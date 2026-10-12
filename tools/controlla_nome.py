@@ -1,7 +1,7 @@
 """Checks that the product name is written in one place only.
 
 The word NAME may appear in the files of the page (web/) only in web/appname.js and inside repository URLs
-(github.com/<owner>/NAME..., <owner>.github.io/NAME...). The manifest is generated (tools/genera_manifest.mjs), not tracked.
+(github.com/<owner>/NAME..., <owner>.github.io/NAME...). The manifest is generated (tools/genera_identita.mjs), not tracked.
 
     python3 tools/controlla_nome.py
 """

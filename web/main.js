@@ -15,10 +15,16 @@ async function showEngine(/** @type {import("./engine.js").Engine | null} */ eng
   $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");
 }
 
+/** Keep the description meta tag in the active language. */
+function setDescription() {
+  document.getElementById("meta-description")?.setAttribute("content", t("share.description"));
+}
+
 async function start() {
   await loadLang(pickLang());
   $("app-name").textContent = APP_NAME;
   document.title = APP_NAME;
+  setDescription();
   const selector = /** @type {HTMLSelectElement} */ ($("language"));
   selector.value = currentLang();
   /** @type {import("./engine.js").Engine | null} */
@@ -36,6 +42,7 @@ async function start() {
     : () => {};
   const translate = () => {
     applyCatalog();
+    setDescription();
     redraw();
     showEngine(engine);
   };
