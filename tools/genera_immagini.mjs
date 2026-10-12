@@ -14,12 +14,12 @@ const write = (name, data) => writeFileSync(IMG + name, data);
 write("logo-chiaro.svg", paint(BLUE));
 write("logo-scuro.svg", paint(AZURE));
 write("logo-mono.svg", paint("#000000"));
-// Favicon: follows the browser theme with a media query inside the SVG.
+// Favicon: follows the browser theme (the logo paints with currentColor, so the colour of the root element is enough).
 write(
   "favicon.svg",
-  source.replaceAll('stroke="currentColor"', 'class="s"').replace(
-    "<rect",
-    `<style>.s{stroke:${BLUE}}@media (prefers-color-scheme:dark){.s{stroke:${AZURE}}}</style><rect`,
+  source.replace(
+    /<svg([^>]*)>/,
+    `<svg$1><style>svg{color:${BLUE}}@media (prefers-color-scheme:dark){svg{color:${AZURE}}}</style>`,
   ),
 );
 
