@@ -1,9 +1,9 @@
 // @ts-check
 import { APP_NAME } from "./appname.js";
-import { collega } from "./grafico.js";
+import { wire } from "./chart.js";
 import { applyCatalog, currentLang, loadLang, pickLang, t } from "./i18n.js";
-import { caricaMotore } from "./motore.js";
-import { leggiSpettro } from "./spettro.js";
+import { loadEngine } from "./engine.js";
+import { parseSpectrum } from "./spectrum.js";
 
 /** @param {string} id @returns {HTMLElement} */
 function $(id) {
@@ -11,40 +11,41 @@ function $(id) {
 }
 
 /** Show the engine version, or its absence as a translated message. */
-async function mostraMotore(/** @type {import("./motore.js").Motore | null} */ motore) {
-  $("versione-motore").textContent = motore ? t("motore.versione", { version: motore.versione() }) : t("motore.errore");
+async function showEngine(/** @type {import("./engine.js").Engine | null} */ engine) {
+  $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");
 }
 
-async function avvia() {
+async function start() {
   await loadLang(pickLang());
-  $("nome-app").textContent = APP_NAME;
-  const selettore = /** @type {HTMLSelectElement} */ ($("lingua"));
-  selettore.value = currentLang();
-  /** @type {import("./motore.js").Motore | null} */
-  let motore = null;
+  $("app-name").textContent = APP_NAME;
+  document.title = APP_NAME;
+  const selector = /** @type {HTMLSelectElement} */ ($("language"));
+  selector.value = currentLang();
+  /** @type {import("./engine.js").Engine | null} */
+  let engine = null;
   try {
-    motore = await caricaMotore();
+    engine = await loadEngine();
   } catch {
-    motore = null;
+    engine = null;
   }
-  const ridisegna = motore
-    ? collega(
-        { grafico: $("grafico"), barra: $("barra-grafico"), tab: $("tabella"), intervallo: $("intervallo") },
-        leggiSpettro(motore.spettro_prova()),
+  const redraw = engine
+    ? wire(
+        { chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") },
+        parseSpectrum(engine.demo_spectrum()),
       )
     : () => {};
-  const traduci = () => {
+  const translate = () => {
     applyCatalog();
-    ridisegna();
-    mostraMotore(motore);
+    redraw();
+    showEngine(engine);
   };
-  traduci();
-  selettore.addEventListener("change", async () => {
-    await loadLang(selettore.value);
-    traduci();
+  translate();
+  selector.addEventListener("change", async () => {
+    await loadLang(selector.value);
+    translate();
   });
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   document.body.dataset.ready = "1";
 }
 
-avvia();
+start();

@@ -1,4 +1,4 @@
-// Smoke e2e: the page loads, draws the synthetic spectrum with its table, is keyboard-operable, passes axe
+// Smoke e2e: the page loads, draws the synthetic spectrum with its table, is keyboard-operable, paxisTexts axe
 // (light and dark), fits a 320 px viewport (zoom 400 %), and numbers use the decimal point in both languages.
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
@@ -23,10 +23,10 @@ const server = createServer(async (req, res) => {
 await new Promise((ok) => server.listen(0, "127.0.0.1", ok));
 const base = `http://127.0.0.1:${server.address().port}/`;
 
-let fallimenti = 0;
-function controlla(nome, ok, dettaglio = "") {
-  console.log(`${ok ? "ok  " : "FAIL"} ${nome}${ok ? "" : " " + dettaglio}`);
-  if (!ok) fallimenti++;
+let failures = 0;
+function check(name, ok, detail = "") {
+  console.log(`${ok ? "ok  " : "FAIL"} ${name}${ok ? "" : " " + detail}`);
+  if (!ok) failures++;
 }
 
 async function axe(page) {
@@ -39,16 +39,16 @@ try {
   for (const scheme of ["light", "dark"]) {
     const ctx = await browser.newContext({ colorScheme: scheme, locale: "it-IT" });
     const page = await ctx.newPage();
-    const errori = [];
-    page.on("pageerror", (e) => errori.push(String(e)));
-    page.on("console", (m) => m.type() === "error" && errori.push(m.text()));
+    const errors = [];
+    page.on("pageerror", (e) => errors.push(String(e)));
+    page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
     await page.goto(base);
     await page.waitForSelector("body[data-ready='1']");
-    controlla(`[${scheme}] curva e tabella disegnate`, (await page.locator("#grafico polyline.curva").count()) === 1 && (await page.locator("#tabella tbody tr").count()) > 10);
-    controlla(`[${scheme}] versione del motore`, /\d+\.\d+\.\d+/.test(await page.textContent("#versione-motore")));
-    const viol = await axe(page);
-    controlla(`[${scheme}] axe senza violazioni`, viol.length === 0, viol.join(", "));
-    controlla(`[${scheme}] nessun errore in console`, errori.length === 0, errori.join(" | "));
+    check(`[${scheme}] curve and table drawn`, (await page.locator("#chart polyline.curve").count()) === 1 && (await page.locator("#table tbody tr").count()) > 10);
+    check(`[${scheme}] engine version`, /\d+\.\d+\.\d+/.test(await page.textContent("#engine-version")));
+    const violations = await axe(page);
+    check(`[${scheme}] axe has no violations`, violations.length === 0, violations.join(", "));
+    check(`[${scheme}] no console errors`, errors.length === 0, errors.join(" | "));
     await ctx.close();
   }
 
@@ -56,30 +56,30 @@ try {
   const page = await ctx.newPage();
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
-  controlla("zoom 400 % (320 px): nessuno scorrimento orizzontale", await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
+  check("zoom 400 % (320 px): no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
 
   await page.keyboard.press("Tab");
-  controlla("Tab: primo elemento è il link «salta»", await page.evaluate(() => document.activeElement?.className === "salta"));
-  await page.focus("#grafico");
-  const prima = await page.textContent("#intervallo");
+  check("Tab: first element is the skip link", await page.evaluate(() => document.activeElement?.className === "skip"));
+  await page.focus("#chart");
+  const before = await page.textContent("#range");
   await page.keyboard.press("+");
-  const dopo = await page.textContent("#intervallo");
-  controlla("tastiera: + riduce l'intervallo", prima !== dopo && dopo.includes("4000") === false, `${prima} -> ${dopo}`);
+  const after = await page.textContent("#range");
+  check("tastiera: + riduce l'range", before !== after && after.includes("4000") === false, `${before} -> ${after}`);
   await page.keyboard.press("0");
-  controlla("tastiera: 0 ripristina la vista intera", (await page.textContent("#intervallo")) === prima);
-  controlla("numeri col punto, senza separatore delle migliaia", /da 400 a 4000 cm/.test(prima) && !/[.,]\d{3}\b/.test(prima), prima);
+  check("tastiera: 0 ripristina la view full", (await page.textContent("#range")) === before);
+  check("numbers use the decimal point, no thousands separator", /da 400 a 4000 cm/.test(before) && !/[.,]\d{3}\b/.test(before), before);
 
-  await page.selectOption("#lingua", "en");
+  await page.selectOption("#language", "en");
   await page.waitForFunction(() => document.documentElement.lang === "en");
-  const asse = await page.textContent("#grafico svg text:last-child");
-  controlla("cambio lingua in inglese", asse === "Absorbance", asse ?? "");
-  controlla("tabella con decimale col punto in inglese", /^\d+\.\d{4}$/.test((await page.locator("#tabella tbody tr:first-child td:nth-child(2)").textContent()) ?? ""));
-  const violEn = await axe(page);
-  controlla("[en] axe senza violazioni", violEn.length === 0, violEn.join(", "));
+  const axis = await page.textContent("#chart svg text:last-child");
+  check("cambio language in inglese", axis === "Absorbance", axis ?? "");
+  check("table con decimale col punto in inglese", /^\d+\.\d{4}$/.test((await page.locator("#table tbody tr:first-child td:nth-child(2)").textContent()) ?? ""));
+  const violationsEn = await axe(page);
+  check("[en] axe has no violations", violationsEn.length === 0, violationsEn.join(", "));
   await ctx.close();
 } finally {
   await browser.close();
   server.close();
 }
-console.log(fallimenti ? `${fallimenti} controlli falliti` : "tutti i controlli ok");
-process.exit(fallimenti ? 1 : 0);
+console.log(failures ? `${failures} checks failed` : "all checks ok");
+process.exit(failures ? 1 : 0);

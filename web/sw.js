@@ -2,7 +2,7 @@
 const VERSION = "1";
 const CACHE = "checkir-v" + VERSION;
 const FILES = [
-  "./", "index.html", "stile.css", "main.js", "appname.js", "i18n.js", "grafico.js", "spettro.js", "vista.js", "motore.js",
+  "./", "index.html", "style.css", "main.js", "appname.js", "i18n.js", "chart.js", "spectrum.js", "view.js", "engine.js",
   "lang/it.json", "lang/en.json", "wasm/ftir_wasm.js", "wasm/ftir_wasm_bg.wasm",
 ];
 

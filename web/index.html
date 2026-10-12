@@ -5,42 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="color-scheme" content="light dark">
-  <title>checkir</title>
+  <title>FTIR</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="stile.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="salta" href="#principale" data-i18n="app.skip"></a>
-  <header class="testata">
+  <a class="skip" href="#main-content" data-i18n="app.skip"></a>
+  <header class="header">
     <div>
-      <h1 id="nome-app"></h1>
+      <h1 id="app-name"></h1>
       <p data-i18n="app.tagline"></p>
     </div>
-    <label class="lingua">
+    <label class="language">
       <span data-i18n="lang.label"></span>
-      <select id="lingua">
+      <select id="language">
         <option value="it" data-i18n="lang.it"></option>
         <option value="en" data-i18n="lang.en"></option>
       </select>
     </label>
   </header>
-  <main id="principale">
-    <section aria-labelledby="titolo-grafico">
-      <h2 id="titolo-grafico" data-i18n="grafico.titolo"></h2>
-      <p data-i18n="grafico.descrizione"></p>
-      <div class="barra" id="barra-grafico"></div>
-      <div id="grafico" tabindex="0" role="group" data-i18n-aria="grafico.titolo"></div>
-      <p class="aiuto" data-i18n="grafico.aiuto"></p>
-      <p id="intervallo" aria-live="polite"></p>
+  <main id="main-content">
+    <section aria-labelledby="chart-title">
+      <h2 id="chart-title" data-i18n="chart.title"></h2>
+      <p data-i18n="chart.description"></p>
+      <div class="toolbar" id="chart-toolbar"></div>
+      <div id="chart" tabindex="0" role="group" data-i18n-aria="chart.title"></div>
+      <p class="help" data-i18n="chart.help"></p>
+      <p id="range" aria-live="polite"></p>
     </section>
-    <section aria-labelledby="titolo-tabella">
-      <h2 id="titolo-tabella" data-i18n="tabella.titolo"></h2>
-      <div id="tabella" class="scorri" tabindex="0" role="region" data-i18n-aria="tabella.regione"></div>
+    <section aria-labelledby="table-title">
+      <h2 id="table-title" data-i18n="table.title"></h2>
+      <div id="table" class="scroll" tabindex="0" role="region" data-i18n-aria="table.region"></div>
     </section>
   </main>
-  <footer class="pie">
-    <p data-i18n="pie.avviso"></p>
-    <p id="versione-motore"></p>
+  <footer class="footer">
+    <p data-i18n="footer.notice"></p>
+    <p id="engine-version"></p>
   </footer>
   <script type="module" src="main.js"></script>
 </body>
