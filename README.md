@@ -1,16 +1,32 @@
-# checkir
-Analisi FTIR open source per il drug checking. Un sito statico (Rust compilato in WebAssembly + HTML/JS senza bundler) dove si carica uno spettro, lo si vede, lo si confronta con le librerie e si capiscono i picchi. Tutto gira nel browser: **nessun file lascia il computer**; il sito funziona anche offline.
+# checkIR
+Italiano: [README.it.md](README.it.md)
 
-**Stato**: fondazione. Per ora il sito mostra uno spettro sintetico di prova; caricamento file, confronto con le librerie, spiegazione dei picchi e scheda della sostanza arrivano nei prossimi pacchetti.
+Open-source FTIR analysis for drug checking, for harm-reduction services and laboratories.
 
-**Principio**: il programma propone, la persona esperta decide. L'FTIR ha limiti (componenti sotto il 5 % circa non rilevabili, sostanze potenti in tracce) che il programma mostra sempre. Non è una diagnosi né un parere medico.
+## 1. What it does
+- You load an infrared (FTIR-ATR) spectrum, see it, and compare it with the spectrum libraries.
+- The program proposes candidate substances and explains the peaks, highlighting the infrared regions involved.
+- If there is a match, it shows the substance sheet. The program proposes; the qualified chemist decides and signs.
+- It is a static website (Rust compiled to WebAssembly, plain HTML/JS) and works offline once loaded.
 
-## Sviluppo
-```
-cargo test --locked --release
-bash tools/costruisci_sito.sh          # costruisce site/ (pagina + motore .wasm)
-npm ci && node tests_e2e/fumo.mjs      # test nel browser con controlli di accessibilità
-```
-Lingue: italiano e inglese. Licenze: codice MIT OR Apache-2.0, testi CC BY 4.0, dati come dichiarato (vedi `LICENSE`). Componenti di terzi: `LICENZE-TERZI.md`. Come contribuire: `CONTRIBUTING.md`; per chi lavora con un assistente IA: `CLAUDE.md`.
+## 2. What it does NOT do
+- It is not a diagnosis, not a medical opinion and not an accredited laboratory analysis.
+- It does not see components below about 5 % by weight.
+- It does not rule out potent substances at low doses (for example fentanyl analogues and nitazenes).
+- It does not measure quantities. A result never means that a sample is safe.
 
-**Uso dell'IA**: il codice è sviluppato con l'aiuto di assistenti IA; l'IA non è autrice, chi pubblica risponde di tutto.
+## 3. Try it in 1 minute
+Open the site: <https://freeesta.github.io/checkir/>. For now it shows a synthetic test spectrum; file loading, library matching and peak explanation are being added step by step.
+
+## 4. Privacy in 3 lines
+- Your files are read and processed only in your browser; nothing is sent anywhere.
+- No cookies, no analytics, no third-party scripts or fonts.
+- Contributions never contain personal data (date to the month, no place, no names, no photos).
+
+## 5. Licences and citation
+- Code: MIT OR Apache-2.0 ([LICENSE](LICENSE)). New spectra and data: CC BY 4.0. Substance sheets: CC BY-SA 4.0. Third-party components: [LICENZE-TERZI.md](LICENZE-TERZI.md).
+- To cite the software, use [CITATION.cff](CITATION.cff) (GitHub shows a "Cite this repository" button).
+- The code is developed with the help of AI assistants; the AI is not an author, the people who publish are responsible for everything.
+
+## Contribute
+You do not need to be a programmer: see [CONTRIBUTING.md](CONTRIBUTING.md) for the four paths (chemists, health workers, translators, developers). Please read the [Code of Conduct](CODE_OF_CONDUCT.md). Security issues: [SECURITY.md](SECURITY.md).

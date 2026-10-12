@@ -1,0 +1,36 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "example-unknown",
+  "type": "unresolved",
+  "names": {
+    "en": {
+      "preferred": "Example amine"
+    },
+    "it": {
+      "preferred": "Ammina d'esempio"
+    }
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "inchikey",
+      "source": "wikidata",
+      "consulted": "2026-10-12"
+    }
+  ],
+  "candidates": [
+    "example-amine",
+    "example-cut"
+  ],
+  "certain_class": "phenethylamines"
+}

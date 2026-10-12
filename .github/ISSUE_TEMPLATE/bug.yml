@@ -1,0 +1,25 @@
+name: Bug report
+description: Something does not work. / Qualcosa non funziona.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? / Cosa è successo?
+      description: What you did, what you expected, what you saw. / Cosa hai fatto, cosa ti aspettavi, cosa hai visto.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and system / Browser e sistema
+      placeholder: Firefox 130, Windows 10
+    validations:
+      required: true
+  - type: checkboxes
+    id: declarations
+    attributes:
+      label: Declarations / Dichiarazioni
+      options:
+        - label: I did not attach personal data or real sample files. / Non ho allegato dati personali né file di campioni reali.
+          required: true

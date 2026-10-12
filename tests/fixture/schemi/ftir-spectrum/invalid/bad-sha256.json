@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-spectrum/1",
+  "id": "example-amine-hcl.checkir.001",
+  "form": "example-amine-hcl",
+  "role": "reference",
+  "technique": {
+    "method": "ATR",
+    "crystal": "diamond",
+    "reflections": 1
+  },
+  "instrument": {
+    "manufacturer": "Synthetic",
+    "model": "Generator"
+  },
+  "resolution_cm1": 4,
+  "scans": 32,
+  "range_cm1": [
+    400,
+    4000
+  ],
+  "step_cm1": 2,
+  "y_axis": "absorbance",
+  "atr_correction": false,
+  "processing": [],
+  "measured": "2026-10",
+  "provenance": {
+    "type": "certified_standard",
+    "supplier": "Synthetic data"
+  },
+  "library": {
+    "name": "checkir-community",
+    "version": "0.0.1"
+  },
+  "contributors": [
+    {
+      "public_name": "checkir synthetic generator"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "sha256": "abc",
+  "original_format": "JCAMP-DX 5.01",
+  "quality": {
+    "checks": [
+      {
+        "criterion": "format",
+        "result": "pass"
+      }
+    ]
+  },
+  "review": {
+    "state": "proposed",
+    "reviewers": [],
+    "date": "2026-10-12"
+  }
+}

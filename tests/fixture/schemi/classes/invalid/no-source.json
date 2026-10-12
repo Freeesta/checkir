@@ -1,0 +1,16 @@
+{
+  "schema": "classes/1",
+  "classes": [
+    {
+      "id": "phenethylamines",
+      "axis": "chemical",
+      "names": {
+        "it": "Fenetilamine",
+        "en": "Phenethylamines"
+      },
+      "mappings": {
+        "wikidata": "Q407605"
+      }
+    }
+  ]
+}
