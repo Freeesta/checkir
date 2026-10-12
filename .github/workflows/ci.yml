@@ -124,7 +124,7 @@ jobs:
       - name: No private names or data in the public repository
         env:
           NOMI_VIETATI: ${{ secrets.NOMI_VIETATI }}
-        run: python3 tools/controlla_nomi.py
+        run: python3 -m unittest discover -s tools -p 'test_*.py' && python3 tools/controlla_nomi.py
 
   data:
     needs: changes

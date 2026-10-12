@@ -2,16 +2,16 @@
 Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 
 ## Struttura
-- `ftir-core/src/spettro.rs`: tipo unico `Spettro` (`ruolo`, `unita_y`, `numero_onda_cm1`, `y`) e i suoi enum `Ruolo`, `UnitaY`.
-- `ftir-core/src/errore.rs`: `Errore {error, error_key, params}` con `json()`; `Esito<T>`.
-- `ftir-core/src/budget.rs`: `Budget {max_byte, max_punti}`, `STANDARD`, `controlla_byte`, `controlla_punti`.
-- `ftir-core/src/lettori.rs`, `passi.rs`, `confronti.rs`: registri statici `LETTORI`, `PASSI`, `CONFRONTI` (vuoti), contratto 1, test di conformità che scorre le voci.
-- `ftir-core/src/regole.rs`: vuoto; le regole sono dati JSON, non codice.
-- `ftir-core/src/sintetico.rs`: `Parametri`, `Banda`, `genera`, `valore_vero`; RNG SplitMix64 scritto a mano, asse discendente come negli strumenti.
-- `ftir-lib`: vuoto. `ftir-wasm/src/lib.rs`: `versione()`, `spettro_prova()` (JSON).
+- `ftir-core/src/spectrum.rs`: tipo unico `Spectrum` (`role`, `y_unit`, `wavenumber_cm1`, `y`) e i suoi enum `Role`, `YUnit`.
+- `ftir-core/src/error.rs`: `EngineError {error, error_key, params}` con `json()`; `EngineResult<T>`.
+- `ftir-core/src/budget.rs`: `Budget {max_bytes, max_points}`, `STANDARD`, `check_bytes`, `check_points`.
+- `ftir-core/src/readers.rs`, `steps.rs`, `comparisons.rs`: registri statici `READERS`, `STEPS`, `COMPARISONS` (vuoti), contratto 1, test di conformità che scorre le voci.
+- `ftir-core/src/rules.rs`: vuoto; le regole sono dati JSON, non codice.
+- `ftir-core/src/synthetic.rs`: `Params`, `Band`, `generate`, `true_value`; RNG SplitMix64 scritto a mano, asse discendente come negli strumenti.
+- `ftir-lib`: vuoto. `ftir-wasm/src/lib.rs`: `version()`, `demo_spectrum()` (JSON).
 
 ## Contratti e formati
-- `lettori/1`: `Lettore {id, contratto, riconosci, apri(&[u8], &Budget)}`. `passi/1`: `Passo {id, versione, contratto, applica}`. `confronti/1`: `Confronto {id, versione, contratto, punteggio in [0,1]}`. Un contratto diverso fa fallire il test di conformità.
+- `readers/1`: `Reader {id, contract, recognize, open(&[u8], &Budget)}`. `steps/1`: `Step {id, version, contract, apply}`. `comparisons/1`: `Comparison {id, version, contract, score in [0,1]}`. Un contratto diverso fa fallire il test di conformità.
 
 ## Prove
 - `sintetico`: stesso seme, stesso spettro; griglia completa; rumore entro il limite; centro della banda dove dichiarato; mezza altezza a una semilarghezza.

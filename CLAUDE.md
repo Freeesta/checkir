@@ -29,8 +29,8 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 
 ## 4. Architettura
 - **Crate**: `ftir-core` (calcolo puro, `forbid(unsafe_code)`, senza dipendenze), `ftir-lib` (librerie, vuoto), `ftir-wasm` (ponte wasm-bindgen: solo funzioni sottili che restituiscono JSON). Nessuna dipendenza nativa nel grafo WASM.
-- **Registri statici** (slice, niente plugin a runtime): `LETTORI`, `PASSI`, `CONFRONTI` in `ftir-core`; aggiungere un modulo = un file + UNA riga nel registro; il test di conformità scorre le voci. Regole come dati JSON (`bande/1`, `allerte/1`, `classi/1`) con schema in `docs/schemi/`.
-- **Un solo modello**: `Spettro` con `Ruolo` (campione, riferimento, residuo, sottrazione, media); unità nei nomi dei campi (`numero_onda_cm1`).
+- **Registri statici** (slice, niente plugin a runtime): `READERS`, `STEPS`, `COMPARISONS` in `ftir-core`; aggiungere un modulo = un file + UNA riga nel registro; il test di conformità scorre le voci. Regole come dati JSON (`bands/1`, `alerts/1`, `classes/1`) con schema in `docs/schemi/`.
+- **Un solo modello**: `Spectrum` con `Role` (campione, riferimento, residuo, sottrazione, media); unità nei nomi dei campi (`wavenumber_cm1`).
 - **Errori**: `{error, error_key, params}`; la pagina traduce `error_key`. **Budget**: ogni `apri` riceve `Budget` (byte, punti).
 - **Pagina**: solo moduli ES, `// @ts-check` + JSDoc, `tsc` stretto; nessuna logica in `index.html`; CSP stretta; un solo catalogo caricato; numeri solo da `formatNumber`; colori solo da variabili CSS (Okabe-Ito).
 - **Formati salvati**: le cache si ricostruiscono; i documenti dell'utente si leggono a N e N−1 e si scrivono a N.
