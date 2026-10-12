@@ -1,35 +1,35 @@
-//! Memory budget contract: every `apri` receives the limits it must respect.
-use crate::errore::{Errore, Esito};
+//! Memory budget contract: every `open` receives the limits it must respect.
+use crate::error::{EngineError, EngineResult};
 
 /// Limits passed to every reader and step. The page chooses them; the engine never exceeds them.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Budget {
     /// Maximum input size in bytes.
-    pub max_byte: usize,
+    pub max_bytes: usize,
     /// Maximum number of points of one spectrum.
-    pub max_punti: usize,
+    pub max_points: usize,
 }
 
 impl Budget {
     pub const STANDARD: Budget = Budget {
-        max_byte: 32 * 1024 * 1024,
-        max_punti: 1 << 20,
+        max_bytes: 32 * 1024 * 1024,
+        max_points: 1 << 20,
     };
 
-    pub fn controlla_byte(&self, n: usize) -> Esito<()> {
-        if n > self.max_byte {
-            return Err(Errore::new("errore.budget.byte", "input too large")
-                .con("max", self.max_byte)
-                .con("size", n));
+    pub fn check_bytes(&self, n: usize) -> EngineResult<()> {
+        if n > self.max_bytes {
+            return Err(EngineError::new("error.budget.bytes", "input too large")
+                .with_param("max", self.max_bytes)
+                .with_param("size", n));
         }
         Ok(())
     }
 
-    pub fn controlla_punti(&self, n: usize) -> Esito<()> {
-        if n > self.max_punti {
-            return Err(Errore::new("errore.budget.punti", "too many points")
-                .con("max", self.max_punti)
-                .con("points", n));
+    pub fn check_points(&self, n: usize) -> EngineResult<()> {
+        if n > self.max_points {
+            return Err(EngineError::new("error.budget.points", "too many points")
+                .with_param("max", self.max_points)
+                .with_param("points", n));
         }
         Ok(())
     }
@@ -42,17 +42,17 @@ mod test {
     #[test]
     fn limits_are_enforced() {
         let b = Budget {
-            max_byte: 10,
-            max_punti: 5,
+            max_bytes: 10,
+            max_points: 5,
         };
-        assert!(b.controlla_byte(10).is_ok());
+        assert!(b.check_bytes(10).is_ok());
         assert_eq!(
-            b.controlla_byte(11).unwrap_err().error_key,
-            "errore.budget.byte"
+            b.check_bytes(11).unwrap_err().error_key,
+            "error.budget.bytes"
         );
         assert_eq!(
-            b.controlla_punti(6).unwrap_err().error_key,
-            "errore.budget.punti"
+            b.check_points(6).unwrap_err().error_key,
+            "error.budget.points"
         );
     }
 }

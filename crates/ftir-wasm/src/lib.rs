@@ -5,14 +5,14 @@ use wasm_bindgen::prelude::*;
 
 /// Engine version.
 #[wasm_bindgen]
-pub fn versione() -> String {
-    ftir_core::VERSIONE.to_string()
+pub fn version() -> String {
+    ftir_core::VERSION.to_string()
 }
 
 #[cfg(test)]
 mod test {
     #[test]
     fn version_is_semver() {
-        assert_eq!(super::versione().split('.').count(), 3);
+        assert_eq!(super::version().split('.').count(), 3);
     }
 }
