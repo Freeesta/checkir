@@ -44,5 +44,17 @@
   "reader.jcamp.xunits_unknown": "L'unità x \"{value}\" non è riconosciuta: l'asse è mostrato in punti.",
   "reader.jcamp.yunits_unknown": "L'unità y \"{value}\" non è riconosciuta: sceglila prima di elaborare.",
   "reader.jcamp.transmittance_range": "I valori di trasmittanza fino a {max} non stanno né in 0–1 né in 0–100: scegli l'unità prima di elaborare.",
-  "reader.jcamp.date_ambiguous": "La data \"{value}\" si può leggere giorno/mese o mese/giorno: è stata conservata come scritta."
+  "reader.jcamp.date_ambiguous": "La data \"{value}\" si può leggere giorno/mese o mese/giorno: è stata conservata come scritta.",
+  "reader.text.ambiguous": "Il file si può leggere in più modi ({alternatives}). Scegli il separatore di colonna e il segno decimale.",
+  "reader.text.no_data": "Nel file non è stata trovata nessuna tabella di numeri.",
+  "reader.text.not_monotonic": "La prima colonna non è strettamente crescente o decrescente, quindi non può essere l'asse di uno spettro.",
+  "reader.text.rows_skipped": "{count} righe dopo la prima riga di dati non sono dati e sono state conservate come testo.",
+  "reader.text.extra_columns": "Il file ha {count} colonne di valori: ognuna è aperta come spettro separato.",
+  "reader.text.npoints_mismatch": "L'intestazione dichiara {expected} punti ma il file ne contiene {found}: sono stati usati i punti trovati.",
+  "reader.text.xunit_unknown": "L'unità x non è indicata nel file; è mostrata in punti finché non la scegli.",
+  "reader.text.xunit_hint_cm1": "L'unità x non è indicata; i valori sembrano numeri d'onda in cm⁻¹, ma non è stato dato per scontato.",
+  "reader.text.yunit_unknown": "L'unità y non è indicata nel file; sceglila prima di elaborare.",
+  "reader.text.yunit_hint_percent_t": "L'unità y non è indicata; valori da 0 a 100 con linea di base vicino a 100 sembrano %T, ma non è stato dato per scontato.",
+  "reader.text.yunit_hint_absorbance": "L'unità y non è indicata; piccoli valori positivi sembrano assorbanza, ma non è stato dato per scontato.",
+  "reader.asc.axis_missing": "Questo file ASC ha solo i valori y e l'intestazione non dà il primo e l'ultimo x (FIRSTX, LASTX): l'asse è sconosciuto."
 }

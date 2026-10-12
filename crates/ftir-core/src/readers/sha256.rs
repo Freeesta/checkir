@@ -56,6 +56,26 @@ fn compress(h: &mut [u32; 8], block: &[u8]) {
 
 /// Lower-case hexadecimal SHA-256 of `data`.
 pub fn sha256_hex(data: &[u8]) -> String {
+    sha256(data).iter().map(|b| format!("{b:02x}")).collect()
+}
+
+/// HMAC-SHA-256 (RFC 2104).
+pub fn hmac_sha256(key: &[u8], msg: &[u8]) -> [u8; 32] {
+    let mut k = if key.len() > 64 {
+        sha256(key).to_vec()
+    } else {
+        key.to_vec()
+    };
+    k.resize(64, 0);
+    let mut inner: Vec<u8> = k.iter().map(|b| b ^ 0x36).collect();
+    inner.extend_from_slice(msg);
+    let mut outer: Vec<u8> = k.iter().map(|b| b ^ 0x5c).collect();
+    outer.extend_from_slice(&sha256(&inner));
+    sha256(&outer)
+}
+
+/// SHA-256 digest of `data`.
+pub fn sha256(data: &[u8]) -> [u8; 32] {
     let mut h: [u32; 8] = [
         0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab,
         0x5be0cd19,
@@ -75,12 +95,26 @@ pub fn sha256_hex(data: &[u8]) -> String {
     for block in tail.chunks_exact(64) {
         compress(&mut h, block);
     }
-    h.iter().map(|x| format!("{x:08x}")).collect()
+    let mut out = [0u8; 32];
+    for (chunk, word) in out.chunks_exact_mut(4).zip(h.iter()) {
+        chunk.copy_from_slice(&word.to_be_bytes());
+    }
+    out
 }
 
 #[cfg(test)]
 mod test {
     use super::sha256_hex;
+
+    #[test]
+    fn hmac_rfc4231_case_2() {
+        let mac = super::hmac_sha256(b"Jefe", b"what do ya want for nothing?");
+        let hex: String = mac.iter().map(|b| format!("{b:02x}")).collect();
+        assert_eq!(
+            hex,
+            "5bdcc146bf60754e6a042426089575c75a003f089d2739839dec58b964ec3843"
+        );
+    }
 
     #[test]
     fn known_vectors() {

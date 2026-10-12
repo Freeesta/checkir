@@ -1,0 +1,4 @@
+# Known header keys of the text reader (normalised). A known key that disappears from KNOWN_KEYS fails the audit test.
+FIRSTX
+LASTX
+NPOINTS

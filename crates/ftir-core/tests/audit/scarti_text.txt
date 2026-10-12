@@ -1,0 +1,2 @@
+# Parts of a text file that are not copied into a field or a value (LINE | reason).
+blank lines | no information: only white space
