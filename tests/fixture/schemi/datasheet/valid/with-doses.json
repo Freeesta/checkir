@@ -1,0 +1,37 @@
+{
+  "schema": "datasheet/1",
+  "substance": "example-amine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "ftir_limits": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "harm_reduction": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-12",
+  "review_by": "2028-09-30",
+  "doses": [
+    {
+      "route": "oral",
+      "unit": "mg",
+      "threshold": 1,
+      "light": 2,
+      "common": 3,
+      "strong": 4,
+      "source": "x",
+      "evidence_type": "clinical"
+    }
+  ],
+  "show_doses": true,
+  "authors": [
+    "Example Author"
+  ],
+  "ai_assisted": false
+}

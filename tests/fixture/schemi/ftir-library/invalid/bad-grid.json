@@ -1,0 +1,16 @@
+{
+  "schema": "ftir-library/1",
+  "name": "checkir-community",
+  "version": "0.0.1",
+  "date": "2026-10-12",
+  "license": "CC-BY-4.0",
+  "attribution": {
+    "en": "checkir community FTIR library, CC BY 4.0"
+  },
+  "grid": {
+    "from_cm1": 400,
+    "to_cm1": 4000
+  },
+  "n_spectra": 1,
+  "sha256_data": "0000000000000000000000000000000000000000000000000000000000000000"
+}

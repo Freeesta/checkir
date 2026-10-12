@@ -1,0 +1,32 @@
+name: Alert
+description: Report a dangerous substance family or a wrong alert. / Segnala una famiglia di sostanze pericolosa o un'allerta sbagliata.
+labels: ["alert", "urgent"]
+body:
+  - type: markdown
+    attributes:
+      value: Alerts need two reviewers. Public communication belongs to services and authorities. No places, venues, vendors or people. / Le allerte richiedono due revisori. La comunicazione pubblica spetta ai servizi e agli enti. Niente luoghi, locali, venditori o persone.
+  - type: input
+    id: family
+    attributes:
+      label: Substance or family / Sostanza o famiglia
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is it dangerous or why is the alert wrong? / Perché è pericolosa o perché l'allerta è sbagliata?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (required) / Fonti (obbligatorie)
+    validations:
+      required: true
+  - type: checkboxes
+    id: declarations
+    attributes:
+      label: Declarations / Dichiarazioni
+      options:
+        - label: This report contains no personal data, places, venues or vendors. / Questa segnalazione non contiene dati personali, luoghi, locali o venditori.
+          required: true

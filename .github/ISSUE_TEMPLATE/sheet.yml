@@ -1,0 +1,41 @@
+name: Substance sheet
+description: Propose or correct a substance sheet. / Proponi o correggi una scheda di sostanza.
+labels: ["sheet", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: Health texts are always approved by a health reviewer. See docs/contribute/sheet.md. / I testi sanitari li approva sempre un revisore sanitario. Vedi docs/contribute/sheet.it.md.
+  - type: input
+    id: substance
+    attributes:
+      label: Substance / Sostanza
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: Section to add or correct / Sezione da aggiungere o correggere
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Proposed text / Testo proposto
+      description: Short sentences, one fact each. Never "safe", "pure" or "clean". / Frasi brevi, un fatto ciascuna. Mai «sicuro», «puro», «pulito».
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (required) / Fonti (obbligatorie)
+    validations:
+      required: true
+  - type: checkboxes
+    id: declarations
+    attributes:
+      label: Declarations / Dichiarazioni
+      options:
+        - label: The text contains no personal data, synthesis or cutting instructions, vendors or places to buy. / Il testo non contiene dati personali, istruzioni di sintesi o taglio, venditori o luoghi d'acquisto.
+          required: true
+        - label: I wrote it or have the right to publish it, and I agree to CC BY-SA 4.0. / L'ho scritto io o ho il diritto di pubblicarlo, e accetto la licenza CC BY-SA 4.0.
+          required: true

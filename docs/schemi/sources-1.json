@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:sources:1",
+  "title": "Common bibliography (sources.json)",
+  "title_it": "Bibliografia comune (sources.json)",
+  "description": "Common bibliography (sources.json)",
+  "description_it": "Bibliografia comune (sources.json)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "sources/1",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "sources": {
+      "description": "All sources.",
+      "description_it": "Tutte le fonti.",
+      "type": "array",
+      "items": {
+        "description": "A bibliographic or web source.",
+        "description_it": "Una fonte bibliografica o web.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "type": {
+            "description": "Kind of source.",
+            "description_it": "Tipo di fonte.",
+            "type": "string",
+            "enum": [
+              "paper",
+              "database",
+              "institution",
+              "project",
+              "web"
+            ]
+          },
+          "title": {
+            "description": "Title.",
+            "description_it": "Titolo.",
+            "type": "string",
+            "minLength": 1
+          },
+          "authors": {
+            "description": "Authors.",
+            "description_it": "Autori.",
+            "type": "array",
+            "items": {
+              "description": "Author.",
+              "description_it": "Autore.",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "year": {
+            "description": "Year.",
+            "description_it": "Anno.",
+            "type": "integer",
+            "minimum": 1800,
+            "maximum": 2100
+          },
+          "doi": {
+            "description": "DOI.",
+            "description_it": "DOI.",
+            "type": "string",
+            "pattern": "^10\\.[0-9]{4,9}/\\S+$"
+          },
+          "url": {
+            "description": "URL.",
+            "description_it": "URL.",
+            "type": "string",
+            "pattern": "^https://\\S+$"
+          },
+          "archive_url": {
+            "description": "Archived copy (e.g. Wayback Machine).",
+            "description_it": "Copia d'archivio (es. Wayback Machine).",
+            "type": "string",
+            "pattern": "^https://\\S+$"
+          },
+          "consulted": {
+            "description": "Date consulted.",
+            "description_it": "Data di consultazione.",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          },
+          "license": {
+            "description": "SPDX id or short licence statement of the source.",
+            "description_it": "Id SPDX o breve dichiarazione di licenza della fonte.",
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "title",
+          "consulted"
+        ],
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "doi"
+            ]
+          },
+          {
+            "required": [
+              "url"
+            ]
+          },
+          {
+            "properties": {
+              "type": {
+                "const": "project"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          }
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "sources"
+  ],
+  "additionalProperties": false
+}

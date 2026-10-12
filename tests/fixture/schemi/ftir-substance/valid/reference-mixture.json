@@ -1,0 +1,41 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "example-cut",
+  "type": "reference_mixture",
+  "names": {
+    "en": {
+      "preferred": "Example amine"
+    },
+    "it": {
+      "preferred": "Ammina d'esempio"
+    }
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "inchikey",
+      "source": "wikidata",
+      "consulted": "2026-10-12"
+    }
+  ],
+  "components": [
+    {
+      "substance": "example-amine",
+      "mass_fraction": 0.5
+    },
+    {
+      "substance": "example-sugar",
+      "mass_fraction": null
+    }
+  ]
+}

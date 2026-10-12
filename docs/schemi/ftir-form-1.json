@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:ftir-form:1",
+  "title": "FTIR form (salt, hydrate, polymorph of a substance)",
+  "title_it": "Forma FTIR (sale, idrato, polimorfo di una sostanza)",
+  "description": "FTIR form (salt, hydrate, polymorph of a substance)",
+  "description_it": "Forma FTIR (sale, idrato, polimorfo di una sostanza)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ftir-form/1",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "id": {
+      "description": "Form id, e.g. mdma-hcl.",
+      "description_it": "Id della forma, es. mdma-hcl.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "substance": {
+      "description": "Id of the substance.",
+      "description_it": "Id della sostanza.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "form_type": {
+      "description": "Kind of solid form.",
+      "description_it": "Tipo di forma solida.",
+      "type": "string",
+      "enum": [
+        "free_base",
+        "free_acid",
+        "salt",
+        "hydrate",
+        "solvate",
+        "polymorph",
+        "mixture",
+        "unspecified"
+      ]
+    },
+    "counterion": {
+      "description": "Counter-ion of a salt, e.g. chloride.",
+      "description_it": "Controione di un sale, es. cloruro.",
+      "type": "string",
+      "minLength": 1
+    },
+    "stoichiometry": {
+      "description": "Substance:counter-ion ratio, e.g. 1:1.",
+      "description_it": "Rapporto sostanza:controione, es. 1:1.",
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]+)?:[0-9]+(\\.[0-9]+)?$"
+    },
+    "water_eq": {
+      "description": "Water equivalents of a hydrate.",
+      "description_it": "Equivalenti di acqua di un idrato.",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "stereo": {
+      "description": "Stereochemistry of the form.",
+      "description_it": "Stereochimica della forma.",
+      "type": "string",
+      "enum": [
+        "racemate",
+        "R",
+        "S",
+        "unspecified"
+      ]
+    },
+    "polymorph": {
+      "description": "Polymorph label from the literature.",
+      "description_it": "Etichetta del polimorfo dalla letteratura.",
+      "type": "string",
+      "minLength": 1
+    },
+    "inchikey_form": {
+      "description": "InChIKey of the real form (a salt differs from its base).",
+      "description_it": "InChIKey della forma reale (un sale differisce dalla base).",
+      "type": "string",
+      "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
+    },
+    "notes": {
+      "description": "Notes per language.",
+      "description_it": "Note per lingua.",
+      "type": "object",
+      "properties": {
+        "it": {
+          "description": "Italian text.",
+          "description_it": "Testo in italiano.",
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "description": "English text.",
+          "description_it": "Testo in inglese.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "sources": {
+      "description": "Sources of the data that do not originate from this project.",
+      "description_it": "Fonti dei dati che non nascono dal progetto.",
+      "type": "array",
+      "items": {
+        "description": "A datum and the source it comes from.",
+        "description_it": "Un dato e la fonte da cui viene.",
+        "type": "object",
+        "properties": {
+          "field": {
+            "description": "Name of the field the source supports.",
+            "description_it": "Nome del campo che la fonte sostiene.",
+            "type": "string"
+          },
+          "source": {
+            "description": "Source id in data/sources.json.",
+            "description_it": "Id della fonte in data/sources.json.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "consulted": {
+            "description": "Date the source was consulted (ISO).",
+            "description_it": "Data di consultazione (ISO).",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          }
+        },
+        "required": [
+          "field",
+          "source",
+          "consulted"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "substance",
+    "form_type",
+    "stereo",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "form_type": {
+            "const": "salt"
+          }
+        },
+        "required": [
+          "form_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "counterion",
+          "stoichiometry",
+          "inchikey_form"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "form_type": {
+            "const": "hydrate"
+          }
+        },
+        "required": [
+          "form_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "water_eq"
+        ]
+      }
+    }
+  ]
+}
