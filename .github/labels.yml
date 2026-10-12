@@ -9,9 +9,6 @@
 - {name: proposal, color: "c5def5", description: "Proposed change from the community / Modifica proposta dalla comunità"}
 - {name: needs-review, color: "fbca04", description: "Waits for a reviewer / Attende un revisore"}
 - {name: in-review, color: "fef2c0", description: "A reviewer is on it / Un revisore se ne sta occupando"}
-- {name: needs-health-reviewer, color: "fbca04", description: "Needs a health reviewer / Serve un revisore sanitario"}
-- {name: needs-chemist, color: "fbca04", description: "Needs a chemist reviewer / Serve un revisore chimico"}
-- {name: needs-translator, color: "fbca04", description: "Needs a native-speaker reviewer / Serve un revisore madrelingua"}
 - {name: urgent, color: "b60205", description: "Review labelled within 48 hours / Etichetta di revisione entro 48 ore"}
 - {name: expiring, color: "f9d0c4", description: "Review expires within a month / La revisione scade entro un mese"}
 - {name: expired, color: "e99695", description: "Review has expired / Revisione scaduta"}

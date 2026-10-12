@@ -4,7 +4,7 @@ labels: ["sheet", "proposal", "needs-review"]
 body:
   - type: markdown
     attributes:
-      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.** Health texts are approved by a health reviewer before publication; doses stay hidden until then. / I testi sanitari li approva un revisore sanitario prima della pubblicazione; le dosi restano nascoste fino ad allora."
+      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.** Every statement needs a source, and a reviewer listed in data/reviewers.json approves the text before publication. / Ogni affermazione richiede una fonte e un revisore elencato in data/reviewers.json approva il testo prima della pubblicazione."
   - type: input
     id: substance
     attributes:

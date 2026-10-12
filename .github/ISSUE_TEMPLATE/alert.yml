@@ -4,7 +4,7 @@ labels: ["alert", "needs-review"]
 body:
   - type: markdown
     attributes:
-      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.** Alerts need two reviewers, one of them from health care. Public communication belongs to services and authorities. / Le allerte richiedono due revisori, uno sanitario. La comunicazione pubblica spetta ai servizi e agli enti."
+      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.** Alerts are reviewed by a listed reviewer. Public communication belongs to services and authorities. / Le allerte le rivede un revisore elencato. La comunicazione pubblica spetta ai servizi e agli enti."
   - type: input
     id: target
     attributes:
