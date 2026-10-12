@@ -15,7 +15,7 @@ JDX = f"{SUB}/spectra/synthetic-a-base.checkir.001.jdx"
 META = f"{SUB}/spectra/synthetic-a-base.checkir.001.json"
 
 
-class Rules(unittest.TestCase):
+class Base(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name) / "data"
@@ -37,6 +37,8 @@ class Rules(unittest.TestCase):
     def problems(self):
         return "\n".join(c.check_data(self.root))
 
+
+class Privacy(Base):
     def test_shipped_data_pass(self):
         self.assertEqual(c.check_data(DATA), [])
 
@@ -68,6 +70,8 @@ class Rules(unittest.TestCase):
         self.edit(f"{SUB}/datasheet/texts.en.md", lambda t: t.replace("[f:synthetic-generator]", "[f:nope]", 1))
         self.assertIn("unknown source id 'nope'", self.problems())
 
+
+class Integrity(Base):
     def test_duplicate_inchikey(self):
         key = json.loads((DATA / SUB / "substance.json").read_text())["inchikey"]
         self.edit_json("substances/synthetic-b/substance.json", lambda o: o.update(inchikey=key))
