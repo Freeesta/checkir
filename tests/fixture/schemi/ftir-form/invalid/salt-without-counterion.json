@@ -1,0 +1,16 @@
+{
+  "schema": "ftir-form/1",
+  "id": "example-amine-hcl",
+  "substance": "example-amine",
+  "form_type": "salt",
+  "stoichiometry": "1:1",
+  "stereo": "racemate",
+  "inchikey_form": "ABCDEFGHIJKLMN-UHFFFAOYSA-N",
+  "sources": [
+    {
+      "field": "inchikey",
+      "source": "wikidata",
+      "consulted": "2026-10-12"
+    }
+  ]
+}

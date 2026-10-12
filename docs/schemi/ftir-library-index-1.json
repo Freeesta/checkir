@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:ftir-library-index:1",
+  "title": "Compact library index (index.json)",
+  "title_it": "Indice di libreria compatta (index.json)",
+  "description": "Compact library index (index.json)",
+  "description_it": "Indice di libreria compatta (index.json)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ftir-library-index/1",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "spectra": {
+      "description": "Rows in the order of data.bin.",
+      "description_it": "Righe nell'ordine di data.bin.",
+      "type": "array",
+      "items": {
+        "description": "One spectrum of the index.",
+        "description_it": "Uno spettro dell'indice.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Spectrum id.",
+            "description_it": "Id spettro.",
+            "type": "string",
+            "minLength": 1
+          },
+          "form": {
+            "description": "Form id.",
+            "description_it": "Id forma.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "substance": {
+            "description": "Substance id.",
+            "description_it": "Id sostanza.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "names": {
+            "description": "Preferred names.",
+            "description_it": "Nomi preferiti.",
+            "type": "object",
+            "properties": {
+              "it": {
+                "description": "Italian.",
+                "description_it": "Italiano.",
+                "type": "string"
+              },
+              "en": {
+                "description": "English.",
+                "description_it": "Inglese.",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "en"
+            ],
+            "additionalProperties": false
+          },
+          "classes": {
+            "description": "Class ids.",
+            "description_it": "Id classe.",
+            "type": "array",
+            "items": {
+              "description": "Id.",
+              "description_it": "Id.",
+              "type": "string",
+              "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+            }
+          },
+          "inchikey": {
+            "description": "InChIKey.",
+            "description_it": "InChIKey.",
+            "type": "string",
+            "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
+          },
+          "quality": {
+            "description": "Worst quality result.",
+            "description_it": "Esito di qualità peggiore.",
+            "type": "string",
+            "enum": [
+              "pass",
+              "warning"
+            ]
+          },
+          "provenance_type": {
+            "description": "Provenance type.",
+            "description_it": "Tipo di provenienza.",
+            "type": "string",
+            "enum": [
+              "certified_standard",
+              "reference_material",
+              "confirmed_sample",
+              "unconfirmed_sample"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "form",
+          "substance",
+          "names",
+          "classes",
+          "quality",
+          "provenance_type"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "spectra"
+  ],
+  "additionalProperties": false
+}
