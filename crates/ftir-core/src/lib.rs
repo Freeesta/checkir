@@ -10,6 +10,7 @@ pub mod spectrum;
 pub mod steps;
 pub mod synthetic;
 pub mod synthetic_jcamp;
+pub mod synthetic_text;
 
 /// Version of the engine, read from the crate manifest.
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");

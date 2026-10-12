@@ -43,4 +43,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - run: echo "no reader targets yet; later cargo fuzz on every reader, a fixed number of seconds each (never a gate of the pull requests)"
+      - run: rustup toolchain install nightly --profile minimal
+      - run: cargo install cargo-fuzz --locked
+      # A fixed time per reader; a crash found here becomes a case of tests/robustness.rs. Never a gate of the pull requests.
+      - run: for t in jcamp text; do cargo +nightly fuzz run "$t" -- -max_total_time=120; done
