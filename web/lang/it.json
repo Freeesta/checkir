@@ -22,7 +22,7 @@
   "table.wavenumber": "Numero d'onda (cm⁻¹)",
   "table.absorbance": "Assorbanza",
   "table.region": "Tabella scorrevole dei dati dello spettro",
-  "footer.notice": "Il programma propone, la persona esperta decide. Nessun file lascia il tuo computer.",
+  "footer.notice": "{app} propone, la persona esperta decide. Nessun file lascia il tuo computer.",
   "reader.limit_exceeded": "Il file supera un limite di sicurezza ({limit}, massimo {max}).",
   "reader.encoding_fallback": "Il file non è UTF-8 valido: è stato letto come Windows-1252, quindi alcuni caratteri possono differire dall'originale.",
   "reader.bom_removed": "È stato tolto un segno di ordine dei byte all'inizio del file.",
