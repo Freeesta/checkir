@@ -1,4 +1,5 @@
-/target
-node_modules/
-/web/pkg/
 *.wasm
+/site/
+/target
+/web/pkg/
+node_modules/
