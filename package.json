@@ -1,0 +1,13 @@
+{
+  "name": "checkir-test",
+  "private": true,
+  "type": "module",
+  "description": "Dev-only dependencies of the browser tests; the site itself has no dependencies and no build step.",
+  "scripts": {
+    "e2e": "node tests_e2e/fumo.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3",
+    "playwright": "1.56.1"
+  }
+}
