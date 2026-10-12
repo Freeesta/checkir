@@ -22,5 +22,5 @@
   "table.wavenumber": "Wavenumber (cm⁻¹)",
   "table.absorbance": "Absorbance",
   "table.region": "Scrollable table of the spectrum data",
-  "footer.notice": "The program proposes, the expert decides. No file leaves your computer."
+  "footer.notice": "{app} proposes, the expert decides. No file leaves your computer."
 }

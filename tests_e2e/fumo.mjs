@@ -77,6 +77,18 @@ try {
   const violationsEn = await axe(page);
   check("[en] axe has no violations", violationsEn.length === 0, violationsEn.join(", "));
   await ctx.close();
+
+  // The product name lives only in appname.js: swapping that module changes it everywhere (title, heading, catalog text, manifest id).
+  const ctxName = await browser.newContext({ locale: "it-IT" });
+  await ctxName.route("**/appname.js", (route) =>
+    route.fulfill({ contentType: "text/javascript", body: 'export const APP_NAME = "provanome"; export const APP_ID = "provaid"; export const STORAGE_PREFIX = "provaid.";' }),
+  );
+  const pageName = await ctxName.newPage();
+  await pageName.goto(base);
+  await pageName.waitForSelector("body[data-ready='1']");
+  check("name: title, heading and footer show APP_NAME", (await pageName.title()) === "provanome" && (await pageName.textContent("#app-name")) === "provanome" && /^provanome /.test((await pageName.textContent(".footer p")) ?? ""));
+  check("name: default name absent from the page", !/checkir/i.test(await pageName.evaluate(() => document.body.innerText + document.title)));
+  await ctxName.close();
 } finally {
   await browser.close();
   server.close();

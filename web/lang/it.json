@@ -22,5 +22,5 @@
   "table.wavenumber": "Numero d'onda (cm⁻¹)",
   "table.absorbance": "Assorbanza",
   "table.region": "Tabella scorrevole dei dati dello spettro",
-  "footer.notice": "Il programma propone, la persona esperta decide. Nessun file lascia il tuo computer."
+  "footer.notice": "{app} propone, la persona esperta decide. Nessun file lascia il tuo computer."
 }

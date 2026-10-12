@@ -1,5 +1,5 @@
 // @ts-check
-import { STORAGE_PREFIX } from "./appname.js";
+import { APP_NAME, STORAGE_PREFIX } from "./appname.js";
 
 /** Languages with a catalog in `lang/`. */
 export const LANGS = ["it", "en"];
@@ -46,14 +46,16 @@ export async function loadLang(lang) {
 }
 
 /**
- * Translate a key; `{name}` placeholders are replaced from `params`. Unknown keys show the key itself.
+ * Translate a key; `{name}` placeholders are replaced from `params`; `{app}` is the product name unless given. Unknown keys show the key itself.
  * @param {string} key
  * @param {Record<string, string | number>} [params]
  * @returns {string}
  */
 export function t(key, params = {}) {
   const text = catalog[key] ?? key;
-  return text.replace(/\{(\w+)\}/g, (m, name) => (name in params ? String(params[name]) : m));
+  /** @type {Record<string, string | number>} */
+  const all = { app: APP_NAME, ...params };
+  return text.replace(/\{(\w+)\}/g, (m, name) => (name in all ? String(all[name]) : m));
 }
 
 /** Translate the `data-i18n*` attributes under `root`. */
