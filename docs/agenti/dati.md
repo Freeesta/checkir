@@ -15,6 +15,10 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
   - `review_by` ≤ 24 mesi, correlazione ≥ 0.98 tra sostanze diverse.
   - Soglie di qualità provvisorie (MATCH le calibra). Il lettore JCAMP (`jcamp.py`) legge solo `##XYPOINTS=(XY..XY)`; altri layout si convertono prima dell'ingresso in `data/`.
 
+## Contributi dalla comunità
+- Moduli delle issue in `.github/ISSUE_TEMPLATE/` (`sheet`, `new-sheet`, `translation`, `spectrum`, `alert`, `bug`; issue vuote disattivate): bilingui en/it, avviso «tutto è pubblico» in testa, caselle senza dati personali (+ DCO e licenza per chi porta testi o dati). Gli `id` dei campi sono un contratto: la pagina (pacchetto PROPONI) precompila il modulo da URL con `?template=sheet.yml&substance=…&section=…`; `section` usa le 10 chiavi fisse delle schede, `language` usa `en`/`it`.
+- Etichette come dati in `.github/labels.yml`; il workflow `labels` le crea/aggiorna al push su `main` (`tools/sync_labels.py`, PyYAML fissato, mai testo di issue in `run:`). Un'etichetta nuova usata da un modulo va aggiunta lì (lo controlla `tools/dati/test_issue_forms.py`).
+
 ## Prove
 - `pip install -r tools/dati/requirements.txt` (jsonschema fissato), poi `python3 tools/dati/valida_schemi.py --schemi | --fixture | FILE...` e `python3 -m unittest discover -s tools/dati -p 'test_*.py'`. Il job `data` della CI esegue questi tre comandi e `python3 tools/dati/controlla_dati.py` (filtro: `data/`, `docs/schemi/`, `tests/fixture/schemi/`, `tools/dati/`).
 

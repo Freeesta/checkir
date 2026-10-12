@@ -1,25 +1,43 @@
-name: Bug report
-description: Something does not work. / Qualcosa non funziona.
+name: "Error or bug / Errore o bug"
+description: "Something does not work, or something is wrong in a text or a result. / Qualcosa non funziona, o c'è un errore in un testo o in un risultato."
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.**"
+  - type: input
+    id: where
+    attributes:
+      label: "Where? / Dove?"
+      description: "Page, sheet and section, or screen. / Pagina, scheda e sezione, o schermata."
+    validations:
+      required: true
   - type: textarea
     id: what
     attributes:
-      label: What happened? / Cosa è successo?
-      description: What you did, what you expected, what you saw. / Cosa hai fatto, cosa ti aspettavi, cosa hai visto.
+      label: "What is wrong, what did you expect? / Cosa è sbagliato, cosa ti aspettavi?"
+      description: "What you did, what you saw. Never attach real sample files. / Cosa hai fatto, cosa hai visto. Non allegare file di campioni reali."
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Severity / Gravità"
+      options:
+        - "Wrong health or safety information / Informazione sanitaria o di sicurezza sbagliata"
+        - "Wrong result or broken feature / Risultato sbagliato o funzione rotta"
+        - "Minor, cosmetic or wording / Lieve, estetico o di formulazione"
     validations:
       required: true
   - type: input
     id: browser
     attributes:
-      label: Browser and system / Browser e sistema
-      placeholder: Firefox 130, Windows 10
-    validations:
-      required: true
+      label: "Browser and system / Browser e sistema"
+      placeholder: "Firefox 130, Windows 10"
   - type: checkboxes
     id: declarations
     attributes:
-      label: Declarations / Dichiarazioni
+      label: "Declarations / Dichiarazioni"
       options:
-        - label: I did not attach personal data or real sample files. / Non ho allegato dati personali né file di campioni reali.
+        - label: "I did not write or attach personal data or real sample files. / Non ho scritto né allegato dati personali o file di campioni reali."
           required: true

@@ -1,32 +1,55 @@
-name: Alert
-description: Report a dangerous substance family or a wrong alert. / Segnala una famiglia di sostanze pericolosa o un'allerta sbagliata.
-labels: ["alert", "urgent"]
+name: "Alert / Allerta"
+description: "Report a dangerous substance family or a wrong alert. / Segnala una famiglia di sostanze pericolosa o un'allerta sbagliata."
+labels: ["alert", "needs-review"]
 body:
   - type: markdown
     attributes:
-      value: Alerts need two reviewers. Public communication belongs to services and authorities. No places, venues, vendors or people. / Le allerte richiedono due revisori. La comunicazione pubblica spetta ai servizi e agli enti. Niente luoghi, locali, venditori o persone.
+      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.** Alerts need two reviewers, one of them from health care. Public communication belongs to services and authorities. / Le allerte richiedono due revisori, uno sanitario. La comunicazione pubblica spetta ai servizi e agli enti."
   - type: input
-    id: family
+    id: target
     attributes:
-      label: Substance or family / Sostanza o famiglia
+      label: "Substance or family / Sostanza o famiglia"
     validations:
       required: true
-  - type: textarea
+  - type: dropdown
     id: reason
     attributes:
-      label: Why is it dangerous or why is the alert wrong? / Perché è pericolosa o perché l'allerta è sbagliata?
+      label: "Reason / Motivo"
+      options:
+        - "Potent substance in traces / Sostanza potente in tracce"
+        - "Unexpected adulterant / Adulterante inatteso"
+        - "Wrong or outdated alert / Allerta sbagliata o superata"
+        - "Other (explain below) / Altro (spiega sotto)"
     validations:
       required: true
   - type: textarea
-    id: sources
+    id: details
     attributes:
-      label: Sources (required) / Fonti (obbligatorie)
+      label: "Why is it dangerous or why is the alert wrong? / Perché è pericolosa o perché l'allerta è sbagliata?"
+    validations:
+      required: true
+  - type: input
+    id: official_source
+    attributes:
+      label: "Official source (link, required) / Fonte ufficiale (link, obbligatoria)"
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: "Urgency / Urgenza"
+      description: "Urgent alerts get the label urgent and a review within 48 hours. / Le allerte urgenti ricevono l'etichetta urgent e una revisione entro 48 ore."
+      options:
+        - "Normal / Normale"
+        - "Urgent: people may be harmed now / Urgente: persone possono subire danni ora"
     validations:
       required: true
   - type: checkboxes
     id: declarations
     attributes:
-      label: Declarations / Dichiarazioni
+      label: "Declarations / Dichiarazioni"
       options:
-        - label: This report contains no personal data, places, venues or vendors. / Questa segnalazione non contiene dati personali, luoghi, locali o venditori.
+        - label: "This report contains no personal data, places, venues or vendors. / Questa segnalazione non contiene dati personali, luoghi, locali o venditori."
+          required: true
+        - label: "I certify the Developer Certificate of Origin 1.1 (https://developercertificate.org/): I have the right to submit this. / Certifico il Developer Certificate of Origin 1.1: ho il diritto di inviare questo contributo."
           required: true

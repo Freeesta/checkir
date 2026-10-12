@@ -1,25 +1,42 @@
-name: Translation
-description: Offer a translation or report a wrong one. / Offri una traduzione o segnala un errore.
-labels: ["translation"]
+name: "Translation / Traduzione"
+description: "Offer a translation or report a wrong one. / Offri una traduzione o segnala un errore."
+labels: ["translation", "needs-review"]
 body:
+  - type: markdown
+    attributes:
+      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.** Health texts are approved by a health reviewer before publication; doses stay hidden until then. / I testi sanitari li approva un revisore sanitario prima della pubblicazione; le dosi restano nascoste fino ad allora."
+  - type: input
+    id: target
+    attributes:
+      label: "Substance sheet or interface page / Scheda o pagina dell'interfaccia"
+      description: "A substance id, or the catalog key names. / Un id di sostanza o i nomi delle chiavi del catalogo."
+    validations:
+      required: true
   - type: input
     id: language
     attributes:
-      label: Language / Lingua
-      placeholder: fr
+      label: "Language code / Codice lingua"
+      placeholder: "fr"
     validations:
       required: true
   - type: textarea
-    id: what
+    id: text
     attributes:
-      label: What do you offer or what is wrong? / Cosa offri o cosa non va?
-      description: Key names and the proposed text. Health texts return to a health reviewer. / Chiavi e testo proposto. I testi sanitari tornano a un revisore sanitario.
+      label: "Translation, or what is wrong / Traduzione, o cosa non va"
     validations:
       required: true
+  - type: input
+    id: public_name
+    attributes:
+      label: "Name for the credits (optional, public; a pseudonym is fine) / Nome per i crediti (facoltativo, pubblico; va bene uno pseudonimo)"
   - type: checkboxes
     id: declarations
     attributes:
-      label: Declarations / Dichiarazioni
+      label: "Declarations / Dichiarazioni"
       options:
-        - label: I wrote the translation and agree to publish it with the project licence. / Ho scritto io la traduzione e accetto di pubblicarla con la licenza del progetto.
+        - label: "The text contains no personal data, no synthesis, extraction or cutting instructions, and no vendors or places to buy. / Il testo non contiene dati personali, istruzioni di sintesi, estrazione o taglio, né venditori o luoghi d'acquisto."
+          required: true
+        - label: "I certify the Developer Certificate of Origin 1.1 (https://developercertificate.org/): I have the right to submit this. / Certifico il Developer Certificate of Origin 1.1: ho il diritto di inviare questo contributo."
+          required: true
+        - label: "I wrote the translation and agree to publish it with the licence of the part it enters (CC BY-SA 4.0 for sheets, project licence for the interface). / Ho scritto io la traduzione e accetto di pubblicarla con la licenza della parte in cui entra (CC BY-SA 4.0 per le schede, licenza del progetto per l'interfaccia)."
           required: true
