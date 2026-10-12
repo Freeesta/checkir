@@ -1,8 +1,9 @@
 // Service worker: makes the site work offline. Cache name carries the project prefix; bump VERSION to renew it.
-const VERSION = "1";
-const CACHE = "checkir-v" + VERSION;
+const VERSION = "2";
+const ID = new URL(self.location.href).searchParams.get("id") || "app";
+const CACHE = ID + "-v" + VERSION;
 const FILES = [
-  "./", "index.html", "style.css", "main.js", "appname.js", "i18n.js", "chart.js", "spectrum.js", "view.js", "engine.js",
+  "./", "index.html", "style.css", "main.js", "appname.js", "manifest.webmanifest", "img/logo.svg", "img/icon-16.png", "img/icon-32.png", "img/icon-192.png", "img/icon-512.png", "i18n.js", "chart.js", "spectrum.js", "view.js", "engine.js",
   "lang/it.json", "lang/en.json", "wasm/ftir_wasm.js", "wasm/ftir_wasm_bg.wasm",
 ];
 
@@ -13,7 +14,7 @@ self.addEventListener("install", (e) => {
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys()
-      .then((ks) => Promise.all(ks.filter((k) => k.startsWith("checkir-") && k !== CACHE).map((k) => caches.delete(k))))
+      .then((ks) => Promise.all(ks.filter((k) => k.startsWith(ID + "-") && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim()),
   );
 });

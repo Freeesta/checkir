@@ -9,22 +9,34 @@
   --oi-vermiglio: #d55e00;
   --oi-viola: #cc79a7;
   --sfondo: #ffffff;
-  --testo: #1a1a1a;
+  --testo: #1b1e22;
   --testo-tenue: #4a4a4a;
   --bordo: #767676;
   --superficie: #f4f4f4;
-  --linea: var(--oi-blu);
+  /* Colour roles (light): what each colour means; the chart and the text use only these names. */
+  --colore-nome: var(--oi-blu);
+  --colore-campione: var(--oi-blu);
+  --colore-riferimento: var(--oi-arancio); /* thick lines only, never text (2.3:1 on white) */
+  --colore-residuo: var(--oi-viola);
+  --colore-allerta: var(--oi-vermiglio); /* graphics; text next to it stays in --testo */
+  --colore-regione: rgb(240 228 66 / 0.25);
+  --linea: var(--colore-campione);
   --fuoco: var(--oi-vermiglio);
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --sfondo: #121212;
-    --testo: #f0f0f0;
+    --sfondo: #121417;
+    --testo: #e6e8eb;
     --testo-tenue: #c4c4c4;
     --bordo: #8a8a8a;
     --superficie: #1e1e1e;
-    --linea: var(--oi-azzurro);
+    --colore-nome: var(--oi-azzurro);
+    --colore-campione: var(--oi-azzurro);
+    --colore-riferimento: var(--oi-arancio);
+    --colore-residuo: var(--oi-viola);
+    --colore-allerta: var(--oi-vermiglio);
+    --colore-regione: rgb(240 228 66 / 0.2);
     --fuoco: var(--oi-giallo);
   }
 }
@@ -37,7 +49,9 @@ body {
 }
 .header, main, .footer { max-width: 60rem; margin: 0 auto; padding: 0.75rem 1rem; }
 .header { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
-h1 { margin: 0; font-size: 1.75rem; }
+h1 { margin: 0; font-size: 1.75rem; font-weight: 400; }
+.brand { display: flex; align-items: center; gap: 0.75rem; }
+.logo { width: 2.25rem; height: 2.25rem; flex: none; background: var(--colore-nome); -webkit-mask: url(img/logo.svg) center / contain no-repeat; mask: url(img/logo.svg) center / contain no-repeat; }
 h2 { font-size: 1.25rem; }
 p { margin: 0.25rem 0; }
 .help, .footer { color: var(--testo-tenue); font-size: 0.9rem; }
