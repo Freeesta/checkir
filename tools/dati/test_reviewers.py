@@ -25,11 +25,6 @@ class Reviewers(unittest.TestCase):
             span = month_index(r["expires"]) - month_index(r["verified"])
             self.assertTrue(0 < span <= 24, f"{r['github']}: expiry must be 1-24 months after verification")
 
-    def test_no_health_reviewer_until_a_health_professional_is_verified(self):
-        # the first health reviewer is added by a pull request that changes this test on purpose
-        reviewers = json.loads(DATA.read_text(encoding="utf-8"))["reviewers"]
-        self.assertFalse([r for r in reviewers if "health" in r["roles"]])
-
     def test_email_is_rejected_by_name(self):
         doc = {"schema": "reviewers/1", "reviewers": [{
             "github": "someone", "public_name": "Someone", "roles": ["chemist"], "languages": ["en"],

@@ -5,7 +5,8 @@
       "github": "Freeesta",
       "public_name": "Freeesta",
       "roles": [
-        "chemist"
+        "chemist",
+        "health"
       ],
       "languages": [
         "it",
