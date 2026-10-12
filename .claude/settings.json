@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./web/vendor/**)",
+      "Read(./site/**)",
+      "Read(./target/**)",
+      "Read(./.git/**)",
+      "Read(./**/__pycache__/**)",
+      "Read(./tests_e2e/shots/**)"
+    ]
+  },
+  "autoCompactWindow": 350000
+}

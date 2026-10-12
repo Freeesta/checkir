@@ -1,0 +1,53 @@
+# Publishes the site at every push to main. The site is static: everything runs in the visitor's browser and nothing is uploaded.
+# One-time setting on GitHub: Settings > Pages > Build and deployment > Source: "GitHub Actions".
+# The .wasm files are built here and never committed.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain (version pinned in rust-toolchain.toml)
+        run: rustup show
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin/wasm-bindgen
+            target
+          key: pages-rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}
+      - name: Build the site (page + WASM engine; wasm-bindgen CLI at the version of Cargo.lock)
+        run: bash tools/costruisci_sito.sh
+      - name: Size guard of the engine (decide the limit once, raise it only by decision)
+        run: |
+          size=$(stat -c %s site/wasm/ftir_wasm_bg.wasm); echo "engine: $size bytes"
+          [ "$size" -le 2000000 ] || { echo "::error::engine over the size limit"; exit 1; }
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

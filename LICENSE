@@ -1,0 +1,12 @@
+Licenses of checkir
+
+- Source code (Rust, JavaScript, scripts, workflows): dual license, at your option,
+  MIT (LICENSE-MIT) OR Apache-2.0 (LICENSE-APACHE).
+- Texts (documentation, guides, user-facing explanations): CC BY 4.0
+  https://creativecommons.org/licenses/by/4.0/
+- Data: new spectra and data are CC BY 4.0; substance sheets (schede) are CC BY-SA 4.0.
+  Each data file declares its own license and attribution; third-party libraries keep
+  the license and conditions given by their owners (see LICENZE-TERZI.md).
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for
+inclusion in this work shall be licensed as above, without any additional terms or conditions.

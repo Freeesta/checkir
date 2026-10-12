@@ -1,0 +1,32 @@
+# cargo-deny: allowed licences and sources (job `deny` of ci.yml) and advisories (daily, advisories.yml).
+# Every ignored advisory needs a comment with the reason and the condition to remove it.
+[advisories]
+version = 2
+yanked = "warn"
+ignore = []
+
+[licenses]
+version = 2
+# Permissive licences for code and fonts. CC0 and CC BY are for data only. No GPL code is translated or linked into the program.
+allow = [
+  "MIT",
+  "Apache-2.0",
+  "Apache-2.0 WITH LLVM-exception",
+  "BSD-2-Clause",
+  "BSD-3-Clause",
+  "MPL-2.0",
+  "ISC",
+  "Unicode-3.0",
+  "Zlib",
+  "OFL-1.1",
+]
+confidence-threshold = 0.9
+
+[bans]
+multiple-versions = "allow"
+wildcards = "deny"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]

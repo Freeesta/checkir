@@ -3,7 +3,7 @@
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
-import { chromium } from "playwright";
+import { chromium, firefox, webkit } from "playwright";
 
 const SITE = new URL("../site/", import.meta.url).pathname;
 const TIPI = { ".html": "text/html", ".js": "text/javascript", ".json": "application/json", ".css": "text/css", ".wasm": "application/wasm" };
@@ -34,7 +34,7 @@ async function axe(page) {
   return page.evaluate(async () => (await window.axe.run(document, { runOnly: ["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"] })).violations.map((v) => `${v.id}: ${v.nodes.length}`));
 }
 
-const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
+const browser = await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
 try {
   for (const scheme of ["light", "dark"]) {
     const ctx = await browser.newContext({ colorScheme: scheme, locale: "it-IT" });
