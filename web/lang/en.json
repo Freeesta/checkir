@@ -1,6 +1,7 @@
 {
   "app.skip": "Skip to content",
   "app.tagline": "Open-source FTIR analysis for drug checking",
+  "share.description": "Open-source FTIR analysis for drug checking. The program proposes, the expert decides.",
   "lang.label": "Language",
   "lang.it": "Italiano",
   "lang.en": "English",
