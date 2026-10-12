@@ -1,0 +1,27 @@
+[package]
+name = "ftir-fuzz"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+ftir-core = { path = "../crates/ftir-core" }
+
+# Not part of the main workspace: built only by the nightly job (`cargo +nightly fuzz run <target>`).
+[workspace]
+
+[[bin]]
+name = "jcamp"
+path = "fuzz_targets/jcamp.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "text"
+path = "fuzz_targets/text.rs"
+test = false
+doc = false

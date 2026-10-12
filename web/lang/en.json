@@ -44,5 +44,17 @@
   "reader.jcamp.xunits_unknown": "The x unit \"{value}\" is not recognised: the axis is shown in points.",
   "reader.jcamp.yunits_unknown": "The y unit \"{value}\" is not recognised: choose it before processing.",
   "reader.jcamp.transmittance_range": "Transmittance values up to {max} fit neither 0–1 nor 0–100: choose the unit before processing.",
-  "reader.jcamp.date_ambiguous": "The date \"{value}\" can be read as day/month or month/day: it was kept as written."
+  "reader.jcamp.date_ambiguous": "The date \"{value}\" can be read as day/month or month/day: it was kept as written.",
+  "reader.text.ambiguous": "The file can be read in more than one way ({alternatives}). Choose the column separator and the decimal mark.",
+  "reader.text.no_data": "No table of numbers was found in the file.",
+  "reader.text.not_monotonic": "The first column is not strictly increasing or decreasing, so it cannot be a spectrum axis.",
+  "reader.text.rows_skipped": "{count} lines after the first data row are not data and were kept as text.",
+  "reader.text.extra_columns": "The file has {count} value columns: each one is opened as a separate spectrum.",
+  "reader.text.npoints_mismatch": "The header declares {expected} points but the file contains {found}: the points found were used.",
+  "reader.text.xunit_unknown": "The x unit is not stated in the file; it is shown in points until you choose it.",
+  "reader.text.xunit_hint_cm1": "The x unit is not stated; the values look like wavenumbers in cm⁻¹, but this was not assumed.",
+  "reader.text.yunit_unknown": "The y unit is not stated in the file; choose it before processing.",
+  "reader.text.yunit_hint_percent_t": "The y unit is not stated; values from 0 to 100 with a baseline near 100 look like %T, but this was not assumed.",
+  "reader.text.yunit_hint_absorbance": "The y unit is not stated; small positive values look like absorbance, but this was not assumed.",
+  "reader.asc.axis_missing": "This ASC file has only y values and its header does not give the first and last x (FIRSTX, LASTX), so the axis is unknown."
 }
