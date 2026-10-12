@@ -255,9 +255,14 @@ impl Limits {
     };
 }
 
-/// Choices of the user passed on re-opening (e.g. a forced separator). None are defined for JCAMP-DX.
+/// Choices of the user passed on re-opening. JCAMP-DX defines none; the text reader takes a forced separator and decimal.
 #[derive(Debug, Clone, Default, PartialEq, Eq)]
-pub struct Options {}
+pub struct Options {
+    /// Column separator: `'\t'`, `';'`, `','` or `' '` (any run of white space).
+    pub separator: Option<char>,
+    /// Decimal mark: `'.'` or `','`.
+    pub decimal: Option<char>,
+}
 
 /// A translatable read error: `key` is looked up in the catalogs, `params` fill its placeholders.
 #[derive(Debug, Clone, PartialEq, Eq)]

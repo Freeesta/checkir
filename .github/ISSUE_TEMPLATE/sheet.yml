@@ -1,41 +1,75 @@
-name: Substance sheet
-description: Propose or correct a substance sheet. / Proponi o correggi una scheda di sostanza.
-labels: ["sheet", "needs-review"]
+name: "Correct a substance sheet / Correggi una scheda"
+description: "Propose a correction to one section of a substance sheet. / Proponi la correzione di una sezione di una scheda."
+labels: ["sheet", "proposal", "needs-review"]
 body:
   - type: markdown
     attributes:
-      value: Health texts are always approved by a health reviewer. See docs/contribute/sheet.md. / I testi sanitari li approva sempre un revisore sanitario. Vedi docs/contribute/sheet.it.md.
+      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.** Every statement needs a source, and a reviewer listed in data/reviewers.json approves the text before publication. / Ogni affermazione richiede una fonte e un revisore elencato in data/reviewers.json approva il testo prima della pubblicazione."
   - type: input
     id: substance
     attributes:
-      label: Substance / Sostanza
+      label: "Substance id / Id della sostanza"
+      description: "The folder name under data/substances/, e.g. synthetic-a. / Il nome della cartella in data/substances/."
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: "Section / Sezione"
+      options:
+        - "molecule"
+        - "category"
+        - "ftir_limits"
+        - "effects"
+        - "doses"
+        - "risks"
+        - "interactions"
+        - "harm_reduction"
+        - "sources"
+        - "license"
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: "Language of the text / Lingua del testo"
+      options:
+        - "en"
+        - "it"
     validations:
       required: true
   - type: input
-    id: section
+    id: version
     attributes:
-      label: Section to add or correct / Sezione da aggiungere o correggere
+      label: "Sheet version you read / Versione della scheda letta"
+      description: "Shown on the sheet. / Indicata sulla scheda."
     validations:
       required: true
   - type: textarea
     id: text
     attributes:
-      label: Proposed text / Testo proposto
-      description: Short sentences, one fact each. Never "safe", "pure" or "clean". / Frasi brevi, un fatto ciascuna. Mai «sicuro», «puro», «pulito».
+      label: "Proposed text / Testo proposto"
+      description: "Short sentences, one fact each, each ending with [f:source-id] or a new source below. Never \"safe\", \"pure\" or \"clean\". / Frasi brevi, un fatto ciascuna, ognuna con [f:id-fonte] o una fonte nuova qui sotto. Mai «sicuro», «puro», «pulito»."
     validations:
       required: true
   - type: textarea
     id: sources
     attributes:
-      label: Sources (required) / Fonti (obbligatorie)
+      label: "Sources, DOI or URL (required) / Fonti, DOI o URL (obbligatorie)"
     validations:
       required: true
+  - type: input
+    id: public_name
+    attributes:
+      label: "Name for the credits (optional, public; a pseudonym is fine) / Nome per i crediti (facoltativo, pubblico; va bene uno pseudonimo)"
   - type: checkboxes
     id: declarations
     attributes:
-      label: Declarations / Dichiarazioni
+      label: "Declarations / Dichiarazioni"
       options:
-        - label: The text contains no personal data, synthesis or cutting instructions, vendors or places to buy. / Il testo non contiene dati personali, istruzioni di sintesi o taglio, venditori o luoghi d'acquisto.
+        - label: "The text contains no personal data, no synthesis, extraction or cutting instructions, and no vendors or places to buy. / Il testo non contiene dati personali, istruzioni di sintesi, estrazione o taglio, né venditori o luoghi d'acquisto."
           required: true
-        - label: I wrote it or have the right to publish it, and I agree to CC BY-SA 4.0. / L'ho scritto io o ho il diritto di pubblicarlo, e accetto la licenza CC BY-SA 4.0.
+        - label: "I certify the Developer Certificate of Origin 1.1 (https://developercertificate.org/): I have the right to submit this. / Certifico il Developer Certificate of Origin 1.1: ho il diritto di inviare questo contributo."
+          required: true
+        - label: "I wrote it or have the right to publish it, and I agree to CC BY-SA 4.0. / L'ho scritto io o ho il diritto di pubblicarlo, e accetto la licenza CC BY-SA 4.0."
           required: true
