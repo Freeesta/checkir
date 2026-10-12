@@ -1,0 +1,6 @@
+{
+  "schema": "aliases/1",
+  "aliases": {
+    "Old": "new"
+  }
+}

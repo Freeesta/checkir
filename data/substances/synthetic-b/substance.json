@@ -1,0 +1,40 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "synthetic-b",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Synthetic example B"
+    },
+    "it": {
+      "preferred": "Esempio sintetico B"
+    }
+  },
+  "iupac": "synthetic example B (fictitious, not a real substance)",
+  "formula": "C10H10",
+  "molar_mass_g_mol": 130.19,
+  "smiles": "C",
+  "inchi": "InChI=1S/synthetic-b",
+  "inchikey": "SYNTHETICBBBBB-EXAMPLETWO-N",
+  "external_ids": {
+    "cas": "00-00-1"
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "diluent_excipient"
+    ]
+  },
+  "sources": [
+    {
+      "field": "all",
+      "source": "synthetic-generator",
+      "consulted": "2026-10-12"
+    }
+  ]
+}

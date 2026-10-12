@@ -1,0 +1,85 @@
+{
+  "schema": "ftir-spectrum/1",
+  "id": "synthetic-a-base.checkir.001",
+  "form": "synthetic-a-base",
+  "role": "reference",
+  "technique": {
+    "method": "ATR",
+    "crystal": "diamond",
+    "reflections": 1
+  },
+  "instrument": {
+    "manufacturer": "Synthetic",
+    "model": "Generator"
+  },
+  "resolution_cm1": 4,
+  "scans": 32,
+  "range_cm1": [
+    400,
+    4000
+  ],
+  "step_cm1": 2,
+  "y_axis": "absorbance",
+  "atr_correction": false,
+  "processing": [],
+  "measured": "2026-10",
+  "provenance": {
+    "type": "certified_standard",
+    "supplier": "Synthetic data (not a measurement)"
+  },
+  "library": {
+    "name": "checkir-community",
+    "version": "0.0.1"
+  },
+  "contributors": [
+    {
+      "public_name": "checkir synthetic generator"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "sha256": "b6809b53e17ae31eec8c7f2ee890ae7113dfc2c0606acc514d9c3f919a02f391",
+  "original_format": "JCAMP-DX 5.01",
+  "review": {
+    "state": "proposed",
+    "reviewers": [],
+    "date": "2026-10-12"
+  },
+  "quality": {
+    "checks": [
+      {
+        "criterion": "range",
+        "result": "pass"
+      },
+      {
+        "criterion": "resolution",
+        "result": "pass",
+        "value": 4
+      },
+      {
+        "criterion": "scans",
+        "result": "pass",
+        "value": 32
+      },
+      {
+        "criterion": "saturation",
+        "result": "pass",
+        "value": 0.625
+      },
+      {
+        "criterion": "signal",
+        "result": "pass",
+        "value": 0.625
+      },
+      {
+        "criterion": "noise",
+        "result": "pass",
+        "value": 400.9
+      },
+      {
+        "criterion": "co2",
+        "result": "pass",
+        "value": 0.0074
+      }
+    ]
+  }
+}
