@@ -1,0 +1,2 @@
+# Labels that are not copied into a field, with the reason (one per line: LABEL | reason).
+END | block terminator: structure of the file, its absence is reported as reader.jcamp.end_missing
