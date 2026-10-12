@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:classes:1",
+  "title": "Classification in three axes (classes.json)",
+  "title_it": "Classificazione in tre assi (classes.json)",
+  "description": "Classification in three axes (classes.json)",
+  "description_it": "Classificazione in tre assi (classes.json)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "classes/1",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "classes": {
+      "description": "All classes.",
+      "description_it": "Tutte le classi.",
+      "type": "array",
+      "items": {
+        "description": "A class.",
+        "description_it": "Una classe.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Class id.",
+            "description_it": "Id classe.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          },
+          "axis": {
+            "description": "Axis.",
+            "description_it": "Asse.",
+            "type": "string",
+            "enum": [
+              "chemical",
+              "effect",
+              "role"
+            ]
+          },
+          "parent": {
+            "description": "Parent class id.",
+            "description_it": "Id della classe madre.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          },
+          "names": {
+            "description": "Names.",
+            "description_it": "Nomi.",
+            "type": "object",
+            "properties": {
+              "it": {
+                "description": "Italian.",
+                "description_it": "Italiano.",
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "description": "English.",
+                "description_it": "Inglese.",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "it",
+              "en"
+            ],
+            "additionalProperties": false
+          },
+          "description": {
+            "description": "Description.",
+            "description_it": "Descrizione.",
+            "type": "object",
+            "properties": {
+              "it": {
+                "description": "Italian text.",
+                "description_it": "Testo in italiano.",
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "description": "English text.",
+                "description_it": "Testo in inglese.",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "mappings": {
+            "description": "Mappings to external classifications, each with the source.",
+            "description_it": "Mappature verso classificazioni esterne.",
+            "type": "object",
+            "properties": {
+              "unodc_ewa": {
+                "description": "Exact UNODC EWA group text.",
+                "description_it": "Testo esatto del gruppo UNODC EWA.",
+                "type": "string",
+                "minLength": 1
+              },
+              "euda": {
+                "description": "EUDA category.",
+                "description_it": "Categoria EUDA.",
+                "type": "string",
+                "minLength": 1
+              },
+              "wikidata": {
+                "description": "Wikidata QID.",
+                "description_it": "QID di Wikidata.",
+                "type": "string",
+                "pattern": "^Q[0-9]+$"
+              },
+              "chebi": {
+                "description": "ChEBI id.",
+                "description_it": "Id ChEBI.",
+                "type": "string",
+                "pattern": "^CHEBI:[0-9]+$"
+              },
+              "atc": {
+                "description": "ATC code or prefix.",
+                "description_it": "Codice o prefisso ATC.",
+                "type": "string",
+                "pattern": "^[A-Z][0-9A-Z]*$"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "source": {
+            "description": "Source id: a class without source is not allowed.",
+            "description_it": "Id fonte: una classe senza fonte non è ammessa.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "id",
+          "axis",
+          "names",
+          "source"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "classes"
+  ],
+  "additionalProperties": false
+}

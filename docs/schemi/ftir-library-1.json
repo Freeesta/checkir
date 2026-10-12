@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:ftir-library:1",
+  "title": "Compact library manifest (manifest.json)",
+  "title_it": "Manifesto di libreria compatta (manifest.json)",
+  "description": "Compact library manifest (manifest.json)",
+  "description_it": "Manifesto di libreria compatta (manifest.json)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ftir-library/1",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "name": {
+      "description": "Library id.",
+      "description_it": "Id libreria.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "version": {
+      "description": "Version.",
+      "description_it": "Versione.",
+      "type": "string",
+      "minLength": 1
+    },
+    "date": {
+      "description": "Build date.",
+      "description_it": "Data di costruzione.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "license": {
+      "description": "SPDX id.",
+      "description_it": "Id SPDX.",
+      "type": "string",
+      "pattern": "^(CC-BY-4\\.0|CC-BY-SA-4\\.0|LicenseRef-permission-[a-z0-9-]+)$"
+    },
+    "attribution": {
+      "description": "Attribution text.",
+      "description_it": "Testo di attribuzione.",
+      "type": "object",
+      "properties": {
+        "it": {
+          "description": "Italian text.",
+          "description_it": "Testo in italiano.",
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "description": "English text.",
+          "description_it": "Testo in inglese.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "en"
+      ],
+      "additionalProperties": false
+    },
+    "grid": {
+      "description": "Common grid.",
+      "description_it": "Griglia comune.",
+      "type": "object",
+      "properties": {
+        "from_cm1": {
+          "description": "Start.",
+          "description_it": "Inizio.",
+          "type": "number"
+        },
+        "to_cm1": {
+          "description": "End.",
+          "description_it": "Fine.",
+          "type": "number"
+        },
+        "step_cm1": {
+          "description": "Step.",
+          "description_it": "Passo.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "from_cm1",
+        "to_cm1",
+        "step_cm1"
+      ],
+      "additionalProperties": false
+    },
+    "n_spectra": {
+      "description": "Number of spectra.",
+      "description_it": "Numero di spettri.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "sha256_data": {
+      "description": "SHA-256 of data.bin.",
+      "description_it": "SHA-256 di data.bin.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "private": {
+      "description": "True for a library the user imported; never exported.",
+      "description_it": "True per una libreria importata dall'utente; mai esportata.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema",
+    "name",
+    "version",
+    "date",
+    "license",
+    "attribution",
+    "grid",
+    "n_spectra",
+    "sha256_data"
+  ],
+  "additionalProperties": false
+}

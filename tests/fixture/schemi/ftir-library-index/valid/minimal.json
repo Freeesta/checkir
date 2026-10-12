@@ -1,0 +1,18 @@
+{
+  "schema": "ftir-library-index/1",
+  "spectra": [
+    {
+      "id": "example-amine-hcl.checkir.001",
+      "form": "example-amine-hcl",
+      "substance": "example-amine",
+      "names": {
+        "en": "Example amine"
+      },
+      "classes": [
+        "phenethylamines"
+      ],
+      "quality": "pass",
+      "provenance_type": "certified_standard"
+    }
+  ]
+}

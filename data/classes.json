@@ -1,0 +1,434 @@
+{
+  "schema": "classes/1",
+  "classes": [
+    {
+      "id": "aminoindanes",
+      "axis": "chemical",
+      "names": {
+        "it": "Aminoindani",
+        "en": "Aminoindanes"
+      },
+      "mappings": {
+        "unodc_ewa": "Aminoindanes"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "arylcyclohexylamines",
+      "axis": "chemical",
+      "names": {
+        "it": "Arilcicloesilamine (tipo fenciclidina/ketamina)",
+        "en": "Arylcyclohexylamines (phencyclidine/ketamine type)"
+      },
+      "mappings": {
+        "unodc_ewa": "Phencyclidine-type substances"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "benzodiazepines",
+      "axis": "chemical",
+      "names": {
+        "it": "Benzodiazepine",
+        "en": "Benzodiazepines"
+      },
+      "mappings": {
+        "unodc_ewa": "Benzodiazepines"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "etomidate_analogues",
+      "axis": "chemical",
+      "names": {
+        "it": "Analoghi dell'etomidato",
+        "en": "Etomidate analogues"
+      },
+      "mappings": {
+        "unodc_ewa": "Etomidate analogues"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "fentanyls",
+      "axis": "chemical",
+      "names": {
+        "it": "Analoghi del fentanil",
+        "en": "Fentanyl analogues"
+      },
+      "mappings": {
+        "unodc_ewa": "Fentanyl analogues"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "lysergamides",
+      "axis": "chemical",
+      "names": {
+        "it": "Lisergammidi",
+        "en": "Lysergamides"
+      },
+      "mappings": {
+        "unodc_ewa": "Lysergamides"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "nitazenes",
+      "axis": "chemical",
+      "names": {
+        "it": "Nitazeni",
+        "en": "Nitazenes"
+      },
+      "mappings": {
+        "unodc_ewa": "Nitazenes"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "orphine_analogues",
+      "axis": "chemical",
+      "names": {
+        "it": "Analoghi orfina",
+        "en": "Orphine analogues"
+      },
+      "mappings": {
+        "unodc_ewa": "Orphine analogues"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "phenethylamines",
+      "axis": "chemical",
+      "names": {
+        "it": "Fenetilamine",
+        "en": "Phenethylamines"
+      },
+      "mappings": {
+        "unodc_ewa": "Phenethylamines"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "phenidates",
+      "axis": "chemical",
+      "names": {
+        "it": "Fenidati",
+        "en": "Phenidates"
+      },
+      "mappings": {
+        "unodc_ewa": "Phenidates"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "phenmetrazines",
+      "axis": "chemical",
+      "names": {
+        "it": "Fenmetrazine",
+        "en": "Phenmetrazines"
+      },
+      "mappings": {
+        "unodc_ewa": "Phenmetrazines"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "piperazines",
+      "axis": "chemical",
+      "names": {
+        "it": "Piperazine",
+        "en": "Piperazines"
+      },
+      "mappings": {
+        "unodc_ewa": "Piperazines"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "plant_based",
+      "axis": "chemical",
+      "names": {
+        "it": "Sostanze di origine vegetale (cocaina, morfina e oppiacei naturali, THC, mescalina, psilocibina)",
+        "en": "Plant-based substances (cocaine, morphine and natural opiates, THC, mescaline, psilocybin)"
+      },
+      "mappings": {
+        "unodc_ewa": "Plant-based substances"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "synthetic_cannabinoids",
+      "axis": "chemical",
+      "names": {
+        "it": "Cannabinoidi sintetici",
+        "en": "Synthetic cannabinoids"
+      },
+      "mappings": {
+        "unodc_ewa": "Synthetic cannabinoids"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "synthetic_cathinones",
+      "axis": "chemical",
+      "names": {
+        "it": "Catinoni sintetici",
+        "en": "Synthetic cathinones"
+      },
+      "mappings": {
+        "unodc_ewa": "Synthetic cathinones"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "tryptamines",
+      "axis": "chemical",
+      "names": {
+        "it": "Triptamine",
+        "en": "Tryptamines"
+      },
+      "mappings": {
+        "unodc_ewa": "Tryptamines"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "others",
+      "axis": "chemical",
+      "names": {
+        "it": "Altre sostanze",
+        "en": "Other substances"
+      },
+      "mappings": {
+        "unodc_ewa": "Other substances"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "2c",
+      "axis": "chemical",
+      "parent": "phenethylamines",
+      "names": {
+        "it": "Serie 2C",
+        "en": "2C series"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "nbome",
+      "axis": "chemical",
+      "parent": "phenethylamines",
+      "names": {
+        "it": "NBOMe",
+        "en": "NBOMe"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "amphetamines",
+      "axis": "chemical",
+      "parent": "phenethylamines",
+      "names": {
+        "it": "Anfetamine",
+        "en": "Amphetamines"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "methylenedioxy",
+      "axis": "chemical",
+      "parent": "phenethylamines",
+      "names": {
+        "it": "Fenetilamine metilenediossi",
+        "en": "Methylenedioxy phenethylamines"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "non_psychoactive",
+      "axis": "chemical",
+      "names": {
+        "it": "Sostanze non psicoattive (tagli ed eccipienti)",
+        "en": "Non-psychoactive substances (cuts and excipients)"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "local_anaesthetic",
+      "axis": "chemical",
+      "parent": "non_psychoactive",
+      "names": {
+        "it": "Anestetico locale",
+        "en": "Local anaesthetic"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "analgesic",
+      "axis": "chemical",
+      "parent": "non_psychoactive",
+      "names": {
+        "it": "Analgesico",
+        "en": "Analgesic"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "anthelmintic",
+      "axis": "chemical",
+      "parent": "non_psychoactive",
+      "names": {
+        "it": "Antielmintico",
+        "en": "Anthelmintic"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "sugar",
+      "axis": "chemical",
+      "parent": "non_psychoactive",
+      "names": {
+        "it": "Zucchero",
+        "en": "Sugar"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "sugar_alcohol",
+      "axis": "chemical",
+      "parent": "non_psychoactive",
+      "names": {
+        "it": "Alcol zuccherino",
+        "en": "Sugar alcohol"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "stimulant",
+      "axis": "effect",
+      "names": {
+        "it": "Stimolante",
+        "en": "Stimulant"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "entactogen",
+      "axis": "effect",
+      "names": {
+        "it": "Entactogeno",
+        "en": "Entactogen"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "psychedelic",
+      "axis": "effect",
+      "names": {
+        "it": "Psichedelico",
+        "en": "Psychedelic"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "dissociative",
+      "axis": "effect",
+      "names": {
+        "it": "Dissociativo",
+        "en": "Dissociative"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "depressant_sedative",
+      "axis": "effect",
+      "names": {
+        "it": "Depressore / sedativo",
+        "en": "Depressant / sedative"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "opioid",
+      "axis": "effect",
+      "names": {
+        "it": "Oppioide",
+        "en": "Opioid"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "cannabinoid",
+      "axis": "effect",
+      "names": {
+        "it": "Cannabinoide",
+        "en": "Cannabinoid"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "deliriant",
+      "axis": "effect",
+      "names": {
+        "it": "Deliriante",
+        "en": "Deliriant"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "no_psychoactive_effect_expected",
+      "axis": "effect",
+      "names": {
+        "it": "Nessun effetto psicoattivo atteso",
+        "en": "No psychoactive effect expected"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "active_principle",
+      "axis": "role",
+      "names": {
+        "it": "Principio attivo (ciò che di solito si cerca)",
+        "en": "Active principle (what is usually sought)"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "pharmacological_adulterant",
+      "axis": "role",
+      "names": {
+        "it": "Adulterante farmacologico (attivo, di solito non dichiarato)",
+        "en": "Pharmacological adulterant (active, usually undeclared)"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "diluent_excipient",
+      "axis": "role",
+      "names": {
+        "it": "Diluente / eccipiente (inerte)",
+        "en": "Diluent / excipient (inert)"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "synthesis_or_degradation_residue",
+      "axis": "role",
+      "names": {
+        "it": "Residuo di sintesi o degradazione",
+        "en": "Synthesis or degradation residue"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "instrumental_reference",
+      "axis": "role",
+      "names": {
+        "it": "Riferimento strumentale",
+        "en": "Instrumental reference"
+      },
+      "source": "checkir-classification"
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:ftir-substance:1",
+  "title": "FTIR substance (the molecule)",
+  "title_it": "Sostanza FTIR (la molecola)",
+  "description": "FTIR substance (the molecule)",
+  "description_it": "Sostanza FTIR (la molecola)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ftir-substance/1",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "id": {
+      "description": "Stable project id; never renamed (a rename creates an alias).",
+      "description_it": "Id stabile del progetto; mai rinominato (un rinomino crea un alias).",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "type": {
+      "description": "compound has an InChIKey; reference_mixture has components; unresolved has candidates.",
+      "description_it": "compound ha un'InChIKey; reference_mixture ha componenti; unresolved ha candidati.",
+      "type": "string",
+      "enum": [
+        "compound",
+        "reference_mixture",
+        "unresolved"
+      ]
+    },
+    "names": {
+      "description": "Names per language; English is required.",
+      "description_it": "Nomi per lingua; l'inglese è obbligatorio.",
+      "type": "object",
+      "properties": {
+        "it": {
+          "description": "Names in one language.",
+          "description_it": "Nomi in una lingua.",
+          "type": "object",
+          "properties": {
+            "preferred": {
+              "description": "Preferred name.",
+              "description_it": "Nome preferito.",
+              "type": "string",
+              "minLength": 1
+            },
+            "synonyms": {
+              "description": "Other names.",
+              "description_it": "Altri nomi.",
+              "type": "array",
+              "items": {
+                "description": "Name.",
+                "description_it": "Nome.",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "street": {
+              "description": "Common street names, never tied to sellers.",
+              "description_it": "Nomi di strada comuni, mai legati a venditori.",
+              "type": "array",
+              "items": {
+                "description": "Name.",
+                "description_it": "Nome.",
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "preferred"
+          ],
+          "additionalProperties": false
+        },
+        "en": {
+          "description": "Names in one language.",
+          "description_it": "Nomi in una lingua.",
+          "type": "object",
+          "properties": {
+            "preferred": {
+              "description": "Preferred name.",
+              "description_it": "Nome preferito.",
+              "type": "string",
+              "minLength": 1
+            },
+            "synonyms": {
+              "description": "Other names.",
+              "description_it": "Altri nomi.",
+              "type": "array",
+              "items": {
+                "description": "Name.",
+                "description_it": "Nome.",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "street": {
+              "description": "Common street names, never tied to sellers.",
+              "description_it": "Nomi di strada comuni, mai legati a venditori.",
+              "type": "array",
+              "items": {
+                "description": "Name.",
+                "description_it": "Nome.",
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "preferred"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "en"
+      ],
+      "additionalProperties": false
+    },
+    "iupac": {
+      "description": "IUPAC name.",
+      "description_it": "Nome IUPAC.",
+      "type": "string",
+      "minLength": 1
+    },
+    "formula": {
+      "description": "Molecular formula (Hill).",
+      "description_it": "Formula molecolare (Hill).",
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*$"
+    },
+    "molar_mass_g_mol": {
+      "description": "Molar mass in g/mol of the neutral compound.",
+      "description_it": "Massa molare in g/mol del composto neutro.",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "smiles": {
+      "description": "Canonical SMILES of the neutral compound.",
+      "description_it": "SMILES canonico del composto neutro.",
+      "type": "string",
+      "minLength": 1
+    },
+    "inchi": {
+      "description": "Standard InChI.",
+      "description_it": "InChI standard.",
+      "type": "string",
+      "pattern": "^InChI=1S?/"
+    },
+    "inchikey": {
+      "description": "InChIKey of the neutral compound; unique among compounds.",
+      "description_it": "InChIKey del composto neutro; unica tra i composti.",
+      "type": "string",
+      "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
+    },
+    "external_ids": {
+      "description": "External identifiers; at least one for a compound.",
+      "description_it": "Identificativi esterni; almeno uno per un composto.",
+      "type": "object",
+      "properties": {
+        "wikidata": {
+          "description": "Wikidata QID.",
+          "description_it": "QID di Wikidata.",
+          "type": "string",
+          "pattern": "^Q[0-9]+$"
+        },
+        "pubchem_cid": {
+          "description": "PubChem compound id.",
+          "description_it": "Id composto PubChem.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "chebi": {
+          "description": "ChEBI id.",
+          "description_it": "Id ChEBI.",
+          "type": "string",
+          "pattern": "^CHEBI:[0-9]+$"
+        },
+        "unii": {
+          "description": "FDA UNII.",
+          "description_it": "UNII FDA.",
+          "type": "string",
+          "pattern": "^[A-Z0-9]{10}$"
+        },
+        "cas": {
+          "description": "CAS number, reference only.",
+          "description_it": "Numero CAS, solo come riferimento.",
+          "type": "string",
+          "pattern": "^[0-9]{2,7}-[0-9]{2}-[0-9]$"
+        },
+        "atc": {
+          "description": "ATC codes of medicines.",
+          "description_it": "Codici ATC dei farmaci.",
+          "type": "array",
+          "items": {
+            "description": "ATC code.",
+            "description_it": "Codice ATC.",
+            "type": "string",
+            "pattern": "^[A-Z][0-9]{2}[A-Z]{2}[0-9]{2}$"
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "classes": {
+      "description": "Class ids of classes/1, at least one per axis.",
+      "description_it": "Id delle classi di classes/1, almeno una per asse.",
+      "type": "object",
+      "properties": {
+        "chemical": {
+          "description": "Chemical axis.",
+          "description_it": "Asse chimico.",
+          "type": "array",
+          "items": {
+            "description": "Class id.",
+            "description_it": "Id classe.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          },
+          "minItems": 1
+        },
+        "effect": {
+          "description": "Effect axis.",
+          "description_it": "Asse effetto.",
+          "type": "array",
+          "items": {
+            "description": "Class id.",
+            "description_it": "Id classe.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          },
+          "minItems": 1
+        },
+        "typical_role": {
+          "description": "Role axis.",
+          "description_it": "Asse ruolo.",
+          "type": "array",
+          "items": {
+            "description": "Class id.",
+            "description_it": "Id classe.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "chemical",
+        "effect",
+        "typical_role"
+      ],
+      "additionalProperties": false
+    },
+    "relations": {
+      "description": "Relations to other substances.",
+      "description_it": "Relazioni con altre sostanze.",
+      "type": "array",
+      "items": {
+        "description": "Relation to another substance.",
+        "description_it": "Relazione con un'altra sostanza.",
+        "type": "object",
+        "properties": {
+          "type": {
+            "description": "Relation type.",
+            "description_it": "Tipo di relazione.",
+            "type": "string",
+            "enum": [
+              "positional_isomer_of",
+              "stereoisomer_of",
+              "analogue_of",
+              "prodrug_of",
+              "degradation_product_of"
+            ]
+          },
+          "to": {
+            "description": "Id of the other substance.",
+            "description_it": "Id dell'altra sostanza.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "type",
+          "to",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "components": {
+      "description": "Components of a reference mixture.",
+      "description_it": "Componenti di una miscela di riferimento.",
+      "type": "array",
+      "items": {
+        "description": "Component of a reference mixture.",
+        "description_it": "Componente di una miscela di riferimento.",
+        "type": "object",
+        "properties": {
+          "substance": {
+            "description": "Substance id.",
+            "description_it": "Id sostanza.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "mass_fraction": {
+            "description": "Mass fraction between 0 and 1, null if unknown.",
+            "description_it": "Frazione di massa tra 0 e 1, null se ignota.",
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "substance",
+          "mass_fraction"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "candidates": {
+      "description": "Possible compounds of an unresolved reference.",
+      "description_it": "Possibili composti di un riferimento non risolto.",
+      "type": "array",
+      "items": {
+        "description": "Substance id.",
+        "description_it": "Id sostanza.",
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "minItems": 2
+    },
+    "certain_class": {
+      "description": "Class id that is certain even if the compound is not.",
+      "description_it": "Id della classe certa anche se il composto non lo è.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+    },
+    "sources": {
+      "description": "Sources of the data that do not originate from this project.",
+      "description_it": "Fonti dei dati che non nascono dal progetto.",
+      "type": "array",
+      "items": {
+        "description": "A datum and the source it comes from.",
+        "description_it": "Un dato e la fonte da cui viene.",
+        "type": "object",
+        "properties": {
+          "field": {
+            "description": "Name of the field the source supports.",
+            "description_it": "Nome del campo che la fonte sostiene.",
+            "type": "string"
+          },
+          "source": {
+            "description": "Source id in data/sources.json.",
+            "description_it": "Id della fonte in data/sources.json.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "consulted": {
+            "description": "Date the source was consulted (ISO).",
+            "description_it": "Data di consultazione (ISO).",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          }
+        },
+        "required": [
+          "field",
+          "source",
+          "consulted"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "type",
+    "names",
+    "classes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "compound"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "required": [
+          "iupac",
+          "formula",
+          "molar_mass_g_mol",
+          "smiles",
+          "inchi",
+          "inchikey",
+          "external_ids"
+        ],
+        "properties": {
+          "external_ids": {
+            "minProperties": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "reference_mixture"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "required": [
+          "components"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "unresolved"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "required": [
+          "candidates",
+          "certain_class"
+        ]
+      }
+    }
+  ]
+}

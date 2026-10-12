@@ -1,0 +1,25 @@
+name: Translation
+description: Offer a translation or report a wrong one. / Offri una traduzione o segnala un errore.
+labels: ["translation"]
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Language / Lingua
+      placeholder: fr
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you offer or what is wrong? / Cosa offri o cosa non va?
+      description: Key names and the proposed text. Health texts return to a health reviewer. / Chiavi e testo proposto. I testi sanitari tornano a un revisore sanitario.
+    validations:
+      required: true
+  - type: checkboxes
+    id: declarations
+    attributes:
+      label: Declarations / Dichiarazioni
+      options:
+        - label: I wrote the translation and agree to publish it with the project licence. / Ho scritto io la traduzione e accetto di pubblicarla con la licenza del progetto.
+          required: true

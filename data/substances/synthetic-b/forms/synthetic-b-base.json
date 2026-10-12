@@ -1,0 +1,19 @@
+{
+  "schema": "ftir-form/1",
+  "id": "synthetic-b-base",
+  "substance": "synthetic-b",
+  "form_type": "free_base",
+  "stereo": "unspecified",
+  "inchikey_form": "SYNTHETICBBBBB-EXAMPLETWO-N",
+  "notes": {
+    "en": "Fictitious form for tests.",
+    "it": "Forma fittizia per i test."
+  },
+  "sources": [
+    {
+      "field": "all",
+      "source": "synthetic-generator",
+      "consulted": "2026-10-12"
+    }
+  ]
+}
