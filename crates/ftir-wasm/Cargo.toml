@@ -1,0 +1,15 @@
+[package]
+name = "ftir-wasm"
+description = "Bridge between the browser page and the engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+ftir-core = { workspace = true }
+wasm-bindgen = "=0.2.129"

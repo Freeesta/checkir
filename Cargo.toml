@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = ["crates/ftir-core", "crates/ftir-lib", "crates/ftir-wasm"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Freeesta/checkir"
+rust-version = "1.97"
+
+[workspace.dependencies]
+ftir-core = { path = "crates/ftir-core" }
+
+[profile.release]
+opt-level = "s"
+lto = true
