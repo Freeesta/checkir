@@ -1,0 +1,1 @@
+{"name":"peak_table","oracle":false,"warnings":["reader.jcamp.peaks_only"],"spectra":[{"explicit_x":true,"x":[3300.5,2920.25,1715,1450.75,1100.5],"y_int":[33353,835226,1054811,461109,661559],"yfactor":1e-6}]}
