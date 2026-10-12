@@ -121,6 +121,8 @@ jobs:
           fetch-depth: 0
       - name: Size limits of code and agent documents (base can only shrink)
         run: python3 tools/controlla_soglie.py
+      - name: Colour roles meet WCAG contrast in light and dark
+        run: python3 tools/controlla_contrasti.py
       - name: The product name is written only in web/appname.js
         run: python3 tools/controlla_nome.py
       - name: No private names or data in the public repository
