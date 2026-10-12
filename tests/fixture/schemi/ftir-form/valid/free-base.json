@@ -1,0 +1,14 @@
+{
+  "schema": "ftir-form/1",
+  "id": "example-amine-base",
+  "substance": "example-amine",
+  "form_type": "free_base",
+  "stereo": "racemate",
+  "sources": [
+    {
+      "field": "inchikey",
+      "source": "wikidata",
+      "consulted": "2026-10-12"
+    }
+  ]
+}

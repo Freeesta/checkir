@@ -1,0 +1,16 @@
+{
+  "schema": "alerts/1",
+  "id": "example-positional-isomers",
+  "status": "draft",
+  "target": {},
+  "reason": "ir_ambiguity",
+  "severity": "caution",
+  "sources": [
+    "wikidata"
+  ],
+  "issued": "2026-10-12",
+  "review_by": "2027-10-12",
+  "reviewers": [
+    "Example Reviewer"
+  ]
+}

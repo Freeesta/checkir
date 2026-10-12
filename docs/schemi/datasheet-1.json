@@ -1,0 +1,441 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:datasheet:1",
+  "title": "Substance sheet data (texts live in testi.<lang>.md)",
+  "title_it": "Dati della scheda sostanza (i testi stanno in testi.<lingua>.md)",
+  "description": "Substance sheet data (texts live in testi.<lang>.md)",
+  "description_it": "Dati della scheda sostanza (i testi stanno in testi.<lingua>.md)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "datasheet/1",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "substance": {
+      "description": "Id of the substance.",
+      "description_it": "Id della sostanza.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "version": {
+      "description": "Sheet version.",
+      "description_it": "Versione della scheda.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "section_state": {
+      "description": "State of each section.",
+      "description_it": "Stato di ogni sezione.",
+      "type": "object",
+      "properties": {
+        "molecule": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "category": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "ftir_limits": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "effects": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "doses": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "risks": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "interactions": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "harm_reduction": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "sources": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "license": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        }
+      },
+      "required": [
+        "molecule",
+        "category",
+        "ftir_limits",
+        "effects",
+        "doses",
+        "risks",
+        "interactions",
+        "harm_reduction",
+        "sources",
+        "license"
+      ],
+      "additionalProperties": false
+    },
+    "reviewers": {
+      "description": "Reviewers (public name and role).",
+      "description_it": "Revisori (nome pubblico e ruolo).",
+      "type": "array",
+      "items": {
+        "description": "Reviewer.",
+        "description_it": "Revisore.",
+        "type": "object",
+        "properties": {
+          "public_name": {
+            "description": "Public name.",
+            "description_it": "Nome pubblico.",
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "description": "Role.",
+            "description_it": "Ruolo.",
+            "type": "string",
+            "enum": [
+              "chemist",
+              "health"
+            ]
+          },
+          "sections": {
+            "description": "Sections signed.",
+            "description_it": "Sezioni firmate.",
+            "type": "array",
+            "items": {
+              "description": "Section.",
+              "description_it": "Sezione.",
+              "type": "string",
+              "enum": [
+                "molecule",
+                "category",
+                "ftir_limits",
+                "effects",
+                "doses",
+                "risks",
+                "interactions",
+                "harm_reduction",
+                "sources",
+                "license"
+              ]
+            },
+            "minItems": 1
+          },
+          "date": {
+            "description": "Date.",
+            "description_it": "Data.",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          }
+        },
+        "required": [
+          "public_name",
+          "role",
+          "sections",
+          "date"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reviewed": {
+      "description": "Date of the last review.",
+      "description_it": "Data dell'ultima revisione.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "review_by": {
+      "description": "Review deadline, at most 24 months after the review (checked by the validator).",
+      "description_it": "Scadenza della revisione, al massimo 24 mesi dopo (controllata dal validatore).",
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "doses": {
+      "description": "Dose rows; empty when show_doses is false.",
+      "description_it": "Righe di dosi; vuoto se show_doses è false.",
+      "type": "array",
+      "items": {
+        "description": "Dose row; there is never a 'safe' or 'maximum safe' column.",
+        "description_it": "Riga di dosi; non esiste mai una colonna «sicura» o «massima sicura».",
+        "type": "object",
+        "properties": {
+          "route": {
+            "description": "Route of administration.",
+            "description_it": "Via di assunzione.",
+            "type": "string",
+            "minLength": 1
+          },
+          "unit": {
+            "description": "Unit.",
+            "description_it": "Unità.",
+            "type": "string",
+            "enum": [
+              "mg",
+              "ug"
+            ]
+          },
+          "threshold": {
+            "description": "Threshold dose.",
+            "description_it": "Dose soglia.",
+            "type": "number",
+            "minimum": 0
+          },
+          "light": {
+            "description": "Light dose.",
+            "description_it": "Dose leggera.",
+            "type": "number",
+            "minimum": 0
+          },
+          "common": {
+            "description": "Common dose.",
+            "description_it": "Dose comune.",
+            "type": "number",
+            "minimum": 0
+          },
+          "strong": {
+            "description": "Strong dose.",
+            "description_it": "Dose forte.",
+            "type": "number",
+            "minimum": 0
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "evidence_type": {
+            "description": "Type of evidence.",
+            "description_it": "Tipo di evidenza.",
+            "type": "string",
+            "enum": [
+              "clinical",
+              "observational",
+              "user_reported"
+            ]
+          }
+        },
+        "required": [
+          "route",
+          "unit",
+          "source",
+          "evidence_type"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "timings": {
+      "description": "Time courses.",
+      "description_it": "Andamenti nel tempo.",
+      "type": "array",
+      "items": {
+        "description": "Time course for a route.",
+        "description_it": "Andamento nel tempo per una via.",
+        "type": "object",
+        "properties": {
+          "route": {
+            "description": "Route.",
+            "description_it": "Via.",
+            "type": "string",
+            "minLength": 1
+          },
+          "onset_min": {
+            "description": "Onset in minutes.",
+            "description_it": "Inizio in minuti.",
+            "type": "number",
+            "minimum": 0
+          },
+          "peak_min": {
+            "description": "Peak in minutes.",
+            "description_it": "Picco in minuti.",
+            "type": "number",
+            "minimum": 0
+          },
+          "duration_h": {
+            "description": "Duration in hours.",
+            "description_it": "Durata in ore.",
+            "type": "number",
+            "minimum": 0
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "route",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "interactions": {
+      "description": "Interactions.",
+      "description_it": "Interazioni.",
+      "type": "array",
+      "items": {
+        "description": "Dangerous combination.",
+        "description_it": "Combinazione pericolosa.",
+        "type": "object",
+        "properties": {
+          "with": {
+            "description": "Substance or class id.",
+            "description_it": "Id sostanza o classe.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          },
+          "severity": {
+            "description": "Severity.",
+            "description_it": "Gravità.",
+            "type": "string",
+            "enum": [
+              "dangerous",
+              "risky",
+              "caution"
+            ]
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "with",
+          "severity",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "show_doses": {
+      "description": "False for potent substances: no dose table, 'no dose is safe'.",
+      "description_it": "False per sostanze potenti: niente tabella, «nessuna dose è sicura».",
+      "type": "boolean"
+    },
+    "authors": {
+      "description": "Public names of the authors.",
+      "description_it": "Nomi pubblici degli autori.",
+      "type": "array",
+      "items": {
+        "description": "Name.",
+        "description_it": "Nome.",
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "ai_assisted": {
+      "description": "True if a draft was AI-assisted; every claim must be checked by a person.",
+      "description_it": "True se la bozza è stata assistita da IA; ogni affermazione va controllata da una persona.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema",
+    "substance",
+    "version",
+    "section_state",
+    "reviewers",
+    "reviewed",
+    "review_by",
+    "doses",
+    "show_doses",
+    "authors",
+    "ai_assisted"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "show_doses": {
+            "const": false
+          }
+        },
+        "required": [
+          "show_doses"
+        ]
+      },
+      "then": {
+        "properties": {
+          "doses": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}
