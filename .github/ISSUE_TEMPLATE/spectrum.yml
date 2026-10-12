@@ -1,0 +1,71 @@
+name: Propose a spectrum
+description: Propose a reference spectrum for the library. / Proponi uno spettro di riferimento per la libreria.
+labels: ["spectrum", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: See docs/contribute/spectrum.md. Use the cleaned .zip prepared by checkIR. / Vedi docs/contribute/spectrum.it.md. Usa lo .zip pulito preparato da checkIR.
+  - type: input
+    id: substance
+    attributes:
+      label: Substance and form / Sostanza e forma
+      placeholder: Cocaine hydrochloride
+    validations:
+      required: true
+  - type: dropdown
+    id: confirmation
+    attributes:
+      label: Confirmation method / Metodo di conferma
+      options:
+        - Certified standard (give lot number below) / Standard certificato
+        - Another technique (say which below) / Altra tecnica
+        - Not confirmed / Non confermato
+    validations:
+      required: true
+  - type: textarea
+    id: confirmation_details
+    attributes:
+      label: Lot number or technique / Numero di lotto o tecnica
+    validations:
+      required: true
+  - type: input
+    id: instrument
+    attributes:
+      label: Instrument and accessory (no serial number) / Strumento e accessorio (senza seriale)
+    validations:
+      required: true
+  - type: input
+    id: acquisition
+    attributes:
+      label: Resolution, scans, range / Risoluzione, scansioni, intervallo
+      placeholder: 4 cm-1, 32 scans, 4000-400 cm-1
+    validations:
+      required: true
+  - type: input
+    id: month
+    attributes:
+      label: Month (YYYY-MM) / Mese (AAAA-MM)
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Attach the .zip here / Allega qui lo .zip
+      description: Drag the file into this box (ZIP, JSON, CSV, TXT up to 25 MB). / Trascina il file in questo campo.
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author (optional, public) / Autore (facoltativo, pubblico)
+  - type: checkboxes
+    id: declarations
+    attributes:
+      label: Declarations / Dichiarazioni
+      options:
+        - label: The files contain no personal data (I checked the preview). / I file non contengono dati personali (ho controllato l'anteprima).
+          required: true
+        - label: I have the right to publish this spectrum and it does not come from a third-party library. / Ho il diritto di pubblicare questo spettro e non proviene da una libreria di terzi.
+          required: true
+        - label: I agree to publish it under CC BY 4.0. / Accetto di pubblicarlo con licenza CC BY 4.0.
+          required: true
