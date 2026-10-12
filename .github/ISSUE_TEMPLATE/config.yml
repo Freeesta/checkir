@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas / Domande e idee
+    url: https://github.com/Freeesta/checkir/discussions
+    about: Ask a question or share an idea. / Fai una domanda o proponi un'idea.
+  - name: Security vulnerability / Vulnerabilità di sicurezza
+    url: https://github.com/Freeesta/checkir/security/advisories/new
+    about: Report privately. Do not open a public issue. / Segnala in privato, senza issue pubblica.
