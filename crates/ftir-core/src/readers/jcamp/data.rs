@@ -121,18 +121,9 @@ fn build_one(blk: &Block, table: &Ldr, limits: &Limits) -> ReadResult<(Spectrum,
     let mut forms = Forms::default();
     let (x, y, group_w): (XValues, Vec<f64>, Vec<f64>);
     if head.starts_with("(X++") {
-        let d = asdf::decode_xydata(&table.cont, limits.max_points)?;
-        forms = d.forms;
-        for c in &d.check_failures {
-            warnings.push(
-                caution("reader.jcamp.y_check")
-                    .with("line", c.line)
-                    .with("expected", c.expected)
-                    .with("found", c.found),
-            );
-        }
-        let ys: Vec<f64> = d.y.iter().map(|v| v * yf).collect();
-        x = regular_axis(blk, &d, xf, ys.len(), &mut warnings)?;
+        let (xv, ys, f) = xydata(blk, table, (xf, yf), limits, &mut warnings)?;
+        forms = f;
+        x = xv;
         y = ys;
         group_w = Vec::new();
     } else if head.starts_with("(XY") {
@@ -197,6 +188,28 @@ fn build_one(blk: &Block, table: &Ldr, limits: &Limits) -> ReadResult<(Spectrum,
         warnings,
     };
     Ok((spectrum, forms))
+}
+
+/// Decodes an `(X++(Y..Y))` table into its axis, scaled ordinates and compression forms.
+fn xydata(
+    blk: &Block,
+    table: &Ldr,
+    (xf, yf): (f64, f64),
+    limits: &Limits,
+    warnings: &mut Vec<Warning>,
+) -> ReadResult<(XValues, Vec<f64>, Forms)> {
+    let d = asdf::decode_xydata(&table.cont, limits.max_points)?;
+    for c in &d.check_failures {
+        warnings.push(
+            caution("reader.jcamp.y_check")
+                .with("line", c.line)
+                .with("expected", c.expected)
+                .with("found", c.found),
+        );
+    }
+    let ys: Vec<f64> = d.y.iter().map(|v| v * yf).collect();
+    let x = regular_axis(blk, &d, xf, ys.len(), warnings)?;
+    Ok((x, ys, d.forms))
 }
 
 fn widths_field(table: &Ldr, w: &[f64]) -> crate::readers::model::Field {
