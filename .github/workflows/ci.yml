@@ -92,6 +92,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Dev dependencies of the browser tests (the site itself has none)
+        run: npm ci --no-audit --no-fund && npx playwright install --with-deps chromium
       - name: Syntax of every script
         run: for f in $(git ls-files 'web/*.js'); do node --check "$f" || exit 1; done
       - name: Types (JSDoc + tsc, strict, no build step)
@@ -106,8 +108,6 @@ jobs:
             ~/.cargo/bin/wasm-bindgen
             target
           key: web-rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}
-      - name: Dev dependencies of the browser tests (the site itself has none)
-        run: npm ci --no-audit --no-fund && npx playwright install --with-deps chromium
       - name: Build the site (page + engine .wasm)
         run: bash tools/costruisci_sito.sh
       - name: Smoke e2e with accessibility checks (axe, keyboard, zoom 400 %, light/dark, both languages)
