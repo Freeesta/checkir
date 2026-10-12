@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "checkir"
+type: software
+abstract: "Open-source FTIR analysis for drug checking."
+license: "MIT OR Apache-2.0"
+repository-code: "https://github.com/Freeesta/checkir"
+version: 0.1.0
+authors:
+  - name: "The checkir contributors"

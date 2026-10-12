@@ -1,0 +1,46 @@
+# Level 3 of the tests: once a day on main and by hand at the end of a large package.
+# Everything that is too slow for the pull requests: other operating systems, all browsers, the full e2e suite, fuzzing at a fixed time.
+# Not a required check: a red night is fixed the next day by ONE chat chosen by the Coordinator.
+name: notte
+
+on:
+  schedule:
+    - cron: "23 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  full:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup show
+      - run: cargo test --locked --release
+  browsers:
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci --no-audit --no-fund && npx playwright install --with-deps ${{ matrix.browser }}
+      - run: bash tools/costruisci_sito.sh
+      - run: BROWSER=${{ matrix.browser }} node tests_e2e/fumo.mjs
+  fuzz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "no reader targets yet: cargo fuzz on every reader, a fixed number of seconds each (never a gate of the pull requests)"

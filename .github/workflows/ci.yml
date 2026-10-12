@@ -1,0 +1,150 @@
+# Checks of every pull request and of every push to main (goal: under 6 minutes).
+# The workflow has NO path filter, so the summary job `ci-ok` always reports: it is the ONLY name to put in the required checks
+# of the protected main branch. The `changes` job decides from the changed paths which jobs run; skipped jobs count as green.
+# Slow checks (all browsers, the full suite, fuzzing) run once a day in notte.yml, not here.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+# a new push stops the run still going on the same branch / pull request
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      rust: ${{ steps.diff.outputs.rust }}
+      web: ${{ steps.diff.outputs.web }}
+      data: ${{ steps.diff.outputs.data }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: diff
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          # no usable base (first push, force push): run everything
+          if [ -z "$BASE" ] || echo "$BASE" | grep -qE '^0+$' || ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            echo "rust=true" >> "$GITHUB_OUTPUT"; echo "web=true" >> "$GITHUB_OUTPUT"; echo "data=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          changed=$(git diff --name-only "$BASE" "$GITHUB_SHA")
+          common='^(\.github/workflows/ci\.yml|tools/controlla)'
+          match() { echo "$changed" | grep -qE "$1|$common" && echo true || echo false; }
+          echo "rust=$(match '^(crates/|Cargo\.|rust-toolchain\.toml|deny\.toml|tools/clippy_base\.json)')" >> "$GITHUB_OUTPUT"
+          echo "web=$(match '^(web/|tests_e2e/|tsconfig\.json|package(-lock)?\.json|tools/costruisci_sito\.sh|crates/)')" >> "$GITHUB_OUTPUT"
+          echo "data=$(match '^(data/|docs/schemi/)')" >> "$GITHUB_OUTPUT"
+
+  rust:
+    needs: changes
+    if: needs.changes.outputs.rust == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain (version pinned in rust-toolchain.toml)
+        run: rustup show
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}
+      - name: Tests (synthetic data and golden fixtures; tests that need private data skip themselves)
+        run: cargo test --locked --release
+      - name: WASM build
+        run: cargo build --locked --release --target wasm32-unknown-unknown -p ftir-wasm
+      - name: No native dependencies in the WASM graph
+        run: |
+          tree=$(cargo tree --locked -e no-dev --target wasm32-unknown-unknown -p ftir-wasm)
+          if echo "$tree" | grep -E '(^|[^A-Za-z0-9_-])(memmap2|zstd-sys|libz-sys|cc) v'; then
+            echo "::error::forbidden native dependency in the WASM graph"; exit 1
+          fi
+      - name: fmt and clippy against the base that can only shrink
+        run: python3 tools/controlla_rust.py
+
+  deny:
+    needs: changes
+    if: needs.changes.outputs.rust == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: EmbarkStudios/cargo-deny-action@v2
+        with:
+          command: check licenses sources
+
+  web:
+    needs: changes
+    if: needs.changes.outputs.web == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Syntax of every script
+        run: for f in $(git ls-files 'web/*.js'); do node --check "$f" || exit 1; done
+      - name: Types (JSDoc + tsc, strict, no build step)
+        run: npx tsc -p tsconfig.json --noEmit
+      - name: Translation catalogs
+        run: python3 tools/controlla_lingue.py
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin/wasm-bindgen
+            target
+          key: web-rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}
+      - name: Dev dependencies of the browser tests (the site itself has none)
+        run: npm ci --no-audit --no-fund && npx playwright install --with-deps chromium
+      - name: Build the site (page + engine .wasm)
+        run: bash tools/costruisci_sito.sh
+      - name: Smoke e2e with accessibility checks (axe, keyboard, zoom 400 %, light/dark, both languages)
+        run: node tests_e2e/fumo.mjs
+
+  limits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Size limits of code and agent documents (base can only shrink)
+        run: python3 tools/controlla_soglie.py
+      - name: No private names or data in the public repository
+        env:
+          NOMI_VIETATI: ${{ secrets.NOMI_VIETATI }}
+        run: python3 tools/controlla_nomi.py
+
+  data:
+    needs: changes
+    if: needs.changes.outputs.data == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Open data valid against their schemas, licence declared, no personal fields
+        run: echo "run the project data validator"
+
+  # The one name for the protection of main: green when every job passed or was skipped because its paths did not change.
+  ci-ok:
+    if: always()
+    needs: [changes, rust, deny, web, limits, data]
+    runs-on: ubuntu-latest
+    steps:
+      - name: every job passed or was skipped
+        env:
+          RESULTS: ${{ needs.changes.result }} ${{ needs.rust.result }} ${{ needs.deny.result }} ${{ needs.web.result }} ${{ needs.limits.result }} ${{ needs.data.result }}
+        run: |
+          echo "changes rust deny web limits data: $RESULTS"
+          case "$RESULTS" in *failure*|*cancelled*) exit 1;; esac
+          [ "${{ needs.changes.result }}" = "success" ]
