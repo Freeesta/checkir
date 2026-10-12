@@ -1,0 +1,19 @@
+{
+  "schema": "reviewers/1",
+  "reviewers": [
+    {
+      "github": "Freeesta",
+      "public_name": "Freeesta",
+      "roles": [
+        "chemist"
+      ],
+      "languages": [
+        "it",
+        "en"
+      ],
+      "verified": "2026-10",
+      "expires": "2028-10",
+      "status": "active"
+    }
+  ]
+}

@@ -18,3 +18,12 @@ checkIR è fatto da chimici, operatori sanitari, traduttori e sviluppatori. Sceg
 - Licenze: codice MIT OR Apache-2.0; nuovi spettri e dati CC BY 4.0; schede delle sostanze CC BY-SA 4.0. Mantieni i tuoi diritti d'autore; non c'è nessun CLA.
 - I testi sanitari li approva sempre un revisore sanitario. Il programma propone, il chimico decide, niente è mai «sicuro».
 - Segnala un problema o una famiglia di sostanze pericolosa con i [moduli delle issue](https://github.com/Freeesta/checkir/issues/new/choose).
+
+## Proporre una modifica a una scheda di sostanza
+Non serve Git. Serve un account GitHub gratuito (va bene uno pseudonimo; GitHub vede il tuo indirizzo IP e il tuo account).
+1. Apri la scheda e scegli la sezione da correggere. Oppure apri il [modulo «Correggi una scheda»](https://github.com/Freeesta/checkir/issues/new?template=sheet.yml) e compilalo.
+2. Scrivi frasi brevi, un fatto ciascuna, e indica una fonte (DOI o link) per ogni affermazione sanitaria. Non scrivere mai «sicuro», «puro» o «pulito».
+3. Spunta le dichiarazioni: nessun dato personale, il Developer Certificate of Origin ([DCO 1.1](https://developercertificate.org/)) e la licenza CC BY-SA 4.0. Se modifichi il file direttamente su GitHub, aggiungi `Signed-off-by: Tuo Nome <nome>` come ultima riga del messaggio del commit (oppure usa `git commit -s`).
+4. Un manutentore smista la proposta entro circa una settimana (etichette come `needs-health-reviewer`). I revisori elencati in [data/reviewers.json](data/reviewers.json) la discutono e approvano la pull request. Le sezioni sanitarie (effetti, dosi, rischi, interazioni, riduzione del danno) le approva sempre un revisore sanitario; le dosi restano nascoste finché un professionista sanitario non le firma.
+5. Unisce solo un amministratore. Il tuo nome pubblico (o pseudonimo) compare nei crediti. Ciò che scrivi non si cancella dalla storia di Git senza l'aiuto dei manutentori: non scrivere dati personali.
+Non hai GitHub? Chiedi in una Discussion come inviare senza account; un manutentore può caricarla per te con lo pseudonimo che scegli.
