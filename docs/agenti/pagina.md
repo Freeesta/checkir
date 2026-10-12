@@ -8,7 +8,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `lang/it.json`, `lang/en.json`: cataloghi piatti `area.component.item`.
 - `engine.js`: carica `wasm/ftir_wasm.js` (costruito dal workflow, non committato). `spectrum.js`: `parseSpectrum`, `visibleIndices`. `view.js`: `zoom`, `pan`, `clamp` (funzioni pure).
 - `chart.js`: `draw` (SVG), `renderTable` (dati dell'intervallo visibile), `wire` (tastiera + pulsanti, senza trascinamento).
-- `style.css`: variabili Okabe-Ito, tema scuro, riduci animazioni, colori forzati. `sw.js`: cache `<APP_ID>-v<VERSION>`.
+- `img/`: `logo.svg` (monocromo, `currentColor`; nella pagina è una maschera CSS `.logo` colorata con `--colore-nome`) e icone PNG 16/32/192/512 per favicon e manifest. `style.css`: variabili Okabe-Ito, ruoli `--colore-nome|campione|riferimento|residuo|allerta|regione` (chiaro e scuro; il grafico usa i ruoli, non i colori `--oi-*`; il riferimento arancio mai per testo), tema scuro, riduci animazioni, colori forzati. `sw.js`: cache `<APP_ID>-v<VERSION>`.
 
 ## Contratti e formati
 - Il motore restituisce spettri come JSON `{wavenumber_cm1: [...], y: [...]}`. Chiavi di errore: `err.*` (dinamiche).

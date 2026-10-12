@@ -6,16 +6,20 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="color-scheme" content="light dark">
   <title>FTIR</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icon-32.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip" href="#main-content" data-i18n="app.skip"></a>
   <header class="header">
-    <div>
-      <h1 id="app-name"></h1>
-      <p data-i18n="app.tagline"></p>
+    <div class="brand">
+      <span class="logo" aria-hidden="true"></span>
+      <div>
+        <h1 id="app-name"></h1>
+        <p data-i18n="app.tagline"></p>
+      </div>
     </div>
     <label class="language">
       <span data-i18n="lang.label"></span>

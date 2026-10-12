@@ -1,9 +1,9 @@
 // Service worker: makes the site work offline. Cache name carries the project prefix; bump VERSION to renew it.
-const VERSION = "1";
+const VERSION = "2";
 const ID = new URL(self.location.href).searchParams.get("id") || "app";
 const CACHE = ID + "-v" + VERSION;
 const FILES = [
-  "./", "index.html", "style.css", "main.js", "appname.js", "manifest.webmanifest", "i18n.js", "chart.js", "spectrum.js", "view.js", "engine.js",
+  "./", "index.html", "style.css", "main.js", "appname.js", "manifest.webmanifest", "img/logo.svg", "img/icon-16.png", "img/icon-32.png", "img/icon-192.png", "img/icon-512.png", "i18n.js", "chart.js", "spectrum.js", "view.js", "engine.js",
   "lang/it.json", "lang/en.json", "wasm/ftir_wasm.js", "wasm/ftir_wasm_bg.wasm",
 ];
 
