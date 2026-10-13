@@ -21,6 +21,7 @@ import { matchActions, startMatching } from "./match.js";
 import { peaksActions } from "./peaks.js";
 import { rangeContext } from "./ranges.js";
 import { startRangeTable } from "./ranges_table.js";
+import { loadBands } from "./regions.js";
 import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
@@ -94,6 +95,7 @@ async function start() {
   await loadLang(pickLang());
   document.title = APP_NAME;
   const engine = await loadEngine().catch(() => null);
+  await loadBands();
   const input = wireFileInput({ engine, announce });
   let redrawAll = () => {};
   /** @type {import("./actions.js").Ctx} */
@@ -129,9 +131,9 @@ async function start() {
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]) });
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: { step: (dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak() } });
   let shown = /** @type {string | null | undefined} */ (undefined);
-  const layers = buildLayers(chart);
+  const layers = buildLayers(chart, $("peaks-summary"));
   const renderUi = () => {
     const s = getState();
     const code = activeFile(s)?.code ?? null;
