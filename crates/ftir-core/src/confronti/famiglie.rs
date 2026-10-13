@@ -77,6 +77,8 @@ pub fn family_alerts(index: &Index, candidates: &[Candidate]) -> Vec<Alert> {
                 ("alert", text(&fl.alert)),
                 ("reason", text(&fl.reason)),
                 ("severity", text(&fl.severity)),
+                ("library", text(&index.libs[index.locate(c.g).0].id)),
+                ("spectrum_id", text(&e.id)),
                 ("display_name", text(&e.display_name)),
                 ("form", text(&e.form)),
                 ("rank", Value::Num((rank + 1) as f64)),

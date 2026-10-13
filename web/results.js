@@ -3,12 +3,12 @@ import { alertViews, capLines, chainLine, levelBar, levelNumber, levelWord, show
 import { actionButton } from "./controls.js";
 import { marginScore, matchScore } from "./candidati.js";
 import { el, icon } from "./dom.js";
-import { currentLang, formatNumber, t } from "./i18n.js";
+import { formatNumber, t } from "./i18n.js";
 import { spectrumOf } from "./files.js";
-import { libraryOriginal, libraryRows } from "./librerie.js";
+import { libraryOriginal, libraryRows, rowName } from "./librerie.js";
 import { meanStep } from "./match.js";
 import { hasSheet } from "./schede.js";
-import { mixtureBlock, mixtureTaken } from "./mixture.js";
+import { mixtureBlock, mixtureChip, mixtureTaken } from "./mixture.js";
 import { openSheet } from "./schede_ui.js";
 import { draftOf } from "./decision.js";
 import { activeFile, activeLibraries, candidateKey, decisionOf, getState, resultOf } from "./state.js";
@@ -25,8 +25,7 @@ export const SHOWN = 5;
 
 /** The name of a candidate in the active language, from the library index (the result carries only the library's own name). @param {any} c @returns {string} */
 export function candidateName(c) {
-  const row = libraryRows(c.library)?.find((r) => r.id === c.spectrum_id);
-  return row ? (row.names[currentLang() === "it" ? "it" : "en"] ?? row.names.en) : c.display_name;
+  return rowName(c);
 }
 
 /** The candidate that is selected: the chosen one if it is still in the result, else the first. @param {import("./state.js").AppState} s @param {any} data @returns {any | null} */
@@ -261,8 +260,17 @@ function statusNodes(s, file, hasResult) {
 /** The mixture proposal above the table (nothing when there is none). @param {any} data @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @returns {HTMLElement[]} */
 function mixtureLines(data, s, ctx) {
   const draft = draftOf(s);
-  const block = mixtureBlock(data, !!draft && draft.level === 4 && mixtureTaken(data, draft.keys), decisionOf(s) !== null, (c) => candidateName({ library: c.library, spectrum_id: c.id, display_name: c.name }), () => ctx.acceptMixture());
+  const block = mixtureBlock(data, !!draft && draft.level === 4 && mixtureTaken(data, draft.keys), decisionOf(s) !== null, componentName, () => ctx.acceptMixture());
   return block ? [block] : [];
+}
+
+/** @param {{ library: string, id: string, name: string }} c @returns {string} */
+const componentName = (c) => candidateName({ library: c.library, spectrum_id: c.id, display_name: c.name });
+
+/** The chip that says a mixture is proposed, beside the level. @param {any} data @returns {HTMLElement[]} */
+function mixtureChipNodes(data) {
+  const chip = mixtureChip(data, componentName);
+  return chip ? [chip] : [];
 }
 
 /**
@@ -278,7 +286,8 @@ export function renderResults(body, s, ctx) {
   if (!result) return;
   const data = result.data;
   const dec = decisionOf(s);
-  const n = dec?.level ?? levelNumber(data);
+  const proposed = levelNumber(data);
+  const n = dec?.level ?? proposed;
   const chosen = selectedCandidate(s, data);
   const title = n === 5 ? t("results.similar") : t("results.candidates");
   const list = el("ol", { class: "cands", "aria-label": title });
@@ -288,7 +297,7 @@ export function renderResults(body, s, ctx) {
   body.append(
     el("div", { class: "result", "data-level": String(n) }, [
       el("h2", { class: "cands-title" }, [title]),
-      el("p", { class: "level-line" }, [levelBadge(n), decisionMark(dec, levelNumber(data))]),
+      el("p", { class: "level-line" }, [levelBadge(n), ...mixtureChipNodes(data), decisionMark(dec, proposed)]),
       alertList(data),
       ...capLines(data).map((c) => el("p", { class: "cap" }, [c])),
       ...(usedRangeLine(data) ? [el("p", { class: "cap", "data-used-range": "1" }, [usedRangeLine(data)])] : []),
