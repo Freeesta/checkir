@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:anonimizza:1",
+  "title": "Cleaning contract (anonimizza/1)",
+  "title_it": "Contratto di pulizia (anonimizza/1)",
+  "description": "For each reader, what happens to each metadata field of an instrument file when a copy is exported: keep, generalise (a date becomes YYYY-MM) or strip. A field the contract does not list is stripped. The original is never touched.",
+  "description_it": "Per ogni lettore, che cosa succede a ogni campo dei metadati di un file dello strumento quando si esporta una copia: tieni, generalizza (una data diventa AAAA-MM) o togli. Un campo che il contratto non elenca viene tolto. L'originale non si tocca mai.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "anonimizza/1"
+    },
+    "default": {
+      "description": "Action for a field the contract does not list: always strip.",
+      "description_it": "Azione per un campo che il contratto non elenca: sempre togli.",
+      "const": "togli"
+    },
+    "warning_params_kept": {
+      "description": "Names of the parameters of reader warnings that stay in the export (numbers and fixed words); every other parameter may carry text of the file and is stripped.",
+      "description_it": "Nomi dei parametri degli avvisi dei lettori che restano nell'esportazione (numeri e parole fisse); ogni altro parametro può contenere testo del file e viene tolto.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "description": "Parameter name.",
+        "description_it": "Nome del parametro.",
+        "type": "string",
+        "pattern": "^[a-z_]+$"
+      }
+    },
+    "readers": {
+      "description": "One entry per reader id of the registry.",
+      "description_it": "Una voce per ogni id di lettore del registro.",
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "additionalProperties": {
+        "description": "The fields of one reader.",
+        "description_it": "I campi di un lettore.",
+        "type": "object",
+        "properties": {
+          "fields": {
+            "description": "Normalised field key (exact, or a prefix ending with an asterisk) to action. The first matching key wins.",
+            "description_it": "Chiave normalizzata del campo (esatta, o un prefisso che finisce con un asterisco) e azione. Vale la prima chiave che corrisponde.",
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "description": "keep, generalise a date to YYYY-MM, or strip.",
+              "description_it": "tieni, generalizza una data in AAAA-MM, o togli.",
+              "enum": ["tieni", "generalizza", "togli"]
+            }
+          }
+        },
+        "required": ["fields"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["schema", "default", "warning_params_kept", "readers"],
+  "additionalProperties": false
+}

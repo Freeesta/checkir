@@ -1,6 +1,7 @@
 //! FTIR engine: pure calculation, no I/O, no unsafe, no native dependencies.
 #![forbid(unsafe_code)]
 
+pub mod anonimizza;
 pub mod budget;
 pub mod comparisons;
 pub mod error;

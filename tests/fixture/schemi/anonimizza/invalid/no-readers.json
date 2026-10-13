@@ -1,0 +1,25 @@
+{
+  "schema": "anonimizza/1",
+  "default": "togli",
+  "warning_params_kept": [
+    "alternatives",
+    "count",
+    "expected",
+    "factor",
+    "found",
+    "id",
+    "limit",
+    "line",
+    "max",
+    "method",
+    "object",
+    "order",
+    "page",
+    "reason",
+    "size",
+    "version",
+    "what",
+    "why"
+  ],
+  "readers": {}
+}
