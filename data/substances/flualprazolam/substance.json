@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "flualprazolam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Flualprazolam"
+    },
+    "it": {
+      "preferred": "Flualprazolam"
+    }
+  },
+  "iupac": "8-chloro-6-(2-fluorophenyl)-1-methyl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepine",
+  "formula": "C17H12ClFN4",
+  "molar_mass_g_mol": 326.8,
+  "smiles": "CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4F",
+  "inchi": "InChI=1S/C17H12ClFN4/c1-10-21-22-16-9-20-17(12-4-2-3-5-14(12)19)13-8-11(18)6-7-15(13)23(10)16/h2-8H,9H2,1H3",
+  "inchikey": "MPZVLJCMGPYWQQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q62018618",
+    "cas": "28910-91-0",
+    "unii": "FWF5L8D2BE",
+    "pubchem_cid": 10359044
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

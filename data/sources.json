@@ -5403,6 +5403,380 @@
       "tier": "agency"
     },
     {
+      "id": "brandt2016",
+      "type": "paper",
+      "title": "Return of the lysergamides. Part I: Analytical and behavioural characterization of 1-propionyl-d-lysergic acid diethylamide (1P-LSD) (Drug Test Anal 8:891-902)",
+      "authors": [
+        "Brandt SD",
+        "Kavanagh PV",
+        "Westphal F",
+        "Stratford A",
+        "Elliott SP",
+        "Hoang K",
+        "Wallach J",
+        "Halberstadt AL"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1884",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26456305/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260825173213/https://pubmed.ncbi.nlm.nih.gov/26456305/"
+    },
+    {
+      "id": "grumann2020",
+      "type": "paper",
+      "title": "Pharmacokinetics and subjective effects of 1P-LSD in humans after oral and intravenous administration (Drug Test Anal 12:1144-1153)",
+      "authors": [
+        "Grumann C",
+        "Henkel K",
+        "Brandt SD",
+        "Stratford A",
+        "Passie T",
+        "Auwärter V"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2821",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32415750/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260426052510/https://pubmed.ncbi.nlm.nih.gov/32415750/"
+    },
+    {
+      "id": "halberstadt2020",
+      "type": "paper",
+      "title": "Pharmacological and biotransformation studies of 1-acyl-substituted derivatives of d-lysergic acid diethylamide (LSD) (Neuropharmacology 172:107856)",
+      "authors": [
+        "Halberstadt AL",
+        "Chatha M",
+        "Klein AK",
+        "McCorvy JD",
+        "Meyer MR",
+        "Wagmann L",
+        "Stratford A",
+        "Brandt SD"
+      ],
+      "year": 2020,
+      "doi": "10.1016/j.neuropharm.2019.107856",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31756337/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "wagmann2019",
+      "type": "paper",
+      "title": "In vitro metabolic fate of nine LSD-based new psychoactive substances and their analytical detectability in different urinary screening procedures (Anal Bioanal Chem 411:4751-4763)",
+      "authors": [
+        "Wagmann L",
+        "Richter LHJ",
+        "Kehl T",
+        "Wack F",
+        "Bergstrand MP",
+        "Brandt SD",
+        "Stratford A",
+        "Maurer HH",
+        "Meyer MR"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00216-018-1558-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30617391/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "klein2021",
+      "type": "paper",
+      "title": "Investigation of the Structure-Activity Relationships of Psilocybin Analogues (ACS Pharmacol Transl Sci 4:533-542)",
+      "authors": [
+        "Klein AK",
+        "Chatha M",
+        "Laskowski LJ",
+        "Anderson EI",
+        "Brandt SD",
+        "Chapman SJ",
+        "McCorvy JD",
+        "Halberstadt AL"
+      ],
+      "year": 2021,
+      "doi": "10.1021/acsptsci.0c00176",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33860183/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261011065315/https://pubmed.ncbi.nlm.nih.gov/33860183"
+    },
+    {
+      "id": "jones2023",
+      "type": "paper",
+      "title": "In vivo validation of psilacetin as a prodrug yielding modestly lower peripheral psilocin exposure than psilocybin (Front Psychiatry 14:1303365)",
+      "authors": [
+        "Jones NT",
+        "Wagner L",
+        "Hahn MCP",
+        "Scarlett CO",
+        "Wenthur CJ"
+      ],
+      "year": 2023,
+      "doi": "10.3389/fpsyt.2023.1303365",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38264637/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260913145238/https://pubmed.ncbi.nlm.nih.gov/38264637/"
+    },
+    {
+      "id": "zhai2022",
+      "type": "paper",
+      "title": "Tentative identification of in vitro metabolites of O-acetylpsilocin (psilacetin, 4-AcO-DMT) by UHPLC-Q-Orbitrap MS (Drug Test Anal 14:1300-1309)",
+      "authors": [
+        "Zhai W",
+        "Li L",
+        "Zhao J",
+        "Xiang P",
+        "Liu M",
+        "Shi Y",
+        "Dang Y"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3255",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35312166/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250915234623/https://pubmed.ncbi.nlm.nih.gov/35312166/"
+    },
+    {
+      "id": "correia2025",
+      "type": "paper",
+      "title": "Quantitative analysis of recreational psychoactive mushroom gummies in Portland, Oregon (Clin Toxicol (Phila) 63:261-266)",
+      "authors": [
+        "Correia MS",
+        "Gonzaga MJ",
+        "Temple C",
+        "Gerona RR"
+      ],
+      "year": 2025,
+      "doi": "10.1080/15563650.2025.2450240",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39977248/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261005045217/https://pubmed.ncbi.nlm.nih.gov/39977248/"
+    },
+    {
+      "id": "nobrega2018",
+      "type": "paper",
+      "title": "The synthetic cathinone α-pyrrolidinovalerophenone (α-PVP): pharmacokinetic and pharmacodynamic clinical and forensic aspects (Drug Metab Rev 50:125-139)",
+      "authors": [
+        "Nóbrega L",
+        "Dinis-Oliveira RJ"
+      ],
+      "year": 2018,
+      "doi": "10.1080/03602532.2018.1448867",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29540067/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261004045338/https://pubmed.ncbi.nlm.nih.gov/29540067/"
+    },
+    {
+      "id": "karila2018",
+      "type": "paper",
+      "title": "MDPV and α-PVP use in humans: The twisted sisters (Neuropharmacology 134:65-72)",
+      "authors": [
+        "Karila L",
+        "Lafaye G",
+        "Scocard A",
+        "Cottencin O",
+        "Benyamina A"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.neuropharm.2017.10.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29030166/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250526165636/https://pubmed.ncbi.nlm.nih.gov/29030166/"
+    },
+    {
+      "id": "kolesnikova2019",
+      "type": "paper",
+      "title": "DARK Classics in Chemical Neuroscience: α-Pyrrolidinovalerophenone (\"Flakka\") (ACS Chem Neurosci 10:168-174)",
+      "authors": [
+        "Kolesnikova TO",
+        "Khatsko SL",
+        "Demin KA",
+        "Shevyrin VA",
+        "Kalueff AV"
+      ],
+      "year": 2019,
+      "doi": "10.1021/acschemneuro.8b00525",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30384587/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "baumann2017",
+      "type": "paper",
+      "title": "Neuropharmacology of 3,4-Methylenedioxypyrovalerone (MDPV), Its Metabolites, and Related Analogs (Curr Top Behav Neurosci 32:93-117)",
+      "authors": [
+        "Baumann MH",
+        "Bukhari MO",
+        "Lehner KR",
+        "Anizan S",
+        "Rice KC",
+        "Concheiro M",
+        "Huestis MA"
+      ],
+      "year": 2017,
+      "doi": "10.1007/7854_2016_53",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27830575/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250620200405/https://pubmed.ncbi.nlm.nih.gov/27830575/"
+    },
+    {
+      "id": "meyer2010",
+      "type": "paper",
+      "title": "Studies on the metabolism of the α-pyrrolidinophenone designer drug methylenedioxy-pyrovalerone (MDPV) in rat and human urine and human liver microsomes using GC-MS and LC-high-resolution MS and its detectability in urine by GC-MS (J Mass Spectrom 45:1426-42)",
+      "authors": [
+        "Meyer MR",
+        "Du P",
+        "Schuster F",
+        "Maurer HH"
+      ],
+      "year": 2010,
+      "doi": "10.1002/jms.1859",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21053377/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251123060456/https://pubmed.ncbi.nlm.nih.gov/21053377/"
+    },
+    {
+      "id": "sauer2009",
+      "type": "paper",
+      "title": "New designer drug alpha-pyrrolidinovalerophenone (PVP): studies on its metabolism and toxicological detection in rat urine using gas chromatographic/mass spectrometric techniques (J Mass Spectrom 44:952-64)",
+      "authors": [
+        "Sauer C",
+        "Peters FT",
+        "Haas C",
+        "Meyer MR",
+        "Fritschi G",
+        "Maurer HH"
+      ],
+      "year": 2009,
+      "doi": "10.1002/jms.1571",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19241365/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251117060350/https://pubmed.ncbi.nlm.nih.gov/19241365/"
+    },
+    {
+      "id": "spiller2011",
+      "type": "paper",
+      "title": "Clinical experience with and analytical confirmation of \"bath salts\" and \"legal highs\" (synthetic cathinones) in the United States (Clin Toxicol (Phila) 49:499-505)",
+      "authors": [
+        "Spiller HA",
+        "Ryan ML",
+        "Weston RG",
+        "Jansen J"
+      ],
+      "year": 2011,
+      "doi": "10.3109/15563650.2011.590812",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21824061/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251207220658/https://pubmed.ncbi.nlm.nih.gov/21824061/"
+    },
+    {
+      "id": "schmoll2018",
+      "type": "paper",
+      "title": "An internet-based survey of 96 German-speaking users of \"bath salts\": frequent complications, risky sexual behavior, violence, and delinquency (Clin Toxicol (Phila) 56:219-222)",
+      "authors": [
+        "Schmoll S",
+        "Romanek K",
+        "Stich R",
+        "Bekka E",
+        "Stenzel J",
+        "Geith S",
+        "Eyer F",
+        "Rabe C"
+      ],
+      "year": 2018,
+      "doi": "10.1080/15563650.2017.1353094",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28753045/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204061352/https://pubmed.ncbi.nlm.nih.gov/28753045/"
+    },
+    {
+      "id": "swgdrug-1plsd",
+      "type": "database",
+      "title": "SWGDRUG monograph: 1P-LSD (IR: base, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/1P-LSD.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207104401/https://swgdrug.org/Monographs/1P-LSD.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-4acodmt",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Acetoxy-N,N-dimethyltryptamine (IR: oxalate, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4AcODMT.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250123160756/http://www.swgdrug.org/Monographs/4AcODMT.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-apvp",
+      "type": "database",
+      "title": "SWGDRUG monograph: alpha-PVP (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/a-PVP.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260724181156/https://www.swgdrug.org/Monographs/a-PVP.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-mdpv",
+      "type": "database",
+      "title": "SWGDRUG monograph: 3,4-MDPV (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/3,4MDPV.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241212113914/https://swgdrug.org/Monographs/3,4MDPV.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "jurowski2026",
+      "type": "paper",
+      "title": "The toxicity of psychedelic LSD derivatives: 1-acetyl-LSD (ALD-52), 1-propionyl-LSD (1P-LSD), 1-butyryl-LSD (1B-LSD), 1-valeryl-LSD (1V-LSD) and 1-cyclopropylmethanoyl-LSD (1cP-LSD): prediction of toxicological parameters using multi-in silico approach (Arch Toxicol 100(7):3091-3110)",
+      "authors": [
+        "K. Jurowski",
+        "A. Krośniak",
+        "D. Kobylarz",
+        "O. Fijałkowska"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00204-025-04255-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41915184/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
       "id": "krotulski2021b",
       "type": "paper",
       "title": "Brorphine - investigation and quantitation of a new potent synthetic opioid in forensic toxicology casework using liquid chromatography-mass spectrometry (J Forensic Sci 66:664-676)",
@@ -6510,6 +6884,7 @@
       "archive_url": "https://web.archive.org/web/20251009154451/https://pmc.ncbi.nlm.nih.gov/articles/PMC7819469/"
     },
     {
+<<<<<<< HEAD
       "id": "coopman2016",
       "type": "paper",
       "title": "Ocfentanil overdose fatality in the recreational drug scene (Forensic Sci Int 266:469-473)",
@@ -6635,6 +7010,238 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13"
+=======
+      "id": "grond2004",
+      "type": "paper",
+      "title": "Clinical pharmacology of tramadol (Clin Pharmacokinet 43:879-923)",
+      "authors": [
+        "S. Grond",
+        "A. Sablotzki"
+      ],
+      "year": 2004,
+      "doi": "10.2165/00003088-200443130-00004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15509185/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261005084943/https://pubmed.ncbi.nlm.nih.gov/15509185/"
+    },
+    {
+      "id": "crews2021",
+      "type": "paper",
+      "title": "Clinical Pharmacogenetics Implementation Consortium guideline for CYP2D6, OPRM1, and COMT genotypes and select opioid therapy (Clin Pharmacol Ther 110:888-896)",
+      "authors": [
+        "K. R. Crews",
+        "A. A. Monte",
+        "R. Huddart",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1002/cpt.2149",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33387367/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260414222147/https://pubmed.ncbi.nlm.nih.gov/33387367/"
+    },
+    {
+      "id": "ali2023",
+      "type": "paper",
+      "title": "Clinical and laboratory factors related to seizure and serotonin toxicity in tramadol intoxication: an Egyptian study (Clin Drug Investig 43:963-971)",
+      "authors": [
+        "A. A. Ali",
+        "M. M. Abdeshafy",
+        "K. Abdelkawy",
+        "R. M. Elsabaa",
+        "F. Elbarbry"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s40261-023-01326-y",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38006536/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260624154855/https://pubmed.ncbi.nlm.nih.gov/38006536/"
+    },
+    {
+      "id": "nielsen2025",
+      "type": "paper",
+      "title": "Prevalence and characteristics of tramadol-induced seizures in young adult emergency admissions (Dan Med J 72:A02250108)",
+      "authors": [
+        "A. V. A. Nielsen",
+        "C. K. Lassen",
+        "D. Cakar",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.61409/a02250108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40747723/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250827190039/https://pubmed.ncbi.nlm.nih.gov/40747723/"
+    },
+    {
+      "id": "tramadol-label",
+      "type": "institution",
+      "title": "Tramadol hydrochloride tablets (Amneal Pharmaceuticals NY LLC), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8ec4e4e5-a56e-4198-8428-6b770b9bf27d",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "lyrica-label",
+      "type": "institution",
+      "title": "LYRICA (pregabalin) capsules and oral solution, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=60185c88-ecfd-46f9-adb9-b97c6b00a553",
+      "archive_url": "https://web.archive.org/web/20260802153658/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=60185c88-ecfd-46f9-adb9-b97c6b00a553",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "bockbrader2010",
+      "type": "paper",
+      "title": "Clinical pharmacokinetics of pregabalin in healthy volunteers (J Clin Pharmacol 50:941-950)",
+      "authors": [
+        "H. N. Bockbrader",
+        "L. L. Radulovic",
+        "E. L. Posvar",
+        "et al."
+      ],
+      "year": 2010,
+      "doi": "10.1177/0091270009352087",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20147618/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260707162059/https://pubmed.ncbi.nlm.nih.gov/20147618/"
+    },
+    {
+      "id": "evoy2021",
+      "type": "paper",
+      "title": "Gabapentinoid pharmacology in the context of emerging misuse liability (J Clin Pharmacol 61 Suppl 2:S89-S99)",
+      "authors": [
+        "K. E. Evoy",
+        "A. M. Peckham",
+        "J. R. Covvey",
+        "K. J. Tidgewell"
+      ],
+      "year": 2021,
+      "doi": "10.1002/jcph.1833",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34396549/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260902203559/https://pubmed.ncbi.nlm.nih.gov/34396549/"
+    },
+    {
+      "id": "evoy2026",
+      "type": "paper",
+      "title": "Misuse of pregabalin and gabapentin: a second systematic review update (Drugs 86:1365-1378)",
+      "authors": [
+        "K. E. Evoy",
+        "D. Drain",
+        "J. Pedigo",
+        "J. R. Covvey",
+        "O. Ramey"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s40265-026-02342-w",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42236659/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "kyei-baffour2020",
+      "type": "paper",
+      "title": "DARK classics in chemical neuroscience: U-47700 (ACS Chem Neurosci 11:3928-3936)",
+      "authors": [
+        "K. Kyei-Baffour",
+        "C. W. Lindsley"
+      ],
+      "year": 2020,
+      "doi": "10.1021/acschemneuro.0c00330",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32639714/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250404133630/https://pubmed.ncbi.nlm.nih.gov/32639714/"
+    },
+    {
+      "id": "rambaran2017",
+      "type": "paper",
+      "title": "U-47700: a clinical review of the literature (J Emerg Med 53:509-519)",
+      "authors": [
+        "K. A. Rambaran",
+        "S. W. Fleming",
+        "J. An",
+        "et al."
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.jemermed.2017.05.034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28911989/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20251119085553/https://pubmed.ncbi.nlm.nih.gov/28911989/"
+    },
+    {
+      "id": "vogliardi2018",
+      "type": "paper",
+      "title": "Non-fatal overdose with U-47700: identification in biological matrices (Curr Pharm Biotechnol 19:180-187)",
+      "authors": [
+        "S. Vogliardi",
+        "G. Stocchero",
+        "S. Maietti",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.2174/1389201019666180509164240",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29745328/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "kriikku2019",
+      "type": "paper",
+      "title": "Toxic lifespan of the synthetic opioid U-47,700 in Finland verified by re-analysis of UPLC-TOF-MS data (Forensic Sci Int 300:85-88)",
+      "authors": [
+        "P. Kriikku",
+        "A. Pelander",
+        "I. Rasanen",
+        "I. Ojanpera"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.forsciint.2019.04.030",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31082566/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260928162543/https://pubmed.ncbi.nlm.nih.gov/31082566/"
+    },
+    {
+      "id": "nordmeier2022",
+      "type": "paper",
+      "title": "Are the N-demethylated metabolites of U-47700 more active than their parent compound? In vitro mu-opioid receptor activation of N-desmethyl-U-47700 and N,N-bisdesmethyl-U-47700 (Drug Test Anal 14:713-717)",
+      "authors": [
+        "F. Nordmeier",
+        "A. Cannaert",
+        "C. P. Stove",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3182",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34669261/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+>>>>>>> origin/main
     },
     {
       "id": "giorgetti2024",
@@ -6644,17 +7251,114 @@
         "A. Giorgetti",
         "M. Große Perdekamp",
         "G. Franchetti",
+<<<<<<< HEAD
         "R. Pircher",
         "S. Pollak",
         "S. Pelotti",
         "V. Auwärter"
+=======
+        "et al."
+>>>>>>> origin/main
       ],
       "year": 2024,
       "doi": "10.1007/s00414-024-03263-7",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38831139/",
+<<<<<<< HEAD
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13"
+=======
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251106032718/https://pubmed.ncbi.nlm.nih.gov/38831139/"
+    },
+    {
+      "id": "wagmann2020",
+      "type": "paper",
+      "title": "Toxicokinetics and analytical toxicology of flualprazolam: metabolic fate, isozyme mapping, human plasma concentration and main urinary excretion products (J Anal Toxicol 44:549-558)",
+      "authors": [
+        "L. Wagmann",
+        "S. K. Manier",
+        "T. P. Bambauer",
+        "et al."
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkaa019",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32104896/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204191314/https://pubmed.ncbi.nlm.nih.gov/32104896/"
+    },
+    {
+      "id": "canfield2023",
+      "type": "paper",
+      "title": "Designer benzodiazepine rat pharmacokinetics: a comparison of alprazolam, flualprazolam and flubromazolam (Toxicol Appl Pharmacol 465:116459)",
+      "authors": [
+        "J. R. Canfield",
+        "D. F. Kisor",
+        "J. E. Sprague"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.taap.2023.116459",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36907383/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260610164130/https://pubmed.ncbi.nlm.nih.gov/36907383/"
+    },
+    {
+      "id": "freestone2026",
+      "type": "paper",
+      "title": "The emergence of novel benzodiazepines in Australia, evidence, alerts, clinical management and harm reduction: a narrative review (Drug Alcohol Rev, e70086)",
+      "authors": [
+        "J. Freestone",
+        "S. Kypri",
+        "J. L. Schumann",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1111/dar.70086",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12682436/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260412082704/https://pmc.ncbi.nlm.nih.gov/articles/PMC12682436/"
+    },
+    {
+      "id": "huppertz2018",
+      "type": "paper",
+      "title": "Flubromazolam - basic pharmacokinetic evaluation of a highly potent designer benzodiazepine (Drug Test Anal 10:206-211)",
+      "authors": [
+        "L. M. Huppertz",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2203",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28378533/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204003332/https://pubmed.ncbi.nlm.nih.gov/28378533/"
+    },
+    {
+      "id": "bohnenberger2019",
+      "type": "paper",
+      "title": "Flubromazolam overdose: a review of a new designer benzodiazepine and the role of flumazenil (Ment Health Clin 9:133-137)",
+      "authors": [
+        "K. Bohnenberger",
+        "M. T. Liu"
+      ],
+      "year": 2019,
+      "doi": "10.9740/mhc.2019.05.133",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31123661/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250203224939/https://pubmed.ncbi.nlm.nih.gov/31123661/"
+>>>>>>> origin/main
     }
   ]
 }

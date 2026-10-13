@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-aco-dmt",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-AcO-DMT",
+      "synonyms": [
+        "psilacetin",
+        "O-acetylpsilocin",
+        "4-acetoxy-N,N-dimethyltryptamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-AcO-DMT",
+      "synonyms": [
+        "psilacetina",
+        "O-acetilpsilocina"
+      ]
+    }
+  },
+  "iupac": "[3-[2-(dimethylamino)ethyl]-1H-indol-4-yl] acetate",
+  "formula": "C14H18N2O2",
+  "molar_mass_g_mol": 246.3,
+  "smiles": "CC(=O)OC1=CC=CC2=C1C(=CN2)CCN(C)C",
+  "inchi": "InChI=1S/C14H18N2O2/c1-10(17)18-13-6-4-5-12-14(13)11(9-15-12)7-8-16(2)3/h4-6,9,15H,7-8H2,1-3H3",
+  "inchikey": "RTLRUOSYLFOFHV-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "92292-84-7",
+    "pubchem_cid": 15429212
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
