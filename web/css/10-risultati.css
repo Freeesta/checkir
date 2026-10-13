@@ -43,4 +43,6 @@
   .chips [data-chip="result"] { flex: 0 0 auto; gap: 0.15rem; padding-inline: 0.25rem; }
   .chips [data-chip="result"] .chip-value { max-width: none; overflow: visible; }
   .chips [data-chip="file"] .chip-value { max-width: 0; padding: 0; }
+  .chips [data-chip="file"] { padding-inline: 0.3rem; }
+  .chips [data-chip="result"] { font-size: 0.8rem; }
 }
