@@ -62,7 +62,7 @@ export function renderPeaks(body, s, ctx) {
   if (a.error) return void body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t("peaks.error")]));
   const result = resultOf(s);
   const chosen = result ? selectedCandidate(s, result.data) : null;
-  if (result && chosen) body.append(el("p", { class: "peaks-ref" }, [levelBadge(levelNumber(result.data)), ` ${t("peaks.against", { name: candidateName(chosen), library: chosen.library })}`]));
+  if (result && chosen) body.append(el("p", { class: "peaks-ref" }, [levelBadge(levelNumber(result.data)), ` ${a.refName ? t("peaks.against_mixture", { name: a.refName }) : t("peaks.against", { name: candidateName(chosen), library: chosen.library })}`]));
   else body.append(el("p", { class: "empty" }, [t("peaks.no_result")]));
   body.append(el("p", { class: "peaks-counts" }, [peaksSummary(s)]), regionList(a));
   if (!a.peaks.length) body.append(el("p", { class: "empty" }, [t("panel.peaks.empty")]));

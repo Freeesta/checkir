@@ -21,6 +21,7 @@ import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
 import { registryScenario } from "./registri.mjs";
 import { sheetScenario } from "./scheda.mjs";
 import { sheetsPureScenario, sheetsScenario } from "./schede.mjs";
+import { mixtureScenario } from "./miscele.mjs";
 import { subtractionScenario } from "./sottrazione.mjs";
 import { startSite } from "./sito.mjs";
 import { toolsScenario } from "./strumenti.mjs";
@@ -346,6 +347,7 @@ function scenarios(browser) {
     () => collaudoCScenario(browser, base, check),
     () => inverseScenario(browser, base, check, axe),
     () => subtractionScenario(browser, base, check, axe),
+    () => mixtureScenario(browser, base, check, axe),
     () => toolsScenario(browser, base, check, axe),
     () => recallScenario(browser, base, check, axe),
     () => exportScenario(browser, base, check, axe),

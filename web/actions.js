@@ -10,7 +10,7 @@ import { canSubtract } from "./subtract.js";
  *   getState: () => import("./state.js").AppState,
  *   openFile: () => void, loadDemo: () => void, selectFile: (code: string) => void, closeFile: (code: string) => void, setLang: (code: string) => void, toggleLang: () => void, cycleTheme: () => void,
  *   togglePanel: () => void, goto: (panelId: string) => void, closeSection: () => void, openDialog: (id: string) => void, folder: FolderCtx,
- *   setDraft: (patch: Partial<import("./state.js").DecisionDraft>) => void, signDecision: () => void, revokeDecision: () => void, setSheetLang: (lang: string) => Promise<void>, toggleTalk: () => void, printSheet: () => void,
+ *   setDraft: (patch: Partial<import("./state.js").DecisionDraft>) => void, signDecision: () => void, acceptMixture: () => void, revokeDecision: () => void, setSheetLang: (lang: string) => Promise<void>, toggleTalk: () => void, printSheet: () => void,
  *   runMatch: () => void, selectCandidate: (key: string) => void, setLabel: (key: string, label: import("./state.js").ChemistLabel | null) => void, toggleOverlay: () => void,
  *   togglePeaks: () => void, focusPeak: (id: string | null) => void, stepPeak: (dir: 1 | -1) => boolean, clearPeak: () => boolean,
  *   setTextLevel: (level: import("./state.js").TextLevel) => void, stepLevel: (dir: 1 | -1) => void, toggleModeAnim: () => void, showRule: (range: import("./state.js").RuleRange | null) => void,

@@ -42,7 +42,7 @@ export function buildLayers(chart, summary) {
       lastOffset = offset;
       const name = chosen ? candidateName(chosen) : null;
       summary.hidden = !analysis || !!analysis.error;
-      summary.textContent = analysis && !analysis.error ? summaryText(analysis, name) : "";
+      summary.textContent = analysis && !analysis.error ? summaryText(analysis, analysis.refName ?? name) : "";
       const sample = shown ? spectrumOf(shown) : undefined;
       const ref = r && chosen && s.overlay && sample ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
       chart.setLayers({

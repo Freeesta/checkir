@@ -90,6 +90,8 @@ const ALERTS = {
   different_form: { labelKey: "alert.different_form.label", reasons: (d) => [t("alert.different_form.reason", { first: rowText(d.first), other: rowText(d.other), rank: num(d.other_rank, 0) })] },
   form_absent: { labelKey: "alert.form_absent.label", reasons: (d) => [t("alert.form_absent.reason", { form: String(d.expected_form), first: rowText(d.first) })] },
   custom_range: { labelKey: "alert.custom_range.label", reasons: (d) => [t("alert.custom_range.reason", { ranges: (d.ranges ?? []).map((/** @type {number[]} */ r) => `${num(r[0], 0)}–${num(r[1], 0)}`).join(", ") })] },
+  high_residual: { labelKey: "alert.high_residual.label", reasons: (d) => [t("alert.high_residual.reason", { share: num(d.unexplained_variance_share, 2), peaks: num(d.unexplained_peaks, 0) })] },
+  over_subtraction: { labelKey: "alert.over_subtraction.label", reasons: (d) => [t("alert.over_subtraction.reason", { round: num(d.round, 0), min: num(d.zone_minimum, 3) })] },
   same_as_previous: { labelKey: "alert.same_as_previous.label", reasons: (d) => [t("alert.same_as_previous.reason", { r: num(d.r) })] },
   quality_saturation: { labelKey: "alert.quality_saturation.label", reasons: (d) => [t("alert.quality_saturation.reason", { max: num(d.max_absorbance), at: num(d.at_cm1, 0), limit: num(d.limit, 1) })] },
   quality_weak_signal: { labelKey: "alert.quality_weak_signal.label", reasons: (d) => [t("alert.quality_weak_signal.reason", { band: num(d.strongest_band, 3), limit: num(d.limit, 2) })] },
