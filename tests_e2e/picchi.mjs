@@ -146,6 +146,7 @@ async function modeScenario(browser, base, check, axe) {
   await page.waitForSelector(".peak-item");
   await page.locator('.peak-item:has-text("~1465")').click();
   const card = page.locator("#peak-card");
+  await card.locator(".reading").first().waitFor();
   check("mode: the reading names the group and the mode", /Metilene · Forbice/.test((await card.locator(".reading").first().textContent()) ?? ""));
   const fig = card.locator("figure.mode-figure");
   check("mode: the drawing moves in the normal case, with a switch to stop it", (await fig.getAttribute("data-animated")) === "true" && (await card.locator('[data-card="mode-anim"]').getAttribute("aria-pressed")) === "true");
