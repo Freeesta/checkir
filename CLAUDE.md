@@ -40,7 +40,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 ## 5. File d'area (leggi solo quello del tuo lavoro)
 | Se tocchi… | Leggi |
 |---|---|
-| `crates/ftir-core`, `crates/ftir-wasm` | `docs/agenti/motore.md` |
+| `crates/ftir-core`, `crates/ftir-wasm` | `docs/agenti/motore.md` (qualità e interferogrammi: anche `qualita.md`) |
 | `crates/ftir-lib`, `tools/libreria/` | `docs/agenti/libreria.md` |
 | `web/` | `docs/agenti/pagina.md` |
 | `data/`, `docs/schemi/` | `docs/agenti/dati.md` |

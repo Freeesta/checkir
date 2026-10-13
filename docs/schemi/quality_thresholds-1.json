@@ -188,6 +188,23 @@
         "strong_min_abs"
       ],
       "additionalProperties": false
+    },
+    "background_energy": {
+      "description": "Background energy check (instrument files with interferograms): the energy of the background single channel against the median of the backgrounds of the same instrument.",
+      "description_it": "Controllo dell'energia del bianco (file dello strumento con interferogrammi): energia del singolo canale del bianco contro la mediana dei bianchi dello stesso strumento.",
+      "type": "object",
+      "properties": {
+        "low_ratio": {
+          "description": "Ratio to the reference median below which the warning fires.",
+          "description_it": "Rapporto con la mediana di riferimento sotto cui scatta l'avviso.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "low_ratio"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [
@@ -196,7 +213,8 @@
     "calibration",
     "co2",
     "vapour",
-    "negative"
+    "negative",
+    "background_energy"
   ],
   "additionalProperties": false
 }
