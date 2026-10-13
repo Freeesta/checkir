@@ -1,4 +1,4 @@
-// T1 (static, no browser): the CSP of index.html is exactly the expected one, and web/ contains no URL that the browser
+// T1 (static, no browser): the CSP of every HTML page is exactly the expected one, and web/ contains no URL that the browser
 // could load (only the textual links listed in link_ammessi.json). Negative controls prove that the checks can fail.
 import { readFile, readdir } from "node:fs/promises";
 import { join, relative } from "node:path";
@@ -33,6 +33,12 @@ export function fileProblems(name, text, allowed) {
   return out;
 }
 
+/** Every HTML page carries exactly the CSP of rule R1. */
+export function cspProblems(name, html) {
+  const csp = cspOf(html);
+  return csp === EXPECTED_CSP ? [] : [`${name}: CSP differs from rule R1: ${csp}`];
+}
+
 async function walk(dir) {
   const out = [];
   for (const e of await readdir(dir, { withFileTypes: true })) {
@@ -47,11 +53,11 @@ async function walk(dir) {
 export async function webProblems() {
   const allowed = JSON.parse(await readFile(new URL("./link_ammessi.json", import.meta.url), "utf8")).links;
   const problems = [];
-  const csp = cspOf(await readFile(join(WEB, "index.html"), "utf8"));
-  if (csp !== EXPECTED_CSP) problems.push(`index.html: CSP differs from rule R1: ${csp}`);
   for (const file of await walk(WEB)) {
     const name = "web/" + relative(WEB, file);
-    problems.push(...fileProblems(name, await readFile(file, "utf8"), allowed));
+    const text = await readFile(file, "utf8");
+    if (name.endsWith(".html")) problems.push(...cspProblems(name, text));
+    problems.push(...fileProblems(name, text, allowed));
   }
   for (const a of allowed) {
     const text = await readFile(join(ROOT, a.file), "utf8").catch(() => "");
@@ -67,5 +73,6 @@ export async function staticScenario(check) {
   check("T1 control: a protocol-relative script fails", fileProblems("web/index.html", '<script src="//cdn.example/x.js"></script>', []).length > 0);
   check("T1 control: a beacon fails", fileProblems("web/main.js", 'navigator.sendBeacon("/x");', []).length > 0);
   check("T1 control: a listed link passes", fileProblems("web/a.js", 'const u = "https://x.example/";', [{ file: "web/a.js", url: "https://x.example/" }]).length === 0);
-  check("T1 control: a looser CSP is not the expected one", cspOf(`<meta http-equiv="Content-Security-Policy" content="${EXPECTED_CSP}; font-src https://f.example">`) !== EXPECTED_CSP);
+  check("T1 control: a looser CSP fails", cspProblems("web/x.html", `<meta http-equiv="Content-Security-Policy" content="${EXPECTED_CSP}; font-src https://f.example">`).length > 0);
+  check("T1 control: a page without CSP fails", cspProblems("web/x.html", "<html></html>").length > 0);
 }

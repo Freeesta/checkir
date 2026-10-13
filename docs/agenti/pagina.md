@@ -15,6 +15,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `chart.js`: `draw` (SVG), `renderTable` (dati dell'intervallo visibile), `wire` (tastiera + pulsanti, senza trascinamento).
 - `img/`: anteprima social `og.png` 1200x630, `favicon.svg` (segue il tema)/`favicon.ico`, `apple-touch-icon.png`, icone `icon-maskable-*`, `logo-chiaro|scuro|mono.svg`: tutti generati da `tools/genera_immagini.mjs` (a mano, da rilanciare se cambiano logo o nome; i PNG contengono il nome). `logo.svg` (pillola tonda con la valle di spettro; varianti e motivazione in `docs/identita/logo.md`; monocromo, `currentColor`; nella pagina è una maschera CSS `.logo` colorata con `--colore-nome`) e icone PNG 16/32/192/512 per favicon e manifest.
 - `style.css`: variabili in inglese `--bg --text --text-muted --border --surface --line --focus --oi-*` e ruoli `--color-brand|sample|reference|residual|alert|region` (il grafico usa i ruoli, non i colori `--oi-*`; il riferimento arancio mai per testo); il tema scuro è scritto due volte, in `@media (prefers-color-scheme: dark)` con `:root:not([data-theme="light"])` e in `:root[data-theme="dark"]` (`controlla_contrasti.py` verifica che i due blocchi coincidano); riduci animazioni, colori forzati, `prefers-contrast: more`. `sw.js`: cache `<APP_ID>-v<VERSION>`.
+- Pagine di testo `pagine/avvertenze/` e `pagine/informativa/` (bozza in attesa di revisione legale, testi come chiavi `warnings.*`/`notice.*`): `pagina.js` le avvia (tema, lingua, header con gruppo lingue, titolo, `body.dataset.ready`); `avvertenze.js` `buildWarningsBox(host, {href?})` è il riquadro breve riusabile (role note, chiavi `warnings.box_label|short|more`; `href` aggiunge il link alla pagina completa). Link nel piè di pagina (`.footer-links`).
 
 ## Contratti e formati
 - Il motore restituisce spettri come JSON `{wavenumber_cm1: [...], y: [...]}`. Chiavi di errore: `err.*` (dinamiche).
@@ -25,6 +26,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `tests_e2e/registri.mjs` (chiamato da `fumo.mjs`): conformità dei registri `ACTIONS` e `PANELS` (id, numeri, `key` e `step` unici; chiavi `labelKey/tipKey/titleKey` in tutti i cataloghi; icone nello sprite; un'azione `panel.goto.N` per pannello); un'azione di prova senza chiave italiana deve far fallire il controllo.
 
 ## Trappole
+- Le pagine di `web/pagine/` hanno la stessa CSP di `index.html` (la controlla T1) e si elencano in `FILES` di `sw.js` (cartella e `index.html`); un link http(s) nuovo si dichiara in `tests_e2e/link_ammessi.json`.
 - `tsc` non controlla `sw.js` né `web/wasm`. Nuovi moduli: aggiungerli a `FILES` in `sw.js`.
 - Le chiavi del catalogo nei registri si scrivono letterali (`labelKey: "x.y"`, `t("x.y")`), mai composte, altrimenti `controlla_lingue.py` le dà orfane (eccezione: prefissi `theme.`, `err.`, `reader.`).
 - Il pulsante «Carica» apre la scelta del file ma la lettura arriva con il pacchetto VISTA PR 1; lo spettro demo (`demo.load`) mette un solo `FileEntry` C1 nello stato, il grafico mostra sempre lo spettro sintetico.

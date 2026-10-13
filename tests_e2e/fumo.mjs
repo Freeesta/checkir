@@ -1,28 +1,13 @@
 // Smoke e2e: the page loads, draws the synthetic spectrum with its table, is keyboard-operable, axe
 // (light and dark), fits a 320 px viewport (zoom 400 %), and numbers use the decimal point in both languages.
-import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
-import { extname, join, normalize } from "node:path";
 import { chromium, firefox, webkit } from "playwright";
 import { registryScenario } from "./registri.mjs";
+import { startSite } from "./sito.mjs";
 
-const SITE = new URL("../site/", import.meta.url).pathname;
-const TIPI = { ".html": "text/html", ".js": "text/javascript", ".json": "application/json", ".css": "text/css", ".wasm": "application/wasm", ".svg": "image/svg+xml" };
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
 
-const server = createServer(async (req, res) => {
-  const url = new URL(req.url ?? "/", "http://x");
-  const rel = normalize(url.pathname === "/" ? "/index.html" : url.pathname).replace(/^(\.\.[/\\])+/, "");
-  try {
-    res.setHeader("Content-Type", TIPI[extname(rel)] ?? "application/octet-stream");
-    res.end(await readFile(join(SITE, rel)));
-  } catch {
-    res.statusCode = 404;
-    res.end();
-  }
-});
-await new Promise((ok) => server.listen(0, "127.0.0.1", ok));
-const base = `http://127.0.0.1:${server.address().port}/`;
+const { base, close } = await startSite();
 
 let failures = 0;
 function check(name, ok, detail = "") {
@@ -159,6 +144,52 @@ async function nameScenario(browser) {
   await ctx.close();
 }
 
+/** The two text pages: reached from the footer, texts in both languages (no raw key), draft line first, axe clean in light and dark, no horizontal scroll at 320 px. */
+async function pagesScenario(browser) {
+  const pages = [{ slug: "avvertenze", link: 0, items: 9, draft: /bozza|draft/i }, { slug: "informativa", link: 1, items: 8, draft: /bozza|draft/i }];
+  for (const scheme of ["light", "dark"]) {
+    for (const p of pages) {
+      const ctx = await browser.newContext({ colorScheme: scheme, locale: "it-IT", viewport: { width: 320, height: 640 } });
+      const page = await ctx.newPage();
+      const errors = [];
+      page.on("pageerror", (e) => errors.push(String(e)));
+      page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
+      await page.goto(base);
+      await page.waitForSelector("body[data-ready='1']");
+      await page.locator(".footer-links a").nth(p.link).click();
+      await page.waitForSelector(`body[data-page][data-ready='1']`);
+      check(`[${scheme}] ${p.slug}: reached from the footer`, page.url().endsWith(`/pagine/${p.slug}/`), page.url());
+      for (const lang of ["it", "en"]) {
+        if (lang === "en") {
+          await page.click('[data-lang="en"]');
+          await page.waitForFunction(() => document.documentElement.lang === "en");
+        }
+        const tag = `[${scheme}] ${p.slug} ${lang}`;
+        const raw = await page.evaluate(() => [...document.querySelectorAll("[data-i18n]")].filter((e) => !e.textContent || /^[a-z]+\.[a-z0-9_.]+$/.test(e.textContent)).map((e) => e.getAttribute("data-i18n")));
+        check(`${tag}: every text is translated`, raw.length === 0, raw.join(", "));
+        check(`${tag}: ${p.items} sections and the draft line first`, (await page.locator(".doc > li").count()) === p.items && p.draft.test((await page.locator(".page > p").first().textContent()) ?? ""));
+        check(`${tag}: no horizontal scroll`, await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
+        const v = await axe(page);
+        check(`${tag}: axe has no violations`, v.length === 0, v.join(", "));
+      }
+      check(`[${scheme}] ${p.slug}: no console errors`, errors.length === 0, errors.join(" | "));
+      await ctx.close();
+    }
+  }
+}
+
+/** The short warnings box: shown on the "Avvertenze" page with the sentences of the limits, no link to itself. */
+async function warningsBoxScenario(browser) {
+  const ctx = await browser.newContext({ locale: "en-GB" });
+  const page = await ctx.newPage();
+  await page.goto(base + "pagine/avvertenze/");
+  await page.waitForSelector("body[data-ready='1']");
+  const box = page.locator(".warnings-box");
+  const text = (await box.textContent()) ?? "";
+  check("warnings box: role note, limits and no safe claim", (await box.getAttribute("role")) === "note" && /5 %/.test(text) && /fentanyl/.test(text) && /not mean that the substance is safe/.test(text) && (await box.locator("a").count()) === 0, text);
+  await ctx.close();
+}
+
 async function run() {
   const browser = await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
   try {
@@ -168,9 +199,11 @@ async function run() {
     await shellScenario(browser);
     await registryScenario(check);
     await nameScenario(browser);
+    await pagesScenario(browser);
+    await warningsBoxScenario(browser);
   } finally {
     await browser.close();
-    server.close();
+    close();
   }
   console.log(failures ? `${failures} checks failed` : "all checks ok");
   process.exit(failures ? 1 : 0);

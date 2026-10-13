@@ -162,6 +162,19 @@ th { position: sticky; top: 0; background: var(--surface); }
 .dialog-head { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 1rem; border-bottom: 1px solid var(--border); }
 .dialog-body { padding: 0.25rem 1rem 1rem; }
 
+/* Static text pages (warnings, privacy notice) and the short warnings box */
+.page-tools { margin-left: auto; display: flex; align-items: center; }
+.page { max-width: 46rem; margin: 0 auto; padding: 1rem; }
+.page h1 { margin-bottom: 0.75rem; font-size: 1.5rem; }
+.page a, .footer a, .warnings-box a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 0.15em; }
+.draft { padding: 0.5rem 0.75rem; border: 2px dashed var(--border); border-radius: 0.4rem; background: var(--surface); font-weight: 600; }
+.warnings-box { margin: 1rem 0; padding: 0.6rem 0.9rem; border: 1px solid var(--border); border-left: 0.35rem solid var(--color-alert); border-radius: 0.4rem; background: var(--surface); }
+.doc { margin: 1rem 0 0; padding: 0; list-style: none; counter-reset: section; }
+.doc > li { margin-bottom: 1rem; counter-increment: section; }
+.doc h2::before { content: counter(section) ". "; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin-bottom: 0.5rem; }
+.footer-links a { display: inline-block; padding: 0.4rem 0; }
+
 /* Phone: compact header, tab bar, sections as full pages */
 .tabbar { display: none; }
 @media (max-width: 45em) {

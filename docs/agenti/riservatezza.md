@@ -14,3 +14,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri. Regole di fondo: niente esce 
 - Non distruttiva: `clean` lavora su una copia dei metadati, l'originale non si tocca; il rapporto di pulizia (ambito, chiave, azione, conteggio) non contiene mai un valore e mostra `(unknown field)` per le chiavi che il contratto non conosce. `readers/anonymize.rs` (pseudonimi stabili HMAC) resta lo strumento per confrontare file dentro lo stesso servizio; l'esportazione che esce dal browser usa il contratto.
 - Un lettore nuovo = una tabella in `CONTRACT` + una riga in `declared()` di `crates/ftir-core/tests/anonimizza.rs` (T4); un campo nuovo di un lettore = una regola nella sua tabella, altrimenti il test fallisce. Dopo ogni modifica: `cargo run --release -p ftir-core --example gen_anonimizza`.
 - T3 (`tools/controlla_schemi.py`): vedi `dati.md`; un campo `email` in uno schema fa fallire il job `data`.
+
+## Avvertenze e informativa
+- Pagine bilingui in `web/pagine/` (testi da revisione legale: titolare, contatto e numero di giorni dell'archivio restano da definire). Contatto = issue pubbliche del repository, nessuna email. Il riquadro breve è `buildWarningsBox` in `web/avvertenze.js`: le schede delle sostanze lo riusano.
+- `fumo.mjs` (`pagesScenario`, `warningsBoxScenario`) prova raggiungibilità dal piè di pagina, testi tradotti, axe chiaro/scuro it/en, 320 px; T2 visita le due pagine.

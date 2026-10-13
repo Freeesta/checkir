@@ -1,4 +1,4 @@
-// Static server of the built site (site/) for the browser tests.
+// Static server of the built site (site/) for the browser tests; a folder serves its index.html like GitHub Pages.
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
@@ -10,7 +10,7 @@ const TIPI = { ".html": "text/html", ".js": "text/javascript", ".json": "applica
 export async function startSite() {
   const server = createServer(async (req, res) => {
     const url = new URL(req.url ?? "/", "http://x");
-    const rel = normalize(url.pathname === "/" ? "/index.html" : url.pathname).replace(/^(\.\.[/\\])+/, "");
+    const rel = normalize(url.pathname.endsWith("/") ? url.pathname + "index.html" : url.pathname).replace(/^(\.\.[/\\])+/, "");
     try {
       res.setHeader("Content-Type", TIPI[extname(rel)] ?? "application/octet-stream");
       res.end(await readFile(join(SITE, rel)));
