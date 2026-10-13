@@ -1,0 +1,72 @@
+{
+  "schema": "datasheet/1",
+  "substance": "butylone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "N-dealkylated metabolite",
+        "reaction": "n_demethylation",
+        "source": "zaitsu2009"
+      },
+      {
+        "from": "parent",
+        "to": "4-hydroxy-3-methoxy metabolite (demethylenation then O-methylation)",
+        "reaction": "other",
+        "source": "zaitsu2009"
+      },
+      {
+        "from": "parent",
+        "to": "beta-keto reduced metabolite",
+        "reaction": "reduction_keto",
+        "source": "zaitsu2009"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "butylone.sold_as",
+      "topic": "testing",
+      "source": "warrick2012"
+    },
+    {
+      "key": "butylone.signs",
+      "topic": "overdose_signs",
+      "source": "warrick2012"
+    },
+    {
+      "key": "butylone.combination",
+      "topic": "combination",
+      "source": "simmler2013"
+    }
+  ]
+}

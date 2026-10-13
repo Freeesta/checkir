@@ -1,0 +1,61 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "n-ethylpentedrone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "N-Ethylpentedrone",
+      "synonyms": [
+        "NEP",
+        "N-ethyl-nor-pentedrone",
+        "α-ethylaminopentiophenone"
+      ]
+    },
+    "it": {
+      "preferred": "N-Etilpentedrone",
+      "synonyms": [
+        "NEP",
+        "N-etil-nor-pentedrone"
+      ]
+    }
+  },
+  "iupac": "2-(ethylamino)-1-phenylpentan-1-one",
+  "formula": "C13H19NO",
+  "molar_mass_g_mol": 205.3,
+  "smiles": "CCCC(C(=O)C1=CC=CC=C1)NCC",
+  "inchi": "InChI=1S/C13H19NO/c1-3-8-12(14-4-2)13(15)11-9-6-5-7-10-11/h5-7,9-10,12,14H,3-4,8H2,1-2H3",
+  "inchikey": "QQAHEGDXEXIQPR-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q27274342",
+    "cas": "779974-89-9",
+    "pubchem_cid": 205593
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
