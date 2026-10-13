@@ -1,14 +1,17 @@
 //! `confronta`: one query against all active libraries together. Candidates are ranked by `pearson_derivata/1`;
 //! `pearson_spettro/1` is scored beside it (never part of the level rule) and `pearson_regioni/1` explains the top ten.
+use super::controlli::quality_alerts;
 use super::indice::Index;
-use super::livello::{build_alerts, propose, AlertInput};
+use super::livello::{alert, build_alerts, propose, AlertInput};
 use super::opzioni::Options;
+use super::pearson::pearson;
 use super::punteggio::{score, RowRef, Selection};
-use super::risultato::{Candidate, Outcome};
+use super::risultato::{Alert, Candidate, Outcome};
 use super::soglie::Thresholds;
-use super::{prepare, GRID_STEP_CM1};
+use super::{grid_absorbance, prepare, GRID_STEP_CM1};
 use crate::error::{EngineError, EngineResult};
-use crate::spectrum::Spectrum;
+use crate::passi::json::Value;
+use crate::spectrum::{Role, Spectrum};
 use std::cmp::Ordering;
 
 /// Candidates listed.
@@ -110,12 +113,50 @@ fn score_all(index: &Index, sel: (&Selection, &Selection), searched: &[usize]) -
     rows
 }
 
+/// The alerts about the measurement: `same_as_previous` (r of the derivative with the sample before it in the session
+/// at or over the threshold) and the `quality_*` ones.
+fn measurement_alerts(
+    query: &Spectrum,
+    p: &super::Prepared,
+    previous: Option<&[f64]>,
+    t: &Thresholds,
+) -> Vec<Alert> {
+    let mut out = Vec::new();
+    let r = previous.and_then(|v| pearson(&p.deriv, v, None));
+    if let Some(r) = r.filter(|r| *r >= t.same_as_previous_r) {
+        out.push(alert(
+            "same_as_previous",
+            vec![
+                ("r", Value::Num(r)),
+                ("limit", Value::Num(t.same_as_previous_r)),
+            ],
+        ));
+    }
+    if query.role == Role::Sample {
+        if let Some(grid) = grid_absorbance(query) {
+            out.extend(quality_alerts(&grid, &p.spec, t));
+        }
+    }
+    out
+}
+
 /// Compare `query` with the rows of the active libraries of `index`.
 pub fn search(
     index: &Index,
     query: &Spectrum,
     o: &Options,
     t: &Thresholds,
+) -> EngineResult<Outcome> {
+    search_with(index, query, o, t, None)
+}
+
+/// `search`, also telling whether the sample repeats the one before it: `previous` = derivative vector of that sample.
+pub fn search_with(
+    index: &Index,
+    query: &Spectrum,
+    o: &Options,
+    t: &Thresholds,
+    previous: Option<&[f64]>,
 ) -> EngineResult<Outcome> {
     let searched = active_libraries(index, o)?;
     let p = prepare(query)?;
@@ -156,6 +197,7 @@ pub fn search(
         })
         .collect();
     let (level, level_caps) = propose(top.r, margin, top.coverage, o, t);
+    let measurement = measurement_alerts(query, &p, previous, t);
     let input = AlertInput {
         index,
         candidates: &candidates,
@@ -164,6 +206,8 @@ pub fn search(
         spectrum_top,
         options: o,
         thresholds: t,
+        searched: &searched,
+        measurement: &measurement,
     };
     let alerts = build_alerts(&input);
     Ok(Outcome {

@@ -155,6 +155,142 @@
       ],
       "additionalProperties": false
     },
+    "same_as_previous": {
+      "description": "Rule of the alert same as previous.",
+      "description_it": "Regola dell'allerta uguale al precedente.",
+      "type": "object",
+      "properties": {
+        "r_min": {
+          "description": "Lowest r with the previous sample of the session.",
+          "description_it": "r minimo con il campione precedente della sessione.",
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "r_min"
+      ],
+      "additionalProperties": false
+    },
+    "quality": {
+      "description": "Limits of the measurement-quality alerts.",
+      "description_it": "Limiti delle allerte sulla qualita della misura.",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "Provisional until the service confirms the values.",
+          "description_it": "Provvisorie finche il servizio non conferma i valori.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "confirmed"
+          ]
+        },
+        "saturation_a": {
+          "description": "Highest absorbance before the alert quality_saturation.",
+          "description_it": "Assorbanza massima oltre cui scatta quality_saturation.",
+          "type": "number",
+          "minimum": 0
+        },
+        "weak_signal_a": {
+          "description": "Strongest band (after the baseline) below which quality_weak_signal fires.",
+          "description_it": "Banda piu alta (dopo la linea di base) sotto cui scatta quality_weak_signal.",
+          "type": "number",
+          "minimum": 0
+        },
+        "snr_min": {
+          "description": "Smallest ratio strongest band / noise before quality_noise.",
+          "description_it": "Rapporto minimo banda piu alta / rumore prima di quality_noise.",
+          "type": "number",
+          "minimum": 0
+        },
+        "noise_from_cm1": {
+          "description": "Lower end of the band where the noise is measured (cm-1).",
+          "description_it": "Estremo basso della banda in cui si misura il rumore (cm-1).",
+          "type": "number",
+          "minimum": 0
+        },
+        "noise_to_cm1": {
+          "description": "Upper end of the band where the noise is measured (cm-1).",
+          "description_it": "Estremo alto della banda in cui si misura il rumore (cm-1).",
+          "type": "number",
+          "minimum": 0
+        },
+        "co2_from_cm1": {
+          "description": "Lower end of the CO2 band (cm-1).",
+          "description_it": "Estremo basso della banda della CO2 (cm-1).",
+          "type": "number",
+          "minimum": 0
+        },
+        "co2_to_cm1": {
+          "description": "Upper end of the CO2 band (cm-1).",
+          "description_it": "Estremo alto della banda della CO2 (cm-1).",
+          "type": "number",
+          "minimum": 0
+        },
+        "co2_edge_cm1": {
+          "description": "Width on each side of the CO2 band used for its local baseline (cm-1).",
+          "description_it": "Larghezza ai lati della banda della CO2 per la sua linea di base locale (cm-1).",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "co2_noise_ratio": {
+          "description": "CO2 height over the noise above which quality_co2_vapour fires.",
+          "description_it": "Altezza della CO2 sul rumore oltre cui scatta quality_co2_vapour.",
+          "type": "number",
+          "minimum": 0
+        },
+        "vapour_from_cm1": {
+          "description": "Lower end of the band where water vapour lines are looked for (cm-1).",
+          "description_it": "Estremo basso della banda dove si cercano le righe del vapore (cm-1).",
+          "type": "number",
+          "minimum": 0
+        },
+        "vapour_to_cm1": {
+          "description": "Upper end of the band where water vapour lines are looked for (cm-1).",
+          "description_it": "Estremo alto della banda dove si cercano le righe del vapore (cm-1).",
+          "type": "number",
+          "minimum": 0
+        },
+        "vapour_noise_ratio": {
+          "description": "Roughness over the noise above which quality_co2_vapour fires.",
+          "description_it": "Ruvidita sul rumore oltre cui scatta quality_co2_vapour.",
+          "type": "number",
+          "minimum": 0
+        },
+        "negative_noise_ratio": {
+          "description": "Depth under zero, in noises, for quality_negative_bands.",
+          "description_it": "Profondita sotto zero, in rumori, per quality_negative_bands.",
+          "type": "number",
+          "minimum": 0
+        },
+        "negative_span_cm1": {
+          "description": "Least width of a negative stretch (cm-1).",
+          "description_it": "Larghezza minima di un tratto negativo (cm-1).",
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "status",
+        "saturation_a",
+        "weak_signal_a",
+        "snr_min",
+        "noise_from_cm1",
+        "noise_to_cm1",
+        "co2_from_cm1",
+        "co2_to_cm1",
+        "co2_edge_cm1",
+        "co2_noise_ratio",
+        "vapour_from_cm1",
+        "vapour_to_cm1",
+        "vapour_noise_ratio",
+        "negative_noise_ratio",
+        "negative_span_cm1"
+      ],
+      "additionalProperties": false
+    },
     "range_limits": {
       "description": "Smallest range accepted.",
       "description_it": "Regione minima accettata.",
@@ -287,6 +423,8 @@
     "to_check",
     "ambiguity",
     "spectral_twin",
+    "same_as_previous",
+    "quality",
     "range_limits",
     "regions",
     "range_presets"

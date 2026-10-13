@@ -285,5 +285,18 @@
   "folder.status.on": "Osservazione della cartella attiva.",
   "folder.status.off": "Osservazione della cartella finita.",
   "folder.status.new": "Nuova misura disponibile.",
-  "folder.status.busy": "Un file della cartella non è leggibile."
+  "folder.status.busy": "Un file della cartella non è leggibile.",
+  "confronti.cache_non_valida": "La copia salvata della libreria non è valida: va ricostruita.",
+  "confronti.cache_obsoleta": "La copia salvata della libreria è di una versione precedente del calcolo: va ricostruita.",
+  "confronti.libreria_sconosciuta": "La libreria «{libreria}» non è caricata.",
+  "confronti.nessun_punto_comune": "Gli spettri hanno troppo pochi punti in comune per essere confrontati.",
+  "confronti.nessuna_libreria": "Nessuna libreria con spettri da cercare: carica o attiva una libreria.",
+  "confronti.opzione_non_valida": "L'opzione «{opzione}» del confronto non è valida.",
+  "confronti.opzione_sconosciuta": "L'opzione «{opzione}» del confronto non esiste.",
+  "confronti.preset_sconosciuto": "La preimpostazione di regioni «{preset}» non esiste.",
+  "confronti.regione_troppo_stretta": "Le regioni scelte sono troppo strette per un confronto: {cm1} cm⁻¹ e {punti} punti, minimo {minimo_cm1} cm⁻¹ e {minimo_punti} punti.",
+  "confronti.soglie_non_valide": "Il file delle soglie del confronto non è valido ({campo}).",
+  "confronti.spettro_non_utilizzabile": "Questo spettro non si può usare per il confronto: ha troppi pochi punti validi nella griglia 650–3800 cm⁻¹.",
+  "confronti.spettro_non_valido": "Lo spettro da confrontare non è valido.",
+  "confronti.unita_non_confrontabile": "L'unità dell'asse o del segnale non permette il confronto: servono numeri d'onda in cm⁻¹ e assorbanza o trasmittanza."
 }

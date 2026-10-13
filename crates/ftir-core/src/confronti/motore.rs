@@ -1,11 +1,12 @@
 //! The state the page keeps between calls: libraries being loaded or loaded, the index over them and the thresholds.
 //! The wasm bridge holds one `Motore` and forwards; all the logic stays here.
 use super::cache_bytes::{library_from_bytes, library_to_bytes, twins_from_bytes, twins_to_bytes};
-use super::cerca::search;
+use super::cerca::search_with;
 use super::indice::{Index, TWIN_BLOCK};
 use super::lettori::from_reader;
 use super::libreria::{LibEntry, LibraryCache};
 use super::opzioni::{parse_options, parse_query};
+use super::prepare;
 use super::soglie::Thresholds;
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::Value;
@@ -13,7 +14,19 @@ use crate::readers::{
     self,
     model::{Limits, Options},
 };
-use crate::spectrum::Spectrum;
+use crate::spectrum::{Role, Spectrum};
+
+impl Session {
+    /// Register the sample `id` (derivative vector `deriv`) and give back the derivative of the sample before it.
+    /// The same id again (the chemist changes ranges or libraries) keeps the sample before it.
+    fn previous_for(&mut self, id: &str, deriv: Vec<f64>) -> Option<&[f64]> {
+        if self.current.as_ref().is_none_or(|(c, _)| c != id) {
+            self.previous = self.current.take().map(|(_, d)| d);
+            self.current = Some((id.to_string(), deriv));
+        }
+        self.previous.as_deref()
+    }
+}
 
 impl Motore {
     pub fn new() -> Self {
@@ -113,8 +126,15 @@ impl Motore {
     pub fn compare(&mut self, query_json: &str, options_json: &str) -> EngineResult<String> {
         let t = Thresholds::embedded()?;
         let (q, o) = (parse_query(query_json)?, parse_options(options_json, &t)?);
+        let previous = match (&o.sample_id, q.role) {
+            (Some(id), Role::Sample) => {
+                let deriv = prepare(&q)?.deriv;
+                self.session.previous_for(id, deriv).map(<[f64]>::to_vec)
+            }
+            _ => None,
+        };
         let index = self.index();
-        Ok(search(index, &q, &o, &t)?.to_json(index))
+        Ok(search_with(index, &q, &o, &t, previous.as_deref())?.to_json(index))
     }
 
     /// Loaded libraries as JSON `[{"id","version","spectra"}]`.
@@ -136,8 +156,16 @@ fn unknown(id: &str) -> EngineError {
         .with_param("libreria", id)
 }
 
+/// The samples of the session, in memory only: the one being searched and the one before it.
+#[derive(Default)]
+struct Session {
+    current: Option<(String, Vec<f64>)>,
+    previous: Option<Vec<f64>>,
+}
+
 #[derive(Default)]
 pub struct Motore {
     libraries: Vec<LibraryCache>,
     index: Option<Index>,
+    session: Session,
 }

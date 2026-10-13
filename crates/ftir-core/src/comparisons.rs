@@ -1,17 +1,19 @@
 //! Comparison scores registry (`COMPARISONS`): spectrum against reference. The implementations live in `crate::confronti`.
-use crate::confronti::pearson;
+use crate::confronti::{hqi, pearson};
 use crate::error::EngineResult;
 use crate::spectrum::Spectrum;
 
 /// Version of the comparison contract this registry accepts.
 pub const CONTRACT: u32 = 1;
 
-/// One comparison: a pure score in [-1, 1] (a correlation) between two spectra, each prepared by its own chain.
+/// One comparison: a pure score between two spectra, each prepared by its own chain. A correlation lies in [-1, 1]
+/// and is 1 with itself; `self_score` says what the score of a spectrum with itself is (the HQI scale is 0–100).
 pub struct Comparison {
     pub id: &'static str,
     pub version: u32,
     pub contract: u32,
     pub score: fn(&Spectrum, &Spectrum) -> EngineResult<f64>,
+    pub self_score: f64,
 }
 
 pub static COMPARISONS: &[Comparison] = &[
@@ -20,18 +22,28 @@ pub static COMPARISONS: &[Comparison] = &[
         version: 1,
         contract: CONTRACT,
         score: pearson::score_derivative,
+        self_score: 1.0,
     },
     Comparison {
         id: "pearson_spettro",
         version: 1,
         contract: CONTRACT,
         score: pearson::score_spectrum,
+        self_score: 1.0,
     },
     Comparison {
         id: "pearson_regioni",
         version: 1,
         contract: CONTRACT,
         score: pearson::score_regions,
+        self_score: 1.0,
+    },
+    Comparison {
+        id: "hqi_euclideo",
+        version: 1,
+        contract: CONTRACT,
+        score: hqi::score,
+        self_score: 100.0,
     },
 ];
 
@@ -48,7 +60,12 @@ mod test {
             assert_eq!(c.contract, CONTRACT, "{}", c.id);
             assert!(ids.insert(c.id), "duplicate id {}", c.id);
             let one = (c.score)(&s, &s).unwrap_or_else(|e| panic!("{}: {}", c.id, e.error));
-            assert!((one - 1.0).abs() < 1e-9, "{}: self score {}", c.id, one);
+            assert!(
+                (one - c.self_score).abs() < 1e-9,
+                "{}: self score {}",
+                c.id,
+                one
+            );
         }
     }
 }
