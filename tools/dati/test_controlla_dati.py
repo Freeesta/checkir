@@ -72,6 +72,10 @@ class Privacy(Base):
 
 
 class Integrity(Base):
+    def test_duplicate_source_id(self):
+        self.edit_json("sources.json", lambda o: o["sources"].append(dict(o["sources"][0])))
+        self.assertIn("sources.json: duplicate id", self.problems())
+
     def test_duplicate_inchikey(self):
         key = json.loads((DATA / SUB / "substance.json").read_text())["inchikey"]
         self.edit_json("substances/synthetic-b/substance.json", lambda o: o.update(inchikey=key))

@@ -32,13 +32,13 @@ Not drafted yet. This section will be written from verifiable sources and signed
 
 ## counselling
 
-Ask which fluoroamphetamine the person expects: 2-FA, 3-FA and 4-FA are positional isomers, and 3-FA and 4-FA co-elute in LC-MS/MS and need the ion ratio to be told apart; 4-FA also inhibits the serotonin transporter more than amphetamine does, and the UBC guidelines describe entactogenic effects only for 4-FA, so the three should not be treated as interchangeable. [f:johansen2012] [f:luethi2019] [f:ubc-counselling-guidelines]
+Ask which fluoroamphetamine the person expects: 2-FA, 3-FA and 4-FA are positional isomers, and 3-FA and 4-FA co-elute in LC-MS/MS and need the ion ratio to be told apart; 4-FA also inhibits the serotonin transporter more than amphetamine does, and the UBC guidelines describe entactogenic effects only for 4-FA, so the three should not be treated as interchangeable. [f:johansen2012] [f:luethi2019-halogen] [f:ubc-counselling-guidelines]
 
 Ask about other substances and medicines: the UBC guidelines advise against combining with alcohol and other stimulants because the effects of interactions are practically unknown; for 4-FA, the closest studied isomer, a review anticipates pharmacodynamic interactions with ADHD medication and antidepressants. [f:inan2020] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:swgdrug-2fa] [f:smith-benzene] [f:johansen2012] [f:kranenburg2020] [f:unodc-ewa] [f:checkir-classification] [f:luethi2019] [f:ubc-counselling-guidelines] [f:inan2020] [f:anchondo2025]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:swgdrug-2fa] [f:smith-benzene] [f:johansen2012] [f:kranenburg2020] [f:unodc-ewa] [f:checkir-classification] [f:luethi2019-halogen] [f:ubc-counselling-guidelines] [f:inan2020] [f:anchondo2025]
 
 ## license
 
