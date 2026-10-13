@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2c-d",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2C-D",
+      "synonyms": [
+        "2,5-dimethoxy-4-methylphenethylamine",
+        "2C-M"
+      ]
+    },
+    "it": {
+      "preferred": "2C-D",
+      "synonyms": [
+        "2,5-dimetossi-4-metilfenetilammina",
+        "2C-M"
+      ]
+    }
+  },
+  "iupac": "2-(2,5-dimethoxy-4-methylphenyl)ethanamine",
+  "formula": "C11H17NO2",
+  "molar_mass_g_mol": 195.26,
+  "smiles": "CC1=CC(=C(C=C1OC)CCN)OC",
+  "inchi": "InChI=1S/C11H17NO2/c1-8-6-11(14-3)9(4-5-12)7-10(8)13-2/h6-7H,4-5,12H2,1-3H3",
+  "inchikey": "UNQQFDCVEMVQHM-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "24333-19-5",
+    "pubchem_cid": 135740
+  },
+  "classes": {
+    "chemical": [
+      "2c"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
