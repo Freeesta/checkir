@@ -6,6 +6,12 @@ D-Mannitolo ((2R,3R,4R,5R)-hexane-1,2,3,4,5,6-hexol), formula C6H14O6, massa mol
 
 Classe chimica: alcol zuccherino (polialcol, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## cuts
+
+La mannite è tra gli zuccheri riportati come tagli della cocaina. [f:unodc-cocaine2012]
+
+Le linee d'indirizzo interne di un servizio di drug checking indicano lidocaina e mannite come i tagli più frequenti della cocaina in Italia e descrivono i tagli inerti come sostanze che aumentano peso e volume. [f:ubc-counselling-guidelines]
+
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -26,7 +32,7 @@ Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:lenhart2017]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:lenhart2017] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
 
 ## license
 

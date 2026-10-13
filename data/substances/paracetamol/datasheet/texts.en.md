@@ -6,6 +6,12 @@ Paracetamol (N-(4-hydroxyphenyl)acetamide), formula C8H9NO2, molar mass 151.16 g
 
 Chemical class: analgesic (non-opioid, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## metabolism
+
+Most of a therapeutic amount is converted to inactive glucuronide (52-57 % of the urinary metabolites) and to sulfate (30-44 %). A minor fraction (5-10 %) is oxidised, mainly by CYP2E1 and CYP1A2, to the reactive metabolite NAPQI, which is neutralised by glutathione. [f:mazaleuskaya2015]
+
+The plasma half-life is 1.5-2.5 hours at recommended doses and 4-8 hours after an overdose. Above the therapeutic range the sulfation pathway saturates first; after a highly toxic dose glucuronidation saturates as well. [f:mazaleuskaya2015]
+
 ## effects
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
@@ -24,9 +30,13 @@ The clinical presentation of paracetamol hepatotoxicity might vary, and N-acetyl
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
 
+## counselling
+
+Ask whether the person also takes medicines containing paracetamol: liver injury can follow non-intentional overdose too, and the amount in a sample is unknown. [f:yoon2016]
+
 ## sources
 
-Sources used for the claims in this sheet: [f:yoon2016]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:mazaleuskaya2015] [f:pubchem] [f:wikidata] [f:yoon2016]
 
 ## license
 

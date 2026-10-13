@@ -1,10 +1,13 @@
 {
   "schema": "datasheet/1",
   "substance": "lactose",
-  "version": 2,
+  "version": 3,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
@@ -21,5 +24,41 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "galactose and glucose",
+        "reaction": "other",
+        "enzymes": [
+          "other"
+        ],
+        "source": "misselwitz2019"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "galactose",
+        "active": null,
+        "source": "misselwitz2019"
+      },
+      {
+        "name_key": "glucose",
+        "active": null,
+        "source": "misselwitz2019"
+      }
+    ]
+  },
+  "cuts": [
+    {
+      "cut": "cocaine",
+      "frequency": "reported",
+      "source": "unodc-cocaine2012"
+    }
+  ]
 }

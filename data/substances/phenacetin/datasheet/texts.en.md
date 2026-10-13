@@ -6,6 +6,14 @@ Phenacetin (N-(4-ethoxyphenyl)acetamide), formula C10H13NO2, molar mass 179.22 g
 
 Chemical class: analgesic (withdrawn medicine, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## metabolism
+
+In humans, paracetamol is the major urinary metabolite after oral phenacetin. [f:iarc-100a-phenacetin]
+
+## cuts
+
+Phenacetin is on the list of the frequent cuts of cocaine. [f:unodc-cocaine2012]
+
 ## effects
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
@@ -26,9 +34,13 @@ In humans, N-acetyl-p-aminophenol (paracetamol) is the major urinary metabolite 
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
 
+## counselling
+
+Explain that phenacetin is no longer a medicine in most countries: analgesics containing it were withdrawn after it was implicated in kidney disease from analgesic abuse, and IARC classifies it as carcinogenic to humans (renal pelvis and ureter). [f:iarc-100a-phenacetin]
+
 ## sources
 
-Sources used for the claims in this sheet: [f:iarc-100a-phenacetin]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:iarc-100a-phenacetin] [f:pubchem] [f:unodc-cocaine2012] [f:wikidata]
 
 ## license
 

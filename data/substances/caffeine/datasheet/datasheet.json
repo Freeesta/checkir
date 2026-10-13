@@ -1,10 +1,13 @@
 {
   "schema": "datasheet/1",
   "substance": "caffeine",
-  "version": 2,
+  "version": 3,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
@@ -27,5 +30,68 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "paraxanthine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP1A2"
+        ],
+        "source": "grzegorzewski2022"
+      },
+      {
+        "from": "parent",
+        "to": "theobromine",
+        "reaction": "n_demethylation",
+        "source": "grzegorzewski2022"
+      },
+      {
+        "from": "parent",
+        "to": "theophylline",
+        "reaction": "n_demethylation",
+        "source": "grzegorzewski2022"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "paraxanthine",
+        "active": null,
+        "source": "grzegorzewski2022"
+      },
+      {
+        "name_key": "theobromine",
+        "active": null,
+        "source": "grzegorzewski2022"
+      },
+      {
+        "name_key": "theophylline",
+        "active": null,
+        "source": "grzegorzewski2022"
+      }
+    ]
+  },
+  "cuts": [
+    {
+      "cut": "cocaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "amphetamine",
+      "frequency": "reported",
+      "source": "ubc-counselling-guidelines"
+    },
+    {
+      "cut": "mdma",
+      "frequency": "reported",
+      "source": "ubc-counselling-guidelines"
+    }
+  ]
 }
