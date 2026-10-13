@@ -1,5 +1,5 @@
 // Service worker: makes the site work offline. Cache name carries the project prefix; bump VERSION to renew it.
-const VERSION = "16";
+const VERSION = "17";
 const ID = new URL(self.location.href).searchParams.get("id") || "app";
 const CACHE = ID + "-v" + VERSION;
 const LIBRARIES = "librerie/";
