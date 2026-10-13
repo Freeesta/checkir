@@ -3,19 +3,19 @@
 import { ALFA, BETA, jcamp } from "./confronto.mjs";
 import { importLibrary } from "./sottrazione.mjs";
 
+const NOISE = 0.01;
 const scale = (bands, k) => bands.map(([c, h, w]) => [c, h * k, w]);
 
 /** A JCAMP file with a little noise from a fixed seed (a measured spectrum is never noiseless). */
 function noisy(name, bands) {
   let seed = 4321;
-  const noise = () => {
-    let sum = 0;
-    for (let i = 0; i < 6; i++) {
-      seed = (seed * 1103515245 + 12345) % 2147483648;
-      sum += seed / 2147483648 - 0.5;
-    }
-    return sum * 0.002;
+  const uniform = () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
+  const noise = () => (uniform() - 0.5) * 2 * NOISE;
   const lines = jcamp(name, bands).toString("latin1").split("\n").map((line) => (/^\d+, [\d.]+$/.test(line) ? line.replace(/, ([\d.]+)$/, (_, y) => `, ${(Number(y) + noise()).toFixed(6)}`) : line));
   return Buffer.from(lines.join("\n"));
 }

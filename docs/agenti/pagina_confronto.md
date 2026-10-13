@@ -25,7 +25,7 @@ Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagin
 - Miscele (sezione): «Picchi non spiegati: n», le allerte della ricerca (`high_residual`, `over_subtraction`, in `alerts.js`) e il pulsante `data-fk=mixture-accept`.
 - Miscele (decisione): `decision.js` `listed` aggiunge i componenti ai candidati scegliibili e `acceptMixture` mette la bozza a livello 4 con i componenti (il chimico firma). `sheet.js` scrive «Possibile miscela: …» finché la scelta non la contiene; `report.js` ha la tabella `[data-report=mixture]`.
 - Miscele (marcatori): `peaks.js` `referencesOf` con una proposta assegna i picchi ai componenti (`byName` = chi spiega, `refName` per riassunto e pannello).
-- `tests_e2e/miscele.mjs` (da `fumo.mjs`): 0.7·beta + 0.3·alfa (rumore a seme fisso 0.002) su libreria alfa/beta/gamma → «Miscela: beta + alfa», contributi, 0 non spiegati, niente % né «quantità», accettazione a livello 4, scheda, rapporto, marcatori con `byName`, axe e 320 px; beta puro → nessuna proposta.
+- `tests_e2e/miscele.mjs` (da `fumo.mjs`): 0.7·beta + 0.3·alfa (rumore bianco a seme fisso 0.01) su libreria alfa/beta/gamma → «Miscela: beta + alfa», contributi, 0 non spiegati, niente % né «quantità», accettazione a livello 4, scheda, rapporto, marcatori con `byName`, axe e 320 px; beta puro → nessuna proposta.
 
 
 ## Prove
