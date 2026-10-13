@@ -7,6 +7,9 @@ import { buildHeader } from "./header.js";
 import { applyCatalog, currentLang, LANGS, loadLang, pickLang, t } from "./i18n.js";
 import { loadEngine } from "./engine.js";
 import { createFolder } from "./cartella.js";
+import { decisionActions } from "./decision.js";
+import { setProgramVersion } from "./sheet.js";
+import { talkActions, wireTalk } from "./talk.js";
 import { libraryActions, loadAllLibraries } from "./librerie.js";
 import { buildPanels } from "./panels.js";
 import { addDemo, closeFile, spectrumOf, wireFileInput } from "./files.js";
@@ -54,6 +57,32 @@ function demoLoader(engine, announce) {
   };
 }
 
+/** Language and theme actions; `redraw` rebuilds every text after a language change. @param {() => void} redraw @param {(text: string) => void} say */
+function languageActions(redraw, say) {
+  /** @param {string} code */
+  const setLang = async (code) => {
+    if (!LANGS.includes(code) || code === currentLang()) return;
+    await loadLang(code);
+    redraw();
+    say(t("status.lang_changed", { lang: t(code === "it" ? "lang.it" : "lang.en") }));
+  };
+  return {
+    setLang,
+    toggleLang: () => setLang(LANGS[(LANGS.indexOf(currentLang()) + 1) % LANGS.length]),
+    cycleTheme: () => {
+      const mode = cycleTheme();
+      refreshActionButtons(getState());
+      say(`${t("action.theme_cycle.label")}: ${t(`theme.${mode}`)}`);
+    },
+  };
+}
+
+/** Offline support, and the synthetic sheets to print for the counsellors, which exist only when the page is served from this machine. */
+function startExtras() {
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register(`sw.js?id=${APP_ID}`).catch(() => {});
+  if (["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) import("./schede_prova.js").then((m) => m.mountSamples());
+}
+
 async function start() {
   initTheme();
   await loadLang(pickLang());
@@ -71,19 +100,10 @@ async function start() {
       closeFile(code);
       announce(t("status.file_closed"));
     },
-    setLang: async (code) => {
-      if (!LANGS.includes(code) || code === currentLang()) return;
-      await loadLang(code);
-      redrawAll();
-      announce(t("status.lang_changed", { lang: t(code === "it" ? "lang.it" : "lang.en") }));
-    },
-    toggleLang: () => ctx.setLang(LANGS[(LANGS.indexOf(currentLang()) + 1) % LANGS.length]),
-    cycleTheme: () => {
-      const mode = cycleTheme();
-      refreshActionButtons(getState());
-      announce(`${t("action.theme_cycle.label")}: ${t(`theme.${mode}`)}`);
-    },
+    ...languageActions(() => redrawAll(), announce),
     ...matchActions(announce),
+    ...decisionActions(announce),
+    ...talkActions(announce),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     openDialog: (id) => openDialog(id),
@@ -94,6 +114,8 @@ async function start() {
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
   const next = buildNextStep($("workbar"), ctx);
   const limits = buildLimits($("limits"));
+  const talk = wireTalk($("sheet-host"));
+  if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
   const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") });
@@ -111,10 +133,10 @@ async function start() {
     panels.refresh(s);
     next.refresh(s);
     limits.refresh();
+    talk.refresh(s);
     refreshActionButtons(s);
     hideIfDetached();
-    $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");
-  };
+    $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");  };
   redrawAll = () => {
     layers.reset();
     applyCatalog();
@@ -128,7 +150,7 @@ async function start() {
   wireShortcuts(ctx, next);
   redrawAll();
   if (engine) loadAllLibraries(engine);
-  if ("serviceWorker" in navigator) navigator.serviceWorker.register(`sw.js?id=${APP_ID}`).catch(() => {});
+  startExtras();
   document.body.dataset.ready = "1";
 }
 
