@@ -62,7 +62,7 @@ async function fieldsScenario(page, check) {
   await page.focus("body");
   await page.keyboard.press("g");
   check("ranges: g shows the picker in section 3, on the whole spectrum", (await page.locator("fieldset.ranges").count()) === 1 && (await page.getAttribute('[data-fk="range-preset-full"]', "aria-pressed")) === "true");
-  check("ranges: with the whole range no chip mark and the table asks to choose regions", (await page.locator("[data-chip-region]").count()) === 0 && (await page.locator(".ranges-table").count()) === 0);
+  check("ranges: with the whole range no chip mark and no table", (await page.locator("[data-chip-region]").count()) === 0 && (await page.locator(".ranges-table").count()) === 0);
   await addByKeyboard(page, 650, 1800);
   await page.waitForFunction(() => document.querySelector(".result [data-alert='custom_range']"), null, { timeout: 20000 });
   check("ranges: a hand-picked region shows the alert custom_range", (await page.locator('.alert[data-alert="custom_range"]').count()) === 1);
@@ -74,7 +74,8 @@ async function fieldsScenario(page, check) {
   const heads = await page.locator(".ranges-table thead th").allTextContents();
   check("ranges: the table has candidate, whole and region 1", heads.length === 3 && /Intero/.test(heads[1]) && /Regione 1/.test(heads[2]), heads.join(" | "));
   const cells = await page.locator(".ranges-table tbody td").allTextContents();
-  check("ranges: every cell has its number and a word, never colour alone", cells.length >= 3 && cells.every((c) => /\d[.,]\d\d · \S/.test(c) || /fuori dai primi/.test(c)), cells.slice(0, 4).join(" | "));
+  check("ranges: every cell has its number and a word, never colour alone", cells.length >= 2 && cells.every((c) => /\d[.,]\d\d · \S/.test(c) || /fuori dai primi/.test(c)), cells.slice(0, 4).join(" | "));
+  check("ranges: the table is in the detail of the chosen candidate, one row", (await page.locator(".detail .ranges-table tbody tr").count()) === 1);
   const first = await page.locator(".ranges-table tbody tr").first().textContent();
   check("ranges: the first row is the best candidate (beta) and agrees on the whole range", /beta/i.test(first ?? "") && /Concorda/.test(first ?? ""), first ?? "");
   check("ranges: the chart draws a light band under the axis with the region number", (await page.locator("#chart rect.range-band").count()) === 1 && /Regione 1/.test((await page.textContent("#chart")) ?? ""));
@@ -140,6 +141,7 @@ async function stateScenario(page, check, axe) {
   await page.evaluate(() => (document.documentElement.dataset.theme = "light"));
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en");
+  await page.waitForSelector(".ranges-table thead", { timeout: 20000 });
   check("ranges: English table and band words", /Whole/.test((await page.textContent(".ranges-table thead")) ?? "") && /Region 1/.test((await page.textContent("#chart")) ?? ""));
   const v3 = await axe(page);
   check("ranges: axe is clean in English", v3.length === 0, v3.join(", "));

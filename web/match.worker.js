@@ -12,18 +12,24 @@ import { ensurePeakIndex } from "./peak_index_job.js";
 const scope = self;
 /** @type {any} */
 let mod = null;
+/** @type {Promise<any> | null} */
+let loading = null;
 /** @type {Map<string, string>} */
 const held = new Map();
 let twinsRunning = false;
 /** Libraries whose peak index is ready to answer. @type {Set<string>} */
 const indexed = new Set();
 
-async function engine() {
-  if (mod) return mod;
-  const path = "./wasm/ftir_wasm.js";
-  mod = await import(path);
-  await mod.default();
-  return mod;
+/** The engine is started once; every message waits for the same start (a second `sync` must never see a half-started module). */
+function engine() {
+  loading ??= (async () => {
+    const path = "./wasm/ftir_wasm.js";
+    const m = await import(path);
+    await m.default();
+    mod = m;
+    return m;
+  })();
+  return loading;
 }
 
 /** @param {LibMessage} lib @returns {string | null} first error key, or null */
@@ -63,7 +69,8 @@ async function indexLibrary(lib) {
 }
 
 /** @param {{ runId: number, libs: string[], query: unknown }} job the libraries to search (those without an index yet are left out) */
-function peakQuery(job) {
+async function peakQuery(job) {
+  await engine();
   const results = job.libs.filter((id) => indexed.has(id)).map((id) => ({ lib: id, json: mod.peak_index_query(id, JSON.stringify(job.query)) }));
   scope.postMessage({ type: "peak_result", runId: job.runId, results, missing: job.libs.filter((id) => !indexed.has(id)) });
 }
@@ -102,5 +109,5 @@ scope.addEventListener("message", (/** @type {MessageEvent} */ e) => {
   const failed = (/** @type {unknown} */ err) => scope.postMessage({ type: "error", runId: m.runId, key: "engine.error", detail: String(err) });
   if (m.type === "sync") sync(m.libs).catch(failed);
   else if (m.type === "run") run(m).catch(failed);
-  else if (m.type === "peak_query") peakQuery(m);
+  else if (m.type === "peak_query") peakQuery(m).catch(failed);
 });
