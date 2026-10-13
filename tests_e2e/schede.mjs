@@ -2,6 +2,7 @@
 // with no banner and nothing hidden for caution (the state is plain data), cites sources, makes no request to another origin, and works by keyboard at 320 px.
 import { readFile } from "node:fs/promises";
 import { parseParagraphs, sectionStatus } from "../web/schede.js";
+import { GITHUB_URL } from "../web/appname.js";
 import { buildIssueUrl, checkProposal, MAX_URL } from "../web/proponi.js";
 import { CANARIES, CANARY_STRINGS } from "./canarino.mjs";
 
@@ -33,7 +34,7 @@ export async function sheetsPureScenario(check) {
   check("propose: email, phone, link, bad source, empty, unchanged", codes({ text: "Scrivi a x@y.it [f:a]" }) === "propose.err.contact" && codes({ text: "Chiama +39 011 1234567 [f:a]" }) === "propose.err.contact" && codes({ text: "Vedi https://x.it [f:a]" }) === "propose.err.contact" && codes({ sources: "boh" }) === "propose.err.sources_invalid" && codes({ text: " " }) === "propose.err.empty" && codes({ text: "Altro. [f:a]" }) === "propose.err.unchanged");
   const short = buildIssueUrl({ id: "synthetic-a", section: "effects", lang: "it", version: 2, text: "Un fatto. [f:a]", sources: "", name: "" });
   const long = buildIssueUrl({ id: "synthetic-a", section: "effects", lang: "it", version: 2, text: "x ".repeat(5000), sources: "", name: "" });
-  check("propose: the link has the form fields and the text", short.url.startsWith("https://github.com/Freeesta/checkir/issues/new?template=sheet.yml&substance=synthetic-a&section=effects&language=it&version=2&text=") && !short.pasted);
+  check("propose: the link has the form fields and the text", short.url.startsWith(GITHUB_URL + "issues/new?template=sheet.yml&substance=synthetic-a&section=effects&language=it&version=2&text=") && !short.pasted);
   check("propose: a very long text goes through the clipboard, not the address", long.pasted && long.url.length <= MAX_URL && !long.url.includes("text="));
 }
 
@@ -93,10 +94,10 @@ async function proposeFlow(page, check, axe) {
   await page.locator('[data-propose="doses"] textarea').nth(1).fill("10.1000/xyz123");
   await text.fill("Una frase con fonte nuova.");
   const href = (await link.getAttribute("href")) ?? "";
-  check("propose: with a source the link opens the issue form of the project in a new tab", href.startsWith("https://github.com/Freeesta/checkir/issues/new?template=sheet.yml&") && (await link.getAttribute("target")) === "_blank" && /noopener/.test((await link.getAttribute("rel")) ?? ""), href);
+  check("propose: with a source the link opens the issue form of the project in a new tab", href.startsWith(GITHUB_URL + "issues/new?template=sheet.yml&") && (await link.getAttribute("target")) === "_blank" && /noopener/.test((await link.getAttribute("rel")) ?? ""), href);
   const decoded = decodeURIComponent(href);
   check("propose: PRIVACY T2 canary: nothing of the sample is in the link", CANARY_STRINGS.every((c) => !decoded.toLowerCase().includes(c.toLowerCase())) && !/campione|\.jdx/i.test(decoded), decoded);
-  check("propose: the history link of the sheet points to the project", /^https:\/\/github\.com\/Freeesta\/checkir\/commits\/main\/data\/substances\/synthetic-/.test((await page.getAttribute('[data-fk="sheet-history"]', "href")) ?? ""));
+  check("propose: the history link of the sheet points to the project", ((await page.getAttribute('[data-fk="sheet-history"]', "href")) ?? "").startsWith(GITHUB_URL + "commits/main/data/substances/synthetic-"));
   const v = await axe(page);
   check("propose: axe has no violations with the editor open", v.length === 0, v.join(", "));
 }

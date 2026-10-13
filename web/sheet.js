@@ -1,5 +1,5 @@
 // @ts-check
-import { alertViews } from "./alerts.js";
+import { alertViews, familyParts } from "./alerts.js";
 import { chosenCandidates, shownChoice } from "./decision.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, inLang, t } from "./i18n.js";
@@ -20,11 +20,11 @@ export function setProgramVersion(version) {
 }
 
 /** Fixed order of the alerts on the sheet: a flagged family always first, hand-picked region after the quality ones. */
-const ORDER = ["flagged_family", "ambiguity", "spectral_twin", "analog_not_in_library", "different_form", "form_absent", "high_residual", "same_as_previous", "quality_saturation", "quality_weak_signal", "quality_noise", "quality_co2_vapour", "quality_negative_bands", "custom_range"];
+const ORDER = ["family_flagged", "ambiguity", "spectral_twin", "analog_not_in_library", "different_form", "form_absent", "high_residual", "same_as_previous", "quality_saturation", "quality_weak_signal", "quality_noise", "quality_co2_vapour", "quality_negative_bands", "custom_range"];
 
 /** One short plain sentence per alert (the technical reason stays in the chemist's view). @type {Record<string, (d: any) => string>} */
 const LINES = {
-  flagged_family: (d) => t("sheet.alert.flagged_family", { family: String(d.family ?? d.name ?? "") }),
+  family_flagged: (d) => t("sheet.alert.family_flagged", familyParts(d)),
   ambiguity: () => t("sheet.alert.ambiguity"),
   spectral_twin: () => t("sheet.alert.spectral_twin"),
   different_form: () => t("sheet.alert.different_form"),
