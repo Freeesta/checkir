@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "psilocybin",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Psilocybin",
+      "synonyms": [
+        "Psilocybine",
+        "4-PO-DMT"
+      ]
+    },
+    "it": {
+      "preferred": "Psilocibina",
+      "synonyms": [
+        "4-PO-DMT"
+      ]
+    }
+  },
+  "iupac": "[3-[2-(dimethylamino)ethyl]-1H-indol-4-yl] dihydrogen phosphate",
+  "formula": "C12H17N2O4P",
+  "molar_mass_g_mol": 284.25,
+  "smiles": "CN(C)CCC1=CNC2=C1C(=CC=C2)OP(=O)(O)O",
+  "inchi": "InChI=1S/C12H17N2O4P/c1-14(2)7-6-9-8-13-10-4-3-5-11(12(9)10)18-19(15,16)17/h3-5,8,13H,6-7H2,1-2H3,(H2,15,16,17)",
+  "inchikey": "QVDSEJDULKLHCG-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "520-52-5",
+    "pubchem_cid": 10624
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

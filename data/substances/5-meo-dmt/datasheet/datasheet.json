@@ -1,0 +1,94 @@
+{
+  "schema": "datasheet/1",
+  "substance": "5-meo-dmt",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "dangerous",
+      "mechanism": "maoi",
+      "source": "shen2010b"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "bufotenine",
+        "reaction": "o_demethylation",
+        "source": "shen2010",
+        "enzymes": [
+          "CYP2D6"
+        ]
+      },
+      {
+        "from": "parent",
+        "to": "deaminated metabolites",
+        "reaction": "deamination",
+        "source": "shen2010b",
+        "enzymes": [
+          "MAO-A"
+        ]
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "bufotenine",
+        "active": true,
+        "source": "shen2010"
+      }
+    ],
+    "half_life_h": {
+      "min": 0.47,
+      "max": 0.47,
+      "matrix": "plasma",
+      "route": "sublingual",
+      "source": "collyer2026"
+    }
+  },
+  "counselling": [
+    {
+      "key": "5meodmt.maoi",
+      "topic": "combination",
+      "source": "shen2010"
+    },
+    {
+      "key": "5meodmt.dose_steps",
+      "topic": "dosing",
+      "source": "shen2011"
+    },
+    {
+      "key": "5meodmt.set_setting",
+      "topic": "set_setting",
+      "source": "johnson2008"
+    }
+  ],
+  "family": "tryptamines"
+}
