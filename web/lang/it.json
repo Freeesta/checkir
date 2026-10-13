@@ -371,6 +371,8 @@
   "library.item.private": "Privata",
   "library.item.public": "Pubblica",
   "library.item.remove": "Rimuovi la libreria {name}",
+  "library.item.rename": "Rinomina la libreria {name}",
+  "library.item.rename_label": "Nuovo nome della libreria {name}",
   "library.item.spectra": "Spettri: {n}",
   "library.item.terms": "Condizioni della licenza: {text}",
   "library.item.version": "Versione {version}",

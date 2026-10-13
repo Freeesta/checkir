@@ -2,6 +2,7 @@
 import { matchScore } from "./candidati.js";
 import { anchorOf, isMenuKey, openMenu } from "./context_menu.js";
 import { formatNumber, t } from "./i18n.js";
+import { libraryLabel } from "./librerie.js";
 import { analyse } from "./peaks.js";
 import { candidateName, selectedCandidate } from "./results.js";
 import { activeLibraries, candidateKey, resultOf } from "./state.js";
@@ -43,7 +44,7 @@ function candidateRows(li, ctx) {
       ctx.goto("sheet");
     }, own),
     row({ id: "cand.recall", labelKey: "rowmenu.recall" }, () => void ctx.recallAdd({ library: c.library, spectrumId: c.spectrum_id, form: c.form })),
-    row({ id: "cand.copy", labelKey: "rowmenu.copy" }, () => void ctx.copyText([formatNumber(c.rank), candidateName(c), c.form, c.library, formatNumber(matchScore(c.r_derivative)), formatNumber(c.coverage * 100)].join("\t"))),
+    row({ id: "cand.copy", labelKey: "rowmenu.copy" }, () => void ctx.copyText([formatNumber(c.rank), candidateName(c), c.form, libraryLabel(c.library), formatNumber(matchScore(c.r_derivative)), formatNumber(c.coverage * 100)].join("\t"))),
   ];
 }
 
