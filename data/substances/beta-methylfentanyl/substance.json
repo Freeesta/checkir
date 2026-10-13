@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "beta-methylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "beta-Methylfentanyl",
+      "synonyms": [
+        "β-methylfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "beta-Metilfentanil",
+      "synonyms": [
+        "β-metilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-phenyl-N-[1-(2-phenylpropyl)piperidin-4-yl]propanamide",
+  "formula": "C23H30N2O",
+  "molar_mass_g_mol": 350.5,
+  "smiles": "CCC(=O)N(C1CCN(CC1)CC(C)C2=CC=CC=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C23H30N2O/c1-3-23(26)25(21-12-8-5-9-13-21)22-14-16-24(17-15-22)18-19(2)20-10-6-4-7-11-20/h4-13,19,22H,3,14-18H2,1-2H3",
+  "inchikey": "UXIGUKSHASXDNI-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "79146-56-8",
+    "pubchem_cid": 6425761
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
