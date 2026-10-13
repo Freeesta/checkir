@@ -38,7 +38,11 @@ It produces dissociative anaesthesia: a trance-like cataleptic state with uncons
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Typical recreational single doses, as a review reports them from the EMCDDA risk assessment: 50-100 mg intravenously, 75-125 mg intramuscularly, 200-300 mg orally and 60-250 mg nasally. [f:kalsi2011]
+
+A typical recreational dose is 10-25 % of the effective general anaesthetic dose. [f:kalsi2011]
+
+Onset and duration of effect by route: intravenous seconds and 30-45 min; intramuscular 1-5 min and 30-45 min; oral 15-20 min and 60-120 min; nasal 5-10 min and 45-60 min. [f:kalsi2011]
 
 ## risks
 
@@ -62,7 +66,7 @@ Remember that tablets sold as ketamine are often mixed with amphetamine, caffein
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-ketamine] [f:smith-carbonyl] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:unodc-ats2006] [f:checkir-classification] [f:kalsi2011] [f:dinis-oliveira2017] [f:peltoniemi2016] [f:zheng2025] [f:ubc-counselling-guidelines]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:dinis-oliveira2017] [f:kalsi2011] [f:peltoniemi2016] [f:pubchem] [f:smith-amine-salts] [f:smith-benzene] [f:smith-carbonyl] [f:swgdrug-ketamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-cathinones2015] [f:unodc-ewa] [f:wikidata] [f:zheng2025]
 
 ## license
 

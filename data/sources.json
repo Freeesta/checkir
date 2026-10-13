@@ -2461,6 +2461,61 @@
       "consulted": "2026-10-13",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20250318000434/https://pubmed.ncbi.nlm.nih.gov/29626650/"
+    },
+    {
+      "id": "lin2025",
+      "type": "paper",
+      "title": "Xylazine Pharmacokinetics in Patients Testing Positive for Fentanyl and Xylazine",
+      "authors": [
+        "Lin, Y.",
+        "Farnsworth, C W.",
+        "Azimi, V.",
+        "Liss, D B.",
+        "Mullins, M E.",
+        "Crews, B O."
+      ],
+      "year": 2025,
+      "doi": "10.1093/clinchem/hvae163",
+      "url": "https://doi.org/10.1093/clinchem/hvae163",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "cardizem-label",
+      "type": "institution",
+      "title": "CARDIZEM (diltiazem hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f3e7ecef-f360-4987-a4f5-933214130ab2",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260731134200/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f3e7ecef-f360-4987-a4f5-933214130ab2",
+      "tier": "agency"
+    },
+    {
+      "id": "evekeo-label",
+      "type": "institution",
+      "title": "EVEKEO (amphetamine sulfate) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f469fb38-0380-4621-9db3-a4f429126156",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "rajkumar2026",
+      "type": "paper",
+      "title": "Single-Step Production of Mannitol From Yacon Fructo-Oligosaccharides Using Fructophilic Lactic Acid Bacteria",
+      "authors": [
+        "Rajkumar, A S.",
+        "Leech, J.",
+        "McAuliffe, O."
+      ],
+      "year": 2026,
+      "doi": "10.1002/mbo3.70387",
+      "url": "https://doi.org/10.1002/mbo3.70387",
+      "license": "CC BY 4.0",
+      "consulted": "2026-10-13",
+      "tier": "primary"
     }
   ]
 }

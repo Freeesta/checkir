@@ -34,7 +34,7 @@ Rilascia dopamina e noradrenalina; la dopamina è il principale mediatore delle 
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Dosi del medicinale autorizzato, dalle informazioni di prescrizione statunitensi delle compresse di anfetamina solfato: nella narcolessia la dose usuale è 5-60 mg al giorno in dosi frazionate; nel disturbo da deficit di attenzione con iperattività, i bambini da 6 anni in su iniziano con 5 mg una o due volte al giorno ed è raro che serva superare 40 mg al giorno; nell'obesità esogena la dose usuale arriva a 30 mg al giorno. [f:evekeo-label]
 
 ## risks
 
@@ -42,7 +42,13 @@ Anoressia, perdita di peso e insonnia sono effetti avversi prevedibili e frequen
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+L'uso durante o nei 14 giorni successivi agli inibitori delle monoamino ossidasi è controindicato: rallentano il metabolismo dell'anfetamina e ne potenziano il rilascio di noradrenalina e di altre monoamine, con possibile cefalea e altri segni di crisi ipertensiva; possono comparire effetti tossici neurologici e ipertermia maligna, talvolta con esito fatale. [f:evekeo-label]
+
+L'uso concomitante di farmaci serotoninergici aumenta il rischio di sindrome serotoninergica. [f:evekeo-label]
+
+Gli inibitori del CYP2D6 (per esempio paroxetina, fluoxetina, chinidina, ritonavir) possono aumentare l'esposizione all'anfetamina e il rischio di sindrome serotoninergica. [f:evekeo-label]
+
+Gli agenti acidificanti gastrointestinali (guanetidina, reserpina, acido glutammico HCl, acido ascorbico, succhi di frutta) riducono l'assorbimento delle anfetamine e quelli urinari ne aumentano l'escrezione urinaria; entrambi abbassano i livelli nel sangue. [f:evekeo-label]
 
 ## counselling
 
@@ -54,7 +60,7 @@ Ricordare che nei campioni di tipo anfetaminico si trovano spesso caffeina e, in
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-amphetamine] [f:smith-inorg2] [f:smith-amine-salts] [f:smith-benzene] [f:unodc-ewa] [f:checkir-classification] [f:losacker2021] [f:dolder2017] [f:heal2013] [f:ubc-counselling-guidelines]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:dolder2017] [f:evekeo-label] [f:heal2013] [f:losacker2021] [f:pubchem] [f:smith-amine-salts] [f:smith-benzene] [f:smith-inorg2] [f:swgdrug-amphetamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-ewa] [f:wikidata]
 
 ## license
 

@@ -6,17 +6,31 @@ Xilazina (N-(2,6-dimetilfenil)-5,6-diidro-4H-1,3-tiazin-2-ammina), formula C12H1
 
 Classe chimica: agonista adrenergico alfa-2, un sedativo veterinario (tra le altre sostanze). Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## metabolism
+
+In 28 pazienti risultati positivi a fentanil e xilazina, l'emivita terminale mediana della xilazina nel plasma è stata 12.0 h (intervallo 5.9-20.8), più lunga che negli studi sugli animali. [f:lin2025]
+
+Ossi-xilazina e solfone-xilazina sono state rilevate in tutti i campioni di plasma che contenevano xilazina e sembrano circolare nel plasma quanto il composto d'origine. [f:lin2025]
+
+Gli studi sugli animali indicano un metabolismo esteso, un grande volume di distribuzione e una distribuzione e un'eliminazione rapide; i dati sull'uomo sono limitati e i metaboliti sono stati identificati nelle urine. [f:owusu-antwi2025]
+
 ## cuts
 
 La xilazina si trova comunemente come adulterante in combinazioni di sostanze illecite con il fentanil. [f:marshall2025]
 
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+La xilazina è un potente agonista alfa-2 adrenergico commercializzato come sedativo veterinario; la sua azione sui recettori alfa-2 del sistema nervoso centrale riduce il rilascio di noradrenalina e dopamina e dà sedazione, ridotta percezione del dolore e rilassamento muscolare. [f:owusu-antwi2025]
+
+Nell'uomo può causare depressione del sistema nervoso centrale e respiratoria, bradicardia, ipotensione e morte; sono descritti anche iperglicemia e prolungamento dell'intervallo QT. [f:owusu-antwi2025]
+
+Negli studi sugli animali gli effetti iniziano entro pochi minuti e possono durare fino a 4 h. [f:owusu-antwi2025]
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Una revisione sistematica delle esposizioni umane riportate ha trovato dosi da 40 a 4300 mg e nessuna dose tossica stabilita. [f:owusu-antwi2025]
+
+L'uso improprio della xilazina era più probabile insieme ad altre sostanze che da sola; è spesso mescolata a cocaina ed eroina. [f:owusu-antwi2025]
 
 ## risks
 
@@ -38,7 +52,7 @@ Chiedi se la persona ha ferite sulla pelle, anche lontano dai punti di iniezione
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:choon2023] [f:marshall2025] [f:owusu-antwi2025] [f:pubchem] [f:vaile2026] [f:wikidata]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:choon2023] [f:lin2025] [f:marshall2025] [f:owusu-antwi2025] [f:pubchem] [f:vaile2026] [f:wikidata]
 
 ## license
 

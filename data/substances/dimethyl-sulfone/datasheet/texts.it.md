@@ -6,6 +6,14 @@ Dimetilsolfone, detto anche metilsulfonilmetano o MSM (metilsulfonilmetano), for
 
 Classe chimica: composto organico dello zolfo (tra le altre sostanze). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## metabolism
+
+Il dimetilsolfone (MSM) è assorbito rapidamente: gli studi di farmacocinetica indicano circa 2.1 h nel ratto e meno di 1 h nell'uomo. [f:butawan2017]
+
+È rilevato nelle urine umane, nel liquido cerebrospinale e nel cervello, con un'emivita stimata nel cervello di 7.5 h. [f:butawan2017]
+
+L'emivita generale è ritenuta superiore a 12 h; nel ratto il 59-79 % dell'MSM è escreto nelle urine il giorno della somministrazione, invariato o come altro metabolita contenente zolfo, e l'emivita è circa 12.2 h. [f:butawan2017]
+
 ## cuts
 
 Una pagina di dati di drug checking dell'Università di Washington conta l'MSM come la sostanza più usata per tagliare la metanfetamina nello Stato di Washington, USA, e nota che è più noto come integratore alimentare. [f:uw-adai-methamphetamine2025]
