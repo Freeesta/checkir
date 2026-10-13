@@ -1,0 +1,6 @@
+{
+  "schema": "ftir-libraries-config/1",
+  "libraries": [
+    { "id": "checkir-community", "enabled": true }
+  ]
+}

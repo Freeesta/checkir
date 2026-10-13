@@ -30,6 +30,7 @@ name = "ftir-wasm"
 version = "0.1.0"
 dependencies = [
  "ftir-core",
+ "ftir-lib",
  "wasm-bindgen",
 ]
 

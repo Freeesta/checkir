@@ -6,6 +6,7 @@ import { buildDialogs } from "./dialogs.js";
 import { activeFile, buildHeader } from "./header.js";
 import { applyCatalog, currentLang, LANGS, loadLang, pickLang, t } from "./i18n.js";
 import { loadEngine } from "./engine.js";
+import { libraryActions, loadAllLibraries } from "./librerie.js";
 import { buildPanels } from "./panels.js";
 import { addDemo, closeFile, spectrumOf, wireFileInput } from "./files.js";
 import { attachShortcuts, onShortcutsChange } from "./shortcuts.js";
@@ -30,6 +31,15 @@ function announce(text) {
 /** Keep the description meta tag in the active language. */
 function setDescription() {
   document.getElementById("meta-description")?.setAttribute("content", t("share.description"));
+}
+
+/** @param {import("./actions.js").Ctx} ctx @param {{ refresh: (s: import("./state.js").AppState) => void }} next */
+function wireShortcuts(ctx, next) {
+  onShortcutsChange(() => {
+    refreshActionButtons(getState());
+    next.refresh(getState());
+  });
+  attachShortcuts(ctx);
 }
 
 async function start() {
@@ -68,6 +78,7 @@ async function start() {
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     openDialog: (id) => openDialog(id),
+    ...libraryActions(engine, announce),
   };
   const header = buildHeader(/** @type {HTMLElement} */ ($("app-header")), ctx, APP_NAME);
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
@@ -101,12 +112,9 @@ async function start() {
     chart.redraw();
   };
   subscribe(renderUi);
-  onShortcutsChange(() => {
-    refreshActionButtons(getState());
-    next.refresh(getState());
-  });
-  attachShortcuts(ctx);
+  wireShortcuts(ctx, next);
   redrawAll();
+  if (engine) loadAllLibraries(engine);
   if ("serviceWorker" in navigator) navigator.serviceWorker.register(`sw.js?id=${APP_ID}`).catch(() => {});
   document.body.dataset.ready = "1";
 }

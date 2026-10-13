@@ -5,18 +5,24 @@ import { STORAGE_PREFIX } from "./appname.js";
  * One loaded spectrum. The real file name never leaves the file panel and the tooltip; the header shows `code`.
  * @typedef {{ key: string, params: Record<string, string> }} Notice
  * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, warnings: Notice[] }} FileEntry
- * @typedef {{ id: string, version: string, spectra: number }} LibraryEntry
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], result: null | { level: number, alerts: number }, peaks: { explained: number, unexplained: number }, decision: null | { level: number } }} AppState
+ * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, private: boolean, enabled: boolean }} LibraryEntry
+ * @typedef {{ done: number, total: number, name: string }} LibraryJob
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], result: null | { level: number, alerts: number }, peaks: { explained: number, unexplained: number }, decision: null | { level: number } }} AppState
  */
 
 /** @returns {AppState} */
 function initial() {
-  return { files: [], active: null, fileError: null, libraries: [], result: null, peaks: { explained: 0, unexplained: 0 }, decision: null };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], result: null, peaks: { explained: 0, unexplained: 0 }, decision: null };
 }
 
 let state = initial();
 /** @type {Set<(s: AppState) => void>} */
 const listeners = new Set();
+
+/** Libraries that take part in the comparison. @param {AppState} s @returns {LibraryEntry[]} */
+export function activeLibraries(s) {
+  return s.libraries.filter((l) => l.enabled);
+}
 
 /** The analysis state: in memory only, never stored. @returns {AppState} */
 export function getState() {

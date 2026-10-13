@@ -4,9 +4,10 @@ import { actionButton } from "./controls.js";
 import { el, icon, keepFocus, setIcon } from "./dom.js";
 import { fileRange } from "./files.js";
 import { activeFile } from "./header.js";
+import { renderLibraries } from "./libpanel.js";
 import { formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
-import { readPref, writePref } from "./state.js";
+import { activeLibraries, readPref, writePref } from "./state.js";
 
 /**
  * Registry of the side-panel sections (1 File … 5 Scheda). The panel, the phone tab bar and the header chips are generated from it.
@@ -76,8 +77,8 @@ export const PANELS = [
   { id: "files", n: 1, titleKey: "panel.files.title", tipKey: "panel.files.tip", icon: "file", summary: (s) => formatNumber(s.files.length), render: renderFiles },
   {
     id: "libraries", n: 2, titleKey: "panel.libraries.title", tipKey: "panel.libraries.tip", icon: "library",
-    summary: (s) => `${formatNumber(s.libraries.length)} · ${formatNumber(s.libraries.reduce((a, l) => a + l.spectra, 0))}`,
-    render: renderEmpty(() => t("panel.libraries.empty")),
+    summary: (s) => `${formatNumber(activeLibraries(s).length)} · ${formatNumber(activeLibraries(s).reduce((a, l) => a + l.spectra, 0))}`,
+    render: renderLibraries,
   },
   { id: "results", n: 3, titleKey: "panel.results.title", tipKey: "panel.results.tip", icon: "results", summary: (s) => (s.result ? formatNumber(s.result.level) : DASH), render: renderEmpty(() => t("panel.results.empty")) },
   { id: "peaks", n: 4, titleKey: "panel.peaks.title", tipKey: "panel.peaks.tip", icon: "peaks", summary: (s) => `● ${formatNumber(s.peaks.explained)} ○ ${formatNumber(s.peaks.unexplained)}`, label: (s) => t("panel.peaks.counts", { explained: formatNumber(s.peaks.explained), unexplained: formatNumber(s.peaks.unexplained) }), render: renderEmpty(() => t("panel.peaks.empty")) },
