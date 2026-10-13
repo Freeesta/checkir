@@ -12,6 +12,7 @@ checkIR is built by chemists, health workers, translators and developers. Pick y
 
 ## Rules for everyone
 - Read the [Code of Conduct](CODE_OF_CONDUCT.md).
+- See [GOVERNANCE.md](GOVERNANCE.md) for roles and who decides what.
 - No personal data in any contribution: no names, contacts, photos, places more precise than a province, dates more precise than a month.
 - No synthesis, extraction, potentiation or cutting instructions; no vendors or places to buy substances.
 - Only spectra you have the right to publish; never spectra from commercial or restricted libraries.
