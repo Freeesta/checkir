@@ -27,6 +27,12 @@ test = false
 doc = false
 
 [[bin]]
+name = "opus"
+path = "fuzz_targets/opus.rs"
+test = false
+doc = false
+
+[[bin]]
 name = "spa"
 path = "fuzz_targets/spa.rs"
 test = false
