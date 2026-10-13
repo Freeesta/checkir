@@ -4,7 +4,7 @@
     python3 tools/dati/genera_strutture.py --verifica  # fail if a file is missing, stale, or exists without the flag (CI)
 
 The drawing is black on transparent: every colour is `currentColor`, no font is loaded (atom labels are paths), the root has
-role="img" and an aria-label with the IUPAC name. Needs RDKit (version pinned in requirements.txt, only used by the tools).
+role="img" and an aria-label with the IUPAC name, and no style attribute (the CSP of the page forbids it). Needs RDKit (version pinned in requirements.txt, only used by the tools).
 """
 from __future__ import annotations
 
@@ -15,6 +15,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 SUBSTANCES = ROOT / "data" / "substances"
+
+
+def presentation(match: re.Match[str]) -> str:
+    """`style='a:b;c:d'` -> ` a="b" c="d"`: the page's CSP does not allow style attributes, presentation attributes are fine."""
+    pairs = [d.split(":", 1) for d in match.group(2).split(";") if ":" in d]
+    return "".join(f' {k.strip()}="{v.strip()}"' for k, v in pairs)
 
 
 def render(smiles: str, label: str) -> str:
@@ -37,6 +43,7 @@ def render(smiles: str, label: str) -> str:
     svg = re.sub(r"<metadata>.*?</metadata>\s*", "", svg, flags=re.S)
     svg = re.sub(r"<rect style='opacity:1\.0;fill:#[0-9A-Fa-f]{6};stroke:none'[^>]*/>\s*", "", svg)
     svg = re.sub(r"#[0-9A-Fa-f]{6}\b", "currentColor", svg)
+    svg = re.sub(r"\sstyle=(['\"])([^'\"]*)\1", presentation, svg)
     safe = label.replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
     svg = re.sub(r"<svg\b", f'<svg role="img" aria-label="{safe}"', svg, count=1)
     svg = re.sub(r"\s(width|height)=['\"][^'\"]*['\"]", "", svg, count=2)

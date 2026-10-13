@@ -142,6 +142,8 @@ class Structures(unittest.TestCase):
         self.assertIn('role="img"', svg)
         self.assertNotIn("<text", svg)
         self.assertNotRegex(svg, r"#[0-9A-Fa-f]{6}")
+        self.assertNotIn("style=", svg)
+        self.assertIn('stroke="currentColor"', svg)
         self.assertEqual(g.main(["--verifica"]), 0)
 
 
