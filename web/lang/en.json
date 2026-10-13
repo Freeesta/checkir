@@ -412,7 +412,6 @@
   "ranges.table.candidate": "Candidate",
   "ranges.table.caption": "r of each candidate by region",
   "ranges.table.full": "Whole",
-  "ranges.table.hint": "Pick one or more regions to see in which parts of the spectrum each candidate agrees.",
   "ranges.table.out": "— outside the first 10",
   "ranges.table.region": "Region {n}: {from}–{to}",
   "ranges.title": "Comparison region",

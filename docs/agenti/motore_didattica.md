@@ -1,5 +1,5 @@
 # Motore: didattica e miscele
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `motore_didattica.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `qualita.md`, `motore_didattica.md`.
 
 ## Struttura
 - **Motore didattico** (`ftir-core::didactic`, sezione Teoria; errori `didactic.<caso>` in `web/lang`): `spring` (Hooke), `depth` (`penetration_depth` in µm, errore sotto l'angolo critico), `ratio` (T = S/B, A = −log₁₀T, punti assenti NaN → `null`), `fft` (radix-2 nostra, `fft`/`ifft`, lunghezza potenza di due), `apodization` (boxcar, triangular, happ_genzel, blackman_harris_3), `interferogram` (righe o bande lorentziane).

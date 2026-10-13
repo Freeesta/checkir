@@ -1,5 +1,5 @@
 # Motore (`crates/`): lettori, anonimizzazione, sintetici
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `motore_didattica.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `qualita.md`, `motore_didattica.md`.
 
 ## Struttura
 - `ftir-core/src/spectrum.rs`: tipo unico `Spectrum` (`role`, `y_unit`, `wavenumber_cm1`, `y`, `history` = passi applicati come `id/versione {parametri completi}`; punto assente = `y` NaN) e i suoi enum `Role`, `YUnit`.

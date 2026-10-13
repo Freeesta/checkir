@@ -1,5 +1,5 @@
 # Motore: passi del segnale, sottrazione
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `motore_didattica.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `qualita.md`, `motore_didattica.md`.
 
 ## Struttura
 - `ftir-core/src/passi/` (pacchetto SEGNALE): ogni passo è `apply(&Spectrum, &str JSON) -> EngineResult<Spectrum>`, puro: l'originale non cambia, il risultato ha lo stesso ruolo e un passo in più in `history`; parametro sconosciuto = `passi.parametro_sconosciuto`.

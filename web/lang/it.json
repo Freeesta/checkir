@@ -412,7 +412,6 @@
   "ranges.table.candidate": "Candidato",
   "ranges.table.caption": "r di ogni candidato per regione",
   "ranges.table.full": "Intero",
-  "ranges.table.hint": "Scegli una o più regioni per vedere in quali parti dello spettro ogni candidato concorda.",
   "ranges.table.out": "— fuori dai primi 10",
   "ranges.table.region": "Regione {n}: {from}–{to}",
   "ranges.title": "Regione del confronto",

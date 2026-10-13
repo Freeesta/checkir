@@ -1,5 +1,5 @@
 # Motore: confronto e allerte di misura
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `motore_didattica.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `qualita.md`, `motore_didattica.md`.
 
 ## Struttura
 - `ftir-core/src/confronti/` (confronto, catena `confronto_v1`: assorbanza → griglia 650-3800 passo 2 → Savitzky-Golay(15,3) derivata 1 → maschera 1900-2400): `mod.rs` costanti e `prepare` (derivata e spettro con AsLS), `asls.rs` (linea di base AsLS lam 1e7 p 0.01, LDLᵀ pentadiagonale), `pearson.rs` (tre punteggi e regioni), `soglie.rs` (carica `data/soglie_confronto.json`, schema `soglie-confronto/1`, le soglie non stanno nel codice),
