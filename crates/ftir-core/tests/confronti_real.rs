@@ -90,6 +90,7 @@ fn reproduces_the_levels_of_bench_1() {
             substance: Some(r.key.clone()),
             display_name: r.name.clone(),
             form: r.form.clone(),
+            classes: Vec::new(),
         };
         let lib = libs
             .iter_mut()

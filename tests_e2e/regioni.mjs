@@ -140,7 +140,7 @@ async function stateScenario(page, check, axe) {
   check("ranges: axe is clean in dark", v2.length === 0, v2.join(", "));
   await page.evaluate(() => (document.documentElement.dataset.theme = "light"));
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   await page.waitForSelector(".ranges-table thead", { timeout: 20000 });
   check("ranges: English table and band words", /Whole/.test((await page.textContent(".ranges-table thead")) ?? "") && /Region 1/.test((await page.textContent("#chart")) ?? ""));
   const v3 = await axe(page);

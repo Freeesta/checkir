@@ -405,7 +405,7 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .sheet-meta dd { margin: 0; }
 .sheet .level-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; }
 .sheet-strong { font-weight: 700; }
-.sheet-alerts li { display: flex; gap: 0.35rem; padding: 0.1rem 0; }
+.sheet-alerts li { display: flex; gap: 0.35rem; padding: 0.1rem 0; overflow-wrap: anywhere; }
 .sheet-alerts .icon { flex: none; align-self: flex-start; color: var(--color-alert); }
 .signature { display: flex; align-items: flex-end; gap: 0.6rem; margin-top: 0.8rem; }
 .sign-line { flex: 1; border-bottom: 1px solid var(--text); height: 1.5rem; }
@@ -490,7 +490,7 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .chart-menu [aria-checked="false"]::before { content: "□ "; }
 .axis-hit-x { cursor: ew-resize; fill: transparent; }
 .axis-hit-y { cursor: ns-resize; fill: transparent; }
-/* Loading screen: a photon (bright head) with its red wave; the wave runs forward one period per cycle. */
+/* Loading screen: a photon (bright head) with its red wave; splash.js draws the wave and moves the head on its last point, from one phase. */
 #splash { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: var(--bg); opacity: 1; transition: opacity 0.12s linear; }
 #splash[data-gone] { opacity: 0; pointer-events: none; }
 .splash-art { width: min(20rem, 70vw); height: auto; }
@@ -499,10 +499,8 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .splash-glow-in { stop-color: var(--splash-wave); stop-opacity: 0.55; }
 .splash-glow-out { stop-color: var(--splash-wave); stop-opacity: 0; }
 @media (prefers-reduced-motion: no-preference) {
-  .splash-wave { animation: splash-run 0.9s linear infinite; }
   .splash-halo { transform-box: fill-box; transform-origin: center; animation: splash-pulse 1.4s ease-in-out infinite; }
 }
-@keyframes splash-run { to { transform: translateX(40px); } }
 @keyframes splash-pulse { 50% { transform: scale(1.35); opacity: 0.7; } }
 @media (prefers-reduced-motion: reduce) { #splash { transition: none; } }
 
@@ -559,6 +557,15 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .rule-range { fill: none; stroke: var(--focus); stroke-width: 2; stroke-dasharray: 6 3; pointer-events: none; }
 .rule-label { font-weight: 600; }
 @media (forced-colors: active) { .mode-atom { fill: Canvas; stroke: CanvasText; } .mode-bond, .mode-arrow { stroke: CanvasText; } .mode-head, .mode-el, .mode-z { fill: CanvasText; } .rule-range { stroke: Highlight; } }
+
+.propose-toggle, .propose-open { font: inherit; border: 1px solid var(--border); border-radius: 0.3rem; padding: 0.3rem 0.7rem; background: transparent; color: var(--text); cursor: pointer; text-decoration: none; display: inline-block; }
+.propose-open[aria-disabled="true"] { color: var(--text-muted); cursor: not-allowed; }
+.propose { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.propose-field { display: grid; gap: 0.2rem; }
+.propose-field textarea, .propose-field input { font: inherit; width: 100%; box-sizing: border-box; }
+.propose-problems { margin: 0; padding-left: 1.2rem; }
+
+
 .inverse-dialog { width: min(52rem, calc(100vw - 2rem)); }
 .inverse-field { display: inline-flex; flex-direction: column; gap: 0.15rem; margin: 0.25rem 0.5rem 0.25rem 0; }
 .inverse-field input { width: 9rem; }
