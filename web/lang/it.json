@@ -60,12 +60,19 @@
   "reader.asc.axis_missing": "Questo file ASC ha solo i valori y e l'intestazione non dà il primo e l'ultimo x (FIRSTX, LASTX): l'asse è sconosciuto.",
   "reader.ispd.bdb_magic": "Questo non è un file .ispd di Shimadzu: manca la firma Berkeley DB.",
   "reader.ispd.bdb_version": "Questo file .ispd usa una struttura Berkeley DB non supportata (metodo {method}, versione {version}, {order}). Segnalalo per farla aggiungere.",
-  "reader.ispd.bdb_method": "Questo file Berkeley DB usa il metodo {method} (versione {version}), che le misure .ispd non usano.",
+  "reader.ispd.bdb_method": "Questo file Berkeley DB usa il metodo {method} (versione {version}), presente in altri file Shimadzu come le librerie utente, non nelle misure: non è ancora supportato.",
   "reader.ispd.bdb_page_size": "La dimensione di pagina del file ({size} byte) non è valida: il file è danneggiato.",
   "reader.ispd.bdb_truncated": "Il file finisce prima della pagina {page}: è troncato o danneggiato.",
   "reader.ispd.bdb_corrupt": "La struttura interna del file è danneggiata ({what}).",
   "reader.ispd.no_spectrum": "Il file non contiene nessuno spettro con asse in numeri d'onda.",
-  "reader.ispd.bad_data": "I dati dello spettro dell'oggetto {object} non si possono leggere.",
+  "reader.ispd.bad_data": "I dati dello spettro dell'oggetto {object} non si possono leggere ({why}).",
   "reader.ispd.yunits_unknown": "L'unità y \"{value}\" non è riconosciuta: sceglila prima di elaborare.",
-  "reader.ispd.header_unreadable": "Nome e data dell'oggetto {object} non si sono potuti leggere dalla sua intestazione."
+  "reader.ispd.header_unreadable": "Nome e data dell'oggetto {object} non si sono potuti leggere dalla sua intestazione.",
+  "reader.ispd.text_latin1": "Alcuni testi del file non sono UTF-8 valido e sono stati letti come Latin-1: gli accenti possono differire dall'originale.",
+  "reader.ispd.params_unreadable": "L'elenco dei parametri dello strumento dell'oggetto {object} non si è potuto leggere: mancano i valori dello strumento (risoluzione, scansioni, modello).",
+  "reader.ispd.param_guessed": "Il tipo del parametro dello strumento {id} non è noto: il valore è stato indovinato.",
+  "reader.ispd.object_skipped": "L'oggetto {object} è stato saltato perché i suoi dati non si sono potuti leggere ({reason}).",
+  "reader.ispd.instrument_alert": "Lo strumento ha segnalato: «{message}». La misura potrebbe non essere affidabile.",
+  "reader.ispd.y_scale": "I valori salvati non corrispondono al minimo dichiarato nel file: sembrano moltiplicati per un fattore {factor} che non è stato applicato. I valori sono mostrati come salvati, in unità arbitrarie.",
+  "reader.ispd.x_range": "L'asse dei numeri d'onda non parte da dove il file dichiara ({declared}, trovato {found}): è stato arrotondato quando il file è stato creato."
 }

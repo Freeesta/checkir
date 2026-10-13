@@ -26,14 +26,8 @@
 100022 0
 100022 2
 100036
-100400
-100401
-100600
-100700
 103700 FTIRX000 Instrument Parameters
 103701
-104500
-104501
 105600
 2 Description
 2 DisplayObject
@@ -42,3 +36,74 @@ CD
 CO
 MEMBERS
 NON_BTREE_DATA
+param 1000
+param 1001
+param 1002
+param 1003
+param 1004
+param 1032
+param 1034
+param 1035
+param 1036
+param 1037
+param 1042
+param 1043
+param 1049
+param 1050
+param 1052
+param 1054
+param 1055
+param 1057
+param 1061
+param 1062
+param 1063
+param 1064
+param 1065
+param 1072
+param 1073
+param 1074
+param 1075
+param 1076
+param 1077
+param 1102
+param 1103
+param 1104
+param 1105
+param 1106
+param 1107
+param 1108
+param 1109
+param 1110
+param 1111
+param 1117
+param 1118
+param 1121
+param 1133
+param 1136
+param 1139
+param 1140
+param 1141
+param 1145
+param 1146
+param 1149
+param 1150
+param 1154
+param 1155
+param 1162
+param 1163
+param 1164
+param 1165
+param 1166
+param 1180
+param 1181
+param 1182
+param 1183
+param 1184
+param 1185
+param 1186
+param 1187
+param 1200
+param 5239
+param 10129
+param 10130
+param 10131

@@ -70,7 +70,7 @@ fn spectrum(sp: &Spectrum) -> String {
     format!(
         "{{\"role\":\"{:?}\",\"x\":{{\"unit\":\"{:?}\",\"order\":\"{:?}\",\"values\":{x}}},\
          \"y\":{{\"unit\":\"{:?}\",\"quantum\":{},\"values\":[{}]}},\
-         \"instrument\":{{\"model\":{},\"resolution_cm1\":{}}},\
+         \"instrument\":{{\"model\":{},\"resolution_cm1\":{},\"scans\":{},\"serial_number\":{},\"accessory\":{}}},\
          \"measurement\":{{\"title\":{},\"sample_name\":{},\"datetime\":{}}},\
          \"history\":[{}],\"fields\":[{}],\"warnings\":[{}]}}",
         sp.role,
@@ -84,6 +84,12 @@ fn spectrum(sp: &Spectrum) -> String {
             .resolution_cm1
             .as_ref()
             .map_or("null".to_string(), |r| r.value.to_string()),
+        sp.instrument
+            .scans
+            .as_ref()
+            .map_or("null".to_string(), |r| r.value.to_string()),
+        opt(&sp.instrument.serial_number),
+        opt(&sp.instrument.accessory),
         opt(&sp.measurement.title),
         opt(&sp.measurement.sample_name),
         opt(&sp.measurement.datetime),

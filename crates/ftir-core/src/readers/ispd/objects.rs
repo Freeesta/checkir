@@ -15,13 +15,6 @@ pub struct Entry<'a> {
     pub value: &'a [u8],
 }
 
-impl Entry<'_> {
-    /// First word of the property (`100036`, `MEMBERS`, `NON_BTREE_DATA`, `2`).
-    pub fn prop(&self) -> &str {
-        self.rest.split(' ').next().unwrap_or("")
-    }
-}
-
 fn split_key(key: &[u8]) -> (u32, String, String) {
     let body = key.strip_suffix(&[0]).unwrap_or(key);
     let text = String::from_utf8_lossy(body).into_owned();
@@ -54,47 +47,110 @@ pub fn entries(pairs: &[Pair]) -> Vec<Entry<'_>> {
 }
 
 /// The properties of one object by first word.
-pub fn by_object<'a, 'b>(list: &'b [Entry<'a>]) -> BTreeMap<u32, BTreeMap<&'b str, &'b Entry<'a>>> {
-    let mut m: BTreeMap<u32, BTreeMap<&str, &Entry<'a>>> = BTreeMap::new();
+pub fn by_object<'a, 'b>(list: &'b [Entry<'a>]) -> BTreeMap<u32, Props<'a, 'b>> {
+    let mut m: BTreeMap<u32, Props<'a, 'b>> = BTreeMap::new();
     for e in list {
         if e.object != CATALOG {
-            m.entry(e.object).or_default().entry(e.prop()).or_insert(e);
+            m.entry(e.object)
+                .or_default()
+                .entry(e.rest.as_str())
+                .or_insert(e);
         }
     }
     m
 }
 
+/// The properties of one object by their full text (`100036`, `2 Description`, `0 ##MINY`).
+pub type Props<'a, 'b> = BTreeMap<&'b str, &'b Entry<'a>>;
+
 /// Offsets of the fixed part of `NON_BTREE_DATA`: Unix creation date, then length-prefixed name.
 const DATE_AT: usize = 168;
+const MAX_ENTRIES: u32 = 1000;
+
+/// One line of the history of an object (who, when, what was done).
+pub struct HistoryEntry {
+    pub user: String,
+    pub full_name: String,
+    pub aux: String,
+    pub unix: u32,
+    pub text: String,
+}
 
 pub struct Header {
     pub created_unix: u32,
     pub name: String,
+    /// `None` when the part after the name does not have the layout of a history (library imports, parameter objects).
+    pub history: Option<Vec<HistoryEntry>>,
+    /// True when some text was not valid UTF-8 and was read as Latin-1.
+    pub latin1: bool,
+}
+
+pub fn read_u32(b: &[u8], off: usize) -> Option<u32> {
+    let s = b.get(off..off.checked_add(4)?)?;
+    Some(u32::from_le_bytes([
+        *s.first()?,
+        *s.get(1)?,
+        *s.get(2)?,
+        *s.get(3)?,
+    ]))
+}
+
+/// Length-prefixed text; bytes below 0x20 are refused. Returns the text, the next offset and whether Latin-1 was needed.
+pub fn read_text(b: &[u8], off: usize) -> Option<(String, usize, bool)> {
+    let len = usize::try_from(read_u32(b, off)?).ok()?;
+    if len > 4096 {
+        return None;
+    }
+    let start = off.checked_add(4)?;
+    let end = start.checked_add(len)?;
+    let raw = b.get(start..end)?;
+    if raw.iter().any(|&c| c < 0x20) {
+        return None;
+    }
+    match std::str::from_utf8(raw) {
+        Ok(t) => Some((t.to_string(), end, false)),
+        Err(_) => Some((raw.iter().map(|&c| char::from(c)).collect(), end, true)),
+    }
+}
+
+fn history(value: &[u8], at: usize, latin1: &mut bool) -> Option<Vec<HistoryEntry>> {
+    let kind = read_u32(value, at.checked_add(4)?)?;
+    let size = usize::try_from(read_u32(value, at.checked_add(8)?)?).ok()?;
+    let count = read_u32(value, at.checked_add(12)?)?;
+    let body = at.checked_add(12)?;
+    if kind != 9 || count > MAX_ENTRIES || value.len().checked_sub(body)? != size {
+        return None;
+    }
+    let mut p = at.checked_add(16)?;
+    let mut out = Vec::new();
+    for _ in 0..count {
+        let (user, q, a) = read_text(value, p)?;
+        let (full_name, q, b) = read_text(value, q)?;
+        let (aux, q, c) = read_text(value, q)?;
+        let unix = read_u32(value, q)?;
+        let (text, q, d) = read_text(value, q.checked_add(4)?)?;
+        *latin1 |= a | b | c | d;
+        p = q;
+        out.push(HistoryEntry {
+            user,
+            full_name,
+            aux,
+            unix,
+            text,
+        });
+    }
+    (p == value.len()).then_some(out)
 }
 
 pub fn header(value: &[u8]) -> Option<Header> {
-    let at = |off: usize| -> Option<u32> {
-        let s = value.get(off..off.checked_add(4)?)?;
-        Some(u32::from_le_bytes([
-            *s.first()?,
-            *s.get(1)?,
-            *s.get(2)?,
-            *s.get(3)?,
-        ]))
-    };
-    let created_unix = at(DATE_AT)?;
-    let len = usize::try_from(at(DATE_AT + 4)?).ok()?;
-    if len > 1024 {
-        return None;
-    }
-    let raw = value.get(DATE_AT + 8..(DATE_AT + 8).checked_add(len)?)?;
-    let name = std::str::from_utf8(raw).ok()?;
-    if name.chars().any(char::is_control) {
-        return None;
-    }
+    let created_unix = read_u32(value, DATE_AT)?;
+    let (name, after, mut latin1) = read_text(value, DATE_AT + 4)?;
+    let history = history(value, after, &mut latin1);
     Some(Header {
         created_unix,
-        name: name.to_string(),
+        name,
+        history,
+        latin1,
     })
 }
 
