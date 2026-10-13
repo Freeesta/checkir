@@ -4,25 +4,7 @@ const VERSION = "dev";
 const ID = new URL(self.location.href).searchParams.get("id") || "app";
 const CACHE = ID + "-v" + VERSION;
 const LIBRARIES = "librerie/";
-const SHEETS = "schede/";
-const FILES = [
-  "./", "index.html", "style.css", "main.js", "appname.js", "manifest.webmanifest", "img/logo.svg", "img/icon-16.png", "img/icon-32.png", "img/icon-192.png", "img/icon-512.png", "img/icon-maskable-192.png", "img/icon-maskable-512.png", "img/apple-touch-icon.png", "img/favicon.svg", "img/favicon.ico", "i18n.js", "chart.js", "chart_cursors.js", "chart_input.js", "view_link.js", "spectrum.js", "view.js", "engine.js", "icons.svg", "state.js", "actions.js", "panels.js", "header.js", "tooltip.js", "dom.js", "theme.js", "controls.js", "dialogs.js", "workarea.js", "shortcuts.js", "help.js", "files.js", "cartella.js", "cartella_ui.js", "librerie.js", "libpanel.js", "importa.js", "nomi.js", "opfs.js", "alerts.js", "match.js", "match.worker.js", "results.js", "layers.js", "peaks.js", "peaks_panel.js", "peaks_view.js", "regions.js", "bands_data.js", "peak_card.js", "mode_anim.js", "chart_marks.js", "decision.js", "sheet.js", "schede.js", "schede_ui.js", "sheet_panel.js", "talk.js", "subtract.js", "subtract_view.js", "strips.js", "schede_prova.js", "print.css",
-  "pagina.js", "avvertenze.js", "pagine/avvertenze/", "pagine/avvertenze/index.html", "pagine/informativa/", "pagine/informativa/index.html",
-  "bands/regions.json", "bands/rules.json", "bands/groups.json", "bands/modes.json", "bands/texts.it.json", "bands/texts.en.json", "bands/sources.json", "lang/it.json", "lang/en.json", "wasm/ftir_wasm.js", "wasm/ftir_wasm_bg.wasm",
-];
-
-/** The substance sheets named by the index: cached on install so the sheets open offline. A failure never blocks the install. */
-async function cacheSheets(cache) {
-  try {
-    const res = await fetch("schede/index.json", { cache: "reload" });
-    if (!res.ok) return;
-    await cache.put("schede/index.json", res.clone());
-    await cache.add("schede/sources.json");
-    for (const id of (await res.json()).sheets ?? []) if (/^[a-z0-9-]+$/.test(id)) await cache.add(`schede/${id}.json`);
-  } catch {
-    // the sheets load from the network when it is there
-  }
-}
+const FILES = []; // precache list: written into site/sw.js by the build (tools/versione_sw.mjs); never edit it
 
 /** Library packages named by the general manifest: cached on install so the libraries work offline. A failure here never blocks the install. */
 async function cacheLibraries(cache) {
@@ -40,7 +22,7 @@ async function cacheLibraries(cache) {
 }
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then(async (c) => { await c.addAll(FILES); await cacheLibraries(c); await cacheSheets(c); }).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then(async (c) => { await c.addAll(FILES); await cacheLibraries(c); }).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (e) => {
@@ -53,9 +35,8 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
-  const path = new URL(e.request.url).pathname;
-  if (path.includes("/" + LIBRARIES) || path.includes("/" + SHEETS)) {
-    // Packages and sheets change with the build, not with VERSION: network first, the cached copy when offline.
+  if (new URL(e.request.url).pathname.includes("/" + LIBRARIES)) {
+    // Packages change with the build, not with VERSION: network first, the cached copy when offline.
     e.respondWith(fetch(e.request).then((res) => {
       if (res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(e.request, copy)); }
       return res;

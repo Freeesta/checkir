@@ -5,11 +5,12 @@ import { nearestIndex, thin, visibleIndices } from "./spectrum.js";
 import { clamp, pan, zoom } from "./view.js";
 import { createCursors } from "./chart_cursors.js";
 import { attachInput } from "./chart_input.js";
+import { drawBrushStrip, drawRangeZones } from "./chart_ranges.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** @typedef {import("./view.js").View} View */
 /** Extra curves and zones drawn with the sample: the library spectrum of a candidate (already scaled) and the zone left out of the comparison.
- * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null, marks?: import("./chart_marks.js").Marks | null }} Layers */
+ * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null, marks?: import("./chart_marks.js").Marks | null, ranges?: import("./chart_ranges.js").RangeLayer | null }} Layers */
 
 const W = 800;
 const H = 360;
@@ -101,12 +102,14 @@ export function draw(host, s, v, layers = {}, opts = {}) {
   const root = svg("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": t("chart.title") });
   drawGrid(root, v, { y0, y1 }, px, py);
   drawExcluded(root, layers.excluded, v, px);
+  if (layers.ranges) drawRangeZones(root, layers.ranges, v, px, { top: M.t, height: H - M.t - M.b });
   if (layers.marks) drawBands(root, layers.marks.bands, v, px, { top: M.t, height: H - M.t - M.b });
   if (layers.marks?.rule) drawRule(root, layers.marks.rule, v, px, { top: M.t, height: H - M.t - M.b });
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
   if (ref) drawReference(root, ref, v, layers, px, py);
   root.append(svg("polyline", { class: "curve", points: thin(idx, s.y, PLOT_W).map((i) => `${px(s.wavenumber_cm1[i])},${py(s.y[i])}`).join(" ") }));
   if (layers.marks) drawPeaks(root, layers.marks.peaks, v, px, (x) => py(s.y[Math.max(0, nearestIndex(s, x))]));
+  drawBrushStrip(root, { left: M.l, right: W - M.r, bottom: H - M.b });
   const ex = svg("text", { class: "label", x: W / 2, y: H - 6, "text-anchor": "middle" });
   ex.textContent = t("chart.axis_x");
   const ey = svg("text", { class: "label", x: 14, y: H / 2, "text-anchor": "middle", transform: `rotate(-90 14 ${H / 2})` });
@@ -252,8 +255,8 @@ function peakKey(e, peaks) {
  * Wire the chart: keyboard (+ - arrows 0 and the cursor keys), pointer (cursors, zoom box, wheel, double click) and buttons. The spectrum is swapped with `set`;
  * with none, a short line says so. With `link`, the x axis follows the other charts joined to the same link.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
- * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean } }} [opts]
- * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void }} `redraw` after a language change
+ * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, onBrush?: (from: number, to: number) => void, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean } }} [opts]
+ * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void, cursorRange: () => [number, number] | null }} `redraw` after a language change
  */
 export function wire(el, opts = {}) {
   const say = opts.announce ?? (() => {});
@@ -306,14 +309,12 @@ export function wire(el, opts = {}) {
     e.preventDefault();
     setView(moves[i][2]());
   });
-  attachInput(el.chart, { geom: () => geom, view: () => v, full: () => full, setView, cursors, toggleLockY });
+  attachInput(el.chart, { geom: () => geom, view: () => v, full: () => full, setView, cursors, toggleLockY, brush: opts.onBrush });
   refresh();
   update();
   return {
-    redraw: () => {
-      refresh();
-      update();
-    },
+    redraw: () => (refresh(), update()),
+    cursorRange: () => cursors.pair(),
     setLayers: (next) => {
       layers = next;
       v = withPeakInView(next, v, full);

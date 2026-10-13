@@ -131,6 +131,8 @@ export function createCursors(announce) {
       st.box = b;
       schedule();
     },
+    /** @returns {[number, number] | null} the span between the two cursors, low to high, or null unless both are placed */
+    pair: () => (st.pos[0] !== null && st.pos[1] !== null ? [Math.min(st.pos[0], st.pos[1]), Math.max(st.pos[0], st.pos[1])] : null),
     /** @returns {boolean} some cursor is shown */
     any: () => st.pos[0] !== null || st.pos[1] !== null,
     /** The `k` key: cursor 1 at `centre`, then cursor 2, then both away. @param {number} centre */

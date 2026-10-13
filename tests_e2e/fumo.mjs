@@ -4,10 +4,14 @@ import { readFile } from "node:fs/promises";
 import { chromium, firefox, webkit } from "playwright";
 import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
+import { areaScenario } from "./area.mjs";
+import { cleanScenario } from "./pulizia.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
+import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
+import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
 import { registryScenario } from "./registri.mjs";
 import { sheetScenario } from "./scheda.mjs";
 import { sheetsPureScenario, sheetsScenario } from "./schede.mjs";
@@ -40,7 +44,10 @@ async function schemeScenario(browser, scheme) {
   page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
-  check(`[${scheme}] engine version`, /\d+\.\d+\.\d+/.test(await page.textContent("#engine-version")));
+  await page.click('[data-action="info.open"]');
+  check(`[${scheme}] engine version in the info dialog, none in the footer`, /\d+\.\d+\.\d+/.test(await page.textContent("dialog .dialog-body")) && !/\d+\.\d+\.\d+/.test(await page.textContent(".footer")));
+  await page.click('dialog [aria-label]');
+  await page.waitForSelector("dialog", { state: "detached" });
   const violations = await axe(page);
   check(`[${scheme}] axe has no violations`, violations.length === 0, violations.join(", "));
   await page.click('[data-action="demo.load"]');
@@ -215,12 +222,12 @@ async function nameScenario(browser) {
   const page = await ctx.newPage();
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
-  check("name: title, heading and footer show APP_NAME", (await page.title()) === "provanome" && (await page.textContent("#app-name")) === "provanome" && /^provanome /.test((await page.textContent(".footer p")) ?? ""));
+  check("name: title, heading and footer show APP_NAME", (await page.title()) === "provanome" && (await page.textContent("#app-name")) === "provanome" && (await page.textContent(".footer")) === "provanome");
   check("name: default name absent from the page", !/checkir/i.test(await page.evaluate(() => document.body.innerText + document.title)));
   await ctx.close();
 }
 
-/** The two text pages: reached from the footer, texts in both languages (no raw key), draft line first, axe clean in light and dark, no horizontal scroll at 320 px. */
+/** The two text pages: reached from the info dialog, texts in both languages (no raw key), draft line first, axe clean in light and dark, no horizontal scroll at 320 px. */
 async function pagesScenario(browser) {
   const pages = [{ slug: "avvertenze", link: 0, items: 9, draft: /bozza|draft/i }, { slug: "informativa", link: 1, items: 8, draft: /bozza|draft/i }];
   for (const scheme of ["light", "dark"]) {
@@ -232,9 +239,10 @@ async function pagesScenario(browser) {
       page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
       await page.goto(base);
       await page.waitForSelector("body[data-ready='1']");
-      await page.locator(".footer-links a").nth(p.link).click();
+      await page.keyboard.press("i"); // the info button hides in the ⋯ menu at 320 px
+      await page.locator("dialog .footer-links a").nth(p.link).click();
       await page.waitForSelector(`body[data-page][data-ready='1']`);
-      check(`[${scheme}] ${p.slug}: reached from the footer`, page.url().endsWith(`/pagine/${p.slug}/`), page.url());
+      check(`[${scheme}] ${p.slug}: reached from the info dialog`, page.url().endsWith(`/pagine/${p.slug}/`), page.url());
       for (const lang of ["it", "en"]) {
         if (lang === "en") {
           await page.click('[data-lang="en"]');
@@ -266,6 +274,28 @@ async function warningsBoxScenario(browser) {
   await ctx.close();
 }
 
+/** Loading screen: only the photon drawing, hidden label "Caricamento"/"Loading" in a status region, animated (static with reduced motion), gone when the page is ready. */
+async function splashScenario(browser) {
+  for (const [motion, locale, word] of [["no-preference", "it-IT", /Caricamento/], ["reduce", "en-GB", /Loading/]]) {
+    const ctx = await browser.newContext({ locale, reducedMotion: motion });
+    const page = await ctx.newPage();
+    await page.route("**/wasm/*.wasm", async (route) => { await new Promise((r) => setTimeout(r, 700)); await route.continue(); });
+    await page.goto(base, { waitUntil: "commit" });
+    await page.waitForFunction(() => document.getElementById("splash-label")?.textContent);
+    const info = await page.evaluate(() => {
+      const s = document.getElementById("splash");
+      return { role: s?.getAttribute("role"), label: s?.textContent?.trim(), labelWidth: document.getElementById("splash-label")?.getBoundingClientRect().width, textOutside: [...(s?.children ?? [])].filter((c) => c.id !== "splash-label").map((c) => c.textContent?.trim()).join(""), animations: s?.getAnimations({ subtree: true }).filter((a) => a.playState === "running").length };
+    });
+    const tag = `splash (${motion})`;
+    check(`${tag}: status role, translated hidden label, no visible text`, info.role === "status" && word.test(info.label ?? "") && info.labelWidth <= 1 && info.textOutside === "", JSON.stringify(info));
+    check(`${tag}: ${motion === "reduce" ? "static" : "animated"}`, motion === "reduce" ? info.animations === 0 : (info.animations ?? 0) > 0, String(info.animations));
+    await page.waitForSelector("body[data-ready='1']");
+    await page.waitForSelector("#splash", { state: "detached", timeout: 2000 });
+    check(`${tag}: removed when ready`, (await page.locator("#splash").count()) === 0);
+    await ctx.close();
+  }
+}
+
 async function run() {
   const browser = await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
   try {
@@ -277,6 +307,7 @@ async function run() {
     await registryScenario(check);
     await versionScenario(check);
     await nameScenario(browser);
+    await splashScenario(browser);
     await pagesScenario(browser);
     await warningsBoxScenario(browser);
     await loadingScenario(browser, base, check, axe);
@@ -285,9 +316,14 @@ async function run() {
     await librariesScenario(browser, base, check, axe);
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
+    await areaScenario(browser, base, check, axe);
+    await cleanScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
+    await inverseScenario(browser, base, check);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
+    await rangesPureScenario(check);
+    await rangesScenario(browser, base, check, axe);
     await sheetScenario(browser, base, check, axe);
     await sheetsPureScenario(check);
     await sheetsScenario(browser, base, check, axe);

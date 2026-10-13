@@ -55,3 +55,13 @@ export async function registryScenario(check) {
   check("registries: reserved and modified keys are caught", registryProblems([{ ...probe, id: "p.a", labelKey: "action.file_open.label", key: "/" }, { ...probe, id: "p.b", labelKey: "action.file_open.label", key: "F5" }, { ...probe, id: "p.c", labelKey: "action.file_open.label", key: "Ctrl+o" }], [], catalogs, icons).filter((p) => p.includes("reserved key")).length === 3);
   check("registries: duplicate keys and steps are caught", registryProblems([{ ...probe, labelKey: "action.file_open.label", key: "o", step: 1 }, { ...probe, id: "probe.two", labelKey: "action.file_open.label", key: "o", step: 1 }], [], catalogs, icons).length >= 2);
 }
+
+/** In the page: every action has one visible button at most (the work bar's "next step" is the one a step shares with its section). @param {import("playwright").Page} page @returns {Promise<string[]>} the actions shown twice */
+export async function duplicatedActions(page) {
+  return page.evaluate(() => {
+    /** @type {Record<string, number>} */
+    const seen = {};
+    for (const e of document.querySelectorAll("[data-action]")) if (e instanceof HTMLElement && e.checkVisibility()) seen[e.dataset.action ?? ""] = (seen[e.dataset.action ?? ""] ?? 0) + 1;
+    return Object.entries(seen).filter(([, n]) => n > 1).map(([id]) => id);
+  });
+}
