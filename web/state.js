@@ -9,6 +9,9 @@ import { STORAGE_PREFIX } from "./appname.js";
  * The open guided subtraction (memory only): the spectrum it works on, the chosen reference, the factor now shown and the one proposed.
  * @typedef {{ sample: string, library: string, spectrumId: string, name: string, k: number, proposed: number, max: number }} Subtraction
  * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, derived: Derived | null, warnings: Notice[] }} FileEntry
+ * A compound recalled from a library to look at beside the sample, and how the recalled ones are shown (memory only).
+ * @typedef {{ library: string, spectrumId: string, form: string }} Recalled
+ * @typedef {{ refs: Recalled[], mode: "overlay" | "offset" | "difference", scale: "raw" | "max" | "area" | "lsq", offset: number, current: number }} RecallState
  * @typedef {{ id: string, name: string }} Offer
  * @typedef {{ supported: boolean, watching: boolean, folderName: string | null, saved: string | null, remember: boolean, auto: boolean, offers: Offer[], notice: Notice | null }} FolderState
  * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, private: boolean, enabled: boolean }} LibraryEntry
@@ -26,12 +29,12 @@ import { STORAGE_PREFIX } from "./appname.js";
  * The three levels of the explanation texts, and a rule window shown on the chart from the peak card (memory only).
  * @typedef {"counsellor" | "chemist" | "teaching"} TextLevel
  * @typedef {{ ruleId: string, from: number, to: number }} RuleRange
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, textLevel: TextLevel, modeAnim: boolean, ruleRange: RuleRange | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, rangesOpen: boolean, rangeChoice: RangeChoice, rangeError: Notice | null, rangeTable: Record<string, RangeTable>, folder: FolderState }} AppState
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, textLevel: TextLevel, modeAnim: boolean, ruleRange: RuleRange | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, recall: RecallState, rangesOpen: boolean, rangeChoice: RangeChoice, rangeError: Notice | null, rangeTable: Record<string, RangeTable>, folder: FolderState }} AppState
  */
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, textLevel: readLevel(), modeAnim: readPref("modeAnim") !== "off", ruleRange: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, rangesOpen: false, rangeChoice: { preset: "full", ranges: [] }, rangeError: null, rangeTable: {}, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, textLevel: readLevel(), modeAnim: readPref("modeAnim") !== "off", ruleRange: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, recall: { refs: [], mode: "overlay", scale: "max", offset: 0.1, current: 0 }, rangesOpen: false, rangeChoice: { preset: "full", ranges: [] }, rangeError: null, rangeTable: {}, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();
