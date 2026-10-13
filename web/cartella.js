@@ -1,4 +1,5 @@
 // @ts-check
+import { APP_ID } from "./appname.js";
 import { isReadable, openFiles } from "./files.js";
 import { t } from "./i18n.js";
 import { getState, update } from "./state.js";
@@ -264,7 +265,7 @@ export function createWatcher(dir, hooks) {
   return { scan, stop: () => void (stopped = true) };
 }
 
-const DB = "checkir-folder";
+const DB = `${APP_ID}-folder`;
 const STORE = "ref";
 const KEY = "watched";
 
