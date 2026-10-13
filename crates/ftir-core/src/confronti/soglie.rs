@@ -51,6 +51,7 @@ pub struct Thresholds {
     pub ambiguity_margin: f64,
     pub twin_r: f64,
     pub same_as_previous_r: f64,
+    pub region_agreement: RegionAgreement,
     pub quality: Quality,
     pub min_cm1: f64,
     pub min_points: usize,
@@ -128,6 +129,15 @@ fn quality(v: &Value) -> EngineResult<Quality> {
     })
 }
 
+fn agreement(v: &Value) -> EngineResult<RegionAgreement> {
+    let a = |k: &str| num(v, &["region_agreement", k]);
+    Ok(RegionAgreement {
+        agree_min: a("agree_min")?,
+        partial_min: a("partial_min")?,
+        signal_share_min: a("signal_share_min")?,
+    })
+}
+
 fn text(v: &Value, key: &str) -> EngineResult<String> {
     Ok(v.get(key)
         .and_then(Value::as_str)
@@ -169,6 +179,7 @@ impl Thresholds {
             ambiguity_margin: num(&v, &["ambiguity", "margin_below"])?,
             twin_r: num(&v, &["spectral_twin", "r_min"])?,
             same_as_previous_r: num(&v, &["same_as_previous", "r_min"])?,
+            region_agreement: agreement(&v)?,
             quality: quality(&v)?,
             min_cm1: num(&v, &["range_limits", "min_cm1"])?,
             min_points: num(&v, &["range_limits", "min_points"])? as usize,
@@ -179,6 +190,29 @@ impl Thresholds {
 
     pub fn preset(&self, id: &str) -> Option<&Preset> {
         self.presets.iter().find(|p| p.id == id)
+    }
+}
+
+/// How the r of a region is read (`region_agreement`): the states `agrees`, `partial`, `disagrees`, and `low_signal`
+/// for a region holding less than `signal_share_min` of the energy of the sample derivative.
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub struct RegionAgreement {
+    pub agree_min: f64,
+    pub partial_min: f64,
+    pub signal_share_min: f64,
+}
+
+impl RegionAgreement {
+    /// State of a region: `low_signal` when the sample holds too little of its energy there (the r is shown, not
+    /// judged), `unknown` without an r, else `agrees` / `partial` / `disagrees`.
+    pub fn state(&self, r: Option<f64>, signal_share: f64) -> &'static str {
+        match r.filter(|r| r.is_finite()) {
+            None => "unknown",
+            Some(_) if signal_share < self.signal_share_min => "low_signal",
+            Some(r) if r >= self.agree_min => "agrees",
+            Some(r) if r >= self.partial_min => "partial",
+            Some(_) => "disagrees",
+        }
     }
 }
 
@@ -196,6 +230,14 @@ mod test {
         );
         assert_eq!(t.regions.len(), 4);
         assert_eq!(t.same_as_previous_r, 0.99);
+        assert_eq!(
+            t.region_agreement,
+            RegionAgreement {
+                agree_min: 0.9,
+                partial_min: 0.7,
+                signal_share_min: 0.01
+            }
+        );
         assert_eq!(t.quality.co2_band, (2330.0, 2370.0));
         assert!(t.preset("full").is_some_and(|p| p.calibrated));
     }
