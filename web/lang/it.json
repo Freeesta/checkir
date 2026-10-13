@@ -577,7 +577,6 @@
   "prova.coverage_title": "Copertura delle forme per libreria",
   "prova.grouping_name": "Le sostanze sono raggruppate per nome perché una libreria non dà l'identità: i nomi diversi della stessa sostanza contano come sostanze diverse.",
   "prova.csv": "Scarica l'elenco (CSV)",
-  "prova.not_probability": "Questi numeri descrivono le librerie e le soglie; non sono la probabilità che un singolo risultato sia giusto o sbagliato. Il CSV contiene solo id e nomi, mai dati spettrali.",
   "confronti.prova_pochi_dati": "La prova serve almeno due sostanze diverse nelle librerie attive.",
   "confronti.prova_non_avviata": "La prova non è avviata o le librerie sono cambiate: riavviala.",
   "peaks.state.minor": "Picco minore",

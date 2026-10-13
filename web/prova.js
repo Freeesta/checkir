@@ -161,7 +161,7 @@ function reportView(rep) {
   if (rep.grouping !== "identity") sections.push(el("p", { class: "empty" }, [t("prova.grouping_name")]));
   const csv = el("button", { type: "button" }, [t("prova.csv")]);
   csv.addEventListener("click", saveCsv);
-  sections.push(el("p", {}, [csv]), el("p", { class: "empty" }, [t("prova.not_probability")]));
+  sections.push(el("p", {}, [csv]));
   return el("div", { class: "prova-report" }, sections);
 }
 

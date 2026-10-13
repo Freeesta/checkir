@@ -577,7 +577,6 @@
   "prova.coverage_title": "Coverage of forms per library",
   "prova.grouping_name": "Substances are grouped by name because a library gives no identity: different names of the same substance count as different substances.",
   "prova.csv": "Download the list (CSV)",
-  "prova.not_probability": "These figures describe the libraries and the thresholds; they are not the probability that a single result is right or wrong. The CSV holds ids and names only, never spectral data.",
   "confronti.prova_pochi_dati": "The test needs at least two different substances in the active libraries.",
   "confronti.prova_non_avviata": "The test is not started or the libraries changed: start it again.",
   "peaks.state.minor": "Minor peak",

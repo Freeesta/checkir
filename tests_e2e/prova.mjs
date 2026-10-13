@@ -37,7 +37,7 @@ export async function libraryTestScenario(browser, base, check, axe) {
   check("test: the twin table names both spectra", (await page.locator(".prova-report table", { hasText: "alfa_bis" }).count()) >= 1 && (await page.locator(".prova-report table", { hasText: /alfa \(/ }).count()) >= 1);
   check("test: the histogram has its description and its data table", (await page.getAttribute("svg.prova-hist", "role")) === "img" && (await page.locator(".prova-report details table tbody tr").count()) === 20);
   check("test: the thresholds are drawn", (await page.locator("svg.prova-hist line.prova-line-probable").count()) === 1 && (await page.locator("svg.prova-hist line.prova-line-check").count()) === 1);
-  check("test: the figures are not called a probability and no tick or colour word is used", /non sono la probabilità/.test(report) && !/[✓✔]|verde|green/i.test(report));
+  check("test: no tick or colour word is used and no generic caution text", !/[✓✔]|verde|green|probabilità/i.test(report));
   check("test: decimals use the point", !/\d,\d/.test(report), report);
   check("test: the button is back to Start (the test is complete)", /Avvia la prova/.test((await page.textContent("#prova-start")) ?? ""));
 
