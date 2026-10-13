@@ -31,7 +31,7 @@ export function buildLayers(chart, summary) {
       const r = resultOf(s);
       const chosen = r ? selectedCandidate(s, r.data) : null;
       const analysis = s.showPeaks ? analyse(s) : null;
-      const key = [shown, r?.sig, chosen && candidateKey(chosen), s.overlay, currentLang(), s.showPeaks, s.peakFocus].join("|");
+      const key = [shown, r?.sig, chosen && candidateKey(chosen), s.overlay, currentLang(), s.showPeaks, s.peakFocus, s.ruleRange?.ruleId].join("|");
       const recall = recallView(s);
       const offset = s.recall.mode === "offset" ? s.recall.offset : 0;
       if (key === last && analysis === lastAnalysis && recall === lastRecall && offset === lastOffset) return;
@@ -46,7 +46,7 @@ export function buildLayers(chart, summary) {
       const ref = r && chosen && s.overlay && sample ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
       chart.setLayers({
         excluded: r ? { from: EXCLUDED_CM1[0], to: EXCLUDED_CM1[1], label: t("chart.excluded") } : null,
-        marks: analysis && { bands: analysis.bands, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus, shoulder: p.shoulder })), rows: analysis.peaks, name, focus: s.peakFocus },
+        marks: analysis && { bands: analysis.bands, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus, shoulder: p.shoulder })), rows: analysis.peaks, name, focus: s.peakFocus, rule: s.ruleRange && { from: s.ruleRange.from, to: s.ruleRange.to, label: t("card.rule_window", { from: formatNumber(Math.round(s.ruleRange.from)), to: formatNumber(Math.round(s.ruleRange.to)) }) } },
         recalled: s.recall.mode === "difference" ? [] : recall.rows.map((r, i) => ({ spectrum: recall.curves[i].spectrum, label: `${r.name} · ${r.ref.form}`, style: i })),
         difference: recall.difference && { spectrum: recall.difference.spectrum, label: t("recall.difference_label", { name: recall.difference.name, k: formatNumber(recall.difference.k, 2) }) },
         offset,

@@ -1,6 +1,6 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
-import { drawBands, drawPeaks, marksTables, svg } from "./chart_marks.js";
+import { drawBands, drawPeaks, drawRule, marksTables, svg } from "./chart_marks.js";
 import { nearestIndex, thin, visibleIndices } from "./spectrum.js";
 import { drawExtras, extraAt, extraCurves, widen } from "./chart_extra.js";
 
@@ -101,6 +101,7 @@ export function draw(host, s, v, layers = {}, opts = {}) {
   drawGrid(root, v, { y0, y1 }, px, py);
   drawExcluded(root, layers.excluded, v, px);
   if (layers.marks) drawBands(root, layers.marks.bands, v, px, { top: M.t, height: H - M.t - M.b });
+  if (layers.marks?.rule) drawRule(root, layers.marks.rule, v, px, { top: M.t, height: H - M.t - M.b });
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
   if (ref) drawReference(root, ref, v, layers, px, py);
   drawExtras(root, extras, v, PLOT_W, { px, py, right: W - M.r });

@@ -8,8 +8,8 @@ if ! wasm-bindgen --version 2>/dev/null | grep -q "$ver"; then
 fi
 cargo build --locked --release --target wasm32-unknown-unknown -p ftir-wasm
 rm -rf site && mkdir -p site && cp -r web/. site/
-# The didactic IR regions (regions/1) drawn on the chart: one source, copied here.
-mkdir -p site/bands && cp data/bands/regions.json site/bands/regions.json
+# The IR band data the page explains peaks with (regions, rules, groups, modes, texts, sources): one source, copied here.
+mkdir -p site/bands && cp data/bands/regions.json data/bands/rules.json data/bands/groups.json data/bands/modes.json data/bands/texts.it.json data/bands/texts.en.json site/bands/ && cp data/sources.json site/bands/sources.json
 node tools/genera_identita.mjs
 wasm-bindgen --target web --no-typescript --out-dir site/wasm target/wasm32-unknown-unknown/release/ftir_wasm.wasm
 # Library packages (never committed) and the general manifest with one switch per library; the service worker caches them.

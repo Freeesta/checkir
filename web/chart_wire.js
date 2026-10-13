@@ -80,10 +80,11 @@ function withPeakInView(layers, v, full) {
   return clamp({ min: at - (v.max - v.min) / 2, max: at + (v.max - v.min) / 2 }, full);
 }
 
-/** With the peaks shown, ← → pick the previous / next peak (Shift+← → still pans) and Esc clears the pick. @param {KeyboardEvent} e @param {{ step: (dir: 1 | -1) => boolean, clear: () => boolean }} peaks @returns {boolean} true when the key was used */
+/** With the peaks shown, ← → pick the previous / next peak (Shift+← → still pans) and ↑ ↓ change the level of the card text, Esc clears the pick. @param {KeyboardEvent} e @param {{ step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean }} peaks @returns {boolean} true when the key was used */
 function peakKey(e, peaks) {
   if (e.key === "Escape") return peaks.clear();
   if (e.shiftKey || e.ctrlKey || e.altKey || e.metaKey) return false;
+  if (e.key === "ArrowUp" || e.key === "ArrowDown") return peaks.level(e.key === "ArrowUp" ? -1 : 1);
   return e.key === "ArrowRight" ? peaks.step(1) : e.key === "ArrowLeft" ? peaks.step(-1) : false;
 }
 
@@ -104,6 +105,17 @@ function download(name, text) {
   a.click();
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+/** The zoom and pan keys of the focused chart; the peak keys come first when they are on. @param {HTMLElement} host @param {Record<string, number>} keys @param {(i: number) => void} run @param {(e: KeyboardEvent) => boolean} peakKeys */
+function attachViewKeys(host, keys, run, peakKeys) {
+  host.addEventListener("keydown", (e) => {
+    if (peakKeys(e)) return e.preventDefault();
+    const i = keys[e.key];
+    if (i === undefined) return;
+    e.preventDefault();
+    run(i);
+  });
 }
 
 /** @typedef {{ y0: number, y1: number }} YRange */
@@ -137,11 +149,27 @@ function createYAxis(say) {
   };
 }
 
+/** The menu's view of the chart. @param {{ has: () => boolean, view: () => View, full: () => View, setView: (v: View) => void, y: ReturnType<typeof createYAxis>, cursors: ReturnType<typeof createCursors>, toggleLockY: () => void, lockButton: HTMLElement, csv: () => void }} c @returns {import("./chart_menu.js").MenuChart} */
+function menuChart(c) {
+  const centre = () => (c.view().min + c.view().max) / 2;
+  return {
+    hasSpectrum: c.has,
+    zoomOut: () => c.setView(zoom(c.view(), c.full(), 2)),
+    showAll: () => c.setView({ ...c.full() }),
+    resetAll: () => (c.y.clear(), c.lockButton.setAttribute("aria-pressed", "false"), c.cursors.clear(), c.setView({ ...c.full() })),
+    toggleLockY: c.toggleLockY,
+    isLocked: c.y.locked,
+    toggleCursors: () => (c.cursors.any() ? c.cursors.clear() : c.cursors.cycle(centre())),
+    cursorsOn: c.cursors.any,
+    exportTable: c.csv,
+  };
+}
+
 /**
  * Wire the chart: keyboard (+ - arrows 0 and the cursor keys), pointer (cursors, zoom bands on the plot and the axes, wheel, double click), the menu and the buttons.
  * The spectrum is swapped with `set`; with none, a short line says so. With `link`, the x axis follows the other charts joined to the same link.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
- * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean }, ctx?: import("./actions.js").Ctx, codeOf?: () => string | null }} [opts]
+ * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean }, ctx?: import("./actions.js").Ctx, codeOf?: () => string | null }} [opts]
  * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void }} `redraw` after a language change
  */
 export function wire(el, opts = {}) {
@@ -188,34 +216,14 @@ export function wire(el, opts = {}) {
   lockButton.setAttribute("aria-pressed", "false");
   const refresh = () => relabel(s !== null);
   el.toolbar.replaceChildren(...buttons);
-  el.chart.addEventListener("keydown", (e) => {
-    if (layers.marks && opts.peaks && peakKey(e, opts.peaks)) return e.preventDefault();
-    const i = keys[e.key];
-    if (i === undefined) return;
-    e.preventDefault();
-    setView(moves[i][2]());
-  });
+  attachViewKeys(el.chart, keys, (i) => setView(moves[i][2]()), (e) => layers.marks !== undefined && opts.peaks !== undefined && peakKey(e, opts.peaks));
   const input = {
     geom: () => geom, view: () => v, full: () => full, setView, cursors, toggleLockY, isLocked: y.locked, announce: say,
     yZoom: (/** @type {number} */ a, /** @type {number} */ b) => (y.zoomTo(a, b), update()),
     yZoomBy: (/** @type {number} */ f) => geom && (y.zoomBy(geom, f), update()),
   };
   attachInput(el.chart, input);
-  if (opts.ctx) attachMenu(el.chart, menuChart(), opts.ctx);
-  /** @returns {import("./chart_menu.js").MenuChart} */
-  function menuChart() {
-    return {
-      hasSpectrum: () => s !== null,
-      zoomOut: () => setView(zoom(v, full, 2)),
-      showAll: () => setView({ ...full }),
-      resetAll: () => (y.clear(), lockButton.setAttribute("aria-pressed", "false"), cursors.clear(), setView({ ...full })),
-      toggleLockY,
-      isLocked: y.locked,
-      toggleCursors: () => (cursors.any() ? cursors.clear() : cursors.cycle(centre())),
-      cursorsOn: cursors.any,
-      exportTable: () => s && download(`${opts.codeOf?.() ?? "spectrum"}.csv`, tableCsv(s, v)),
-    };
-  }
+  if (opts.ctx) attachMenu(el.chart, menuChart({ has: () => s !== null, view: () => v, full: () => full, setView, y, cursors, toggleLockY, lockButton, csv: () => s && download(`${opts.codeOf?.() ?? "spectrum"}.csv`, tableCsv(s, v)) }), opts.ctx);
   refresh();
   update();
   return {

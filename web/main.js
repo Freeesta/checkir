@@ -20,6 +20,8 @@ import { buildLayers } from "./layers.js";
 import { matchActions, startMatching } from "./match.js";
 import { peaksActions } from "./peaks.js";
 import { loadBands } from "./regions.js";
+import { loadBandData } from "./bands_data.js";
+import { createPeakCard } from "./peak_card.js";
 import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
@@ -70,6 +72,7 @@ function languageActions(redraw, say) {
   const setLang = async (code) => {
     if (!LANGS.includes(code) || code === currentLang()) return;
     await loadLang(code);
+    await loadBandData(code);
     redraw();
     say(t("status.lang_changed", { lang: t(code === "it" ? "lang.it" : "lang.en") }));
   };
@@ -90,12 +93,23 @@ function startExtras() {
   if (["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) import("./schede_prova.js").then((m) => m.mountSamples());
 }
 
+/** The actions of the analysis work: matching, peaks, subtraction, decision and talk mode. @param {import("./engine.js").Engine | null} engine @param {(text: string) => void} announce */
+function workActions(engine, announce) {
+  return { ...matchActions(announce), ...peaksActions(engine, announce), ...subtractActions(engine, announce), ...decisionActions(announce), ...talkActions(announce) };
+}
+
+/** What the chart's arrow keys do with the picked peak. @param {import("./actions.js").Ctx} ctx */
+function chartPeakKeys(ctx) {
+  return { step: (/** @type {-1 | 1} */ dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak(), level: (/** @type {-1 | 1} */ dir) => (getState().peakFocus ? (ctx.stepLevel(dir), true) : false) };
+}
+
 async function start() {
   initTheme();
   await loadLang(pickLang());
   document.title = APP_NAME;
   const engine = await loadEngine().catch(() => null);
   await loadBands();
+  await loadBandData(currentLang());
   const input = wireFileInput({ engine, announce });
   let redrawAll = () => {};
   /** @type {import("./actions.js").Ctx} */
@@ -109,13 +123,7 @@ async function start() {
       announce(t("status.file_closed"));
     },
     ...languageActions(() => redrawAll(), announce),
-    ...matchActions(announce),
-    ...peaksActions(engine, announce),
-    ...subtractActions(engine, announce),
-    ...recallActions(announce),
-    recallOpen: () => openRecallDialog(ctx),
-    ...decisionActions(announce),
-    ...talkActions(announce),
+    ...workActions(engine, announce), ...recallActions(announce), recallOpen: () => openRecallDialog(ctx),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     closeSection: () => panels.closeSection(),
@@ -133,9 +141,10 @@ async function start() {
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), peaks: { step: (dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak() } });
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), peaks: chartPeakKeys(ctx) });
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
+  const card = createPeakCard($("peak-card"), ctx);
   const renderUi = () => {
     const s = getState();
     const code = activeFile(s)?.code ?? null;
@@ -144,6 +153,7 @@ async function start() {
       chart.set(code ? (spectrumOf(code) ?? null) : null);
     }
     layers.sync(s, shown ?? null);
+    card.refresh(s);
     document.body.toggleAttribute("data-subtract", s.subtraction !== null);
     for (const part of [subtraction, recalled, header, panels]) part.refresh(s);
     next.refresh(s);
@@ -151,9 +161,11 @@ async function start() {
     talk.refresh(s);
     refreshActionButtons(s);
     hideIfDetached();
-    $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");  };
+    $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");
+  };
   redrawAll = () => {
     layers.reset();
+    card.reset();
     applyCatalog();
     setDescription();
     relabelToggletips();
