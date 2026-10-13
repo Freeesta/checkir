@@ -1,0 +1,105 @@
+{
+  "schema": "datasheet/1",
+  "substance": "dextromethorphan",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "dextrorphan",
+        "reaction": "o_demethylation",
+        "enzymes": [
+          "CYP2D6"
+        ],
+        "source": "burns2013"
+      },
+      {
+        "from": "parent",
+        "to": "3-methoxymorphinan",
+        "reaction": "n_demethylation",
+        "source": "burns2013"
+      },
+      {
+        "from": "dextrorphan",
+        "to": "3-hydroxymorphinan",
+        "reaction": "n_demethylation",
+        "source": "burns2013"
+      },
+      {
+        "from": "3-methoxymorphinan",
+        "to": "3-hydroxymorphinan",
+        "reaction": "o_demethylation",
+        "source": "burns2013"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "dextrorphan",
+        "active": true,
+        "marker": true,
+        "source": "burns2013"
+      }
+    ],
+    "half_life_h": {
+      "min": 2,
+      "max": 4,
+      "matrix": "plasma",
+      "source": "burns2013"
+    }
+  },
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "dangerous",
+      "mechanism": "serotonergic",
+      "source": "burns2013"
+    },
+    {
+      "with": "serotonergic_drugs",
+      "severity": "risky",
+      "mechanism": "serotonergic",
+      "source": "burns2013"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "dextromethorphan.medicines",
+      "topic": "combination",
+      "source": "burns2013"
+    },
+    {
+      "key": "dextromethorphan.syrups",
+      "topic": "testing",
+      "source": "burns2013"
+    },
+    {
+      "key": "dextromethorphan.variability",
+      "topic": "dosing",
+      "source": "burns2013"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "doses": []
+}

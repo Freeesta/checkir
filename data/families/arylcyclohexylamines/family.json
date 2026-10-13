@@ -1,0 +1,57 @@
+{
+  "schema": "family-sheet/1",
+  "id": "arylcyclohexylamines",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "interactions": [
+    {
+      "with": "ethanol",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kalsi2011"
+    },
+    {
+      "with": "opioid",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kalsi2011"
+    },
+    {
+      "with": "benzodiazepines",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kalsi2011"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "arylcyclohexylamines.depressants",
+      "topic": "combination",
+      "source": "kalsi2011"
+    },
+    {
+      "key": "arylcyclohexylamines.sold_as",
+      "topic": "testing",
+      "source": "mezaache2026"
+    },
+    {
+      "key": "arylcyclohexylamines.not_interchangeable",
+      "topic": "dosing",
+      "source": "mezaache2026"
+    }
+  ],
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
