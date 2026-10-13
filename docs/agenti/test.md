@@ -8,6 +8,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `deny.toml`: licenze e sorgenti ammesse. `.claude/agents/`: subagenti meccanici.
 
 ## Prove
+- `tests_e2e/registri.mjs` (conformità di `ACTIONS`/`PANELS`, senza browser, chiamato da `fumo.mjs`).
 - `tests_e2e/fumo.mjs` (Playwright + axe-core; `BROWSER` sceglie il motore del browser, `CHROMIUM_PATH` un eseguibile locale).
 
 ## Trappole

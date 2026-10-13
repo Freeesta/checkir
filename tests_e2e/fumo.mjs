@@ -4,6 +4,7 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { chromium, firefox, webkit } from "playwright";
+import { registryScenario } from "./registri.mjs";
 
 const SITE = new URL("../site/", import.meta.url).pathname;
 const TIPI = { ".html": "text/html", ".js": "text/javascript", ".json": "application/json", ".css": "text/css", ".wasm": "application/wasm", ".svg": "image/svg+xml" };
@@ -103,6 +104,46 @@ async function nextStepScenario(browser) {
   await ctx.close();
 }
 
+/** Shell behaviour: Tab order in the header, tooltip and Esc, theme and panel preferences survive a reload, nothing of the analysis is stored. */
+async function shellScenario(browser) {
+  const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 768 } });
+  const page = await ctx.newPage();
+  await page.goto(base);
+  await page.waitForSelector("body[data-ready='1']");
+  await page.keyboard.press("Tab");
+  const stops = [];
+  for (let i = 0; i < 10; i++) {
+    await page.keyboard.press("Tab");
+    stops.push(await page.evaluate(() => ({ inHeader: Boolean(document.activeElement?.closest("#app-header")), left: document.activeElement?.getBoundingClientRect().left ?? -1 })));
+  }
+  check("Tab: the 10 header controls come in visual order", stops.every((x, i) => x.inHeader && (i === 0 || x.left > stops[i - 1].left)), JSON.stringify(stops));
+  await page.focus('[data-action="info.open"]');
+  check("tooltip: shows on keyboard focus", await page.isVisible("#tooltip"));
+  await page.keyboard.press("Escape");
+  check("tooltip: Esc closes it", !(await page.isVisible("#tooltip")));
+  await page.click('[data-action="theme.cycle"]');
+  check("theme: the first click goes from auto to light", (await page.getAttribute("html", "data-theme")) === "light");
+  await page.click('[data-action="theme.cycle"]');
+  await page.click('[data-action="theme.cycle"]');
+  check("theme: it cycles back to auto", (await page.getAttribute("html", "data-theme")) === "auto");
+  await page.click('[data-action="theme.cycle"]');
+  await page.click('[data-action="panel.toggle"]');
+  await page.reload();
+  await page.waitForSelector("body[data-ready='1']");
+  check("theme: the choice survives a reload", (await page.getAttribute("html", "data-theme")) === "light");
+  check("panel: the folded panel stays folded after a reload", (await page.getAttribute("body", "data-panel")) === "rail");
+  await page.click('[data-action="panel.toggle"]');
+  await page.click('[data-action="demo.load"]');
+  const stored = await page.evaluate(async () => ({
+    local: Object.keys(localStorage),
+    session: sessionStorage.length,
+    idb: (await indexedDB.databases()).length,
+  }));
+  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel"];
+  check("privacy: only preferences are stored, nothing of the analysis", stored.local.every((k) => allowed.includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
+  await ctx.close();
+}
+
 /** The product name lives only in appname.js: swapping that module changes it everywhere (title, heading, catalog text, manifest id). */
 async function nameScenario(browser) {
   const ctx = await browser.newContext({ locale: "it-IT" });
@@ -123,6 +164,8 @@ async function run() {
     for (const scheme of ["light", "dark"]) await schemeScenario(browser, scheme);
     await phoneScenario(browser);
     await nextStepScenario(browser);
+    await shellScenario(browser);
+    await registryScenario(check);
     await nameScenario(browser);
   } finally {
     await browser.close();
