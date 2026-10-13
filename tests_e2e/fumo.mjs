@@ -215,9 +215,9 @@ async function nameScenario(browser) {
   await ctx.close();
 }
 
-/** The two text pages: reached from the info dialog, texts in both languages (no raw key), axe clean in light and dark, no horizontal scroll at 320 px. */
+/** The text page: reached from the info dialog, texts in both languages (no raw key), axe clean in light and dark, no horizontal scroll at 320 px. */
 async function pagesScenario(browser) {
-  const pages = [{ slug: "avvertenze", link: 0, items: 9 }, { slug: "informativa", link: 1, items: 8 }];
+  const pages = [{ slug: "informativa", link: 0, items: 8 }];
   for (const scheme of ["light", "dark"]) {
     for (const p of pages) {
       const ctx = await browser.newContext({ colorScheme: scheme, locale: "it-IT", viewport: { width: 320, height: 640 } });
