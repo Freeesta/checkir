@@ -1,7 +1,7 @@
 // @ts-check
 // Start-up of the static text pages (pagine/avvertenze, pagine/informativa): theme, language, header, catalog texts.
 import { APP_NAME } from "./appname.js";
-import { applyCatalog, loadLang, pickLang } from "./i18n.js";
+import { applyCatalog, currentLang, loadLang, pickLang } from "./i18n.js";
 import { buildHeader } from "./pagina_header.js";
 import { initTheme } from "./theme.js";
 
@@ -14,6 +14,7 @@ async function start() {
     applyCatalog();
     refreshHeader();
     document.title = `${heading.textContent} · ${APP_NAME}`;
+    document.body.dataset.langReady = currentLang();
   };
   render();
   document.body.dataset.ready = "1";

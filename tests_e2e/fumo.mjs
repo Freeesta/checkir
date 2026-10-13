@@ -93,7 +93,7 @@ async function phoneScenario(browser) {
   await page.click(".menu-button");
   check("320 px: the menu shows the tools", await page.isVisible('[data-lang="en"]'));
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   await page.keyboard.press("Escape"); // the open phone menu overlays the chart toolbar, which axe would count as an obscured target
   await page.waitForFunction(() => document.querySelector("#chart svg > text:last-child")?.textContent === "Absorbance", null, { timeout: 5000 }).catch(() => {});
   const axis = await page.textContent("#chart svg > text:last-child");
@@ -139,10 +139,10 @@ async function shortcutsScenario(browser) {
   await page.waitForSelector("dialog", { state: "detached" });
   check("shortcuts: Esc closes the list and gives the focus back", !(await page.isVisible("dialog")) && (await page.evaluate(() => document.activeElement === document.body)));
   await page.keyboard.press("l");
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("shortcuts: l changes the language", true);
   await page.keyboard.press("l");
-  await page.waitForFunction(() => document.documentElement.lang === "it");
+  await page.waitForFunction(() => document.body.dataset.langReady === "it");
   await page.keyboard.press("t");
   check("shortcuts: t changes the theme", (await page.getAttribute("html", "data-theme")) === "light");
   const before = await page.getAttribute("body", "data-panel");
@@ -252,7 +252,7 @@ async function pagesScenario(browser) {
       for (const lang of ["it", "en"]) {
         if (lang === "en") {
           await page.click('[data-lang="en"]');
-          await page.waitForFunction(() => document.documentElement.lang === "en");
+          await page.waitForFunction(() => document.body.dataset.langReady === "en");
         }
         const tag = `[${scheme}] ${p.slug} ${lang}`;
         const raw = await page.evaluate(() => [...document.querySelectorAll("[data-i18n]")].filter((e) => !e.textContent || /^[a-z]+\.[a-z0-9_.]+$/.test(e.textContent)).map((e) => e.getAttribute("data-i18n")));
@@ -290,43 +290,58 @@ async function splashScenario(browser) {
   }
 }
 
+/** Every scenario in a fixed order; SHARD="i/n" (1-based) runs scenarios i, i+n, i+2n… so n parallel jobs together run exactly all of them. */
+function scenarios(browser) {
+  return [
+    () => schemeScenario(browser, "light"),
+    () => schemeScenario(browser, "dark"),
+    () => phoneScenario(browser),
+    () => nextStepScenario(browser),
+    () => shellScenario(browser),
+    () => shortcutsScenario(browser),
+    () => registryScenario(check),
+    () => versionScenario(check),
+    () => nameScenario(browser),
+    () => splashScenario(browser),
+    () => pagesScenario(browser),
+    () => loadingScenario(browser, base, check, axe),
+    () => demoScenario(browser, base, check, axe),
+    () => librariesPureScenario(check),
+    () => librariesScenario(browser, base, check, axe),
+    () => matchPureScenario(check),
+    () => matchScenario(browser, base, check, axe),
+    () => libraryTestScenario(browser, base, check, axe),
+    () => areaScenario(browser, base, check, axe),
+    () => cleanScenario(browser, base, check, axe),
+    () => peaksScenario(browser, base, check, axe),
+    () => collaudoScenario(browser, base, check),
+    () => inverseScenario(browser, base, check, axe),
+    () => subtractionScenario(browser, base, check, axe),
+    () => toolsScenario(browser, base, check, axe),
+    () => recallScenario(browser, base, check, axe),
+    () => exportScenario(browser, base, check, axe),
+    () => rangesPureScenario(check),
+    () => rangesScenario(browser, base, check, axe),
+    () => sheetScenario(browser, base, check, axe),
+    () => teoriaScenario(browser, base, check, axe),
+    () => sheetsPureScenario(check),
+    () => sheetsScenario(browser, base, check, axe),
+    () => offlineScenario(browser, base, check),
+    () => folderScenario(browser, base, check, axe),
+    () => browser.close(),
+  ];
+}
+
+function pickShard(list) {
+  const m = /^(\d+)\/(\d+)$/.exec(process.env.SHARD ?? "1/1");
+  if (!m || +m[1] < 1 || +m[1] > +m[2]) throw new Error(`bad SHARD ${process.env.SHARD}`);
+  return list.filter((_, i) => i % +m[2] === +m[1] - 1);
+}
+
 async function run() {
   const browser = await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
   try {
-    for (const scheme of ["light", "dark"]) await schemeScenario(browser, scheme);
-    await phoneScenario(browser);
-    await nextStepScenario(browser);
-    await shellScenario(browser);
-    await shortcutsScenario(browser);
-    await registryScenario(check);
-    await versionScenario(check);
-    await nameScenario(browser);
-    await splashScenario(browser);
-    await pagesScenario(browser);
-    await loadingScenario(browser, base, check, axe);
-    await demoScenario(browser, base, check, axe);
-    await librariesPureScenario(check);
-    await librariesScenario(browser, base, check, axe);
-    await matchPureScenario(check);
-    await matchScenario(browser, base, check, axe);
-    await libraryTestScenario(browser, base, check, axe);
-    await areaScenario(browser, base, check, axe);
-    await cleanScenario(browser, base, check, axe);
-    await peaksScenario(browser, base, check, axe);
-    await collaudoScenario(browser, base, check);
-    await inverseScenario(browser, base, check, axe);
-    await subtractionScenario(browser, base, check, axe);
-    await toolsScenario(browser, base, check, axe);
-    await recallScenario(browser, base, check, axe);
-    await exportScenario(browser, base, check, axe);
-    await rangesPureScenario(check);
-    await rangesScenario(browser, base, check, axe);
-    await sheetScenario(browser, base, check, axe);
-    await teoriaScenario(browser, base, check, axe);
-    await sheetsPureScenario(check);
-    await sheetsScenario(browser, base, check, axe);
-    await offlineScenario(browser, base, check);
-    await folderScenario(browser, base, check, axe);
+    for (const step of pickShard(scenarios(browser))) await step();
   } finally {
     await browser.close();
     close();

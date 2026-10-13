@@ -1,11 +1,11 @@
 // @ts-check
 /**
  * Build the package of a private library from JCAMP-DX files chosen by the user. Everything runs in the page with the
- * engine; nothing is sent anywhere. Only the resampled values and the file names (as compound names) are kept: the
- * metadata of the files (sample name, operator, paths…) is dropped.
+ * engine; nothing is sent anywhere. Only the spectra (resampled for the calculation, as the file gives them for drawing) and
+ * the file names (as compound names) are kept: the metadata of the files (sample name, operator, paths…) is dropped.
  * @typedef {import("./state.js").Notice} Notice
  * @typedef {{ done: number, total: number }} Progress
- * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array }} Built
+ * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array, native?: Uint8Array }} Built
  * @typedef {{ built: Built | null, imported: number, ignored: number, skipped: { file: string, notice: Notice }[], cancelled: boolean, error: Notice | null }} Outcome
  */
 import { BUDGET } from "./files.js";
@@ -54,6 +54,8 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
   const out = { built: null, imported: 0, ignored: files.length - usable.length, skipped: [], cancelled: false, error: null };
   /** @type {Float32Array[]} */
   const rows = [];
+  /** @type {Float32Array[]} */
+  const natives = [];
   /** @type {object[]} */
   const index = [];
   let last = performance.now();
@@ -61,7 +63,10 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
     if (hooks.signal.aborted) return { ...out, cancelled: true };
     try {
       if (file.size > BUDGET.maxBytes) throw JSON.stringify({ error_key: "reader.limit_exceeded", params: { limit: "bytes", max: BUDGET.maxBytes } });
-      rows.push(Float32Array.from(engine.library_resample(new Uint8Array(await file.arrayBuffer()))));
+      const bytes = new Uint8Array(await file.arrayBuffer());
+      const resampled = Float32Array.from(engine.library_resample(bytes));
+      natives.push(Float32Array.from(engine.library_native(bytes)));
+      rows.push(resampled);
       const id = `u${rows.length}`;
       index.push({ id, form: "", substance: id, names: { en: file.name.replace(/\.[^.]*$/, "") }, classes: [], quality: "pass", provenance_type: "user_import" });
     } catch (e) {
@@ -81,6 +86,8 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
   const ident = { name: identity.id, version: "1", date: identity.date, license: "LicenseRef-private", attribution: identity.attribution, private: true };
   const built = JSON.parse(engine.library_build(JSON.stringify(ident), JSON.stringify({ schema: "ftir-library-index/1", spectra: index }), values));
   if ("error_key" in built) return { ...out, imported: 0, error: noticeOf(built) };
-  out.built = { id: identity.id, manifest: JSON.stringify(built.manifest), index: JSON.stringify(built.index), data: new Uint8Array(values.buffer) };
+  const native = new Float32Array(natives.reduce((n, r) => n + r.length, 0));
+  natives.reduce((at, r) => (native.set(r, at), at + r.length), 0);
+  out.built = { id: identity.id, manifest: JSON.stringify(built.manifest), index: JSON.stringify(built.index), data: new Uint8Array(values.buffer), native: new Uint8Array(native.buffer) };
   return out;
 }

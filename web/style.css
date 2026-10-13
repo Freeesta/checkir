@@ -553,6 +553,15 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .rule-range { fill: none; stroke: var(--focus); stroke-width: 2; stroke-dasharray: 6 3; pointer-events: none; }
 .rule-label { font-weight: 600; }
 @media (forced-colors: active) { .mode-atom { fill: Canvas; stroke: CanvasText; } .mode-bond, .mode-arrow { stroke: CanvasText; } .mode-head, .mode-el, .mode-z { fill: CanvasText; } .rule-range { stroke: Highlight; } }
+
+.propose-toggle, .propose-open { font: inherit; border: 1px solid var(--border); border-radius: 0.3rem; padding: 0.3rem 0.7rem; background: transparent; color: var(--text); cursor: pointer; text-decoration: none; display: inline-block; }
+.propose-open[aria-disabled="true"] { color: var(--text-muted); cursor: not-allowed; }
+.propose { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.propose-field { display: grid; gap: 0.2rem; }
+.propose-field textarea, .propose-field input { font: inherit; width: 100%; box-sizing: border-box; }
+.propose-problems { margin: 0; padding-left: 1.2rem; }
+
+
 .inverse-dialog { width: min(52rem, calc(100vw - 2rem)); }
 .inverse-field { display: inline-flex; flex-direction: column; gap: 0.15rem; margin: 0.25rem 0.5rem 0.25rem 0; }
 .inverse-field input { width: 9rem; }

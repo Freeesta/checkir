@@ -3,9 +3,11 @@ import { alertViews, capLines, chainLine, levelBar, levelNumber, levelWord, show
 import { actionButton } from "./controls.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
-import { libraryRows } from "./librerie.js";
+import { spectrumOf } from "./files.js";
+import { libraryOriginal, libraryRows } from "./librerie.js";
+import { meanStep } from "./match.js";
 import { openSheet } from "./schede_ui.js";
-import { activeFile, activeLibraries, candidateKey, decisionOf, resultOf } from "./state.js";
+import { activeFile, activeLibraries, candidateKey, decisionOf, getState, resultOf } from "./state.js";
 import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
 import { attachTip, toggletip } from "./tooltip.js";
 
@@ -127,6 +129,22 @@ function wireArrows(list, ctx) {
   });
 }
 
+/** "4 cm⁻¹ · step 1.93 cm⁻¹" (resolution only when the file states it). @param {number | null} resolution @param {number} step @returns {string} */
+function resolutionText(resolution, step) {
+  const own = resolution === null ? "" : `${t("results.resolution")} ${formatNumber(resolution, 1)} ${t("unit.cm1")} · `;
+  return `${own}${t("results.step")} ${formatNumber(step, 2)} ${t("unit.cm1")}`;
+}
+
+/** The nominal resolution and the spacing of the points of the sample and of the reference file, side by side (data, no comment). @param {any} c @param {import("./state.js").FileEntry | null} file @returns {HTMLElement} */
+function resolutionLines(c, file) {
+  const sample = file ? spectrumOf(file.code) : undefined;
+  const ref = libraryOriginal(c.library, c.spectrum_id);
+  const lines = el("dl", { class: "numbers", "data-part": "resolution" });
+  if (sample && file) lines.append(el("dt", {}, [t("results.sample_file")]), el("dd", {}, [resolutionText(file.resolutionCm1, meanStep(sample.wavenumber_cm1))]));
+  if (ref) lines.append(el("dt", {}, [t("results.reference_file")]), el("dd", {}, [resolutionText(ref.resolutionCm1, meanStep(ref.wavenumber_cm1))]));
+  return lines;
+}
+
 /** Detail of the selected candidate, always in the same reserved space. @param {any} data @param {any | null} c @param {import("./actions.js").Ctx} ctx @param {import("./state.js").AppState} s @param {number} level @returns {HTMLElement} */
 function detail(data, c, ctx, s, level) {
   const box = el("section", { class: "detail", "aria-label": t("results.detail") });
@@ -140,6 +158,7 @@ function detail(data, c, ctx, s, level) {
       el("dt", {}, [t("results.coverage")]), el("dd", {}, [`${formatNumber(c.coverage * 100)} %`, " ", toggletip(() => t("results.coverage_tip"), () => t("results.coverage_tip_label"))]),
     ]),
   );
+  box.append(resolutionLines(c, activeFile(getState()) ?? null));
   const button = actionButton("overlay.toggle", ctx, { withLabel: true, className: "btn" });
   button.setAttribute("aria-pressed", String(s.overlay));
   const row = libraryRows(c.library)?.find((/** @type {any} */ r) => r.id === c.spectrum_id);
