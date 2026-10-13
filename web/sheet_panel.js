@@ -67,7 +67,7 @@ export function renderSheetPanel(body, s, ctx) {
   if (!dec) form.append(el("p", { class: "hint" }, [(HINTS[d.level] ?? HINTS[5])()]));
   const status = el("p", { class: "decision-state", }, [dec ? icon("pen") : icon("warning"), dec ? t("decision.done", { level: levelWord(dec.level) }) : t("decision.draft_state")]);
   const sign = actionButton(dec ? "decision.revoke" : "decision.sign", ctx, { withLabel: true, className: "btn primary" });
-  const tools = el("div", { class: "row" }, [sign, actionButton("sheet.print", ctx, { withLabel: true, className: "btn" }), actionButton("sheet.talk", ctx, { withLabel: true, className: "btn" })]);
+  const tools = el("div", { class: "row" }, [sign, actionButton("sheet.print", ctx, { withLabel: true, className: "btn" }), actionButton("sheet.talk", ctx, { withLabel: true, className: "btn" }), actionButton("export.report", ctx, { withLabel: true, className: "btn" })]);
     const preview = el("div", { class: "sheet-preview", "aria-label": t("sheet.preview"), role: "group" }, [buildSheet(s, { chemist: true })]);
   body.append(form, status, tools, sheetLangGroup(s, ctx), preview);
 }

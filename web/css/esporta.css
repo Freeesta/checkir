@@ -1,0 +1,3 @@
+/* Visible export buttons (files and sheet panels): compact, wrapping, never wider than the panel */
+.export-row { margin-top: 0.5rem; }
+.export-row .btn, #panel .row .btn[data-action^="export."] { padding: 0.25rem 0.55rem; font-size: 0.85rem; min-height: 24px; max-width: 100%; }
