@@ -1,6 +1,6 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
-import { drawPeaks, drawRegions, marksTables, svg } from "./chart_marks.js";
+import { drawBands, drawPeaks, marksTables, svg } from "./chart_marks.js";
 import { nearestIndex, thin, visibleIndices } from "./spectrum.js";
 import { clamp, pan, zoom } from "./view.js";
 import { createCursors } from "./chart_cursors.js";
@@ -103,7 +103,7 @@ export function draw(host, s, v, layers = {}, opts = {}) {
   const root = svg("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": t("chart.title") });
   drawGrid(root, v, { y0, y1 }, px, py);
   drawExcluded(root, layers.excluded, v, px);
-  if (layers.marks) drawRegions(root, layers.marks.regions, v, px, { top: M.t, height: H - M.t - M.b });
+  if (layers.marks) drawBands(root, layers.marks.bands, v, px, { top: M.t, height: H - M.t - M.b });
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
   if (ref) drawReference(root, ref, v, layers, px, py);
   drawExtras(root, extras, v, PLOT_W, { px, py, right: W - M.r });
@@ -240,11 +240,25 @@ function viewMoves(view, full) {
   };
 }
 
+/** The view moved so that the picked peak is inside it. @param {Layers} layers @param {View} v @param {View} full @returns {View} */
+function withPeakInView(layers, v, full) {
+  const at = layers.marks?.peaks.find((p) => p.focus)?.x;
+  if (at === undefined || (at >= v.min && at <= v.max)) return v;
+  return clamp({ min: at - (v.max - v.min) / 2, max: at + (v.max - v.min) / 2 }, full);
+}
+
+/** With the peaks shown, ← → pick the previous / next peak (Shift+← → still pans) and Esc clears the pick. @param {KeyboardEvent} e @param {{ step: (dir: 1 | -1) => boolean, clear: () => boolean }} peaks @returns {boolean} true when the key was used */
+function peakKey(e, peaks) {
+  if (e.key === "Escape") return peaks.clear();
+  if (e.shiftKey || e.ctrlKey || e.altKey || e.metaKey) return false;
+  return e.key === "ArrowRight" ? peaks.step(1) : e.key === "ArrowLeft" ? peaks.step(-1) : false;
+}
+
 /**
  * Wire the chart: keyboard (+ - arrows 0 and the cursor keys), pointer (cursors, zoom box, wheel, double click) and buttons. The spectrum is swapped with `set`;
  * with none, a short line says so. With `link`, the x axis follows the other charts joined to the same link.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
- * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink> }} [opts]
+ * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean } }} [opts]
  * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void }} `redraw` after a language change
  */
 export function wire(el, opts = {}) {
@@ -292,6 +306,7 @@ export function wire(el, opts = {}) {
   const refresh = () => relabel(s !== null);
   el.toolbar.replaceChildren(...buttons);
   el.chart.addEventListener("keydown", (e) => {
+    if (layers.marks && opts.peaks && peakKey(e, opts.peaks)) return e.preventDefault();
     const i = keys[e.key];
     if (i === undefined) return;
     e.preventDefault();
@@ -307,6 +322,7 @@ export function wire(el, opts = {}) {
     },
     setLayers: (next) => {
       layers = next;
+      v = withPeakInView(next, v, full);
       update();
     },
     set: (next) => {

@@ -1,8 +1,9 @@
 // @ts-check
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { EXCLUDED_CM1, referenceFor } from "./match.js";
-import { selectedCandidate } from "./results.js";
+import { candidateName, selectedCandidate } from "./results.js";
 import { analyse } from "./peaks.js";
+import { summaryText } from "./peaks_view.js";
 import { recallView } from "./recall.js";
 import { candidateKey, resultOf } from "./state.js";
 import { spectrumOf } from "./files.js";
@@ -11,9 +12,10 @@ import { spectrumOf } from "./files.js";
  * The extra layers of the chart: the zone left out of the comparison (whenever the shown spectrum has a result) and the library
  * spectrum of the chosen candidate when the overlay is on. They are redrawn only when what they depend on changes.
  * @param {{ setLayers: (l: import("./chart.js").Layers) => void }} chart
+ * @param {HTMLElement} summary the line above the chart that tells in words what the peak markers say
  * @returns {{ sync: (s: import("./state.js").AppState, shown: string | null) => void, reset: () => void }}
  */
-export function buildLayers(chart) {
+export function buildLayers(chart, summary) {
   let last = "";
   /** @type {import("./peaks.js").Analysis | null} */
   let lastAnalysis = null;
@@ -37,11 +39,14 @@ export function buildLayers(chart) {
       lastAnalysis = analysis;
       lastRecall = recall;
       lastOffset = offset;
+      const name = chosen ? candidateName(chosen) : null;
+      summary.hidden = !analysis || !!analysis.error;
+      summary.textContent = analysis && !analysis.error ? summaryText(analysis, name) : "";
       const sample = shown ? spectrumOf(shown) : undefined;
       const ref = r && chosen && s.overlay && sample ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
       chart.setLayers({
         excluded: r ? { from: EXCLUDED_CM1[0], to: EXCLUDED_CM1[1], label: t("chart.excluded") } : null,
-        marks: analysis && { regions: analysis.regions, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus })), rows: analysis.peaks },
+        marks: analysis && { bands: analysis.bands, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus, shoulder: p.shoulder })), rows: analysis.peaks, name, focus: s.peakFocus },
         recalled: s.recall.mode === "difference" ? [] : recall.rows.map((r, i) => ({ spectrum: recall.curves[i].spectrum, label: `${r.name} · ${r.ref.form}`, style: i })),
         difference: recall.difference && { spectrum: recall.difference.spectrum, label: t("recall.difference_label", { name: recall.difference.name, k: formatNumber(recall.difference.k, 2) }) },
         offset,
