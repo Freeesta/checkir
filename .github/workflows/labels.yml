@@ -1,0 +1,34 @@
+# Creates or updates the repository labels from .github/labels.yml (data). It never deletes a label.
+# Safe by construction: it reads only files of main, no issue or pull request text ever reaches a shell command.
+name: labels
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/labels.yml", ".github/workflows/labels.yml", "tools/sync_labels.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Pinned dependency of the label reader
+        run: pip install pyyaml==6.0.2
+      - name: Create or update every label
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 tools/sync_labels.py | while IFS="$(printf '\t')" read -r name color description; do
+            gh label create "$name" --color "$color" --description "$description" --force
+          done

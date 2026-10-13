@@ -1,6 +1,7 @@
 {
   "app.skip": "Skip to content",
   "app.tagline": "Open-source FTIR analysis for drug checking",
+  "share.description": "Open-source FTIR analysis for drug checking. The program proposes, the expert decides.",
   "lang.label": "Language",
   "lang.it": "Italiano",
   "lang.en": "English",
@@ -22,7 +23,7 @@
   "table.wavenumber": "Wavenumber (cm⁻¹)",
   "table.absorbance": "Absorbance",
   "table.region": "Scrollable table of the spectrum data",
-  "footer.notice": "The program proposes, the expert decides. No file leaves your computer.",
+  "footer.notice": "{app} proposes, the expert decides. No file leaves your computer.",
   "reader.limit_exceeded": "The file exceeds a safety limit ({limit}, maximum {max}).",
   "reader.encoding_fallback": "The file is not valid UTF-8: it was read as Windows-1252, so some characters may differ from the original.",
   "reader.bom_removed": "A byte-order mark at the start of the file was removed.",

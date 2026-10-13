@@ -8,4 +8,5 @@ if ! wasm-bindgen --version 2>/dev/null | grep -q "$ver"; then
 fi
 cargo build --locked --release --target wasm32-unknown-unknown -p ftir-wasm
 rm -rf site && mkdir -p site && cp -r web/. site/
+node tools/genera_identita.mjs
 wasm-bindgen --target web --no-typescript --out-dir site/wasm target/wasm32-unknown-unknown/release/ftir_wasm.wasm

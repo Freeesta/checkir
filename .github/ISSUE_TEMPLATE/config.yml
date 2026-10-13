@@ -1,8 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Questions and ideas / Domande e idee
+  - name: "Questions and ideas / Domande e idee"
     url: https://github.com/Freeesta/checkir/discussions
-    about: Ask a question or share an idea. / Fai una domanda o proponi un'idea.
-  - name: Security vulnerability / Vulnerabilità di sicurezza
+    about: "Ask a question or share an idea before you propose a change. / Fai una domanda o proponi un'idea prima di proporre una modifica."
+  - name: "Code of Conduct / Codice di condotta"
+    url: https://github.com/Freeesta/checkir/blob/main/CODE_OF_CONDUCT.md
+    about: "How we work together, and how to report a conduct problem. / Come lavoriamo insieme e come segnalare un problema di condotta."
+  - name: "Security vulnerability / Vulnerabilità di sicurezza"
     url: https://github.com/Freeesta/checkir/security/advisories/new
-    about: Report privately. Do not open a public issue. / Segnala in privato, senza issue pubblica.
+    about: "Report privately. Do not open a public issue. / Segnala in privato, senza issue pubblica."

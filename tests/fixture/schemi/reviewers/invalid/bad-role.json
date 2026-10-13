@@ -1,0 +1,20 @@
+{
+  "schema": "reviewers/1",
+  "reviewers": [
+    {
+      "github": "example-user",
+      "public_name": "Example Reviewer",
+      "roles": [
+        "owner"
+      ],
+      "languages": [
+        "en",
+        "it"
+      ],
+      "organisation_public": "Example Lab",
+      "verified": "2026-10",
+      "expires": "2028-10",
+      "status": "active"
+    }
+  ]
+}

@@ -1,71 +1,72 @@
-name: Propose a spectrum
-description: Propose a reference spectrum for the library. / Proponi uno spettro di riferimento per la libreria.
+name: "Propose a spectrum / Proponi uno spettro"
+description: "Propose a reference spectrum for the library. / Proponi uno spettro di riferimento per la libreria."
 labels: ["spectrum", "needs-review"]
 body:
   - type: markdown
     attributes:
-      value: See docs/contribute/spectrum.md. Use the cleaned .zip prepared by checkIR. / Vedi docs/contribute/spectrum.it.md. Usa lo .zip pulito preparato da checkIR.
+      value: "**Everything you write here is PUBLIC. Do not write data about people, precise places, vendors or venues. / Tutto ciò che scrivi qui è PUBBLICO. Non scrivere dati di persone, luoghi precisi, venditori o locali.** See docs/contribute/spectrum.md. Use the cleaned .zip prepared by checkIR; it is uploaded in a pull request, not here. / Vedi docs/contribute/spectrum.it.md. Usa lo .zip pulito preparato da checkIR; si carica in una pull request, non qui."
   - type: input
     id: substance
     attributes:
-      label: Substance and form / Sostanza e forma
-      placeholder: Cocaine hydrochloride
+      label: "Substance and form / Sostanza e forma"
+      placeholder: "Cocaine hydrochloride"
     validations:
       required: true
   - type: dropdown
-    id: confirmation
+    id: provenance
     attributes:
-      label: Confirmation method / Metodo di conferma
+      label: "Provenance / Provenienza"
       options:
-        - Certified standard (give lot number below) / Standard certificato
-        - Another technique (say which below) / Altra tecnica
-        - Not confirmed / Non confermato
+        - "Certified standard (give lot number below) / Standard certificato"
+        - "Sample confirmed with another technique (say which below) / Campione confermato con altra tecnica"
+        - "Not confirmed (cannot be accepted) / Non confermato (non può essere accettato)"
     validations:
       required: true
   - type: textarea
     id: confirmation_details
     attributes:
-      label: Lot number or technique / Numero di lotto o tecnica
+      label: "Lot number or confirmation technique / Numero di lotto o tecnica di conferma"
     validations:
       required: true
   - type: input
     id: instrument
     attributes:
-      label: Instrument and accessory (no serial number) / Strumento e accessorio (senza seriale)
+      label: "Instrument and accessory (no serial number) / Strumento e accessorio (senza seriale)"
     validations:
       required: true
   - type: input
     id: acquisition
     attributes:
-      label: Resolution, scans, range / Risoluzione, scansioni, intervallo
-      placeholder: 4 cm-1, 32 scans, 4000-400 cm-1
+      label: "Resolution, scans, range / Risoluzione, scansioni, intervallo"
+      placeholder: "4 cm-1, 32 scans, 4000-400 cm-1"
     validations:
       required: true
   - type: input
     id: month
     attributes:
-      label: Month (YYYY-MM) / Mese (AAAA-MM)
-    validations:
-      required: true
-  - type: textarea
-    id: files
-    attributes:
-      label: Attach the .zip here / Allega qui lo .zip
-      description: Drag the file into this box (ZIP, JSON, CSV, TXT up to 25 MB). / Trascina il file in questo campo.
+      label: "Month (YYYY-MM) / Mese (AAAA-MM)"
     validations:
       required: true
   - type: input
-    id: author
+    id: organisation
     attributes:
-      label: Author (optional, public) / Autore (facoltativo, pubblico)
+      label: "Organisation (optional, public, needs your organisation's consent) / Ente (facoltativo, pubblico, richiede il consenso dell'ente)"
+  - type: input
+    id: pr_link
+    attributes:
+      label: "Link to the pull request with the package / Link alla pull request con il pacchetto"
+  - type: input
+    id: public_name
+    attributes:
+      label: "Author (optional, public; a pseudonym is fine) / Autore (facoltativo, pubblico; va bene uno pseudonimo)"
   - type: checkboxes
     id: declarations
     attributes:
-      label: Declarations / Dichiarazioni
+      label: "Declarations / Dichiarazioni"
       options:
-        - label: The files contain no personal data (I checked the preview). / I file non contengono dati personali (ho controllato l'anteprima).
+        - label: "The files contain no personal data (I checked the preview). / I file non contengono dati personali (ho controllato l'anteprima)."
           required: true
-        - label: I have the right to publish this spectrum and it does not come from a third-party library. / Ho il diritto di pubblicare questo spettro e non proviene da una libreria di terzi.
+        - label: "I certify the Developer Certificate of Origin 1.1 (https://developercertificate.org/): I have the right to submit this. / Certifico il Developer Certificate of Origin 1.1: ho il diritto di inviare questo contributo."
           required: true
-        - label: I agree to publish it under CC BY 4.0. / Accetto di pubblicarlo con licenza CC BY 4.0.
+        - label: "I measured it myself or have the right to publish it, it does not come from a third-party library, and I agree to CC BY 4.0. / L'ho misurato io o ho il diritto di pubblicarlo, non proviene da una libreria di terzi e accetto la licenza CC BY 4.0."
           required: true
