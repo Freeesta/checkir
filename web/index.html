@@ -33,40 +33,31 @@
 </head>
 <body>
   <a class="skip" href="#main-content" data-i18n="app.skip"></a>
-  <header class="header">
-    <div class="brand">
-      <span class="logo" aria-hidden="true"></span>
-      <div>
-        <h1 id="app-name"></h1>
-        <p data-i18n="app.tagline"></p>
+  <header class="app-header" id="app-header"></header>
+  <div class="shell">
+    <aside class="panel" id="panel"></aside>
+    <main id="main-content">
+      <div class="workbar" id="workbar">
+        <div class="toolbar" id="chart-toolbar"></div>
       </div>
-    </div>
-    <label class="language">
-      <span data-i18n="lang.label"></span>
-      <select id="language">
-        <option value="it" data-i18n="lang.it"></option>
-        <option value="en" data-i18n="lang.en"></option>
-      </select>
-    </label>
-  </header>
-  <main id="main-content">
-    <section aria-labelledby="chart-title">
-      <h2 id="chart-title" data-i18n="chart.title"></h2>
-      <p data-i18n="chart.description"></p>
-      <div class="toolbar" id="chart-toolbar"></div>
-      <div id="chart" tabindex="0" role="group" data-i18n-aria="chart.title"></div>
-      <p class="help" data-i18n="chart.help"></p>
-      <p id="range" aria-live="polite"></p>
-    </section>
-    <section aria-labelledby="table-title">
-      <h2 id="table-title" data-i18n="table.title"></h2>
-      <div id="table" class="scroll" tabindex="0" role="region" data-i18n-aria="table.region"></div>
-    </section>
-  </main>
+      <section aria-labelledby="chart-title">
+        <div class="title-row"><h2 id="chart-title" data-i18n="chart.title"></h2><span id="chart-help"></span></div>
+        <div id="chart" tabindex="0" role="group" data-i18n-aria="chart.title"></div>
+        <p id="range" aria-live="polite"></p>
+      </section>
+      <div class="limits" id="limits" role="note"></div>
+      <section aria-labelledby="table-title">
+        <h2 id="table-title" data-i18n="table.title"></h2>
+        <div id="table" class="scroll" tabindex="0" role="region" data-i18n-aria="table.region"></div>
+      </section>
+    </main>
+  </div>
+  <nav class="tabbar" id="tabbar"></nav>
   <footer class="footer">
     <p data-i18n="footer.notice"></p>
     <p id="engine-version"></p>
   </footer>
+  <p class="sr-only" id="status" role="status" aria-live="polite"></p>
   <script type="module" src="main.js"></script>
 </body>
 </html>

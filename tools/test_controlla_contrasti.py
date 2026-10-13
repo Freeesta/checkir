@@ -14,8 +14,14 @@ class Contrasti(unittest.TestCase):
         self.assertEqual(c.problems(c.CSS.read_text(encoding="utf-8")), [])
 
     def test_weak_role_is_reported(self):
-        css = c.CSS.read_text(encoding="utf-8").replace("--colore-campione: var(--oi-blu);", "--colore-campione: var(--oi-arancio);", 1)
-        self.assertTrue(any("light --colore-campione" in p for p in c.problems(css)))
+        css = c.CSS.read_text(encoding="utf-8").replace("--color-sample: var(--oi-blue);", "--color-sample: var(--oi-orange);", 1)
+        self.assertTrue(any("light --color-sample" in p for p in c.problems(css)))
+
+    def test_forced_dark_block_must_match_media_block(self):
+        css = c.CSS.read_text(encoding="utf-8")
+        start = css.index(':root[data-theme="dark"]')
+        broken = css[:start] + css[start:].replace("--bg: #121417;", "--bg: #000000;", 1)
+        self.assertTrue(any("forced dark" in p for p in c.problems(broken)))
 
 
 if __name__ == "__main__":
