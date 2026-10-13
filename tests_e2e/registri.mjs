@@ -3,7 +3,7 @@
 import { readFile, readdir } from "node:fs/promises";
 
 const WEB = new URL("../web/", import.meta.url);
-const RESERVED_KEYS = ["Tab", "Enter", " ", "Escape"];
+const RESERVED_KEYS = ["/", "'", "Tab", "Enter", " ", "Escape", ...Array.from({ length: 12 }, (_, i) => `F${i + 1}`)];
 
 /**
  * @param {Array<Record<string, any>>} actions
@@ -52,5 +52,6 @@ export async function registryScenario(check) {
   check("registries: actions and panels conform", problems.length === 0, problems.join("; "));
   const probe = { id: "probe.test", labelKey: "probe.missing.label", tipKey: "action.file_open.tip", icon: "file", run() {}, enabled: () => true };
   check("registries: a probe action without an Italian key fails", registryProblems([...ACTIONS, probe], PANELS, catalogs, icons).some((p) => p.includes("probe.missing.label missing in it")));
+  check("registries: reserved and modified keys are caught", registryProblems([{ ...probe, id: "p.a", labelKey: "action.file_open.label", key: "/" }, { ...probe, id: "p.b", labelKey: "action.file_open.label", key: "F5" }, { ...probe, id: "p.c", labelKey: "action.file_open.label", key: "Ctrl+o" }], [], catalogs, icons).filter((p) => p.includes("reserved key")).length === 3);
   check("registries: duplicate keys and steps are caught", registryProblems([{ ...probe, labelKey: "action.file_open.label", key: "o", step: 1 }, { ...probe, id: "probe.two", labelKey: "action.file_open.label", key: "o", step: 1 }], [], catalogs, icons).length >= 2);
 }
