@@ -1,6 +1,6 @@
 {
   "schema": "peaks_thresholds/1",
-  "version": 1,
+  "version": 2,
   "calibration": {
     "status": "draft",
     "bench": "banco-1",
@@ -32,7 +32,7 @@
   },
   "shape": {
     "narrow_below_cm1": 15,
-    "medium_below_cm1": 40,
+    "medium_below_cm1": 65,
     "broad_below_cm1": 150
   },
   "position": {

@@ -341,7 +341,8 @@ fn shaped(shape: &str) -> String {
 }
 
 /// Shape of the peak × shape of the rule: a broad rule reads only broad and very broad peaks, a sharp rule only
-/// narrow and medium ones, the others every peak. Lorentz FWHM 8, 14, 28, 40, 90 cm⁻¹ (half-widths 4, 7, 14, 20, 45).
+/// narrow and medium ones, the others every peak. Lorentz FWHM at widths measured on the SWGDRUG reference spectra:
+/// ring 8, 14; C=O 28; free NH₂ 53, 57 (medium); H-bonded N-H 76, N-H⁺ 108 (broad).
 #[test]
 fn the_shape_of_a_rule_reads_only_the_peaks_of_a_compatible_width() {
     let t = Thresholds::embedded().expect("thresholds");
@@ -353,13 +354,8 @@ fn the_shape_of_a_rule_reads_only_the_peaks_of_a_compatible_width() {
         assert_eq!(a.items.len(), 1, "one peak");
         (peaks.peaks[0].shape, !a.items[0].interpretations.is_empty())
     };
-    for (fwhm, half) in [
-        (8.0, 4.0),
-        (14.0, 7.0),
-        (28.0, 14.0),
-        (40.0, 20.0),
-        (90.0, 45.0),
-    ] {
+    for fwhm in [8.0, 14.0, 28.0, 53.0, 57.0, 76.0, 108.0] {
+        let half = fwhm / 2.0;
         let (shape, _) = read("sharp", half);
         let shape = shape.expect("shape");
         let expect = if fwhm < narrow {
@@ -384,4 +380,38 @@ fn the_shape_of_a_rule_reads_only_the_peaks_of_a_compatible_width() {
             assert!(read(any, half).1, "{any} rule, FWHM {fwhm}");
         }
     }
+}
+
+/// With the embedded rules, the free NH₂ stretch of an aromatic amine (FWHM 53 cm⁻¹, benzocaine-like, with a band in
+/// the water bend window) is a medium peak and is not read as water; a broad O-H band at 3400 still is.
+#[test]
+fn a_free_nh2_stretch_is_not_read_as_water() {
+    let c = Context {
+        rules: Some(RuleSet::embedded().expect("rules")),
+        ..Context::empty()
+    };
+    let water_at = |sample: &[B], at: f64| {
+        let a = run(sample, &[], &c);
+        let peaks = peaks_of(sample, 1);
+        let n = (peaks.peaks.iter())
+            .position(|p| (p.position_cm1 - at).abs() < 6.0)
+            .expect("peak");
+        let read = (a.items[n].interpretations.iter())
+            .any(|i| i.rule_id.as_deref() == Some("h2o.stretch"));
+        (peaks.peaks[n].shape, read)
+    };
+    let amine = [
+        (3337.0, 26.5, 0.4),
+        (3219.0, 15.0, 0.25),
+        (1678.0, 8.0, 1.0),
+        (1632.0, 8.5, 0.4),
+        (1598.0, 5.0, 0.6),
+    ];
+    assert_eq!(water_at(&amine, 3337.0), (Some(Shape::Medium), false));
+    let wet = [
+        (3400.0, 120.0, 0.5),
+        (1640.0, 40.0, 0.2),
+        (1598.0, 5.0, 0.6),
+    ];
+    assert_eq!(water_at(&wet, 3400.0), (Some(Shape::VeryBroad), true));
 }

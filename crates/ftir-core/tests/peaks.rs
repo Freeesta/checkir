@@ -75,7 +75,7 @@ fn two_bands_12_cm1_apart_are_two_peaks() {
 fn the_result_carries_chain_noise_thresholds_and_regions() {
     let r = run(&spectrum(BANDS, 0.0005, 2.0, 7));
     assert_eq!(r.chain_id, "peak_detect_v1");
-    assert_eq!(r.thresholds_version, 1);
+    assert_eq!(r.thresholds_version, 2);
     assert!(r.noise_abs > 0.0 && r.noise_abs < 0.002, "{}", r.noise_abs);
     let carbonyl = r
         .peaks
