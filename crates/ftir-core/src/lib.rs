@@ -2,6 +2,7 @@
 #![forbid(unsafe_code)]
 
 pub mod anonimizza;
+pub mod assign;
 pub mod budget;
 pub mod comparisons;
 pub mod confronti;
