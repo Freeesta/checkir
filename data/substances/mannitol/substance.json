@@ -1,0 +1,64 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mannitol",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "D-Mannitol",
+      "synonyms": [
+        "mannitol"
+      ]
+    },
+    "it": {
+      "preferred": "D-Mannitolo",
+      "synonyms": [
+        "mannitolo"
+      ]
+    }
+  },
+  "iupac": "(2R,3R,4R,5R)-hexane-1,2,3,4,5,6-hexol",
+  "formula": "C6H14O6",
+  "molar_mass_g_mol": 182.17,
+  "smiles": "C([C@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O)O",
+  "inchi": "InChI=1S/C6H14O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3-12H,1-2H2/t3-,4-,5-,6-/m1/s1",
+  "inchikey": "FBPFZTCFMRRESA-KVTDHHQDSA-N",
+  "external_ids": {
+    "wikidata": "Q407646",
+    "chebi": "CHEBI:16899",
+    "cas": "69-65-8",
+    "pubchem_cid": 6251
+  },
+  "classes": {
+    "chemical": [
+      "sugar_alcohol"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "diluent_excipient"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

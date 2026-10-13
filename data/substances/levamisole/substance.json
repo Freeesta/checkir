@@ -1,0 +1,64 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "levamisole",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Levamisole",
+      "synonyms": [
+        "(S)-tetramisole"
+      ]
+    },
+    "it": {
+      "preferred": "Levamisolo",
+      "synonyms": [
+        "(S)-tetramisolo"
+      ]
+    }
+  },
+  "iupac": "(6S)-6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole",
+  "formula": "C11H12N2S",
+  "molar_mass_g_mol": 204.29,
+  "smiles": "C1CSC2=N[C@H](CN21)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C11H12N2S/c1-2-4-9(5-3-1)10-8-13-6-7-14-11(13)12-10/h1-5,10H,6-8H2/t10-/m1/s1",
+  "inchikey": "HLFSDGLLUJUHTE-SNVBAGLBSA-N",
+  "external_ids": {
+    "wikidata": "Q417097",
+    "chebi": "CHEBI:6432",
+    "cas": "14769-73-4",
+    "pubchem_cid": 26879
+  },
+  "classes": {
+    "chemical": [
+      "anthelmintic"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

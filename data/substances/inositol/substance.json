@@ -1,0 +1,64 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "inositol",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "myo-Inositol",
+      "synonyms": [
+        "inositol",
+        "cyclohexane-1,2,3,4,5,6-hexol (myo)"
+      ]
+    },
+    "it": {
+      "preferred": "myo-Inositolo",
+      "synonyms": [
+        "inositolo"
+      ]
+    }
+  },
+  "iupac": "(1R,2R,3S,4S,5R,6S)-cyclohexane-1,2,3,4,5,6-hexol",
+  "formula": "C6H12O6",
+  "molar_mass_g_mol": 180.16,
+  "smiles": "O[C@H]1[C@H](O)[C@@H](O)[C@H](O)[C@@H](O)[C@H]1O",
+  "inchi": "InChI=1S/C6H12O6/c7-1-2(8)4(10)6(12)5(11)3(1)9/h1-12H/t1-,2-,3-,4+,5-,6-",
+  "inchikey": "CDAISMWEOUEBRE-GPIVLXJGSA-N",
+  "external_ids": {
+    "wikidata": "Q3331426",
+    "chebi": "CHEBI:17268",
+    "cas": "87-89-8"
+  },
+  "classes": {
+    "chemical": [
+      "sugar_alcohol"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "diluent_excipient"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity (PubChem lists only the stereo-unspecified inositol; stereo form from Wikidata and ChEBI)",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
