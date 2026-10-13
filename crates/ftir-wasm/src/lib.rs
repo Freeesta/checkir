@@ -6,6 +6,7 @@ use wasm_bindgen::prelude::*;
 mod confronto;
 mod didactic;
 mod miscele;
+mod sottrazione;
 
 /// Engine version.
 #[wasm_bindgen]
