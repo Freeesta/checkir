@@ -22,6 +22,7 @@ export const MENU_ITEMS = [
   { id: "cursors", labelKey: "menu.cursors", run: (c) => c.toggleCursors(), enabled: (c) => c.hasSpectrum(), checked: (c) => c.cursorsOn() },
   { id: "table.export", labelKey: "menu.export_table", run: (c) => c.exportTable(), enabled: (c) => c.hasSpectrum() },
   { id: "library.recall", labelKey: "menu.recall", run: (_c, ctx) => ctx.recallOpen(), enabled: (_c, ctx) => ctx.getState().files.length > 0 && ctx.getState().libraries.some((l) => l.enabled) },
+  { id: "inverse.open", labelKey: "menu.inverse", run: (_c, ctx) => ctx.inverseOpen(), enabled: (_c, ctx) => ctx.getState().libraries.some((l) => l.enabled) },
   { id: "peaks.toggle", labelKey: "menu.peaks", run: (_c, ctx) => ctx.togglePeaks(), enabled: (_c, ctx) => ctx.getState().files.length > 0, checked: (_c, ctx) => ctx.getState().showPeaks },
 ];
 

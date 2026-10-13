@@ -147,6 +147,13 @@ export function analyse(s) {
   return value;
 }
 
+/** Group rules (`bands/1`) compatible with a position, for the inverse search. @param {number} cm1 @param {number} tol @returns {Array<{ group: string, mode: string }>} */
+export function interpretationsAt(cm1, tol) {
+  if (!engine) return [];
+  const out = JSON.parse(engine.interpretations_at(cm1, tol, ""));
+  return Array.isArray(out) ? out : [];
+}
+
 /** Forget the cached analysis (after a language change nothing changes, but closing files must not keep a stale one). */
 export function resetPeaks() {
   last = null;

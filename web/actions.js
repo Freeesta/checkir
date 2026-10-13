@@ -17,6 +17,7 @@ import { canSubtract } from "./subtract.js";
  *   subtractOpen: () => void, subtractClose: () => void, subtractSearch: () => Promise<boolean>, setFactor: (k: number) => void, undo: () => void,
  *   viewBack: () => void, recallOpen: () => void, recallAdd: (ref: import("./state.js").Recalled) => boolean, recallRemove: (i: number) => void, recallClear: () => void, setRecall: (patch: Partial<import("./state.js").RecallState>) => void, recallKeep: () => string | null,
  *   setPreset: (id: string) => void, setRanges: (ranges: Array<[number, number]>) => void, addRange: (range: [number, number]) => void, removeRange: (i: number) => void, clearRanges: () => void, rejectRange: () => void, rangeFromCursors: () => void, openRanges: () => void,
+ *   inverseOpen: (position?: number | null) => void,
  *   importLibrary: (files: File[], name: string) => Promise<void>, cancelImport: () => void, removeLibrary: (id: string) => void, toggleLibrary: (id: string, on: boolean) => void,
  * }} Ctx
  * @typedef {{
@@ -59,6 +60,7 @@ export const ACTIONS = [
   { id: "decision.revoke", labelKey: "action.decision_revoke.label", tipKey: "action.decision_revoke.tip", icon: "back", section: "sheet", run: (c) => c.revokeDecision(), enabled: (s) => decisionOf(s) !== null },
   { id: "sheet.print", labelKey: "action.sheet_print.label", tipKey: "action.sheet_print.tip", icon: "sheet", section: "sheet", run: (c) => c.printSheet(), enabled: (s) => resultOf(s) !== null },
   { id: "library.recall", labelKey: "action.library_recall.label", tipKey: "action.library_recall.tip", icon: "library", key: "n", section: "libraries", run: (c) => c.recallOpen(), enabled: (s) => s.files.length > 0 && activeLibraries(s).length > 0 },
+  { id: "inverse.open", labelKey: "action.inverse_open.label", tipKey: "action.inverse_open.tip", icon: "peaks", key: "q", section: "peaks", run: (c) => c.inverseOpen(), enabled: (s) => activeLibraries(s).length > 0 },
   { id: "view.back", labelKey: "action.view_back.label", tipKey: "action.view_back.tip", icon: "back", key: "b", run: (c) => c.viewBack(), enabled: (s) => s.files.length > 0 },
   { id: "overlay.toggle", labelKey: "action.overlay_toggle.label", tipKey: "action.overlay_toggle.tip", icon: "results", key: "r", section: "results", run: (c) => c.toggleOverlay(), enabled: (s) => resultOf(s) !== null },
   { id: "ranges.open", labelKey: "action.ranges_open.label", tipKey: "action.ranges_open.tip", icon: "region", key: "g", section: "results", run: (c) => c.openRanges(), enabled: (s) => s.files.length > 0 },

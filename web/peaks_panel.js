@@ -58,7 +58,7 @@ export function renderPeaks(body, s, ctx) {
   if (!a) return void body.append(el("p", { class: "empty" }, [t("panel.peaks.empty")]));
   const toggle = actionButton("peaks.toggle", ctx, { withLabel: true, className: "btn" });
   toggle.setAttribute("aria-pressed", String(s.showPeaks));
-  body.append(el("div", { class: "row" }, [toggle]));
+  body.append(el("div", { class: "row" }, [toggle, actionButton("inverse.open", ctx, { withLabel: true, className: "btn" })]));
   if (a.error) return void body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t("peaks.error")]));
   const result = resultOf(s);
   const chosen = result ? selectedCandidate(s, result.data) : null;

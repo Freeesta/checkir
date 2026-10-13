@@ -320,7 +320,7 @@ async function run() {
     await areaScenario(browser, base, check, axe);
     await cleanScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
-    await inverseScenario(browser, base, check);
+    await inverseScenario(browser, base, check, axe);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
     await recallScenario(browser, base, check, axe);
