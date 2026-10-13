@@ -1,14 +1,60 @@
 {
   "nota": "Textual links and XML namespaces allowed in web/ (the browser never loads them). Every URL found in web/ must be listed here with its file; a stale entry also fails.",
   "links": [
-    { "file": "web/appname.js", "url": "https://freeesta.github.io/checkir/", "motivo": "public address of the site (text, Open Graph tags)" },
-    { "file": "web/dom.js", "url": "http://www.w3.org/2000/svg", "motivo": "SVG namespace, an identifier" },
-    { "file": "web/chart.js", "url": "http://www.w3.org/2000/svg", "motivo": "SVG namespace, an identifier" },
-    { "file": "web/icons.svg", "url": "http://www.w3.org/2000/svg", "motivo": "SVG namespace, an identifier" },
-    { "file": "web/img/logo-mono.svg", "url": "http://www.w3.org/2000/svg", "motivo": "SVG namespace, an identifier" },
-    { "file": "web/img/favicon.svg", "url": "http://www.w3.org/2000/svg", "motivo": "SVG namespace, an identifier" },
-    { "file": "web/img/logo-chiaro.svg", "url": "http://www.w3.org/2000/svg", "motivo": "SVG namespace, an identifier" },
-    { "file": "web/img/logo.svg", "url": "http://www.w3.org/2000/svg", "motivo": "SVG namespace, an identifier" },
-    { "file": "web/img/logo-scuro.svg", "url": "http://www.w3.org/2000/svg", "motivo": "SVG namespace, an identifier" }
+    {
+      "file": "web/appname.js",
+      "url": "https://freeesta.github.io/checkir/",
+      "motivo": "public address of the site (text, Open Graph tags)"
+    },
+    {
+      "file": "web/dom.js",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "SVG namespace, an identifier"
+    },
+    {
+      "file": "web/chart.js",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "SVG namespace, an identifier"
+    },
+    {
+      "file": "web/icons.svg",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "SVG namespace, an identifier"
+    },
+    {
+      "file": "web/img/logo-mono.svg",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "SVG namespace, an identifier"
+    },
+    {
+      "file": "web/img/favicon.svg",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "SVG namespace, an identifier"
+    },
+    {
+      "file": "web/img/logo-chiaro.svg",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "SVG namespace, an identifier"
+    },
+    {
+      "file": "web/img/logo.svg",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "SVG namespace, an identifier"
+    },
+    {
+      "file": "web/img/logo-scuro.svg",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "SVG namespace, an identifier"
+    },
+    {
+      "file": "web/pagine/informativa/index.html",
+      "url": "https://github.com/Freeesta/checkir/issues",
+      "motivo": "link to the public issues of the project (text; the browser follows it only on click)"
+    },
+    {
+      "file": "web/pagine/informativa/index.html",
+      "url": "https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement",
+      "motivo": "link to the privacy statement of the host (text; followed only on click)"
+    }
   ]
 }

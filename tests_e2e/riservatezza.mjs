@@ -85,6 +85,16 @@ async function doEverything(page) {
   }
   await page.focus("#chart");
   for (const key of ["+", "ArrowLeft", "0"]) await page.keyboard.press(key);
+  for (const slug of ["avvertenze", "informativa"]) {
+    await page.locator(".footer-links a", { hasText: /Avvertenze|Informativa/ }).nth(slug === "avvertenze" ? 0 : 1).click();
+    await page.waitForSelector("body[data-page][data-ready='1']");
+    for (const l of ["en", "it"]) {
+      await page.locator(`[data-lang="${l}"]`).click({ timeout: 5000 });
+      await page.waitForFunction((x) => document.documentElement.lang === x, l);
+    }
+    await page.goto(base);
+    await page.waitForSelector("body[data-ready='1']");
+  }
   await page.evaluate(() => navigator.serviceWorker?.ready);
 }
 
