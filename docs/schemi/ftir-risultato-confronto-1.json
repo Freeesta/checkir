@@ -273,6 +273,13 @@
             "minimum": -1,
             "maximum": 1
           },
+          "hqi_euclidean": {
+            "description": "Euclidean HQI of the derivative, 100 x (1 + r) / 2, to speak the language of commercial software; it carries nothing beyond r_derivative.",
+            "description_it": "HQI euclideo della derivata, 100 x (1 + r) / 2, per parlare la lingua dei programmi commerciali; non porta nulla in piu di r_derivative.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
           "coverage": {
             "description": "Share of the compared points the candidate has.",
             "description_it": "Quota dei punti confrontati che il candidato ha.",
@@ -304,6 +311,7 @@
           "library_version",
           "r_derivative",
           "r_spectrum",
+          "hqi_euclidean",
           "coverage",
           "r_regions"
         ],
@@ -401,6 +409,13 @@
               "ambiguity",
               "spectral_twin",
               "different_form",
+              "form_absent",
+              "same_as_previous",
+              "quality_saturation",
+              "quality_weak_signal",
+              "quality_noise",
+              "quality_co2_vapour",
+              "quality_negative_bands",
               "custom_range",
               "fixed_limit"
             ]

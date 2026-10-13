@@ -24,6 +24,23 @@ pub struct Preset {
     pub probable_margin: Option<f64>,
 }
 
+/// Provisional limits of the measurement-quality alerts (`quality` in the data file), all in the units of the
+/// absorbance spectrum on the comparison grid.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Quality {
+    pub saturation_a: f64,
+    pub weak_signal_a: f64,
+    pub snr_min: f64,
+    pub noise_band: (f64, f64),
+    pub co2_band: (f64, f64),
+    pub co2_edge_cm1: f64,
+    pub co2_noise_ratio: f64,
+    pub vapour_band: (f64, f64),
+    pub vapour_noise_ratio: f64,
+    pub negative_noise_ratio: f64,
+    pub negative_span_cm1: f64,
+}
+
 #[derive(Debug, Clone, PartialEq)]
 pub struct Thresholds {
     pub version: u32,
@@ -33,6 +50,8 @@ pub struct Thresholds {
     pub check_r1: f64,
     pub ambiguity_margin: f64,
     pub twin_r: f64,
+    pub same_as_previous_r: f64,
+    pub quality: Quality,
     pub min_cm1: f64,
     pub min_points: usize,
     pub regions: Vec<Region>,
@@ -80,6 +99,35 @@ fn preset(v: &Value) -> EngineResult<Preset> {
     })
 }
 
+fn band(v: &Value, key: &str) -> EngineResult<(f64, f64)> {
+    let (a, b) = (
+        num(v, &["quality", &format!("{key}_from_cm1")])?,
+        num(v, &["quality", &format!("{key}_to_cm1")])?,
+    );
+    if a < b {
+        Ok((a, b))
+    } else {
+        Err(bad(&format!("quality/{key}")))
+    }
+}
+
+fn quality(v: &Value) -> EngineResult<Quality> {
+    let q = |k: &str| num(v, &["quality", k]);
+    Ok(Quality {
+        saturation_a: q("saturation_a")?,
+        weak_signal_a: q("weak_signal_a")?,
+        snr_min: q("snr_min")?,
+        noise_band: band(v, "noise")?,
+        co2_band: band(v, "co2")?,
+        co2_edge_cm1: q("co2_edge_cm1")?,
+        co2_noise_ratio: q("co2_noise_ratio")?,
+        vapour_band: band(v, "vapour")?,
+        vapour_noise_ratio: q("vapour_noise_ratio")?,
+        negative_noise_ratio: q("negative_noise_ratio")?,
+        negative_span_cm1: q("negative_span_cm1")?,
+    })
+}
+
 fn text(v: &Value, key: &str) -> EngineResult<String> {
     Ok(v.get(key)
         .and_then(Value::as_str)
@@ -120,6 +168,8 @@ impl Thresholds {
             check_r1: num(&v, &["to_check", "r1_min"])?,
             ambiguity_margin: num(&v, &["ambiguity", "margin_below"])?,
             twin_r: num(&v, &["spectral_twin", "r_min"])?,
+            same_as_previous_r: num(&v, &["same_as_previous", "r_min"])?,
+            quality: quality(&v)?,
             min_cm1: num(&v, &["range_limits", "min_cm1"])?,
             min_points: num(&v, &["range_limits", "min_points"])? as usize,
             regions,
@@ -145,6 +195,8 @@ mod test {
             (0.85, 0.9, 0.8)
         );
         assert_eq!(t.regions.len(), 4);
+        assert_eq!(t.same_as_previous_r, 0.99);
+        assert_eq!(t.quality.co2_band, (2330.0, 2370.0));
         assert!(t.preset("full").is_some_and(|p| p.calibrated));
     }
 

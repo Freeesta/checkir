@@ -186,6 +186,10 @@ fn candidate_json(rank: usize, c: &Candidate, index: &Index) -> Value {
         ("library_version".into(), text(&lib.version)),
         ("r_derivative".into(), num(c.r_derivative)),
         ("r_spectrum".into(), num(c.r_spectrum)),
+        (
+            "hqi_euclidean".into(),
+            num(super::hqi::from_r(c.r_derivative)),
+        ),
         ("coverage".into(), num(c.coverage)),
         ("r_regions".into(), Value::Obj(regions)),
     ])

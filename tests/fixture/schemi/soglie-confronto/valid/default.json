@@ -1,6 +1,6 @@
 {
   "schema": "soglie-confronto/1",
-  "version": 1,
+  "version": 2,
   "calibration": {
     "bench": "banco-1",
     "chain": "confronto_v1",
@@ -22,6 +22,26 @@
   },
   "spectral_twin": {
     "r_min": 0.9
+  },
+  "same_as_previous": {
+    "r_min": 0.99
+  },
+  "quality": {
+    "status": "draft",
+    "saturation_a": 1.5,
+    "weak_signal_a": 0.02,
+    "snr_min": 100,
+    "noise_from_cm1": 2400,
+    "noise_to_cm1": 2600,
+    "co2_from_cm1": 2330,
+    "co2_to_cm1": 2370,
+    "co2_edge_cm1": 20,
+    "co2_noise_ratio": 10,
+    "vapour_from_cm1": 3700,
+    "vapour_to_cm1": 3900,
+    "vapour_noise_ratio": 5,
+    "negative_noise_ratio": 5,
+    "negative_span_cm1": 10
   },
   "range_limits": {
     "min_cm1": 400,
