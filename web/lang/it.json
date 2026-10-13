@@ -133,11 +133,6 @@
   "panel.sheet.empty": "Nessuna scheda",
   "panel.back": "Indietro",
   "panel.nav": "Sezioni",
-  "limits.label": "Limiti dell'FTIR",
-  "limits.undetected": "< 5 % non visto",
-  "limits.potent": "fentanili e nitazeni: non esclusi",
-  "limits.quantity": "nessuna quantità",
-  "limits.more_label": "Spiega i limiti",
   "limits.more": "L'FTIR non vede i componenti sotto circa il 5 %. Fentanil e analoghi si vedono solo tra il 3 e il 10 % in peso; nitazeni e altre sostanze potenti, attive a dosi bassissime, non si possono escludere. Il risultato non dà quantità e non è una diagnosi né un parere medico.",
   "info.title": "Informazioni e limiti",
   "info.privacy_title": "Riservatezza",
@@ -579,5 +574,7 @@
   "regions.oop.name": "Deformazioni fuori piano (impronta digitale)",
   "regions.oop.tag": "fuori piano",
   "regions.far.name": "Atomi pesanti e reticolo",
-  "regions.far.tag": "pesanti"
+  "regions.far.tag": "pesanti",
+  "results.count": "Candidati: {n}",
+  "table.summary": "Tabella dei dati ({n} righe)"
 }

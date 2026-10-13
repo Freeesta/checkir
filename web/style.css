@@ -159,7 +159,7 @@ main { min-width: 0; max-width: 72rem; padding: 0.75rem 1rem; }
 .toolbar { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .title-row { display: flex; align-items: center; gap: 0.25rem; margin: 0.25rem 0; }
 #chart { border: 1px solid var(--border); border-radius: 0.4rem; background: var(--bg); }
-#chart svg { display: block; width: 100%; height: auto; }
+#chart svg { display: block; width: 100%; height: auto; max-height: 44vh; }
 .axis, .grid { stroke: var(--border); fill: none; }
 .grid { stroke-opacity: 0.35; }
 .label { fill: var(--text); font-size: 12px; }
@@ -169,8 +169,6 @@ table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nu
 caption { text-align: left; padding: 0.5rem; color: var(--text-muted); }
 th, td { padding: 0.25rem 0.75rem; text-align: right; border-bottom: 1px solid var(--border); }
 th { position: sticky; top: 0; background: var(--surface); }
-.limits { display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; padding: 0.4rem 0.75rem; border: 1px solid var(--border); border-radius: 0.4rem; background: var(--surface); }
-.limits-list { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0; padding: 0; list-style: none; font-size: 0.9rem; }
 
 /* Tooltip, toggletip, dialogs */
 .tooltip { position: absolute; z-index: 50; max-width: 18rem; padding: 0.3rem 0.6rem; background: var(--text); color: var(--bg); border-radius: 0.3rem; font-size: 0.875rem; }
@@ -258,7 +256,7 @@ kbd { display: inline-block; min-width: 1.4rem; padding: 0 0.35rem; border: 1px 
 .alert { display: flex; gap: 0.35rem; padding: 0.15rem 0; }
 .alert .icon { color: var(--color-alert); flex: none; }
 .cands-title { margin-top: 0.5rem; }
-.cands { list-style: none; margin: 0; padding: 0; min-height: 17rem; font-size: 0.9rem; }
+.cands { list-style: none; margin: 0; padding: 0; font-size: 0.9rem; }
 .cand { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "sel sel" "extra labels"; align-items: center; min-height: 3.6rem; padding: 0.1rem 0; border-top: 1px solid var(--border); }
 .cand-select { grid-area: sel; display: flex; align-items: baseline; gap: 0.35rem; min-height: 1.75rem; padding: 0.1rem 0.35rem; font: inherit; color: inherit; text-align: left; background: none; border: 0; border-left: 3px solid transparent; border-radius: 0.25rem; cursor: pointer; }
 .cand-select[aria-current] { border-left-color: var(--color-brand); background: var(--surface); font-weight: 600; }
@@ -367,7 +365,7 @@ body[data-talk] .sheet-host .talk-exit { display: inline-flex; }
 .dev-bar { position: fixed; right: 0.5rem; bottom: 3.5rem; z-index: 5; display: flex; gap: 0.25rem; padding: 0.25rem; border: 1px dashed var(--text); background: var(--bg); }
 
 /* Guided subtraction: stacked strips, the factor control, the warning. The reference strip is dashed and the residual has a zero line (never colour alone). */
-body[data-subtract] #chart-section, body[data-subtract] #table-section { display: none; }
+body[data-subtract] #chart-section, body[data-subtract] #table-section, body[data-subtract] #candidates { display: none; }
 .factor { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin: 0.5rem 0; }
 .factor input[type="range"] { flex: 1 1 12rem; min-height: 1.5rem; accent-color: var(--color-residual); }
 .factor input[type="text"] { width: 5rem; min-height: 1.5rem; padding: 0.2rem 0.4rem; border: 1px solid var(--border); border-radius: 0.3rem; background: var(--bg); color: var(--text); font: inherit; text-align: right; }
@@ -391,3 +389,28 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section { display
 .cursor-hover { stroke: var(--text-muted); stroke-width: 1; stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
 .zoom-box { fill: var(--surface); fill-opacity: 0.6; stroke: var(--text); stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
 .cursor-text { font-variant-numeric: tabular-nums; }
+
+/* Candidates under the chart: the space is reserved once a spectrum is shown, so the result arriving moves nothing */
+.candidates[data-open] { min-height: 24rem; margin-top: 0.75rem; }
+.candidates .cand-name { overflow: visible; white-space: normal; }
+.candidates .detail { min-height: 4rem; }
+.cand-delta { font-variant-numeric: tabular-nums; color: var(--text-muted); white-space: nowrap; }
+@media (min-width: 46em) {
+  .candidates .cand { grid-template-columns: minmax(0, 1fr) 3.5rem 5.5rem 3.5rem minmax(4rem, 8rem) auto; grid-template-areas: "sel r delta cov lib labels"; min-height: 2.3rem; }
+  .candidates .cand-extra { display: contents; }
+  .candidates .cand-r { grid-area: r; text-align: right; }
+  .candidates .cand-delta { grid-area: delta; padding-left: 0.5rem; }
+  .candidates .cand meter { grid-area: cov; }
+  .candidates .cand-lib { grid-area: lib; padding-left: 0.5rem; }
+  .candidates .labels { grid-area: labels; }
+  .candidates .cand[data-label="reject"] .cand-extra { display: none; }
+}
+
+/* The data table is the text version of the chart: folded, with the number of rows in the title */
+.table-section > summary { padding: 0.4rem 0; font-weight: 600; cursor: pointer; }
+
+/* Coverage meters in a neutral colour: the browser's own green would read as "safe" */
+meter { appearance: none; background: var(--surface); border: 1px solid var(--border); border-radius: 0.2rem; }
+meter::-webkit-meter-bar { background: var(--surface); border: 0; }
+meter::-webkit-meter-optimum-value, meter::-webkit-meter-suboptimum-value, meter::-webkit-meter-even-less-good-value { background: var(--text-muted); }
+meter::-moz-meter-bar { background: var(--text-muted); }

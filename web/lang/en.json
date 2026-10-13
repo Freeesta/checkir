@@ -133,11 +133,6 @@
   "panel.sheet.empty": "No sheet",
   "panel.back": "Back",
   "panel.nav": "Sections",
-  "limits.label": "FTIR limits",
-  "limits.undetected": "< 5 % not seen",
-  "limits.potent": "fentanyls and nitazenes: not excluded",
-  "limits.quantity": "no quantity",
-  "limits.more_label": "Explain the limits",
   "limits.more": "FTIR does not see components below about 5 %. Fentanyl and analogues show only from 3 to 10 % by weight; nitazenes and other potent substances, active at very low doses, cannot be excluded. The result gives no quantity and is neither a diagnosis nor medical advice.",
   "info.title": "Information and limits",
   "info.privacy_title": "Privacy",
@@ -579,5 +574,7 @@
   "regions.oop.name": "Out-of-plane bending (fingerprint)",
   "regions.oop.tag": "out of plane",
   "regions.far.name": "Heavy atoms and lattice",
-  "regions.far.tag": "heavy"
+  "regions.far.tag": "heavy",
+  "results.count": "Candidates: {n}",
+  "table.summary": "Data table ({n} rows)"
 }

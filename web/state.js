@@ -25,7 +25,7 @@ import { STORAGE_PREFIX } from "./appname.js";
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, showPeaks: false, peakFocus: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();

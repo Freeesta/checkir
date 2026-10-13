@@ -23,9 +23,10 @@ import { loadBands } from "./regions.js";
 import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
+import { buildTableTitle } from "./table_title.js";
 import { buildSubtractView } from "./subtract_view.js";
 import { subtractActions } from "./subtract.js";
-import { buildLimits, buildNextStep } from "./workarea.js";
+import { buildCandidates, buildNextStep } from "./workarea.js";
 
 /** @param {string} id @returns {HTMLElement} */
 function $(id) {
@@ -122,7 +123,7 @@ async function start() {
   const header = buildHeader(/** @type {HTMLElement} */ ($("app-header")), ctx, APP_NAME);
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
   const next = buildNextStep($("workbar"), ctx);
-  const limits = buildLimits($("limits"));
+  const candidates = buildCandidates($("candidates"), ctx);
   const subtraction = buildSubtractView($("subtract"), ctx);
   const talk = wireTalk($("sheet-host"));
   if (engine) setProgramVersion(engine.version());
@@ -130,6 +131,7 @@ async function start() {
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
   const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), peaks: { step: (dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak() } });
   let shown = /** @type {string | null | undefined} */ (undefined);
+  buildTableTitle($("table-section"), $("table"));
   const layers = buildLayers(chart, $("peaks-summary"));
   const renderUi = () => {
     const s = getState();
@@ -144,7 +146,7 @@ async function start() {
     header.refresh(s);
     panels.refresh(s);
     next.refresh(s);
-    limits.refresh();
+    candidates.refresh(s);
     talk.refresh(s);
     refreshActionButtons(s);
     hideIfDetached();
