@@ -22,7 +22,7 @@ export default async ({ browser, base, check }) => {
   const match = await read(new URL("match.js", WEB));
   check("thresholds: peaks.js keeps no intensity cuts", !/STRONG_MIN|MEDIUM_MIN|intensityOf|prominence_rel/.test(peaks));
   check("thresholds: subtract.js keeps no over-subtraction ratio", !/OVER_RATIO/.test(subtract) && /over_subtraction/.test(subtract));
-  check("thresholds: ranges.js keeps no grid, mask or limit numbers", !/\b(650|3800|1900|2400|400|150)\b/.test(ranges.replace(/\/\*[\s\S]*?\*\//g, "")));
+  check("thresholds: ranges.js keeps no grid, mask or limit numbers (the presets mirror a data file and are checked by regioni.mjs)", !/\b(650|3800|1900|2400|400|150)\b/.test(ranges.replace(/\/\*[\s\S]*?\*\//g, "").replace(/export const PRESETS = .*\n/, "")));
   check("thresholds: match.js keeps no grid or mask numbers", !/\b(650|1900|2400)\b/.test(match.replace(/\/\*[\s\S]*?\*\//g, "")));
 
   const th = JSON.parse(await read(new URL("../../data/soglie/peaks_thresholds-1.json", import.meta.url)));
