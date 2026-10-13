@@ -6,6 +6,20 @@ Lattosio ((2R,3R,4S,5R,6S)-2-(hydroxymethyl)-6-[(2R,3S,4R,5R)-4,5,6-trihydroxy-2
 
 Classe chimica: zucchero (disaccaride, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## origin
+
+Il lattosio è un disaccaride ed è la principale fonte di calorie del latte. [f:misselwitz2019]
+
+## metabolism
+
+Nell'intestino tenue l'enzima lattasi idrolizza il lattosio in galattosio e glucosio. [f:misselwitz2019]
+
+## cuts
+
+Il lattosio è tra gli zuccheri riportati come tagli della cocaina. [f:unodc-cocaine2012]
+
+Le linee d'indirizzo interne di un servizio di drug checking descrivono i tagli inerti come sostanze che aumentano peso e volume. [f:ubc-counselling-guidelines]
+
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -26,7 +40,7 @@ Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:misselwitz2019]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:misselwitz2019] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
 
 ## license
 

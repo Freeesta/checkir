@@ -6,6 +6,14 @@ Fenacetina (N-(4-ethoxyphenyl)acetamide), formula C10H13NO2, massa molare 179.22
 
 Classe chimica: analgesico (medicinale ritirato, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## metabolism
+
+Nell'uomo il paracetamolo è il principale metabolita urinario dopo la fenacetina assunta per bocca. [f:iarc-100a-phenacetin]
+
+## cuts
+
+La fenacetina è nell'elenco dei tagli frequenti della cocaina. [f:unodc-cocaine2012]
+
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -26,9 +34,13 @@ Nell'uomo, dopo fenacetina per bocca, il principale metabolita urinario è l'N-a
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
 
+## counselling
+
+Spiega che la fenacetina in quasi tutti i paesi non è più un medicinale: gli analgesici che la contenevano sono stati ritirati dopo che era stata coinvolta in malattie renali da abuso di analgesici, e lo IARC la classifica come cancerogena per l'uomo (pelvi renale e uretere). [f:iarc-100a-phenacetin]
+
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:iarc-100a-phenacetin]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:iarc-100a-phenacetin] [f:pubchem] [f:unodc-cocaine2012] [f:wikidata]
 
 ## license
 

@@ -1,14 +1,17 @@
 {
   "schema": "datasheet/1",
   "substance": "phenacetin",
-  "version": 2,
+  "version": 3,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
@@ -21,5 +24,37 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "paracetamol",
+        "reaction": "other",
+        "source": "iarc-100a-phenacetin"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "paracetamol",
+        "active": null,
+        "source": "iarc-100a-phenacetin"
+      }
+    ]
+  },
+  "cuts": [
+    {
+      "cut": "cocaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "phenacetin.withdrawn",
+      "topic": "testing",
+      "source": "iarc-100a-phenacetin"
+    }
+  ]
 }

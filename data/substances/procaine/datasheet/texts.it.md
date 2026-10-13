@@ -6,6 +6,18 @@ Procaina (2-(diethylamino)ethyl 4-aminobenzoate), formula C13H20N2O2, massa mola
 
 Classe chimica: anestetico locale (di tipo estere, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## metabolism
+
+La procaina è un estere: gli esteri sono idrolizzati nel sangue dalle esterasi plasmatiche, mentre le ammidi come la lidocaina sono demolite nel fegato. [f:becker2012]
+
+La procaina è rappresentativa degli esteri derivati dall'acido para-aminobenzoico (PABA); l'idrolisi libera una parte potenzialmente immunogena. [f:becker2012]
+
+## cuts
+
+La procaina è nell'elenco dei tagli frequenti della cocaina. [f:unodc-cocaine2012]
+
+La procaina è un estere aromatico, come la cocaina, con una banda C=O nella stessa regione: un C=O estereo da solo non indica la cocaina. [f:smith-arom-esters]
+
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -26,9 +38,15 @@ I dati specifici sulla procaina non sono ancora redatti. [f:checkir-section-pend
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
 
+## counselling
+
+I tagli con anestetici locali pesano di più quando la cocaina è iniettata: le linee d'indirizzo del servizio citano collasso, embolia e convulsioni. [f:ubc-counselling-guidelines] La tossicità sistemica degli anestetici locali può essere fatale. [f:neal2010]
+
+Chiedi di eventuali reazioni allergiche passate ad anestetici locali: la procaina è un estere derivato dal PABA e la sua idrolisi libera una parte potenzialmente immunogena. [f:becker2012]
+
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:checkir-section-pending] [f:guay2009] [f:neal2010]
+Fonti usate per le affermazioni di questa scheda: [f:becker2012] [f:chebi] [f:checkir-classification] [f:guay2009] [f:neal2010] [f:pubchem] [f:smith-arom-esters] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
 
 ## license
 

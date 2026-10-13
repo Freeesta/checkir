@@ -6,6 +6,22 @@ Caffeine (1,3,7-trimethylpurine-2,6-dione), formula C8H10N4O2, molar mass 194.19
 
 Chemical class: xanthine alkaloid (grouped here under other substances). Expected effect: stimulant. Typical role in samples: pharmacological adulterant, also found as a declared ingredient. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## origin
+
+Caffeine is found in coffee, tea, soft drinks, cocoa and chocolate products and in medications. [f:nawrot2003]
+
+## metabolism
+
+Caffeine is almost exclusively metabolised in the liver. The main product is paraxanthine, formed only by CYP1A2 (about 80-90 % of the demethylation); theobromine and theophylline are minor products (about 11 % and 4 %). [f:grzegorzewski2022]
+
+Smoking increases the clearance of caffeine and shortens its elimination half-life. [f:grzegorzewski2022]
+
+## cuts
+
+Caffeine is on the list of the frequent cuts of cocaine. [f:unodc-cocaine2012]
+
+Internal guidelines of a drug checking service describe caffeine as an active cut: a stimulant that adds an effect the person can feel. They also name it among the substances found in speed and in tablets sold as MDMA. [f:ubc-counselling-guidelines]
+
 ## effects
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
@@ -26,7 +42,7 @@ Fluvoxamine, an antidepressant that inhibits the enzyme CYP1A2, greatly reduced 
 
 ## sources
 
-Sources used for the claims in this sheet: [f:culm-merdek2005] [f:nawrot2003]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:culm-merdek2005] [f:grzegorzewski2022] [f:nawrot2003] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
 
 ## license
 
