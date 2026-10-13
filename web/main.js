@@ -1,6 +1,6 @@
 // @ts-check
 import { APP_ID, APP_NAME } from "./appname.js";
-import { wire } from "./chart.js";
+import { wire } from "./chart_wire.js";
 import { createViewLink } from "./view_link.js";
 import { refreshActionButtons } from "./controls.js";
 import { buildDialogs } from "./dialogs.js";
@@ -29,6 +29,8 @@ import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
 import { buildSubtractView } from "./subtract_view.js";
+import { recallActions } from "./recall.js";
+import { buildRecallView, openRecallDialog } from "./recall_ui.js";
 import { subtractActions } from "./subtract.js";
 import { buildCandidates, buildNextStep } from "./workarea.js";
 
@@ -127,7 +129,7 @@ async function start() {
   await loadBands();
   await loadBandData(currentLang());
   const input = wireFileInput({ engine, announce });
-  let redrawAll = () => {};
+  let redrawAll = () => {}, viewBack = () => {};
   /** @type {import("./actions.js").Ctx} */
   const ctx = {
     getState,
@@ -139,7 +141,7 @@ async function start() {
       announce(t("status.file_closed"));
     },
     ...languageActions(() => redrawAll(), announce),
-    ...workActions(engine, announce),
+    ...workActions(engine, announce), ...recallActions(announce), recallOpen: () => openRecallDialog(ctx), viewBack: () => viewBack(),
     ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
@@ -153,11 +155,13 @@ async function start() {
   const next = buildNextStep($("workbar"), ctx);
   const candidates = buildCandidates($("candidates"), ctx);
   const subtraction = buildSubtractView($("subtract"), ctx);
+  const recalled = buildRecallView($("recall"), ctx);
   const talk = wireTalk($("sheet-host"));
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
+  viewBack = chart.back;
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
   const card = createPeakCard($("peak-card"), ctx);
@@ -171,9 +175,7 @@ async function start() {
     layers.sync(s, shown ?? null);
     card.refresh(s);
     document.body.toggleAttribute("data-subtract", s.subtraction !== null);
-    subtraction.refresh(s);
-    header.refresh(s);
-    panels.refresh(s);
+    for (const part of [subtraction, recalled, header, panels]) part.refresh(s);
     next.refresh(s);
     candidates.refresh(s);
     talk.refresh(s);

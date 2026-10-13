@@ -431,6 +431,43 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .zoom-box { fill: var(--surface); fill-opacity: 0.6; stroke: var(--text); stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
 .cursor-text { font-variant-numeric: tabular-nums; }
 
+/* Substance sheet (dialog) */
+.substance-sheet h3 { font-size: 1rem; margin: 1rem 0 0.25rem; }
+.substance-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
+.sheet-sources { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Recalled compounds: the dash is the second signal beside the label (colour is the role "reference" for all of them); the difference uses the residual role. */
+.curve-recalled, .curve-difference { fill: none; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.curve-recalled { stroke: var(--color-reference); }
+.curve-difference { stroke: var(--color-residual); }
+.curve-style-0 { stroke-dasharray: 8 4; }
+.curve-style-1 { stroke-dasharray: 2 3; }
+.curve-style-2 { stroke-dasharray: 10 3 2 3; }
+.curve-difference.curve-style-0 { stroke-dasharray: none; }
+.extra-label { font-size: 11px; }
+.recall { margin: 0.75rem 0; padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 0.4rem; }
+.recall-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin: 0.5rem 0; }
+.recall-modes { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; border: 0; padding: 0; margin: 0; }
+.recall-list, .recall-results { list-style: none; padding: 0; margin: 0.25rem 0; }
+.recall-item { padding: 0.25rem 0; border-top: 1px solid var(--border); }
+.recall-name { flex: 1; }
+.recall-numbers { margin: 0.1rem 0; font-variant-numeric: tabular-nums; }
+.recall-swatch { display: inline-block; width: 2.2rem; border-top: 3px solid var(--color-reference); }
+.recall-swatch-0 { border-top-style: dashed; }
+.recall-swatch-1 { border-top-style: dotted; }
+.recall-swatch-2 { border-top-style: double; border-top-width: 5px; }
+.recall-results .btn { width: 100%; text-align: left; margin: 0.15rem 0; }
+.recall-results .btn[aria-pressed="true"] { border-width: 2px; font-weight: 600; }
+
+/* Chart menu and axis zones: the menu is a plain list under the pointer, no animation. */
+.chart-menu { position: fixed; z-index: 40; min-width: 14rem; padding: 0.25rem; border: 1px solid var(--border); border-radius: 0.4rem; background: var(--bg); color: var(--text); box-shadow: 0 2px 8px rgb(0 0 0 / 0.25); }
+.chart-menu button { display: block; width: 100%; padding: 0.4rem 0.6rem; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.chart-menu button:hover, .chart-menu button:focus-visible { background: var(--surface); }
+.chart-menu button:disabled { opacity: 0.55; cursor: default; }
+.chart-menu [aria-checked="true"]::before { content: "■ "; }
+.chart-menu [aria-checked="false"]::before { content: "□ "; }
+.axis-hit-x { cursor: ew-resize; fill: transparent; }
+.axis-hit-y { cursor: ns-resize; fill: transparent; }
 /* Loading screen: a photon (bright head) with its red wave; the wave runs forward one period per cycle. */
 #splash { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: var(--bg); opacity: 1; transition: opacity 0.12s linear; }
 #splash[data-gone] { opacity: 0; pointer-events: none; }
