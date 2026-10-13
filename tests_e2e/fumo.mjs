@@ -199,7 +199,7 @@ async function shellScenario(browser) {
     session: sessionStorage.length,
     idb: (await indexedDB.databases()).length,
   }));
-  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.shortcuts", "checkir.autoMatch"];
+  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.shortcuts", "checkir.autoMatch", "checkir.textLevel", "checkir.modeAnim"];
   check("privacy: only preferences are stored, nothing of the analysis", stored.local.every((k) => allowed.includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
   await ctx.close();
 }
