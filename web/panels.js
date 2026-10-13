@@ -64,11 +64,16 @@ function fileTree(s, ctx, parent) {
   return list;
 }
 
+/** Compact row of export buttons built from the registry. @param {string[]} ids @param {import("./actions.js").Ctx} ctx */
+export function exportRow(ids, ctx) {
+  return el("div", { class: "row export-row" }, ids.map((id) => actionButton(id, ctx, { withLabel: true, className: "btn" })));
+}
+
 /** @param {HTMLElement} body @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx */
 function renderFiles(body, s, ctx) {
   body.append(el("div", { class: "row" }, [actionButton("demo.load", ctx, { withLabel: true, className: "btn" }), actionButton("file.close", ctx)]));
   if (s.fileError) body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t(s.fileError.key, s.fileError.params)]));
-  if (s.files.length) body.append(fileTree(s, ctx, null));
+  if (s.files.length) body.append(fileTree(s, ctx, null), exportRow(["export.csv", "export.svg", "export.png"], ctx));
   else emptyLine(body, t("panel.files.empty"));
   renderFolder(body, s.folder, ctx.folder);
 }

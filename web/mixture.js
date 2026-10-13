@@ -9,7 +9,8 @@ import { candidateKey } from "./state.js";
  * The mixture proposal of a comparison (`data.mixture`, made in the worker by `miscele_job.js`): the components that together explain the
  * spectrum, each with its contribution to the spectrum (a share of the explained area, never a percentage by weight or an amount) and
  * the main peaks it explains. The program proposes; the chemist accepts it as a mixture or leaves it.
- * @typedef {{ id: string, library: string, name: string, substance: string | null, is_cut: boolean, contribution: number, explained: number | null }} Component
+ * When the engine rejects the proposal (`data.mixture.rejected`) there is no component, only the reason, shown in place of the mixture.
+ * @typedef {{ id: string, library: string, name: string, substance: string | null, is_cut: boolean, contribution: number, explained: number | null, minor?: boolean }} Component
  */
 
 /** @param {any} data a comparison @returns {Component[]} the proposed components, empty when there is no proposal */
@@ -48,7 +49,22 @@ function componentRow(c, nameOf) {
   return el("li", { class: "mixture-part", "data-component": `${c.library}/${c.id}` }, [
     el("strong", {}, [nameOf(c)]),
     el("span", {}, [` ${t("mixture.contribution")} ${formatNumber(c.contribution, 2)} · ${t("mixture.explained")} ${explained}`]),
+    ...(c.minor ? [el("span", { class: "mixture-minor", "data-minor": "1" }, [` · ${t("mixture.minor")}`])] : []),
   ]);
+}
+
+/**
+ * Why the engine makes no proposal although it found several components (computed on this result, not a generic caution).
+ * @param {any} mixture @param {(c: Component) => string} nameOf @returns {HTMLElement | null}
+ */
+function rejectedBlock(mixture, nameOf) {
+  const why = mixture?.rejected;
+  if (!why) return null;
+  const text =
+    why.reason === "component_without_peaks" && why.component
+      ? t("mixture.rejected_no_peaks", { name: nameOf(why.component) })
+      : t("mixture.rejected_residual", { share: formatNumber(mixture.unexplained_variance_share ?? 0, 2) });
+  return el("section", { class: "mixture", "aria-label": t("mixture.label"), "data-mixture-rejected": String(why.reason) }, [el("p", { class: "mixture-line" }, [text])]);
 }
 
 /**
@@ -56,11 +72,11 @@ function componentRow(c, nameOf) {
  * of the mixture search and the button that takes the mixture.
  * @param {any} data @param {boolean} taken the draft already holds exactly these components @param {boolean} locked a signed decision cannot change
  * @param {(c: Component) => string} nameOf the name in the active language @param {() => void} accept
- * @returns {HTMLElement | null} null when there is no proposal
+ * @returns {HTMLElement | null} null when there is no proposal; the reason when the engine rejected one
  */
 export function mixtureBlock(data, taken, locked, nameOf, accept) {
   const parts = mixtureComponents(data);
-  if (!parts.length) return null;
+  if (!parts.length) return rejectedBlock(data?.mixture, nameOf);
   const button = el("button", { type: "button", class: "btn", "data-fk": "mixture-accept", "aria-pressed": String(taken) }, [icon("compare"), t("mixture.accept")]);
   button.disabled = locked || taken;
   button.addEventListener("click", accept);

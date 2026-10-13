@@ -21,6 +21,10 @@ pub struct Thresholds {
     pub smooth_window: usize,
     pub smooth_polyorder: usize,
     pub high_residual_variance_share: f64,
+    pub proposal_min_components: usize,
+    pub proposal_max_unexplained_share: f64,
+    pub proposal_min_explained_peaks: usize,
+    pub minor_variance_share: f64,
     pub enforce_bands: bool,
     pub bands_tolerance_cm1: f64,
     pub bands_explained_fraction: f64,
@@ -106,6 +110,13 @@ impl Thresholds {
             smooth_window: count(&v, &["analogues", "smooth_window"])?,
             smooth_polyorder: count(&v, &["analogues", "smooth_polyorder"])?,
             high_residual_variance_share: share(&v, &["residual", "high_residual_variance_share"])?,
+            proposal_min_components: count(&v, &["proposal", "min_components"])?,
+            proposal_max_unexplained_share: share(
+                &v,
+                &["proposal", "max_unexplained_variance_share"],
+            )?,
+            proposal_min_explained_peaks: count(&v, &["proposal", "min_explained_peaks"])?,
+            minor_variance_share: share(&v, &["proposal", "minor_variance_share"])?,
             enforce_bands: flag(&v, &["bands_criterion", "enforce"])?,
             bands_tolerance_cm1: num(&v, &["bands_criterion", "tolerance_cm1"])?,
             bands_explained_fraction: share(&v, &["bands_criterion", "explained_fraction"])?,
@@ -173,7 +184,12 @@ mod test {
     #[test]
     fn embedded_files_are_valid_and_carry_the_agreed_values() {
         let t = Thresholds::embedded().expect("thresholds");
-        assert_eq!((t.version, t.max_components, t.background_order), (1, 3, 3));
+        assert_eq!((t.version, t.max_components, t.background_order), (2, 3, 3));
+        assert_eq!(
+            (t.proposal_min_components, t.proposal_min_explained_peaks),
+            (2, 1)
+        );
+        assert_eq!(t.proposal_max_unexplained_share, 0.3);
         assert_eq!(t.stop_variance_share, 0.02);
         assert_eq!(t.second_active_variance_share, 0.10);
         assert_eq!(t.high_residual_variance_share, 0.15);

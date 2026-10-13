@@ -1,5 +1,5 @@
 # Pagina: grafico, picchi, regioni
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`, `pagina_miscele.md`.
 
 ## Struttura
 - `chart.js`: `draw` (SVG, curva ridotta con `thin` a ≤ 2 punti per pixel), `table` (dati dell'intervallo visibile, ≤ 400 righe), `wire(el)` → `{redraw, set(spettro|null)}` `setLayers(layers)` (banda grigia `rect.excluded` 1900–2400 cm⁻¹, curva di riferimento tratteggiata `--color-reference` e colonna «Riferimento (scalato)» nella tabella; `layers.js` li calcola; senza spettro `chart.empty`; l'etichetta y dice «intensità» se l'unità non è assorbanza).
@@ -12,7 +12,7 @@ Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagin
 - (segue) `copyText` per i menu delle righe.
 - `x` = `recall.mode` (sovrapposto → sfalsato → differenza); Maiusc+clic sul grafico mette il cursore sulla cima del picco entro 20 cm⁻¹ (`topNear`).
 - Assi: trascinare sull'asse x (sotto la fascia dei pennelli delle regioni) o sulla y ingrandisce l'intervallo.
-- Richiamo (`n`, `library.recall`): `recall.js` (`state.recall` ≤ 3 riferimenti, modo, scala; `recallView(s)`: k, r spettro e derivata, posizione nel confronto, differenza con `proposedFactor`/`residualAt`; `recallKeep` = `addResidual`; mai un livello), `recall_math.js`, `recall_ui.js`, `chart_extra.js` (curve in più).
+- Richiamo (`n`, `library.recall`): `recall.js` (`state.recall` ≤ 3 riferimenti, modo, scala; `recallView(s)`: k, r spettro e derivata dal motore (`engine.richiamo`), posizione nel confronto, differenza con `proposedFactor`/`residualAt`; `recallKeep` = `addResidual`; mai un livello), `recall_ui.js`, `chart_extra.js` (curve in più).
 - Regione: `ranges.js` (`state.rangeChoice`, `PRESETS`, `narrowError`; tasto `g`), `ranges_ui.js` (selettore; tabella r per regione nel dettaglio), `ranges_table.js` (un `confronta` per colonna), `chart_ranges.js` (fascia, `onBrush`). Solo memoria.
 - Picchi e regioni: `peaks.js` (`analyse(state)` in cache per spettro/risultato/candidato: picchi del campione e della curva di libreria del candidato scelto con `detect_peaks` del wasm sul thread principale; stato da `assign_peaks` del wasm (tolleranza dalle soglie del motore; `explained_other_form` conta come spiegato con `otherForm`; ogni riga ha `delta`, `readings` max 3, `crowded`): `explained`, `unexplained` se non c'è e il picco è `main`, `minor` se è `secondary`, `artifact` per CO₂/vapore, `plain` senza candidato.
 - Intensità forte/media/debole da `prominence_rel` (soglie provvisorie `STRONG_MIN` 0.5, `MEDIUM_MIN` 0.2).
