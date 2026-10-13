@@ -30,6 +30,7 @@ import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
 import { buildSubtractView } from "./subtract_view.js";
 import { recallActions } from "./recall.js";
+import { focusedPosition, openInverseDialog } from "./inverse_ui.js";
 import { exportActions } from "./report.js";
 import { buildRecallView, openRecallDialog } from "./recall_ui.js";
 import { subtractActions } from "./subtract.js";
@@ -119,7 +120,7 @@ function workActions(engine, announce) {
 
 /** What the chart's arrow keys do with the picked peak. @param {import("./actions.js").Ctx} ctx */
 function chartPeakKeys(ctx) {
-  return { step: (/** @type {-1 | 1} */ dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak(), level: (/** @type {-1 | 1} */ dir) => (getState().peakFocus ? (ctx.stepLevel(dir), true) : false) };
+  return { step: (/** @type {-1 | 1} */ dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak(), level: (/** @type {-1 | 1} */ dir) => (getState().peakFocus ? (ctx.stepLevel(dir), true) : false), pick: (/** @type {string} */ id) => ctx.focusPeak(id) };
 }
 
 async function start() {
@@ -142,7 +143,7 @@ async function start() {
       announce(t("status.file_closed"));
     },
     ...languageActions(() => redrawAll(), announce),
-    ...workActions(engine, announce), ...recallActions(announce), ...exportActions(announce), recallOpen: () => openRecallDialog(ctx), viewBack: () => viewBack(),
+    ...workActions(engine, announce), ...recallActions(announce), ...exportActions(announce), recallOpen: () => openRecallDialog(ctx), inverseOpen: (position) => openInverseDialog(ctx, position === undefined ? focusedPosition(getState()) : position), viewBack: () => viewBack(),
     ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
