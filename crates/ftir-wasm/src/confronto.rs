@@ -271,3 +271,13 @@ mod test {
 pub fn comparison_limits() -> String {
     ftir_core::confronti::limiti::limiti_json().unwrap_or_else(|e| e.json())
 }
+
+/// State of an r on its own against the limits a result carries (`agrees`, `partial`, `disagrees`, `unknown`); empty limits =
+/// the embedded ones. The range table of the page asks this for each cell.
+#[wasm_bindgen]
+pub fn region_agreement_of(r: f64, agreement_json: &str) -> String {
+    match ftir_core::confronti::soglie::RegionAgreement::from_json(agreement_json) {
+        Ok(a) => a.state_of_r(r).to_string(),
+        Err(_) => "unknown".to_string(),
+    }
+}

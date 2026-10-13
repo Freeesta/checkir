@@ -2,7 +2,7 @@
 import { matchScore } from "./candidati.js";
 import { formatNumber, t } from "./i18n.js";
 import { samplingName } from "./campionamento.js";
-import { libraryLabel } from "./librerie.js";
+import { libraryLabel, rowName } from "./librerie.js";
 import { decisionOf, resultOf } from "./state.js";
 
 /**
@@ -13,14 +13,16 @@ import { decisionOf, resultOf } from "./state.js";
 
 /** Level numbers of the interface (the program proposes 2, 3 or 5; 1 confirmed and 4 mixture come only from the chemist's decision). @type {Record<string, number>} */
 const LEVEL_NUMBER = { probable: 2, to_check: 3, not_identified: 5 };
-/** Identification tier shown before the word (T1 is only the chemist's; the mixture level has none). @type {Record<number, string>} */
-const TIER = { 1: "T1", 2: "T2", 3: "T3", 5: "T4" };
+/** Identification tier shown before the word, as the engine emitted it for each proposed level (`data.tier`); T1 is only the chemist's, the mixture level has none. @type {Record<number, string>} */
+const TIER = { 1: "T1" };
 /** Filled segments of the four-segment bar. @type {Record<number, number>} */
 const LEVEL_BAR = { 1: 4, 2: 3, 3: 2, 4: 2, 5: 0 };
 
 /** @param {any} data @returns {number} */
 export function levelNumber(data) {
-  return LEVEL_NUMBER[data.level_proposed] ?? 5;
+  const n = LEVEL_NUMBER[data.level_proposed] ?? 5;
+  if (typeof data.tier === "string") TIER[n] = data.tier;
+  return n;
 }
 
 /** @param {number} n @returns {number} filled segments, out of four */
@@ -43,7 +45,8 @@ export function shownLevel(s) {
 
 /** @param {any} r a row reference of an alert: name, form and r @returns {string} */
 function rowText(r) {
-  const name = r?.form ? `${r.display_name} (${r.form})` : String(r?.display_name ?? "");
+  const shown = r?.spectrum_id ? rowName(r) : String(r?.display_name ?? "");
+  const name = r?.form ? `${shown} (${r.form})` : shown;
   return `${name} ${formatNumber(matchScore(Number(r?.r)))}`;
 }
 
@@ -66,7 +69,8 @@ function familyOf(d) {
 /** The parts of a `family_flagged` line: the candidate, its family and the short motive. @param {any} d @returns {{ name: string, family: string, motive: string }} */
 export function familyParts(d) {
   const f = familyOf(d);
-  return { name: d.form ? `${d.display_name} (${d.form})` : String(d.display_name ?? ""), family: f.name, motive: f.motive };
+  const shown = d.spectrum_id ? rowName(d) : String(d.display_name ?? "");
+  return { name: d.form ? `${shown} (${d.form})` : shown, family: f.name, motive: f.motive };
 }
 
 /** The line of the alert list: candidate, family, motive and source. @param {any} d @returns {string} */

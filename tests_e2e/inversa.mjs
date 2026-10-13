@@ -26,8 +26,9 @@ async function ask(page, queries) {
     const out = [];
     for (const q of qs) {
       const a = await m.searchPeaks(q);
-      const mine = (a?.results ?? []).find((r) => r.lib === "sintetica");
-      out.push({ missing: a?.missing, answers: mine ? [JSON.parse(mine.json)] : [] });
+      const parsed = a ? JSON.parse(a.json) : null;
+      const hits = (parsed?.hits ?? []).filter((h) => h.lib === "sintetica");
+      out.push({ missing: a?.missing, answers: parsed?.error_key ? [parsed] : parsed ? [{ total: hits.length, hits }] : [] });
     }
     return { status: m.peakIndexStatus("sintetica"), out };
   }, queries);

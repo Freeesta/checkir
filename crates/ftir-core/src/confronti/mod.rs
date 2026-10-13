@@ -11,6 +11,7 @@ use crate::passi::catene::{self, CONFRONTO_V1};
 use crate::passi::maschera;
 use crate::spectrum::Spectrum;
 
+pub mod accordo;
 pub mod asls;
 pub mod cache_bytes;
 pub mod cerca;

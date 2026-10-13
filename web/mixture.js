@@ -8,7 +8,7 @@ import { candidateKey } from "./state.js";
 /**
  * The mixture proposal of a comparison (`data.mixture`, made in the worker by `miscele_job.js`): the components that together explain the
  * spectrum, each with its contribution to the spectrum (a share of the explained area, never a percentage by weight or an amount) and
- * the main peaks it explains. The program proposes; the chemist accepts it at level 4 or leaves it.
+ * the main peaks it explains. The program proposes; the chemist accepts it as a mixture or leaves it.
  * When the engine rejects the proposal (`data.mixture.rejected`) there is no component, only the reason, shown in place of the mixture.
  * @typedef {{ id: string, library: string, name: string, substance: string | null, is_cut: boolean, contribution: number, explained: number | null, minor?: boolean }} Component
  */
@@ -37,6 +37,12 @@ export function mixtureTaken(data, keys) {
   return want.length > 0 && want.length === keys.length && want.every((k) => keys.includes(k));
 }
 
+/** The note beside the level chip: «Proposed mixture: A + B»; null when there is no proposal. @param {any} data @param {(c: Component) => string} nameOf @returns {HTMLElement | null} */
+export function mixtureChip(data, nameOf) {
+  const parts = mixtureComponents(data);
+  return parts.length ? el("span", { class: "mixture-chip", "data-mixture-chip": "1" }, [t("mixture.chip", { names: parts.map(nameOf).join(" + ") })]) : null;
+}
+
 /** @param {Component} c @param {(c: Component) => string} nameOf @returns {HTMLElement} */
 function componentRow(c, nameOf) {
   const explained = c.explained === null ? "—" : formatNumber(c.explained);
@@ -63,7 +69,7 @@ function rejectedBlock(mixture, nameOf) {
 
 /**
  * The lines above the table: «Mixture: A + B», each part with its contribution and peaks explained, the peaks nobody explains, the alerts
- * of the mixture search and the button that takes the mixture at level 4.
+ * of the mixture search and the button that takes the mixture.
  * @param {any} data @param {boolean} taken the draft already holds exactly these components @param {boolean} locked a signed decision cannot change
  * @param {(c: Component) => string} nameOf the name in the active language @param {() => void} accept
  * @returns {HTMLElement | null} null when there is no proposal; the reason when the engine rejected one

@@ -1,6 +1,7 @@
 // @ts-check
 import { assignContext } from "./bands_data.js";
-import { EXCLUDED_CM1, referenceFor } from "./match.js";
+import { EXCLUDED_CM1 } from "./match.js";
+import { referenceFor, useReferenceEngine } from "./reference.js";
 import { mixtureComponents } from "./mixture.js";
 import { candidateName, selectedCandidate } from "./results.js";
 import { engineUnit } from "./spectrum.js";
@@ -32,11 +33,11 @@ const sampleCache = new WeakMap();
 /** @type {{ key: string, value: Analysis } | null} */
 let last = null;
 
-/** Agreement of a regional r by the limits the result carries (`thresholds.region_agreement`, from `soglie_confronto.json`); «unknown» without them. @param {number | null} r @param {any | null} data @returns {Agreement} */
+/** Agreement of an r, read by the engine (`region_agreement_of`) with the limits the result carries (`thresholds.region_agreement`); «unknown» without an r or an engine. @param {number | null} r @param {any | null} data @returns {Agreement} */
 export function agreementOf(r, data) {
-  const a = data?.thresholds?.region_agreement;
-  if (r === null || !Number.isFinite(r) || !a) return "unknown";
-  return r >= a.agree_min ? "agrees" : r >= a.partial_min ? "partial" : "disagrees";
+  if (r === null || !engine) return "unknown";
+  const limits = data?.thresholds?.region_agreement;
+  return /** @type {Agreement} */ (engine.region_agreement_of(r, limits ? JSON.stringify(limits) : ""));
 }
 
 /** The regions to show: those of the result with their r, else the defaults without one. @param {any | null} data @returns {Region[]} */
@@ -172,6 +173,7 @@ export function resetPeaks() {
 /** @param {import("./engine.js").Engine | null} e @param {(text: string) => void} announce */
 export function peaksActions(e, announce) {
   engine = e;
+  useReferenceEngine(e);
   return {
     togglePeaks: () => {
       const on = !getState().showPeaks;

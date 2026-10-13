@@ -109,8 +109,8 @@ async function indexLibrary(lib) {
 /** @param {{ runId: number, libs: string[], query: unknown }} job the libraries to search (those without an index yet are left out) */
 async function peakQuery(job) {
   await engine();
-  const results = job.libs.filter((id) => indexed.has(id)).map((id) => ({ lib: id, json: mod.peak_index_query(id, JSON.stringify(job.query)) }));
-  scope.postMessage({ type: "peak_result", runId: job.runId, results, missing: job.libs.filter((id) => !indexed.has(id)) });
+  const answer = mod.peak_index_query_all(JSON.stringify(job.libs.filter((id) => indexed.has(id))), JSON.stringify(job.query));
+  scope.postMessage({ type: "peak_result", runId: job.runId, json: answer, missing: job.libs.filter((id) => !indexed.has(id)) });
 }
 
 /** @param {LibMessage[]} libs the libraries to hold; `rows` is present only for those not sent before */

@@ -26,3 +26,22 @@ pub fn richiamo(
         params_json,
     )
 }
+
+/// Factor that brings a library spectrum to the height of the sample (highest band outside the excluded zone `[from, to]`).
+#[wasm_bindgen]
+pub fn reference_scale(sx: &[f64], sy: &[f64], rx: &[f64], ry: &[f64], from: f64, to: f64) -> f64 {
+    ftir_core::reference::reference_scale((sx, sy), (rx, ry), (from, to))
+}
+
+/// The library values times `reference_scale`, for the overlay and the assignment of the peaks.
+#[wasm_bindgen]
+pub fn reference_scaled(
+    sx: &[f64],
+    sy: &[f64],
+    rx: &[f64],
+    ry: &[f64],
+    from: f64,
+    to: f64,
+) -> Vec<f64> {
+    ftir_core::reference::reference_scaled((sx, sy), (rx, ry), (from, to))
+}
