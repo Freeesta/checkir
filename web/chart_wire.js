@@ -2,9 +2,13 @@
 import { draw, table } from "./chart.js";
 import { attachMenu } from "./chart_menu.js";
 import { createCursors } from "./chart_cursors.js";
-import { attachInput } from "./chart_input.js";
+import { attachInput, clientWavenumber } from "./chart_input.js";
 import { formatNumber, t } from "./i18n.js";
+import { topNear } from "./spectrum.js";
 import { clamp, pan, zoom } from "./view.js";
+
+/** Shift+click looks for the top of a peak this far from the pointer, cm⁻¹. */
+const SNAP_CM1 = 20;
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** @typedef {import("./view.js").View} View */
@@ -88,25 +92,6 @@ function peakKey(e, peaks) {
   return e.key === "ArrowRight" ? peaks.step(1) : e.key === "ArrowLeft" ? peaks.step(-1) : false;
 }
 
-/** The points of a spectrum inside a view as CSV text, numbers in the machine form (dot decimal). Only the sample's own data: nothing of a library. @param {Spectrum} s @param {View} v @returns {string} */
-export function tableCsv(s, v) {
-  const rows = [`wavenumber_cm1,${s.y_unit === "Transmittance" ? "transmittance" : s.y_unit === undefined || s.y_unit === "Absorbance" ? "absorbance" : "intensity"}`];
-  s.wavenumber_cm1.forEach((x, i) => {
-    if (x >= v.min && x <= v.max) rows.push(`${x},${s.y[i]}`);
-  });
-  return rows.join("\n") + "\n";
-}
-
-/** Offer a text as a local download (nothing leaves the browser). @param {string} name @param {string} text */
-function download(name, text) {
-  const url = URL.createObjectURL(new Blob([text], { type: "text/csv" }));
-  const a = Object.assign(document.createElement("a"), { href: url, download: name });
-  document.body.append(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
-
 /** The zoom and pan keys of the focused chart; the peak keys come first when they are on. @param {HTMLElement} host @param {Record<string, number>} keys @param {(i: number) => void} run @param {(e: KeyboardEvent) => boolean} peakKeys */
 function attachViewKeys(host, keys, run, peakKeys) {
   host.addEventListener("keydown", (e) => {
@@ -160,12 +145,13 @@ function remember(past, v, burst) {
   if (past.views.length > 10) past.views.shift();
 }
 
-/** The menu's view of the chart. @param {{ has: () => boolean, back: () => unknown, view: () => View, full: () => View, setView: (v: View) => void, y: ReturnType<typeof createYAxis>, cursors: ReturnType<typeof createCursors>, toggleLockY: () => void, lockButton: HTMLElement, csv: () => void }} c @returns {import("./chart_menu.js").MenuChart} */
+/** The menu's view of the chart. @param {{ has: () => boolean, wnAt: (e: MouseEvent) => number | null, view: () => View, full: () => View, setView: (v: View) => void, y: ReturnType<typeof createYAxis>, cursors: ReturnType<typeof createCursors>, toggleLockY: () => void, lockButton: HTMLElement }} c @returns {import("./chart_menu.js").MenuChart} */
 function menuChart(c) {
   const centre = () => (c.view().min + c.view().max) / 2;
   return {
     hasSpectrum: c.has,
-    back: c.back,
+    cursorAt: (i, wn) => c.cursors.set(i, wn),
+    wnAt: c.wnAt,
     zoomOut: () => c.setView(zoom(c.view(), c.full(), 2)),
     showAll: () => c.setView({ ...c.full() }),
     resetAll: () => (c.y.clear(), c.lockButton.setAttribute("aria-pressed", "false"), c.cursors.clear(), c.setView({ ...c.full() })),
@@ -173,7 +159,6 @@ function menuChart(c) {
     isLocked: c.y.locked,
     toggleCursors: () => (c.cursors.any() ? c.cursors.clear() : c.cursors.cycle(centre())),
     cursorsOn: c.cursors.any,
-    exportTable: c.csv,
   };
 }
 
@@ -232,14 +217,14 @@ export function wire(el, opts = {}) {
   el.toolbar.replaceChildren(...buttons);
   attachViewKeys(el.chart, keys, (i) => setView(moves[i][2]()), (e) => layers.marks !== undefined && opts.peaks !== undefined && peakKey(e, opts.peaks));
   const input = {
-    geom: () => geom, view: () => v, full: () => full, setView, cursors, toggleLockY, isLocked: y.locked, announce: say, brush: opts.onBrush,
+    geom: () => geom, view: () => v, full: () => full, setView, cursors, toggleLockY, isLocked: y.locked, announce: say, brush: opts.onBrush, snap: (/** @type {number} */ wn) => (s ? topNear(s, wn, SNAP_CM1) : wn),
     pickPeak: (/** @type {string} */ id) => (layers.marks !== undefined ? (opts.peaks?.pick(id), true) : false),
     yZoom: (/** @type {number} */ a, /** @type {number} */ b) => (y.zoomTo(a, b), update()),
     yZoomBy: (/** @type {number} */ f) => geom && (y.zoomBy(geom, f), update()),
   };
   attachInput(el.chart, input);
   const back = () => past.views.length && ((v = /** @type {View} */ (past.views.pop())), update());
-  if (opts.ctx) attachMenu(el.chart, menuChart({ has: () => s !== null, back, view: () => v, full: () => full, setView, y, cursors, toggleLockY, lockButton, csv: () => s && download(`${opts.codeOf?.() ?? "spectrum"}.csv`, tableCsv(s, v)) }), opts.ctx);
+  if (opts.ctx) attachMenu(el.chart, menuChart({ has: () => s !== null, view: () => v, full: () => full, setView, y, cursors, toggleLockY, lockButton, wnAt: (e) => clientWavenumber(el.chart, input, e) }), opts.ctx);
   refresh();
   update();
   return {
