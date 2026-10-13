@@ -47,6 +47,13 @@ def used_keys() -> set[str]:
     return keys
 
 
+def theory_problems() -> list[str]:
+    """Chapters, glossary and sources of the theory section (tools/controlla_teoria.py): same keys in it and en."""
+    from controlla_teoria import problems
+
+    return ["theory: " + p for p in problems()]
+
+
 def main() -> int:
     cats = catalogs()
     if REF not in cats:
@@ -62,6 +69,7 @@ def main() -> int:
         for k in sorted(set(ref) & set(cat)):
             if set(PLACEHOLDER.findall(ref[k])) != set(PLACEHOLDER.findall(cat[k])):
                 bad.append(f"placeholders differ in {code}: {k}")
+    bad += theory_problems()
     for p in sorted((WEB / "lang").glob("*.json")):
         if sorted_text(p.read_text(encoding="utf-8")) != p.read_text(encoding="utf-8"):
             bad.append(f"catalog not sorted: web/lang/{p.name} (run python3 tools/ordina_cataloghi.py)")

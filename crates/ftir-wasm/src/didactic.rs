@@ -50,6 +50,13 @@ pub fn didactic_spectrum_from_interferogram(
         .unwrap_or_else(|e| e.json())
 }
 
+/// One period of a vibration mode in `frame_count` frames and its dipole: `atoms_json` =
+/// `[{el, xyz, displacement, charge?}]` → `{frames[], dipole_change[], ir_active, momentum[]}`.
+#[wasm_bindgen]
+pub fn didactic_vibration_frames(atoms_json: &str, frame_count: u32) -> String {
+    json::vibration_frames_json(atoms_json, frame_count as usize).unwrap_or_else(|e| e.json())
+}
+
 #[cfg(test)]
 mod test {
     #[test]

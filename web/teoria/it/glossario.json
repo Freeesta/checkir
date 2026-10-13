@@ -1,0 +1,562 @@
+{
+ "schema": "glossary/1",
+ "lang": "it",
+ "entries": [
+  {
+   "id": "wavenumber",
+   "term": "Numero d'onda (ν̃)",
+   "term_other_lang": "wavenumber",
+   "definition": "Quante onde entrano in un centimetro, in cm⁻¹: più è alto, più la luce ha energia.",
+   "see_also": [
+    "mid-infrared"
+   ]
+  },
+  {
+   "id": "mid-infrared",
+   "term": "Medio infrarosso",
+   "term_other_lang": "mid-infrared (MIR)",
+   "definition": "La zona da 4000 a 400 cm⁻¹, dove cadono le vibrazioni fondamentali delle molecole.",
+   "see_also": [
+    "wavenumber",
+    "fundamental-band"
+   ]
+  },
+  {
+   "id": "transmittance",
+   "term": "Trasmittanza (T)",
+   "term_other_lang": "transmittance",
+   "definition": "La frazione di luce che attraversa il campione; in percentuale è la %T.",
+   "see_also": [
+    "absorbance"
+   ]
+  },
+  {
+   "id": "absorbance",
+   "term": "Assorbanza (A)",
+   "term_other_lang": "absorbance",
+   "definition": "Una misura di quanta luce il campione trattiene: A = −log₁₀T, e cresce con la quantità di sostanza.",
+   "see_also": [
+    "transmittance",
+    "beer-lambert"
+   ]
+  },
+  {
+   "id": "beer-lambert",
+   "term": "Legge di Lambert-Beer",
+   "term_other_lang": "Beer–Lambert law",
+   "definition": "A = ε·b·c: l'assorbanza è proporzionale al cammino della luce e alla concentrazione.",
+   "see_also": [
+    "absorbance"
+   ]
+  },
+  {
+   "id": "molecular-vibration",
+   "term": "Vibrazione molecolare",
+   "term_other_lang": "molecular vibration",
+   "definition": "Il movimento periodico degli atomi attorno alle loro posizioni di equilibrio.",
+   "see_also": [
+    "normal-mode"
+   ]
+  },
+  {
+   "id": "normal-mode",
+   "term": "Modo normale",
+   "term_other_lang": "normal mode",
+   "definition": "Una vibrazione in cui tutti gli atomi oscillano insieme, alla stessa frequenza e in fase.",
+   "see_also": [
+    "molecular-vibration",
+    "degrees-of-freedom"
+   ]
+  },
+  {
+   "id": "degrees-of-freedom",
+   "term": "Gradi di libertà vibrazionali",
+   "term_other_lang": "vibrational degrees of freedom",
+   "definition": "Il numero dei modi di una molecola: 3N−6 se non è lineare, 3N−5 se è lineare (N = numero di atomi).",
+   "see_also": [
+    "normal-mode"
+   ]
+  },
+  {
+   "id": "force-constant",
+   "term": "Costante di forza (k)",
+   "term_other_lang": "force constant",
+   "definition": "La rigidità della «molla» di un legame: cresce passando da legame singolo a doppio e triplo.",
+   "see_also": [
+    "harmonic-oscillator",
+    "reduced-mass"
+   ]
+  },
+  {
+   "id": "reduced-mass",
+   "term": "Massa ridotta (μ)",
+   "term_other_lang": "reduced mass",
+   "definition": "m₁m₂/(m₁+m₂): la massa «efficace» che oscilla quando due atomi sono legati.",
+   "see_also": [
+    "force-constant"
+   ]
+  },
+  {
+   "id": "harmonic-oscillator",
+   "term": "Oscillatore armonico",
+   "term_other_lang": "harmonic oscillator",
+   "definition": "Il modello della molla ideale: livelli ugualmente distanziati e numero d'onda proporzionale a √(k/μ).",
+   "see_also": [
+    "anharmonicity"
+   ]
+  },
+  {
+   "id": "anharmonicity",
+   "term": "Anarmonicità",
+   "term_other_lang": "anharmonicity",
+   "definition": "Lo scostamento dalla molla ideale: i livelli si avvicinano salendo e diventano possibili le armoniche deboli.",
+   "see_also": [
+    "overtone",
+    "harmonic-oscillator"
+   ]
+  },
+  {
+   "id": "selection-rule",
+   "term": "Regola di selezione",
+   "term_other_lang": "selection rule",
+   "definition": "La condizione perché una transizione sia permessa: nell'IR serve che il dipolo cambi durante la vibrazione.",
+   "see_also": [
+    "dipole-moment",
+    "ir-active"
+   ]
+  },
+  {
+   "id": "dipole-moment",
+   "term": "Momento di dipolo",
+   "term_other_lang": "dipole moment",
+   "definition": "La separazione di carica in una molecola; per assorbire l'IR deve oscillare con la vibrazione.",
+   "see_also": [
+    "selection-rule"
+   ]
+  },
+  {
+   "id": "ir-active",
+   "term": "IR-attivo / IR-inattivo",
+   "term_other_lang": "IR-active / IR-inactive",
+   "definition": "Un modo è IR-attivo se assorbe l'infrarosso, inattivo se no (come lo stiramento simmetrico del CO₂).",
+   "see_also": [
+    "selection-rule",
+    "dipole-moment"
+   ]
+  },
+  {
+   "id": "symmetric-stretching",
+   "term": "Stiramento simmetrico",
+   "term_other_lang": "symmetric stretching",
+   "definition": "Due legami si allungano e si accorciano insieme.",
+   "see_also": [
+    "asymmetric-stretching"
+   ]
+  },
+  {
+   "id": "asymmetric-stretching",
+   "term": "Stiramento asimmetrico",
+   "term_other_lang": "asymmetric (antisymmetric) stretching",
+   "definition": "Un legame si allunga mentre l'altro si accorcia; di solito cade a numeri d'onda più alti del simmetrico.",
+   "see_also": [
+    "symmetric-stretching"
+   ]
+  },
+  {
+   "id": "bending",
+   "term": "Piegamento (deformazione)",
+   "term_other_lang": "bending",
+   "definition": "Cambia l'angolo tra i legami, non la loro lunghezza.",
+   "see_also": [
+    "scissoring",
+    "rocking",
+    "wagging",
+    "twisting"
+   ]
+  },
+  {
+   "id": "scissoring",
+   "term": "Forbice",
+   "term_other_lang": "scissoring",
+   "definition": "Piegamento nel piano: l'angolo H–X–H si apre e si chiude.",
+   "see_also": [
+    "bending"
+   ]
+  },
+  {
+   "id": "rocking",
+   "term": "Dondolo",
+   "term_other_lang": "rocking",
+   "definition": "Piegamento nel piano: il gruppo oscilla in blocco da un lato all'altro.",
+   "see_also": [
+    "bending"
+   ]
+  },
+  {
+   "id": "wagging",
+   "term": "Ventaglio",
+   "term_other_lang": "wagging",
+   "definition": "Piegamento fuori dal piano: il gruppo si inclina avanti e indietro tutto insieme.",
+   "see_also": [
+    "bending"
+   ]
+  },
+  {
+   "id": "twisting",
+   "term": "Torsione",
+   "term_other_lang": "twisting",
+   "definition": "Piegamento fuori dal piano: un atomo va avanti mentre l'altro va indietro.",
+   "see_also": [
+    "bending"
+   ]
+  },
+  {
+   "id": "oop-bending",
+   "term": "Piegamento C–H fuori dal piano",
+   "term_other_lang": "C–H out-of-plane bending",
+   "definition": "Gli idrogeni aromatici escono dal piano dell'anello; la posizione dipende da come l'anello è sostituito.",
+   "see_also": [
+    "bending"
+   ]
+  },
+  {
+   "id": "ring-breathing",
+   "term": "Respirazione dell'anello",
+   "term_other_lang": "ring breathing",
+   "definition": "L'anello si dilata e si contrae in modo uniforme; è un concetto, non una banda diagnostica nell'IR.",
+   "see_also": [
+    "normal-mode"
+   ]
+  },
+  {
+   "id": "fundamental-band",
+   "term": "Banda fondamentale",
+   "term_other_lang": "fundamental band",
+   "definition": "Il passaggio dal livello 0 al livello 1 di un modo: è la banda più intensa di quel modo.",
+   "see_also": [
+    "overtone"
+   ]
+  },
+  {
+   "id": "overtone",
+   "term": "Armonica (sovratono)",
+   "term_other_lang": "overtone",
+   "definition": "Il passaggio da 0 a 2, a 3…: è debole e cade un po' sotto il doppio, il triplo… della fondamentale.",
+   "see_also": [
+    "fundamental-band",
+    "anharmonicity"
+   ]
+  },
+  {
+   "id": "combination-band",
+   "term": "Banda di combinazione",
+   "term_other_lang": "combination band",
+   "definition": "Due modi eccitati insieme: la banda cade vicino alla somma dei loro numeri d'onda.",
+   "see_also": [
+    "overtone"
+   ]
+  },
+  {
+   "id": "fermi-resonance",
+   "term": "Risonanza di Fermi",
+   "term_other_lang": "Fermi resonance",
+   "definition": "Due livelli della stessa simmetria e di energia vicina si mescolano, si respingono e si dividono l'intensità.",
+   "see_also": [
+    "overtone",
+    "fundamental-band"
+   ]
+  },
+  {
+   "id": "vibrational-coupling",
+   "term": "Accoppiamento vibrazionale",
+   "term_other_lang": "vibrational coupling",
+   "definition": "Due oscillatori con un atomo in comune vibrano come una coppia, in modo simmetrico e asimmetrico.",
+   "see_also": [
+    "symmetric-stretching",
+    "asymmetric-stretching"
+   ]
+  },
+  {
+   "id": "hydrogen-bond",
+   "term": "Legame a idrogeno",
+   "term_other_lang": "hydrogen bond",
+   "definition": "Un'interazione X–H···Y che abbassa e allarga la banda di X–H.",
+   "see_also": [
+    "amine-salt"
+   ]
+  },
+  {
+   "id": "conjugation",
+   "term": "Coniugazione",
+   "term_other_lang": "conjugation",
+   "definition": "Un'alternanza di doppi legami che abbassa il numero d'onda del C=O.",
+   "see_also": [
+    "ring-strain"
+   ]
+  },
+  {
+   "id": "ring-strain",
+   "term": "Tensione d'anello",
+   "term_other_lang": "ring strain",
+   "definition": "Negli anelli piccoli il C=O è più rigido e cade a numeri d'onda più alti.",
+   "see_also": [
+    "conjugation"
+   ]
+  },
+  {
+   "id": "functional-group-region",
+   "term": "Regione dei gruppi funzionali",
+   "term_other_lang": "functional group region",
+   "definition": "Sopra circa 1500 cm⁻¹: poche bande, più facili da attribuire.",
+   "see_also": [
+    "fingerprint-region"
+   ]
+  },
+  {
+   "id": "fingerprint-region",
+   "term": "Impronta digitale",
+   "term_other_lang": "fingerprint region",
+   "definition": "Sotto circa 1500 cm⁻¹: molte bande accoppiate, tipiche della singola molecola (alcune fonti dicono 1300–650).",
+   "see_also": [
+    "functional-group-region"
+   ]
+  },
+  {
+   "id": "amine-salt",
+   "term": "Sale di ammina",
+   "term_other_lang": "amine salt",
+   "definition": "Un'ammina protonata (per esempio un cloridrato): dà una banda N–H⁺ larga tra 3200 e 2300 cm⁻¹.",
+   "see_also": [
+    "free-base",
+    "hydrogen-bond"
+   ]
+  },
+  {
+   "id": "free-base",
+   "term": "Base libera",
+   "term_other_lang": "free base",
+   "definition": "La forma non protonata dell'ammina: senza l'ampio inviluppo N–H⁺.",
+   "see_also": [
+    "amine-salt"
+   ]
+  },
+  {
+   "id": "polymorphism",
+   "term": "Polimorfismo",
+   "term_other_lang": "polymorphism",
+   "definition": "La stessa molecola impacchettata in modi diversi nel cristallo: lo spettro del solido cambia.",
+   "see_also": [
+    "hydrogen-bond"
+   ]
+  },
+  {
+   "id": "michelson-interferometer",
+   "term": "Interferometro di Michelson",
+   "term_other_lang": "Michelson interferometer",
+   "definition": "Divide il fascio in due bracci, uno fisso e uno mobile, e poi li ricombina.",
+   "see_also": [
+    "beamsplitter",
+    "opd"
+   ]
+  },
+  {
+   "id": "beamsplitter",
+   "term": "Divisore di fascio",
+   "term_other_lang": "beamsplitter",
+   "definition": "Una lastra semiriflettente che manda metà della luce in ciascun braccio.",
+   "see_also": [
+    "michelson-interferometer"
+   ]
+  },
+  {
+   "id": "opd",
+   "term": "Differenza di cammino ottico",
+   "term_other_lang": "optical path difference (OPD)",
+   "definition": "La differenza di percorso tra i due bracci: il doppio dello spostamento dello specchio mobile.",
+   "see_also": [
+    "interferogram"
+   ]
+  },
+  {
+   "id": "interferogram",
+   "term": "Interferogramma",
+   "term_other_lang": "interferogram",
+   "definition": "Il segnale del rivelatore in funzione della differenza di cammino ottico.",
+   "see_also": [
+    "centerburst",
+    "fourier-transform"
+   ]
+  },
+  {
+   "id": "centerburst",
+   "term": "Picco centrale (ZPD)",
+   "term_other_lang": "centerburst / zero path difference",
+   "definition": "Il picco dell'interferogramma dove la differenza di cammino è zero e tutte le onde sono in fase.",
+   "see_also": [
+    "interferogram"
+   ]
+  },
+  {
+   "id": "reference-laser",
+   "term": "Laser di riferimento",
+   "term_other_lang": "reference laser (HeNe 632.8 nm)",
+   "definition": "Un laser rosso che misura dove si trova lo specchio e decide quando campionare il segnale.",
+   "see_also": [
+    "connes-advantage"
+   ]
+  },
+  {
+   "id": "fourier-transform",
+   "term": "Trasformata di Fourier (FFT)",
+   "term_other_lang": "Fourier transform",
+   "definition": "Il calcolo che trasforma l'interferogramma in spettro.",
+   "see_also": [
+    "interferogram"
+   ]
+  },
+  {
+   "id": "fellgett-advantage",
+   "term": "Vantaggio di Fellgett",
+   "term_other_lang": "Fellgett (multiplex) advantage",
+   "definition": "Tutte le frequenze sono misurate insieme: meno rumore a parità di tempo.",
+   "see_also": [
+    "jacquinot-advantage"
+   ]
+  },
+  {
+   "id": "jacquinot-advantage",
+   "term": "Vantaggio di Jacquinot",
+   "term_other_lang": "Jacquinot (throughput) advantage",
+   "definition": "Senza fenditure arriva più luce al rivelatore.",
+   "see_also": [
+    "fellgett-advantage"
+   ]
+  },
+  {
+   "id": "connes-advantage",
+   "term": "Vantaggio di Connes",
+   "term_other_lang": "Connes (wavenumber precision) advantage",
+   "definition": "La scala dei numeri d'onda è legata al laser, quindi è molto precisa.",
+   "see_also": [
+    "reference-laser"
+   ]
+  },
+  {
+   "id": "spectral-resolution",
+   "term": "Risoluzione spettrale",
+   "term_other_lang": "spectral resolution",
+   "definition": "La distanza minima tra due bande ancora separabili: circa 1/OPD massima.",
+   "see_also": [
+    "apodization",
+    "zero-filling"
+   ]
+  },
+  {
+   "id": "apodization",
+   "term": "Apodizzazione",
+   "term_other_lang": "apodization",
+   "definition": "Una funzione che smorza i bordi dell'interferogramma e i lobi laterali, a costo di bande un po' più larghe.",
+   "see_also": [
+    "spectral-resolution"
+   ]
+  },
+  {
+   "id": "zero-filling",
+   "term": "Zero-filling",
+   "term_other_lang": "zero filling",
+   "definition": "Aggiungere zeri all'interferogramma: lo spettro è più liscio ma la risoluzione non cambia.",
+   "see_also": [
+    "spectral-resolution"
+   ]
+  },
+  {
+   "id": "phase-correction",
+   "term": "Correzione di fase (Mertz)",
+   "term_other_lang": "phase correction (Mertz)",
+   "definition": "Corregge l'asimmetria dell'interferogramma reale prima della trasformata.",
+   "see_also": [
+    "interferogram"
+   ]
+  },
+  {
+   "id": "single-beam",
+   "term": "Spettro a singolo raggio",
+   "term_other_lang": "single-beam spectrum",
+   "definition": "Lo spettro grezzo: sorgente, ottiche, campione e rivelatore insieme.",
+   "see_also": [
+    "background-spectrum"
+   ]
+  },
+  {
+   "id": "background-spectrum",
+   "term": "Spettro di fondo",
+   "term_other_lang": "background spectrum",
+   "definition": "Il singolo raggio misurato senza campione: serve per fare il rapporto.",
+   "see_also": [
+    "single-beam"
+   ]
+  },
+  {
+   "id": "co-added-scans",
+   "term": "Scansioni sommate",
+   "term_other_lang": "co-added scans",
+   "definition": "La media di più scansioni: il rumore scende con la radice del numero di scansioni.",
+   "see_also": [
+    "fellgett-advantage"
+   ]
+  },
+  {
+   "id": "globar",
+   "term": "Globar",
+   "term_other_lang": "globar",
+   "definition": "La sorgente infrarossa: una barretta di carburo di silicio scaldata a circa 1200 K.",
+   "see_also": []
+  },
+  {
+   "id": "dlatgs",
+   "term": "DLaTGS (DTGS)",
+   "term_other_lang": "DLaTGS (DTGS) detector",
+   "definition": "Un rivelatore piroelettrico che lavora a temperatura ambiente: lineare e di uso comune.",
+   "see_also": [
+    "mct"
+   ]
+  },
+  {
+   "id": "mct",
+   "term": "MCT",
+   "term_other_lang": "mercury cadmium telluride (MCT)",
+   "definition": "Un rivelatore raffreddato con azoto liquido: più veloce e più sensibile.",
+   "see_also": [
+    "dlatgs"
+   ]
+  },
+  {
+   "id": "atr",
+   "term": "ATR (riflettanza totale attenuata)",
+   "term_other_lang": "attenuated total reflectance (ATR)",
+   "definition": "Una misura per contatto con un cristallo, senza preparare il campione.",
+   "see_also": [
+    "evanescent-wave"
+   ]
+  },
+  {
+   "id": "evanescent-wave",
+   "term": "Onda evanescente",
+   "term_other_lang": "evanescent wave",
+   "definition": "Il campo che sporge per pochi micrometri oltre la superficie del cristallo ATR.",
+   "see_also": [
+    "penetration-depth",
+    "atr"
+   ]
+  },
+  {
+   "id": "penetration-depth",
+   "term": "Profondità di penetrazione (dp)",
+   "term_other_lang": "penetration depth (dp)",
+   "definition": "La distanza a cui il campo evanescente scende a 1/e: cresce con la lunghezza d'onda.",
+   "see_also": [
+    "evanescent-wave"
+   ]
+  }
+ ]
+}
