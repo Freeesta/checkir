@@ -40,7 +40,7 @@ export async function librariesScenario(browser, base, check, axe) {
   const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 768 } });
   const page = await ctx.newPage();
   const requests = [];
-  page.on("request", (r) => requests.push(r.url()));
+  page.on("request", (r) => ["fetch", "xhr", "websocket", "eventsource", "ping"].includes(r.resourceType()) && requests.push(r.url()));
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
   await page.goto(base);
@@ -67,6 +67,7 @@ export async function librariesScenario(browser, base, check, axe) {
   ]);
   const mine = page.locator('[data-library="mia-libreria"]');
   await mine.waitFor();
+  await page.locator('details[data-panel="libraries"] .notes').waitFor();
   const notes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
   check("import: the summary counts imported and discarded files and names the broken one", /2 spettri, 2 scartati/.test(notes) && /rotto\.jdx/.test(notes), notes);
   check("import: the private library is marked private with personal-use licence", /Privata/.test((await mine.textContent()) ?? "") && /uso personale/.test((await mine.textContent()) ?? ""));
