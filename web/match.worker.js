@@ -90,6 +90,7 @@ async function runProva(ids) {
   if (!step) return;
   scope.postMessage({ type: "prova", done: step.done, total: step.total });
   scope.postMessage({ type: "prova-report", json: mod.confronto_prova_rapporto() });
+}
 
 /** Builds (or reads from the cache) the peak index of a library, then tells the page. @param {LibMessage} lib */
 async function indexLibrary(lib) {
