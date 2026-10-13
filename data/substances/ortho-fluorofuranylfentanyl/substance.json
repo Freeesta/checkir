@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ortho-fluorofuranylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "ortho-Fluorofuranylfentanyl",
+      "synonyms": [
+        "o-fluorofuranylfentanyl",
+        "ortho-fluorofuranyl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "ortho-Fluorofuranilfentanil",
+      "synonyms": [
+        "o-fluorofuranilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(2-fluorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]furan-2-carboxamide",
+  "formula": "C24H25FN2O2",
+  "molar_mass_g_mol": 392.5,
+  "smiles": "C1CN(CCC1N(C2=CC=CC=C2F)C(=O)C3=CC=CO3)CCC4=CC=CC=C4",
+  "inchi": "InChI=1S/C24H25FN2O2/c25-21-9-4-5-10-22(21)27(24(28)23-11-6-18-29-23)20-13-16-26(17-14-20)15-12-19-7-2-1-3-8-19/h1-11,18,20H,12-17H2",
+  "inchikey": "QAURJPLHDYKGHY-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "101343-73-1",
+    "pubchem_cid": 13653679
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

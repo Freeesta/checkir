@@ -1,0 +1,81 @@
+{
+  "schema": "datasheet/1",
+  "substance": "cyclopropyl-fentanyl",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "fentanyls",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "norcyclopropylfentanyl",
+        "reaction": "other",
+        "source": "cutler2019"
+      },
+      {
+        "from": "parent",
+        "to": "monohydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "cutler2019"
+      },
+      {
+        "from": "parent",
+        "to": "N-oxide",
+        "reaction": "other",
+        "source": "cutler2019"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "norcyclopropylfentanyl",
+        "active": null,
+        "source": "vikingsson2019"
+      },
+      {
+        "name_key": "4-hydroxyphenethyl-cyclopropylfentanyl",
+        "active": null,
+        "marker": true,
+        "source": "vikingsson2019"
+      },
+      {
+        "name_key": "3-4-dihydroxyphenethyl-cyclopropylfentanyl",
+        "active": null,
+        "marker": true,
+        "source": "vikingsson2019"
+      },
+      {
+        "name_key": "4-hydroxy-3-methoxyphenethyl-cyclopropylfentanyl",
+        "active": null,
+        "marker": true,
+        "source": "vikingsson2019"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "cyclopropyl-fentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Cyclopropylfentanyl",
+      "synonyms": [
+        "cyclopropyl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Ciclopropilfentanil",
+      "synonyms": [
+        "ciclopropil fentanil"
+      ]
+    }
+  },
+  "iupac": "N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]cyclopropanecarboxamide",
+  "formula": "C23H28N2O",
+  "molar_mass_g_mol": 348.5,
+  "smiles": "C1CC1C(=O)N(C2CCN(CC2)CCC3=CC=CC=C3)C4=CC=CC=C4",
+  "inchi": "InChI=1S/C23H28N2O/c26-23(20-11-12-20)25(21-9-5-2-6-10-21)22-14-17-24(18-15-22)16-13-19-7-3-1-4-8-19/h1-10,20,22H,11-18H2",
+  "inchikey": "OIQSKDSKROTEMN-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1169-68-2",
+    "pubchem_cid": 137332271
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
