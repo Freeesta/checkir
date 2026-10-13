@@ -9,9 +9,11 @@ import { collaudoCScenario } from "./collaudo_c.mjs";
 import { cleanScenario } from "./pulizia.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
+import { libraryTestScenario } from "./prova.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
+import { collaudoScenario } from "./collaudo.mjs";
 import { exportScenario } from "./esporta.mjs";
 import { recallScenario } from "./richiamo.mjs";
 import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
@@ -94,6 +96,7 @@ async function phoneScenario(browser) {
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
   await page.keyboard.press("Escape"); // the open phone menu overlays the chart toolbar, which axe would count as an obscured target
+  await page.waitForFunction(() => document.querySelector("#chart svg > text:last-child")?.textContent === "Absorbance", null, { timeout: 5000 }).catch(() => {});
   const axis = await page.textContent("#chart svg > text:last-child");
   check("language switch to English", axis === "Absorbance", axis ?? "");
   check("table: decimal point in English", /^\d+\.\d{4}$/.test((await page.locator("#table tbody tr:first-child td:nth-child(2)").textContent()) ?? ""));
@@ -320,11 +323,13 @@ async function run() {
     await librariesScenario(browser, base, check, axe);
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
+    await libraryTestScenario(browser, base, check, axe);
     await areaScenario(browser, base, check, axe);
     await cleanScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
+    await collaudoScenario(browser, base, check);
     await collaudoCScenario(browser, base, check);
-    await inverseScenario(browser, base, check);
+    await inverseScenario(browser, base, check, axe);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
     await recallScenario(browser, base, check, axe);

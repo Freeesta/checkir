@@ -150,6 +150,47 @@ pub fn confronto_gemelli_importa(bytes: &[u8]) -> String {
     }
 }
 
+/// Start the library test over the libraries `ids_json` (a JSON array of ids) or carry on with the one begun for the
+/// same libraries: `{"done":n,"total":m}`.
+#[wasm_bindgen]
+pub fn confronto_prova_inizia(ids_json: &str) -> String {
+    let ids: Vec<String> = match ftir_core::passi::json::parse(ids_json) {
+        Ok(v) => v
+            .as_arr()
+            .unwrap_or_default()
+            .iter()
+            .filter_map(|x| x.as_str().map(str::to_string))
+            .collect(),
+        Err(e) => return e.json(),
+    };
+    progress(with(|m| m.prova_start(&ids)))
+}
+
+/// Next block of the library test: `{"done":n,"total":m}`; the page calls it until `done == total` (or stops).
+#[wasm_bindgen]
+pub fn confronto_prova_blocco() -> String {
+    progress(with(|m| m.prova_step()))
+}
+
+/// JSON `prova-libreria/1` of the test so far.
+#[wasm_bindgen]
+pub fn confronto_prova_rapporto() -> String {
+    with(|m| m.prova_report()).unwrap_or_else(|e| e.json())
+}
+
+/// CSV of the test so far (ids and names only), or the error JSON.
+#[wasm_bindgen]
+pub fn confronto_prova_csv() -> String {
+    with(|m| m.prova_csv()).unwrap_or_else(|e| e.json())
+}
+
+fn progress(r: Result<(usize, usize), EngineError>) -> String {
+    r.map_or_else(
+        |e| e.json(),
+        |(done, total)| format!("{{\"done\":{done},\"total\":{total}}}"),
+    )
+}
+
 /// `confronta(spettro, opzioni) → risultato`: the query as JSON `{role, y_unit, wavenumber_cm1, y}`, the options as
 /// JSON (`ranges`, `range_preset`, `libraries`, `origin`); the result is `ftir-risultato-confronto/1` or an error.
 #[wasm_bindgen]
@@ -210,5 +251,13 @@ mod test {
         let e = confronta("{}", "");
         assert!(e.contains("\"error_key\""), "{e}");
         assert!(confronto_libreria_importa(b"junk").contains("confronti.cache_non_valida"));
+        assert_eq!(
+            confronto_prova_inizia("[\"demo\"]"),
+            "{\"done\":0,\"total\":3}"
+        );
+        assert_eq!(confronto_prova_blocco(), "{\"done\":3,\"total\":3}");
+        assert!(confronto_prova_rapporto().contains("\"schema\":\"prova-libreria/1\""));
+        assert!(confronto_prova_csv().starts_with("kind,r,"));
+        assert!(confronto_prova_inizia("[\"nope\"]").contains("confronti.libreria_sconosciuta"));
     }
 }
