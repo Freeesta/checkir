@@ -42,9 +42,17 @@ fn json_sha256_matches_the_file_and_no_path_or_user_text_is_left() {
     for p in main_files() {
         let text = std::fs::read_to_string(&p).expect("read");
         let meta = std::fs::read_to_string(p.with_extension("json")).expect("json next to it");
-        assert!(meta.contains(&sha256_hex(text.as_bytes())), "{}", p.display());
+        assert!(
+            meta.contains(&sha256_hex(text.as_bytes())),
+            "{}",
+            p.display()
+        );
         for bad in [":\\", "/home/", "Users/", "Users\\", "SNO:", "Serial"] {
-            assert!(!text.contains(bad) && !meta.contains(bad), "{} has {bad}", p.display());
+            assert!(
+                !text.contains(bad) && !meta.contains(bad),
+                "{} has {bad}",
+                p.display()
+            );
         }
     }
 }

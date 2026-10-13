@@ -2,8 +2,8 @@
 //! the main spectrum, the two interferograms, the kept parameters and the cleaning report (never a value of a stripped field).
 //! Run by hand by `tools/demo/genera_demo.py`, outside CI: `cargo run --release -p ftir-core --example export_demo -- FILE.ispd`.
 use ftir_core::anonimizza::{clean, Report};
-use ftir_core::readers::model::{Limits, Options, Role, Spectrum, XUnit};
 use ftir_core::readers::ispd;
+use ftir_core::readers::model::{Limits, Options, Role, Spectrum, XUnit};
 
 fn numbers(v: &[f64]) -> String {
     let items: Vec<String> = v.iter().map(|x| format!("{x:?}")).collect();
@@ -39,16 +39,24 @@ fn report_json(r: &Report) -> String {
 
 /// The value of a kept field by its normalised key, from the main spectrum only.
 fn field<'a>(s: &'a Spectrum, key: &str) -> Option<&'a str> {
-    s.fields.iter().find(|f| f.key == key).map(|f| f.value.as_str())
+    s.fields
+        .iter()
+        .find(|f| f.key == key)
+        .map(|f| f.value.as_str())
 }
 
 fn main() {
-    let path = std::env::args().nth(1).expect("usage: export_demo FILE.ispd");
+    let path = std::env::args()
+        .nth(1)
+        .expect("usage: export_demo FILE.ispd");
     let bytes = std::fs::read(&path).expect("cannot read the file");
     let opened = (ispd::READER.open)(&bytes, &Limits::STANDARD, &Options::default());
     let (doc, report) = clean(&opened.expect("cannot open the file"));
     let main = doc.spectra.get(doc.primary).expect("no main spectrum");
-    assert!(main.x.unit == XUnit::Cm1, "the main spectrum is not in wavenumbers");
+    assert!(
+        main.x.unit == XUnit::Cm1,
+        "the main spectrum is not in wavenumbers"
+    );
     let mut out = vec![spectrum_json("main", main)];
     for (role, name) in [
         (Role::SampleInterferogram, "sample_interferogram"),

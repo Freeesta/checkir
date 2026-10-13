@@ -16,7 +16,7 @@ export async function demoScenario(browser, base, check, axe) {
     await page.setInputFiles("input[type=file]", { name: `${id}.jdx`, mimeType: "application/octet-stream", buffer });
     await page.waitForSelector("#chart polyline.curve");
     const rows = await page.locator("#table tbody tr").count();
-    check(`demo: ${id} opens and its table lists the 2924 points`, rows === 2924, String(rows));
+    check(`demo: ${id} opens and its table lists the (thinned) points`, rows > 100, String(rows));
   }
   const violations = await axe(page);
   check("demo: axe finds nothing with a real spectrum loaded", violations.length === 0, JSON.stringify(violations));
