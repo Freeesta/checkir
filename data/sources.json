@@ -7260,6 +7260,232 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13"
+    },
+    {
+      "id": "ono2022",
+      "type": "paper",
+      "title": "Hepatic and renal toxicities and metabolism of fentanyl analogues in rats (Naunyn Schmiedebergs Arch Pharmacol 396(1):149-159)",
+      "authors": [
+        "Y. Ono",
+        "M. Sakamoto",
+        "K. Makino",
+        "K. Tayama",
+        "Y. Tada",
+        "Y. Nakagawa",
+        "J. Nakajima",
+        "J. Suzuki",
+        "T. Suzuki",
+        "H. Takahashi",
+        "A. Inomata",
+        "T. Moriyasu"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00210-022-02301-8",
+      "url": "https://doi.org/10.1007/s00210-022-02301-8",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20231020043008/https://pubmed.ncbi.nlm.nih.gov/36269341/"
+    },
+    {
+      "id": "ono2025",
+      "type": "paper",
+      "title": "Assessment of μ-Opioid Receptor Signaling Responses for Fentanyl Analogs Using Luciferase Complementation Assay (Biol Pharm Bull 48(11):1769-1774)",
+      "authors": [
+        "Y. Ono",
+        "K. Tayama",
+        "K. Makino",
+        "M. Sakamoto",
+        "J. Suzuki",
+        "H. Takahashi",
+        "A. Inomata"
+      ],
+      "year": 2025,
+      "doi": "10.1248/bpb.b25-00318",
+      "url": "https://doi.org/10.1248/bpb.b25-00318",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251222062755/https://pubmed.ncbi.nlm.nih.gov/41260693/"
+    },
+    {
+      "id": "roosendaal2023",
+      "type": "paper",
+      "title": "A fatal mono-intoxication with 4-fluoroisobutyrylfentanyl: Case report with postmortem concentrations (J Anal Toxicol 47(6):541-546)",
+      "authors": [
+        "J. Roosendaal",
+        "R. Oosting",
+        "D.-P. Kloos",
+        "H. H. de Boer",
+        "J. D. J. van den Berg",
+        "S. Oldenhof",
+        "I. J. Bosman"
+      ],
+      "year": 2023,
+      "doi": "10.1093/jat/bkad034",
+      "url": "https://doi.org/10.1093/jat/bkad034",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250203032103/https://pubmed.ncbi.nlm.nih.gov/37315188/"
+    },
+    {
+      "id": "lai2026",
+      "type": "paper",
+      "title": "Reinforcing and discriminative stimulus effects of 4-fluorobutyrfentanyl, 4-fluoroisobutyrfentanyl, and isobutyrfentanyl in male rats (Eur J Pharmacol 1030:179055)",
+      "authors": [
+        "M. Lai",
+        "L. Wen",
+        "H. Li",
+        "D. Fu",
+        "Z. Xu",
+        "Q. Jin",
+        "B. Shi",
+        "W. Zhou",
+        "L. Liu",
+        "P. Xu"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.ejphar.2026.179055",
+      "url": "https://doi.org/10.1016/j.ejphar.2026.179055",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "rautio2023",
+      "type": "paper",
+      "title": "In vitro metabolite identification of acetylbenzylfentanyl, benzoylbenzylfentanyl, 3-fluoro-methoxyacetylfentanyl, and 3-phenylpropanoylfentanyl using LC-QTOF-HRMS together with synthesized references (Drug Test Anal 15(7):711-729)",
+      "authors": [
+        "T. Rautio",
+        "D. Vangerven",
+        "J. Dahlén",
+        "S. Watanabe",
+        "R. Kronstrand",
+        "S. Vikingsson",
+        "P. Konradsson",
+        "X. Wu",
+        "H. Gréen"
+      ],
+      "year": 2023,
+      "doi": "10.1002/dta.3454",
+      "url": "https://doi.org/10.1002/dta.3454",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251116030321/https://pubmed.ncbi.nlm.nih.gov/36756728/"
+    },
+    {
+      "id": "canfield2026",
+      "type": "paper",
+      "title": "The abuse-related effects of illicitly manufactured fentanyls (IMFs): A mini review (Pharmacol Biochem Behav 265:174201)",
+      "authors": [
+        "J. R. Canfield",
+        "J. E. Sprague"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.pbb.2026.174201",
+      "url": "https://doi.org/10.1016/j.pbb.2026.174201",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "obeng2025",
+      "type": "paper",
+      "title": "In vitro and in vivo pharmacological characterization of fentanyl analogs (Neuropharmacology 279:110603)",
+      "authors": [
+        "S. Obeng",
+        "K. R. Urquhart",
+        "S. Fukuda",
+        "V. L. C. Pallares",
+        "L. R. McMahon",
+        "W. E. Fantegrossi",
+        "T. Hiranita"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.neuropharm.2025.110603",
+      "url": "https://doi.org/10.1016/j.neuropharm.2025.110603",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "polke2024",
+      "type": "paper",
+      "title": "Development and validation of a liquid chromatography-tandem mass spectrometry (LC-MS/MS) method including 25 novel synthetic opioids in hair and subsequent analysis of a Swiss opioid consumer cohort (Drug Test Anal 16(11):1384-1391)",
+      "authors": [
+        "M. Polke",
+        "M. Concheiro",
+        "G. Cooper",
+        "C. Bogdal",
+        "M. R. Baumgartner",
+        "T. Krämer",
+        "T. M. Binz"
+      ],
+      "year": 2024,
+      "doi": "10.1002/dta.3663",
+      "url": "https://doi.org/10.1002/dta.3663",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251009153700/https://pubmed.ncbi.nlm.nih.gov/38382125/"
+    },
+    {
+      "id": "hewes2024",
+      "type": "paper",
+      "title": "Determination of fentanyl contamination on United States paper currency by LC-QQQ-MS (J Anal Toxicol 48(3):141-149)",
+      "authors": [
+        "M. P. Hewes",
+        "D. M. Papsun",
+        "B. K. Logan",
+        "A. J. Krotulski"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae010",
+      "url": "https://doi.org/10.1093/jat/bkae010",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "cieri2024",
+      "type": "paper",
+      "title": "Evaluating cross-reactivity of new psychoactive substances (NPS) in human whole blood by enzyme-linked immunosorbent assay (ELISA) (J Anal Toxicol 48(3):191-196)",
+      "authors": [
+        "G. Cieri",
+        "A. L. A. Mohr",
+        "R. Mastrovito",
+        "B. K. Logan"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae017",
+      "url": "https://doi.org/10.1093/jat/bkae017",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240804120257/https://pubmed.ncbi.nlm.nih.gov/38456706/"
+    },
+    {
+      "id": "mastrovito2022",
+      "type": "paper",
+      "title": "Determination of Cross-Reactivity of Novel Psychoactive Substances with Drug Screen Immunoassays Kits in Whole Blood (J Anal Toxicol 46(7):726-731)",
+      "authors": [
+        "R. Mastrovito",
+        "C. Trail",
+        "M. Lino",
+        "A. Cervantes",
+        "A. Chan-Hosokawa",
+        "F. Strathmann",
+        "B. Logan"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkab110",
+      "url": "https://doi.org/10.1093/jat/bkab110",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240604065203/https://pubmed.ncbi.nlm.nih.gov/34791285/"
     }
   ]
 }
