@@ -3,13 +3,19 @@ import { actionById } from "./actions.js";
 import { actionButton } from "./controls.js";
 import { el, icon } from "./dom.js";
 import { LANGS, currentLang, formatNumber, t } from "./i18n.js";
+import { fileRange } from "./files.js";
 import { attachTip } from "./tooltip.js";
 
 const DASH = "—";
 
+/** @param {import("./state.js").AppState} s @returns {import("./state.js").FileEntry | undefined} */
+export function activeFile(s) {
+  return s.files.find((f) => f.code === s.active) ?? s.files[0];
+}
+
 /** @param {import("./state.js").FileEntry} f @returns {string} */
 function fileChip(f) {
-  return `${f.code} · ${formatNumber(f.fromCm1)}–${formatNumber(f.toCm1)} · ${formatNumber(f.stepCm1)} ${t("unit.cm1")}`;
+  return `${f.code} · ${fileRange(f)}`;
 }
 
 /**
@@ -19,8 +25,8 @@ function fileChip(f) {
 const CHIPS = [
   {
     id: "file", panel: 1, icon: "file", labelKey: "header.file.label", tipKey: "header.file.tip",
-    value: (s) => (s.files[0] ? fileChip(s.files[0]) : DASH),
-    tip: (s) => (s.files[0] ? `${s.files[0].name ?? t("file.demo_name")} · ${t("header.file.points", { points: formatNumber(s.files[0].points) })}` : t("header.file.tip")),
+    value: (s) => { const f = activeFile(s); return f ? fileChip(f) : DASH; },
+    tip: (s) => { const f = activeFile(s); return f ? `${f.name ?? t("file.demo_name")} · ${t("header.file.points", { points: formatNumber(f.points) })}` : t("header.file.tip"); },
   },
   {
     id: "library", panel: 2, icon: "library", labelKey: "header.library.label", tipKey: "header.library.tip",
@@ -90,7 +96,7 @@ export function buildHeader(host, ctx, appName) {
   }
   attachTip(menu, () => t("header.menu.label"));
   /** @type {import("./state.js").AppState} */
-  let lastState = { files: [], libraries: [], result: null, peaks: { explained: 0, unexplained: 0 }, decision: null };
+  let lastState = { files: [], active: null, fileError: null, libraries: [], result: null, peaks: { explained: 0, unexplained: 0 }, decision: null };
   return {
     refresh(s) {
       lastState = s;
@@ -100,7 +106,7 @@ export function buildHeader(host, ctx, appName) {
         b.querySelector(".chip-value")?.replaceChildren(value);
         b.setAttribute("aria-label", `${t(c.labelKey)}: ${value}`);
       }
-      const warn = s.files[0]?.warnings.length;
+      const warn = activeFile(s)?.warnings.length;
       chipButtons.get("file")?.toggleAttribute("data-warn", Boolean(warn));
       menu.setAttribute("aria-label", t("header.menu.label"));
       langGroup.setAttribute("aria-label", t("lang.label"));

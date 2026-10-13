@@ -1,0 +1,15 @@
+{
+ "schema": "substance-bands/1",
+ "version": "2026-10.1",
+ "substance": "phenacetin",
+ "form": "solid",
+ "note": "Numbers from the NIST KBr spectrum and from the architect's notes; the aryl-ethyl ether near 1241 and 1047 separate it from paracetamol (draft).",
+ "bands": [
+  {"position_cm1": 1657, "tolerance_cm1": 10, "intensity": "strong", "shape": "sharp", "group": "amide", "mode": "stretch", "rule_id": "co.amide", "sources": ["nist-webbook"], "status": "draft"},
+  {"position_cm1": 1555, "tolerance_cm1": 10, "intensity": "medium", "shape": "sharp", "group": "amide", "mode": "bend_in_plane", "rule_id": "amide.ii", "sources": ["nist-webbook"], "status": "draft"},
+  {"position_cm1": 1508, "tolerance_cm1": 10, "intensity": "strong", "shape": "sharp", "group": "aromatic_ring", "mode": "stretch", "rule_id": "ring.c_c_1500", "sources": ["nist-webbook"], "status": "draft"},
+  {"position_cm1": 1241, "tolerance_cm1": 10, "intensity": "strong", "shape": "sharp", "group": "aryl_ether", "mode": "stretch_asym", "rule_id": "c_o.aryl_ether", "text_key": "substance_bands.phenacetin.solid.1241", "sources": ["nist-webbook", "smith-ethers"], "status": "draft"},
+  {"position_cm1": 1047, "tolerance_cm1": 8, "intensity": "medium", "shape": "sharp", "group": "ether", "mode": "stretch_asym", "rule_id": "c_o_c.ether", "sources": ["nist-webbook", "smith-ethers"], "status": "draft"},
+  {"position_cm1": 825, "tolerance_cm1": 8, "intensity": "strong", "shape": "sharp", "group": "benzene_para", "mode": "oop", "rule_id": "oop.para", "sources": ["nist-webbook", "smith-benzene"], "status": "draft"}
+ ]
+}
