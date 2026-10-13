@@ -4,6 +4,7 @@ import { t } from "./i18n.js";
 import { APP_NAME } from "./appname.js";
 import { helpBody } from "./help.js";
 import { autoMatchOn, setAutoMatch } from "./match.js";
+import { provaSection } from "./prova.js";
 
 /** The switch of the automatic comparison (stored preference `autoMatch`). @returns {HTMLElement} */
 function autoMatchSwitch() {
@@ -25,6 +26,7 @@ export function buildDialogs(engineVersion) {
       titleKey: "info.title",
       body: [
         el("section", {}, [el("h3", {}, [t("info.match_title")]), autoMatchSwitch(), el("p", { class: "empty" }, [t("info.auto_match_hint")])]),
+        provaSection(),
         el("section", {}, [el("h3", {}, [t("info.pages_title")]), el("nav", { class: "footer-links", "aria-label": t("info.pages_title") }, [
           el("a", { href: "pagine/avvertenze/" }, [t("info.link_warnings")]),
           el("a", { href: "pagine/informativa/" }, [t("info.link_notice")]),

@@ -104,6 +104,12 @@ function syncLibraries(s) {
   sentSignature = signature;
 }
 
+/** The comparison worker, with the active libraries sent to it: the library test talks to it directly. @returns {Worker} */
+export function matchWorker() {
+  syncLibraries(getState());
+  return ensureWorker();
+}
+
 /** Progress of the peak index of a library; null while the worker has not started it. @param {string} id @returns {{ done: number, total: number, ready: boolean } | null} */
 export function peakIndexStatus(id) {
   return indexStatus.get(id) ?? null;

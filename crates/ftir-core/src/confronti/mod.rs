@@ -23,6 +23,8 @@ pub mod livello;
 pub mod motore;
 pub mod opzioni;
 pub mod pearson;
+pub mod prova;
+pub mod prova_rapporto;
 pub mod punteggio;
 pub mod risultato;
 pub mod soglie;

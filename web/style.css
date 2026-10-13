@@ -432,6 +432,13 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .zoom-box { fill: var(--surface); fill-opacity: 0.6; stroke: var(--text); stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
 .cursor-text { font-variant-numeric: tabular-nums; }
 
+/* Library test (information dialog) */
+.prova-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0; }
+.prova-hist { display: block; width: 100%; height: auto; }
+.prova-bar { fill: var(--color-sample); }
+.prova-line-check, .prova-line-probable { stroke: var(--color-alert); stroke-width: 1.5; }
+.prova-line-check { stroke-dasharray: 4 3; }
+.prova-report progress { width: 100%; }
 /* Substance sheet (dialog) */
 .substance-sheet h3 { font-size: 1rem; margin: 1rem 0 0.25rem; }
 .substance-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
