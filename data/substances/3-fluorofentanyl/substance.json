@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "3-fluorofentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "3-Fluorofentanyl",
+      "synonyms": [
+        "meta-Fluorofentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "3-Fluorofentanyl",
+      "synonyms": [
+        "meta-Fluorofentanyl"
+      ]
+    }
+  },
+  "iupac": "N-(3-fluorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]propanamide",
+  "formula": "C22H27FN2O",
+  "molar_mass_g_mol": 354.5,
+  "smiles": "CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC(=CC=C3)F",
+  "inchi": "InChI=1S/C22H27FN2O/c1-2-22(26)25(21-10-6-9-19(23)17-21)20-12-15-24(16-13-20)14-11-18-7-4-3-5-8-18/h3-10,17,20H,2,11-16H2,1H3",
+  "inchikey": "SLTQVWMQISKVDN-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "90736-22-4",
+    "pubchem_cid": 621847
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

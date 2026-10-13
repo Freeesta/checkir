@@ -1,0 +1,79 @@
+{
+  "schema": "datasheet/1",
+  "substance": "2-fluorofentanyl",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "fentanyls",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "norfluorofentanyl",
+        "reaction": "other",
+        "source": "gundersen2020"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "gundersen2020"
+      },
+      {
+        "from": "parent",
+        "to": "N-oxide",
+        "reaction": "other",
+        "source": "gundersen2020"
+      },
+      {
+        "from": "parent",
+        "to": "dihydrodiol metabolites",
+        "reaction": "other",
+        "source": "gundersen2020"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxymethoxy metabolite",
+        "reaction": "other",
+        "source": "gundersen2020"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "norfluorofentanyl",
+        "active": null,
+        "source": "gundersen2020"
+      },
+      {
+        "name_key": "hydroxymethoxy-fluorofentanyl",
+        "active": null,
+        "source": "gundersen2020"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

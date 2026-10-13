@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-fluorofentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-Fluorofentanyl",
+      "synonyms": [
+        "ortho-Fluorofentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "2-Fluorofentanyl",
+      "synonyms": [
+        "ortho-Fluorofentanyl"
+      ]
+    }
+  },
+  "iupac": "N-(2-fluorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]propanamide",
+  "formula": "C22H27FN2O",
+  "molar_mass_g_mol": 354.5,
+  "smiles": "CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3F",
+  "inchi": "InChI=1S/C22H27FN2O/c1-2-22(26)25(21-11-7-6-10-20(21)23)19-13-16-24(17-14-19)15-12-18-8-4-3-5-9-18/h3-11,19H,2,12-17H2,1H3",
+  "inchikey": "BKUWDIVZCJNXRA-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "910616-29-4",
+    "pubchem_cid": 101454647
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
