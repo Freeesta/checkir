@@ -423,6 +423,14 @@
       "consulted": "2026-10-12"
     },
     {
+      "id": "swgdrug-ir-library",
+      "type": "database",
+      "title": "SWGDRUG Infrared Spectral Library (ATR-FTIR), JCAMP-DX release of 15 May 2024",
+      "url": "https://www.swgdrug.org/ir.htm",
+      "license": "used with the written permission of SWGDRUG (non-commercial, with citation); see the library credits",
+      "consulted": "2026-10-13"
+    },
+    {
       "id": "rodrigues2013",
       "type": "paper",
       "title": "Analysis of seized cocaine samples by using chemometric methods and FTIR spectroscopy (J. Braz. Chem. Soc. 24(3))",

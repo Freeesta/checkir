@@ -1,0 +1,24 @@
+{
+  "schema": "ftir-form/1",
+  "id": "caffeine-base",
+  "substance": "caffeine",
+  "form_type": "free_base",
+  "stereo": "unspecified",
+  "inchikey_form": "RYYVLZVUVIJVGH-UHFFFAOYSA-N",
+  "notes": {
+    "en": "Free base as in the SWGDRUG standard; the source does not state anhydrous or hydrate.",
+    "it": "Base libera come nello standard SWGDRUG; la fonte non indica se anidra o idrata."
+  },
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

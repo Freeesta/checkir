@@ -7,7 +7,7 @@ import re
 from datetime import date
 
 SECTIONS = ("molecule", "category", "effects", "doses", "risks", "interactions", "sources", "license")
-# Roles that must sign a changed section (docs/agenti/dati.md): health texts need a health professional, chemistry a chemist.
+# Roles that must sign a changed section (docs/agenti/dati_revisione.md): health texts need a health professional, chemistry a chemist.
 REQUIRED_ROLES = {
     "molecule": ("chemist",),
     "category": ("chemist",),

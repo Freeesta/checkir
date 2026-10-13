@@ -14,6 +14,7 @@
   "ftir-spectrum/invalid/serial-number-in-instrument.json": "serial_number",
   "ftir-spectrum/invalid/missing-provenance.json": "provenance",
   "ftir-spectrum/invalid/bad-sha256.json": "/sha256",
+  "ftir-spectrum/invalid/permission-without-terms.json": "license_terms",
   "ftir-spectrum/invalid/bad-month.json": "/measured",
   "ftir-spectrum/invalid/bad-licence.json": "/license",
   "ftir-spectrum/invalid/role-not-reference.json": "/role",

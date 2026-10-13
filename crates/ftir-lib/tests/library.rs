@@ -15,6 +15,8 @@ fn identity() -> Identity {
         license: "CC-BY-4.0".into(),
         attribution_it: Some("Libreria di prova".into()),
         attribution_en: "Test library".into(),
+        terms_it: None,
+        terms_en: None,
         private: false,
     }
 }
@@ -215,6 +217,25 @@ fn private_flag_round_trips() {
     id.private = true;
     let f = write_package(&id, &small_grid(), vec![(row("a.1"), vec![0.0; 6])]).expect("write");
     assert!(open(&f, &f.data_bin).expect("open").manifest.private);
+}
+
+#[test]
+fn permission_terms_round_trip_and_need_english() {
+    let mut id = identity();
+    id.license = "LicenseRef-permission-example".into();
+    id.terms_it = Some("Solo uso non commerciale.".into());
+    id.terms_en = Some("Non-commercial use only.".into());
+    let f = write_package(&id, &small_grid(), vec![(row("a.1"), vec![0.0; 6])]).expect("write");
+    let m = open(&f, &f.data_bin).expect("open").manifest;
+    assert_eq!(m.terms_it.as_deref(), Some("Solo uso non commerciale."));
+    assert_eq!(m.terms_en.as_deref(), Some("Non-commercial use only."));
+    let no_en = f
+        .manifest_json
+        .replace(",\"en\":\"Non-commercial use only.\"", "");
+    let err = Package::open(&no_en, &f.index_json, &f.data_bin, &Limits::STANDARD).unwrap_err();
+    assert_eq!(err.error_key, "library.manifest_invalid");
+    let plain = write_package(&identity(), &small_grid(), vec![(row("a.1"), vec![0.0; 6])]);
+    assert!(!plain.expect("write").manifest_json.contains("terms"));
 }
 
 fn golden() -> Value {

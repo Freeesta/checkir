@@ -18,6 +18,27 @@ use std::process::ExitCode;
 const ATTRIBUTION_EN: &str = "checkir community library, CC BY 4.0. Spectra by the contributors named in each spectrum record.";
 const ATTRIBUTION_IT: &str = "Libreria comunitaria di checkir, CC BY 4.0. Spettri dei contributori indicati nella scheda di ogni spettro.";
 
+/// One library to build: id, switch, licence and the texts shown with it (`it` may be absent).
+struct LibConf {
+    id: String,
+    enabled: bool,
+    license: String,
+    attribution: (Option<String>, String),
+    terms: Option<(Option<String>, String)>,
+}
+
+impl LibConf {
+    fn community(id: &str, enabled: bool) -> LibConf {
+        LibConf {
+            id: id.to_string(),
+            enabled,
+            license: "CC-BY-4.0".into(),
+            attribution: (Some(ATTRIBUTION_IT.into()), ATTRIBUTION_EN.into()),
+            terms: None,
+        }
+    }
+}
+
 struct Args {
     data: PathBuf,
     out: PathBuf,
@@ -104,7 +125,8 @@ fn collect(data: &Path) -> Result<Vec<Built>, String> {
 }
 
 /// Builds one library into `<out>/<name>/`; returns its version and number of spectra.
-fn build_library(args: &Args, name: &str) -> Result<(String, usize), String> {
+fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize), String> {
+    let name = conf.id.as_str();
     let mut built: Vec<Built> = collect(&args.data)?
         .into_iter()
         .filter(|b| b.library_name == name)
@@ -121,9 +143,11 @@ fn build_library(args: &Args, name: &str) -> Result<(String, usize), String> {
         name: name.to_string(),
         version: version.clone(),
         date: args.date.clone(),
-        license: "CC-BY-4.0".into(),
-        attribution_it: Some(ATTRIBUTION_IT.into()),
-        attribution_en: ATTRIBUTION_EN.into(),
+        license: conf.license.clone(),
+        attribution_it: conf.attribution.0.clone(),
+        attribution_en: conf.attribution.1.clone(),
+        terms_it: conf.terms.as_ref().and_then(|t| t.0.clone()),
+        terms_en: conf.terms.as_ref().map(|t| t.1.clone()),
         private: false,
     };
     let n = built.len();
@@ -142,32 +166,54 @@ fn build_library(args: &Args, name: &str) -> Result<(String, usize), String> {
     Ok((version, n))
 }
 
-/// The libraries to build as `(id, enabled)`: those of the config file, or the single `--library`.
-fn wanted(args: &Args) -> Result<Vec<(String, bool)>, String> {
+/// `{"it": …, "en": …}` of a config entry (`en` required).
+fn texts(x: &Value, key: &str) -> Option<(Option<String>, String)> {
+    let v = x.get(key)?;
+    let en = v.get("en").and_then(Value::as_str)?.to_string();
+    Some((v.get("it").and_then(Value::as_str).map(str::to_string), en))
+}
+
+/// One entry of the config file: without `license` it is a community library (CC BY 4.0, community attribution);
+/// with it, `attribution` is required and `terms` (permission conditions) is optional.
+fn conf_of(x: &Value, path: &Path) -> Result<LibConf, String> {
+    let id = x.get("id").and_then(Value::as_str);
+    let id = id.ok_or(format!("{}: a library has no id", path.display()))?;
+    let enabled = !matches!(x.get("enabled"), Some(Value::Bool(false)));
+    let Some(license) = x.get("license").and_then(Value::as_str) else {
+        return Ok(LibConf::community(id, enabled));
+    };
+    let attribution = texts(x, "attribution").ok_or(format!(
+        "{}: {id} has a licence but no attribution",
+        path.display()
+    ))?;
+    Ok(LibConf {
+        id: id.to_string(),
+        enabled,
+        license: license.to_string(),
+        attribution,
+        terms: texts(x, "terms"),
+    })
+}
+
+/// The libraries to build: those of the config file, or the single `--library` (community).
+fn wanted(args: &Args) -> Result<Vec<LibConf>, String> {
     let Some(path) = &args.config else {
-        return Ok(vec![(args.library.clone(), true)]);
+        return Ok(vec![LibConf::community(&args.library, true)]);
     };
     let text = fs::read_to_string(path).map_err(|e| format!("{}: {e}", path.display()))?;
     let v = parse(&text).map_err(|_| format!("{}: not JSON", path.display()))?;
     let items = v.get("libraries").and_then(Value::as_arr);
     let items = items.ok_or(format!("{}: no libraries", path.display()))?;
-    items
-        .iter()
-        .map(|x| {
-            let id = x.get("id").and_then(Value::as_str);
-            let on = !matches!(x.get("enabled"), Some(Value::Bool(false)));
-            id.map(|id| (id.to_string(), on))
-                .ok_or(format!("{}: a library has no id", path.display()))
-        })
-        .collect()
+    items.iter().map(|x| conf_of(x, path)).collect()
 }
 
 fn run() -> Result<String, String> {
     let args = parse_args()?;
     let mut entries = Vec::new();
     let mut report = Vec::new();
-    for (name, enabled) in wanted(&args)? {
-        let (version, n) = build_library(&args, &name)?;
+    for conf in wanted(&args)? {
+        let (name, enabled) = (conf.id.clone(), conf.enabled);
+        let (version, n) = build_library(&args, &conf)?;
         entries.push(Value::Obj(vec![
             ("id".into(), Value::Str(name.clone())),
             ("path".into(), Value::Str(name.clone())),

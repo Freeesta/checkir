@@ -13,8 +13,14 @@ async function openPanel(page, name) {
 
 /** Import the synthetic library (alfa, beta, gamma) as the only one in use. */
 export async function importLibrary(page) {
+  // With a sample already open, switching a public library off runs the match again and the results panel takes the place
+  // of the libraries panel (one open section at a time): reopen it before each step.
+  for (const name of [/swgdrug-ir/, /checkir-community/]) {
+    await openPanel(page, "libraries");
+    const box = page.getByRole("checkbox", { name });
+    if (await box.isChecked()) await box.click();
+  }
   await openPanel(page, "libraries");
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });
   await page.setInputFiles('input[data-library="files"]', [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA)]);
