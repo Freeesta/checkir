@@ -9,7 +9,7 @@
   "chart.title": "Spectrum",
   "chart.axis_x": "Wavenumber (cm⁻¹)",
   "chart.axis_y": "Absorbance",
-  "chart.help": "With the chart focused: + and − zoom, left and right arrows pan, 0 resets.",
+  "chart.help": "With the chart focused: + and − zoom, left and right arrows pan, 0 resets; k places the first and the second cursor (comma and full stop move them, with Shift by 10 points), y locks the y axis, Esc removes the cursors. With the mouse: click = cursor, Alt+click = second cursor, drag = box zoom, wheel = zoom, double click = full view.",
   "chart.zoom_in": "Zoom in",
   "chart.zoom_out": "Zoom out",
   "chart.pan_left": "Pan left",
@@ -507,5 +507,13 @@
   "didactic.too_many_points": "The number of points is out of range (maximum {limit}).",
   "didactic.zero_fill": "The zero-filling factor ({value}) must be a power of two, from 1 up.",
   "didactic.unknown_apodization": "The apodization “{id}” does not exist.",
-  "didactic.invalid_input": "The value “{what}” is not valid."
+  "didactic.invalid_input": "The value “{what}” is not valid.",
+  "chart.unit_abs": "A",
+  "chart.unit_other": "I",
+  "chart.reading_point": "~{x} cm⁻¹ · {unit} {y}",
+  "chart.reading_delta": "Δν̃ {dx} cm⁻¹ · Δ{unit} {dy}",
+  "chart.cursors": "Reading cursors: the first, the second, then none",
+  "chart.lock_y": "Lock or unlock the y axis",
+  "chart.y_locked": "y axis locked",
+  "chart.y_unlocked": "y axis automatic"
 }

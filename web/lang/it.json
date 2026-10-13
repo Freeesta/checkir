@@ -9,7 +9,7 @@
   "chart.title": "Spettro",
   "chart.axis_x": "Numero d'onda (cm⁻¹)",
   "chart.axis_y": "Assorbanza",
-  "chart.help": "Con il grafico selezionato: + e − zoom, frecce sinistra e destra spostano, 0 azzera.",
+  "chart.help": "Con il grafico selezionato: + e − zoom, frecce sinistra e destra spostano, 0 azzera; k mette il primo e il secondo cursore (virgola e punto li spostano, con Maiusc di 10 punti), y blocca l'asse y, Esc toglie i cursori. Con il mouse: clic = cursore, Alt+clic = secondo cursore, trascina = zoom a riquadro, rotella = zoom, doppio clic = vista intera.",
   "chart.zoom_in": "Ingrandisci",
   "chart.zoom_out": "Riduci",
   "chart.pan_left": "Sposta a sinistra",
@@ -507,5 +507,13 @@
   "didactic.too_many_points": "Il numero di punti è fuori misura (massimo {limit}).",
   "didactic.zero_fill": "Il fattore di zero-filling ({value}) deve essere una potenza di due, da 1 in su.",
   "didactic.unknown_apodization": "L'apodizzazione «{id}» non esiste.",
-  "didactic.invalid_input": "Il dato «{what}» non è valido."
+  "didactic.invalid_input": "Il dato «{what}» non è valido.",
+  "chart.unit_abs": "A",
+  "chart.unit_other": "I",
+  "chart.reading_point": "~{x} cm⁻¹ · {unit} {y}",
+  "chart.reading_delta": "Δν̃ {dx} cm⁻¹ · Δ{unit} {dy}",
+  "chart.cursors": "Cursori di lettura: il primo, il secondo, poi nessuno",
+  "chart.lock_y": "Blocca o sblocca l'asse y",
+  "chart.y_locked": "Asse y bloccato",
+  "chart.y_unlocked": "Asse y automatico"
 }
