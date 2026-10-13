@@ -1,7 +1,7 @@
 //! The peaks of one spectrum as the assignment reads them: from a `PeakList` or from `peaks/1` JSON.
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::{self, Value};
-use crate::peaks::result::{Artifact, Kind, Peak, PeakList, Shape, Tier};
+use crate::peaks::result::{Artifact, IntensityClass, Kind, Peak, PeakList, Shape, Tier};
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct PeakSet {
@@ -46,6 +46,21 @@ fn shape(v: &Value) -> EngineResult<Option<Shape>> {
     }
 }
 
+/// The class the detection emitted; a list written without it is classed by the embedded cuts.
+fn intensity(v: &Value) -> EngineResult<IntensityClass> {
+    match v.get("intensity").and_then(Value::as_str) {
+        Some(id) => IntensityClass::from_id(id).ok_or_else(|| bad("intensity")),
+        None => {
+            let t = crate::peaks::Thresholds::embedded()?.tolerances;
+            Ok(IntensityClass::of(
+                num(v, "prominence_rel")?,
+                t.strong_rel_min,
+                t.medium_rel_min,
+            ))
+        }
+    }
+}
+
 fn peak(v: &Value) -> EngineResult<Peak> {
     let artifact = match v.get("artifact").and_then(Value::as_str) {
         None => None,
@@ -59,6 +74,7 @@ fn peak(v: &Value) -> EngineResult<Peak> {
         height_abs: num(v, "height_abs")?,
         prominence_abs: num(v, "prominence_abs")?,
         prominence_rel: num(v, "prominence_rel")?,
+        intensity: intensity(v)?,
         fwhm_cm1: v.get("fwhm_cm1").and_then(Value::as_f64),
         shape: shape(v)?,
         tier: if word(v, "tier")? == "main" {
