@@ -1,5 +1,5 @@
 // @ts-check
-import { el } from "./dom.js";
+import { el, SVG_NS } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
 import { matchWorker } from "./match.js";
 import { activeLibraries, getState } from "./state.js";
@@ -98,7 +98,7 @@ function histogram(rep) {
   const [w, hh, pad] = [320, 140, 24];
   const max = Math.max(1, ...counts);
   const bw = (w - 2 * pad) / counts.length;
-  const ns = "http://www.w3.org/2000/svg";
+  const ns = SVG_NS;
   /** @param {string} tag @param {Record<string, string | number>} attrs @returns {SVGElement} */
   const node = (tag, attrs) => {
     const n = document.createElementNS(ns, tag);
