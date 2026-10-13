@@ -14,7 +14,8 @@ pub use build::AXIS_KEYS as KNOWN_KEYS;
 
 use super::jcamp::text as jtext;
 use super::model::{
-    Confidence, Document, Limits, Options, Provenance, ReadError, ReadResult, Severity, Warning,
+    Background, Confidence, Document, Limits, Options, Provenance, ReadError, ReadResult, Severity,
+    Warning,
 };
 use super::sha256::sha256_hex;
 use super::Reader;
@@ -93,8 +94,10 @@ pub fn open(bytes: &[u8], limits: &Limits, options: &Options) -> ReadResult<Docu
         chosen.eval.decimal,
         if chosen.y_only { ", y only" } else { "" }
     );
+    let background = Background::NONE;
     Ok(Document {
         spectra: built.spectra,
+        background,
         primary: 0,
         fields: built.fields,
         warnings,

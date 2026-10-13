@@ -13,7 +13,8 @@ pub mod meta;
 pub mod text;
 
 use super::model::{
-    Confidence, Document, Limits, Options, Provenance, ReadError, ReadResult, Severity, Warning,
+    Background, Confidence, Document, Limits, Options, Provenance, ReadError, ReadResult, Severity,
+    Warning,
 };
 use super::sha256::sha256_hex;
 use super::Reader;
@@ -99,8 +100,10 @@ pub fn open(bytes: &[u8], limits: &Limits, _options: &Options) -> ReadResult<Doc
     }
     warnings.extend(meta::unknown_warning(&fields));
     let version = version_of(&p.doc_items).unwrap_or_else(|| p.version.clone());
+    let background = Background::find(&p.spectra);
     Ok(Document {
         spectra: p.spectra,
+        background,
         primary: 0,
         fields,
         warnings,
