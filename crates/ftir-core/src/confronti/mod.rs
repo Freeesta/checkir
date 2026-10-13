@@ -14,6 +14,8 @@ use crate::spectrum::Spectrum;
 pub mod asls;
 pub mod cache_bytes;
 pub mod cerca;
+pub mod controlli;
+pub mod hqi;
 pub mod indice;
 pub mod lettori;
 pub mod libreria;
@@ -57,6 +59,11 @@ pub struct Prepared {
 
 fn unusable(why: &str) -> EngineError {
     EngineError::new("confronti.spettro_non_utilizzabile", why)
+}
+
+/// The query as absorbance on the comparison grid, before the baseline and the mask (what the quality alerts look at).
+pub fn grid_absorbance(s: &Spectrum) -> Option<Spectrum> {
+    catene::run(s, CONFRONTO_SPETTRO_V1).ok()
 }
 
 /// Run both chains (and the AsLS baseline) on `s`.

@@ -259,5 +259,18 @@
   "library.y_unit": "The spectrum is not in absorbance or transmittance ({unit}) and cannot enter a library.",
   "library.source_invalid": "A source file of the library is incomplete ({field}).",
   "library.spectrum_sha256": "The spectrum file {id} does not match its recorded checksum.",
-  "library.provenance_not_allowed": "The spectrum {id} comes from an unconfirmed sample and cannot enter a public library."
+  "library.provenance_not_allowed": "The spectrum {id} comes from an unconfirmed sample and cannot enter a public library.",
+  "confronti.cache_non_valida": "The saved copy of the library is not valid: it must be rebuilt.",
+  "confronti.cache_obsoleta": "The saved copy of the library comes from an earlier version of the calculation: it must be rebuilt.",
+  "confronti.libreria_sconosciuta": "The library “{libreria}” is not loaded.",
+  "confronti.nessun_punto_comune": "The spectra share too few points to be compared.",
+  "confronti.nessuna_libreria": "No library with spectra to search: load or enable a library.",
+  "confronti.opzione_non_valida": "The comparison option “{opzione}” is not valid.",
+  "confronti.opzione_sconosciuta": "The comparison option “{opzione}” does not exist.",
+  "confronti.preset_sconosciuto": "The region preset “{preset}” does not exist.",
+  "confronti.regione_troppo_stretta": "The chosen regions are too narrow for a comparison: {cm1} cm⁻¹ and {punti} points, at least {minimo_cm1} cm⁻¹ and {minimo_punti} points.",
+  "confronti.soglie_non_valide": "The comparison thresholds file is not valid ({campo}).",
+  "confronti.spettro_non_utilizzabile": "This spectrum cannot be used for the comparison: it has too few valid points on the 650–3800 cm⁻¹ grid.",
+  "confronti.spettro_non_valido": "The spectrum to compare is not valid.",
+  "confronti.unita_non_confrontabile": "The axis or signal unit does not allow the comparison: wavenumbers in cm⁻¹ and absorbance or transmittance are required."
 }
