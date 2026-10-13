@@ -1,0 +1,43 @@
+{
+  "schema": "datasheet/1",
+  "substance": "3-fa",
+  "version": 2,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "doses": [],
+  "interactions": [],
+  "counselling": [
+    {
+      "key": "3fa.isomer",
+      "topic": "testing",
+      "source": "johansen2012"
+    },
+    {
+      "key": "3fa.combination",
+      "topic": "combination",
+      "source": "inan2020"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

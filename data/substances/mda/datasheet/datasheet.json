@@ -1,0 +1,74 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mda",
+  "version": 2,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic",
+    "precursor_classes": [
+      "mdp2p",
+      "safrole",
+      "isosafrole",
+      "piperonal"
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "dihydroxyamphetamine",
+        "reaction": "other",
+        "source": "meyer2009mda",
+        "enzymes": [
+          "CYP2D6"
+        ]
+      },
+      {
+        "from": "parent",
+        "to": "HMA",
+        "reaction": "other",
+        "source": "baggott2019"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "counselling": [
+    {
+      "key": "mda.duration",
+      "topic": "redosing",
+      "source": "baggott2019"
+    },
+    {
+      "key": "mda.label",
+      "topic": "testing",
+      "source": "unodc-ats2006"
+    },
+    {
+      "key": "mda.cardio",
+      "topic": "dosing",
+      "source": "baggott2019"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
