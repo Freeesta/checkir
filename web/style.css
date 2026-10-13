@@ -139,6 +139,9 @@ body[data-panel="rail"] .panel-head { justify-content: center; }
 .drop[hidden] { display: none; }
 .warn { display: inline-flex; align-items: center; gap: 0.25rem; }
 .warn .icon { color: var(--color-alert); }
+.folder { min-width: 0; margin: 0.75rem 0 0; padding: 0.4rem 0.6rem 0.6rem; border: 1px solid var(--border); border-radius: 0.4rem; }
+.folder legend { padding: 0 0.3rem; font-weight: 600; }
+.folder-offer { flex: 1 1 10rem; overflow-wrap: anywhere; }
 body[data-panel="rail"] .panel-section summary { justify-content: center; padding: 0.25rem; }
 body[data-panel="rail"] .title, body[data-panel="rail"] .sum, body[data-panel="rail"] .panel-body { display: none; }
 

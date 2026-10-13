@@ -72,6 +72,17 @@ async function readOne(file, engine) {
   addSpectrum(r.spectrum, { name: file.name, resolutionCm1: r.resolutionCm1, warnings });
 }
 
+/** Whether the engine reads the file now, without adding it to the analysis (a file too big is left to `openFiles`, which says so). @param {File} file @param {import("./engine.js").Engine | null} engine @returns {Promise<boolean>} */
+export async function isReadable(file, engine) {
+  if (!engine || file.size > BUDGET.maxBytes) return true;
+  try {
+    const bytes = new Uint8Array(await file.arrayBuffer());
+    return !("error" in parseDocument(engine.open_file(file.name, bytes, BUDGET.maxBytes, BUDGET.maxPoints)));
+  } catch {
+    return false;
+  }
+}
+
 /** Open the chosen files one after the other, so the codes follow the order of choice. @param {Iterable<File>} files @param {import("./engine.js").Engine | null} engine @returns {Promise<number>} how many were read */
 export async function openFiles(files, engine) {
   if (!engine) {

@@ -6,6 +6,7 @@ import { buildDialogs } from "./dialogs.js";
 import { activeFile, buildHeader } from "./header.js";
 import { applyCatalog, currentLang, LANGS, loadLang, pickLang, t } from "./i18n.js";
 import { loadEngine } from "./engine.js";
+import { createFolder } from "./cartella.js";
 import { buildPanels } from "./panels.js";
 import { addDemo, closeFile, spectrumOf, wireFileInput } from "./files.js";
 import { attachShortcuts, onShortcutsChange } from "./shortcuts.js";
@@ -68,6 +69,7 @@ async function start() {
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     openDialog: (id) => openDialog(id),
+    folder: createFolder({ engine, announce }),
   };
   const header = buildHeader(/** @type {HTMLElement} */ ($("app-header")), ctx, APP_NAME);
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
@@ -76,8 +78,7 @@ async function start() {
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
   const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") });
-  /** @type {string | null | undefined} */
-  let shown;
+  let shown = /** @type {string | null | undefined} */ (undefined);
   const renderUi = () => {
     const s = getState();
     const code = activeFile(s)?.code ?? null;

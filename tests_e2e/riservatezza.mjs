@@ -4,6 +4,7 @@
 // IndexedDB, OPFS, Cache Storage, cookies, the page or any downloaded file, (c) after a reload nothing of the sample is left.
 // RULE: every new action or export of the page is added to `doEverything` (docs/agenti/riservatezza.md).
 import { chromium, firefox, webkit } from "playwright";
+import { FAKE_PICKER } from "./cartella.mjs";
 import { CANARIES, CANARY_STRINGS, canaryJcamp } from "./canarino.mjs";
 import { staticScenario } from "./riservatezza_statico.mjs";
 import { startSite } from "./sito.mjs";
@@ -95,11 +96,19 @@ async function doEverything(page) {
     await page.goto(base);
     await page.waitForSelector("body[data-ready='1']");
   }
+  // Watched folder (stand-in picker): choose, remember, open-at-once, stop; at the end nothing is remembered.
+  if ((await page.getAttribute("body", "data-panel")) === "rail") await page.click('[data-action="panel.toggle"]');
+  await page.click("#folder-choose");
+  await page.check("#folder-remember");
+  await page.check("#folder-auto");
+  await page.click("#folder-stop");
+  await page.uncheck("#folder-remember");
   await page.evaluate(() => navigator.serviceWorker?.ready);
 }
 
 async function canaryScenario(browser) {
   const { ctx, seen } = await watchedContext(browser);
+  await ctx.addInitScript(FAKE_PICKER);
   const page = await ctx.newPage();
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
