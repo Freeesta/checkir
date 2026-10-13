@@ -1,14 +1,17 @@
 {
   "schema": "datasheet/1",
   "substance": "procaine",
-  "version": 2,
+  "version": 3,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
@@ -21,5 +24,50 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "PABA-derived moiety",
+        "reaction": "hydrolysis_ester",
+        "enzymes": [
+          "other"
+        ],
+        "source": "becker2012"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "paba-moiety",
+        "active": null,
+        "source": "becker2012"
+      }
+    ]
+  },
+  "cuts": [
+    {
+      "cut": "cocaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "local-anaesthetic.injecting",
+      "topic": "route",
+      "source": "neal2010"
+    },
+    {
+      "key": "procaine.allergy",
+      "topic": "testing",
+      "source": "becker2012"
+    }
+  ],
+  "identity_extra": {
+    "salt_forms": [
+      "procaine-hcl"
+    ]
+  }
 }

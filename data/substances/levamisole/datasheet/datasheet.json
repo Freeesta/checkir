@@ -1,14 +1,18 @@
 {
   "schema": "datasheet/1",
   "substance": "levamisole",
-  "version": 2,
+  "version": 3,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "history": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
@@ -21,5 +25,60 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "aminorex",
+        "reaction": "other",
+        "source": "hess2013"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylevamisole",
+        "reaction": "hydroxylation",
+        "source": "hess2013"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "aminorex",
+        "active": true,
+        "source": "hess2013"
+      },
+      {
+        "name_key": "hydroxylevamisole",
+        "active": null,
+        "source": "hess2013"
+      }
+    ],
+    "half_life_h": {
+      "min": 2.0,
+      "max": 2.0,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "hess2014"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "cocaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "levamisole.warning-signs",
+      "topic": "overdose_signs",
+      "source": "larocque2012"
+    },
+    {
+      "key": "levamisole.re-exposure",
+      "topic": "redosing",
+      "source": "larocque2012"
+    }
+  ]
 }

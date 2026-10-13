@@ -826,6 +826,120 @@
       "archive_url": "https://web.archive.org/web/20261010012359/https://www.europeanreview.org/article/21028"
     },
     {
+      "id": "becker2012",
+      "type": "paper",
+      "title": "Local anesthetics: review of pharmacological considerations",
+      "authors": [
+        "Becker, D. E.",
+        "Reed, K. L."
+      ],
+      "year": 2012,
+      "doi": "10.2344/0003-3006-59.2.90",
+      "url": "https://doi.org/10.2344/0003-3006-59.2.90",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20261012003759/https://pubmed.ncbi.nlm.nih.gov/22822998/",
+      "tier": "review"
+    },
+    {
+      "id": "mazaleuskaya2015",
+      "type": "paper",
+      "title": "PharmGKB summary: pathways of acetaminophen metabolism at the therapeutic versus toxic doses",
+      "authors": [
+        "Mazaleuskaya, L. L.",
+        "Sangkuhl, K.",
+        "Thorn, C. F.",
+        "FitzGerald, G. A.",
+        "Altman, R. B.",
+        "Klein, T. E."
+      ],
+      "year": 2015,
+      "doi": "10.1097/FPC.0000000000000150",
+      "url": "https://doi.org/10.1097/FPC.0000000000000150",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20251126043803/https://pubmed.ncbi.nlm.nih.gov/26049587/",
+      "tier": "review"
+    },
+    {
+      "id": "grzegorzewski2022",
+      "type": "paper",
+      "title": "Pharmacokinetics of Caffeine: A Systematic Analysis of Reported Data for Application in Metabolic Phenotyping and Liver Function Testing",
+      "authors": [
+        "Grzegorzewski, J.",
+        "Bartsch, F.",
+        "Köller, A.",
+        "König, M."
+      ],
+      "year": 2022,
+      "doi": "10.3389/fphar.2021.752826",
+      "url": "https://doi.org/10.3389/fphar.2021.752826",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260414131553/https://pmc.ncbi.nlm.nih.gov/articles/PMC8914174/",
+      "tier": "review"
+    },
+    {
+      "id": "hess2013",
+      "type": "paper",
+      "title": "Metabolism of levamisole and kinetics of levamisole and aminorex in urine by means of LC-QTOF-HRMS and LC-QqQ-MS",
+      "authors": [
+        "Hess, C.",
+        "Ritke, N.",
+        "Broecker, S.",
+        "Madea, B.",
+        "Musshoff, F."
+      ],
+      "year": 2013,
+      "doi": "10.1007/s00216-013-6829-x",
+      "url": "https://doi.org/10.1007/s00216-013-6829-x",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250804155220/https://pubmed.ncbi.nlm.nih.gov/23436169/",
+      "tier": "primary"
+    },
+    {
+      "id": "hess2014",
+      "type": "paper",
+      "title": "Determination of levamisole, aminorex, and pemoline in plasma by means of liquid chromatography-mass spectrometry and application to a pharmacokinetic study of levamisole",
+      "authors": [
+        "Hess, C.",
+        "Ritke, N.",
+        "Sydow, K.",
+        "Mehling, L.-M.",
+        "Ruehs, H.",
+        "Madea, B.",
+        "Musshoff, F."
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1619",
+      "url": "https://doi.org/10.1002/dta.1619",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204064101/https://pubmed.ncbi.nlm.nih.gov/24574157/",
+      "tier": "primary"
+    },
+    {
+      "id": "eiden2015",
+      "type": "paper",
+      "title": "Prevalence of levamisole and aminorex in patients tested positive for cocaine in a French University Hospital",
+      "authors": [
+        "Eiden, C.",
+        "Peyrière, H.",
+        "Diot, C.",
+        "Mathieu, O."
+      ],
+      "year": 2015,
+      "doi": "10.3109/15563650.2015.1054499",
+      "url": "https://doi.org/10.3109/15563650.2015.1054499",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204074007/https://pubmed.ncbi.nlm.nih.gov/26065363/",
+      "tier": "primary"
+    },
+    {
+      "id": "ubc-counselling-guidelines",
+      "type": "project",
+      "title": "Linee d'indirizzo counseling drug checking (internal guidelines, UBC, 2026); paraphrased with written permission, no URL",
+      "year": 2026,
+      "consulted": "2026-10-13",
+      "tier": "secondary"
+    },
+    {
       "id": "roque-bravo2022",
       "type": "paper",
       "title": "Cocaine: An Updated Overview on Chemistry, Detection, Biokinetics, and Pharmacotoxicological Aspects including Abuse Pattern (Toxins 14(4):278)",
@@ -1206,15 +1320,6 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13",
       "tier": "primary"
-    },
-    {
-      "id": "ubc-counselling-guidelines",
-      "type": "project",
-      "title": "UBC, internal counselling guidelines for drug checking (Linee d'indirizzo counseling drug checking), 2026; paraphrased with the permission recorded by the project, the points are confirmed by the other cited sources",
-      "year": 2026,
-      "license": "paraphrase and citation allowed by the owner of the document",
-      "consulted": "2026-10-13",
-      "tier": "secondary"
     }
   ]
 }
