@@ -158,8 +158,8 @@ main { min-width: 0; max-width: 72rem; padding: 0.75rem 1rem; }
 .workbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
 .toolbar { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .title-row { display: flex; align-items: center; gap: 0.25rem; margin: 0.25rem 0; }
-#chart { border: 1px solid var(--border); border-radius: 0.4rem; background: var(--bg); }
-#chart svg { display: block; width: 100%; height: auto; max-height: 44vh; }
+#chart { max-width: calc(44vh * 20 / 9); border: 1px solid var(--border); border-radius: 0.4rem; background: var(--bg); }
+#chart svg { display: block; width: 100%; height: auto; }
 .axis, .grid { stroke: var(--border); fill: none; }
 .grid { stroke-opacity: 0.35; }
 .label { fill: var(--text); font-size: 12px; }
@@ -410,7 +410,7 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .cursor-text { font-variant-numeric: tabular-nums; }
 
 /* Candidates under the chart: the space is reserved once a spectrum is shown, so the result arriving moves nothing */
-.candidates[data-open] { min-height: 24rem; margin-top: 0.75rem; }
+.candidates[data-open] { min-height: 28rem; margin-top: 0.75rem; }
 .candidates .cand-name { overflow: visible; white-space: normal; }
 .candidates .detail { min-height: 4rem; }
 .cand-delta { font-variant-numeric: tabular-nums; color: var(--text-muted); white-space: nowrap; }
