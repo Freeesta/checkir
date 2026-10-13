@@ -55,6 +55,81 @@
       "file": "web/pagine/informativa/index.html",
       "url": "https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement",
       "motivo": "link to the privacy statement of the host (text; followed only on click)"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://commons.wikimedia.org/wiki/Category:Infrared_vibrational_modes",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://en.wikipedia.org/wiki/Infrared_spectroscopy",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://en.wikipedia.org/wiki/Infrared_spectroscopy_correlation_table",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://en.wikipedia.org/wiki/Molecular_vibration",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://it.wikipedia.org/wiki/Spettroscopia_IR",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://openstax.org/books/organic-chemistry/pages/12-6-infrared-spectroscopy",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://phet.colorado.edu/en/simulations/molecules-and-light",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://reusch-archive.organicchemistrydata.org/Spectrpy/InfraRed/irspec1.htm",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=800",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/fonti.json",
+      "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-v-amine-salts",
+      "motivo": "source of the theory section: textual link the person can follow, never loaded by the page"
+    },
+    {
+      "file": "web/teoria/svg.js",
+      "url": "http://www.w3.org/2000/svg",
+      "motivo": "namespace identifier, never loaded"
+    },
+    {
+      "file": "web/schede_ui.js",
+      "url": "https://doi.org/",
+      "motivo": "link a DOI of a cited source, opened only on the user's click (no request from the page)"
+    },
+    {
+      "file": "web/proponi.js",
+      "url": "https://github.com/Freeesta/checkir/",
+      "motivo": "base of the pre-filled issue and history links, opened only on the user's click (no request from the page)"
     }
   ]
 }

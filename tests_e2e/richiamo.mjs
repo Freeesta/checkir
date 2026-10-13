@@ -11,12 +11,12 @@ function pureScenario(check) {
   check("recall: correlation of a line with itself is 1 and a flat curve has none", Math.abs(pearson([1, 2, 3, 4], [2, 4, 6, 8]) - 1) < 1e-12 && pearson([1, 1, 1, 1], [1, 2, 3, 4]) === null);
 }
 
-async function openPanel(page, name) {
+export async function openPanel(page, name) {
   const section = page.locator(`details[data-panel="${name}"]`);
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();
 }
 
-async function prepare(browser, base) {
+export async function prepare(browser, base) {
   const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 900 } });
   const page = await ctx.newPage();
   await page.goto(base);
@@ -34,7 +34,7 @@ async function prepare(browser, base) {
 }
 
 /** Type in the search dialog and click the n-th hit. */
-async function pick(page, text, n = 0) {
+export async function pick(page, text, n = 0) {
   await page.fill("#recall-q", text);
   await page.locator(".recall-results button").nth(n).click();
 }

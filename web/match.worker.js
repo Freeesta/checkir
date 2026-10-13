@@ -4,7 +4,9 @@
  * sent by the page); it never touches the network; its only storage is the cache of the peak indexes (`peak_index_cache.js`). Messages in: `sync` (the libraries to hold), `run` and `peak_query`;
  * messages out: `synced`, `twins` (progress of the spectral twins), `peak_index` (progress of the peak index of a library),
  * `result`, `peak_result` (answer to `peak_query`), `error`.
- * @typedef {{ id: string, version: string, rows?: Array<{ id: string, substance?: string, form?: string, names: { it?: string, en: string } }>, values?: Float32Array, from?: number, step?: number }} LibMessage
+ * The library test adds `prova-start` (libraries to test; the same libraries carry on where it stopped), `prova-stop` and
+ * `prova-csv` in, `prova` (progress), `prova-report` (the report so far: when it stops or finishes), `prova-csv`, `prova-error` out.
+ * @typedef {{ id: string, version: string, rows?: Array<{ id: string, substance?: string, form?: string, names: { it?: string, en: string } }>, sampling?: string, values?: Float32Array, from?: number, step?: number }} LibMessage
  */
 import { ensurePeakIndex } from "./peak_index_job.js";
 
@@ -38,6 +40,7 @@ function addLibrary(lib) {
   const n = rows.length ? Math.round(values.length / rows.length) : 0;
   const axis = Float64Array.from({ length: n }, (_, i) => from + step * i);
   mod.confronto_libreria_inizia(lib.id, lib.version);
+  if (lib.sampling) mod.confronto_libreria_campionamento(lib.id, lib.sampling);
   for (let i = 0; i < rows.length; i++) {
     const r = rows[i];
     const answer = JSON.parse(mod.confronto_libreria_aggiungi(lib.id, r.id, r.substance ?? "", r.names.en, r.form ?? "", "absorbance", axis, Float64Array.from(values.subarray(i * n, (i + 1) * n))));
@@ -57,6 +60,37 @@ async function stepTwins() {
     await new Promise((r) => setTimeout(r, 0));
   }
   twinsRunning = false;
+}
+
+let proving = false;
+let provaStop = false;
+
+/** @param {string} json an engine answer @returns {any} the parsed answer, `null` when it is an error (already reported) */
+function provaAnswer(json) {
+  const data = JSON.parse(json);
+  if (!data.error_key) return data;
+  scope.postMessage({ type: "prova-error", key: data.error_key, params: data.params ?? {} });
+  return null;
+}
+
+/** The library test, in small blocks like the twins; a stop leaves the state in the engine and the report so far is sent. @param {string[]} ids */
+async function runProva(ids) {
+  await engine();
+  if (proving) return;
+  const first = provaAnswer(mod.confronto_prova_inizia(JSON.stringify(ids)));
+  if (!first) return;
+  proving = true;
+  provaStop = false;
+  let step = first;
+  while (step && step.done < step.total && !provaStop) {
+    scope.postMessage({ type: "prova", done: step.done, total: step.total });
+    await new Promise((r) => setTimeout(r, 0));
+    step = provaAnswer(mod.confronto_prova_blocco());
+  }
+  proving = false;
+  if (!step) return;
+  scope.postMessage({ type: "prova", done: step.done, total: step.total });
+  scope.postMessage({ type: "prova-report", json: mod.confronto_prova_rapporto() });
 }
 
 /** Builds (or reads from the cache) the peak index of a library, then tells the page. @param {LibMessage} lib */
@@ -109,5 +143,9 @@ scope.addEventListener("message", (/** @type {MessageEvent} */ e) => {
   const failed = (/** @type {unknown} */ err) => scope.postMessage({ type: "error", runId: m.runId, key: "engine.error", detail: String(err) });
   if (m.type === "sync") sync(m.libs).catch(failed);
   else if (m.type === "run") run(m).catch(failed);
+  else if (m.type === "prova-start") runProva(m.ids).catch(failed);
+  else if (m.type === "prova-stop") provaStop = true;
+  else if (m.type === "prova-csv") scope.postMessage({ type: "prova-csv", text: mod ? mod.confronto_prova_csv() : "" });
+
   else if (m.type === "peak_query") peakQuery(m).catch(failed);
 });

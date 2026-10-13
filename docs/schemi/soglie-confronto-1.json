@@ -173,6 +173,40 @@
       ],
       "additionalProperties": false
     },
+    "region_agreement": {
+      "description": "How the r of each explanation region is read: it agrees from agree_min, agrees in part from partial_min; a region holding a share of the sample derivative energy under signal_share_min has too little signal and is not judged.",
+      "description_it": "Come si legge l'r di ogni regione di spiegazione: concorda da agree_min, concorda in parte da partial_min; una regione con una quota di energia della derivata del campione sotto signal_share_min ha poco segnale e non si giudica.",
+      "type": "object",
+      "properties": {
+        "agree_min": {
+          "description": "Lowest regional r that agrees.",
+          "description_it": "r regionale minimo che concorda.",
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "partial_min": {
+          "description": "Lowest regional r that agrees in part.",
+          "description_it": "r regionale minimo che concorda in parte.",
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "signal_share_min": {
+          "description": "Lowest share (0-1) of the sample derivative energy a region must hold to be judged.",
+          "description_it": "Quota minima (0-1) dell'energia della derivata del campione che una regione deve avere per essere giudicata.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "agree_min",
+        "partial_min",
+        "signal_share_min"
+      ],
+      "additionalProperties": false
+    },
     "quality": {
       "description": "Limits of the measurement-quality alerts.",
       "description_it": "Limiti delle allerte sulla qualita della misura.",
@@ -424,6 +458,7 @@
     "ambiguity",
     "spectral_twin",
     "same_as_previous",
+    "region_agreement",
     "quality",
     "range_limits",
     "regions",

@@ -125,7 +125,7 @@ async function menuScenario(page, check, axe) {
   await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2, { button: "right" });
   await page.waitForSelector('[role="menu"]');
   const items = await page.$$eval('[role="menu"] button', (b) => b.map((x) => x.dataset.item));
-  check("tools: right click opens the chart menu with its rows", items.length === 9 && items.includes("y.lock") && items.includes("table.export") && items.includes("peaks.toggle"), items.join(","));
+  check("tools: right click opens the chart menu with its rows", items.length === 14 && items.includes("y.lock") && items.includes("export.csv") && items.includes("peaks.toggle") && items.includes("cursor.1"), items.join(","));
   check("tools: the first row has the focus", await page.evaluate(() => document.activeElement?.closest('[role="menu"]') !== null));
   const violations = await axe(page);
   check("tools: axe has no violations with the menu open", violations.length === 0, violations.join(", "));
@@ -141,7 +141,7 @@ async function menuScenario(page, check, axe) {
   await page.waitForSelector('[role="menu"]');
   check("tools: the checked row is marked", (await page.getAttribute('[data-item="y.lock"]', "aria-checked")) === "true");
   await page.click('[data-item="y.lock"]');
-  const [download] = await Promise.all([page.waitForEvent("download"), page.keyboard.press("Shift+F10").then(() => page.click('[data-item="table.export"]'))]);
+  const [download] = await Promise.all([page.waitForEvent("download"), page.keyboard.press("Shift+F10").then(() => page.click('[data-item="export.csv"]'))]);
   const lines = (await (await import("node:fs/promises")).readFile(await download.path(), "utf8")).split("\n");
   check("tools: the CSV is named by the code and holds only the sample", download.suggestedFilename() === "C1.csv" && lines[0] === "wavenumber_cm1,absorbance" && /^\d+(\.\d+)?,-?[\d.e-]+$/.test(lines[1]), download.suggestedFilename() + " " + lines[0]);
   check("tools: outside the chart the browser's own menu is left alone", await page.evaluate(() => { const e = new MouseEvent("contextmenu", { bubbles: true, cancelable: true }); document.getElementById("range")?.dispatchEvent(e); return !e.defaultPrevented; }));

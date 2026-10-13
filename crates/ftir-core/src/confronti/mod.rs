@@ -23,6 +23,8 @@ pub mod livello;
 pub mod motore;
 pub mod opzioni;
 pub mod pearson;
+pub mod prova;
+pub mod prova_rapporto;
 pub mod punteggio;
 pub mod risultato;
 pub mod soglie;
@@ -33,7 +35,7 @@ pub const GRID_N: usize = 1576;
 /// Zone always excluded (diamond), as in the `maschera/1` step of the chains.
 pub const MASK_CM1: (f64, f64) = (1900.0, 2400.0);
 /// Version of the prepared vectors: a change of chain or baseline raises it and the caches are rebuilt, never migrated.
-pub const CACHE_VERSION: u32 = 1;
+pub const CACHE_VERSION: u32 = 2;
 
 /// Chain of the spectrum score: absorbance → grid (the baseline and the mask follow in `prepare`).
 pub const CONFRONTO_SPETTRO_V1: &str = r#"{"schema":"catene/1","id":"confronto_spettro_v1","steps":[

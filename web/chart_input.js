@@ -17,10 +17,13 @@ import { t } from "./i18n.js";
  *   yZoomBy: (factor: number) => void,
  *   announce: (text: string) => void,
  *   brush?: (from: number, to: number) => void,
+ *   pickPeak?: (id: string) => boolean,
+ *   snap?: (wn: number) => number,
  * }} ChartApi */
 
 const DRAG_PX = 4;
 const WHEEL_STEP = 1.25;
+const PEAK_HIT_PX = 8;
 
 /** A pointer position in the SVG user units and the part of the chart it is on: the plot, the x axis (below it) or the y axis (left of it). @typedef {{ x: number, y: number, zone: "plot" | "x" | "y" | "brush" | null }} Point */
 
@@ -72,6 +75,18 @@ function endBrush(api, start, end, dx) {
   api.brush?.(Math.round(Math.min(a, b)), Math.round(Math.max(a, b)));
 }
 
+/** The id of the peak marker within a few pixels of a click, the nearest one. @param {HTMLElement} host @param {{ clientX: number, clientY: number }} e @returns {string | null} */
+function peakAt(host, e) {
+  let best = null;
+  let bestD = PEAK_HIT_PX;
+  for (const m of host.querySelectorAll("[data-peak]")) {
+    const r = m.getBoundingClientRect();
+    const d = Math.hypot(e.clientX - (r.left + r.width / 2), e.clientY - (r.top + r.height / 2));
+    if (d <= bestD) [best, bestD] = [m.getAttribute("data-peak"), d];
+  }
+  return best;
+}
+
 /** Pointer: moving shows the cursor line, a click places cursor 1 (Alt+click cursor 2), a drag in the plot or along an axis draws a zoom band (the y axis only when it is not locked), the wheel zooms around the pointer, a double click shows everything. @param {HTMLElement} host @param {ChartApi} api */
 function attachPointer(host, api) {
   /** @type {{ start: Point, cx: number, cy: number, alt: boolean } | null} */
@@ -95,7 +110,9 @@ function attachPointer(host, api) {
     const p = pointOf(host, api, e);
     if (!d || !p) return;
     if (d.start.zone === "plot" && Math.abs(e.clientX - d.cx) <= DRAG_PX) {
-      if (p.zone === "plot") api.cursors.set(d.alt ? 1 : 0, wavenumberAt(api, p.x));
+      const peak = !e.shiftKey && Math.abs(e.clientY - d.cy) <= DRAG_PX ? peakAt(host, e) : null;
+      if (peak && api.pickPeak?.(peak)) return;
+      if (p.zone === "plot") api.cursors.set(d.alt ? 1 : 0, e.shiftKey && api.snap ? api.snap(wavenumberAt(api, p.x)) : wavenumberAt(api, p.x));
       return;
     }
     if (d.start.zone === "brush") return endBrush(api, d.start, p, e.clientX - d.cx);
@@ -139,4 +156,10 @@ function attachKeys(host, api) {
 export function attachInput(host, api) {
   attachPointer(host, api);
   attachKeys(host, api);
+}
+
+/** The wavenumber under a mouse event, or null when it is not over the plot. @param {HTMLElement} host @param {ChartApi} api @param {MouseEvent} e @returns {number | null} */
+export function clientWavenumber(host, api, e) {
+  const p = pointOf(host, api, e);
+  return p?.zone === "plot" ? wavenumberAt(api, p.x) : null;
 }

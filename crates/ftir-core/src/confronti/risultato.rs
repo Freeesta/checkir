@@ -49,13 +49,7 @@ impl Outcome {
                 self.origin.as_deref().map_or(Value::Null, text),
             ),
         ]);
-        let thresholds = Value::Obj(vec![
-            ("schema".into(), text(soglie::SCHEMA)),
-            (
-                "version".into(),
-                Value::Num(f64::from(self.thresholds_version)),
-            ),
-        ]);
+        let thresholds = self.thresholds_json();
         let twins = Value::Obj(vec![
             ("done".into(), Value::Num(index.twins.done as f64)),
             ("total".into(), Value::Num(index.total() as f64)),
@@ -76,12 +70,41 @@ impl Outcome {
             ("margin".into(), self.margin.map_or(Value::Null, num)),
             ("margin_vs".into(), margin_vs),
             ("level_proposed".into(), text(self.level.id())),
+            ("tier".into(), text(self.level.tier())),
+            (
+                "region_signal".into(),
+                Value::Obj(
+                    self.region_signal
+                        .iter()
+                        .map(|(k, s)| (k.clone(), num(*s)))
+                        .collect(),
+                ),
+            ),
             (
                 "level_caps".into(),
                 Value::Arr(self.level_caps.iter().map(|c| text(c)).collect()),
             ),
             ("alerts".into(), Value::Arr(alerts.collect())),
             ("twins".into(), twins),
+        ])
+    }
+
+    fn thresholds_json(&self) -> Value {
+        let a = self.region_agreement;
+        Value::Obj(vec![
+            ("schema".into(), text(soglie::SCHEMA)),
+            (
+                "version".into(),
+                Value::Num(f64::from(self.thresholds_version)),
+            ),
+            (
+                "region_agreement".into(),
+                Value::Obj(vec![
+                    ("agree_min".into(), Value::Num(a.agree_min)),
+                    ("partial_min".into(), Value::Num(a.partial_min)),
+                    ("signal_share_min".into(), Value::Num(a.signal_share_min)),
+                ]),
+            ),
         ])
     }
 
@@ -96,6 +119,18 @@ pub enum Level {
     Probable,
     ToCheck,
     NotIdentified,
+}
+
+impl Level {
+    /// Identification tier of the level: T2 probable, T3 to check, T4 not identified. T1 (confirmed) is never
+    /// proposed here: only the chemist assigns it.
+    pub fn tier(self) -> &'static str {
+        match self {
+            Level::Probable => "T2",
+            Level::ToCheck => "T3",
+            Level::NotIdentified => "T4",
+        }
+    }
 }
 
 impl Level {
@@ -118,6 +153,8 @@ pub struct Candidate {
     pub coverage: f64,
     /// r of the derivative in each fixed region; `None` = too few points.
     pub r_regions: Vec<(String, Option<f64>)>,
+    /// State of each region (`agrees`, `partial`, `disagrees`, `low_signal`, `unknown`).
+    pub region_states: Vec<(String, &'static str)>,
 }
 
 /// An alert with the data that made it fire.
@@ -134,6 +171,8 @@ pub struct Outcome {
     pub margin_vs: Option<(usize, f64)>,
     pub level: Level,
     pub level_caps: Vec<&'static str>,
+    /// Share (0-1) of the sample derivative energy that falls in each explanation region.
+    pub region_signal: Vec<(String, f64)>,
     pub alerts: Vec<Alert>,
     pub ranges: Vec<(f64, f64)>,
     pub range_preset: Option<String>,
@@ -141,6 +180,7 @@ pub struct Outcome {
     pub origin: Option<String>,
     pub searched: Vec<usize>,
     pub thresholds_version: u32,
+    pub region_agreement: soglie::RegionAgreement,
 }
 
 fn num(x: f64) -> Value {
@@ -192,6 +232,15 @@ fn candidate_json(rank: usize, c: &Candidate, index: &Index) -> Value {
         ),
         ("coverage".into(), num(c.coverage)),
         ("r_regions".into(), Value::Obj(regions)),
+        (
+            "region_states".into(),
+            Value::Obj(
+                c.region_states
+                    .iter()
+                    .map(|(k, s)| (k.clone(), text(s)))
+                    .collect(),
+            ),
+        ),
     ])
 }
 

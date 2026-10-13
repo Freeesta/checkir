@@ -1,0 +1,42 @@
+{
+ "schema": "theory-index/1",
+ "lang": "en",
+ "chapters": [
+  {
+   "n": 1,
+   "id": "what-ftir-sees",
+   "slug": "01-che-cosa-vede",
+   "title": "What FTIR sees (and what it does not)"
+  },
+  {
+   "n": 2,
+   "id": "springs",
+   "slug": "02-molle",
+   "title": "Molecules are springs"
+  },
+  {
+   "n": 3,
+   "id": "vibration-modes",
+   "slug": "03-modi",
+   "title": "Modes of vibration"
+  },
+  {
+   "n": 4,
+   "id": "dipole",
+   "slug": "04-dipolo",
+   "title": "Why a peak is strong, weak or absent"
+  },
+  {
+   "n": 5,
+   "id": "broad-and-shifted",
+   "slug": "05-bande",
+   "title": "Why a peak is broad or shifted"
+  },
+  {
+   "n": 6,
+   "id": "instrument",
+   "slug": "06-strumento",
+   "title": "The instrument"
+  }
+ ]
+}

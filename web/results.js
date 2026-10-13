@@ -4,6 +4,7 @@ import { actionButton } from "./controls.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { libraryRows } from "./librerie.js";
+import { openSheet } from "./schede_ui.js";
 import { activeFile, activeLibraries, candidateKey, decisionOf, resultOf } from "./state.js";
 import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
 import { attachTip, toggletip } from "./tooltip.js";
@@ -119,8 +120,10 @@ function wireArrows(list, ctx) {
     const next = rows[rows.indexOf(target) + (e.key === "ArrowDown" ? 1 : -1)];
     if (!(next instanceof HTMLElement)) return;
     e.preventDefault();
+    const at = [...document.querySelectorAll(".cands")].indexOf(list);
     ctx.selectCandidate(/** @type {string} */ (next.closest(".cand")?.getAttribute("data-key")));
-    /** @type {HTMLElement | null} */ (list.querySelector(`[data-fk="${next.dataset.fk}"]`))?.focus();
+    // The selection redraws the list: the row to focus is in the new one (same position among the lists), not in `list`.
+    /** @type {HTMLElement | null} */ (document.querySelectorAll(".cands")[at]?.querySelector(`[data-fk="${next.dataset.fk}"]`) ?? null)?.focus();
   });
 }
 
@@ -139,7 +142,15 @@ function detail(data, c, ctx, s, level) {
   );
   const button = actionButton("overlay.toggle", ctx, { withLabel: true, className: "btn" });
   button.setAttribute("aria-pressed", String(s.overlay));
-  box.append(el("div", { class: "row" }, [button, actionButton("subtract.open", ctx, { withLabel: true, className: "btn" })]));
+  const row = libraryRows(c.library)?.find((/** @type {any} */ r) => r.id === c.spectrum_id);
+  const tools = el("div", { class: "row" }, [button, actionButton("subtract.open", ctx, { withLabel: true, className: "btn" })]);
+  if (row?.substance && level <= 4) {
+    // level 5 names nobody ("the most similar"): the sheet of a substance stays closed
+    const sheet = el("button", { type: "button", class: "btn", "data-fk": "open-sheet" }, [icon("sheet"), t("sheets.open")]);
+    sheet.addEventListener("click", () => void openSheet(row.substance, candidateName(c)));
+    tools.append(sheet);
+  }
+  box.append(tools);
   const regions = rangeTable(s, c);
   if (regions) box.append(regions);
   return box;

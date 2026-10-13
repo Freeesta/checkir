@@ -93,7 +93,14 @@ def check_fixtures() -> list[str]:
         elif not any(expected[key] in e for e in errors):
             out.append(f"{key}: no message names '{expected[key]}': {errors}")
     out += [f"attesi.json lists a missing fixture: {k}" for k in expected if k != "_comment" and k not in seen]
+    out += check_theory_content()
     return out
+
+
+def check_theory_content() -> list[str]:
+    """The real files of the theory section (chapters, indices, glossaries, sources) follow their schemas."""
+    files = sorted(p for lang in ("it", "en") for p in (ROOT / "web" / "teoria" / lang).glob("*.json")) + [ROOT / "web" / "teoria" / "fonti.json"]
+    return [m for path in files if path.is_file() for m in check_file(path)]
 
 
 def main(argv: list[str]) -> int:

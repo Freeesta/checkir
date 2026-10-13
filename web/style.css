@@ -224,7 +224,14 @@ th { position: sticky; top: 0; background: var(--surface); }
   .app-header { gap: 0.4rem; padding: 0.25rem 0.5rem; }
   .brand { margin-right: 0; }
   .chips [data-chip="library"] { display: none; }
+  .chips { flex: 1 1 0; }
+  .chip { min-width: 0; padding-inline: 0.5rem; }
   .chip-value { max-width: 7.5rem; overflow: hidden; text-overflow: ellipsis; }
+  /* the level of the result is what must stay readable: the file name gives way first */
+  .chips [data-chip="file"] { flex: 0 1 auto; }
+  .chips [data-chip="file"] .chip-value { max-width: 3.5rem; }
+  .chips [data-chip="result"] { flex: 0 0 auto; }
+  .chips [data-chip="result"] .chip-value { max-width: none; overflow: visible; }
   .menu-button { display: inline-flex; }
   .hdr-tools { display: none; position: absolute; top: 100%; right: 0.5rem; flex-direction: column; align-items: stretch; margin: 0; padding: 0.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 0.4rem; }
   .app-header[data-menu] .hdr-tools { display: flex; }
@@ -243,6 +250,13 @@ th { position: sticky; top: 0; background: var(--surface); }
   .tab[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--color-brand); }
   main { padding: 0.5rem 0.75rem; }
   body { padding-bottom: var(--tabbar-h); }
+}
+/* below 24em the logo stands for the name (the heading stays for screen readers) so the result chip has the room */
+@media (max-width: 24em) {
+  .brand #app-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .app-header { gap: 0.25rem; }
+  .chips { gap: 0.25rem; }
+  .chip { gap: 0.25rem; padding-inline: 0.4rem; font-size: 0.9rem; }
 }
 @media (prefers-contrast: more) {
   :root { --border: var(--text); }
@@ -342,6 +356,7 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .region-agrees .swatch { background-image: radial-gradient(var(--text) 1.2px, transparent 1.6px); background-size: 6px 6px; }
 .region-partial .swatch { background-image: repeating-linear-gradient(45deg, var(--text) 0 1px, transparent 1px 5px); }
 .region-disagrees .swatch { background-image: repeating-linear-gradient(45deg, var(--text) 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, var(--text) 0 1px, transparent 1px 5px); }
+.region-low_signal .swatch { background-color: transparent; border-style: dashed; }
 .peak-list { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; }
 .peak-item { display: inline-flex; align-items: center; gap: 0.25rem; min-height: 1.5rem; padding: 0 0.4rem; font: inherit; font-size: 0.9rem; color: var(--text); background: transparent; border: 1px solid var(--border); border-radius: 0.3rem; cursor: pointer; }
 .peak-item[aria-pressed="true"] { border-color: var(--focus); border-width: 2px; font-weight: 600; }
@@ -430,6 +445,18 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .cursor-hover { stroke: var(--text-muted); stroke-width: 1; stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
 .zoom-box { fill: var(--surface); fill-opacity: 0.6; stroke: var(--text); stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
 .cursor-text { font-variant-numeric: tabular-nums; }
+
+/* Library test (information dialog) */
+.prova-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0; }
+.prova-hist { display: block; width: 100%; height: auto; }
+.prova-bar { fill: var(--color-sample); }
+.prova-line-check, .prova-line-probable { stroke: var(--color-alert); stroke-width: 1.5; }
+.prova-line-check { stroke-dasharray: 4 3; }
+.prova-report progress { width: 100%; }
+/* Substance sheet (dialog) */
+.substance-sheet h3 { font-size: 1rem; margin: 1rem 0 0.25rem; }
+.substance-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
+.sheet-sources { font-size: 0.85rem; color: var(--text-muted); }
 
 /* Recalled compounds: the dash is the second signal beside the label (colour is the role "reference" for all of them); the difference uses the residual role. */
 .curve-recalled, .curve-difference { fill: none; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
@@ -532,3 +559,24 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .rule-range { fill: none; stroke: var(--focus); stroke-width: 2; stroke-dasharray: 6 3; pointer-events: none; }
 .rule-label { font-weight: 600; }
 @media (forced-colors: active) { .mode-atom { fill: Canvas; stroke: CanvasText; } .mode-bond, .mode-arrow { stroke: CanvasText; } .mode-head, .mode-el, .mode-z { fill: CanvasText; } .rule-range { stroke: Highlight; } }
+
+.propose-toggle, .propose-open { font: inherit; border: 1px solid var(--border); border-radius: 0.3rem; padding: 0.3rem 0.7rem; background: transparent; color: var(--text); cursor: pointer; text-decoration: none; display: inline-block; }
+.propose-open[aria-disabled="true"] { color: var(--text-muted); cursor: not-allowed; }
+.propose { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.propose-field { display: grid; gap: 0.2rem; }
+.propose-field textarea, .propose-field input { font: inherit; width: 100%; box-sizing: border-box; }
+.propose-problems { margin: 0; padding-left: 1.2rem; }
+
+
+.inverse-dialog { width: min(52rem, calc(100vw - 2rem)); }
+.inverse-field { display: inline-flex; flex-direction: column; gap: 0.15rem; margin: 0.25rem 0.5rem 0.25rem 0; }
+.inverse-field input { width: 9rem; }
+.inverse-chips, .inverse-bands, .inverse-readings { list-style: none; padding: 0; margin: 0.25rem 0; }
+.inverse-chip { display: flex; align-items: center; gap: 0.5rem; }
+.inverse-table { margin-top: 0.5rem; }
+.inverse-table caption { text-align: left; font-weight: 600; padding: 0.25rem 0; }
+.inverse-table th, .inverse-table td { text-align: left; padding: 0.2rem 0.4rem; border-top: 1px solid var(--border); vertical-align: top; }
+.inverse-table th[scope="rowgroup"] { font-weight: 600; }
+.report-host { display: none; }
+.chart-menu button { display: flex; justify-content: space-between; gap: 1.5rem; }
+.menu-key { color: var(--text-muted); font-variant-numeric: tabular-nums; }

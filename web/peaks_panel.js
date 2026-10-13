@@ -30,7 +30,7 @@ export function peaksLabel(s) {
 function regionList(a) {
   const list = el("ul", { class: "regions", "aria-label": t("peaks.regions_label") });
   for (const g of a.regions) {
-    const r = g.r === null ? "" : ` · r ${formatNumber(g.r, 2)}`;
+    const r = (g.r === null ? "" : ` · r ${formatNumber(g.r, 2)}`) + (g.share === null ? "" : ` · ${t("peaks.signal_share", { share: formatNumber(g.share * 100, 1) })}`);
     list.append(el("li", { class: `region-item region-${g.agreement}`, "data-region": g.id }, [el("span", { class: "swatch", "aria-hidden": "true" }), `${formatNumber(g.from)}–${formatNumber(g.to)} cm⁻¹${r} · ${agreementWord(g.agreement)}`]));
   }
   return list;
@@ -58,7 +58,7 @@ export function renderPeaks(body, s, ctx) {
   if (!a) return void body.append(el("p", { class: "empty" }, [t("panel.peaks.empty")]));
   const toggle = actionButton("peaks.toggle", ctx, { withLabel: true, className: "btn" });
   toggle.setAttribute("aria-pressed", String(s.showPeaks));
-  body.append(el("div", { class: "row" }, [toggle]));
+  body.append(el("div", { class: "row" }, [toggle, actionButton("inverse.open", ctx, { withLabel: true, className: "btn" })]));
   if (a.error) return void body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t("peaks.error")]));
   const result = resultOf(s);
   const chosen = result ? selectedCandidate(s, result.data) : null;

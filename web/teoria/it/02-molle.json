@@ -1,0 +1,117 @@
+{
+ "schema": "theory/1",
+ "id": "springs",
+ "n": 2,
+ "title": "Le molecole sono molle",
+ "key_message": "Più il legame è rigido e gli atomi leggeri, più alta è la frequenza: per questo C–H sta a sinistra e C–Cl a destra.",
+ "body": [
+  "Immagina due palline unite da una molla. Se la molla è rigida o le palline leggere, vibrano in fretta; se la molla è morbida o le palline pesanti, vibrano lentamente. Nelle molecole succede lo stesso: un legame con l'idrogeno (leggero) vibra veloce e sta a sinistra nello spettro; un doppio legame C=O (rigido) sta a metà; i legami con atomi pesanti stanno a destra.",
+  "Prova tu: muovi i cursori o scegli un legame e guarda come cambia il [[wavenumber|numero d'onda]]. Il modello prevede l'ordine delle bande, non il valore esatto."
+ ],
+ "for_chemists": [
+  "[[harmonic-oscillator|Oscillatore armonico]]: ν̃ = (1/2πc)·√(k/μ), con la [[reduced-mass|massa ridotta]] μ = m₁m₂/(m₁+m₂) e la [[force-constant|costante di forza]] k. Con k in N/m e μ in u vale ν̃ ≈ 130.3·√(k/μ) cm⁻¹. Esempio C–H: k ≈ 500 N/m, μ = 0.93 u, ν̃ ≈ 3020 cm⁻¹ contro 2850–2960 osservato.",
+  "Sostituire H con D abbassa ν̃ del fattore √(μ_D/μ_H): per O–H e O–D vale circa 1.37, non √2. Le k della figura sono ordini di grandezza da letteratura didattica, non misure; il modello prevede l'ordine (C≡N > C=O > C–C, X–H in alto), non il valore esatto. F–H cade sopra C–H nonostante la massa ridotta leggermente maggiore: conta di più l'aumento di k.",
+  "Il potenziale reale non è una parabola ([[anharmonicity|anarmonicità]]): i livelli si avvicinano salendo e la prima [[overtone|armonica]] cade poco sotto il doppio della fondamentale."
+ ],
+ "figure": {
+  "id": "spring",
+  "alt": "Due palline unite da una molla a zigzag. Il contorno tratteggiato mostra la posizione estrema della vibrazione; la pallina più pesante si muove meno.",
+  "caption": "Due masse e una molla: il numero d'onda è calcolato dal motore con la legge di Hooke."
+ },
+ "interactive": {
+  "id": "spring",
+  "labels": {
+   "k": "Rigidità della molla k",
+   "m1": "Massa A",
+   "m2": "Massa B",
+   "result": "Massa ridotta {mu} u: numero d'onda calcolato circa {nu} centimetri alla meno uno (cm⁻¹).",
+   "error": "Valori non validi.",
+   "presets": "Prova con alcuni legami (k indicativa):",
+   "note": "Modello semplificato: dà l'ordine delle bande, non il valore esatto. Le costanti k sono ordini di grandezza.",
+   "table_caption": "Esempi calcolati con il modello",
+   "col_bond": "Legame",
+   "col_k": "k (N/m)",
+   "col_mu": "μ (u)",
+   "col_calc": "Calcolato (cm⁻¹)",
+   "col_obs": "Osservato tipico (cm⁻¹)",
+   "svg_title": "Due masse e una molla",
+   "svg_desc": "Due palline unite da una molla a zigzag; il contorno tratteggiato è la posizione estrema della vibrazione.",
+   "ghost": "Contorno tratteggiato: posizione estrema"
+  },
+  "items": [
+   {
+    "id": "ch",
+    "label": "C–H",
+    "text": "",
+    "value": "2850–2960",
+    "params": [
+     500,
+     12.011,
+     1.008
+    ]
+   },
+   {
+    "id": "oh",
+    "label": "O–H",
+    "text": "",
+    "value": "3620–3670 (libero)",
+    "params": [
+     770,
+     15.999,
+     1.008
+    ]
+   },
+   {
+    "id": "od",
+    "label": "O–D",
+    "text": "",
+    "value": "~2600",
+    "params": [
+     770,
+     15.999,
+     2.014
+    ]
+   },
+   {
+    "id": "co",
+    "label": "C=O",
+    "text": "",
+    "value": "~1715 (chetone)",
+    "params": [
+     1210,
+     12.011,
+     15.999
+    ]
+   },
+   {
+    "id": "cn",
+    "label": "C≡N",
+    "text": "",
+    "value": "2220–2250",
+    "params": [
+     1773,
+     12.011,
+     14.007
+    ]
+   }
+  ]
+ },
+ "further_reading": [
+  "phet-molecules-light",
+  "libretexts-ir-theory"
+ ],
+ "sources": [
+  "wiki-molecular-vibration",
+  "libretexts-ir-theory",
+  "engine-calculation"
+ ],
+ "glossary_terms": [
+  "wavenumber",
+  "force-constant",
+  "reduced-mass",
+  "harmonic-oscillator",
+  "anharmonicity"
+ ],
+ "status": "draft",
+ "reviewers": []
+}
