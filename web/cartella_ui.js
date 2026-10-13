@@ -1,6 +1,7 @@
 // @ts-check
 import { el, icon } from "./dom.js";
 import { t } from "./i18n.js";
+import { toggletip } from "./tooltip.js";
 
 /**
  * @param {string} key @param {string} label @param {boolean} on @param {(on: boolean) => void} change
@@ -41,22 +42,26 @@ function idleRow(f, folder) {
 }
 
 /**
- * The "instrument" block of section 1: watch the folder the instrument software saves to (Chrome/Edge), or, elsewhere, open the latest measurement of a chosen folder.
+ * The "instrument" block of section 1, one line and a ⓘ (the two switches appear while a folder is watched or remembered): watch the folder the instrument software saves to (Chrome/Edge), or, elsewhere, open the latest measurement of a chosen folder.
+ * What it does and where it works sits behind the ⓘ.
  * @param {HTMLElement} body @param {import("./state.js").FolderState} f @param {import("./actions.js").FolderCtx} folder
  */
 export function renderFolder(body, f, folder) {
   const box = el("fieldset", { class: "folder" }, [el("legend", {}, [t("folder.title")])]);
+  const info = toggletip(() => [f.supported ? t("folder.intro") : t("folder.unsupported"), t("folder.limits"), f.supported ? t("folder.remember_note") : ""].filter(Boolean).join(" "), () => t("folder.more_label"));
   if (!f.supported) {
-    box.append(el("p", { class: "note" }, [t("folder.unsupported")]), el("div", { class: "row" }, [button(t("folder.last"), "folder-last", () => folder.pickLast(), "upload")]));
+    box.append(el("div", { class: "row" }, [button(t("folder.last"), "folder-last", () => folder.pickLast(), "upload"), info]));
   } else {
-    box.append(el("p", { class: "note" }, [t("folder.intro")]));
     if (f.watching) {
-      box.append(el("p", {}, [t("folder.watching", { name: f.folderName ?? "" })]), el("div", { class: "row" }, [button(t("folder.stop"), "folder-stop", () => folder.stop(), "close")]));
-    } else box.append(idleRow(f, folder));
-    box.append(checkbox("remember", t("folder.remember"), f.remember, (on) => folder.setRemember(on)), checkbox("auto", t("folder.auto"), f.auto, (on) => folder.setAuto(on)));
+      box.append(el("div", { class: "row" }, [el("span", {}, [t("folder.watching", { name: f.folderName ?? "" })]), button(t("folder.stop"), "folder-stop", () => folder.stop(), "close"), info]));
+    } else {
+      const row = idleRow(f, folder);
+      row.append(info);
+      box.append(row);
+    }
+    if (f.watching || f.remember || f.saved) box.append(checkbox("remember", t("folder.remember"), f.remember, (on) => folder.setRemember(on)), checkbox("auto", t("folder.auto"), f.auto, (on) => folder.setAuto(on)));
     if (f.offers.length) box.append(offerList(f, folder));
   }
   if (f.notice) box.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t(f.notice.key, f.notice.params)]));
-  box.append(el("p", { class: "note" }, [t("folder.limits")]));
   body.append(box);
 }

@@ -70,12 +70,13 @@ async function watchedPage(browser, base) {
 async function watchScenario(browser, base, check, axe) {
   const { b64, ctx, page, seen } = await watchedPage(browser, base);
   check("folder: off at the start, nothing stored", (await page.locator("#folder-choose").count()) === 1 && (await page.evaluate(async () => (await indexedDB.databases()).length)) === 0);
-  check("folder: the remember and open-at-once boxes start unchecked", !(await page.isChecked("#folder-remember")) && !(await page.isChecked("#folder-auto")));
+  check("folder: the boxes are not there while idle", (await page.locator("#folder-remember").count()) === 0);
   check("folder: axe is clean before the activation", (await axe(page)).length === 0);
 
   for (let i = 0; i < 50; i++) await put(page, `vecchio_${i}.jdx`, b64);
   await page.click("#folder-choose");
   await page.waitForSelector("#folder-stop");
+  check("folder: the remember and open-at-once boxes start unchecked", !(await page.isChecked("#folder-remember")) && !(await page.isChecked("#folder-auto")));
   check("folder: the folder name is shown, not a path", ((await page.textContent(".folder")) ?? "").includes("«misure»"));
   await wait(5000);
   const old = (await page.textContent("#panel")) ?? "";
@@ -172,10 +173,11 @@ async function fallbackScenario(browser, base, check, axe) {
   const page = await ctx.newPage();
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
-  check("folder (no API): only the latest-measurement button, with the limits said", (await page.locator("#folder-choose").count()) === 0 && (await page.locator("#folder-last").count()) === 1 && ((await page.textContent(".folder")) ?? "").includes("Chrome o Edge"));
+  await page.click('.folder button[aria-label^="Spiega"]');
+  check("folder (no API): only the latest-measurement button, with the limits said behind the info button", (await page.locator("#folder-choose").count()) === 0 && (await page.locator("#folder-last").count()) === 1 && ((await page.textContent("body")) ?? "").includes("Chrome o Edge"));
   check("folder (no API): axe is clean", (await axe(page)).length === 0);
   await page.setInputFiles("input[webkitdirectory]", dir);
-  await page.waitForSelector('[data-fk="sel-C1"]');
+  await page.waitForSelector('[data-fk="sel-C1"]', { state: "attached" });
   const row = (await page.textContent('[data-fk="sel-C1"]')) ?? "";
   check("folder (no API): the newest file of the first level opens, files in sub-folders and other types are left out", row.includes("nuova.jdx") && !row.includes("piu_nuova") && (await page.locator('[data-fk="sel-C2"]').count()) === 0, row);
   await ctx.close();
