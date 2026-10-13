@@ -1,0 +1,55 @@
+{
+  "schema": "datasheet/1",
+  "substance": "pma",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "counselling": [
+    {
+      "key": "pma.identity",
+      "topic": "testing",
+      "source": "rojek2016"
+    },
+    {
+      "key": "pma.redosing",
+      "topic": "redosing",
+      "source": "rojek2016"
+    },
+    {
+      "key": "pma.heat",
+      "topic": "overdose_signs",
+      "source": "refstad2003"
+    },
+    {
+      "key": "pma.combination",
+      "topic": "combination",
+      "source": "lurie2012"
+    }
+  ]
+}
