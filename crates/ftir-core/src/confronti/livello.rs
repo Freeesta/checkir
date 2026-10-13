@@ -166,7 +166,10 @@ fn different_form(a: &AlertInput) -> Option<Alert> {
     let top = a.candidates.first()?;
     let top_form = &a.index.entry(top.g).form;
     let (rank, other) = a.candidates.iter().enumerate().skip(1).find(|(_, c)| {
-        a.index.group[c.g] == a.index.group[top.g] && a.index.entry(c.g).form != *top_form
+        a.index.group[c.g] == a.index.group[top.g]
+            && a.index.entry(c.g).form != *top_form
+            // the same spectrum under another name is a copy, not another form
+            && (c.r_derivative - top.r_derivative).abs() > 1e-9
     })?;
     Some(alert(
         "different_form",

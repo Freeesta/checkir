@@ -36,9 +36,10 @@ export default async ({ browser, base, check }) => {
   await page.setInputFiles('input[data-library="files"]', [{ name: "caffeine-base_lab.jdx", mimeType: "application/octet-stream", buffer: caffeine }]);
   await page.waitForFunction(() => document.querySelector('[data-library="copia"]'), null, { timeout: 30000 });
   await page.setInputFiles("input[type=file]", { name: "caffeina.jdx", mimeType: "chemical/x-jcamp-dx", buffer: caffeine });
-  await page.waitForFunction(() => /caffe/i.test(document.querySelector('details[data-panel="results"]')?.textContent ?? ""), null, { timeout: 30000 });
+  await page.waitForFunction(() => /caffe/i.test([...document.querySelectorAll(".cands > li")].map((e) => e.textContent).join(" ")), null, { timeout: 30000 });
   await openResults(page);
-  const res = page.locator('details[data-panel="results"]');
+  await page.waitForTimeout(3000); // the twin search runs after the first result
+  const res = page.locator("body");
   const body = (await res.textContent()) ?? "";
   const rows = await res.locator(".cands > li").count();
   const caffeineRows = await res.locator(".cands > li", { hasText: /caffe/i }).count();
