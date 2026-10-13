@@ -26,9 +26,6 @@ export function toQuery(spec) {
   return q;
 }
 
-/** Order of the results: more requested bands found, then stronger bands, then closer to the wanted positions. @param {InverseHit} a @param {InverseHit} b @returns {number} */
-const byRelevance = (a, b) => b.found - a.found || b.prominence - a.prominence || a.delta - b.delta;
-
 /** @param {string} lib @param {any} hit one hit of the engine @returns {InverseHit | null} */
 function hitOf(lib, hit) {
   const row = libraryRows(lib)?.[hit.spectrum];
@@ -57,21 +54,12 @@ export async function runInverse(spec) {
   const out = { groups: [], spectra: 0, truncated: false, building: [], failed: answer === null };
   if (!answer) return out;
   out.building = answer.missing.map((id) => ({ id, done: peakIndexStatus(id)?.done ?? 0, total: peakIndexStatus(id)?.total ?? 0 }));
-  /** @type {InverseHit[]} */
-  const hits = [];
-  for (const r of answer.results) {
-    const parsed = JSON.parse(r.json);
-    if (parsed.error_key) {
-      out.failed = true;
-      continue;
-    }
-    out.truncated ||= parsed.total > parsed.hits.length;
-    for (const h of parsed.hits) {
-      const hit = hitOf(r.lib, h);
-      if (hit) hits.push(hit);
-    }
-  }
-  hits.sort(byRelevance);
+  const parsed = JSON.parse(answer.json);
+  if (parsed.error_key) return { ...out, failed: true };
+  out.failed = parsed.failed > 0;
+  out.truncated = parsed.truncated;
+  // The engine merged the libraries and ordered the hits (bands found, prominence, distance); the page keeps that order.
+  const hits = parsed.hits.map((/** @type {any} */ h) => hitOf(h.lib, h)).filter((/** @type {InverseHit | null} */ h) => h !== null);
   out.spectra = hits.length;
   /** @type {Map<string, InverseGroup>} */
   const groups = new Map();
