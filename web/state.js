@@ -20,12 +20,15 @@ import { STORAGE_PREFIX } from "./appname.js";
  * The chemist's decision on one spectrum: level 1–5 and the chosen candidates (keys), valid for the libraries searched (`sig`). Memory only; the sheet is never stored.
  * @typedef {{ level: number, keys: string[] }} DecisionDraft
  * @typedef {{ level: number, keys: string[], sig: string }} Decision
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, folder: FolderState }} AppState
+ * The three levels of the explanation texts, and a rule window shown on the chart from the peak card (memory only).
+ * @typedef {"counsellor" | "chemist" | "teaching"} TextLevel
+ * @typedef {{ ruleId: string, from: number, to: number }} RuleRange
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, textLevel: TextLevel, modeAnim: boolean, ruleRange: RuleRange | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, folder: FolderState }} AppState
  */
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, textLevel: readLevel(), modeAnim: readPref("modeAnim") !== "off", ruleRange: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();
@@ -83,7 +86,13 @@ export function reset() {
 }
 
 /** Preferences are the only thing stored in the browser, always under the product prefix. */
-export const PREFS = ["lang", "theme", "panel", "shortcuts", "autoMatch"];
+export const PREFS = ["lang", "theme", "panel", "shortcuts", "autoMatch", "textLevel", "modeAnim"];
+
+/** @returns {TextLevel} the remembered level of the explanation texts (counsellor when none) */
+function readLevel() {
+  const v = readPref("textLevel");
+  return v === "chemist" || v === "teaching" ? v : "counsellor";
+}
 
 /** @param {string} name @returns {string | null} */
 export function readPref(name) {

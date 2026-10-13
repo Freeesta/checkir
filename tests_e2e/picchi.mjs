@@ -87,11 +87,93 @@ async function viewScenario(page, check, axe) {
   await page.keyboard.press("ArrowRight");
   const two = await page.getAttribute("#chart circle.peak-focus", "data-peak");
   check("peaks: → goes to the next peak, ← back", one !== null && two !== null && one !== two && (await (async () => { await page.keyboard.press("ArrowLeft"); return (await page.getAttribute("#chart circle.peak-focus", "data-peak")) === one; })()));
+  await page.waitForTimeout(200);
   check("peaks: the focused peak is announced and marked in the table", /picco a circa ~?\d+/.test((await page.textContent("#status")) ?? "") && (await page.locator("#table table.peak-table tr[aria-current]").count()) === 1);
   await page.keyboard.press("Escape");
   check("peaks: Esc clears the pick", (await page.locator("#chart .peak-focus").count()) === 0);
   const v = await axe(page);
   check("peaks: axe has no violations with the sorted table", v.length === 0, v.join(", "));
+}
+
+/** The peak card: facts, readings, level picker, source, other modes, the drawing of the mode (still under reduced motion) and Esc. */
+async function cardScenario(page, check, axe) {
+  const card = page.locator("#peak-card");
+  check("card: nothing until a peak is picked", await card.isHidden());
+  await page.click('.peak-item[data-state="explained"]');
+  check("card: a picked peak opens its card with title and facts", (await card.isVisible()) && /Picco a ~?\d+/.test((await card.locator("h3").textContent()) ?? "") && (await card.locator(".card-facts dt").count()) === 4);
+  check("card: the readings are at most three and say where they come from", (await card.locator(".reading").count()) <= 3 && (await card.locator(".reading-source").count()) === (await card.locator(".reading").count()));
+  check("card: no generic caution text", !/decide la persona|diagnosi|ipotesi del programma/i.test((await card.textContent()) ?? ""));
+  const names = await page.$$eval(".peak-item", (b) => b.map((x) => x.getAttribute("aria-label")));
+  check("card: each peak button has the full accessible name", names.every((n) => /^picco a circa ~?\d+/i.test(n ?? "")), JSON.stringify(names));
+  const level = (l) => card.locator(`[data-level="${l}"]`);
+  await level("chemist").click();
+  check("card: the level picker sets the level and stores it", (await level("chemist").getAttribute("aria-pressed")) === "true" && (await page.evaluate(() => localStorage.getItem("checkir.textLevel"))) === "chemist");
+  await level("chemist").focus();
+  await page.keyboard.press("ArrowDown");
+  check("card: ↓ goes to the next level and keeps the focus", (await level("teaching").getAttribute("aria-pressed")) === "true" && (await page.evaluate(() => document.activeElement?.getAttribute("data-level"))) === "teaching");
+  await page.keyboard.press("ArrowUp");
+  await page.keyboard.press("ArrowUp");
+  check("card: ↑ goes back to the simplest and stops there", (await level("counsellor").getAttribute("aria-pressed")) === "true");
+  await page.waitForTimeout(200);
+  check("card: the level is announced", /Livello del testo/.test((await page.textContent("#status")) ?? ""));
+  if (await card.locator("[data-rule-range]").count()) {
+    await card.locator("[data-rule-range]").first().click();
+    check("card: another mode of the group shows its window on the chart", (await page.locator("#chart rect.rule-range").count()) === 1 && /Finestra della regola/.test((await page.textContent("#chart text.rule-label")) ?? ""));
+  }
+  const fig = card.locator("figure.mode-figure");
+  if (await fig.count()) check("card: the drawing of the mode moves in the normal case", (await fig.getAttribute("data-animated")) === "true" && (await card.locator('[data-card="mode-anim"]').count()) === 1);
+  const v = await axe(page);
+  check("card: axe has no violations with the card open", v.length === 0, v.join(", "));
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.click('.peak-item[data-state="explained"] >> nth=1');
+  const still = page.locator("#peak-card figure.mode-figure");
+  if (await still.count()) check("card: under reduced motion the drawing is still, two frames with arrows, no switch", (await still.getAttribute("data-animated")) === "false" && (await still.locator("text.label").count()) === 2 && (await page.locator('#peak-card [data-card="mode-anim"]').count()) === 0 && (await page.evaluate(() => document.getAnimations().length)) === 0);
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.focus("#chart");
+  await page.keyboard.press("Escape");
+  check("card: Esc closes the card", await card.isHidden());
+}
+
+/** A methylene sample: the drawing of the mode (moving, then still under reduced motion), another mode of the group on the chart, out-of-plane drawing. */
+async function modeScenario(browser, base, check, axe) {
+  const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 900 } });
+  const page = await ctx.newPage();
+  await page.goto(base);
+  await page.waitForSelector("body[data-ready='1']");
+  await page.setInputFiles("input[type=file]", [{ name: "metilene.jdx", mimeType: "application/octet-stream", buffer: jcamp("metilene", [[1465, 0.6, 12], [2920, 0.8, 14], [2850, 0.6, 10], [720, 0.4, 10]]) }]);
+  await page.keyboard.press("p");
+  await openPanel(page, "peaks");
+  await page.waitForSelector(".peak-item");
+  await page.locator('.peak-item:has-text("~1465")').click();
+  const card = page.locator("#peak-card");
+  check("mode: the reading names the group and the mode", /Metilene · Forbice/.test((await card.locator(".reading").first().textContent()) ?? ""));
+  const fig = card.locator("figure.mode-figure");
+  check("mode: the drawing moves in the normal case, with a switch to stop it", (await fig.getAttribute("data-animated")) === "true" && (await card.locator('[data-card="mode-anim"]').getAttribute("aria-pressed")) === "true");
+  await card.locator('[data-card="mode-anim"]').click();
+  check("mode: stopping gives two still frames and remembers it", (await card.locator("figure.mode-figure").getAttribute("data-animated")) === "false" && (await page.evaluate(() => localStorage.getItem("checkir.modeAnim"))) === "off");
+  await card.locator('[data-card="mode-anim"]').click();
+  await card.locator("[data-rule-range]").first().click();
+  check("mode: another mode of the group draws its window on the chart", (await page.locator("#chart rect.rule-range").count()) === 1 && /Finestra della regola \d+–\d+ cm⁻¹/.test((await page.textContent("#chart text.rule-label")) ?? ""));
+  const v = await axe(page);
+  check("mode: axe has no violations with the window on the chart", v.length === 0, v.join(", "));
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.locator('.peak-item:has-text("~2920")').click();
+  const still = page.locator("#peak-card figure.mode-figure");
+  check("mode: reduced motion gives two frames with arrows, no switch and nothing animated", (await still.getAttribute("data-animated")) === "false" && (await still.locator("text.label").count()) === 2 && (await still.locator("line.mode-arrow").count()) > 0 && (await page.locator('#peak-card [data-card="mode-anim"]').count()) === 0 && (await page.evaluate(() => document.getAnimations().length)) === 0);
+  const oop = await page.evaluate(async () => {
+    const { modeFigure } = await import("./mode_anim.js");
+    const modes = (await (await fetch("bands/modes.json")).json()).modes;
+    const wag = modes.find((m) => m.id === "wagging");
+    const f = modeFigure(wag, { animate: true });
+    return { animated: f?.animated, text: f?.node.textContent ?? "" };
+  });
+  check("mode: an out-of-plane motion is never animated and uses ⊙ and ⊗", oop.animated === false && oop.text.includes("⊙") && oop.text.includes("⊗"), JSON.stringify(oop));
+  await page.click('[data-lang="en"]');
+  await page.waitForFunction(() => document.documentElement.lang === "en");
+  const en = await axe(page);
+  check("mode: axe has no violations in English", en.length === 0, en.join(", "));
+  check("mode: English card", /Peak at/.test((await card.textContent()) ?? "") && /Possible readings/.test((await card.textContent()) ?? ""));
+  await ctx.close();
 }
 
 /** English, switching off, and the phone width. */
@@ -118,9 +200,11 @@ export async function peaksScenario(browser, base, check, axe) {
   await panelScenario(page, check);
   await chartScenario(page, check, axe);
   await viewScenario(page, check, axe);
+  await cardScenario(page, check, axe);
   await languageScenario(page, check, axe);
   check("peaks: no page errors", errors.length === 0, errors.join(" | "));
   await ctx.close();
+  await modeScenario(browser, base, check, axe);
   const phone = await browser.newContext({ locale: "it-IT", viewport: { width: 320, height: 640 } });
   const p = await phone.newPage();
   await p.goto(base);
