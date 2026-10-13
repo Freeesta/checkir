@@ -9,6 +9,8 @@ pub mod rules;
 pub mod spectrum;
 pub mod steps;
 pub mod synthetic;
+pub mod synthetic_ispd;
+pub mod synthetic_ispd_fixtures;
 pub mod synthetic_jcamp;
 pub mod synthetic_text;
 

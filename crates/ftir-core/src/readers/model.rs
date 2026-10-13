@@ -188,6 +188,12 @@ pub struct Sourced<T> {
 pub struct Instrument {
     pub model: Option<Sourced<String>>,
     pub resolution_cm1: Option<Sourced<f64>>,
+    /// Number of co-added scans, when the file states it.
+    pub scans: Option<Sourced<u32>>,
+    /// Serial number of the instrument (identifies a machine: `identity`).
+    pub serial_number: Option<Sourced<String>>,
+    /// Accessory name and serial number as written by the file (`identity`).
+    pub accessory: Option<Sourced<String>>,
 }
 
 #[derive(Debug, Clone, Default, PartialEq)]

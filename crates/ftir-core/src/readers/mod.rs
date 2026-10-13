@@ -1,6 +1,8 @@
 //! Readers registry (`READERS`), contract `ftir-reader/1`: one file per format and one line in the registry.
 pub mod anonymize;
+pub mod bdb;
 pub mod export;
+pub mod ispd;
 pub mod jcamp;
 pub mod model;
 pub mod sha256;
@@ -21,7 +23,7 @@ pub struct Reader {
     pub open: fn(&[u8], &Limits, &Options) -> ReadResult<Document>,
 }
 
-pub static READERS: &[Reader] = &[jcamp::READER, text::READER];
+pub static READERS: &[Reader] = &[jcamp::READER, text::READER, ispd::READER];
 
 /// Picks the reader that is surest about the file; ties go to the registry order.
 pub fn pick(name: &str, head: &[u8]) -> Option<&'static Reader> {
