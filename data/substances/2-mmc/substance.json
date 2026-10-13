@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-mmc",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-MMC",
+      "synonyms": [
+        "2-methylmethcathinone",
+        "2-methyl-N-methylcathinone"
+      ]
+    },
+    "it": {
+      "preferred": "2-MMC",
+      "synonyms": [
+        "2-metilmetcatinone"
+      ]
+    }
+  },
+  "iupac": "2-(methylamino)-1-(2-methylphenyl)propan-1-one",
+  "formula": "C11H15NO",
+  "molar_mass_g_mol": 177.24,
+  "smiles": "CC1=CC=CC=C1C(=O)C(C)NC",
+  "inchi": "InChI=1S/C11H15NO/c1-8-6-4-5-7-10(8)11(13)9(2)12-3/h4-7,9,12H,1-3H3",
+  "inchikey": "PRGXFAWAMOFULD-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1246911-71-6",
+    "pubchem_cid": 56603536
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

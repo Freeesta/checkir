@@ -1,0 +1,38 @@
+{
+  "schema": "family-sheet/1",
+  "id": "synthetic_cannabinoids",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "interactions": [],
+  "counselling": [
+    {
+      "key": "synthetic-cannabinoids.adulteration",
+      "topic": "testing",
+      "source": "jones2025"
+    },
+    {
+      "key": "synthetic-cannabinoids.potency",
+      "topic": "dosing",
+      "source": "lobato-freitas2021"
+    },
+    {
+      "key": "synthetic-cannabinoids.psychosis",
+      "topic": "mental_health",
+      "source": "ricci2026"
+    }
+  ],
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
