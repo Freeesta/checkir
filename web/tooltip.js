@@ -22,10 +22,8 @@ function ensureBubble() {
   bubble.addEventListener("mouseleave", () => scheduleHide());
   document.body.append(bubble);
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && bubble && !bubble.hidden) {
-      e.preventDefault();
-      hide();
-    }
+    // Only hide it: the key still reaches a dialog or the chart, so one Esc is never swallowed by a tooltip.
+    if (e.key === "Escape" && bubble && !bubble.hidden) hide();
   });
   return bubble;
 }

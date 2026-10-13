@@ -699,12 +699,6 @@
       "consulted": "2026-10-13"
     },
     {
-      "id": "checkir-ftir-limits",
-      "type": "project",
-      "title": "checkir fixed statement of the limits of FTIR for drug checking (components below about 5 % are not detectable; fentanyl and analogues, found at about 3-10 % w/w, and nitazenes cannot be ruled out; no quantification); project text, to be reviewed by a chemist",
-      "consulted": "2026-10-13"
-    },
-    {
       "id": "checkir-section-pending",
       "type": "project",
       "title": "Placeholder: this section is not drafted yet; no claim is made. It will be written from verifiable sources and signed by a health professional before it is shown",

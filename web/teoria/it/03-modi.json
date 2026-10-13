@@ -1,0 +1,96 @@
+{
+ "schema": "theory/1",
+ "id": "vibration-modes",
+ "n": 3,
+ "title": "I modi di vibrazione",
+ "key_message": "Un gruppo di atomi vibra in pochi modi: si allunga (insieme o a turno), si piega a forbice, dondola, si agita, si torce.",
+ "body": [
+  "Un gruppo come CH₂ può allungare i due legami insieme ([[symmetric-stretching|stiramento simmetrico]]) o a turno ([[asymmetric-stretching|asimmetrico]]), chiudere e aprire l'angolo come una [[scissoring|forbice]], [[rocking|dondolare]] nel piano, oppure muovere gli idrogeni fuori dal piano nello stesso verso ([[wagging|ventaglio]]) o in versi opposti ([[twisting|torsione]]). Ogni modo ha la sua frequenza: per questo un solo gruppo dà più picchi.",
+  "Scegli un modo e guarda dove cade nello spettro."
+ ],
+ "for_chemists": [
+  "Notazione: ν stiramento (νs, νas), δ forbice, ρ dondolo, ω ventaglio, τ torsione, γ fuori piano. Una molecola di N atomi ha 3N−6 modi (3N−5 se è lineare); non tutti si vedono: alcuni sono inattivi, degeneri, deboli o fuori intervallo.",
+  "CH₂: νas ~2925, νs ~2850, forbice ~1465–1470, dondolo 720 ± 10 (catene con almeno 4 CH₂ di fila); ventaglio e torsione danno bande deboli sotto 1500, senza un valore verificato qui. CH₃: νas/νs 2960/2870, deformazione simmetrica ~1380. NH₂ primario: due bande tra 3400 e 3500 (distanza 80–100) e forbice 1560–1640.",
+  "[[oop-bending|C–H aromatico fuori piano]]: mono 770–710, orto 770–735, meta 810–750, para 860–790 cm⁻¹; la posizione dipende dal numero di H adiacenti. La «respirazione» dell'anello (benzene 992 cm⁻¹) è un concetto, non una banda diagnostica nell'IR."
+ ],
+ "figure": {
+  "id": "modes",
+  "alt": "Un atomo di carbonio e due di idrogeno disegnati con i legami; frecce o segni + e − mostrano come si muovono nel modo scelto.",
+  "caption": "I sei modi di un gruppo CH₂: scegli un modo, guarda il movimento e dove cade nello spettro."
+ },
+ "interactive": {
+  "id": "modes",
+  "labels": {
+   "svg_title": "Gruppo CH₂ che vibra",
+   "svg_desc": "Un atomo di carbonio al centro e due di idrogeno; i legami si muovono secondo il modo scelto.",
+   "toward": "+",
+   "away": "−",
+   "phase": "Fase del movimento",
+   "choose": "Scegli un modo",
+   "where": "Nello spettro, in cm⁻¹:",
+   "note": "Frecce: verso del movimento nel piano. + e −: l'idrogeno si avvicina a chi guarda (+) o si allontana (−). L'ampiezza è ingrandita. I numeri d'onda sono quelli tipici di un CH₂ in una catena alchilica.",
+   "table_caption": "Dove cadono i sei modi del CH₂",
+   "col_mode": "Modo",
+   "col_where": "Numero d'onda tipico (cm⁻¹)"
+  },
+  "items": [
+   {
+    "id": "stretch_sym",
+    "label": "Stiramento simmetrico",
+    "text": "I due legami C–H si allungano e si accorciano insieme.",
+    "value": "~2850"
+   },
+   {
+    "id": "stretch_asym",
+    "label": "Stiramento asimmetrico",
+    "text": "Un legame si allunga mentre l'altro si accorcia.",
+    "value": "~2925"
+   },
+   {
+    "id": "scissoring",
+    "label": "Forbice",
+    "text": "L'angolo H–C–H si apre e si chiude, nel piano.",
+    "value": "~1465"
+   },
+   {
+    "id": "rocking",
+    "label": "Dondolo",
+    "text": "Il gruppo oscilla in blocco da un lato all'altro, nel piano.",
+    "value": "~720 (catene di almeno 4 CH₂)"
+   },
+   {
+    "id": "wagging",
+    "label": "Ventaglio",
+    "text": "I due H vanno avanti e indietro insieme, fuori dal piano.",
+    "value": "sotto 1500, debole"
+   },
+   {
+    "id": "twisting",
+    "label": "Torsione",
+    "text": "Un H va avanti mentre l'altro va indietro, fuori dal piano.",
+    "value": "sotto 1500, debole"
+   }
+  ]
+ },
+ "further_reading": [
+  "commons-ir-modes",
+  "openstax-orgchem-ir"
+ ],
+ "sources": [
+  "wiki-molecular-vibration",
+  "wiki-ir-correlation",
+  "wiki-spettroscopia-ir"
+ ],
+ "glossary_terms": [
+  "symmetric-stretching",
+  "asymmetric-stretching",
+  "bending",
+  "scissoring",
+  "rocking",
+  "wagging",
+  "twisting",
+  "degrees-of-freedom"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

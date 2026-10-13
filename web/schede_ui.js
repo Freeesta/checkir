@@ -8,12 +8,10 @@ import { isApproved, loadSheet, loadSources, parseParagraphs, SECTIONS, sectionS
 const TITLES = {
   molecule: () => t("sheets.section.molecule"),
   category: () => t("sheets.section.category"),
-  ftir_limits: () => t("sheets.section.ftir_limits"),
   effects: () => t("sheets.section.effects"),
   doses: () => t("sheets.section.doses"),
   risks: () => t("sheets.section.risks"),
   interactions: () => t("sheets.section.interactions"),
-  harm_reduction: () => t("sheets.section.harm_reduction"),
   sources: () => t("sheets.section.sources"),
   license: () => t("sheets.section.license"),
 };
@@ -48,7 +46,7 @@ function sectionView(sheet, key, lang, order) {
   return box;
 }
 
-/** The whole sheet: version line, the ten sections, the numbered sources. @param {import("./schede.js").Sheet} sheet @param {Record<string, import("./schede.js").Source>} sources @param {string} lang @returns {HTMLElement} */
+/** The whole sheet: version line, the eight sections, the numbered sources. @param {import("./schede.js").Sheet} sheet @param {Record<string, import("./schede.js").Source>} sources @param {string} lang @returns {HTMLElement} */
 export function buildSheetView(sheet, sources, lang) {
   const root = el("div", { class: "substance-sheet", "data-substance": sheet.id }, []);
   const signed = SECTIONS.filter((k) => isApproved(sheet, k)).length;
