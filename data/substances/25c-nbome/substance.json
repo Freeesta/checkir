@@ -1,0 +1,58 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "25c-nbome",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "25C-NBOMe",
+      "synonyms": [
+        "2C-C-NBOMe"
+      ]
+    },
+    "it": {
+      "preferred": "25C-NBOMe",
+      "synonyms": [
+        "2C-C-NBOMe"
+      ]
+    }
+  },
+  "iupac": "2-(4-chloro-2,5-dimethoxyphenyl)-N-[(2-methoxyphenyl)methyl]ethanamine",
+  "formula": "C18H22ClNO3",
+  "molar_mass_g_mol": 335.8,
+  "smiles": "COC1=CC=CC=C1CNCCC2=CC(=C(C=C2OC)Cl)OC",
+  "inchi": "InChI=1S/C18H22ClNO3/c1-21-16-7-5-4-6-14(16)12-20-9-8-13-10-18(23-3)15(19)11-17(13)22-2/h4-7,10-11,20H,8-9,12H2,1-3H3",
+  "inchikey": "FJFPOGCVVLUYAQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q980120",
+    "cas": "1227608-02-7",
+    "pubchem_cid": 46856354
+  },
+  "classes": {
+    "chemical": [
+      "nbome"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
