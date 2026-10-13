@@ -302,44 +302,59 @@ async function splashScenario(browser) {
   }
 }
 
+/** Every scenario in a fixed order; SHARD="i/n" (1-based) runs scenarios i, i+n, i+2n… so n parallel jobs together run exactly all of them. */
+function scenarios(browser) {
+  return [
+    () => schemeScenario(browser, "light"),
+    () => schemeScenario(browser, "dark"),
+    () => phoneScenario(browser),
+    () => nextStepScenario(browser),
+    () => shellScenario(browser),
+    () => shortcutsScenario(browser),
+    () => registryScenario(check),
+    () => versionScenario(check),
+    () => nameScenario(browser),
+    () => splashScenario(browser),
+    () => pagesScenario(browser),
+    () => warningsBoxScenario(browser),
+    () => loadingScenario(browser, base, check, axe),
+    () => demoScenario(browser, base, check, axe),
+    () => librariesPureScenario(check),
+    () => librariesScenario(browser, base, check, axe),
+    () => matchPureScenario(check),
+    () => matchScenario(browser, base, check, axe),
+    () => libraryTestScenario(browser, base, check, axe),
+    () => areaScenario(browser, base, check, axe),
+    () => cleanScenario(browser, base, check, axe),
+    () => peaksScenario(browser, base, check, axe),
+    () => collaudoScenario(browser, base, check),
+    () => inverseScenario(browser, base, check, axe),
+    () => subtractionScenario(browser, base, check, axe),
+    () => toolsScenario(browser, base, check, axe),
+    () => recallScenario(browser, base, check, axe),
+    () => exportScenario(browser, base, check, axe),
+    () => rangesPureScenario(check),
+    () => rangesScenario(browser, base, check, axe),
+    () => sheetScenario(browser, base, check, axe),
+    () => teoriaScenario(browser, base, check, axe),
+    () => sheetsPureScenario(check),
+    () => sheetsScenario(browser, base, check, axe),
+    () => offlineScenario(browser, base, check),
+    () => folderScenario(browser, base, check, axe),
+    () => browser.close(),
+  ];
+}
+
+function pickShard(list) {
+  const m = /^(\d+)\/(\d+)$/.exec(process.env.SHARD ?? "1/1");
+  if (!m || +m[1] < 1 || +m[1] > +m[2]) throw new Error(`bad SHARD ${process.env.SHARD}`);
+  return list.filter((_, i) => i % +m[2] === +m[1] - 1);
+}
+
 async function run() {
   const browser = await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
   try {
-    for (const scheme of ["light", "dark"]) await schemeScenario(browser, scheme);
-    await phoneScenario(browser);
-    await nextStepScenario(browser);
-    await shellScenario(browser);
-    await shortcutsScenario(browser);
-    await registryScenario(check);
-    await versionScenario(check);
-    await nameScenario(browser);
-    await splashScenario(browser);
-    await pagesScenario(browser);
-    await warningsBoxScenario(browser);
-    await loadingScenario(browser, base, check, axe);
-    await demoScenario(browser, base, check, axe);
-    await librariesPureScenario(check);
-    await librariesScenario(browser, base, check, axe);
-    await matchPureScenario(check);
-    await matchScenario(browser, base, check, axe);
-    await libraryTestScenario(browser, base, check, axe);
-    await areaScenario(browser, base, check, axe);
-    await cleanScenario(browser, base, check, axe);
-    await peaksScenario(browser, base, check, axe);
-    await collaudoScenario(browser, base, check);
-    await inverseScenario(browser, base, check, axe);
-    await subtractionScenario(browser, base, check, axe);
-    await toolsScenario(browser, base, check, axe);
-    await recallScenario(browser, base, check, axe);
-    await exportScenario(browser, base, check, axe);
-    await rangesPureScenario(check);
-    await rangesScenario(browser, base, check, axe);
-    await sheetScenario(browser, base, check, axe);
-    await teoriaScenario(browser, base, check, axe);
-    await sheetsPureScenario(check);
-    await sheetsScenario(browser, base, check, axe);
-    await offlineScenario(browser, base, check);
-    await folderScenario(browser, base, check, axe);
+    for (const step of pickShard(scenarios(browser))) await step();
   } finally {
     await browser.close();
     close();
