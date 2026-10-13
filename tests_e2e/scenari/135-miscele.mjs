@@ -43,7 +43,7 @@ async function proposalScenario(browser, base, check, axe) {
   const title = (await page.textContent("[data-mixture] .mixture-line strong")) ?? "";
   check("mixture: the proposal names beta and alfa above the table", /^Miscela: beta \+ alfa$/i.test(title.trim()) || /^Miscela: alfa \+ beta$/i.test(title.trim()), title);
   check("mixture: it sits before the candidates", await page.evaluate(() => { const m = document.querySelector("[data-mixture]"); const l = document.querySelector(".result .cands"); return !!m && !!l && !!(m.compareDocumentPosition(l) & Node.DOCUMENT_POSITION_FOLLOWING); }));
-  check("mixture: two parts, each with a contribution and the peaks it explains", (await page.locator("[data-mixture] .mixture-part").count()) === 2 && (text.match(/contributo allo spettro \d\.\d\d/g) ?? []).length === 2 && (text.match(/picchi spiegati \d+/g) ?? []).length === 2, text);
+  check("mixture: two parts, each with a contribution and the peaks it explains", (await page.locator("[data-mixture] .mixture-part").count()) === 2 && (text.match(/quota del segnale \d\.\d\d/g) ?? []).length === 2 && (text.match(/picchi spiegati \d+/g) ?? []).length === 2, text);
   check("mixture: no unexplained peak", (await page.getAttribute("[data-mixture] .mixture-left", "data-unexplained")) === "0" && /Picchi non spiegati: 0/.test(text), text);
   check("mixture: never a percentage or an amount", !/%|quantit/i.test(text), text);
   const v = await axe(page);

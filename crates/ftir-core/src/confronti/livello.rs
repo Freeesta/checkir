@@ -95,6 +95,8 @@ fn text(s: &str) -> Value {
 fn row_ref(index: &Index, g: usize, r: f64) -> Value {
     let e = index.entry(g);
     Value::Obj(vec![
+        ("library".into(), text(&index.libs[index.locate(g).0].id)),
+        ("spectrum_id".into(), text(&e.id)),
         ("display_name".into(), text(&e.display_name)),
         ("form".into(), text(&e.form)),
         ("r".into(), Value::Num(r)),
@@ -218,24 +220,39 @@ fn form_absent(a: &AlertInput) -> Option<Alert> {
     ))
 }
 
-/// Alerts in display order: ambiguity, spectral twin, different form, form absent, flagged family, same as previous, quality,
-/// custom range, fixed limit (always).
-pub fn build_alerts(a: &AlertInput) -> Vec<Alert> {
-    let mut out: Vec<Alert> = [ambiguity(a), twin(a), different_form(a), form_absent(a)]
-        .into_iter()
-        .flatten()
+fn custom_range(a: &AlertInput) -> Option<Alert> {
+    if !a.options.custom {
+        return None;
+    }
+    let ranges = a
+        .options
+        .ranges
+        .iter()
+        .map(|(x, y)| Value::Arr(vec![Value::Num(*x), Value::Num(*y)]))
         .collect();
+    Some(alert("custom_range", vec![("ranges", Value::Arr(ranges))]))
+}
+
+/// Alerts in display order: ambiguity, spectral twin, different form, form absent, flagged family, same as previous, quality,
+/// custom range. The first three only qualify an identification, so they need r₁ at the "to check" threshold.
+pub fn build_alerts(a: &AlertInput) -> Vec<Alert> {
+    let identified = a
+        .candidates
+        .first()
+        .is_some_and(|c| c.r_derivative >= a.thresholds.check_r1);
+    let gated = |x: Option<Alert>| x.filter(|_| identified);
+    let mut out: Vec<Alert> = [
+        gated(ambiguity(a)),
+        gated(twin(a)),
+        gated(different_form(a)),
+        form_absent(a),
+    ]
+    .into_iter()
+    .flatten()
+    .collect();
     out.extend(family_alerts(a.index, a.candidates));
     out.extend(a.measurement.iter().cloned());
-    if a.options.custom {
-        let ranges = a
-            .options
-            .ranges
-            .iter()
-            .map(|(x, y)| Value::Arr(vec![Value::Num(*x), Value::Num(*y)]))
-            .collect();
-        out.push(alert("custom_range", vec![("ranges", Value::Arr(ranges))]));
-    }
+    out.extend(custom_range(a));
     out
 }
 
