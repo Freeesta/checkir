@@ -41,7 +41,7 @@ export function summaryText(a, name) {
 /** The accessible name of a peak, also what is announced when the arrows reach it. @param {PeakRow} p @param {string | null} name @returns {string} */
 export function peakName(p, name) {
   const by = p.state === "explained" && name ? t("peaks.name_by", { name }) : stateWord(p.state).toLowerCase();
-  return t("peaks.name", { pos: approx(p.position), intensity: intensityWord(p.intensity), state: by });
+  return t("peaks.name", { pos: formatNumber(Math.round(p.position)), intensity: intensityWord(p.intensity), state: by });
 }
 
 /** @typedef {"position" | "intensity" | "shape" | "state" | "by" | "region"} SortKey */
