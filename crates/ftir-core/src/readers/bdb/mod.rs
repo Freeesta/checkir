@@ -122,104 +122,109 @@ impl<'a> Db<'a> {
             .ok_or_else(|| ReadError::limit("bytes", limits.max_bytes))?;
         Ok(())
     }
+}
 
-    /// Follows an overflow chain and returns exactly `total` bytes.
-    fn overflow(&mut self, first: usize, total: usize, limits: &Limits) -> ReadResult<Vec<u8>> {
-        self.take(total, limits)?;
-        let mut out = Vec::with_capacity(total.min(self.bytes.len()));
-        let mut p = first;
-        let mut steps = 0usize;
-        while p != 0 {
-            steps += 1;
-            if steps > limits.max_chain {
-                return Err(ReadError::limit("chain", limits.max_chain));
-            }
-            self.claim(p)?;
-            let pg = self.page(p)?;
-            if pg.get(25) != Some(&P_OVERFLOW) {
-                return Err(corrupt("overflow-type"));
-            }
-            let used = u16_at(pg, 22).ok_or_else(|| corrupt("overflow-length"))?;
-            let data = pg
-                .get(PAGE_HEADER..PAGE_HEADER.saturating_add(used))
-                .ok_or_else(|| corrupt("overflow-length"))?;
-            if out.len().saturating_add(data.len()) > total {
-                return Err(corrupt("overflow-total"));
-            }
-            out.extend_from_slice(data);
-            p = usz(u32_at(pg, 16).ok_or_else(|| corrupt("overflow-next"))?);
+/// Follows an overflow chain and returns exactly `total` bytes.
+fn overflow(db: &mut Db<'_>, first: usize, total: usize, limits: &Limits) -> ReadResult<Vec<u8>> {
+    db.take(total, limits)?;
+    let mut out = Vec::with_capacity(total.min(db.bytes.len()));
+    let mut p = first;
+    let mut steps = 0usize;
+    while p != 0 {
+        steps += 1;
+        if steps > limits.max_chain {
+            return Err(ReadError::limit("chain", limits.max_chain));
         }
-        if out.len() != total {
+        db.claim(p)?;
+        let pg = db.page(p)?;
+        if pg.get(25) != Some(&P_OVERFLOW) {
+            return Err(corrupt("overflow-type"));
+        }
+        let used = u16_at(pg, 22).ok_or_else(|| corrupt("overflow-length"))?;
+        let data = pg
+            .get(PAGE_HEADER..PAGE_HEADER.saturating_add(used))
+            .ok_or_else(|| corrupt("overflow-length"))?;
+        if out.len().saturating_add(data.len()) > total {
             return Err(corrupt("overflow-total"));
         }
-        Ok(out)
+        out.extend_from_slice(data);
+        p = usz(u32_at(pg, 16).ok_or_else(|| corrupt("overflow-next"))?);
     }
+    if out.len() != total {
+        return Err(corrupt("overflow-total"));
+    }
+    Ok(out)
+}
 
-    fn item(&mut self, pg: &[u8], off: usize, end: usize, limits: &Limits) -> ReadResult<Vec<u8>> {
-        let body = pg.get(off..end).ok_or_else(|| corrupt("item-bounds"))?;
-        match body.first() {
-            Some(&H_KEYDATA) => {
-                let data = body.get(1..).unwrap_or(&[]);
-                self.take(data.len(), limits)?;
-                Ok(data.to_vec())
-            }
-            Some(&H_OFFPAGE) => {
-                let pgno = u32_at(body, 4).ok_or_else(|| corrupt("offpage"))?;
-                let tlen = u32_at(body, 8).ok_or_else(|| corrupt("offpage"))?;
-                self.overflow(usz(pgno), usz(tlen), limits)
-            }
-            _ => Err(corrupt("item-type")),
+fn item(
+    db: &mut Db<'_>,
+    pg: &[u8],
+    off: usize,
+    end: usize,
+    limits: &Limits,
+) -> ReadResult<Vec<u8>> {
+    let body = pg.get(off..end).ok_or_else(|| corrupt("item-bounds"))?;
+    match body.first() {
+        Some(&H_KEYDATA) => {
+            let data = body.get(1..).unwrap_or(&[]);
+            db.take(data.len(), limits)?;
+            Ok(data.to_vec())
         }
+        Some(&H_OFFPAGE) => {
+            let pgno = u32_at(body, 4).ok_or_else(|| corrupt("offpage"))?;
+            let tlen = u32_at(body, 8).ok_or_else(|| corrupt("offpage"))?;
+            overflow(db, usz(pgno), usz(tlen), limits)
+        }
+        _ => Err(corrupt("item-type")),
     }
-
-    /// Reads the pairs of one bucket chain.
-    fn bucket(&mut self, first: usize, limits: &Limits, out: &mut Vec<Pair>) -> ReadResult<()> {
-        let mut p = first;
-        let mut steps = 0usize;
-        while p != 0 {
-            steps += 1;
-            if steps > limits.max_chain {
-                return Err(ReadError::limit("chain", limits.max_chain));
-            }
-            self.claim(p)?;
-            let pg = self.page(p)?;
-            let entries = u16_at(pg, 20).ok_or_else(|| corrupt("entries"))?;
-            let next = usz(u32_at(pg, 16).ok_or_else(|| corrupt("next"))?);
-            let kind = pg.get(25).copied().unwrap_or(0);
-            if entries == 0 && kind == 0 {
-                p = next;
-                continue;
-            }
-            if kind != P_HASH || entries % 2 != 0 {
-                return Err(corrupt("hash-page"));
-            }
-            if PAGE_HEADER + entries * 2 > self.page_size {
-                return Err(corrupt("entries"));
-            }
-            let mut offs = Vec::with_capacity(entries);
-            for i in 0..entries {
-                offs.push(u16_at(pg, PAGE_HEADER + 2 * i).ok_or_else(|| corrupt("offsets"))?);
-            }
-            let mut end = self.page_size;
-            let mut items = Vec::with_capacity(entries);
-            for &o in &offs {
-                if o >= end || o < PAGE_HEADER + entries * 2 {
-                    return Err(corrupt("offsets"));
-                }
-                items.push(self.item(pg, o, end, limits)?);
-                end = o;
-            }
-            let mut it = items.into_iter();
-            while let (Some(key), Some(value)) = (it.next(), it.next()) {
-                if out.len() >= limits.max_fields {
-                    return Err(ReadError::limit("fields", limits.max_fields));
-                }
-                out.push(Pair { key, value });
-            }
+}
+/// Reads the pairs of one bucket chain.
+fn bucket(db: &mut Db<'_>, first: usize, limits: &Limits, out: &mut Vec<Pair>) -> ReadResult<()> {
+    let mut p = first;
+    let mut steps = 0usize;
+    while p != 0 {
+        steps += 1;
+        if steps > limits.max_chain {
+            return Err(ReadError::limit("chain", limits.max_chain));
+        }
+        db.claim(p)?;
+        let pg = db.page(p)?;
+        let entries = u16_at(pg, 20).ok_or_else(|| corrupt("entries"))?;
+        let next = usz(u32_at(pg, 16).ok_or_else(|| corrupt("next"))?);
+        let kind = pg.get(25).copied().unwrap_or(0);
+        if entries == 0 && kind == 0 {
             p = next;
+            continue;
         }
-        Ok(())
+        if kind != P_HASH || entries % 2 != 0 {
+            return Err(corrupt("hash-page"));
+        }
+        if PAGE_HEADER + entries * 2 > db.page_size {
+            return Err(corrupt("entries"));
+        }
+        let mut offs = Vec::with_capacity(entries);
+        for i in 0..entries {
+            offs.push(u16_at(pg, PAGE_HEADER + 2 * i).ok_or_else(|| corrupt("offsets"))?);
+        }
+        let mut end = db.page_size;
+        let mut items = Vec::with_capacity(entries);
+        for &o in &offs {
+            if o >= end || o < PAGE_HEADER + entries * 2 {
+                return Err(corrupt("offsets"));
+            }
+            items.push(item(db, pg, o, end, limits)?);
+            end = o;
+        }
+        let mut it = items.into_iter();
+        while let (Some(key), Some(value)) = (it.next(), it.next()) {
+            if out.len() >= limits.max_fields {
+                return Err(ReadError::limit("fields", limits.max_fields));
+            }
+            out.push(Pair { key, value });
+        }
+        p = next;
     }
+    Ok(())
 }
 
 /// Page number of a bucket: `bucket + 1 + spares[ceil(log2(bucket + 1)) - 1]`.
@@ -233,11 +238,8 @@ fn bucket_page(bucket: u32, spares: &[u32]) -> Option<usize> {
     Some(page)
 }
 
-/// Reads every pair of a hash database version 5.
-pub fn read_hash(bytes: &[u8], limits: &Limits) -> ReadResult<Vec<Pair>> {
-    if bytes.len() > limits.max_bytes {
-        return Err(ReadError::limit("bytes", limits.max_bytes));
-    }
+/// Accepts only a little-endian hash database version 5; anything else gets a translated error.
+fn check_kind(bytes: &[u8]) -> ReadResult<()> {
     match sniff(bytes) {
         None => return Err(ReadError::new("reader.ispd.bdb_magic")),
         Some(Kind::Btree { version }) => {
@@ -259,6 +261,15 @@ pub fn read_hash(bytes: &[u8], limits: &Limits) -> ReadResult<Vec<Pair>> {
         }
         Some(Kind::Hash { .. }) => {}
     }
+    Ok(())
+}
+
+/// Reads every pair of a hash database version 5.
+pub fn read_hash(bytes: &[u8], limits: &Limits) -> ReadResult<Vec<Pair>> {
+    if bytes.len() > limits.max_bytes {
+        return Err(ReadError::limit("bytes", limits.max_bytes));
+    }
+    check_kind(bytes)?;
     let page_size = usz(u32_at(bytes, 20).ok_or_else(|| corrupt("meta"))?);
     if !(512..=65536).contains(&page_size) || !page_size.is_power_of_two() {
         return Err(ReadError::new("reader.ispd.bdb_page_size").with("size", page_size));
@@ -285,7 +296,7 @@ pub fn read_hash(bytes: &[u8], limits: &Limits) -> ReadResult<Vec<Pair>> {
     let mut out = Vec::new();
     for b in 0..=max_bucket {
         let p = bucket_page(b, &spares).ok_or_else(|| corrupt("bucket-page"))?;
-        db.bucket(p, limits, &mut out)?;
+        bucket(&mut db, p, limits, &mut out)?;
     }
     Ok(out)
 }

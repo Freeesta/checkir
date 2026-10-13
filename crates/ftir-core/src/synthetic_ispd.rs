@@ -68,7 +68,6 @@ impl Writer {
         }
         order.first().copied().unwrap_or(0)
     }
-
     fn item(&mut self, v: &[u8]) -> Vec<u8> {
         if v.len() + 1 > (self.size - HEADER) / 4 {
             let first = self.overflow(v);
@@ -82,38 +81,38 @@ impl Writer {
             it
         }
     }
+}
 
-    /// Fills the chain of hash pages of a bucket with the already encoded items (key, value, key, value, ...).
-    fn fill(&mut self, first: usize, items: &[Vec<u8>]) {
-        let mut page = first;
-        let mut entries = 0usize;
-        let mut low = self.size;
-        for pair in items.chunks(2) {
-            let need: usize = pair.iter().map(Vec::len).sum::<usize>() + 4;
-            if low < HEADER + 2 * entries + need {
-                let next = self.alloc(2);
-                if let Some(p) = self.pages.get_mut(next) {
-                    put32(p, 12, pgno(page));
-                }
-                if let Some(p) = self.pages.get_mut(page) {
-                    put32(p, 16, pgno(next));
-                }
-                page = next;
-                entries = 0;
-                low = self.size;
+/// Fills the chain of hash pages of a bucket with the already encoded items (key, value, key, value, ...).
+fn fill(w: &mut Writer, first: usize, items: &[Vec<u8>]) {
+    let mut page = first;
+    let mut entries = 0usize;
+    let mut low = w.size;
+    for pair in items.chunks(2) {
+        let need: usize = pair.iter().map(Vec::len).sum::<usize>() + 4;
+        if low < HEADER + 2 * entries + need {
+            let next = w.alloc(2);
+            if let Some(p) = w.pages.get_mut(next) {
+                put32(p, 12, pgno(page));
             }
-            for it in pair {
-                low -= it.len();
-                if let Some(p) = self.pages.get_mut(page) {
-                    if let Some(s) = p.get_mut(low..low + it.len()) {
-                        s.copy_from_slice(it);
-                    }
-                    put16(p, HEADER + 2 * entries, low);
-                    put16(p, 20, entries + 1);
-                    put16(p, 22, low);
-                }
-                entries += 1;
+            if let Some(p) = w.pages.get_mut(page) {
+                put32(p, 16, pgno(next));
             }
+            page = next;
+            entries = 0;
+            low = w.size;
+        }
+        for it in pair {
+            low -= it.len();
+            if let Some(p) = w.pages.get_mut(page) {
+                if let Some(s) = p.get_mut(low..low + it.len()) {
+                    s.copy_from_slice(it);
+                }
+                put16(p, HEADER + 2 * entries, low);
+                put16(p, 20, entries + 1);
+                put16(p, 22, low);
+            }
+            entries += 1;
         }
     }
 }
@@ -142,7 +141,7 @@ pub fn write_hash(pairs: &Pairs, page_size: usize) -> Vec<u8> {
         }
     }
     for (head, list) in heads.iter().zip(&items) {
-        w.fill(*head, list);
+        fill(&mut w, *head, list);
     }
     let total = w.pages.len() - 1 - BUCKETS;
     if let Some(m) = w.pages.first_mut() {

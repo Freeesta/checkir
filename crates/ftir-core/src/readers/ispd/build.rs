@@ -167,6 +167,34 @@ fn y_unit(text: Option<&str>) -> (YUnit, Option<Warning>) {
     }
 }
 
+fn map_fields(fields: &mut [Field]) {
+    for f in fields {
+        match f.key.as_str() {
+            "100008" => f.mapped = Some("y"),
+            "100036" => f.mapped = Some("x"),
+            "100001" => f.mapped = Some("x_unit"),
+            "100003" => f.mapped = Some("y_unit"),
+            _ => {}
+        }
+    }
+}
+
+type Pair2 = (Option<Sourced<String>>, Option<Sourced<String>>);
+
+/// Title and ISO date, both sourced from the `NON_BTREE_DATA` field.
+fn sourced(c: &Candidate<'_>, fields: &[Field]) -> Pair2 {
+    let at = fields.iter().position(|f| f.key == "NON_BTREE_DATA");
+    let title = c.name.as_ref().zip(at).map(|(n, field)| Sourced {
+        value: n.clone(),
+        field,
+    });
+    let datetime = c.created.zip(at).map(|(t, field)| Sourced {
+        value: objects::iso_utc(t),
+        field,
+    });
+    (title, datetime)
+}
+
 /// Builds the main spectrum. `fields` are the already built fields of the object, in order.
 pub fn spectrum(
     c: &Candidate<'_>,
@@ -202,31 +230,8 @@ pub fn spectrum(
             .as_deref(),
     );
     warnings.extend(w);
-    for f in &mut fields {
-        match f.key.as_str() {
-            "100008" => f.mapped = Some("y"),
-            "100036" => f.mapped = Some("x"),
-            "100001" => f.mapped = Some("x_unit"),
-            "100003" => f.mapped = Some("y_unit"),
-            _ => {}
-        }
-    }
-    let index = |key: &str| fields.iter().position(|f| f.key == key);
-    let title = c
-        .name
-        .as_ref()
-        .zip(index("NON_BTREE_DATA"))
-        .map(|(n, field)| Sourced {
-            value: n.clone(),
-            field,
-        });
-    let datetime = c
-        .created
-        .zip(index("NON_BTREE_DATA"))
-        .map(|(t, field)| Sourced {
-            value: objects::iso_utc(t),
-            field,
-        });
+    map_fields(&mut fields);
+    let (title, datetime) = sourced(c, &fields);
     Ok(Spectrum {
         role: Role::Unknown,
         x: XAxis {
