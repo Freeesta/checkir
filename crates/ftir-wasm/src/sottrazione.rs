@@ -2,9 +2,10 @@
 //! `ftir_core::passi::sottrazione` and its answers in `sottrazione_json`. Axes in cm-1, `*_unit` = `absorbance` or
 //! `transmittance`, NaN = absent point; `params_json` is `{}` or the parameters of the step
 //! (`k`, `reference_id`, `library`, `baseline`; `baseline`, `intervals_cm1` for the factor).
+use ftir_core::confronti::lettori::spectrum_in;
 use ftir_core::error::EngineError;
 use ftir_core::passi::sottrazione_json::{fattore_proposto_json, sottrai_json};
-use ftir_core::spectrum::{Role, Spectrum, YUnit};
+use ftir_core::spectrum::{Role, Spectrum};
 use wasm_bindgen::prelude::*;
 
 fn spectrum(role: Role, unit: &str, x: &[f64], y: &[f64]) -> Result<Spectrum, EngineError> {
@@ -14,16 +15,11 @@ fn spectrum(role: Role, unit: &str, x: &[f64], y: &[f64]) -> Result<Spectrum, En
             "axis and values differ in length",
         ));
     }
-    let unit = if unit == "transmittance" {
-        YUnit::Transmittance
-    } else {
-        YUnit::Absorbance
-    };
-    Ok(Spectrum::new(role, unit, x.to_vec(), y.to_vec()))
+    Ok(spectrum_in(role, unit, x.to_vec(), y.to_vec()))
 }
 
 #[allow(clippy::too_many_arguments)]
-fn run(
+pub(crate) fn run(
     f: fn(&Spectrum, &Spectrum, &str) -> Result<String, EngineError>,
     sample_unit: &str,
     sample_x: &[f64],

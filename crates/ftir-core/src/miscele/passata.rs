@@ -21,7 +21,7 @@ impl Run<'_> {
     }
 
     /// Unexplained peaks of the residual left by the first `picks`.
-    fn peaks_after(&self, picks: &[usize]) -> EngineResult<Vec<UnexplainedPeak>> {
+    pub(super) fn peaks_after(&self, picks: &[usize]) -> EngineResult<Vec<UnexplainedPeak>> {
         let fit = self.problem.fit(picks);
         let res = residual_spectrum(&self.space, &self.residual_at(picks, &fit), Vec::new());
         unexplained(&res, &self.scale, self.pk)
@@ -41,16 +41,22 @@ impl Run<'_> {
             .map(|c| c.id.clone())
     }
 
-    fn component(&self, sel: &Selection, n: usize, done: &[Component]) -> EngineResult<Component> {
+    fn component(
+        &self,
+        sel: &Selection,
+        n: usize,
+        done: &[Component],
+        peaks: &[UnexplainedPeak],
+    ) -> EngineResult<Component> {
         let chosen: Vec<usize> = sel.picks.iter().map(|p| p.candidate).collect();
         let k = chosen[n];
         let (r, weight) = (&self.refs[k], sel.weights[n]);
         let c = &self.pool[r.index];
         let without: Vec<usize> = chosen.iter().copied().filter(|&j| j != k).collect();
+        let curve: Vec<f64> = r.area.iter().map(|v| v * weight).collect();
         let bands = if n == 0 {
             None
         } else {
-            let curve: Vec<f64> = r.area.iter().map(|v| v * weight).collect();
             Some(bands_check(
                 &self.peaks_after(&chosen[..n])?,
                 &curve,
@@ -75,14 +81,17 @@ impl Run<'_> {
             variant_of: self.variant_of(k, done),
             bands,
             status,
+            explained_peaks: bands_check(peaks, &curve, self.th).explained,
+            minor: sel.picks[n].minor,
         })
     }
 
     pub(super) fn finish(&self, sel: &Selection) -> EngineResult<Mixture> {
         let chosen: Vec<usize> = sel.picks.iter().map(|p| p.candidate).collect();
+        let sample_peaks = self.peaks_after(&[])?;
         let mut components: Vec<Component> = Vec::new();
         for n in 0..chosen.len() {
-            let c = self.component(sel, n, &components)?;
+            let c = self.component(sel, n, &components, &sample_peaks)?;
             components.push(c);
         }
         let fit = self.problem.fit(&chosen);
@@ -100,6 +109,7 @@ impl Run<'_> {
         let share = sel.rss / sel.total;
         Ok(Mixture {
             alerts: self.alerts(share, left.len()),
+            proposal: self.verdict(&components, share),
             components,
             unexplained_share: share,
             background: on_grid(&self.space, &self.problem.background_of(&chosen, &fit)),

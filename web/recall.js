@@ -2,8 +2,7 @@
 import { addResidual, spectrumOf } from "./files.js";
 import { currentLang, t } from "./i18n.js";
 import { libraryRows } from "./librerie.js";
-import { EXCLUDED_CM1, libraryCurve } from "./match.js";
-import { correlations, pairs, scaleFactor } from "./recall_math.js";
+import { libraryCurve } from "./match.js";
 import { activeFile, getState, resultOf, update } from "./state.js";
 import { proposedFactor, residualAt } from "./subtract.js";
 
@@ -13,6 +12,8 @@ import { proposedFactor, residualAt } from "./subtract.js";
  */
 
 export const MAX_REFS = 3;
+/** The display scales the engine knows (`ftir_core::richiamo::SCALES`): as measured, same highest band, same area, least squares. */
+export const SCALES = /** @type {Array<"raw" | "max" | "area" | "lsq">} */ (["raw", "max", "area", "lsq"]);
 
 /**
  * What the chart and the panel need for the shown spectrum.
@@ -25,6 +26,21 @@ export const MAX_REFS = 3;
 let cached = null;
 /** @type {(text: string) => void} */
 let say = () => {};
+/** @type {import("./engine.js").Engine | null} */
+let engine = null;
+
+/**
+ * The factor of the scale and the two correlations of a library curve against the sample, all worked out by the engine on the comparison grid.
+ * @param {import("./spectrum.js").Spectrum} sample @param {import("./spectrum.js").Spectrum} curve @param {string} scale
+ * @returns {{ k: number, r: number | null, rDerivative: number | null }}
+ */
+function engineRecall(sample, curve, scale) {
+  const none = { k: 1, r: null, rDerivative: null };
+  if (!engine) return none;
+  const unit = sample.y_unit === "Transmittance" ? "transmittance" : "absorbance";
+  const out = JSON.parse(engine.richiamo(unit, Float64Array.from(sample.wavenumber_cm1), Float64Array.from(sample.y), "absorbance", Float64Array.from(curve.wavenumber_cm1), Float64Array.from(curve.y), JSON.stringify({ scale })));
+  return out.error_key ? none : { k: out.k, r: out.r, rDerivative: out.r_derivata };
+}
 
 /** @param {import("./state.js").Recalled} ref @returns {string} the compound's name in the active language */
 export function recalledName(ref) {
@@ -47,11 +63,10 @@ function compute(s) {
   for (const ref of s.recall.refs) {
     const curve = libraryCurve(ref.library, ref.spectrumId);
     if (!curve) continue;
-    const k = scaleFactor(s.recall.scale, pairs(sample, curve, EXCLUDED_CM1));
-    const r = correlations(sample, curve, EXCLUDED_CM1);
+    const { k, r, rDerivative } = engineRecall(sample, curve, s.recall.scale);
     const at = candidates.findIndex((/** @type {any} */ c) => c.library === ref.library && c.spectrum_id === ref.spectrumId);
     const rank = resultOf(s) ? (at >= 0 ? candidates[at].rank : null) : undefined;
-    view.rows.push({ ref, name: recalledName(ref), k, rSpectrum: r.spectrum, rDerivative: r.derivative, rank, first });
+    view.rows.push({ ref, name: recalledName(ref), k, rSpectrum: r, rDerivative, rank, first });
     view.curves.push({ spectrum: { wavenumber_cm1: curve.wavenumber_cm1, y: curve.y.map((v) => v * k), y_unit: "Absorbance" } });
   }
   if (s.recall.mode === "difference") view.difference = differenceFor(s, file.code, view);
@@ -128,9 +143,10 @@ function cycleMode() {
   say(next === "overlay" ? t("recall.mode_overlay") : next === "offset" ? t("recall.mode_offset") : t("recall.mode_difference"));
 }
 
-/** @param {(text: string) => void} announce */
-export function recallActions(announce) {
+/** @param {(text: string) => void} announce @param {import("./engine.js").Engine | null} e */
+export function recallActions(announce, e) {
   say = announce;
+  engine = e;
   return {
     recallAdd: add,
     recallRemove: remove,

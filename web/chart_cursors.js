@@ -1,7 +1,7 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
 import { svg } from "./chart_marks.js";
-import { nearestIndex } from "./spectrum.js";
+import { axisKind, nearestIndex } from "./spectrum.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** Plot area and mappings of the last drawn chart (SVG user units).
@@ -11,7 +11,10 @@ import { nearestIndex } from "./spectrum.js";
  * @typedef {{ pos: Array<number | null>, hover: number | null, band: { kind: "x" | "y", range: [number, number] } | null }} Shown */
 
 /** @param {Spectrum} s @returns {string} */
-const unitOf = (s) => (s.y_unit === undefined || s.y_unit === "Absorbance" ? t("chart.unit_abs") : t("chart.unit_other"));
+const unitOf = (s) => {
+  const kind = axisKind(s);
+  return kind === "absorbance" ? t("chart.unit_abs") : kind === "transmittance_percent" ? t("chart.unit_tp") : kind === "transmittance_fraction" ? t("chart.unit_tf") : t("chart.unit_other");
+};
 
 /** @param {Spectrum} s @param {number} x @returns {string} position and value at the nearest point */
 function readPoint(s, x) {

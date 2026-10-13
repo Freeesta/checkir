@@ -1,5 +1,5 @@
 # Pagina: file, residui, cartella
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`, `pagina_miscele.md`.
 
 ## Struttura
 - Residui: `files.js` `addResidual(parent, spettro, derived)` dà il codice radice + `-r` + numero (C1-r1, poi C1-r2 anche se il padre è C1-r1), ruolo `residual`, `derived {name, library, k}` (la frase «sottratto: nome, libreria, k = 0.84» si scrive al disegno); l'originale non cambia mai. Sotto il grafico i candidati del residuo stanno SOTTO quelli del campione (`results.js` `residualBlock`, righe di sola lettura con livello e allerte; «Mostra C1-r1» apre il suo pannello completo).
@@ -15,3 +15,4 @@ Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagin
 ## Prove
 - `tests_e2e/caricamento.mjs` (chiamato da `fumo.mjs`): `thin` e `parseDocument` puri; JCAMP sintetico caricato dal selettore e per rilascio (C1, C2): grafico e tabella con i punti del file, chip «C1», nome del file solo in sezione 1 e tooltip, valori dei campi identità assenti dalla pagina, albero e selezione, errori tradotti it/en (formato ignoto, file troncato), axe, solo preferenze in storage, chiusura che svuota tutto.
 - `tests_e2e/cartella.mjs` (chiamato da `fumo.mjs`; `FAKE_PICKER` serve anche a T2): cartella finta nell'OPFS: 50 file vecchi mai proposti, file scritto a pezzi che attende, file completo proposto una volta, file rotto con avviso (attende ~30 s), Ignora, apri subito, riferimento unico in IndexedDB solo su richiesta, nessun nome fuori dalla sezione 1, zero richieste di rete, 320 px, axe; senza API solo «ultima misura».
+- Esportazioni visibili: `exportRow` (`panels.js`) mostra nel pannello File, con almeno un file, i pulsanti `export.csv`, `export.svg`, `export.png` (le stesse azioni del menù del grafico; file C1.csv/.svg/.png); stile in `web/css/esporta.css`, prova in `tests_e2e/scenari/290-exportButtons.mjs`.
