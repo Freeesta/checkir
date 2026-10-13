@@ -34,6 +34,8 @@ pub struct Identity {
     pub terms_it: Option<String>,
     pub terms_en: Option<String>,
     pub private: bool,
+    /// Sampling method of the spectra; `None` = not said.
+    pub sampling: Option<String>,
 }
 
 impl Package {
@@ -83,6 +85,7 @@ pub fn write_package(
         n_spectra: index.len(),
         sha256_data: sha256_hex(&data_bin),
         private: identity.private,
+        sampling: identity.sampling.clone(),
     };
     Ok(Files {
         manifest_json: manifest.to_json(),

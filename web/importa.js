@@ -43,7 +43,7 @@ const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 /**
  * @param {import("./engine.js").Engine} engine
  * @param {File[]} files
- * @param {{ id: string, name: string, date: string, attribution: { it: string, en: string } }} identity
+ * @param {{ id: string, name: string, sampling?: string, date: string, attribution: { it: string, en: string } }} identity
  * @param {{ onProgress: (p: Progress) => void, signal: AbortSignal }} hooks
  * @returns {Promise<Outcome>}
  */
@@ -83,7 +83,7 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
   if (!rows.length) return out;
   const values = new Float32Array(rows.length * POINTS);
   rows.forEach((r, k) => values.set(r, k * POINTS));
-  const ident = { name: identity.id, version: "1", date: identity.date, license: "LicenseRef-private", attribution: identity.attribution, private: true };
+  const ident = { name: identity.id, version: "1", date: identity.date, license: "LicenseRef-private", attribution: identity.attribution, private: true, ...(identity.sampling && identity.sampling !== "unknown" ? { sampling: identity.sampling } : {}) };
   const built = JSON.parse(engine.library_build(JSON.stringify(ident), JSON.stringify({ schema: "ftir-library-index/1", spectra: index }), values));
   if ("error_key" in built) return { ...out, imported: 0, error: noticeOf(built) };
   const native = new Float32Array(natives.reduce((n, r) => n + r.length, 0));

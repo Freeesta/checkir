@@ -53,6 +53,8 @@ pub struct Manifest {
     pub n_spectra: usize,
     pub sha256_data: String,
     pub private: bool,
+    /// How the spectra were measured (an id of `ftir_core::campionamento`); `None` = not said (`unknown`).
+    pub sampling: Option<String>,
 }
 
 fn req<'a>(v: &'a Value, name: &str) -> EngineResult<&'a str> {
@@ -142,6 +144,7 @@ impl Manifest {
             n_spectra: n as usize,
             sha256_data,
             private: matches!(v.get("private"), Some(Value::Bool(true))),
+            sampling: crate::sampling(&v, KEY)?,
         })
     }
 
@@ -173,6 +176,9 @@ impl Manifest {
             ("n_spectra", Value::Num(self.n_spectra as f64)),
             ("sha256_data", string(&self.sha256_data)),
         ]);
+        if let Some(sampling) = &self.sampling {
+            members.push(("sampling", string(sampling)));
+        }
         if self.private {
             members.push(("private", Value::Bool(true)));
         }

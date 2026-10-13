@@ -105,6 +105,7 @@ pub fn apply_header(s: &mut Spectrum, h: &Header, ix: &HeaderIndex) {
         }
         if let Some(acc) = e.text.strip_prefix("Measured with accessory:") {
             s.instrument.accessory = sourced(acc.trim().to_string(), field);
+            s.instrument.sampling = crate::campionamento::classify(acc);
         }
         if e.text.to_ascii_lowercase().contains("out of range") {
             s.warnings.push(

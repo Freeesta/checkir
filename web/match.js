@@ -64,10 +64,15 @@ export function effectiveChoice(s) {
   return c.preset ? c : { preset: null, ranges: normalizeRanges(c.ranges) };
 }
 
-/** What a result is valid for: the libraries searched and the region used (empty when no library is active). @param {import("./state.js").AppState} s @returns {string} */
-export function matchSignature(s) {
+/** How a sample was measured, as the engine gets it (the shown one without a code). @param {import("./state.js").AppState} s @param {string} [code] @returns {string} */
+function samplingOf(s, code) {
+  return (code ? s.files.find((f) => f.code === code) : activeFile(s))?.sampling ?? "unknown";
+}
+
+/** What a result is valid for: the libraries searched, the region used and how the sample was measured (empty when no library is active). @param {import("./state.js").AppState} s @param {string} [code] the sample, the shown one without a code @returns {string} */
+export function matchSignature(s, code) {
   const libs = activeSignature(s);
-  return libs ? `${libs}#${choiceKey(effectiveChoice(s))}` : "";
+  return libs ? `${libs}#${choiceKey(effectiveChoice(s))}#${samplingOf(s, code)}` : "";
 }
 
 function ensureWorker() {
@@ -103,7 +108,7 @@ function syncLibraries(s) {
     type: "sync",
     libs: s.libraries.map((l) => {
       const fresh = !previous.has(`${l.id}@${l.version}`);
-      return fresh ? { id: l.id, version: l.version, rows: libraryRows(l.id) ?? [], values: libraryValues(l.id) ?? new Float32Array(), ...GRID } : { id: l.id, version: l.version };
+      return fresh ? { id: l.id, version: l.version, rows: libraryRows(l.id) ?? [], values: libraryValues(l.id) ?? new Float32Array(), sampling: l.sampling ?? undefined, ...GRID } : { id: l.id, version: l.version };
     }),
   });
   sentSignature = signature;
@@ -160,7 +165,7 @@ export function compareWith(code, options, onMixture = null) {
   if (!spectrum || !unit) return Promise.resolve(null);
   return ask(
     { role: "sample", y_unit: unit, wavenumber_cm1: spectrum.wavenumber_cm1, y: spectrum.y },
-    { libraries: activeLibraries(getState()).map((l) => l.id), ...options },
+    { libraries: activeLibraries(getState()).map((l) => l.id), sampling: getState().files.find((f) => f.code === code)?.sampling ?? "unknown", ...options },
     onMixture,
   );
 }
@@ -189,7 +194,7 @@ export async function runMatch(code) {
   const narrow = choice.preset ? null : narrowError(choice.ranges);
   if (narrow) return update({ rangeError: narrow });
   syncLibraries(s);
-  const signature = matchSignature(s);
+  const signature = matchSignature(s, code);
   pending++;
   update({ matching: code, matchError: null, rangeError: null });
   const json = await compareWith(code, { sample_id: code, ...optionsOf(choice) }, s.files.find((f) => f.code === code)?.role === "sample" ? (proposal) => attachMixture(code, signature, proposal) : null);

@@ -37,8 +37,8 @@ pub struct Options {
     pub expected_form: Option<String>,
     /// Id of the sample in the session: lets `same_as_previous` compare with the sample before it.
     pub sample_id: Option<String>,
-    /// Sampling method of the sample (`ATR`, `transmission`, ...), when known: a library measured another way caps
-    /// the level (`sampling_not_calibrated`).
+    /// Sampling method of the sample (`atr_diamond`, `transmission_kbr`, ...), when known (`unknown` = not said): a
+    /// library measured another way caps the level (`sampling_not_calibrated`).
     pub sampling: Option<String>,
 }
 
@@ -123,7 +123,7 @@ pub fn parse_options(text: &str, t: &Thresholds) -> EngineResult<Options> {
         sampling: v
             .get("sampling")
             .and_then(Value::as_str)
-            .filter(|s| !s.trim().is_empty())
+            .filter(|s| !s.trim().is_empty() && s.trim() != crate::campionamento::UNKNOWN)
             .map(str::to_string),
     };
     match (v.get("ranges"), preset_id) {

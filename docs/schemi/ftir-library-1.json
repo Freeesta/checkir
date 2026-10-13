@@ -123,6 +123,12 @@
       "type": "string",
       "pattern": "^[0-9a-f]{64}$"
     },
+    "sampling": {
+      "description": "How the spectra were measured; absent = not said (unknown). A sample measured another way cannot reach the level probable against this library.",
+      "description_it": "Come sono stati misurati gli spettri; assente = non indicato (unknown). Un campione misurato in altro modo non raggiunge il livello probabile contro questa libreria.",
+      "type": "string",
+      "enum": ["atr_diamond", "atr_ge", "atr_znse", "transmission_kbr", "unknown"]
+    },
     "private": {
       "description": "True for a library the user imported; never exported.",
       "description_it": "True per una libreria importata dall'utente; mai esportata.",

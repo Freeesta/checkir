@@ -194,6 +194,8 @@ pub struct Instrument {
     pub serial_number: Option<Sourced<String>>,
     /// Accessory name and serial number as written by the file (`identity`).
     pub accessory: Option<Sourced<String>>,
+    /// Sampling method the file names (an id of `campionamento`); `None` when it does not say or does not say enough.
+    pub sampling: Option<&'static str>,
 }
 
 #[derive(Debug, Clone, Default, PartialEq)]

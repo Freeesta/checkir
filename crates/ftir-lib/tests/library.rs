@@ -18,6 +18,7 @@ fn identity() -> Identity {
         terms_it: None,
         terms_en: None,
         private: false,
+        sampling: None,
     }
 }
 
@@ -220,6 +221,39 @@ fn private_flag_round_trips() {
 }
 
 #[test]
+fn sampling_round_trips_and_absent_means_unknown() {
+    let one = |sampling: Option<&str>| {
+        let mut id = identity();
+        id.sampling = sampling.map(str::to_string);
+        write_package(&id, &small_grid(), vec![(row("a.1"), vec![0.0; 6])]).expect("write")
+    };
+    let f = one(Some("atr_diamond"));
+    assert!(f.manifest_json.contains("\"sampling\":\"atr_diamond\""));
+    let got = open(&f, &f.data_bin).expect("open").manifest.sampling;
+    assert_eq!(got.as_deref(), Some("atr_diamond"));
+    // A package written before the member existed has the same manifest text as one that says nothing.
+    let none = one(None);
+    assert!(!none.manifest_json.contains("sampling"));
+    assert_eq!(
+        open(&none, &none.data_bin).expect("open").manifest.sampling,
+        None
+    );
+    // "unknown" is the same as absent; a method not in the list is refused, naming the member.
+    let unknown = f.manifest_json.replace("atr_diamond", "unknown");
+    let m =
+        Package::open(&unknown, &f.index_json, &f.data_bin, &Limits::STANDARD).expect("unknown");
+    assert_eq!(m.manifest.sampling, None);
+    let bad = f.manifest_json.replace("atr_diamond", "ATR");
+    let e = Package::open(&bad, &f.index_json, &f.data_bin, &Limits::STANDARD).expect_err("bad");
+    assert_eq!(e.error_key, "library.manifest_invalid");
+    assert!(
+        e.params.iter().any(|(_, v)| v == "sampling"),
+        "{:?}",
+        e.params
+    );
+}
+
+#[test]
 fn permission_terms_round_trip_and_need_english() {
     let mut id = identity();
     id.license = "LicenseRef-permission-example".into();
@@ -316,6 +350,20 @@ fn a_spectrum_of_data_becomes_a_row_and_a_package() {
         ("checkir-community", "0.0.1")
     );
     assert!(b.row.classes.contains(&"others".to_string()));
+    assert_eq!(
+        b.sampling,
+        Some("atr_diamond"),
+        "from the technique of the record"
+    );
+    let other = spec.replace("\"crystal\": \"diamond\"", "\"crystal\": \"other\"");
+    let src2 = Source {
+        spectrum_json: &other,
+        ..src
+    };
+    assert_eq!(
+        build_one(&src2, &Grid::STANDARD).expect("other").sampling,
+        None
+    );
     assert_eq!(b.values.len(), 1576);
     assert!(
         b.values.iter().all(|v| v.is_finite()),

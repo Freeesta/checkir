@@ -166,6 +166,50 @@ fn a_different_sampling_method_blocks_t2() {
 }
 
 #[test]
+fn sampling_ids_decide_the_cap_and_are_recorded_in_the_result() {
+    let q = make(A, 9);
+    let on = |lib: Option<&str>, sample: &str| {
+        let opt = format!(r#"{{"sampling":"{sample}"}}"#);
+        run(&index_with(lib), &q, &opt)
+    };
+    let same = on(Some("atr_diamond"), "atr_diamond");
+    assert_eq!((text(&same, "tier"), caps(&same)), ("T2", vec![]));
+    let other = on(Some("atr_diamond"), "transmission_kbr");
+    assert_eq!(
+        (text(&other, "tier"), caps(&other)),
+        ("T3", vec!["sampling_not_calibrated"])
+    );
+    let crystal = on(Some("atr_diamond"), "atr_ge");
+    assert_eq!(caps(&crystal), vec!["sampling_not_calibrated"]);
+    // `unknown` on either side is "not said": no cap, and the result records null.
+    for res in [
+        on(Some("atr_diamond"), "unknown"),
+        on(Some("unknown"), "atr_ge"),
+    ] {
+        assert_eq!((text(&res, "tier"), caps(&res)), ("T2", vec![]));
+    }
+    let query = other.get("query").expect("query");
+    assert_eq!(
+        query.get("sampling").and_then(Value::as_str),
+        Some("transmission_kbr")
+    );
+    let lib = &list(&other, "libraries")[0];
+    assert_eq!(
+        lib.get("sampling").and_then(Value::as_str),
+        Some("atr_diamond")
+    );
+    let none = on(None, "unknown");
+    assert_eq!(
+        none.get("query").and_then(|x| x.get("sampling")),
+        Some(&Value::Null)
+    );
+    assert_eq!(
+        list(&none, "libraries")[0].get("sampling"),
+        Some(&Value::Null)
+    );
+}
+
+#[test]
 fn a_region_without_signal_is_low_signal_not_a_disagreement() {
     let res = run(&index_with(None), &make(A, 9), "");
     let signal = res.get("region_signal").expect("region_signal");

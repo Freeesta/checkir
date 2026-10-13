@@ -305,6 +305,26 @@
       "source": "checkir-classification"
     },
     {
+      "id": "tropane_esters",
+      "axis": "chemical",
+      "parent": "plant_based",
+      "names": {
+        "it": "Esteri del tropano (cocaina)",
+        "en": "Tropane esters (cocaine)"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "morphinans",
+      "axis": "chemical",
+      "parent": "plant_based",
+      "names": {
+        "it": "Morfinani (morfina e derivati semisintetici, come l'eroina)",
+        "en": "Morphinans (morphine and semi-synthetic derivatives such as heroin)"
+      },
+      "source": "checkir-classification"
+    },
+    {
       "id": "stimulant",
       "axis": "effect",
       "names": {

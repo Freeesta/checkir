@@ -32,6 +32,8 @@ const reading = async (page) => (await frames(page), page.$$eval("#chart .cursor
 
 /** Keyboard only: k places cursor 1 then 2, the comma moves the active one, the reading is announced, y locks, Esc clears. */
 async function keyboardScenario(page, check) {
+  // The automatic comparison announces its result when it ends; wait for it so it cannot overwrite the cursor's announcement.
+  await page.waitForFunction(() => /candidat/.test(document.getElementById("status")?.textContent ?? ""));
   await page.focus("#chart");
   await recordSaid(page);
   await page.keyboard.press("k");
