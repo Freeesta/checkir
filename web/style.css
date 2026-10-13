@@ -431,6 +431,11 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .zoom-box { fill: var(--surface); fill-opacity: 0.6; stroke: var(--text); stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
 .cursor-text { font-variant-numeric: tabular-nums; }
 
+/* Substance sheet (dialog) */
+.substance-sheet h3 { font-size: 1rem; margin: 1rem 0 0.25rem; }
+.substance-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
+.sheet-sources { font-size: 0.85rem; color: var(--text-muted); }
+
 /* Recalled compounds: the dash is the second signal beside the label (colour is the role "reference" for all of them); the difference uses the residual role. */
 .curve-recalled, .curve-difference { fill: none; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .curve-recalled { stroke: var(--color-reference); }
