@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:quality_thresholds:1",
+  "title": "Thresholds of the measurement-quality checks",
+  "title_it": "Soglie dei controlli di qualita della misura",
+  "description": "Limits of measurement_quality/1 as data: residual CO2, water vapour, negative bands (absorbance).",
+  "description_it": "Limiti di measurement_quality/1 come dati: CO2 residua, vapore acqueo, bande negative (assorbanza).",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "quality_thresholds/1"
+    },
+    "version": {
+      "description": "Version of the thresholds; a result stores it.",
+      "description_it": "Versione delle soglie; il risultato la salva.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "calibration": {
+      "description": "Where the numbers come from.",
+      "description_it": "Da dove vengono i numeri.",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "draft until the service confirms the limits.",
+          "description_it": "draft finche il servizio non conferma i limiti.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "calibrated"
+          ]
+        },
+        "bench": {
+          "description": "Bench the numbers come from.",
+          "description_it": "Banco da cui vengono i numeri.",
+          "type": "string"
+        },
+        "chain": {
+          "description": "Id of the procedure used.",
+          "description_it": "Id della procedura usata.",
+          "type": "string"
+        },
+        "date": {
+          "description": "Month of the calibration (YYYY-MM).",
+          "description_it": "Mese della taratura (AAAA-MM).",
+          "type": "string",
+          "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+        }
+      },
+      "required": [
+        "status",
+        "bench",
+        "chain",
+        "date"
+      ],
+      "additionalProperties": false
+    },
+    "co2": {
+      "description": "Residual CO2 check.",
+      "description_it": "Controllo della CO2 residua.",
+      "type": "object",
+      "properties": {
+        "band_cm1": {
+          "description": "Range where the largest deviation is searched.",
+          "description_it": "Intervallo in cui si cerca lo scarto massimo.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "flanks_cm1": {
+          "description": "Two windows on both sides of the band; the local line goes through their medians.",
+          "description_it": "Due finestre ai lati della banda; la linea locale passa per le loro mediane.",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "max_deviation_abs": {
+          "description": "Largest deviation from the local line (absorbance) before the warning.",
+          "description_it": "Scarto massimo dalla linea locale (assorbanza) oltre cui scatta l'avviso.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "min_points": {
+          "description": "Fewest points in the band to do the check.",
+          "description_it": "Punti minimi nella banda per fare il controllo.",
+          "type": "integer",
+          "minimum": 3
+        }
+      },
+      "required": [
+        "band_cm1",
+        "flanks_cm1",
+        "max_deviation_abs",
+        "min_points"
+      ],
+      "additionalProperties": false
+    },
+    "vapour": {
+      "description": "Water vapour check.",
+      "description_it": "Controllo del vapore acqueo.",
+      "type": "object",
+      "properties": {
+        "band_cm1": {
+          "description": "Range where the roughness of the derivative is measured.",
+          "description_it": "Intervallo in cui si misura la ruvidita della derivata.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "roughness_ratio": {
+          "description": "Multiple of the reference median above which the warning fires.",
+          "description_it": "Multiplo della mediana di riferimento oltre cui scatta l'avviso.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "reference_median_roughness": {
+          "description": "Median roughness (absorbance per cm-1) of a clean reference set.",
+          "description_it": "Ruvidita mediana (assorbanza per cm-1) di un insieme di riferimento pulito.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "min_points": {
+          "description": "Fewest derivative points to do the check.",
+          "description_it": "Punti minimi della derivata per fare il controllo.",
+          "type": "integer",
+          "minimum": 3
+        }
+      },
+      "required": [
+        "band_cm1",
+        "roughness_ratio",
+        "reference_median_roughness",
+        "min_points"
+      ],
+      "additionalProperties": false
+    },
+    "negative": {
+      "description": "Negative bands check.",
+      "description_it": "Controllo delle bande negative.",
+      "type": "object",
+      "properties": {
+        "excluded_cm1": {
+          "description": "Ranges not examined (CO2 region, crystal cut-off).",
+          "description_it": "Intervalli non esaminati (regione della CO2, taglio del cristallo).",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 0
+        },
+        "min_abs": {
+          "description": "Lowest absorbance before the warning (negative).",
+          "description_it": "Assorbanza minima oltre cui scatta l'avviso (negativa).",
+          "type": "number",
+          "exclusiveMaximum": 0
+        },
+        "strong_min_abs": {
+          "description": "Lowest absorbance for a strong warning (below min_abs).",
+          "description_it": "Assorbanza minima per l'avviso forte (sotto min_abs).",
+          "type": "number",
+          "exclusiveMaximum": 0
+        }
+      },
+      "required": [
+        "excluded_cm1",
+        "min_abs",
+        "strong_min_abs"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "calibration",
+    "co2",
+    "vapour",
+    "negative"
+  ],
+  "additionalProperties": false
+}
