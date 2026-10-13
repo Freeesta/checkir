@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "metonitazene",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Metonitazene"
+    },
+    "it": {
+      "preferred": "Metonitazene"
+    }
+  },
+  "iupac": "N,N-diethyl-2-[2-[(4-methoxyphenyl)methyl]-5-nitrobenzimidazol-1-yl]ethanamine",
+  "formula": "C21H26N4O3",
+  "molar_mass_g_mol": 382.5,
+  "smiles": "CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)OC",
+  "inchi": "InChI=1S/C21H26N4O3/c1-4-23(5-2)12-13-24-20-11-8-17(25(26)27)15-19(20)22-21(24)14-16-6-9-18(28-3)10-7-16/h6-11,15H,4-5,12-14H2,1-3H3",
+  "inchikey": "HNGZTLMRQTVPBH-UHFFFAOYSA-N",
+  "external_ids": {
+    "chebi": "CHEBI:234362",
+    "cas": "14680-51-4",
+    "pubchem_cid": 53316366
+  },
+  "classes": {
+    "chemical": [
+      "nitazenes"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
