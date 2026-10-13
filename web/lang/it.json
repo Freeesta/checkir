@@ -543,11 +543,8 @@
   "chart.y_locked": "Asse y bloccato",
   "chart.y_unlocked": "Asse y automatico",
   "sheets.open": "Scheda della sostanza",
-  "sheets.none": "Per questa sostanza il sito non ha ancora una scheda. Chiedi all'operatore.",
-  "sheets.banner": "Bozza non firmata.",
-  "sheets.banner_more": "Testo scritto con assistenza di IA, non ancora controllato da un chimico né da personale sanitario: serve solo come punto di partenza.",
+  "sheets.none": "Nessuna scheda per questa sostanza.",
   "sheets.version": "Versione {version} · sezioni firmate: {signed} su {total} · da rivedere entro {until}",
-  "sheets.preparing": "In preparazione: chiedere all'operatore.",
   "sheets.open_source": "(apri la fonte)",
   "sheets.sources_list": "Fonti citate",
   "sheets.state.draft": "bozza",
@@ -562,5 +559,6 @@
   "sheets.section.interactions": "Interazioni",
   "sheets.section.harm_reduction": "Riduzione del danno",
   "sheets.section.sources": "Fonti",
-  "sheets.section.license": "Licenza e stato"
+  "sheets.section.license": "Licenza e stato",
+  "sheets.empty": "Non ancora redatta."
 }

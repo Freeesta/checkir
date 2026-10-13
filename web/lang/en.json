@@ -543,11 +543,8 @@
   "chart.y_locked": "y axis locked",
   "chart.y_unlocked": "y axis automatic",
   "sheets.open": "Substance sheet",
-  "sheets.none": "The site has no sheet for this substance yet. Ask the operator.",
-  "sheets.banner": "Unsigned draft.",
-  "sheets.banner_more": "Text written with AI assistance, not yet checked by a chemist or by health staff: use it only as a starting point.",
+  "sheets.none": "No sheet for this substance.",
   "sheets.version": "Version {version} · signed sections: {signed} of {total} · review due by {until}",
-  "sheets.preparing": "In preparation: ask the operator.",
   "sheets.open_source": "(open the source)",
   "sheets.sources_list": "Cited sources",
   "sheets.state.draft": "draft",
@@ -562,5 +559,6 @@
   "sheets.section.interactions": "Interactions",
   "sheets.section.harm_reduction": "Harm reduction",
   "sheets.section.sources": "Sources",
-  "sheets.section.license": "Licence and status"
+  "sheets.section.license": "Licence and status",
+  "sheets.empty": "Not written yet."
 }
