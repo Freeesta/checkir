@@ -40,7 +40,7 @@ export function summaryText(a, name) {
 
 /** The accessible name of a peak, also what is announced when the arrows reach it. @param {PeakRow} p @param {string | null} name @returns {string} */
 export function peakName(p, name) {
-  const by = p.state === "explained" && name ? t("peaks.name_by", { name }) : stateWord(p.state).toLowerCase();
+  const by = p.state === "explained" && (p.byName ?? name) ? t("peaks.name_by", { name: String(p.byName ?? name) }) : stateWord(p.state).toLowerCase();
   return t("peaks.name", { pos: formatNumber(Math.round(p.position)), intensity: intensityWord(p.intensity), state: by });
 }
 
@@ -75,7 +75,7 @@ function rowOf(p, name, focus) {
   const tr = document.createElement("tr");
   tr.dataset.peak = p.id;
   if (p.id === focus) tr.setAttribute("aria-current", "true");
-  const by = p.by === null ? "—" : `${approx(p.by)}${name ? ` · ${name}` : ""}`;
+  const by = p.by === null ? "—" : `${approx(p.by)}${p.byName ?? name ? ` · ${p.byName ?? name}` : ""}`;
   const cells = [`${approx(p.position)}${p.shoulder ? ` (${t("peaks.shoulder")})` : ""}`, intensityWord(p.intensity), shapeWord(p.shape), stateWord(p.state), by, p.regions.map(bandName).join(", ") || "—"];
   for (const c of cells) tr.insertCell().textContent = c;
   return tr;

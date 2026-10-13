@@ -8,6 +8,7 @@
  * `prova-csv` in, `prova` (progress), `prova-report` (the report so far: when it stops or finishes), `prova-csv`, `prova-error` out.
  * @typedef {{ id: string, version: string, rows?: Array<{ id: string, substance?: string, form?: string, classes?: string[], names: { it?: string, en: string } }>, sampling?: string, values?: Float32Array, from?: number, step?: number }} LibMessage
  */
+import { mixtureProposal } from "./miscele_job.js";
 import { ensurePeakIndex } from "./peak_index_job.js";
 
 /** The worker global scope (typed loosely: the project compiles with the DOM library only). @type {any} */
@@ -18,6 +19,8 @@ let mod = null;
 let loading = null;
 /** @type {Map<string, string>} */
 const held = new Map();
+/** The spectra of the held libraries, kept for the mixture search. @type {Map<string, import("./miscele_job.js").LibData>} */
+const data = new Map();
 let twinsRunning = false;
 /** Libraries whose peak index is ready to answer. @type {Set<string>} */
 const indexed = new Set();
@@ -39,6 +42,7 @@ function addLibrary(lib) {
   const { rows = [], values = new Float32Array(), from = 650, step = 2 } = lib;
   const n = rows.length ? Math.round(values.length / rows.length) : 0;
   const axis = Float64Array.from({ length: n }, (_, i) => from + step * i);
+  data.set(lib.id, { rows, values, n, from, step });
   mod.confronto_libreria_inizia(lib.id, lib.version);
   if (lib.sampling) mod.confronto_libreria_campionamento(lib.id, lib.sampling);
   for (let i = 0; i < rows.length; i++) {
@@ -119,6 +123,7 @@ async function sync(libs) {
       mod.peak_index_remove(id);
       indexed.delete(id);
       held.delete(id);
+      data.delete(id);
     }
   }
   for (const lib of libs) {
@@ -132,10 +137,20 @@ async function sync(libs) {
   for (const lib of libs) if (lib.rows && held.get(lib.id) === lib.version) indexLibrary(lib).catch(() => scope.postMessage({ type: "peak_index", id: lib.id, done: 0, total: 0, ready: false, how: "failed" }));
 }
 
-/** @param {{ runId: number, query: unknown, options: unknown }} job */
+/** @param {{ runId: number, query: unknown, options: any, mixture?: boolean }} job `mixture`: after the comparison, look for a mixture when peaks stay unexplained */
 async function run(job) {
   await engine();
-  scope.postMessage({ type: "result", runId: job.runId, json: mod.confronta(JSON.stringify(job.query), JSON.stringify(job.options)) });
+  const json = mod.confronta(JSON.stringify(job.query), JSON.stringify(job.options));
+  scope.postMessage({ type: "result", runId: job.runId, json });
+  if (!job.mixture) return;
+  const result = JSON.parse(json);
+  let proposal = null;
+  try {
+    proposal = result.error_key ? null : mixtureProposal(mod, data, job.options.libraries ?? [], job.query, result);
+  } catch {
+    proposal = null;
+  }
+  scope.postMessage({ type: "mixture", runId: job.runId, proposal });
 }
 
 scope.addEventListener("message", (/** @type {MessageEvent} */ e) => {

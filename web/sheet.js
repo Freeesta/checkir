@@ -1,6 +1,7 @@
 // @ts-check
 import { alertViews, familyParts } from "./alerts.js";
 import { chosenCandidates, shownChoice } from "./decision.js";
+import { mixtureCandidates, mixtureTaken } from "./mixture.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, inLang, t } from "./i18n.js";
 import { candidateName, levelBadge } from "./results.js";
@@ -64,8 +65,20 @@ function nameOf(c) {
   return c.form ? `${candidateName(c)} (${c.form})` : candidateName(c);
 }
 
+/** «Possible mixture: A, B» when the program proposes one that the choice does not already hold. @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {HTMLElement[]} */
+function mixtureLine(choice, data) {
+  const parts = mixtureCandidates(data);
+  if (!parts.length || (choice.level === 4 && mixtureTaken(data, choice.keys))) return [];
+  return [el("p", { class: "sheet-mixture" }, [t("sheet.found.mixture", { names: parts.map(nameOf).join(", ") })])];
+}
+
 /** The sentence or names of block 2, by level. @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {Array<Node | string>} */
 function foundLines(choice, data) {
+  return [...levelLines(choice, data), ...mixtureLine(choice, data)];
+}
+
+/** @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {Array<Node | string>} */
+function levelLines(choice, data) {
   const picked = chosenCandidates(choice, data);
   const names = picked.map((c) => el("strong", { class: "sheet-name" }, [nameOf(c)]));
   const joined = picked.map(nameOf).join(", ");
