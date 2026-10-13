@@ -4,8 +4,11 @@ pub mod bdb;
 pub mod export;
 pub mod ispd;
 pub mod jcamp;
+pub(crate) mod le;
 pub mod model;
 pub mod sha256;
+pub mod spa;
+pub mod spc;
 pub mod text;
 
 use model::{Confidence, Document, Limits, Options, ReadResult};
@@ -23,7 +26,13 @@ pub struct Reader {
     pub open: fn(&[u8], &Limits, &Options) -> ReadResult<Document>,
 }
 
-pub static READERS: &[Reader] = &[jcamp::READER, text::READER, ispd::READER];
+pub static READERS: &[Reader] = &[
+    jcamp::READER,
+    text::READER,
+    ispd::READER,
+    spa::READER,
+    spc::READER,
+];
 
 /// Picks the reader that is surest about the file; ties go to the registry order.
 pub fn pick(name: &str, head: &[u8]) -> Option<&'static Reader> {

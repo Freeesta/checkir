@@ -39,12 +39,14 @@ async function tableAndColours(page, check) {
 
   // No green on results; the sample is one colour everywhere.
   const colours = await page.evaluate(() => {
-    const m = document.querySelector(".cand meter");
+    // A full coverage bar is not drawn, so the colours are read from a partial one added for the purpose.
+    const m = document.querySelector(".cand meter") ?? document.querySelector(".cand")?.appendChild(Object.assign(document.createElement("meter"), { min: 0, max: 1, value: 0.5 }));
     const sample = document.createElement("i");
     sample.style.color = "var(--color-sample)";
     document.body.append(sample);
     const out = { sample: getComputedStyle(sample).color, curve: getComputedStyle(document.querySelector("#chart polyline.curve")).stroke, bar: getComputedStyle(m).backgroundColor, value: [...["::-webkit-meter-optimum-value", "::-webkit-meter-suboptimum-value", "::-webkit-meter-even-less-good-value"]].map((p) => getComputedStyle(m, p).backgroundColor), seg: [...document.querySelectorAll(".result .level .seg.on")].map((x) => getComputedStyle(x).backgroundColor) };
     sample.remove();
+    if (!document.querySelector(".cand meter[aria-label]")) m.remove();
     return out;
   });
   check("area: the meters and the level marks have no green", !colours.value.some(isGreen) && !isGreen(colours.bar) && !colours.seg.some(isGreen), JSON.stringify(colours));
@@ -103,7 +105,7 @@ export async function areaScenario(browser, base, check, axe) {
     check(`area: axe has no violations (${scheme}, it)`, v.length === 0, v.join(", "));
   }
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   const ven = await axe(page);
   check("area: axe has no violations (en)", ven.length === 0, ven.join(", "));
   check("area: English table title and candidates", /\(\d+ rows\)/.test((await page.textContent("#table-section > summary")) ?? "") && /Candidates|Most similar/.test((await page.textContent(".cands-title")) ?? ""));

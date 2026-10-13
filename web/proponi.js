@@ -1,9 +1,8 @@
 // @ts-check
 // "Propose a change" to a substance sheet: local checks and the pre-filled issue link. No DOM, no network: the page only builds the
 // address; the browser opens it on the user's click. Nothing of the sample or of the analysis ever enters here.
+import { GITHUB_URL } from "./appname.js";
 
-/** Base of the project on GitHub (text; followed only on click). */
-const GITHUB = "https://github.com/Freeesta/checkir/";
 /** Issue form that receives the proposals. */
 const TEMPLATE = "sheet.yml";
 /** Longest address sent to GitHub; a longer one carries the text through the clipboard. */
@@ -78,7 +77,7 @@ export function buildIssueUrl(p) {
     if (withText) fields.push(["text", p.text.trim()]);
     if (p.sources.trim()) fields.push(["sources", p.sources.trim()]);
     if (p.name.trim()) fields.push(["public_name", p.name.trim()]);
-    return `${GITHUB}issues/new?template=${TEMPLATE}&${fields.map(([k, v]) => `${k}=${enc(v)}`).join("&")}`;
+    return `${GITHUB_URL}issues/new?template=${TEMPLATE}&${fields.map(([k, v]) => `${k}=${enc(v)}`).join("&")}`;
   };
   const full = make(true);
   return full.length <= MAX_URL ? { url: full, pasted: false } : { url: make(false), pasted: true };
@@ -86,5 +85,5 @@ export function buildIssueUrl(p) {
 
 /** Address of the history of a sheet on GitHub. @param {string} id @returns {string} */
 export function historyUrl(id) {
-  return `${GITHUB}commits/main/data/substances/${enc(id)}/datasheet`;
+  return `${GITHUB_URL}commits/main/data/substances/${enc(id)}/datasheet`;
 }

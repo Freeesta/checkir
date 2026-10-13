@@ -1,5 +1,6 @@
 //! The proposed level and the alerts computed from a comparison. The program proposes; the chemist confirms or changes
 //! and signs: there is no "confirmed" level here, and no level or alert uses words of certainty.
+use super::famiglie::family_alerts;
 use super::indice::Index;
 use super::opzioni::Options;
 use super::risultato::{Alert, Candidate, Level};
@@ -214,13 +215,14 @@ fn form_absent(a: &AlertInput) -> Option<Alert> {
     ))
 }
 
-/// Alerts in display order: ambiguity, spectral twin, different form, form absent, same as previous, quality,
+/// Alerts in display order: ambiguity, spectral twin, different form, form absent, flagged family, same as previous, quality,
 /// custom range, fixed limit (always).
 pub fn build_alerts(a: &AlertInput) -> Vec<Alert> {
     let mut out: Vec<Alert> = [ambiguity(a), twin(a), different_form(a), form_absent(a)]
         .into_iter()
         .flatten()
         .collect();
+    out.extend(family_alerts(a.index, a.candidates));
     out.extend(a.measurement.iter().cloned());
     if a.options.custom {
         let ranges = a

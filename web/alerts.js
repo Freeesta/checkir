@@ -48,9 +48,33 @@ function rowText(r) {
 /** @param {unknown} v @param {number} [d] @returns {string} */
 const num = (v, d = 2) => formatNumber(Number(v), d);
 
+/** Name and short motive of each flagged class (`data/alerts/`); a class this page does not know shows its id. @param {any} d data of `family_flagged` @returns {{ name: string, motive: string }} */
+function familyOf(d) {
+  /** @type {Record<string, () => { name: string, motive: string }>} */
+  const known = {
+    nitazenes: () => ({ name: t("alert.family.nitazenes.name"), motive: t("alert.family.nitazenes.motive") }),
+    fentanyls: () => ({ name: t("alert.family.fentanyls.name"), motive: t("alert.family.fentanyls.motive") }),
+    synthetic_cannabinoids: () => ({ name: t("alert.family.synthetic_cannabinoids.name"), motive: t("alert.family.synthetic_cannabinoids.motive") }),
+    synthetic_cathinones: () => ({ name: t("alert.family.synthetic_cathinones.name"), motive: t("alert.family.synthetic_cathinones.motive") }),
+    benzodiazepines: () => ({ name: t("alert.family.benzodiazepines.name"), motive: t("alert.family.benzodiazepines.motive") }),
+  };
+  return known[String(d.class)]?.() ?? { name: String(d.class ?? ""), motive: "" };
+}
+
+/** The parts of a `family_flagged` line: the candidate, its family and the short motive. @param {any} d @returns {{ name: string, family: string, motive: string }} */
+export function familyParts(d) {
+  const f = familyOf(d);
+  return { name: d.form ? `${d.display_name} (${d.form})` : String(d.display_name ?? ""), family: f.name, motive: f.motive };
+}
+
+/** The line of the alert list: candidate, family, motive and source. @param {any} d @returns {string} */
+function familyText(d) {
+  return t("alert.family_flagged.reason", { ...familyParts(d), source: String(d.source ?? "") });
+}
+
 /** @type {Record<string, { labelKey: string, reasons: (d: any) => string[] }>} */
 const ALERTS = {
-  flagged_family: { labelKey: "alert.flagged_family.label", reasons: (d) => [t("alert.flagged_family.reason", { family: String(d.family ?? d.name ?? "") })] },
+  family_flagged: { labelKey: "alert.family_flagged.label", reasons: (d) => [familyText(d)] },
   ambiguity: {
     labelKey: "alert.ambiguity.label",
     reasons(d) {

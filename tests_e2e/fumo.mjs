@@ -5,6 +5,7 @@ import { chromium, firefox, webkit } from "playwright";
 import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { areaScenario } from "./area.mjs";
+import { binariesScenario } from "./binari.mjs";
 import { cleanScenario } from "./pulizia.mjs";
 import { samplingScenario } from "./campionamento.mjs";
 import { demoScenario } from "./demo.mjs";
@@ -14,6 +15,7 @@ import { librariesPureScenario, librariesScenario, offlineScenario } from "./lib
 import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
 import { collaudoScenario } from "./collaudo.mjs";
+import { collaudoCScenario } from "./collaudo_c.mjs";
 import { exportScenario } from "./esporta.mjs";
 import { recallScenario } from "./richiamo.mjs";
 import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
@@ -94,7 +96,7 @@ async function phoneScenario(browser) {
   await page.click(".menu-button");
   check("320 px: the menu shows the tools", await page.isVisible('[data-lang="en"]'));
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   await page.keyboard.press("Escape"); // the open phone menu overlays the chart toolbar, which axe would count as an obscured target
   await page.waitForFunction(() => document.querySelector("#chart svg > text:last-child")?.textContent === "Absorbance", null, { timeout: 5000 }).catch(() => {});
   const axis = await page.textContent("#chart svg > text:last-child");
@@ -140,10 +142,10 @@ async function shortcutsScenario(browser) {
   await page.waitForSelector("dialog", { state: "detached" });
   check("shortcuts: Esc closes the list and gives the focus back", !(await page.isVisible("dialog")) && (await page.evaluate(() => document.activeElement === document.body)));
   await page.keyboard.press("l");
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("shortcuts: l changes the language", true);
   await page.keyboard.press("l");
-  await page.waitForFunction(() => document.documentElement.lang === "it");
+  await page.waitForFunction(() => document.body.dataset.langReady === "it");
   await page.keyboard.press("t");
   check("shortcuts: t changes the theme", (await page.getAttribute("html", "data-theme")) === "light");
   const before = await page.getAttribute("body", "data-panel");
@@ -224,7 +226,7 @@ async function shellScenario(browser) {
 async function nameScenario(browser) {
   const ctx = await browser.newContext({ locale: "it-IT" });
   await ctx.route("**/appname.js", (route) =>
-    route.fulfill({ contentType: "text/javascript", body: 'export const APP_NAME = "provanome"; export const APP_ID = "provaid"; export const STORAGE_PREFIX = "provaid.";' }),
+    route.fulfill({ contentType: "text/javascript", body: 'export const APP_NAME = "provanome"; export const APP_ID = "provaid"; export const STORAGE_PREFIX = "provaid."; export const GITHUB_URL = "https://github.com/x/y/"; export const SITE_URL = "https://x.github.io/y/";' }),
   );
   const page = await ctx.newPage();
   await page.goto(base);
@@ -253,7 +255,7 @@ async function pagesScenario(browser) {
       for (const lang of ["it", "en"]) {
         if (lang === "en") {
           await page.click('[data-lang="en"]');
-          await page.waitForFunction(() => document.documentElement.lang === "en");
+          await page.waitForFunction(() => document.body.dataset.langReady === "en");
         }
         const tag = `[${scheme}] ${p.slug} ${lang}`;
         const raw = await page.evaluate(() => [...document.querySelectorAll("[data-i18n]")].filter((e) => !e.textContent || /^[a-z]+\.[a-z0-9_.]+$/.test(e.textContent)).map((e) => e.getAttribute("data-i18n")));
@@ -296,6 +298,18 @@ async function splashScenario(browser) {
     const tag = `splash (${motion})`;
     check(`${tag}: status role, translated hidden label, no visible text`, info.role === "status" && word.test(info.label ?? "") && info.labelWidth <= 1 && info.textOutside === "", JSON.stringify(info));
     check(`${tag}: ${motion === "reduce" ? "static" : "animated"}`, motion === "reduce" ? info.animations === 0 : (info.animations ?? 0) > 0, String(info.animations));
+    const headOnWave = () => page.evaluate(() => {
+      const d = document.querySelector(".splash-wave")?.getAttribute("d") ?? "";
+      const last = d.split("L").pop()?.split(" ").map(Number) ?? [NaN, NaN];
+      const head = document.querySelector(".splash-head");
+      const hx = Number(head?.getAttribute("cx")), hy = Number(head?.getAttribute("cy"));
+      return { dist: Math.hypot(last[0] - hx, last[1] - hy), hy };
+    });
+    const a = await headOnWave();
+    await page.waitForTimeout(250);
+    const b = await headOnWave();
+    check(`${tag}: head sits on the wave end`, a.dist < 1 && b.dist < 1, JSON.stringify([a, b]));
+    check(`${tag}: head ${motion === "reduce" ? "still" : "moves with the wave"}`, motion === "reduce" ? a.hy === b.hy : a.hy !== b.hy, JSON.stringify([a, b]));
     await page.waitForSelector("body[data-ready='1']");
     await page.waitForSelector("#splash", { state: "detached", timeout: 2000 });
     check(`${tag}: removed when ready`, (await page.locator("#splash").count()) === 0);
@@ -319,6 +333,7 @@ function scenarios(browser) {
     () => pagesScenario(browser),
     () => warningsBoxScenario(browser),
     () => loadingScenario(browser, base, check, axe),
+    () => binariesScenario(browser, base, check, axe),
     () => demoScenario(browser, base, check, axe),
     () => librariesPureScenario(check),
     () => librariesScenario(browser, base, check, axe),
@@ -330,6 +345,7 @@ function scenarios(browser) {
     () => cleanScenario(browser, base, check, axe),
     () => peaksScenario(browser, base, check, axe),
     () => collaudoScenario(browser, base, check),
+    () => collaudoCScenario(browser, base, check),
     () => inverseScenario(browser, base, check, axe),
     () => subtractionScenario(browser, base, check, axe),
     () => toolsScenario(browser, base, check, axe),

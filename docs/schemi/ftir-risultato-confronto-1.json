@@ -458,6 +458,7 @@
               "spectral_twin",
               "different_form",
               "form_absent",
+              "family_flagged",
               "same_as_previous",
               "quality_saturation",
               "quality_weak_signal",

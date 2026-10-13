@@ -90,6 +90,8 @@ pub fn library_to_bytes(l: &LibraryCache) -> Vec<u8> {
         put_str(&mut out, e.substance.as_deref().unwrap_or(""));
         put_str(&mut out, &e.display_name);
         put_str(&mut out, &e.form);
+        out.extend((e.classes.len() as u32).to_le_bytes());
+        e.classes.iter().for_each(|c| put_str(&mut out, c));
     }
     put_matrix(&mut out, &l.deriv);
     put_matrix(&mut out, &l.spec);
@@ -120,6 +122,9 @@ pub fn library_from_bytes(bytes: &[u8]) -> EngineResult<LibraryCache> {
             substance: has.then_some(substance),
             display_name: r.str()?,
             form: r.str()?,
+            classes: (0..r.u32()?)
+                .map(|_| r.str())
+                .collect::<EngineResult<_>>()?,
         });
     }
     let (deriv, spec) = (get_matrix(&mut r, n)?, get_matrix(&mut r, n)?);
@@ -193,6 +198,7 @@ mod test {
                 substance: (k == 0).then(|| "x".to_string()),
                 display_name: "Ünïcode".into(),
                 form: "base".into(),
+                classes: vec!["c".into()],
             });
         }
         l

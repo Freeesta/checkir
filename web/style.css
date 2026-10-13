@@ -406,7 +406,7 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .sheet-meta dd { margin: 0; }
 .sheet .level-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; }
 .sheet-strong { font-weight: 700; }
-.sheet-alerts li { display: flex; gap: 0.35rem; padding: 0.1rem 0; }
+.sheet-alerts li { display: flex; gap: 0.35rem; padding: 0.1rem 0; overflow-wrap: anywhere; }
 .sheet-alerts .icon { flex: none; align-self: flex-start; color: var(--color-alert); }
 .signature { display: flex; align-items: flex-end; gap: 0.6rem; margin-top: 0.8rem; }
 .sign-line { flex: 1; border-bottom: 1px solid var(--text); height: 1.5rem; }
@@ -491,7 +491,7 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .chart-menu [aria-checked="false"]::before { content: "□ "; }
 .axis-hit-x { cursor: ew-resize; fill: transparent; }
 .axis-hit-y { cursor: ns-resize; fill: transparent; }
-/* Loading screen: a photon (bright head) with its red wave; the wave runs forward one period per cycle. */
+/* Loading screen: a photon (bright head) with its red wave; splash.js draws the wave and moves the head on its last point, from one phase. */
 #splash { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: var(--bg); opacity: 1; transition: opacity 0.12s linear; }
 #splash[data-gone] { opacity: 0; pointer-events: none; }
 .splash-art { width: min(20rem, 70vw); height: auto; }
@@ -500,10 +500,8 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .splash-glow-in { stop-color: var(--splash-wave); stop-opacity: 0.55; }
 .splash-glow-out { stop-color: var(--splash-wave); stop-opacity: 0; }
 @media (prefers-reduced-motion: no-preference) {
-  .splash-wave { animation: splash-run 0.9s linear infinite; }
   .splash-halo { transform-box: fill-box; transform-origin: center; animation: splash-pulse 1.4s ease-in-out infinite; }
 }
-@keyframes splash-run { to { transform: translateX(40px); } }
 @keyframes splash-pulse { 50% { transform: scale(1.35); opacity: 0.7; } }
 @media (prefers-reduced-motion: reduce) { #splash { transition: none; } }
 
@@ -581,3 +579,13 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .report-host { display: none; }
 .chart-menu button { display: flex; justify-content: space-between; gap: 1.5rem; }
 .menu-key { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+
+/* Layout pass: full-width chart, regions strip, coverage only when partial, test bar out of the way */
+#chart { max-width: none; }
+.region-label { paint-order: stroke; stroke: var(--bg); stroke-width: 3px; stroke-linejoin: round; }
+.cov-none { display: none; }
+@media (min-width: 46em) {
+  .candidates .cov-none { display: block; grid-area: cov; }
+}
+.dev-bar { position: static; justify-content: flex-end; margin: 0.5rem; }
