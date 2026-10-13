@@ -156,6 +156,47 @@
       ],
       "additionalProperties": false
     },
+    "proposal": {
+      "description": "When the search makes a mixture proposal, and the minor component.",
+      "description_it": "Quando la ricerca fa una proposta di miscela, e il componente minore.",
+      "type": "object",
+      "properties": {
+        "min_components": {
+          "description": "Fewest components (not variants) of a proposal; fewer: no proposal.",
+          "description_it": "Minimo di componenti (non varianti) di una proposta; meno: nessuna proposta.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "max_unexplained_variance_share": {
+          "description": "Above this unexplained share of the variance the proposal is rejected (reason high_residual).",
+          "description_it": "Sopra questa quota di varianza non spiegata la proposta si rifiuta (motivo high_residual).",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "min_explained_peaks": {
+          "description": "Fewest sample peaks each component must explain (reason component_without_peaks); also what a minor component must explain of the peaks left.",
+          "description_it": "Minimo di picchi del campione che ogni componente deve spiegare (motivo component_without_peaks); e quanti dei picchi rimasti deve spiegare un componente minore.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "minor_variance_share": {
+          "description": "A component below stop_variance_share joins as minor if it explains at least this share and peaks the selection leaves.",
+          "description_it": "Un componente sotto stop_variance_share entra come minore se spiega almeno questa quota e picchi che la selezione lascia.",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "min_components",
+        "max_unexplained_variance_share",
+        "min_explained_peaks",
+        "minor_variance_share"
+      ],
+      "additionalProperties": false
+    },
     "residual": {
       "description": "What the residual may hold.",
       "description_it": "Cosa puo contenere il residuo.",
@@ -254,6 +295,7 @@
     "space",
     "selection",
     "analogues",
+    "proposal",
     "residual",
     "bands_criterion",
     "subtraction"

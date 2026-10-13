@@ -1,6 +1,6 @@
 {
   "schema": "soglie_miscele/1",
-  "version": 1,
+  "version": 2,
   "calibration": {
     "status": "draft",
     "bench": "banco-1",
@@ -21,6 +21,12 @@
     "derivative_pearson_min": 0.6,
     "smooth_window": 15,
     "smooth_polyorder": 3
+  },
+  "proposal": {
+    "min_components": 2,
+    "max_unexplained_variance_share": 0.3,
+    "min_explained_peaks": 1,
+    "minor_variance_share": 0.003
   },
   "residual": {
     "high_residual_variance_share": 0.15

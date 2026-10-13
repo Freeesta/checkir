@@ -22,6 +22,8 @@ pub struct Pick {
     pub candidate: usize,
     /// Share of the sample variance it explained when it was added.
     pub gain: f64,
+    /// Joined after the selection stopped, through the peaks it left (`proposta.rs`).
+    pub minor: bool,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -83,7 +85,7 @@ struct Trial {
 }
 
 /// Rule of the single active: a cut may always join; a non-cut only if `sel` holds no non-cut yet.
-fn allowed(p: &Problem, sel: &[usize], j: usize) -> bool {
+pub(super) fn allowed(p: &Problem, sel: &[usize], j: usize) -> bool {
     p.is_cut[j] || sel.iter().all(|&k| p.is_cut[k])
 }
 
@@ -153,7 +155,11 @@ pub fn forward(p: &Problem, pool: &[usize], th: &Thresholds) -> Option<Selection
         picks: sel
             .iter()
             .zip(gains)
-            .map(|(&candidate, gain)| Pick { candidate, gain })
+            .map(|(&candidate, gain)| Pick {
+                candidate,
+                gain,
+                minor: false,
+            })
             .collect(),
         weights,
         total,

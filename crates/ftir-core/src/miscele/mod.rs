@@ -12,12 +12,14 @@ pub mod dati;
 pub mod iterativa;
 pub mod nnls;
 mod passata;
+pub mod proposta;
 pub mod residuo;
 pub mod risultato;
 pub mod seleziona;
 pub mod spazio;
 
 pub use dati::{Cuts, Thresholds};
+pub use proposta::{Proposal, Verdict};
 pub use residuo::{BandsCheck, UnexplainedPeak};
 pub use spazio::Candidate;
 
@@ -53,6 +55,10 @@ pub struct Component {
     /// `None` for the first component.
     pub bands: Option<BandsCheck>,
     pub status: Status,
+    /// Sample peaks this component explains (bands criterion with its fitted curve).
+    pub explained_peaks: usize,
+    /// Joined after the selection stopped, through peaks it left: a minor component.
+    pub minor: bool,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -70,6 +76,8 @@ pub struct Mixture {
     pub residual: Spectrum,
     pub unexplained_peaks: Vec<UnexplainedPeak>,
     pub alerts: Vec<Alert>,
+    /// Whether the page shows a mixture, and if not, why.
+    pub proposal: Proposal,
     pub candidates_used: usize,
     pub thresholds_version: u32,
     pub cuts_version: u32,
@@ -149,5 +157,6 @@ pub fn analyze(
             "no variance left after the background",
         )
     })?;
+    let sel = run.minor_pass(sel)?;
     run.finish(&sel)
 }

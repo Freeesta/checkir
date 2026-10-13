@@ -4,6 +4,7 @@
 //! is `{"wavenumber_cm1":[…], "y":[…], "y_unit"?}` (`null` = absent point). Output schema names:
 //! `ftir-risultato-miscele/1` and `ftir-risultato-sottrazione/1`. Numbers that are not finite are written as `null`.
 use super::iterativa::{self, Iteration};
+use super::proposta::{Proposal, Verdict};
 use super::{
     Alert, BandsCheck, Candidate, Component, Cuts, Mixture, Status, Thresholds, UnexplainedPeak,
 };
@@ -121,6 +122,24 @@ fn component_value(c: &Component) -> Value {
                 Status::PossibleNotShown => "possible_not_shown",
             }),
         ),
+        ("explained_peaks", num(c.explained_peaks as f64)),
+        ("minor", Value::Bool(c.minor)),
+    ])
+}
+
+fn proposal_value(p: &Proposal) -> Value {
+    let status = match p.verdict {
+        Verdict::Proposed => "proposed",
+        Verdict::Rejected => "rejected",
+        Verdict::None => "none",
+    };
+    obj(vec![
+        ("status", text(status)),
+        ("reason", p.reason.map_or(Value::Null, text)),
+        (
+            "component",
+            p.component.as_deref().map_or(Value::Null, text),
+        ),
     ])
 }
 
@@ -146,6 +165,7 @@ fn mixture_value(v: &Mixture) -> Value {
         ),
         ("unexplained_peaks", peaks_of(&v.unexplained_peaks)),
         ("alerts", alerts_of(&v.alerts)),
+        ("proposal", proposal_value(&v.proposal)),
         ("notes", Value::Arr(NOTES.iter().map(|n| text(n)).collect())),
     ])
 }
