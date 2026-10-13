@@ -63,7 +63,7 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
       if (file.size > BUDGET.maxBytes) throw JSON.stringify({ error_key: "reader.limit_exceeded", params: { limit: "bytes", max: BUDGET.maxBytes } });
       rows.push(Float32Array.from(engine.library_resample(new Uint8Array(await file.arrayBuffer()))));
       const id = `u${rows.length}`;
-      index.push({ id, form: "imported", substance: id, names: { en: file.name.replace(/\.[^.]*$/, "") }, classes: [], quality: "pass", provenance_type: "user_import" });
+      index.push({ id, form: "", substance: id, names: { en: file.name.replace(/\.[^.]*$/, "") }, classes: [], quality: "pass", provenance_type: "user_import" });
     } catch (e) {
       out.skipped.push({ file: file.name, notice: noticeOf(e) });
     }

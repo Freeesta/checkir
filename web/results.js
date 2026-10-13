@@ -99,7 +99,7 @@ function candidateRow(c, i, s, ctx, selected, data) {
   const key = candidateKey(c);
   const name = candidateName(c);
   const r = formatNumber(c.r_derivative, 2);
-  const select = el("button", { type: "button", class: "cand-select", "data-fk": `cand-${i}`, "aria-label": t("results.row", { rank: formatNumber(c.rank), name, form: c.form, library: c.library, r }) }, [
+  const select = el("button", { type: "button", class: "cand-select", "data-fk": `cand-${i}`, "aria-label": t("results.row", { rank: formatNumber(c.rank), name, form: c.form ? ` ${c.form},` : "", library: c.library, r }) }, [
     el("span", { class: "rank" }, [formatNumber(c.rank)]),
     el("span", { class: "cand-name" }, [name]),
     el("span", { class: "cand-form" }, [c.form]),
@@ -131,7 +131,7 @@ function detail(data, c, ctx, s, level) {
   if (!c) return box;
   const delta = c.rank === 1 ? data.margin : data.candidates[0].r_derivative - c.r_derivative;
   box.append(
-    el("p", { class: "detail-head" }, [el("strong", {}, [candidateName(c)]), ` ${c.form} · `, levelBadge(level)]),
+    el("p", { class: "detail-head" }, [el("strong", {}, [candidateName(c)]), c.form ? ` ${c.form} · ` : " · ", levelBadge(level)]),
     el("dl", { class: "numbers" }, [
       el("dt", {}, ["r"]), el("dd", {}, [formatNumber(c.r_derivative, 2)]),
       el("dt", {}, [t("results.delta")]), el("dd", {}, [delta === null ? "—" : formatNumber(delta, 2)]),

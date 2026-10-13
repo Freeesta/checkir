@@ -29,15 +29,15 @@ async function blocksScenario(page, check, axe) {
   check("sheet: nothing that reassures and no score", !REASSURING.test(text) && !/\b[01][.,]\d+\b/.test(body), body);
   check("sheet: no fixed warning text (limits, harm reduction, emergency, not a diagnosis)", !NO_FIXED_WARNINGS.test(text) && (await page.locator(".sheet-preview .sheet details").count()) === 0, text);
   check("sheet: a name never stands without the level", await page.evaluate(() => [...document.querySelectorAll(".sheet-name")].every((n) => n.closest(".found")?.querySelector(".level"))));
-  check("sheet: signed, so no draft mark", (await page.getAttribute(".sheet-preview .sheet", "data-draft")) === "0" && (await page.locator(".sheet-banner").count()) === 0);
+  check("sheet: signed, so no draft mark", (await page.getAttribute(".sheet-preview .sheet", "data-draft")) === "0");
   const violations = await axe(page);
   check("sheet: axe has no violations", violations.length === 0, violations.join(", "));
 }
 
-/** Draft until the chemist signs; revoking goes back to the draft; level 5 never says "no active substances". */
+/** Draft until the chemist signs; revoking goes back to the draft; level 5 names no substance. */
 async function draftScenario(page, check) {
   await sample(page, 6);
-  check("sheet: undecided sheet is a draft with the watermark", (await page.getAttribute(".sheet-preview .sheet", "data-draft")) === "1" && /BOZZA, non consegnare/.test((await page.textContent(".sheet-banner")) ?? "") && /BOZZA/.test((await page.getAttribute(".sheet-preview .sheet", "data-watermark")) ?? ""));
+  check("sheet: undecided sheet is a draft, with no banner or watermark", (await page.getAttribute(".sheet-preview .sheet", "data-draft")) === "1" && (await page.locator(".sheet-banner").count()) === 0 && (await page.getAttribute(".sheet-preview .sheet", "data-watermark")) === null);
   await page.click('.panel-body [data-action="decision.sign"]');
   check("sheet: signing removes the draft mark", (await page.getAttribute(".sheet-preview .sheet", "data-draft")) === "0");
   check("sheet: the result block shows the pen and who decided", /deciso dal chimico/.test((await page.textContent(".result .decided")) ?? ""));
@@ -45,7 +45,7 @@ async function draftScenario(page, check) {
   check("sheet: changing the decision goes back to the draft", (await page.getAttribute(".sheet-preview .sheet", "data-draft")) === "1");
   await sample(page, 4);
   const none = (await page.textContent(".sheet-preview .found")) ?? "";
-  check("sheet: level 5 says it does not mean there are no active substances", /Non vuol dire che non ci siano sostanze attive/.test(none) && (await page.locator(".sheet-preview .sheet-name").count()) === 0, none);
+  check("sheet: level 5 says only that nothing was identified", /Non identificato/.test(none) && !/sostanze attive/.test(none) && (await page.locator(".sheet-preview .sheet-name").count()) === 0, none);
   await sample(page, 5);
   const first = await page.getAttribute(".sheet-preview .sheet-alert", "data-sheet-alert");
   check("sheet: a flagged family comes first among the alerts", first === "flagged_family", String(first));

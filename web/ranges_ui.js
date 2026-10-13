@@ -100,7 +100,7 @@ export function rangeTable(s, c) {
   const tab = el("table", { class: "ranges-table" }, [el("caption", {}, [t("ranges.table.caption")])]);
   tab.append(el("thead", {}, [el("tr", {}, heads.map((h) => el("th", { scope: "col" }, [h])))]));
   const key = candidateKey(c);
-  tab.append(el("tbody", {}, [el("tr", {}, [el("th", { scope: "row" }, [`${formatNumber(c.rank)}. ${candidateName(c)} (${c.form})`]), ...table.columns.map((col) => cell(table.cells[col.id]?.[key], table.busy))])]));
+  tab.append(el("tbody", {}, [el("tr", {}, [el("th", { scope: "row" }, [`${formatNumber(c.rank)}. ${candidateName(c)}${c.form ? ` (${c.form})` : ""}`]), ...table.columns.map((col) => cell(table.cells[col.id]?.[key], table.busy))])]));
   return el("div", { class: "ranges-table-wrap", role: "region", tabindex: "0", "aria-label": t("ranges.table.caption") }, [tab]);
 }
 

@@ -228,9 +228,9 @@ async function nameScenario(browser) {
   await ctx.close();
 }
 
-/** The two text pages: reached from the info dialog, texts in both languages (no raw key), draft line first, axe clean in light and dark, no horizontal scroll at 320 px. */
+/** The two text pages: reached from the info dialog, texts in both languages (no raw key), axe clean in light and dark, no horizontal scroll at 320 px. */
 async function pagesScenario(browser) {
-  const pages = [{ slug: "avvertenze", link: 0, items: 9, draft: /bozza|draft/i }, { slug: "informativa", link: 1, items: 8, draft: /bozza|draft/i }];
+  const pages = [{ slug: "avvertenze", link: 0, items: 9 }, { slug: "informativa", link: 1, items: 8 }];
   for (const scheme of ["light", "dark"]) {
     for (const p of pages) {
       const ctx = await browser.newContext({ colorScheme: scheme, locale: "it-IT", viewport: { width: 320, height: 640 } });
@@ -252,7 +252,7 @@ async function pagesScenario(browser) {
         const tag = `[${scheme}] ${p.slug} ${lang}`;
         const raw = await page.evaluate(() => [...document.querySelectorAll("[data-i18n]")].filter((e) => !e.textContent || /^[a-z]+\.[a-z0-9_.]+$/.test(e.textContent)).map((e) => e.getAttribute("data-i18n")));
         check(`${tag}: every text is translated`, raw.length === 0, raw.join(", "));
-        check(`${tag}: ${p.items} sections and the draft line first`, (await page.locator(".doc > li").count()) === p.items && p.draft.test((await page.locator(".page > p").first().textContent()) ?? ""));
+        check(`${tag}: ${p.items} sections and no draft line`, (await page.locator(".doc > li").count()) === p.items && (await page.locator(".draft, .warnings-box").count()) === 0);
         check(`${tag}: no horizontal scroll`, await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
         const v = await axe(page);
         check(`${tag}: axe has no violations`, v.length === 0, v.join(", "));
@@ -261,18 +261,6 @@ async function pagesScenario(browser) {
       await ctx.close();
     }
   }
-}
-
-/** The short warnings box: shown on the "Avvertenze" page with the sentences of the limits, no link to itself. */
-async function warningsBoxScenario(browser) {
-  const ctx = await browser.newContext({ locale: "en-GB" });
-  const page = await ctx.newPage();
-  await page.goto(base + "pagine/avvertenze/");
-  await page.waitForSelector("body[data-ready='1']");
-  const box = page.locator(".warnings-box");
-  const text = (await box.textContent()) ?? "";
-  check("warnings box: role note, limits and no safe claim", (await box.getAttribute("role")) === "note" && /5 %/.test(text) && /fentanyl/.test(text) && /not mean that the substance is safe/.test(text) && (await box.locator("a").count()) === 0, text);
-  await ctx.close();
 }
 
 /** Loading screen: only the photon drawing, hidden label "Caricamento"/"Loading" in a status region, animated (static with reduced motion), gone when the page is ready. */
@@ -310,7 +298,6 @@ async function run() {
     await nameScenario(browser);
     await splashScenario(browser);
     await pagesScenario(browser);
-    await warningsBoxScenario(browser);
     await loadingScenario(browser, base, check, axe);
     await demoScenario(browser, base, check, axe);
     await librariesPureScenario(check);

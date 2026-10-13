@@ -18,5 +18,5 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri. Regole di fondo: niente esce 
 - T3 (`tools/controlla_schemi.py`): vedi `dati.md`; un campo `email` in uno schema fa fallire il job `data`.
 
 ## Avvertenze e informativa
-- Pagine bilingui in `web/pagine/` (testi da revisione legale: titolare, contatto e numero di giorni dell'archivio restano da definire). Contatto = issue pubbliche del repository, nessuna email. Il riquadro breve è `buildWarningsBox` in `web/avvertenze.js`: le schede delle sostanze lo riusano.
-- `fumo.mjs` (`pagesScenario`, `warningsBoxScenario`) prova raggiungibilità dalla finestra ⓘ, testi tradotti, axe chiaro/scuro it/en, 320 px; T2 visita le due pagine.
+- Pagine bilingui in `web/pagine/` (testi da revisione legale: titolare, contatto e numero di giorni dell'archivio restano da definire). Contatto = issue pubbliche del repository, nessuna email. Le due pagine non hanno riquadro breve né riga di bozza.
+- `fumo.mjs` (`pagesScenario`) prova raggiungibilità dalla finestra ⓘ, testi tradotti, axe chiaro/scuro it/en, 320 px; T2 visita le due pagine.

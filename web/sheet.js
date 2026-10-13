@@ -70,7 +70,7 @@ function foundLines(choice, data) {
   const names = picked.map((c) => el("strong", { class: "sheet-name" }, [nameOf(c)]));
   const joined = picked.map(nameOf).join(", ");
   if (choice.level === 5 || !picked.length) {
-    return [el("p", {}, [t("sheet.found.none")]), el("p", { class: "sheet-strong" }, [t("sheet.found.none_active")])];
+    return [el("p", {}, [t("sheet.found.none")])];
   }
   if (choice.level <= 2) return [el("p", {}, names)];
   if (choice.level === 3 && picked.length === 2) return [el("p", {}, [t("sheet.found.between", { a: nameOf(picked[0]), b: nameOf(picked[1]) })]), el("p", {}, names)];
@@ -122,10 +122,6 @@ export function buildSheet(s, opts = {}) {
   sheet.setAttribute("data-draft", decided ? "0" : "1");
   inLang(lang, () => {
     sheet.setAttribute("aria-label", t("sheet.title"));
-    if (!decided) {
-      sheet.setAttribute("data-watermark", t("sheet.draft"));
-      sheet.append(el("p", { class: "sheet-banner" }, [icon("warning"), t("sheet.draft")]));
-    }
     sheet.append(headBlock(r.code, r.data), foundBlock(choice, r.data, decided), alertsBlock(r.data, Boolean(opts.chemist)), footBlock());
   });
   return sheet;

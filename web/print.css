@@ -14,7 +14,5 @@ body > :not(.sheet-host) { display: none; }
 .sheet-meta { grid-template-columns: auto 1fr auto 1fr; gap: 0 6pt; font-size: 10pt; }
 .sheet-meta dt { color: #000; }
 .sheet .level .icon, .sheet-alerts .icon { width: 11pt; height: 11pt; color: #000; }
-.sheet-banner { border: 1.5pt dashed #000; }
-.sheet[data-draft="1"]::after { color: #999; font-size: 34pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .sign-line { height: 16pt; border-bottom-color: #000; }
 .signature { margin-top: 8pt; }

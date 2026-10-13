@@ -1,7 +1,6 @@
 // @ts-check
 // Start-up of the static text pages (pagine/avvertenze, pagine/informativa): theme, language, header, catalog texts.
 import { APP_NAME } from "./appname.js";
-import { buildWarningsBox } from "./avvertenze.js";
 import { el } from "./dom.js";
 import { applyCatalog, currentLang, LANGS, loadLang, pickLang, t } from "./i18n.js";
 import { initTheme } from "./theme.js";
@@ -36,13 +35,10 @@ function buildHeader(change) {
 async function start() {
   initTheme();
   await loadLang(pickLang());
-  const slot = document.getElementById("warnings-box");
-  const box = slot ? buildWarningsBox(slot) : null;
   const heading = /** @type {HTMLElement} */ (document.querySelector("h1"));
   const refreshHeader = buildHeader(async () => render());
   const render = () => {
     applyCatalog();
-    box?.refresh();
     refreshHeader();
     document.title = `${heading.textContent} · ${APP_NAME}`;
   };
