@@ -1,5 +1,5 @@
 // @ts-check
-const SVG_NS = "http://www.w3.org/2000/svg";
+export const SVG_NS = "http://www.w3.org/2000/svg";
 
 /**
  * Icon from the sprite `icons.svg`; decorative (the button around it carries the accessible name).

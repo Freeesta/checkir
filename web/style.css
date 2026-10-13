@@ -446,6 +446,13 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .zoom-box { fill: var(--surface); fill-opacity: 0.6; stroke: var(--text); stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
 .cursor-text { font-variant-numeric: tabular-nums; }
 
+/* Library test (information dialog) */
+.prova-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0; }
+.prova-hist { display: block; width: 100%; height: auto; }
+.prova-bar { fill: var(--color-sample); }
+.prova-line-check, .prova-line-probable { stroke: var(--color-alert); stroke-width: 1.5; }
+.prova-line-check { stroke-dasharray: 4 3; }
+.prova-report progress { width: 100%; }
 /* Substance sheet (dialog) */
 .substance-sheet h3 { font-size: 1rem; margin: 1rem 0 0.25rem; }
 .substance-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
@@ -552,6 +559,15 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .rule-range { fill: none; stroke: var(--focus); stroke-width: 2; stroke-dasharray: 6 3; pointer-events: none; }
 .rule-label { font-weight: 600; }
 @media (forced-colors: active) { .mode-atom { fill: Canvas; stroke: CanvasText; } .mode-bond, .mode-arrow { stroke: CanvasText; } .mode-head, .mode-el, .mode-z { fill: CanvasText; } .rule-range { stroke: Highlight; } }
+.inverse-dialog { width: min(52rem, calc(100vw - 2rem)); }
+.inverse-field { display: inline-flex; flex-direction: column; gap: 0.15rem; margin: 0.25rem 0.5rem 0.25rem 0; }
+.inverse-field input { width: 9rem; }
+.inverse-chips, .inverse-bands, .inverse-readings { list-style: none; padding: 0; margin: 0.25rem 0; }
+.inverse-chip { display: flex; align-items: center; gap: 0.5rem; }
+.inverse-table { margin-top: 0.5rem; }
+.inverse-table caption { text-align: left; font-weight: 600; padding: 0.25rem 0; }
+.inverse-table th, .inverse-table td { text-align: left; padding: 0.2rem 0.4rem; border-top: 1px solid var(--border); vertical-align: top; }
+.inverse-table th[scope="rowgroup"] { font-weight: 600; }
 .report-host { display: none; }
 .chart-menu button { display: flex; justify-content: space-between; gap: 1.5rem; }
 .menu-key { color: var(--text-muted); font-variant-numeric: tabular-nums; }
