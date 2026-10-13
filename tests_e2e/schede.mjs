@@ -49,7 +49,8 @@ export async function sheetsScenario(browser, base, check, axe) {
   await page.waitForSelector("body[data-ready='1']");
   page.on("request", (r) => { if (!r.url().startsWith(new URL(base).origin) && !r.url().startsWith("data:") && !r.url().startsWith("blob:")) foreign.push(r.url()); });
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.waitForFunction(() => /1/.test(document.querySelector('[data-library="checkir-community"]')?.textContent ?? ""), null, { timeout: 20000 });
+  await page.waitForFunction(() => /1/.test(document.querySelector('[data-library="checkir-demo"]')?.textContent ?? ""), null, { timeout: 20000 });
+  await page.getByRole("checkbox", { name: /checkir-demo/ }).check();
   await page.setInputFiles("input[type=file]", [{ name: CANARIES.fileName, mimeType: "chemical/x-jcamp-dx", buffer: Buffer.from(canarySpectrum(await readFile(SPECTRUM, "utf8"))) }]);
   const section = page.locator('details[data-panel="results"]');
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();

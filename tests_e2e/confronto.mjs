@@ -124,7 +124,6 @@ export async function matchScenario(browser, base, check, axe) {
     new MutationObserver(() => document.getElementById("status")?.textContent && window.__said.push(document.getElementById("status").textContent)).observe(document.getElementById("status"), { childList: true, characterData: true, subtree: true });
   });
   await openPanel(page, "libraries");
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   await page.setInputFiles('input[data-library="files"]', [

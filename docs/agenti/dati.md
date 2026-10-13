@@ -25,7 +25,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri. Revisori, firme e contributi:
 - Aggiungere un campo facoltativo non cambia versione; cambiare significato, obbligatorietà o toglierlo → `/2`. Le cache si ricostruiscono; i documenti dell'utente si leggono a N e N−1.
 - Regole non esprimibili nello schema (scheda `review_by` ≤ 24 mesi, parole vietate, fonte per ogni affermazione, unicità di id e InChIKey, coerenza `.jdx`/`.json`) sono controlli di `tools/dati/controlla_dati.py`:
   - id = cartella, InChIKey unica, riferimenti (forma, classe e asse, fonte), SHA-256 e intestazioni `.jdx` = `.json`, `quality` = valori ricalcolati da `qualita.py` (nessun criterio `fail`),
-  - `checkir-community` = CC-BY-4.0, ogni altra libreria = `LicenseRef-permission-*`; niente `unconfirmed_sample`, campi personali (regex + `NOMI_VIETATI`) in JCAMP/JSON/testi, parole vietate (con eccezioni fisse «nessuna dose è sicura», «sostanza pura»), `[f:id]` su ogni capoverso di effects/doses/risks/interactions,
+  - `checkir-community` e `checkir-demo` = CC-BY-4.0, ogni altra libreria = `LicenseRef-permission-*`; niente `unconfirmed_sample`, campi personali (regex + `NOMI_VIETATI`) in JCAMP/JSON/testi, parole vietate (con eccezioni fisse «nessuna dose è sicura», «sostanza pura»), `[f:id]` su ogni capoverso di effects/doses/risks/interactions,
   - `review_by` ≤ 24 mesi, correlazione ≥ 0.98 tra sostanze diverse.
   - Soglie di qualità provvisorie (MATCH le calibra); il rumore è l'RMS delle differenze seconde in 2500-2600 cm⁻¹ (le bande N-H⁺ larghe dei sali amminici non contano come rumore). Il lettore JCAMP (`jcamp.py`) legge solo `##XYPOINTS=(XY..XY)`; altri layout si convertono prima dell'ingresso in `data/`.
 

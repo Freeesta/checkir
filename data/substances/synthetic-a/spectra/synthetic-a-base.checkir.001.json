@@ -28,7 +28,7 @@
     "supplier": "Synthetic data (not a measurement)"
   },
   "library": {
-    "name": "checkir-community",
+    "name": "checkir-demo",
     "version": "0.0.1"
   },
   "contributors": [

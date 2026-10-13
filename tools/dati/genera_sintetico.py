@@ -64,7 +64,7 @@ def spectrum(sid: str, text: str, xs: list[float], ys: list[float]) -> dict:
         "instrument": {"manufacturer": "Synthetic", "model": "Generator"}, "resolution_cm1": 4, "scans": 32,
         "range_cm1": [400, 4000], "step_cm1": 2, "y_axis": "absorbance", "atr_correction": False, "processing": [],
         "measured": "2026-10", "provenance": {"type": "certified_standard", "supplier": "Synthetic data (not a measurement)"},
-        "library": {"name": "checkir-community", "version": "0.0.1"},
+        "library": {"name": "checkir-demo", "version": "0.0.1"},
         "contributors": [{"public_name": "checkir synthetic generator"}], "license": "CC-BY-4.0",
         "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(), "original_format": "JCAMP-DX 5.01",
         "review": {"state": "proposed", "reviewers": [], "date": DAY},

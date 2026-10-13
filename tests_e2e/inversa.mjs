@@ -89,7 +89,6 @@ async function dialogScenario(page, check, axe) {
 export async function inverseScenario(browser, base, check, axe) {
   const { ctx, page, errors } = await libraryPage(browser, base);
   await openPanel(page, "libraries");
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });

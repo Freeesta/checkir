@@ -347,7 +347,7 @@ fn a_spectrum_of_data_becomes_a_row_and_a_package() {
     assert_eq!(b.row.quality, "pass");
     assert_eq!(
         (b.library_name.as_str(), b.library_version.as_str()),
-        ("checkir-community", "0.0.1")
+        ("checkir-demo", "0.0.1")
     );
     assert!(b.row.classes.contains(&"others".to_string()));
     assert_eq!(

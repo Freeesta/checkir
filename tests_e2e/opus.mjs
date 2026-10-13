@@ -21,7 +21,6 @@ export async function opusScenario(browser, base, check, axe) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openPanel(page, "libraries");
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.fill("#lib-name", "Opus");
   await page.setInputFiles('input[data-library="files"]', [
     { name: "demo.jdx", mimeType: "application/octet-stream", buffer: jcamp("demo", DEMO) },

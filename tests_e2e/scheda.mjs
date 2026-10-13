@@ -102,7 +102,6 @@ async function flowScenario(browser, base, check) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   await page.setInputFiles('input[data-library="files"]', [{ name: "alfa.jdx", buffer: jcamp("alfa", ALFA) }, { name: "beta.jdx", buffer: jcamp("beta", BETA) }, { name: "gamma.jdx", buffer: jcamp("gamma", GAMMA) }]);
   await page.waitForFunction(() => /3/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));

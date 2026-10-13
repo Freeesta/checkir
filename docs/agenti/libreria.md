@@ -27,6 +27,9 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - 11 spettri ATR-FTIR della SWGDRUG IR Library (release JCAMP del 15/05/2024, versione `2024-05-15`) per i 10 tagli: caffeina, paracetamolo, fenacetina, levamisolo HCl, procaina HCl, benzocaina, lidocaina base e HCl·H₂O, alfa-lattosio, mannitolo, mio-inositolo. Permesso scritto SWGDRUG del 13/10/2026 (non commerciale; citazione con versione; disclaimer e «SWGDRUG does not endorse» nei `terms`, mostrati nel pannello librerie). Si rigenerano con `tools/dati/importa_swgdrug.py --source <cartella JCAMP privata>`; nessun altro spettro SWGDRUG entra.
 - Prova della libreria (13/10/2026, solo `swgdrug-ir`): 0 falsi «probabile», 0 falsi «da verificare», 0 gemelli (r ≥ 0.90); miglior r₁ tra sostanze diverse ≤ 0.50. La tabella «copertura delle forme» conta tutto come «sale o altra forma»: `is_base` del motore legge il nome della forma, non l'id (`lidocaine-base`).
 
+## Libreria demo `checkir-demo`
+- Contiene solo «Esempio sintetico A» (`synthetic-a`, generato al calcolatore, CC BY 4.0) e in `librerie.json` è `enabled: false`: con le librerie predefinite (`swgdrug-ir`) nessun candidato, scheda, rapporto o componente di miscela è sintetico. Compare nel pannello librerie, spenta; i test che servono lo spettro sintetico la accendono. Prova: `tests_e2e/scenari/270-noSyntheticCandidates.mjs` (nessun sintetico, copie identiche di una libreria importata = un solo candidato, niente allerte «Ambiguità»/«Gemello» tra copie né id grezzi).
+
 ## Prove
 - `crates/ftir-lib/tests/library.rs`: andata e ritorno bit per bit (NaN compresi); OGNI byte di `data.bin` cambiato è rifiutato; dimensione, conteggio, limiti, schema e campi del manifesto/indice; parità ≤ 1e-9 (relativa al massimo) con `numpy.interp` sulle tre casistiche; lo spettro sintetico di `data/` diventa riga e pacchetto; JCAMP alterato o provenienza non ammessa non entrano.
 

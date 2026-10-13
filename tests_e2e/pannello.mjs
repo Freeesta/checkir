@@ -22,7 +22,6 @@ export async function pannelloScenario(browser, base, check) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   const dir = folder();
   await page.setInputFiles('input[data-library="folder"]', dir);
   await page.waitForFunction(() => /3/.test(document.querySelector('[data-library="miscela"]')?.textContent ?? ""));

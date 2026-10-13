@@ -18,7 +18,6 @@ const isGreen = (rgb) => {
 /** A private library of three synthetic spectra, as in the comparison e2e. */
 async function addLibrary(page) {
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   await page.setInputFiles('input[data-library="files"]', [
