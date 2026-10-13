@@ -2,6 +2,7 @@
 // (light and dark), fits a 320 px viewport (zoom 400 %), and numbers use the decimal point in both languages.
 import { readFile } from "node:fs/promises";
 import { chromium, firefox, webkit } from "playwright";
+import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { demoScenario } from "./demo.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
@@ -275,6 +276,7 @@ async function run() {
     await librariesPureScenario(check);
     await librariesScenario(browser, base, check, axe);
     await offlineScenario(browser, base, check);
+    await folderScenario(browser, base, check, axe);
   } finally {
     await browser.close();
     close();

@@ -1,10 +1,10 @@
 // Service worker: makes the site work offline. Cache name carries the project prefix; bump VERSION to renew it.
-const VERSION = "8";
+const VERSION = "9";
 const ID = new URL(self.location.href).searchParams.get("id") || "app";
 const CACHE = ID + "-v" + VERSION;
 const LIBRARIES = "librerie/";
 const FILES = [
-  "./", "index.html", "style.css", "main.js", "appname.js", "manifest.webmanifest", "img/logo.svg", "img/icon-16.png", "img/icon-32.png", "img/icon-192.png", "img/icon-512.png", "img/icon-maskable-192.png", "img/icon-maskable-512.png", "img/apple-touch-icon.png", "img/favicon.svg", "img/favicon.ico", "i18n.js", "chart.js", "spectrum.js", "view.js", "engine.js", "icons.svg", "state.js", "actions.js", "panels.js", "header.js", "tooltip.js", "dom.js", "theme.js", "controls.js", "dialogs.js", "workarea.js", "shortcuts.js", "help.js", "files.js", "librerie.js", "libpanel.js", "importa.js", "nomi.js", "opfs.js",
+  "./", "index.html", "style.css", "main.js", "appname.js", "manifest.webmanifest", "img/logo.svg", "img/icon-16.png", "img/icon-32.png", "img/icon-192.png", "img/icon-512.png", "img/icon-maskable-192.png", "img/icon-maskable-512.png", "img/apple-touch-icon.png", "img/favicon.svg", "img/favicon.ico", "i18n.js", "chart.js", "spectrum.js", "view.js", "engine.js", "icons.svg", "state.js", "actions.js", "panels.js", "header.js", "tooltip.js", "dom.js", "theme.js", "controls.js", "dialogs.js", "workarea.js", "shortcuts.js", "help.js", "files.js", "cartella.js", "cartella_ui.js", "librerie.js", "libpanel.js", "importa.js", "nomi.js", "opfs.js",
   "pagina.js", "avvertenze.js", "pagine/avvertenze/", "pagine/avvertenze/index.html", "pagine/informativa/", "pagine/informativa/index.html",
   "lang/it.json", "lang/en.json", "wasm/ftir_wasm.js", "wasm/ftir_wasm_bg.wasm",
 ];

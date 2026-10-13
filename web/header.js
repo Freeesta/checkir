@@ -5,7 +5,7 @@ import { el, icon } from "./dom.js";
 import { LANGS, currentLang, formatNumber, t } from "./i18n.js";
 import { fileRange } from "./files.js";
 import { attachTip } from "./tooltip.js";
-import { activeLibraries } from "./state.js";
+import { activeLibraries, getState } from "./state.js";
 
 const DASH = "—";
 
@@ -97,7 +97,7 @@ export function buildHeader(host, ctx, appName) {
   }
   attachTip(menu, () => t("header.menu.label"));
   /** @type {import("./state.js").AppState} */
-  let lastState = { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], result: null, peaks: { explained: 0, unexplained: 0 }, decision: null };
+  let lastState = getState();
   return {
     refresh(s) {
       lastState = s;

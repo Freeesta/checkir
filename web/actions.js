@@ -6,9 +6,13 @@ import { activeLibraries } from "./state.js";
  * @typedef {{
  *   getState: () => import("./state.js").AppState,
  *   openFile: () => void, loadDemo: () => void, selectFile: (code: string) => void, closeFile: (code: string) => void, setLang: (code: string) => void, toggleLang: () => void, cycleTheme: () => void,
- *   togglePanel: () => void, goto: (panelId: string) => void, openDialog: (id: string) => void,
+ *   togglePanel: () => void, goto: (panelId: string) => void, openDialog: (id: string) => void, folder: FolderCtx,
  *   importLibrary: (files: File[], name: string) => Promise<void>, cancelImport: () => void, removeLibrary: (id: string) => void, toggleLibrary: (id: string, on: boolean) => void,
  * }} Ctx
+ * @typedef {{
+ *   choose: () => Promise<void>, resume: () => Promise<void>, stop: () => void, setRemember: (on: boolean) => Promise<void>, setAuto: (on: boolean) => void,
+ *   openOffer: (id: string) => Promise<void>, ignoreOffer: (id: string) => void, pickLast: () => void,
+ * }} FolderCtx
  * @typedef {{
  *   id: string, labelKey: string, tipKey: string, icon: string, key?: string, section?: string, step?: number, soon?: boolean,
  *   run: (ctx: Ctx) => void, enabled: (state: import("./state.js").AppState) => boolean,
