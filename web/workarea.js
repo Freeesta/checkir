@@ -4,6 +4,7 @@ import { tipText } from "./controls.js";
 import { actionById } from "./actions.js";
 import { el, icon, setIcon } from "./dom.js";
 import { t } from "./i18n.js";
+import { activeKey } from "./shortcuts.js";
 import { attachTip, toggletip } from "./tooltip.js";
 
 /**
@@ -25,7 +26,8 @@ export function buildNextStep(host, ctx) {
       button.dataset.action = a.id;
       const svg = button.querySelector("svg");
       if (svg) setIcon(svg, a.icon);
-      if (a.key) button.setAttribute("aria-keyshortcuts", a.key);
+      const key = activeKey(a);
+      if (key) button.setAttribute("aria-keyshortcuts", key);
       else button.removeAttribute("aria-keyshortcuts");
     },
   };
