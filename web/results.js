@@ -7,12 +7,16 @@ import { spectrumOf } from "./files.js";
 import { libraryOriginal, libraryRows } from "./librerie.js";
 import { meanStep } from "./match.js";
 import { activeFile, activeLibraries, candidateKey, decisionOf, getState, resultOf } from "./state.js";
+import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
 import { attachTip, toggletip } from "./tooltip.js";
 
 /** @typedef {import("./state.js").ChemistLabel} ChemistLabel */
 
-/** How many candidates the panel lists. */
+/** How many candidates the decision can use. */
 export const LISTED = 10;
+
+/** How many candidates the work area lists under the chart. */
+export const SHOWN = 5;
 
 /** The name of a candidate in the active language, from the library index (the result carries only the library's own name). @param {any} c @returns {string} */
 export function candidateName(c) {
@@ -22,7 +26,7 @@ export function candidateName(c) {
 
 /** The candidate that is selected: the chosen one if it is still in the result, else the first. @param {import("./state.js").AppState} s @param {any} data @returns {any | null} */
 export function selectedCandidate(s, data) {
-  const list = (data.candidates ?? []).slice(0, LISTED);
+  const list = (data.candidates ?? []).slice(0, SHOWN);
   return list.find((/** @type {any} */ c) => candidateKey(c) === s.selected) ?? list[0] ?? null;
 }
 
@@ -91,8 +95,8 @@ function coverageMeter(value, label) {
   return m;
 }
 
-/** One row of the list: select button (name, form, r, coverage), library and the chemist's mark. @param {any} c @param {number} i @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @param {boolean} selected @returns {HTMLElement} */
-function candidateRow(c, i, s, ctx, selected) {
+/** One row of the list: select button (name, form), r, delta from the first, coverage, library and the chemist's mark. @param {any} c @param {number} i @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @param {boolean} selected @param {any} data @returns {HTMLElement} */
+function candidateRow(c, i, s, ctx, selected, data) {
   const key = candidateKey(c);
   const name = candidateName(c);
   const r = formatNumber(c.r_derivative, 2);
@@ -103,7 +107,8 @@ function candidateRow(c, i, s, ctx, selected) {
   ]);
   if (selected) select.setAttribute("aria-current", "true");
   select.addEventListener("click", () => ctx.selectCandidate(key));
-  const extra = el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [r]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]);
+  const delta = c.rank === 1 ? data.margin : data.candidates[0].r_derivative - c.r_derivative;
+  const extra = el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [r]), el("span", { class: "cand-delta" }, [`${t("results.delta")} ${delta === null ? "—" : formatNumber(delta, 2)}`]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]);
   return el("li", { class: "cand", "data-key": key, "data-label": s.labels[key] ?? "" }, [select, extra, labelGroup(key, i, s.labels[key], ctx)]);
 }
 
@@ -137,8 +142,8 @@ function resolutionLines(c, file) {
   return lines;
 }
 
-/** Detail of the selected candidate, always in the same reserved space. @param {any} data @param {any | null} c @param {import("./actions.js").Ctx} ctx @param {boolean} overlay @param {number} level @returns {HTMLElement} */
-function detail(data, c, ctx, overlay, level) {
+/** Detail of the selected candidate, always in the same reserved space. @param {any} data @param {any | null} c @param {import("./actions.js").Ctx} ctx @param {import("./state.js").AppState} s @param {number} level @returns {HTMLElement} */
+function detail(data, c, ctx, s, level) {
   const box = el("section", { class: "detail", "aria-label": t("results.detail") });
   if (!c) return box;
   const delta = c.rank === 1 ? data.margin : data.candidates[0].r_derivative - c.r_derivative;
@@ -152,8 +157,10 @@ function detail(data, c, ctx, overlay, level) {
   );
   box.append(resolutionLines(c, activeFile(getState()) ?? null));
   const button = actionButton("overlay.toggle", ctx, { withLabel: true, className: "btn" });
-  button.setAttribute("aria-pressed", String(overlay));
+  button.setAttribute("aria-pressed", String(s.overlay));
   box.append(el("div", { class: "row" }, [button, actionButton("subtract.open", ctx, { withLabel: true, className: "btn" })]));
+  const regions = rangeTable(s, c);
+  if (regions) box.append(regions);
   return box;
 }
 
@@ -171,7 +178,7 @@ function residualsOf(s, code) {
 /** Read-only rows of a residual's candidates; the full panel (labels, detail, overlay) is the residual's own, one click away. @param {any} data @returns {HTMLElement} */
 function residualRows(data) {
   const list = el("ol", { class: "cands", "aria-label": t("results.candidates") });
-  (data.candidates ?? []).slice(0, LISTED).forEach((/** @type {any} */ c) => {
+  (data.candidates ?? []).slice(0, SHOWN).forEach((/** @type {any} */ c) => {
     const row = el("li", { class: "cand", "data-key": candidateKey(c) }, [
       el("span", { class: "cand-select" }, [el("span", { class: "rank" }, [formatNumber(c.rank)]), el("span", { class: "cand-name" }, [candidateName(c)]), el("span", { class: "cand-form" }, [c.form])]),
       el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [formatNumber(c.r_derivative, 2)]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]),
@@ -202,41 +209,63 @@ function residualBlock(f, s, ctx) {
   ]);
 }
 
+/** What to say while there is no result to list: no library, an error, the comparison running, or not run yet. @param {import("./state.js").AppState} s @param {import("./state.js").FileEntry} file @param {boolean} hasResult @returns {HTMLElement[]} */
+function statusNodes(s, file, hasResult) {
+  if (!hasResult && !activeLibraries(s).length) return [el("p", { class: "empty" }, [t("results.no_libraries")])];
+  const nodes = [];
+  if (s.matchError) nodes.push(el("p", { class: "error", role: "alert" }, [icon("warning"), t(s.matchError.key, s.matchError.params)]));
+  if (s.matching === file.code) nodes.push(el("p", { class: "busy", role: "status" }, [icon("compare"), t("results.running")]));
+  else if (!hasResult) nodes.push(el("p", { class: "empty" }, [t("results.not_run")]));
+  return nodes;
+}
+
 /**
- * The open part of section 3. Shapes and words say how strong the identification is; a name never appears without the level
- * in the same block; the strip of limits is outside, always visible.
+ * The candidates, under the chart. Shapes and words say how strong the identification is; a name never appears without the level
+ * in the same block.
  * @param {HTMLElement} body @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx
  */
 export function renderResults(body, s, ctx) {
   const result = resultOf(s);
   const file = activeFile(s);
-  const head = el("div", { class: "row" }, [actionButton("match.run", ctx, { withLabel: true, className: "btn" })]);
-  if (!file) return void body.append(el("p", { class: "empty" }, [t("panel.results.empty")]));
-  if (!result && !activeLibraries(s).length) return void body.append(head, el("p", { class: "empty" }, [t("results.no_libraries")]));
-  body.append(head);
-  if (s.matchError) body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t(s.matchError.key, s.matchError.params)]));
-  if (s.matching === file.code) body.append(el("p", { class: "busy", role: "status" }, [icon("compare"), t("results.running")]));
-  if (!result) return void (s.matching !== file.code && body.append(el("p", { class: "empty" }, [t("results.not_run")])));
+  if (!file) return;
+  body.append(...statusNodes(s, file, !!result));
+  if (!result) return;
   const data = result.data;
   const dec = decisionOf(s);
   const n = dec?.level ?? levelNumber(data);
   const chosen = selectedCandidate(s, data);
   const title = n === 5 ? t("results.similar") : t("results.candidates");
   const list = el("ol", { class: "cands", "aria-label": title });
-  (data.candidates ?? []).slice(0, LISTED).forEach((/** @type {any} */ c, /** @type {number} */ i) => list.append(candidateRow(c, i, s, ctx, c === chosen)));
+  (data.candidates ?? []).slice(0, SHOWN).forEach((/** @type {any} */ c, /** @type {number} */ i) => list.append(candidateRow(c, i, s, ctx, c === chosen, data)));
   wireArrows(list, ctx);
-  const caps = capLines(data);
   body.append(
     el("div", { class: "result", "data-level": String(n) }, [
+      el("h2", { class: "cands-title" }, [title]),
       el("p", { class: "level-line" }, [levelBadge(n), decisionMark(dec, levelNumber(data))]),
       alertList(data),
-      ...caps.map((c) => el("p", { class: "cap" }, [c])),
-      el("h3", { class: "cands-title" }, [title]),
+      ...capLines(data).map((c) => el("p", { class: "cap" }, [c])),
+      ...(usedRangeLine(data) ? [el("p", { class: "cap", "data-used-range": "1" }, [usedRangeLine(data)])] : []),
       list,
       el("p", { class: "chain" }, [chainLine(data)]),
-      detail(data, chosen, ctx, s.overlay, n),
+      detail(data, chosen, ctx, s, n),
     ]),
     ...residualsOf(s, file.code).map((f) => residualBlock(f, s, ctx)).filter((b) => b !== null),
+  );
+}
+
+/** Section 3 of the panel: the comparison button and a summary (the level in words and how many candidates); the list itself is under the chart. @param {HTMLElement} body @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx */
+export function renderResultsPanel(body, s, ctx) {
+  const file = activeFile(s);
+  if (!file) return void body.append(el("p", { class: "empty" }, [t("panel.results.empty")]));
+  const result = resultOf(s);
+  body.append(el("div", { class: "row" }, [actionButton("match.run", ctx, { withLabel: true, className: "btn" })]));
+  renderRanges(body, s, ctx);
+  body.append(...statusNodes(s, file, !!result));
+  if (!result) return;
+  const dec = decisionOf(s);
+  body.append(
+    el("p", { class: "level-line" }, [levelBadge(dec?.level ?? levelNumber(result.data)), decisionMark(dec, levelNumber(result.data))]),
+    el("p", { class: "note" }, [t("results.count", { n: formatNumber((result.data.candidates ?? []).length) })]),
   );
 }
 

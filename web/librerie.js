@@ -12,6 +12,7 @@
 import { buildNameIndex, searchNames } from "./nomi.js";
 import { buildPrivateLibrary, noticeOf, slug, uniqueId } from "./importa.js";
 import { canStore, loadLibraries, removeStored, saveLibrary } from "./opfs.js";
+import { removeIndex } from "./peak_index_cache.js";
 import { t } from "./i18n.js";
 import { getState, update } from "./state.js";
 
@@ -146,6 +147,7 @@ export function setEnabled(id, on) {
 export async function removePrivate(id) {
   if (!loaded.get(id)?.entry.private) return;
   await removeStored(id);
+  await removeIndex(id);
   loaded.delete(id);
   publish();
 }
