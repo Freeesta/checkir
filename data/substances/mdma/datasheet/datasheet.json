@@ -5,18 +5,117 @@
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
   "reviewers": [],
   "reviewed": "2026-10-13",
   "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic",
+    "precursor_classes": [
+      "mdp2p",
+      "safrole",
+      "isosafrole",
+      "piperonal"
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "MDA",
+        "reaction": "n_demethylation",
+        "source": "pizarro2004"
+      },
+      {
+        "from": "parent",
+        "to": "HHMA",
+        "reaction": "other",
+        "source": "segura2005",
+        "enzymes": [
+          "CYP2D6"
+        ]
+      },
+      {
+        "from": "hhma",
+        "to": "HMMA",
+        "reaction": "other",
+        "source": "pizarro2004"
+      }
+    ],
+    "half_life_h": {
+      "min": 4.8,
+      "max": 14.8,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "pizarro2004"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "caffeine",
+      "frequency": "reported",
+      "source": "unodc-ats2006"
+    },
+    {
+      "cut": "ketamine",
+      "frequency": "reported",
+      "source": "unodc-ats2006"
+    }
+  ],
   "doses": [],
-  "interactions": [],
+  "interactions": [
+    {
+      "with": "moclobemide",
+      "severity": "dangerous",
+      "mechanism": "maoi",
+      "source": "vuori2003"
+    },
+    {
+      "with": "ritonavir",
+      "severity": "dangerous",
+      "mechanism": "cyp_inhibition",
+      "source": "papaseit2012"
+    },
+    {
+      "with": "paroxetine",
+      "severity": "caution",
+      "mechanism": "cyp_inhibition",
+      "source": "segura2005"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "mdma.maoi",
+      "topic": "combination",
+      "source": "vuori2003"
+    },
+    {
+      "key": "mdma.ritonavir",
+      "topic": "combination",
+      "source": "papaseit2012"
+    },
+    {
+      "key": "mdma.fluids",
+      "topic": "sleep_food_water",
+      "source": "atila2024"
+    },
+    {
+      "key": "mdma.toxic_range",
+      "topic": "overdose_signs",
+      "source": "kalant2001"
+    }
+  ],
   "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"

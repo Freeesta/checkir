@@ -10,31 +10,57 @@ Salt or base: the base has no N-H+ envelope, the C=O doublet widens (~1734 and ~
 
 Analogues and impurities: cis- and trans-cinnamoylcocaine come with cocaine; the trans isomer has a large band at 1320 cm-1 that the cis isomer lacks, and a band at 1625 cm-1 about as strong as the C=O bands. [f:unodc-cocaine2012]
 
-Frequent cuts: levamisole (or tetramisole), phenacetin, lidocaine, caffeine, diltiazem, hydroxyzine, procaine, benzocaine and sugars such as mannitol, lactose and glucose. [f:unodc-cocaine2012] Procaine and benzocaine are aromatic esters too, with a C=O in the same region: an ester C=O alone does not point to cocaine. [f:smith-arom-esters]
-
 ## category
 
 Chemical class: tropane ester, among the plant-based substances of the UNODC grouping. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
 
+## origin
+
+Natural alkaloid found in the leaves of Erythroxylum coca; coca paste is an intermediate. In seized material cocaine comes with cis- and trans-cinnamoylcocaine, leaf alkaloids that leave marks in the IR spectrum. [f:unodc-cocaine2012]
+
+## metabolism
+
+Cocaine is hydrolysed by esterases to benzoylecgonine (liver carboxylesterase hCE1) and ecgonine methyl ester (plasma cholinesterase and hCE2), both inactive; a part is N-demethylated by CYP3A4 to norcocaine, which is active and hepatotoxic. The mean half-life is 40-90 minutes. [f:roque-bravo2022]
+
+With alcohol, cocaethylene forms: it is active, has a half-life of 148 ± 15 minutes and is a marker of combined use. [f:roque-bravo2022] [f:cami1998]
+
+## cuts
+
+Cocaine commonly contains levamisole (and/or tetramisole), phenacetin, lidocaine, caffeine, diltiazem, hydroxyzine, procaine, benzocaine and sugars (mannitol, lactose, glucose). [f:unodc-cocaine2012]
+
+Procaine and benzocaine are aromatic esters too, with a C=O in the same region: an ester C=O alone does not point to cocaine. [f:smith-arom-esters]
+
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+By inhalation the peak comes within 1-3 minutes and the effect lasts 5-15 minutes; when it ends, insomnia, anxiety, irritability and dysphoria may follow. [f:roque-bravo2022]
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+A «line» of hydrochloride contains 20-50 mg. Intranasal bioavailability is about 80% (over 90% by inhalation); because of vasoconstriction the intranasal plasma peak is delayed (about 60 minutes). [f:roque-bravo2022]
 
 ## risks
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Norcocaine, an active metabolite, is hepatotoxic. Levamisole used as a cut is associated with vasculopathy and vasculitis with autoimmune manifestations. [f:roque-bravo2022] [f:iorio2024]
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+With alcohol, cocaethylene forms: plasma cocaine rises and the longer half-life of cocaethylene may explain the prolonged effects; its own contribution is probably minor and additive. Co-use prolongs the effect and counters dysphoria. [f:roque-bravo2022] [f:cami1998]
+
+In Europe opioids are the substance most often found in cocaine-related deaths. [f:roque-bravo2022]
+
+## counselling
+
+Ask whether alcohol is planned: explain that alcohol produces cocaethylene, which is active and lasts longer, and that co-use prolongs the effect. [f:roque-bravo2022] [f:cami1998] [f:ubc-counselling-guidelines]
+
+Ask about other substances, opioids above all: in Europe they are the substance most often found in cocaine-related deaths. [f:roque-bravo2022] [f:ubc-counselling-guidelines]
+
+Prepare for the period after the effect: insomnia, anxiety, irritability and dysphoria are possible, so think beforehand about where and how to rest. [f:roque-bravo2022] [f:ubc-counselling-guidelines]
+
+If the result points to levamisole, say so: it is associated with vasculopathy and vasculitis; new or painful skin lesions are a reason to see a doctor. [f:iorio2024] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-cocaine2012] [f:swgdrug-cocaine] [f:rodrigues2013] [f:smith-arom-esters] [f:smith-amine-salts] [f:mendez-hernandez2020] [f:unodc-ewa]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-cocaine2012] [f:swgdrug-cocaine] [f:rodrigues2013] [f:smith-arom-esters] [f:smith-amine-salts] [f:mendez-hernandez2020] [f:unodc-ewa] [f:checkir-classification] [f:roque-bravo2022] [f:cami1998] [f:iorio2024] [f:ubc-counselling-guidelines]
 
 ## license
 

@@ -10,31 +10,57 @@ Sale o base: nella base manca l'inviluppo N-H+, il doppietto C=O si apre (~1734 
 
 Analoghi e impurezze: la cis- e la trans-cinnamoilcocaina accompagnano la cocaina; la trans ha una banda forte a 1320 cm-1 che manca nella cis, e una banda a 1625 cm-1 di intensità simile a quella dei C=O. [f:unodc-cocaine2012]
 
-Tagli frequenti: levamisolo (o tetramisolo), fenacetina, lidocaina, caffeina, diltiazem, idrossizina, procaina, benzocaina e zuccheri come mannitolo, lattosio e glucosio. [f:unodc-cocaine2012] Procaina e benzocaina sono anch'esse esteri aromatici con un C=O nella stessa zona: un C=O di estere da solo non indica la cocaina. [f:smith-arom-esters]
-
 ## category
 
 Classe chimica: estere del tropano, tra le sostanze di origine vegetale del gruppo UNODC. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
 
+## origin
+
+Alcaloide naturale contenuto nelle foglie di Erythroxylum coca; la pasta di coca è un intermedio. Nel materiale sequestrato la cocaina è accompagnata da cis- e trans-cinnamoilcocaina, alcaloidi della foglia che lasciano tracce nello spettro IR. [f:unodc-cocaine2012]
+
+## metabolism
+
+La cocaina è idrolizzata da esterasi a benzoilecgonina (carbossilesterasi epatica hCE1) ed ecgonina metil estere (colinesterasi plasmatica e hCE2), entrambe inattive; una parte è N-demetilata dal CYP3A4 a norcocaina, attiva ed epatotossica. L'emivita media è di 40-90 minuti. [f:roque-bravo2022]
+
+Con l'alcol si forma la cocaetilene, attiva, con emivita di 148 ± 15 minuti, marcatore del consumo combinato. [f:roque-bravo2022] [f:cami1998]
+
+## cuts
+
+Nella cocaina si trovano comunemente levamisolo (e/o tetramisolo), fenacetina, lidocaina, caffeina, diltiazem, idrossizina, procaina, benzocaina e zuccheri (mannitolo, lattosio, glucosio). [f:unodc-cocaine2012]
+
+Procaina e benzocaina sono anch'esse esteri aromatici con un C=O nella stessa zona: un C=O di estere da solo non indica la cocaina. [f:smith-arom-esters]
+
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Per inalazione il picco arriva in 1-3 minuti e l'effetto dura 5-15 minuti; finito l'effetto possono comparire insonnia, ansia, irritabilità e disforia. [f:roque-bravo2022]
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Una «riga» di cloridrato contiene 20-50 mg. La biodisponibilità per via intranasale è circa l'80% (oltre il 90% per inalazione); per la vasocostrizione il picco plasmatico intranasale è ritardato (circa 60 minuti). [f:roque-bravo2022]
 
 ## risks
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+La norcocaina, metabolita attivo, è epatotossica. Il levamisolo usato come taglio è associato a vasculopatia e vasculite con manifestazioni autoimmuni. [f:roque-bravo2022] [f:iorio2024]
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Con l'alcol si forma la cocaetilene: la cocaina plasmatica aumenta e l'emivita più lunga della cocaetilene può spiegare gli effetti prolungati; il suo contributo agli effetti è probabilmente minore e additivo. Il co-uso prolunga l'effetto e contrasta la disforia. [f:roque-bravo2022] [f:cami1998]
+
+In Europa gli oppioidi sono la sostanza più spesso trovata nei decessi legati alla cocaina. [f:roque-bravo2022]
+
+## counselling
+
+Chiedere se è previsto alcol: spiegare che con l'alcol si forma la cocaetilene, attiva e con emivita più lunga, e che il co-uso prolunga l'effetto. [f:roque-bravo2022] [f:cami1998] [f:ubc-counselling-guidelines]
+
+Chiedere di altre sostanze, in particolare oppioidi: in Europa sono la sostanza più trovata nei decessi legati alla cocaina. [f:roque-bravo2022] [f:ubc-counselling-guidelines]
+
+Preparare la fase dopo l'effetto: insonnia, ansia, irritabilità e disforia sono possibili, quindi conviene pensare prima a dove e come riposare. [f:roque-bravo2022] [f:ubc-counselling-guidelines]
+
+Se il risultato indica levamisolo, dirlo: è associato a vasculopatia e vasculite; lesioni cutanee nuove o dolorose sono un motivo per rivolgersi a un medico. [f:iorio2024] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-cocaine2012] [f:swgdrug-cocaine] [f:rodrigues2013] [f:smith-arom-esters] [f:smith-amine-salts] [f:mendez-hernandez2020] [f:unodc-ewa]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-cocaine2012] [f:swgdrug-cocaine] [f:rodrigues2013] [f:smith-arom-esters] [f:smith-amine-salts] [f:mendez-hernandez2020] [f:unodc-ewa] [f:checkir-classification] [f:roque-bravo2022] [f:cami1998] [f:iorio2024] [f:ubc-counselling-guidelines]
 
 ## license
 

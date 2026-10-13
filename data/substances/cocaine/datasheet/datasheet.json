@@ -5,18 +5,177 @@
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
   "reviewers": [],
   "reviewed": "2026-10-13",
   "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "natural",
+    "precursor_classes": [
+      "coca_leaf"
+    ],
+    "typical_impurities": [
+      {
+        "substance": "trans-cinnamoylcocaine",
+        "ir_relevant": true,
+        "source": "unodc-cocaine2012"
+      },
+      {
+        "substance": "cis-cinnamoylcocaine",
+        "ir_relevant": true,
+        "source": "unodc-cocaine2012"
+      }
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "benzoylecgonine",
+        "reaction": "hydrolysis_ester",
+        "source": "roque-bravo2022",
+        "enzymes": [
+          "CES1"
+        ]
+      },
+      {
+        "from": "parent",
+        "to": "ecgonine methyl ester",
+        "reaction": "hydrolysis_ester",
+        "source": "roque-bravo2022",
+        "enzymes": [
+          "BChE",
+          "CES2"
+        ]
+      },
+      {
+        "from": "parent",
+        "to": "norcocaine",
+        "reaction": "n_demethylation",
+        "source": "roque-bravo2022",
+        "enzymes": [
+          "CYP3A4"
+        ]
+      },
+      {
+        "from": "parent+ethanol",
+        "to": "cocaethylene",
+        "reaction": "other",
+        "source": "roque-bravo2022"
+      }
+    ],
+    "half_life_h": {
+      "min": 0.67,
+      "max": 1.5,
+      "matrix": "plasma",
+      "source": "roque-bravo2022"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "levamisole",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "phenacetin",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "lidocaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "caffeine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "diltiazem",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "hydroxyzine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "procaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "benzocaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "mannitol",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "lactose",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    },
+    {
+      "cut": "glucose",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    }
+  ],
   "doses": [],
-  "interactions": [],
+  "interactions": [
+    {
+      "with": "ethanol",
+      "severity": "risky",
+      "mechanism": "other",
+      "source": "roque-bravo2022"
+    },
+    {
+      "with": "opioid",
+      "severity": "risky",
+      "mechanism": "other",
+      "source": "roque-bravo2022"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "cocaine.ethanol",
+      "topic": "combination",
+      "source": "roque-bravo2022"
+    },
+    {
+      "key": "cocaine.opioids",
+      "topic": "combination",
+      "source": "roque-bravo2022"
+    },
+    {
+      "key": "cocaine.comedown",
+      "topic": "sleep_food_water",
+      "source": "roque-bravo2022"
+    },
+    {
+      "key": "cocaine.levamisole",
+      "topic": "testing",
+      "source": "iorio2024"
+    }
+  ],
   "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"
