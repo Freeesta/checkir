@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   changes:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       rust: ${{ steps.diff.outputs.rust }}
       web: ${{ steps.diff.outputs.web }}
@@ -46,7 +46,7 @@ jobs:
   rust:
     needs: changes
     if: needs.changes.outputs.rust == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -75,7 +75,7 @@ jobs:
   deny:
     needs: changes
     if: needs.changes.outputs.rust == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: EmbarkStudios/cargo-deny-action@v2
@@ -85,7 +85,7 @@ jobs:
   web:
     needs: changes
     if: needs.changes.outputs.web == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -114,7 +114,7 @@ jobs:
         run: node tests_e2e/fumo.mjs
 
   limits:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -133,7 +133,7 @@ jobs:
   data:
     needs: changes
     if: needs.changes.outputs.data == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -148,7 +148,7 @@ jobs:
   ci-ok:
     if: always()
     needs: [changes, rust, deny, web, limits, data]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: every job passed or was skipped
         env:
