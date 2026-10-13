@@ -29,6 +29,8 @@ export async function sheetsScenario(browser, base, check, axe) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   page.on("request", (r) => { if (!r.url().startsWith(new URL(base).origin) && !r.url().startsWith("data:") && !r.url().startsWith("blob:")) foreign.push(r.url()); });
+  await page.locator('details[data-panel="libraries"] summary').click();
+  await page.waitForFunction(() => /1/.test(document.querySelector('[data-library="checkir-community"]')?.textContent ?? ""), null, { timeout: 20000 });
   await page.setInputFiles("input[type=file]", [{ name: "campione.jdx", mimeType: "chemical/x-jcamp-dx", buffer: await readFile(SPECTRUM) }]);
   const section = page.locator('details[data-panel="results"]');
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();
@@ -50,9 +52,9 @@ export async function sheetsScenario(browser, base, check, axe) {
   await page.waitForSelector("dialog", { state: "detached" });
   check("sheets: Esc closes and the focus returns to the button", await page.evaluate(() => document.activeElement?.getAttribute("data-fk") === "open-sheet"));
   check("sheets: no request to another origin", foreign.length === 0, foreign.join(" "));
-  await page.setViewportSize({ width: 320, height: 700 });
   await page.click('[data-fk="open-sheet"]');
   await page.waitForSelector("dialog .substance-sheet");
+  await page.setViewportSize({ width: 320, height: 700 });
   check("sheets: 320 px has no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth && (document.querySelector("dialog")?.scrollWidth ?? 0) <= (document.querySelector("dialog")?.clientWidth ?? 0) + 1));
   check("sheets: no page errors", errors.length === 0, errors.join(" | "));
   await ctx.close();
