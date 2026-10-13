@@ -5,6 +5,7 @@ use wasm_bindgen::prelude::*;
 
 mod confronto;
 mod miscele;
+mod sottrazione;
 
 /// Engine version.
 #[wasm_bindgen]
