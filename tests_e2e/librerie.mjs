@@ -1,7 +1,9 @@
 // Library scenarios: the public package is listed with licence and attribution and has a switch, it is still there offline,
 // a private library is imported from files with progress and zero network requests, kept in OPFS across a reload and removed
 // on request; the name index finds compounds by prefix without accents.
-import { readFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { FIXTURE } from "./caricamento.mjs";
 
 /** Pure checks (no browser): the name index and the helpers of the importer. */
@@ -32,6 +34,25 @@ export async function librariesPureScenario(check) {
 async function openLibraries(page) {
   const section = page.locator('details[data-panel="libraries"]');
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();
+}
+
+/** A folder with a JCAMP, a CSV, a synthetic .ispd and a foreign file: three rows and "1 file non riconosciuto". */
+async function folderScenario(page, jdx, check) {
+  const ispd = await readFile(new URL("../crates/ftir-core/tests/fixtures/ispd/measurement.ispd", import.meta.url));
+  const csv = ["wavenumber,absorbance", ...Array.from({ length: 400 }, (_, i) => `${800 + i * 6},${(0.5 + 0.4 * Math.sin(i / 9)).toFixed(4)}`)].join("\n");
+  const dir = await mkdtemp(join(tmpdir(), "checkir-folder-"));
+  await writeFile(join(dir, "a.jdx"), jdx);
+  await writeFile(join(dir, "b.csv"), csv);
+  await writeFile(join(dir, "c.ispd"), ispd);
+  await writeFile(join(dir, "d.bin"), Buffer.from([0, 1, 2, 3, 250, 251, 252, 253]));
+  await page.fill("#lib-name", "Cartella");
+  await page.setInputFiles('input[data-library="folder"]', dir);
+  await page.locator('[data-library="cartella"]').waitFor();
+  const folderNotes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
+  check("import: a folder of JCAMP, CSV and .ispd gives 3 spectra and counts 1 unrecognized file", /3 spettri, 0 scartati/.test(folderNotes) && /1 file non riconosciuto/.test(folderNotes), folderNotes);
+  await rm(dir, { recursive: true, force: true });
+  await page.getByRole("button", { name: /Rimuovi la libreria cartella/ }).click();
+  await page.waitForSelector('[data-library="cartella"]', { state: "detached" });
 }
 
 /** @param {import("playwright").Browser} browser */
@@ -72,7 +93,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await mine.waitFor();
   await page.locator('details[data-panel="libraries"] .notes').waitFor();
   const notes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
-  check("import: the summary counts imported and discarded files (the repeated one included) and names the broken one", /1 spettri, 3 scartati/.test(notes) && /rotto\.jdx/.test(notes), notes);
+  check("import: the summary counts imported files and the unrecognized ones (broken JCAMP, text note); the repeated file counts as discarded", /1 spettri, 1 scartati/.test(notes) && /2 file non riconosciuti/.test(notes), notes);
   check("import: the private library is marked private with personal-use licence", /Privata/.test((await mine.textContent()) ?? "") && /uso personale/.test((await mine.textContent()) ?? ""));
   check("import: no network request during the import", requests.length === before, requests.slice(before).join(", "));
   const stored = await page.evaluate(async () => {
@@ -81,6 +102,8 @@ export async function librariesScenario(browser, base, check, axe) {
     return (await (await dir.getFileHandle("data.bin")).getFile()).size;
   });
   check("import: data.bin in OPFS has one spectrum (the repeated file is left out) on the 1576-point grid", stored === 1576 * 4, String(stored));
+
+  await folderScenario(page, jdx, check);
   const withPrivate = await axe(page);
   check("import: axe has no violations with a private library", withPrivate.length === 0, withPrivate.join(", "));
 

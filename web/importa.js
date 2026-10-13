@@ -1,12 +1,12 @@
 // @ts-check
 /**
- * Build the package of a private library from JCAMP-DX files chosen by the user. Everything runs in the page with the
+ * Build the package of a private library from files of any format the engine reads, chosen by the user. Everything runs in the page with the
  * engine; nothing is sent anywhere. Only the spectra (resampled for the calculation, as the file gives them for drawing) and
  * the file names (as compound names) are kept: the metadata of the files (sample name, operator, paths…) is dropped.
  * @typedef {import("./state.js").Notice} Notice
  * @typedef {{ done: number, total: number }} Progress
  * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array, native?: Uint8Array }} Built
- * @typedef {{ built: Built | null, imported: number, ignored: number, repeated: number, skipped: { file: string, notice: Notice }[], cancelled: boolean, error: Notice | null }} Outcome
+ * @typedef {{ built: Built | null, imported: number, unrecognized: number, repeated: number, skipped: { file: string, notice: Notice }[], cancelled: boolean, error: Notice | null }} Outcome
  */
 import { BUDGET } from "./files.js";
 
@@ -16,7 +16,6 @@ async function digest(bytes) {
   return Array.from(h, (b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-const JCAMP = /\.(jdx|dx|jcm|jcamp)$/i;
 /** Points of the library grid (650–3800 cm⁻¹, step 2). */
 const POINTS = 1576;
 
@@ -55,9 +54,8 @@ const pause = (ms) => new Promise((r) => setTimeout(r, ms));
  * @returns {Promise<Outcome>}
  */
 export async function buildPrivateLibrary(engine, files, identity, hooks) {
-  const usable = files.filter((f) => JCAMP.test(f.name));
   /** @type {Outcome} */
-  const out = { built: null, imported: 0, ignored: files.length - usable.length, repeated: 0, skipped: [], cancelled: false, error: null };
+  const out = { built: null, imported: 0, unrecognized: 0, repeated: 0, skipped: [], cancelled: false, error: null };
   /** @type {Float32Array[]} */
   const rows = [];
   /** @type {Float32Array[]} */
@@ -66,27 +64,29 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
   const index = [];
   const hashes = new Set();
   let last = performance.now();
-  for (const [i, file] of usable.entries()) {
+  for (const [i, file] of files.entries()) {
     if (hooks.signal.aborted) return { ...out, cancelled: true };
     try {
       if (file.size > BUDGET.maxBytes) throw JSON.stringify({ error_key: "reader.limit_exceeded", params: { limit: "bytes", max: BUDGET.maxBytes } });
       const buffer = await file.arrayBuffer();
       const bytes = new Uint8Array(buffer);
       const hash = await digest(buffer);
-      if (hashes.has(hash)) out.repeated += 1;
+      if (hashes.has(hash)) out.repeated++;
       else {
         hashes.add(hash);
-        const resampled = Float32Array.from(engine.library_resample(bytes));
-        natives.push(Float32Array.from(engine.library_native(bytes)));
+        const resampled = Float32Array.from(engine.library_resample(file.name, bytes));
+        natives.push(Float32Array.from(engine.library_native(file.name, bytes)));
         rows.push(resampled);
         const id = `u${rows.length}`;
         const title = file.name.replace(/\.[^.]*$/, "");
         index.push({ id, form: "imported", substance: slug(title), names: { en: title }, classes: [], quality: "pass", provenance_type: "user_import" });
       }
     } catch (e) {
-      out.skipped.push({ file: file.name, notice: noticeOf(e) });
+      const notice = noticeOf(e);
+      if (notice.key === "reader.unknown_format") out.unrecognized++;
+      else out.skipped.push({ file: file.name, notice });
     }
-    hooks.onProgress({ done: i + 1, total: usable.length });
+    hooks.onProgress({ done: i + 1, total: files.length });
     if (performance.now() - last > 30) {
       await pause(0);
       last = performance.now();

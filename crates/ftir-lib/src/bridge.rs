@@ -1,6 +1,6 @@
 //! Text-in, text-out entry points for the browser bridge: open a package that was stored or fetched, and build the
 //! package of a library imported by the user. The wasm crate only forwards to these functions.
-use crate::build::{native_record, resample_jcamp};
+use crate::build::{native_record, native_record_file, resample_file, resample_jcamp};
 use crate::data::Limits;
 use crate::index::parse_index;
 use crate::invalid;
@@ -35,6 +35,19 @@ pub fn resample_standard(jdx: &[u8]) -> EngineResult<Vec<f32>> {
 /// A JCAMP-DX file as the file gives it (`build::native_record`), for drawing the reference.
 pub fn native_standard(jdx: &[u8]) -> EngineResult<Vec<f32>> {
     native_record(jdx)
+}
+
+/// Any file the readers recognise, main spectrum on the standard grid as float32.
+pub fn resample_standard_file(name: &str, bytes: &[u8]) -> EngineResult<Vec<f32>> {
+    Ok(resample_file(name, bytes, &Grid::STANDARD)?
+        .into_iter()
+        .map(|v| v as f32)
+        .collect())
+}
+
+/// Any file the readers recognise as the file gives it (`build::native_record_file`).
+pub fn native_standard_file(name: &str, bytes: &[u8]) -> EngineResult<Vec<f32>> {
+    native_record_file(name, bytes)
 }
 
 fn identity(source: &str) -> EngineResult<Identity> {

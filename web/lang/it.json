@@ -351,6 +351,8 @@
   "library.import.private_note": "Le librerie importate restano in questo browser: non vengono inviate né esportate. Dei file si conserva solo lo spettro e il nome del file.",
   "library.import.progress": "Importo {done} di {total}",
   "library.import.skipped": "Scartato {file}:",
+  "library.import.unrecognized_many": "{count} file non riconosciuti.",
+  "library.import.unrecognized_one": "1 file non riconosciuto.",
   "library.index_invalid": "L'indice della libreria non è valido ({field}).",
   "library.item.attribution": "Attribuzione: {text}",
   "library.item.attribution_private": "importata da te, resta in questo browser",
