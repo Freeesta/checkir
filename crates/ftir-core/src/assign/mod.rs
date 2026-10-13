@@ -24,9 +24,6 @@ use result::{
 };
 use rules::RuleSet;
 
-/// Share of the highest band above which a reference peak missing from the sample is reported as expected.
-/// TODO(coordinator): move to `peaks_thresholds/1` (a data file outside this package) as `tolerances.missing_rel_min`.
-pub const MISSING_REL_MIN: f64 = 0.2;
 /// Below this wavenumber (the fingerprint region) a rule that is not diagnostic is not shown without a candidate:
 /// there the same position fits dozens of groups. TODO(coordinator): move to the thresholds file as well.
 pub const FINGERPRINT_BELOW_CM1: f64 = 1500.0;
@@ -197,7 +194,9 @@ fn missing(sample: &PeakSet, candidate: &Reference, t: &Thresholds) -> Vec<Missi
         .peaks
         .peaks
         .iter()
-        .filter(|q| usable(q) && q.kind == Kind::Peak && q.prominence_rel >= MISSING_REL_MIN)
+        .filter(|q| {
+            usable(q) && q.kind == Kind::Peak && q.prominence_rel >= t.tolerances.missing_rel_min
+        })
         .filter(|q| nearest(q, &sample.peaks, t).is_none())
         .map(|q| Missing {
             ref_peak_id: q.id.clone(),
