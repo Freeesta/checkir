@@ -4,7 +4,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { APP_NAME, SITE_URL } from "../web/appname.js";
 
-const THEME = { light: "#ffffff", dark: "#121417" };
+const THEME = { light: "#fbfcfe", dark: "#0e1521" };
 const site = (name) => new URL(`../site/${name}`, import.meta.url);
 const it = JSON.parse(await readFile(new URL("../web/lang/it.json", import.meta.url), "utf8"));
 
