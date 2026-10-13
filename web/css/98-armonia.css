@@ -23,7 +23,7 @@
 .primary, .btn[aria-pressed="true"], .toolbar button[aria-pressed="true"], .range-presets .btn[aria-pressed="true"] {
   background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600;
 }
-.primary:hover:not(:disabled) { filter: none; background: var(--accent); border-color: var(--accent); opacity: 0.9; }
+.primary:hover:not(:disabled) { background: var(--accent); border-color: var(--accent); filter: brightness(0.92); }
 .lang-group { border-color: var(--border-ui); border-radius: var(--radius-pill); }
 .lang-button { border-radius: 0; background: transparent; }
 .lang-button[aria-pressed="true"], .lang-group .btn[aria-pressed="true"] { background: var(--accent); color: var(--bg); box-shadow: none; font-weight: 600; }
