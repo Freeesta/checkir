@@ -305,3 +305,40 @@ fn audit_lists_match_the_code() {
         vec!["blank lines | no information: only white space"]
     );
 }
+
+/// Export of an instrument program: `##` header lines without a data label, then bare `x y` rows.
+fn instrument_export(rows: usize) -> String {
+    let mut s = String::from(
+        "##TITLE=No Description\n##DATA TYPE=INFRARED SPECTRUM\n##XUNITS=1/CM\n##YUNITS=Abs\n",
+    );
+    for i in 0..rows {
+        s.push_str(&format!(
+            "{:.6}  \t{:.6} \n",
+            400.0 + 0.7 * i as f64,
+            0.1 + 0.001 * i as f64
+        ));
+    }
+    s
+}
+
+#[test]
+fn instrument_export_without_data_label_is_read_through_the_jcamp_entry() {
+    let text = instrument_export(30);
+    let reader = ftir_core::readers::pick("export.txt", text.as_bytes()).expect("reader");
+    let doc = (reader.open)(text.as_bytes(), &Limits::STANDARD, &Options::default())
+        .unwrap_or_else(|e| panic!("{}", e.key));
+    let s = &doc.spectra[doc.primary];
+    assert_eq!(s.x.unit, XUnit::Cm1);
+    assert_eq!(s.y.unit, YUnit::Absorbance);
+    assert_eq!(s.y.values.len(), 30);
+    assert!((s.x.values.to_vec()[1] - 400.7).abs() < 1e-9);
+    assert!(!warning_keys(&doc).iter().any(|k| k.contains("unit")));
+}
+
+#[test]
+fn headered_table_needs_no_data_label_and_enough_rows() {
+    assert!(text::is_headered_table(&instrument_export(10)));
+    assert!(!text::is_headered_table(&instrument_export(9)));
+    let jcamp = "##TITLE=a\n##XYDATA=(X++(Y..Y))\n400 1 2\n402 3 4\n404 5 6\n406 7 8\n408 1 2\n410 3 4\n412 5 6\n414 7 8\n416 1 2\n418 3 4\n##END=\n";
+    assert!(!text::is_headered_table(jcamp));
+}

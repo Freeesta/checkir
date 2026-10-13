@@ -118,13 +118,27 @@ fn column_names(c: &Chosen, fields: &mut [Field]) -> Vec<String> {
         .map(|s| s.to_string())
         .collect();
     if names.len() != c.eval.columns || c.eval.columns < 2 {
-        return Vec::new();
+        return units_of_header(c);
     }
     if let Some(f) = fields.last_mut() {
         f.mapped = Some("column.names");
         f.known = true;
     }
     names
+}
+
+/// Axis names from the `##XUNITS=` and `##YUNITS=` header lines of an instrument export (two columns only).
+fn units_of_header(c: &Chosen) -> Vec<String> {
+    let value = |label: &str| {
+        c.lines.iter().take(c.eval.first).find_map(|(_, t)| {
+            let (k, v) = t.strip_prefix("##")?.split_once('=')?;
+            (normalize(k) == label).then(|| v.trim().to_string())
+        })
+    };
+    match (value("XUNITS"), value("YUNITS")) {
+        (Some(x), Some(y)) if c.eval.columns == 2 => vec![x, y],
+        _ => Vec::new(),
+    }
 }
 
 fn xy(
