@@ -45,7 +45,7 @@ async function candidateScenario(page, check) {
   check("rowmenu: a candidate row has compare, sheet, recall and copy", ["cand.compare", "cand.sheet", "cand.recall", "cand.copy"].every((i) => items.includes(i)), items.join(","));
   await page.click('[data-item="cand.copy"]');
   const text = await copied(page, /^1\tbeta/);
-  check("rowmenu: copy gives rank, name, form, library, r and coverage with a decimal point", /^1\tbeta\t[^\t]*\t[^\t]*\t\d\.\d\d\t\d+$/.test(text), JSON.stringify(text));
+  check("rowmenu: copy gives rank, name, form, library, Match (whole number) and coverage", /^1\tbeta\t[^\t]*\t[^\t]*\t\d{1,3}\t\d+$/.test(text), JSON.stringify(text));
   await row.click({ button: "right" });
   await page.click('[data-item="cand.recall"]');
   await page.waitForSelector("#recall:not([hidden]) .recall-item");

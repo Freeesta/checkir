@@ -36,11 +36,11 @@ async function oneButtonScenario(page, check, axe) {
   check("clean: axe has no violations with the short instrument block", v.length === 0, v.join(", "));
 }
 
-/** E5: a result opens the candidates from an early section, never takes a later one; the subtraction closes the decision. */
+/** E5: a result opens the candidates only from section 1 or none, never takes another one; the subtraction closes the decision. */
 async function followScenario(page, check) {
   await page.locator('details[data-panel="libraries"] summary').click();
   await loadAndWait(page, "beta.jdx", "C2");
-  check("follow: a result arriving opens the candidates from an early section", (await openSections(page)).join() === "results", (await openSections(page)).join());
+  check("follow: a result arriving leaves the libraries section open by hand as it is", (await openSections(page)).join() === "libraries", (await openSections(page)).join());
   await page.locator('details[data-panel="sheet"] summary').click();
   await loadAndWait(page, "beta2.jdx", "C3");
   await page.waitForTimeout(500);

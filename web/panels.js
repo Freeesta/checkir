@@ -9,16 +9,16 @@ import { renderLibraries } from "./libpanel.js";
 import { peaksLabel, peaksSummary, renderPeaks } from "./peaks_panel.js";
 import { renderSheetPanel, sheetSummary } from "./sheet_panel.js";
 import { derivedText, renderResultsPanel, resultsSummary } from "./results.js";
-import { formatNumber, t } from "./i18n.js";
+import { currentLang, formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
 import { activeFile, activeLibraries, readPref, resultOf, writePref } from "./state.js";
 
 /**
  * Registry of the side-panel sections (1 File … 5 Scheda). The panel, the phone tab bar and the header chips are generated from it.
- * `summary` is the numeric line shown when the section is closed; `render` fills the open section.
+ * `summary` is the numeric line shown when the section is closed; `render` fills the open section; `sig` (optional) is what the section shows: it is drawn again only when that changes, so a result arriving does not rebuild a section the person is using.
  * @typedef {{
  *   id: string, n: number, titleKey: string, tipKey: string, icon: string,
- *   summary: (s: import("./state.js").AppState) => string, label?: (s: import("./state.js").AppState) => string,
+ *   sig?: (s: import("./state.js").AppState) => string, summary: (s: import("./state.js").AppState) => string, label?: (s: import("./state.js").AppState) => string,
  *   render: (body: HTMLElement, s: import("./state.js").AppState, ctx: import("./actions.js").Ctx) => void,
  * }} PanelDef
  */
@@ -79,6 +79,7 @@ export const PANELS = [
   {
     id: "libraries", n: 2, titleKey: "panel.libraries.title", tipKey: "panel.libraries.tip", icon: "library",
     summary: (s) => `${formatNumber(activeLibraries(s).length)} · ${formatNumber(activeLibraries(s).reduce((a, l) => a + l.spectra, 0))}`,
+    sig: (s) => JSON.stringify([s.libraries, s.libraryJob, s.libraryNotices]),
     render: renderLibraries,
   },
   { id: "results", n: 3, titleKey: "panel.results.title", tipKey: "panel.results.tip", icon: "results", summary: resultsSummary, render: renderResultsPanel },
@@ -114,11 +115,23 @@ function createFollow(isRail) {
     lastError = s.fileError;
     if (isRail() || matchMedia(MOBILE).matches) return;
     const current = document.querySelector("details[data-panel][open]");
-    const early = !current || PANELS.findIndex((p) => p.id === current.getAttribute("data-panel")) < 2;
+    const early = !current || current.getAttribute("data-panel") === "files";
     if (failed) sectionOf("files")?.setAttribute("open", "");
     const results = sectionOf("results");
     if (results && ((arrived && early && !s.folder.watching) || opened)) results.open = true;
   };
+}
+
+/** Fill the body of a section; a section with a `sig` is drawn again only when what it shows changes. @param {HTMLElement} section @param {PanelDef} p @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx */
+function drawBody(section, p, s, ctx) {
+  const sig = p.sig ? `${currentLang()}|${p.sig(s)}` : null;
+  if (sig !== null && section.dataset.sig === sig) return;
+  if (sig !== null) section.dataset.sig = sig;
+  const body = /** @type {HTMLElement} */ (section.querySelector(".panel-body"));
+  keepFocus(body, () => {
+    body.replaceChildren();
+    p.render(body, s, ctx);
+  });
 }
 
 /**
@@ -191,11 +204,7 @@ export function buildPanels(hosts, ctx) {
       section.querySelector(".sum")?.replaceChildren(p.summary(s));
       const spoken = `${title} ${(p.label ?? p.summary)(s)}`;
       section.querySelector("summary")?.setAttribute("aria-label", `${formatNumber(p.n)} ${spoken}`);
-      const body = /** @type {HTMLElement} */ (section.querySelector(".panel-body"));
-      keepFocus(body, () => {
-        body.replaceChildren();
-        p.render(body, s, ctx);
-      });
+      drawBody(section, p, s, ctx);
       hosts.tabbar.querySelector(`[data-goto="${p.id}"]`)?.setAttribute("aria-label", spoken);
     }
     backButton.setAttribute("aria-label", t("panel.back"));

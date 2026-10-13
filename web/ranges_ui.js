@@ -1,4 +1,5 @@
 // @ts-check
+import { matchScore } from "./candidati.js";
 import { el, icon } from "./dom.js";
 import { formatNumber, parseNumber, t } from "./i18n.js";
 import { agreementOf } from "./peaks.js";
@@ -83,7 +84,7 @@ function cell(r, busy, data) {
     return td;
   }
   const agreement = agreementOf(r, data);
-  td.append(el("span", { class: `region-${agreement}` }, [el("span", { class: "swatch" }), ` ${formatNumber(r, 2)} · ${agreementWord(agreement)}`]));
+  td.append(el("span", { class: `region-${agreement}` }, [el("span", { class: "swatch" }), ` ${formatNumber(matchScore(r))} · ${agreementWord(agreement)}`]));
   return td;
 }
 

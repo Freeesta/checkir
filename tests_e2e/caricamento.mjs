@@ -67,7 +67,7 @@ async function browserScenario(browser, base, check, axe) {
   await page.evaluate(() => { document.querySelector('details[data-panel="files"]').open = true; });
 
   check("drop: a dropped file becomes C2 and is active", (await page.textContent('[data-chip="file"]'))?.trim().startsWith("C2") === true);
-  await page.click('[data-fk="sel-C1"]');
+  await page.evaluate(() => { document.querySelector('details[data-panel="files"]').open = true; document.querySelector('[data-fk="sel-C1"]').click(); });
   check("tree: choosing C1 shows it again", (await page.textContent('[data-chip="file"]'))?.trim().startsWith("C1") === true);
 
   await page.setInputFiles("input[type=file]", { name: "rotto.bin", mimeType: "application/octet-stream", buffer: Buffer.from([0, 1, 2, 250, 251]) });

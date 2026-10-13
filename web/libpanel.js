@@ -1,6 +1,7 @@
 // @ts-check
 import { SAMPLING_IDS, samplingName } from "./campionamento.js";
 import { APP_NAME } from "./appname.js";
+import { proposedLibraryName } from "./candidati.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
@@ -24,7 +25,7 @@ function makePicker(folder) {
   input.addEventListener("change", () => {
     const chosen = [...(input.files ?? [])];
     input.value = "";
-    if (chosen.length) current?.importLibrary(chosen, typedName.trim() || t("library.import.name_default"), typedSampling);
+    if (chosen.length) current?.importLibrary(chosen, typedName.trim() || proposedLibraryName(chosen) || t("library.import.name_default"), typedSampling);
   });
   document.body.append(input);
   return input;
@@ -87,7 +88,7 @@ export function renderLibraries(body, s, ctx) {
   files.disabled = folder.disabled = busy;
   files.addEventListener("click", () => pick.files.click());
   folder.addEventListener("click", () => pick.folder.click());
-  const name = el("input", { type: "text", id: "lib-name", class: "lib-name", maxlength: "60", autocomplete: "off", placeholder: t("library.import.name_default") });
+  const name = el("input", { type: "text", id: "lib-name", class: "lib-name", maxlength: "60", autocomplete: "off", placeholder: t("library.import.name_placeholder") });
   name.value = typedName;
   name.addEventListener("input", () => (typedName = name.value));
   const how = el("select", { id: "lib-sampling", class: "chip sampling-choice", "aria-label": t("library.import.sampling_label") }, SAMPLING_IDS.map((id) => el("option", { value: id }, [`${t("sampling.prefix")} ${samplingName(id)}`])));

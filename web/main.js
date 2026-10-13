@@ -26,6 +26,7 @@ import { loadBands } from "./regions.js";
 import { loadBandData } from "./bands_data.js";
 import { createPeakCard } from "./peak_card.js";
 import { activeFile, getState, subscribe, update } from "./state.js";
+import { loadSheetIndex } from "./schede.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
 import { buildSubtractView } from "./subtract_view.js";
@@ -112,6 +113,7 @@ function showName() {
 /** Last step of the start-up: libraries, offline support, loading screen away, page marked ready. @param {import("./engine.js").Engine | null} engine */
 function finishStart(engine) {
   if (engine) loadAllLibraries(engine);
+  loadSheetIndex(() => update({}));
   startExtras();
   hideSplash();
   document.body.dataset.ready = "1";

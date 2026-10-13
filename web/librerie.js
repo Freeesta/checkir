@@ -187,7 +187,7 @@ export async function importLibrary(engine, files, name, sampling, say) {
   if (out.cancelled) head = { key: "library.import.cancelled", params: {} };
   else if (out.error) head = out.error;
   else if (!out.imported) head = { key: "library.import.none", params: {} };
-  else if (stored) head = { key: "library.import.done", params: { name: id, ok: String(out.imported), skipped: String(out.skipped.length) } };
+  else if (stored) head = { key: "library.import.done", params: { name: id, ok: String(out.imported), skipped: String(out.skipped.length + out.repeated) } };
   const skipped = out.skipped.slice(0, 5).map((s) => ({ key: "library.import.skipped", params: { file: s.file, reason_key: s.notice.key, ...s.notice.params } }));
   const unknown = out.unrecognized ? [{ key: out.unrecognized === 1 ? "library.import.unrecognized_one" : "library.import.unrecognized_many", params: { count: String(out.unrecognized) } }] : [];
   const all = [...(head ? [head] : []), ...notices, ...unknown, ...skipped];

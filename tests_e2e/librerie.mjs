@@ -95,7 +95,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await mine.waitFor();
   await page.locator('details[data-panel="libraries"] .notes').waitFor();
   const notes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
-  check("import: the summary counts imported files and the unrecognized ones (broken JCAMP, text note)", /2 spettri, 0 scartati/.test(notes) && /2 file non riconosciuti/.test(notes), notes);
+  check("import: the summary counts imported files and the unrecognized ones (broken JCAMP, text note); the repeated file counts as discarded", /1 spettri, 1 scartati/.test(notes) && /2 file non riconosciuti/.test(notes), notes);
   check("import: the private library is marked private with personal-use licence", /Privata/.test((await mine.textContent()) ?? "") && /uso personale/.test((await mine.textContent()) ?? ""));
   check("import: no network request during the import", requests.length === before, requests.slice(before).join(", "));
   const stored = await page.evaluate(async () => {
@@ -103,7 +103,7 @@ export async function librariesScenario(browser, base, check, axe) {
     const dir = await root.getDirectoryHandle("mia-libreria");
     return (await (await dir.getFileHandle("data.bin")).getFile()).size;
   });
-  check("import: data.bin in OPFS has two spectra on the 1576-point grid", stored === 2 * 1576 * 4, String(stored));
+  check("import: data.bin in OPFS has one spectrum (the repeated file is left out) on the 1576-point grid", stored === 1576 * 4, String(stored));
 
   await folderScenario(page, jdx, check);
   const withPrivate = await axe(page);

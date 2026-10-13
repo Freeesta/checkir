@@ -173,7 +173,7 @@ async function libraryImportScenario(browser) {
   for (let t = 0; t < 400 && own.filter((u) => u.endsWith("ftir_wasm_bg.wasm")).length < 2; t++) await page.waitForTimeout(50);
   const start = own.length;
   await page.setInputFiles('input[data-library="files"]', { name: "riferimento.jdx", mimeType: "chemical/x-jcamp-dx", buffer: Buffer.from(canaryJcamp(), "latin1") });
-  await page.locator('[data-library="mia-libreria"]').waitFor();
+  await page.locator('[data-library="riferimento"]').waitFor();
   await page.locator('details[data-panel="libraries"] .notes').waitFor();
   const dump = await storageDump(page, ctx);
   check("T2 (library): the import made no request from the page", own.length === start, own.slice(start).join(", "));
