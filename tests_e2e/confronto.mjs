@@ -75,7 +75,7 @@ async function levelsScenario(page, check) {
   // English.
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
-  check("match: English shows the level word and the limits", /Not identified/.test((await page.textContent(".result .level")) ?? "") && (await page.isVisible("#limits")));
+  check("match: English shows the level word", /Not identified/.test((await page.textContent(".result .level")) ?? ""));
   await page.click('[data-lang="it"]');
   await page.waitForFunction(() => document.documentElement.lang === "it");
 
@@ -110,7 +110,7 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: every row shows its library", (await page.locator(".cand .cand-lib").allTextContents()).every((x) => x === "sintetica"));
   check("match: a name never stands outside a block with the level", await page.evaluate(() => [...document.querySelectorAll(".cand-name")].every((n) => n.closest(".result")?.querySelector(".level"))));
   check("match: header chip shows the level word", /Probabile/.test((await page.textContent('[data-chip="result"]')) ?? ""));
-  check("match: the strip of limits is visible with a result", await page.isVisible("#limits"));
+  check("match: no fixed limits strip, even with a result", (await page.locator("#limits").count()) === 0);
   await page.waitForFunction(() => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(document.querySelector("#status")?.textContent ?? ""), null, { timeout: 5000 }).catch(() => {});
   check("match: announcement says candidates, level and alerts", /\d+ candidat\w*, Probabile, \d+ allert\w*/.test((await page.textContent("#status")) ?? ""), (await page.textContent("#status")) ?? "");
   check("match: the zone left out is drawn and named", (await page.locator("#chart rect.excluded").count()) === 1 && /Escluso dal confronto/.test((await page.textContent("#chart")) ?? ""));
@@ -137,7 +137,7 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: no page errors", errors.length === 0, errors.join(" | "));
   await ctx.close();
 
-  // Phone width: no horizontal scroll, the strip of limits is still there.
+  // Phone width: no horizontal scroll.
   const phone = await browser.newContext({ locale: "it-IT", viewport: { width: 320, height: 640 } });
   const p = await phone.newPage();
   await p.goto(base);

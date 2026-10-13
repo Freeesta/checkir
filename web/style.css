@@ -194,8 +194,6 @@ table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nu
 caption { text-align: left; padding: 0.5rem; color: var(--text-muted); }
 th, td { padding: 0.25rem 0.75rem; text-align: right; border-bottom: 1px solid var(--border-soft); }
 th { position: sticky; top: 0; background: var(--surface); }
-.limits { display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; padding: 0.4rem 0.75rem; border: 1px solid var(--border); border-radius: 0.4rem; background: var(--surface); }
-.limits-list { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0; padding: 0; list-style: none; font-size: 0.9rem; }
 
 /* Tooltip, toggletip, dialogs */
 .tooltip { position: absolute; z-index: 50; max-width: 18rem; padding: 0.3rem 0.6rem; background: var(--text); color: var(--bg); border-radius: 0.3rem; font-size: 0.875rem; }
@@ -294,6 +292,10 @@ kbd { display: inline-block; min-width: 1.4rem; padding: 0 0.35rem; border: 1px 
 .cand-r { font-variant-numeric: tabular-nums; font-weight: 600; }
 .cand-lib { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-muted); }
 .cand meter { width: 3rem; height: 0.6rem; flex: none; }
+/* Coverage bar: the accent blue, never the browser's traffic-light green */
+.cand meter::-webkit-meter-bar { background: var(--border-soft); border: 1px solid var(--border); border-radius: 0.3rem; }
+.cand meter::-webkit-meter-optimum-value, .cand meter::-webkit-meter-suboptimum-value, .cand meter::-webkit-meter-even-less-good-value { background: var(--accent); border-radius: 0.2rem; }
+.cand meter::-moz-meter-bar { background: var(--accent); }
 .labels { grid-area: labels; display: inline-flex; }
 .label-button { min-width: 1.5rem; min-height: 1.5rem; padding: 0.1rem; }
 .label-button[aria-checked="true"] { background: var(--text); color: var(--bg); }
@@ -394,8 +396,6 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .sheet-strong { font-weight: 700; }
 .sheet-alerts li { display: flex; gap: 0.35rem; padding: 0.1rem 0; }
 .sheet-alerts .icon { flex: none; align-self: flex-start; color: var(--color-alert); }
-.sheet-limits li { display: flex; gap: 0.4rem; align-items: baseline; }
-.sheet-limits .icon { flex: none; }
 .signature { display: flex; align-items: flex-end; gap: 0.6rem; margin-top: 0.8rem; }
 .sign-line { flex: 1; border-bottom: 1px solid var(--text); height: 1.5rem; }
 .sheet[data-draft="1"]::after { content: attr(data-watermark); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transform: rotate(-24deg); color: var(--border); font-size: 2.4rem; font-weight: 800; text-align: center; pointer-events: none; }
@@ -404,7 +404,6 @@ body[data-talk] > :not(.sheet-host):not(#status) { display: none; }
 body[data-talk] .sheet-host { display: block; max-width: 56rem; margin: 0 auto; padding: 1rem; }
 body[data-talk] .sheet { padding: 1.25rem 1.5rem; font-size: 1.35rem; line-height: 1.5; }
 body[data-talk] .sheet-meta { font-size: 0.8em; }
-body[data-talk] .sheet-limits li { margin: 0.3rem 0; }
 .talk-exit { position: sticky; top: 0.5rem; margin-bottom: 0.5rem; }
 .sheet-host .talk-exit { display: none; }
 body[data-talk] .sheet-host .talk-exit { display: inline-flex; }

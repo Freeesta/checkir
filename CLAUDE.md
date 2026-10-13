@@ -8,7 +8,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 - **Distribuzione**: sito statico su GitHub Pages, funziona offline (service worker); tutto gira nel browser; i file dell'utente non lasciano il computer.
 - **Prima versione (priorità)**: carica-file, visualizzatore dello spettro, match immediato con le librerie, spiegazione dei picchi con regioni IR evidenziate, scheda della sostanza se c'è match. Ogni PR deve avvicinare questo traguardo.
 - **Principi da non violare**: 1. il programma propone, la persona esperta decide; 2. incertezza sempre visibile, mai «verde = sicuro» (i colori indicano la confidenza dell'identificazione)
-  3. niente avvisi generici fissi sui limiti nel piè di pagina (decisione del proprietario, 13/10/2026): restano incertezza e allerte di ogni risultato
+  3. nessun avviso o testo fisso generico (limiti dell'FTIR, riduzione del danno, emergenza, «non è una diagnosi») in piè di pagina, schermate, scheda e stampa (decisione del proprietario, 13/10/2026): restano incertezza e allerte di ogni risultato
   4. non è una diagnosi né un parere medico; 5. niente esce dal browser, nessuna telemetria, nessun dato personale (lo provano i test di rete, non un testo); 6. Rust per il calcolo, HTML/JS senza bundler; 7. due lingue (it, en) dalla nascita, decimale col punto; 8. WCAG 2.2 AA, ogni grafico con la sua tabella dei dati.
 - **Dati privati**: MAI nel repository pubblico (nemmeno «per un test»); stanno in `Freeesta/checkir-data`. La lista `NOMI_VIETATI` (segreto di GitHub) non compare mai nel pubblico. Librerie di terzi: solo con permesso e attribuzione dichiarati.
 

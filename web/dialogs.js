@@ -24,8 +24,6 @@ export function buildDialogs(engineVersion) {
     info: () => ({
       titleKey: "info.title",
       body: [
-        el("section", {}, [el("h3", {}, [t("info.privacy_title")]), el("p", {}, [t("info.privacy")])]),
-        el("section", {}, [el("h3", {}, [t("info.limits_title")]), el("p", {}, [t("limits.more")])]),
         el("section", {}, [el("h3", {}, [t("info.match_title")]), autoMatchSwitch(), el("p", { class: "empty" }, [t("info.auto_match_hint")])]),
         el("section", {}, [el("h3", {}, [t("info.pages_title")]), el("nav", { class: "footer-links", "aria-label": t("info.pages_title") }, [
           el("a", { href: "pagine/avvertenze/" }, [t("info.link_warnings")]),

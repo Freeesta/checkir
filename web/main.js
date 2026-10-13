@@ -30,7 +30,7 @@ import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
 import { buildSubtractView } from "./subtract_view.js";
 import { subtractActions } from "./subtract.js";
-import { buildLimits, buildNextStep } from "./workarea.js";
+import { buildNextStep } from "./workarea.js";
 
 /** @param {string} id @returns {HTMLElement} */
 function $(id) {
@@ -151,7 +151,6 @@ async function start() {
   const header = buildHeader(/** @type {HTMLElement} */ ($("app-header")), ctx, APP_NAME);
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
   const next = buildNextStep($("workbar"), ctx);
-  const limits = buildLimits($("limits"));
   const subtraction = buildSubtractView($("subtract"), ctx);
   const talk = wireTalk($("sheet-host"));
   if (engine) setProgramVersion(engine.version());
@@ -175,7 +174,6 @@ async function start() {
     header.refresh(s);
     panels.refresh(s);
     next.refresh(s);
-    limits.refresh();
     talk.refresh(s);
     refreshActionButtons(s);
     hideIfDetached();

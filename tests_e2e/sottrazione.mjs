@@ -82,7 +82,7 @@ async function openScenario(page, check, axe) {
   check("subtract: every strip is also a column of the table", heads.length === 4 && /Residuo/.test(heads[3]) && (await page.locator("#subtract table tbody tr").count()) > 100, heads.join(" | "));
   check("subtract: the fixed sentence says the factor is not the quantity", /Il fattore non è la quantità/.test((await page.textContent("#subtract")) ?? ""));
   check("subtract: no over-subtraction warning at the proposed factor", ((await page.textContent(".subtract-warning")) ?? "").trim() === "");
-  check("subtract: the limits strip stays visible", await page.isVisible("#limits"));
+  check("subtract: no fixed limits strip on the page", (await page.locator("#limits").count()) === 0);
   const v = await axe(page);
   check("subtract: axe has no violations", v.length === 0, v.join(", "));
 }
