@@ -6,6 +6,12 @@ Benzocaina (ethyl 4-aminobenzoate), formula C9H11NO2, massa molare 165.19 g/mol,
 
 Classe chimica: anestetico locale (di tipo estere, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## metabolism
+
+Dopo uso topico poca benzocaina raggiunge il fegato, perché è lipofila e viene acetilata rapidamente nel tessuto; fegati umani isolati, però, formano da benzocaina metaboliti N-idrossilati che producono metaemoglobina. [f:spiller2014]
+
+In un bambino con metaemoglobinemia (32.9 %) dopo spray di benzocaina, nel sangue sono stati misurati entro 20 minuti l'acido N-idrossi-p-amminobenzoico (35 ng/mL) e l'acido p-amminobenzoico: la prima identificazione del metabolita responsabile, in un solo caso. [f:spiller2014]
+
 ## cuts
 
 La benzocaina è nell'elenco dei tagli frequenti della cocaina. [f:unodc-cocaine2012]
@@ -40,7 +46,7 @@ Ricorda che i tagli con anestetici locali sono descritti dalle linee d'indirizzo
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:guay2009] [f:kane2007] [f:neal2010] [f:pubchem] [f:smith-arom-esters] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:guay2009] [f:kane2007] [f:neal2010] [f:pubchem] [f:smith-arom-esters] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata] [f:spiller2014]
 
 ## license
 

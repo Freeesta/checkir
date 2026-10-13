@@ -6,6 +6,12 @@ D-Mannitolo ((2R,3R,4R,5R)-hexane-1,2,3,4,5,6-hexol), formula C6H14O6, massa mol
 
 Classe chimica: alcol zuccherino (polialcol, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## metabolism
+
+Nei volontari sani il recupero urinario dopo una dose orale è stato 8.0-39.6 % della quantità ingerita; l'assorbimento netto in un segmento digiunale perfuso di 30 cm è stato 3.6 %. Dopo iniezione endovenosa il recupero nelle urine si avvicinava al 100 % e la clearance renale era in media 131 mL/min. [f:laker1982]
+
+Il mannitolo si distribuisce soprattutto nello spazio extracellulare. Nelle colture fecali è stato degradato ad acido e anidride carbonica, ed è presente naturalmente nelle urine umane. [f:laker1982]
+
 ## cuts
 
 La mannite è tra gli zuccheri riportati come tagli della cocaina. [f:unodc-cocaine2012]
@@ -32,7 +38,7 @@ Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:lenhart2017] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:lenhart2017] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata] [f:laker1982]
 
 ## license
 

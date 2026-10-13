@@ -6,6 +6,12 @@ Benzocaine (ethyl 4-aminobenzoate), formula C9H11NO2, molar mass 165.19 g/mol, C
 
 Chemical class: local anaesthetic (ester type, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## metabolism
+
+After topical use little benzocaine reaches the liver, because it is lipophilic and rapidly acetylated in the tissue; isolated human livers, however, form N-hydroxylated metabolites from benzocaine that produce methaemoglobin. [f:spiller2014]
+
+In a child with methaemoglobinaemia (32.9 %) after benzocaine spray, N-hydroxy-p-aminobenzoic acid (35 ng/mL) and p-aminobenzoic acid were measured in blood within 20 minutes: the first identification of the metabolite responsible, in a single case. [f:spiller2014]
+
 ## cuts
 
 Benzocaine is on the list of the frequent cuts of cocaine. [f:unodc-cocaine2012]
@@ -40,7 +46,7 @@ Remind that cuts with local anaesthetics are described by service guidelines as 
 
 ## sources
 
-Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:guay2009] [f:kane2007] [f:neal2010] [f:pubchem] [f:smith-arom-esters] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:guay2009] [f:kane2007] [f:neal2010] [f:pubchem] [f:smith-arom-esters] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata] [f:spiller2014]
 
 ## license
 
