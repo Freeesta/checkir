@@ -23,7 +23,7 @@ fn spectrum(role: Role, unit: &str, x: &[f64], y: &[f64]) -> Result<Spectrum, En
 }
 
 #[allow(clippy::too_many_arguments)]
-fn run(
+pub(crate) fn run(
     f: fn(&Spectrum, &Spectrum, &str) -> Result<String, EngineError>,
     sample_unit: &str,
     sample_x: &[f64],
