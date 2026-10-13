@@ -6,6 +6,7 @@ pub mod budget;
 pub mod comparisons;
 pub mod confronti;
 pub mod error;
+pub mod miscele;
 pub mod passi;
 pub mod peaks;
 pub mod readers;

@@ -1,0 +1,39 @@
+{
+  "schema": "soglie_miscele/1",
+  "version": 1,
+  "calibration": {
+    "status": "draft",
+    "bench": "banco-1",
+    "method": "forward_selection_absorbance",
+    "date": "2026-10"
+  },
+  "space": {
+    "background_order": 3,
+    "min_reference_coverage": 0.8
+  },
+  "selection": {
+    "candidates_top": 25,
+    "max_components": 3,
+    "stop_variance_share": 0.02,
+    "second_active_variance_share": 0.1
+  },
+  "analogues": {
+    "derivative_pearson_min": 0.6,
+    "smooth_window": 15,
+    "smooth_polyorder": 3
+  },
+  "residual": {
+    "high_residual_variance_share": 0.15
+  },
+  "bands_criterion": {
+    "enforce": false,
+    "tolerance_cm1": 6,
+    "explained_fraction": 0.5
+  },
+  "subtraction": {
+    "max_rounds": 3,
+    "stop_variance_share": 0.02,
+    "over_subtraction_noise_ratio": 3,
+    "reference_zone_fraction": 0.1
+  }
+}
