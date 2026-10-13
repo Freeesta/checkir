@@ -1,6 +1,6 @@
 //! Text-in, text-out entry points for the browser bridge: open a package that was stored or fetched, and build the
 //! package of a library imported by the user. The wasm crate only forwards to these functions.
-use crate::build::resample_jcamp;
+use crate::build::{resample_file, resample_jcamp};
 use crate::data::Limits;
 use crate::index::parse_index;
 use crate::invalid;
@@ -27,6 +27,14 @@ pub fn open_json(
 /// A JCAMP-DX file on the standard grid as float32 (`NaN` where it was not measured).
 pub fn resample_standard(jdx: &[u8]) -> EngineResult<Vec<f32>> {
     Ok(resample_jcamp(jdx, &Grid::STANDARD)?
+        .into_iter()
+        .map(|v| v as f32)
+        .collect())
+}
+
+/// Any file the readers recognise, main spectrum on the standard grid as float32.
+pub fn resample_standard_file(name: &str, bytes: &[u8]) -> EngineResult<Vec<f32>> {
+    Ok(resample_file(name, bytes, &Grid::STANDARD)?
         .into_iter()
         .map(|v| v as f32)
         .collect())

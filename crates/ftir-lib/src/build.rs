@@ -5,9 +5,9 @@ use crate::manifest::Grid;
 use ftir_core::error::{EngineError, EngineResult};
 use ftir_core::passi::json::parse;
 use ftir_core::passi::{griglia, trasmittanza, Value};
-use ftir_core::readers::jcamp;
 use ftir_core::readers::model::{Limits, Options, XUnit, YUnit};
 use ftir_core::readers::sha256::sha256_hex;
+use ftir_core::readers::{self, jcamp};
 use ftir_core::spectrum::{Role, Spectrum, YUnit as CoreUnit};
 
 /// The three files of one spectrum of `data/`: the substance, the spectrum metadata and the JCAMP-DX.
@@ -33,9 +33,21 @@ fn spectrum_error(id: &str, key: &'static str) -> EngineError {
 
 /// Reads a JCAMP-DX file and returns its main spectrum on `grid` in absorbance, `NaN` where it was not measured.
 pub fn resample_jcamp(jdx: &[u8], grid: &Grid) -> EngineResult<Vec<f64>> {
-    let doc = (jcamp::READER.open)(jdx, &Limits::STANDARD, &Options::default()).map_err(|e| {
+    resample_with(&jcamp::READER, jdx, grid)
+}
+
+/// Like `resample_jcamp` for any file a reader of the registry recognises (`reader.unknown_format` otherwise).
+pub fn resample_file(name: &str, bytes: &[u8], grid: &Grid) -> EngineResult<Vec<f64>> {
+    let head = bytes.get(..bytes.len().min(4096)).unwrap_or_default();
+    let reader = readers::pick(name, head)
+        .ok_or_else(|| EngineError::new("reader.unknown_format", "unknown file format"))?;
+    resample_with(reader, bytes, grid)
+}
+
+fn resample_with(reader: &readers::Reader, bytes: &[u8], grid: &Grid) -> EngineResult<Vec<f64>> {
+    let doc = (reader.open)(bytes, &Limits::STANDARD, &Options::default()).map_err(|e| {
         e.params.iter().fold(
-            EngineError::new(e.key, "the JCAMP-DX file cannot be read"),
+            EngineError::new(e.key, "the file cannot be read"),
             |err, (k, v)| err.with_param(k, v),
         )
     })?;
