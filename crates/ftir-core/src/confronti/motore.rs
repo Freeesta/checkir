@@ -15,17 +15,6 @@ use crate::readers::{
 };
 use crate::spectrum::Spectrum;
 
-#[derive(Default)]
-pub struct Motore {
-    libraries: Vec<LibraryCache>,
-    index: Option<Index>,
-}
-
-fn unknown(id: &str) -> EngineError {
-    EngineError::new("confronti.libreria_sconosciuta", "library not loaded")
-        .with_param("libreria", id)
-}
-
 impl Motore {
     pub fn new() -> Self {
         Self::default()
@@ -140,4 +129,15 @@ impl Motore {
         });
         Value::Arr(list.collect()).write()
     }
+}
+
+fn unknown(id: &str) -> EngineError {
+    EngineError::new("confronti.libreria_sconosciuta", "library not loaded")
+        .with_param("libreria", id)
+}
+
+#[derive(Default)]
+pub struct Motore {
+    libraries: Vec<LibraryCache>,
+    index: Option<Index>,
 }

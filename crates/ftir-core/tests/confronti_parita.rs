@@ -63,6 +63,32 @@ fn spectrum(x: &[f64], y: Vec<f64>) -> Spectrum {
     Spectrum::new(Role::Sample, YUnit::Absorbance, x.to_vec(), y)
 }
 
+fn build_index(lib: &[Spectrum]) -> Index {
+    let mut cache = LibraryCache::new("golden", "1");
+    for (i, s) in lib.iter().enumerate() {
+        let entry = LibEntry {
+            id: format!("s{i}"),
+            substance: Some(format!("sub{i}")),
+            display_name: format!("S{i}"),
+            form: "base".into(),
+        };
+        cache.add(entry, s).expect("add");
+    }
+    Index::new(vec![cache])
+}
+
+fn ranges_of(exp: &Value) -> Vec<(f64, f64)> {
+    field(exp, "ranges")
+        .as_arr()
+        .expect("ranges")
+        .iter()
+        .map(|r| {
+            let r = nums(r);
+            (r[0], r[1])
+        })
+        .collect()
+}
+
 #[test]
 fn pairwise_scores_match_numpy_and_the_search_agrees_to_storage_precision() {
     let g = golden("libreria");
@@ -75,28 +101,10 @@ fn pairwise_scores_match_numpy_and_the_search_agrees_to_storage_precision() {
         .collect();
     let query = spectrum(&x, nums(field(&g, "query")));
     let t = Thresholds::embedded().expect("thresholds");
-    let mut cache = LibraryCache::new("golden", "1");
-    for (i, s) in lib.iter().enumerate() {
-        let entry = LibEntry {
-            id: format!("s{i}"),
-            substance: Some(format!("sub{i}")),
-            display_name: format!("S{i}"),
-            form: "base".into(),
-        };
-        cache.add(entry, s).expect("add");
-    }
-    let index = Index::new(vec![cache]);
+    let index = build_index(&lib);
     let pq = prepare(&query).expect("prepare");
     for (name, exp) in items(field(&g, "expected")) {
-        let ranges: Vec<(f64, f64)> = field(exp, "ranges")
-            .as_arr()
-            .expect("ranges")
-            .iter()
-            .map(|r| {
-                let r = nums(r);
-                (r[0], r[1])
-            })
-            .collect();
+        let ranges = ranges_of(exp);
         let (rd, rs) = (
             nums(field(exp, "r_derivative")),
             nums(field(exp, "r_spectrum")),

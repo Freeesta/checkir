@@ -66,13 +66,6 @@ fn list<'a>(v: &'a Value, key: &str) -> EngineResult<&'a [Value]> {
     v.get(key).and_then(Value::as_arr).ok_or_else(|| bad(key))
 }
 
-fn text(v: &Value, key: &str) -> EngineResult<String> {
-    Ok(v.get(key)
-        .and_then(Value::as_str)
-        .ok_or_else(|| bad(key))?
-        .to_string())
-}
-
 fn preset(v: &Value) -> EngineResult<Preset> {
     let ranges = list(v, "ranges")?
         .iter()
@@ -85,6 +78,13 @@ fn preset(v: &Value) -> EngineResult<Preset> {
         probable_r1: v.get("probable_r1").and_then(Value::as_f64),
         probable_margin: v.get("probable_margin").and_then(Value::as_f64),
     })
+}
+
+fn text(v: &Value, key: &str) -> EngineResult<String> {
+    Ok(v.get(key)
+        .and_then(Value::as_str)
+        .ok_or_else(|| bad(key))?
+        .to_string())
 }
 
 impl Thresholds {

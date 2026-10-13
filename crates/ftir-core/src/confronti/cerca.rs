@@ -92,6 +92,24 @@ fn regions(index: &Index, deriv: &[f64], g: usize, t: &Thresholds) -> Vec<(Strin
         .collect()
 }
 
+/// Score every row of the searched libraries on the derivative and on the baseline-corrected spectrum.
+fn score_all(index: &Index, sel: (&Selection, &Selection), searched: &[usize]) -> Vec<Scored> {
+    let mut rows = Vec::new();
+    for li in searched {
+        for g in index.lib_range(*li) {
+            let (r, coverage) = score(sel.0, rows_of(index, g, false));
+            let r_spectrum = score(sel.1, rows_of(index, g, true)).0;
+            rows.push(Scored {
+                g,
+                r,
+                r_spectrum,
+                coverage,
+            });
+        }
+    }
+    rows
+}
+
 /// Compare `query` with the rows of the active libraries of `index`.
 pub fn search(
     index: &Index,
@@ -107,19 +125,7 @@ pub fn search(
         Selection::new(&p.spec, ranges),
     );
     check_range(&sel_d, t)?;
-    let mut rows: Vec<Scored> = Vec::new();
-    for li in &searched {
-        for g in index.lib_range(*li) {
-            let (r, coverage) = score(&sel_d, rows_of(index, g, false));
-            let r_spectrum = score(&sel_s, rows_of(index, g, true)).0;
-            rows.push(Scored {
-                g,
-                r,
-                r_spectrum,
-                coverage,
-            });
-        }
-    }
+    let rows = score_all(index, (&sel_d, &sel_s), &searched);
     let mut order: Vec<usize> = (0..rows.len()).collect();
     let k = TOP.min(order.len());
     order.select_nth_unstable_by(k - 1, |a, b| by_rank(&rows[*a], &rows[*b]));

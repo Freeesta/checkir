@@ -7,6 +7,89 @@ use crate::spectrum::Role;
 
 pub const SCHEMA: &str = "ftir-risultato-confronto/1";
 
+impl Outcome {
+    /// The result as the JSON value of `ftir-risultato-confronto/1`.
+    pub fn to_value(&self, index: &Index) -> Value {
+        let libraries = index.libs.iter().enumerate().map(|(i, l)| {
+            Value::Obj(vec![
+                ("id".into(), text(&l.id)),
+                ("version".into(), text(&l.version)),
+                ("spectra".into(), Value::Num(l.len() as f64)),
+                ("searched".into(), Value::Bool(self.searched.contains(&i))),
+            ])
+        });
+        let candidates = self
+            .candidates
+            .iter()
+            .enumerate()
+            .map(|(i, c)| candidate_json(i + 1, c, index));
+        let alerts = self.alerts.iter().map(|a| {
+            Value::Obj(vec![
+                ("id".into(), text(a.id)),
+                ("data".into(), Value::Obj(a.data.clone())),
+            ])
+        });
+        let margin_vs = self.margin_vs.map_or(Value::Null, |(g, r)| {
+            let e = index.entry(g);
+            Value::Obj(vec![
+                ("display_name".into(), text(&e.display_name)),
+                ("form".into(), text(&e.form)),
+                ("r_derivative".into(), num(r)),
+            ])
+        });
+        let grouping = match index.grouping {
+            Grouping::Identity => "identity",
+            Grouping::Name => "name",
+            Grouping::Mixed => "mixed",
+        };
+        let query = Value::Obj(vec![
+            ("role".into(), text(role_id(self.query_role))),
+            (
+                "origin".into(),
+                self.origin.as_deref().map_or(Value::Null, text),
+            ),
+        ]);
+        let thresholds = Value::Obj(vec![
+            ("schema".into(), text(soglie::SCHEMA)),
+            (
+                "version".into(),
+                Value::Num(f64::from(self.thresholds_version)),
+            ),
+        ]);
+        let twins = Value::Obj(vec![
+            ("done".into(), Value::Num(index.twins.done as f64)),
+            ("total".into(), Value::Num(index.total() as f64)),
+        ]);
+        Value::Obj(vec![
+            ("schema".into(), text(SCHEMA)),
+            ("chain".into(), chain_json()),
+            ("thresholds".into(), thresholds),
+            ("query".into(), query),
+            ("libraries".into(), Value::Arr(libraries.collect())),
+            ("ranges".into(), ranges_json(&self.ranges)),
+            (
+                "range_preset".into(),
+                self.range_preset.as_deref().map_or(Value::Null, text),
+            ),
+            ("grouping".into(), text(grouping)),
+            ("candidates".into(), Value::Arr(candidates.collect())),
+            ("margin".into(), self.margin.map_or(Value::Null, num)),
+            ("margin_vs".into(), margin_vs),
+            ("level_proposed".into(), text(self.level.id())),
+            (
+                "level_caps".into(),
+                Value::Arr(self.level_caps.iter().map(|c| text(c)).collect()),
+            ),
+            ("alerts".into(), Value::Arr(alerts.collect())),
+            ("twins".into(), twins),
+        ])
+    }
+
+    pub fn to_json(&self, index: &Index) -> String {
+        self.to_value(index).write()
+    }
+}
+
 /// Level proposed by the program. There is no "confirmed" level: only the chemist can confirm.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Level {
@@ -108,14 +191,6 @@ fn candidate_json(rank: usize, c: &Candidate, index: &Index) -> Value {
     ])
 }
 
-fn ranges_json(r: &[(f64, f64)]) -> Value {
-    Value::Arr(
-        r.iter()
-            .map(|(a, b)| Value::Arr(vec![Value::Num(*a), Value::Num(*b)]))
-            .collect(),
-    )
-}
-
 fn chain_json() -> Value {
     let a = asls::DEFAULT;
     let baseline = Value::Obj(vec![
@@ -133,85 +208,10 @@ fn chain_json() -> Value {
     ])
 }
 
-impl Outcome {
-    /// The result as the JSON value of `ftir-risultato-confronto/1`.
-    pub fn to_value(&self, index: &Index) -> Value {
-        let libraries = index.libs.iter().enumerate().map(|(i, l)| {
-            Value::Obj(vec![
-                ("id".into(), text(&l.id)),
-                ("version".into(), text(&l.version)),
-                ("spectra".into(), Value::Num(l.len() as f64)),
-                ("searched".into(), Value::Bool(self.searched.contains(&i))),
-            ])
-        });
-        let candidates = self
-            .candidates
-            .iter()
-            .enumerate()
-            .map(|(i, c)| candidate_json(i + 1, c, index));
-        let alerts = self.alerts.iter().map(|a| {
-            Value::Obj(vec![
-                ("id".into(), text(a.id)),
-                ("data".into(), Value::Obj(a.data.clone())),
-            ])
-        });
-        let margin_vs = self.margin_vs.map_or(Value::Null, |(g, r)| {
-            let e = index.entry(g);
-            Value::Obj(vec![
-                ("display_name".into(), text(&e.display_name)),
-                ("form".into(), text(&e.form)),
-                ("r_derivative".into(), num(r)),
-            ])
-        });
-        let grouping = match index.grouping {
-            Grouping::Identity => "identity",
-            Grouping::Name => "name",
-            Grouping::Mixed => "mixed",
-        };
-        let query = Value::Obj(vec![
-            ("role".into(), text(role_id(self.query_role))),
-            (
-                "origin".into(),
-                self.origin.as_deref().map_or(Value::Null, text),
-            ),
-        ]);
-        let thresholds = Value::Obj(vec![
-            ("schema".into(), text(soglie::SCHEMA)),
-            (
-                "version".into(),
-                Value::Num(f64::from(self.thresholds_version)),
-            ),
-        ]);
-        let twins = Value::Obj(vec![
-            ("done".into(), Value::Num(index.twins.done as f64)),
-            ("total".into(), Value::Num(index.total() as f64)),
-        ]);
-        Value::Obj(vec![
-            ("schema".into(), text(SCHEMA)),
-            ("chain".into(), chain_json()),
-            ("thresholds".into(), thresholds),
-            ("query".into(), query),
-            ("libraries".into(), Value::Arr(libraries.collect())),
-            ("ranges".into(), ranges_json(&self.ranges)),
-            (
-                "range_preset".into(),
-                self.range_preset.as_deref().map_or(Value::Null, text),
-            ),
-            ("grouping".into(), text(grouping)),
-            ("candidates".into(), Value::Arr(candidates.collect())),
-            ("margin".into(), self.margin.map_or(Value::Null, num)),
-            ("margin_vs".into(), margin_vs),
-            ("level_proposed".into(), text(self.level.id())),
-            (
-                "level_caps".into(),
-                Value::Arr(self.level_caps.iter().map(|c| text(c)).collect()),
-            ),
-            ("alerts".into(), Value::Arr(alerts.collect())),
-            ("twins".into(), twins),
-        ])
-    }
-
-    pub fn to_json(&self, index: &Index) -> String {
-        self.to_value(index).write()
-    }
+fn ranges_json(r: &[(f64, f64)]) -> Value {
+    Value::Arr(
+        r.iter()
+            .map(|(a, b)| Value::Arr(vec![Value::Num(*a), Value::Num(*b)]))
+            .collect(),
+    )
 }

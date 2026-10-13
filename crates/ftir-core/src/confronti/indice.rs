@@ -9,47 +9,6 @@ use std::collections::HashMap;
 /// Rows per twin block (the page calls `twins_step` repeatedly and may save the state between blocks).
 pub const TWIN_BLOCK: usize = 256;
 
-/// How the substances were grouped: by the identity given by the library or by the normalised name.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum Grouping {
-    Identity,
-    Name,
-    Mixed,
-}
-
-#[derive(Debug, Clone)]
-pub struct Twins {
-    /// Best r with a different substance, valid for rows `< done`.
-    pub r: Vec<f64>,
-    /// Global row of that twin (`u32::MAX` = none).
-    pub partner: Vec<u32>,
-    pub done: usize,
-}
-
-#[derive(Debug)]
-pub struct Index {
-    pub libs: Vec<LibraryCache>,
-    offsets: Vec<usize>,
-    pub group: Vec<u32>,
-    pub grouping: Grouping,
-    pub twins: Twins,
-}
-
-/// Lowercase, letters and digits only, single spaces: the fallback identity when a library gives none.
-pub fn normalize_name(s: &str) -> String {
-    let lower: String = s
-        .chars()
-        .map(|c| {
-            if c.is_alphanumeric() {
-                c.to_lowercase().next().unwrap_or(c)
-            } else {
-                ' '
-            }
-        })
-        .collect();
-    lower.split_whitespace().collect::<Vec<_>>().join(" ")
-}
-
 impl Index {
     pub fn new(libs: Vec<LibraryCache>) -> Self {
         let mut offsets = Vec::with_capacity(libs.len());
@@ -172,6 +131,47 @@ impl Index {
             .collect();
         format!("v{CACHE_VERSION}:{}", parts.join("|"))
     }
+}
+
+/// How the substances were grouped: by the identity given by the library or by the normalised name.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Grouping {
+    Identity,
+    Name,
+    Mixed,
+}
+
+#[derive(Debug, Clone)]
+pub struct Twins {
+    /// Best r with a different substance, valid for rows `< done`.
+    pub r: Vec<f64>,
+    /// Global row of that twin (`u32::MAX` = none).
+    pub partner: Vec<u32>,
+    pub done: usize,
+}
+
+/// Lowercase, letters and digits only, single spaces: the fallback identity when a library gives none.
+pub fn normalize_name(s: &str) -> String {
+    let lower: String = s
+        .chars()
+        .map(|c| {
+            if c.is_alphanumeric() {
+                c.to_lowercase().next().unwrap_or(c)
+            } else {
+                ' '
+            }
+        })
+        .collect();
+    lower.split_whitespace().collect::<Vec<_>>().join(" ")
+}
+
+#[derive(Debug)]
+pub struct Index {
+    pub libs: Vec<LibraryCache>,
+    offsets: Vec<usize>,
+    pub group: Vec<u32>,
+    pub grouping: Grouping,
+    pub twins: Twins,
 }
 
 #[cfg(test)]

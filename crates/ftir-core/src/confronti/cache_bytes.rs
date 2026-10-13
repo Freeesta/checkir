@@ -131,18 +131,6 @@ pub fn library_from_bytes(bytes: &[u8]) -> EngineResult<LibraryCache> {
     })
 }
 
-/// The twins computed so far, valid only for the same libraries (fingerprint).
-pub fn twins_to_bytes(index: &Index) -> Vec<u8> {
-    let t = &index.twins;
-    let mut out = Vec::new();
-    out.extend(MAGIC_TWINS);
-    put_str(&mut out, &index.fingerprint());
-    out.extend((t.done as u64).to_le_bytes());
-    out.extend(t.r.iter().take(t.done).flat_map(|x| x.to_le_bytes()));
-    out.extend(t.partner.iter().take(t.done).flat_map(|x| x.to_le_bytes()));
-    out
-}
-
 /// Resume from saved twins. `Ok(false)` when they belong to other libraries (nothing changes).
 pub fn twins_from_bytes(index: &mut Index, bytes: &[u8]) -> EngineResult<bool> {
     let mut r = Reader { b: bytes, i: 0 };
@@ -170,6 +158,18 @@ pub fn twins_from_bytes(index: &mut Index, bytes: &[u8]) -> EngineResult<bool> {
     index.twins.partner[..done].copy_from_slice(&ps);
     index.twins.done = done;
     Ok(true)
+}
+
+/// The twins computed so far, valid only for the same libraries (fingerprint).
+pub fn twins_to_bytes(index: &Index) -> Vec<u8> {
+    let t = &index.twins;
+    let mut out = Vec::new();
+    out.extend(MAGIC_TWINS);
+    put_str(&mut out, &index.fingerprint());
+    out.extend((t.done as u64).to_le_bytes());
+    out.extend(t.r.iter().take(t.done).flat_map(|x| x.to_le_bytes()));
+    out.extend(t.partner.iter().take(t.done).flat_map(|x| x.to_le_bytes()));
+    out
 }
 
 #[cfg(test)]

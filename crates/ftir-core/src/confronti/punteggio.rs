@@ -101,14 +101,6 @@ pub fn dot_f32(a: &[f32], b: &[f32]) -> f64 {
     acc.iter().sum::<f64>() + tail
 }
 
-fn finish(num: f64, var: f64) -> f64 {
-    if var > 1e-300 {
-        (num / var.sqrt()).clamp(-1.0, 1.0)
-    } else {
-        0.0
-    }
-}
-
 /// Pearson r of the query selection against `row`, and the coverage (share of the selected points the row has).
 pub fn score(sel: &Selection, row: RowRef) -> (f64, f64) {
     if sel.flat || sel.count == 0 {
@@ -128,6 +120,29 @@ pub fn score(sel: &Selection, row: RowRef) -> (f64, f64) {
         return (finish(d, s2 - s1 * s1 / sel.count as f64), 1.0);
     }
     partial(sel, row)
+}
+
+/// Pearson r of two rows (twins): a dot product when both are full, else over the points both have.
+pub fn pair(a: RowRef, b: RowRef) -> f64 {
+    if a.full && b.full {
+        return dot_f32(a.v, b.v).clamp(-1.0, 1.0);
+    }
+    let (mut n, mut sa, mut sb, mut saa, mut sbb, mut sab) = (0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+    for i in 0..GRID_N {
+        if a.p[i] == 1 && b.p[i] == 1 {
+            let (x, y) = (f64::from(a.v[i]), f64::from(b.v[i]));
+            n += 1.0;
+            sa += x;
+            sb += y;
+            saa += x * x;
+            sbb += y * y;
+            sab += x * y;
+        }
+    }
+    if n < 3.0 {
+        return 0.0;
+    }
+    finish(n * sab - sa * sb, (n * saa - sa * sa) * (n * sbb - sb * sb))
 }
 
 /// Rows with absent points: raw sums over the points both have.
@@ -154,27 +169,12 @@ fn partial(sel: &Selection, row: RowRef) -> (f64, f64) {
     )
 }
 
-/// Pearson r of two rows (twins): a dot product when both are full, else over the points both have.
-pub fn pair(a: RowRef, b: RowRef) -> f64 {
-    if a.full && b.full {
-        return dot_f32(a.v, b.v).clamp(-1.0, 1.0);
+fn finish(num: f64, var: f64) -> f64 {
+    if var > 1e-300 {
+        (num / var.sqrt()).clamp(-1.0, 1.0)
+    } else {
+        0.0
     }
-    let (mut n, mut sa, mut sb, mut saa, mut sbb, mut sab) = (0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-    for i in 0..GRID_N {
-        if a.p[i] == 1 && b.p[i] == 1 {
-            let (x, y) = (f64::from(a.v[i]), f64::from(b.v[i]));
-            n += 1.0;
-            sa += x;
-            sb += y;
-            saa += x * x;
-            sbb += y * y;
-            sab += x * y;
-        }
-    }
-    if n < 3.0 {
-        return 0.0;
-    }
-    finish(n * sab - sa * sb, (n * saa - sa * sa) * (n * sbb - sb * sb))
 }
 
 #[cfg(test)]
