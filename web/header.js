@@ -5,7 +5,7 @@ import { el, icon } from "./dom.js";
 import { LANGS, currentLang, formatNumber, t } from "./i18n.js";
 import { fileRange } from "./files.js";
 import { attachTip } from "./tooltip.js";
-import { getState } from "./state.js";
+import { activeLibraries, getState } from "./state.js";
 
 const DASH = "—";
 
@@ -31,8 +31,8 @@ const CHIPS = [
   },
   {
     id: "library", panel: 2, icon: "library", labelKey: "header.library.label", tipKey: "header.library.tip",
-    value: (s) => (s.libraries.length ? `${formatNumber(s.libraries.length)} · ${formatNumber(s.libraries.reduce((a, l) => a + l.spectra, 0))}` : DASH),
-    tip: (s) => (s.libraries.length ? s.libraries.map((l) => `${l.id} ${l.version}`).join(", ") : t("header.library.tip")),
+    value: (s) => (activeLibraries(s).length ? `${formatNumber(activeLibraries(s).length)} · ${formatNumber(activeLibraries(s).reduce((a, l) => a + l.spectra, 0))}` : DASH),
+    tip: (s) => (activeLibraries(s).length ? activeLibraries(s).map((l) => `${l.id} ${l.version}`).join(", ") : t("header.library.tip")),
   },
   { id: "result", panel: 3, icon: "results", labelKey: "header.result.label", tipKey: "header.result.tip", value: (s) => (s.result ? formatNumber(s.result.level) : DASH), tip: () => t("header.result.tip") },
 ];

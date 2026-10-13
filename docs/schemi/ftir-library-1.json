@@ -34,7 +34,7 @@
       "description": "SPDX id.",
       "description_it": "Id SPDX.",
       "type": "string",
-      "pattern": "^(CC-BY-4\\.0|CC-BY-SA-4\\.0|LicenseRef-permission-[a-z0-9-]+)$"
+      "pattern": "^(CC-BY-4\\.0|CC-BY-SA-4\\.0|LicenseRef-permission-[a-z0-9-]+|LicenseRef-private)$"
     },
     "attribution": {
       "description": "Attribution text.",

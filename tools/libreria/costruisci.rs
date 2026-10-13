@@ -1,9 +1,13 @@
 //! Builds the package of one library from `data/` with the engine itself (no second implementation):
 //!
 //!     cargo run --release -p ftir-lib --bin costruisci-libreria -- [--data data] [--out target/libreria] \
-//!         [--library checkir-community] [--date AAAA-MM-GG]
+//!         [--library checkir-community | --config tools/libreria/librerie.json] [--date AAAA-MM-GG]
 //!
-//! Writes `<out>/<library>/{manifest.json,index.json,data.bin}`. Packages are never committed: CI builds them.
+//! Writes `<out>/<library>/{manifest.json,index.json,data.bin}` and the general manifest `<out>/libraries.json`
+//! (`ftir-libraries/1`: one entry per package with an `enabled` switch). With `--config` every library of the file is
+//! built. Packages are never committed: CI builds them.
+use ftir_core::passi::json::parse;
+use ftir_core::passi::Value;
 use ftir_lib::build::{build_one, Built, Source};
 use ftir_lib::manifest::Grid;
 use ftir_lib::package::{write_package, Identity};
@@ -18,6 +22,7 @@ struct Args {
     data: PathBuf,
     out: PathBuf,
     library: String,
+    config: Option<PathBuf>,
     date: String,
 }
 
@@ -26,6 +31,7 @@ fn parse_args() -> Result<Args, String> {
         data: "data".into(),
         out: "target/libreria".into(),
         library: "checkir-community".into(),
+        config: None,
         date: today(),
     };
     let mut it = std::env::args().skip(1);
@@ -35,6 +41,7 @@ fn parse_args() -> Result<Args, String> {
             "--data" => a.data = value.into(),
             "--out" => a.out = value.into(),
             "--library" => a.library = value,
+            "--config" => a.config = Some(value.into()),
             "--date" => a.date = value,
             _ => return Err(format!("unknown option {flag}")),
         }
@@ -96,24 +103,24 @@ fn collect(data: &Path) -> Result<Vec<Built>, String> {
     Ok(built)
 }
 
-fn run() -> Result<String, String> {
-    let args = parse_args()?;
+/// Builds one library into `<out>/<name>/`; returns its version and number of spectra.
+fn build_library(args: &Args, name: &str) -> Result<(String, usize), String> {
     let mut built: Vec<Built> = collect(&args.data)?
         .into_iter()
-        .filter(|b| b.library_name == args.library)
+        .filter(|b| b.library_name == name)
         .collect();
     built.sort_by(|a, b| a.row.id.cmp(&b.row.id));
     let version = built
         .first()
         .map(|b| b.library_version.clone())
-        .ok_or("no spectrum in this library")?;
+        .ok_or(format!("{name}: no spectrum in this library"))?;
     if built.iter().any(|b| b.library_version != version) {
-        return Err("the spectra declare different versions of the library".into());
+        return Err(format!("{name}: the spectra declare different versions"));
     }
     let identity = Identity {
-        name: args.library.clone(),
-        version,
-        date: args.date,
+        name: name.to_string(),
+        version: version.clone(),
+        date: args.date.clone(),
         license: "CC-BY-4.0".into(),
         attribution_it: Some(ATTRIBUTION_IT.into()),
         attribution_en: ATTRIBUTION_EN.into(),
@@ -122,16 +129,55 @@ fn run() -> Result<String, String> {
     let n = built.len();
     let rows = built.into_iter().map(|b| (b.row, b.values)).collect();
     let files = write_package(&identity, &Grid::STANDARD, rows).map_err(|e| e.json())?;
-    let dir = args.out.join(&args.library);
+    let dir = args.out.join(name);
     fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
     fs::write(dir.join("manifest.json"), files.manifest_json).map_err(|e| e.to_string())?;
     fs::write(dir.join("index.json"), files.index_json).map_err(|e| e.to_string())?;
     fs::write(dir.join("data.bin"), files.data_bin).map_err(|e| e.to_string())?;
-    Ok(format!(
-        "{}: {n} spectra -> {}",
-        args.library,
-        dir.display()
-    ))
+    Ok((version, n))
+}
+
+/// The libraries to build as `(id, enabled)`: those of the config file, or the single `--library`.
+fn wanted(args: &Args) -> Result<Vec<(String, bool)>, String> {
+    let Some(path) = &args.config else {
+        return Ok(vec![(args.library.clone(), true)]);
+    };
+    let text = fs::read_to_string(path).map_err(|e| format!("{}: {e}", path.display()))?;
+    let v = parse(&text).map_err(|_| format!("{}: not JSON", path.display()))?;
+    let items = v.get("libraries").and_then(Value::as_arr);
+    let items = items.ok_or(format!("{}: no libraries", path.display()))?;
+    items
+        .iter()
+        .map(|x| {
+            let id = x.get("id").and_then(Value::as_str);
+            let on = !matches!(x.get("enabled"), Some(Value::Bool(false)));
+            id.map(|id| (id.to_string(), on))
+                .ok_or(format!("{}: a library has no id", path.display()))
+        })
+        .collect()
+}
+
+fn run() -> Result<String, String> {
+    let args = parse_args()?;
+    let mut entries = Vec::new();
+    let mut report = Vec::new();
+    for (name, enabled) in wanted(&args)? {
+        let (version, n) = build_library(&args, &name)?;
+        entries.push(Value::Obj(vec![
+            ("id".into(), Value::Str(name.clone())),
+            ("path".into(), Value::Str(name.clone())),
+            ("version".into(), Value::Str(version)),
+            ("spectra".into(), Value::Num(n as f64)),
+            ("enabled".into(), Value::Bool(enabled)),
+        ]));
+        report.push(format!("{name}: {n} spectra"));
+    }
+    let general = Value::Obj(vec![
+        ("schema".into(), Value::Str("ftir-libraries/1".into())),
+        ("libraries".into(), Value::Arr(entries)),
+    ]);
+    fs::write(args.out.join("libraries.json"), general.write()).map_err(|e| e.to_string())?;
+    Ok(format!("{} -> {}", report.join(", "), args.out.display()))
 }
 
 fn main() -> ExitCode {

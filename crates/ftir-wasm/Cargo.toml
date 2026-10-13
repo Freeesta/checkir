@@ -12,4 +12,5 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 ftir-core = { workspace = true }
+ftir-lib = { path = "../ftir-lib" }
 wasm-bindgen = "=0.2.129"
