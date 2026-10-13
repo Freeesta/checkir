@@ -1,5 +1,10 @@
 {
   "app.skip": "Skip to content",
+  "peak_index.damaged": "The stored peak index is damaged ({what}); it will be rebuilt from the spectra.",
+  "peak_index.missing": "The peak index of library “{library}” is not ready yet.",
+  "peak_index.obsolete": "The stored peak index belongs to another version of the library; it will be rebuilt.",
+  "peak_index.query_invalid": "The peak search is not valid ({what}).",
+  "peak_index.spectrum_invalid": "A library spectrum could not be indexed: axis and values differ in length.",
   "share.description": "Open-source FTIR analysis for drug checking. The program proposes, the expert decides.",
   "lang.label": "Language",
   "lang.it": "Italiano",
