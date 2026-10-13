@@ -127,7 +127,6 @@ export function renderPeakCard(host, s, ctx, track) {
   else body.push(el("ol", { class: "readings" }, p.readings.slice(0, MAX_READINGS).map((r) => reading(r, s.textLevel))), ...(p.crowded ? [el("p", { class: "note" }, [t("card.crowded")])] : []), vibration(first, s, ctx, track));
   const more = first ? others(first.group, first.rule_id, ctx) : null;
   if (more) body.push(more);
-  body.push(el("p", { class: "note" }, [t("card.caution")]), el("p", { class: "note", "aria-disabled": "true", "data-theory": "soon" }, [t("card.theory_soon")]));
   host.replaceChildren(...body);
 }
 

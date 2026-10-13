@@ -101,7 +101,7 @@ async function cardScenario(page, check, axe) {
   await page.click('.peak-item[data-state="explained"]');
   check("card: a picked peak opens its card with title and facts", (await card.isVisible()) && /Picco a ~?\d+/.test((await card.locator("h3").textContent()) ?? "") && (await card.locator(".card-facts dt").count()) === 4);
   check("card: the readings are at most three and say where they come from", (await card.locator(".reading").count()) <= 3 && (await card.locator(".reading-source").count()) === (await card.locator(".reading").count()));
-  check("card: the program's caution is always there", /decide la persona esperta/.test((await card.textContent()) ?? ""));
+  check("card: no generic caution text", !/decide la persona|diagnosi|ipotesi del programma/i.test((await card.textContent()) ?? ""));
   const names = await page.$$eval(".peak-item", (b) => b.map((x) => x.getAttribute("aria-label")));
   check("card: each peak button has the full accessible name", names.every((n) => /^picco a circa ~?\d+/i.test(n ?? "")), JSON.stringify(names));
   const level = (l) => card.locator(`[data-level="${l}"]`);
