@@ -1,6 +1,19 @@
 {
   "schema": "ftir-libraries-config/1",
   "libraries": [
-    { "id": "checkir-community", "enabled": true }
+    { "id": "checkir-community", "enabled": true },
+    {
+      "id": "swgdrug-ir",
+      "enabled": true,
+      "license": "LicenseRef-permission-swgdrug",
+      "attribution": {
+        "it": "IR spectral data provided courtesy of SWGDRUG (swgdrug.org), SWGDRUG IR Library v2024-05-15. Selezione di 11 spettri ATR-FTIR di sostanze da taglio (standard di riferimento con lotto), usati con il permesso scritto di SWGDRUG.",
+        "en": "IR spectral data provided courtesy of SWGDRUG (swgdrug.org), SWGDRUG IR Library v2024-05-15. Selection of 11 ATR-FTIR spectra of cutting agents (reference standards with lot), used with the written permission of SWGDRUG."
+      },
+      "terms": {
+        "it": "Solo uso non commerciale. SWGDRUG spectra are provided for reference purposes without warranty or liability regarding compound identifications or operational outcomes (gli spettri SWGDRUG sono forniti come riferimento, senza garanzia né responsabilità per le identificazioni dei composti o gli esiti operativi). SWGDRUG does not endorse {app} or any software implementations derived from the library (SWGDRUG non approva {app} né i software derivati dalla libreria).",
+        "en": "Non-commercial use only. SWGDRUG spectra are provided for reference purposes without warranty or liability regarding compound identifications or operational outcomes. SWGDRUG does not endorse {app} or any software implementations derived from the library."
+      }
+    }
   ]
 }

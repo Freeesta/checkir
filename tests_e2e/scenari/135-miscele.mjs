@@ -1,7 +1,7 @@
 // Mixture proposal e2e: a synthetic sample 0.7·beta + 0.3·alfa against the library alfa/beta/gamma gives «Mixture: beta + alfa» above the table with the
 // contribution of each and no unexplained peak; a pure beta gives no proposal; the mixture is taken at level 4; sheet, report and peak markers name the components.
-import { ALFA, BETA, jcamp } from "./confronto.mjs";
-import { importLibrary } from "./sottrazione.mjs";
+import { ALFA, BETA, jcamp } from "../confronto.mjs";
+import { importLibrary } from "../sottrazione.mjs";
 
 const NOISE = 0.01;
 const scale = (bands, k) => bands.map(([c, h, w]) => [c, h * k, w]);
@@ -80,7 +80,7 @@ async function phoneScenario(browser, base, check, axe) {
   await ctx.close();
 }
 
-export async function mixtureScenario(browser, base, check, axe) {
+export default async function mixtureScenario({ browser, base, check, axe }) {
   await proposalScenario(browser, base, check, axe);
   await pureScenario(browser, base, check);
   await phoneScenario(browser, base, check, axe);

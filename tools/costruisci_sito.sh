@@ -8,6 +8,8 @@ if ! wasm-bindgen --version 2>/dev/null | grep -q "$ver"; then
 fi
 cargo build --locked --release --target wasm32-unknown-unknown -p ftir-wasm
 rm -rf site && mkdir -p site && cp -r web/. site/
+# One stylesheet: web/style.css (tokens and shell) followed by web/css/*.css in name order (digits first); each area owns its file.
+cat web/css/*.css >> site/style.css && rm -rf site/css
 # The IR band data the page explains peaks with (regions, rules, groups, modes, texts, sources): one source, copied here.
 mkdir -p site/bands && cp data/bands/regions.json data/bands/rules.json data/bands/groups.json data/bands/modes.json data/bands/texts.it.json data/bands/texts.en.json site/bands/ && cp data/sources.json site/bands/sources.json
 node tools/genera_identita.mjs

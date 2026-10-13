@@ -1,0 +1,24 @@
+{
+  "schema": "ftir-form/1",
+  "id": "mannitol-neutral",
+  "substance": "mannitol",
+  "form_type": "unspecified",
+  "stereo": "unspecified",
+  "inchikey_form": "FBPFZTCFMRRESA-KVTDHHQDSA-N",
+  "notes": {
+    "en": "D-mannitol, neutral molecule; the source does not state the polymorph.",
+    "it": "D-mannitolo, molecola neutra; la fonte non indica il polimorfo."
+  },
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
