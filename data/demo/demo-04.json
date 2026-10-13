@@ -1,0 +1,84 @@
+{
+  "schema": "ftir-spectrum/1",
+  "id": "ketamine-hydrochloride.demo.004",
+  "form": "ketamine-hydrochloride",
+  "role": "reference",
+  "technique": {
+    "method": "ATR",
+    "crystal": "diamond",
+    "reflections": 1
+  },
+  "instrument": {
+    "manufacturer": "Shimadzu",
+    "model": "IRSpirit-X"
+  },
+  "resolution_cm1": 4.0,
+  "range_cm1": [
+    399.551,
+    4600.586
+  ],
+  "step_cm1": 1.437,
+  "y_axis": "absorbance",
+  "atr_correction": false,
+  "processing": [],
+  "measured": "2026-07",
+  "provenance": {
+    "type": "unconfirmed_sample",
+    "supplier": "Drug checking service (identification by FTIR only)"
+  },
+  "library": {
+    "name": "checkir-demo",
+    "version": "0.1.0"
+  },
+  "contributors": [
+    {
+      "public_name": "Drug checking service",
+      "body": "Drug checking service (Torino)"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "sha256": "ab1378e2683cac588c30b2511300310519bfb0221633ff9f4dfdf30e38f1dadd",
+  "original_format": "Shimadzu LabSolutions IR (.ispd), cleaned with anonimizza/1",
+  "review": {
+    "state": "proposed",
+    "reviewers": [],
+    "date": "2026-10-13"
+  },
+  "quality": {
+    "checks": [
+      {
+        "criterion": "range",
+        "result": "pass"
+      },
+      {
+        "criterion": "resolution",
+        "result": "pass",
+        "value": 4.0
+      },
+      {
+        "criterion": "scans",
+        "result": "warning"
+      },
+      {
+        "criterion": "saturation",
+        "result": "pass",
+        "value": 0.432
+      },
+      {
+        "criterion": "signal",
+        "result": "pass",
+        "value": 0.432
+      },
+      {
+        "criterion": "noise",
+        "result": "pass",
+        "value": 180.4
+      },
+      {
+        "criterion": "co2",
+        "result": "pass",
+        "value": 0.0071
+      }
+    ]
+  }
+}

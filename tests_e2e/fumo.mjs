@@ -3,6 +3,7 @@
 import { readFile } from "node:fs/promises";
 import { chromium, firefox, webkit } from "playwright";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
+import { demoScenario } from "./demo.mjs";
 import { registryScenario } from "./registri.mjs";
 import { startSite } from "./sito.mjs";
 
@@ -269,6 +270,7 @@ async function run() {
     await pagesScenario(browser);
     await warningsBoxScenario(browser);
     await loadingScenario(browser, base, check, axe);
+    await demoScenario(browser, base, check, axe);
   } finally {
     await browser.close();
     close();

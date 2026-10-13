@@ -1,0 +1,84 @@
+{
+  "schema": "ftir-spectrum/1",
+  "id": "mixture-heroin-hydrochloride.demo.013",
+  "form": "mixture-heroin-hydrochloride",
+  "role": "reference",
+  "technique": {
+    "method": "ATR",
+    "crystal": "diamond",
+    "reflections": 1
+  },
+  "instrument": {
+    "manufacturer": "Shimadzu",
+    "model": "IRSpirit-X"
+  },
+  "resolution_cm1": 4.0,
+  "range_cm1": [
+    399.551,
+    4600.586
+  ],
+  "step_cm1": 1.437,
+  "y_axis": "absorbance",
+  "atr_correction": false,
+  "processing": [],
+  "measured": "2026-05",
+  "provenance": {
+    "type": "unconfirmed_sample",
+    "supplier": "Drug checking service (identification by FTIR only)"
+  },
+  "library": {
+    "name": "checkir-demo",
+    "version": "0.1.0"
+  },
+  "contributors": [
+    {
+      "public_name": "Drug checking service",
+      "body": "Drug checking service (Torino)"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "sha256": "dd4c01169b17d6b8107dd699a7bbf87a2505251f3adfb3dc2cdaf811d2072b9d",
+  "original_format": "Shimadzu LabSolutions IR (.ispd), cleaned with anonimizza/1",
+  "review": {
+    "state": "proposed",
+    "reviewers": [],
+    "date": "2026-10-13"
+  },
+  "quality": {
+    "checks": [
+      {
+        "criterion": "range",
+        "result": "pass"
+      },
+      {
+        "criterion": "resolution",
+        "result": "pass",
+        "value": 4.0
+      },
+      {
+        "criterion": "scans",
+        "result": "warning"
+      },
+      {
+        "criterion": "saturation",
+        "result": "pass",
+        "value": 0.249
+      },
+      {
+        "criterion": "signal",
+        "result": "pass",
+        "value": 0.249
+      },
+      {
+        "criterion": "noise",
+        "result": "pass",
+        "value": 151.2
+      },
+      {
+        "criterion": "co2",
+        "result": "pass",
+        "value": 0.012
+      }
+    ]
+  }
+}
