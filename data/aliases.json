@@ -1,12 +1,16 @@
 {
   "schema": "aliases/1",
   "aliases": {
+    "2c-c-nbome": "25c-nbome",
+    "2c-i-nbome": "25i-nbome",
     "2cb": "2c-b",
     "2cc": "2c-c",
     "2cd": "2c-d",
     "2ce": "2c-e",
     "2ch": "2c-h",
     "2ci": "2c-i",
+    "2ct2": "2c-t-2",
+    "2ct7": "2c-t-7",
     "2fa": "2-fa",
     "3fa": "3-fa",
     "5-methoxy-dmt": "5-meo-dmt",
