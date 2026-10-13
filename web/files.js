@@ -143,7 +143,7 @@ export function closeFile(code) {
 export function closeAll() {
   store.clear();
   seq = 0;
-  update({ files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: false, decisions: {}, draft: {}, talk: false, subtraction: null });
+  update({ files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: true, decisions: {}, draft: {}, talk: false, subtraction: null });
 }
 
 /**
