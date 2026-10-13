@@ -56,5 +56,15 @@
   "reader.text.yunit_unknown": "The y unit is not stated in the file; choose it before processing.",
   "reader.text.yunit_hint_percent_t": "The y unit is not stated; values from 0 to 100 with a baseline near 100 look like %T, but this was not assumed.",
   "reader.text.yunit_hint_absorbance": "The y unit is not stated; small positive values look like absorbance, but this was not assumed.",
-  "reader.asc.axis_missing": "This ASC file has only y values and its header does not give the first and last x (FIRSTX, LASTX), so the axis is unknown."
+  "reader.asc.axis_missing": "This ASC file has only y values and its header does not give the first and last x (FIRSTX, LASTX), so the axis is unknown.",
+  "reader.ispd.bdb_magic": "This is not a Shimadzu .ispd file: the Berkeley DB signature is missing.",
+  "reader.ispd.bdb_version": "This .ispd file uses an unsupported Berkeley DB layout (method {method}, version {version}, {order}). Please report it so support can be added.",
+  "reader.ispd.bdb_method": "This Berkeley DB file uses the {method} method (version {version}), which is not used by .ispd measurements.",
+  "reader.ispd.bdb_page_size": "The page size of the file ({size} bytes) is not valid: the file is damaged.",
+  "reader.ispd.bdb_truncated": "The file ends before page {page}: it is truncated or damaged.",
+  "reader.ispd.bdb_corrupt": "The internal structure of the file is damaged ({what}).",
+  "reader.ispd.no_spectrum": "The file contains no spectrum with a wavenumber axis.",
+  "reader.ispd.bad_data": "The spectrum data of object {object} cannot be read.",
+  "reader.ispd.yunits_unknown": "The y unit \"{value}\" is not recognised: choose it before processing.",
+  "reader.ispd.header_unreadable": "The name and date of object {object} could not be read from its header."
 }
