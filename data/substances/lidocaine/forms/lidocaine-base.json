@@ -1,0 +1,20 @@
+{
+  "schema": "ftir-form/1",
+  "id": "lidocaine-base",
+  "substance": "lidocaine",
+  "form_type": "free_base",
+  "stereo": "unspecified",
+  "inchikey_form": "NNJVILVZKWQKPM-UHFFFAOYSA-N",
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

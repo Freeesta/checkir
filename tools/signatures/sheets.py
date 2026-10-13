@@ -6,17 +6,15 @@ import json
 import re
 from datetime import date
 
-SECTIONS = ("molecule", "category", "ftir_limits", "effects", "doses", "risks", "interactions", "harm_reduction", "sources", "license")
-# Roles that must sign a changed section (docs/agenti/dati.md): health texts need a health professional, chemistry a chemist.
+SECTIONS = ("molecule", "category", "effects", "doses", "risks", "interactions", "sources", "license")
+# Roles that must sign a changed section (docs/agenti/dati_revisione.md): health texts need a health professional, chemistry a chemist.
 REQUIRED_ROLES = {
     "molecule": ("chemist",),
     "category": ("chemist",),
-    "ftir_limits": ("chemist", "health"),
     "effects": ("health",),
     "doses": ("health",),
     "risks": ("health",),
     "interactions": ("health",),
-    "harm_reduction": ("health",),
     "sources": (),
     "license": (),
 }

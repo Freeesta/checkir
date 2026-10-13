@@ -41,7 +41,6 @@ function symbolsTable() {
   names.set("peak-explained", t("help.sym_explained"));
   names.set("peak-unexplained", t("help.sym_unexplained"));
   names.set("warning", t("help.sym_warning"));
-  names.set("limits", t("help.sym_limits"));
   return table([t("help.col_icon"), t("help.col_meaning")], [...names].map(([id, name]) => [icon(id), el("span", {}, [name])]), "help.tab_symbols");
 }
 

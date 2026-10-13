@@ -49,16 +49,6 @@
             "approved"
           ]
         },
-        "ftir_limits": {
-          "description": "Section state; production shows only approved.",
-          "description_it": "Stato della sezione; la produzione mostra solo approved.",
-          "type": "string",
-          "enum": [
-            "draft",
-            "in_review",
-            "approved"
-          ]
-        },
         "effects": {
           "description": "Section state; production shows only approved.",
           "description_it": "Stato della sezione; la produzione mostra solo approved.",
@@ -99,16 +89,6 @@
             "approved"
           ]
         },
-        "harm_reduction": {
-          "description": "Section state; production shows only approved.",
-          "description_it": "Stato della sezione; la produzione mostra solo approved.",
-          "type": "string",
-          "enum": [
-            "draft",
-            "in_review",
-            "approved"
-          ]
-        },
         "sources": {
           "description": "Section state; production shows only approved.",
           "description_it": "Stato della sezione; la produzione mostra solo approved.",
@@ -133,12 +113,10 @@
       "required": [
         "molecule",
         "category",
-        "ftir_limits",
         "effects",
         "doses",
         "risks",
         "interactions",
-        "harm_reduction",
         "sources",
         "license"
       ],
@@ -179,12 +157,10 @@
               "enum": [
                 "molecule",
                 "category",
-                "ftir_limits",
                 "effects",
                 "doses",
                 "risks",
                 "interactions",
-                "harm_reduction",
                 "sources",
                 "license"
               ]

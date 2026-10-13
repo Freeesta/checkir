@@ -1,0 +1,24 @@
+{
+  "schema": "ftir-form/1",
+  "id": "lactose-alpha",
+  "substance": "lactose",
+  "form_type": "unspecified",
+  "stereo": "unspecified",
+  "inchikey_form": "GUBGYTABKSRVRQ-XLOQQCSPSA-N",
+  "notes": {
+    "en": "alpha-lactose (alpha anomer of the glucose unit); the source does not state whether it is the monohydrate.",
+    "it": "alfa-lattosio (anomero alfa dell'unità di glucosio); la fonte non indica se è il monoidrato."
+  },
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

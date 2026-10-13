@@ -103,6 +103,52 @@ const ISPD: &[Rule] = &[
     strip("NON_BTREE_DATA"),
 ];
 
+/// Bruker OPUS: parameters are named `PREFIX.NAME` (data `DATA`, instrument `INST`, acquisition `ACQ`, Fourier `FT`, sample
+/// `SMP`, info `INFO`); the physical ones stay, sample, operator, path, serial number, time and free texts go.
+const OPUS: &[Rule] = &[
+    keep("AB"),
+    keep("ACQ.AQM"),
+    keep("ACQ.HFW"),
+    keep("ACQ.LFW"),
+    keep("ACQ.NSS"),
+    keep("ACQ.RES"),
+    keep("DATA.CSF"),
+    keep("DATA.DPF"),
+    keep("DATA.DXU"),
+    keep("DATA.FXV"),
+    keep("DATA.LXV"),
+    keep("DATA.MNY"),
+    keep("DATA.MXY"),
+    keep("DATA.NPT"),
+    keep("FT.APF"),
+    keep("FT.PHZ"),
+    keep("FT.ZFF"),
+    keep("IGRF"),
+    keep("IGSM"),
+    keep("INST.APT"),
+    keep("INST.BMS"),
+    keep("INST.DTC"),
+    keep("INST.HFQ"),
+    keep("INST.INS"),
+    keep("INST.LFQ"),
+    keep("INST.LWN"),
+    keep("INST.SRC"),
+    keep("INST.VEL"),
+    keep("PHSM"),
+    keep("SCRF"),
+    keep("SCSM"),
+    coarsen("DATA.DAT"),
+    strip("CURVEFIT"),
+    strip("DATA.TIM"),
+    strip("HISTORY"),
+    strip("INFO.*"),
+    strip("INST.SRN"),
+    strip("INTEGRATION"),
+    strip("SIGNATURE"),
+    strip("SMP.*"),
+    strip("TEXT"),
+];
+
 const SPA: &[Rule] = &[
     keep("FIRSTX"),
     keep("LASTX"),
@@ -139,6 +185,10 @@ pub static CONTRACT: &[ReaderRules] = &[
     ReaderRules {
         reader: "shimadzu-ispd",
         rules: ISPD,
+    },
+    ReaderRules {
+        reader: "bruker-opus",
+        rules: OPUS,
     },
     ReaderRules {
         reader: "thermo-spa",

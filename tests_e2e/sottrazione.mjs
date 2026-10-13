@@ -13,8 +13,14 @@ async function openPanel(page, name) {
 
 /** Import the synthetic library (alfa, beta, gamma) as the only one in use. */
 export async function importLibrary(page) {
+  // With a sample already open, switching a public library off runs the match again and the results panel takes the place
+  // of the libraries panel (one open section at a time): reopen it before each step.
+  for (const name of [/swgdrug-ir/, /checkir-community/]) {
+    await openPanel(page, "libraries");
+    const box = page.getByRole("checkbox", { name });
+    if (await box.isChecked()) await box.click();
+  }
   await openPanel(page, "libraries");
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });
   await page.setInputFiles('input[data-library="files"]', [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA)]);
@@ -80,7 +86,7 @@ async function openScenario(page, check, axe) {
   check("subtract: three strips, the reference dashed", (await page.locator("#subtract svg polyline").count()) === 3 && (await page.locator("#subtract polyline.strip-reference").count()) === 1);
   const heads = await page.locator("#subtract table thead th").allTextContents();
   check("subtract: every strip is also a column of the table", heads.length === 4 && /Residuo/.test(heads[3]) && (await page.locator("#subtract table tbody tr").count()) > 100, heads.join(" | "));
-  check("subtract: the fixed sentence says the factor is not the quantity", /Il fattore non è la quantità/.test((await page.textContent("#subtract")) ?? ""));
+  check("subtract: no fixed caution about the factor", !/non è la quantità/.test((await page.textContent("#subtract")) ?? ""));
   check("subtract: no over-subtraction warning at the proposed factor", ((await page.textContent(".subtract-warning")) ?? "").trim() === "");
   const v = await axe(page);
   check("subtract: axe has no violations", v.length === 0, v.join(", "));
@@ -164,7 +170,7 @@ async function closeScenario(page, check) {
   await page.waitForSelector("#subtract:not([hidden])");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en" && /Guided subtraction/.test(document.getElementById("subtract-title")?.textContent ?? "")); // the view is redrawn after the language attribute changes
-  check("subtract: English names the view and the sentence", /Guided subtraction/.test((await page.textContent("#subtract-title")) ?? "") && /The factor is not the quantity/.test((await page.textContent("#subtract")) ?? ""));
+  check("subtract: English names the view", /Guided subtraction/.test((await page.textContent("#subtract-title")) ?? "") && !/not the quantity/.test((await page.textContent("#subtract")) ?? ""));
   await page.click('[data-lang="it"]');
   const stored = await page.evaluate(async () => ({ local: JSON.stringify({ ...localStorage }), idb: (await indexedDB.databases()).length }));
   check("subtract: nothing of it is stored", !/subtract|residu|"k"/i.test(stored.local) && Object.keys(JSON.parse(stored.local)).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch)$/.test(k)));

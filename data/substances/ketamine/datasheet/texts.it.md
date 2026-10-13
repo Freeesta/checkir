@@ -16,10 +16,6 @@ Tagli e miscele: la ketamina compare spesso, a sua volta, nei campioni di anfeta
 
 Classe chimica: arilcicloesilammine. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
 
-## ftir_limits
-
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
-
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -33,10 +29,6 @@ Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
 
 ## interactions
-
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
-
-## harm_reduction
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
 

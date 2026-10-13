@@ -5,6 +5,7 @@ import { candidatesCsv, download, peaksCsv, spectrumCsv } from "./export.js";
 import { spectrumOf } from "./files.js";
 import { el } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
+import { mixtureComponents } from "./mixture.js";
 import { analyse } from "./peaks.js";
 import { candidateName, LISTED } from "./results.js";
 import { activeFile, decisionOf, getState, resultOf } from "./state.js";
@@ -30,7 +31,7 @@ export function buildReport(s) {
   if (result) facts.push(...row(t("report.chain"), chainLine(result.data)), ...row(t("report.level"), level === null ? "" : levelWord(level)));
   /** @type {HTMLElement[]} */
   const parts = [el("h2", {}, [t("report.title")]), el("dl", { class: "report-facts" }, facts)];
-  if (result) parts.push(candidatesBlock(result.data), ...decisionBlock(s));
+  if (result) parts.push(candidatesBlock(result.data), ...mixtureBlock(result.data), ...decisionBlock(s));
   const peaks = unexplained(s);
   if (peaks.length) parts.push(el("h3", {}, [t("report.unexplained")]), el("p", {}, [peaks.map((p) => `~${formatNumber(Math.round(p.position))}`).join(" · ")]));
   parts.push(el("p", { class: "report-sign" }, [t("report.signature")]), el("div", { class: "report-line" }));
@@ -42,6 +43,15 @@ function candidatesBlock(data) {
   const head = el("tr", {}, [t("report.col_rank"), t("report.col_name"), t("report.col_form"), t("report.col_library"), t("report.col_r"), t("report.col_coverage")].map((name) => el("th", { scope: "col" }, [name])));
   const rows = (data.candidates ?? []).slice(0, LISTED).map((/** @type {any} */ c) => el("tr", {}, [formatNumber(c.rank), candidateName(c), c.form, c.library, formatNumber(c.r_derivative, 2), formatNumber(c.coverage * 100)].map((v) => el("td", {}, [String(v)]))));
   return el("div", {}, [el("h3", {}, [t("report.candidates")]), el("table", { class: "report-table" }, [el("thead", {}, [head]), el("tbody", {}, rows)])]);
+}
+
+/** The mixture the program proposed: one row per component with its contribution to the spectrum and the main peaks it explains. @param {any} data @returns {HTMLElement[]} */
+function mixtureBlock(data) {
+  const parts = mixtureComponents(data);
+  if (!parts.length) return [];
+  const head = el("tr", {}, [t("report.col_name"), t("report.col_library"), t("report.col_contribution"), t("report.col_explained")].map((name) => el("th", { scope: "col" }, [name])));
+  const rows = parts.map((c) => el("tr", {}, [candidateName({ library: c.library, spectrum_id: c.id, display_name: c.name }), c.library, formatNumber(c.contribution, 2), c.explained === null ? "—" : formatNumber(c.explained)].map((v) => el("td", {}, [String(v)]))));
+  return [el("h3", {}, [t("report.mixture")]), el("table", { class: "report-table", "data-report": "mixture" }, [el("thead", {}, [head]), el("tbody", {}, rows)]), el("p", {}, [t("mixture.unexplained", { n: formatNumber(data.mixture.unexplained ?? 0) })])];
 }
 
 /** @param {import("./state.js").AppState} s @returns {HTMLElement[]} */

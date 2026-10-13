@@ -24,10 +24,9 @@ export function buildSubtractView(host, ctx) {
   const warning = el("p", { class: "subtract-warning", role: "alert" });
   const error = el("p", { class: "error", role: "alert" });
   const chart = el("div", { class: "strips" });
-  const note = el("p", { class: "factor-note" });
   const table = el("div", { class: "scroll", tabindex: "0", role: "region" });
   const buttons = el("div", { class: "row" }, [actionButton("subtract.search", ctx, { withLabel: true, className: "btn primary" }), actionButton("subtract.close", ctx, { withLabel: true, className: "btn" })]);
-  host.append(title, formula, el("div", { class: "factor" }, [rangeLabel, range, fieldLabel, field, proposed]), keys, warning, error, chart, note, buttons, table);
+  host.append(title, formula, el("div", { class: "factor" }, [rangeLabel, range, fieldLabel, field, proposed]), keys, warning, error, chart, buttons, table);
 
   range.addEventListener("input", () => ctx.setFactor(Number(range.value)));
   range.addEventListener("keydown", (e) => {
@@ -70,7 +69,6 @@ export function buildSubtractView(host, ctx) {
       if (document.activeElement !== field) field.value = formatNumber(sub.k, 2);
       proposed.replaceChildren(icon("subtract"), t("subtract.proposed", { k: formatNumber(sub.proposed, 2) }));
       keys.textContent = t("subtract.keys");
-      note.textContent = t("subtract.factor_note");
       table.setAttribute("aria-label", t("subtract.table_region"));
       const key = [sub.sample, sub.spectrumId, sub.k, sub.name, t("subtract.title")].join("|");
       if (key === drawn) return;

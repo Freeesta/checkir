@@ -6,10 +6,6 @@ Lattosio ((2R,3R,4S,5R,6S)-2-(hydroxymethyl)-6-[(2R,3S,4R,5R)-4,5,6-trihydroxy-2
 
 Classe chimica: zucchero (disaccaride, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
-## ftir_limits
-
-Lo spettro di una miscela riflette i suoi componenti principali. I componenti sotto circa il 5 % del campione in genere non sono rilevabili e l'FTIR non misura la concentrazione. Le sostanze potenti attive a dosi molto basse, come il fentanil e i suoi analoghi (quando presenti, di solito circa 3-10 % p/p) e i nitazeni, non possono essere escluse con questa analisi. Un match è una proposta che una persona esperta valuta, non una diagnosi, e vale solo se l'identificazione è corretta; sono consigliati test complementari. [f:checkir-ftir-limits] Il lattosio esiste in forme alfa e beta e come monoidrato, con spettri che differiscono nei dettagli. Zuccheri, alcoli zuccherini e cellulosa condividono ampie bande O-H e C-O, quindi identificarli in una miscela è incerto, e questa voce è il lattosio con centro anomerico non specificato.
-
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -25,10 +21,6 @@ L'intolleranza al lattosio è la comparsa di dolore addominale, gonfiore e diarr
 Le persone con ipersensibilità viscerale associata ad ansia o a sindrome dell'intestino irritabile hanno un rischio maggiore di questa condizione. [f:misselwitz2019]
 
 ## interactions
-
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
-
-## harm_reduction
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
 

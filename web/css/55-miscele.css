@@ -1,0 +1,4 @@
+.mixture { margin: 0 0 0.5rem; padding: 0.4rem 0.6rem; border: 1px solid var(--border-soft); border-radius: 4px; font-size: 0.9rem; }
+.mixture-line { margin: 0 0 0.3rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.mixture-parts { margin: 0 0 0.3rem; padding-left: 1.1rem; }
+.mixture-left { margin: 0 0 0.2rem; }

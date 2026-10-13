@@ -1,7 +1,9 @@
 // Library scenarios: the public package is listed with licence and attribution and has a switch, it is still there offline,
 // a private library is imported from files with progress and zero network requests, kept in OPFS across a reload and removed
 // on request; the name index finds compounds by prefix without accents.
-import { readFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { FIXTURE } from "./caricamento.mjs";
 
 /** Pure checks (no browser): the name index and the helpers of the importer. */
@@ -21,6 +23,8 @@ export async function librariesPureScenario(check) {
   check("names: the InChIKey is searchable and the limit is respected", searchNames(index, "zpucind").length === 1 && searchNames(index, "co", 1).length === 1);
   check("names: an empty or unknown query finds nothing", searchNames(index, " ").length === 0 && searchNames(index, "xyz").length === 0);
   check("import: names become safe ids and ids stay unique", slug("Mia Libreria Èè!") === "mia-libreria-ee" && slug("***") === "library" && uniqueId("x", new Set(["x", "x-2"])) === "x-3");
+  const { isMeasure } = await import(new URL("../web/cartella.js", import.meta.url));
+  check("folder: the watched folder lists every reader's extension (JCAMP, .ispd, OPUS .0, SPA, SPC, CSV) and nothing else", ["a.JDX", "b.ispd", "c.0", "c.12", "d.SPA", "e.spc", "f.csv"].every(isMeasure) && !["g.pdf", "h.png", "notes"].some(isMeasure));
   const { buildPrivateLibrary } = await import(new URL("../web/importa.js", import.meta.url));
   const aborted = new AbortController();
   aborted.abort();
@@ -32,6 +36,25 @@ export async function librariesPureScenario(check) {
 async function openLibraries(page) {
   const section = page.locator('details[data-panel="libraries"]');
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();
+}
+
+/** A folder with a JCAMP, a CSV, a synthetic .ispd and a foreign file: three rows and "1 file non riconosciuto". */
+async function folderScenario(page, jdx, check) {
+  const ispd = await readFile(new URL("../crates/ftir-core/tests/fixtures/ispd/measurement.ispd", import.meta.url));
+  const csv = ["wavenumber,absorbance", ...Array.from({ length: 400 }, (_, i) => `${800 + i * 6},${(0.5 + 0.4 * Math.sin(i / 9)).toFixed(4)}`)].join("\n");
+  const dir = await mkdtemp(join(tmpdir(), "checkir-folder-"));
+  await writeFile(join(dir, "a.jdx"), jdx);
+  await writeFile(join(dir, "b.csv"), csv);
+  await writeFile(join(dir, "c.ispd"), ispd);
+  await writeFile(join(dir, "d.bin"), Buffer.from([0, 1, 2, 3, 250, 251, 252, 253]));
+  await page.fill("#lib-name", "Cartella");
+  await page.setInputFiles('input[data-library="folder"]', dir);
+  await page.locator('[data-library="cartella"]').waitFor();
+  const folderNotes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
+  check("import: a folder of JCAMP, CSV and .ispd gives 3 spectra and counts 1 unrecognized file", /3 spettri, 0 scartati/.test(folderNotes) && /1 file non riconosciuto/.test(folderNotes), folderNotes);
+  await rm(dir, { recursive: true, force: true });
+  await page.getByRole("button", { name: /Rimuovi la libreria cartella/ }).click();
+  await page.waitForSelector('[data-library="cartella"]', { state: "detached" });
 }
 
 /** @param {import("playwright").Browser} browser */
@@ -50,8 +73,11 @@ export async function librariesScenario(browser, base, check, axe) {
   await pub.waitFor();
   const text = (await pub.textContent()) ?? "";
   check("libraries: the public library shows version, spectra, licence and attribution", /Versione/.test(text) && /Spettri: 1/.test(text) && /CC-BY-4\.0/.test(text) && /Attribuzione: Libreria comunitaria/.test(text) && /Pubblica/.test(text), text);
-  check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 1"));
+  check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes("2 · 12"));
+  const swg = (await page.locator('[data-library="swgdrug-ir"]').textContent()) ?? "";
+  check("libraries: a library under a written permission shows its citation, licence terms, disclaimer and no endorsement", /SWGDRUG IR Library v2024-05-15/.test(swg) && /LicenseRef-permission-swgdrug/.test(swg) && /Condizioni della licenza: Solo uso non commerciale/.test(swg) && /without warranty or liability/.test(swg) && /SWGDRUG does not endorse \S+ or any software/.test(swg) && !swg.includes("{app}"), swg);
   await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
+  await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   check("libraries: switching a library off empties the header chip", ((await page.textContent('[data-chip="library"]')) ?? "").includes("—"));
   await page.getByRole("checkbox", { name: /checkir-community/ }).check();
   const violations = await axe(page);
@@ -69,7 +95,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await mine.waitFor();
   await page.locator('details[data-panel="libraries"] .notes').waitFor();
   const notes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
-  check("import: the summary counts imported and discarded files and names the broken one", /2 spettri, 2 scartati/.test(notes) && /rotto\.jdx/.test(notes), notes);
+  check("import: the summary counts imported files and the unrecognized ones (broken JCAMP, text note)", /2 spettri, 0 scartati/.test(notes) && /2 file non riconosciuti/.test(notes), notes);
   check("import: the private library is marked private with personal-use licence", /Privata/.test((await mine.textContent()) ?? "") && /uso personale/.test((await mine.textContent()) ?? ""));
   check("import: no network request during the import", requests.length === before, requests.slice(before).join(", "));
   const stored = await page.evaluate(async () => {
@@ -78,6 +104,8 @@ export async function librariesScenario(browser, base, check, axe) {
     return (await (await dir.getFileHandle("data.bin")).getFile()).size;
   });
   check("import: data.bin in OPFS has two spectra on the 1576-point grid", stored === 2 * 1576 * 4, String(stored));
+
+  await folderScenario(page, jdx, check);
   const withPrivate = await axe(page);
   check("import: axe has no violations with a private library", withPrivate.length === 0, withPrivate.join(", "));
 

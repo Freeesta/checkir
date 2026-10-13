@@ -125,7 +125,7 @@ async function menuScenario(page, check, axe) {
   await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2, { button: "right" });
   await page.waitForSelector('[role="menu"]');
   const items = await page.$$eval('[role="menu"] button', (b) => b.map((x) => x.dataset.item));
-  check("tools: right click opens the chart menu with its rows", items.length === 14 && items.includes("y.lock") && items.includes("export.csv") && items.includes("peaks.toggle") && items.includes("cursor.1"), items.join(","));
+  check("tools: right click opens the chart menu with its rows", items.length === 17 && items.includes("y.lock") && items.includes("export.svg") && items.includes("export.png") && items.includes("cursor.copy") && items.includes("export.csv") && items.includes("peaks.toggle") && items.includes("cursor.1"), items.join(","));
   check("tools: the first row has the focus", await page.evaluate(() => document.activeElement?.closest('[role="menu"]') !== null));
   const violations = await axe(page);
   check("tools: axe has no violations with the menu open", violations.length === 0, violations.join(", "));
@@ -157,6 +157,8 @@ export async function toolsScenario(browser, base, check, axe) {
     await page.waitForSelector("body[data-ready='1']");
     await page.setInputFiles("input[type=file]", FIXTURE.pathname);
     await page.waitForSelector("#chart polyline.curve");
+    // The match announcement must land before the cursor readings (with public spectra the match takes a moment).
+    await page.waitForSelector(".result[data-level]", { timeout: 20000 });
     if (scheme === "light") {
       await keyboardScenario(page, check);
       await pointerScenario(page, check);

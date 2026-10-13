@@ -20,7 +20,7 @@ import jcamp  # noqa: E402
 import qualita  # noqa: E402
 import valida_schemi  # noqa: E402
 
-SECTIONS = ["molecule", "category", "ftir_limits", "effects", "doses", "risks", "interactions", "harm_reduction", "sources", "license"]
+SECTIONS = ["molecule", "category", "effects", "doses", "risks", "interactions", "sources", "license"]
 CLAIM_SECTIONS = {"effects", "doses", "risks", "interactions"}
 FORBIDDEN = re.compile(r"\b(sicur[oaie]|pur[oaie]|pulit[oaie]|innocu[oaie]|nessun rischio|safe|pure|clean|harmless)\b", re.I)
 ALLOWED_PHRASES = re.compile(r"nessuna dose è sicura|no dose is safe|sostanza pura|pure substance", re.I)
@@ -191,8 +191,9 @@ def check_substance(path: Path, root: Path, ctx: dict, forbidden: list[re.Patter
         meta = load(mp)
         if meta["id"] != mp.stem or meta["form"] not in ctx["forms"] or not meta["id"].startswith(meta["form"] + "."):
             out.append(f"{mp}: id must match the file name and start with an existing form id")
-        if meta["license"] != "CC-BY-4.0":
-            out.append(f"{mp}: spectra in data/ must be CC-BY-4.0 (third-party libraries live outside data/)")
+        community = meta["library"]["name"] == "checkir-community"
+        if (meta["license"] == "CC-BY-4.0") != community:
+            out.append(f"{mp}: checkir-community spectra are CC-BY-4.0; a third-party library with written permission uses LicenseRef-permission-<body>")
         jdx = mp.with_suffix(".jdx")
         if not jdx.is_file():
             out.append(f"{mp}: missing {jdx.name}")

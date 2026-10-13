@@ -6,7 +6,9 @@ import { currentLang, formatNumber, t } from "./i18n.js";
 import { spectrumOf } from "./files.js";
 import { libraryOriginal, libraryRows } from "./librerie.js";
 import { meanStep } from "./match.js";
+import { mixtureBlock, mixtureTaken } from "./mixture.js";
 import { openSheet } from "./schede_ui.js";
+import { draftOf } from "./decision.js";
 import { activeFile, activeLibraries, candidateKey, decisionOf, getState, resultOf } from "./state.js";
 import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
 import { attachTip, toggletip } from "./tooltip.js";
@@ -102,7 +104,7 @@ function candidateRow(c, i, s, ctx, selected, data) {
   const key = candidateKey(c);
   const name = candidateName(c);
   const r = formatNumber(c.r_derivative, 2);
-  const select = el("button", { type: "button", class: "cand-select", "data-fk": `cand-${i}`, "aria-label": t("results.row", { rank: formatNumber(c.rank), name, form: c.form, library: c.library, r }) }, [
+  const select = el("button", { type: "button", class: "cand-select", "data-fk": `cand-${i}`, "aria-label": t("results.row", { rank: formatNumber(c.rank), name, form: c.form ? ` ${c.form},` : "", library: c.library, r }) }, [
     el("span", { class: "rank" }, [formatNumber(c.rank)]),
     el("span", { class: "cand-name" }, [name]),
     el("span", { class: "cand-form" }, [c.form]),
@@ -152,7 +154,7 @@ function detail(data, c, ctx, s, level) {
   if (!c) return box;
   const delta = c.rank === 1 ? data.margin : data.candidates[0].r_derivative - c.r_derivative;
   box.append(
-    el("p", { class: "detail-head" }, [el("strong", {}, [candidateName(c)]), ` ${c.form} · `, levelBadge(level)]),
+    el("p", { class: "detail-head" }, [el("strong", {}, [candidateName(c)]), c.form ? ` ${c.form} · ` : " · ", levelBadge(level)]),
     el("dl", { class: "numbers" }, [
       el("dt", {}, ["r"]), el("dd", {}, [formatNumber(c.r_derivative, 2)]),
       el("dt", {}, [t("results.delta")]), el("dd", {}, [delta === null ? "—" : formatNumber(delta, 2)]),
@@ -231,6 +233,13 @@ function statusNodes(s, file, hasResult) {
   return nodes;
 }
 
+/** The mixture proposal above the table (nothing when there is none). @param {any} data @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @returns {HTMLElement[]} */
+function mixtureLines(data, s, ctx) {
+  const draft = draftOf(s);
+  const block = mixtureBlock(data, !!draft && draft.level === 4 && mixtureTaken(data, draft.keys), decisionOf(s) !== null, (c) => candidateName({ library: c.library, spectrum_id: c.id, display_name: c.name }), () => ctx.acceptMixture());
+  return block ? [block] : [];
+}
+
 /**
  * The candidates, under the chart. Shapes and words say how strong the identification is; a name never appears without the level
  * in the same block.
@@ -257,6 +266,7 @@ export function renderResults(body, s, ctx) {
       alertList(data),
       ...capLines(data).map((c) => el("p", { class: "cap" }, [c])),
       ...(usedRangeLine(data) ? [el("p", { class: "cap", "data-used-range": "1" }, [usedRangeLine(data)])] : []),
+      ...mixtureLines(data, s, ctx),
       list,
       el("p", { class: "chain" }, [chainLine(data)]),
       detail(data, chosen, ctx, s, n),

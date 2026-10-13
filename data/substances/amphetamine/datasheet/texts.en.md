@@ -16,10 +16,6 @@ Frequent cuts: caffeine, and in some regions ketamine, are often found in amphet
 
 Chemical class: phenethylamines, amphetamines subgroup. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
 
-## ftir_limits
-
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
-
 ## effects
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
@@ -33,10 +29,6 @@ Not drafted yet. This section will be written from verifiable sources and signed
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
 
 ## interactions
-
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
-
-## harm_reduction
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
 

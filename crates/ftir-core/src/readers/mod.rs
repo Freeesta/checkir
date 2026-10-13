@@ -6,6 +6,7 @@ pub mod ispd;
 pub mod jcamp;
 pub(crate) mod le;
 pub mod model;
+pub mod opus;
 pub mod sha256;
 pub mod spa;
 pub mod spc;
@@ -32,6 +33,7 @@ pub static READERS: &[Reader] = &[
     ispd::READER,
     spa::READER,
     spc::READER,
+    opus::READER,
 ];
 
 /// Picks the reader that is surest about the file; ties go to the registry order.

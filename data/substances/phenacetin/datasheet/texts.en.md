@@ -6,10 +6,6 @@ Phenacetin (N-(4-ethoxyphenyl)acetamide), formula C10H13NO2, molar mass 179.22 g
 
 Chemical class: analgesic (withdrawn medicine, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
-## ftir_limits
-
-The spectrum of a mixture reflects its main components. Components below about 5 % of the sample are generally not detectable, and FTIR does not measure concentration. Potent substances active at very low doses, such as fentanyl and its analogues (when found, usually at about 3-10 % w/w) and nitazenes, cannot be ruled out by this analysis. A match is a proposal for an expert to evaluate, not a diagnosis, and it holds only if the identification is correct; complementary tests are advisable. [f:checkir-ftir-limits] Phenacetin and paracetamol are structurally close aromatic amides with similar spectra; telling them apart in a mixture needs the whole band pattern, not a single band.
-
 ## effects
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
@@ -27,10 +23,6 @@ Phenacetin was extensively used in analgesic mixtures until it was implicated in
 In humans, N-acetyl-p-aminophenol (paracetamol) is the major urinary metabolite after oral phenacetin. [f:iarc-100a-phenacetin]
 
 ## interactions
-
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
-
-## harm_reduction
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
 
