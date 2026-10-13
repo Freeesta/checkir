@@ -1,7 +1,7 @@
 {
   "schema": "datasheet/1",
   "substance": "paracetamol",
-  "version": 3,
+  "version": 4,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
