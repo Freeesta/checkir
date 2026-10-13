@@ -154,7 +154,7 @@
   "help.names_search_from": "Search",
   "help.names_search_to": "Confronta",
   "help.names_score_from": "Score, Hit Quality",
-  "help.names_score_to": "Risultati: il livello di confidenza di ogni candidato",
+  "help.names_score_to": "Risultati: l'indice r (da 0 a 1) di ogni candidato",
   "help.names_subtract_from": "Subtraction, Factor",
   "help.names_subtract_to": "Sottrai, con il fattore",
   "help.names_residual_from": "Residual",
