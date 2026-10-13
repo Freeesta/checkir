@@ -20,7 +20,6 @@
   "table.caption": "Punti dello spettro nell'intervallo visibile",
   "table.wavenumber": "Numero d'onda (cm⁻¹)",
   "table.region": "Tabella scorrevole dei dati dello spettro",
-  "footer.notice": "{app} propone, la persona esperta decide. Nessun file lascia il tuo computer.",
   "reader.limit_exceeded": "Il file supera un limite di sicurezza ({limit}, massimo {max}).",
   "reader.encoding_fallback": "Il file non è UTF-8 valido: è stato letto come Windows-1252, quindi alcuni caratteri possono differire dall'originale.",
   "reader.bom_removed": "È stato tolto un segno di ordine dei byte all'inizio del file.",
@@ -145,8 +144,6 @@
   "info.privacy_title": "Riservatezza",
   "info.privacy": "Nessun file esce da questo computer. Nessuna telemetria.",
   "info.limits_title": "Limiti dell'FTIR",
-  "info.warnings_title": "Avvertenze",
-  "info.warnings_empty": "Nessuna avvertenza per ora",
   "info.versions_title": "Versioni",
   "help.title": "Scorciatoie",
   "help.soon": "In arrivo",
@@ -206,8 +203,6 @@
   "page.draft": "Bozza in attesa di revisione legale.",
   "footer.nav_label": "Informazioni sul sito",
   "footer.link_home": "Pagina iniziale",
-  "footer.link_warnings": "Avvertenze",
-  "footer.link_notice": "Informativa",
   "warnings.title": "Avvertenze",
   "warnings.box_label": "Avvertenze sul risultato",
   "warnings.more": "Tutte le avvertenze",
@@ -541,5 +536,9 @@
   "chart.cursors": "Cursori di lettura: il primo, il secondo, poi nessuno",
   "chart.lock_y": "Blocca o sblocca l'asse y",
   "chart.y_locked": "Asse y bloccato",
-  "chart.y_unlocked": "Asse y automatico"
+  "chart.y_unlocked": "Asse y automatico",
+  "info.link_warnings": "Avvertenze",
+  "info.link_notice": "Informativa",
+  "info.pages_title": "Altre pagine",
+  "splash.loading": "Caricamento"
 }

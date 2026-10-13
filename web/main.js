@@ -10,6 +10,7 @@ import { loadEngine } from "./engine.js";
 import { createFolder } from "./cartella.js";
 import { decisionActions } from "./decision.js";
 import { setProgramVersion } from "./sheet.js";
+import { hideSplash, labelSplash } from "./splash.js";
 import { talkActions, wireTalk } from "./talk.js";
 import { libraryActions, loadAllLibraries } from "./librerie.js";
 import { buildPanels } from "./panels.js";
@@ -87,10 +88,24 @@ function startExtras() {
   if (["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) import("./schede_prova.js").then((m) => m.mountSamples());
 }
 
+/** Title and footer carry the product name; the loading screen gets its translated label. */
+function showName() {
+  document.title = APP_NAME;
+  $("footer-name").textContent = APP_NAME;
+  labelSplash();
+}
+
+/** Last step of the start-up: offline support, loading screen away, page marked ready. */
+function finishStart() {
+  startExtras();
+  hideSplash();
+  document.body.dataset.ready = "1";
+}
+
 async function start() {
   initTheme();
   await loadLang(pickLang());
-  document.title = APP_NAME;
+  showName();
   const engine = await loadEngine().catch(() => null);
   const input = wireFileInput({ engine, announce });
   let redrawAll = () => {};
@@ -146,7 +161,7 @@ async function start() {
     talk.refresh(s);
     refreshActionButtons(s);
     hideIfDetached();
-    $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");  };
+  };
   redrawAll = () => {
     layers.reset();
     applyCatalog();
@@ -160,8 +175,10 @@ async function start() {
   wireShortcuts(ctx, next);
   redrawAll();
   if (engine) loadAllLibraries(engine);
-  startExtras();
-  document.body.dataset.ready = "1";
+  finishStart();
 }
 
-start();
+start().catch((e) => {
+  hideSplash();
+  throw e;
+});
