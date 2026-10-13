@@ -67,6 +67,7 @@ async function chartScenario(page, check, axe) {
 
 /** The summary above the chart, the sortable table, the arrows between peaks and Esc. */
 async function viewScenario(page, check, axe) {
+  await page.evaluate(() => (document.getElementById("table-section").open = true)); // the data table is folded by default
   const summary = (await page.textContent("#peaks-summary")) ?? "";
   check("peaks: the summary counts the main peaks and names the one not explained", /Picchi principali: 6 · spiegati da .*: 5 · non spiegati: 1 \(~26\d\d\)/.test(summary), summary);
   check("peaks: no reassuring word in the summary", !/sicur|pur[oa]|pulit/i.test(summary), summary);
@@ -145,6 +146,7 @@ async function modeScenario(browser, base, check, axe) {
   await page.waitForSelector(".peak-item");
   await page.locator('.peak-item:has-text("~1465")').click();
   const card = page.locator("#peak-card");
+  await card.locator(".reading").first().waitFor();
   check("mode: the reading names the group and the mode", /Metilene · Forbice/.test((await card.locator(".reading").first().textContent()) ?? ""));
   const fig = card.locator("figure.mode-figure");
   check("mode: the drawing moves in the normal case, with a switch to stop it", (await fig.getAttribute("data-animated")) === "true" && (await card.locator('[data-card="mode-anim"]').getAttribute("aria-pressed")) === "true");

@@ -57,7 +57,8 @@ export async function recallScenario(browser, base, check, axe) {
   await pick(page, "alf", 1);
   check("recall: a fourth reference is refused", (await page.locator(".recall-item").count()) === 3 && await page.waitForFunction(() => /già 3 riferimenti/.test(document.getElementById("status")?.textContent ?? "")).then(() => true));
   await page.keyboard.press("Escape");
-  check("recall: the table has one column per reference", (await page.locator("#table thead th").count()) === 5);
+  const heads = await page.locator("#table thead th").allTextContents();
+  check("recall: the table has one column per reference", heads.filter((h) => / · imported/.test(h)).length === 3, heads.join("|"));
   const overlay = await page.getAttribute("#chart polyline.curve-recalled >> nth=0", "points");
   await page.check("#recall-mode-offset");
   await page.waitForSelector("#recall-offset");

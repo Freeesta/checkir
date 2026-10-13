@@ -181,8 +181,8 @@ function menuChart(c) {
  * Wire the chart: keyboard (+ - arrows 0 and the cursor keys), pointer (cursors, zoom bands on the plot and the axes, wheel, double click), the menu and the buttons.
  * The spectrum is swapped with `set`; with none, a short line says so. With `link`, the x axis follows the other charts joined to the same link.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
- * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean }, ctx?: import("./actions.js").Ctx, codeOf?: () => string | null }} [opts]
- * @returns {{ back: () => unknown, redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void }} `redraw` after a language change
+ * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, onBrush?: (from: number, to: number) => void, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean }, ctx?: import("./actions.js").Ctx, codeOf?: () => string | null }} [opts]
+ * @returns {{ back: () => unknown, redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void, cursorRange: () => [number, number] | null }} `redraw` after a language change
  */
 export function wire(el, opts = {}) {
   const say = opts.announce ?? (() => {});
@@ -232,7 +232,7 @@ export function wire(el, opts = {}) {
   el.toolbar.replaceChildren(...buttons);
   attachViewKeys(el.chart, keys, (i) => setView(moves[i][2]()), (e) => layers.marks !== undefined && opts.peaks !== undefined && peakKey(e, opts.peaks));
   const input = {
-    geom: () => geom, view: () => v, full: () => full, setView, cursors, toggleLockY, isLocked: y.locked, announce: say,
+    geom: () => geom, view: () => v, full: () => full, setView, cursors, toggleLockY, isLocked: y.locked, announce: say, brush: opts.onBrush,
     yZoom: (/** @type {number} */ a, /** @type {number} */ b) => (y.zoomTo(a, b), update()),
     yZoomBy: (/** @type {number} */ f) => geom && (y.zoomBy(geom, f), update()),
   };
@@ -243,6 +243,7 @@ export function wire(el, opts = {}) {
   update();
   return {
     back,
+    cursorRange: () => cursors.pair(),
     redraw: () => (refresh(), update()),
     setLayers: (next) => ((layers = next), (v = withPeakInView(next, v, full)), update()),
     set: (next) => {

@@ -86,7 +86,7 @@ async function axisScenario(page, check) {
     await page.mouse.up();
   };
   const full = await page.textContent("#range");
-  await drag(at(300, 340), at(500, 340));
+  await drag(at(300, 352), at(500, 352));
   check("tools: dragging along the x axis zooms that range", (await page.textContent("#range")) !== full);
   await page.mouse.dblclick(at(400, 150).x, at(400, 150).y);
   await page.keyboard.press("b");

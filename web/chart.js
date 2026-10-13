@@ -3,11 +3,12 @@ import { formatNumber, t } from "./i18n.js";
 import { drawBands, drawPeaks, drawRule, marksTables, svg } from "./chart_marks.js";
 import { nearestIndex, thin, visibleIndices } from "./spectrum.js";
 import { drawExtras, extraAt, extraCurves, widen } from "./chart_extra.js";
+import { drawBrushStrip, drawRangeZones } from "./chart_ranges.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** @typedef {import("./view.js").View} View */
 /** Extra curves and zones drawn with the sample: the library spectrum of a candidate (already scaled) and the zone left out of the comparison.
- * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null, marks?: import("./chart_marks.js").Marks | null, recalled?: Array<{ spectrum: Spectrum, label: string, style: number }>, difference?: { spectrum: Spectrum, label: string } | null, offset?: number }} Layers */
+ * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null, marks?: import("./chart_marks.js").Marks | null, ranges?: import("./chart_ranges.js").RangeLayer | null, recalled?: Array<{ spectrum: Spectrum, label: string, style: number }>, difference?: { spectrum: Spectrum, label: string } | null, offset?: number }} Layers */
 
 const W = 800;
 const H = 360;
@@ -100,6 +101,7 @@ export function draw(host, s, v, layers = {}, opts = {}) {
   const root = svg("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": t("chart.title") });
   drawGrid(root, v, { y0, y1 }, px, py);
   drawExcluded(root, layers.excluded, v, px);
+  if (layers.ranges) drawRangeZones(root, layers.ranges, v, px, { top: M.t, height: H - M.t - M.b });
   if (layers.marks) drawBands(root, layers.marks.bands, v, px, { top: M.t, height: H - M.t - M.b });
   if (layers.marks?.rule) drawRule(root, layers.marks.rule, v, px, { top: M.t, height: H - M.t - M.b });
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
@@ -107,6 +109,7 @@ export function draw(host, s, v, layers = {}, opts = {}) {
   drawExtras(root, extras, v, PLOT_W, { px, py, right: W - M.r });
   root.append(svg("polyline", { class: "curve", points: thin(idx, s.y, PLOT_W).map((i) => `${px(s.wavenumber_cm1[i])},${py(s.y[i])}`).join(" ") }));
   if (layers.marks) drawPeaks(root, layers.marks.peaks, v, px, (x) => py(s.y[Math.max(0, nearestIndex(s, x))]));
+  drawBrushStrip(root, { left: M.l, right: W - M.r, bottom: H - M.b });
   const ex = svg("text", { class: "label", x: W / 2, y: H - 6, "text-anchor": "middle" });
   ex.textContent = t("chart.axis_x");
   const ey = svg("text", { class: "label", x: 14, y: H / 2, "text-anchor": "middle", transform: `rotate(-90 14 ${H / 2})` });

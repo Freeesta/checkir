@@ -1,4 +1,5 @@
 // @ts-check
+import { BRUSH_HEIGHT } from "./chart_ranges.js";
 import { spanOf, zoomAt } from "./view.js";
 import { t } from "./i18n.js";
 
@@ -15,12 +16,13 @@ import { t } from "./i18n.js";
  *   yZoom: (a: number, b: number) => void,
  *   yZoomBy: (factor: number) => void,
  *   announce: (text: string) => void,
+ *   brush?: (from: number, to: number) => void,
  * }} ChartApi */
 
 const DRAG_PX = 4;
 const WHEEL_STEP = 1.25;
 
-/** A pointer position in the SVG user units and the part of the chart it is on: the plot, the x axis (below it) or the y axis (left of it). @typedef {{ x: number, y: number, zone: "plot" | "x" | "y" | null }} Point */
+/** A pointer position in the SVG user units and the part of the chart it is on: the plot, the x axis (below it) or the y axis (left of it). @typedef {{ x: number, y: number, zone: "plot" | "x" | "y" | "brush" | null }} Point */
 
 /** @param {HTMLElement} host @param {ChartApi} api @param {{ clientX: number, clientY: number }} e @returns {Point | null} */
 function pointOf(host, api, e) {
@@ -32,7 +34,9 @@ function pointOf(host, api, e) {
   const y = ((e.clientY - r.top) * g.height) / r.height;
   const inX = x >= g.left && x <= g.right;
   const inY = y >= g.top && y <= g.bottom;
-  return { x, y, zone: inX && inY ? "plot" : inX && y > g.bottom && y <= g.height ? "x" : inY && x < g.left && x >= 0 ? "y" : null };
+  const strip = api.brush ? BRUSH_HEIGHT : 0;
+  const below = inX && y > g.bottom && y <= g.height;
+  return { x, y, zone: inX && inY ? "plot" : below && y <= g.bottom + strip ? "brush" : below ? "x" : inY && x < g.left && x >= 0 ? "y" : null };
 }
 
 /** Wavenumber at an SVG x, held inside the plot. @param {ChartApi} api @param {number} sx @returns {number} */
@@ -60,6 +64,14 @@ function finishDrag(api, start, end, dx, dy) {
   if (Math.abs(dx) > DRAG_PX) api.setView(spanOf(api.full(), wavenumberAt(api, start.x), wavenumberAt(api, end.x)));
 }
 
+/** The pointer-up of a brush drag: a span of whole wavenumbers, or nothing for a click. @param {ChartApi} api @param {Point} start @param {Point} end @param {number} dx pointer travel in CSS pixels */
+function endBrush(api, start, end, dx) {
+  if (Math.abs(dx) <= DRAG_PX) return;
+  const a = wavenumberAt(api, start.x);
+  const b = wavenumberAt(api, end.x);
+  api.brush?.(Math.round(Math.min(a, b)), Math.round(Math.max(a, b)));
+}
+
 /** Pointer: moving shows the cursor line, a click places cursor 1 (Alt+click cursor 2), a drag in the plot or along an axis draws a zoom band (the y axis only when it is not locked), the wheel zooms around the pointer, a double click shows everything. @param {HTMLElement} host @param {ChartApi} api */
 function attachPointer(host, api) {
   /** @type {{ start: Point, cx: number, cy: number, alt: boolean } | null} */
@@ -67,8 +79,7 @@ function attachPointer(host, api) {
   host.addEventListener("pointerdown", (e) => {
     const p = e.button === 0 ? pointOf(host, api, e) : null;
     if (!p?.zone) return;
-    drag = { start: p, cx: e.clientX, cy: e.clientY, alt: e.altKey };
-    host.setPointerCapture(e.pointerId);
+    drag = { start: p, cx: e.clientX, cy: e.clientY, alt: e.altKey };    host.setPointerCapture(e.pointerId);
   });
   host.addEventListener("pointermove", (e) => {
     const p = pointOf(host, api, e);
@@ -87,8 +98,8 @@ function attachPointer(host, api) {
       if (p.zone === "plot") api.cursors.set(d.alt ? 1 : 0, wavenumberAt(api, p.x));
       return;
     }
-    finishDrag(api, d.start, p, e.clientX - d.cx, e.clientY - d.cy);
-  });
+    if (d.start.zone === "brush") return endBrush(api, d.start, p, e.clientX - d.cx);
+    finishDrag(api, d.start, p, e.clientX - d.cx, e.clientY - d.cy);  });
   host.addEventListener("pointercancel", () => {
     drag = null;
     api.cursors.band(null);

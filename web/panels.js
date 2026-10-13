@@ -7,7 +7,7 @@ import { fileRange } from "./files.js";
 import { renderLibraries } from "./libpanel.js";
 import { peaksLabel, peaksSummary, renderPeaks } from "./peaks_panel.js";
 import { renderSheetPanel, sheetSummary } from "./sheet_panel.js";
-import { derivedText, renderResults, resultsSummary } from "./results.js";
+import { derivedText, renderResultsPanel, resultsSummary } from "./results.js";
 import { formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
 import { activeFile, activeLibraries, readPref, writePref } from "./state.js";
@@ -79,7 +79,7 @@ export const PANELS = [
     summary: (s) => `${formatNumber(activeLibraries(s).length)} · ${formatNumber(activeLibraries(s).reduce((a, l) => a + l.spectra, 0))}`,
     render: renderLibraries,
   },
-  { id: "results", n: 3, titleKey: "panel.results.title", tipKey: "panel.results.tip", icon: "results", summary: resultsSummary, render: renderResults },
+  { id: "results", n: 3, titleKey: "panel.results.title", tipKey: "panel.results.tip", icon: "results", summary: resultsSummary, render: renderResultsPanel },
   { id: "peaks", n: 4, titleKey: "panel.peaks.title", tipKey: "panel.peaks.tip", icon: "peaks", summary: peaksSummary, label: peaksLabel, render: renderPeaks },
   { id: "sheet", n: 5, titleKey: "panel.sheet.title", tipKey: "panel.sheet.tip", icon: "sheet", summary: sheetSummary, render: renderSheetPanel },
 ];

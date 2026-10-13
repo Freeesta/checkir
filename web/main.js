@@ -19,6 +19,8 @@ import { parseSpectrum } from "./spectrum.js";
 import { buildLayers } from "./layers.js";
 import { matchActions, startMatching } from "./match.js";
 import { peaksActions } from "./peaks.js";
+import { rangeContext } from "./ranges.js";
+import { startRangeTable } from "./ranges_table.js";
 import { loadBands } from "./regions.js";
 import { loadBandData } from "./bands_data.js";
 import { createPeakCard } from "./peak_card.js";
@@ -29,7 +31,7 @@ import { buildSubtractView } from "./subtract_view.js";
 import { recallActions } from "./recall.js";
 import { buildRecallView, openRecallDialog } from "./recall_ui.js";
 import { subtractActions } from "./subtract.js";
-import { buildLimits, buildNextStep } from "./workarea.js";
+import { buildCandidates, buildNextStep } from "./workarea.js";
 
 /** @param {string} id @returns {HTMLElement} */
 function $(id) {
@@ -124,6 +126,7 @@ async function start() {
     },
     ...languageActions(() => redrawAll(), announce),
     ...workActions(engine, announce), ...recallActions(announce), recallOpen: () => openRecallDialog(ctx), viewBack: () => viewBack(),
+    ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     closeSection: () => panels.closeSection(),
@@ -134,14 +137,14 @@ async function start() {
   const header = buildHeader(/** @type {HTMLElement} */ ($("app-header")), ctx, APP_NAME);
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
   const next = buildNextStep($("workbar"), ctx);
-  const limits = buildLimits($("limits"));
+  const candidates = buildCandidates($("candidates"), ctx);
   const subtraction = buildSubtractView($("subtract"), ctx);
   const recalled = buildRecallView($("recall"), ctx);
   const talk = wireTalk($("sheet-host"));
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), peaks: chartPeakKeys(ctx) });
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
   viewBack = chart.back;
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
@@ -158,7 +161,7 @@ async function start() {
     document.body.toggleAttribute("data-subtract", s.subtraction !== null);
     for (const part of [subtraction, recalled, header, panels]) part.refresh(s);
     next.refresh(s);
-    limits.refresh();
+    candidates.refresh(s);
     talk.refresh(s);
     refreshActionButtons(s);
     hideIfDetached();
@@ -174,9 +177,8 @@ async function start() {
     chart.redraw();
   };
   subscribe(renderUi);
-  startMatching({ announce });
-  wireShortcuts(ctx, next);
-  redrawAll();
+  startMatching({ announce }); startRangeTable();
+  wireShortcuts(ctx, next); redrawAll();
   if (engine) loadAllLibraries(engine);
   startExtras();
   document.body.dataset.ready = "1";
