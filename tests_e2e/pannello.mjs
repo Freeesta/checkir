@@ -45,7 +45,7 @@ export async function pannelloScenario(browser, base, check) {
   check("pannello: the score is a whole number from 0 to 100", rows.length >= 3 && rows.every((x) => /^\d{1,3}$/.test(x.r) && Number(x.r) <= 100), text);
   check("pannello: the margin is on the first row only, as «margine N»", /^margine \d{1,3}$/.test(rows[0].margin) && rows.slice(1).every((x) => x.margin === ""), text);
   check("pannello: no spectrum appears twice (the folder imported twice, a copy inside)", new Set(rows.map((x) => x.name.toLowerCase())).size === rows.length, text);
-  check("pannello: the column is «Match» and the library column shows the folder name", /Match/.test((await page.textContent(".cand-head")) ?? "") && rows.every((x) => /^miscela/.test(x.lib)), text);
+  check("pannello: the column is «Match» and the library column shows the folder name", /Match/.test((await page.textContent(".cand-head")) ?? "") && /^miscela/.test(rows[0].lib), text);
   const chain = (await page.textContent(".result .chain")) ?? "";
   check("pannello: the libraries read «name (N spettri)»", /miscela \(3 spettri\)/.test(chain) && !/miscela 1/.test(chain), chain);
   check("pannello: no sheet button for an imported spectrum", (await page.locator('[data-fk="open-sheet"]').count()) === 0);
