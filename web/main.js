@@ -8,6 +8,7 @@ import { applyCatalog, currentLang, LANGS, loadLang, pickLang, t } from "./i18n.
 import { loadEngine } from "./engine.js";
 import { buildPanels } from "./panels.js";
 import { addDemo, closeFile, spectrumOf, wireFileInput } from "./files.js";
+import { attachShortcuts, onShortcutsChange } from "./shortcuts.js";
 import { parseSpectrum } from "./spectrum.js";
 import { getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
@@ -37,7 +38,6 @@ async function start() {
   document.title = APP_NAME;
   const engine = await loadEngine().catch(() => null);
   const input = wireFileInput({ engine, announce });
-  /** @type {() => void} */
   let redrawAll = () => {};
   /** @type {import("./actions.js").Ctx} */
   const ctx = {
@@ -101,6 +101,11 @@ async function start() {
     chart.redraw();
   };
   subscribe(renderUi);
+  onShortcutsChange(() => {
+    refreshActionButtons(getState());
+    next.refresh(getState());
+  });
+  attachShortcuts(ctx);
   redrawAll();
   if ("serviceWorker" in navigator) navigator.serviceWorker.register(`sw.js?id=${APP_ID}`).catch(() => {});
   document.body.dataset.ready = "1";

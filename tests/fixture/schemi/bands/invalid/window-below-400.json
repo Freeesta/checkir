@@ -1,0 +1,22 @@
+{
+  "schema": "bands/1",
+  "version": "2026-10.1",
+  "rules": [
+    {
+      "id": "co.demo",
+      "version": 1,
+      "range_cm1": {
+        "min": 300,
+        "max": 340
+      },
+      "group": "ketone",
+      "mode": "stretch",
+      "intensity": "strong",
+      "shape": "sharp",
+      "sources": [
+        "coates2000"
+      ],
+      "status": "draft"
+    }
+  ]
+}

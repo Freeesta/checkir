@@ -4,13 +4,21 @@ use ftir_core::readers::bdb;
 use ftir_core::readers::export::to_json;
 use ftir_core::readers::ispd;
 use ftir_core::readers::model::{
-    Document, FieldKind, Limits, Options, Order, XUnit, XValues, YUnit,
+    Document, FieldKind, Limits, Options, Order, Role, XUnit, XValues, YUnit,
 };
-use ftir_core::synthetic_ispd::{fixtures, truth_json};
+use ftir_core::synthetic_ispd::{fixtures, truth_json, Fixture};
 use std::collections::BTreeSet;
 
 fn open(bytes: &[u8]) -> Result<Document, String> {
     ispd::open(bytes, &Limits::STANDARD, &Options::default()).map_err(|e| e.key.to_string())
+}
+
+/// The fixtures that look like a measurement (not the raw library import).
+fn measurements() -> Vec<Fixture> {
+    fixtures()
+        .into_iter()
+        .filter(|f| f.name != "library_raw")
+        .collect()
 }
 
 fn dir() -> std::path::PathBuf {
@@ -45,9 +53,9 @@ fn container_gives_back_every_pair() {
 
 #[test]
 fn main_spectrum_matches_the_truth() {
-    for f in fixtures() {
+    for f in measurements() {
         let d = open(&f.bytes).expect("open");
-        assert_eq!(d.spectra.len(), 1);
+        assert_eq!(d.spectra.len(), 4);
         let s = &d.spectra[d.primary];
         assert_eq!(s.x.unit, XUnit::Cm1);
         assert_eq!(s.x.order, Order::Ascending);
@@ -68,7 +76,7 @@ fn main_spectrum_matches_the_truth() {
             Some("2026-06-09T10:13:20Z")
         );
         let source = &s.fields[title.field];
-        assert_eq!(source.key, "NON_BTREE_DATA");
+        assert_eq!(source.key, "NAME");
         assert_eq!(d.provenance.reader, "shimadzu-ispd");
     }
 }
@@ -81,6 +89,10 @@ fn every_pair_becomes_one_field_and_binary_is_never_copied() {
             .fields
             .iter()
             .chain(d.spectra.iter().flat_map(|s| s.fields.iter()))
+            .collect();
+        let fields: Vec<_> = fields
+            .into_iter()
+            .filter(|x| !x.origin.starts_with("decoded"))
             .collect();
         assert_eq!(fields.len(), f.pairs.len());
         let origins: BTreeSet<_> = fields.iter().map(|x| x.origin.clone()).collect();
@@ -106,11 +118,13 @@ fn known_keys_file_matches_the_reader() {
         std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("tests/audit/noti_ispd.txt"),
     )
     .expect("noti_ispd.txt");
-    let listed: BTreeSet<&str> = text
+    let listed: BTreeSet<String> = text
         .lines()
         .filter(|l| !l.starts_with('#') && !l.is_empty())
+        .map(str::to_string)
         .collect();
-    let known: BTreeSet<&str> = ispd::KNOWN.iter().copied().collect();
+    let mut known: BTreeSet<String> = ispd::KNOWN.iter().map(ToString::to_string).collect();
+    known.extend(ispd::KNOWN_IDS.iter().map(|i| format!("param {i}")));
     assert_eq!(listed, known);
 }
 
@@ -121,7 +135,7 @@ fn main_spectrum_skips_subtractions() {
         .find(|f| f.name == "subtraction_first")
         .expect("fixture");
     let d = open(&f.bytes).expect("open");
-    let s = &d.spectra[0];
+    let s = &d.spectra[d.primary];
     assert_eq!(
         s.measurement.title.as_ref().map(|t| t.value.as_str()),
         Some("Mario_Prova_2")
@@ -131,7 +145,7 @@ fn main_spectrum_skips_subtractions() {
 
 #[test]
 fn anonymous_export_hides_the_identity() {
-    for f in fixtures() {
+    for f in measurements() {
         let d = open(&f.bytes).expect("open");
         let before = to_json(&d);
         let after = to_json(&anonymize(&d, b"local secret"));
@@ -156,7 +170,7 @@ fn patched(mut b: Vec<u8>, edit: impl FnOnce(&mut Vec<u8>)) -> Vec<u8> {
 }
 
 fn base() -> Vec<u8> {
-    fixtures().remove(0).bytes
+    measurements().remove(0).bytes
 }
 
 #[test]
@@ -292,4 +306,131 @@ fn byte_mutations_never_panic() {
             Err(e) => assert!(e.key.starts_with("reader."), "{}", e.key),
         }
     }
+}
+
+fn named(name: &str) -> Document {
+    let f = fixtures()
+        .into_iter()
+        .find(|f| f.name == name)
+        .expect("fixture");
+    open(&f.bytes).expect("open")
+}
+
+#[test]
+fn standard_metadata_comes_from_parameters_and_history() {
+    let d = named("measurement");
+    let t = &measurements()[0].truth;
+    let s = &d.spectra[d.primary];
+    let ins = &s.instrument;
+    assert_eq!(
+        ins.resolution_cm1.as_ref().map(|r| r.value),
+        Some(t.resolution_cm1)
+    );
+    assert_eq!(ins.scans.as_ref().map(|r| r.value), Some(t.scans));
+    assert_eq!(ins.model.as_ref().map(|r| r.value.as_str()), Some(t.model));
+    assert_eq!(
+        ins.serial_number.as_ref().map(|r| r.value.as_str()),
+        Some(t.serial)
+    );
+    assert_eq!(
+        ins.accessory.as_ref().map(|r| r.value.as_str()),
+        Some(t.accessory)
+    );
+    assert_eq!(s.history, t.history);
+    let src = &s.fields[ins.resolution_cm1.as_ref().expect("resolution").field];
+    assert_eq!(src.key, "param.1004");
+    let src = &s.fields[ins.serial_number.as_ref().expect("serial").field];
+    assert!(src.identity && src.key == "HISTORY");
+    let comment = s
+        .fields
+        .iter()
+        .find(|f| f.key == "param.1032")
+        .expect("comment");
+    assert!(comment.identity);
+}
+
+#[test]
+fn unknown_parameter_ids_are_kept_unknown_and_reported() {
+    let d = named("measurement");
+    let s = &d.spectra[d.primary];
+    let f = s
+        .fields
+        .iter()
+        .find(|f| f.key == "param.7777")
+        .expect("field");
+    assert!(!f.known);
+    assert_eq!(f.value, "zz");
+    assert!(d
+        .warnings
+        .iter()
+        .any(|w| w.key == "reader.ispd.param_guessed"));
+    assert!(d.warnings.iter().any(|w| w.key == "reader.fields_unknown"));
+}
+
+#[test]
+fn interferograms_and_subtractions_are_spectra_with_their_role() {
+    let d = named("measurement");
+    let roles: Vec<Role> = d.spectra.iter().map(|s| s.role).collect();
+    assert_eq!(
+        roles,
+        [
+            Role::Unknown,
+            Role::Subtraction,
+            Role::SampleInterferogram,
+            Role::BackgroundInterferogram
+        ]
+    );
+    let sub = &d.spectra[1];
+    assert_eq!(sub.history, ["Search: Subtraction, Factor=1.0"]);
+    assert_eq!(sub.x.unit, XUnit::Cm1);
+    for s in &d.spectra[2..] {
+        assert_eq!(s.x.unit, XUnit::Cm);
+        assert_eq!(s.y.unit, YUnit::Interferogram);
+        assert_eq!(s.y.values.len(), 1024);
+    }
+}
+
+#[test]
+fn instrument_alerts_become_quality_warnings() {
+    let d = named("measurement");
+    let t = &measurements()[0].truth;
+    let on_spectrum = d.spectra[d.primary].warnings.iter().any(|w| {
+        w.key == "reader.ispd.instrument_alert" && w.params.iter().any(|(_, v)| v == t.alert)
+    });
+    assert!(on_spectrum);
+    let doc = d
+        .warnings
+        .iter()
+        .find(|w| w.key == "reader.ispd.instrument_alert")
+        .expect("document alert");
+    assert!(doc.params.iter().any(|(n, v)| *n == "count" && v == "1"));
+}
+
+#[test]
+fn raw_library_import_is_declared_not_rescaled() {
+    let d = named("library_raw");
+    let s = &d.spectra[d.primary];
+    assert_eq!(s.y.unit, YUnit::Arbitrary);
+    assert!(s.y.values.iter().any(|v| *v > 1e6), "values stay as stored");
+    let keys: Vec<&str> = s.warnings.iter().map(|w| w.key).collect();
+    assert!(
+        keys.contains(&"reader.ispd.y_scale") && keys.contains(&"reader.ispd.x_range"),
+        "{keys:?}"
+    );
+    let factor = s
+        .warnings
+        .iter()
+        .find(|w| w.key == "reader.ispd.y_scale")
+        .and_then(|w| w.params.first())
+        .map(|p| p.1.clone());
+    assert_eq!(factor.as_deref(), Some("1e-9"));
+    assert!(d
+        .warnings
+        .iter()
+        .any(|w| w.key == "reader.ispd.header_unreadable"));
+    let ok = named("measurement");
+    assert!(ok.spectra[ok.primary]
+        .warnings
+        .iter()
+        .all(|w| w.key == "reader.ispd.instrument_alert"));
 }

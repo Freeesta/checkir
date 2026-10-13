@@ -1,0 +1,26 @@
+{
+  "schema": "bands/1",
+  "version": "2026-10.1",
+  "rules": [
+    {
+      "id": "co.demo",
+      "version": 1,
+      "range_cm1": {
+        "min": 1690,
+        "max": 1740
+      },
+      "group": "ketone",
+      "mode": "stretch",
+      "intensity": "strong",
+      "shape": "sharp",
+      "sources": [
+        "coates2000"
+      ],
+      "status": "verified_spectra",
+      "verified_on": [
+        "Cocaine HCl.ispd",
+        "vs-0123456789ab"
+      ]
+    }
+  ]
+}

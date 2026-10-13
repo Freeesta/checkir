@@ -208,3 +208,15 @@ th { position: sticky; top: 0; background: var(--surface); }
   .curve { stroke: CanvasText; }
   .lang-button[aria-pressed="true"] { forced-color-adjust: none; background: Highlight; color: HighlightText; }
 }
+
+/* Shortcut dialog */
+.switch-row { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 0 0.5rem; min-height: 1.5rem; }
+.switch-row input { width: 1.25rem; height: 1.25rem; }
+.help-tabs { display: flex; gap: 0.25rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.help-tabs [role="tab"] { min-height: 1.5rem; padding: 0.3rem 0.7rem; border: 1px solid transparent; border-bottom: 0; border-radius: 0.4rem 0.4rem 0 0; background: transparent; color: var(--text); font: inherit; cursor: pointer; }
+.help-tabs [aria-selected="true"] { border-color: var(--border); background: var(--surface); font-weight: 600; text-decoration: underline; }
+.help-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.help-table th, .help-table td { padding: 0.25rem 0.4rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; }
+.help-table svg { width: 1.2rem; height: 1.2rem; vertical-align: middle; }
+kbd { display: inline-block; min-width: 1.4rem; padding: 0 0.35rem; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 0.3rem; background: var(--surface); font: inherit; font-family: ui-monospace, monospace; text-align: center; }
+.soon-tag { padding: 0 0.35rem; border: 1px dashed var(--text-muted); border-radius: 0.3rem; color: var(--text-muted); font-size: 0.8rem; }

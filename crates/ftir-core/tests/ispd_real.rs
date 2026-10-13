@@ -3,8 +3,10 @@
 //! The container is compared with `db_dump` through the fingerprints written by `tools/ispd_riferimento.py impronte`
 //! (read from `CHECKIR_DATA/studio/formati/impronte_ispd.json`, or computed on the fly when `db_dump` is installed).
 mod common;
+use ftir_core::readers::anonymize::anonymize;
 use ftir_core::readers::bdb;
-use ftir_core::readers::model::{Limits, Options, Order};
+use ftir_core::readers::export::to_json;
+use ftir_core::readers::model::{Document, Limits, Options, Order, Role};
 use ftir_core::readers::{ispd, jcamp};
 use ftir_core::synthetic_ispd::container_digest;
 use std::collections::BTreeMap;
@@ -119,8 +121,27 @@ fn every_measurement_opens_and_keeps_every_pair() {
         };
         match ispd::open(&bytes, &Limits::STANDARD, &Options::default()) {
             Ok(d) => {
-                let n = d.fields.len() + d.spectra.iter().map(|s| s.fields.len()).sum::<usize>();
+                let all = d
+                    .fields
+                    .iter()
+                    .chain(d.spectra.iter().flat_map(|s| s.fields.iter()));
+                let n = all.filter(|f| !f.origin.starts_with("decoded")).count();
                 assert_eq!(n, pairs.len(), "{}", p.display());
+                for w in d
+                    .warnings
+                    .iter()
+                    .chain(d.spectra.iter().flat_map(|s| s.warnings.iter()))
+                {
+                    assert!(
+                        !matches!(
+                            w.key,
+                            "reader.ispd.params_unreadable" | "reader.ispd.object_skipped"
+                        ),
+                        "{}: {}",
+                        p.display(),
+                        w.key
+                    );
+                }
                 *kinds.entry("ok".into()).or_default() += 1;
                 if d.spectra[0].measurement.title.is_none() {
                     *kinds.entry("no name".into()).or_default() += 1;
@@ -178,11 +199,22 @@ fn library_pairs_agree_with_the_jcamp_exports() {
                 .map(|(a, b)| (a - k * b).abs())
                 .fold(0.0, f64::max)
         };
+        let flagged = |k: &str| sa.warnings.iter().any(|w| w.key == k);
         if dist(&xa, &xb, 1.0) <= 1e-9 && dist(&sa.y.values, &yb, 1.0) <= 1e-9 {
+            assert!(
+                !flagged("reader.ispd.y_scale") && !flagged("reader.ispd.x_range"),
+                "{}",
+                p.display()
+            );
             identical += 1;
         } else {
             // Library files imported from a JCAMP with YFACTOR 1e-9 that the import did not apply: raw integers.
             assert!(dist(&sa.y.values, &yb, 1e9) <= 1e-3, "{}", p.display());
+            assert!(
+                flagged("reader.ispd.y_scale") && flagged("reader.ispd.x_range"),
+                "{}",
+                p.display()
+            );
             raw_import += 1;
         }
     }
@@ -191,4 +223,112 @@ fn library_pairs_agree_with_the_jcamp_exports() {
         "library pairs: {pairs}, identical {identical}, raw import (y = 1e9 x JCAMP) {raw_import}"
     );
     assert!(identical >= 134);
+}
+
+fn open_all(folder: &str) -> Vec<(PathBuf, Document)> {
+    let Some(root) = common::private_dir() else {
+        return Vec::new();
+    };
+    ispd_files(&root.join(folder))
+        .into_iter()
+        .filter_map(|p| {
+            let bytes = std::fs::read(&p).ok()?;
+            let d = ispd::open(&bytes, &Limits::STANDARD, &Options::default()).ok()?;
+            Some((p, d))
+        })
+        .collect()
+}
+
+#[test]
+fn measurements_carry_parameters_history_and_interferograms() {
+    let docs = open_all("Spettri IR");
+    if docs.is_empty() {
+        eprintln!("skipped: CHECKIR_DATA not set");
+        return;
+    }
+    assert!(docs.len() >= 239, "{}", docs.len());
+    let (mut alerts, mut subtractions, mut coherent) = (0usize, 0usize, 0usize);
+    for (p, d) in &docs {
+        let m = &d.spectra[d.primary];
+        let ins = &m.instrument;
+        let name = p.display();
+        assert!(
+            ins.resolution_cm1.is_some() && ins.scans.is_some() && ins.model.is_some(),
+            "{name}"
+        );
+        assert!(
+            ins.serial_number.is_some() && ins.accessory.is_some() && !m.history.is_empty(),
+            "{name}"
+        );
+        assert!(
+            m.measurement.title.is_some() && m.measurement.datetime.is_some(),
+            "{name}"
+        );
+        let roles: Vec<Role> = d.spectra.iter().map(|s| s.role).collect();
+        assert!(roles.contains(&Role::SampleInterferogram), "{name}");
+        assert!(roles.contains(&Role::BackgroundInterferogram), "{name}");
+        subtractions += roles.iter().filter(|r| **r == Role::Subtraction).count();
+        alerts += usize::from(
+            d.warnings
+                .iter()
+                .any(|w| w.key == "reader.ispd.instrument_alert"),
+        );
+        let xs = m.x.values.to_vec();
+        let step = (xs[xs.len() - 1] - xs[0]).abs() / (xs.len() - 1) as f64;
+        let res = ins.resolution_cm1.as_ref().map_or(0.0, |r| r.value);
+        coherent += usize::from(res > 0.0 && step < res);
+    }
+    eprintln!("{} measurements: {subtractions} subtractions, {alerts} with instrument alerts, step < resolution in {coherent}", docs.len());
+}
+
+/// Whole values that name a person, a machine or a sample (not words: the model name is not secret).
+fn secrets(d: &Document) -> Vec<String> {
+    let all = d
+        .fields
+        .iter()
+        .chain(d.spectra.iter().flat_map(|s| s.fields.iter()));
+    let mut v: Vec<String> = all
+        .filter(|f| f.identity && f.kind != ftir_core::readers::model::FieldKind::Bytes)
+        .map(|f| f.value.clone())
+        .collect();
+    for s in &d.spectra {
+        let ins = &s.instrument;
+        v.extend(
+            ins.serial_number
+                .iter()
+                .chain(ins.accessory.iter())
+                .map(|x| x.value.clone()),
+        );
+    }
+    // Fixed names of the file format (object names such as the parameter list) also appear in keys: not secrets.
+    let keys: Vec<&str> = d
+        .fields
+        .iter()
+        .chain(d.spectra.iter().flat_map(|s| s.fields.iter()))
+        .flat_map(|f| [f.key.as_str(), f.original_key.as_str()])
+        .collect();
+    v.retain(|x| x.len() >= 5 && !keys.iter().any(|k| k.contains(x.as_str())));
+    v.sort();
+    v.dedup();
+    v
+}
+
+#[test]
+fn anonymous_export_hides_every_identity_value_of_the_real_files() {
+    let mut checked = 0usize;
+    for folder in ["Spettri IR", "Data"] {
+        for (p, d) in open_all(folder) {
+            let json = to_json(&anonymize(&d, b"local secret"));
+            for v in secrets(&d) {
+                let escaped = v.replace('\\', "\\\\").replace('"', "\\\"");
+                assert!(
+                    !json.contains(&escaped) && !json.contains(&v),
+                    "{}: {v}",
+                    p.display()
+                );
+            }
+            checked += 1;
+        }
+    }
+    eprintln!("anonymous export checked on {checked} files");
 }

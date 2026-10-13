@@ -1,0 +1,14 @@
+{
+  "schema": "groups/1",
+  "version": "2026-10.1",
+  "groups": [
+    {
+      "id": "ketone",
+      "names": {
+        "it": "Chetone",
+        "en": "Ketone"
+      },
+      "family": "colourful"
+    }
+  ]
+}

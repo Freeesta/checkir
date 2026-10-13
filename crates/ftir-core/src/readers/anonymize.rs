@@ -65,11 +65,15 @@ fn scrub_sourced(s: &mut Option<Sourced<String>>, fields: &[Field]) {
 }
 
 fn scrub_warning(w: &mut Warning, secret: &[u8]) {
-    if w.key == "reader.jcamp.date_ambiguous" {
-        for (name, value) in &mut w.params {
-            if *name == "value" {
-                *value = pseudonym(secret, "date", value);
-            }
+    // The text of an instrument alert is a line of the history, which can carry free text.
+    let target = match w.key {
+        "reader.jcamp.date_ambiguous" => ("value", "date"),
+        "reader.ispd.instrument_alert" => ("message", "alert"),
+        _ => return,
+    };
+    for (name, value) in &mut w.params {
+        if *name == target.0 {
+            *value = pseudonym(secret, target.1, value);
         }
     }
 }
@@ -81,6 +85,8 @@ fn scrub_spectrum(s: &mut Spectrum, secret: &[u8]) {
     scrub_sourced(&mut s.measurement.title, &s.fields);
     scrub_sourced(&mut s.measurement.sample_name, &s.fields);
     scrub_sourced(&mut s.instrument.model, &s.fields);
+    scrub_sourced(&mut s.instrument.serial_number, &s.fields);
+    scrub_sourced(&mut s.instrument.accessory, &s.fields);
     if let Some(d) = &mut s.measurement.datetime {
         d.value = year_month(&d.value).unwrap_or_else(|| pseudonym(secret, "date", &d.value));
     }

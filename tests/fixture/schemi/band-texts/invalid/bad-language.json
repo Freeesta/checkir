@@ -1,0 +1,8 @@
+{
+  "schema": "band-texts/1",
+  "version": "2026-10.1",
+  "language": "fr",
+  "texts": {
+    "bands.co.demo.counsellor": "Example."
+  }
+}
