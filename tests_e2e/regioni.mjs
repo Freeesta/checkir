@@ -4,6 +4,9 @@ import { ALFA, BETA, GAMMA, ALFA_BIS, jcamp } from "./confronto.mjs";
 
 /** Pure helpers: merging, the mask, the minimum width, the options, and the presets against the thresholds file. */
 export async function rangesPureScenario(check) {
+  const engine = await import(new URL("../site/wasm/ftir_wasm.js", import.meta.url));
+  await engine.default({ module_or_path: await readFile(new URL("../site/wasm/ftir_wasm_bg.wasm", import.meta.url)) });
+  (await import(new URL("../web/engine_limits.js", import.meta.url))).loadLimits(engine);
   const r = await import(new URL("../web/ranges.js", import.meta.url));
   check("ranges: overlapping ranges are merged and sorted", JSON.stringify(r.normalizeRanges([[1500, 1800], [700, 1000], [900, 1100], [5000, 4000]])) === JSON.stringify([[700, 1100], [1500, 1800]]));
   check("ranges: ranges are clipped to the grid", JSON.stringify(r.normalizeRanges([[100, 700], [3700, 4500]])) === JSON.stringify([[650, 700], [3700, 3800]]));
