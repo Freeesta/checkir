@@ -1,0 +1,100 @@
+{
+  "schema": "datasheet/1",
+  "substance": "psilocybin",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "lithium",
+      "severity": "dangerous",
+      "mechanism": "other",
+      "source": "nayak2021"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "psilocin",
+        "reaction": "other",
+        "source": "hasler1997"
+      },
+      {
+        "from": "psilocin",
+        "to": "4-hydroxyindole-3-acetic acid",
+        "reaction": "deamination",
+        "source": "thomann2024",
+        "enzymes": [
+          "MAO-A"
+        ]
+      },
+      {
+        "from": "psilocin",
+        "to": "psilocin glucuronide",
+        "reaction": "glucuronidation",
+        "source": "thomann2024"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "psilocin",
+        "active": true,
+        "source": "euda-mushrooms"
+      },
+      {
+        "name_key": "4-hydroxyindole-3-acetic-acid",
+        "active": false,
+        "source": "thomann2024"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "psilocybin.set_setting",
+      "topic": "set_setting",
+      "source": "johnson2008"
+    },
+    {
+      "key": "psilocybin.onset",
+      "topic": "redosing",
+      "source": "hasler1997"
+    },
+    {
+      "key": "psilocybin.dose",
+      "topic": "dosing",
+      "source": "hasler2004"
+    },
+    {
+      "key": "psilocybin.lithium",
+      "topic": "combination",
+      "source": "nayak2021"
+    }
+  ],
+  "family": "tryptamines"
+}
