@@ -1,9 +1,11 @@
 // Substance sheet e2e: the sheet opens from the candidate's detail, shows version and state per section, shows what exists
 // with no banner and nothing hidden for caution (the state is plain data), cites sources, makes no request to another origin, and works by keyboard at 320 px.
 import { readFile } from "node:fs/promises";
-import { parseParagraphs, sectionStatus } from "../web/schede.js";
+import { parseParagraphs, SECTIONS, sectionStatus } from "../web/schede.js";
+import { parseTexts } from "../tools/genera_schede.mjs";
 
 const REASSURING = /sicur|\bpur[oai]\b|pulit|via libera|\bok\b|negativ|\bsafe\b|\bpure\b|\bclean\b|all clear/i;
+const REAL_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "methamphetamine", "heroin", "3-mmc", "4-mmc", "2c-b"];
 const SPECTRUM = new URL("../data/substances/synthetic-a/spectra/synthetic-a-base.checkir.001.jdx", import.meta.url);
 
 /** The rules of what may be shown, on hand-made sheets, no browser. */
@@ -15,6 +17,27 @@ export async function sheetsPureScenario(check) {
   const order = [];
   const p = parseParagraphs("One. [f:a] Two. [f:b] [f:a]\n\nThree.", order);
   check("sheets: citations are numbered in order of first appearance", order.join() === "a,b" && p.length === 2 && p[0].filter((x) => x.ref).map((x) => x.n).join() === "1,2,1");
+  await realSheetsScenario(check);
+}
+
+/** The sheets of the main substances, read from data/ as the build reads them: identity and IR text shown, the rest a placeholder, every citation known. */
+async function realSheetsScenario(check) {
+  const data = new URL("../data/", import.meta.url);
+  const known = new Set(JSON.parse(await readFile(new URL("sources.json", data), "utf8")).sources.map((s) => s.id));
+  for (const id of REAL_SHEETS) {
+    const dir = new URL(`substances/${id}/datasheet/`, data);
+    const ds = JSON.parse(await readFile(new URL("datasheet.json", dir), "utf8"));
+    const texts = { en: parseTexts(await readFile(new URL("texts.en.md", dir), "utf8")), it: parseTexts(await readFile(new URL("texts.it.md", dir), "utf8")) };
+    const sheet = { id, names: {}, version: ds.version, section_state: ds.section_state, reviewers: ds.reviewers, reviewed: ds.reviewed, review_by: ds.review_by, ai_assisted: ds.ai_assisted, texts };
+    for (const lang of ["it", "en"]) {
+      const shown = SECTIONS.filter((k) => sectionStatus(sheet, k, lang) === "shown");
+      check(`sheets: ${id} (${lang}) shows molecule, category, sources and license only`, shown.join() === "molecule,category,sources,license", shown.join());
+      const all = Object.values(texts[lang]).join("\n");
+      const refs = [...all.matchAll(/\[f:([a-z0-9-]+)\]/g)].map((m) => m[1]);
+      check(`sheets: ${id} (${lang}) cites only known sources`, refs.length > 0 && refs.every((r) => known.has(r)), refs.filter((r) => !known.has(r)).join());
+      check(`sheets: ${id} (${lang}) says nothing that reassures`, !REASSURING.test(texts[lang].molecule + texts[lang].category));
+    }
+  }
 }
 
 /** The sheet in the page: open, read, close. */

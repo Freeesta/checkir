@@ -1,0 +1,27 @@
+{
+  "schema": "datasheet/1",
+  "substance": "amphetamine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "ftir_limits": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "harm_reduction": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

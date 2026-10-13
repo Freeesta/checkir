@@ -1,0 +1,64 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2c-b",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2C-B",
+      "synonyms": [
+        "4-bromo-2,5-dimethoxyphenethylamine"
+      ]
+    },
+    "it": {
+      "preferred": "2C-B",
+      "synonyms": [
+        "4-bromo-2,5-dimetossifenetilammina"
+      ]
+    }
+  },
+  "iupac": "2-(4-bromo-2,5-dimethoxyphenyl)ethanamine",
+  "formula": "C10H14BrNO2",
+  "molar_mass_g_mol": 260.13,
+  "smiles": "COC1=CC(=C(C=C1CCN)OC)Br",
+  "inchi": "InChI=1S/C10H14BrNO2/c1-13-9-6-8(11)10(14-2)5-7(9)3-4-12/h5-6H,3-4,12H2,1-2H3",
+  "inchikey": "YMHOBZXQZVXHBM-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q229942",
+    "chebi": "CHEBI:189669",
+    "cas": "66142-81-2",
+    "pubchem_cid": 98527
+  },
+  "classes": {
+    "chemical": [
+      "2c"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
