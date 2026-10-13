@@ -1,4 +1,5 @@
 // @ts-check
+import { assignContext } from "./bands_data.js";
 import { EXCLUDED_CM1, referenceFor } from "./match.js";
 import { mixtureComponents } from "./mixture.js";
 import { candidateName, selectedCandidate } from "./results.js";
@@ -89,7 +90,7 @@ function intensityOf(p) {
 /** Assignment of the sample peaks against the given references (`assign_peaks`, rules embedded); without any only the readings. @param {any} list @param {any[]} refs @returns {any | null} */
 function assignOf(list, refs) {
   if (!engine) return null;
-  const out = JSON.parse(engine.assign_peaks(JSON.stringify(list), JSON.stringify(refs), "", ""));
+  const out = JSON.parse(engine.assign_peaks(JSON.stringify(list), JSON.stringify(refs), assignContext(refs), ""));
   return out.error_key ? null : out;
 }
 

@@ -20,6 +20,8 @@ export default async ({ browser, base, check }) => {
   const main = n(/principali:\s*(\d+)/);
   const explained = n(/spiegati da [^:]*:\s*(\d+)/);
   check("peak counts: explained never exceed the main peaks", explained <= main, summary);
+  const panel = page.locator('details[data-panel="peaks"]');
+  if (!(await panel.evaluate((d) => d.open))) await panel.locator("summary").click();
   const peaks = page.locator(".peak-item[data-state='explained']");
   const labels = await peaks.evaluateAll((b) => b.map((x) => [x.dataset.peak, x.textContent]));
   const near = labels.find(([, t]) => /12(0\d|1\d|2\d)/.test(t ?? ""));
@@ -28,6 +30,8 @@ export default async ({ browser, base, check }) => {
     await page.waitForSelector(".reading");
     const first = (await page.locator(".reading strong").first().textContent()) ?? "";
     check("peak card: the first reading of a peak near 1212 is not the generic aryl ether", !/Etere arilico/i.test(first), first);
+    const card = (await page.locator(".reading").first().textContent()) ?? "";
+    check("peak card: the first reading names the substance and has its own text and source", /Assegnazione della banda di .*[Cc]affe/.test(card) && /stiramento C–N/.test(card) && !/non c'è ancora un testo/.test(card) && /fonti/.test(card), card);
   } else check("peak card: caffeine explains a peak near 1212", false, JSON.stringify(labels));
   check("peak card: no page error", errors.length === 0, errors.join("; "));
   await ctx.close();

@@ -104,6 +104,7 @@
   "alert.spectral_twin.label": "Spectral twin",
   "alert.spectral_twin.reason": "Almost identical in the library: {twin}",
   "app.skip": "Skip to content",
+  "card.band_of": "Band assignment of {name}",
   "card.close": "Close the card",
   "card.crowded": "Several rules fall in this zone.",
   "card.explained_by": "Explained by",
