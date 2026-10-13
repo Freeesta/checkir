@@ -1,0 +1,66 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "dimethyl-sulfone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Dimethyl sulfone",
+      "synonyms": [
+        "methylsulfonylmethane",
+        "MSM"
+      ]
+    },
+    "it": {
+      "preferred": "Dimetilsolfone",
+      "synonyms": [
+        "metilsulfonilmetano",
+        "MSM"
+      ]
+    }
+  },
+  "iupac": "methylsulfonylmethane",
+  "formula": "C2H6O2S",
+  "molar_mass_g_mol": 94.14,
+  "smiles": "CS(=O)(=O)C",
+  "inchi": "InChI=1S/C2H6O2S/c1-5(2,3)4/h1-2H3",
+  "inchikey": "HHVIBTZHLRERCL-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q423842",
+    "chebi": "CHEBI:9349",
+    "cas": "67-71-0",
+    "pubchem_cid": 6213
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "diluent_excipient"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

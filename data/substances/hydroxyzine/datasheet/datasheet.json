@@ -1,0 +1,84 @@
+{
+  "schema": "datasheet/1",
+  "substance": "hydroxyzine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "qt_prolonging_drugs",
+      "severity": "risky",
+      "mechanism": "qt",
+      "source": "prac-hydroxyzine2015"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "cetirizine",
+        "reaction": "other",
+        "source": "prac-hydroxyzine2015"
+      },
+      {
+        "from": "parent",
+        "to": "unspecified metabolites",
+        "reaction": "other",
+        "enzymes": [
+          "ADH",
+          "CYP3A4",
+          "CYP3A5"
+        ],
+        "source": "prac-hydroxyzine2015"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "cetirizine",
+        "active": true,
+        "source": "prac-hydroxyzine2015"
+      }
+    ],
+    "half_life_h": {
+      "min": 14,
+      "max": 14,
+      "matrix": "plasma",
+      "source": "prac-hydroxyzine2015"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "cocaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "hydroxyzine.heart",
+      "topic": "combination",
+      "source": "prac-hydroxyzine2015"
+    }
+  ]
+}

@@ -1567,6 +1567,233 @@
       "url": "https://doi.org/10.1111/1556-4029.12594",
       "consulted": "2026-10-13",
       "tier": "primary"
+    },
+    {
+      "id": "hoglund1989",
+      "type": "paper",
+      "title": "Pharmacokinetics of diltiazem and its metabolites after single and multiple dosing in healthy volunteers",
+      "authors": [
+        "Höglund, P.",
+        "Nilsson, L G."
+      ],
+      "year": 1989,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2815231/",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204221117/https://pubmed.ncbi.nlm.nih.gov/2815231/",
+      "tier": "primary"
+    },
+    {
+      "id": "molden2002",
+      "type": "paper",
+      "title": "Pharmacokinetics of diltiazem and its metabolites in relation to CYP2D6 genotype",
+      "authors": [
+        "Molden, E.",
+        "Johansen, P W.",
+        "Bøe, G H.",
+        "Bergan, S.",
+        "Christensen, H.",
+        "Rugstad, H E.",
+        "Rootwelt, H.",
+        "Reubsaet, L.",
+        "Lehne, G."
+      ],
+      "year": 2002,
+      "doi": "10.1067/mcp.2002.127396",
+      "url": "https://doi.org/10.1067/mcp.2002.127396",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260415172218/https://pubmed.ncbi.nlm.nih.gov/12235455/",
+      "tier": "primary"
+    },
+    {
+      "id": "molden2002b",
+      "type": "paper",
+      "title": "Desacetyl-diltiazem displays severalfold higher affinity to CYP2D6 compared with CYP3A4",
+      "authors": [
+        "Molden, E.",
+        "Asberg, A.",
+        "Christensen, H."
+      ],
+      "year": 2002,
+      "doi": "10.1124/dmd.30.1.1",
+      "url": "https://doi.org/10.1124/dmd.30.1.1",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260212133621/https://pubmed.ncbi.nlm.nih.gov/11744603/",
+      "tier": "primary"
+    },
+    {
+      "id": "chiappini2025",
+      "type": "paper",
+      "title": "Adverse Drug Reactions Associated with Concomitant Use of Calcium Channel Blockers and Cocaine: An Analysis of FDA Adverse Events Reporting System Data",
+      "authors": [
+        "Chiappini, S.",
+        "Mosca, A.",
+        "Papanti Pelletier, D G.",
+        "Corkery, J M.",
+        "Guirguis, A.",
+        "Arillotta, D.",
+        "Martinotti, G.",
+        "Schifano, F."
+      ],
+      "year": 2025,
+      "doi": "10.3390/jcm14103461",
+      "url": "https://doi.org/10.3390/jcm14103461",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260328112000/https://pubmed.ncbi.nlm.nih.gov/40429456/",
+      "tier": "primary"
+    },
+    {
+      "id": "graudins2016",
+      "type": "paper",
+      "title": "Calcium channel antagonist and beta-blocker overdose: antidotes and adjunct therapies",
+      "authors": [
+        "Graudins, A.",
+        "Lee, H M.",
+        "Druda, D."
+      ],
+      "year": 2016,
+      "doi": "10.1111/bcp.12763",
+      "url": "https://doi.org/10.1111/bcp.12763",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260922204520/https://pubmed.ncbi.nlm.nih.gov/26344579/",
+      "tier": "review"
+    },
+    {
+      "id": "afzal2023",
+      "type": "paper",
+      "title": "Hydroxyzine-Induced Torsade De Pointes: A Case Report and a Literature Review",
+      "authors": [
+        "Afzal, M A.",
+        "Khalid, N.",
+        "Abdullah, M.",
+        "Ul-Haiy, A.",
+        "Michael, P."
+      ],
+      "year": 2023,
+      "doi": "10.7759/cureus.41588",
+      "url": "https://doi.org/10.7759/cureus.41588",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20251127220422/https://pubmed.ncbi.nlm.nih.gov/37559846/",
+      "tier": "primary"
+    },
+    {
+      "id": "owusu-antwi2025",
+      "type": "paper",
+      "title": "Management of xylazine toxicity, overdose, dependence, and withdrawal: A systematic review",
+      "authors": [
+        "Owusu-Antwi, P.",
+        "Atodaria, P.",
+        "Appiah-Kubi, E.",
+        "Shah, Z.",
+        "Garcia, E M."
+      ],
+      "year": 2025,
+      "doi": "10.1111/ajad.70051",
+      "url": "https://doi.org/10.1111/ajad.70051",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "marshall2025",
+      "type": "paper",
+      "title": "Xylazine Adulteration in Illicit Fentanyl: A Threat to Public Health",
+      "authors": [
+        "Marshall, S A.",
+        "Nelson, L A."
+      ],
+      "year": 2025,
+      "doi": "10.1177/08971900241279635",
+      "url": "https://doi.org/10.1177/08971900241279635",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250203041950/https://pubmed.ncbi.nlm.nih.gov/39237081/",
+      "tier": "review"
+    },
+    {
+      "id": "choon2023",
+      "type": "paper",
+      "title": "A case series of accidental xylazine intoxication in humans; Is there a role of naloxone as an antidote?",
+      "authors": [
+        "Choon, L K.",
+        "Khiruddin, A I.",
+        "Annuar, W M W M.",
+        "Shamsuddin, S R."
+      ],
+      "year": 2023,
+      "doi": "10.4103/tjem.tjem_198_22",
+      "url": "https://doi.org/10.4103/tjem.tjem_198_22",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250206004155/https://pubmed.ncbi.nlm.nih.gov/37169031/",
+      "tier": "primary"
+    },
+    {
+      "id": "vaile2026",
+      "type": "paper",
+      "title": "Xylazine-Associated Wounds: A Scoping Review of Clinical Presentation and Management",
+      "authors": [
+        "Vaile, J R.",
+        "Connolly, W C.",
+        "Zavitsanos, A P.",
+        "Isch, E L.",
+        "Zavodnick, J H.",
+        "Tannouri, S.",
+        "McMahon, H A."
+      ],
+      "year": 2026,
+      "doi": "10.1097/ASW.0000000000000436",
+      "url": "https://doi.org/10.1097/ASW.0000000000000436",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "butawan2017",
+      "type": "paper",
+      "title": "Methylsulfonylmethane: Applications and Safety of a Novel Dietary Supplement",
+      "authors": [
+        "Butawan, M.",
+        "Benjamin, R L.",
+        "Bloomer, R J."
+      ],
+      "year": 2017,
+      "doi": "10.3390/nu9030290",
+      "url": "https://doi.org/10.3390/nu9030290",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "prac-hydroxyzine2015",
+      "type": "institution",
+      "title": "EMA, Pharmacovigilance Risk Assessment Committee (PRAC), Assessment report, Article 31 referral for hydroxyzine-containing medicines (EMA/154392/2015)",
+      "year": 2015,
+      "url": "https://www.ema.europa.eu/en/documents/referral/hydroxyzine-article-31-referral-prac-assessment-report_en.pdf",
+      "license": "© European Medicines Agency; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "uw-adai-methamphetamine2025",
+      "type": "web",
+      "title": "Alcohol and Drug Abuse Institute, University of Washington, Variability of the methamphetamine supply in Washington (drug checking data, updated 6 June 2025)",
+      "year": 2025,
+      "url": "https://adai.uw.edu/WAdata/DrugChecking/methamphetamine_content.html",
+      "consulted": "2026-10-13",
+      "tier": "database"
+    },
+    {
+      "id": "zhang2009",
+      "type": "paper",
+      "title": "Semiphysiologically based pharmacokinetic models for the inhibition of midazolam clearance by diltiazem and its major metabolite",
+      "authors": [
+        "Zhang, X.",
+        "Quinney, SK.",
+        "Gorski, JC.",
+        "Jones, DR.",
+        "Hall, SD."
+      ],
+      "year": 2009,
+      "doi": "10.1124/dmd.109.026658",
+      "url": "https://doi.org/10.1124/dmd.109.026658",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/2026/https://pubmed.ncbi.nlm.nih.gov/19420129/",
+      "tier": "primary"
     }
   ]
 }
