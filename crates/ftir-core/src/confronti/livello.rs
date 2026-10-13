@@ -6,13 +6,24 @@ use super::risultato::{Alert, Candidate, Level};
 use super::soglie::Thresholds;
 use crate::passi::json::Value;
 
+/// True when the sample and the library of the first candidate are both said to be measured with a sampling method
+/// and the two differ (e.g. transmission against ATR: bands shift by 2-4 cm⁻¹ and the thresholds do not hold).
+pub fn sampling_differs(o: &Options, library: Option<&str>) -> bool {
+    match (o.sampling.as_deref(), library) {
+        (Some(a), Some(b)) => !a.trim().eq_ignore_ascii_case(b.trim()),
+        _ => false,
+    }
+}
+
 /// Level from the first candidate's r, the margin over the first different substance and the coverage. A coverage
-/// under the threshold, a hand-chosen range or a range without calibration cap "probable" at "to check"; the
-/// caps that applied are returned (`coverage`, `custom_range`, `range_not_calibrated`).
+/// under the threshold, a hand-chosen range, a range without calibration or a different sampling method
+/// (`sampling_differs`) cap "probable" at "to check"; the caps that applied are returned (`coverage`,
+/// `custom_range`, `range_not_calibrated`, `sampling_not_calibrated`).
 pub fn propose(
     r1: f64,
     margin: Option<f64>,
     coverage: f64,
+    sampling_differs: bool,
     o: &Options,
     t: &Thresholds,
 ) -> (Level, Vec<&'static str>) {
@@ -39,6 +50,9 @@ pub fn propose(
         caps.push("custom_range");
     } else if !o.calibrated {
         caps.push("range_not_calibrated");
+    }
+    if sampling_differs {
+        caps.push("sampling_not_calibrated");
     }
     (
         if caps.is_empty() {
@@ -231,6 +245,7 @@ mod test {
             origin: None,
             expected_form: None,
             sample_id: None,
+            sampling: None,
         }
     }
 
@@ -238,36 +253,34 @@ mod test {
     fn levels_follow_the_agreed_rules() {
         let t = Thresholds::embedded().unwrap();
         let o = opts(false, true);
+        let lvl = |r, m, c| propose(r, m, c, false, &o, &t).0;
         assert_eq!(
-            propose(0.96, Some(0.06), 1.0, &o, &t),
+            propose(0.96, Some(0.06), 1.0, false, &o, &t),
             (Level::Probable, vec![])
         );
-        assert_eq!(propose(0.96, Some(0.04), 1.0, &o, &t).0, Level::ToCheck);
-        assert_eq!(propose(0.95, Some(0.05), 1.0, &o, &t).0, Level::Probable);
-        assert_eq!(propose(0.90, Some(0.5), 1.0, &o, &t).0, Level::ToCheck);
-        assert_eq!(propose(0.85, None, 1.0, &o, &t).0, Level::ToCheck);
-        assert_eq!(
-            propose(0.849, Some(0.9), 1.0, &o, &t).0,
-            Level::NotIdentified
-        );
-        assert_eq!(propose(0.99, None, 1.0, &o, &t).0, Level::ToCheck);
+        assert_eq!(lvl(0.96, Some(0.04), 1.0), Level::ToCheck);
+        assert_eq!(lvl(0.95, Some(0.05), 1.0), Level::Probable);
+        assert_eq!(lvl(0.90, Some(0.5), 1.0), Level::ToCheck);
+        assert_eq!(lvl(0.85, None, 1.0), Level::ToCheck);
+        assert_eq!(lvl(0.849, Some(0.9), 1.0), Level::NotIdentified);
+        assert_eq!(lvl(0.99, None, 1.0), Level::ToCheck);
     }
 
     #[test]
     fn coverage_custom_ranges_and_uncalibrated_presets_cap_at_to_check() {
         let t = Thresholds::embedded().unwrap();
-        let (l, caps) = propose(0.99, Some(0.5), 0.79, &opts(false, true), &t);
+        let (l, caps) = propose(0.99, Some(0.5), 0.79, false, &opts(false, true), &t);
         assert_eq!((l, caps), (Level::ToCheck, vec!["coverage"]));
         assert_eq!(
-            propose(0.99, Some(0.5), 1.0, &opts(true, false), &t).1,
+            propose(0.99, Some(0.5), 1.0, false, &opts(true, false), &t).1,
             vec!["custom_range"]
         );
         assert_eq!(
-            propose(0.99, Some(0.5), 1.0, &opts(false, false), &t).1,
+            propose(0.99, Some(0.5), 1.0, false, &opts(false, false), &t).1,
             vec!["range_not_calibrated"]
         );
         assert_eq!(
-            propose(0.5, Some(0.5), 0.1, &opts(true, false), &t),
+            propose(0.5, Some(0.5), 0.1, false, &opts(true, false), &t),
             (Level::NotIdentified, vec![])
         );
     }

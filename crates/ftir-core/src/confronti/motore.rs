@@ -55,6 +55,14 @@ impl Motore {
         self.libraries.push(LibraryCache::new(id, version));
     }
 
+    /// Say how the spectra of the library `lib` were measured (`ATR`, `transmission`, ...); empty = not said.
+    pub fn set_sampling(&mut self, lib: &str, method: &str) -> EngineResult<()> {
+        let i = self.position(lib)?;
+        let method = method.trim();
+        self.libraries[i].sampling = (!method.is_empty()).then(|| method.to_string());
+        Ok(())
+    }
+
     /// Prepare and append one spectrum to the library `lib`.
     pub fn add(&mut self, lib: &str, entry: LibEntry, s: &Spectrum) -> EngineResult<()> {
         let i = self.position(lib)?;

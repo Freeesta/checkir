@@ -148,7 +148,7 @@ fn the_result_records_chain_libraries_thresholds_and_ranges() {
         text(res.get("chain").unwrap(), "derivative"),
         "confronto_v1"
     );
-    assert_eq!(num(res.get("thresholds").unwrap(), "version"), 2.0);
+    assert_eq!(num(res.get("thresholds").unwrap(), "version"), 3.0);
     let libs = list(&res, "libraries");
     assert_eq!(
         (
