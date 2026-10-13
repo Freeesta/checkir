@@ -1,0 +1,40 @@
+/* Results: level component, candidates, alerts, detail. Heights are reserved so results arriving do not move anything. */
+.level { display: inline-flex; align-items: center; gap: 0.35rem; }
+.level .icon { color: var(--color-brand); }
+.level[data-level="5"] .icon { color: var(--text-muted); }
+.level-bar { display: inline-flex; gap: 2px; }
+.seg { width: 0.5rem; height: 0.8rem; border: 1px solid var(--text); }
+.seg.on { background: var(--text); }
+.level-line { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; margin: 0 0 0.4rem; }
+.proposed, .chain, .cap { color: var(--text-muted); font-size: 0.85rem; }
+.alerts { list-style: none; margin: 0 0 0.4rem; padding: 0; font-size: 0.85rem; }
+.alert { display: flex; gap: 0.35rem; padding: 0.15rem 0; }
+.alert .icon { color: var(--color-alert); flex: none; }
+.cands-title { margin-top: 0.5rem; }
+.cands { list-style: none; margin: 0; padding: 0; font-size: 0.9rem; }
+.cand { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "sel sel" "extra labels"; align-items: center; min-height: 3.6rem; padding: 0.1rem 0; border-top: 1px solid var(--border); }
+.cand-select { grid-area: sel; display: flex; align-items: baseline; gap: 0.35rem; min-height: 1.75rem; padding: 0.1rem 0.35rem; font: inherit; color: inherit; text-align: left; background: none; border: 0; border-left: 3px solid transparent; border-radius: 0.25rem; cursor: pointer; }
+.cand-select[aria-current] { border-left-color: var(--color-brand); background: var(--surface); font-weight: 600; }
+.rank { color: var(--text-muted); font-variant-numeric: tabular-nums; min-width: 1.2ch; }
+.cand-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cand-form { color: var(--text-muted); font-size: 0.8rem; white-space: nowrap; }
+.cand-extra { grid-area: extra; display: flex; align-items: center; gap: 0.4rem; min-width: 0; padding-left: 0.35rem; font-size: 0.8rem; }
+.cand-r { font-variant-numeric: tabular-nums; font-weight: 600; }
+.cand-lib { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-muted); }
+.cand meter { width: 3rem; height: 0.6rem; flex: none; }
+.labels { grid-area: labels; display: inline-flex; }
+.label-button { min-width: 1.5rem; min-height: 1.5rem; padding: 0.1rem; }
+.label-button[aria-checked="true"] { background: var(--text); color: var(--bg); }
+.cand[data-label="reject"] { min-height: 0; }
+.cand[data-label="reject"] .cand-extra { display: none; }
+.cand[data-label="reject"] .cand-select { text-decoration: line-through; color: var(--text-muted); }
+.detail { min-height: 7rem; margin-top: 0.5rem; padding-top: 0.4rem; border-top: 1px solid var(--border); font-size: 0.9rem; }
+.numbers { display: grid; grid-template-columns: auto 1fr; gap: 0.1rem 0.6rem; margin: 0.25rem 0 0.5rem; font-variant-numeric: tabular-nums; }
+.numbers dt { color: var(--text-muted); }
+.numbers dd { margin: 0; }
+.busy { display: flex; align-items: center; gap: 0.35rem; min-height: 1.5rem; color: var(--text-muted); font-size: 0.9rem; }
+.chip-extra { display: inline-flex; align-items: center; gap: 0.15rem; }
+.excluded { fill: var(--border); fill-opacity: 0.25; stroke: var(--border); stroke-dasharray: 4 3; }
+.excluded-label { fill: var(--text-muted); font-size: 11px; }
+.curve-reference { fill: none; stroke: var(--color-reference); stroke-width: 2; stroke-dasharray: 7 4; vector-effect: non-scaling-stroke; }
+@media (forced-colors: active) { .curve-reference { stroke: Highlight; } .excluded { fill: GrayText; } }
