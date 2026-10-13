@@ -3,6 +3,7 @@
 //! Pure functions on bytes and text; files are read and written by the callers.
 #![forbid(unsafe_code)]
 
+pub mod bridge;
 pub mod build;
 pub mod data;
 pub mod index;

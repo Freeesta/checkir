@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { chromium, firefox, webkit } from "playwright";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { demoScenario } from "./demo.mjs";
+import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { registryScenario } from "./registri.mjs";
 import { startSite } from "./sito.mjs";
 
@@ -271,6 +272,9 @@ async function run() {
     await warningsBoxScenario(browser);
     await loadingScenario(browser, base, check, axe);
     await demoScenario(browser, base, check, axe);
+    await librariesPureScenario(check);
+    await librariesScenario(browser, base, check, axe);
+    await offlineScenario(browser, base, check);
   } finally {
     await browser.close();
     close();

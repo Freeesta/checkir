@@ -124,6 +124,28 @@ async function canaryScenario(browser) {
   await ctx.close();
 }
 
+/** Importing a private library keeps only the spectrum and the file name: the metadata of the file never reach OPFS, the caches or the network. */
+async function libraryImportScenario(browser) {
+  const { ctx, seen } = await watchedContext(browser);
+  const page = await ctx.newPage();
+  const own = [];
+  page.on("request", (r) => own.push(r.url()));
+  await page.goto(base);
+  await page.waitForSelector("body[data-ready='1']");
+  await page.locator('details[data-panel="libraries"] summary').click();
+  await page.locator('[data-library="checkir-community"]').waitFor();
+  const start = own.length;
+  await page.setInputFiles('input[data-library="files"]', { name: "riferimento.jdx", mimeType: "chemical/x-jcamp-dx", buffer: Buffer.from(canaryJcamp(), "latin1") });
+  await page.locator('[data-library="mia-libreria"]').waitFor();
+  const dump = await storageDump(page, ctx);
+  check("T2 (library): the import made no request from the page", own.length === start, own.slice(start).join(", "));
+  check("T2 (library): nothing left for another origin", foreignRequests(seen.requests).length === 0);
+  check("T2 (library): the private library is in OPFS", dump.includes("checkir-libraries") && dump.includes("riferimento"));
+  check("T2 (library): no canary of the file metadata in browser storage after the import", canariesIn(dump).length === 0, canariesIn(dump).join(", "));
+  check("T2 (library): no canary in the page after the import", canariesIn(await page.evaluate(() => document.documentElement.outerHTML)).length === 0);
+  await ctx.close();
+}
+
 /** Controls: the detectors must be able to fail, otherwise a green T2 means nothing. */
 async function detectorScenario(browser) {
   const { ctx, seen } = await watchedContext(browser);
@@ -151,6 +173,7 @@ async function run() {
   try {
     await detectorScenario(browser);
     await canaryScenario(browser);
+    await libraryImportScenario(browser);
   } finally {
     await browser.close();
     close();

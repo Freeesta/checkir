@@ -1,6 +1,6 @@
 [package]
 name = "ftir-lib"
-description = "Spectral library handling (empty for now)"
+description = "Compact spectral libraries (format, builder, browser bridge)"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

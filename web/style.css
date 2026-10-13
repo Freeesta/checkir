@@ -132,6 +132,14 @@ body[data-panel="rail"] .panel-head { justify-content: center; }
 .file-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.35rem; }
 .file-select { flex: 1; display: inline-flex; align-items: center; gap: 0.35rem; min-height: 1.75rem; padding: 0.1rem 0.35rem; text-align: left; font: inherit; color: inherit; background: none; border: 0; border-left: 3px solid transparent; border-radius: 0.25rem; cursor: pointer; }
 .file-select[aria-current] { border-left-color: var(--color-brand); font-weight: 600; background: var(--surface); }
+.libs, .notes { list-style: none; margin: 0.5rem 0 0; padding: 0; font-size: 0.9rem; }
+.lib-item { padding: 0.35rem 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.1rem; }
+.lib-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+.lib-toggle { display: inline-flex; align-items: center; gap: 0.4rem; flex: 1; min-height: 1.75rem; }
+.badge { padding: 0 0.4rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 0.8rem; color: var(--text-muted); }
+.lib-name { width: 100%; box-sizing: border-box; min-height: 1.9rem; margin-bottom: 0.4rem; font: inherit; color: inherit; background: var(--surface); border: 1px solid var(--border); border-radius: 0.3rem; padding: 0.1rem 0.4rem; }
+.lib-progress { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.5rem 0; font-size: 0.9rem; }
+.lib-progress progress { flex: 1; min-width: 6rem; accent-color: var(--color-brand); }
 .note { color: var(--text-muted); font-size: 0.85rem; }
 .error { display: flex; align-items: center; gap: 0.35rem; margin: 0 0 0.5rem; font-size: 0.9rem; }
 .error .icon { color: var(--color-alert); flex: none; }
