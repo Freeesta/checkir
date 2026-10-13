@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "etizolam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Etizolam",
+      "synonyms": [
+        "Depas",
+        "Etizolamum"
+      ]
+    },
+    "it": {
+      "preferred": "Etizolam",
+      "synonyms": [
+        "Depas"
+      ]
+    }
+  },
+  "iupac": "7-(2-chlorophenyl)-4-ethyl-13-methyl-3-thia-1,8,11,12-tetrazatricyclo[8.3.0.02,6]trideca-2(6),4,7,10,12-pentaene",
+  "formula": "C17H15ClN4S",
+  "molar_mass_g_mol": 342.8,
+  "smiles": "CCC1=CC2=C(S1)N3C(=NN=C3CN=C2C4=CC=CC=C4Cl)C",
+  "inchi": "InChI=1S/C17H15ClN4S/c1-3-11-8-13-16(12-6-4-5-7-14(12)18)19-9-15-21-20-10(2)22(15)17(13)23-11/h4-8H,3,9H2,1-2H3",
+  "inchikey": "VMZUTJCNQWMAGF-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "40054-69-1",
+    "pubchem_cid": 3307
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
