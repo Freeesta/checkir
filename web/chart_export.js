@@ -1,4 +1,5 @@
 // @ts-check
+import { SVG_NS } from "./dom.js";
 import { download } from "./export.js";
 import { t } from "./i18n.js";
 import { activeFile, getState } from "./state.js";
@@ -29,16 +30,16 @@ export function chartSvg(chart) {
   copy.querySelectorAll(DROP).forEach((n) => n.remove());
   const box = chart.viewBox.baseVal;
   const { width, height } = box;
-  copy.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  copy.setAttribute("xmlns", SVG_NS);
   copy.setAttribute("width", String(width));
   copy.setAttribute("height", String(height));
   copy.removeAttribute("role");
   copy.removeAttribute("aria-label");
   copy.removeAttribute("class");
   copy.removeAttribute("style");
-  const back = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  const back = document.createElementNS(SVG_NS, "rect");
   for (const [k, v] of Object.entries({ x: "0", y: "0", width: String(width), height: String(height), fill: getComputedStyle(document.body).backgroundColor })) back.setAttribute(k, v);
-  const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+  const title = document.createElementNS(SVG_NS, "title");
   title.textContent = chart.getAttribute("aria-label") ?? "";
   copy.prepend(back);
   copy.prepend(title);
