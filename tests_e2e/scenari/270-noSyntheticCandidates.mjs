@@ -48,4 +48,23 @@ export default async ({ browser, base, check }) => {
   check("no synthetic: no raw spectrum id in the results", !/caffeine-base[._]/i.test(body) && !body.includes("_lab"), body.slice(0, 400));
   check("no synthetic: no page error", errors.length === 0, errors.join("; "));
   await ctx.close();
+
+  // First result after the page opens: it is computed with all the default libraries, never shown first with a part of them.
+  const ctx2 = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 900 } });
+  const page2 = await ctx2.newPage();
+  await page2.addInitScript(() => {
+    /** @type {string[]} */
+    const seen = (window.__levels = []);
+    new MutationObserver(() => {
+      const v = document.querySelector(".result[data-level]")?.getAttribute("data-level");
+      if (v && seen[seen.length - 1] !== v) seen.push(v);
+    }).observe(document, { subtree: true, childList: true, attributes: true, attributeFilter: ["data-level"] });
+  });
+  await page2.goto(base);
+  await page2.setInputFiles("input[type=file]", { name: "caffeina.jdx", mimeType: "chemical/x-jcamp-dx", buffer: caffeine });
+  await page2.waitForSelector(".result[data-level]", { timeout: 30000 });
+  await page2.waitForTimeout(4000);
+  const levels = await page2.evaluate(() => window.__levels);
+  check("no synthetic: the first result of a known spectrum is never a provisional level 4", levels.length >= 1 && !levels.includes("4") && new Set(levels).size === 1, levels.join(">"));
+  await ctx2.close();
 };
