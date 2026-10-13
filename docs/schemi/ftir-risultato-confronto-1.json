@@ -101,9 +101,9 @@
           "description_it": "Limiti usati per leggere l'r di ogni regione (agree_min, partial_min) e quota di segnale sotto cui una regione non si giudica (signal_share_min).",
           "type": "object",
           "properties": {
-            "agree_min": { "type": "number" },
-            "partial_min": { "type": "number" },
-            "signal_share_min": { "type": "number" }
+            "agree_min": { "description": "Lowest regional r that agrees.", "description_it": "r regionale minimo che concorda.", "type": "number" },
+            "partial_min": { "description": "Lowest regional r that agrees in part.", "description_it": "r regionale minimo che concorda in parte.", "type": "number" },
+            "signal_share_min": { "description": "Lowest share of signal for a region to be judged.", "description_it": "Quota minima di segnale perché una regione sia giudicata.", "type": "number" }
           },
           "required": ["agree_min", "partial_min", "signal_share_min"],
           "additionalProperties": false
