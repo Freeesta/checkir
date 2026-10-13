@@ -20,6 +20,170 @@ export const GIVE_UP_MS = 30000;
 /** At most this many measurements wait for an answer; older ones are dropped. */
 export const MAX_OFFERS = 20;
 
+/** The folder feature: state in `state.folder`, handles and timers here. */
+class Folder {
+  /** @param {import("./engine.js").Engine | null} engine @param {(text: string) => void} announce */
+  constructor(engine, announce) {
+    this.engine = engine;
+    this.say = announce;
+    /** @type {Map<string, FsHandle>} */
+    this.offered = new Map();
+    /** @type {FsHandle | null} */
+    this.current = null;
+    /** @type {FsHandle | null} */
+    this.saved = null;
+    /** @type {Watcher | null} */
+    this.watcher = null;
+    /** @type {ReturnType<typeof setInterval> | null} */
+    this.timer = null;
+    /** @type {{ disconnect: () => void } | null} */
+    this.observer = null;
+    this.seq = 0;
+  }
+
+  stop() {
+    this.watcher?.stop();
+    if (this.timer) clearInterval(this.timer);
+    this.observer?.disconnect();
+    this.watcher = this.timer = this.observer = this.current = null;
+    this.offered.clear();
+    patch({ watching: false, folderName: null, offers: [], notice: null });
+  }
+
+  /** @param {string} id */
+  dropOffer(id) {
+    this.offered.delete(id);
+    patch({ offers: getState().folder.offers.filter((o) => o.id !== id) });
+  }
+
+  /** Open a measurement as any loaded file (a new entry; nothing already open is replaced). @param {string} id */
+  async openOffer(id) {
+    const handle = this.offered.get(id);
+    if (!handle) return;
+    this.dropOffer(id);
+    try {
+      await openFiles([await handle.getFile()], this.engine);
+    } catch {
+      return notice("err.folder.unreadable");
+    }
+    const s = getState();
+    this.say(s.fileError ? `${t("status.file_failed")} ${t(s.fileError.key, s.fileError.params)}` : t("status.file_loaded", { code: s.active ?? "" }));
+  }
+
+  /** @param {string} name @param {FsHandle} handle */
+  onReady(name, handle) {
+    const id = String(++this.seq);
+    this.offered.set(id, handle);
+    const offers = [...getState().folder.offers, { id, name }];
+    for (const old of offers.splice(0, Math.max(0, offers.length - MAX_OFFERS))) this.offered.delete(old.id);
+    patch({ offers, notice: null });
+    // Open at once only when no derived spectrum (residual, mean…) is on screen; otherwise it stays an offer.
+    if (getState().folder.auto && !getState().files.some((f) => f.parent !== null)) this.openOffer(id);
+    else this.say(t("folder.status.new"));
+  }
+
+  /** @param {string} name */
+  onUnreadable(name) {
+    notice("err.folder.busy", { name });
+    this.say(t("folder.status.busy"));
+  }
+
+  onLost() {
+    this.stop();
+    notice("err.folder.lost");
+    this.say(t("err.folder.lost"));
+  }
+
+  /** Observe the folder when the browser can (then a slow scan is only a safety net); otherwise scan every 2 s. @param {FsHandle} dir @param {Watcher} w */
+  schedule(dir, w) {
+    const rescan = async () => {
+      if ((await w.scan()) > 0 && this.observer) setTimeout(rescan, POLL_MS);
+    };
+    this.timer = setInterval(rescan, POLL_MS);
+    const Observer = /** @type {any} */ (window).FileSystemObserver;
+    if (typeof Observer !== "function") return;
+    try {
+      const o = new Observer(() => rescan());
+      o.observe(dir).then(() => {
+        if (this.watcher !== w) return o.disconnect();
+        this.observer = o;
+        if (this.timer) clearInterval(this.timer);
+        this.timer = setInterval(rescan, SAFETY_MS);
+      }, () => {});
+    } catch {
+      // keep scanning every 2 s
+    }
+  }
+
+  /** @param {FsHandle} dir */
+  async begin(dir) {
+    this.stop();
+    this.current = dir;
+    const w = createWatcher(dir, { validate: (f) => isReadable(f, this.engine), onReady: (n, h) => this.onReady(n, h), onUnreadable: (n) => this.onUnreadable(n), onLost: () => this.onLost() });
+    this.watcher = w;
+    patch({ watching: true, folderName: dir.name, notice: null });
+    if (getState().folder.remember) await this.keep(dir);
+    await w.scan();
+    if (this.watcher === w) this.schedule(dir, w);
+    this.say(t("folder.status.on"));
+  }
+
+  /** Store the reference to the folder (the only thing that is ever stored). @param {FsHandle} dir */
+  async keep(dir) {
+    await saveRef(dir).catch(() => {});
+    this.saved = dir;
+    patch({ saved: dir.name });
+  }
+
+  /** @param {boolean} on */
+  async setRemember(on) {
+    patch({ remember: on });
+    if (on && this.current) return this.keep(this.current);
+    if (on) return;
+    this.saved = null;
+    patch({ saved: null });
+    await clearRef();
+  }
+
+  async choose() {
+    try {
+      await this.begin(await /** @type {any} */ (window).showDirectoryPicker({ mode: "read" }));
+    } catch (e) {
+      if (!(e instanceof DOMException && e.name === "AbortError")) notice("err.folder.denied");
+    }
+  }
+
+  async resume() {
+    if (!this.saved) return;
+    try {
+      const answer = await /** @type {any} */ (this.saved).requestPermission({ mode: "read" });
+      if (answer === "granted") await this.begin(this.saved);
+      else notice("err.folder.denied");
+    } catch {
+      notice("err.folder.denied");
+    }
+  }
+
+  /** Without the folder API: open the newest measurement among the files at the first level of a folder chosen with the plain chooser. */
+  wireLatestChooser() {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.hidden = true;
+    input.setAttribute("webkitdirectory", "");
+    document.body.append(input);
+    input.addEventListener("change", async () => {
+      const chosen = [...(input.files ?? [])].filter((f) => f.webkitRelativePath.split("/").length === 2 && isMeasure(f.name));
+      input.value = "";
+      const latest = chosen.sort((a, b) => b.lastModified - a.lastModified)[0];
+      if (!latest) return notice("err.folder.none");
+      patch({ notice: null });
+      await openFiles([latest], this.engine);
+      this.say(t("status.file_loaded", { code: getState().active ?? "" }));
+    });
+    return () => input.click();
+  }
+}
+
 /** @param {string} name */
 const isMeasure = (name) => EXTENSIONS.some((e) => name.toLowerCase().endsWith(e));
 
@@ -157,180 +321,28 @@ function patch(patch) {
 const notice = (key, params = {}) => patch({ notice: { key, params } });
 
 /**
- * The folder feature: state in `state.folder`, handles and timers here. Without the browser API only `pickLast` (a plain folder chooser) works.
+ * The folder feature. Without the browser API only `pickLast` (a plain folder chooser) works.
  * @param {{ engine: import("./engine.js").Engine | null, announce: (text: string) => void }} deps
  * @returns {import("./actions.js").FolderCtx}
  */
 export function createFolder({ engine, announce }) {
-  /** @type {Map<string, FsHandle>} */
-  const offered = new Map();
-  /** @type {FsHandle | null} */
-  let current = null;
-  /** @type {FsHandle | null} */
-  let saved = null;
-  /** @type {Watcher | null} */
-  let watcher = null;
-  /** @type {ReturnType<typeof setInterval> | null} */
-  let timer = null;
-  /** @type {{ disconnect: () => void } | null} */
-  let observer = null;
-  let seq = 0;
-
-  const stop = () => {
-    watcher?.stop();
-    if (timer) clearInterval(timer);
-    observer?.disconnect();
-    watcher = timer = observer = current = null;
-    offered.clear();
-    patch({ watching: false, folderName: null, offers: [], notice: null });
-  };
-
-  /** @param {string} id */
-  const dropOffer = (id) => {
-    offered.delete(id);
-    patch({ offers: getState().folder.offers.filter((o) => o.id !== id) });
-  };
-
-  /** Open a measurement as any loaded file (new entry; nothing already open is replaced). @param {string} id */
-  const openOffer = async (id) => {
-    const handle = offered.get(id);
-    if (!handle) return;
-    dropOffer(id);
-    try {
-      await openFiles([await handle.getFile()], engine);
-    } catch {
-      return notice("err.folder.unreadable");
-    }
-    const s = getState();
-    announce(s.fileError ? `${t("status.file_failed")} ${t(s.fileError.key, s.fileError.params)}` : t("status.file_loaded", { code: s.active ?? "" }));
-  };
-
-  /** Open at once only when nothing derived from a spectrum would be lost to the view; otherwise it stays an offer. */
-  const canAutoOpen = () => getState().folder.auto && !getState().files.some((f) => f.parent !== null);
-
-  /** @param {string} name @param {FsHandle} handle */
-  const onReady = (name, handle) => {
-    const id = String(++seq);
-    offered.set(id, handle);
-    const offers = [...getState().folder.offers, { id, name }];
-    for (const old of offers.splice(0, Math.max(0, offers.length - MAX_OFFERS))) offered.delete(old.id);
-    patch({ offers, notice: null });
-    if (canAutoOpen()) openOffer(id);
-    else announce(t("folder.status.new"));
-  };
-
-  /** @param {string} name */
-  const onUnreadable = (name) => {
-    notice("err.folder.busy", { name });
-    announce(t("folder.status.busy"));
-  };
-
-  const onLost = () => {
-    stop();
-    notice("err.folder.lost");
-    announce(t("err.folder.lost"));
-  };
-
-  /** Observe the folder when the browser can (then a slow scan is only a safety net); otherwise scan every 2 s. @param {FsHandle} dir @param {Watcher} w */
-  function schedule(dir, w) {
-    const rescan = async () => {
-      if ((await w.scan()) > 0 && observer) setTimeout(rescan, POLL_MS);
-    };
-    timer = setInterval(rescan, POLL_MS);
-    const Observer = /** @type {any} */ (window).FileSystemObserver;
-    if (typeof Observer !== "function") return;
-    try {
-      const o = new Observer(() => rescan());
-      o.observe(dir).then(() => {
-        if (watcher !== w) return o.disconnect();
-        observer = o;
-        if (timer) clearInterval(timer);
-        timer = setInterval(rescan, SAFETY_MS);
-      }, () => {});
-    } catch {
-      // keep scanning every 2 s
-    }
-  }
-
-  /** @param {FsHandle} dir */
-  async function begin(dir) {
-    stop();
-    current = dir;
-    const w = createWatcher(dir, { validate: (f) => isReadable(f, engine), onReady, onUnreadable, onLost });
-    watcher = w;
-    patch({ watching: true, folderName: dir.name, notice: null });
-    if (getState().folder.remember) {
-      await saveRef(dir).catch(() => {});
-      saved = dir;
-      patch({ saved: dir.name });
-    }
-    await w.scan();
-    if (watcher === w) schedule(dir, w);
-    announce(t("folder.status.on"));
-  }
-
-  /** @param {boolean} on */
-  async function setRemember(on) {
-    patch({ remember: on });
-    if (on && current) {
-      await saveRef(current).catch(() => {});
-      saved = current;
-      patch({ saved: current.name });
-    } else if (!on) {
-      saved = null;
-      patch({ saved: null });
-      await clearRef();
-    }
-  }
-
+  const f = new Folder(engine, announce);
   patch({ supported: folderSupported() });
   loadRef().then((ref) => {
-    saved = ref;
+    f.saved = ref;
     if (ref) patch({ remember: true, saved: ref.name });
   });
-
-  const hidden = document.createElement("input");
-  hidden.type = "file";
-  hidden.hidden = true;
-  hidden.setAttribute("webkitdirectory", "");
-  document.body.append(hidden);
-  hidden.addEventListener("change", async () => {
-    const chosen = [...(hidden.files ?? [])].filter((f) => f.webkitRelativePath.split("/").length === 2 && isMeasure(f.name));
-    hidden.value = "";
-    const latest = chosen.sort((a, b) => b.lastModified - a.lastModified)[0];
-    if (!latest) return notice("err.folder.none");
-    patch({ notice: null });
-    await openFiles([latest], engine);
-    announce(t("status.file_loaded", { code: getState().active ?? "" }));
-  });
-
   return {
-    choose: async () => {
-      try {
-        const dir = await /** @type {any} */ (window).showDirectoryPicker({ mode: "read" });
-        await begin(dir);
-      } catch (e) {
-        if (!(e instanceof DOMException && e.name === "AbortError")) notice("err.folder.denied");
-      }
-    },
-    resume: async () => {
-      if (!saved) return;
-      try {
-        const answer = await /** @type {any} */ (saved).requestPermission({ mode: "read" });
-        if (answer === "granted") await begin(saved);
-        else notice("err.folder.denied");
-      } catch {
-        notice("err.folder.denied");
-      }
-    },
+    choose: () => f.choose(),
+    resume: () => f.resume(),
     stop: () => {
-      stop();
+      f.stop();
       announce(t("folder.status.off"));
     },
-    setRemember,
+    setRemember: (on) => f.setRemember(on),
     setAuto: (on) => patch({ auto: on }),
-    openOffer,
-    ignoreOffer: dropOffer,
-    pickLast: () => hidden.click(),
+    openOffer: (id) => f.openOffer(id),
+    ignoreOffer: (id) => f.dropOffer(id),
+    pickLast: f.wireLatestChooser(),
   };
 }

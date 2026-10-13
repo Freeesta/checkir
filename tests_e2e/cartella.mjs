@@ -52,18 +52,23 @@ async function leaksOf(page, names) {
   }, names);
 }
 
-/** The watched-folder scenario with the folder API present (a stand-in picker). */
-async function watchScenario(browser, base, check, axe) {
+/** A page with the stand-in picker, recording requests and page errors. */
+async function watchedPage(browser, base) {
   const b64 = (await readFile(FIXTURE)).toString("base64");
   const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 768 } });
   await ctx.addInitScript(FAKE_PICKER);
-  const requests = [];
-  ctx.on("request", (r) => requests.push(r.url()));
+  const seen = { requests: [], errors: [] };
+  ctx.on("request", (r) => seen.requests.push(r.url()));
   const page = await ctx.newPage();
-  const errors = [];
-  page.on("pageerror", (e) => errors.push(String(e)));
+  page.on("pageerror", (e) => seen.errors.push(String(e)));
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
+  return { b64, ctx, page, seen };
+}
+
+/** The watched-folder scenario with the folder API present: detection, offers, opening. */
+async function watchScenario(browser, base, check, axe) {
+  const { b64, ctx, page, seen } = await watchedPage(browser, base);
   check("folder: off at the start, nothing stored", (await page.locator("#folder-choose").count()) === 1 && (await page.evaluate(async () => (await indexedDB.databases()).length)) === 0);
   check("folder: the remember and open-at-once boxes start unchecked", !(await page.isChecked("#folder-remember")) && !(await page.isChecked("#folder-auto")));
   check("folder: axe is clean before the activation", (await axe(page)).length === 0);
@@ -110,7 +115,18 @@ async function watchScenario(browser, base, check, axe) {
   await page.waitForSelector('[data-fk="sel-C2"]', { timeout: 20000 });
   check("folder: with open-at-once the new measurement opens (C2) without an offer", (await offers(page).count()) === 0);
   await page.uncheck("#folder-auto");
+  await rememberScenario(page, b64, check);
+  const foreign = seen.requests.filter((u) => !u.startsWith(base) && !/^(data|blob|about):/.test(u));
+  check("folder: no request left the site", foreign.length === 0, foreign.join(", "));
+  check("folder: no page error", seen.errors.length === 0, seen.errors.join(" | "));
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.click('.tab[data-goto="files"]');
+  check("folder: no horizontal scroll at 320 px", await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
+  await ctx.close();
+}
 
+/** Remembering the folder: only a reference, only on request, gone when unchecked; resuming after a reload; stopping. */
+async function rememberScenario(page, b64, check) {
   await page.check("#folder-remember");
   await page.waitForFunction(async () => (await indexedDB.databases()).some((d) => d.name === "checkir-folder"));
   const kept = await page.evaluate(async () => {
@@ -136,14 +152,6 @@ async function watchScenario(browser, base, check, axe) {
 
   await page.click("#folder-stop");
   check("folder: stopping clears the offers and goes back to the choice", (await offers(page).count()) === 0 && (await page.locator("#folder-choose").count()) === 1);
-  const foreign = requests.filter((u) => !u.startsWith(base) && !/^(data|blob|about):/.test(u));
-  check("folder: no request left the site", foreign.length === 0, foreign.join(", "));
-  check("folder: no page error", errors.length === 0, errors.join(" | "));
-
-  await page.setViewportSize({ width: 320, height: 700 });
-  await page.click('.tab[data-goto="files"]');
-  check("folder: no horizontal scroll at 320 px", await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
-  await ctx.close();
 }
 
 /** Without the folder API only the plain folder chooser (latest measurement) is offered. */
