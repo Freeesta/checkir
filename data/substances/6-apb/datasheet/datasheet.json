@@ -1,0 +1,60 @@
+{
+  "schema": "datasheet/1",
+  "substance": "6-apb",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "4-carboxymethyl-3-hydroxyamphetamine",
+        "reaction": "other",
+        "source": "welter2015"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "6-apb.identity",
+      "topic": "testing",
+      "source": "welter2015"
+    },
+    {
+      "key": "6-apb.potency",
+      "topic": "dosing",
+      "source": "brandt2020"
+    },
+    {
+      "key": "6-apb.multiple",
+      "topic": "combination",
+      "source": "hofmann2022"
+    }
+  ]
+}

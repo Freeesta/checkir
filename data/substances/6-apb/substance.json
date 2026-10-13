@@ -1,0 +1,61 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "6-apb",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "6-APB",
+      "synonyms": [
+        "6-(2-aminopropyl)benzofuran",
+        "Benzo-Fury",
+        "1-(1-benzofuran-6-yl)propan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "6-APB",
+      "synonyms": [
+        "6-(2-amminopropil)benzofurano",
+        "Benzo-Fury"
+      ]
+    }
+  },
+  "iupac": "1-(1-benzofuran-6-yl)propan-2-amine",
+  "formula": "C11H13NO",
+  "molar_mass_g_mol": 175.23,
+  "smiles": "CC(CC1=CC2=C(C=C1)C=CO2)N",
+  "inchi": "InChI=1S/C11H13NO/c1-8(12)6-9-2-3-10-4-5-13-11(10)7-9/h2-5,7-8H,6,12H2,1H3",
+  "inchikey": "FQDAMYLMQQKPRX-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q2664395",
+    "cas": "286834-85-3",
+    "pubchem_cid": 9794343
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
