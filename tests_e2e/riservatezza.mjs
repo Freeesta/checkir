@@ -6,6 +6,7 @@
 import { chromium, firefox, webkit } from "playwright";
 import { FAKE_PICKER } from "./cartella.mjs";
 import { CANARIES, CANARY_STRINGS, canaryJcamp } from "./canarino.mjs";
+import { subtractionTrace } from "./sottrazione.mjs";
 import { staticScenario } from "./riservatezza_statico.mjs";
 import { startSite } from "./sito.mjs";
 
@@ -113,6 +114,7 @@ async function canaryScenario(browser) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await doEverything(page);
+  await subtractionTrace(page, CANARIES.fileName);
   const dump = await storageDump(page, ctx);
   // While a file is open the page shows it to its owner; closing every file must leave nothing of it in the page.
   for (let i = 0; i < 20; i++) {
