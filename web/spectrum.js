@@ -98,3 +98,23 @@ export function thin(idx, ys, buckets) {
   }
   return out;
 }
+
+/**
+ * Index of the point nearest to a wavenumber, by bisection (the axis is monotonic, either way).
+ * @param {Spectrum} s
+ * @param {number} x
+ * @returns {number} -1 for an empty spectrum
+ */
+export function nearestIndex(s, x) {
+  const xs = s.wavenumber_cm1;
+  if (!xs.length) return -1;
+  const up = xs[xs.length - 1] >= xs[0];
+  let lo = 0;
+  let hi = xs.length - 1;
+  while (hi - lo > 1) {
+    const mid = (lo + hi) >> 1;
+    if (xs[mid] < x === up) lo = mid;
+    else hi = mid;
+  }
+  return Math.abs(xs[lo] - x) <= Math.abs(xs[hi] - x) ? lo : hi;
+}
