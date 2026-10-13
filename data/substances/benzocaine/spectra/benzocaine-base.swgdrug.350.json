@@ -1,0 +1,96 @@
+{
+  "schema": "ftir-spectrum/1",
+  "id": "benzocaine-base.swgdrug.350",
+  "form": "benzocaine-base",
+  "role": "reference",
+  "technique": {
+    "method": "ATR",
+    "crystal": "diamond",
+    "reflections": 1
+  },
+  "instrument": {
+    "manufacturer": "Thermo Nicolet",
+    "model": "iS10"
+  },
+  "resolution_cm1": 4,
+  "scans": 32,
+  "apodization": "Norton-Beer strong",
+  "range_cm1": [
+    649.9,
+    3999.8
+  ],
+  "step_cm1": 1.9285,
+  "y_axis": "absorbance",
+  "atr_correction": false,
+  "processing": [
+    "normalised by the source to 0-1 absorbance (declared: subtraction or addition, multiplied by a scalar)"
+  ],
+  "measured": "2018-01",
+  "provenance": {
+    "type": "reference_material",
+    "supplier": "SWGDRUG IR Library (reference standard)",
+    "batch": "055K0751"
+  },
+  "library": {
+    "name": "swgdrug-ir",
+    "version": "2024-05-15",
+    "original_id": "#350"
+  },
+  "contributors": [
+    {
+      "public_name": "SWGDRUG",
+      "body": "Scientific Working Group for the Analysis of Seized Drugs"
+    }
+  ],
+  "license": "LicenseRef-permission-swgdrug",
+  "license_terms": {
+    "non_commercial": true,
+    "citation": "IR spectral data provided courtesy of SWGDRUG (swgdrug.org), SWGDRUG IR Library v2024-05-15",
+    "permission": "written, 2026-10-13, for the listed cutting agents"
+  },
+  "sha256": "ac6af8da632417811070ac1490198ca5b496f4fac7bb271cacc3d116a01b619b",
+  "original_format": "JCAMP-DX 5.01 (OMNIC), (X++(Y..Y))",
+  "review": {
+    "state": "proposed",
+    "reviewers": [],
+    "date": "2026-10-13"
+  },
+  "quality": {
+    "checks": [
+      {
+        "criterion": "range",
+        "result": "pass"
+      },
+      {
+        "criterion": "resolution",
+        "result": "pass",
+        "value": 4
+      },
+      {
+        "criterion": "scans",
+        "result": "pass",
+        "value": 32
+      },
+      {
+        "criterion": "saturation",
+        "result": "pass",
+        "value": 1.0
+      },
+      {
+        "criterion": "signal",
+        "result": "pass",
+        "value": 1.0
+      },
+      {
+        "criterion": "noise",
+        "result": "pass",
+        "value": 15819.4
+      },
+      {
+        "criterion": "co2",
+        "result": "pass",
+        "value": 0.0004
+      }
+    ]
+  }
+}

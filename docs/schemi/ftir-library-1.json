@@ -59,6 +59,29 @@
       ],
       "additionalProperties": false
     },
+    "terms": {
+      "description": "Conditions of a third-party permission (non-commercial use, disclaimer, no endorsement), shown with the library; {app} stands for the product name.",
+      "description_it": "Condizioni del permesso di un ente terzo (uso non commerciale, disclaimer, nessuna approvazione), mostrate con la libreria; {app} sta per il nome del prodotto.",
+      "type": "object",
+      "properties": {
+        "it": {
+          "description": "Italian text.",
+          "description_it": "Testo in italiano.",
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "description": "English text.",
+          "description_it": "Testo in inglese.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "en"
+      ],
+      "additionalProperties": false
+    },
     "grid": {
       "description": "Common grid.",
       "description_it": "Griglia comune.",

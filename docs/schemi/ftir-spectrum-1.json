@@ -340,10 +340,40 @@
       "minItems": 1
     },
     "license": {
-      "description": "SPDX id: CC-BY-4.0 or LicenseRef-permission-<body> for third parties.",
-      "description_it": "Id SPDX: CC-BY-4.0 oppure LicenseRef-permission-<ente> per i terzi.",
+      "description": "SPDX id: CC-BY-4.0, or LicenseRef-permission-<body> for third parties (then license_terms is required).",
+      "description_it": "Id SPDX: CC-BY-4.0, oppure LicenseRef-permission-<ente> per i terzi (allora serve license_terms).",
       "type": "string",
       "pattern": "^(CC-BY-4\\.0|LicenseRef-permission-[a-z0-9-]+)$"
+    },
+    "license_terms": {
+      "description": "Conditions of a third-party permission (only with a LicenseRef-permission licence).",
+      "description_it": "Condizioni di un permesso di terzi (solo con una licenza LicenseRef-permission).",
+      "type": "object",
+      "properties": {
+        "non_commercial": {
+          "description": "Use limited to non-commercial purposes.",
+          "description_it": "Uso limitato a scopi non commerciali.",
+          "type": "boolean"
+        },
+        "citation": {
+          "description": "Citation required by the body, with the library version.",
+          "description_it": "Citazione richiesta dall'ente, con la versione della libreria.",
+          "type": "string",
+          "minLength": 1
+        },
+        "permission": {
+          "description": "Kind and date of the permission (the text stays in the private repository).",
+          "description_it": "Tipo e data del permesso (il testo resta nel repository privato).",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "non_commercial",
+        "citation",
+        "permission"
+      ],
+      "additionalProperties": false
     },
     "sha256": {
       "description": "SHA-256 of the .jdx file, lowercase hex.",
@@ -472,5 +502,31 @@
     "quality",
     "review"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "license": {
+            "pattern": "^LicenseRef-permission-"
+          }
+        },
+        "required": [
+          "license"
+        ]
+      },
+      "then": {
+        "required": [
+          "license_terms"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "license_terms"
+          ]
+        }
+      }
+    }
+  ]
 }

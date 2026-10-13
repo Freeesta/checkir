@@ -16,6 +16,7 @@ export async function libraryTestScenario(browser, base, check, axe) {
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"]').evaluate((d) => (d.open = true));
   await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
+  await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   await page.setInputFiles('input[data-library="files"]', [
     { name: "alfa.jdx", mimeType: "application/octet-stream", buffer: jcamp("alfa", ALFA) },

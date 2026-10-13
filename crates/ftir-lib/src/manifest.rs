@@ -46,6 +46,9 @@ pub struct Manifest {
     pub license: String,
     pub attribution_it: Option<String>,
     pub attribution_en: String,
+    /// Conditions of a third-party permission (non-commercial use, disclaimer, no endorsement), shown with the library.
+    pub terms_it: Option<String>,
+    pub terms_en: Option<String>,
     pub grid: Grid,
     pub n_spectra: usize,
     pub sha256_data: String,
@@ -75,6 +78,38 @@ fn parse_grid(v: &Value) -> EngineResult<Grid> {
     Ok(grid)
 }
 
+/// `schema` must be `ftir-library/1`; another value is `library.schema_unknown`.
+fn check_schema(v: &Value) -> EngineResult<()> {
+    match text(v, "schema") {
+        Some(SCHEMA) => {}
+        Some(other) => {
+            return Err(ftir_core::error::EngineError::new(
+                "library.schema_unknown",
+                "unknown library schema",
+            )
+            .with_param("schema", other))
+        }
+        None => return Err(invalid(KEY, "schema")),
+    }
+    Ok(())
+}
+
+/// The optional `terms` (`it`, `en`); when present, `en` is required.
+fn parse_terms(v: &Value) -> EngineResult<(Option<String>, Option<String>)> {
+    let Some(t) = v.get("terms") else {
+        return Ok((None, None));
+    };
+    let en = text(t, "en").ok_or_else(|| invalid(KEY, "terms"))?;
+    Ok((text(t, "it").map(str::to_string), Some(en.to_string())))
+}
+
+/// `{"it": …, "en": …}` with `it` only when present.
+fn texts(it: Option<&str>, en: &str) -> Value {
+    let mut v: Vec<(&str, Value)> = it.map(|it| ("it", string(it))).into_iter().collect();
+    v.push(("en", string(en)));
+    obj(v)
+}
+
 fn is_hex64(s: &str) -> bool {
     s.len() == 64 && s.bytes().all(|b| matches!(b, b'0'..=b'9' | b'a'..=b'f'))
 }
@@ -83,20 +118,11 @@ impl Manifest {
     /// Reads a manifest; a missing or malformed member is `library.manifest_invalid` with the member name.
     pub fn parse(source: &str) -> EngineResult<Manifest> {
         let v = parse(source).map_err(|_| invalid(KEY, "json"))?;
-        match text(&v, "schema") {
-            Some(SCHEMA) => {}
-            Some(other) => {
-                return Err(ftir_core::error::EngineError::new(
-                    "library.schema_unknown",
-                    "unknown library schema",
-                )
-                .with_param("schema", other))
-            }
-            None => return Err(invalid(KEY, "schema")),
-        }
+        check_schema(&v)?;
         let attribution = v
             .get("attribution")
             .ok_or_else(|| invalid(KEY, "attribution"))?;
+        let (terms_it, terms_en) = parse_terms(&v)?;
         let n = number(&v, "n_spectra")?;
         if !(n >= 0.0 && n.fract() == 0.0 && n <= 1e9) {
             return Err(invalid(KEY, "n_spectra"));
@@ -112,6 +138,8 @@ impl Manifest {
             license: req(&v, "license")?.to_string(),
             attribution_it: text(attribution, "it").map(str::to_string),
             attribution_en: req(attribution, "en")?.to_string(),
+            terms_it,
+            terms_en,
             grid: parse_grid(&v)?,
             n_spectra: n as usize,
             sha256_data,
@@ -122,18 +150,21 @@ impl Manifest {
 
     /// Compact JSON text in the key order of the schema.
     pub fn to_json(&self) -> String {
-        let mut attribution = Vec::new();
-        if let Some(it) = &self.attribution_it {
-            attribution.push(("it", string(it)));
-        }
-        attribution.push(("en", string(&self.attribution_en)));
         let mut members = vec![
             ("schema", string(SCHEMA)),
             ("name", string(&self.name)),
             ("version", string(&self.version)),
             ("date", string(&self.date)),
             ("license", string(&self.license)),
-            ("attribution", obj(attribution)),
+            (
+                "attribution",
+                texts(self.attribution_it.as_deref(), &self.attribution_en),
+            ),
+        ];
+        if let Some(en) = &self.terms_en {
+            members.push(("terms", texts(self.terms_it.as_deref(), en)));
+        }
+        members.extend([
             (
                 "grid",
                 obj(vec![
@@ -144,7 +175,7 @@ impl Manifest {
             ),
             ("n_spectra", Value::Num(self.n_spectra as f64)),
             ("sha256_data", string(&self.sha256_data)),
-        ];
+        ]);
         if let Some(sampling) = &self.sampling {
             members.push(("sampling", string(sampling)));
         }

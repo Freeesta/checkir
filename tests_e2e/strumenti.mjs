@@ -159,6 +159,8 @@ export async function toolsScenario(browser, base, check, axe) {
     await page.waitForSelector("body[data-ready='1']");
     await page.setInputFiles("input[type=file]", FIXTURE.pathname);
     await page.waitForSelector("#chart polyline.curve");
+    // The match announcement must land before the cursor readings (with public spectra the match takes a moment).
+    await page.waitForSelector(".result[data-level]", { timeout: 20000 });
     if (scheme === "light") {
       await keyboardScenario(page, check);
       await pointerScenario(page, check);
