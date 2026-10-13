@@ -18,6 +18,7 @@ pub mod maschera;
 pub mod normalizza;
 pub mod savitzky_golay;
 pub mod sottrazione;
+pub mod sottrazione_json;
 pub mod trasmittanza;
 pub mod whittaker;
 
