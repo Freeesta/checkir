@@ -325,9 +325,18 @@
             "description_it": "Altre righe con la stessa identità (InChIKey, altrimenti id sostanza) e forma nelle librerie cercate, la migliore prima; il candidato è la migliore.",
             "type": "array",
             "items": {
-              "description": "A row of the same substance in another library (library, spectrum_id, display_name, form, r).",
-              "description_it": "Una riga della stessa sostanza in un'altra libreria (library, spectrum_id, display_name, form, r).",
-              "type": "object"
+              "description": "A row of the same substance in another library.",
+              "description_it": "Una riga della stessa sostanza in un'altra libreria.",
+              "type": "object",
+              "properties": {
+                "library": { "description": "Library id.", "description_it": "Id libreria.", "type": "string" },
+                "spectrum_id": { "description": "Spectrum id.", "description_it": "Id spettro.", "type": "string" },
+                "display_name": { "description": "Name of the row.", "description_it": "Nome della riga.", "type": "string" },
+                "form": { "description": "Form id.", "description_it": "Id forma.", "type": "string" },
+                "r": { "description": "r of the derivative.", "description_it": "r della derivata.", "type": "number" }
+              },
+              "required": ["library", "spectrum_id", "display_name", "form", "r"],
+              "additionalProperties": false
             }
           },
           "r_regions": {
