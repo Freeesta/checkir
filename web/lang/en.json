@@ -349,6 +349,7 @@
   "library.item.public": "Public",
   "library.item.remove": "Remove library {name}",
   "library.item.spectra": "Spectra: {n}",
+  "library.item.terms": "Licence terms: {text}",
   "library.item.version": "Version {version}",
   "library.load_failed": "The public libraries are not available: you are offline and they are not yet saved in the browser.",
   "library.manifest_invalid": "The library manifest is not valid ({field}).",

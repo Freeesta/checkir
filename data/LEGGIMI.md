@@ -1,6 +1,6 @@
 # data/ — dati aperti di checkir · open data of checkir
 
-**Italiano.** Questa cartella contiene i dati aperti del progetto: sostanze, forme, spettri di riferimento, schede, allerte, classi e fonti. Per ora ci sono solo **esempi sintetici** (`synthetic-a`, `synthetic-b`): sostanze fittizie e uno spettro generato al calcolatore, non una misura. Le librerie di terzi non stanno mai qui; i dati veri del servizio non stanno mai in questo repository.
+**Italiano.** Questa cartella contiene i dati aperti del progetto: sostanze, forme, spettri di riferimento, schede, allerte, classi e fonti. Ci sono **esempi sintetici** (`synthetic-a`, `synthetic-b`: sostanze fittizie e uno spettro generato al calcolatore, non una misura) e 11 spettri ATR-FTIR di sostanze da taglio della SWGDRUG IR Library, pubblicati con il permesso scritto di SWGDRUG per uso non commerciale (vedi `LICENZE-DATI.md`). Altre librerie di terzi stanno qui solo con un permesso scritto per il sito pubblico; i dati veri del servizio non stanno mai in questo repository.
 
 - Struttura: `sostanze` → `forme` → `spettri` (tre livelli; lo spettro dipende dalla forma, per esempio sale o base libera). Cartelle: `substances/<id>/{substance.json, forms/, spectra/*.jdx + *.json, datasheet/}`, `alerts/`, `classes.json`, `sources.json`, `aliases.json`.
 - Ogni file ha il campo `schema` e viene controllato contro `docs/schemi/`. Nessun dato personale (numeri di serie, operatori, percorsi, codici di campione) in nessun campo né nei commenti JCAMP.
@@ -10,7 +10,7 @@
 - Bande IR: `bands/` contiene le regole di gruppo (79; 5 con `verified_spectra`, le altre `draft`), i cataloghi di gruppi, modi e regioni, le assegnazioni delle bande di 13 sostanze (`substance-bands/`) e i testi di spiegazione in it/en; sono generati da `tools/dati/genera_bande.py` e non si modificano a mano.
 - Licenze: vedi `LICENZE-DATI.md`.
 
-**English.** This folder holds the project's open data: substances, forms, reference spectra, datasheets, alerts, classes and sources. For now it contains only **synthetic examples** (`synthetic-a`, `synthetic-b`): fictitious substances and a computer-generated spectrum, not a measurement. Third-party libraries never live here; real service data never enter this repository.
+**English.** This folder holds the project's open data: substances, forms, reference spectra, datasheets, alerts, classes and sources. It contains **synthetic examples** (`synthetic-a`, `synthetic-b`: fictitious substances and a computer-generated spectrum, not a measurement) and 11 ATR-FTIR spectra of cutting agents from the SWGDRUG IR Library, published with SWGDRUG's written permission for non-commercial use (see `LICENZE-DATI.md`). Other third-party libraries live here only with written permission for the public site; real service data never enter this repository.
 
 - Structure: substance → form → spectrum (three levels; a spectrum depends on the form, e.g. salt or free base). Folders: `substances/<id>/{substance.json, forms/, spectra/*.jdx + *.json, datasheet/}`, `alerts/`, `classes.json`, `sources.json`, `aliases.json`.
 - Every file has a `schema` field and is checked against `docs/schemi/`. No personal data (serial numbers, operators, paths, sample codes) in any field or JCAMP comment.

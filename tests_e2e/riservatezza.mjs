@@ -169,6 +169,7 @@ async function libraryImportScenario(browser) {
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"] summary').click();
   await page.locator('[data-library="checkir-community"]').waitFor();
+  await page.waitForLoadState("networkidle"); // the start-up loads (engine, public libraries, their peak index) are over
   const start = own.length;
   await page.setInputFiles('input[data-library="files"]', { name: "riferimento.jdx", mimeType: "chemical/x-jcamp-dx", buffer: Buffer.from(canaryJcamp(), "latin1") });
   await page.locator('[data-library="mia-libreria"]').waitFor();

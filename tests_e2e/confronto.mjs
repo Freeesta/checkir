@@ -100,6 +100,7 @@ export async function matchScenario(browser, base, check, axe) {
   });
   await openPanel(page, "libraries");
   await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
+  await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   await page.setInputFiles('input[data-library="files"]', [
     { name: "alfa.jdx", mimeType: "application/octet-stream", buffer: jcamp("alfa", ALFA) },

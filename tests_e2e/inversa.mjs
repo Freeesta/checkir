@@ -90,6 +90,7 @@ export async function inverseScenario(browser, base, check, axe) {
   const { ctx, page, errors } = await libraryPage(browser, base);
   await openPanel(page, "libraries");
   await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
+  await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });
   await page.setInputFiles('input[data-library="files"]', [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
@@ -103,12 +104,14 @@ export async function inverseScenario(browser, base, check, axe) {
   check("inverse: with one band enough, those with two come before the one with a single band", partial.answers[0]?.total === 3 && partial.answers[0].hits.map((h) => h.found).join() === "2,2,1", JSON.stringify(partial));
   check("inverse: a query without bands is an error with a key", empty.answers[0]?.error_key === "peak_index.query_invalid", JSON.stringify(empty));
   const stored = await cacheFiles(page);
-  check("inverse: the index is kept in the cache, one file per library", stored.includes("sintetica.bin") && stored.length === 2, JSON.stringify(stored));
+  const publicCount = await page.evaluate(async () => (await (await fetch("librerie/libraries.json")).json()).libraries.length);
+  check("inverse: the index is kept in the cache, one file per library", stored.includes("sintetica.bin") && stored.length === publicCount + 1, JSON.stringify(stored));
   await page.reload();
   await page.waitForSelector("body[data-ready='1']");
   const again = await ask(page, QUERIES.slice(0, 1));
   check("inverse: after a reload the index is back and gives the same answer", again.status?.ready === true && again.out[0].answers[0]?.total === 2, JSON.stringify(again));
   await openPanel(page, "libraries");
+  await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   await dialogScenario(page, check, axe);
   check("inverse: no page errors", errors.length === 0, errors.join(" | "));
   await page.evaluate(async () => {

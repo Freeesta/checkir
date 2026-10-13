@@ -1,0 +1,24 @@
+{
+  "schema": "ftir-form/1",
+  "id": "phenacetin-neutral",
+  "substance": "phenacetin",
+  "form_type": "unspecified",
+  "stereo": "unspecified",
+  "inchikey_form": "CPJSUEIXXCENMM-UHFFFAOYSA-N",
+  "notes": {
+    "en": "Neutral molecule (not a salt); the source does not state a polymorph or hydrate.",
+    "it": "Molecola neutra (non un sale); la fonte non indica polimorfo né idrato."
+  },
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

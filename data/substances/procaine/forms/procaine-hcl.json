@@ -1,0 +1,26 @@
+{
+  "schema": "ftir-form/1",
+  "id": "procaine-hcl",
+  "substance": "procaine",
+  "form_type": "salt",
+  "counterion": "chloride",
+  "stoichiometry": "1:1",
+  "stereo": "unspecified",
+  "inchikey_form": "HCBIBCJNVBAKAB-UHFFFAOYSA-N",
+  "notes": {
+    "en": "Hydrochloride.",
+    "it": "Cloridrato."
+  },
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

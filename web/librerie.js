@@ -97,7 +97,7 @@ export function registerPackage(engine, files, enabled) {
     rows: JSON.parse(files.index).spectra,
     values: new Float32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4),
     native: parseNative(files.native, checked.n_spectra),
-    entry: { id: files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, private: checked.private === true, enabled },
+    entry: { id: files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, terms: checked.terms ? { it: checked.terms.it ?? null, en: checked.terms.en ?? "" } : null, private: checked.private === true, enabled },
   });
   publish();
   return null;
