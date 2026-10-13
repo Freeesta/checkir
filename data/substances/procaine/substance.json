@@ -1,0 +1,64 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "procaine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Procaine",
+      "synonyms": [
+        "Novocain"
+      ]
+    },
+    "it": {
+      "preferred": "Procaina",
+      "synonyms": [
+        "novocaina"
+      ]
+    }
+  },
+  "iupac": "2-(diethylamino)ethyl 4-aminobenzoate",
+  "formula": "C13H20N2O2",
+  "molar_mass_g_mol": 236.31,
+  "smiles": "CCN(CC)CCOC(=O)C1=CC=C(C=C1)N",
+  "inchi": "InChI=1S/C13H20N2O2/c1-3-15(4-2)9-10-17-13(16)11-5-7-12(14)8-6-11/h5-8H,3-4,9-10,14H2,1-2H3",
+  "inchikey": "MFDFERRIHVXMIY-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q423741",
+    "chebi": "CHEBI:8430",
+    "cas": "59-46-1",
+    "pubchem_cid": 4914
+  },
+  "classes": {
+    "chemical": [
+      "local_anaesthetic"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

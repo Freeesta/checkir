@@ -1,0 +1,64 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "lidocaine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Lidocaine",
+      "synonyms": [
+        "lignocaine"
+      ]
+    },
+    "it": {
+      "preferred": "Lidocaina",
+      "synonyms": [
+        "lignocaina"
+      ]
+    }
+  },
+  "iupac": "2-(diethylamino)-N-(2,6-dimethylphenyl)acetamide",
+  "formula": "C14H22N2O",
+  "molar_mass_g_mol": 234.34,
+  "smiles": "CCN(CC)CC(=O)NC1=C(C=CC=C1C)C",
+  "inchi": "InChI=1S/C14H22N2O/c1-5-16(6-2)10-13(17)15-14-11(3)8-7-9-12(14)4/h7-9H,5-6,10H2,1-4H3,(H,15,17)",
+  "inchikey": "NNJVILVZKWQKPM-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q216935",
+    "chebi": "CHEBI:6456",
+    "cas": "137-58-6",
+    "pubchem_cid": 3676
+  },
+  "classes": {
+    "chemical": [
+      "local_anaesthetic"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "benzocaine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Benzocaine",
+      "synonyms": [
+        "ethyl 4-aminobenzoate"
+      ]
+    },
+    "it": {
+      "preferred": "Benzocaina",
+      "synonyms": [
+        "4-amminobenzoato di etile"
+      ]
+    }
+  },
+  "iupac": "ethyl 4-aminobenzoate",
+  "formula": "C9H11NO2",
+  "molar_mass_g_mol": 165.19,
+  "smiles": "CCOC(=O)C1=CC=C(C=C1)N",
+  "inchi": "InChI=1S/C9H11NO2/c1-2-12-9(11)7-3-5-8(10)6-4-7/h3-6H,2,10H2,1H3",
+  "inchikey": "BLFLLBZGZJTVJG-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q422745",
+    "chebi": "CHEBI:116735",
+    "cas": "94-09-7",
+    "pubchem_cid": 2337
+  },
+  "classes": {
+    "chemical": [
+      "local_anaesthetic"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
