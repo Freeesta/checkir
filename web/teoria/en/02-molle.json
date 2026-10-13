@@ -103,7 +103,7 @@
  "sources": [
   "wiki-molecular-vibration",
   "libretexts-ir-theory",
-  "checkir-calculation"
+  "engine-calculation"
  ],
  "glossary_terms": [
   "wavenumber",

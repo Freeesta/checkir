@@ -98,16 +98,16 @@
    "license": "CC BY-NC-SA 4.0 (link)"
   },
   {
-   "id": "checkir-demo-spectra",
+   "id": "demo-spectra",
    "type": "project",
-   "title": "Spettri dimostrativi / demonstration spectra di checkIR (data/demo/)",
+   "title": "Spettri dimostrativi / demonstration spectra (data/demo/)",
    "consulted": "2026-10-13",
    "license": "CC BY 4.0"
   },
   {
-   "id": "checkir-calculation",
+   "id": "engine-calculation",
    "type": "project",
-   "title": "Calcolo del motore checkIR / checkIR engine calculation (didactic)",
+   "title": "Calcolo del motore / engine calculation (didactic)",
    "consulted": "2026-10-13"
   }
  ]

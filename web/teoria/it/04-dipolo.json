@@ -84,7 +84,7 @@
  "sources": [
   "wiki-infrared-spectroscopy",
   "nist-water",
-  "checkir-calculation"
+  "engine-calculation"
  ],
  "glossary_terms": [
   "dipole-moment",
