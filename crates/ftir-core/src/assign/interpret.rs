@@ -29,7 +29,7 @@ fn width_ok(rule: &Rule, shape: Option<Shape>) -> bool {
     match (rule.width, shape) {
         (Width::Any, _) | (_, None) => true,
         (Width::Sharp, Some(s)) => matches!(s, Shape::Narrow | Shape::Medium),
-        (Width::Broad, Some(s)) => !matches!(s, Shape::Narrow),
+        (Width::Broad, Some(s)) => matches!(s, Shape::Broad | Shape::VeryBroad),
     }
 }
 
