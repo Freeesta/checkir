@@ -6,6 +6,7 @@ pub mod assign;
 pub mod budget;
 pub mod comparisons;
 pub mod confronti;
+pub mod didactic;
 pub mod error;
 pub mod measurement_quality;
 pub mod miscele;
