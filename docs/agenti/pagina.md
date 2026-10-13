@@ -26,3 +26,6 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `tsc` non controlla `sw.js` né `web/wasm`. Nuovi moduli: aggiungerli a `FILES` in `sw.js`.
 - Le chiavi del catalogo nei registri si scrivono letterali (`labelKey: "x.y"`, `t("x.y")`), mai composte, altrimenti `controlla_lingue.py` le dà orfane (eccezione: prefissi `theme.`, `err.`, `reader.`).
 - Il pulsante «Carica» apre la scelta del file ma la lettura arriva con il pacchetto VISTA PR 1; lo spettro demo (`demo.load`) mette un solo `FileEntry` C1 nello stato, il grafico mostra sempre lo spettro sintetico.
+
+## Logo
+The logo is a round pill with a check mark. The check mark is allowed only in the logo, favicon and app icons (neutral theme colour); it never appears in the results interface (no check mark, "ok" or green on a substance or a match).

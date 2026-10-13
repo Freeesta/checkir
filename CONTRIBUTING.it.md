@@ -16,7 +16,7 @@ checkIR è fatto da chimici, operatori sanitari, traduttori e sviluppatori. Sceg
 - Niente istruzioni di sintesi, estrazione, potenziamento o taglio; niente venditori o luoghi dove acquistare sostanze.
 - Solo spettri che hai il diritto di pubblicare; mai spettri di librerie commerciali o con licenza ristretta.
 - Licenze: codice MIT OR Apache-2.0; nuovi spettri e dati CC BY 4.0; schede delle sostanze CC BY-SA 4.0. Mantieni i tuoi diritti d'autore; non c'è nessun CLA.
-- I testi sanitari li approva sempre un revisore sanitario. Il programma propone, il chimico decide, niente è mai «sicuro».
+- I testi sanitari li approva sempre un revisore elencato in data/reviewers.json. Il programma propone, il chimico decide, niente è mai «sicuro».
 - Segnala un problema o una famiglia di sostanze pericolosa con i [moduli delle issue](https://github.com/Freeesta/checkir/issues/new/choose).
 
 ## Proporre una modifica a una scheda di sostanza

@@ -127,5 +127,15 @@
   "info.versions_title": "Versioni",
   "help.title": "Scorciatoie",
   "help.soon": "In arrivo",
-  "dialog.close": "Chiudi"
+  "dialog.close": "Chiudi",
+  "reader.ispd.bdb_magic": "Questo non è un file .ispd di Shimadzu: manca la firma Berkeley DB.",
+  "reader.ispd.bdb_version": "Questo file .ispd usa una struttura Berkeley DB non supportata (metodo {method}, versione {version}, {order}). Segnalalo per farla aggiungere.",
+  "reader.ispd.bdb_method": "Questo file Berkeley DB usa il metodo {method} (versione {version}), che le misure .ispd non usano.",
+  "reader.ispd.bdb_page_size": "La dimensione di pagina del file ({size} byte) non è valida: il file è danneggiato.",
+  "reader.ispd.bdb_truncated": "Il file finisce prima della pagina {page}: è troncato o danneggiato.",
+  "reader.ispd.bdb_corrupt": "La struttura interna del file è danneggiata ({what}).",
+  "reader.ispd.no_spectrum": "Il file non contiene nessuno spettro con asse in numeri d'onda.",
+  "reader.ispd.bad_data": "I dati dello spettro dell'oggetto {object} non si possono leggere.",
+  "reader.ispd.yunits_unknown": "L'unità y \"{value}\" non è riconosciuta: sceglila prima di elaborare.",
+  "reader.ispd.header_unreadable": "Nome e data dell'oggetto {object} non si sono potuti leggere dalla sua intestazione."
 }
