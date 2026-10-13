@@ -5,13 +5,14 @@ use crate::passi::json::{self, Value};
 use crate::spectrum::{Role, Spectrum, YUnit};
 
 const MAX_RANGES: usize = 16;
-const KNOWN: [&str; 6] = [
+const KNOWN: [&str; 7] = [
     "ranges",
     "range_preset",
     "libraries",
     "origin",
     "expected_form",
     "sample_id",
+    "sampling",
 ];
 
 /// Options of `confronta`. Without `ranges` or `range_preset` the comparison uses the whole grid (preset `full`).
@@ -36,6 +37,9 @@ pub struct Options {
     pub expected_form: Option<String>,
     /// Id of the sample in the session: lets `same_as_previous` compare with the sample before it.
     pub sample_id: Option<String>,
+    /// Sampling method of the sample (`ATR`, `transmission`, ...), when known: a library measured another way caps
+    /// the level (`sampling_not_calibrated`).
+    pub sampling: Option<String>,
 }
 
 fn invalid(field: &'static str, why: &str) -> EngineError {
@@ -115,6 +119,11 @@ pub fn parse_options(text: &str, t: &Thresholds) -> EngineResult<Options> {
         sample_id: v
             .get("sample_id")
             .and_then(Value::as_str)
+            .map(str::to_string),
+        sampling: v
+            .get("sampling")
+            .and_then(Value::as_str)
+            .filter(|s| !s.trim().is_empty())
             .map(str::to_string),
     };
     match (v.get("ranges"), preset_id) {
