@@ -68,5 +68,11 @@
   "ftir-risultato-confronto/invalid/r-out-of-range.json": "/candidates/0/r_derivative",
   "ftir-risultato-confronto/invalid/no-chain.json": "chain",
   "soglie-confronto/invalid/bad-threshold.json": "/probable",
-  "soglie-confronto/invalid/no-regions.json": "regions"
+  "soglie-confronto/invalid/no-regions.json": "regions",
+  "peaks/invalid/bad-tier.json": "tier",
+  "peaks/invalid/unknown-field.json": "serial",
+  "peaks/invalid/no-noise.json": "noise_abs",
+  "peaks_thresholds/invalid/negative-distance.json": "min_distance_cm1",
+  "peaks_thresholds/invalid/no-noise.json": "noise",
+  "peaks_thresholds/invalid/unknown-block.json": "extra"
 }

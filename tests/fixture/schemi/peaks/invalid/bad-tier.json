@@ -1,0 +1,134 @@
+{
+  "schema": "peaks/1",
+  "spectrum_id": null,
+  "chain": {
+    "id": "peak_detect_v1",
+    "steps": [
+      "trasmittanza_in_assorbanza/1",
+      "griglia/1",
+      "linea_di_base_asls/1"
+    ]
+  },
+  "thresholds_version": 1,
+  "noise_abs": 0.0002979040223489041,
+  "reference_abs": 1.0588841625220387,
+  "peaks": [
+    {
+      "id": "p1",
+      "position_cm1": 1000,
+      "height_abs": 0.6950382709625916,
+      "prominence_abs": 0.6960169044365063,
+      "prominence_rel": 0.6573116579425845,
+      "fwhm_cm1": 23.9,
+      "shape": "medium",
+      "tier": "huge",
+      "kind": "peak",
+      "artifact": null,
+      "region_ids": [
+        "single_bonds",
+        "oop"
+      ]
+    },
+    {
+      "id": "p2",
+      "position_cm1": 1450,
+      "height_abs": 0.49372909551477817,
+      "prominence_abs": 0.4941675174206568,
+      "prominence_rel": 0.4666870418041328,
+      "fwhm_cm1": 19.8,
+      "shape": "medium",
+      "tier": "main",
+      "kind": "peak",
+      "artifact": null,
+      "region_ids": [
+        "ch_bend"
+      ]
+    },
+    {
+      "id": "p3",
+      "position_cm1": 1683.5,
+      "height_abs": 0.4886889270879676,
+      "prominence_abs": 0.04640728800256947,
+      "prominence_rel": 0.04382659562311056,
+      "fwhm_cm1": null,
+      "shape": null,
+      "tier": "secondary",
+      "kind": "shoulder",
+      "artifact": null,
+      "region_ids": [
+        "carbonyl"
+      ]
+    },
+    {
+      "id": "p4",
+      "position_cm1": 1699.7,
+      "height_abs": 1.0588841625220387,
+      "prominence_abs": 1.0607620375550157,
+      "prominence_rel": 1,
+      "fwhm_cm1": 22.2,
+      "shape": "medium",
+      "tier": "main",
+      "kind": "peak",
+      "artifact": null,
+      "region_ids": [
+        "carbonyl"
+      ]
+    },
+    {
+      "id": "p5",
+      "position_cm1": 2349.1,
+      "height_abs": 0.0630268257643233,
+      "prominence_abs": 0.040181099238964846,
+      "prominence_rel": 0.03794664294842407,
+      "fwhm_cm1": 5.8,
+      "shape": "narrow",
+      "tier": "secondary",
+      "kind": "peak",
+      "artifact": "co2",
+      "region_ids": [
+        "salt_nh",
+        "instrument"
+      ]
+    },
+    {
+      "id": "p6",
+      "position_cm1": 2599.8,
+      "height_abs": 0.1550541704417701,
+      "prominence_abs": 0.12086678715216223,
+      "prominence_rel": 0.1141454291508932,
+      "fwhm_cm1": 199.8,
+      "shape": "very_broad",
+      "tier": "main",
+      "kind": "peak",
+      "artifact": null,
+      "region_ids": [
+        "salt_nh"
+      ]
+    }
+  ],
+  "broad_bands": [
+    {
+      "id": "b1",
+      "from_cm1": 2499,
+      "to_cm1": 2700.3,
+      "max_cm1": 2599.8,
+      "prominence_rel": 0.11286688725162905,
+      "region_ids": [
+        "salt_nh"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "co2_vapour",
+      "data": {
+        "co2": {
+          "height": 0.04362984480276125,
+          "at_cm1": 2350,
+          "limit_in_noises": 10
+        },
+        "noise": 0.00028021794835899423
+      }
+    }
+  ]
+}
