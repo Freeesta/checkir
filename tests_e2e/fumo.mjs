@@ -4,6 +4,7 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { chromium, firefox, webkit } from "playwright";
+import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { registryScenario } from "./registri.mjs";
 
 const SITE = new URL("../site/", import.meta.url).pathname;
@@ -44,11 +45,11 @@ async function schemeScenario(browser, scheme) {
   page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
-  check(`[${scheme}] curve and table drawn`, (await page.locator("#chart polyline.curve").count()) === 1 && (await page.locator("#table tbody tr").count()) > 10);
   check(`[${scheme}] engine version`, /\d+\.\d+\.\d+/.test(await page.textContent("#engine-version")));
   const violations = await axe(page);
   check(`[${scheme}] axe has no violations`, violations.length === 0, violations.join(", "));
   await page.click('[data-action="demo.load"]');
+  check(`[${scheme}] demo: curve and table drawn`, (await page.locator("#chart polyline.curve").count()) === 1 && (await page.locator("#table tbody tr").count()) > 10);
   const withFile = await axe(page);
   check(`[${scheme}] axe has no violations with a file loaded`, withFile.length === 0, withFile.join(", "));
   for (const forced of ["light", "dark"]) {
@@ -66,6 +67,8 @@ async function phoneScenario(browser) {
   const page = await ctx.newPage();
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
+  await page.setInputFiles("input[type=file]", FIXTURE.pathname);
+  await page.waitForSelector("#chart polyline.curve");
   check("zoom 400 % (320 px): no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
   await page.keyboard.press("Tab");
   check("Tab: first element is the skip link", await page.evaluate(() => document.activeElement?.className === "skip"));
@@ -143,6 +146,8 @@ async function shortcutsScenario(browser) {
   await page.evaluate(() => document.getElementById("probe")?.remove());
   await page.keyboard.press("Control+l");
   check("shortcuts: with Ctrl pressed nothing happens", (await page.getAttribute("html", "lang")) === "it");
+  await page.setInputFiles("input[type=file]", FIXTURE.pathname);
+  await page.waitForSelector("#chart polyline.curve");
   const range = await page.textContent("#range");
   await page.focus("#chart");
   await page.keyboard.press("+");
@@ -228,6 +233,7 @@ async function run() {
     await shortcutsScenario(browser);
     await registryScenario(check);
     await nameScenario(browser);
+    await loadingScenario(browser, base, check, axe);
   } finally {
     await browser.close();
     server.close();

@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Loader of the calculation engine (the .wasm built by the workflow; it is not committed).
- * @typedef {{ version: () => string, demo_spectrum: () => string }} Engine
+ * @typedef {{ version: () => string, demo_spectrum: () => string, open_file: (name: string, bytes: Uint8Array, maxBytes: number, maxPoints: number) => string }} Engine
  */
 
 /**

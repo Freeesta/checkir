@@ -3,14 +3,15 @@ import { STORAGE_PREFIX } from "./appname.js";
 
 /**
  * One loaded spectrum. The real file name never leaves the file panel and the tooltip; the header shows `code`.
- * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, stepCm1: number, role: "sample" | "reference" | "residual" | "subtraction" | "mean", warnings: string[] }} FileEntry
+ * @typedef {{ key: string, params: Record<string, string> }} Notice
+ * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, warnings: Notice[] }} FileEntry
  * @typedef {{ id: string, version: string, spectra: number }} LibraryEntry
- * @typedef {{ files: FileEntry[], libraries: LibraryEntry[], result: null | { level: number, alerts: number }, peaks: { explained: number, unexplained: number }, decision: null | { level: number } }} AppState
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], result: null | { level: number, alerts: number }, peaks: { explained: number, unexplained: number }, decision: null | { level: number } }} AppState
  */
 
 /** @returns {AppState} */
 function initial() {
-  return { files: [], libraries: [], result: null, peaks: { explained: 0, unexplained: 0 }, decision: null };
+  return { files: [], active: null, fileError: null, libraries: [], result: null, peaks: { explained: 0, unexplained: 0 }, decision: null };
 }
 
 let state = initial();
