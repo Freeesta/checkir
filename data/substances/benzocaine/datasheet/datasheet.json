@@ -5,6 +5,7 @@
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "metabolism": "draft",
     "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
@@ -43,5 +44,15 @@
       "topic": "route",
       "source": "neal2010"
     }
-  ]
+  ],
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "N-hydroxy-p-aminobenzoic acid",
+        "reaction": "hydroxylation",
+        "source": "spiller2014"
+      }
+    ]
+  }
 }

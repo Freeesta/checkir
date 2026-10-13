@@ -12,6 +12,14 @@ Gran parte di una quantità terapeutica è convertita in glucuronide inattivo (5
 
 L'emivita plasmatica è di 1.5-2.5 ore alle dosi raccomandate e di 4-8 ore dopo un sovradosaggio. Oltre l'intervallo terapeutico si satura prima la solfatazione; dopo una dose altamente tossica si satura anche la glucuronidazione. [f:mazaleuskaya2015]
 
+## cuts
+
+Il paracetamolo è un taglio frequente dell'eroina di strada. In 415 campioni al dettaglio sequestrati a Vienna nel 1999 tutti contenevano un diluente, soprattutto lattosio, e adulteranti come caffeina e/o paracetamolo. [f:risser2007]
+
+In 962 campioni di eroina sequestrati in Lussemburgo nel 2005-2010 paracetamolo e caffeina erano di gran lunga gli adulteranti più abbondanti. [f:schneider2011]
+
+Nell'eroina di strada in Danimarca (2006-2024) la caffeina era presente nell'87.8 % dei campioni e l'acetaminofene nel 71.4 %, spesso insieme (70.6 %). [f:hesse2025]
+
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -36,7 +44,7 @@ Chiedi se la persona assume anche medicinali che contengono paracetamolo: il dan
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:mazaleuskaya2015] [f:pubchem] [f:wikidata] [f:yoon2016]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:mazaleuskaya2015] [f:pubchem] [f:wikidata] [f:yoon2016] [f:risser2007] [f:schneider2011] [f:hesse2025]
 
 ## license
 

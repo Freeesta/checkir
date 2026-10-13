@@ -12,6 +12,14 @@ Most of a therapeutic amount is converted to inactive glucuronide (52-57 % of th
 
 The plasma half-life is 1.5-2.5 hours at recommended doses and 4-8 hours after an overdose. Above the therapeutic range the sulfation pathway saturates first; after a highly toxic dose glucuronidation saturates as well. [f:mazaleuskaya2015]
 
+## cuts
+
+Paracetamol is a frequent adulterant of street heroin. In 415 retail samples seized in Vienna in 1999 all contained a diluent, mainly lactose, and adulterants such as caffeine and/or paracetamol. [f:risser2007]
+
+In 962 heroin samples seized in Luxembourg in 2005-2010, paracetamol and caffeine were by far the most abundant adulterants. [f:schneider2011]
+
+In street heroin in Denmark (2006-2024) caffeine was found in 87.8 % of samples and acetaminophen in 71.4 %, often together (70.6 %). [f:hesse2025]
+
 ## effects
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
@@ -36,7 +44,7 @@ Ask whether the person also takes medicines containing paracetamol: liver injury
 
 ## sources
 
-Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:mazaleuskaya2015] [f:pubchem] [f:wikidata] [f:yoon2016]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:mazaleuskaya2015] [f:pubchem] [f:wikidata] [f:yoon2016] [f:risser2007] [f:schneider2011] [f:hesse2025]
 
 ## license
 
