@@ -51,7 +51,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 - `ftir-wasm` non ha `forbid(unsafe_code)`: il codice generato da wasm-bindgen lo richiede; non metterci logica.
 - La versione di `wasm-bindgen-cli` deve essere uguale a quella in `Cargo.lock`, altrimenti il sito non parte (lo script la legge da solo).
 - `cargo fmt` può allungare una funzione oltre 80 righe: rilancia `controlla_soglie.py`.
-- Il service worker precarica l'elenco `FILES` di `web/sw.js`: un modulo nuovo va aggiunto lì e `VERSION` alzata.
+- Il service worker precarica l'elenco `FILES` di `web/sw.js`: un modulo nuovo va aggiunto lì (`VERSION` la scrive la build, `tools/versione_sw.mjs`: mai alzarla a mano; un nome di `FILES` che non c'è nel sito ferma la build).
 - Ogni chiave del catalogo deve comparire nel codice come `t("x.y")` o `data-i18n*="x.y"` letterale, altrimenti `controlla_lingue.py` la dà orfana.
 
 ## Compact instructions
