@@ -22,7 +22,7 @@ const DEFAULT_REGION_IDS = ["3700-2500", "1900-1500", "1500-1000", "1000-650"];
 /** @typedef {{ id: string, from: number, to: number, r: number | null, share: number | null, agreement: Agreement }} Region */
 /** @typedef {"explained" | "unexplained" | "minor" | "artifact" | "plain"} PeakState */
 /** @typedef {{ rule_id: string | null, group: string, mode: string, rank: number, rule_status: string, origin: string | null }} Reading */
-/** @typedef {{ id: string, position: number, state: PeakState, by: number | null, delta: number | null, otherForm: boolean, group: string | null, mode: string | null, readings: Reading[], crowded: boolean, regions: string[], shoulder: boolean, intensity: "strong" | "medium" | "weak", shape: string | null, tier: "main" | "secondary" }} PeakRow */
+/** @typedef {{ id: string, position: number, state: PeakState, by: number | null, delta: number | null, otherForm: boolean, group: string | null, mode: string | null, readings: Reading[], crowded: boolean, regions: string[], shoulder: boolean, intensity: "strong" | "medium" | "weak", shape: string | null, fwhm: number | null, tier: "main" | "secondary" }} PeakRow */
 /** @typedef {{ regions: Region[], bands: import("./regions.js").Band[], peaks: PeakRow[], main: number, explained: number, unexplained: number, minor: number, artifact: number, error: string | null }} Analysis */
 
 /** @type {import("./engine.js").Engine | null} */
@@ -107,7 +107,7 @@ function rowsOf(list, assignment, compared) {
   return list.peaks.map((/** @type {any} */ p) => {
     const item = /** @type {any} */ (items.get(p.id));
     const by = item?.explained_by ?? null;
-    return { id: p.id, position: p.position_cm1, state: stateOf(item, p, compared), by: by ? by.ref_peak_cm1 : null, delta: by ? by.delta_cm1 : null, otherForm: item?.state === "explained_other_form", group: by?.group ?? null, mode: by?.mode ?? null, readings: item?.interpretations ?? [], crowded: !!item?.crowded, regions: p.region_ids ?? [], shoulder: p.kind === "shoulder", intensity: intensityOf(p), shape: p.shape ?? null, tier: p.tier === "secondary" ? "secondary" : "main" };
+    return { id: p.id, position: p.position_cm1, state: stateOf(item, p, compared), by: by ? by.ref_peak_cm1 : null, delta: by ? by.delta_cm1 : null, otherForm: item?.state === "explained_other_form", group: by?.group ?? null, mode: by?.mode ?? null, readings: item?.interpretations ?? [], crowded: !!item?.crowded, regions: p.region_ids ?? [], shoulder: p.kind === "shoulder", intensity: intensityOf(p), shape: p.shape ?? null, fwhm: p.fwhm_cm1 ?? null, tier: p.tier === "secondary" ? "secondary" : "main" };
   });
 }
 

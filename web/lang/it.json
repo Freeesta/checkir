@@ -103,6 +103,7 @@
   "card.others": "Altri modi del gruppo «{group}»",
   "card.readings": "Letture possibili",
   "card.rule_window": "Finestra della regola {from}–{to} cm⁻¹",
+  "card.shape_width": "{fwhm} cm⁻¹ a metà altezza ({shape})",
   "card.show_on_chart": "Mostra sul grafico",
   "card.sources": "fonti",
   "card.status.draft": "regola in bozza",

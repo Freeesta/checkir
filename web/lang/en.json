@@ -103,6 +103,7 @@
   "card.others": "Other modes of the «{group}» group",
   "card.readings": "Possible readings",
   "card.rule_window": "Rule window {from}–{to} cm⁻¹",
+  "card.shape_width": "{fwhm} cm⁻¹ at half height ({shape})",
   "card.show_on_chart": "Show on chart",
   "card.sources": "sources",
   "card.status.draft": "draft rule",
