@@ -1,4 +1,4 @@
-# Riservatezza (rete, memoria, pulizia, avvertenze)
+# Riservatezza (rete, memoria, pulizia, informativa)
 Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri. Regole di fondo: niente esce dal browser, nessuna telemetria, nessun dato sulla persona, un campo sconosciuto si toglie.
 
 ## Rete e memoria del browser
@@ -17,6 +17,6 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri. Regole di fondo: niente esce 
 - Un lettore nuovo = una tabella in `CONTRACT` + una riga in `declared()` di `crates/ftir-core/tests/anonimizza.rs` (T4); un campo nuovo di un lettore = una regola nella sua tabella, altrimenti il test fallisce. Dopo ogni modifica: `cargo run --release -p ftir-core --example gen_anonimizza`.
 - T3 (`tools/controlla_schemi.py`): vedi `dati.md`; un campo `email` in uno schema fa fallire il job `data`.
 
-## Avvertenze e informativa
-- Pagine bilingui in `web/pagine/` (testi da revisione legale: titolare, contatto e numero di giorni dell'archivio restano da definire). Contatto = issue pubbliche del repository, nessuna email. Le due pagine non hanno riquadro breve né riga di bozza.
-- `fumo.mjs` (`pagesScenario`) prova raggiungibilità dalla finestra ⓘ, testi tradotti, axe chiaro/scuro it/en, 320 px; T2 visita le due pagine.
+## Informativa
+- Unica pagina di testo, bilingue: `web/pagine/informativa/` (privacy come comportamento; testo da revisione legale: titolare, contatto e giorni dell'archivio restano da definire). Contatto = issue pubbliche del repository, nessuna email. Nessun avviso, disclaimer o testo fisso generico (decisione del proprietario, 13/10/2026): restano solo incertezza e allerte calcolate sul risultato e le condizioni di licenza delle librerie.
+- `fumo.mjs` (`pagesScenario`) prova raggiungibilità dalla finestra ⓘ, testi tradotti, axe chiaro/scuro it/en, 320 px; T2 visita la pagina.

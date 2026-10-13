@@ -87,9 +87,9 @@ async function doEverything(page) {
   }
   await page.focus("#chart");
   for (const key of ["+", "ArrowLeft", "0"]) await page.keyboard.press(key);
-  for (const slug of ["avvertenze", "informativa"]) {
+  for (const slug of ["informativa"]) {
     await page.keyboard.press("i");
-    await page.locator("dialog .footer-links a").nth(slug === "avvertenze" ? 0 : 1).click();
+    await page.locator("dialog .footer-links a").nth(0).click();
     await page.waitForSelector("body[data-page][data-ready='1']");
     for (const l of ["en", "it"]) {
       await page.locator(`[data-lang="${l}"]`).click({ timeout: 5000 });

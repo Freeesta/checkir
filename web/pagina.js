@@ -1,5 +1,5 @@
 // @ts-check
-// Start-up of the static text pages (pagine/avvertenze, pagine/informativa): theme, language, header, catalog texts.
+// Start-up of the static text pages (pagine/informativa): theme, language, header, catalog texts.
 import { APP_NAME, GITHUB_URL } from "./appname.js";
 import { applyCatalog, currentLang, loadLang, pickLang } from "./i18n.js";
 import { buildHeader } from "./pagina_header.js";
