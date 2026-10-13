@@ -12,6 +12,7 @@ import { libraryTestScenario } from "./prova.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
+import { collaudoScenario } from "./collaudo.mjs";
 import { exportScenario } from "./esporta.mjs";
 import { recallScenario } from "./richiamo.mjs";
 import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
@@ -325,6 +326,7 @@ async function run() {
     await areaScenario(browser, base, check, axe);
     await cleanScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
+    await collaudoScenario(browser, base, check);
     await inverseScenario(browser, base, check, axe);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
