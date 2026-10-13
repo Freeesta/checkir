@@ -104,6 +104,7 @@
     "intensity_classes": {
       "strong_rel_min": 0.5,
       "medium_rel_min": 0.2
-    }
+    },
+    "missing_rel_min": 0.2
   }
 }

@@ -10,6 +10,7 @@ import { librariesPureScenario, librariesScenario, offlineScenario } from "./lib
 import { peaksScenario } from "./picchi.mjs";
 import { registryScenario } from "./registri.mjs";
 import { sheetScenario } from "./scheda.mjs";
+import { subtractionScenario } from "./sottrazione.mjs";
 import { startSite } from "./sito.mjs";
 import { toolsScenario } from "./strumenti.mjs";
 
@@ -108,7 +109,7 @@ async function shortcutsScenario(browser) {
   await page.waitForSelector("body[data-ready='1']");
   await page.keyboard.press("?");
   check("shortcuts: ? opens the list", await page.isVisible("dialog[open] .help-table"));
-  check("shortcuts: the list has a row for every key and greys out what is coming", (await page.locator("dialog[open] .help-table tbody tr").count()) >= 18 && (await page.locator("dialog[open] .soon-tag").count()) >= 3);
+  check("shortcuts: the list has a row for every key", (await page.locator("dialog[open] .help-table tbody tr").count()) >= 18);
   const violations = await axe(page);
   check("shortcuts: axe has no violations on the dialog", violations.length === 0, violations.join(", "));
   for (const n of [1, 2]) {
@@ -282,6 +283,7 @@ async function run() {
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
+    await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
     await sheetScenario(browser, base, check, axe);
     await offlineScenario(browser, base, check);

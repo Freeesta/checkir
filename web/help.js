@@ -29,7 +29,7 @@ function shortcutsTable() {
   });
   rows.push([kbd("Esc"), icon("close"), el("span", {}, [t("dialog.close")])]);
   rows.push([kbd("+ − ← → 0"), icon("compare"), el("span", {}, [t("help.chart_keys")])]);
-  rows.push([kbd("↑ ↓ PgUp PgDn"), icon("subtract"), el("span", {}, [t("help.factor_keys"), " ", soonTag()])]);
+  rows.push([kbd("↑ ↓ PgUp PgDn"), icon("subtract"), el("span", {}, [t("help.factor_keys")])]);
   return table([t("help.col_key"), t("help.col_icon"), t("help.col_action")], rows, "help.tab_keys");
 }
 

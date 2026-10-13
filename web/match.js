@@ -179,6 +179,17 @@ export function startMatching({ announce }) {
   });
 }
 
+/** The library spectrum of a candidate as stored (absorbance on the library grid), or null when it is not loaded. @param {string} library @param {string} spectrumId @returns {import("./spectrum.js").Spectrum | null} */
+export function libraryCurve(library, spectrumId) {
+  const rows = libraryRows(library);
+  const values = libraryValues(library);
+  const i = rows?.findIndex((r) => r.id === spectrumId) ?? -1;
+  if (!rows || !values || i < 0) return null;
+  const n = values.length / rows.length;
+  const y = Array.from(values.subarray(i * n, (i + 1) * n));
+  return { wavenumber_cm1: y.map((_, k) => GRID.from + GRID.step * k), y, y_unit: "Absorbance" };
+}
+
 /**
  * The library spectrum of a candidate, scaled to the highest band of the sample outside the excluded zone, for the overlay.
  * @param {string} library @param {string} spectrumId
@@ -187,17 +198,13 @@ export function startMatching({ announce }) {
  * @returns {{ spectrum: import("./spectrum.js").Spectrum, scale: number } | null}
  */
 export function referenceFor(library, spectrumId, sample, excluded) {
-  const rows = libraryRows(library);
-  const values = libraryValues(library);
-  const i = rows?.findIndex((r) => r.id === spectrumId) ?? -1;
-  if (!rows || !values || i < 0) return null;
-  const n = values.length / rows.length;
-  const y = Array.from(values.subarray(i * n, (i + 1) * n));
-  const x = y.map((_, k) => GRID.from + GRID.step * k);
+  const curve = libraryCurve(library, spectrumId);
+  if (!curve) return null;
+  const { wavenumber_cm1: x, y } = curve;
   const inside = (/** @type {number} */ v) => v < excluded[0] || v > excluded[1];
   const top = (/** @type {number[]} */ xs, /** @type {number[]} */ ys) => {
     let best = 0;
-    for (let k = 0; k < xs.length; k++) if (xs[k] >= GRID.from && xs[k] <= GRID.from + GRID.step * (n - 1) && inside(xs[k]) && Number.isFinite(ys[k]) && ys[k] > best) best = ys[k];
+    for (let k = 0; k < xs.length; k++) if (xs[k] >= x[0] && xs[k] <= x[x.length - 1] && inside(xs[k]) && Number.isFinite(ys[k]) && ys[k] > best) best = ys[k];
     return best;
   };
   const ref = top(x, y);

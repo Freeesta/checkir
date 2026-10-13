@@ -518,12 +518,20 @@
             "medium_rel_min"
           ],
           "additionalProperties": false
+        },
+        "missing_rel_min": {
+          "description": "Lowest prominence share of a reference peak to be reported as an expected band missing from the sample.",
+          "description_it": "Quota minima di prominenza di un picco del riferimento per segnalarlo come banda attesa mancante nel campione.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         }
       },
       "required": [
         "same_peak_cm1",
         "atr_shift_cm1",
-        "intensity_classes"
+        "intensity_classes",
+        "missing_rel_min"
       ],
       "additionalProperties": false
     }
