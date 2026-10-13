@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:glossary:1",
+  "title": "glossary/1: glossary of the theory section",
+  "title_it": "glossary/1: glossario della sezione Teoria",
+  "description": "glossary of the theory section",
+  "description_it": "glossario della sezione Teoria",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "glossary/1"
+    },
+    "lang": {
+      "description": "Language of the file.",
+      "description_it": "Lingua del file.",
+      "type": "string",
+      "enum": [
+        "it",
+        "en"
+      ]
+    },
+    "entries": {
+      "description": "The terms.",
+      "description_it": "I termini.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "description": "One term.",
+        "description_it": "Un termine.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Id of the term (the same in both languages).",
+            "description_it": "Id del termine (lo stesso nelle due lingue).",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "term": {
+            "description": "The term in the language of the file.",
+            "description_it": "Il termine nella lingua del file.",
+            "type": "string",
+            "minLength": 1
+          },
+          "term_other_lang": {
+            "description": "The term in the other language.",
+            "description_it": "Il termine nell'altra lingua.",
+            "type": "string",
+            "minLength": 1
+          },
+          "definition": {
+            "description": "One-line definition.",
+            "description_it": "Definizione di una riga.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "see_also": {
+            "description": "Ids of related terms.",
+            "description_it": "Id di termini collegati.",
+            "type": "array",
+            "items": {
+              "description": "An id.",
+              "description_it": "Un id.",
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "term",
+          "term_other_lang",
+          "definition",
+          "see_also"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "lang",
+    "entries"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,98 @@
+{
+ "schema": "theory/1",
+ "id": "dipole",
+ "n": 4,
+ "title": "Why a peak is strong, weak or absent",
+ "key_message": "Only a vibration that makes the charge oscillate absorbs: C=O is very strong, symmetric CO₂ is invisible.",
+ "body": [
+  "Infrared light «pushes» electric charges. If a vibration makes the distribution of charge oscillate, it absorbs; if not, it is invisible. The C=O group has very different charges on its two atoms: it gives very strong peaks. In CO₂ the symmetric stretch changes nothing in the charge: it is not seen.",
+  "The figure shows the modes of CO₂ and water: the arrow is the oscillating [[dipole-moment|dipole]]."
+ ],
+ "for_chemists": [
+  "[[selection-rule|Selection rule]]: a mode is IR-active if the dipole moment changes along the coordinate (∂μ/∂Q ≠ 0); the intensity grows with (∂μ/∂Q)². A permanent dipole is not needed: the asymmetric stretch of CO₂ is active. N₂ and O₂ do not absorb. In the harmonic oscillator Δv = ±1; with [[anharmonicity|anharmonicity]] Δv = ±2, ±3 are possible too, weakly.",
+  "CO₂ (linear, 3N−5 = 4 modes): νas 2349 and the bend 667 (doubly degenerate) absorb; νs is IR-inactive (Raman, Fermi dyad 1285/1388). H₂O (3N−6 = 3 modes): all active, in the gas phase 3656.7 (νs), 1594.6 (δ), 3755.8 (νas) cm⁻¹. A symmetric alkene C=C may not be seen.",
+  "In the figure the geometry, partial charges and amplitudes are illustrative, not calculated: they show whether the dipole changes, not by how much."
+ ],
+ "figure": {
+  "id": "dipole",
+  "alt": "A vibrating CO₂ or water molecule; below it an arrow shows the change of the dipole and a small plot shows the dipole over time.",
+  "caption": "The oscillating dipole: only the modes in which it changes absorb infrared."
+ },
+ "interactive": {
+  "id": "dipole",
+  "labels": {
+   "svg_title": "Oscillating dipole",
+   "svg_desc": "A vibrating molecule; below it an arrow shows the change of the dipole and a plot shows it over time, for one period.",
+   "dipole": "Change of the dipole",
+   "zero": "The dipole does not change: no absorption",
+   "time": "Dipole over time (one period)",
+   "phase": "Phase of the motion",
+   "choose": "Choose a molecule and a mode",
+   "active": "{mode}: the dipole oscillates, so the mode absorbs infrared (IR-active).",
+   "inactive": "{mode}: the dipole stays still, so the mode does not absorb infrared (IR-inactive).",
+   "note": "Partial charges and amplitudes are illustrative, not calculated. δ+ and δ−: sign of the partial charge. Wavenumbers observed in the gas phase.",
+   "table_caption": "Which modes absorb (calculated by the engine)",
+   "col_mode": "Mode",
+   "col_active": "Absorbs IR?",
+   "col_obs": "Observed (cm⁻¹)",
+   "yes": "Yes",
+   "no": "No"
+  },
+  "items": [
+   {
+    "id": "co2.sym",
+    "label": "CO₂ · symmetric stretch",
+    "text": "",
+    "value": "— (Raman: 1285 and 1388)"
+   },
+   {
+    "id": "co2.asym",
+    "label": "CO₂ · asymmetric stretch",
+    "text": "",
+    "value": "2349"
+   },
+   {
+    "id": "co2.bend",
+    "label": "CO₂ · bend",
+    "text": "",
+    "value": "667"
+   },
+   {
+    "id": "h2o.sym",
+    "label": "H₂O · symmetric stretch",
+    "text": "",
+    "value": "3657"
+   },
+   {
+    "id": "h2o.bend",
+    "label": "H₂O · bend",
+    "text": "",
+    "value": "1595"
+   },
+   {
+    "id": "h2o.asym",
+    "label": "H₂O · asymmetric stretch",
+    "text": "",
+    "value": "3756"
+   }
+  ]
+ },
+ "further_reading": [
+  "libretexts-ir-theory",
+  "phet-molecules-light"
+ ],
+ "sources": [
+  "wiki-infrared-spectroscopy",
+  "nist-water",
+  "engine-calculation"
+ ],
+ "glossary_terms": [
+  "dipole-moment",
+  "selection-rule",
+  "ir-active",
+  "anharmonicity",
+  "degrees-of-freedom"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

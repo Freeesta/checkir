@@ -3,6 +3,7 @@
 use super::apodization::Apodization;
 use super::interferogram::{interferogram_from_lines, Interferogram, Line};
 use super::spectrum::{spectrum_from_interferogram, Options, Output};
+use super::vibration::{self, Atom};
 use super::{depth, ratio, spring};
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::{parse, Value};
@@ -141,5 +142,61 @@ pub fn spectrum_from_interferogram_json(
         ("intensity", array(&s.intensity)),
         ("resolution_cm1", num(s.resolution_cm1)),
         ("point_spacing_cm1", num(s.point_spacing_cm1)),
+    ]))
+}
+
+fn vec3(v: Option<&Value>, what: &str) -> EngineResult<[f64; 3]> {
+    let a = v.and_then(Value::as_arr).ok_or_else(|| invalid(what))?;
+    let n = |i: usize| {
+        a.get(i)
+            .and_then(Value::as_f64)
+            .ok_or_else(|| invalid(what))
+    };
+    Ok([n(0)?, n(1)?, n(2)?])
+}
+
+fn parse_atoms(items: &[Value]) -> EngineResult<Vec<Atom>> {
+    items
+        .iter()
+        .map(|it| {
+            let el = it
+                .get("el")
+                .and_then(Value::as_str)
+                .ok_or_else(|| invalid("el"))?;
+            Ok(Atom {
+                mass_u: vibration::element_mass_u(el).ok_or_else(|| invalid("el"))?,
+                charge: it.get("charge").and_then(Value::as_f64).unwrap_or(0.0),
+                position: vec3(it.get("xyz"), "xyz")?,
+                displacement: vec3(it.get("displacement"), "displacement")?,
+            })
+        })
+        .collect()
+}
+
+fn triple(v: [f64; 3]) -> Value {
+    Value::Arr(v.iter().map(|x| num(*x)).collect())
+}
+
+/// `atoms_json` = `[{el, xyz:[x,y,z], displacement:[x,y,z], charge?}]` → `{frames:[{phase_rad, positions, dipole}],
+/// dipole_change, ir_active, momentum}`: one period in `frame_count` frames.
+pub fn vibration_frames_json(atoms_json: &str, frame_count: usize) -> EngineResult<String> {
+    let v = parse(atoms_json)?;
+    let atoms = parse_atoms(v.as_arr().ok_or_else(|| invalid("atoms"))?)?;
+    let list = vibration::frames(&atoms, frame_count)?;
+    let frames = list.iter().map(|f| {
+        Value::Obj(vec![
+            ("phase_rad".into(), num(f.phase_rad)),
+            (
+                "positions".into(),
+                Value::Arr(f.positions.iter().map(|p| triple(*p)).collect()),
+            ),
+            ("dipole".into(), triple(f.dipole)),
+        ])
+    });
+    Ok(obj(vec![
+        ("frames", Value::Arr(frames.collect())),
+        ("dipole_change", triple(vibration::dipole_change(&atoms))),
+        ("ir_active", Value::Bool(vibration::is_ir_active(&atoms))),
+        ("momentum", triple(vibration::momentum(&atoms))),
     ]))
 }
