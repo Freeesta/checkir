@@ -1,0 +1,48 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ocfentanil",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Ocfentanil",
+      "synonyms": []
+    },
+    "it": {
+      "preferred": "Ocfentanil",
+      "synonyms": []
+    }
+  },
+  "iupac": "N-(2-fluorophenyl)-2-methoxy-N-[1-(2-phenylethyl)piperidin-4-yl]acetamide",
+  "formula": "C22H27FN2O2",
+  "molar_mass_g_mol": 370.5,
+  "smiles": "COCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3F",
+  "inchi": "InChI=1S/C22H27FN2O2/c1-27-17-22(26)25(21-10-6-5-9-20(21)23)19-12-15-24(16-13-19)14-11-18-7-3-2-4-8-18/h2-10,19H,11-17H2,1H3",
+  "inchikey": "NYISTOZKVCMVEL-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "101343-69-5",
+    "pubchem_cid": 60575
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

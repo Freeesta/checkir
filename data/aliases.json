@@ -201,7 +201,21 @@
     "valium": "diazepam",
     "wildnil": "carfentanil",
     "xanax": "alprazolam",
-    "xilazina": "xylazine"
+    "xilazina": "xylazine",
+    "2-chlorofentanyl": "ortho-chlorofentanyl",
+    "m-fluoroisobutyrylfentanyl": "meta-fluoroisobutyrylfentanyl",
+    "m-methoxyfuranylfentanyl": "meta-methoxyfuranylfentanyl",
+    "m-methylacetylfentanyl": "meta-methylacetylfentanyl",
+    "m-methylfuranylfentanyl": "meta-methylfuranylfentanyl",
+    "meacf": "methoxyacetylfentanyl",
+    "meta-fluoroisobutyryl-fentanyl": "meta-fluoroisobutyrylfentanyl",
+    "meta-methoxy-furanylfentanyl": "meta-methoxyfuranylfentanyl",
+    "meta-methyl-acetylfentanyl": "meta-methylacetylfentanyl",
+    "meta-methyl-furanylfentanyl": "meta-methylfuranylfentanyl",
+    "methoxyacetyl-fentanyl": "methoxyacetylfentanyl",
+    "o-chlorofentanyl": "ortho-chlorofentanyl",
+    "o-fluoroacrylfentanyl": "ortho-fluoroacrylfentanyl",
+    "ortho-fluoro-acrylfentanyl": "ortho-fluoroacrylfentanyl"
   },
   "schema": "aliases/1"
 }

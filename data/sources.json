@@ -7486,6 +7486,133 @@
       "consulted": "2026-10-13",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20240604065203/https://pubmed.ncbi.nlm.nih.gov/34791285/"
+    },
+    {
+      "id": "coopman2016",
+      "type": "paper",
+      "title": "Ocfentanil overdose fatality in the recreational drug scene (Forensic Sci Int 266:469-473)",
+      "authors": [
+        "V. Coopman",
+        "J. Cordonnier",
+        "M. De Leeuw",
+        "V. Cirimele"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.forsciint.2016.07.005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27471990/",
+      "archive_url": "https://web.archive.org/web/20250916114849/https://pubmed.ncbi.nlm.nih.gov/27471990/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "fogarty2018",
+      "type": "paper",
+      "title": "Analysis of Fentanyl and 18 Novel Fentanyl Analogs and Metabolites by LC-MS-MS, and report of Fatalities Associated with Methoxyacetylfentanyl and Cyclopropylfentanyl (J Anal Toxicol 42:592-604)",
+      "authors": [
+        "M. F. Fogarty",
+        "D. M. Papsun",
+        "B. K. Logan"
+      ],
+      "year": 2018,
+      "doi": "10.1093/jat/bky035",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29750250/",
+      "archive_url": "https://web.archive.org/web/20260725102208/https://pubmed.ncbi.nlm.nih.gov/29750250/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "walentiny2019",
+      "type": "paper",
+      "title": "Oxycodone-like discriminative stimulus effects of fentanyl-related emerging drugs of abuse in mice (Neuropharmacology 150:210-216)",
+      "authors": [
+        "D. M. Walentiny",
+        "L. T. Moisa",
+        "P. M. Beardsley"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2019.02.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30735691/",
+      "archive_url": "https://web.archive.org/web/20250202035911/https://pubmed.ncbi.nlm.nih.gov/30735691/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "kronstrand2021",
+      "type": "paper",
+      "title": "Circumstances, Postmortem Findings, Blood Concentrations and Metabolism in a Series of Methoxyacetylfentanyl-Related Deaths (J Anal Toxicol 45:760-771)",
+      "authors": [
+        "R. Kronstrand",
+        "A. Åstrand",
+        "S. Watanabe",
+        "H. Gréen",
+        "S. Vikingsson"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkab053",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34009362/",
+      "archive_url": "https://web.archive.org/web/20250202024558/https://pubmed.ncbi.nlm.nih.gov/34009362/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "bilel2023",
+      "type": "paper",
+      "title": "Toxicity and behavioural effects of ocfentanil and 2-furanylfentanyl in zebrafish larvae and mice (Neurotoxicology 95:83-93)",
+      "authors": [
+        "S. Bilel",
+        "M. Murari",
+        "S. Pesavento",
+        "R. Arfè",
+        "M. Tirri",
+        "L. Torroni",
+        "M. Marti",
+        "F. Tagliaro",
+        "R. Gottardo"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.neuro.2023.01.003",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36634872/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "varshneya2023-locomotor",
+      "type": "paper",
+      "title": "Structurally diverse fentanyl analogs yield differential locomotor activities in mice (Pharmacol Biochem Behav 222:173496)",
+      "authors": [
+        "N. B. Varshneya",
+        "D. M. Walentiny",
+        "D. L. Stevens",
+        "T. D. Walker",
+        "L. R. Akinfiresoye",
+        "P. M. Beardsley"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.pbb.2022.173496",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36435268/",
+      "archive_url": "https://web.archive.org/web/20260210215912/https://pubmed.ncbi.nlm.nih.gov/36435268/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "rodriguezcruz2023",
+      "type": "paper",
+      "title": "Evaluating the sensitivity, stability, and cross-reactivity of commercial fentanyl immunoassay test strips (J Forensic Sci 68:1555-1569)",
+      "authors": [
+        "S. E. Rodriguez-Cruz"
+      ],
+      "year": 2023,
+      "doi": "10.1111/1556-4029.15332",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37420315/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
     }
   ]
 }
