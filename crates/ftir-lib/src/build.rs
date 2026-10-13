@@ -51,6 +51,15 @@ fn read_absorbance(
         .spectra
         .get(doc.primary)
         .ok_or_else(|| EngineError::new("library.no_spectrum", "the file has no spectrum"))?;
+    absorbance_of(s, false)
+}
+
+/// One spectrum of a document in absorbance (only the unit is converted) and its stated nominal resolution. With
+/// `shape_only` an arbitrary y unit is taken as absorbance (the shape counts, the scale is lost: a normalised library).
+fn absorbance_of(
+    s: &readers::model::Spectrum,
+    shape_only: bool,
+) -> EngineResult<(Spectrum, Option<f64>)> {
     if s.x.unit != XUnit::Cm1 {
         return Err(EngineError::new(
             "library.x_unit",
@@ -59,6 +68,7 @@ fn read_absorbance(
     }
     let (unit, trans_params) = match s.y.unit {
         YUnit::Absorbance => (CoreUnit::Absorbance, None),
+        YUnit::Arbitrary if shape_only => (CoreUnit::Absorbance, None),
         YUnit::TransmittancePercent => (CoreUnit::Transmittance, Some(r#"{"percent":true}"#)),
         YUnit::TransmittanceFraction => (CoreUnit::Transmittance, Some(r#"{"percent":false}"#)),
         other => {
@@ -220,4 +230,74 @@ pub fn build_one(src: &Source, grid: &Grid) -> EngineResult<Built> {
             .ok_or_else(|| bad("library"))?,
         sampling: sampling_of(&spec),
     })
+}
+
+/// The entries of a Shimadzu IRsolution library (`.L01` with its `.nam`): name, resampled values and native record of each.
+#[derive(Debug, Clone, PartialEq)]
+pub struct ShimadzuEntries {
+    pub names: Vec<String>,
+    /// The entries one after the other on `grid`, float32.
+    pub values: Vec<f32>,
+    /// The records of `native_record`, one after the other.
+    pub native: Vec<f32>,
+    /// Warnings of the reader as `(key, params)`, e.g. `reader.scale_lost`.
+    pub warnings: Vec<(String, Vec<(String, String)>)>,
+}
+
+/// Reads a Shimadzu library; the names come from `nam` when given (an empty one for an entry without a name).
+pub fn shimadzu_entries(
+    l01: &[u8],
+    nam: Option<&[u8]>,
+    max_bytes: usize,
+    grid: &Grid,
+) -> EngineResult<ShimadzuEntries> {
+    let limits = Limits {
+        max_bytes,
+        max_spectra: 50_000,
+        ..Limits::STANDARD
+    };
+    let doc = readers::shimadzu_lib::open_named(l01, nam, &limits).map_err(|e| {
+        e.params.iter().fold(
+            EngineError::new(e.key, "the file cannot be read"),
+            |err, (k, v)| err.with_param(k, v),
+        )
+    })?;
+    let params = format!(
+        r#"{{"from_cm1":{},"to_cm1":{},"step_cm1":{}}}"#,
+        grid.from_cm1, grid.to_cm1, grid.step_cm1
+    );
+    let mut out = ShimadzuEntries {
+        names: Vec::new(),
+        values: Vec::new(),
+        native: Vec::new(),
+        warnings: doc
+            .warnings
+            .iter()
+            .map(|w| {
+                let p = w.params.iter().map(|(k, v)| (k.to_string(), v.clone()));
+                (w.key.to_string(), p.collect())
+            })
+            .collect(),
+    };
+    for s in &doc.spectra {
+        let (spectrum, resolution) = absorbance_of(s, true)?;
+        out.values.extend(
+            griglia::apply(&spectrum, &params)?
+                .y
+                .iter()
+                .map(|v| *v as f32),
+        );
+        out.native.push(spectrum.y.len() as f32);
+        out.native.push(resolution.map_or(f32::NAN, |r| r as f32));
+        out.native
+            .extend(spectrum.wavenumber_cm1.iter().map(|v| *v as f32));
+        out.native.extend(spectrum.y.iter().map(|v| *v as f32));
+        out.names.push(
+            s.measurement
+                .title
+                .as_ref()
+                .map_or(String::new(), |t| t.value.clone()),
+        );
+    }
+    Ok(out)
 }
