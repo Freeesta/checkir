@@ -23,7 +23,6 @@ export default async ({ browser, base, check }) => {
   await page.waitForSelector("body[data-ready='1']");
   const panel = page.locator('details[data-panel="libraries"]');
   if (!(await panel.evaluate((d) => d.open))) await panel.locator("summary").click();
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   await page.setInputFiles('input[data-library="files"]', [

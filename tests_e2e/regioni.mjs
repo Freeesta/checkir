@@ -47,7 +47,6 @@ async function setup(browser, base, locale = "it-IT", viewport = { width: 1366, 
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openPanel(page, "libraries");
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
   const files = [["alfa", ALFA], ["beta", BETA], ["gamma", GAMMA], ["alfa_bis", ALFA_BIS]];
   await page.setInputFiles('input[data-library="files"]', files.map(([n, b]) => ({ name: `${n}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(n, b) })));

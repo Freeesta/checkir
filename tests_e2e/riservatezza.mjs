@@ -168,7 +168,7 @@ async function libraryImportScenario(browser) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.locator('[data-library="checkir-community"]').waitFor();
+  await page.locator('[data-library="checkir-demo"]').waitFor();
   // Start-up loads the engine twice by itself (page, then the comparison worker once the first library is synced): the second load is not the import's.
   for (let t = 0; t < 400 && own.filter((u) => u.endsWith("ftir_wasm_bg.wasm")).length < 2; t++) await page.waitForTimeout(50);
   const start = own.length;

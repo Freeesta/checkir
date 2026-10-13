@@ -69,17 +69,16 @@ export async function librariesScenario(browser, base, check, axe) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openLibraries(page);
-  const pub = page.locator('[data-library="checkir-community"]');
+  const pub = page.locator('[data-library="checkir-demo"]');
   await pub.waitFor();
   const text = (await pub.textContent()) ?? "";
   check("libraries: the public library shows version, spectra, licence and attribution", /Versione/.test(text) && /Spettri: 1/.test(text) && /CC-BY-4\.0/.test(text) && /Attribuzione: Libreria comunitaria/.test(text) && /Pubblica/.test(text), text);
-  check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes("2 · 12"));
+  check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 11"));
   const swg = (await page.locator('[data-library="swgdrug-ir"]').textContent()) ?? "";
   check("libraries: a library under a written permission shows its citation, licence terms, disclaimer and no endorsement", /SWGDRUG IR Library v2024-05-15/.test(swg) && /LicenseRef-permission-swgdrug/.test(swg) && /Condizioni della licenza: Solo uso non commerciale/.test(swg) && /without warranty or liability/.test(swg) && /SWGDRUG does not endorse \S+ or any software/.test(swg) && !swg.includes("{app}"), swg);
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   check("libraries: switching a library off empties the header chip", ((await page.textContent('[data-chip="library"]')) ?? "").includes("—"));
-  await page.getByRole("checkbox", { name: /checkir-community/ }).check();
+  await page.getByRole("checkbox", { name: /swgdrug-ir/ }).check();
   const violations = await axe(page);
   check("libraries: axe has no violations with the panel open", violations.length === 0, violations.join(", "));
 
@@ -128,7 +127,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await ctx.close();
 }
 
-/** After the first visit the community library is available with no network at all. */
+/** After the first visit the demo library is available with no network at all. */
 export async function offlineScenario(browser, base, check) {
   const ctx = await browser.newContext({ locale: "it-IT" });
   const page = await ctx.newPage();
@@ -136,14 +135,14 @@ export async function offlineScenario(browser, base, check) {
   await page.waitForSelector("body[data-ready='1']");
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.waitForFunction(async () => {
-    for (const k of await caches.keys()) if (await (await caches.open(k)).match("librerie/checkir-community/data.bin")) return true;
+    for (const k of await caches.keys()) if (await (await caches.open(k)).match("librerie/checkir-demo/data.bin")) return true;
     return false;
   });
   await ctx.setOffline(true);
   await page.reload();
   await page.waitForSelector("body[data-ready='1']");
   await openLibraries(page);
-  await page.locator('[data-library="checkir-community"]').waitFor();
-  check("offline: the community library is available without network after the first visit", true);
+  await page.locator('[data-library="checkir-demo"]').waitFor();
+  check("offline: the demo library is available without network after the first visit", true);
   await ctx.close();
 }

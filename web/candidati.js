@@ -14,9 +14,10 @@ export function marginScore(m) {
 /** @param {any} c @returns {string} */
 const named = (c) => `${String(c.display_name ?? "").trim().toLowerCase()}\u0001${c.form ?? ""}`;
 
-/** Spectrum identity for the list, in two ways: the same name and form in the same library, or the same name, form and r in two libraries (the same file imported twice). @param {any} c @returns {string[]} */
+/** Spectrum identity for the list, in two ways: the same name and form in the same library, or the same r (to 8 decimals) in two libraries, whatever the names (the same file imported next to the public library). @param {any} c @returns {string[]} */
 function identities(c) {
-  return [`${c.library}\u0001${named(c)}`, `${named(c)}\u0001${Number(c.r_derivative).toFixed(6)}`];
+  const r = Number(c.r_derivative);
+  return Number.isFinite(r) ? [`${c.library}\u0001${named(c)}`, `r\u0001${r.toFixed(8)}`] : [`${c.library}\u0001${named(c)}`];
 }
 
 /**

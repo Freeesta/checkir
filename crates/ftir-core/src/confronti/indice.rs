@@ -47,12 +47,46 @@ impl Index {
             partner: vec![u32::MAX; total],
             done: 0,
         };
-        Self {
+        let mut index = Self {
             libs,
             offsets,
             group,
             grouping,
             twins,
+        };
+        index.merge_identical_rows();
+        index
+    }
+
+    /// Rows with the same derivative values are the same spectrum under two names (a folder imported next to the public
+    /// library): they join the group of the first one, so neither the margin nor the twins count a copy as another substance.
+    fn merge_identical_rows(&mut self) {
+        let mut first: HashMap<u64, Vec<usize>> = HashMap::new();
+        for g in 0..self.total() {
+            let row = self.deriv_row(g);
+            let mut h: u64 = 0xcbf2_9ce4_8422_2325;
+            for x in row
+                .v
+                .iter()
+                .map(|x| u64::from(x.to_bits()))
+                .chain(row.p.iter().map(|p| u64::from(*p)))
+            {
+                h = (h ^ x).wrapping_mul(0x0100_0000_01b3);
+            }
+            let same = first.entry(h).or_default();
+            let found = same.iter().copied().find(|&f| {
+                let other = self.deriv_row(f);
+                other
+                    .v
+                    .iter()
+                    .map(|x| x.to_bits())
+                    .eq(row.v.iter().map(|x| x.to_bits()))
+                    && other.p == row.p
+            });
+            match found {
+                Some(f) => self.group[g] = self.group[f],
+                None => same.push(g),
+            }
         }
     }
 

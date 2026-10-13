@@ -38,3 +38,11 @@
 .excluded-label { fill: var(--text-muted); font-size: 11px; }
 .curve-reference { fill: none; stroke: var(--color-reference); stroke-width: 2; stroke-dasharray: 7 4; vector-effect: non-scaling-stroke; }
 @media (forced-colors: active) { .curve-reference { stroke: Highlight; } .excluded { fill: GrayText; } }
+/* narrow phones: the level word of the result chip stays whole on one line (the header keeps its height): tighter padding, no ellipsis */
+@media (max-width: 24em) {
+  .chips [data-chip="result"] { flex: 0 0 auto; gap: 0.15rem; padding-inline: 0.25rem; }
+  .chips [data-chip="result"] .chip-value { max-width: none; overflow: visible; }
+  .chips [data-chip="file"] .chip-value { max-width: 0; padding: 0; }
+  .chips [data-chip="file"] { padding-inline: 0.3rem; }
+  .chips [data-chip="result"] { font-size: 0.8rem; }
+}

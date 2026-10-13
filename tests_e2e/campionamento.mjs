@@ -26,7 +26,6 @@ export async function samplingScenario(browser, base, check) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openPanel(page, "libraries");
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.fill("#lib-name", "Diamante");
   await page.selectOption("#lib-sampling", "atr_diamond");
   const file = (name, bands) => ({ name, mimeType: "application/octet-stream", buffer: jcamp(name.replace(".jdx", ""), bands) });

@@ -94,9 +94,9 @@ function publish() {
 
 /**
  * Check a package with the engine and add it. Nothing partial is kept when the engine refuses it.
- * @param {import("./engine.js").Engine} engine @param {PackageFiles} files @param {boolean} enabled @returns {Notice | null}
+ * @param {import("./engine.js").Engine} engine @param {PackageFiles} files @param {boolean} enabled @param {boolean} [announce] false while several packages load together: the caller publishes once @returns {Notice | null}
  */
-export function registerPackage(engine, files, enabled) {
+export function registerPackage(engine, files, enabled, announce = true) {
   const checked = JSON.parse(engine.library_open(files.manifest, files.index, files.data, LIMITS.maxBytes, LIMITS.maxSpectra));
   if ("error_key" in checked) return noticeOf(checked);
   const bytes = files.data.byteOffset % 4 === 0 ? files.data : files.data.slice();
@@ -107,7 +107,7 @@ export function registerPackage(engine, files, enabled) {
     native: parseNative(files.native, checked.n_spectra),
     entry: { id: files.id, label: checked.private === true ? readPref(LABEL + files.id) || files.id : files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, terms: checked.terms ? { it: checked.terms.it ?? null, en: checked.terms.en ?? "" } : null, private: checked.private === true, enabled, sampling: typeof checked.sampling === "string" ? checked.sampling : null },
   });
-  publish();
+  if (announce) publish();
   return null;
 }
 
@@ -127,7 +127,7 @@ export async function loadAllLibraries(engine) {
       const [manifest, index, data] = await Promise.all(["manifest.json", "index.json", "data.bin"].map((f) => fetchBytes(`${BASE}${lib.path}/${f}`)));
       const native = await fetchBytes(`${BASE}${lib.path}/native.bin`).catch(() => undefined);
       const text = new TextDecoder();
-      const bad = registerPackage(engine, { id: String(lib.id), manifest: text.decode(manifest), index: text.decode(index), data: /** @type {Uint8Array} */ (data), ...(native ? { native } : {}) }, lib.enabled !== false);
+      const bad = registerPackage(engine, { id: String(lib.id), manifest: text.decode(manifest), index: text.decode(index), data: /** @type {Uint8Array} */ (data), ...(native ? { native } : {}) }, lib.enabled !== false, false);
       if (bad) addNotice(bad);
     }
   } catch {
@@ -135,12 +135,13 @@ export async function loadAllLibraries(engine) {
   }
   try {
     for (const stored of await loadLibraries()) {
-      const bad = registerPackage(engine, stored, true);
+      const bad = registerPackage(engine, stored, true, false);
       if (bad) addNotice(bad);
     }
   } catch {
     addNotice({ key: "library.store_failed", params: {} });
   }
+  publish(); // one state change for all the libraries: the first comparison never runs on a part of them
 }
 
 /** @param {string} id @returns {string} the name shown for a library: the one the user gave a private library, else its id */

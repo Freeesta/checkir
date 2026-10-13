@@ -15,7 +15,7 @@ async function openPanel(page, name) {
 export async function importLibrary(page) {
   // With a sample already open, switching a public library off runs the match again and the results panel takes the place
   // of the libraries panel (one open section at a time): reopen it before each step.
-  for (const name of [/swgdrug-ir/, /checkir-community/]) {
+  for (const name of [/swgdrug-ir/]) {
     await openPanel(page, "libraries");
     const box = page.getByRole("checkbox", { name });
     if (await box.isChecked()) await box.click();
