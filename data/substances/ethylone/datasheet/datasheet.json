@@ -1,0 +1,83 @@
+{
+  "schema": "datasheet/1",
+  "substance": "ethylone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "dihydro-ethylone",
+        "reaction": "reduction_keto",
+        "source": "yeh2025"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-ethylone",
+        "reaction": "hydroxylation",
+        "source": "yeh2025"
+      },
+      {
+        "from": "parent",
+        "to": "ethylone-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "yeh2025"
+      },
+      {
+        "from": "parent",
+        "to": "n-dealkyl-ethylone",
+        "reaction": "other",
+        "source": "yeh2025"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "ethylone.identity",
+      "topic": "testing",
+      "source": "maheux2016"
+    },
+    {
+      "key": "ethylone.redosing",
+      "topic": "redosing",
+      "source": "lai2022"
+    },
+    {
+      "key": "ethylone.combination",
+      "topic": "combination",
+      "source": "lee2015"
+    },
+    {
+      "key": "ethylone.testing",
+      "topic": "testing",
+      "source": "euda-cathinones"
+    }
+  ]
+}

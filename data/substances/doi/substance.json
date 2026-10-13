@@ -1,0 +1,60 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "doi",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "DOI",
+      "synonyms": [
+        "4-iodo-2,5-dimethoxyamphetamine",
+        "2,5-dimethoxy-4-iodoamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "DOI",
+      "synonyms": [
+        "4-iodo-2,5-dimetossianfetamina",
+        "2,5-dimetossi-4-iodoanfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine",
+  "formula": "C11H16INO2",
+  "molar_mass_g_mol": 321.15,
+  "smiles": "CC(CC1=CC(=C(C=C1OC)I)OC)N",
+  "inchi": "InChI=1S/C11H16INO2/c1-7(13)4-8-5-11(15-3)9(12)6-10(8)14-2/h5-7H,4,13H2,1-3H3",
+  "inchikey": "BGMZUEKZENQUJY-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q209251",
+    "cas": "64584-34-5",
+    "pubchem_cid": 1229
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

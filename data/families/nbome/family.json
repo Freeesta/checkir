@@ -1,0 +1,48 @@
+{
+  "schema": "family-sheet/1",
+  "id": "nbome",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "interactions": [],
+  "counselling": [
+    {
+      "key": "nbome.testing",
+      "topic": "testing",
+      "source": "suzuki2015"
+    },
+    {
+      "key": "nbome.redosing",
+      "topic": "redosing",
+      "source": "suzuki2015"
+    },
+    {
+      "key": "nbome.route",
+      "topic": "route",
+      "source": "suzuki2015"
+    },
+    {
+      "key": "nbome.overdose_signs",
+      "topic": "overdose_signs",
+      "source": "suzuki2015"
+    },
+    {
+      "key": "nbome.combination",
+      "topic": "combination",
+      "source": "schifano2021"
+    }
+  ],
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
