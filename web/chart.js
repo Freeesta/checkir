@@ -311,10 +311,7 @@ export function wire(el, opts = {}) {
   refresh();
   update();
   return {
-    redraw: () => {
-      refresh();
-      update();
-    },
+    redraw: () => (refresh(), update()),
     cursorRange: () => cursors.pair(),
     setLayers: (next) => {
       layers = next;

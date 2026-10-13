@@ -161,8 +161,7 @@ async function start() {
     chart.redraw();
   };
   subscribe(renderUi);
-  startMatching({ announce });
-  startRangeTable();
+  startMatching({ announce }); startRangeTable();
   wireShortcuts(ctx, next);
   redrawAll();
   if (engine) loadAllLibraries(engine);
