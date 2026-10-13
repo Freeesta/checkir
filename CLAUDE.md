@@ -16,8 +16,9 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 - **Consegna = sito pubblicato**: finito quando è in `main` e il workflow `pages` di quel commit è riuscito.
 - **Flusso**: ramo `claude/<argomento>` da `origin/main` → PR → merge commit (mai rebase né push forzato). Prima di unire `git merge origin/main`. Le PR le unisce il Coordinatore a CI verde; le chat di sviluppo lasciano la PR aperta.
 - **Perimetro**: ogni chat tocca solo ciò che dice il suo prompt; a fine lavoro UN messaggio al Coordinatore (max 5 righe).
+- **Due persone** (Federico e Dave) con privilegi identici e chat che non si parlano: il lavoro si prende solo da una riga di `STATO.md` del privato `Freeesta/checkir-data` secondo `REGOLE.md` §3 (una chat = una riga = il suo perimetro). A PR aperta la chat non tocca altro.
 - **Commit**: titolo breve in italiano + 1-3 righe; codice e commenti in inglese; mai nomi di modelli nei commit e nel codice.
-- **Documenti**: CLAUDE.md e `docs/agenti/` descrivono solo lo stato attuale; quando cambi un comportamento RISCRIVI la riga; una funzione nuova = una riga nel file della sua area; riga ≤ 600 caratteri; file d'area ≤ 15 KB (se ci si avvicina, dividilo per argomento e aggiorna la tabella §5).
+- **Documenti**: CLAUDE.md e `docs/agenti/` descrivono solo lo stato attuale (niente date, numeri di PR, «prima/ora»); quando cambi un comportamento RISCRIVI la riga; una funzione nuova = una riga nel file della sua area; riga ≤ 600 caratteri; file d'area ≤ 15 KB (se ci si avvicina, dividilo per argomento e aggiorna la tabella §5; i file troppo piccoli si uniscono al più vicino).
 - **Consumo**: una sessione per pacchetto; leggi solo il file d'area che serve; `grep -n` e letture a intervalli; raggruppa le modifiche e prova una volta alla fine. A fine PR, sopra 200k token, blocco di consegna al Coordinatore e stop.
 - **Subagenti** (`.claude/agents/`): cercatore, verificatore, controllo-github, archivista, sostituzioni, estrattore, inventario-testi, stato-sessioni. Mai a un subagente: decisioni, codice nuovo, testi scientifici o sanitari, asserzioni dei test, commit, push, merge.
 
@@ -26,7 +27,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 - Pagina: `bash tools/costruisci_sito.sh` (costruisce `site/`, richiede `wasm-bindgen-cli` alla versione di `Cargo.lock`), poi `npm ci && node tests_e2e/fumo.mjs` (axe, tastiera, 320 px, chiaro/scuro, it/en). Un front end non provato nel browser è rotto.
 - Soglie (basi che nascono VUOTE e restano vuote): `python3 tools/controlla_soglie.py`, `python3 tools/controlla_rust.py`, `python3 tools/controlla_lingue.py`, `npx tsc -p tsconfig.json --noEmit`, `python3 tools/controlla_nomi.py`. Dopo `cargo fmt` rilancia le soglie.
 - Limiti: funzione ≤ 80 righe, file ≤ 500, documenti ≤ 25 KB e righe ≤ 600 caratteri. Nessun test né misura di velocità o memoria; la memoria si garantisce col contratto di budget.
-- Dati sintetici: `ftir_core::sintetico` (bande di Lorentz, linea di base, rumore con seme fisso). Dati veri: i test che li chiedono si saltano senza il repository privato (variabile `CHECKIR_DATA`).
+- Dati sintetici: `ftir_core::synthetic` (bande di Lorentz, linea di base, rumore con seme fisso). Dati veri: i test che li chiedono si saltano senza il repository privato (variabile `CHECKIR_DATA`).
 - CI: `ci-ok` è l'unico controllo richiesto; `changes` decide quali job girano (rust, web, data); `limits` gira sempre. La notte (`notte.yml`) fa tutto; `advisories.yml` ogni giorno.
 
 ## 4. Architettura
@@ -40,7 +41,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 ## 5. File d'area (leggi solo quello del tuo lavoro)
 | Se tocchi… | Leggi |
 |---|---|
-| `crates/ftir-core`, `crates/ftir-wasm` | `docs/agenti/motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md` (passi, sottrazione), `motore_confronto.md` (confronto, allerte), `motore_picchi.md` (picchi, indice, assegnazione), `qualita.md` (qualità della misura, interferogrammi), `motore_didattica.md` (teoria, miscele) |
+| `crates/ftir-core`, `crates/ftir-wasm` | `docs/agenti/motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md` (passi, sottrazione, qualità della misura, interferogrammi), `motore_confronto.md` (confronto, allerte), `motore_picchi.md` (picchi, indice, assegnazione), `motore_didattica.md` (teoria, miscele) |
 | `crates/ftir-lib`, `tools/libreria/` | `docs/agenti/libreria.md` |
 | `web/` | `docs/agenti/pagina.md` (guscio, stile, pagine), `pagina_grafico.md` (grafico, picchi, regioni), `pagina_confronto.md` (risultati, scheda, sottrazione), `pagina_schede.md` (schede delle sostanze, pagina schede), `pagina_miscele.md` (proposta di miscela), `pagina_file.md` (file, residui, cartella) |
 | `data/`, `docs/schemi/` | `docs/agenti/dati.md` (struttura, contratti, schede), `dati_bande.md` (bande IR), `dati_revisione.md` (revisori, firme, contributi) |

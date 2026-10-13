@@ -388,8 +388,8 @@
       "minLength": 1
     },
     "quality": {
-      "description": "Quality metrics computed by CI (ARCHITETTO_DATI_2 §8).",
-      "description_it": "Metriche di qualità calcolate dalla CI (§8).",
+      "description": "Quality metrics computed by CI from the JCAMP data; a criterion with result fail rejects the file.",
+      "description_it": "Metriche di qualità calcolate dalla CI dai dati JCAMP; un criterio con esito fail fa rifiutare il file.",
       "type": "object",
       "properties": {
         "checks": {

@@ -23,6 +23,10 @@ export async function librariesPureScenario(check) {
   check("names: the InChIKey is searchable and the limit is respected", searchNames(index, "zpucind").length === 1 && searchNames(index, "co", 1).length === 1);
   check("names: an empty or unknown query finds nothing", searchNames(index, " ").length === 0 && searchNames(index, "xyz").length === 0);
   check("import: names become safe ids and ids stay unique", slug("Mia Libreria Èè!") === "mia-libreria-ee" && slug("***") === "library" && uniqueId("x", new Set(["x", "x-2"])) === "x-3");
+  const { groupPackages } = await import(new URL("../web/importa.js", import.meta.url));
+  const f = (name, path) => Object.defineProperty(new File(["x"], name), "webkitRelativePath", { value: path ?? "" });
+  const groups = groupPackages([f("manifest.json", "p/a/manifest.json"), f("index.json", "p/a/index.json"), f("data.bin", "p/a/data.bin"), f("native.bin", "p/a/native.bin"), f("manifest.json", "p/b/manifest.json"), f("notes.txt", "p/b/notes.txt")]);
+  check("packages: files are grouped by folder and foreign files ignored", groups.length === 2 && groups[0].name === "a" && Boolean(groups[0].native) && groups[1].name === "b" && !groups[1].data);
   const { isMeasure } = await import(new URL("../web/cartella.js", import.meta.url));
   check("folder: the watched folder lists every reader's extension (JCAMP, .ispd, OPUS .0, SPA, SPC, CSV) and nothing else", ["a.JDX", "b.ispd", "c.0", "c.12", "d.SPA", "e.spc", "f.csv"].every(isMeasure) && !["g.pdf", "h.png", "notes"].some(isMeasure));
   const { buildPrivateLibrary } = await import(new URL("../web/importa.js", import.meta.url));
@@ -55,6 +59,35 @@ async function folderScenario(page, jdx, check) {
   await rm(dir, { recursive: true, force: true });
   await page.getByRole("button", { name: /Rimuovi la libreria cartella/ }).click();
   await page.waitForSelector('[data-library="cartella"]', { state: "detached" });
+}
+
+/** Ready-made package: the four files of the stored library are loaded again as one package (no folder name: the manifest names it); off survives a reload. */
+async function packageScenario(page, check) {
+  const files = await page.evaluate(async () => {
+    const dir = await (await (await navigator.storage.getDirectory()).getDirectoryHandle("checkir-libraries")).getDirectoryHandle("mia-libreria");
+    const out = [];
+    for (const name of ["manifest.json", "index.json", "data.bin", "native.bin"]) {
+      const bytes = new Uint8Array(await (await (await dir.getFileHandle(name)).getFile()).arrayBuffer());
+      out.push({ name, b64: btoa(Array.from(bytes, (b) => String.fromCharCode(b)).join("")) });
+    }
+    return out;
+  });
+  await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
+  await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
+  await page.setInputFiles('input[data-library="package"]', files.map((f) => ({ name: f.name, mimeType: "application/octet-stream", buffer: Buffer.from(f.b64, "base64") })));
+  await page.locator('[data-library="mia-libreria"]').waitFor();
+  const notes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
+  check("package: one ready-made private package is loaded and announced", /Pacchetti privati caricati: 1/.test(notes), notes);
+  await page.getByRole("checkbox", { name: /mia-libreria/ }).uncheck();
+  await page.reload();
+  await page.waitForSelector("body[data-ready='1']");
+  await openLibraries(page);
+  await page.locator('[data-library="mia-libreria"]').waitFor();
+  check("package: it is kept across a reload and stays switched off", !(await page.getByRole("checkbox", { name: /mia-libreria/ }).isChecked()));
+  await page.getByRole("checkbox", { name: /mia-libreria/ }).check();
+  await page.setInputFiles('input[data-library="package"]', [{ name: "manifest.json", mimeType: "application/json", buffer: Buffer.from("{}") }]);
+  await page.waitForFunction(() => /mancano file/.test(document.querySelector('details[data-panel="libraries"] .notes')?.textContent ?? ""));
+  check("package: an incomplete set is refused with a message", true);
 }
 
 /** @param {import("playwright").Browser} browser */
@@ -107,6 +140,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await folderScenario(page, jdx, check);
   const withPrivate = await axe(page);
   check("import: axe has no violations with a private library", withPrivate.length === 0, withPrivate.join(", "));
+  await packageScenario(page, check);
 
   await page.reload();
   await page.waitForSelector("body[data-ready='1']");

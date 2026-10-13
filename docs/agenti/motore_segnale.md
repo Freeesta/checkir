@@ -1,5 +1,5 @@
-# Motore: passi del segnale, sottrazione
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `qualita.md`, `motore_didattica.md`.
+# Motore: passi del segnale, sottrazione, qualità della misura
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri.
 
 ## Struttura
 - `ftir-core/src/passi/` (pacchetto SEGNALE): ogni passo è `apply(&Spectrum, &str JSON) -> EngineResult<Spectrum>`, puro: l'originale non cambia, il risultato ha lo stesso ruolo e un passo in più in `history`; parametro sconosciuto = `passi.parametro_sconosciuto`.
@@ -20,3 +20,12 @@ Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore:
 ## Prove
 - `tests/segnale_base.rs`: parità con `pybaselines` (1e-9 relativa al massimo; 1e-8 per λ 1e7, 1576 punti, ordine 3: `pybaselines` dista ~4e-9 dall'esatto), linea nota recuperata, ATR, sottrazione (A + 0.6·B → k = 0.60 ± 0.01, residuo = A entro 1e-9), fattore come `numpy.linalg.lstsq`, mai negativo.
 - `tests/segnale.rs`: parità ≤ 1e-9 con NumPy/SciPy sulle fixture `tests/golden/segnale/*.json` (`tools/segnale_riferimento.py`, fuori CI; `null` = assente), verità sintetica (bande conservate, derivata nulla al centro, andata e ritorno %T), catena = passi uno a uno.
+
+## Qualità della misura e ricalcolo dagli interferogrammi
+- `ftir-core/src/measurement_quality/` (qualità della misura sull'assorbanza di qualsiasi formato, solo avvisi, mai blocchi, esito neutro mai «ok»: CO₂ residua = scarto massimo 2300-2380 dalla retta per le mediane dei due fianchi; vapore = deviazione standard della derivata 3700-3900 contro 5× la mediana di riferimento; bande negative = minimo fuori da 0-500 e 1900-2400; intervallo mancante = `not_evaluable`).
+- Qualità della misura, dati: soglie in `data/soglie/quality_thresholds-1.json`, schema `quality_thresholds/1`, `draft`): `check(&Spectrum, &Thresholds)` e `check_json(spettro, soglie)` → JSON `measurement_quality/1` (schema `docs/schemi/measurement_quality-1.json`, chiavi di catalogo `quality.<controllo>.<esito>|action`, `quality.summary.*`); wasm `measurement_quality(spectrum_json, thresholds_json)`.
+- Qualità della misura, note: sono separati dagli avvisi `quality_*` dei confronti (relativi al rumore, sulla griglia).
+- `ftir-core/src/single_beam/` (calcolo di checkIR dai due interferogrammi di un `.ispd`, solo qualità e didattica, mai per il confronto): `channel(y, passo_cm)` = senza media, centro = massimo |y|, peso triangolare 1 al centro e 0 all'estremo più lontano, centro all'indice 0, modulo della FFT reale (lunghezza potenza di due, nessuna correzione di fase);
+  `absorbance` = −log10(S/B) con `interp` come `numpy.interp`; `recompute(&Document)` → canali e assorbanza sull'asse dello spettro principale, ogni dato con `computed_by: checkir · <passo>` nella storia; senza coppia di interferogrammi o con dati rotti = errore `single_beam.*`, mai un blocco.
+  `energy.rs`: energia del bianco = massimo del singolo canale; `check(doc, soglie, riferimento)` → `Check` `background_energy` (rapporto con la mediana dei bianchi dello strumento, data dal chiamante; soglia `background_energy.low_ratio` in `quality_thresholds/1`, `draft`); senza riferimento o con errori = `not_evaluable`.
+- `tests/single_beam.rs` (parità ≤ 1e-9 con NumPy su `tests/golden/single_beam/parity.json`, da `tools/single_beam_riferimento.py` a mano; centro, `computed_by`, energia, dati rotti senza panico); `tests/single_beam_real.rs` (con `CHECKIR_DATA`: 239/239 `.ispd` ricalcolati, correlazione con l'assorbanza salvata ≥ 0.999 su 237, minimo 0.998).

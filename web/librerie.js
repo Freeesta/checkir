@@ -10,7 +10,7 @@
  * @typedef {{ entry: LibraryEntry, rows: import("./nomi.js").IndexRow[], values: Float32Array, native: Native | null }} Loaded
  */
 import { buildNameIndex, searchNames } from "./nomi.js";
-import { buildPrivateLibrary, noticeOf, slug, uniqueId } from "./importa.js";
+import { buildPrivateLibrary, groupPackages, noticeOf, slug, uniqueId } from "./importa.js";
 import { canStore, loadLibraries, removeStored, saveLibrary } from "./opfs.js";
 import { removeIndex } from "./peak_index_cache.js";
 import { currentLang, t } from "./i18n.js";
@@ -21,6 +21,8 @@ const LIMITS = { maxBytes: 256 * 1024 * 1024, maxSpectra: 50_000 };
 const BASE = "librerie/";
 /** Preference holding the name the user gave to a private library (the id never changes). */
 const LABEL = "libname.";
+/** Preference remembering that a private library is switched off (a library that is on has no entry). */
+const OFF = "liboff.";
 
 /** @type {Map<string, Loaded>} */
 const loaded = new Map();
@@ -135,7 +137,7 @@ export async function loadAllLibraries(engine) {
   }
   try {
     for (const stored of await loadLibraries()) {
-      const bad = registerPackage(engine, stored, true, false);
+      const bad = registerPackage(engine, stored, readPref(OFF + stored.id) !== "1", false);
       if (bad) addNotice(bad);
     }
   } catch {
@@ -165,6 +167,10 @@ export function setEnabled(id, on) {
   const l = loaded.get(id);
   if (!l) return;
   l.entry = { ...l.entry, enabled: on };
+  if (l.entry.private) {
+    if (on) forgetPref(OFF + id);
+    else writePref(OFF + id, "1");
+  }
   publish();
 }
 
@@ -174,6 +180,7 @@ export async function removePrivate(id) {
   await removeStored(id);
   await removeIndex(id);
   forgetPref(LABEL + id);
+  forgetPref(OFF + id);
   loaded.delete(id);
   publish();
 }
@@ -221,10 +228,71 @@ export async function importLibrary(engine, files, name, sampling, say) {
   if (all[0]) say(all[0]);
 }
 
+/**
+ * Load ready-made private packages (`ftir-library/1` with `private: true`, e.g. a folder of packages) in one go: each is checked by the engine,
+ * kept in OPFS and added; a package with the id of a private library already here replaces it (loading again updates). Nothing leaves the browser.
+ * @param {import("./engine.js").Engine | null} engine @param {File[]} files @param {(notice: Notice) => void} say receives the summary to announce
+ * @returns {Promise<void>}
+ */
+export async function importPackages(engine, files, say) {
+  if (!engine || job) return;
+  job = new AbortController();
+  const groups = groupPackages(files);
+  /** @type {Notice[]} */
+  const notices = [];
+  const taken = new Set([...loaded].filter(([, l]) => !l.entry.private).map(([id]) => id));
+  const text = new TextDecoder();
+  let ok = 0;
+  let noStorage = false;
+  for (const g of groups) {
+    const name = g.name || "?";
+    if (!g.manifest || !g.index || !g.data) {
+      notices.push({ key: "library.package.incomplete", params: { name } });
+      continue;
+    }
+    try {
+      if (g.data.size > LIMITS.maxBytes) throw JSON.stringify({ error_key: "reader.limit_exceeded", params: { limit: "bytes", max: LIMITS.maxBytes } });
+      const [manifest, index, data, native] = await Promise.all([g.manifest.text(), g.index.text(), g.data.arrayBuffer(), g.native?.arrayBuffer()]);
+      const meta = JSON.parse(manifest);
+      if (meta.private !== true) {
+        notices.push({ key: "library.package.not_private", params: { name } });
+        continue;
+      }
+      const id = uniqueId(slug(g.name || String(meta.name ?? "")), taken);
+      taken.add(id);
+      const had = loaded.has(id);
+      const pkg = { id, manifest, index, data: new Uint8Array(data), ...(native ? { native: new Uint8Array(native) } : {}) };
+      const bad = registerPackage(engine, pkg, readPref(OFF + id) !== "1", false);
+      if (bad) {
+        notices.push({ key: "library.import.skipped", params: { file: name, reason_key: bad.key, ...bad.params } });
+        continue;
+      }
+      ok++;
+      if (had) await removeIndex(id);
+      if (!canStore()) noStorage = true;
+      else {
+        await removeStored(id);
+        await saveLibrary(pkg).catch(() => notices.push({ key: "library.store_failed", params: {} }));
+      }
+    } catch (e) {
+      const notice = noticeOf(e);
+      notices.push({ key: "library.import.skipped", params: { file: name, reason_key: notice.key, ...notice.params } });
+    }
+  }
+  job = null;
+  publish();
+  /** @type {Notice} */
+  const head = ok ? { key: "library.package.done", params: { n: String(ok) } } : { key: "library.package.none", params: {} };
+  const all = [head, ...(noStorage ? [{ key: "library.import.no_storage", params: {} }] : []), ...notices];
+  update({ libraryNotices: all });
+  say(head);
+}
+
 /** The library members of the page context. @param {import("./engine.js").Engine | null} engine @param {(text: string) => void} announce */
 export function libraryActions(engine, announce) {
   return {
     importLibrary: (/** @type {File[]} */ files, /** @type {string} */ name, /** @type {string} */ sampling) => importLibrary(engine, files, name, sampling, (n) => announce(t(n.key, n.params))),
+    importPackages: (/** @type {File[]} */ files) => importPackages(engine, files, (n) => announce(t(n.key, n.params))),
     cancelImport,
     renameLibrary: (/** @type {string} */ id, /** @type {string} */ name) => renameLibrary(id, name),
     removeLibrary: (/** @type {string} */ id) => void removePrivate(id).then(() => announce(t("status.library_removed", { name: id }))),
