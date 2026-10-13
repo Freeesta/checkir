@@ -37,6 +37,13 @@ pub fn confronto_libreria_inizia(id: &str, version: &str) {
     with(|m| m.begin(id, version));
 }
 
+/// Say how the spectra of the library `lib` were measured (`ATR`, `transmission`, ...); empty = not said. A sample
+/// declared with another method cannot reach the level T2 (`sampling_not_calibrated`).
+#[wasm_bindgen]
+pub fn confronto_libreria_campionamento(lib: &str, method: &str) -> String {
+    answer(with(|m| m.set_sampling(lib, method)))
+}
+
 /// Add one spectrum (axis in cm-1, `y_unit` = `absorbance` or `transmittance`, NaN = absent point).
 /// An empty `substance` means "no identity: group by name". Returns `{"ok":true}` or `{error, error_key, params}`.
 #[wasm_bindgen]

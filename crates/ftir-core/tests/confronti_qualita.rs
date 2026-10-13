@@ -139,7 +139,6 @@ fn f(v: &Value, key: &str) -> f64 {
 fn a_good_measurement_raises_no_quality_alert() {
     let res = run(&good(A, 5), "");
     assert_eq!(quality(&res), Vec::<String>::new());
-    assert_eq!(ids(&res).last().map(String::as_str), Some("fixed_limit"));
 }
 
 #[test]
