@@ -37,5 +37,12 @@
   "ftir-library/invalid/bad-grid.json": "step_cm1",
   "ftir-library/invalid/no-attribution-en.json": "en",
   "ftir-library-index/invalid/bad-quality.json": "/spectra/0/quality",
-  "_comment": "Expected text of the first error message for each invalid fixture: the field it must name."
+  "_comment": "Expected text of the first error message for each invalid fixture: the field it must name.",
+  "reviewers/invalid/email.json": "email",
+  "reviewers/invalid/phone.json": "phone",
+  "reviewers/invalid/bad-role.json": "/reviewers/0/roles/0",
+  "reviewers/invalid/bad-month.json": "/reviewers/0/expires",
+  "reviewers/invalid/bad-status.json": "/reviewers/0/status",
+  "reviewers/invalid/no-roles.json": "/reviewers/0/roles",
+  "reviewers/invalid/bad-github.json": "/reviewers/0/github"
 }
