@@ -19,10 +19,15 @@ body:
       options:
         - "molecule"
         - "category"
+        - "history"
+        - "origin"
+        - "metabolism"
+        - "cuts"
         - "effects"
         - "doses"
         - "risks"
         - "interactions"
+        - "counselling"
         - "sources"
         - "license"
     validations:

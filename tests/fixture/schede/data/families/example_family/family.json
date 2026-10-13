@@ -1,0 +1,28 @@
+{
+  "schema": "family-sheet/1",
+  "id": "example_family",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-12",
+  "review_by": "2028-09-30",
+  "authors": [
+    "Example"
+  ],
+  "ai_assisted": true,
+  "interactions": [
+    {
+      "with": "others",
+      "severity": "caution",
+      "mechanism": "other",
+      "source": "synthetic-generator"
+    }
+  ]
+}

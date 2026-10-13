@@ -11,7 +11,7 @@ export const MAX_URL = 6000;
 export const MAX_TEXT = 4000;
 
 /** Sections whose every point needs a source. */
-export const HEALTH = new Set(["effects", "doses", "risks", "interactions"]);
+export const HEALTH = new Set(["effects", "doses", "risks", "interactions", "counselling"]);
 
 /** Words that must never reassure (same list as tools/check_words.py), by language. @type {Record<string, RegExp>} */
 const BANNED = {

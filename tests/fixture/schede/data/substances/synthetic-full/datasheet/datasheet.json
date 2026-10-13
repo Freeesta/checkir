@@ -1,0 +1,143 @@
+{
+  "schema": "datasheet/1",
+  "substance": "synthetic-full",
+  "version": 1,
+  "section_state": {
+    "molecule": "approved",
+    "category": "approved",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [
+    {
+      "public_name": "Example Chemist",
+      "role": "chemist",
+      "sections": [
+        "molecule",
+        "category"
+      ],
+      "date": "2026-10-12"
+    }
+  ],
+  "reviewed": "2026-10-12",
+  "review_by": "2028-09-30",
+  "family": "example_family",
+  "structure_svg": true,
+  "identity_extra": {},
+  "origin": {
+    "type": "natural",
+    "precursor_classes": [
+      "example_leaf_alkaloids"
+    ],
+    "typical_impurities": [
+      {
+        "substance": "example-impurity",
+        "ir_relevant": true,
+        "source": "synthetic-generator"
+      }
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "example-metabolite",
+        "reaction": "hydrolysis_ester",
+        "enzymes": [
+          "CES1",
+          "BChE"
+        ],
+        "source": "synthetic-generator"
+      },
+      {
+        "from": "parent+ethanol",
+        "to": "example-adduct",
+        "reaction": "other",
+        "enzymes": [
+          "CES1"
+        ],
+        "source": "synthetic-generator"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "example.metabolite",
+        "pubchem_cid": 1,
+        "active": false,
+        "marker": true,
+        "source": "synthetic-generator"
+      },
+      {
+        "name_key": "example.adduct",
+        "active": null,
+        "source": "synthetic-generator"
+      }
+    ],
+    "half_life_h": {
+      "min": 0.7,
+      "max": 1.5,
+      "matrix": "plasma",
+      "route": "intravenous",
+      "source": "synthetic-generator"
+    },
+    "notes_key": "example.metabolism_notes"
+  },
+  "cuts": [
+    {
+      "cut": "synthetic-cut-a",
+      "frequency": "common",
+      "source": "synthetic-generator"
+    },
+    {
+      "cut": "synthetic-cut-b",
+      "frequency": "occasional",
+      "source": "synthetic-generator"
+    }
+  ],
+  "doses": [
+    {
+      "route": "oral",
+      "unit": "g",
+      "threshold": 1,
+      "light": 2,
+      "common": 3,
+      "strong": 4,
+      "source": "synthetic-generator",
+      "evidence_type": "user_reported"
+    }
+  ],
+  "interactions": [
+    {
+      "with": "others",
+      "severity": "risky",
+      "mechanism": "other",
+      "source": "synthetic-generator"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "example.redosing",
+      "topic": "redosing",
+      "source": "synthetic-generator"
+    },
+    {
+      "key": "example.testing",
+      "topic": "testing",
+      "source": "synthetic-generator"
+    }
+  ],
+  "show_doses": true,
+  "authors": [
+    "Example Author"
+  ],
+  "ai_assisted": true
+}
