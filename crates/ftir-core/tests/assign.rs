@@ -151,10 +151,10 @@ fn json_in_json_out_matches_the_direct_call() {
     let sample = detect_json(&sp(BANDS, 1), "").expect("peaks");
     let reference = detect_json(&sp(&shifted(3.0), 2), "").expect("peaks");
     let refs = format!(r#"[{{"substance_id":"sub","form":"hcl","peaks":{reference}}}]"#);
-    let out = assign_json(&sample, &refs, "").expect("assign");
+    let out = assign_json(&sample, &refs, "", "").expect("assign");
     assert!(out.contains(r#""schema":"assignment/1""#), "{out}");
     assert!(out.contains(r#""n_unexplained":0"#), "{out}");
-    let e = assign_json("{}", "[]", "").expect_err("invalid");
+    let e = assign_json("{}", "[]", "", "").expect_err("invalid");
     assert_eq!(e.error_key, "assign.picchi_non_validi");
 }
 

@@ -41,6 +41,29 @@ pub struct Explanation {
     pub ref_peak_id: String,
     pub ref_peak_cm1: f64,
     pub delta_cm1: f64,
+    /// From the assignment of the band in `substance-bands/1`, when the file has one.
+    pub band: Option<BandInfo>,
+}
+
+#[derive(Debug, Clone, PartialEq)]
+pub struct BandInfo {
+    pub group: String,
+    pub mode: String,
+    pub group_instance: Option<String>,
+    pub mode_character: Option<String>,
+    pub origin: &'static str,
+}
+
+/// A reading of a peak by a group rule (`rule_id`) or by an assignment of the substance (`origin`); never an
+/// explanation.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Interpretation {
+    pub rule_id: Option<String>,
+    pub group: String,
+    pub mode: String,
+    pub rank: usize,
+    pub status: String,
+    pub origin: Option<&'static str>,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -48,6 +71,12 @@ pub struct Item {
     pub peak_id: String,
     pub state: State,
     pub explained_by: Option<Explanation>,
+    /// At most `MAX_INTERPRETATIONS`, ranked.
+    pub interpretations: Vec<Interpretation>,
+    /// More readings were compatible than are listed: the region is crowded.
+    pub crowded: bool,
+    /// Common cuts that could explain an unexplained peak (ids), at most `MAX_SUSPECTS`.
+    pub suspects: Vec<String>,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -70,6 +99,8 @@ pub struct Summary {
 #[derive(Debug, Clone, PartialEq)]
 pub struct Assignment {
     pub sample_spectrum_id: Option<String>,
+    /// Version of the group rules read; `None` when none were given.
+    pub bands_version: Option<String>,
     /// The candidate; `None` without any reference.
     pub reference: Option<ReferenceId>,
     pub components: Vec<ReferenceId>,

@@ -127,10 +127,10 @@
       }
     },
     "bands_version": {
-      "description": "Version of the group rules used; null until they are applied.",
-      "description_it": "Versione delle regole di gruppo usate; null finche non sono applicate.",
+      "description": "Version of the group rules (bands/1) read; null when none were read.",
+      "description_it": "Versione delle regole di gruppo (bands/1) lette; null se non ne sono state lette.",
       "type": [
-        "integer",
+        "string",
         "null"
       ]
     },
@@ -193,6 +193,42 @@
                 "description": "Reference position minus sample position in cm-1.",
                 "description_it": "Posizione del riferimento meno posizione del campione in cm-1.",
                 "type": "number"
+              },
+              "group": {
+                "description": "Group of the assignment of this band in substance-bands/1; present only when the file has one.",
+                "description_it": "Gruppo dell'assegnazione di questa banda in substance-bands/1; presente solo se il file ce l'ha.",
+                "type": "string"
+              },
+              "mode": {
+                "description": "Mode of the assignment of this band.",
+                "description_it": "Modo dell'assegnazione di questa banda.",
+                "type": "string"
+              },
+              "group_instance": {
+                "description": "The specific group (for example the methyl ester).",
+                "description_it": "Il gruppo specifico (per esempio l'estere metilico).",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "mode_character": {
+                "description": "Character of the mode (for example mostly C=O).",
+                "description_it": "Carattere del modo (per esempio prevalentemente C=O).",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "origin": {
+                "description": "Where the assignment comes from; a dft assignment never explains a peak by itself.",
+                "description_it": "Da dove viene l'assegnazione; un'assegnazione dft non spiega mai un picco da sola.",
+                "type": "string",
+                "enum": [
+                  "literature",
+                  "measured",
+                  "dft"
+                ]
               }
             },
             "required": [
@@ -205,16 +241,88 @@
             "additionalProperties": false
           },
           "interpretations": {
-            "description": "Interpretations by group rules (bands/1); empty until the rules are applied.",
-            "description_it": "Interpretazioni delle regole di gruppo (bands/1); vuoto finche le regole non sono applicate.",
+            "description": "Readings of the peak, ranked, at most 3: assignments of the candidate's bands first, then group rules. A reading is never an explanation.",
+            "description_it": "Letture del picco, ordinate, al massimo 3: prima le assegnazioni delle bande del candidato, poi le regole di gruppo. Una lettura non è mai una spiegazione.",
             "type": "array",
-            "items": {}
+            "items": {
+              "type": "object",
+              "description": "One reading.",
+              "description_it": "Una lettura.",
+              "properties": {
+                "rule_id": {
+                  "description": "Id of the rule in bands/1; null for an assignment of the substance.",
+                  "description_it": "Id della regola in bands/1; null per un'assegnazione della sostanza.",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "group": {
+                  "description": "Id of the group (groups/1).",
+                  "description_it": "Id del gruppo (groups/1).",
+                  "type": "string"
+                },
+                "mode": {
+                  "description": "Id of the mode (modes/1).",
+                  "description_it": "Id del modo (modes/1).",
+                  "type": "string"
+                },
+                "rank": {
+                  "description": "Position in the order, from 1.",
+                  "description_it": "Posizione nell'ordine, da 1.",
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "rule_status": {
+                  "description": "Status of the rule or of the assignment.",
+                  "description_it": "Stato della regola o dell'assegnazione.",
+                  "type": "string",
+                  "enum": [
+                    "draft",
+                    "verified_spectra",
+                    "reviewed"
+                  ]
+                },
+                "origin": {
+                  "description": "Origin of an assignment of the substance; null for a rule.",
+                  "description_it": "Origine di un'assegnazione della sostanza; null per una regola.",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "enum": [
+                    "literature",
+                    "measured",
+                    "dft",
+                    null
+                  ]
+                }
+              },
+              "required": [
+                "rule_id",
+                "group",
+                "mode",
+                "rank",
+                "rule_status",
+                "origin"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "crowded": {
+            "description": "True when more readings were compatible than are listed: the region is crowded and the reading by groups is unreliable.",
+            "description_it": "Vero se le letture compatibili sono più di quelle elencate: la regione è affollata e la lettura per gruppi è poco affidabile.",
+            "type": "boolean"
           },
           "suspects": {
-            "description": "Common cuts that could explain an unexplained peak; empty until applied.",
-            "description_it": "Tagli comuni che potrebbero spiegare un picco non spiegato; vuoto finche non sono applicati.",
+            "description": "Common cuts with a diagnostic band at an unexplained peak, at most 3: a hint to try the subtraction, never an identification.",
+            "description_it": "Tagli comuni con una banda diagnostica in un picco non spiegato, al massimo 3: un invito a provare la sottrazione, mai un'identificazione.",
             "type": "array",
-            "items": {}
+            "items": {
+              "type": "string",
+              "description": "Id of a common cut (tagli/1).",
+              "description_it": "Id di un taglio comune (tagli/1)."
+            }
           }
         },
         "required": [
@@ -222,6 +330,7 @@
           "state",
           "explained_by",
           "interpretations",
+          "crowded",
           "suspects"
         ],
         "additionalProperties": false

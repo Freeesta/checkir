@@ -95,6 +95,34 @@ pub fn detect_peaks(spectrum_json: &str, thresholds_json: &str) -> String {
     ftir_core::peaks::detect_json(spectrum_json, thresholds_json).unwrap_or_else(|e| e.json())
 }
 
+/// Assignment of the peaks of a sample (`assignment/1` JSON): `sample_peaks_json` is `peaks/1`, `references_json` an
+/// array of `{substance_id, form, library?, version?, same_form?, peaks}` (candidate first, empty array = no reference),
+/// `context_json` the group rules, classes of the candidate, band assignments and cuts (empty = the embedded rules
+/// only). An empty `thresholds_json` uses the embedded file; errors are `{error, error_key, params}`.
+#[wasm_bindgen]
+pub fn assign_peaks(
+    sample_peaks_json: &str,
+    references_json: &str,
+    context_json: &str,
+    thresholds_json: &str,
+) -> String {
+    ftir_core::assign::assign_json(
+        sample_peaks_json,
+        references_json,
+        context_json,
+        thresholds_json,
+    )
+    .unwrap_or_else(|e| e.json())
+}
+
+/// Group rules compatible with a position (JSON array), narrower intervals first, for the inverse search. An empty
+/// `rules_json` uses the embedded rules.
+#[wasm_bindgen]
+pub fn interpretations_at(cm1: f64, tol_cm1: f64, rules_json: &str) -> String {
+    ftir_core::assign::interpret::at_position_json(cm1, tol_cm1, rules_json)
+        .unwrap_or_else(|e| e.json())
+}
+
 /// Measurement-quality checks of an absorbance spectrum (`measurement_quality/1` JSON): residual CO2, water vapour,
 /// negative bands; warnings only. An empty `thresholds_json` uses the embedded file; errors are `{error, error_key, params}`.
 #[wasm_bindgen]
@@ -105,6 +133,18 @@ pub fn measurement_quality(spectrum_json: &str, thresholds_json: &str) -> String
 
 #[cfg(test)]
 mod test {
+    #[test]
+    fn assign_peaks_reports_errors_as_data() {
+        let e = super::assign_peaks("{}", "[]", "", "");
+        assert!(e.contains("assign.picchi_non_validi"), "{e}");
+    }
+
+    #[test]
+    fn interpretations_at_lists_embedded_rules() {
+        let out = super::interpretations_at(1700.0, 6.0, "");
+        assert!(out.starts_with("[{\"rule_id\""), "{out}");
+    }
+
     #[test]
     fn detect_peaks_reports_errors_as_data() {
         let e = super::detect_peaks("{}", "");
