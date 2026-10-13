@@ -589,7 +589,7 @@
   "reader.jcamp.yunits_unknown": "The y unit \"{value}\" is not recognised: choose it before processing.",
   "reader.limit_exceeded": "The file exceeds a safety limit ({limit}, maximum {max}).",
   "reader.more_spectra": "The file contains {count} more spectra: only the first is open.",
-  "reader.opus.absorbance_computed": "The file has no absorbance spectrum: checkIR computed it as −log10(sample / background) from the single-channel spectra.",
+  "reader.opus.absorbance_computed": "The file has no absorbance spectrum: it was computed as −log10(sample / background) from the single-channel spectra.",
   "reader.opus.axis_mismatch": "The single-channel spectra of sample and background do not share the same axis: absorbance cannot be computed.",
   "reader.opus.bad_data": "The spectrum data cannot be read ({why}).",
   "reader.opus.block_skipped": "Block {object} was skipped because its data could not be read ({reason}).",
