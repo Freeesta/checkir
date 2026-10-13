@@ -254,6 +254,9 @@ th { position: sticky; top: 0; background: var(--surface); }
 /* below 24em the logo stands for the name (the heading stays for screen readers) so the result chip has the room */
 @media (max-width: 24em) {
   .brand #app-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .app-header { gap: 0.25rem; }
+  .chips { gap: 0.25rem; }
+  .chip { gap: 0.25rem; padding-inline: 0.4rem; font-size: 0.9rem; }
 }
 @media (prefers-contrast: more) {
   :root { --border: var(--text); }
