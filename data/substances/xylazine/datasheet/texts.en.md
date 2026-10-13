@@ -6,6 +6,14 @@ Xylazine (N-(2,6-dimethylphenyl)-5,6-dihydro-4H-1,3-thiazin-2-amine), formula C1
 
 Chemical class: alpha-2 adrenergic agonist, a veterinary sedative (grouped here under other substances). Expected effect: depressant or sedative. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## history
+
+Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
+## origin
+
+Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
 ## metabolism
 
 In 28 patients who tested positive for fentanyl and xylazine, the median terminal half-life of xylazine in plasma was 12.0 h (range 5.9-20.8), longer than in animal studies. [f:lin2025]

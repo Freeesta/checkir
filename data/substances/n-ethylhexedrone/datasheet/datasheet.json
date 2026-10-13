@@ -1,0 +1,100 @@
+{
+  "schema": "datasheet/1",
+  "substance": "n-ethylhexedrone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "reduced NEH",
+        "reaction": "reduction_keto",
+        "source": "lefeuvre2024"
+      },
+      {
+        "from": "parent",
+        "to": "dealkyl-NEH",
+        "reaction": "other",
+        "source": "lefeuvre2024"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-NEH",
+        "reaction": "hydroxylation",
+        "source": "lefeuvre2024"
+      },
+      {
+        "from": "parent",
+        "to": "NEH-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "massano2024"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "reduced-neh",
+        "active": null,
+        "source": "lefeuvre2024"
+      },
+      {
+        "name_key": "dealkyl-neh",
+        "active": null,
+        "source": "lefeuvre2024"
+      },
+      {
+        "name_key": "reduced-dealkyl-neh",
+        "active": null,
+        "source": "lefeuvre2024"
+      },
+      {
+        "name_key": "hydroxy-neh",
+        "active": null,
+        "source": "lefeuvre2024"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "neh.sold_as",
+      "topic": "testing",
+      "source": "domagalska2021"
+    },
+    {
+      "key": "neh.aftereffects",
+      "topic": "mental_health",
+      "source": "lefeuvre2024"
+    },
+    {
+      "key": "neh.redosing",
+      "topic": "redosing",
+      "source": "nunezmontero2025"
+    }
+  ]
+}

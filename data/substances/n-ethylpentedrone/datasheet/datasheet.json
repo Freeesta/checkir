@@ -1,0 +1,90 @@
+{
+  "schema": "datasheet/1",
+  "substance": "n-ethylpentedrone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "dihydro-NEP",
+        "reaction": "reduction_keto",
+        "source": "roosendaal2026"
+      },
+      {
+        "from": "parent",
+        "to": "N-desethyl-NEP",
+        "reaction": "other",
+        "source": "roosendaal2026"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated NEP",
+        "reaction": "hydroxylation",
+        "source": "pasquet2026"
+      },
+      {
+        "from": "parent",
+        "to": "NEP-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "massano2024"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "dihydro-nep",
+        "active": null,
+        "source": "roosendaal2026"
+      },
+      {
+        "name_key": "n-desethyl-nep",
+        "active": null,
+        "source": "roosendaal2026"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "nep.name",
+      "topic": "testing",
+      "source": "espinosa2024"
+    },
+    {
+      "key": "nep.context",
+      "topic": "sexual_health",
+      "source": "pasquet2026"
+    },
+    {
+      "key": "nep.redosing",
+      "topic": "redosing",
+      "source": "nunezmontero2025"
+    }
+  ]
+}

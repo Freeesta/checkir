@@ -1,0 +1,68 @@
+{
+  "schema": "datasheet/1",
+  "substance": "ephylone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "dihydro-ephylone (beta-ketone reduced to alcohol)",
+        "reaction": "reduction_keto",
+        "source": "krotulski2018"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "dihydro-ephylone",
+        "active": null,
+        "marker": true,
+        "source": "krotulski2018"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "ephylone.isomers",
+      "topic": "testing",
+      "source": "fogarty2023"
+    },
+    {
+      "key": "ephylone.combination",
+      "topic": "combination",
+      "source": "krotulski2018"
+    },
+    {
+      "key": "ephylone.signs",
+      "topic": "overdose_signs",
+      "source": "costa2019"
+    }
+  ]
+}
