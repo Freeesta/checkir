@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "hexanoylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Hexanoylfentanyl",
+      "synonyms": [
+        "hexanoyl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Esanoilfentanil",
+      "synonyms": [
+        "esanoil fentanil"
+      ]
+    }
+  },
+  "iupac": "N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]hexanamide",
+  "formula": "C25H34N2O",
+  "molar_mass_g_mol": 378.5,
+  "smiles": "CCCCCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C25H34N2O/c1-2-3-6-15-25(28)27(23-13-9-5-10-14-23)24-17-20-26(21-18-24)19-16-22-11-7-4-8-12-22/h4-5,7-14,24H,2-3,6,15-21H2,1H3",
+  "inchikey": "PWKBFVCAQVONRR-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2583550-66-5",
+    "pubchem_cid": 137700441
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
