@@ -1,5 +1,6 @@
-// Service worker: makes the site work offline. Cache name carries the project prefix; bump VERSION to renew it.
-const VERSION = "17";
+// Service worker: makes the site work offline. Cache name carries the project prefix. VERSION is written by the build
+// (tools/versione_sw.mjs: hash of this file and of everything in FILES); "dev" only when web/ is served as it is.
+const VERSION = "dev";
 const ID = new URL(self.location.href).searchParams.get("id") || "app";
 const CACHE = ID + "-v" + VERSION;
 const LIBRARIES = "librerie/";
