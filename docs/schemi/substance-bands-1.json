@@ -30,6 +30,12 @@
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
     },
+    "note": {
+      "description": "Note for the reviewer, in English, not shown to users: where the numbers come from, which forms were checked, what is still to confirm.",
+      "description_it": "Nota per chi rivede, in inglese, non mostrata alle persone: da dove vengono i numeri, quali forme sono state controllate, cosa resta da confermare.",
+      "type": "string",
+      "maxLength": 600
+    },
     "bands": {
       "description": "The bands.",
       "description_it": "Le bande.",
@@ -94,8 +100,8 @@
             "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
           },
           "text_key": {
-            "description": "Key of the explanation texts (substance_bands.<substance>.<form>.<position>.<level>, hyphens of the ids written as underscores).",
-            "description_it": "Chiave dei testi di spiegazione (substance_bands.<sostanza>.<forma>.<posizione>.<livello>, trattini degli id scritti come underscore).",
+            "description": "Key of the explanation text of the band (substance_bands.<substance>.<form>.<position>, hyphens of the ids written as underscores); optional.",
+            "description_it": "Chiave del testo di spiegazione della banda (substance_bands.<sostanza>.<forma>.<posizione>, trattini degli id scritti come underscore); facoltativa.",
             "type": "string",
             "pattern": "^substance_bands(\\.[a-z0-9_]+)+$"
           },

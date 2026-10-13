@@ -140,6 +140,7 @@ def check_rules(files: dict, ctx: dict) -> list[str]:
     rules = files.get("bands/rules.json", {}).get("rules", [])
     ids = [r["id"] for r in rules]
     ctx["rules"] = set(ids)
+    ctx["windows"] = {r["id"]: r["range_cm1"] for r in rules}
     out = [f"bands/rules.json: duplicate rule id '{i}'" for i in sorted({i for i in ids if ids.count(i) > 1})]
     for r in rules:
         out += check_rule(r, ctx)
@@ -162,6 +163,9 @@ def check_substance_bands(files: dict, ctx: dict) -> tuple[list[str], set[str]]:
                 out.append(f"{who}: unknown group '{b['group']}' or mode '{b['mode']}'")
             if "rule_id" in b and b["rule_id"] not in ctx["rules"]:
                 out.append(f"{who}: unknown rule_id '{b['rule_id']}'")
+            win = ctx["windows"].get(b.get("rule_id", ""))
+            if win and not win["min"] - b["tolerance_cm1"] <= b["position_cm1"] <= win["max"] + b["tolerance_cm1"]:
+                out.append(f"{who}: lies outside the window {win['min']}-{win['max']} of its rule '{b['rule_id']}'")
             out += [f"{who}: unknown source '{s}'" for s in b["sources"] if s not in ctx["sources"]]
             if b["status"] != "draft" and len(b.get("verified_on", [])) < 2:
                 out.append(f"{who}: status {b['status']} needs at least two spectra in verified_on")

@@ -213,6 +213,26 @@
   "regions.single_bonds.name": "Legami singoli C-O e C-N (impronta digitale)",
   "regions.single_bonds.short": "Esteri, eteri, alcoli, ammine; solfati, fosfati, silicati: zona affollata.",
   "regions.xh_stretch.name": "Stiramenti O-H e N-H",
-  "regions.xh_stretch.short": "Larghe se c'è legame a idrogeno (alcoli, zuccheri, acqua); due bande strette per NH₂."
+  "regions.xh_stretch.short": "Larghe se c'è legame a idrogeno (alcoli, zuccheri, acqua); due bande strette per NH₂.",
+  "substance_bands.4_cmc.hydrochloride.840": "Banda a ~840 cm-1: deformazione fuori piano dell'anello para-disostituito, atteso per il 4-CMC cloridrato.",
+  "substance_bands.4_mmc.hydrochloride.1686": "Banda a ~1686 cm-1: C=O aril-chetonico, tipico dei catinoni; cade vicino a caffeina, lidocaina e ammidi.",
+  "substance_bands.4_mmc.hydrochloride.833": "Banda a ~833 cm-1: deformazione fuori piano dell'anello para-disostituito; indizio del 4-sostituito, solo con un candidato.",
+  "substance_bands.amphetamine.sulfate_racemate.1049": "Banda a ~1049 cm-1: stiramento del solfato, molto intensa e larga; distingue il solfato dal cloridrato.",
+  "substance_bands.caffeine.anhydrous.1692": "Banda a ~1692 cm-1: primo dei due C=O accoppiati della caffeina (l'altro è a ~1645); in miscela può spostarsi di 5-10 cm-1.",
+  "substance_bands.caffeine.anhydrous.744": "Banda a ~744 cm-1: molto intensa e isolata, la più utile per riconoscere la caffeina in miscela.",
+  "substance_bands.cellulose.microcrystalline.1029": "Banda a ~1029 cm-1: gruppo di bande C-O intense e larghe, tipiche dei polisaccaridi; non basta a distinguere cellulosa da zuccheri.",
+  "substance_bands.cocaine.base.1734": "Banda a ~1734 cm-1: C=O del metil estere nella forma base; nel cloridrato è a ~1728.",
+  "substance_bands.cocaine.base.712": "Banda a ~712 cm-1: deformazione fuori piano dell'anello monosostituito, compatibile con la forma base (nel sale è a ~729).",
+  "substance_bands.cocaine.hydrochloride.1712": "Banda a ~1712 cm-1: C=O del benzoato (estere coniugato); con ~1728 forma il doppietto tipico degli esteri del tropano.",
+  "substance_bands.cocaine.hydrochloride.1728": "Banda a ~1728 cm-1: C=O del metil estere, atteso per la cocaina cloridrato insieme alla banda a ~1712.",
+  "substance_bands.cocaine.hydrochloride.729": "Banda a ~729 cm-1: deformazione fuori piano dell'anello monosostituito; nella base libera cade più in basso, a ~712.",
+  "substance_bands.ketamine.hydrochloride.1720": "Banda a ~1720 cm-1: C=O del cicloesanone, più alto di quello dei catinoni (~1686); la base libera è a ~1699.",
+  "substance_bands.ketamine.hydrochloride.772": "Banda a ~772 cm-1: la più intensa, deformazione fuori piano dell'anello orto-disostituito.",
+  "substance_bands.levamisole.hydrochloride.1529": "Banda a ~1529 cm-1, larga: stiramento C=N dell'amidina protonata; da confermare, manca una fonte aperta con le sue bande.",
+  "substance_bands.mdma.hydrochloride.1244": "Banda a ~1244 cm-1: C-O-C aril-alchilico del gruppo metilendiossi; da sola non basta, conta la tripletta con ~1032 e ~930.",
+  "substance_bands.mdma.hydrochloride.930": "Banda a ~930 cm-1: modo dell'anello diossolico O-CH2-O; nei campioni di strada può cadere a ~922.",
+  "substance_bands.paracetamol.solid.1224": "Banda a ~1224 cm-1: stiramento C-O del fenolo, intensa; con ~1651 e ~835 è compatibile con il paracetamolo.",
+  "substance_bands.phenacetin.solid.1241": "Banda a ~1241 cm-1: C-O-C aril-etilico, intensa; con ~1047 distingue la fenacetina dal paracetamolo.",
+  "substance_bands.thca_a.free_acid.1612": "Banda a ~1612 cm-1: C=O dell'acido legato da un legame a idrogeno interno; per questo non va cercata a ~1700."
  }
 }

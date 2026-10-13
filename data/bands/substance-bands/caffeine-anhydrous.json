@@ -1,0 +1,13 @@
+{
+ "schema": "substance-bands/1",
+ "version": "2026-10.1",
+ "substance": "caffeine",
+ "form": "anhydrous",
+ "note": "The two coupled C=O (~1692 and ~1645) and the strong isolated band at ~744 are what recognise caffeine in a mixture; in mixtures the C=O move by 5-10 cm-1. One library spectrum checked so far (draft).",
+ "bands": [
+  {"position_cm1": 1692, "tolerance_cm1": 10, "intensity": "strong", "shape": "sharp", "group": "imide", "mode": "stretch", "rule_id": "co.imide", "text_key": "substance_bands.caffeine.anhydrous.1692", "sources": ["nist-webbook", "dzodic2024"], "status": "draft", "verified_on": ["vs-6571fe9826b6"]},
+  {"position_cm1": 1645, "tolerance_cm1": 10, "intensity": "strong", "shape": "sharp", "group": "amide", "mode": "stretch", "rule_id": "co.amide", "sources": ["nist-webbook", "dzodic2024"], "status": "draft", "verified_on": ["vs-6571fe9826b6"]},
+  {"position_cm1": 1546, "tolerance_cm1": 10, "intensity": "medium", "shape": "sharp", "group": "imine", "mode": "stretch", "sources": ["nist-webbook"], "status": "draft", "verified_on": ["vs-6571fe9826b6"]},
+  {"position_cm1": 744, "tolerance_cm1": 8, "intensity": "strong", "shape": "sharp", "group": "aromatic_ring", "mode": "oop", "text_key": "substance_bands.caffeine.anhydrous.744", "sources": ["nist-webbook"], "status": "draft", "verified_on": ["vs-6571fe9826b6"]}
+ ]
+}

@@ -51,7 +51,10 @@ class ShippedData(Base):
     def test_every_rule_has_a_source_and_three_levels_where_common(self):
         rules = json.loads((DATA / "bands/rules.json").read_text(encoding="utf-8"))["rules"]
         self.assertEqual(len(rules), 79)
-        self.assertTrue(all(r["status"] == "draft" and r["sources"] for r in rules))
+        self.assertTrue(all(r["sources"] for r in rules))
+        verified = {r["id"] for r in rules if r["status"] != "draft"}
+        self.assertEqual(verified, {"co.aryl_ketone", "o_ch2_o.c_o", "o_ch2_o.ring", "co.ketone.sat", "co.amide"})
+        self.assertTrue(all(r["diagnostic_for"] and len(r["verified_on"]) >= 2 for r in rules if r["id"] in verified))
         texts = json.loads((DATA / "bands/texts.it.json").read_text(encoding="utf-8"))["texts"]
         self.assertEqual(sum(k.endswith(".teaching") for k in texts), 20)
 
@@ -80,19 +83,19 @@ class Failures(Base):
         self.assertIn("rule 'co.amide': a strong band needs the ATR widening", self.problems())
 
     def test_diagnostic_needs_verified_spectra(self):
-        self.rule("co.aryl_ketone", lambda r: r.update(diagnostic_for=[{"class": "synthetic_cathinones", "strength": "strong"}]))
+        self.rule("co.acid", lambda r: r.update(diagnostic_for=[{"class": "synthetic_cathinones", "strength": "strong"}]))
         self.assertIn("diagnostic_for needs status verified_spectra", self.problems())
 
     def test_verified_needs_two_opaque_spectra(self):
-        self.rule("co.aryl_ketone", lambda r: r.update(status="verified_spectra", verified_on=OPAQUE[:1]))
+        self.rule("co.acid", lambda r: r.update(status="verified_spectra", verified_on=OPAQUE[:1]))
         self.assertIn("needs at least two spectra in verified_on", self.problems())
-        self.rule("co.aryl_ketone", lambda r: r.update(verified_on=["Cathinone 4-MMC.ispd", OPAQUE[0]]))
-        self.assertIn("rule 'co.aryl_ketone'", self.problems())
+        self.rule("co.acid", lambda r: r.update(verified_on=["Cathinone 4-MMC.ispd", OPAQUE[0]]))
+        self.assertIn("rule 'co.acid'", self.problems())
 
     def test_verified_with_two_opaque_ids_passes(self):
-        self.rule("co.aryl_ketone", lambda r: r.update(status="verified_spectra", verified_on=OPAQUE,
+        self.rule("co.acid", lambda r: r.update(status="verified_spectra", verified_on=OPAQUE,
                                                        diagnostic_for=[{"class": "synthetic_cathinones", "strength": "strong"}]))
-        self.assertNotIn("co.aryl_ketone", self.problems())
+        self.assertNotIn("co.acid", self.problems())
 
     def test_reassuring_word_in_a_text(self):
         self.text("it", "bands.oh.free.counsellor", lambda t: t + " Il campione è sicuro.")
@@ -126,6 +129,44 @@ class Failures(Base):
         self.assertIn("parent cycle", self.problems())
         self.edit_json("bands/groups.json", lambda o: o["groups"].append(dict(o["groups"][1])))
         self.assertIn("duplicate id", self.problems())
+
+
+class SubstanceBands(Base):
+    FILE = "bands/substance-bands/cocaine-hydrochloride.json"
+
+    def band(self, pos, fn):
+        def go(o):
+            fn(next(b for b in o["bands"] if b["position_cm1"] == pos))
+        self.edit_json(self.FILE, go)
+
+    def test_thirteen_demo_substances_ship(self):
+        files = sorted((DATA / "bands/substance-bands").glob("*.json"))
+        self.assertEqual(len(files), 13)
+        for f in files:
+            for b in json.loads(f.read_text(encoding="utf-8"))["bands"]:
+                self.assertEqual(b["status"] == "verified_spectra", len(b.get("verified_on", [])) >= 2, f"{f.name} {b['position_cm1']}")
+
+    def test_band_outside_its_rule_window_names_file_and_rule(self):
+        self.band(1728, lambda b: b.update(position_cm1=1600, tolerance_cm1=6))
+        out = self.problems()
+        self.assertIn("cocaine-hydrochloride.json: band at 1600 cm-1: lies outside the window", out)
+        self.assertIn("'co.ester.sat'", out)
+
+    def test_verified_band_with_one_spectrum_fails(self):
+        self.band(1728, lambda b: b.update(verified_on=OPAQUE[:1]))
+        self.assertIn("needs at least two spectra in verified_on", self.problems())
+
+    def test_file_name_instead_of_opaque_id_fails(self):
+        self.band(1728, lambda b: b.update(verified_on=["Cocaine HCl.DX", OPAQUE[0]]))
+        self.assertIn("verified_on", self.problems())
+
+    def test_band_without_source_fails(self):
+        self.band(1728, lambda b: b.update(sources=[]))
+        self.assertIn("sources", self.problems())
+
+    def test_unknown_text_key_is_missing_in_both_languages(self):
+        self.band(1728, lambda b: b.update(text_key="substance_bands.cocaine.hydrochloride.9999"))
+        self.assertIn("key 'substance_bands.cocaine.hydrochloride.9999' is missing", self.problems())
 
 
 if __name__ == "__main__":

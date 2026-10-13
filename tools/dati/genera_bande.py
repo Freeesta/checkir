@@ -15,13 +15,18 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bande_didattica  # noqa: E402
 import bande_regole as T  # noqa: E402
+import bande_sostanze  # noqa: E402
+import bande_sostanze_testi  # noqa: E402
 import bande_testi_a  # noqa: E402
 import bande_testi_b  # noqa: E402
+import bande_verifiche as V  # noqa: E402
 
 OUT = Path(__file__).resolve().parent.parent.parent / "data" / "bands"
 VERSION = "2026-10.1"
 INTENSITY = {"F": "strong", "M": "medium", "d": "weak", "v": "variable"}
 SHAPE = {"s": "sharp", "m": "medium", "L": "broad", "mL": "very_broad", "2": "doublet", "n": "multiplet"}
+SUB_INTENSITY = {"s": "strong", "m": "medium", "w": "weak", "v": "variable"}
+SUB_SHAPE = {"s": "sharp", "m": "medium", "b": "broad", "B": "very_broad"}
 ATR_SHIFT_CM1 = 10
 LEVELS = ("counsellor", "chemist")
 
@@ -41,6 +46,9 @@ def rule(row: tuple) -> dict:
     if friends:
         r["false_friends"] = friends
     r.update(sources=sources.split(), status="draft")
+    if rid in V.VERIFIED:
+        cls, strength, spectra = V.VERIFIED[rid]
+        r.update(status="verified_spectra", diagnostic_for=[{"class": cls, "strength": strength}], verified_on=sorted(spectra))
     return r
 
 
@@ -75,7 +83,42 @@ def texts() -> dict[str, dict[str, str]]:
     for gid, (n_it, n_en, s_it, s_en) in bande_didattica.REGIONS_TXT.items():
         out["it"][f"regions.{gid}.name"], out["en"][f"regions.{gid}.name"] = n_it, n_en
         out["it"][f"regions.{gid}.short"], out["en"][f"regions.{gid}.short"] = s_it, s_en
+    for (sub, form, pos), (it, en) in bande_sostanze_testi.TEXTS.items():
+        out["it"][text_key(sub, form, pos)], out["en"][text_key(sub, form, pos)] = it, en
     return out
+
+
+def text_key(substance: str, form: str, position: int) -> str:
+    return "substance_bands." + f"{substance}.{form}.{position}".replace("-", "_")
+
+
+def band(rules: dict, d: dict, b: tuple) -> dict:
+    pos, tol, inten, shape, rid, group, mode, sources, measured = b
+    if rid:
+        group, mode = group or rules[rid]["group"], mode or rules[rid]["mode"]
+    spectra = list(d["spectra"]) if measured else []
+    verified = len(spectra) >= 2
+    out = {"position_cm1": pos, "tolerance_cm1": tol, "intensity": SUB_INTENSITY[inten], "shape": SUB_SHAPE[shape], "group": group, "mode": mode}
+    if rid:
+        out["rule_id"] = rid
+    if (d["substance"], d["form"], pos) in bande_sostanze_testi.TEXTS:
+        out["text_key"] = text_key(d["substance"], d["form"], pos)
+    out.update(sources=list(sources), status="verified_spectra" if verified else "draft")
+    if spectra:
+        out["verified_on"] = sorted(spectra)
+    return out
+
+
+def substance_files() -> dict[str, str]:
+    rules = {r[0]: rule(r) for r in T.RULES}
+    files = {}
+    for d in bande_sostanze.SUBSTANCES:
+        doc = {"schema": "substance-bands/1", "version": VERSION, "substance": d["substance"], "form": d["form"], "note": d["note"],
+               "bands": [band(rules, d, b) for b in d["bands"]]}
+        body = ",\n".join("  " + json.dumps(b, ensure_ascii=False, separators=(", ", ": ")) for b in doc.pop("bands"))
+        head = json.dumps(doc, ensure_ascii=False, indent=1)[:-2]
+        files[f"substance-bands/{d['substance']}-{d['form']}.json"] = f'{head},\n "bands": [\n{body}\n ]\n}}\n'
+    return files
 
 
 def line_per_item(schema: str, key: str, items: list[dict]) -> str:
@@ -90,6 +133,7 @@ def build() -> dict[str, str]:
         "modes.json": json.dumps({"schema": "modes/1", "version": VERSION, "modes": modes()}, ensure_ascii=False, indent=1) + "\n",
         "regions.json": line_per_item("regions/1", "regions", regions()),
     }
+    files.update(substance_files())
     for lang, tx in texts().items():
         body = ",\n".join(f"  {json.dumps(k)}: {json.dumps(v, ensure_ascii=False)}" for k, v in sorted(tx.items()))
         files[f"texts.{lang}.json"] = f'{{\n "schema": "band-texts/1",\n "version": "{VERSION}",\n "language": "{lang}",\n "texts": {{\n{body}\n }}\n}}\n'
@@ -102,8 +146,11 @@ def main(argv: list[str]) -> int:
         stale = [n for n, c in files.items() if not (OUT / n).is_file() or (OUT / n).read_text(encoding="utf-8") != c]
         for n in stale:
             print(f"data/bands/{n} differs from the tables: run tools/dati/genera_bande.py")
-        return 1 if stale else 0
-    OUT.mkdir(parents=True, exist_ok=True)
+        extra = [p.name for p in (OUT / "substance-bands").glob("*.json") if f"substance-bands/{p.name}" not in files]
+        for n in extra:
+            print(f"data/bands/substance-bands/{n} belongs to no table: remove it or add it to bande_sostanze.py")
+        return 1 if stale or extra else 0
+    (OUT / "substance-bands").mkdir(parents=True, exist_ok=True)
     for n, c in files.items():
         (OUT / n).write_text(c, encoding="utf-8")
     print("written", ", ".join(files))

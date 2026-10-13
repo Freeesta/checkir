@@ -213,6 +213,26 @@
   "regions.single_bonds.name": "C-O and C-N single bonds (fingerprint)",
   "regions.single_bonds.short": "Esters, ethers, alcohols, amines; sulfates, phosphates, silicates: a crowded zone.",
   "regions.xh_stretch.name": "O-H and N-H stretching",
-  "regions.xh_stretch.short": "Broad when hydrogen-bonded (alcohols, sugars, water); two sharp bands for NH₂."
+  "regions.xh_stretch.short": "Broad when hydrogen-bonded (alcohols, sugars, water); two sharp bands for NH₂.",
+  "substance_bands.4_cmc.hydrochloride.840": "Band at ~840 cm-1: out-of-plane bend of the para-disubstituted ring, expected for 4-CMC hydrochloride.",
+  "substance_bands.4_mmc.hydrochloride.1686": "Band at ~1686 cm-1: aryl-ketone C=O, typical of cathinones; it falls near caffeine, lidocaine and amides.",
+  "substance_bands.4_mmc.hydrochloride.833": "Band at ~833 cm-1: out-of-plane bend of the para-disubstituted ring; a hint of the 4-substituted isomer, only with a candidate.",
+  "substance_bands.amphetamine.sulfate_racemate.1049": "Band at ~1049 cm-1: sulfate stretch, very intense and broad; it tells the sulfate from the hydrochloride.",
+  "substance_bands.caffeine.anhydrous.1692": "Band at ~1692 cm-1: first of the two coupled C=O of caffeine (the other is at ~1645); in a mixture it may move by 5-10 cm-1.",
+  "substance_bands.caffeine.anhydrous.744": "Band at ~744 cm-1: very intense and isolated, the most useful to recognise caffeine in a mixture.",
+  "substance_bands.cellulose.microcrystalline.1029": "Band at ~1029 cm-1: group of strong broad C-O bands, typical of polysaccharides; it does not tell cellulose from sugars.",
+  "substance_bands.cocaine.base.1734": "Band at ~1734 cm-1: C=O of the methyl ester in the base form; in the hydrochloride it is at ~1728.",
+  "substance_bands.cocaine.base.712": "Band at ~712 cm-1: out-of-plane bend of the monosubstituted ring, compatible with the base form (in the salt it is at ~729).",
+  "substance_bands.cocaine.hydrochloride.1712": "Band at ~1712 cm-1: C=O of the benzoate (conjugated ester); with ~1728 it makes the doublet typical of tropane esters.",
+  "substance_bands.cocaine.hydrochloride.1728": "Band at ~1728 cm-1: C=O of the methyl ester, expected for cocaine hydrochloride together with the band at ~1712.",
+  "substance_bands.cocaine.hydrochloride.729": "Band at ~729 cm-1: out-of-plane bend of the monosubstituted ring; in the free base it falls lower, at ~712.",
+  "substance_bands.ketamine.hydrochloride.1720": "Band at ~1720 cm-1: C=O of the cyclohexanone, higher than that of cathinones (~1686); the free base is at ~1699.",
+  "substance_bands.ketamine.hydrochloride.772": "Band at ~772 cm-1: the strongest, out-of-plane bend of the ortho-disubstituted ring.",
+  "substance_bands.levamisole.hydrochloride.1529": "Band at ~1529 cm-1, broad: C=N stretch of the protonated amidine; to be confirmed, no open source with its bands was found.",
+  "substance_bands.mdma.hydrochloride.1244": "Band at ~1244 cm-1: aryl-alkyl C-O-C of the methylenedioxy group; alone it is not enough, the triplet with ~1032 and ~930 counts.",
+  "substance_bands.mdma.hydrochloride.930": "Band at ~930 cm-1: mode of the dioxole ring O-CH2-O; in street samples it may fall at ~922.",
+  "substance_bands.paracetamol.solid.1224": "Band at ~1224 cm-1: phenol C-O stretch, strong; together with ~1651 and ~835 it is compatible with paracetamol.",
+  "substance_bands.phenacetin.solid.1241": "Band at ~1241 cm-1: aryl-ethyl C-O-C, strong; with ~1047 it tells phenacetin from paracetamol.",
+  "substance_bands.thca_a.free_acid.1612": "Band at ~1612 cm-1: C=O of the acid held by an internal hydrogen bond; for this reason it is not looked for at ~1700."
  }
 }
