@@ -20,7 +20,6 @@ export async function rinominaScenario(browser, base, check) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.setInputFiles('input[data-library="folder"]', folder());
   await page.waitForFunction(() => /2/.test(document.querySelector('[data-library="miscela"]')?.textContent ?? ""));
   check("rename: only a private library has the button", (await page.locator('[data-fk="lib-rename-miscela"]').count()) === 1 && (await page.locator('[data-fk^="lib-rename-checkir"]').count()) === 0);

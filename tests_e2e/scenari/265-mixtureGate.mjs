@@ -34,7 +34,7 @@ async function openPanel(page, name) {
 
 /** The library above as the only one in use. */
 async function importLibrary(page) {
-  for (const name of [/swgdrug-ir/, /checkir-community/]) {
+  for (const name of [/swgdrug-ir/]) {
     await openPanel(page, "libraries");
     const box = page.getByRole("checkbox", { name });
     if (await box.isChecked()) await box.click();
