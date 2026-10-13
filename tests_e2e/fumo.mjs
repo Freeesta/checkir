@@ -225,7 +225,7 @@ async function shellScenario(browser) {
 async function nameScenario(browser) {
   const ctx = await browser.newContext({ locale: "it-IT" });
   await ctx.route("**/appname.js", (route) =>
-    route.fulfill({ contentType: "text/javascript", body: 'export const APP_NAME = "provanome"; export const APP_ID = "provaid"; export const STORAGE_PREFIX = "provaid.";' }),
+    route.fulfill({ contentType: "text/javascript", body: 'export const APP_NAME = "provanome"; export const APP_ID = "provaid"; export const STORAGE_PREFIX = "provaid."; export const GITHUB_URL = "https://github.com/x/y/"; export const SITE_URL = "https://x.github.io/y/";' }),
   );
   const page = await ctx.newPage();
   await page.goto(base);
