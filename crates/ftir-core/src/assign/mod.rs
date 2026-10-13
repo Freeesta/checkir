@@ -10,6 +10,7 @@ use crate::peaks::Thresholds;
 
 pub mod input;
 pub mod result;
+mod to_json;
 
 pub use input::PeakSet;
 use result::{Assignment, Explanation, Item, Missing, ReferenceId, State, Summary};
