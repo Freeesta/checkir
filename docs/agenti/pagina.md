@@ -21,6 +21,8 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 
 ## Prove
 - `tests_e2e/fumo.mjs`: curva e tabella, versione motore, nome unico (appname.js sostituito con «provanome»), axe chiaro/scuro/en anche con file demo caricato e con `data-theme` forzato, 320 px (nessuno scorrimento orizzontale, sezione a pagina intera, menù ⋯), tastiera (+, 0), lingue, decimale col punto, «passo successivo» = Carica che apre la scelta del file.
+- Prove del guscio in `fumo.mjs`: ordine di Tab dei 10 controlli dell'header, tooltip al fuoco chiuso da Esc, tema e pannello ripiegato che restano dopo il ricaricamento, nessun dato dell'analisi in localStorage/sessionStorage/IndexedDB (solo `checkir.lang|theme|panel`).
+- `tests_e2e/registri.mjs` (chiamato da `fumo.mjs`): conformità dei registri `ACTIONS` e `PANELS` (id, numeri, `key` e `step` unici; chiavi `labelKey/tipKey/titleKey` in tutti i cataloghi; icone nello sprite; un'azione `panel.goto.N` per pannello); un'azione di prova senza chiave italiana deve far fallire il controllo.
 
 ## Trappole
 - `tsc` non controlla `sw.js` né `web/wasm`. Nuovi moduli: aggiungerli a `FILES` in `sw.js`.
