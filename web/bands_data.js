@@ -93,11 +93,11 @@ function bandFileOf(substance, form) {
   return files.find((f) => f.form === form) ?? files.find((f) => form.includes(f.form)) ?? (files.length === 1 ? files[0] : undefined);
 }
 
-/** The assignments of the bands of the references' substances (`substance-bands/1`), as the context the engine reads; each file answers to the form id the library gives. @param {Array<{ substance_id: string, form: string }>} refs @returns {string} JSON, empty when there is none */
-export function assignContext(refs) {
-  const files = refs.flatMap((r) => {
-    const f = bandFileOf(r.substance_id, r.form);
-    return f ? [{ ...f, form: r.form }] : [];
+/** The assignments of the bands of the references' substances (`substance-bands/1`), as the context the engine reads; each file answers to the id and form the reference has (`owners[i]` names the substance of reference i when its id is a library id, as in a mixture). @param {Array<{ substance_id: string, form: string }>} refs @param {Array<string | undefined>} [owners] @returns {string} JSON, empty when there is none */
+export function assignContext(refs, owners = []) {
+  const files = refs.flatMap((r, i) => {
+    const f = bandFileOf(owners[i] || r.substance_id, r.form);
+    return f ? [{ ...f, substance: r.substance_id, form: r.form }] : [];
   });
   return files.length ? JSON.stringify({ substance_bands: files }) : "";
 }
