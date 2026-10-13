@@ -63,6 +63,7 @@
   "tolerances": {
     "same_peak_cm1": { "narrow": 6, "medium": 6, "broad": 15 },
     "atr_shift_cm1": { "strong_rel_min": 0.5, "down": 15, "up": 6 },
-    "intensity_classes": { "strong_rel_min": 0.5, "medium_rel_min": 0.2 }
+    "intensity_classes": { "strong_rel_min": 0.5, "medium_rel_min": 0.2 },
+    "missing_rel_min": 0.2
   }
 }

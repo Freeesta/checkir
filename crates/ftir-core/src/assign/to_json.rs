@@ -1,5 +1,5 @@
 //! `assignment/1` as JSON (`docs/schemi/assignment-1.json`).
-use super::result::{Assignment, Item, ReferenceId, Summary, SCHEMA};
+use super::result::{Assignment, BandInfo, Interpretation, Item, ReferenceId, Summary, SCHEMA};
 use crate::passi::json::Value;
 
 fn text(s: &str) -> Value {
@@ -14,6 +14,27 @@ fn opt(s: Option<&str>) -> Value {
     s.map_or(Value::Null, text)
 }
 
+fn band_fields(b: &BandInfo) -> Vec<(String, Value)> {
+    vec![
+        ("group".into(), text(&b.group)),
+        ("mode".into(), text(&b.mode)),
+        ("group_instance".into(), opt(b.group_instance.as_deref())),
+        ("mode_character".into(), opt(b.mode_character.as_deref())),
+        ("origin".into(), text(b.origin)),
+    ]
+}
+
+fn interpretation(i: &Interpretation) -> Value {
+    Value::Obj(vec![
+        ("rule_id".into(), opt(i.rule_id.as_deref())),
+        ("group".into(), text(&i.group)),
+        ("mode".into(), text(&i.mode)),
+        ("rank".into(), num(i.rank as f64)),
+        ("rule_status".into(), text(&i.status)),
+        ("origin".into(), opt(i.origin)),
+    ])
+}
+
 fn reference(r: &ReferenceId) -> Value {
     Value::Obj(vec![
         ("spectrum_id".into(), opt(r.spectrum_id.as_deref())),
@@ -26,20 +47,32 @@ fn reference(r: &ReferenceId) -> Value {
 
 fn item(i: &Item) -> Value {
     let by = i.explained_by.as_ref().map_or(Value::Null, |e| {
-        Value::Obj(vec![
-            ("substance_id".into(), text(&e.substance_id)),
-            ("form".into(), text(&e.form)),
-            ("ref_peak_id".into(), text(&e.ref_peak_id)),
-            ("ref_peak_cm1".into(), num(e.ref_peak_cm1)),
-            ("delta_cm1".into(), num(e.delta_cm1)),
-        ])
+        Value::Obj(
+            vec![
+                ("substance_id".into(), text(&e.substance_id)),
+                ("form".into(), text(&e.form)),
+                ("ref_peak_id".into(), text(&e.ref_peak_id)),
+                ("ref_peak_cm1".into(), num(e.ref_peak_cm1)),
+                ("delta_cm1".into(), num(e.delta_cm1)),
+            ]
+            .into_iter()
+            .chain(e.band.iter().flat_map(band_fields))
+            .collect(),
+        )
     });
     Value::Obj(vec![
         ("peak_id".into(), text(&i.peak_id)),
         ("state".into(), text(i.state.id())),
         ("explained_by".into(), by),
-        ("interpretations".into(), Value::Arr(Vec::new())),
-        ("suspects".into(), Value::Arr(Vec::new())),
+        (
+            "interpretations".into(),
+            Value::Arr(i.interpretations.iter().map(interpretation).collect()),
+        ),
+        ("crowded".into(), Value::Bool(i.crowded)),
+        (
+            "suspects".into(),
+            Value::Arr(i.suspects.iter().map(|s| text(s)).collect()),
+        ),
     ])
 }
 
@@ -85,7 +118,7 @@ impl Assignment {
                 "components".into(),
                 list(self.components.iter().map(reference).collect()),
             ),
-            ("bands_version".into(), Value::Null),
+            ("bands_version".into(), opt(self.bands_version.as_deref())),
             ("items".into(), list(self.items.iter().map(item).collect())),
             ("missing_expected".into(), missing(self)),
             ("summary".into(), summary(&self.summary)),
