@@ -224,7 +224,14 @@ th { position: sticky; top: 0; background: var(--surface); }
   .app-header { gap: 0.4rem; padding: 0.25rem 0.5rem; }
   .brand { margin-right: 0; }
   .chips [data-chip="library"] { display: none; }
+  .chips { flex: 1 1 0; }
+  .chip { min-width: 0; padding-inline: 0.5rem; }
   .chip-value { max-width: 7.5rem; overflow: hidden; text-overflow: ellipsis; }
+  /* the level of the result is what must stay readable: the file name gives way first */
+  .chips [data-chip="file"] { flex: 0 1 auto; }
+  .chips [data-chip="file"] .chip-value { max-width: 3.5rem; }
+  .chips [data-chip="result"] { flex: 0 0 auto; }
+  .chips [data-chip="result"] .chip-value { max-width: none; overflow: visible; }
   .menu-button { display: inline-flex; }
   .hdr-tools { display: none; position: absolute; top: 100%; right: 0.5rem; flex-direction: column; align-items: stretch; margin: 0; padding: 0.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 0.4rem; }
   .app-header[data-menu] .hdr-tools { display: flex; }
@@ -243,6 +250,10 @@ th { position: sticky; top: 0; background: var(--surface); }
   .tab[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--color-brand); }
   main { padding: 0.5rem 0.75rem; }
   body { padding-bottom: var(--tabbar-h); }
+}
+/* below 24em the logo stands for the name (the heading stays for screen readers) so the result chip has the room */
+@media (max-width: 24em) {
+  .brand #app-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
 @media (prefers-contrast: more) {
   :root { --border: var(--text); }

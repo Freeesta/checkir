@@ -11,6 +11,7 @@ import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
+import { collaudoScenario } from "./collaudo.mjs";
 import { recallScenario } from "./richiamo.mjs";
 import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
 import { registryScenario } from "./registri.mjs";
@@ -319,6 +320,7 @@ async function run() {
     await areaScenario(browser, base, check, axe);
     await cleanScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
+    await collaudoScenario(browser, base, check);
     await inverseScenario(browser, base, check);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);

@@ -119,8 +119,10 @@ function wireArrows(list, ctx) {
     const next = rows[rows.indexOf(target) + (e.key === "ArrowDown" ? 1 : -1)];
     if (!(next instanceof HTMLElement)) return;
     e.preventDefault();
+    const at = [...document.querySelectorAll(".cands")].indexOf(list);
     ctx.selectCandidate(/** @type {string} */ (next.closest(".cand")?.getAttribute("data-key")));
-    /** @type {HTMLElement | null} */ (list.querySelector(`[data-fk="${next.dataset.fk}"]`))?.focus();
+    // The selection redraws the list: the row to focus is in the new one (same position among the lists), not in `list`.
+    /** @type {HTMLElement | null} */ (document.querySelectorAll(".cands")[at]?.querySelector(`[data-fk="${next.dataset.fk}"]`) ?? null)?.focus();
   });
 }
 

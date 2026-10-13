@@ -118,7 +118,7 @@ function workActions(engine, announce) {
 
 /** What the chart's arrow keys do with the picked peak. @param {import("./actions.js").Ctx} ctx */
 function chartPeakKeys(ctx) {
-  return { step: (/** @type {-1 | 1} */ dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak(), level: (/** @type {-1 | 1} */ dir) => (getState().peakFocus ? (ctx.stepLevel(dir), true) : false) };
+  return { step: (/** @type {-1 | 1} */ dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak(), level: (/** @type {-1 | 1} */ dir) => (getState().peakFocus ? (ctx.stepLevel(dir), true) : false), pick: (/** @type {string} */ id) => ctx.focusPeak(id) };
 }
 
 async function start() {
