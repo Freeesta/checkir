@@ -1,0 +1,15 @@
+{
+ "schema": "substance-bands/1",
+ "version": "2026-10.1",
+ "substance": "cocaine",
+ "form": "hydrochloride",
+ "note": "Positions re-checked on two library spectra of the hydrochloride (ATR). The two C=O are assigned to the methyl ester (higher) and the benzoate (lower) following the monograph; to be confirmed by the reviewer. The N-H+ envelope is much weaker in ATR than in KBr.",
+ "bands": [
+  {"position_cm1": 2540, "tolerance_cm1": 40, "intensity": "weak", "shape": "very_broad", "group": "ammonium_tertiary", "mode": "stretch", "rule_id": "nhplus.stretch", "sources": ["rodrigues2013", "mendez-hernandez2020", "smith-amine-salts"], "status": "verified_spectra", "verified_on": ["vs-7978c81846f0", "vs-88f33b27b982"]},
+  {"position_cm1": 1728, "tolerance_cm1": 6, "intensity": "medium", "shape": "sharp", "group": "ester", "mode": "stretch", "rule_id": "co.ester.sat", "text_key": "substance_bands.cocaine.hydrochloride.1728", "sources": ["swgdrug-cocaine", "rodrigues2013"], "status": "verified_spectra", "verified_on": ["vs-7978c81846f0", "vs-88f33b27b982"]},
+  {"position_cm1": 1712, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "ester_conjugated", "mode": "stretch", "rule_id": "co.ester.conj", "text_key": "substance_bands.cocaine.hydrochloride.1712", "sources": ["swgdrug-cocaine", "rodrigues2013", "unodc-cocaine2012"], "status": "verified_spectra", "verified_on": ["vs-7978c81846f0", "vs-88f33b27b982"]},
+  {"position_cm1": 1265, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "ester_conjugated", "mode": "stretch_asym", "rule_id": "c_c_o.ester.arom", "sources": ["rodrigues2013", "smith-arom-esters"], "status": "verified_spectra", "verified_on": ["vs-7978c81846f0", "vs-88f33b27b982"]},
+  {"position_cm1": 1105, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "ester", "mode": "stretch_asym", "rule_id": "o_c_c.ester", "sources": ["swgdrug-cocaine", "rodrigues2013"], "status": "verified_spectra", "verified_on": ["vs-7978c81846f0", "vs-88f33b27b982"]},
+  {"position_cm1": 729, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "benzene_mono", "mode": "oop", "rule_id": "oop.mono", "text_key": "substance_bands.cocaine.hydrochloride.729", "sources": ["swgdrug-cocaine", "rodrigues2013", "mendez-hernandez2020"], "status": "verified_spectra", "verified_on": ["vs-7978c81846f0", "vs-88f33b27b982"]}
+ ]
+}

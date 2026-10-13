@@ -1,0 +1,13 @@
+{
+ "schema": "substance-bands/1",
+ "version": "2026-10.1",
+ "substance": "ketamine",
+ "form": "hydrochloride",
+ "note": "The C=O of the cyclohexanone sits higher (~1720) than in cathinones (~1686); the free base is lower (~1699). The strongest band near 772 is the ortho-disubstituted ring; the positional isomers differ in this region.",
+ "bands": [
+  {"position_cm1": 2685, "tolerance_cm1": 30, "intensity": "weak", "shape": "very_broad", "group": "ammonium_secondary", "mode": "stretch", "rule_id": "nh2plus.stretch", "sources": ["swgdrug-ketamine", "smith-amine-salts"], "status": "verified_spectra", "verified_on": ["vs-9a166e00cc5e", "vs-f27ceb76a44f"]},
+  {"position_cm1": 1720, "tolerance_cm1": 6, "intensity": "medium", "shape": "sharp", "group": "ketone", "mode": "stretch", "rule_id": "co.ketone.sat", "text_key": "substance_bands.ketamine.hydrochloride.1720", "sources": ["swgdrug-ketamine", "smith-carbonyl"], "status": "verified_spectra", "verified_on": ["vs-9a166e00cc5e", "vs-f27ceb76a44f"]},
+  {"position_cm1": 772, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "benzene_ortho", "mode": "oop", "rule_id": "oop.ortho", "text_key": "substance_bands.ketamine.hydrochloride.772", "sources": ["swgdrug-ketamine", "smith-benzene"], "status": "verified_spectra", "verified_on": ["vs-9a166e00cc5e", "vs-f27ceb76a44f"]},
+  {"position_cm1": 719, "tolerance_cm1": 6, "intensity": "medium", "shape": "sharp", "group": "benzene_ortho", "mode": "oop", "sources": ["swgdrug-ketamine"], "status": "verified_spectra", "verified_on": ["vs-9a166e00cc5e", "vs-f27ceb76a44f"]}
+ ]
+}

@@ -44,5 +44,18 @@
   "reviewers/invalid/bad-month.json": "/reviewers/0/expires",
   "reviewers/invalid/bad-status.json": "/reviewers/0/status",
   "reviewers/invalid/no-roles.json": "/reviewers/0/roles",
-  "reviewers/invalid/bad-github.json": "/reviewers/0/github"
+  "reviewers/invalid/bad-github.json": "/reviewers/0/github",
+  "bands/invalid/no-sources.json": "/rules/0/sources",
+  "bands/invalid/verified-on-file-name.json": "/rules/0/verified_on/0",
+  "bands/invalid/unknown-field.json": "notes",
+  "bands/invalid/bad-intensity.json": "/rules/0/intensity",
+  "bands/invalid/window-below-400.json": "/rules/0/range_cm1/min",
+  "groups/invalid/bad-family.json": "/groups/0/family",
+  "groups/invalid/no-english-name.json": "en",
+  "modes/invalid/bad-definition-key.json": "/modes/0/definition_key",
+  "regions/invalid/no-source.json": "/regions/0/sources",
+  "substance-bands/invalid/no-tolerance.json": "tolerance_cm1",
+  "substance-bands/invalid/decimal-position.json": "/bands/0/position_cm1",
+  "band-texts/invalid/bad-language.json": "/language",
+  "band-texts/invalid/bad-key.json": "Bands Demo"
 }

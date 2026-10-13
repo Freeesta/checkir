@@ -1,0 +1,15 @@
+{
+ "schema": "substance-bands/1",
+ "version": "2026-10.1",
+ "substance": "cocaine",
+ "form": "base",
+ "note": "Free base (crack): no N-H+ envelope, a clear C-H band near 2945 and the out-of-plane band near 712 instead of ~729 of the hydrochloride. The C-O-C bands sit higher than in the hydrochloride (~1273 and ~1108).",
+ "bands": [
+  {"position_cm1": 2945, "tolerance_cm1": 10, "intensity": "medium", "shape": "medium", "group": "methyl", "mode": "stretch_asym", "sources": ["rodrigues2013", "mendez-hernandez2020"], "status": "verified_spectra", "verified_on": ["vs-5d51a6dc9d0e", "vs-c5566b020537"]},
+  {"position_cm1": 1734, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "ester", "mode": "stretch", "rule_id": "co.ester.sat", "text_key": "substance_bands.cocaine.base.1734", "sources": ["swgdrug-cocaine", "rodrigues2013"], "status": "verified_spectra", "verified_on": ["vs-5d51a6dc9d0e", "vs-c5566b020537"]},
+  {"position_cm1": 1707, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "ester_conjugated", "mode": "stretch", "rule_id": "co.ester.conj", "sources": ["swgdrug-cocaine", "rodrigues2013", "unodc-cocaine2012"], "status": "verified_spectra", "verified_on": ["vs-5d51a6dc9d0e", "vs-c5566b020537"]},
+  {"position_cm1": 1273, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "ester_conjugated", "mode": "stretch_asym", "rule_id": "c_c_o.ester.arom", "sources": ["swgdrug-cocaine", "rodrigues2013"], "status": "verified_spectra", "verified_on": ["vs-5d51a6dc9d0e", "vs-c5566b020537"]},
+  {"position_cm1": 1108, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "ester", "mode": "stretch_asym", "rule_id": "o_c_c.ester", "sources": ["swgdrug-cocaine", "rodrigues2013"], "status": "verified_spectra", "verified_on": ["vs-5d51a6dc9d0e", "vs-c5566b020537"]},
+  {"position_cm1": 712, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "benzene_mono", "mode": "oop", "rule_id": "oop.mono", "text_key": "substance_bands.cocaine.base.712", "sources": ["swgdrug-cocaine", "rodrigues2013", "unodc-cocaine2012"], "status": "verified_spectra", "verified_on": ["vs-5d51a6dc9d0e", "vs-c5566b020537"]}
+ ]
+}
