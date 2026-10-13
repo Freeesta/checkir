@@ -19,6 +19,8 @@ import { parseSpectrum } from "./spectrum.js";
 import { buildLayers } from "./layers.js";
 import { matchActions, startMatching } from "./match.js";
 import { peaksActions } from "./peaks.js";
+import { rangeContext } from "./ranges.js";
+import { startRangeTable } from "./ranges_table.js";
 import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
@@ -108,6 +110,7 @@ async function start() {
     ...matchActions(announce),
     ...peaksActions(engine, announce),
     ...subtractActions(engine, announce),
+    ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     ...decisionActions(announce),
     ...talkActions(announce),
     togglePanel: () => panels.toggle(),
@@ -126,7 +129,7 @@ async function start() {
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink() });
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]) });
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart);
   const renderUi = () => {
@@ -157,6 +160,7 @@ async function start() {
   };
   subscribe(renderUi);
   startMatching({ announce });
+  startRangeTable();
   wireShortcuts(ctx, next);
   redrawAll();
   if (engine) loadAllLibraries(engine);

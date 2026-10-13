@@ -97,6 +97,28 @@ async function doEverything(page) {
     await page.goto(base);
     await page.waitForSelector("body[data-ready='1']");
   }
+  // Comparison region: key g, the numeric fields, the cursors as a brush, the strip under the axis, clear; the choice is in memory only.
+  await page.evaluate(() => document.querySelector('[data-action="demo.load"]')?.click());
+  await page.keyboard.press("g");
+  if ((await page.getAttribute("body", "data-panel")) === "rail") await page.click('[data-action="panel.toggle"]');
+  await page.evaluate(() => { document.querySelector('details[data-panel="results"]').open = true; });
+  await page.fill('[data-fk="range-new-from"]', "650");
+  await page.keyboard.press("Tab");
+  await page.fill('[data-fk="range-new-to"]', "1800");
+  await page.keyboard.press("Tab");
+  await page.click('[data-fk="range-add"]');
+  await page.focus("#chart");
+  for (const key of ["k", "k", ">", ">"]) await page.keyboard.press(key);
+  await page.click('[data-fk="range-cursors"]');
+  const strip = await page.locator("#chart .brush-strip").boundingBox();
+  if (strip) {
+    await page.mouse.move(strip.x + strip.width * 0.2, strip.y + 5);
+    await page.mouse.down();
+    await page.mouse.move(strip.x + strip.width * 0.6, strip.y + 5, { steps: 4 });
+    await page.mouse.up();
+  }
+  await page.click('[data-fk="range-clear"]');
+  await page.evaluate(() => { document.querySelector('details[data-panel="files"]').open = true; });
   // Watched folder (stand-in picker): choose, remember, open-at-once, stop; at the end nothing is remembered.
   if ((await page.getAttribute("body", "data-panel")) === "rail") await page.click('[data-action="panel.toggle"]');
   await page.click("#folder-choose");

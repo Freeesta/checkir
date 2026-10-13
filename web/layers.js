@@ -5,6 +5,7 @@ import { selectedCandidate } from "./results.js";
 import { analyse } from "./peaks.js";
 import { candidateKey, resultOf } from "./state.js";
 import { spectrumOf } from "./files.js";
+import { choiceKey, rangesOf } from "./ranges.js";
 
 /**
  * The extra layers of the chart: the zone left out of the comparison (whenever the shown spectrum has a result) and the library
@@ -25,13 +26,14 @@ export function buildLayers(chart) {
       const r = resultOf(s);
       const chosen = r ? selectedCandidate(s, r.data) : null;
       const analysis = s.showPeaks ? analyse(s) : null;
-      const key = [shown, r?.sig, chosen && candidateKey(chosen), s.overlay, currentLang(), s.showPeaks, s.peakFocus].join("|");
+      const key = [shown, r?.sig, chosen && candidateKey(chosen), s.overlay, currentLang(), s.showPeaks, s.peakFocus, choiceKey(s.rangeChoice)].join("|");
       if (key === last && analysis === lastAnalysis) return;
       last = key;
       lastAnalysis = analysis;
       const sample = shown ? spectrumOf(shown) : undefined;
       const ref = r && chosen && s.overlay && sample ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
       chart.setLayers({
+        ranges: s.rangeChoice.preset === "full" ? null : { chosen: rangesOf(s.rangeChoice), outsideLabel: t("ranges.outside"), name: (n) => t("ranges.name", { n: String(n) }) },
         excluded: r ? { from: EXCLUDED_CM1[0], to: EXCLUDED_CM1[1], label: t("chart.excluded") } : null,
         marks: analysis && { regions: analysis.regions, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus })), rows: analysis.peaks },
         reference: ref && chosen ? { spectrum: ref.spectrum, scale: ref.scale, label: t("chart.reference_legend", { rank: chosen.rank, library: chosen.library }) } : null,

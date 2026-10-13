@@ -14,6 +14,7 @@ import { canSubtract } from "./subtract.js";
  *   runMatch: () => void, selectCandidate: (key: string) => void, setLabel: (key: string, label: import("./state.js").ChemistLabel | null) => void, toggleOverlay: () => void,
  *   togglePeaks: () => void, focusPeak: (id: string | null) => void,
  *   subtractOpen: () => void, subtractClose: () => void, subtractSearch: () => Promise<boolean>, setFactor: (k: number) => void, undo: () => void,
+ *   setPreset: (id: string) => void, setRanges: (ranges: Array<[number, number]>) => void, addRange: (range: [number, number]) => void, removeRange: (i: number) => void, clearRanges: () => void, rejectRange: () => void, rangeFromCursors: () => void, openRanges: () => void,
  *   importLibrary: (files: File[], name: string) => Promise<void>, cancelImport: () => void, removeLibrary: (id: string) => void, toggleLibrary: (id: string, on: boolean) => void,
  * }} Ctx
  * @typedef {{
@@ -56,6 +57,7 @@ export const ACTIONS = [
   { id: "decision.revoke", labelKey: "action.decision_revoke.label", tipKey: "action.decision_revoke.tip", icon: "back", section: "sheet", run: (c) => c.revokeDecision(), enabled: (s) => decisionOf(s) !== null },
   { id: "sheet.print", labelKey: "action.sheet_print.label", tipKey: "action.sheet_print.tip", icon: "sheet", section: "sheet", run: (c) => c.printSheet(), enabled: (s) => resultOf(s) !== null },
   { id: "overlay.toggle", labelKey: "action.overlay_toggle.label", tipKey: "action.overlay_toggle.tip", icon: "results", key: "r", section: "results", run: (c) => c.toggleOverlay(), enabled: (s) => resultOf(s) !== null },
+  { id: "ranges.open", labelKey: "action.ranges_open.label", tipKey: "action.ranges_open.tip", icon: "region", key: "g", section: "results", run: (c) => c.openRanges(), enabled: (s) => s.files.length > 0 },
   { id: "peaks.toggle", labelKey: "action.peaks_toggle.label", tipKey: "action.peaks_toggle.tip", icon: "peaks", key: "p", section: "peaks", run: (c) => c.togglePeaks(), enabled: (s) => s.files.length > 0 },
   { id: "sheet.talk", labelKey: "action.sheet_talk.label", tipKey: "action.sheet_talk.tip", icon: "sheet", key: "m", section: "sheet", run: (c) => c.toggleTalk(), enabled: (s) => resultOf(s) !== null },
   { id: "history.undo", labelKey: "action.history_undo.label", tipKey: "action.history_undo.tip", icon: "back", key: "u", run: (c) => c.undo(), enabled: (s) => lastResidual(s) !== undefined },

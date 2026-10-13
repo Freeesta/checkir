@@ -20,12 +20,15 @@ import { STORAGE_PREFIX } from "./appname.js";
  * The chemist's decision on one spectrum: level 1–5 and the chosen candidates (keys), valid for the libraries searched (`sig`). Memory only; the sheet is never stored.
  * @typedef {{ level: number, keys: string[] }} DecisionDraft
  * @typedef {{ level: number, keys: string[], sig: string }} Decision
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, folder: FolderState }} AppState
+ * The region of the comparison (a preset or ranges chosen by hand), an error to show next to its fields, and the candidate × region table per spectrum (`sig` = libraries and choice it was made for). Memory only.
+ * @typedef {{ preset: string | null, ranges: Array<[number, number]> }} RangeChoice
+ * @typedef {{ sig: string, columns: Array<{ id: string, ranges: Array<[number, number]> }>, cells: Record<string, Record<string, number | null>>, busy: boolean }} RangeTable
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, rangeChoice: RangeChoice, rangeError: Notice | null, rangeTable: Record<string, RangeTable>, folder: FolderState }} AppState
  */
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, showPeaks: false, peakFocus: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, showPeaks: false, peakFocus: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, rangeChoice: { preset: "full", ranges: [] }, rangeError: null, rangeTable: {}, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();
