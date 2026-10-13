@@ -105,6 +105,65 @@ async function nextStepScenario(browser) {
   await ctx.close();
 }
 
+/** Single-key shortcuts: the list, the actions, fields and the chart keep their keys, the switch turns them all off and the choice survives a reload. */
+async function shortcutsScenario(browser) {
+  const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 768 } });
+  const page = await ctx.newPage();
+  await page.goto(base);
+  await page.waitForSelector("body[data-ready='1']");
+  await page.keyboard.press("?");
+  check("shortcuts: ? opens the list", await page.isVisible("dialog[open] .help-table"));
+  check("shortcuts: the list has a row for every key and greys out what is coming", (await page.locator("dialog[open] .help-table tbody tr").count()) >= 18 && (await page.locator("dialog[open] .soon-tag").count()) >= 5);
+  const violations = await axe(page);
+  check("shortcuts: axe has no violations on the dialog", violations.length === 0, violations.join(", "));
+  for (const n of [1, 2]) {
+    await page.click(`#help-tab-${n}`);
+    const v = await axe(page);
+    check(`shortcuts: axe has no violations on tab ${n}`, v.length === 0, v.join(", "));
+  }
+  await page.keyboard.press("l");
+  check("shortcuts: with the dialog open the letters do nothing", (await page.getAttribute("html", "lang")) === "it");
+  await page.keyboard.press("Escape");
+  check("shortcuts: Esc closes the list and gives the focus back", !(await page.isVisible("dialog")) && (await page.evaluate(() => document.activeElement === document.body)));
+  await page.keyboard.press("l");
+  await page.waitForFunction(() => document.documentElement.lang === "en");
+  check("shortcuts: l changes the language", true);
+  await page.keyboard.press("l");
+  await page.waitForFunction(() => document.documentElement.lang === "it");
+  await page.keyboard.press("t");
+  check("shortcuts: t changes the theme", (await page.getAttribute("html", "data-theme")) === "light");
+  const before = await page.getAttribute("body", "data-panel");
+  await page.keyboard.press("[");
+  check("shortcuts: [ folds the panel", (await page.getAttribute("body", "data-panel")) !== before);
+  await page.keyboard.press("2");
+  check("shortcuts: 2 moves the focus to the Libraries section", await page.evaluate(() => document.activeElement?.closest("[data-panel]")?.getAttribute("data-panel") === "libraries"));
+  await page.evaluate(() => { const i = document.createElement("input"); i.type = "text"; i.id = "probe"; document.body.append(i); i.focus(); });
+  await page.keyboard.press("l");
+  check("shortcuts: in a text field l types an l", (await page.inputValue("#probe")) === "l" && (await page.getAttribute("html", "lang")) === "it");
+  await page.evaluate(() => document.getElementById("probe")?.remove());
+  await page.keyboard.press("Control+l");
+  check("shortcuts: with Ctrl pressed nothing happens", (await page.getAttribute("html", "lang")) === "it");
+  const range = await page.textContent("#range");
+  await page.focus("#chart");
+  await page.keyboard.press("+");
+  check("shortcuts: with the focus on the chart + zooms and nothing else", (await page.textContent("#range")) !== range && (await page.getAttribute("html", "lang")) === "it" && !(await page.isVisible("dialog")));
+  check("shortcuts: buttons announce their key", (await page.getAttribute('[data-action="theme.cycle"]', "aria-keyshortcuts")) === "t");
+  await page.keyboard.press("?");
+  await page.uncheck("#shortcuts-switch");
+  await page.keyboard.press("Escape");
+  check("shortcuts: switched off, aria-keyshortcuts is gone", (await page.getAttribute('[data-action="theme.cycle"]', "aria-keyshortcuts")) === null);
+  for (const k of ["l", "?", "t", "["]) await page.keyboard.press(k);
+  check("shortcuts: switched off, no key acts", (await page.getAttribute("html", "lang")) === "it" && !(await page.isVisible("dialog")) && (await page.getAttribute("html", "data-theme")) === "light");
+  await page.reload();
+  await page.waitForSelector("body[data-ready='1']");
+  await page.keyboard.press("?");
+  await page.keyboard.press("l");
+  check("shortcuts: the switch survives a reload", !(await page.isVisible("dialog")) && (await page.getAttribute("html", "lang")) === "it");
+  await page.click('[data-action="help.open"]');
+  check("shortcuts: the list still opens from its button and shows the switch off", !(await page.isChecked("#shortcuts-switch")));
+  await ctx.close();
+}
+
 /** Shell behaviour: Tab order in the header, tooltip and Esc, theme and panel preferences survive a reload, nothing of the analysis is stored. */
 async function shellScenario(browser) {
   const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 768 } });
@@ -140,7 +199,7 @@ async function shellScenario(browser) {
     session: sessionStorage.length,
     idb: (await indexedDB.databases()).length,
   }));
-  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel"];
+  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.shortcuts"];
   check("privacy: only preferences are stored, nothing of the analysis", stored.local.every((k) => allowed.includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
   await ctx.close();
 }
@@ -166,6 +225,7 @@ async function run() {
     await phoneScenario(browser);
     await nextStepScenario(browser);
     await shellScenario(browser);
+    await shortcutsScenario(browser);
     await registryScenario(check);
     await nameScenario(browser);
   } finally {

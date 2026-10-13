@@ -2,6 +2,7 @@
 import { el, icon } from "./dom.js";
 import { t } from "./i18n.js";
 import { APP_NAME } from "./appname.js";
+import { helpBody } from "./help.js";
 
 /**
  * Modal dialogs (native <dialog>), rebuilt each time they open so they are always in the active language.
@@ -23,7 +24,7 @@ export function buildDialogs(engineVersion) {
         ]),
       ],
     }),
-    help: () => ({ titleKey: "help.title", body: [el("div", { id: "shortcuts-slot" }, [el("p", { class: "empty" }, [t("help.soon")])])] }),
+    help: () => ({ titleKey: "help.title", body: helpBody() }),
   };
   return (id) => {
     const make = makers[id];

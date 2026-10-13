@@ -1,0 +1,39 @@
+{
+  "schema": "bands/1",
+  "version": "2026-10.1",
+  "rules": [
+    {
+      "id": "co.demo",
+      "version": 1,
+      "range_cm1": {
+        "min": 1690,
+        "max": 1740
+      },
+      "group": "ketone",
+      "mode": "stretch",
+      "intensity": "strong",
+      "shape": "sharp",
+      "sources": [
+        "coates2000"
+      ],
+      "status": "reviewed",
+      "verified_on": [
+        "vs-0123456789ab",
+        "vs-ba9876543210"
+      ],
+      "diagnostic_for": [
+        {
+          "class": "synthetic_cathinones",
+          "strength": "supporting"
+        }
+      ],
+      "reviewers": [
+        {
+          "public_name": "Example Reviewer",
+          "date": "2026-10-13"
+        }
+      ],
+      "scope": "candidate_only"
+    }
+  ]
+}

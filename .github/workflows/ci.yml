@@ -143,8 +143,8 @@ jobs:
           python-version: "3.13"
       - name: Pinned validator dependency
         run: pip install -r tools/dati/requirements.txt
-      - name: Schemas valid and documented in it + en; fixtures; data checker (references, quality, privacy, wording) and its tests
-        run: python3 tools/dati/valida_schemi.py --schemi && python3 tools/dati/valida_schemi.py --fixture && python3 -m unittest discover -s tools/dati -p 'test_*.py' && python3 tools/dati/controlla_dati.py
+      - name: Schemas valid and documented in it + en; fixtures; data checker (references, quality, privacy, wording), band data checker and generator in sync, and their tests
+        run: python3 tools/dati/valida_schemi.py --schemi && python3 tools/dati/valida_schemi.py --fixture && python3 -m unittest discover -s tools/dati -p 'test_*.py' && python3 tools/dati/controlla_dati.py && python3 tools/dati/controlla_bande.py && python3 tools/dati/genera_bande.py --verifica
       - name: "Privacy of the schemas (T3: no personal field, closed objects, measurement dates as YYYY-MM)"
         run: python3 tools/controlla_schemi.py
 

@@ -1,0 +1,596 @@
+{
+ "schema": "modes/1",
+ "version": "2026-10.1",
+ "modes": [
+  {
+   "id": "stretch",
+   "names": {
+    "it": "Stiramento",
+    "en": "Stretching"
+   },
+   "kind": "stretching",
+   "symmetry": null,
+   "in_plane": null,
+   "definition_key": "modes.stretch.definition",
+   "animation": {
+    "atoms": [
+     {
+      "el": "C",
+      "xyz": [
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       -0.8,
+       0.6,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       0.8,
+       0.6,
+       0
+      ]
+     }
+    ],
+    "bonds": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "period_s": 1.2,
+    "displacements": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      -0.16,
+      0.12,
+      0
+     ],
+     [
+      0.16,
+      0.12,
+      0
+     ]
+    ]
+   },
+   "example_groups": [
+    "ketone",
+    "hydroxyl",
+    "methyl"
+   ]
+  },
+  {
+   "id": "stretch_sym",
+   "names": {
+    "it": "Stiramento simmetrico",
+    "en": "Symmetric stretching"
+   },
+   "kind": "stretching",
+   "symmetry": "sym",
+   "in_plane": true,
+   "definition_key": "modes.stretch_sym.definition",
+   "animation": {
+    "atoms": [
+     {
+      "el": "C",
+      "xyz": [
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       -0.8,
+       0.6,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       0.8,
+       0.6,
+       0
+      ]
+     }
+    ],
+    "bonds": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "period_s": 1.2,
+    "displacements": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      -0.16,
+      0.12,
+      0
+     ],
+     [
+      0.16,
+      0.12,
+      0
+     ]
+    ]
+   },
+   "example_groups": [
+    "methylene",
+    "nitro"
+   ]
+  },
+  {
+   "id": "stretch_asym",
+   "names": {
+    "it": "Stiramento asimmetrico",
+    "en": "Asymmetric stretching"
+   },
+   "kind": "stretching",
+   "symmetry": "asym",
+   "in_plane": true,
+   "definition_key": "modes.stretch_asym.definition",
+   "animation": {
+    "atoms": [
+     {
+      "el": "C",
+      "xyz": [
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       -0.8,
+       0.6,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       0.8,
+       0.6,
+       0
+      ]
+     }
+    ],
+    "bonds": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "period_s": 1.2,
+    "displacements": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      -0.16,
+      0.12,
+      0
+     ],
+     [
+      -0.16,
+      -0.12,
+      0
+     ]
+    ]
+   },
+   "example_groups": [
+    "methylene",
+    "nitro"
+   ]
+  },
+  {
+   "id": "scissoring",
+   "names": {
+    "it": "Forbice (scissoring)",
+    "en": "Scissoring"
+   },
+   "kind": "bending",
+   "symmetry": "sym",
+   "in_plane": true,
+   "definition_key": "modes.scissoring.definition",
+   "animation": {
+    "atoms": [
+     {
+      "el": "C",
+      "xyz": [
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       -0.8,
+       0.6,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       0.8,
+       0.6,
+       0
+      ]
+     }
+    ],
+    "bonds": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "period_s": 1.2,
+    "displacements": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0.12,
+      0.16,
+      0
+     ],
+     [
+      -0.12,
+      0.16,
+      0
+     ]
+    ]
+   },
+   "example_groups": [
+    "methylene",
+    "amine_primary"
+   ]
+  },
+  {
+   "id": "rocking",
+   "names": {
+    "it": "Dondolo (rocking)",
+    "en": "Rocking"
+   },
+   "kind": "bending",
+   "symmetry": "asym",
+   "in_plane": true,
+   "definition_key": "modes.rocking.definition",
+   "animation": {
+    "atoms": [
+     {
+      "el": "C",
+      "xyz": [
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       -0.8,
+       0.6,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       0.8,
+       0.6,
+       0
+      ]
+     }
+    ],
+    "bonds": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "period_s": 1.2,
+    "displacements": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0.12,
+      0.16,
+      0
+     ],
+     [
+      0.12,
+      -0.16,
+      0
+     ]
+    ]
+   },
+   "example_groups": [
+    "methylene_chain"
+   ]
+  },
+  {
+   "id": "wagging",
+   "names": {
+    "it": "Agitazione (wagging)",
+    "en": "Wagging"
+   },
+   "kind": "bending",
+   "symmetry": "sym",
+   "in_plane": false,
+   "definition_key": "modes.wagging.definition",
+   "animation": {
+    "atoms": [
+     {
+      "el": "C",
+      "xyz": [
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       -0.8,
+       0.6,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       0.8,
+       0.6,
+       0
+      ]
+     }
+    ],
+    "bonds": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "period_s": 1.2,
+    "displacements": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0.25
+     ],
+     [
+      0,
+      0,
+      0.25
+     ]
+    ]
+   },
+   "example_groups": [
+    "methylene"
+   ]
+  },
+  {
+   "id": "twisting",
+   "names": {
+    "it": "Torsione (twisting)",
+    "en": "Twisting"
+   },
+   "kind": "bending",
+   "symmetry": "asym",
+   "in_plane": false,
+   "definition_key": "modes.twisting.definition",
+   "animation": {
+    "atoms": [
+     {
+      "el": "C",
+      "xyz": [
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       -0.8,
+       0.6,
+       0
+      ]
+     },
+     {
+      "el": "H",
+      "xyz": [
+       0.8,
+       0.6,
+       0
+      ]
+     }
+    ],
+    "bonds": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "period_s": 1.2,
+    "displacements": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0.25
+     ],
+     [
+      0,
+      0,
+      -0.25
+     ]
+    ]
+   },
+   "example_groups": [
+    "methylene"
+   ]
+  },
+  {
+   "id": "oop",
+   "names": {
+    "it": "Deformazione fuori piano",
+    "en": "Out-of-plane bending"
+   },
+   "kind": "bending",
+   "symmetry": null,
+   "in_plane": null,
+   "definition_key": "modes.oop.definition",
+   "animation": null,
+   "example_groups": [
+    "benzene_para",
+    "benzene_mono"
+   ]
+  },
+  {
+   "id": "ring_breathing",
+   "names": {
+    "it": "Respirazione dell'anello",
+    "en": "Ring breathing"
+   },
+   "kind": "stretching",
+   "symmetry": null,
+   "in_plane": null,
+   "definition_key": "modes.ring_breathing.definition",
+   "animation": null,
+   "example_groups": [
+    "aromatic_ring"
+   ]
+  },
+  {
+   "id": "bend_in_plane",
+   "names": {
+    "it": "Deformazione nel piano",
+    "en": "In-plane bending"
+   },
+   "kind": "bending",
+   "symmetry": null,
+   "in_plane": null,
+   "definition_key": "modes.bend_in_plane.definition",
+   "animation": null,
+   "example_groups": [
+    "amide",
+    "hydroxyl",
+    "aromatic_ring"
+   ]
+  },
+  {
+   "id": "overtone",
+   "names": {
+    "it": "Armonica",
+    "en": "Overtone"
+   },
+   "kind": "other",
+   "symmetry": null,
+   "in_plane": null,
+   "definition_key": "modes.overtone.definition",
+   "animation": null,
+   "example_groups": [
+    "aromatic_ring"
+   ]
+  },
+  {
+   "id": "combination",
+   "names": {
+    "it": "Banda di combinazione",
+    "en": "Combination band"
+   },
+   "kind": "other",
+   "symmetry": null,
+   "in_plane": null,
+   "definition_key": "modes.combination.definition",
+   "animation": null,
+   "example_groups": [
+    "aromatic_ring",
+    "ammonium"
+   ]
+  },
+  {
+   "id": "lattice",
+   "names": {
+    "it": "Modo del reticolo o di uno ione",
+    "en": "Lattice or ion mode"
+   },
+   "kind": "other",
+   "symmetry": null,
+   "in_plane": null,
+   "definition_key": "modes.lattice.definition",
+   "animation": null,
+   "example_groups": [
+    "carbonate",
+    "sulfate"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:bands:1",
+  "title": "bands/1: group-frequency rules",
+  "title_it": "bands/1: regole di frequenza di gruppo",
+  "description": "Rules that say which functional groups can explain an absorption band. Rules propose interpretations; only a substance explains a peak. Texts are in band-texts files, by key.",
+  "description_it": "Regole che dicono quali gruppi funzionali possono spiegare una banda di assorbimento. Le regole propongono interpretazioni; un picco è spiegato solo da una sostanza. I testi stanno nei file band-texts, per chiave.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "bands/1"
+    },
+    "version": {
+      "description": "Data version, YYYY-MM.N (for example 2026-10.1).",
+      "description_it": "Versione dei dati, AAAA-MM.N (per esempio 2026-10.1).",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}(-[0-9]{2})?\\.[0-9]+$"
+    },
+    "rules": {
+      "description": "The rules.",
+      "description_it": "Le regole.",
+      "type": "array",
+      "items": {
+        "description": "One group-frequency rule.",
+        "description_it": "Una regola di frequenza di gruppo.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Stable rule id (never renamed); the texts are bands.<id>.counsellor|chemist|teaching.",
+            "description_it": "Id stabile della regola (mai rinominato); i testi sono bands.<id>.counsellor|chemist|teaching.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+          },
+          "version": {
+            "description": "Version of this rule, raised when its meaning changes.",
+            "description_it": "Versione della regola, alzata quando cambia il significato.",
+            "type": "integer",
+            "minimum": 1
+          },
+          "range_cm1": {
+            "description": "Search window in cm-1, at least 10 cm-1 wide unless the group family is artifact. For strong bands the lower limit is 10 cm-1 below the literature value (ATR shift), computed by tools/dati/genera_bande.py.",
+            "description_it": "Finestra di ricerca in cm-1, larga almeno 10 cm-1 salvo famiglia artifact. Per le bande forti il limite basso è 10 cm-1 sotto il valore di letteratura (spostamento ATR), calcolato da tools/dati/genera_bande.py.",
+            "type": "object",
+            "properties": {
+              "min": {
+                "description": "Lower limit in cm-1.",
+                "description_it": "Limite basso in cm-1.",
+                "type": "integer",
+                "minimum": 400,
+                "maximum": 4000
+              },
+              "max": {
+                "description": "Upper limit in cm-1.",
+                "description_it": "Limite alto in cm-1.",
+                "type": "integer",
+                "minimum": 400,
+                "maximum": 4000
+              }
+            },
+            "required": [
+              "min",
+              "max"
+            ],
+            "additionalProperties": false
+          },
+          "range_literature_cm1": {
+            "description": "Window as given by the sources, present only when range_cm1 was widened for ATR.",
+            "description_it": "Finestra come la danno le fonti, presente solo se range_cm1 è stata allargata per l'ATR.",
+            "type": "object",
+            "properties": {
+              "min": {
+                "description": "Lower limit in cm-1.",
+                "description_it": "Limite basso in cm-1.",
+                "type": "integer",
+                "minimum": 400,
+                "maximum": 4000
+              },
+              "max": {
+                "description": "Upper limit in cm-1.",
+                "description_it": "Limite alto in cm-1.",
+                "type": "integer",
+                "minimum": 400,
+                "maximum": 4000
+              }
+            },
+            "required": [
+              "min",
+              "max"
+            ],
+            "additionalProperties": false
+          },
+          "group": {
+            "description": "Functional group id in groups/1.",
+            "description_it": "Id del gruppo funzionale in groups/1.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+          },
+          "mode": {
+            "description": "Vibration mode id in modes/1.",
+            "description_it": "Id del modo di vibrazione in modes/1.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+          },
+          "bond": {
+            "description": "Chemical notation shown as is, for example C=O, N-H+.",
+            "description_it": "Notazione chimica mostrata così com'è, per esempio C=O, N-H+.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 24
+          },
+          "intensity": {
+            "description": "Typical band intensity.",
+            "description_it": "Intensità tipica della banda.",
+            "enum": [
+              "strong",
+              "medium",
+              "weak",
+              "variable"
+            ]
+          },
+          "shape": {
+            "description": "Typical band shape.",
+            "description_it": "Forma tipica della banda.",
+            "enum": [
+              "sharp",
+              "medium",
+              "broad",
+              "very_broad",
+              "doublet",
+              "multiplet"
+            ]
+          },
+          "scope": {
+            "description": "generic (default): can interpret a peak alone; candidate_only: too unspecific alone, used only to name the group of a band already explained by a candidate whose structure has that group.",
+            "description_it": "generic (predefinito): può interpretare un picco da sola; candidate_only: troppo generica da sola, usata solo per nominare il gruppo di una banda già spiegata da un candidato la cui struttura ha quel gruppo.",
+            "enum": [
+              "generic",
+              "candidate_only"
+            ]
+          },
+          "conditions": {
+            "description": "Conditions on other rules.",
+            "description_it": "Condizioni su altre regole.",
+            "type": "object",
+            "properties": {
+              "requires_any": {
+                "description": "At least one of these rules must also match.",
+                "description_it": "Almeno una di queste regole deve trovare una banda.",
+                "type": "array",
+                "items": {
+                  "description": "Id.",
+                  "description_it": "Id.",
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+                },
+                "uniqueItems": true
+              },
+              "requires_all": {
+                "description": "All these rules must also match.",
+                "description_it": "Tutte queste regole devono trovare una banda.",
+                "type": "array",
+                "items": {
+                  "description": "Id.",
+                  "description_it": "Id.",
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+                },
+                "uniqueItems": true
+              },
+              "excludes": {
+                "description": "The rule does not apply if any of these matches.",
+                "description_it": "La regola non si applica se una di queste trova una banda.",
+                "type": "array",
+                "items": {
+                  "description": "Id.",
+                  "description_it": "Id.",
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+                },
+                "uniqueItems": true
+              }
+            },
+            "additionalProperties": false
+          },
+          "diagnostic_for": {
+            "description": "Classes this band is diagnostic for; allowed only from status verified_spectra upwards.",
+            "description_it": "Classi per cui la banda è diagnostica; ammesso solo da status verified_spectra in su.",
+            "type": "array",
+            "items": {
+              "description": "A class this band is diagnostic for.",
+              "description_it": "Una classe per cui la banda è diagnostica.",
+              "type": "object",
+              "properties": {
+                "class": {
+                  "description": "Class id in classes.json.",
+                  "description_it": "Id di una classe in classes.json.",
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+                },
+                "strength": {
+                  "description": "supporting: supports the class; strong: the band (or the set of bands) points to it.",
+                  "description_it": "supporting: sostiene la classe; strong: la banda (o l'insieme di bande) la indica.",
+                  "enum": [
+                    "supporting",
+                    "strong"
+                  ]
+                }
+              },
+              "required": [
+                "class",
+                "strength"
+              ],
+              "additionalProperties": false
+            },
+            "uniqueItems": true
+          },
+          "false_friends": {
+            "description": "Rules of other groups that fall in the same window and can be confused with this one.",
+            "description_it": "Regole di altri gruppi che cadono nella stessa finestra e si possono confondere con questa.",
+            "type": "array",
+            "items": {
+              "description": "Id.",
+              "description_it": "Id.",
+              "type": "string",
+              "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+            },
+            "uniqueItems": true
+          },
+          "sources": {
+            "description": "Sources of the numbers (ids in sources.json); at least one.",
+            "description_it": "Fonti dei numeri (id in sources.json); almeno una.",
+            "type": "array",
+            "items": {
+              "description": "Source id in sources.json.",
+              "description_it": "Id di una fonte in sources.json.",
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "status": {
+            "description": "Review state: draft (from the literature), verified_spectra (checked on at least two reference spectra of different forms), reviewed (signed by a reviewer in reviewers.json).",
+            "description_it": "Stato di revisione: draft (dalla letteratura), verified_spectra (controllata su almeno due spettri di riferimento di forme diverse), reviewed (firmata da un revisore di reviewers.json).",
+            "enum": [
+              "draft",
+              "verified_spectra",
+              "reviewed"
+            ]
+          },
+          "verified_on": {
+            "description": "Ids of the reference spectra the rule was checked on. Opaque ids only (vs- plus 12 hexadecimal digits): never a file name or a sample code.",
+            "description_it": "Id degli spettri di riferimento su cui la regola è stata controllata. Solo id opachi (vs- più 12 cifre esadecimali): mai un nome di file né un codice di campione.",
+            "type": "array",
+            "items": {
+              "description": "Opaque spectrum id.",
+              "description_it": "Id opaco di uno spettro.",
+              "type": "string",
+              "pattern": "^vs-[0-9a-f]{12}$"
+            },
+            "uniqueItems": true
+          },
+          "reviewers": {
+            "description": "Signatures; required for status reviewed.",
+            "description_it": "Firme; obbligatorie per status reviewed.",
+            "type": "array",
+            "items": {
+              "description": "A reviewer's signature.",
+              "description_it": "La firma di un revisore.",
+              "type": "object",
+              "properties": {
+                "public_name": {
+                  "description": "Public name as in reviewers.json.",
+                  "description_it": "Nome pubblico come in reviewers.json.",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "description": "Date of the signature, YYYY-MM-DD.",
+                  "description_it": "Data della firma, AAAA-MM-GG.",
+                  "type": "string",
+                  "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+                }
+              },
+              "required": [
+                "public_name",
+                "date"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "range_cm1",
+          "group",
+          "mode",
+          "intensity",
+          "shape",
+          "sources",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "rules"
+  ],
+  "additionalProperties": false
+}

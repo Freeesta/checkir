@@ -7,6 +7,7 @@ import { buildHeader } from "./header.js";
 import { applyCatalog, currentLang, LANGS, loadLang, pickLang, t } from "./i18n.js";
 import { loadEngine } from "./engine.js";
 import { buildPanels } from "./panels.js";
+import { attachShortcuts, onShortcutsChange } from "./shortcuts.js";
 import { parseSpectrum } from "./spectrum.js";
 import { getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
@@ -103,6 +104,11 @@ async function start() {
     redrawChart();
   };
   subscribe(renderUi);
+  onShortcutsChange(() => {
+    refreshActionButtons(getState());
+    next.refresh(getState());
+  });
+  attachShortcuts(ctx);
   redrawAll();
   if ("serviceWorker" in navigator) navigator.serviceWorker.register(`sw.js?id=${APP_ID}`).catch(() => {});
   document.body.dataset.ready = "1";

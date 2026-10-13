@@ -1,0 +1,13 @@
+{
+ "schema": "substance-bands/1",
+ "version": "2026-10.1",
+ "substance": "4-cmc",
+ "form": "hydrochloride",
+ "note": "Values from the monograph only; no local spectrum of this substance was available (draft).",
+ "bands": [
+  {"position_cm1": 2698, "tolerance_cm1": 20, "intensity": "weak", "shape": "very_broad", "group": "ammonium_secondary", "mode": "stretch", "rule_id": "nh2plus.stretch", "sources": ["swgdrug-4cmc", "smith-amine-salts"], "status": "draft"},
+  {"position_cm1": 1687, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "aryl_ketone", "mode": "stretch", "rule_id": "co.aryl_ketone", "sources": ["swgdrug-4cmc"], "status": "draft"},
+  {"position_cm1": 1588, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "aromatic_ring", "mode": "stretch", "rule_id": "ring.c_c_1600", "sources": ["swgdrug-4cmc"], "status": "draft"},
+  {"position_cm1": 840, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "benzene_para", "mode": "oop", "rule_id": "oop.para", "text_key": "substance_bands.4_cmc.hydrochloride.840", "sources": ["swgdrug-4cmc", "smith-benzene"], "status": "draft"}
+ ]
+}
