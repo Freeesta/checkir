@@ -1,0 +1,111 @@
+{
+  "schema": "datasheet/1",
+  "substance": "flualprazolam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "benzodiazepines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "alpha-hydroxy-flualprazolam",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "wagmann2020"
+      },
+      {
+        "from": "parent",
+        "to": "4-hydroxy-flualprazolam",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "wagmann2020"
+      },
+      {
+        "from": "parent",
+        "to": "flualprazolam-glucuronide",
+        "reaction": "glucuronidation",
+        "enzymes": [
+          "UGT1A*"
+        ],
+        "source": "wagmann2020"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "alpha-hydroxy-flualprazolam",
+        "active": null,
+        "marker": true,
+        "source": "wagmann2020"
+      },
+      {
+        "name_key": "4-hydroxy-flualprazolam",
+        "active": null,
+        "marker": true,
+        "source": "wagmann2020"
+      },
+      {
+        "name_key": "flualprazolam-glucuronide",
+        "active": null,
+        "marker": true,
+        "source": "wagmann2020"
+      }
+    ]
+  },
+  "interactions": [
+    {
+      "with": "opioid",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "el-balkhi2023"
+    },
+    {
+      "with": "cyp3a4_inhibitors",
+      "severity": "caution",
+      "mechanism": "cyp_inhibition",
+      "source": "wagmann2020"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "flualprazolam.potency",
+      "topic": "dosing",
+      "source": "canfield2023"
+    },
+    {
+      "key": "flualprazolam.effects",
+      "topic": "overdose_signs",
+      "source": "wagmann2020"
+    }
+  ],
+  "doses": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
