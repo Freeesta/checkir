@@ -28,7 +28,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 - CI: `ci-ok` è l'unico controllo richiesto; `changes` decide quali job girano (rust, web, data); `limits` gira sempre. La notte (`notte.yml`) fa tutto; `advisories.yml` ogni giorno.
 
 ## 4. Architettura
-- **Crate**: `ftir-core` (calcolo puro, `forbid(unsafe_code)`, senza dipendenze), `ftir-lib` (librerie, vuoto), `ftir-wasm` (ponte wasm-bindgen: solo funzioni sottili che restituiscono JSON). Nessuna dipendenza nativa nel grafo WASM.
+- **Crate**: `ftir-core` (calcolo puro, `forbid(unsafe_code)`, senza dipendenze), `ftir-lib` (pacchetti di libreria `ftir-library/1`), `ftir-wasm` (ponte wasm-bindgen: solo funzioni sottili che restituiscono JSON). Nessuna dipendenza nativa nel grafo WASM.
 - **Registri statici** (slice, niente plugin a runtime): `READERS`, `STEPS`, `COMPARISONS` in `ftir-core`; aggiungere un modulo = un file + UNA riga nel registro; il test di conformità scorre le voci. Regole come dati JSON (`bands/1`, `alerts/1`, `classes/1`) con schema in `docs/schemi/`.
 - **Un solo modello**: `Spectrum` con `Role` (campione, riferimento, residuo, sottrazione, media); unità nei nomi dei campi (`wavenumber_cm1`).
 - **Errori**: `{error, error_key, params}`; la pagina traduce `error_key`. **Budget**: ogni `apri` riceve `Budget` (byte, punti).
@@ -38,7 +38,8 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 ## 5. File d'area (leggi solo quello del tuo lavoro)
 | Se tocchi… | Leggi |
 |---|---|
-| `crates/` | `docs/agenti/motore.md` |
+| `crates/ftir-core`, `crates/ftir-wasm` | `docs/agenti/motore.md` |
+| `crates/ftir-lib`, `tools/libreria/` | `docs/agenti/libreria.md` |
 | `web/` | `docs/agenti/pagina.md` |
 | `data/`, `docs/schemi/` | `docs/agenti/dati.md` |
 | `tests_e2e/`, `tools/`, `.github/` | `docs/agenti/test.md` |
