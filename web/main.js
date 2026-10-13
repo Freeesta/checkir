@@ -25,7 +25,6 @@ import { createPeakCard } from "./peak_card.js";
 import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
-import { buildTableTitle } from "./table_title.js";
 import { buildSubtractView } from "./subtract_view.js";
 import { subtractActions } from "./subtract.js";
 import { buildCandidates, buildNextStep } from "./workarea.js";
@@ -141,7 +140,6 @@ async function start() {
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
   const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), peaks: chartPeakKeys(ctx) });
   let shown = /** @type {string | null | undefined} */ (undefined);
-  buildTableTitle($("table-section"), $("table"));
   const layers = buildLayers(chart, $("peaks-summary"));
   const card = createPeakCard($("peak-card"), ctx);
   const renderUi = () => {

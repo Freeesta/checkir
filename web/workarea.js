@@ -5,6 +5,7 @@ import { actionById } from "./actions.js";
 import { el, icon, keepFocus, setIcon } from "./dom.js";
 import { renderResults } from "./results.js";
 import { activeFile } from "./state.js";
+import { buildTableTitle } from "./table_title.js";
 import { activeKey } from "./shortcuts.js";
 import { attachTip } from "./tooltip.js";
 
@@ -41,6 +42,7 @@ export function buildNextStep(host, ctx) {
  * @returns {{ refresh: (s: import("./state.js").AppState) => void }}
  */
 export function buildCandidates(host, ctx) {
+  buildTableTitle(/** @type {HTMLElement} */ (document.getElementById("table-section")), /** @type {HTMLElement} */ (document.getElementById("table")));
   return {
     refresh(s) {
       host.toggleAttribute("data-open", activeFile(s) !== null);

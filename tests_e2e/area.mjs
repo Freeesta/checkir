@@ -28,6 +28,29 @@ async function addLibrary(page) {
   await page.waitForFunction(() => /3/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));
 }
 
+/** The folded data table, no green on results, the sample in one colour. */
+async function tableAndColours(page, check) {
+  // The data table: folded, with its row count in the title, and still in the page.
+  const table = await page.evaluate(() => ({ open: document.getElementById("table-section").open, title: document.querySelector("#table-section > summary").textContent, tables: document.querySelectorAll("#table table").length, rows: document.querySelectorAll("#table tbody tr").length }));
+  check("area: the data table is folded, its title has the row count, the table is in the page", !table.open && table.tables === 1 && table.title.includes(`(${table.rows} righe)`) && table.rows > 0, JSON.stringify(table));
+  await page.click("#table-section > summary");
+  check("area: opening the data table shows the rows", await page.isVisible("#table tbody tr"));
+  await page.click("#table-section > summary");
+
+  // No green on results; the sample is one colour everywhere.
+  const colours = await page.evaluate(() => {
+    const m = document.querySelector(".cand meter");
+    const sample = document.createElement("i");
+    sample.style.color = "var(--color-sample)";
+    document.body.append(sample);
+    const out = { sample: getComputedStyle(sample).color, curve: getComputedStyle(document.querySelector("#chart polyline.curve")).stroke, bar: getComputedStyle(m).backgroundColor, value: [...["::-webkit-meter-optimum-value", "::-webkit-meter-suboptimum-value", "::-webkit-meter-even-less-good-value"]].map((p) => getComputedStyle(m, p).backgroundColor), seg: [...document.querySelectorAll(".result .level .seg.on")].map((x) => getComputedStyle(x).backgroundColor) };
+    sample.remove();
+    return out;
+  });
+  check("area: the meters and the level marks have no green", !colours.value.some(isGreen) && !isGreen(colours.bar) && !colours.seg.some(isGreen), JSON.stringify(colours));
+  check("area: the sample curve has the sample colour", colours.curve === colours.sample, JSON.stringify(colours));
+}
+
 /** @param {import("playwright").Browser} browser */
 export async function areaScenario(browser, base, check, axe) {
   const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 768 } });
@@ -72,25 +95,7 @@ export async function areaScenario(browser, base, check, axe) {
   actions++;
   check("area: from file to printed sheet in 4 actions or fewer, no dialog", actions <= 4 && (await page.evaluate(() => window.__printed)) === 1 && (await page.locator("dialog[open]").count()) === 0, String(actions));
 
-  // The data table: folded, with its row count in the title, and still in the page.
-  const table = await page.evaluate(() => ({ open: document.getElementById("table-section").open, title: document.querySelector("#table-section > summary").textContent, tables: document.querySelectorAll("#table table").length, rows: document.querySelectorAll("#table tbody tr").length }));
-  check("area: the data table is folded, its title has the row count, the table is in the page", !table.open && table.tables === 1 && table.title.includes(`(${table.rows} righe)`) && table.rows > 0, JSON.stringify(table));
-  await page.click("#table-section > summary");
-  check("area: opening the data table shows the rows", await page.isVisible("#table tbody tr"));
-  await page.click("#table-section > summary");
-
-  // No green on results; the sample is one colour everywhere.
-  const colours = await page.evaluate(() => {
-    const m = document.querySelector(".cand meter");
-    const sample = document.createElement("i");
-    sample.style.color = "var(--color-sample)";
-    document.body.append(sample);
-    const out = { sample: getComputedStyle(sample).color, curve: getComputedStyle(document.querySelector("#chart polyline.curve")).stroke, bar: getComputedStyle(m).backgroundColor, value: [...["::-webkit-meter-optimum-value", "::-webkit-meter-suboptimum-value", "::-webkit-meter-even-less-good-value"]].map((p) => getComputedStyle(m, p).backgroundColor), seg: [...document.querySelectorAll(".result .level .seg.on")].map((x) => getComputedStyle(x).backgroundColor) };
-    sample.remove();
-    return out;
-  });
-  check("area: the meters and the level marks have no green", !colours.value.some(isGreen) && !isGreen(colours.bar) && !colours.seg.some(isGreen), JSON.stringify(colours));
-  check("area: the sample curve has the sample colour", colours.curve === colours.sample, JSON.stringify(colours));
+  await tableAndColours(page, check);
 
   for (const scheme of ["light", "dark"]) {
     await page.emulateMedia({ colorScheme: scheme });
