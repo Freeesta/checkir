@@ -1,0 +1,19 @@
+{
+  "schema": "substance-bands/1",
+  "version": "2026-10.1",
+  "substance": "synthetic-a",
+  "form": "hydrochloride",
+  "bands": [
+    {
+      "position_cm1": 1712,
+      "intensity": "strong",
+      "group": "ester_conjugated",
+      "mode": "stretch",
+      "rule_id": "co.ester.conj",
+      "sources": [
+        "coates2000"
+      ],
+      "status": "draft"
+    }
+  ]
+}

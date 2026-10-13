@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:groups:1",
+  "title": "groups/1: functional group catalogue",
+  "title_it": "groups/1: catalogo dei gruppi funzionali",
+  "description": "The functional groups the rules refer to, with names in Italian and English and a family.",
+  "description_it": "I gruppi funzionali a cui si riferiscono le regole, con nomi in italiano e inglese e una famiglia.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "groups/1"
+    },
+    "version": {
+      "description": "Data version, YYYY-MM.N (for example 2026-10.1).",
+      "description_it": "Versione dei dati, AAAA-MM.N (per esempio 2026-10.1).",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}(-[0-9]{2})?\\.[0-9]+$"
+    },
+    "groups": {
+      "description": "The groups.",
+      "description_it": "I gruppi.",
+      "type": "array",
+      "items": {
+        "description": "One functional group.",
+        "description_it": "Un gruppo funzionale.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Stable group id.",
+            "description_it": "Id stabile del gruppo.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+          },
+          "parent": {
+            "description": "Parent group id (tree: carbonyl > ketone > aryl_ketone).",
+            "description_it": "Id del gruppo padre (albero: carbonyl > ketone > aryl_ketone).",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+          },
+          "names": {
+            "description": "Display names.",
+            "description_it": "Nomi da mostrare.",
+            "type": "object",
+            "properties": {
+              "it": {
+                "description": "Italian name.",
+                "description_it": "Nome in italiano.",
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "description": "English name.",
+                "description_it": "Nome in inglese.",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "it",
+              "en"
+            ],
+            "additionalProperties": false
+          },
+          "formula_hint": {
+            "description": "Generic formula for display, for example R-CO-OR'.",
+            "description_it": "Formula generica da mostrare, per esempio R-CO-OR'.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "family": {
+            "description": "Family: sets the colour and pattern of the group in the interface (never the colour alone).",
+            "description_it": "Famiglia: decide colore e motivo del gruppo nell'interfaccia (mai il solo colore).",
+            "enum": [
+              "oh_nh",
+              "ch",
+              "triple",
+              "carbonyl",
+              "double",
+              "co_cn",
+              "oop",
+              "halogen",
+              "inorganic",
+              "heavy",
+              "artifact"
+            ]
+          },
+          "smarts": {
+            "description": "SMARTS pattern, for offline checks in tools/ only.",
+            "description_it": "Schema SMARTS, solo per i controlli offline in tools/.",
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "names",
+          "family"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "groups"
+  ],
+  "additionalProperties": false
+}

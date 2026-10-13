@@ -1,0 +1,21 @@
+{
+  "schema": "modes/1",
+  "version": "2026-10.1",
+  "modes": [
+    {
+      "id": "stretch",
+      "names": {
+        "it": "Stiramento",
+        "en": "Stretching"
+      },
+      "kind": "stretching",
+      "symmetry": null,
+      "in_plane": null,
+      "definition_key": "modes.stretch.definition",
+      "animation": null,
+      "example_groups": [
+        "ketone"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "regions/1",
+  "version": "2026-10.1",
+  "regions": [
+    {
+      "id": "carbonyl",
+      "range_cm1": {
+        "min": 1650,
+        "max": 1850
+      },
+      "family": "carbonyl",
+      "sources": []
+    }
+  ]
+}
