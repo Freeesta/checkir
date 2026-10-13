@@ -170,13 +170,13 @@ function controls() {
   const ids = activeIds();
   const same = ids.join("|") === test.ids;
   const running = test.status === "running";
-  const label_ = test.status === "paused" && same ? "prova.resume" : "prova.start";
-  const go = el("button", { type: "button", id: "prova-start" }, [t(label_)]);
+  const go = el("button", { type: "button", id: "prova-start" }, [test.status === "paused" && same ? t("prova.resume") : t("prova.start")]);
   if (running || !ids.length) go.setAttribute("disabled", "");
   go.addEventListener("click", start);
   const cancel = el("button", { type: "button", id: "prova-stop" }, [t("prova.cancel")]);
   if (!running) cancel.setAttribute("disabled", "");
   cancel.addEventListener("click", stop);
+  /** @type {HTMLElement[]} */
   const out = [el("div", { class: "prova-actions" }, [go, cancel])];
   if (!ids.length) out.push(el("p", { class: "empty" }, [t("prova.no_libraries")]));
   if (running) {
@@ -190,7 +190,7 @@ function controls() {
 function render() {
   const slot = document.getElementById("prova-slot");
   if (!slot) return;
-  const view = test.report ? [el("h4", {}, [t(test.status === "done" ? "prova.finished" : "prova.partial")]), reportView(test.report)] : [];
+  const view = test.report ? [el("h4", {}, [test.status === "done" ? t("prova.finished") : t("prova.partial")]), reportView(test.report)] : [];
   slot.replaceChildren(...controls(), ...view);
 }
 

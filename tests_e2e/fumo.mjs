@@ -6,6 +6,7 @@ import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
+import { libraryTestScenario } from "./prova.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { peaksScenario } from "./picchi.mjs";
 import { registryScenario } from "./registri.mjs";
@@ -282,6 +283,7 @@ async function run() {
     await librariesScenario(browser, base, check, axe);
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
+    await libraryTestScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
