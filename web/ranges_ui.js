@@ -88,22 +88,19 @@ function cell(r, busy) {
 }
 
 /**
- * The candidate × region table under the list of candidates; when only the whole range is used it says how to choose regions.
- * @param {import("./state.js").AppState} s @returns {HTMLElement}
+ * The candidate × region table of the candidate detail: r of the chosen candidate on the whole range and on every region of the
+ * choice. Nothing is drawn when only the whole range is used.
+ * @param {import("./state.js").AppState} s @param {any} c the chosen candidate @returns {HTMLElement | null}
  */
-export function rangeTable(s) {
+export function rangeTable(s, c) {
   const result = resultOf(s);
   const table = result ? s.rangeTable[result.code] : undefined;
-  if (!result || !table || table.sig !== result.sig || !table.columns.length) return el("p", { class: "cap" }, [t("ranges.table.hint")]);
-  const heads = [t("ranges.table.candidate"), ...table.columns.map((c, i) => (c.id === "full" ? t("ranges.table.full") : t("ranges.table.region", { n: formatNumber(i), from: formatNumber(c.ranges[0][0]), to: formatNumber(c.ranges[0][1]) })))];
+  if (!result || !table || table.sig !== result.sig || !table.columns.length) return null;
+  const heads = [t("ranges.table.candidate"), ...table.columns.map((col, i) => (col.id === "full" ? t("ranges.table.full") : t("ranges.table.region", { n: formatNumber(i), from: formatNumber(col.ranges[0][0]), to: formatNumber(col.ranges[0][1]) })))];
   const tab = el("table", { class: "ranges-table" }, [el("caption", {}, [t("ranges.table.caption")])]);
   tab.append(el("thead", {}, [el("tr", {}, heads.map((h) => el("th", { scope: "col" }, [h])))]));
-  const body = el("tbody");
-  (result.data.candidates ?? []).slice(0, LISTED).forEach((/** @type {any} */ c) => {
-    const key = candidateKey(c);
-    body.append(el("tr", {}, [el("th", { scope: "row" }, [`${formatNumber(c.rank)}. ${candidateName(c)} (${c.form})`]), ...table.columns.map((col) => cell(table.cells[col.id]?.[key], table.busy))]));
-  });
-  tab.append(body);
+  const key = candidateKey(c);
+  tab.append(el("tbody", {}, [el("tr", {}, [el("th", { scope: "row" }, [`${formatNumber(c.rank)}. ${candidateName(c)} (${c.form})`]), ...table.columns.map((col) => cell(table.cells[col.id]?.[key], table.busy))])]));
   return el("div", { class: "ranges-table-wrap", role: "region", tabindex: "0", "aria-label": t("ranges.table.caption") }, [tab]);
 }
 

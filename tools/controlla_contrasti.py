@@ -17,9 +17,16 @@ CSS = Path(__file__).resolve().parent.parent / "web" / "style.css"
 MIN: dict[str, tuple[float | None, float | None]] = {
     "--color-brand": (4.5, 4.5),
     "--color-sample": (4.5, 4.5),
-    "--color-reference": (None, 3.0),
+    "--color-reference": (3.0, 3.0),
     "--color-residual": (3.0, 3.0),
     "--color-alert": (3.0, 4.5),
+    "--accent": (4.5, 4.5),
+    "--series-1": (3.0, 3.0),
+    "--series-2": (3.0, 3.0),
+    "--series-3": (3.0, 3.0),
+    "--series-4": (3.0, 3.0),
+    "--series-5": (3.0, 3.0),
+    "--border": (3.0, 3.0),
     "--text": (4.5, 4.5),
     "--text-muted": (4.5, 4.5),
 }

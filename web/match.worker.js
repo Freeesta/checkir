@@ -97,10 +97,13 @@ async function run(job) {
   scope.postMessage({ type: "result", runId: job.runId, json: mod.confronta(JSON.stringify(job.query), JSON.stringify(job.options)) });
 }
 
+/** Syncs and runs go one after the other: a run that overtook the sync still starting the engine saw no library ("library not loaded"). */
+let ordered = Promise.resolve();
+
 scope.addEventListener("message", (/** @type {MessageEvent} */ e) => {
   const m = e.data;
   const failed = (/** @type {unknown} */ err) => scope.postMessage({ type: "error", runId: m.runId, key: "engine.error", detail: String(err) });
-  if (m.type === "sync") sync(m.libs).catch(failed);
-  else if (m.type === "run") run(m).catch(failed);
+  if (m.type === "sync") ordered = ordered.then(() => sync(m.libs)).catch(failed);
+  else if (m.type === "run") ordered = ordered.then(() => run(m)).catch(failed);
   else if (m.type === "peak_query") peakQuery(m);
 });

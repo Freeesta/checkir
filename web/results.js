@@ -124,8 +124,8 @@ function wireArrows(list, ctx) {
   });
 }
 
-/** Detail of the selected candidate, always in the same reserved space. @param {any} data @param {any | null} c @param {import("./actions.js").Ctx} ctx @param {boolean} overlay @param {number} level @returns {HTMLElement} */
-function detail(data, c, ctx, overlay, level) {
+/** Detail of the selected candidate, always in the same reserved space. @param {any} data @param {any | null} c @param {import("./actions.js").Ctx} ctx @param {import("./state.js").AppState} s @param {number} level @returns {HTMLElement} */
+function detail(data, c, ctx, s, level) {
   const box = el("section", { class: "detail", "aria-label": t("results.detail") });
   if (!c) return box;
   const delta = c.rank === 1 ? data.margin : data.candidates[0].r_derivative - c.r_derivative;
@@ -138,8 +138,10 @@ function detail(data, c, ctx, overlay, level) {
     ]),
   );
   const button = actionButton("overlay.toggle", ctx, { withLabel: true, className: "btn" });
-  button.setAttribute("aria-pressed", String(overlay));
+  button.setAttribute("aria-pressed", String(s.overlay));
   box.append(el("div", { class: "row" }, [button, actionButton("subtract.open", ctx, { withLabel: true, className: "btn" })]));
+  const regions = rangeTable(s, c);
+  if (regions) box.append(regions);
   return box;
 }
 
@@ -225,9 +227,8 @@ export function renderResults(body, s, ctx) {
       ...capLines(data).map((c) => el("p", { class: "cap" }, [c])),
       ...(usedRangeLine(data) ? [el("p", { class: "cap", "data-used-range": "1" }, [usedRangeLine(data)])] : []),
       list,
-      rangeTable(s),
       el("p", { class: "chain" }, [chainLine(data)]),
-      detail(data, chosen, ctx, s.overlay, n),
+      detail(data, chosen, ctx, s, n),
     ]),
     ...residualsOf(s, file.code).map((f) => residualBlock(f, s, ctx)).filter((b) => b !== null),
   );
