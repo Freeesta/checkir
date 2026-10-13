@@ -560,6 +560,8 @@
   "regions.oop.tag": "out of plane",
   "regions.far.name": "Heavy atoms and lattice",
   "regions.far.tag": "heavy",
+  "results.count": "Candidates: {n}",
+  "table.summary": "Data table ({n} rows)",
   "card.title": "Peak at {pos} cm⁻¹",
   "card.close": "Close the card",
   "card.level_label": "Text level (↑ ↓ to change)",

@@ -560,6 +560,8 @@
   "regions.oop.tag": "fuori piano",
   "regions.far.name": "Atomi pesanti e reticolo",
   "regions.far.tag": "pesanti",
+  "results.count": "Candidati: {n}",
+  "table.summary": "Tabella dei dati ({n} righe)",
   "card.title": "Picco a {pos} cm⁻¹",
   "card.close": "Chiudi la scheda",
   "card.level_label": "Livello del testo (↑ ↓ per cambiare)",

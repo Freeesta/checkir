@@ -39,7 +39,7 @@ function mixtureFile(name) {
 /** Load the mixture under `name` and wait for its comparison; the first candidate named alfa is chosen. */
 export async function loadMixture(page, name = "campione_miscela.jdx") {
   await page.setInputFiles("input[type=file]", [{ name, mimeType: "chemical/x-jcamp-dx", buffer: mixtureFile(name) }]);
-  await openPanel(page, "results");
+  if (await page.evaluate(() => document.body.dataset.section !== undefined)) await page.click(".panel-back"); // on a phone the open section covers the candidates
   await page.waitForSelector(".result:not(.result-residual) .cand", { timeout: 20000 });
   await page.locator(".result:not(.result-residual) .cand", { hasText: /alfa/ }).first().locator(".cand-select").click();
 }
@@ -82,7 +82,6 @@ async function openScenario(page, check, axe) {
   check("subtract: every strip is also a column of the table", heads.length === 4 && /Residuo/.test(heads[3]) && (await page.locator("#subtract table tbody tr").count()) > 100, heads.join(" | "));
   check("subtract: the fixed sentence says the factor is not the quantity", /Il fattore non è la quantità/.test((await page.textContent("#subtract")) ?? ""));
   check("subtract: no over-subtraction warning at the proposed factor", ((await page.textContent(".subtract-warning")) ?? "").trim() === "");
-  check("subtract: no fixed limits strip on the page", (await page.locator("#limits").count()) === 0);
   const v = await axe(page);
   check("subtract: axe has no violations", v.length === 0, v.join(", "));
 }

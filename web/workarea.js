@@ -2,7 +2,10 @@
 import { nextStep } from "./actions.js";
 import { tipText } from "./controls.js";
 import { actionById } from "./actions.js";
-import { el, icon, setIcon } from "./dom.js";
+import { el, icon, keepFocus, setIcon } from "./dom.js";
+import { renderResults } from "./results.js";
+import { activeFile } from "./state.js";
+import { buildTableTitle } from "./table_title.js";
 import { activeKey } from "./shortcuts.js";
 import { attachTip } from "./tooltip.js";
 
@@ -28,6 +31,25 @@ export function buildNextStep(host, ctx) {
       const key = activeKey(a);
       if (key) button.setAttribute("aria-keyshortcuts", key);
       else button.removeAttribute("aria-keyshortcuts");
+    },
+  };
+}
+
+/**
+ * The candidates under the chart: rebuilt on every state change, the space reserved as soon as a spectrum is shown so the arrival of the result moves nothing.
+ * @param {HTMLElement} host
+ * @param {import("./actions.js").Ctx} ctx
+ * @returns {{ refresh: (s: import("./state.js").AppState) => void }}
+ */
+export function buildCandidates(host, ctx) {
+  buildTableTitle(/** @type {HTMLElement} */ (document.getElementById("table-section")), /** @type {HTMLElement} */ (document.getElementById("table")));
+  return {
+    refresh(s) {
+      host.toggleAttribute("data-open", activeFile(s) !== null);
+      keepFocus(host, () => {
+        host.replaceChildren();
+        renderResults(host, s, ctx);
+      });
     },
   };
 }
