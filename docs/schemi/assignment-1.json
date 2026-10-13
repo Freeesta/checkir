@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:assignment:1",
+  "title": "Assignment of the peaks of a sample",
+  "title_it": "Assegnazione dei picchi di un campione",
+  "description": "Result of the peak assignment (assignment/1): for every peak of the sample, which substance explains it, which peaks stay unexplained and which expected bands are missing.",
+  "description_it": "Risultato dell'assegnazione dei picchi (assignment/1): per ogni picco del campione, quale sostanza lo spiega, quali restano non spiegati e quali bande attese mancano.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "assignment/1"
+    },
+    "sample_spectrum_id": {
+      "description": "Id of the sample spectrum.",
+      "description_it": "Id dello spettro del campione.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reference": {
+      "description": "The candidate reference; null without any reference.",
+      "description_it": "Il riferimento candidato; null senza riferimento.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "spectrum_id": {
+          "description": "Id of the reference spectrum.",
+          "description_it": "Id dello spettro di riferimento.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "substance_id": {
+          "description": "Id of the substance.",
+          "description_it": "Id della sostanza.",
+          "type": "string"
+        },
+        "form": {
+          "description": "Form of the substance (salt, base, ...).",
+          "description_it": "Forma della sostanza (sale, base, ...).",
+          "type": "string"
+        },
+        "library": {
+          "description": "Library the spectrum comes from.",
+          "description_it": "Libreria da cui viene lo spettro.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "description": "Version of the library.",
+          "description_it": "Versione della libreria.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "spectrum_id",
+        "substance_id",
+        "form",
+        "library",
+        "version"
+      ],
+      "additionalProperties": false
+    },
+    "components": {
+      "description": "Other references (components of a mixture, other forms).",
+      "description_it": "Altri riferimenti (componenti di una miscela, altre forme).",
+      "type": "array",
+      "items": {
+        "description": "A component.",
+        "description_it": "Un componente.",
+        "type": "object",
+        "properties": {
+          "spectrum_id": {
+            "description": "Id of the reference spectrum.",
+            "description_it": "Id dello spettro di riferimento.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "substance_id": {
+            "description": "Id of the substance.",
+            "description_it": "Id della sostanza.",
+            "type": "string"
+          },
+          "form": {
+            "description": "Form of the substance (salt, base, ...).",
+            "description_it": "Forma della sostanza (sale, base, ...).",
+            "type": "string"
+          },
+          "library": {
+            "description": "Library the spectrum comes from.",
+            "description_it": "Libreria da cui viene lo spettro.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "version": {
+            "description": "Version of the library.",
+            "description_it": "Versione della libreria.",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "spectrum_id",
+          "substance_id",
+          "form",
+          "library",
+          "version"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "bands_version": {
+      "description": "Version of the group rules used; null until they are applied.",
+      "description_it": "Versione delle regole di gruppo usate; null finche non sono applicate.",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "items": {
+      "description": "One entry per peak of the sample, in the order of peaks/1.",
+      "description_it": "Una voce per picco del campione, nell'ordine di peaks/1.",
+      "type": "array",
+      "items": {
+        "description": "State of one peak of the sample.",
+        "description_it": "Stato di un picco del campione.",
+        "type": "object",
+        "properties": {
+          "peak_id": {
+            "description": "Id of the peak in peaks/1.",
+            "description_it": "Id del picco in peaks/1.",
+            "type": "string",
+            "pattern": "^p[0-9]+$"
+          },
+          "state": {
+            "description": "explained: a reference of the same form has a peak within the tolerance; explained_other_form: only another form of the substance has; unexplained: prominent peak (prominence and noise ratio from peaks_thresholds/1) nobody explains; minor: below that, or a shoulder; artifact: CO2, vapour.",
+            "description_it": "explained: un riferimento della stessa forma ha un picco entro la tolleranza; explained_other_form: solo un'altra forma della sostanza; unexplained: picco prominente (prominenza e rapporto col rumore da peaks_thresholds/1) che nessuno spiega; minor: sotto la soglia, o una spalla; artifact: CO2, vapore.",
+            "type": "string",
+            "enum": [
+              "explained",
+              "explained_other_form",
+              "unexplained",
+              "minor",
+              "artifact"
+            ]
+          },
+          "explained_by": {
+            "description": "The substance that explains the peak; null when none does.",
+            "description_it": "La sostanza che spiega il picco; null se nessuna.",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "substance_id": {
+                "description": "Id of the substance.",
+                "description_it": "Id della sostanza.",
+                "type": "string"
+              },
+              "form": {
+                "description": "Form of the substance.",
+                "description_it": "Forma della sostanza.",
+                "type": "string"
+              },
+              "ref_peak_id": {
+                "description": "Id of the peak in the peaks/1 of the reference.",
+                "description_it": "Id del picco nel peaks/1 del riferimento.",
+                "type": "string"
+              },
+              "ref_peak_cm1": {
+                "description": "Position of the reference peak in cm-1.",
+                "description_it": "Posizione del picco di riferimento in cm-1.",
+                "type": "number"
+              },
+              "delta_cm1": {
+                "description": "Reference position minus sample position in cm-1.",
+                "description_it": "Posizione del riferimento meno posizione del campione in cm-1.",
+                "type": "number"
+              }
+            },
+            "required": [
+              "substance_id",
+              "form",
+              "ref_peak_id",
+              "ref_peak_cm1",
+              "delta_cm1"
+            ],
+            "additionalProperties": false
+          },
+          "interpretations": {
+            "description": "Interpretations by group rules (bands/1); empty until the rules are applied.",
+            "description_it": "Interpretazioni delle regole di gruppo (bands/1); vuoto finche le regole non sono applicate.",
+            "type": "array",
+            "items": {}
+          },
+          "suspects": {
+            "description": "Common cuts that could explain an unexplained peak; empty until applied.",
+            "description_it": "Tagli comuni che potrebbero spiegare un picco non spiegato; vuoto finche non sono applicati.",
+            "type": "array",
+            "items": {}
+          }
+        },
+        "required": [
+          "peak_id",
+          "state",
+          "explained_by",
+          "interpretations",
+          "suspects"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "missing_expected": {
+      "description": "Peaks of the candidate with a prominence of at least 20 % that the sample lacks.",
+      "description_it": "Picchi del candidato con prominenza di almeno 20 % che mancano nel campione.",
+      "type": "array",
+      "items": {
+        "description": "A prominent peak of the candidate that the sample lacks.",
+        "description_it": "Un picco prominente del candidato che manca nel campione.",
+        "type": "object",
+        "properties": {
+          "ref_peak_id": {
+            "description": "Id of the peak in the peaks/1 of the reference.",
+            "description_it": "Id del picco nel peaks/1 del riferimento.",
+            "type": "string"
+          },
+          "ref_peak_cm1": {
+            "description": "Position in cm-1.",
+            "description_it": "Posizione in cm-1.",
+            "type": "number"
+          },
+          "prominence_rel": {
+            "description": "Prominence as a share of the highest band (0-1).",
+            "description_it": "Prominenza come quota della banda piu alta (0-1).",
+            "type": "number"
+          }
+        },
+        "required": [
+          "ref_peak_id",
+          "ref_peak_cm1",
+          "prominence_rel"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "summary": {
+      "description": "Counts for the headline; without a reference the unexplained peaks are not counted.",
+      "description_it": "Conteggi per il titolo; senza riferimento i picchi non spiegati non si contano.",
+      "type": "object",
+      "properties": {
+        "no_reference": {
+          "description": "True when no reference was chosen.",
+          "description_it": "Vero se non e stato scelto alcun riferimento.",
+          "type": "boolean"
+        },
+        "n_main": {
+          "description": "Main peaks of the sample (artifacts left out).",
+          "description_it": "Picchi principali del campione (artefatti esclusi).",
+          "type": "integer",
+          "minimum": 0
+        },
+        "n_explained": {
+          "description": "Peaks explained by a substance.",
+          "description_it": "Picchi spiegati da una sostanza.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "n_unexplained": {
+          "description": "Unexplained peaks; null without a reference.",
+          "description_it": "Picchi non spiegati; null senza riferimento.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "n_missing": {
+          "description": "Expected bands the sample lacks.",
+          "description_it": "Bande attese che mancano nel campione.",
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "no_reference",
+        "n_main",
+        "n_explained",
+        "n_unexplained",
+        "n_missing"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "sample_spectrum_id",
+    "reference",
+    "components",
+    "bands_version",
+    "items",
+    "missing_expected",
+    "summary"
+  ],
+  "additionalProperties": false
+}
