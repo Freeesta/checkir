@@ -20,7 +20,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: rustup show
       - run: cargo test --locked --release
   browsers:
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: rustup toolchain install nightly --profile minimal
       - run: cargo install cargo-fuzz --locked
       # A fixed time per reader; a crash found here becomes a case of tests/robustness.rs. Never a gate of the pull requests.
