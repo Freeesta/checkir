@@ -7,7 +7,7 @@ Ogni componente incluso nel sito o nel motore, con la sua licenza. Si aggiorna q
 | wasm-bindgen e crate collegati | MIT OR Apache-2.0 | ponte tra pagina e motore |
 
 ## Pagina
-Nessun componente di terzi: moduli ES scritti nel progetto, senza bundler.
+Nessun componente di terzi: moduli ES scritti nel progetto, senza bundler. Le icone di `web/icons.svg` sono disegnate nel progetto (nessuna icona di terzi).
 
 ## Solo sviluppo e test (non nel sito)
 | Componente | Licenza | Uso |
