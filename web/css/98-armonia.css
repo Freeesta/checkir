@@ -1,0 +1,57 @@
+/* Visual harmony: grey page, white panels, light neutral outlines, one blue accent for the active state.
+   Colours come from the tokens in style.css; this file only places them (it overrides, other area files are untouched). */
+:root { --radius: 0.5rem; --radius-pill: 999px; }
+
+.app-header, .panel { background: var(--panel); }
+.app-header { border-bottom-color: var(--border-soft); }
+.panel { border-right-color: var(--border-soft); }
+.panel-section { border-top-color: var(--border-soft); }
+.tabbar { background: var(--panel); border-top-color: var(--border-soft); }
+.hdr-tools, .dialog, .toggletip-note, .scroll, #chart, .folder { background: var(--panel); border-color: var(--border-soft); border-radius: var(--radius); }
+.dialog-head, .help-tabs { border-bottom-color: var(--border-soft); }
+.help-table th, .help-table td, .lib-item { border-color: var(--border-soft); }
+.files .files { border-left-color: var(--border-soft); }
+.dialog::backdrop { background: rgb(15 18 22 / 0.45); }
+
+/* Bar buttons: white pill, light outline, dark label; the active one is the only solid colour */
+.btn, .icon-button, .chip, .toolbar button {
+  background: var(--panel); color: var(--text); border-color: var(--border-ui); border-radius: var(--radius-pill);
+}
+.btn:hover:not(:disabled), .icon-button:hover:not(:disabled), .chip:hover, .toolbar button:hover:not(:disabled) { background: var(--bg); border-color: var(--border); }
+.chip[data-warn], .chip[data-quality] { border-color: var(--color-alert); }
+.toggletip .icon-button { background: transparent; border: 0; }
+.primary, .btn[aria-pressed="true"], .toolbar button[aria-pressed="true"], .range-presets .btn[aria-pressed="true"] {
+  background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600;
+}
+.primary:hover:not(:disabled) { filter: none; background: var(--accent); border-color: var(--accent); opacity: 0.9; }
+.lang-group { border-color: var(--border-ui); border-radius: var(--radius-pill); }
+.lang-button { border-radius: 0; background: transparent; }
+.lang-button[aria-pressed="true"], .lang-group .btn[aria-pressed="true"] { background: var(--accent); color: var(--bg); box-shadow: none; font-weight: 600; }
+
+/* Tabs: grey, the current one has a blue underline */
+.tab { color: var(--text-muted); }
+.tab[aria-current="page"] { color: var(--text); font-weight: 600; box-shadow: inset 0 -3px 0 var(--accent); }
+.help-tabs [role="tab"] { color: var(--text-muted); border-radius: 0; }
+.help-tabs [aria-selected="true"] { background: transparent; color: var(--text); border-color: transparent; box-shadow: inset 0 -3px 0 var(--accent); text-decoration: none; }
+
+/* Fields, lists, tables */
+.lib-name, kbd, .badge { background: var(--panel); border-color: var(--border-ui); }
+.lib-name { border-radius: var(--radius); }
+.file-select[aria-current], .cand-select[aria-current] { background: var(--bg); border-left-color: var(--accent); }
+th { background: var(--panel); }
+tr + tr td, .files li + li { border-top-color: var(--border-soft); }
+
+/* Chart: lighter axes and grid, thin traces (series colours stay as they are) */
+.axis { stroke: var(--text-muted); stroke-width: 1; }
+.grid { stroke: var(--border-soft); stroke-opacity: 1; }
+.curve { stroke-width: 1.25; }
+.label { fill: var(--text-muted); }
+
+/* Panels and separators drawn with the control outline elsewhere: lighter here (fields and meters keep theirs) */
+.cand, .detail, .recall-item, .result-residual, .inverse-table th, .inverse-table td { border-color: var(--border-soft); }
+.ranges, .decision, .sheet, .recall, .chart-menu, .peak-card { border-color: var(--border-soft); border-radius: var(--radius); background: var(--panel); }
+
+@media (prefers-contrast: more) {
+  .btn, .icon-button, .chip, .toolbar button, .lang-group, .lib-name, kbd, .badge { border-color: var(--text); }
+  .hdr-tools, .dialog, .scroll, #chart, .folder, .cand, .detail, .recall-item, .ranges, .decision, .sheet, .recall, .chart-menu, .peak-card { border-color: var(--text); }
+}
