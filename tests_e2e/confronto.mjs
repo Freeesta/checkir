@@ -77,11 +77,10 @@ async function levelsScenario(page, check) {
 
   // English.
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
-  await page.waitForFunction(() => /Not identified/.test(document.querySelector(".result .level")?.textContent ?? ""), null, { timeout: 5000 }).catch(() => {});
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("match: English shows the level word", /Not identified/.test((await page.textContent(".result .level")) ?? ""));
   await page.click('[data-lang="it"]');
-  await page.waitForFunction(() => document.documentElement.lang === "it");
+  await page.waitForFunction(() => document.body.dataset.langReady === "it");
 
 }
 

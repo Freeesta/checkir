@@ -75,7 +75,7 @@ async function phoneScenario(browser) {
   await page.click(".menu-button");
   check("320 px: the menu shows the tools", await page.isVisible('[data-lang="en"]'));
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   await page.keyboard.press("Escape"); // the open phone menu overlays the chart toolbar, which axe would count as an obscured target
   await page.waitForFunction(() => document.querySelector("#chart svg > text:last-child")?.textContent === "Absorbance", null, { timeout: 5000 }).catch(() => {});
   const axis = await page.textContent("#chart svg > text:last-child");
@@ -121,10 +121,10 @@ async function shortcutsScenario(browser) {
   await page.waitForSelector("dialog", { state: "detached" });
   check("shortcuts: Esc closes the list and gives the focus back", !(await page.isVisible("dialog")) && (await page.evaluate(() => document.activeElement === document.body)));
   await page.keyboard.press("l");
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("shortcuts: l changes the language", true);
   await page.keyboard.press("l");
-  await page.waitForFunction(() => document.documentElement.lang === "it");
+  await page.waitForFunction(() => document.body.dataset.langReady === "it");
   await page.keyboard.press("t");
   check("shortcuts: t changes the theme", (await page.getAttribute("html", "data-theme")) === "light");
   const before = await page.getAttribute("body", "data-panel");
@@ -234,7 +234,7 @@ async function pagesScenario(browser) {
       for (const lang of ["it", "en"]) {
         if (lang === "en") {
           await page.click('[data-lang="en"]');
-          await page.waitForFunction(() => document.documentElement.lang === "en");
+          await page.waitForFunction(() => document.body.dataset.langReady === "en");
         }
         const tag = `[${scheme}] ${p.slug} ${lang}`;
         const raw = await page.evaluate(() => [...document.querySelectorAll("[data-i18n]")].filter((e) => !e.textContent || /^[a-z]+\.[a-z0-9_.]+$/.test(e.textContent)).map((e) => e.getAttribute("data-i18n")));
@@ -284,24 +284,39 @@ async function splashScenario(browser) {
   }
 }
 
+/** Every scenario in a fixed order; SHARD="i/n" (1-based) runs scenarios i, i+n, i+2n… so n parallel jobs together run exactly all of them. */
+async function scenarios(browser) {
+  // Every tests_e2e/scenari/*.mjs default-exports one scenario; they follow the shell ones in name order.
+  const files = (await readdir(new URL("./scenari/", import.meta.url))).filter((f) => f.endsWith(".mjs")).sort();
+  const found = files.map((f) => async () => (await import(`./scenari/${f}`)).default({ browser, base, check, axe }));
+  return [
+    () => schemeScenario(browser, "light"),
+    () => schemeScenario(browser, "dark"),
+    () => phoneScenario(browser),
+    () => nextStepScenario(browser),
+    () => shellScenario(browser),
+    () => shortcutsScenario(browser),
+    () => registryScenario(check),
+    () => versionScenario(check),
+    () => nameScenario(browser),
+    () => splashScenario(browser),
+    () => pagesScenario(browser),
+    () => warningsBoxScenario(browser),
+    ...found,
+    () => browser.close(),
+  ];
+}
+
+function pickShard(list) {
+  const m = /^(\d+)\/(\d+)$/.exec(process.env.SHARD ?? "1/1");
+  if (!m || +m[1] < 1 || +m[1] > +m[2]) throw new Error(`bad SHARD ${process.env.SHARD}`);
+  return list.filter((_, i) => i % +m[2] === +m[1] - 1);
+}
+
 async function run() {
   const browser = await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
   try {
-    for (const scheme of ["light", "dark"]) await schemeScenario(browser, scheme);
-    await phoneScenario(browser);
-    await nextStepScenario(browser);
-    await shellScenario(browser);
-    await shortcutsScenario(browser);
-    await registryScenario(check);
-    await versionScenario(check);
-    await nameScenario(browser);
-    await splashScenario(browser);
-    await pagesScenario(browser);
-    await warningsBoxScenario(browser);
-    // Every tests_e2e/scenari/*.mjs default-exports one scenario; they run in name order.
-    for (const file of (await readdir(new URL("./scenari/", import.meta.url))).filter((f) => f.endsWith(".mjs")).sort()) {
-      await (await import(`./scenari/${file}`)).default({ browser, base, check, axe });
-    }
+    for (const step of pickShard(await scenarios(browser))) await step();
   } finally {
     await browser.close();
     close();

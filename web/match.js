@@ -1,7 +1,7 @@
 // @ts-check
 import { announcement } from "./alerts.js";
 import { spectrumOf } from "./files.js";
-import { libraryRows, libraryValues } from "./librerie.js";
+import { libraryOriginal, libraryRows, libraryValues } from "./librerie.js";
 import { selectedCandidate } from "./results.js";
 import { t } from "./i18n.js";
 import { choiceKey, narrowError, normalizeRanges, optionsOf } from "./ranges.js";
@@ -216,15 +216,19 @@ export function startMatching({ announce }) {
   });
 }
 
-/** The library spectrum of a candidate as stored (absorbance on the library grid), or null when it is not loaded. @param {string} library @param {string} spectrumId @returns {import("./spectrum.js").Spectrum | null} */
+/**
+ * The library spectrum of a candidate exactly as its file gives it (its own points, no resampling or smoothing), or null when
+ * the library has no such copy. The resampled vectors of the calculation are never drawn as "the reference".
+ * @param {string} library @param {string} spectrumId @returns {import("./spectrum.js").Spectrum | null}
+ */
 export function libraryCurve(library, spectrumId) {
-  const rows = libraryRows(library);
-  const values = libraryValues(library);
-  const i = rows?.findIndex((r) => r.id === spectrumId) ?? -1;
-  if (!rows || !values || i < 0) return null;
-  const n = values.length / rows.length;
-  const y = Array.from(values.subarray(i * n, (i + 1) * n));
-  return { wavenumber_cm1: y.map((_, k) => GRID.from + GRID.step * k), y, y_unit: "Absorbance" };
+  const original = libraryOriginal(library, spectrumId);
+  return original && { wavenumber_cm1: original.wavenumber_cm1, y: original.y, y_unit: original.y_unit };
+}
+
+/** Mean spacing of the points of a spectrum, cm⁻¹ (0 with fewer than two points). @param {number[]} x @returns {number} */
+export function meanStep(x) {
+  return x.length > 1 ? Math.abs(x[x.length - 1] - x[0]) / (x.length - 1) : 0;
 }
 
 /**

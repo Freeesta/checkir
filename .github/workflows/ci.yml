@@ -1,4 +1,4 @@
-# Checks of every pull request and of every push to main (goal: under 6 minutes).
+# Checks of every pull request, of every push to main and of every merge-queue group (goal: under 6 minutes).
 # The workflow has NO path filter, so the summary job `ci-ok` always reports: it is the ONLY name to put in the required checks
 # of the protected main branch. The `changes` job decides from the changed paths which jobs run; skipped jobs count as green.
 # Slow checks (all browsers, the full suite, fuzzing) run once a day in notte.yml, not here.
@@ -8,14 +8,15 @@ on:
   push:
     branches: [main]
   pull_request:
+  merge_group:
 
 permissions:
   contents: read
 
-# a new push stops the run still going on the same branch / pull request
+# a new push stops the run still going on the same pull request; runs on main and in the merge queue are never cancelled
 concurrency:
-  group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  group: ci-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   changes:
@@ -30,14 +31,14 @@ jobs:
           fetch-depth: 0
       - id: diff
         env:
-          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          BASE: ${{ github.event.pull_request.base.sha || github.event.merge_group.base_sha || github.event.before }}
         run: |
           # no usable base (first push, force push): run everything
           if [ -z "$BASE" ] || echo "$BASE" | grep -qE '^0+$' || ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then
             echo "rust=true" >> "$GITHUB_OUTPUT"; echo "web=true" >> "$GITHUB_OUTPUT"; echo "data=true" >> "$GITHUB_OUTPUT"; exit 0
           fi
           changed=$(git diff --name-only "$BASE" "$GITHUB_SHA")
-          common='^(\.github/workflows/ci\.yml|tools/controlla)'
+          common='^(\.github/workflows/ci\.yml|\.github/actions/|tools/controlla)'
           match() { echo "$changed" | grep -qE "$1|$common" && echo true || echo false; }
           echo "rust=$(match '^(crates/|Cargo\.|rust-toolchain\.toml|deny\.toml|tools/clippy_base\.json|tools/libreria/)')" >> "$GITHUB_OUTPUT"
           echo "web=$(match '^(web/|tests_e2e/|tsconfig\.json|package(-lock)?\.json|tools/costruisci_sito\.sh|crates/)')" >> "$GITHUB_OUTPUT"
@@ -52,13 +53,17 @@ jobs:
       - uses: actions/checkout@v7
       - name: Toolchain (version pinned in rust-toolchain.toml)
         run: rustup show
-      - uses: actions/cache@v6
+      - name: Cargo cache (saved only by main, restored by every run)
+        uses: actions/cache/restore@v6
         with:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
             target
-          key: rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}
+          key: rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ github.sha }}
+          restore-keys: |
+            rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
+            rust-${{ runner.os }}-
       - name: Tests (synthetic data and golden fixtures; tests that need private data skip themselves)
         run: cargo test --locked --release
       - name: WASM build
@@ -71,6 +76,15 @@ jobs:
           fi
       - name: fmt and clippy against the base that can only shrink
         run: python3 tools/controlla_rust.py
+      - name: Save the cargo cache (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/cache/save@v6
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ github.sha }}
 
   deny:
     needs: changes
@@ -82,18 +96,15 @@ jobs:
         with:
           command: check licenses sources
 
-  web:
+  # Static checks of the page: no build needed, runs in parallel with the site build.
+  web-static:
     needs: changes
     if: needs.changes.outputs.web == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with:
-          node-version: "22"
-      - name: Dev dependencies of the browser tests (the site itself has none)
-        run: npm ci --no-audit --no-fund && npx playwright install --with-deps chromium
+      - uses: ./.github/actions/node-deps
       - name: Syntax of every script
         run: for f in $(git ls-files 'web/*.js'); do node --check "$f" || exit 1; done
       - name: Types (JSDoc + tsc, strict, no build step)
@@ -102,18 +113,87 @@ jobs:
         run: python3 tools/controlla_lingue.py
       - name: No catalog reassures (safe, pure, clean, ok, negative…)
         run: python3 tools/check_words.py
-      - uses: actions/cache@v6
+
+  # The site is built once here and handed to the browser jobs as an artifact.
+  site:
+    needs: changes
+    if: needs.changes.outputs.web == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Toolchain (version pinned in rust-toolchain.toml)
+        run: rustup show
+      - name: Cargo and wasm-bindgen cache (saved only by main, restored by every run)
+        uses: actions/cache/restore@v6
         with:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
             ~/.cargo/bin/wasm-bindgen
             target
-          key: web-rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}
+          key: site-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ github.sha }}
+          restore-keys: |
+            site-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
+            site-${{ runner.os }}-
       - name: Build the site (page + engine .wasm)
         run: bash tools/costruisci_sito.sh
-      - name: Smoke e2e with accessibility checks (axe, keyboard, zoom 400 %, light/dark, both languages)
+      - name: Save the cache (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/cache/save@v6
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin/wasm-bindgen
+            target
+          key: site-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ github.sha }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site
+          include-hidden-files: true
+          retention-days: 1
+
+  # Smoke e2e with accessibility checks (axe, keyboard, zoom 400 %, light/dark, both languages): the scenarios of fumo.mjs are split
+  # over 3 parallel jobs (SHARD=i/n); together they run exactly the same checks as one run.
+  web-e2e:
+    needs: [changes, site]
+    if: needs.changes.outputs.web == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ["1/3", "2/3", "3/3"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/node-deps
+        with:
+          browser: "true"
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+      - name: Smoke e2e, shard ${{ matrix.shard }}
+        env:
+          SHARD: ${{ matrix.shard }}
         run: node tests_e2e/fumo.mjs
+
+  web-privacy:
+    needs: [changes, site]
+    if: needs.changes.outputs.web == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/node-deps
+        with:
+          browser: "true"
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
       - name: Privacy (T1 exact CSP and no remote URL; T2 canary file, no request out, nothing stored)
         run: node tests_e2e/riservatezza.mjs
 
@@ -153,13 +233,13 @@ jobs:
   # The one name for the protection of main: green when every job passed or was skipped because its paths did not change.
   ci-ok:
     if: always()
-    needs: [changes, rust, deny, web, limits, data]
+    needs: [changes, rust, deny, web-static, site, web-e2e, web-privacy, limits, data]
     runs-on: ubuntu-24.04
     steps:
       - name: every job passed or was skipped
         env:
-          RESULTS: ${{ needs.changes.result }} ${{ needs.rust.result }} ${{ needs.deny.result }} ${{ needs.web.result }} ${{ needs.limits.result }} ${{ needs.data.result }}
+          RESULTS: ${{ needs.changes.result }} ${{ needs.rust.result }} ${{ needs.deny.result }} ${{ needs.web-static.result }} ${{ needs.site.result }} ${{ needs.web-e2e.result }} ${{ needs.web-privacy.result }} ${{ needs.limits.result }} ${{ needs.data.result }}
         run: |
-          echo "changes rust deny web limits data: $RESULTS"
+          echo "changes rust deny web-static site web-e2e web-privacy limits data: $RESULTS"
           case "$RESULTS" in *failure*|*cancelled*) exit 1;; esac
           [ "${{ needs.changes.result }}" = "success" ]
