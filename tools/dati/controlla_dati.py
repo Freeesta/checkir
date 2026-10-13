@@ -115,7 +115,7 @@ def check_spectrum(label: str, jdx: Path, meta_path: Path, meta: dict, forbidden
         if stored.get(crit) != res:
             out.append(f"{meta_path}: quality '{crit}' is stored as {stored.get(crit)} but the file gives {res}")
         if res == FAIL_ON:
-            out.append(f"{jdx}: quality criterion '{crit}' fails (see ARCHITETTO_DATI_2 section 8)")
+            out.append(f"{jdx}: quality criterion '{crit}' fails")
     return out, j.ys
 
 

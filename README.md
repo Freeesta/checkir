@@ -16,7 +16,7 @@ Open-source FTIR analysis for drug checking, for harm-reduction services and lab
 - It does not measure quantities. A result never means that a sample is safe.
 
 ## 3. Try it in 1 minute
-Open the site: <https://freeesta.github.io/checkir/>. For now it shows a synthetic test spectrum; file loading, library matching and peak explanation are being added step by step.
+Open the site: <https://freeesta.github.io/checkir/>. Load a spectrum file (or pick a demo spectrum): the program shows it, compares it with the libraries and explains the peaks.
 
 ## 4. Privacy in 3 lines
 - Your files are read and processed only in your browser; nothing is sent anywhere.

@@ -44,7 +44,7 @@ fn open(root: &Path, file: &str) -> Spectrum {
 
 /// Groups of files of the same compound and form: the first file (in library order) and the files of the other libraries.
 fn groups(root: &Path) -> Vec<(String, Vec<String>)> {
-    let table = rows(&root.join("scratchpad/esperimenti/matematica/identita_librerie.csv"));
+    let table = rows(&root.join("studio/esperimenti/matematica/identita_librerie.csv"));
     let mut by_key: BTreeMap<(String, String), Vec<(String, String)>> = BTreeMap::new();
     for r in &table {
         let (file, lib, form, key) = (&r[0], &r[1], &r[4], &r[7]);

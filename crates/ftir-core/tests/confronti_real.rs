@@ -1,5 +1,5 @@
 //! Library comparison on the real libraries of the private repository: reproduces the oracle of bench 1
-//! (`scratchpad/esperimenti/matematica/results/livelli_banco1.csv`). Skipped without `CHECKIR_DATA`.
+//! (`studio/esperimenti/matematica/results/livelli_banco1.csv`). Skipped without `CHECKIR_DATA`.
 mod common;
 use ftir_core::confronti::cerca::search;
 use ftir_core::confronti::indice::Index;
@@ -45,7 +45,7 @@ struct Row {
 }
 
 fn load(root: &Path) -> (Vec<Row>, Vec<Spectrum>) {
-    let dir = root.join("scratchpad/esperimenti/matematica");
+    let dir = root.join("studio/esperimenti/matematica");
     let rows: Vec<Row> = csv(&dir.join("identita_librerie.csv"))
         .into_iter()
         .map(|c| Row {
@@ -103,7 +103,7 @@ fn reproduces_the_levels_of_bench_1() {
     while index.twins_step(256).0 < index.total() {}
     let t = Thresholds::embedded().unwrap();
     let oracle: HashMap<String, Vec<String>> =
-        csv(&root.join("scratchpad/esperimenti/matematica/results/livelli_banco1.csv"))
+        csv(&root.join("studio/esperimenti/matematica/results/livelli_banco1.csv"))
             .into_iter()
             .map(|c| (c[0].clone(), c))
             .collect();

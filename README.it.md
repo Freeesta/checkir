@@ -16,7 +16,7 @@ Analisi FTIR open source per il drug checking, per i servizi di riduzione del da
 - Non misura le quantità. Un risultato non significa mai che un campione sia sicuro.
 
 ## 3. Provalo in 1 minuto
-Apri il sito: <https://freeesta.github.io/checkir/>. Per ora mostra uno spettro sintetico di prova; caricamento dei file, confronto con le librerie e spiegazione dei picchi arrivano passo dopo passo.
+Apri il sito: <https://freeesta.github.io/checkir/>. Carica un file di spettro (o scegli uno spettro dimostrativo): il programma lo mostra, lo confronta con le librerie e spiega i picchi.
 
 ## 4. Privacy in 3 righe
 - I tuoi file sono letti ed elaborati solo nel tuo browser; non viene inviato nulla a nessuno.

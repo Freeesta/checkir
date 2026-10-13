@@ -1,5 +1,5 @@
 # Pagina (`web/`): guscio, stile, pagine
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`, `pagina_miscele.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri.
 
 ## Struttura
 - `index.html`: scheletro con CSP, link «salta», `<header id=app-header>`, `<aside id=panel>`, area di lavoro (`#workbar`, grafico, `#candidates`, tabella dei dati in `<details id=table-section>` chiuso), `<nav id=tabbar>`, piè di pagina col solo nome (`#footer-name`), `#status` (annunci); nessuna logica.
