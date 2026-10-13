@@ -123,7 +123,7 @@ button, select { font: inherit; color: var(--text); }
 .logo { width: 2rem; height: 2rem; flex: none; background: var(--color-brand); -webkit-mask: url(img/logo.svg) center / contain no-repeat; mask: url(img/logo.svg) center / contain no-repeat; }
 .chips { display: flex; gap: 0.4rem; min-width: 0; }
 .chip { min-height: 2.25rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.chip[data-warn] { border-color: var(--color-alert); }
+.chip[data-warn], .chip[data-quality] { border-color: var(--color-alert); }
 .hdr-tools { display: flex; align-items: center; gap: 0.4rem; margin-left: auto; }
 .menu-button { display: none; margin-left: auto; }
 .lang-group { display: inline-flex; border: 1px solid var(--border); border-radius: 0.4rem; overflow: hidden; }

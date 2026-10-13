@@ -119,14 +119,15 @@ async function doEverything(page) {
     await page.mouse.up();
   }
   await page.click('[data-fk="range-clear"]');
+  await page.waitForSelector(".result[data-level]", { timeout: 20000 }); // a new result moves the panel to section 3: open section 1 after it
   await page.evaluate(() => { document.querySelector('details[data-panel="files"]').open = true; });
   // Watched folder (stand-in picker): choose, remember, open-at-once, stop; at the end nothing is remembered.
   if ((await page.getAttribute("body", "data-panel")) === "rail") await page.click('[data-action="panel.toggle"]');
   await page.click("#folder-choose");
   await page.check("#folder-remember");
   await page.check("#folder-auto");
+  await page.uncheck("#folder-remember"); // the switches exist only while a folder is watched or remembered
   await page.click("#folder-stop");
-  await page.uncheck("#folder-remember");
   await page.evaluate(() => navigator.serviceWorker?.ready);
 }
 
