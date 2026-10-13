@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ethyleneoxynitazene",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Ethyleneoxynitazene"
+    },
+    "it": {
+      "preferred": "Ethyleneoxynitazene"
+    }
+  },
+  "iupac": "2-[2-(2,3-dihydro-1-benzofuran-5-ylmethyl)-5-nitrobenzimidazol-1-yl]-N,N-diethylethanamine",
+  "formula": "C22H26N4O3",
+  "molar_mass_g_mol": 394.5,
+  "smiles": "CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC4=C(C=C3)OCC4",
+  "inchi": "InChI=1S/C22H26N4O3/c1-3-24(4-2)10-11-25-20-7-6-18(26(27)28)15-19(20)23-22(25)14-16-5-8-21-17(13-16)9-12-29-21/h5-8,13,15H,3-4,9-12,14H2,1-2H3",
+  "inchikey": "IPSJQZUMCSELFZ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "3085641-39-7",
+    "pubchem_cid": 168310596
+  },
+  "classes": {
+    "chemical": [
+      "nitazenes"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

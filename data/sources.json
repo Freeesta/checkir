@@ -4854,6 +4854,143 @@
       "consulted": "2026-10-14",
       "archive_url": "https://web.archive.org/web/20241212101632/https://swgdrug.org/Monographs/5,6-MDAI.pdf",
       "tier": "agency"
+    },
+    {
+      "id": "krotulski2021b",
+      "type": "paper",
+      "title": "Brorphine - investigation and quantitation of a new potent synthetic opioid in forensic toxicology casework using liquid chromatography-mass spectrometry (J Forensic Sci 66:664-676)",
+      "authors": [
+        "A. J. Krotulski",
+        "D. M. Papsun",
+        "C. Noble",
+        "S. L. Kacinko",
+        "B. K. Logan"
+      ],
+      "year": 2021,
+      "doi": "10.1111/1556-4029.14623",
+      "url": "https://doi.org/10.1111/1556-4029.14623",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "vandeputte2024-brorphine",
+      "type": "paper",
+      "title": "Elucidating the harm potential of brorphine analogues as new synthetic opioids: synthesis, in vitro, and in vivo characterization (Neuropharmacology 260:110113)",
+      "authors": [
+        "M. M. Vandeputte",
+        "et al."
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.neuropharm.2024.110113",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39154855/",
+      "archive_url": "https://web.archive.org/web/20260808153208/https://pubmed.ncbi.nlm.nih.gov/39154855/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "marchei2026",
+      "type": "paper",
+      "title": "Brorphine and its analogues: pharmacology, toxicology, and biomonitoring (Ther Drug Monit 48:424-431)",
+      "authors": [
+        "E. Marchei",
+        "S. Graziano",
+        "S. Pichini",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1097/FTD.0000000000001446",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41622550/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "jadhav2025",
+      "type": "paper",
+      "title": "Biotransformation and kinetics of selected benzimidazole synthetic opioids in human hepatocytes (Front Pharmacol 16:1656437)",
+      "authors": [
+        "G. R. Jadhav",
+        "P. S. Fasinu"
+      ],
+      "year": 2025,
+      "doi": "10.3389/fphar.2025.1656437",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41394146/",
+      "archive_url": "https://web.archive.org/web/20260416054536/https://pubmed.ncbi.nlm.nih.gov/41394146/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "taoussi2025",
+      "type": "paper",
+      "title": "In vitro metabolism of a benzofuran-substituted nitazene: ethyleneoxynitazene (Metabolites 15)",
+      "authors": [
+        "O. Taoussi",
+        "D. Y. Ovat",
+        "F. Tavoletta",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.3390/metabo15100679",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41149656/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "huang2025",
+      "type": "paper",
+      "title": "Metabolism of six novel nitazenes in human liver microsomes based on ultra-high-performance liquid chromatography coupled with high-resolution mass spectrometry (Drug Test Anal 17:1323-1335)",
+      "authors": [
+        "B. Huang",
+        "Z. Hua",
+        "C. Liu",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1002/dta.3838",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39659178/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "hataoka2025",
+      "type": "paper",
+      "title": "Evaluation of rewarding effects of nitazene analogs: results from conditioned place preference tests and in vivo microdialysis experiments in mice (J Toxicol Sci 50:33-43)",
+      "authors": [
+        "K. Hataoka",
+        "M. Hojo",
+        "S. Nomura",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.2131/jts.50.33",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39779230/",
+      "archive_url": "https://web.archive.org/web/20250202190702/https://pubmed.ncbi.nlm.nih.gov/39779230/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "gatch2025",
+      "type": "paper",
+      "title": "Discriminative stimulus and antinociceptive effects of sixteen nitazene analogs in rodents (Neuropharmacology 272:110416)",
+      "authors": [
+        "M. B. Gatch",
+        "R. D. Hill",
+        "M. Sundar",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.neuropharm.2025.110416",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40120927/",
+      "archive_url": "https://web.archive.org/web/20260228112646/https://pubmed.ncbi.nlm.nih.gov/40120927/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
     }
   ]
 }
