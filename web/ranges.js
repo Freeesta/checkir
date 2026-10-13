@@ -9,11 +9,9 @@ import { t } from "./i18n.js";
  * @typedef {import("./state.js").RangeChoice} RangeChoice
  */
 
-/** The grid of the library packages and the zone always left out (diamond), cm⁻¹. */
-export const GRID = { from: 650, to: 3800, step: 2 };
-export const MASK_CM1 = /** @type {Range} */ ([1900, 2400]);
-/** Smallest region the engine accepts (`range_limits` in the thresholds). */
-export const LIMITS = { minCm1: 400, minPoints: 150 };
+/** The grid of the library packages, the zone always left out (diamond) and the smallest region the engine accepts: all read from the engine. */
+export { GRID, MASK_CM1, LIMITS } from "./engine_limits.js";
+import { GRID, MASK_CM1, LIMITS } from "./engine_limits.js";
 
 /**
  * The presets the page offers, mirrored from `range_presets` of `data/soglie_confronto.json` (`fumo.mjs` checks both lists are equal).

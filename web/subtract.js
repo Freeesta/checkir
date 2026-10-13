@@ -3,7 +3,6 @@ import { addResidual, lastResidual, closeFile, spectrumOf } from "./files.js";
 import { t } from "./i18n.js";
 import { engineUnit } from "./spectrum.js";
 import { libraryCurve, runMatch } from "./match.js";
-import { noiseOf } from "./peaks.js";
 import { candidateName, selectedCandidate } from "./results.js";
 import { activeFile, getState, resultOf, subscribe, update } from "./state.js";
 
@@ -13,8 +12,6 @@ import { activeFile, getState, resultOf, subscribe, update } from "./state.js";
  * and nothing is stored: the open subtraction and the residuals live in memory.
  */
 
-/** A residual that goes under minus this many noise sigmas where the reference is strong is over-subtracted (same ratio as the automatic subtraction of the engine). */
-export const OVER_RATIO = 3;
 /** Step of the factor by arrow and by page key. */
 export const STEP = 0.01;
 export const BIG_STEP = 0.1;
@@ -93,8 +90,7 @@ function compute(sub) {
     strips.residual.push(r);
     strips.reference.push(a - r);
   }
-  const noise = noiseOf(sample);
-  strips.over = strips.zoneMinimum !== null && noise !== null && strips.zoneMinimum < -OVER_RATIO * noise;
+  strips.over = cur.over_subtraction === true;
   return { strips };
 }
 

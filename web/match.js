@@ -15,11 +15,11 @@ import { activeFile, activeLibraries, candidateKey, getState, readPref, resultOf
  * are there (preference `autoMatch`, on by default), and `c` runs it again.
  */
 
-/** Same grid as the library packages (`Grid::STANDARD`): 650–3800 cm⁻¹, step 2. */
-const GRID = { from: 650, step: 2 };
-
-/** The zone left out of the comparison (diamond absorption), cm⁻¹: the mask of the chain `confronto_v1`. @type {[number, number]} */
-export const EXCLUDED_CM1 = [1900, 2400];
+import { GRID as ENGINE_GRID, MASK_CM1 } from "./engine_limits.js";
+/** Same grid as the library packages, read from the engine (getters: the values arrive after the module loads). */
+const GRID = { get from() { return ENGINE_GRID.from; }, get step() { return ENGINE_GRID.step; } };
+/** The zone left out of the comparison (diamond absorption), cm⁻¹, from the engine. @type {[number, number]} */
+export const EXCLUDED_CM1 = MASK_CM1;
 
 /** @type {Worker | null} */
 let worker = null;
