@@ -1,0 +1,199 @@
+{
+ "comment": "Illustrative geometry, partial charges and mode amplitudes for the dipole figure: not computed, not measured. Observed gas-phase wavenumbers: CO2 asym 2349 and bend 667 (Wikipedia, Infrared spectroscopy); H2O 3656.7, 1594.6, 3755.8 (NIST Chemistry WebBook).",
+ "molecules": [
+  {
+   "id": "co2",
+   "atoms": [
+    {
+     "el": "O",
+     "xyz": [
+      -1.16,
+      0,
+      0
+     ],
+     "charge": -0.3
+    },
+    {
+     "el": "C",
+     "xyz": [
+      0,
+      0,
+      0
+     ],
+     "charge": 0.6
+    },
+    {
+     "el": "O",
+     "xyz": [
+      1.16,
+      0,
+      0
+     ],
+     "charge": -0.3
+    }
+   ],
+   "modes": [
+    {
+     "id": "sym",
+     "displacements": [
+      [
+       -0.2,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0
+      ],
+      [
+       0.2,
+       0,
+       0
+      ]
+     ],
+     "observed_cm1": null
+    },
+    {
+     "id": "asym",
+     "displacements": [
+      [
+       0.2,
+       0,
+       0
+      ],
+      [
+       -0.5328,
+       0,
+       0
+      ],
+      [
+       0.2,
+       0,
+       0
+      ]
+     ],
+     "observed_cm1": 2349
+    },
+    {
+     "id": "bend",
+     "displacements": [
+      [
+       0,
+       0.2,
+       0
+      ],
+      [
+       0,
+       -0.5328,
+       0
+      ],
+      [
+       0,
+       0.2,
+       0
+      ]
+     ],
+     "observed_cm1": 667
+    }
+   ]
+  },
+  {
+   "id": "h2o",
+   "atoms": [
+    {
+     "el": "O",
+     "xyz": [
+      0,
+      0,
+      0
+     ],
+     "charge": -0.8
+    },
+    {
+     "el": "H",
+     "xyz": [
+      -0.7591,
+      0.5877,
+      0
+     ],
+     "charge": 0.4
+    },
+    {
+     "el": "H",
+     "xyz": [
+      0.7591,
+      0.5877,
+      0
+     ],
+     "charge": 0.4
+    }
+   ],
+   "modes": [
+    {
+     "id": "sym",
+     "displacements": [
+      [
+       -0.0,
+       -0.011572,
+       -0.0
+      ],
+      [
+       -0.118603,
+       0.091833,
+       0.0
+      ],
+      [
+       0.118603,
+       0.091833,
+       0.0
+      ]
+     ],
+     "observed_cm1": 3656.7
+    },
+    {
+     "id": "bend",
+     "displacements": [
+      [
+       -0.0,
+       -0.014945,
+       -0.0
+      ],
+      [
+       0.091833,
+       0.118603,
+       0.0
+      ],
+      [
+       -0.091833,
+       0.118603,
+       0.0
+      ]
+     ],
+     "observed_cm1": 1594.6
+    },
+    {
+     "id": "asym",
+     "displacements": [
+      [
+       0.014945,
+       -0.0,
+       -0.0
+      ],
+      [
+       -0.118603,
+       0.091833,
+       0.0
+      ],
+      [
+       -0.118603,
+       -0.091833,
+       -0.0
+      ]
+     ],
+     "observed_cm1": 3755.8
+    }
+   ]
+  }
+ ]
+}
