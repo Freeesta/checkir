@@ -9,7 +9,7 @@ async function openPanel(page, name) {
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();
 }
 
-async function prepare(browser, base) {
+export async function prepare(browser, base) {
   const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 900 } });
   const page = await ctx.newPage();
   const errors = [];

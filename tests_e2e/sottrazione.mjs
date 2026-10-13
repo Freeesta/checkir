@@ -55,7 +55,7 @@ export async function subtractionTrace(page, fileName) {
 }
 
 async function prepare(browser, base) {
-  const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 900 } });
+  const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 768 } });
   const page = await ctx.newPage();
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
@@ -108,11 +108,15 @@ async function factorScenario(page, check) {
   check("subtract: the proposed value comes back and the warning goes", (await factor(page)) === k0 && ((await page.textContent(".subtract-warning")) ?? "").trim() === "");
 }
 
+/** The chart is shown and at least its upper half is inside the window. */
+const chartInView = (page) => page.evaluate(() => { const r = document.querySelector("#chart")?.getBoundingClientRect(); return !!r && r.width > 0 && r.top >= 0 && r.top + r.height / 2 <= innerHeight; });
+
 /** Search the residual: it is a new spectrum under C1, its candidates are below the sample's, B is the first one, the original is unchanged. */
 async function searchScenario(page, check, axe, errors) {
   const before = await original(page);
   await page.click('#subtract [data-action="subtract.search"]');
   await page.waitForSelector(".result-residual[data-level] .cand-name", { timeout: 20000 });
+  check("subtract: after the search the chart stays in view next to the new result", await chartInView(page));
   const name = (await page.locator(".result-residual .cand-name").first().textContent()) ?? "";
   check("subtract: the first candidate of the residual is beta", /beta/i.test(name), name);
   check("subtract: the sample's candidates are still there, above", (await page.locator(".result:not(.result-residual) .cand").count()) > 0 && (await page.evaluate(() => { const a = document.querySelector(".result:not(.result-residual)"); const b = document.querySelector(".result-residual"); return !!(a && b && a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING); })));
