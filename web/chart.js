@@ -1,6 +1,6 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
-import { visibleIndices } from "./spectrum.js";
+import { thin, visibleIndices } from "./spectrum.js";
 import { clamp, pan, zoom } from "./view.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
@@ -11,6 +11,12 @@ const W = 800;
 const H = 360;
 const M = { l: 56, r: 16, t: 12, b: 44 };
 const MAX_RIGHE = 400;
+const PLOT_W = W - M.l - M.r;
+
+/** @param {Spectrum} s @returns {string} */
+function yLabel(s) {
+  return s.y_unit === undefined || s.y_unit === "Absorbance" ? t("chart.axis_y") : t("chart.axis_y_other");
+}
 
 /**
  * @param {string} name
@@ -46,9 +52,13 @@ function ticks(lo, hi, n) {
  */
 export function draw(host, s, v) {
   const idx = visibleIndices(s, v.min, v.max);
-  const ys = idx.map((i) => s.y[i]);
-  const y0 = Math.min(0, ...ys);
-  const y1 = Math.max(...ys) * 1.05 || 1;
+  let y0 = 0;
+  let y1 = -Infinity;
+  for (const i of idx) {
+    if (s.y[i] < y0) y0 = s.y[i];
+    if (s.y[i] > y1) y1 = s.y[i];
+  }
+  y1 = y1 > y0 ? (y1 - y0) * 1.05 + y0 : y0 + 1;
   const px = (/** @type {number} */ x) => M.l + ((v.max - x) / (v.max - v.min)) * (W - M.l - M.r);
   const py = (/** @type {number} */ y) => H - M.b - ((y - y0) / (y1 - y0)) * (H - M.t - M.b);
   const root = svg("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": t("chart.title") });
@@ -65,11 +75,11 @@ export function draw(host, s, v) {
     root.append(e);
   }
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
-  root.append(svg("polyline", { class: "curve", points: idx.map((i) => `${px(s.wavenumber_cm1[i])},${py(s.y[i])}`).join(" ") }));
+  root.append(svg("polyline", { class: "curve", points: thin(idx, s.y, PLOT_W).map((i) => `${px(s.wavenumber_cm1[i])},${py(s.y[i])}`).join(" ") }));
   const ex = svg("text", { class: "label", x: W / 2, y: H - 6, "text-anchor": "middle" });
   ex.textContent = t("chart.axis_x");
   const ey = svg("text", { class: "label", x: 14, y: H / 2, "text-anchor": "middle", transform: `rotate(-90 14 ${H / 2})` });
-  ey.textContent = t("chart.axis_y");
+  ey.textContent = yLabel(s);
   root.append(ex, ey);
   host.replaceChildren(root);
 }
@@ -87,7 +97,7 @@ export function table(host, s, v) {
   const cap = tab.createCaption();
   cap.textContent = t("table.caption");
   const row = tab.createTHead().insertRow();
-  for (const name of [t("table.wavenumber"), t("table.absorbance")]) {
+  for (const name of [t("table.wavenumber"), yLabel(s)]) {
     const th = document.createElement("th");
     th.scope = "col";
     th.textContent = name;
@@ -103,16 +113,21 @@ export function table(host, s, v) {
 }
 
 /**
- * Wire the chart: keyboard (+ - arrows 0) and buttons, both without any drag.
+ * Wire the chart: keyboard (+ - arrows 0) and buttons, both without any drag. The spectrum is swapped with `set`; with none, a short line says so.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
- * @param {Spectrum} s
- * @returns {() => void} redraw (call after a language change)
+ * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void }} `redraw` after a language change
  */
-export function wire(el, s) {
-  const xs = s.wavenumber_cm1;
-  const full = { min: Math.min(...xs), max: Math.max(...xs) };
+export function wire(el) {
+  /** @type {Spectrum | null} */
+  let s = null;
+  let full = { min: 0, max: 1 };
   let v = { ...full };
   const update = () => {
+    if (!s) {
+      for (const host of [el.chart, el.tab]) host.replaceChildren(Object.assign(document.createElement("p"), { className: "empty", textContent: t("chart.empty") }));
+      el.range.textContent = "";
+      return;
+    }
     draw(el.chart, s, v);
     table(el.tab, s, v);
     el.range.textContent = t("chart.range", { from: formatNumber(v.min), to: formatNumber(v.max) });
@@ -127,26 +142,54 @@ export function wire(el, s) {
   ];
   const keys = { "+": 0, "=": 0, "-": 1, ArrowLeft: 2, ArrowRight: 3, "0": 4 };
   const apply = (/** @type {number} */ i) => {
+    if (!s) return;
     v = actions[i][2]();
     update();
   };
-  el.toolbar.replaceChildren(
-    ...actions.map(([symbol, label], i) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.textContent = symbol;
-      b.setAttribute("aria-label", label());
-      b.title = label();
-      b.addEventListener("click", () => apply(i));
-      return b;
-    }),
-  );
+  const buttons = actions.map(([symbol], i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = symbol;
+    b.addEventListener("click", () => apply(i));
+    return b;
+  });
+  const relabel = () => {
+    buttons.forEach((b, i) => {
+      b.setAttribute("aria-label", actions[i][1]());
+      b.title = actions[i][1]();
+      b.disabled = !s;
+    });
+  };
+  el.toolbar.replaceChildren(...buttons);
   el.chart.addEventListener("keydown", (e) => {
     const i = keys[/** @type {keyof typeof keys} */ (e.key)];
     if (i === undefined) return;
     e.preventDefault();
     apply(i);
   });
+  relabel();
   update();
-  return update;
+  return {
+    redraw: () => {
+      relabel();
+      update();
+    },
+    set: (next) => {
+      if (next !== s) {
+        s = next;
+        if (s) {
+          let lo = Infinity;
+          let hi = -Infinity;
+          for (const x of s.wavenumber_cm1) {
+            if (x < lo) lo = x;
+            if (x > hi) hi = x;
+          }
+          full = { min: lo, max: hi };
+          v = { ...full };
+        }
+      }
+      relabel();
+      update();
+    },
+  };
 }

@@ -4,7 +4,7 @@
  * `step` orders the guided flow: the "next step" button shows the first enabled action by `step`. `key` is for the shortcuts package.
  * @typedef {{
  *   getState: () => import("./state.js").AppState,
- *   openFile: () => void, loadDemo: () => void, setLang: (code: string) => void, toggleLang: () => void, cycleTheme: () => void,
+ *   openFile: () => void, loadDemo: () => void, selectFile: (code: string) => void, closeFile: (code: string) => void, setLang: (code: string) => void, toggleLang: () => void, cycleTheme: () => void,
  *   togglePanel: () => void, goto: (panelId: string) => void, openDialog: (id: string) => void,
  * }} Ctx
  * @typedef {{
@@ -33,6 +33,7 @@ function gotoAction(n, id, icon) {
 export const ACTIONS = [
   { id: "file.open", labelKey: "action.file_open.label", tipKey: "action.file_open.tip", icon: "upload", section: "files", step: 1, run: (c) => c.openFile(), enabled: always },
   { id: "demo.load", labelKey: "action.demo_load.label", tipKey: "action.demo_load.tip", icon: "demo", section: "files", run: (c) => c.loadDemo(), enabled: always },
+  { id: "file.close", labelKey: "action.file_close.label", tipKey: "action.file_close.tip", icon: "close", section: "files", run: (c) => { const code = c.getState().active; if (code) c.closeFile(code); }, enabled: (s) => s.files.length > 0 },
   { id: "match.run", labelKey: "action.match_run.label", tipKey: "action.match_run.tip", icon: "compare", section: "results", step: 2, run: () => {}, enabled: (s) => s.files.length > 0 && s.libraries.length > 0 },
   { id: "subtract.open", labelKey: "action.subtract_open.label", tipKey: "action.subtract_open.tip", icon: "subtract", section: "files", step: 3, run: () => {}, enabled: never },
   { id: "sheet.open", labelKey: "action.sheet_open.label", tipKey: "action.sheet_open.tip", icon: "sheet", section: "sheet", step: 4, run: () => {}, enabled: never },
