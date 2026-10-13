@@ -1,0 +1,65 @@
+{
+  "schema": "datasheet/1",
+  "substance": "alpha-php",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "beta-keto reduced metabolite (M1)",
+        "reaction": "reduction_keto",
+        "source": "yeh2024"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "aphp.isomers",
+      "topic": "testing",
+      "source": "yeh2024"
+    },
+    {
+      "key": "aphp.agitation",
+      "topic": "mental_health",
+      "source": "brueckner2024"
+    },
+    {
+      "key": "aphp.combination",
+      "topic": "combination",
+      "source": "brueckner2024"
+    },
+    {
+      "key": "aphp.signs",
+      "topic": "overdose_signs",
+      "source": "bassi2025aphp"
+    }
+  ]
+}
