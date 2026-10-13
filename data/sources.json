@@ -2516,6 +2516,22 @@
       "license": "CC BY 4.0",
       "consulted": "2026-10-13",
       "tier": "primary"
+    },
+    {
+      "id": "anchondo2025",
+      "type": "paper",
+      "title": "Locomotor and discriminative stimulus effects of fluorinated analogs of amphetamine and methamphetamine in mice and rats (J Pharmacol Exp Ther)",
+      "authors": [
+        "Anchondo",
+        "Shetty",
+        "Gatch"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.jpet.2025.103617",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40553972/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
     }
   ]
 }
