@@ -1,0 +1,27 @@
+{
+  "schema": "ftir-form/1",
+  "id": "lidocaine-hcl-h2o",
+  "substance": "lidocaine",
+  "form_type": "salt",
+  "counterion": "chloride",
+  "stoichiometry": "1:1",
+  "water_eq": 1,
+  "stereo": "unspecified",
+  "inchikey_form": "YECIFGHRMFEPJK-UHFFFAOYSA-N",
+  "notes": {
+    "en": "Hydrochloride monohydrate.",
+    "it": "Cloridrato monoidrato."
+  },
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

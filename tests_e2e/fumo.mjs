@@ -1,31 +1,10 @@
 // Smoke e2e: the page loads, draws the synthetic spectrum with its table, is keyboard-operable, axe
 // (light and dark), fits a 320 px viewport (zoom 400 %), and numbers use the decimal point in both languages.
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { chromium, firefox, webkit } from "playwright";
-import { folderScenario } from "./cartella.mjs";
-import { FIXTURE, loadingScenario } from "./caricamento.mjs";
-import { areaScenario } from "./area.mjs";
-import { binariesScenario } from "./binari.mjs";
-import { cleanScenario } from "./pulizia.mjs";
-import { demoScenario } from "./demo.mjs";
-import { matchPureScenario, matchScenario } from "./confronto.mjs";
-import { libraryTestScenario } from "./prova.mjs";
-import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
-import { inverseScenario } from "./inversa.mjs";
-import { peaksScenario } from "./picchi.mjs";
-import { collaudoScenario } from "./collaudo.mjs";
-import { collaudoCScenario } from "./collaudo_c.mjs";
-import { exportScenario } from "./esporta.mjs";
-import { rowMenuScenario } from "./menu_righe.mjs";
-import { recallScenario } from "./richiamo.mjs";
-import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
+import { FIXTURE } from "./caricamento.mjs";
 import { registryScenario } from "./registri.mjs";
-import { sheetScenario } from "./scheda.mjs";
-import { sheetsPureScenario, sheetsScenario } from "./schede.mjs";
-import { subtractionScenario } from "./sottrazione.mjs";
 import { startSite } from "./sito.mjs";
-import { toolsScenario } from "./strumenti.mjs";
-import { teoriaScenario } from "./teoria.mjs";
 import { versionScenario } from "./versione.mjs";
 
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
@@ -318,7 +297,10 @@ async function splashScenario(browser) {
 }
 
 /** Every scenario in a fixed order; SHARD="i/n" (1-based) runs scenarios i, i+n, i+2n… so n parallel jobs together run exactly all of them. */
-function scenarios(browser) {
+async function scenarios(browser) {
+  // Every tests_e2e/scenari/*.mjs default-exports one scenario; they follow the shell ones in name order.
+  const files = (await readdir(new URL("./scenari/", import.meta.url))).filter((f) => f.endsWith(".mjs")).sort();
+  const found = files.map((f) => async () => (await import(`./scenari/${f}`)).default({ browser, base, check, axe }));
   return [
     () => schemeScenario(browser, "light"),
     () => schemeScenario(browser, "dark"),
@@ -332,33 +314,7 @@ function scenarios(browser) {
     () => splashScenario(browser),
     () => pagesScenario(browser),
     () => warningsBoxScenario(browser),
-    () => loadingScenario(browser, base, check, axe),
-    () => binariesScenario(browser, base, check, axe),
-    () => demoScenario(browser, base, check, axe),
-    () => librariesPureScenario(check),
-    () => librariesScenario(browser, base, check, axe),
-    () => matchPureScenario(check),
-    () => matchScenario(browser, base, check, axe),
-    () => libraryTestScenario(browser, base, check, axe),
-    () => areaScenario(browser, base, check, axe),
-    () => cleanScenario(browser, base, check, axe),
-    () => peaksScenario(browser, base, check, axe),
-    () => collaudoScenario(browser, base, check),
-    () => collaudoCScenario(browser, base, check),
-    () => inverseScenario(browser, base, check, axe),
-    () => subtractionScenario(browser, base, check, axe),
-    () => toolsScenario(browser, base, check, axe),
-    () => recallScenario(browser, base, check, axe),
-    () => exportScenario(browser, base, check, axe),
-    () => rowMenuScenario(browser, base, check, axe),
-    () => rangesPureScenario(check),
-    () => rangesScenario(browser, base, check, axe),
-    () => sheetScenario(browser, base, check, axe),
-    () => teoriaScenario(browser, base, check, axe),
-    () => sheetsPureScenario(check),
-    () => sheetsScenario(browser, base, check, axe),
-    () => offlineScenario(browser, base, check),
-    () => folderScenario(browser, base, check, axe),
+    ...found,
     () => browser.close(),
   ];
 }
@@ -372,7 +328,7 @@ function pickShard(list) {
 async function run() {
   const browser = await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
   try {
-    for (const step of pickShard(scenarios(browser))) await step();
+    for (const step of pickShard(await scenarios(browser))) await step();
   } finally {
     await browser.close();
     close();

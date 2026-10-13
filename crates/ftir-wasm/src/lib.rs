@@ -80,16 +80,17 @@ pub fn library_open(
     .unwrap_or_else(|e| e.json())
 }
 
-/// A JCAMP-DX file on the library grid (float32, `NaN` where not measured). The error is thrown as JSON text.
+/// The main spectrum of a file any reader recognises, on the library grid (float32, `NaN` where not measured).
+/// The error is thrown as JSON text (`reader.unknown_format` when no reader recognises the file).
 #[wasm_bindgen]
-pub fn library_resample(jdx: &[u8]) -> Result<Vec<f32>, String> {
-    ftir_lib::bridge::resample_standard(jdx).map_err(|e| e.json())
+pub fn library_resample(name: &str, bytes: &[u8]) -> Result<Vec<f32>, String> {
+    ftir_lib::bridge::resample_standard_file(name, bytes).map_err(|e| e.json())
 }
 
-/// A JCAMP-DX file as the file gives it: `[points, resolution_cm1 or NaN, x…, y…]` (float32, absorbance). The error is thrown as JSON text.
+/// A file any reader recognises, as the file gives it: `[points, resolution_cm1 or NaN, x…, y…]` (float32, absorbance). The error is thrown as JSON text.
 #[wasm_bindgen]
-pub fn library_native(jdx: &[u8]) -> Result<Vec<f32>, String> {
-    ftir_lib::bridge::native_standard(jdx).map_err(|e| e.json())
+pub fn library_native(name: &str, bytes: &[u8]) -> Result<Vec<f32>, String> {
+    ftir_lib::bridge::native_standard_file(name, bytes).map_err(|e| e.json())
 }
 
 /// Builds the manifest and the index of an imported library: `{"manifest":{...},"index":{...}}` or `{error, ...}`.
@@ -178,7 +179,7 @@ mod test {
     #[test]
     fn libraries_build_open_and_refuse_a_changed_byte() {
         let jdx = include_bytes!("../../ftir-core/tests/fixtures/jcamp/affn_ascending.jdx");
-        let values = super::library_resample(jdx).expect("resample");
+        let values = super::library_resample("a.jdx", jdx).expect("resample");
         let identity = r#"{"name":"mine","version":"1","date":"2026-10-13","license":"x","attribution":{"en":"m"},"private":true}"#;
         let index = r#"{"schema":"ftir-library-index/1","spectra":[{"id":"p1","form":"f","substance":"p1","names":{"en":"a"},"classes":[],"quality":"pass","provenance_type":"user_import"}]}"#;
         let built = super::library_build(identity, index, &values);
@@ -188,7 +189,7 @@ mod test {
         let bytes: Vec<u8> = values.iter().flat_map(|v| v.to_le_bytes()).collect();
         let ok = super::library_open("{}", index, &bytes, 1 << 20, 100);
         assert!(ok.contains("library.manifest_invalid"), "{ok}");
-        assert!(super::library_resample(b"nope").is_err());
+        assert!(super::library_resample("a.jdx", b"nope").is_err());
     }
 
     #[test]

@@ -1,4 +1,5 @@
 // @ts-check
+import { APP_NAME } from "./appname.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
@@ -18,7 +19,6 @@ function makePicker(folder) {
   input.hidden = true;
   input.dataset.library = folder ? "folder" : "files";
   if (folder) input.setAttribute("webkitdirectory", "");
-  else input.accept = ".jdx,.dx,.jcm,.jcamp";
   input.addEventListener("change", () => {
     const chosen = [...(input.files ?? [])];
     input.value = "";
@@ -64,10 +64,14 @@ function libraryItem(l, ctx) {
   }
   const license = l.private ? t("library.item.license_private") : l.license;
   const attribution = l.private ? t("library.item.attribution_private") : ((currentLang() === "it" && l.attribution.it) || l.attribution.en);
+  // Conditions of a third-party permission (licence page of the library, never in the results); {app} = product name.
+  const termsText = l.terms && ((currentLang() === "it" && l.terms.it) || l.terms.en);
+  const terms = termsText ? termsText.replaceAll("{app}", APP_NAME) : "";
   return el("li", { class: "lib-item", "data-library": l.id }, [
     head,
     el("span", { class: "note" }, [`${t("library.item.version", { version: l.version })} · ${t("library.item.spectra", { n: formatNumber(l.spectra) })} · ${t("library.item.license", { license })}`]),
     el("span", { class: "note" }, [t("library.item.attribution", { text: attribution })]),
+    ...(terms ? [el("span", { class: "note", "data-library-terms": l.id }, [t("library.item.terms", { text: terms })])] : []),
   ]);
 }
 

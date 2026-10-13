@@ -1,0 +1,9 @@
+/* Chart menu and axis zones: the menu is a plain list under the pointer, no animation. */
+.chart-menu { position: fixed; z-index: 40; min-width: 14rem; padding: 0.25rem; border: 1px solid var(--border); border-radius: 0.4rem; background: var(--bg); color: var(--text); box-shadow: 0 2px 8px rgb(0 0 0 / 0.25); }
+.chart-menu button { display: block; width: 100%; padding: 0.4rem 0.6rem; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.chart-menu button:hover, .chart-menu button:focus-visible { background: var(--surface); }
+.chart-menu button:disabled { opacity: 0.55; cursor: default; }
+.chart-menu [aria-checked="true"]::before { content: "■ "; }
+.chart-menu [aria-checked="false"]::before { content: "□ "; }
+.axis-hit-x { cursor: ew-resize; fill: transparent; }
+.axis-hit-y { cursor: ns-resize; fill: transparent; }

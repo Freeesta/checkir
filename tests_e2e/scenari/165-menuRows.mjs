@@ -1,5 +1,5 @@
-// Picture export (SVG, PNG), copy of the values at the cursor and the context menus of the rows (candidate, peak, region). Waits are on state: file, clipboard, DOM.
-import { openPanel, prepare } from "./richiamo.mjs";
+// Scenario run by fumo.mjs (files in this folder run in name order). Picture export (SVG, PNG), copy of the values at the cursor and the context menus of the rows (candidate, peak, region). Waits are on state: file, clipboard, DOM.
+import { openPanel, prepare } from "../richiamo.mjs";
 import { readFile } from "node:fs/promises";
 
 const clipboard = (page) => page.evaluate(() => navigator.clipboard.readText());
@@ -93,7 +93,7 @@ async function peakScenario(page, check) {
   check("rowmenu: use the region as range adds a comparison range with the region's limits", JSON.stringify(got) === JSON.stringify(range.split("\t").sort()), `${got} vs ${range}`);
 }
 
-export async function rowMenuScenario(browser, base, check, axe) {
+export default async ({ browser, base, check, axe }) => {
   const { ctx, page } = await prepare(browser, base);
   await ctx.grantPermissions(["clipboard-read", "clipboard-write"], { origin: new URL(base).origin });
   await picturesScenario(page, check);
@@ -103,4 +103,4 @@ export async function rowMenuScenario(browser, base, check, axe) {
   const violations = await axe(page);
   check("rowmenu: axe has no violations", violations.length === 0, violations.join(", "));
   await ctx.close();
-}
+};

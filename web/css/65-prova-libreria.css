@@ -1,0 +1,7 @@
+/* Library test (information dialog) */
+.prova-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0; }
+.prova-hist { display: block; width: 100%; height: auto; }
+.prova-bar { fill: var(--color-sample); }
+.prova-line-check, .prova-line-probable { stroke: var(--color-alert); stroke-width: 1.5; }
+.prova-line-check { stroke-dasharray: 4 3; }
+.prova-report progress { width: 100%; }
