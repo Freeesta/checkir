@@ -9,7 +9,7 @@
   "chart.title": "Spectrum",
   "chart.axis_x": "Wavenumber (cm⁻¹)",
   "chart.axis_y": "Absorbance",
-  "chart.help": "With the chart focused: + and − zoom, left and right arrows pan, 0 resets.",
+  "chart.help": "With the chart focused: + and − zoom, left and right arrows pan, 0 resets; k places the first and the second cursor (comma and full stop move them, with Shift by 10 points), y locks the y axis, Esc removes the cursors. With the mouse: click = cursor, Alt+click = second cursor, drag = box zoom, wheel = zoom, double click = full view.",
   "chart.zoom_in": "Zoom in",
   "chart.zoom_out": "Zoom out",
   "chart.pan_left": "Pan left",
@@ -522,5 +522,13 @@
   "status.undone": "Residual {code} removed",
   "file.derived": "subtracted: {name}, {library}, k = {k}",
   "results.on_residual": "On the residual {code}",
-  "results.residual_show": "Show {code}"
+  "results.residual_show": "Show {code}",
+  "chart.unit_abs": "A",
+  "chart.unit_other": "I",
+  "chart.reading_point": "~{x} cm⁻¹ · {unit} {y}",
+  "chart.reading_delta": "Δν̃ {dx} cm⁻¹ · Δ{unit} {dy}",
+  "chart.cursors": "Reading cursors: the first, the second, then none",
+  "chart.lock_y": "Lock or unlock the y axis",
+  "chart.y_locked": "y axis locked",
+  "chart.y_unlocked": "y axis automatic"
 }

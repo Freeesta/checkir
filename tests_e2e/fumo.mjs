@@ -12,6 +12,7 @@ import { registryScenario } from "./registri.mjs";
 import { sheetScenario } from "./scheda.mjs";
 import { subtractionScenario } from "./sottrazione.mjs";
 import { startSite } from "./sito.mjs";
+import { toolsScenario } from "./strumenti.mjs";
 
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
 
@@ -80,7 +81,7 @@ async function phoneScenario(browser) {
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
   await page.keyboard.press("Escape"); // the open phone menu overlays the chart toolbar, which axe would count as an obscured target
-  const axis = await page.textContent("#chart svg text:last-child");
+  const axis = await page.textContent("#chart svg > text:last-child");
   check("language switch to English", axis === "Absorbance", axis ?? "");
   check("table: decimal point in English", /^\d+\.\d{4}$/.test((await page.locator("#table tbody tr:first-child td:nth-child(2)").textContent()) ?? ""));
   const violationsEn = await axe(page);
@@ -283,6 +284,7 @@ async function run() {
     await matchScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
     await subtractionScenario(browser, base, check, axe);
+    await toolsScenario(browser, base, check, axe);
     await sheetScenario(browser, base, check, axe);
     await offlineScenario(browser, base, check);
     await folderScenario(browser, base, check, axe);
