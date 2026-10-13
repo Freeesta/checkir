@@ -84,6 +84,7 @@ async function phoneScenario(browser) {
   check("320 px: the menu shows the tools", await page.isVisible('[data-lang="en"]'));
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.keyboard.press("Escape"); // the open phone menu overlays the chart toolbar, which axe would count as an obscured target
   const axis = await page.textContent("#chart svg text:last-child");
   check("language switch to English", axis === "Absorbance", axis ?? "");
   check("table: decimal point in English", /^\d+\.\d{4}$/.test((await page.locator("#table tbody tr:first-child td:nth-child(2)").textContent()) ?? ""));
