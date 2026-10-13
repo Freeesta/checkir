@@ -7220,6 +7220,48 @@
       "archive_url": "https://web.archive.org/web/20250203224939/https://pubmed.ncbi.nlm.nih.gov/31123661/"
     },
     {
+      "id": "iwaki2026",
+      "type": "paper",
+      "title": "Differentiation of 2-, 3-, and 4-fluorofuranylfentanyl using high performance liquid chromatography-mass spectrometry and human liver microsomes (J Anal Toxicol 50(6))",
+      "authors": [
+        "T. Iwaki",
+        "Y. Oida",
+        "M. Morikawa",
+        "K. Itoh",
+        "K. Iwai",
+        "K. Abe",
+        "E. Kohyama",
+        "T. Ito",
+        "H. Tanaka",
+        "T. Yokoi",
+        "K. Kitaichi"
+      ],
+      "year": 2026,
+      "doi": "10.1093/jat/bkag056",
+      "url": "https://doi.org/10.1093/jat/bkag056",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "rojkiewicz2017",
+      "type": "paper",
+      "title": "Identification and physicochemical characterization of 4-fluorobutyrfentanyl (1-((4-fluorophenyl)(1-phenethylpiperidin-4-yl)amino)butan-1-one, 4-FBF) in seized materials and post-mortem biological samples (Drug Test Anal 9(3):405-414)",
+      "authors": [
+        "M. Rojkiewicz",
+        "M. Majchrzak",
+        "R. Celiński",
+        "P. Kuś",
+        "M. Sajewicz"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2135",
+      "url": "https://doi.org/10.1002/dta.2135",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
       "id": "coopman2016",
       "type": "paper",
       "title": "Ocfentanil overdose fatality in the recreational drug scene (Forensic Sci Int 266:469-473)",
