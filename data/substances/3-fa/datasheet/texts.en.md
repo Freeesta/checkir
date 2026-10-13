@@ -16,7 +16,7 @@ Synthetic compound, described as a designer drug. [f:johansen2012]
 
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Animal data only; no controlled human study of 3-FA effects was found. In mice, 3-fluoroamphetamine produced dose- and time-dependent locomotor stimulation with a peak effect similar to methamphetamine, and in rats trained to discriminate methamphetamine from saline it substituted fully for methamphetamine. [f:anchondo2025]
 
 ## doses
 
@@ -38,7 +38,7 @@ Ask about other substances and medicines: the UBC guidelines advise against comb
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:swgdrug-3fa] [f:smith-benzene] [f:johansen2012] [f:kranenburg2020] [f:unodc-ewa] [f:checkir-classification] [f:luethi2019] [f:ubc-counselling-guidelines] [f:inan2020]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:swgdrug-3fa] [f:smith-benzene] [f:johansen2012] [f:kranenburg2020] [f:unodc-ewa] [f:checkir-classification] [f:luethi2019] [f:ubc-counselling-guidelines] [f:inan2020] [f:anchondo2025]
 
 ## license
 
