@@ -1,5 +1,5 @@
 // @ts-check
-import { currentLang, t } from "./i18n.js";
+import { currentLang, formatNumber, t } from "./i18n.js";
 import { EXCLUDED_CM1, referenceFor } from "./match.js";
 import { candidateName, selectedCandidate } from "./results.js";
 import { analyse } from "./peaks.js";
@@ -27,7 +27,7 @@ export function buildLayers(chart, summary) {
       const r = resultOf(s);
       const chosen = r ? selectedCandidate(s, r.data) : null;
       const analysis = s.showPeaks ? analyse(s) : null;
-      const key = [shown, r?.sig, chosen && candidateKey(chosen), s.overlay, currentLang(), s.showPeaks, s.peakFocus].join("|");
+      const key = [shown, r?.sig, chosen && candidateKey(chosen), s.overlay, currentLang(), s.showPeaks, s.peakFocus, s.ruleRange?.ruleId].join("|");
       if (key === last && analysis === lastAnalysis) return;
       last = key;
       lastAnalysis = analysis;
@@ -38,7 +38,7 @@ export function buildLayers(chart, summary) {
       const ref = r && chosen && s.overlay && sample ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
       chart.setLayers({
         excluded: r ? { from: EXCLUDED_CM1[0], to: EXCLUDED_CM1[1], label: t("chart.excluded") } : null,
-        marks: analysis && { bands: analysis.bands, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus, shoulder: p.shoulder })), rows: analysis.peaks, name, focus: s.peakFocus },
+        marks: analysis && { bands: analysis.bands, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus, shoulder: p.shoulder })), rows: analysis.peaks, name, focus: s.peakFocus, rule: s.ruleRange && { from: s.ruleRange.from, to: s.ruleRange.to, label: t("card.rule_window", { from: formatNumber(Math.round(s.ruleRange.from)), to: formatNumber(Math.round(s.ruleRange.to)) }) } },
         reference: ref && chosen ? { spectrum: ref.spectrum, scale: ref.scale, label: t("chart.reference_legend", { rank: chosen.rank, library: chosen.library }) } : null,
       });
     },

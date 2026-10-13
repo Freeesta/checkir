@@ -8,11 +8,13 @@ if ! wasm-bindgen --version 2>/dev/null | grep -q "$ver"; then
 fi
 cargo build --locked --release --target wasm32-unknown-unknown -p ftir-wasm
 rm -rf site && mkdir -p site && cp -r web/. site/
-# The didactic IR regions (regions/1) drawn on the chart: one source, copied here.
-mkdir -p site/bands && cp data/bands/regions.json site/bands/regions.json
+# The IR band data the page explains peaks with (regions, rules, groups, modes, texts, sources): one source, copied here.
+mkdir -p site/bands && cp data/bands/regions.json data/bands/rules.json data/bands/groups.json data/bands/modes.json data/bands/texts.it.json data/bands/texts.en.json site/bands/ && cp data/sources.json site/bands/sources.json
 node tools/genera_identita.mjs
 # Data of the theory section taken from data/ (one copy of the truth): the vibration modes and two demonstration spectra.
 mkdir -p site/teoria/dati && cp data/bands/modes.json data/demo/demo-01.jdx data/demo/demo-02.jdx site/teoria/dati/
 wasm-bindgen --target web --no-typescript --out-dir site/wasm target/wasm32-unknown-unknown/release/ftir_wasm.wasm
 # Library packages (never committed) and the general manifest with one switch per library; the service worker caches them.
 cargo run --locked --release -p ftir-lib --bin costruisci-libreria -- --config tools/libreria/librerie.json --out site/librerie
+# Last step: the cache version of the service worker is a hash of what it precaches (nothing to raise by hand).
+node tools/versione_sw.mjs
