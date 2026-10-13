@@ -1,0 +1,58 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "25i-nbome",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "25I-NBOMe",
+      "synonyms": [
+        "2C-I-NBOMe"
+      ]
+    },
+    "it": {
+      "preferred": "25I-NBOMe",
+      "synonyms": [
+        "2C-I-NBOMe"
+      ]
+    }
+  },
+  "iupac": "2-(4-iodo-2,5-dimethoxyphenyl)-N-[(2-methoxyphenyl)methyl]ethanamine",
+  "formula": "C18H22INO3",
+  "molar_mass_g_mol": 427.3,
+  "smiles": "COC1=CC=CC=C1CNCCC2=CC(=C(C=C2OC)I)OC",
+  "inchi": "InChI=1S/C18H22INO3/c1-21-16-7-5-4-6-14(16)12-20-9-8-13-10-18(23-3)15(19)11-17(13)22-2/h4-7,10-11,20H,8-9,12H2,1-3H3",
+  "inchikey": "ZFUOLNAKPBFDIJ-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q4632141",
+    "cas": "919797-19-6",
+    "pubchem_cid": 10251906
+  },
+  "classes": {
+    "chemical": [
+      "nbome"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

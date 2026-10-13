@@ -1,0 +1,91 @@
+{
+  "schema": "datasheet/1",
+  "substance": "2c-t-7",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "caution",
+      "mechanism": "maoi",
+      "source": "theobald2006"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "O-demethylated metabolites",
+        "reaction": "o_demethylation",
+        "source": "theobald2006"
+      },
+      {
+        "from": "parent",
+        "to": "deaminated metabolites",
+        "reaction": "deamination",
+        "enzymes": [
+          "MAO-A",
+          "MAO-B",
+          "CYP2D6"
+        ],
+        "source": "theobald2006"
+      },
+      {
+        "from": "parent",
+        "to": "beta-hydroxylated N-acetylated sulfoxide",
+        "reaction": "hydroxylation",
+        "source": "kanamori2016"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "2c-t-7-bhydroxy-n-acetyl-sulfoxide",
+        "active": null,
+        "source": "kanamori2016"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "2ct7.route",
+      "topic": "route",
+      "source": "curtis2003"
+    },
+    {
+      "key": "2ct7.combination",
+      "topic": "combination",
+      "source": "theobald2006"
+    },
+    {
+      "key": "2ct7.dosing",
+      "topic": "dosing",
+      "source": "halberstadt2022"
+    }
+  ]
+}
