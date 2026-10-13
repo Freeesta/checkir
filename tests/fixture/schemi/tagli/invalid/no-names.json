@@ -1,0 +1,179 @@
+{
+  "schema": "tagli/1",
+  "version": 1,
+  "status": "draft",
+  "description": "Common cutting agents, diluents and adulterants met in drug checking. A candidate whose substance id or name matches an entry is a cut: cuts are always allowed in the mixture search. Not a health statement.",
+  "cuts": [
+    {
+      "id": "caffeine",
+      "names": []
+    },
+    {
+      "id": "acetaminophen",
+      "names": [
+        "acetaminophen",
+        "paracetamol"
+      ]
+    },
+    {
+      "id": "benzocaine",
+      "names": [
+        "benzocaine"
+      ]
+    },
+    {
+      "id": "lidocaine",
+      "names": [
+        "lidocaine"
+      ]
+    },
+    {
+      "id": "procaine",
+      "names": [
+        "procaine"
+      ]
+    },
+    {
+      "id": "levamisole",
+      "names": [
+        "levamisole",
+        "tetramisole"
+      ]
+    },
+    {
+      "id": "phenacetin",
+      "names": [
+        "phenacetin"
+      ]
+    },
+    {
+      "id": "creatine",
+      "names": [
+        "creatine"
+      ]
+    },
+    {
+      "id": "mannitol",
+      "names": [
+        "mannitol"
+      ]
+    },
+    {
+      "id": "inositol",
+      "names": [
+        "inositol"
+      ]
+    },
+    {
+      "id": "lactose",
+      "names": [
+        "lactose"
+      ]
+    },
+    {
+      "id": "sucrose",
+      "names": [
+        "sucrose"
+      ]
+    },
+    {
+      "id": "dimethyl-sulfone",
+      "names": [
+        "dimethyl sulfone",
+        "dimethylsulfone",
+        "msm"
+      ]
+    },
+    {
+      "id": "diltiazem",
+      "names": [
+        "diltiazem"
+      ]
+    },
+    {
+      "id": "hydroxyzine",
+      "names": [
+        "hydroxyzine"
+      ]
+    },
+    {
+      "id": "boric-acid",
+      "names": [
+        "boric acid"
+      ]
+    },
+    {
+      "id": "glucose",
+      "names": [
+        "glucose"
+      ]
+    },
+    {
+      "id": "starch",
+      "names": [
+        "starch"
+      ]
+    },
+    {
+      "id": "cellulose",
+      "names": [
+        "cellulose"
+      ]
+    },
+    {
+      "id": "sodium-bicarbonate",
+      "names": [
+        "sodium bicarbonate"
+      ]
+    },
+    {
+      "id": "talc",
+      "names": [
+        "talc"
+      ]
+    },
+    {
+      "id": "niacinamide",
+      "names": [
+        "niacinamide"
+      ]
+    },
+    {
+      "id": "acetylsalicylic-acid",
+      "names": [
+        "acetylsalicylic acid",
+        "aspirin"
+      ]
+    },
+    {
+      "id": "ibuprofen",
+      "names": [
+        "ibuprofen"
+      ]
+    },
+    {
+      "id": "metamizole",
+      "names": [
+        "metamizole"
+      ]
+    },
+    {
+      "id": "diphenhydramine",
+      "names": [
+        "diphenhydramine"
+      ]
+    },
+    {
+      "id": "xylitol",
+      "names": [
+        "xylitol"
+      ]
+    },
+    {
+      "id": "erythritol",
+      "names": [
+        "erythritol"
+      ]
+    }
+  ]
+}

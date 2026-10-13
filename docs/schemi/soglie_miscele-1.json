@@ -1,0 +1,262 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:soglie_miscele:1",
+  "title": "Thresholds of the mixture search",
+  "title_it": "Soglie della ricerca di miscele",
+  "description": "Every limit of the mixture search and of the iterative subtraction, as data.",
+  "description_it": "Ogni limite della ricerca di miscele e della sottrazione iterativa, come dati.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "soglie_miscele/1"
+    },
+    "version": {
+      "description": "Version of the thresholds; a result stores it.",
+      "description_it": "Versione delle soglie; il risultato la salva.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "calibration": {
+      "description": "Where the numbers come from.",
+      "description_it": "Da dove vengono i numeri.",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "draft until a calibration on the instrument is done.",
+          "description_it": "draft finche non c'e una taratura sullo strumento.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "calibrated"
+          ]
+        },
+        "bench": {
+          "description": "Bench the numbers come from.",
+          "description_it": "Banco da cui vengono i numeri.",
+          "type": "string"
+        },
+        "method": {
+          "description": "Name of the method.",
+          "description_it": "Nome del metodo.",
+          "type": "string"
+        },
+        "date": {
+          "description": "Month of the calibration (YYYY-MM).",
+          "description_it": "Mese della taratura (AAAA-MM).",
+          "type": "string",
+          "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+        }
+      },
+      "required": [
+        "status",
+        "bench",
+        "method",
+        "date"
+      ],
+      "additionalProperties": false
+    },
+    "space": {
+      "description": "The space the fit works in.",
+      "description_it": "Lo spazio in cui lavora l'adattamento.",
+      "type": "object",
+      "properties": {
+        "background_order": {
+          "description": "Order of the polynomial background fitted together with the components (free sign).",
+          "description_it": "Ordine del fondo polinomiale stimato insieme ai componenti (segno libero).",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 6
+        },
+        "min_reference_coverage": {
+          "description": "Fewest fraction of the compared points a reference must cover.",
+          "description_it": "Frazione minima dei punti confrontati che un riferimento deve coprire.",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "background_order",
+        "min_reference_coverage"
+      ],
+      "additionalProperties": false
+    },
+    "selection": {
+      "description": "The forward selection.",
+      "description_it": "La selezione in avanti.",
+      "type": "object",
+      "properties": {
+        "candidates_top": {
+          "description": "Candidates taken from the simple search (the cuts are added to them).",
+          "description_it": "Candidati presi dalla ricerca semplice (ci si aggiungono i tagli).",
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_components": {
+          "description": "Most components of a mixture.",
+          "description_it": "Massimo di componenti di una miscela.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "stop_variance_share": {
+          "description": "A new component must explain at least this share of the sample variance (after the background).",
+          "description_it": "Un nuovo componente deve spiegare almeno questa quota della varianza del campione (dopo il fondo).",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "second_active_variance_share": {
+          "description": "A second component outside the cut list enters only if it explains at least this share.",
+          "description_it": "Un secondo componente fuori dall'elenco dei tagli entra solo se spiega almeno questa quota.",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "candidates_top",
+        "max_components",
+        "stop_variance_share",
+        "second_active_variance_share"
+      ],
+      "additionalProperties": false
+    },
+    "analogues": {
+      "description": "Components too similar to an accepted one.",
+      "description_it": "Componenti troppo simili a uno gia accettato.",
+      "type": "object",
+      "properties": {
+        "derivative_pearson_min": {
+          "description": "Derivative Pearson r from which a component is shown as a variant.",
+          "description_it": "Pearson (derivata) da cui un componente si mostra come variante.",
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "smooth_window": {
+          "description": "Savitzky-Golay window of the derivative.",
+          "description_it": "Finestra Savitzky-Golay della derivata.",
+          "type": "integer",
+          "minimum": 3
+        },
+        "smooth_polyorder": {
+          "description": "Savitzky-Golay polynomial order of the derivative.",
+          "description_it": "Ordine del polinomio della derivata.",
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "derivative_pearson_min",
+        "smooth_window",
+        "smooth_polyorder"
+      ],
+      "additionalProperties": false
+    },
+    "residual": {
+      "description": "What the residual may hold.",
+      "description_it": "Cosa puo contenere il residuo.",
+      "type": "object",
+      "properties": {
+        "high_residual_variance_share": {
+          "description": "The alert high_residual fires above this unexplained share of the variance.",
+          "description_it": "L'allerta high_residual scatta sopra questa quota di varianza non spiegata.",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "high_residual_variance_share"
+      ],
+      "additionalProperties": false
+    },
+    "bands_criterion": {
+      "description": "Acceptance of a component by unexplained bands.",
+      "description_it": "Accettazione di un componente a bande.",
+      "type": "object",
+      "properties": {
+        "enforce": {
+          "description": "false: the criterion is computed and reported only; true: a component that fails stays possible, not shown.",
+          "description_it": "false: il criterio si calcola e si riporta soltanto; true: un componente che non lo supera resta possibile, non dimostrato.",
+          "type": "boolean"
+        },
+        "tolerance_cm1": {
+          "description": "A band is explained if the component has signal within this distance of it.",
+          "description_it": "Una banda e spiegata se il componente ha segnale entro questa distanza.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "explained_fraction": {
+          "description": "Share of the band height the component must reach there.",
+          "description_it": "Quota dell'altezza della banda che il componente deve raggiungere li.",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "enforce",
+        "tolerance_cm1",
+        "explained_fraction"
+      ],
+      "additionalProperties": false
+    },
+    "subtraction": {
+      "description": "The iterative subtraction.",
+      "description_it": "La sottrazione iterativa.",
+      "type": "object",
+      "properties": {
+        "max_rounds": {
+          "description": "Most rounds of subtract and search again.",
+          "description_it": "Massimo di giri di sottrai e cerca di nuovo.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "stop_variance_share": {
+          "description": "A round must explain at least this share of the sample variance.",
+          "description_it": "Un giro deve spiegare almeno questa quota della varianza del campione.",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "over_subtraction_noise_ratio": {
+          "description": "Over-subtraction if the residual goes below minus this many noise sigmas where the reference is strong.",
+          "description_it": "Sovrasottrazione se il residuo scende sotto meno questi sigma di rumore dove il riferimento e forte.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "reference_zone_fraction": {
+          "description": "A reference is strong where it exceeds this fraction of its maximum.",
+          "description_it": "Un riferimento e forte dove supera questa frazione del suo massimo.",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "max_rounds",
+        "stop_variance_share",
+        "over_subtraction_noise_ratio",
+        "reference_zone_fraction"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "calibration",
+    "space",
+    "selection",
+    "analogues",
+    "residual",
+    "bands_criterion",
+    "subtraction"
+  ],
+  "additionalProperties": false
+}

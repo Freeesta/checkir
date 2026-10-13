@@ -493,6 +493,222 @@
       "doi": "10.3390/ijms251810087",
       "license": "CC-BY-4.0",
       "consulted": "2026-10-12"
+    },
+    {
+      "id": "nawrot2003",
+      "type": "paper",
+      "title": "Effects of caffeine on human health",
+      "authors": [
+        "Nawrot, P.",
+        "Jordan, S.",
+        "Eastwood, J.",
+        "Rotstein, J.",
+        "Hugenholtz, A.",
+        "Feeley, M."
+      ],
+      "year": 2003,
+      "doi": "10.1080/0265203021000007840",
+      "url": "https://doi.org/10.1080/0265203021000007840",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260929102905/https://pubmed.ncbi.nlm.nih.gov/12519715/"
+    },
+    {
+      "id": "culm-merdek2005",
+      "type": "paper",
+      "title": "Fluvoxamine impairs single‐dose caffeine clearance without altering caffeine pharmacodynamics",
+      "authors": [
+        "Culm‐Merdek, Kerry E.",
+        "Von Moltke, Lisa L.",
+        "Harmatz, Jerold S.",
+        "Greenblatt, David J."
+      ],
+      "year": 2005,
+      "doi": "10.1111/j.1365-2125.2005.02467.x",
+      "url": "https://doi.org/10.1111/j.1365-2125.2005.02467.x",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204054853/https://pubmed.ncbi.nlm.nih.gov/16236038/"
+    },
+    {
+      "id": "yoon2016",
+      "type": "paper",
+      "title": "Acetaminophen-Induced Hepatotoxicity: a Comprehensive Update",
+      "authors": [
+        "Yoon, Eric",
+        "Babar, Ali",
+        "Choudhary, Moaz",
+        "Kutner, Matthew",
+        "Pyrsopoulos, Nikolaos"
+      ],
+      "year": 2016,
+      "doi": "10.14218/jcth.2015.00052",
+      "url": "https://doi.org/10.14218/jcth.2015.00052",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20261002105648/https://pubmed.ncbi.nlm.nih.gov/27350943/"
+    },
+    {
+      "id": "chang2010",
+      "type": "paper",
+      "title": "Levamisole: A Dangerous New Cocaine Adulterant",
+      "authors": [
+        "Chang, A",
+        "Osterloh, J",
+        "Thomas, J"
+      ],
+      "year": 2010,
+      "doi": "10.1038/clpt.2010.156",
+      "url": "https://doi.org/10.1038/clpt.2010.156",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260226005448/https://pubmed.ncbi.nlm.nih.gov/20668440/"
+    },
+    {
+      "id": "larocque2012",
+      "type": "paper",
+      "title": "Levamisole in cocaine: Unexpected news from an old acquaintance",
+      "authors": [
+        "Larocque, Alexandre",
+        "Hoffman, Robert S."
+      ],
+      "year": 2012,
+      "doi": "10.3109/15563650.2012.665455",
+      "url": "https://doi.org/10.3109/15563650.2012.665455",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260411000919/https://pubmed.ncbi.nlm.nih.gov/22455354/"
+    },
+    {
+      "id": "neal2010",
+      "type": "paper",
+      "title": "ASRA Practice Advisory on Local Anesthetic Systemic Toxicity",
+      "authors": [
+        "Neal, Joseph M.",
+        "Bernards, Christopher M.",
+        "Butterworth, John F.",
+        "Di Gregorio, Guido",
+        "Drasner, Kenneth",
+        "Hejtmanek, Michael R.",
+        "Mulroy, Michael F.",
+        "Rosenquist, Richard W."
+      ],
+      "year": 2010,
+      "doi": "10.1097/AAP.0b013e3181d22fcd",
+      "url": "https://doi.org/10.1097/AAP.0b013e3181d22fcd",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260616014101/https://pubmed.ncbi.nlm.nih.gov/20216033/"
+    },
+    {
+      "id": "olkkola2005",
+      "type": "paper",
+      "title": "The Effect of Erythromycin and Fluvoxamine on the Pharmacokinetics of Intravenous Lidocaine",
+      "authors": [
+        "Olkkola, Klaus T.",
+        "Isohanni, Mika H.",
+        "Hamunen, Katri",
+        "Neuvonen, Pertti J."
+      ],
+      "year": 2005,
+      "doi": "10.1213/01.ane.0000148123.79437.f9",
+      "url": "https://doi.org/10.1213/01.ane.0000148123.79437.f9",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20251004220105/https://pubmed.ncbi.nlm.nih.gov/15845683/"
+    },
+    {
+      "id": "guay2009",
+      "type": "paper",
+      "title": "Methemoglobinemia Related to Local Anesthetics: A Summary of 242 Episodes",
+      "authors": [
+        "Guay, Joanne"
+      ],
+      "year": 2009,
+      "doi": "10.1213/ane.0b013e318187c4b1",
+      "url": "https://doi.org/10.1213/ane.0b013e318187c4b1",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204044649/https://pubmed.ncbi.nlm.nih.gov/19224791/"
+    },
+    {
+      "id": "kane2007",
+      "type": "paper",
+      "title": "Benzocaine-Induced Methemoglobinemia Based on the Mayo Clinic Experience From 28 478 Transesophageal Echocardiograms",
+      "authors": [
+        "Kane, Garvan C.",
+        "Hoehn, Suzette M.",
+        "Behrenbeck, Thomas R.",
+        "Mulvagh, Sharon L."
+      ],
+      "year": 2007,
+      "doi": "10.1001/archinte.167.18.1977",
+      "url": "https://doi.org/10.1001/archinte.167.18.1977",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241214003216/https://pubmed.ncbi.nlm.nih.gov/17923598/"
+    },
+    {
+      "id": "misselwitz2019",
+      "type": "paper",
+      "title": "Update on lactose malabsorption and intolerance: pathogenesis, diagnosis and clinical management",
+      "authors": [
+        "Misselwitz, Benjamin",
+        "Butter, Matthias",
+        "Verbeke, Kristin",
+        "Fox, Mark R"
+      ],
+      "year": 2019,
+      "doi": "10.1136/gutjnl-2019-318404",
+      "url": "https://doi.org/10.1136/gutjnl-2019-318404",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250711214651/https://gut.bmj.com/content/68/11/2080"
+    },
+    {
+      "id": "lenhart2017",
+      "type": "paper",
+      "title": "A Systematic Review of the Effects of Polyols on Gastrointestinal Health and Irritable Bowel Syndrome",
+      "authors": [
+        "Lenhart, Adrienne",
+        "Chey, William D"
+      ],
+      "year": 2017,
+      "doi": "10.3945/an.117.015560",
+      "url": "https://doi.org/10.3945/an.117.015560",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20240909215346/https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5508768/"
+    },
+    {
+      "id": "iarc-100a-phenacetin",
+      "type": "institution",
+      "title": "Phenacetin. In: IARC Monographs on the Evaluation of Carcinogenic Risks to Humans, Volume 100A, Pharmaceuticals (IARC, Lyon, 2012)",
+      "year": 2012,
+      "url": "https://publications.iarc.who.int/118",
+      "archive_url": "https://web.archive.org/web/20260520075134/https://publications.iarc.who.int/118",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "carlomagno2011",
+      "type": "paper",
+      "title": "Inositol safety: clinical evidences",
+      "authors": [
+        "Carlomagno, G",
+        "Unfer, V"
+      ],
+      "year": 2011,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21845803/",
+      "archive_url": "https://web.archive.org/web/20260625191359/https://pubmed.ncbi.nlm.nih.gov/21845803/",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "pubchem",
+      "type": "database",
+      "title": "PubChem (chemical identity)",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "checkir-ftir-limits",
+      "type": "project",
+      "title": "checkir fixed statement of the limits of FTIR for drug checking (components below about 5 % are not detectable; fentanyl and analogues, found at about 3-10 % w/w, and nitazenes cannot be ruled out; no quantification); project text, to be reviewed by a chemist",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "checkir-section-pending",
+      "type": "project",
+      "title": "Placeholder: this section is not drafted yet; no claim is made. It will be written from verifiable sources and signed by a health professional before it is shown",
+      "consulted": "2026-10-13"
     }
   ]
 }
