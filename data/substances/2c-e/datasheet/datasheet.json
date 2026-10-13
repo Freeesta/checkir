@@ -1,0 +1,124 @@
+{
+  "schema": "datasheet/1",
+  "substance": "2c-e",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "caution",
+      "mechanism": "maoi",
+      "source": "theobald2007"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "family": "2c",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "O-desmethyl-2C-E",
+        "reaction": "o_demethylation",
+        "source": "theobald2006e"
+      },
+      {
+        "from": "parent",
+        "to": "N-acetyl-2C-E",
+        "reaction": "other",
+        "source": "theobald2006e"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-2C-E (ethyl side chain)",
+        "reaction": "hydroxylation",
+        "source": "theobald2006e"
+      },
+      {
+        "from": "parent",
+        "to": "2C-E carboxylic acid",
+        "reaction": "deamination",
+        "enzymes": [
+          "MAO-A",
+          "MAO-B",
+          "CYP2D6"
+        ],
+        "source": "theobald2007"
+      },
+      {
+        "from": "parent",
+        "to": "2C-E alcohol",
+        "reaction": "deamination",
+        "enzymes": [
+          "MAO-A",
+          "MAO-B",
+          "CYP2D6"
+        ],
+        "source": "theobald2007"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "2c-e-odesmethyl",
+        "active": null,
+        "source": "theobald2006e"
+      },
+      {
+        "name_key": "2c-e-hydroxy",
+        "active": null,
+        "source": "theobald2006e"
+      },
+      {
+        "name_key": "2c-e-acid",
+        "active": null,
+        "source": "theobald2006e"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "2ce.identity",
+      "topic": "testing",
+      "source": "dean2013"
+    },
+    {
+      "key": "2ce.setting",
+      "topic": "set_setting",
+      "source": "dean2013"
+    },
+    {
+      "key": "2ce.dosing",
+      "topic": "dosing",
+      "source": "dean2013"
+    },
+    {
+      "key": "2ce.combination",
+      "topic": "combination",
+      "source": "dean2013"
+    }
+  ]
+}
