@@ -1,0 +1,29 @@
+# Node 22 + dev dependencies of the browser tests (the site itself has none), cached by package-lock.json; optionally the Playwright chromium.
+name: node-deps
+inputs:
+  browser:
+    description: "true to install chromium for Playwright"
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v7
+      with:
+        node-version: "22"
+    - id: nm
+      uses: actions/cache@v6
+      with:
+        path: node_modules
+        key: node-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+    - if: steps.nm.outputs.cache-hit != 'true'
+      shell: bash
+      run: npm ci --no-audit --no-fund
+    - if: inputs.browser == 'true'
+      uses: actions/cache@v6
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+    # the browser download is skipped when cached; the system libraries are always (re)installed
+    - if: inputs.browser == 'true'
+      shell: bash
+      run: npx playwright install --with-deps chromium
