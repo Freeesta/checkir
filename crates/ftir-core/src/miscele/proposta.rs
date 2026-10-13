@@ -11,26 +11,6 @@ use super::seleziona::{allowed, Pick, Selection};
 use super::{Component, Run, Status};
 use crate::error::EngineResult;
 
-/// What the page does with the result.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum Verdict {
-    /// Show the mixture.
-    Proposed,
-    /// There are several components, but the numbers do not hold up: show the reason.
-    Rejected,
-    /// Nothing that looks like a mixture (fewer than `min_components`): show nothing.
-    None,
-}
-
-#[derive(Debug, Clone, PartialEq)]
-pub struct Proposal {
-    pub verdict: Verdict,
-    /// `single_component`, `high_residual` or `component_without_peaks`; `None` when proposed.
-    pub reason: Option<&'static str>,
-    /// Id of the component that explains too few peaks (`component_without_peaks`).
-    pub component: Option<String>,
-}
-
 impl Run<'_> {
     /// The best allowed candidate not yet chosen that explains enough of the peaks `left` and of the variance.
     fn best_minor(&self, sel: &Selection, left: &[UnexplainedPeak]) -> Option<(usize, Fit)> {
@@ -108,4 +88,24 @@ impl Run<'_> {
             component,
         }
     }
+}
+
+/// What the page does with the result.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Verdict {
+    /// Show the mixture.
+    Proposed,
+    /// There are several components, but the numbers do not hold up: show the reason.
+    Rejected,
+    /// Nothing that looks like a mixture (fewer than `min_components`): show nothing.
+    None,
+}
+
+#[derive(Debug, Clone, PartialEq)]
+pub struct Proposal {
+    pub verdict: Verdict,
+    /// `single_component`, `high_residual` or `component_without_peaks`; `None` when proposed.
+    pub reason: Option<&'static str>,
+    /// Id of the component that explains too few peaks (`component_without_peaks`).
+    pub component: Option<String>,
 }
