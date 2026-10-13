@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-fa",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-FA",
+      "synonyms": [
+        "4-Fluoroamphetamine",
+        "para-Fluoroamphetamine",
+        "PAL-303"
+      ]
+    },
+    "it": {
+      "preferred": "4-FA",
+      "synonyms": [
+        "4-Fluoroanfetamina",
+        "para-fluoroanfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(4-fluorophenyl)propan-2-amine",
+  "formula": "C9H12FN",
+  "molar_mass_g_mol": 153.2,
+  "smiles": "CC(CC1=CC=C(C=C1)F)N",
+  "inchi": "InChI=1S/C9H12FN/c1-7(11)6-8-2-4-9(10)5-3-8/h2-5,7H,6,11H2,1H3",
+  "inchikey": "DGXWNDGLEOIEGT-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "459-02-9",
+    "pubchem_cid": 9986
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant",
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

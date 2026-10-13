@@ -2127,6 +2127,473 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13",
       "tier": "primary"
+    },
+    {
+      "id": "bossong2005",
+      "type": "paper",
+      "title": "Methylone and mCPP, two new drugs of abuse? (Addiction biology 10)",
+      "authors": [
+        "M G Bossong",
+        "J P Van Dijk",
+        "R J M Niesink"
+      ],
+      "year": 2005,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1080/13556210500350794",
+      "url": "https://doi.org/10.1080/13556210500350794"
+    },
+    {
+      "id": "busardo2015",
+      "type": "paper",
+      "title": "GHB pharmacology and toxicology: acute intoxication, concentrations in blood and urine in forensic cases and treatment of the withdrawal syndrome (Current neuropharmacology 13)",
+      "authors": [
+        "Francesco P Busardò",
+        "Alan W Jones"
+      ],
+      "year": 2015,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.2174/1570159X13666141210215423",
+      "url": "https://doi.org/10.2174/1570159X13666141210215423"
+    },
+    {
+      "id": "chan2008",
+      "type": "paper",
+      "title": "Urinary elimination of ephedrines following administration of the Traditional Chinese Medicine preparation Kakkon-to (Journal of analytical toxicology 32)",
+      "authors": [
+        "Kuei Hui Chan",
+        "Ryh-Nan Pan",
+        "Mei-Chich Hsu",
+        "Ku-Fu Hsu"
+      ],
+      "year": 2008,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1093/jat/32.9.763",
+      "url": "https://doi.org/10.1093/jat/32.9.763"
+    },
+    {
+      "id": "feuchtl2004",
+      "type": "paper",
+      "title": "Pharmacokinetics of m-chlorophenylpiperazine after intravenous and oral administration in healthy male volunteers: implication for the pharmacodynamic profile (Pharmacopsychiatry 37)",
+      "authors": [
+        "A Feuchtl",
+        "M Bagli",
+        "R Stephan",
+        "C Frahnert",
+        "H Kölsch",
+        "K U Kühn",
+        "M L Rao"
+      ],
+      "year": 2004,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1055/s-2004-827175",
+      "url": "https://doi.org/10.1055/s-2004-827175"
+    },
+    {
+      "id": "gerostamoulos2023",
+      "type": "paper",
+      "title": "Fatal Intoxications from a Combination of 4-Fluoroamphetamine and 25C-NBOMe (Journal of analytical toxicology 47)",
+      "authors": [
+        "Dimitri Gerostamoulos",
+        "Linda Glowacki",
+        "Maria Pricone",
+        "Kerryn Crump",
+        "Matthew Di Rago",
+        "Samantha Joubert",
+        "Matthew J Lynch",
+        "Noel W Woodford",
+        "Olaf H Drummer"
+      ],
+      "year": 2023,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1093/jat/bkac059",
+      "url": "https://doi.org/10.1093/jat/bkac059"
+    },
+    {
+      "id": "gresnigt2022",
+      "type": "paper",
+      "title": "4-Fluoroamphetamine (4-FA) intoxication results in exaggerated blood pressure effects compared to MDMA and amphetamine: A retrospective analysis (Journal of the American College of Emergency Physicians open 3)",
+      "authors": [
+        "Femke M J Gresnigt",
+        "Anouk Snik",
+        "Eric J F Franssen",
+        "Joost W Vanhommerig",
+        "Dylan W de Lange",
+        "Robert K Riezebos"
+      ],
+      "year": 2022,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1002/emp2.12813",
+      "url": "https://doi.org/10.1002/emp2.12813"
+    },
+    {
+      "id": "haller2000",
+      "type": "paper",
+      "title": "Adverse cardiovascular and central nervous system events associated with dietary supplements containing ephedra alkaloids (The New England journal of medicine 343)",
+      "authors": [
+        "C A Haller",
+        "N L Benowitz"
+      ],
+      "year": 2000,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1056/NEJM200012213432502",
+      "url": "https://doi.org/10.1056/NEJM200012213432502"
+    },
+    {
+      "id": "haller2002",
+      "type": "paper",
+      "title": "Pharmacology of ephedra alkaloids and caffeine after single-dose dietary supplement use (Clinical pharmacology and therapeutics 71)",
+      "authors": [
+        "Christine A Haller",
+        "Peyton Jacob",
+        "Neal L Benowitz"
+      ],
+      "year": 2002,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1067/mcp.2002.124523",
+      "url": "https://doi.org/10.1067/mcp.2002.124523"
+    },
+    {
+      "id": "hondebrink2018",
+      "type": "paper",
+      "title": "Fatalities, Cerebral Hemorrhage, and Severe Cardiovascular Toxicity After Exposure to the New Psychoactive Substance 4-Fluoroamphetamine: A Prospective Cohort Study (Annals of emergency medicine 71)",
+      "authors": [
+        "Laura Hondebrink",
+        "Johanna J Nugteren-van Lonkhuyzen",
+        "Saskia J Rietjens",
+        "Tibor M Brunt",
+        "Bastiaan Venhuis",
+        "Vidija Soerdjbalie-Maikoe",
+        "Beitske E Smink",
+        "Antoinette J H P van Riel",
+        "Irma de Vries"
+      ],
+      "year": 2018,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.annemergmed.2017.07.482",
+      "url": "https://doi.org/10.1016/j.annemergmed.2017.07.482"
+    },
+    {
+      "id": "liechti2016",
+      "type": "paper",
+      "title": "Pharmacokinetics and pharmacodynamics of γ-hydroxybutyrate in healthy subjects (British journal of clinical pharmacology 81)",
+      "authors": [
+        "Matthias E Liechti",
+        "Boris B Quednow",
+        "Evangelia Liakoni",
+        "Dario Dornbierer",
+        "Robin von Rotz",
+        "Maria Salomé Gachet",
+        "Jürg Gertsch",
+        "Erich Seifritz",
+        "Oliver G Bosch"
+      ],
+      "year": 2016,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1111/bcp.12863",
+      "url": "https://doi.org/10.1111/bcp.12863"
+    },
+    {
+      "id": "nugteren2015",
+      "type": "paper",
+      "title": "Pharmacokinetics, pharmacodynamics and toxicology of new psychoactive substances (NPS): 2C-B, 4-fluoroamphetamine and benzofurans (Drug and alcohol dependence 157)",
+      "authors": [
+        "Johanna J Nugteren-van Lonkhuyzen",
+        "Antoinette J H P van Riel",
+        "Tibor M Brunt",
+        "Laura Hondebrink"
+      ],
+      "year": 2015,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1016/j.drugalcdep.2015.10.011",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2015.10.011"
+    },
+    {
+      "id": "palatini1993",
+      "type": "paper",
+      "title": "Dose-dependent absorption and elimination of gamma-hydroxybutyric acid in healthy volunteers (European journal of clinical pharmacology 45)",
+      "authors": [
+        "P Palatini",
+        "L Tedeschi",
+        "G Frison",
+        "R Padrini",
+        "R Zordan",
+        "R Orlando",
+        "L Gallimberti",
+        "G L Gessa",
+        "S D Ferrara"
+      ],
+      "year": 1993,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/BF00265954",
+      "url": "https://doi.org/10.1007/BF00265954"
+    },
+    {
+      "id": "rickli2015",
+      "type": "paper",
+      "title": "Monoamine transporter and receptor interaction profiles of novel psychoactive substances: para-halogenated amphetamines and pyrovalerone cathinones (European neuropsychopharmacology : the journal of the European College of Neuropsychopharmacology 25)",
+      "authors": [
+        "Anna Rickli",
+        "Marius C Hoener",
+        "Matthias E Liechti"
+      ],
+      "year": 2015,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.euroneuro.2014.12.012",
+      "url": "https://doi.org/10.1016/j.euroneuro.2014.12.012"
+    },
+    {
+      "id": "rotzinger1998",
+      "type": "paper",
+      "title": "Trazodone is metabolized to m-chlorophenylpiperazine by CYP3A4 from human sources (Drug metabolism and disposition: the biological fate of chemicals 26)",
+      "authors": [
+        "S Rotzinger",
+        "J Fang",
+        "G B Baker"
+      ],
+      "year": 1998,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9616194/"
+    },
+    {
+      "id": "schep2012",
+      "type": "paper",
+      "title": "The clinical toxicology of γ-hydroxybutyrate, γ-butyrolactone and 1,4-butanediol (Clinical toxicology (Philadelphia, Pa.) 50)",
+      "authors": [
+        "Leo J Schep",
+        "Kai Knudsen",
+        "Robin J Slaughter",
+        "J Allister Vale",
+        "Bruno Mégarbane"
+      ],
+      "year": 2012,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.3109/15563650.2012.702218",
+      "url": "https://doi.org/10.3109/15563650.2012.702218"
+    },
+    {
+      "id": "sever1975",
+      "type": "paper",
+      "title": "The metabolism of (-)-ephedrine in man (European journal of clinical pharmacology 9)",
+      "authors": [
+        "P S Sever",
+        "L G Dring",
+        "R T Williams"
+      ],
+      "year": 1975,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/BF00614017",
+      "url": "https://doi.org/10.1007/BF00614017"
+    },
+    {
+      "id": "staack2007",
+      "type": "paper",
+      "title": "Proof of a 1-(3-chlorophenyl)piperazine (mCPP) intake: use as adulterant of cocaine resulting in drug-drug interactions? (Journal of chromatography. B, Analytical technologies in the biomedical and life sciences 855)",
+      "authors": [
+        "Roland F Staack",
+        "Liane D Paul",
+        "Dagmar Schmid",
+        "Gabriele Roider",
+        "Burkhard Rolf"
+      ],
+      "year": 2007,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.jchromb.2007.05.017",
+      "url": "https://doi.org/10.1016/j.jchromb.2007.05.017"
+    },
+    {
+      "id": "swgdrug-4fa",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Fluoroamphetamine (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4-FA.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241212105436/https://swgdrug.org/Monographs/4-FA.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-ephedrine",
+      "type": "database",
+      "title": "SWGDRUG monograph: d-Ephedrine (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/d-Ephedrine.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207115757/https://swgdrug.org/Monographs/d-Ephedrine.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-gbl",
+      "type": "database",
+      "title": "SWGDRUG monograph: Gamma-butyrolactone (IR: neat, ATR, vapour)",
+      "url": "https://www.swgdrug.org/Monographs/GAMMA-BUTYROLACTONE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250831001249/https://www.swgdrug.org/Monographs/GAMMA-BUTYROLACTONE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-ghb",
+      "type": "database",
+      "title": "SWGDRUG monograph: Gamma-hydroxybutyrate / butyric acid (IR: sodium salt and free acid)",
+      "url": "https://www.swgdrug.org/Monographs/GAMMA-HYDROXYBUTYRATE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260917194548/https://www.swgdrug.org/Monographs/GAMMA-HYDROXYBUTYRATE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "tay2022",
+      "type": "paper",
+      "title": "Current Insights on the Impact of Gamma-Hydroxybutyrate (GHB) Abuse (Substance abuse and rehabilitation 13)",
+      "authors": [
+        "Emma Tay",
+        "Wing Kwan Winky Lo",
+        "Bridin Murnion"
+      ],
+      "year": 2022,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.2147/SAR.S315720",
+      "url": "https://doi.org/10.2147/SAR.S315720"
+    },
+    {
+      "id": "toennes2020",
+      "type": "paper",
+      "title": "Excretion of 4-fluoroamphetamine and three metabolites in urine after controlled oral ingestion (Journal of pharmaceutical and biomedical analysis 179)",
+      "authors": [
+        "Stefan W Toennes",
+        "David Schneider",
+        "Werner Pogoda",
+        "Alexander Paulke",
+        "Cora Wunder",
+        "Eef L Theunissen",
+        "Elizabeth B de Sousa Fernandes Perna",
+        "Johannes G Ramaekers"
+      ],
+      "year": 2020,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.jpba.2019.113008",
+      "url": "https://doi.org/10.1016/j.jpba.2019.113008"
+    },
+    {
+      "id": "vogels2009",
+      "type": "paper",
+      "title": "Content of ecstasy in the Netherlands: 1993-2008 (Addiction (Abingdon, England) 104)",
+      "authors": [
+        "Neeltje Vogels",
+        "Tibor M Brunt",
+        "Sander Rigter",
+        "Peter van Dijk",
+        "Hylke Vervaeke",
+        "Raymond J M Niesink"
+      ],
+      "year": 2009,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1111/j.1360-0443.2009.02707.x",
+      "url": "https://doi.org/10.1111/j.1360-0443.2009.02707.x"
+    },
+    {
+      "id": "wen2008",
+      "type": "paper",
+      "title": "Detection of novel reactive metabolites of trazodone: evidence for CYP2D6-mediated bioactivation of m-chlorophenylpiperazine (Drug metabolism and disposition: the biological fate of chemicals 36)",
+      "authors": [
+        "Bo Wen",
+        "Li Ma",
+        "A David Rodrigues",
+        "Mingshe Zhu"
+      ],
+      "year": 2008,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1124/dmd.107.019471",
+      "url": "https://doi.org/10.1124/dmd.107.019471"
+    },
+    {
+      "id": "white1997",
+      "type": "paper",
+      "title": "Pharmacokinetics and cardiovascular effects of ma-huang (Ephedra sinica) in normotensive adults (Journal of clinical pharmacology 37)",
+      "authors": [
+        "L M White",
+        "S F Gardner",
+        "B J Gurley",
+        "M A Marx",
+        "P L Wang",
+        "M Estes"
+      ],
+      "year": 1997,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1002/j.1552-4604.1997.tb04769.x",
+      "url": "https://doi.org/10.1002/j.1552-4604.1997.tb04769.x"
+    },
+    {
+      "id": "wijers2018",
+      "type": "paper",
+      "title": "Haemorrhagic stroke related to the use of 4-fluoroamphetamine (Journal of neurology 265)",
+      "authors": [
+        "C H W Wijers",
+        "M C Visser",
+        "R T H van Litsenburg",
+        "R J M Niesink",
+        "R B Willemse",
+        "Esther A Croes"
+      ],
+      "year": 2018,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/s00415-018-8888-6",
+      "url": "https://doi.org/10.1007/s00415-018-8888-6"
+    },
+    {
+      "id": "wong2004",
+      "type": "paper",
+      "title": "Gamma-hydroxybutyric acid: neurobiology and toxicology of a recreational drug (Toxicological reviews 23)",
+      "authors": [
+        "C Guin Ting Wong",
+        "Katherine F Y Chan",
+        "K Michael Gibson",
+        "O Carter Snead"
+      ],
+      "year": 2004,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.2165/00139709-200423010-00002",
+      "url": "https://doi.org/10.2165/00139709-200423010-00002"
+    },
+    {
+      "id": "zheng2023",
+      "type": "paper",
+      "title": "Ephedrae herba: A comprehensive review of its traditional uses, phytochemistry, pharmacology, and toxicology (Journal of ethnopharmacology 307)",
+      "authors": [
+        "Qingge Zheng",
+        "Xiangyu Mu",
+        "Shaobin Pan",
+        "Ruqiao Luan",
+        "Pan Zhao"
+      ],
+      "year": 2023,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1016/j.jep.2023.116153",
+      "url": "https://doi.org/10.1016/j.jep.2023.116153"
     }
   ]
 }
