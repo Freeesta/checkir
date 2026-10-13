@@ -48,7 +48,7 @@ async function draftScenario(page, check) {
   check("sheet: level 5 says it does not mean there are no active substances", /Non vuol dire che non ci siano sostanze attive/.test(none) && (await page.locator(".sheet-preview .sheet-name").count()) === 0, none);
   await sample(page, 5);
   const first = await page.getAttribute(".sheet-preview .sheet-alert", "data-sheet-alert");
-  check("sheet: a flagged family comes first among the alerts", first === "flagged_family", String(first));
+  check("sheet: a flagged family comes first among the alerts", first === "family_flagged", String(first));
 }
 
 /** The sheet has its own language; the interface keeps its own. */
@@ -90,6 +90,7 @@ async function printScenario(page, check) {
     check(`print: sheet ${n} is one A5 page`, pages === 1, `${pages} pages`);
     const info = await page.evaluate(() => ({ text: document.querySelector(".sheet-host .sheet")?.textContent ?? "", size: parseFloat(getComputedStyle(document.querySelector(".sheet-host .sheet")).fontSize), bar: document.querySelector(".dev-bar")?.checkVisibility() ?? false, signLine: document.querySelector(".sheet-host .sign-line")?.checkVisibility() ?? false, named: [...document.querySelectorAll(".sheet-host .sheet-name")].every((n) => n.closest(".found")?.querySelector(".level")) }));
     check(`print: sheet ${n} has no fixed warning, 10 pt text, a signature line and nothing else`, !NO_FIXED_WARNINGS.test(info.text) && info.size >= 13.3 && info.signLine && !info.bar && info.named, JSON.stringify(info));
+    if (n === 5) check("print: sheet 5 carries the family alert with class and source", /Benzodiazepine/.test(info.text) && /unodc-ewa/.test(info.text), info.text);
   }
   await page.emulateMedia({ media: "screen" });
 }

@@ -71,6 +71,7 @@ fn entry(id: &str, substance: &str, form: &str) -> LibEntry {
         substance: Some(substance.into()),
         display_name: format!("Substance {substance}"),
         form: form.into(),
+        classes: Vec::new(),
     }
 }
 
