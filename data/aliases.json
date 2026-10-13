@@ -1,4 +1,9 @@
 {
   "schema": "aliases/1",
-  "aliases": {}
+  "aliases": {
+    "2cb": "2c-b",
+    "mephedrone": "4-mmc",
+    "metoxetamine": "methoxetamine",
+    "mxe": "methoxetamine"
+  }
 }

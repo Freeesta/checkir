@@ -1,14 +1,19 @@
 {
   "schema": "datasheet/1",
   "substance": "4-mmc",
-  "version": 1,
+  "version": 2,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
@@ -16,10 +21,117 @@
   "reviewed": "2026-10-13",
   "review_by": "2028-09-30",
   "doses": [],
-  "interactions": [],
+  "interactions": [
+    {
+      "with": "stimulant",
+      "severity": "caution",
+      "mechanism": "sympathomimetic",
+      "source": "euda-cathinones"
+    }
+  ],
   "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic",
+    "precursor_classes": [],
+    "typical_impurities": []
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "nor-mephedrone",
+        "reaction": "n_demethylation",
+        "source": "euda-cathinones"
+      },
+      {
+        "from": "parent",
+        "to": "dihydro-mephedrone",
+        "reaction": "reduction_keto",
+        "source": "euda-cathinones"
+      },
+      {
+        "from": "parent",
+        "to": "4'-carboxy-mephedrone",
+        "reaction": "other",
+        "source": "olesti2017"
+      },
+      {
+        "from": "nor-mephedrone",
+        "to": "N-succinyl-nor-mephedrone",
+        "reaction": "other",
+        "source": "olesti2017"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "nor-mephedrone",
+        "active": null,
+        "source": "olesti2017"
+      },
+      {
+        "name_key": "dihydro-mephedrone",
+        "active": null,
+        "source": "olesti2017"
+      },
+      {
+        "name_key": "4-carboxy-mephedrone",
+        "active": null,
+        "source": "olesti2017"
+      },
+      {
+        "name_key": "n-succinyl-nor-mephedrone",
+        "active": null,
+        "source": "olesti2017"
+      }
+    ]
+  },
+  "cuts": [
+    {
+      "cut": "acetaminophen",
+      "frequency": "common",
+      "source": "unodc-cathinones2015"
+    },
+    {
+      "cut": "caffeine",
+      "frequency": "common",
+      "source": "unodc-cathinones2015"
+    },
+    {
+      "cut": "lidocaine",
+      "frequency": "common",
+      "source": "unodc-cathinones2015"
+    },
+    {
+      "cut": "benzocaine",
+      "frequency": "common",
+      "source": "unodc-cathinones2015"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "4mmc.redosing",
+      "topic": "redosing",
+      "source": "euda-cathinones"
+    },
+    {
+      "key": "4mmc.combination",
+      "topic": "combination",
+      "source": "euda-cathinones"
+    },
+    {
+      "key": "4mmc.signs",
+      "topic": "overdose_signs",
+      "source": "wood2010"
+    },
+    {
+      "key": "4mmc.testing",
+      "topic": "testing",
+      "source": "euda-cathinones"
+    }
+  ]
 }

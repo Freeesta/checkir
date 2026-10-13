@@ -1,14 +1,19 @@
 {
   "schema": "datasheet/1",
   "substance": "methamphetamine",
-  "version": 1,
+  "version": 2,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
@@ -16,10 +21,107 @@
   "reviewed": "2026-10-13",
   "review_by": "2028-09-30",
   "doses": [],
-  "interactions": [],
+  "interactions": [
+    {
+      "with": "stimulant",
+      "severity": "caution",
+      "mechanism": "sympathomimetic",
+      "source": "schep2010"
+    }
+  ],
   "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic",
+    "precursor_classes": [],
+    "typical_impurities": [
+      {
+        "substance": "ephedrine",
+        "ir_relevant": false,
+        "source": "unodc-ats2006"
+      }
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "4-hydroxymethamphetamine",
+        "reaction": "hydroxylation",
+        "source": "schep2010"
+      },
+      {
+        "from": "parent",
+        "to": "amphetamine",
+        "reaction": "n_demethylation",
+        "source": "schep2010"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "4-hydroxymethamphetamine",
+        "active": null,
+        "source": "euda-meth"
+      },
+      {
+        "name_key": "amphetamine",
+        "active": true,
+        "source": "euda-meth"
+      }
+    ],
+    "half_life_h": {
+      "min": 5,
+      "max": 30,
+      "matrix": "unspecified",
+      "source": "schep2010"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "caffeine",
+      "frequency": "common",
+      "source": "unodc-ats2006"
+    },
+    {
+      "cut": "ketamine",
+      "frequency": "occasional",
+      "source": "unodc-ats2006"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "meth.route",
+      "topic": "route",
+      "source": "euda-meth"
+    },
+    {
+      "key": "meth.redosing",
+      "topic": "redosing",
+      "source": "euda-meth"
+    },
+    {
+      "key": "meth.sleep",
+      "topic": "sleep_food_water",
+      "source": "schep2010"
+    },
+    {
+      "key": "meth.mental",
+      "topic": "mental_health",
+      "source": "cruickshank2009"
+    },
+    {
+      "key": "meth.signs",
+      "topic": "overdose_signs",
+      "source": "schep2010"
+    },
+    {
+      "key": "meth.combination",
+      "topic": "combination",
+      "source": "schep2010"
+    }
+  ]
 }
