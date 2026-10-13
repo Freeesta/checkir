@@ -1890,6 +1890,243 @@
       "url": "https://doi.org/10.1111/j.1556-4029.2007.00507.x",
       "tier": "primary",
       "consulted": "2026-10-13"
+    },
+    {
+      "id": "armenian2018",
+      "type": "paper",
+      "title": "Fentanyl, fentanyl analogs and novel synthetic opioids: a comprehensive review (Neuropharmacology 134 Pt A:121-132)",
+      "authors": [
+        "P. Armenian",
+        "K. T. Vo",
+        "J. Barr-Walker",
+        "K. L. Lynch"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.neuropharm.2017.10.016",
+      "url": "https://doi.org/10.1016/j.neuropharm.2017.10.016",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "lovrecic2019",
+      "type": "paper",
+      "title": "Non-medical use of novel synthetic opioids: a new challenge to public health (Int J Environ Res Public Health 16:177)",
+      "authors": [
+        "B. Lovrecic",
+        "M. Lovrecic",
+        "B. Gabrovec",
+        "M. Carli",
+        "M. Pacini",
+        "A. G. I. Maremmani",
+        "I. Maremmani"
+      ],
+      "year": 2019,
+      "doi": "10.3390/ijerph16020177",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6352208/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "kharasch2004",
+      "type": "paper",
+      "title": "Influence of hepatic and intestinal cytochrome P4503A activity on the acute disposition and effects of oral transmucosal fentanyl citrate (Anesthesiology 101:729-737)",
+      "authors": [
+        "E. D. Kharasch",
+        "D. Whittington",
+        "C. Hoffer"
+      ],
+      "year": 2004,
+      "doi": "10.1097/00000542-200409000-00022",
+      "url": "https://doi.org/10.1097/00000542-200409000-00022",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "elsherbini2023",
+      "type": "paper",
+      "title": "Opioids-induced inhibition of HERG ion channels and sudden cardiac death, a systematic review of current literature (Trends Cardiovasc Med 34:279-285)",
+      "authors": [
+        "A. El Sherbini",
+        "K. Liblik",
+        "J. Lee",
+        "A. Baranchuk",
+        "S. Zhang",
+        "M. El-Diasty"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.tcm.2023.03.006",
+      "url": "https://doi.org/10.1016/j.tcm.2023.03.006",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "degregori2012",
+      "type": "paper",
+      "title": "Morphine metabolism, transport and brain disposition (Metab Brain Dis 27:1-5)",
+      "authors": [
+        "S. De Gregori",
+        "M. De Gregori",
+        "G. N. Ranzani",
+        "M. Allegri",
+        "C. Minella",
+        "M. Regazzi"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s11011-011-9274-6",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3276770/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "oosten2017",
+      "type": "paper",
+      "title": "A prospective population pharmacokinetic study on morphine metabolism in cancer patients (Clin Pharmacokinet 56:733-746)",
+      "authors": [
+        "A. W. Oosten",
+        "J. A. Abrantes",
+        "S. Jonsson",
+        "M. Matic",
+        "R. H. N. van Schaik",
+        "P. de Bruijn",
+        "C. C. D. van der Rijt",
+        "R. H. J. Mathijssen"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s40262-016-0471-7",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5488155/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "wittwer2006",
+      "type": "paper",
+      "title": "Role of morphine's metabolites in analgesia: concepts and controversies (AAPS J 8:E348-E352)",
+      "authors": [
+        "E. Wittwer",
+        "S. E. Kern"
+      ],
+      "year": 2006,
+      "doi": "10.1007/BF02854905",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3231567/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "ravenscroft2000",
+      "type": "paper",
+      "title": "Bedside perspectives on the use of opioids: transferring results of clinical research into practice (Clin Exp Pharmacol Physiol 27:529-532)",
+      "authors": [
+        "P. Ravenscroft",
+        "J. Schneider"
+      ],
+      "year": 2000,
+      "doi": "10.1046/j.1440-1681.2000.03293.x",
+      "url": "https://doi.org/10.1046/j.1440-1681.2000.03293.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "crews2014",
+      "type": "paper",
+      "title": "Clinical Pharmacogenetics Implementation Consortium guidelines for cytochrome P450 2D6 genotype and codeine therapy: 2014 update (Clin Pharmacol Ther 95:376-382)",
+      "authors": [
+        "K. R. Crews",
+        "A. Gaedigk",
+        "H. M. Dunnenberger",
+        "J. S. Leeder",
+        "T. E. Klein",
+        "K. E. Caudle",
+        "C. E. Haidar",
+        "D. D. Shen",
+        "J. T. Callaghan",
+        "S. Sadhasivam",
+        "C. A. Prows",
+        "E. D. Kharasch",
+        "T. C. Skaar"
+      ],
+      "year": 2014,
+      "doi": "10.1038/clpt.2013.254",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3975212/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "eap2002",
+      "type": "paper",
+      "title": "Interindividual variability of the clinical pharmacokinetics of methadone: implications for the treatment of opioid dependence (Clin Pharmacokinet 41:1153-1193)",
+      "authors": [
+        "C. B. Eap",
+        "T. Buclin",
+        "P. Baumann"
+      ],
+      "year": 2002,
+      "doi": "10.2165/00003088-200241140-00003",
+      "url": "https://doi.org/10.2165/00003088-200241140-00003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "elkader2005",
+      "type": "paper",
+      "title": "Buprenorphine: clinical pharmacokinetics in the treatment of opioid dependence (Clin Pharmacokinet 44:661-680)",
+      "authors": [
+        "A. Elkader",
+        "B. Sproule"
+      ],
+      "year": 2005,
+      "doi": "10.2165/00003088-200544070-00001",
+      "url": "https://doi.org/10.2165/00003088-200544070-00001",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "wong2023",
+      "type": "paper",
+      "title": "Analgesic effect of buprenorphine for chronic noncancer pain: a systematic review and meta-analysis of randomized controlled trials (Anesth Analg 137:59-71)",
+      "authors": [
+        "S. S. C. Wong",
+        "T. H. Chan",
+        "F. Wang",
+        "T. C. W. Chan",
+        "H. C. Ho",
+        "C. W. Cheung"
+      ],
+      "year": 2023,
+      "doi": "10.1213/ANE.0000000000006467",
+      "url": "https://doi.org/10.1213/ANE.0000000000006467",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "wightman2020",
+      "type": "paper",
+      "title": "Opioid overdose deaths with buprenorphine detected in postmortem toxicology: a retrospective analysis (J Med Toxicol 17:10-15)",
+      "authors": [
+        "R. S. Wightman",
+        "J. Perrone",
+        "R. Scagos",
+        "M. Krieger",
+        "L. S. Nelson",
+        "B. D. L. Marshall"
+      ],
+      "year": 2021,
+      "doi": "10.1007/s13181-020-00795-3",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7785599/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
     }
   ]
 }

@@ -1,0 +1,98 @@
+{
+  "schema": "datasheet/1",
+  "substance": "codeine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "morphine",
+        "reaction": "o_demethylation",
+        "enzymes": [
+          "CYP2D6"
+        ],
+        "source": "crews2014"
+      },
+      {
+        "from": "parent",
+        "to": "norcodeine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "crews2014"
+      },
+      {
+        "from": "parent",
+        "to": "codeine-6-glucuronide",
+        "reaction": "glucuronidation",
+        "enzymes": [
+          "UGT2B7"
+        ],
+        "source": "crews2014"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "morphine",
+        "active": true,
+        "source": "crews2014"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [
+    {
+      "with": "benzodiazepines",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kerensky2017"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "codeine.cyp2d6",
+      "topic": "dosing",
+      "source": "crews2014"
+    },
+    {
+      "key": "codeine.breastfeeding",
+      "topic": "overdose_signs",
+      "source": "crews2014"
+    },
+    {
+      "key": "codeine.combination",
+      "topic": "combination",
+      "source": "kerensky2017"
+    },
+    {
+      "key": "codeine.tolerance",
+      "topic": "tolerance",
+      "source": "kerensky2017"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
