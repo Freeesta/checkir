@@ -189,6 +189,29 @@ fn near_identical_substances_raise_ambiguity() {
 }
 
 #[test]
+fn an_unidentified_sample_raises_no_ambiguity() {
+    let index = Index::new(vec![library(
+        "lib",
+        &[
+            ("a", "A", "base", make(A, 1)),
+            ("b", "B", "base", make(B, 2)),
+        ],
+    )]);
+    let res = run(
+        &index,
+        &make(&[(2650.0, 12.0, 0.8), (3500.0, 30.0, 0.5)], 7),
+        "",
+    );
+    assert_eq!(text(&res, "tier"), "T4");
+    for id in ["ambiguity", "spectral_twin", "different_form"] {
+        assert!(
+            alert(&res, id).is_none(),
+            "{id} under the to-check threshold"
+        );
+    }
+}
+
+#[test]
 fn two_libraries_are_searched_together_and_can_be_restricted() {
     let l1 = library(
         "one",

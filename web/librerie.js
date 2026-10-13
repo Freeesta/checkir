@@ -13,7 +13,7 @@ import { buildNameIndex, searchNames } from "./nomi.js";
 import { buildPrivateLibrary, noticeOf, slug, uniqueId } from "./importa.js";
 import { canStore, loadLibraries, removeStored, saveLibrary } from "./opfs.js";
 import { removeIndex } from "./peak_index_cache.js";
-import { t } from "./i18n.js";
+import { currentLang, t } from "./i18n.js";
 import { forgetPref, getState, readPref, update, writePref } from "./state.js";
 
 /** Same numbers as `Limits::STANDARD` of the library crate. */
@@ -32,6 +32,12 @@ let job = null;
 /** @param {string} id @returns {Float32Array | null} spectra of a library, one after the other on the common grid */
 export function libraryValues(id) {
   return loaded.get(id)?.values ?? null;
+}
+
+/** The name of a library row in the active language (rows, alerts and mixtures all name a substance this way); without the row, the name the result carries. @param {{ library: string, spectrum_id: string, display_name: string }} c @returns {string} */
+export function rowName(c) {
+  const row = libraryRows(c.library)?.find((r) => r.id === c.spectrum_id);
+  return row ? (row.names[currentLang() === "it" ? "it" : "en"] ?? row.names.en) : c.display_name;
 }
 
 /** @param {string} id @returns {import("./nomi.js").IndexRow[] | null} the index rows of a library, in the order of its values */
