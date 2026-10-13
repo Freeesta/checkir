@@ -77,7 +77,24 @@ async function qualityScenario(browser, base, check, axe) {
   await ctx.close();
 }
 
+/** A file opened before the library has arrived still gets its comparison (the worker must serve the `run` after the `sync`, not before). */
+async function lateLibraryScenario(browser, base, check) {
+  const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 768 } });
+  const page = await ctx.newPage();
+  await page.route("**/librerie/**", async (route) => {
+    await new Promise((r) => setTimeout(r, 2500));
+    await route.continue();
+  });
+  await page.goto(base);
+  await page.waitForSelector("body[data-ready='1']");
+  await page.setInputFiles("input[type=file]", [{ name: "presto.jdx", mimeType: "application/octet-stream", buffer: jcamp("presto", BETA) }]);
+  const arrived = await page.waitForSelector(".result[data-level]", { timeout: 20000 }).then(() => true, () => false);
+  check("late library: a file opened before the library arrives still gets its result, with no error", arrived && (await page.locator("#candidates .error").count()) === 0);
+  await ctx.close();
+}
+
 /** @param {import("playwright").Browser} browser */
 export async function cleanScenario(browser, base, check, axe) {
   await qualityScenario(browser, base, check, axe);
+  await lateLibraryScenario(browser, base, check);
 }

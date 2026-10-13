@@ -18,12 +18,21 @@ let twinsRunning = false;
 /** Libraries whose peak index is ready to answer. @type {Set<string>} */
 const indexed = new Set();
 
-async function engine() {
-  if (mod) return mod;
-  const path = "./wasm/ftir_wasm.js";
-  mod = await import(path);
-  await mod.default();
-  return mod;
+/** The one start of the engine, shared by every message: two callers must not start it twice, or a `run` can pass a `sync` still waiting for it. @type {Promise<any> | null} */
+let starting = null;
+
+function engine() {
+  starting ??= (async () => {
+    const path = "./wasm/ftir_wasm.js";
+    const loaded = await import(path);
+    await loaded.default();
+    mod = loaded;
+    return loaded;
+  })().catch((err) => {
+    starting = null;
+    throw err;
+  });
+  return starting;
 }
 
 /** @param {LibMessage} lib @returns {string | null} first error key, or null */
