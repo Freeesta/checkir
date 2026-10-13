@@ -5,6 +5,7 @@ FAILS when:
   - a key of REF is missing in another catalog, or another catalog has a key that REF does not have;
   - the placeholders ({name}) of a key differ between two languages;
   - the code uses a literal key (t("x.y"), data-i18n="x.y", data-i18n-title="x.y"...) that REF does not define;
+  - a catalog is not sorted by key (python3 tools/ordina_cataloghi.py sorts it: new keys land in their area, not all at the end);
   - a key of REF is never used in the code (orphan), unless it starts with a prefix listed in DYNAMIC (keys built at run time).
 Only standard library. Adapt WEB, REF, CODE_GLOBS and DYNAMIC to the project.
 
@@ -16,6 +17,9 @@ import json
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from ordina_cataloghi import sorted_text  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "web"
@@ -58,6 +62,9 @@ def main() -> int:
         for k in sorted(set(ref) & set(cat)):
             if set(PLACEHOLDER.findall(ref[k])) != set(PLACEHOLDER.findall(cat[k])):
                 bad.append(f"placeholders differ in {code}: {k}")
+    for p in sorted((WEB / "lang").glob("*.json")):
+        if sorted_text(p.read_text(encoding="utf-8")) != p.read_text(encoding="utf-8"):
+            bad.append(f"catalog not sorted: web/lang/{p.name} (run python3 tools/ordina_cataloghi.py)")
     used = used_keys()
     bad += [f"used in the code but not defined: {k}" for k in sorted(used - set(ref))]
     bad += [f"orphan key (never used): {k}" for k in sorted(set(ref) - used) if not k.startswith(DYNAMIC)]
