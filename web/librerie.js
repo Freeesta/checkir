@@ -14,11 +14,13 @@ import { buildPrivateLibrary, noticeOf, slug, uniqueId } from "./importa.js";
 import { canStore, loadLibraries, removeStored, saveLibrary } from "./opfs.js";
 import { removeIndex } from "./peak_index_cache.js";
 import { currentLang, t } from "./i18n.js";
-import { getState, update } from "./state.js";
+import { forgetPref, getState, readPref, update, writePref } from "./state.js";
 
 /** Same numbers as `Limits::STANDARD` of the library crate. */
 const LIMITS = { maxBytes: 256 * 1024 * 1024, maxSpectra: 50_000 };
 const BASE = "librerie/";
+/** Preference holding the name the user gave to a private library (the id never changes). */
+const LABEL = "libname.";
 
 /** @type {Map<string, Loaded>} */
 const loaded = new Map();
@@ -103,7 +105,7 @@ export function registerPackage(engine, files, enabled) {
     rows: JSON.parse(files.index).spectra,
     values: new Float32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4),
     native: parseNative(files.native, checked.n_spectra),
-    entry: { id: files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, terms: checked.terms ? { it: checked.terms.it ?? null, en: checked.terms.en ?? "" } : null, private: checked.private === true, enabled, sampling: typeof checked.sampling === "string" ? checked.sampling : null },
+    entry: { id: files.id, label: checked.private === true ? readPref(LABEL + files.id) || files.id : files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, terms: checked.terms ? { it: checked.terms.it ?? null, en: checked.terms.en ?? "" } : null, private: checked.private === true, enabled, sampling: typeof checked.sampling === "string" ? checked.sampling : null },
   });
   publish();
   return null;
@@ -141,6 +143,22 @@ export async function loadAllLibraries(engine) {
   }
 }
 
+/** @param {string} id @returns {string} the name shown for a library: the one the user gave a private library, else its id */
+export function libraryLabel(id) {
+  return loaded.get(id)?.entry.label ?? id;
+}
+
+/** Give a private library another name (saved in this browser); an empty name goes back to the id. @param {string} id @param {string} name */
+export function renameLibrary(id, name) {
+  const l = loaded.get(id);
+  if (!l?.entry.private) return;
+  const label = name.trim().slice(0, 60);
+  if (label && label !== id) writePref(LABEL + id, label);
+  else forgetPref(LABEL + id);
+  l.entry = { ...l.entry, label: label || id };
+  publish();
+}
+
 /** @param {string} id @param {boolean} on */
 export function setEnabled(id, on) {
   const l = loaded.get(id);
@@ -154,6 +172,7 @@ export async function removePrivate(id) {
   if (!loaded.get(id)?.entry.private) return;
   await removeStored(id);
   await removeIndex(id);
+  forgetPref(LABEL + id);
   loaded.delete(id);
   publish();
 }
@@ -206,6 +225,7 @@ export function libraryActions(engine, announce) {
   return {
     importLibrary: (/** @type {File[]} */ files, /** @type {string} */ name, /** @type {string} */ sampling) => importLibrary(engine, files, name, sampling, (n) => announce(t(n.key, n.params))),
     cancelImport,
+    renameLibrary: (/** @type {string} */ id, /** @type {string} */ name) => renameLibrary(id, name),
     removeLibrary: (/** @type {string} */ id) => void removePrivate(id).then(() => announce(t("status.library_removed", { name: id }))),
     toggleLibrary: setEnabled,
   };
