@@ -92,6 +92,11 @@ export async function matchScenario(browser, base, check, axe) {
   page.on("pageerror", (e) => errors.push(String(e)));
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
+  // Every announcement is recorded: the live region keeps only the last one, and another message (a library import) may land after the result's.
+  await page.evaluate(() => {
+    window.__said = [];
+    new MutationObserver(() => document.getElementById("status")?.textContent && window.__said.push(document.getElementById("status").textContent)).observe(document.getElementById("status"), { childList: true, characterData: true, subtree: true });
+  });
   await openPanel(page, "libraries");
   await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
@@ -114,8 +119,9 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: a name never stands outside a block with the level", await page.evaluate(() => [...document.querySelectorAll(".cand-name")].every((n) => n.closest(".result")?.querySelector(".level"))));
   check("match: header chip shows the tier and level word", /T2 · Probabile/.test((await page.textContent('[data-chip="result"]')) ?? ""));
   check("match: no fixed strip of warnings in the work area", (await page.locator("#limits").count()) === 0);
-  await page.waitForFunction(() => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(document.querySelector("#status")?.textContent ?? ""), null, { timeout: 5000 }).catch(() => {});
-  check("match: announcement says candidates, level and alerts", /\d+ candidat\w*, T2 · Probabile, \d+ allert\w*/.test((await page.textContent("#status")) ?? ""), (await page.textContent("#status")) ?? "");
+  const said = () => page.evaluate(() => window.__said);
+  await page.waitForFunction(() => window.__said.some((t) => /\d+ candidat\w*, T2 · Probabile, \d+ allert\w*/.test(t)), null, { timeout: 15000 }).catch(() => {});
+  check("match: announcement says candidates, level and alerts", (await said()).some((t) => /\d+ candidat\w*, T2 · Probabile, \d+ allert\w*/.test(t)), JSON.stringify(await said()));
   check("match: the zone left out is drawn and named", (await page.locator("#chart rect.excluded").count()) === 1 && /Escluso dal confronto/.test((await page.textContent("#chart")) ?? ""));
   const v1 = await axe(page);
   check("match: axe has no violations with a result", v1.length === 0, v1.join(", "));

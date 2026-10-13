@@ -5,6 +5,7 @@ import { chromium, firefox, webkit } from "playwright";
 import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { areaScenario } from "./area.mjs";
+import { cleanScenario } from "./pulizia.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
@@ -315,6 +316,7 @@ async function run() {
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
     await areaScenario(browser, base, check, axe);
+    await cleanScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
     await inverseScenario(browser, base, check);
     await subtractionScenario(browser, base, check, axe);
