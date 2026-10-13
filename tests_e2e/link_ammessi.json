@@ -125,6 +125,11 @@
       "file": "web/schede_ui.js",
       "url": "https://doi.org/",
       "motivo": "link a DOI of a cited source, opened only on the user's click (no request from the page)"
+    },
+    {
+      "file": "web/proponi.js",
+      "url": "https://github.com/Freeesta/checkir/",
+      "motivo": "base of the pre-filled issue and history links, opened only on the user's click (no request from the page)"
     }
   ]
 }

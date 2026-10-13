@@ -15,6 +15,7 @@ async function cacheLibraries(cache) {
     for (const lib of (await res.json()).libraries ?? []) {
       if (!/^[a-z0-9-]+$/.test(String(lib.path))) continue;
       for (const f of ["manifest.json", "index.json", "data.bin"]) await cache.add(`${LIBRARIES}${lib.path}/${f}`);
+      await cache.add(`${LIBRARIES}${lib.path}/native.bin`).catch(() => {});
     }
   } catch {
     // offline libraries are a bonus: the page loads them from the network when it can

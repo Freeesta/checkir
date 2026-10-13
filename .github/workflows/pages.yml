@@ -24,14 +24,18 @@ jobs:
       - uses: actions/checkout@v7
       - name: Toolchain (version pinned in rust-toolchain.toml)
         run: rustup show
-      - uses: actions/cache@v6
+      - name: Cargo and wasm-bindgen cache (written by the ci workflow on main)
+        uses: actions/cache/restore@v6
         with:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
             ~/.cargo/bin/wasm-bindgen
             target
-          key: pages-rust-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}
+          key: site-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ github.sha }}
+          restore-keys: |
+            site-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
+            site-${{ runner.os }}-
       - name: Build the site (page + WASM engine; wasm-bindgen CLI at the version of Cargo.lock)
         run: bash tools/costruisci_sito.sh
       - name: Size guard of the engine (decide the limit once, raise it only by decision)
