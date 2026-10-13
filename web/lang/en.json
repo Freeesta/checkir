@@ -579,5 +579,9 @@
   "regions.oop.name": "Out-of-plane bending (fingerprint)",
   "regions.oop.tag": "out of plane",
   "regions.far.name": "Heavy atoms and lattice",
-  "regions.far.tag": "heavy"
+  "regions.far.tag": "heavy",
+  "results.resolution": "resolution",
+  "results.step": "step",
+  "results.sample_file": "Sample",
+  "results.reference_file": "Reference"
 }

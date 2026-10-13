@@ -579,5 +579,9 @@
   "regions.oop.name": "Deformazioni fuori piano (impronta digitale)",
   "regions.oop.tag": "fuori piano",
   "regions.far.name": "Atomi pesanti e reticolo",
-  "regions.far.tag": "pesanti"
+  "regions.far.tag": "pesanti",
+  "results.resolution": "risoluzione",
+  "results.step": "passo",
+  "results.sample_file": "Campione",
+  "results.reference_file": "Riferimento"
 }

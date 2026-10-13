@@ -83,6 +83,12 @@ pub fn library_resample(jdx: &[u8]) -> Result<Vec<f32>, String> {
     ftir_lib::bridge::resample_standard(jdx).map_err(|e| e.json())
 }
 
+/// A JCAMP-DX file as the file gives it: `[points, resolution_cm1 or NaN, x…, y…]` (float32, absorbance). The error is thrown as JSON text.
+#[wasm_bindgen]
+pub fn library_native(jdx: &[u8]) -> Result<Vec<f32>, String> {
+    ftir_lib::bridge::native_standard(jdx).map_err(|e| e.json())
+}
+
 /// Builds the manifest and the index of an imported library: `{"manifest":{...},"index":{...}}` or `{error, ...}`.
 #[wasm_bindgen]
 pub fn library_build(identity: &str, index: &str, values: &[f32]) -> String {

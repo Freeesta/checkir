@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Loader of the calculation engine (the .wasm built by the workflow; it is not committed).
- * @typedef {{ version: () => string, demo_spectrum: () => string, open_file: (name: string, bytes: Uint8Array, maxBytes: number, maxPoints: number) => string, library_open: (manifest: string, index: string, data: Uint8Array, maxBytes: number, maxSpectra: number) => string, library_resample: (jdx: Uint8Array) => Float32Array, library_build: (identity: string, index: string, values: Float32Array) => string, detect_peaks: (spectrumJson: string, thresholdsJson: string) => string, fattore_proposto: SubtractionCall, sottrai: SubtractionCall }} Engine
+ * @typedef {{ version: () => string, demo_spectrum: () => string, open_file: (name: string, bytes: Uint8Array, maxBytes: number, maxPoints: number) => string, library_open: (manifest: string, index: string, data: Uint8Array, maxBytes: number, maxSpectra: number) => string, library_resample: (jdx: Uint8Array) => Float32Array, library_native: (jdx: Uint8Array) => Float32Array, library_build: (identity: string, index: string, values: Float32Array) => string, detect_peaks: (spectrumJson: string, thresholdsJson: string) => string, fattore_proposto: SubtractionCall, sottrai: SubtractionCall }} Engine
  * The two calls of the manual subtraction: sample and reference as (unit, wavenumbers, values), then the parameters as JSON.
  * @typedef {(sampleUnit: string, sampleX: Float64Array, sampleY: Float64Array, referenceUnit: string, referenceX: Float64Array, referenceY: Float64Array, paramsJson: string) => string} SubtractionCall
  */
