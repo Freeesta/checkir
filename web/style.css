@@ -350,6 +350,25 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .peaks-ref { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; margin: 0.4rem 0; }
 @media (forced-colors: active) { .region-ground { fill: Canvas; } .peak-minor { fill: Canvas; stroke: CanvasText; } .region-ink { fill: CanvasText; stroke: CanvasText; } .peak-explained { fill: CanvasText; } .peak-unexplained { fill: Canvas; stroke: CanvasText; } .peak-focus { stroke: Highlight; } }
 
+/* Comparison region (section 3 and the chart): grey outside the region, a bracket and a number for each chosen region, a table of r by region. */
+.ranges { margin: 0 0 0.6rem; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 0.4rem; }
+.ranges legend { display: flex; align-items: center; gap: 0.35rem; padding: 0 0.3rem; font-weight: 600; }
+.range-presets, .range-add, .range-list li { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.4rem; margin: 0.3rem 0; }
+.range-list { list-style: none; margin: 0.3rem 0; padding: 0; }
+.range-field { display: flex; flex-direction: column; font-size: 0.8rem; }
+.range-input { box-sizing: border-box; width: 5.5rem; min-height: 2rem; padding: 0 0.4rem; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 0.3rem; }
+.range-presets .btn[aria-pressed="true"] { border: 2px solid var(--focus); font-weight: 600; }
+.range-custom { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.9rem; }
+.range-band { fill: var(--text); fill-opacity: 0.35; }
+.range-name { font-weight: 600; font-size: 11px; }
+.brush-strip { fill: transparent; cursor: col-resize; pointer-events: all; }
+.ranges-table-wrap { overflow-x: auto; min-height: 12rem; margin: 0.5rem 0; }
+.ranges-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.ranges-table caption { text-align: left; font-weight: 600; padding-bottom: 0.2rem; }
+.ranges-table th, .ranges-table td { padding: 0.25rem 0.4rem; border: 1px solid var(--border); text-align: left; vertical-align: middle; }
+.ranges-table td > span { display: inline-flex; align-items: center; gap: 0.3rem; }
+@media (forced-colors: active) { .range-band { fill: CanvasText; } .range-input { border-color: ButtonText; } }
+
 /* Decision form and counselling sheet (section 5), and talk mode. The sheet host exists for print and talk mode only. */
 .decision { margin: 0 0 0.5rem; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 0.4rem; }
 .decision legend { display: flex; align-items: center; gap: 0.35rem; padding: 0 0.3rem; font-weight: 600; }

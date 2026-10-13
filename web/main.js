@@ -20,6 +20,8 @@ import { parseSpectrum } from "./spectrum.js";
 import { buildLayers } from "./layers.js";
 import { matchActions, startMatching } from "./match.js";
 import { peaksActions } from "./peaks.js";
+import { rangeContext } from "./ranges.js";
+import { startRangeTable } from "./ranges_table.js";
 import { loadBands } from "./regions.js";
 import { loadBandData } from "./bands_data.js";
 import { createPeakCard } from "./peak_card.js";
@@ -138,6 +140,7 @@ async function start() {
     },
     ...languageActions(() => redrawAll(), announce),
     ...workActions(engine, announce),
+    ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     closeSection: () => panels.closeSection(),
@@ -154,7 +157,7 @@ async function start() {
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), peaks: chartPeakKeys(ctx) });
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
   const card = createPeakCard($("peak-card"), ctx);
@@ -187,9 +190,8 @@ async function start() {
     chart.redraw();
   };
   subscribe(renderUi);
-  startMatching({ announce });
-  wireShortcuts(ctx, next);
-  redrawAll();
+  startMatching({ announce }); startRangeTable();
+  wireShortcuts(ctx, next); redrawAll();
   finishStart(engine);
 }
 
