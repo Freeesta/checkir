@@ -4052,6 +4052,342 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "review"
+    },
+    {
+      "id": "grond2004",
+      "type": "paper",
+      "title": "Clinical pharmacology of tramadol (Clin Pharmacokinet 43:879-923)",
+      "authors": [
+        "S. Grond",
+        "A. Sablotzki"
+      ],
+      "year": 2004,
+      "doi": "10.2165/00003088-200443130-00004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15509185/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261005084943/https://pubmed.ncbi.nlm.nih.gov/15509185/"
+    },
+    {
+      "id": "crews2021",
+      "type": "paper",
+      "title": "Clinical Pharmacogenetics Implementation Consortium guideline for CYP2D6, OPRM1, and COMT genotypes and select opioid therapy (Clin Pharmacol Ther 110:888-896)",
+      "authors": [
+        "K. R. Crews",
+        "A. A. Monte",
+        "R. Huddart",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1002/cpt.2149",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33387367/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260414222147/https://pubmed.ncbi.nlm.nih.gov/33387367/"
+    },
+    {
+      "id": "ali2023",
+      "type": "paper",
+      "title": "Clinical and laboratory factors related to seizure and serotonin toxicity in tramadol intoxication: an Egyptian study (Clin Drug Investig 43:963-971)",
+      "authors": [
+        "A. A. Ali",
+        "M. M. Abdeshafy",
+        "K. Abdelkawy",
+        "R. M. Elsabaa",
+        "F. Elbarbry"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s40261-023-01326-y",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38006536/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260624154855/https://pubmed.ncbi.nlm.nih.gov/38006536/"
+    },
+    {
+      "id": "nielsen2025",
+      "type": "paper",
+      "title": "Prevalence and characteristics of tramadol-induced seizures in young adult emergency admissions (Dan Med J 72:A02250108)",
+      "authors": [
+        "A. V. A. Nielsen",
+        "C. K. Lassen",
+        "D. Cakar",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.61409/a02250108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40747723/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250827190039/https://pubmed.ncbi.nlm.nih.gov/40747723/"
+    },
+    {
+      "id": "tramadol-label",
+      "type": "institution",
+      "title": "Tramadol hydrochloride tablets (Amneal Pharmaceuticals NY LLC), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8ec4e4e5-a56e-4198-8428-6b770b9bf27d",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "lyrica-label",
+      "type": "institution",
+      "title": "LYRICA (pregabalin) capsules and oral solution, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=60185c88-ecfd-46f9-adb9-b97c6b00a553",
+      "archive_url": "https://web.archive.org/web/20260802153658/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=60185c88-ecfd-46f9-adb9-b97c6b00a553",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "bockbrader2010",
+      "type": "paper",
+      "title": "Clinical pharmacokinetics of pregabalin in healthy volunteers (J Clin Pharmacol 50:941-950)",
+      "authors": [
+        "H. N. Bockbrader",
+        "L. L. Radulovic",
+        "E. L. Posvar",
+        "et al."
+      ],
+      "year": 2010,
+      "doi": "10.1177/0091270009352087",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20147618/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260707162059/https://pubmed.ncbi.nlm.nih.gov/20147618/"
+    },
+    {
+      "id": "evoy2021",
+      "type": "paper",
+      "title": "Gabapentinoid pharmacology in the context of emerging misuse liability (J Clin Pharmacol 61 Suppl 2:S89-S99)",
+      "authors": [
+        "K. E. Evoy",
+        "A. M. Peckham",
+        "J. R. Covvey",
+        "K. J. Tidgewell"
+      ],
+      "year": 2021,
+      "doi": "10.1002/jcph.1833",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34396549/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260902203559/https://pubmed.ncbi.nlm.nih.gov/34396549/"
+    },
+    {
+      "id": "evoy2026",
+      "type": "paper",
+      "title": "Misuse of pregabalin and gabapentin: a second systematic review update (Drugs 86:1365-1378)",
+      "authors": [
+        "K. E. Evoy",
+        "D. Drain",
+        "J. Pedigo",
+        "J. R. Covvey",
+        "O. Ramey"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s40265-026-02342-w",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42236659/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "kyei-baffour2020",
+      "type": "paper",
+      "title": "DARK classics in chemical neuroscience: U-47700 (ACS Chem Neurosci 11:3928-3936)",
+      "authors": [
+        "K. Kyei-Baffour",
+        "C. W. Lindsley"
+      ],
+      "year": 2020,
+      "doi": "10.1021/acschemneuro.0c00330",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32639714/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250404133630/https://pubmed.ncbi.nlm.nih.gov/32639714/"
+    },
+    {
+      "id": "rambaran2017",
+      "type": "paper",
+      "title": "U-47700: a clinical review of the literature (J Emerg Med 53:509-519)",
+      "authors": [
+        "K. A. Rambaran",
+        "S. W. Fleming",
+        "J. An",
+        "et al."
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.jemermed.2017.05.034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28911989/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20251119085553/https://pubmed.ncbi.nlm.nih.gov/28911989/"
+    },
+    {
+      "id": "vogliardi2018",
+      "type": "paper",
+      "title": "Non-fatal overdose with U-47700: identification in biological matrices (Curr Pharm Biotechnol 19:180-187)",
+      "authors": [
+        "S. Vogliardi",
+        "G. Stocchero",
+        "S. Maietti",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.2174/1389201019666180509164240",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29745328/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "kriikku2019",
+      "type": "paper",
+      "title": "Toxic lifespan of the synthetic opioid U-47,700 in Finland verified by re-analysis of UPLC-TOF-MS data (Forensic Sci Int 300:85-88)",
+      "authors": [
+        "P. Kriikku",
+        "A. Pelander",
+        "I. Rasanen",
+        "I. Ojanpera"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.forsciint.2019.04.030",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31082566/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260928162543/https://pubmed.ncbi.nlm.nih.gov/31082566/"
+    },
+    {
+      "id": "nordmeier2022",
+      "type": "paper",
+      "title": "Are the N-demethylated metabolites of U-47700 more active than their parent compound? In vitro mu-opioid receptor activation of N-desmethyl-U-47700 and N,N-bisdesmethyl-U-47700 (Drug Test Anal 14:713-717)",
+      "authors": [
+        "F. Nordmeier",
+        "A. Cannaert",
+        "C. P. Stove",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3182",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34669261/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "giorgetti2024",
+      "type": "paper",
+      "title": "Intoxications involving methoxyacetylfentanyl and U-47700: a study of 3 polydrug fatalities (Int J Legal Med 138:1801-1811)",
+      "authors": [
+        "A. Giorgetti",
+        "M. Große Perdekamp",
+        "G. Franchetti",
+        "et al."
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00414-024-03263-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38831139/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251106032718/https://pubmed.ncbi.nlm.nih.gov/38831139/"
+    },
+    {
+      "id": "wagmann2020",
+      "type": "paper",
+      "title": "Toxicokinetics and analytical toxicology of flualprazolam: metabolic fate, isozyme mapping, human plasma concentration and main urinary excretion products (J Anal Toxicol 44:549-558)",
+      "authors": [
+        "L. Wagmann",
+        "S. K. Manier",
+        "T. P. Bambauer",
+        "et al."
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkaa019",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32104896/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204191314/https://pubmed.ncbi.nlm.nih.gov/32104896/"
+    },
+    {
+      "id": "canfield2023",
+      "type": "paper",
+      "title": "Designer benzodiazepine rat pharmacokinetics: a comparison of alprazolam, flualprazolam and flubromazolam (Toxicol Appl Pharmacol 465:116459)",
+      "authors": [
+        "J. R. Canfield",
+        "D. F. Kisor",
+        "J. E. Sprague"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.taap.2023.116459",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36907383/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260610164130/https://pubmed.ncbi.nlm.nih.gov/36907383/"
+    },
+    {
+      "id": "freestone2026",
+      "type": "paper",
+      "title": "The emergence of novel benzodiazepines in Australia, evidence, alerts, clinical management and harm reduction: a narrative review (Drug Alcohol Rev, e70086)",
+      "authors": [
+        "J. Freestone",
+        "S. Kypri",
+        "J. L. Schumann",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1111/dar.70086",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12682436/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260412082704/https://pmc.ncbi.nlm.nih.gov/articles/PMC12682436/"
+    },
+    {
+      "id": "huppertz2018",
+      "type": "paper",
+      "title": "Flubromazolam - basic pharmacokinetic evaluation of a highly potent designer benzodiazepine (Drug Test Anal 10:206-211)",
+      "authors": [
+        "L. M. Huppertz",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2203",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28378533/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204003332/https://pubmed.ncbi.nlm.nih.gov/28378533/"
+    },
+    {
+      "id": "bohnenberger2019",
+      "type": "paper",
+      "title": "Flubromazolam overdose: a review of a new designer benzodiazepine and the role of flumazenil (Ment Health Clin 9:133-137)",
+      "authors": [
+        "K. Bohnenberger",
+        "M. T. Liu"
+      ],
+      "year": 2019,
+      "doi": "10.9740/mhc.2019.05.133",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31123661/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250203224939/https://pubmed.ncbi.nlm.nih.gov/31123661/"
     }
   ]
 }

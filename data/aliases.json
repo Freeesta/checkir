@@ -34,9 +34,12 @@
     "metoxetamine": "methoxetamine",
     "mezcaline": "mescaline",
     "mxe": "methoxetamine",
+    "pregabalina": "pregabalin",
     "psilocibina": "psilocybin",
     "psilocybine": "psilocybin",
     "salvinorin": "salvinorin-a",
-    "tenamfetamine": "mda"
+    "tenamfetamine": "mda",
+    "tramadolo": "tramadol",
+    "u47700": "u-47700"
   }
 }
