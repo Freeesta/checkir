@@ -117,7 +117,7 @@ export function drawPeaks(root, peaks, v, px, pyAt) {
 
 /** @param {string} agreement @returns {string} */
 export function agreementWord(agreement) {
-  return agreement === "agrees" ? t("peaks.agreement.agrees") : agreement === "partial" ? t("peaks.agreement.partial") : agreement === "disagrees" ? t("peaks.agreement.disagrees") : t("peaks.agreement.unknown");
+  return agreement === "agrees" ? t("peaks.agreement.agrees") : agreement === "partial" ? t("peaks.agreement.partial") : agreement === "disagrees" ? t("peaks.agreement.disagrees") : agreement === "low_signal" ? t("peaks.agreement.low_signal") : t("peaks.agreement.unknown");
 }
 
 /** The regions and the peaks as tables, after the data of the spectrum. @param {Marks} marks @returns {HTMLTableElement[]} */
