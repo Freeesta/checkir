@@ -1,0 +1,13 @@
+{
+ "schema": "substance-bands/1",
+ "version": "2026-10.1",
+ "substance": "4-mmc",
+ "form": "hydrochloride",
+ "note": "One library spectrum checked so far (draft). Position isomers (3-MMC, 2-MMC) have the same C=O: the para-ring band near 833 is what tells them apart, and only with a candidate.",
+ "bands": [
+  {"position_cm1": 2715, "tolerance_cm1": 20, "intensity": "weak", "shape": "very_broad", "group": "ammonium_secondary", "mode": "stretch", "rule_id": "nh2plus.stretch", "sources": ["swgdrug-4mmc", "vujovic2020"], "status": "draft", "verified_on": ["vs-31eb58599154"]},
+  {"position_cm1": 1686, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "aryl_ketone", "mode": "stretch", "rule_id": "co.aryl_ketone", "text_key": "substance_bands.4_mmc.hydrochloride.1686", "sources": ["swgdrug-4mmc", "vujovic2020", "goncalves2021"], "status": "draft", "verified_on": ["vs-31eb58599154"]},
+  {"position_cm1": 1606, "tolerance_cm1": 6, "intensity": "medium", "shape": "sharp", "group": "aromatic_ring", "mode": "stretch", "rule_id": "ring.c_c_1600", "sources": ["swgdrug-4mmc", "vujovic2020"], "status": "draft", "verified_on": ["vs-31eb58599154"]},
+  {"position_cm1": 833, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "benzene_para", "mode": "oop", "rule_id": "oop.para", "text_key": "substance_bands.4_mmc.hydrochloride.833", "sources": ["swgdrug-4mmc", "smith-benzene"], "status": "draft", "verified_on": ["vs-31eb58599154"]}
+ ]
+}

@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:modes:1",
+  "title": "modes/1: vibration mode catalogue",
+  "title_it": "modes/1: catalogo dei modi di vibrazione",
+  "description": "The vibration modes the rules refer to, with the data to animate them.",
+  "description_it": "I modi di vibrazione a cui si riferiscono le regole, con i dati per animarli.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "modes/1"
+    },
+    "version": {
+      "description": "Data version, YYYY-MM.N (for example 2026-10.1).",
+      "description_it": "Versione dei dati, AAAA-MM.N (per esempio 2026-10.1).",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}(-[0-9]{2})?\\.[0-9]+$"
+    },
+    "modes": {
+      "description": "The modes.",
+      "description_it": "I modi.",
+      "type": "array",
+      "items": {
+        "description": "One vibration mode.",
+        "description_it": "Un modo di vibrazione.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Stable mode id.",
+            "description_it": "Id stabile del modo.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+          },
+          "names": {
+            "description": "Display names.",
+            "description_it": "Nomi da mostrare.",
+            "type": "object",
+            "properties": {
+              "it": {
+                "description": "Italian name.",
+                "description_it": "Nome in italiano.",
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "description": "English name.",
+                "description_it": "Nome in inglese.",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "it",
+              "en"
+            ],
+            "additionalProperties": false
+          },
+          "kind": {
+            "description": "Kind of motion.",
+            "description_it": "Tipo di moto.",
+            "enum": [
+              "stretching",
+              "bending",
+              "other"
+            ]
+          },
+          "symmetry": {
+            "description": "Symmetry of the motion, null when not applicable.",
+            "description_it": "Simmetria del moto, null se non applicabile.",
+            "enum": [
+              "sym",
+              "asym",
+              null
+            ]
+          },
+          "in_plane": {
+            "description": "True if the motion stays in the plane of the group, null when not applicable.",
+            "description_it": "True se il moto resta nel piano del gruppo, null se non applicabile.",
+            "enum": [
+              true,
+              false,
+              null
+            ]
+          },
+          "definition_key": {
+            "description": "Key of the definition text (modes.<id>.definition).",
+            "description_it": "Chiave del testo di definizione (modes.<id>.definition).",
+            "type": "string",
+            "pattern": "^modes\\.[a-z0-9_]+\\.definition$"
+          },
+          "animation": {
+            "description": "Animation data, null when the mode is explained with words only.",
+            "description_it": "Dati dell'animazione, null se il modo si spiega solo a parole.",
+            "oneOf": [
+              {
+                "description": "Two-dimensional animation of a model group (z toward the viewer is drawn as size or symbol, never as colour only). Centre-of-mass compensation of the heavy atom is left to the renderer.",
+                "description_it": "Animazione bidimensionale di un gruppo modello (z verso chi guarda è disegnata con dimensione o simbolo, mai col solo colore). La compensazione del centro di massa dell'atomo pesante spetta a chi disegna.",
+                "type": "object",
+                "properties": {
+                  "atoms": {
+                    "description": "Atoms of the model group.",
+                    "description_it": "Atomi del gruppo modello.",
+                    "type": "array",
+                    "items": {
+                      "description": "An atom.",
+                      "description_it": "Un atomo.",
+                      "type": "object",
+                      "properties": {
+                        "el": {
+                          "description": "Element symbol.",
+                          "description_it": "Simbolo dell'elemento.",
+                          "type": "string",
+                          "pattern": "^[A-Z][a-z]?$"
+                        },
+                        "xyz": {
+                          "description": "x, y, z of one atom or displacement.",
+                          "description_it": "x, y, z di un atomo o di uno spostamento.",
+                          "type": "array",
+                          "items": {
+                            "description": "Coordinate.",
+                            "description_it": "Coordinata.",
+                            "type": "number"
+                          },
+                          "minItems": 3,
+                          "maxItems": 3
+                        }
+                      },
+                      "required": [
+                        "el",
+                        "xyz"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 2
+                  },
+                  "bonds": {
+                    "description": "Bonds as pairs of atom indices.",
+                    "description_it": "Legami come coppie di indici di atomi.",
+                    "type": "array",
+                    "items": {
+                      "description": "Two atom indices.",
+                      "description_it": "Due indici di atomi.",
+                      "type": "array",
+                      "items": {
+                        "description": "Atom index.",
+                        "description_it": "Indice dell'atomo.",
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "minItems": 1
+                  },
+                  "displacements": {
+                    "description": "Displacement of each atom at the extreme of the vibration (same order as atoms).",
+                    "description_it": "Spostamento di ciascun atomo all'estremo della vibrazione (stesso ordine di atoms).",
+                    "type": "array",
+                    "items": {
+                      "description": "x, y, z of one atom or displacement.",
+                      "description_it": "x, y, z di un atomo o di uno spostamento.",
+                      "type": "array",
+                      "items": {
+                        "description": "Coordinate.",
+                        "description_it": "Coordinata.",
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "minItems": 2
+                  },
+                  "period_s": {
+                    "description": "Period of the animation in seconds (shown only if the user has not asked for reduced motion).",
+                    "description_it": "Periodo dell'animazione in secondi (mostrata solo se l'utente non ha chiesto meno movimento).",
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                },
+                "required": [
+                  "atoms",
+                  "bonds",
+                  "displacements",
+                  "period_s"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "example_groups": {
+            "description": "Groups (ids in groups/1) that show this mode.",
+            "description_it": "Gruppi (id in groups/1) che mostrano questo modo.",
+            "type": "array",
+            "items": {
+              "description": "Id.",
+              "description_it": "Id.",
+              "type": "string",
+              "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "names",
+          "kind",
+          "symmetry",
+          "in_plane",
+          "definition_key",
+          "animation",
+          "example_groups"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "modes"
+  ],
+  "additionalProperties": false
+}

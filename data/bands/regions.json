@@ -1,0 +1,16 @@
+{
+ "schema": "regions/1",
+ "version": "2026-10.1",
+ "regions": [
+  {"id": "xh_stretch", "range_cm1": {"min": 3200, "max": 3700}, "family": "oh_nh", "sources": ["coates2000", "smith-co-bond", "smith-nitrogen"]},
+  {"id": "ch_stretch", "range_cm1": {"min": 2800, "max": 3130}, "family": "ch", "sources": ["coates2000", "smith-hydrocarbons"]},
+  {"id": "salt_nh", "range_cm1": {"min": 2200, "max": 3200}, "family": "oh_nh", "sources": ["smith-amine-salts", "goncalves2021", "smith-amines23"]},
+  {"id": "instrument", "range_cm1": {"min": 1900, "max": 2400}, "family": "artifact", "sources": ["shimadzu-faq-environment", "libretexts-ir-table"]},
+  {"id": "carbonyl", "range_cm1": {"min": 1650, "max": 1850}, "family": "carbonyl", "sources": ["smith-carbonyl", "coates2000"]},
+  {"id": "double_bonds", "range_cm1": {"min": 1500, "max": 1680}, "family": "double", "sources": ["coates2000", "smith-amides"]},
+  {"id": "ch_bend", "range_cm1": {"min": 1300, "max": 1500}, "family": "ch", "sources": ["coates2000", "smith-hydrocarbons", "smith-inorg2"]},
+  {"id": "single_bonds", "range_cm1": {"min": 1000, "max": 1300}, "family": "co_cn", "sources": ["smith-co-bond", "smith-inorg3"]},
+  {"id": "oop", "range_cm1": {"min": 650, "max": 1000}, "family": "oop", "sources": ["smith-benzene", "coates2000"]},
+  {"id": "far", "range_cm1": {"min": 400, "max": 650}, "family": "heavy", "sources": ["coates2000", "smith-halogen"]}
+ ]
+}

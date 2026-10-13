@@ -35,6 +35,464 @@
       "url": "https://www.ebi.ac.uk/chebi/",
       "consulted": "2026-10-12",
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "coates2000",
+      "type": "paper",
+      "title": "Interpretation of Infrared Spectra, A Practical Approach (Encyclopedia of Analytical Chemistry)",
+      "authors": [
+        "J. Coates"
+      ],
+      "year": 2000,
+      "doi": "10.1002/9780470027318.a5606",
+      "consulted": "2026-10-12",
+      "license": "© John Wiley & Sons; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "wikipedia-ir-table",
+      "type": "web",
+      "title": "Wikipedia: Infrared spectroscopy correlation table",
+      "url": "https://en.wikipedia.org/wiki/Infrared_spectroscopy_correlation_table",
+      "archive_url": "https://web.archive.org/web/20260919030615/https://en.wikipedia.org/wiki/Infrared_spectroscopy_correlation_table",
+      "consulted": "2026-10-12",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "libretexts-ir-table",
+      "type": "web",
+      "title": "LibreTexts Chemistry: Infrared Spectroscopy Absorption Table",
+      "url": "https://chem.libretexts.org/Ancillary_Materials/Reference/Reference_Tables/Spectroscopic_Reference_Tables/Infrared_Spectroscopy_Absorption_Table",
+      "archive_url": "https://web.archive.org/web/20260610183100/https://chem.libretexts.org/Ancillary_Materials/Reference/Reference_Tables/Spectroscopic_Reference_Tables/Infrared_Spectroscopy_Absorption_Table",
+      "consulted": "2026-10-12",
+      "license": "CC-BY-NC-SA-4.0; cited as the source of numbers only, never copied or redistributed"
+    },
+    {
+      "id": "ucla-irtable",
+      "type": "web",
+      "title": "UCLA WebSpectra: Table of IR Absorptions",
+      "url": "https://webspectra.chem.ucla.edu/irtable.html",
+      "archive_url": "https://web.archive.org/web/20260603110406/https://webspectra.chem.ucla.edu/irtable.html",
+      "consulted": "2026-10-12",
+      "license": "© UCLA; cited as the source of numbers only"
+    },
+    {
+      "id": "boulder-irchart",
+      "type": "web",
+      "title": "University of Colorado Boulder, Organic Chemistry: Table of Characteristic IR Absorptions",
+      "url": "https://orgchemboulder.com/Spectroscopy/specttutor/irchart.shtml",
+      "consulted": "2026-10-12",
+      "license": "cited as the source of numbers only"
+    },
+    {
+      "id": "smith-amine-salts",
+      "type": "paper",
+      "title": "Organic Nitrogen Compounds V: Amine Salts (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2019,
+      "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-v-amine-salts",
+      "archive_url": "https://web.archive.org/web/20260209085920/https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-v-amine-salts",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-hydrocarbons",
+      "type": "paper",
+      "title": "The Big Review IV: Hydrocarbons (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2025,
+      "url": "https://www.spectroscopyonline.com/view/the-big-review-iv-hydrocarbons",
+      "archive_url": "https://web.archive.org/web/20261008091911/https://www.spectroscopyonline.com/view/the-big-review-iv-hydrocarbons",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-co-bond",
+      "type": "paper",
+      "title": "The Big Review V: The C-O Bond (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2025,
+      "url": "https://www.spectroscopyonline.com/view/the-big-review-v-the-c-o-bond",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-carbonyl",
+      "type": "paper",
+      "title": "The Big Review VI: Carbonyl Compounds (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2025,
+      "url": "https://www.spectroscopyonline.com/view/the-big-review-vi-carbonyl-compounds",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-nitrogen",
+      "type": "paper",
+      "title": "The Big Review VIII: Organic Nitrogen Compounds (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2026,
+      "url": "https://www.spectroscopyonline.com/view/the-big-review-viii-organic-nitrogen-compounds",
+      "archive_url": "https://web.archive.org/web/20261008091910/https://www.spectroscopyonline.com/view/the-big-review-viii-organic-nitrogen-compounds",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-nitro",
+      "type": "paper",
+      "title": "Organic Nitrogen Compounds X: Nitro Groups, An Explosive Proposition (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2020,
+      "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-x-nitro-groups-an-explosive-proposition",
+      "archive_url": "https://web.archive.org/web/20260130134546/https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-x-nitro-groups-an-explosive-proposition",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-benzene",
+      "type": "paper",
+      "title": "Distinguishing Structural Isomers: Mono- and Disubstituted Benzene Rings (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2016,
+      "url": "https://www.spectroscopyonline.com/view/distinguishing-structural-isomers-mono-and-di-substituted-benzene-rings",
+      "archive_url": "https://web.archive.org/web/20250926005911/https://www.spectroscopyonline.com/view/distinguishing-structural-isomers-mono-and-di-substituted-benzene-rings",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-fingers",
+      "type": "paper",
+      "title": "Benzene Fingers, Part I: Overtone and Combination Bands (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2016,
+      "url": "https://www.spectroscopyonline.com/view/benzene-fingers-part-i-overtone-and-combination-bands",
+      "archive_url": "https://web.archive.org/web/20260825120404/https://www.spectroscopyonline.com/view/benzene-fingers-part-i-overtone-and-combination-bands",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-ethers",
+      "type": "paper",
+      "title": "The C-O Bond III: Ethers By a Knockout (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2017,
+      "url": "https://www.spectroscopyonline.com/view/c-o-bond-iii-ethers-knockout",
+      "archive_url": "https://web.archive.org/web/20260907060910/https://www.spectroscopyonline.com/view/c-o-bond-iii-ethers-knockout",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-esters",
+      "type": "paper",
+      "title": "The C=O Bond, Part VI: Esters and the Rule of Three (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2018,
+      "url": "https://www.spectroscopyonline.com/view/co-bond-part-vi-esters-and-rule-three",
+      "archive_url": "https://web.archive.org/web/20260603110406/https://www.spectroscopyonline.com/view/co-bond-part-vi-esters-and-rule-three",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-arom-esters",
+      "type": "paper",
+      "title": "The C=O Bond, Part VII: Aromatic Esters, Organic Carbonates, and More of the Rule of Three (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2018,
+      "url": "https://www.spectroscopyonline.com/view/co-bond-part-vii-aromatic-esters-organic-carbonates-and-more-rule-three",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-inorg1",
+      "type": "paper",
+      "title": "Inorganics I: Introduction (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2023,
+      "url": "https://www.spectroscopyonline.com/view/inorganics-i-introduction",
+      "archive_url": "https://web.archive.org/web/20261008091915/https://www.spectroscopyonline.com/view/inorganics-i-introduction",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-inorg2",
+      "type": "paper",
+      "title": "Inorganics II: The Spectra (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2024,
+      "url": "https://www.spectroscopyonline.com/view/inorganics-ii-the-spectra",
+      "archive_url": "https://web.archive.org/web/20261008091914/https://www.spectroscopyonline.com/view/inorganics-ii-the-spectra",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-inorg3",
+      "type": "paper",
+      "title": "Inorganics III: Even More Spectra and the Grand Finale (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2024,
+      "url": "https://www.spectroscopyonline.com/view/inorganics-iii-even-more-spectra-and-the-grand-finale",
+      "archive_url": "https://web.archive.org/web/20261008091913/https://www.spectroscopyonline.com/view/inorganics-iii-even-more-spectra-and-the-grand-finale",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-halogen",
+      "type": "paper",
+      "title": "Halogenated Organic Compounds (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2023,
+      "url": "https://www.spectroscopyonline.com/view/halogenated-organic-compounds",
+      "archive_url": "https://web.archive.org/web/20261008091915/https://www.spectroscopyonline.com/view/halogenated-organic-compounds",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-amines23",
+      "type": "paper",
+      "title": "Organic Nitrogen Compounds III: Secondary and Tertiary Amines (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2019,
+      "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-iii-secondary-and-tertiary-amines",
+      "archive_url": "https://web.archive.org/web/20260114012452/https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-iii-secondary-and-tertiary-amines",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-imides",
+      "type": "paper",
+      "title": "Organic Nitrogen Compounds VIII: Imides (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2020,
+      "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-viii-imides",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "smith-amides",
+      "type": "paper",
+      "title": "Organic Nitrogen Compounds VII: Amides, The Rest of the Story (B. C. Smith, Spectroscopy)",
+      "authors": [
+        "B. C. Smith"
+      ],
+      "year": 2020,
+      "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-vii-amides-rest-story",
+      "archive_url": "https://web.archive.org/web/20260113204621/https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-vii-amides-rest-story",
+      "consulted": "2026-10-12",
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+    },
+    {
+      "id": "goncalves2021",
+      "type": "paper",
+      "title": "Structure Assignment of Seized Products Containing Cathinone Derivatives Using High Resolution Analytical Techniques (Metabolites 11(3):144)",
+      "authors": [
+        "J. L. Gonçalves"
+      ],
+      "year": 2021,
+      "doi": "10.3390/metabo11030144",
+      "consulted": "2026-10-12",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "maheux2016",
+      "type": "paper",
+      "title": "Identification of polymorphism in ethylone hydrochloride (Drug Testing and Analysis 8(8):847-857)",
+      "authors": [
+        "C. R. Maheux"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1859",
+      "consulted": "2026-10-12",
+      "license": "cited as the source of numbers only; reuse licence not stated"
+    },
+    {
+      "id": "nist-webbook",
+      "type": "database",
+      "title": "NIST Chemistry WebBook, SRD 69 (infrared spectra)",
+      "url": "https://webbook.nist.gov/chemistry/",
+      "archive_url": "https://web.archive.org/web/20261010212143/https://webbook.nist.gov/chemistry/",
+      "consulted": "2026-10-12",
+      "license": "US government data; some spectra from the Coblentz Society or EPA, cite the source"
+    },
+    {
+      "id": "usp-talc",
+      "type": "web",
+      "title": "USP 35-NF 30, Talc monograph, identification A (infrared)",
+      "url": "https://www.drugfuture.com/Pharmacopoeia/USP35/data/v35300/usp35nf30s0_m80360.html",
+      "consulted": "2026-10-12",
+      "license": "© USP; cited as the source of numbers only"
+    },
+    {
+      "id": "shimadzu-faq-environment",
+      "type": "web",
+      "title": "Shimadzu FTIR FAQ: Is FTIR affected by the environment?",
+      "url": "https://www.shimadzu.com/an/ftir/support/faq/1.html",
+      "archive_url": "https://web.archive.org/web/20191214095142/https://www.shimadzu.com/an/ftir/support/faq/1.html",
+      "consulted": "2026-10-12",
+      "license": "© Shimadzu; cited as the source of numbers only"
+    },
+    {
+      "id": "swgdrug-cocaine",
+      "type": "database",
+      "title": "SWGDRUG monograph: Cocaine (IR: base KBr, HCl ATR and KBr)",
+      "url": "https://www.swgdrug.org/Monographs/COCAINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-12",
+      "archive_url": "https://web.archive.org/web/20261005185553/https://www.swgdrug.org/Monographs/COCAINE.pdf"
+    },
+    {
+      "id": "swgdrug-amphetamine",
+      "type": "database",
+      "title": "SWGDRUG monograph: Amphetamine (IR: HCl, sulfate, phosphate, ATR)",
+      "url": "https://www.swgdrug.org/Monographs/AMPHETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-12"
+    },
+    {
+      "id": "swgdrug-mdma",
+      "type": "database",
+      "title": "SWGDRUG monograph: 3,4-Methylenedioxymethamphetamine (IR: HCl KBr, base ATR)",
+      "url": "https://www.swgdrug.org/Monographs/3,4-METHYLENEDIOXYMETHAMPHETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-12"
+    },
+    {
+      "id": "swgdrug-4mmc",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Methylmethcathinone (IR: HCl ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4-methylmethcathinone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-12"
+    },
+    {
+      "id": "swgdrug-4cmc",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Chloromethcathinone (IR: HCl ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4-Chloromethcathinone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-12",
+      "archive_url": "https://web.archive.org/web/20241213085638/https://swgdrug.org/Monographs/4-Chloromethcathinone.pdf"
+    },
+    {
+      "id": "swgdrug-ketamine",
+      "type": "database",
+      "title": "SWGDRUG monograph: Ketamine (IR: base and HCl, KBr and ATR)",
+      "url": "https://www.swgdrug.org/Monographs/KETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-12",
+      "archive_url": "https://web.archive.org/web/20250123160825/https://www.swgdrug.org/Monographs/KETAMINE.pdf"
+    },
+    {
+      "id": "swgdrug-thca-a",
+      "type": "database",
+      "title": "SWGDRUG monograph: THCA-A (IR: free acid, ATR)",
+      "url": "https://www.swgdrug.org/Monographs/THCA-A.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-12"
+    },
+    {
+      "id": "rodrigues2013",
+      "type": "paper",
+      "title": "Analysis of seized cocaine samples by using chemometric methods and FTIR spectroscopy (J. Braz. Chem. Soc. 24(3))",
+      "authors": [
+        "N. V. S. Rodrigues",
+        "E. M. Cardoso",
+        "M. V. O. Andrade",
+        "C. L. Donnici",
+        "M. M. Sena"
+      ],
+      "year": 2013,
+      "doi": "10.5935/0103-5053.20130066",
+      "license": "CC-BY-NC-4.0; cited as the source of numbers only",
+      "consulted": "2026-10-12"
+    },
+    {
+      "id": "unodc-cocaine2012",
+      "type": "institution",
+      "title": "UNODC, Recommended Methods for the Identification and Analysis of Cocaine in Seized Materials (ST/NAR/7/Rev.1)",
+      "year": 2012,
+      "url": "https://www.unodc.org/documents/scientific/Cocaine_Manual_Rev_1.pdf",
+      "license": "© United Nations; cited as the source of numbers only",
+      "consulted": "2026-10-12",
+      "archive_url": "https://web.archive.org/web/20260822112454/https://www.unodc.org/documents/scientific/Cocaine_Manual_Rev_1.pdf"
+    },
+    {
+      "id": "mendez-hernandez2020",
+      "type": "paper",
+      "title": "Espectroscopia vibracional como una alternativa para la discriminación de drogas ilícitas incautadas en la ciudad de Cúcuta (Respuestas 25(S1))",
+      "authors": [
+        "J. M. Méndez-Hernández",
+        "A. L. Chaparro-García",
+        "M. E. Rivera"
+      ],
+      "year": 2020,
+      "doi": "10.22463/0122820X.1829",
+      "license": "CC-BY-NC-ND; cited as the source of numbers only",
+      "consulted": "2026-10-12"
+    },
+    {
+      "id": "vujovic2020",
+      "type": "paper",
+      "title": "DFT calculations as an efficient tool for prediction of Raman and infra-red spectra and activities of newly synthesized cathinones (Open Chem. 18)",
+      "authors": [
+        "M. Vujović",
+        "V. Ragavendran",
+        "B. Arsić",
+        "E. Kostić",
+        "M. Mladenović"
+      ],
+      "year": 2020,
+      "doi": "10.1515/chem-2020-0021",
+      "license": "CC-BY-4.0",
+      "consulted": "2026-10-12"
+    },
+    {
+      "id": "dzodic2024",
+      "type": "paper",
+      "title": "Molecular Aspects of the Interactions between Selected Benzodiazepines and Common Adulterants/Diluents (Int. J. Mol. Sci. 25, 10087)",
+      "authors": [
+        "J. Džodić",
+        "M. Marković",
+        "D. Milenković",
+        "D. Dimić",
+        "A. Di Trana"
+      ],
+      "year": 2024,
+      "doi": "10.3390/ijms251810087",
+      "license": "CC-BY-4.0",
+      "consulted": "2026-10-12"
     }
   ]
 }

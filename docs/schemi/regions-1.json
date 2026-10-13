@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:regions:1",
+  "title": "regions/1: didactic IR regions",
+  "title_it": "regions/1: regioni IR didattiche",
+  "description": "The regions of the spectrum highlighted to explain peaks. They serve teaching, not scoring (the four scoring zones of the matcher are separate).",
+  "description_it": "Le regioni dello spettro evidenziate per spiegare i picchi. Servono alla didattica, non al punteggio (le quattro zone del punteggio del confronto sono separate).",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "regions/1"
+    },
+    "version": {
+      "description": "Data version, YYYY-MM.N (for example 2026-10.1).",
+      "description_it": "Versione dei dati, AAAA-MM.N (per esempio 2026-10.1).",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}(-[0-9]{2})?\\.[0-9]+$"
+    },
+    "regions": {
+      "description": "The regions.",
+      "description_it": "Le regioni.",
+      "type": "array",
+      "items": {
+        "description": "One didactic IR region.",
+        "description_it": "Una regione IR didattica.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Stable region id; texts regions.<id>.name and regions.<id>.short.",
+            "description_it": "Id stabile della regione; testi regions.<id>.name e regions.<id>.short.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+          },
+          "range_cm1": {
+            "description": "Extent of the region in cm-1 (regions may overlap on purpose).",
+            "description_it": "Estensione della regione in cm-1 (le regioni si sovrappongono di proposito).",
+            "type": "object",
+            "properties": {
+              "min": {
+                "description": "Lower limit in cm-1.",
+                "description_it": "Limite basso in cm-1.",
+                "type": "integer",
+                "minimum": 400,
+                "maximum": 4000
+              },
+              "max": {
+                "description": "Upper limit in cm-1.",
+                "description_it": "Limite alto in cm-1.",
+                "type": "integer",
+                "minimum": 400,
+                "maximum": 4000
+              }
+            },
+            "required": [
+              "min",
+              "max"
+            ],
+            "additionalProperties": false
+          },
+          "family": {
+            "description": "Family: sets the colour and pattern (never the colour alone).",
+            "description_it": "Famiglia: decide colore e motivo (mai il solo colore).",
+            "enum": [
+              "oh_nh",
+              "ch",
+              "triple",
+              "carbonyl",
+              "double",
+              "co_cn",
+              "oop",
+              "halogen",
+              "inorganic",
+              "heavy",
+              "artifact"
+            ]
+          },
+          "sources": {
+            "description": "Sources of the numbers (ids in sources.json); at least one.",
+            "description_it": "Fonti dei numeri (id in sources.json); almeno una.",
+            "type": "array",
+            "items": {
+              "description": "Source id in sources.json.",
+              "description_it": "Id di una fonte in sources.json.",
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "range_cm1",
+          "family",
+          "sources"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "regions"
+  ],
+  "additionalProperties": false
+}

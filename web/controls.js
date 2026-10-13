@@ -4,11 +4,13 @@ import { el, icon, setIcon } from "./dom.js";
 import { t } from "./i18n.js";
 import { currentTheme } from "./theme.js";
 import { themeIcon } from "./actions.js";
+import { activeKey } from "./shortcuts.js";
 import { attachTip } from "./tooltip.js";
 
 /** @param {import("./actions.js").Action} a @returns {string} */
 export function tipText(a) {
-  return a.key ? `${t(a.tipKey)} (${a.key})` : t(a.tipKey);
+  const key = activeKey(a);
+  return key ? `${t(a.tipKey)} (${key})` : t(a.tipKey);
 }
 
 /** @param {import("./actions.js").Action} a @returns {string} */
@@ -28,7 +30,6 @@ export function actionButton(actionId, ctx, opts = {}) {
   const button = el("button", { type: "button", class: opts.className ?? "icon-button", "data-action": a.id, "data-fk": a.id });
   button.append(icon(a.icon));
   if (opts.withLabel) button.append(el("span", { class: "btn-label" }));
-  if (a.key) button.setAttribute("aria-keyshortcuts", a.key);
   button.addEventListener("click", () => a.run(ctx));
   attachTip(button, () => tipText(a));
   return button;
@@ -44,6 +45,9 @@ export function refreshActionButtons(state) {
     const label = button.querySelector(".btn-label");
     if (label) label.textContent = t(a.labelKey);
     button.disabled = !a.enabled(state);
+    const key = activeKey(a);
+    if (key) button.setAttribute("aria-keyshortcuts", key);
+    else button.removeAttribute("aria-keyshortcuts");
     if (a.id === "theme.cycle") {
       const svg = button.querySelector("svg");
       if (svg) setIcon(svg, themeIcon(currentTheme()));

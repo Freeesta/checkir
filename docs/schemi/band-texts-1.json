@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:band-texts:1",
+  "title": "band-texts/1: explanation texts of the band data",
+  "title_it": "band-texts/1: testi di spiegazione dei dati delle bande",
+  "description": "All user-visible texts of bands, modes and regions in one language. Keys: bands.<id>.counsellor|chemist|teaching, modes.<id>.definition, regions.<id>.name|short, substance_bands.*. Every key exists in every language. Licence CC BY-SA 4.0 like the datasheets.",
+  "description_it": "Tutti i testi visibili di bande, modi e regioni in una lingua. Chiavi: bands.<id>.counsellor|chemist|teaching, modes.<id>.definition, regions.<id>.name|short, substance_bands.*. Ogni chiave esiste in ogni lingua. Licenza CC BY-SA 4.0 come le schede.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "band-texts/1"
+    },
+    "version": {
+      "description": "Data version, YYYY-MM.N (for example 2026-10.1).",
+      "description_it": "Versione dei dati, AAAA-MM.N (per esempio 2026-10.1).",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}(-[0-9]{2})?\\.[0-9]+$"
+    },
+    "language": {
+      "description": "Language of the texts.",
+      "description_it": "Lingua dei testi.",
+      "enum": [
+        "it",
+        "en"
+      ]
+    },
+    "texts": {
+      "description": "Text by key.",
+      "description_it": "Testo per chiave.",
+      "type": "object",
+      "patternProperties": {
+        "^[a-z0-9_]+(\\.[a-z0-9_]+)+$": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "language",
+    "texts"
+  ],
+  "additionalProperties": false
+}
