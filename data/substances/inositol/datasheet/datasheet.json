@@ -1,7 +1,7 @@
 {
   "schema": "datasheet/1",
   "substance": "inositol",
-  "version": 2,
+  "version": 3,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
@@ -21,5 +21,6 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true
 }

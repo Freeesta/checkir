@@ -6,6 +6,22 @@ Caffeina (1,3,7-trimethylpurine-2,6-dione), formula C8H10N4O2, massa molare 194.
 
 Classe chimica: alcaloide xantinico (qui tra le altre sostanze). Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico, presente anche come ingrediente dichiarato. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## origin
+
+La caffeina è presente in caffè, tè, bibite, cacao e cioccolato e in alcuni medicinali. [f:nawrot2003]
+
+## metabolism
+
+La caffeina è metabolizzata quasi solo nel fegato. Il prodotto principale è la paraxantina, formata solo dal CYP1A2 (circa l'80-90 % della demetilazione); teobromina e teofillina sono prodotti minori (circa l'11 % e il 4 %). [f:grzegorzewski2022]
+
+Il fumo aumenta la clearance della caffeina e ne accorcia l'emivita di eliminazione. [f:grzegorzewski2022]
+
+## cuts
+
+La caffeina è nell'elenco dei tagli frequenti della cocaina. [f:unodc-cocaine2012]
+
+Le linee d'indirizzo interne di un servizio di drug checking descrivono la caffeina come taglio attivo: uno stimolante che aggiunge un effetto percepibile. La citano anche tra le sostanze presenti nella speed e nelle pasticche vendute come MDMA. [f:ubc-counselling-guidelines]
+
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -26,7 +42,7 @@ La fluvoxamina, un antidepressivo che inibisce l'enzima CYP1A2, ha ridotto molto
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:culm-merdek2005] [f:nawrot2003]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:culm-merdek2005] [f:grzegorzewski2022] [f:nawrot2003] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
 
 ## license
 
