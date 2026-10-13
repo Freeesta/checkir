@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "beta-phenyl-fentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "β'-Phenylfentanyl",
+      "synonyms": [
+        "beta'-phenyl fentanyl",
+        "3-phenylpropanoylfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "β'-Fenilfentanil",
+      "synonyms": [
+        "beta'-fenilfentanil",
+        "3-fenilpropanoilfentanil"
+      ]
+    }
+  },
+  "iupac": "N,3-diphenyl-N-[1-(2-phenylethyl)piperidin-4-yl]propanamide",
+  "formula": "C28H32N2O",
+  "molar_mass_g_mol": 412.6,
+  "smiles": "C1CN(CCC1N(C2=CC=CC=C2)C(=O)CCC3=CC=CC=C3)CCC4=CC=CC=C4",
+  "inchi": "InChI=1S/C28H32N2O/c31-28(17-16-24-10-4-1-5-11-24)30(26-14-8-3-9-15-26)27-19-22-29(23-20-27)21-18-25-12-6-2-7-13-25/h1-15,27H,16-23H2",
+  "inchikey": "DIRAGWDYMRIDIO-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "79279-02-0",
+    "pubchem_cid": 137700126
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
