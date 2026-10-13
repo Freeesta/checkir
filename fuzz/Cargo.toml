@@ -31,3 +31,15 @@ name = "opus"
 path = "fuzz_targets/opus.rs"
 test = false
 doc = false
+
+[[bin]]
+name = "spa"
+path = "fuzz_targets/spa.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "spc"
+path = "fuzz_targets/spc.rs"
+test = false
+doc = false

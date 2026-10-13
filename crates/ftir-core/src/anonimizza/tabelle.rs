@@ -149,6 +149,29 @@ const OPUS: &[Rule] = &[
     strip("TEXT"),
 ];
 
+const SPA: &[Rule] = &[
+    keep("FIRSTX"),
+    keep("LASTX"),
+    keep("NPOINTS"),
+    keep("XUNITS"),
+    keep("YUNITS"),
+    coarsen("DATE"),
+    strip("COMMENT"),
+    strip("HISTORY"),
+    strip("TITLE"),
+];
+
+const SPC: &[Rule] = &[
+    keep("FIRSTX"),
+    keep("LASTX"),
+    keep("NPOINTS"),
+    keep("SUBFILE"),
+    keep("XUNITS"),
+    keep("YUNITS"),
+    coarsen("DATE"),
+    strip("COMMENT"),
+];
+
 /// The contract: one table per reader of `READERS` (a test fails for a reader without one).
 pub static CONTRACT: &[ReaderRules] = &[
     ReaderRules {
@@ -166,6 +189,14 @@ pub static CONTRACT: &[ReaderRules] = &[
     ReaderRules {
         reader: "bruker-opus",
         rules: OPUS,
+    },
+    ReaderRules {
+        reader: "thermo-spa",
+        rules: SPA,
+    },
+    ReaderRules {
+        reader: "galactic-spc",
+        rules: SPC,
     },
 ];
 

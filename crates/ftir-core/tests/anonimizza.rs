@@ -3,7 +3,7 @@
 use ftir_core::anonimizza::{action_for, clean, contract_json, listed_action, Action, CONTRACT};
 use ftir_core::readers::export::to_json;
 use ftir_core::readers::model::{Document, Limits, Options};
-use ftir_core::readers::{ispd, jcamp, opus, pick, text, READERS};
+use ftir_core::readers::{ispd, jcamp, opus, pick, spa, spc, text, READERS};
 use std::path::PathBuf;
 
 const JCAMP: &str = "##TITLE=Case 4711 powder\r\n##JCAMP-DX=4.24 $$ exported by C:\\Users\\mrossi\\Desktop\r\n##DATA TYPE=INFRARED SPECTRUM\r\n\
@@ -33,11 +33,14 @@ fn documents() -> Vec<Document> {
         text::open(TEXT.as_bytes(), &Limits::STANDARD, &o).expect("text"),
         opus::open(&opus_bytes(), &Limits::STANDARD, &o).expect("opus"),
     ];
-    for dir in ["jcamp", "ispd"] {
+    for dir in ["jcamp", "ispd", "spa", "spc"] {
         let mut names: Vec<_> = std::fs::read_dir(fixture_dir(dir))
             .expect("fixture folder")
             .map(|e| e.expect("entry").path())
-            .filter(|p| p.extension().is_some_and(|x| x == "jdx" || x == "ispd"))
+            .filter(|p| {
+                p.extension()
+                    .is_some_and(|x| x == "jdx" || x == "ispd" || x == "spa" || x == "spc")
+            })
             .collect();
         names.sort();
         for p in names {
@@ -72,6 +75,8 @@ fn declared(reader: &str) -> Vec<String> {
             v
         }
         "bruker-opus" => strs(opus::KNOWN),
+        "thermo-spa" => strs(spa::KNOWN),
+        "galactic-spc" => strs(spc::KNOWN),
         other => panic!(
             "reader {other}: declare its fields in this test and write its table in the contract"
         ),

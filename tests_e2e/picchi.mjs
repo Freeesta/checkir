@@ -88,7 +88,7 @@ async function viewScenario(page, check, axe) {
   const two = await page.getAttribute("#chart circle.peak-focus", "data-peak");
   check("peaks: → goes to the next peak, ← back", one !== null && two !== null && one !== two && (await (async () => { await page.keyboard.press("ArrowLeft"); return (await page.getAttribute("#chart circle.peak-focus", "data-peak")) === one; })()));
   await page.waitForTimeout(200);
-  check("peaks: the focused peak is announced and marked in the table", /picco a circa ~?\d+/.test((await page.textContent("#status")) ?? "") && (await page.locator("#table table.peak-table tr[aria-current]").count()) === 1);
+  check("peaks: the focused peak is announced and marked in the table", /picco a circa \d+/.test((await page.textContent("#status")) ?? "") && (await page.locator("#table table.peak-table tr[aria-current]").count()) === 1);
   await page.keyboard.press("Escape");
   check("peaks: Esc clears the pick", (await page.locator("#chart .peak-focus").count()) === 0);
   const v = await axe(page);
@@ -104,7 +104,7 @@ async function cardScenario(page, check, axe) {
   check("card: the readings are at most three and say where they come from", (await card.locator(".reading").count()) <= 3 && (await card.locator(".reading-source").count()) === (await card.locator(".reading").count()));
   check("card: no generic caution text", !/decide la persona|diagnosi|ipotesi del programma/i.test((await card.textContent()) ?? ""));
   const names = await page.$$eval(".peak-item", (b) => b.map((x) => x.getAttribute("aria-label")));
-  check("card: each peak button has the full accessible name", names.every((n) => /^picco a circa ~?\d+/i.test(n ?? "")), JSON.stringify(names));
+  check("card: each peak button has the full accessible name", names.every((n) => /^picco a circa \d+/i.test(n ?? "")), JSON.stringify(names));
   const level = (l) => card.locator(`[data-level="${l}"]`);
   await level("chemist").click();
   check("card: the level picker sets the level and stores it", (await level("chemist").getAttribute("aria-pressed")) === "true" && (await page.evaluate(() => localStorage.getItem("checkir.textLevel"))) === "chemist");
@@ -132,6 +132,32 @@ async function cardScenario(page, check, axe) {
   await page.focus("#chart");
   await page.keyboard.press("Escape");
   check("card: Esc closes the card", await card.isHidden());
+}
+
+/** The width of a peak decides what the rules read: a broad synthetic band at 1050 is read as phosphate, a narrow one is not; the card gives the width in cm⁻¹. */
+async function widthScenario(browser, base, check) {
+  const readings = async (bands, name) => {
+    const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 900 } });
+    const page = await ctx.newPage();
+    await page.goto(base);
+    await page.waitForSelector("body[data-ready='1']");
+    await page.setInputFiles("input[type=file]", [{ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) }]);
+    await page.keyboard.press("p");
+    await openPanel(page, "peaks");
+    await page.waitForSelector(".peak-item");
+    await page.locator('.peak-item:has-text("~105")').first().click();
+    const card = page.locator("#peak-card");
+    await card.locator(".card-facts").waitFor();
+    const out = { readings: (await card.locator(".reading").allTextContents()).join(" "), shape: (await card.locator(".card-facts dd").nth(1).textContent()) ?? "", names: await page.$$eval(".peak-item", (b) => b.map((x) => x.getAttribute("aria-label") ?? "")) };
+    await ctx.close();
+    return out;
+  };
+  const wide = await readings([[1050, 0.8, 45], [1700, 0.3, 6]], "larga");
+  const sharp = await readings([[1050, 0.8, 4], [1700, 0.3, 6]], "stretta");
+  check("width: a broad band at 1050 is read as phosphate", /Fosfato/.test(wide.readings), wide.readings);
+  check("width: a narrow peak at 1050 is not", !/Fosfato/.test(sharp.readings), sharp.readings);
+  check("width: the card gives the width in cm⁻¹ with the class", /^\d+\.\d cm⁻¹ a metà altezza \((largo|molto largo)\)$/.test(wide.shape.trim()), wide.shape);
+  check("width: the accessible name has no double approximation", sharp.names.every((n) => !/circa ~/.test(n)), sharp.names.join(" | "));
 }
 
 /** A methylene sample: the drawing of the mode (moving, then still under reduced motion), another mode of the group on the chart, out-of-plane drawing. */
@@ -206,6 +232,7 @@ export async function peaksScenario(browser, base, check, axe) {
   check("peaks: no page errors", errors.length === 0, errors.join(" | "));
   await ctx.close();
   await modeScenario(browser, base, check, axe);
+  await widthScenario(browser, base, check);
   const phone = await browser.newContext({ locale: "it-IT", viewport: { width: 320, height: 640 } });
   const p = await phone.newPage();
   await p.goto(base);
