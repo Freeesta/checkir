@@ -127,6 +127,9 @@ class Rules(unittest.TestCase):
         fake.head["data/reviewers.json"] = json.dumps(LIST)
         self.assertIn("signatures.missing_approval", keys(fake))
 
+
+
+class Signatures(unittest.TestCase):
     def test_signature_in_json_without_approval(self):
         fake = Fake(base_approved(), files(signed_head(), texts("New. [f:a]")), [review("Chem")])
         self.assertIn("signatures.signature_without_approval", keys(fake))
