@@ -11,6 +11,7 @@ pub mod error;
 pub mod measurement_quality;
 pub mod miscele;
 pub mod passi;
+pub mod peak_index;
 pub mod peaks;
 pub mod readers;
 pub mod rules;

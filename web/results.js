@@ -5,6 +5,7 @@ import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { libraryRows } from "./librerie.js";
 import { activeFile, activeLibraries, candidateKey, decisionOf, resultOf } from "./state.js";
+import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
 import { attachTip, toggletip } from "./tooltip.js";
 
 /** @typedef {import("./state.js").ChemistLabel} ChemistLabel */
@@ -222,7 +223,9 @@ export function renderResults(body, s, ctx) {
       el("p", { class: "level-line" }, [levelBadge(n), decisionMark(dec, levelNumber(data))]),
       alertList(data),
       ...capLines(data).map((c) => el("p", { class: "cap" }, [c])),
+      ...(usedRangeLine(data) ? [el("p", { class: "cap", "data-used-range": "1" }, [usedRangeLine(data)])] : []),
       list,
+      rangeTable(s),
       el("p", { class: "chain" }, [chainLine(data)]),
       detail(data, chosen, ctx, s.overlay, n),
     ]),
@@ -235,7 +238,9 @@ export function renderResultsPanel(body, s, ctx) {
   const file = activeFile(s);
   if (!file) return void body.append(el("p", { class: "empty" }, [t("panel.results.empty")]));
   const result = resultOf(s);
-  body.append(el("div", { class: "row" }, [actionButton("match.run", ctx, { withLabel: true, className: "btn" })]), ...statusNodes(s, file, !!result));
+  body.append(el("div", { class: "row" }, [actionButton("match.run", ctx, { withLabel: true, className: "btn" })]));
+  renderRanges(body, s, ctx);
+  body.append(...statusNodes(s, file, !!result));
   if (!result) return;
   const dec = decisionOf(s);
   body.append(

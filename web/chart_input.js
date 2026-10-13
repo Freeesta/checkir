@@ -1,4 +1,5 @@
 // @ts-check
+import { BRUSH_HEIGHT } from "./chart_ranges.js";
 import { spanOf, zoomAt } from "./view.js";
 
 /** @typedef {import("./view.js").View} View */
@@ -10,6 +11,7 @@ import { spanOf, zoomAt } from "./view.js";
  *   setView: (v: View, defer?: boolean) => void,
  *   cursors: ReturnType<typeof import("./chart_cursors.js").createCursors>,
  *   toggleLockY: () => void,
+ *   brush?: (from: number, to: number) => void,
  * }} ChartApi */
 
 const DRAG_PX = 4;
@@ -27,14 +29,31 @@ function wavenumberAt(host, api, e) {
   return v.max - ((x - g.left) / (g.right - g.left)) * (v.max - v.min);
 }
 
+/** Is the pointer in the brush strip under the plot (the x axis)? @param {HTMLElement} host @param {ChartApi} api @param {{ clientY: number }} e @returns {boolean} */
+function inBrushStrip(host, api, e) {
+  const g = api.geom();
+  const root = host.querySelector("svg");
+  if (!g || !root || !api.brush) return false;
+  const r = root.getBoundingClientRect();
+  const y = ((e.clientY - r.top) * (g.width * (r.height / r.width))) / r.height;
+  return y > g.bottom && y <= g.bottom + BRUSH_HEIGHT;
+}
+
+/** The pointer-up of a brush drag: a span of whole wavenumbers, or nothing for a click. @param {ChartApi} api @param {{ x: number, wn: number }} start @param {number | null} wn @param {number} clientX */
+function endBrush(api, start, wn, clientX) {
+  api.cursors.box(null);
+  if (wn === null || Math.abs(clientX - start.x) <= DRAG_PX) return;
+  api.brush?.(Math.round(Math.min(start.wn, wn)), Math.round(Math.max(start.wn, wn)));
+}
+
 /** Pointer: moving shows the cursor line, a click places cursor 1 (Alt+click cursor 2), a drag draws the zoom box, the wheel zooms around the pointer, a double click shows the whole spectrum. @param {HTMLElement} host @param {ChartApi} api */
 function attachPointer(host, api) {
-  /** @type {{ x: number, wn: number } | null} */
+  /** @type {{ x: number, wn: number, brush: boolean } | null} */
   let drag = null;
   host.addEventListener("pointerdown", (e) => {
     const wn = e.button === 0 ? wavenumberAt(host, api, e) : null;
     if (wn === null) return;
-    drag = { x: e.clientX, wn };
+    drag = { x: e.clientX, wn, brush: inBrushStrip(host, api, e) };
     host.setPointerCapture(e.pointerId);
   });
   host.addEventListener("pointermove", (e) => {
@@ -47,6 +66,7 @@ function attachPointer(host, api) {
     drag = null;
     api.cursors.box(null);
     const wn = wavenumberAt(host, api, e);
+    if (start?.brush) return endBrush(api, start, wn, e.clientX);
     if (!start || wn === null) return;
     if (Math.abs(e.clientX - start.x) > DRAG_PX) api.setView(spanOf(api.full(), start.wn, wn));
     else api.cursors.set(e.altKey ? 1 : 0, wn);

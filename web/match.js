@@ -4,6 +4,7 @@ import { spectrumOf } from "./files.js";
 import { libraryRows, libraryValues } from "./librerie.js";
 import { selectedCandidate } from "./results.js";
 import { t } from "./i18n.js";
+import { choiceKey, narrowError, normalizeRanges, optionsOf } from "./ranges.js";
 import { activeFile, activeLibraries, candidateKey, getState, readPref, resultOf, subscribe, update, writePref } from "./state.js";
 
 /**
@@ -27,6 +28,10 @@ const waiting = new Map();
 let sentSignature = "";
 /** @type {Set<string>} */
 const started = new Set();
+/** Progress of the peak index of each library, as the worker reports it. @type {Map<string, { done: number, total: number, ready: boolean }>} */
+const indexStatus = new Map();
+/** @type {Map<number, (answer: { results: Array<{ lib: string, json: string }>, missing: string[] } | null) => void>} */
+const peakWaiting = new Map();
 /** @type {(text: string) => void} */
 let say = () => {};
 
@@ -51,6 +56,18 @@ function activeSignature(s) {
   return activeLibraries(s).map((l) => `${l.id}@${l.version}`).join("|");
 }
 
+/** The choice of region as the engine gets it: hand-made ranges merged and sorted. @param {import("./state.js").AppState} s @returns {import("./state.js").RangeChoice} */
+export function effectiveChoice(s) {
+  const c = s.rangeChoice;
+  return c.preset ? c : { preset: null, ranges: normalizeRanges(c.ranges) };
+}
+
+/** What a result is valid for: the libraries searched and the region used (empty when no library is active). @param {import("./state.js").AppState} s @returns {string} */
+export function matchSignature(s) {
+  const libs = activeSignature(s);
+  return libs ? `${libs}#${choiceKey(effectiveChoice(s))}` : "";
+}
+
 function ensureWorker() {
   if (worker) return worker;
   worker = new Worker(new URL("./match.worker.js", import.meta.url), { type: "module" });
@@ -59,6 +76,11 @@ function ensureWorker() {
     if (m.type === "result" || (m.type === "error" && m.runId !== undefined)) {
       waiting.get(m.runId)?.(m.type === "result" ? m.json : null);
       waiting.delete(m.runId);
+    } else if (m.type === "peak_index") {
+      indexStatus.set(m.id, { done: m.done, total: m.total, ready: m.ready });
+    } else if (m.type === "peak_result") {
+      peakWaiting.get(m.runId)?.({ results: m.results, missing: m.missing });
+      peakWaiting.delete(m.runId);
     } else if (m.type === "error") {
       update({ matchError: { key: m.key, params: {} } });
     }
@@ -82,6 +104,24 @@ function syncLibraries(s) {
   sentSignature = signature;
 }
 
+/** Progress of the peak index of a library; null while the worker has not started it. @param {string} id @returns {{ done: number, total: number, ready: boolean } | null} */
+export function peakIndexStatus(id) {
+  return indexStatus.get(id) ?? null;
+}
+
+/**
+ * Which spectra of the active libraries have a band here? `query` is the JSON of `peak_index_query`; each result is the engine's
+ * answer for one library (row numbers of that library); `missing` lists the libraries whose index is still being built.
+ * @param {unknown} query @returns {Promise<{ results: Array<{ lib: string, json: string }>, missing: string[] } | null>}
+ */
+export function searchPeaks(query) {
+  const runId = ++runSeq;
+  return new Promise((resolve) => {
+    peakWaiting.set(runId, resolve);
+    ensureWorker().postMessage({ type: "peak_query", runId, libs: activeLibraries(getState()).map((l) => l.id), query });
+  });
+}
+
 /** @param {string | undefined} unit @returns {string | null} the unit name the engine knows */
 function unitOf(unit) {
   return unit === undefined || unit === "Absorbance" ? "absorbance" : unit === "Transmittance" ? "transmittance" : null;
@@ -97,6 +137,21 @@ function ask(query, options) {
 }
 
 /**
+ * One engine comparison of a loaded spectrum with the active libraries; `null` when the engine did not answer.
+ * @param {string} code @param {Record<string, unknown>} options region and sample id
+ * @returns {Promise<string | null>} the result text (`ftir-risultato-confronto/1` or an error)
+ */
+export function compareWith(code, options) {
+  const spectrum = spectrumOf(code);
+  const unit = unitOf(spectrum?.y_unit);
+  if (!spectrum || !unit) return Promise.resolve(null);
+  return ask(
+    { role: "sample", y_unit: unit, wavenumber_cm1: spectrum.wavenumber_cm1, y: spectrum.y },
+    { libraries: activeLibraries(getState()).map((l) => l.id), ...options },
+  );
+}
+
+/**
  * Compare one spectrum with the active libraries and keep the result in the state, next to the others (a result never replaces
  * the spectrum itself). A refusal or an engine error is a translatable notice in the state, never a thrown error.
  * @param {string} code
@@ -108,14 +163,14 @@ export async function runMatch(code) {
   if (!spectrum || !libs.length) return;
   const unit = unitOf(spectrum.y_unit);
   if (!unit) return update({ matchError: { key: "err.match.unit_unsupported", params: {} } });
+  const choice = effectiveChoice(s);
+  const narrow = choice.preset ? null : narrowError(choice.ranges);
+  if (narrow) return update({ rangeError: narrow });
   syncLibraries(s);
-  const signature = activeSignature(s);
+  const signature = matchSignature(s);
   pending++;
-  update({ matching: code, matchError: null });
-  const json = await ask(
-    { role: "sample", y_unit: unit, wavenumber_cm1: spectrum.wavenumber_cm1, y: spectrum.y },
-    { libraries: libs.map((l) => l.id), sample_id: code },
-  );
+  update({ matching: code, matchError: null, rangeError: null });
+  const json = await compareWith(code, { sample_id: code, ...optionsOf(choice) });
   pending--;
   const now = getState();
   const done = { matching: pending > 0 ? now.matching : null };
@@ -125,6 +180,7 @@ export async function runMatch(code) {
     return update({ ...done, matchError: data.error_key ? { key: data.error_key, params: data.params ?? {} } : now.matchError });
   }
   update({ ...done, results: { ...now.results, [code]: { code, data, sig: signature } } });
+  started.delete(`${code}#${signature}`);
   if (activeFile(getState())?.code === code) say(announcement(data));
 }
 
@@ -132,8 +188,8 @@ export async function runMatch(code) {
 function onState(s) {
   const f = activeFile(s);
   if (!f || f.role !== "sample" || !autoMatchOn()) return;
-  const signature = activeSignature(s);
-  if (!signature || s.results[f.code]?.sig === signature) return;
+  const signature = matchSignature(s);
+  if (!signature || s.results[f.code]?.sig === signature || (s.rangeError && !s.rangeChoice.preset)) return;
   const key = `${f.code}#${signature}`;
   if (started.has(key)) return;
   started.add(key);
