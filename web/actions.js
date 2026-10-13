@@ -12,7 +12,7 @@ import { canSubtract } from "./subtract.js";
  *   togglePanel: () => void, goto: (panelId: string) => void, closeSection: () => void, openDialog: (id: string) => void, folder: FolderCtx,
  *   setDraft: (patch: Partial<import("./state.js").DecisionDraft>) => void, signDecision: () => void, revokeDecision: () => void, setSheetLang: (lang: string) => Promise<void>, toggleTalk: () => void, printSheet: () => void,
  *   runMatch: () => void, selectCandidate: (key: string) => void, setLabel: (key: string, label: import("./state.js").ChemistLabel | null) => void, toggleOverlay: () => void,
- *   togglePeaks: () => void, focusPeak: (id: string | null) => void,
+ *   togglePeaks: () => void, focusPeak: (id: string | null) => void, stepPeak: (dir: 1 | -1) => boolean, clearPeak: () => boolean,
  *   subtractOpen: () => void, subtractClose: () => void, subtractSearch: () => Promise<boolean>, setFactor: (k: number) => void, undo: () => void,
  *   importLibrary: (files: File[], name: string) => Promise<void>, cancelImport: () => void, removeLibrary: (id: string) => void, toggleLibrary: (id: string, on: boolean) => void,
  * }} Ctx
