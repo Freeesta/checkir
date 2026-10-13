@@ -91,18 +91,6 @@ fn text(s: &str) -> Value {
     Value::Str(s.to_string())
 }
 
-fn num(x: f64) -> Value {
-    Value::Num(x)
-}
-
-fn ids(v: &[String]) -> Value {
-    Value::Arr(v.iter().map(|s| text(s)).collect())
-}
-
-fn opt(v: Option<&str>) -> Value {
-    v.map_or(Value::Null, text)
-}
-
 impl Peak {
     fn to_value(&self) -> Value {
         let tier = match self.tier {
@@ -133,6 +121,10 @@ impl Peak {
     }
 }
 
+fn num(x: f64) -> Value {
+    Value::Num(x)
+}
+
 impl BroadBand {
     fn to_value(&self) -> Value {
         Value::Obj(vec![
@@ -144,6 +136,10 @@ impl BroadBand {
             ("region_ids".into(), ids(&self.region_ids)),
         ])
     }
+}
+
+fn ids(v: &[String]) -> Value {
+    Value::Arr(v.iter().map(|s| text(s)).collect())
 }
 
 impl PeakList {
@@ -187,4 +183,8 @@ impl PeakList {
     pub fn to_json(&self) -> String {
         self.to_value().write()
     }
+}
+
+fn opt(v: Option<&str>) -> Value {
+    v.map_or(Value::Null, text)
 }

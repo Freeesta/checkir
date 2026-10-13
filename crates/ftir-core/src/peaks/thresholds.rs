@@ -187,6 +187,38 @@ fn tolerances(v: &Value) -> EngineResult<Tolerances> {
     })
 }
 
+fn shoulders_of(v: &Value) -> EngineResult<Shoulders> {
+    let sh = |k: &'static str| ["shoulders", k];
+    Ok(Shoulders {
+        derivative_window: odd_window(v, &sh("derivative_window"))?,
+        derivative_polyorder: count(v, &sh("derivative_polyorder"))?,
+        depth_noise_ratio: num(v, &sh("depth_noise_ratio"))?,
+        min_distance_cm1: num(v, &sh("min_distance_cm1"))?,
+        min_lobe_width_cm1: num(v, &sh("min_lobe_width_cm1"))?,
+    })
+}
+
+fn broad_of(v: &Value) -> EngineResult<BroadBands> {
+    let br = |k: &'static str| ["broad_bands", k];
+    Ok(BroadBands {
+        smooth_window: odd_window(v, &br("smooth_window"))?,
+        smooth_polyorder: count(v, &br("smooth_polyorder"))?,
+        prominence_rel_min: num(v, &br("prominence_rel_min"))?,
+        min_fwhm_cm1: num(v, &br("min_fwhm_cm1"))?,
+        min_sustained_fraction: num(v, &br("min_sustained_fraction"))?,
+    })
+}
+
+fn artifacts_of(v: &Value) -> EngineResult<Artifacts> {
+    let ar = |k: &'static str| ["artifacts", k];
+    let co2 = at(v, &ar("co2_search_cm1"))?;
+    Ok(Artifacts {
+        co2_search_cm1: pair_of(co2, "artifacts/co2_search_cm1")?,
+        vapour_max_fwhm_cm1: num(v, &ar("vapour_max_fwhm_cm1"))?,
+        vapour_ranges_cm1: ranges(v, &ar("vapour_ranges_cm1"))?,
+    })
+}
+
 impl Thresholds {
     /// The thresholds embedded in the build.
     pub fn embedded() -> EngineResult<Self> {
@@ -199,10 +231,6 @@ impl Thresholds {
             return Err(bad("schema"));
         }
         let shape = |k: &'static str| num(&v, &["shape", k]);
-        let sh = |k: &'static str| ["shoulders", k];
-        let br = |k: &'static str| ["broad_bands", k];
-        let ar = |k: &'static str| ["artifacts", k];
-        let co2 = at(&v, &ar("co2_search_cm1"))?;
         Ok(Self {
             version: count(&v, &["version"])? as u32,
             noise: noise(&v)?,
@@ -218,25 +246,9 @@ impl Thresholds {
                 shape("broad_below_cm1")?,
             ],
             centroid_from_fwhm_cm1: num(&v, &["position", "centroid_from_fwhm_cm1"])?,
-            shoulders: Shoulders {
-                derivative_window: odd_window(&v, &sh("derivative_window"))?,
-                derivative_polyorder: count(&v, &sh("derivative_polyorder"))?,
-                depth_noise_ratio: num(&v, &sh("depth_noise_ratio"))?,
-                min_distance_cm1: num(&v, &sh("min_distance_cm1"))?,
-                min_lobe_width_cm1: num(&v, &sh("min_lobe_width_cm1"))?,
-            },
-            broad: BroadBands {
-                smooth_window: odd_window(&v, &br("smooth_window"))?,
-                smooth_polyorder: count(&v, &br("smooth_polyorder"))?,
-                prominence_rel_min: num(&v, &br("prominence_rel_min"))?,
-                min_fwhm_cm1: num(&v, &br("min_fwhm_cm1"))?,
-                min_sustained_fraction: num(&v, &br("min_sustained_fraction"))?,
-            },
-            artifacts: Artifacts {
-                co2_search_cm1: pair_of(co2, "artifacts/co2_search_cm1")?,
-                vapour_max_fwhm_cm1: num(&v, &ar("vapour_max_fwhm_cm1"))?,
-                vapour_ranges_cm1: ranges(&v, &ar("vapour_ranges_cm1"))?,
-            },
+            shoulders: shoulders_of(&v)?,
+            broad: broad_of(&v)?,
+            artifacts: artifacts_of(&v)?,
             too_many_peaks: count(&v, &["warnings", "too_many_peaks"])?,
             tolerances: tolerances(&v)?,
         })
