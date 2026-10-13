@@ -4,6 +4,7 @@
 pub mod anonimizza;
 pub mod assign;
 pub mod budget;
+pub mod campionamento;
 pub mod comparisons;
 pub mod confronti;
 pub mod didactic;

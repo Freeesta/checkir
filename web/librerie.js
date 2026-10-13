@@ -65,7 +65,7 @@ export function registerPackage(engine, files, enabled) {
   loaded.set(files.id, {
     rows: JSON.parse(files.index).spectra,
     values: new Float32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4),
-    entry: { id: files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, private: checked.private === true, enabled },
+    entry: { id: files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, private: checked.private === true, enabled, sampling: typeof checked.sampling === "string" ? checked.sampling : null },
   });
   publish();
   return null;
@@ -125,16 +125,16 @@ export function cancelImport() {
 
 /**
  * Import the chosen JCAMP-DX files as one private library, with progress; nothing is stored unless it all worked.
- * @param {import("./engine.js").Engine | null} engine @param {File[]} files @param {string} name
+ * @param {import("./engine.js").Engine | null} engine @param {File[]} files @param {string} name @param {string} sampling how the spectra were measured (`unknown` = not said)
  * @param {(notice: Notice) => void} say receives the summary to announce
  * @returns {Promise<void>}
  */
-export async function importLibrary(engine, files, name, say) {
+export async function importLibrary(engine, files, name, sampling, say) {
   if (!engine || job) return;
   job = new AbortController();
   const id = uniqueId(slug(name), new Set(loaded.keys()));
   update({ libraryNotices: [], libraryJob: { done: 0, total: files.length, name: id } });
-  const identity = { id, name, date: new Date().toISOString().slice(0, 10), attribution: { it: "Importata dall'utente, resta in questo browser.", en: "Imported by the user, kept in this browser only." } };
+  const identity = { id, name, sampling, date: new Date().toISOString().slice(0, 10), attribution: { it: "Importata dall'utente, resta in questo browser.", en: "Imported by the user, kept in this browser only." } };
   const out = await buildPrivateLibrary(engine, files, identity, { signal: job.signal, onProgress: (p) => update({ libraryJob: { ...p, name: id } }) });
   job = null;
   /** @type {Notice[]} */
@@ -164,7 +164,7 @@ export async function importLibrary(engine, files, name, say) {
 /** The library members of the page context. @param {import("./engine.js").Engine | null} engine @param {(text: string) => void} announce */
 export function libraryActions(engine, announce) {
   return {
-    importLibrary: (/** @type {File[]} */ files, /** @type {string} */ name) => importLibrary(engine, files, name, (n) => announce(t(n.key, n.params))),
+    importLibrary: (/** @type {File[]} */ files, /** @type {string} */ name, /** @type {string} */ sampling) => importLibrary(engine, files, name, sampling, (n) => announce(t(n.key, n.params))),
     cancelImport,
     removeLibrary: (/** @type {string} */ id) => void removePrivate(id).then(() => announce(t("status.library_removed", { name: id }))),
     toggleLibrary: setEnabled,

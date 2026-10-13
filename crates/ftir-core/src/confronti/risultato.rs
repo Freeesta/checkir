@@ -16,6 +16,10 @@ impl Outcome {
                 ("version".into(), text(&l.version)),
                 ("spectra".into(), Value::Num(l.len() as f64)),
                 ("searched".into(), Value::Bool(self.searched.contains(&i))),
+                (
+                    "sampling".into(),
+                    l.sampling.as_deref().map_or(Value::Null, text),
+                ),
             ])
         });
         let candidates = self
@@ -42,13 +46,7 @@ impl Outcome {
             Grouping::Name => "name",
             Grouping::Mixed => "mixed",
         };
-        let query = Value::Obj(vec![
-            ("role".into(), text(role_id(self.query_role))),
-            (
-                "origin".into(),
-                self.origin.as_deref().map_or(Value::Null, text),
-            ),
-        ]);
+        let query = self.query_json();
         let thresholds = self.thresholds_json();
         let twins = Value::Obj(vec![
             ("done".into(), Value::Num(index.twins.done as f64)),
@@ -86,6 +84,21 @@ impl Outcome {
             ),
             ("alerts".into(), Value::Arr(alerts.collect())),
             ("twins".into(), twins),
+        ])
+    }
+
+    /// The searched spectrum: role, origin of a residual and the sampling method declared for it.
+    fn query_json(&self) -> Value {
+        Value::Obj(vec![
+            ("role".into(), text(role_id(self.query_role))),
+            (
+                "origin".into(),
+                self.origin.as_deref().map_or(Value::Null, text),
+            ),
+            (
+                "sampling".into(),
+                self.sample_sampling.as_deref().map_or(Value::Null, text),
+            ),
         ])
     }
 
@@ -178,6 +191,8 @@ pub struct Outcome {
     pub range_preset: Option<String>,
     pub query_role: Role,
     pub origin: Option<String>,
+    /// Sampling method declared for the sample (`None` = not said).
+    pub sample_sampling: Option<String>,
     pub searched: Vec<usize>,
     pub thresholds_version: u32,
     pub region_agreement: soglie::RegionAgreement,

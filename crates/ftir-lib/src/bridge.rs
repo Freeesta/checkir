@@ -52,6 +52,7 @@ fn identity(source: &str) -> EngineResult<Identity> {
             .ok_or_else(|| invalid(KEY, "attribution"))?
             .to_string(),
         private: matches!(v.get("private"), Some(Value::Bool(true))),
+        sampling: crate::sampling(&v, KEY)?,
     })
 }
 

@@ -281,6 +281,7 @@ pub fn search_with(
         range_preset: o.range_preset.clone(),
         query_role: query.role,
         origin: o.origin.clone(),
+        sample_sampling: o.sampling.clone(),
         searched,
         thresholds_version: t.version,
         region_agreement: t.region_agreement,

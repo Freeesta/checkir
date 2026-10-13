@@ -6,6 +6,7 @@ import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { areaScenario } from "./area.mjs";
 import { cleanScenario } from "./pulizia.mjs";
+import { samplingScenario } from "./campionamento.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { libraryTestScenario } from "./prova.mjs";
@@ -322,6 +323,7 @@ async function run() {
     await librariesScenario(browser, base, check, axe);
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
+    await samplingScenario(browser, base, check);
     await libraryTestScenario(browser, base, check, axe);
     await areaScenario(browser, base, check, axe);
     await cleanScenario(browser, base, check, axe);

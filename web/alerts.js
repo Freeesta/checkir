@@ -1,5 +1,6 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
+import { samplingName } from "./campionamento.js";
 import { decisionOf, resultOf } from "./state.js";
 
 /**
@@ -92,10 +93,16 @@ export function alertViews(data) {
   return out;
 }
 
+/** How the library of the first candidate was measured. @param {any} data @returns {string | null} */
+function firstLibrarySampling(data) {
+  const id = data.candidates?.[0]?.library;
+  return (data.libraries ?? []).find((/** @type {any} */ l) => l.id === id)?.sampling ?? null;
+}
+
 /** Why the level cannot go higher, one line per cap. @param {any} data @returns {string[]} */
 export function capLines(data) {
   /** @type {Record<string, () => string>} */
-  const lines = { coverage: () => t("results.cap.coverage"), custom_range: () => t("results.cap.custom_range"), range_not_calibrated: () => t("results.cap.range_not_calibrated"), sampling_not_calibrated: () => t("results.cap.sampling_not_calibrated") };
+  const lines = { coverage: () => t("results.cap.coverage"), custom_range: () => t("results.cap.custom_range"), range_not_calibrated: () => t("results.cap.range_not_calibrated"), sampling_not_calibrated: () => t("results.cap.sampling_not_calibrated", { sample: samplingName(data.query?.sampling), library: samplingName(firstLibrarySampling(data)) }) };
   return (data.level_caps ?? []).map((/** @type {string} */ c) => lines[c]?.() ?? c);
 }
 

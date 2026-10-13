@@ -57,11 +57,14 @@ impl Motore {
         self.libraries.push(LibraryCache::new(id, version));
     }
 
-    /// Say how the spectra of the library `lib` were measured (`ATR`, `transmission`, ...); empty = not said.
+    /// Say how the spectra of the library `lib` were measured (`atr_diamond`, `transmission_kbr`, ...); empty or
+    /// `unknown` = not said.
     pub fn set_sampling(&mut self, lib: &str, method: &str) -> EngineResult<()> {
         let i = self.position(lib)?;
         let method = method.trim();
-        self.libraries[i].sampling = (!method.is_empty()).then(|| method.to_string());
+        self.libraries[i].sampling = (!method.is_empty()
+            && method != crate::campionamento::UNKNOWN)
+            .then(|| method.to_string());
         Ok(())
     }
 

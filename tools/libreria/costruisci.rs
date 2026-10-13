@@ -1,11 +1,15 @@
 //! Builds the package of one library from `data/` with the engine itself (no second implementation):
 //!
 //!     cargo run --release -p ftir-lib --bin costruisci-libreria -- [--data data] [--out target/libreria] \
-//!         [--library checkir-community | --config tools/libreria/librerie.json] [--date AAAA-MM-GG]
+//!         [--library checkir-community | --config tools/libreria/librerie.json] [--date AAAA-MM-GG] \
+//!         [--sampling atr_diamond|atr_ge|atr_znse|transmission_kbr|unknown]
 //!
 //! Writes `<out>/<library>/{manifest.json,index.json,data.bin}` and the general manifest `<out>/libraries.json`
 //! (`ftir-libraries/1`: one entry per package with an `enabled` switch). With `--config` every library of the file is
-//! built. Packages are never committed: CI builds them.
+//! built. The manifest says how the spectra were measured (`sampling`) when every spectrum agrees: from its record
+//! (`technique`) or, where the record does not say, from `--sampling` (the default of a private library). Packages are
+//! never committed: CI builds them.
+use ftir_core::campionamento;
 use ftir_core::passi::json::parse;
 use ftir_core::passi::Value;
 use ftir_lib::build::{build_one, Built, Source};
@@ -24,6 +28,7 @@ struct Args {
     library: String,
     config: Option<PathBuf>,
     date: String,
+    sampling: Option<&'static str>,
 }
 
 fn parse_args() -> Result<Args, String> {
@@ -33,6 +38,7 @@ fn parse_args() -> Result<Args, String> {
         library: "checkir-community".into(),
         config: None,
         date: today(),
+        sampling: None,
     };
     let mut it = std::env::args().skip(1);
     while let Some(flag) = it.next() {
@@ -43,6 +49,12 @@ fn parse_args() -> Result<Args, String> {
             "--library" => a.library = value,
             "--config" => a.config = Some(value.into()),
             "--date" => a.date = value,
+            "--sampling" => {
+                a.sampling = Some(
+                    campionamento::known(&value)
+                        .ok_or(format!("unknown sampling method {value}"))?,
+                )
+            }
             _ => return Err(format!("unknown option {flag}")),
         }
     }
@@ -103,6 +115,17 @@ fn collect(data: &Path) -> Result<Vec<Built>, String> {
     Ok(built)
 }
 
+/// The sampling of a whole library: the one every spectrum has (its own record, else `default`); `None` when they
+/// differ or nothing says.
+fn library_sampling(built: &[Built], default: Option<&'static str>) -> Option<String> {
+    let mut all = built.iter().map(|b| b.sampling.or(default));
+    let first = all.next()??;
+    all.all(|m| m == Some(first))
+        .then_some(first)
+        .and_then(campionamento::normalise)
+        .map(str::to_string)
+}
+
 /// Builds one library into `<out>/<name>/`; returns its version and number of spectra.
 fn build_library(args: &Args, name: &str) -> Result<(String, usize), String> {
     let mut built: Vec<Built> = collect(&args.data)?
@@ -125,6 +148,7 @@ fn build_library(args: &Args, name: &str) -> Result<(String, usize), String> {
         attribution_it: Some(ATTRIBUTION_IT.into()),
         attribution_en: ATTRIBUTION_EN.into(),
         private: false,
+        sampling: library_sampling(&built, args.sampling),
     };
     let n = built.len();
     let rows = built.into_iter().map(|b| (b.row, b.values)).collect();

@@ -140,11 +140,17 @@
             "string",
             "null"
           ]
+        },
+        "sampling": {
+          "description": "Sampling method declared for the sample (null = not said).",
+          "description_it": "Campionamento dichiarato per il campione (null = non indicato).",
+          "type": ["string", "null"]
         }
       },
       "required": [
         "role",
-        "origin"
+        "origin",
+        "sampling"
       ],
       "additionalProperties": false
     },
@@ -177,13 +183,19 @@
             "description": "Searched in this comparison.",
             "description_it": "Cercata in questo confronto.",
             "type": "boolean"
+          },
+          "sampling": {
+            "description": "Sampling method the library declares (null = not said).",
+            "description_it": "Campionamento dichiarato dalla libreria (null = non indicato).",
+            "type": ["string", "null"]
           }
         },
         "required": [
           "id",
           "version",
           "spectra",
-          "searched"
+          "searched",
+          "sampling"
         ],
         "additionalProperties": false
       }

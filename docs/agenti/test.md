@@ -11,6 +11,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `tests_e2e/registri.mjs` (conformità di `ACTIONS`/`PANELS`, senza browser, chiamato da `fumo.mjs`).
 - `tests_e2e/prova.mjs` (la Prova della libreria: libreria sintetica con un gemello noto, report, CSV, niente rete; chiamato da `fumo.mjs`).
 - `tests_e2e/riservatezza.mjs` (T1 statico + T2 canarino, vedi `riservatezza.md`; passo a parte del job `web`).
+- `tests_e2e/campionamento.mjs` (da `fumo`): libreria privata importata con campionamento `atr_diamond`, scelta nella riga del campione, tetto T3 con il motivo dei due metodi (anche cristallo ATR diverso), `unknown` non limita, il metodo scritto nel file (`##SAMPLING PROCEDURE`) è letto.
 - `tests_e2e/fumo.mjs` (Playwright + axe-core; `BROWSER` sceglie il motore del browser, `CHROMIUM_PATH` un eseguibile locale).
 
 ## Trappole

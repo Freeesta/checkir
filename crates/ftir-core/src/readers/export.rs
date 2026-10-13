@@ -70,7 +70,7 @@ fn spectrum(sp: &Spectrum) -> String {
     format!(
         "{{\"role\":\"{:?}\",\"x\":{{\"unit\":\"{:?}\",\"order\":\"{:?}\",\"values\":{x}}},\
          \"y\":{{\"unit\":\"{:?}\",\"quantum\":{},\"values\":[{}]}},\
-         \"instrument\":{{\"model\":{},\"resolution_cm1\":{},\"scans\":{},\"serial_number\":{},\"accessory\":{}}},\
+         \"instrument\":{{\"model\":{},\"resolution_cm1\":{},\"scans\":{},\"serial_number\":{},\"accessory\":{},\"sampling\":{}}},\
          \"measurement\":{{\"title\":{},\"sample_name\":{},\"datetime\":{}}},\
          \"history\":[{}],\"fields\":[{}],\"warnings\":[{}]}}",
         sp.role,
@@ -90,6 +90,9 @@ fn spectrum(sp: &Spectrum) -> String {
             .map_or("null".to_string(), |r| r.value.to_string()),
         opt(&sp.instrument.serial_number),
         opt(&sp.instrument.accessory),
+        sp.instrument
+            .sampling
+            .map_or("null".to_string(), |m| format!("\"{m}\"")),
         opt(&sp.measurement.title),
         opt(&sp.measurement.sample_name),
         opt(&sp.measurement.datetime),
