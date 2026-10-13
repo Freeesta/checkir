@@ -13,11 +13,15 @@ use crate::error::{EngineError, EngineResult};
 use crate::passi::json::Value;
 use crate::spectrum::{Role, Spectrum};
 use std::cmp::Ordering;
+use std::collections::HashMap;
 
 /// Candidates listed.
 pub const TOP: usize = 10;
 /// Fewest points for the r of an explanation region to be shown.
 const MIN_REGION_POINTS: usize = 20;
+
+/// Rows folded into a candidate as `(global row, r)`.
+type Absorbed = Vec<(usize, f64)>;
 
 /// One scored row of the search.
 struct Scored {
@@ -132,6 +136,38 @@ fn regions(index: &Index, deriv: &[f64], g: usize, t: &Thresholds) -> Vec<(Strin
         .collect()
 }
 
+/// The best `TOP` rows with one entry per identity and form: a row with an InChIKey or a substance id that repeats the
+/// identity and form of a better one (the same substance in another library) joins that one's list. Rows with no
+/// identity are never merged here. Returns the kept rows (indices into `rows`) and, for each, the rows it absorbed.
+fn one_per_identity(
+    index: &Index,
+    rows: &[Scored],
+    sorted: &[usize],
+) -> (Vec<usize>, Vec<Absorbed>) {
+    let mut kept: Vec<usize> = Vec::new();
+    let mut same: Vec<Absorbed> = Vec::new();
+    let mut seen: HashMap<(u32, String), usize> = HashMap::new();
+    for i in sorted {
+        let s = &rows[*i];
+        let e = index.entry(s.g);
+        let has_identity = e.inchikey.is_some() || e.substance.is_some();
+        let key = (index.group[s.g], e.form.to_lowercase());
+        if let Some(k) = has_identity.then(|| seen.get(&key)).flatten() {
+            same[*k].push((s.g, s.r));
+            continue;
+        }
+        if kept.len() == TOP {
+            continue; // later rows only matter when they join a kept one (above)
+        }
+        if has_identity {
+            seen.insert(key, kept.len());
+        }
+        kept.push(*i);
+        same.push(Vec::new());
+    }
+    (kept, same)
+}
+
 /// Score every row of the searched libraries on the derivative and on the baseline-corrected spectrum.
 fn score_all(index: &Index, sel: (&Selection, &Selection), searched: &[usize]) -> Vec<Scored> {
     let mut rows = Vec::new();
@@ -154,13 +190,14 @@ fn score_all(index: &Index, sel: (&Selection, &Selection), searched: &[usize]) -
 fn candidates_of(
     index: &Index,
     rows: &[Scored],
-    order: &[usize],
+    (order, same): (&[usize], &[Absorbed]),
     sample: (&[f64], &[(String, f64)]),
     t: &Thresholds,
 ) -> Vec<Candidate> {
     order
         .iter()
-        .map(|i| {
+        .zip(same)
+        .map(|(i, same_substance)| {
             let s = &rows[*i];
             let r_regions = regions(index, sample.0, s.g, t);
             Candidate {
@@ -169,6 +206,7 @@ fn candidates_of(
                 r_derivative: s.r,
                 r_spectrum: s.r_spectrum,
                 coverage: s.coverage,
+                same_substance: same_substance.clone(),
                 r_regions,
             }
         })
@@ -229,11 +267,9 @@ pub fn search_with(
     );
     check_range(&sel_d, t)?;
     let rows = score_all(index, (&sel_d, &sel_s), &searched);
-    let mut order: Vec<usize> = (0..rows.len()).collect();
-    let k = TOP.min(order.len());
-    order.select_nth_unstable_by(k - 1, |a, b| by_rank(&rows[*a], &rows[*b]));
-    order.truncate(k);
-    order.sort_by(|a, b| by_rank(&rows[*a], &rows[*b]));
+    let mut sorted: Vec<usize> = (0..rows.len()).collect();
+    sorted.sort_by(|a, b| by_rank(&rows[*a], &rows[*b]));
+    let (order, same) = one_per_identity(index, &rows, &sorted);
     let top = &rows[order[0]];
     let second = rows
         .iter()
@@ -246,7 +282,7 @@ pub fn search_with(
         .min_by(|a, b| b.r_spectrum.total_cmp(&a.r_spectrum).then(a.g.cmp(&b.g)))
         .map_or((top.g, top.r_spectrum), |s| (s.g, s.r_spectrum));
     let signal = region_signal(&p.deriv, t);
-    let candidates = candidates_of(index, &rows, &order, (&p.deriv, &signal), t);
+    let candidates = candidates_of(index, &rows, (&order, &same), (&p.deriv, &signal), t);
     let top_library = index.libs[index.locate(top.g).0].sampling.as_deref();
     let (level, level_caps) = propose(
         top.r,

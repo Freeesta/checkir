@@ -1,14 +1,18 @@
 {
   "schema": "datasheet/1",
   "substance": "2c-b",
-  "version": 1,
+  "version": 2,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
@@ -16,10 +20,80 @@
   "reviewed": "2026-10-13",
   "review_by": "2028-09-30",
   "doses": [],
-  "interactions": [],
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "caution",
+      "mechanism": "maoi",
+      "source": "inan2020"
+    },
+    {
+      "with": "mdma",
+      "severity": "caution",
+      "mechanism": "other",
+      "source": "papaseit2018"
+    }
+  ],
   "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "2c-b-alc",
+        "reaction": "deamination",
+        "enzymes": [
+          "MAO-A",
+          "MAO-B"
+        ],
+        "source": "papaseit2018"
+      },
+      {
+        "from": "parent",
+        "to": "2c-b-cba",
+        "reaction": "deamination",
+        "enzymes": [
+          "MAO-A",
+          "MAO-B"
+        ],
+        "source": "papaseit2018"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "2c-b-alc",
+        "active": null,
+        "source": "papaseit2018"
+      },
+      {
+        "name_key": "2c-b-cba",
+        "active": null,
+        "source": "papaseit2018"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "2cb.setting",
+      "topic": "set_setting",
+      "source": "papaseit2018"
+    },
+    {
+      "key": "2cb.dosing",
+      "topic": "dosing",
+      "source": "papaseit2018"
+    },
+    {
+      "key": "2cb.combination",
+      "topic": "combination",
+      "source": "inan2020"
+    }
+  ]
 }

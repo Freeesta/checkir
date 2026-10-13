@@ -751,7 +751,7 @@
   "results.no_libraries": "Nessuna libreria attiva: attivane una nella sezione 2.",
   "results.not_run": "Confronto non ancora fatto.",
   "results.on_residual": "Sul residuo {code}",
-  "results.others_label": "{n} altri spettri con lo stesso nome nella libreria; qui il migliore",
+  "results.others_label": "{n} altri spettri della stessa sostanza (stesso nome o altre librerie); qui il migliore",
   "results.proposed": "proposto dal programma",
   "results.proposed_was": "proposto: {level}",
   "results.reference_file": "Riferimento",

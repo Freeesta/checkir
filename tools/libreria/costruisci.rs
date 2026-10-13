@@ -2,7 +2,10 @@
 //!
 //!     cargo run --release -p ftir-lib --bin costruisci-libreria -- [--data data] [--out target/libreria] \
 //!         [--library checkir-community | --config tools/libreria/librerie.json] [--date AAAA-MM-GG] \
-//!         [--sampling atr_diamond|atr_ge|atr_znse|transmission_kbr|unknown]
+//!         [--sampling atr_diamond|atr_ge|atr_znse|transmission_kbr|unknown] [--identity identita.csv]
+//!
+//! `--identity` (columns `name,inchikey,substance`) gives each row the identity of its name, so the same substance under
+//! different names is one substance in the margin; names the table does not know are listed in the report.
 //!
 //! Writes `<out>/<library>/{manifest.json,index.json,data.bin,native.bin}` (`native.bin` = the spectra as the files give them, for drawing) and the general manifest `<out>/libraries.json`
 //! (`ftir-libraries/1`: one entry per package with an `enabled` switch). With `--config` every library of the file is
@@ -13,6 +16,7 @@ use ftir_core::campionamento;
 use ftir_core::passi::json::parse;
 use ftir_core::passi::Value;
 use ftir_lib::build::{build_one, Built, Source};
+use ftir_lib::identity;
 use ftir_lib::manifest::Grid;
 use ftir_lib::package::{write_package, Identity};
 use std::fs;
@@ -50,6 +54,7 @@ struct Args {
     config: Option<PathBuf>,
     date: String,
     sampling: Option<&'static str>,
+    identity: Option<PathBuf>,
 }
 
 fn parse_args() -> Result<Args, String> {
@@ -60,6 +65,7 @@ fn parse_args() -> Result<Args, String> {
         config: None,
         date: today(),
         sampling: None,
+        identity: None,
     };
     let mut it = std::env::args().skip(1);
     while let Some(flag) = it.next() {
@@ -70,6 +76,7 @@ fn parse_args() -> Result<Args, String> {
             "--library" => a.library = value,
             "--config" => a.config = Some(value.into()),
             "--date" => a.date = value,
+            "--identity" => a.identity = Some(value.into()),
             "--sampling" => {
                 a.sampling = Some(
                     campionamento::known(&value)
@@ -148,7 +155,7 @@ fn library_sampling(built: &[Built], default: Option<&'static str>) -> Option<St
 }
 
 /// Builds one library into `<out>/<name>/`; returns its version and number of spectra.
-fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize), String> {
+fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize, Vec<String>), String> {
     let name = conf.id.as_str();
     let mut built: Vec<Built> = collect(&args.data)?
         .into_iter()
@@ -179,7 +186,18 @@ fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize), String>
         .iter()
         .flat_map(|b| b.native.iter().flat_map(|v| v.to_le_bytes()))
         .collect();
-    let rows = built.into_iter().map(|b| (b.row, b.values)).collect();
+    let mut rows: Vec<_> = built.into_iter().map(|b| (b.row, b.values)).collect();
+    let unknown = match &args.identity {
+        Some(path) => {
+            let csv = fs::read_to_string(path).map_err(|e| format!("{}: {e}", path.display()))?;
+            let table = identity::parse_table(&csv)?;
+            let mut only: Vec<_> = rows.iter().map(|(r, _)| r.clone()).collect();
+            let unknown = identity::apply(&mut only, &table);
+            rows.iter_mut().zip(only).for_each(|(slot, r)| slot.0 = r);
+            unknown
+        }
+        None => Vec::new(),
+    };
     let files = write_package(&identity, &Grid::STANDARD, rows).map_err(|e| e.json())?;
     let dir = args.out.join(name);
     fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
@@ -187,7 +205,7 @@ fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize), String>
     fs::write(dir.join("index.json"), files.index_json).map_err(|e| e.to_string())?;
     fs::write(dir.join("data.bin"), files.data_bin).map_err(|e| e.to_string())?;
     fs::write(dir.join("native.bin"), native).map_err(|e| e.to_string())?;
-    Ok((version, n))
+    Ok((version, n, unknown))
 }
 
 /// `{"it": …, "en": …}` of a config entry (`en` required).
@@ -237,7 +255,7 @@ fn run() -> Result<String, String> {
     let mut report = Vec::new();
     for conf in wanted(&args)? {
         let (name, enabled) = (conf.id.clone(), conf.enabled);
-        let (version, n) = build_library(&args, &conf)?;
+        let (version, n, unknown) = build_library(&args, &conf)?;
         entries.push(Value::Obj(vec![
             ("id".into(), Value::Str(name.clone())),
             ("path".into(), Value::Str(name.clone())),
@@ -246,6 +264,17 @@ fn run() -> Result<String, String> {
             ("enabled".into(), Value::Bool(enabled)),
         ]));
         report.push(format!("{name}: {n} spectra"));
+        if args.identity.is_some() {
+            report.push(format!(
+                "{name}: {} names without identity{}",
+                unknown.len(),
+                if unknown.is_empty() {
+                    String::new()
+                } else {
+                    format!(": {}", unknown.join("; "))
+                }
+            ));
+        }
     }
     let general = Value::Obj(vec![
         ("schema".into(), Value::Str("ftir-libraries/1".into())),

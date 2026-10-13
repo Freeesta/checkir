@@ -1322,6 +1322,253 @@
       "tier": "primary"
     },
     {
+      "id": "euda-meth",
+      "type": "institution",
+      "title": "EUDA, Methamphetamine drug profile",
+      "year": 2026,
+      "url": "https://www.euda.europa.eu/publications/drug-profiles/methamphetamine_en",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20261007123532/https://www.euda.europa.eu/publications/drug-profiles/methamphetamine_en",
+      "tier": "agency"
+    },
+    {
+      "id": "euda-cathinones",
+      "type": "institution",
+      "title": "EMCDDA/EUDA, Synthetic cathinones drug profile",
+      "url": "https://www.euda.europa.eu/publications/drug-profiles/synthetic-cathinones_en",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20240119155426/https://www.emcdda.europa.eu/publications/drug-profiles/synthetic-cathinones_en",
+      "tier": "agency"
+    },
+    {
+      "id": "euda-mxe-ra",
+      "type": "institution",
+      "title": "EMCDDA, Risk assessment of methoxetamine",
+      "year": 2014,
+      "url": "https://www.euda.europa.eu/publications/risk-assessment/methoxetamine",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20230308014516/https://www.emcdda.europa.eu/publications/risk-assessment/methoxetamine",
+      "tier": "agency"
+    },
+    {
+      "id": "who-ecdd45-3mmc",
+      "type": "institution",
+      "title": "WHO Expert Committee on Drug Dependence, 45th meeting (2022), Critical review report: 3-MMC (accepted manuscript, Liverpool John Moores University repository)",
+      "year": 2022,
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/18334/",
+      "license": "CC BY-NC-SA (repository copy)",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "cruickshank2009",
+      "type": "paper",
+      "title": "A review of the clinical pharmacology of methamphetamine (Addiction 104)",
+      "authors": [
+        "Christopher C. Cruickshank",
+        "Kyle R. Dyer"
+      ],
+      "year": 2009,
+      "doi": "10.1111/j.1360-0443.2009.02564.x",
+      "url": "https://doi.org/10.1111/j.1360-0443.2009.02564.x",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "schep2010",
+      "type": "paper",
+      "title": "The clinical toxicology of metamfetamine (Clinical Toxicology 48)",
+      "authors": [
+        "Leo J. Schep",
+        "Robin J. Slaughter",
+        "D. Michael G. Beasley"
+      ],
+      "year": 2010,
+      "doi": "10.3109/15563650.2010.516752",
+      "url": "https://doi.org/10.3109/15563650.2010.516752",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "chaichana2022",
+      "type": "paper",
+      "title": "Categorization of Cytochrome P4502D6 Activity Score by Urinary Amphetamine/Methamphetamine Ratios (Metabolites 12)",
+      "authors": [
+        "Jatuporn Chaichana",
+        "Manee Khamenkhetkarn",
+        "Thanapat Sastraruji",
+        "Tawachai Monum",
+        "Timothy E. O’Brien",
+        "Yutti Amornlertwatana",
+        "Churdsak Jaikang"
+      ],
+      "year": 2022,
+      "doi": "10.3390/metabo12121174",
+      "url": "https://doi.org/10.3390/metabo12121174",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "wood2010",
+      "type": "paper",
+      "title": "Case series of individuals with analytically confirmed acute mephedrone toxicity (Clinical Toxicology 48)",
+      "authors": [
+        "David M. Wood",
+        "Susannah Davies",
+        "Shaun L. Greene",
+        "Jenny Button",
+        "David W. Holt",
+        "John Ramsey",
+        "Paul I. Dargan"
+      ],
+      "year": 2010,
+      "doi": "10.3109/15563650.2010.531021",
+      "url": "https://doi.org/10.3109/15563650.2010.531021",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "pozo2015",
+      "type": "paper",
+      "title": "Mass Spectrometric Evaluation of Mephedrone In Vivo Human Metabolism: Identification of Phase I and Phase II Metabolites, Including a Novel Succinyl Conjugate (Drug Metabolism and Disposition 43)",
+      "authors": [
+        "Óscar J. Pozo",
+        "María Ibáñez",
+        "Juan V. Sancho",
+        "Julio Lahoz-Beneytez",
+        "Magí Farré",
+        "Esther Papaseit",
+        "Rafael de la Torre",
+        "Félix Hernández"
+      ],
+      "year": 2015,
+      "doi": "10.1124/dmd.114.061416",
+      "url": "https://doi.org/10.1124/dmd.114.061416",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "olesti2017",
+      "type": "paper",
+      "title": "Pharmacokinetics of Mephedrone and Its Metabolites in Human by LC-MS/MS (The AAPS Journal 19)",
+      "authors": [
+        "Eulàlia Olesti",
+        "Magí Farré",
+        "Esther Papaseit",
+        "Aristotelis Krotonoulas",
+        "Mitona Pujadas",
+        "Rafael de la Torre",
+        "Óscar J. Pozo"
+      ],
+      "year": 2017,
+      "doi": "10.1208/s12248-017-0132-2",
+      "url": "https://doi.org/10.1208/s12248-017-0132-2",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "papaseit2018",
+      "type": "paper",
+      "title": "Acute Pharmacological Effects of 2C-B in Humans: An Observational Study (Frontiers in Pharmacology 9)",
+      "authors": [
+        "Esther Papaseit",
+        "Magí Farré",
+        "Clara Pérez-Mañá",
+        "Marta Torrens",
+        "Mireia Ventura",
+        "Mitona Pujadas",
+        "Rafael de la Torre",
+        "Débora González"
+      ],
+      "year": 2018,
+      "doi": "10.3389/fphar.2018.00206",
+      "url": "https://doi.org/10.3389/fphar.2018.00206",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "inan2020",
+      "type": "paper",
+      "title": "Novel Phenethylamines and Their Potential Interactions With Prescription Drugs: A Systematic Critical Review (Therapeutic Drug Monitoring 42)",
+      "authors": [
+        "Funda Inan",
+        "Tibor M. Brunt",
+        "Ramon R. Contrucci",
+        "Laura Hondebrink",
+        "Eric J. F. Franssen"
+      ],
+      "year": 2020,
+      "doi": "10.1097/FTD.0000000000000725",
+      "url": "https://doi.org/10.1097/FTD.0000000000000725",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "menzies2014",
+      "type": "paper",
+      "title": "Characterizing metabolites and potential metabolic pathways for the novel psychoactive substance methoxetamine (Drug Testing and Analysis 6)",
+      "authors": [
+        "E. L. Menzies",
+        "S. C. Hudson",
+        "P. I. Dargan",
+        "M. C. Parkin",
+        "D. M. Wood",
+        "A. T. Kicman"
+      ],
+      "year": 2013,
+      "doi": "10.1002/dta.1541",
+      "url": "https://doi.org/10.1002/dta.1541",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "zawilska2014",
+      "type": "paper",
+      "title": "Methoxetamine – a novel recreational drug with potent hallucinogenic properties (Toxicology Letters 230)",
+      "authors": [
+        "Jolanta B. Zawilska"
+      ],
+      "year": 2014,
+      "doi": "10.1016/j.toxlet.2014.08.011",
+      "url": "https://doi.org/10.1016/j.toxlet.2014.08.011",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "hill2013",
+      "type": "paper",
+      "title": "Methoxetamine toxicity reported to the National Poisons Information Service: clinical characteristics and patterns of enquiries (including the period of the introduction of the UK's first Temporary Class Drug Order) (Emergency Medicine Journal 31)",
+      "authors": [
+        "Simon L Hill",
+        "Siân C D Harbon",
+        "James Coulson",
+        "Gillian A Cooper",
+        "Gill Jackson",
+        "David J Lupton",
+        "J Allister Vale",
+        "Simon H L Thomas"
+      ],
+      "year": 2013,
+      "doi": "10.1136/emermed-2012-202251",
+      "url": "https://doi.org/10.1136/emermed-2012-202251",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "adamowicz2014",
+      "type": "paper",
+      "title": "Fatal Intoxication with Methoxetamine (Journal of Forensic Sciences 60)",
+      "authors": [
+        "Piotr Adamowicz",
+        "Dariusz Zuba"
+      ],
+      "year": 2014,
+      "doi": "10.1111/1556-4029.12594",
+      "url": "https://doi.org/10.1111/1556-4029.12594",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
       "id": "hoglund1989",
       "type": "paper",
       "title": "Pharmacokinetics of diltiazem and its metabolites after single and multiple dosing in healthy volunteers",

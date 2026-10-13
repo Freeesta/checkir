@@ -203,7 +203,7 @@ pub fn build_one(src: &Source, grid: &Grid) -> EngineResult<Built> {
     let row = Row {
         id,
         form: member_str(&spec, &["form"]).ok_or_else(|| bad("form"))?,
-        substance: member_str(&sub, &["id"]).ok_or_else(|| bad("substance"))?,
+        substance: Some(member_str(&sub, &["id"]).ok_or_else(|| bad("substance"))?),
         name_it: member_str(&sub, &["names", "it", "preferred"]),
         name_en: member_str(&sub, &["names", "en", "preferred"]).ok_or_else(|| bad("names"))?,
         classes,

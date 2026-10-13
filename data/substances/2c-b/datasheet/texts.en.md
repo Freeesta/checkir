@@ -10,25 +10,49 @@ Analogues: the SWGDRUG monograph notes that, with the parameters used, the IR sp
 
 Chemical class: phenethylamines, 2C series. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
 
+## history
+
+2C-B comes from the research of Alexander Shulgin in the 1950s-1970s. Since 2001 it has been in Schedule II of the 1971 UN Convention. [f:papaseit2018]
+
+## origin
+
+A synthetic substance of the 2C family of phenethylamines. [f:papaseit2018]
+
+## metabolism
+
+It is believed to be metabolised mainly by MAO-A and MAO-B and less by CYP450; 2C-B-ALC and 2C-B-CBA appear in urine. [f:papaseit2018] [f:inan2020]
+
+In 16 experienced users after 10, 15 or 20 mg orally, the oral-fluid Cmax is about 4.19 ng/mL at about 1 h and the half-life 2.48 ± 3.20 h. [f:papaseit2018]
+
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+It is a partial agonist at the 5-HT2A, 2B and 2C receptors. In the study blood pressure and heart rate increased and mild hallucinatory effects were seen in 5 of 16 subjects. [f:papaseit2018]
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Usual oral doses are 10-30 mg; tablets contain 5-10 mg. The study used 10, 15 and 20 mg orally. [f:papaseit2018]
 
 ## risks
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+In the study blood pressure and heart rate increased. The verified sources hold no data on severe intoxications. [f:papaseit2018]
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Metabolism goes through the MAOs: MAO inhibitors, some antidepressants and ADHD medicines can interact. [f:inan2020]
+
+In a survey 2C-B was combined with MDMA in 28.3 % of cases; the UBC guidelines flag a risk of seizures with this combination. [f:papaseit2018] [f:ubc-counselling-guidelines]
+
+## counselling
+
+Hallucinatory effects depend on set and setting: ask where and with whom it will be taken, whether the person is well and has slept, and suggest not taking it alone. [f:papaseit2018] [f:ubc-counselling-guidelines]
+
+Effects appear at small doses (the study uses 10-20 mg): the UBC guidelines note that a few mg more or less change the effect and suggest approaching the dose gradually. [f:papaseit2018] [f:ubc-counselling-guidelines]
+
+Ask about MAO inhibitors, antidepressants, ADHD medicines and MDMA: metabolism goes through the MAOs and the UBC guidelines advise against mixing with MDMA and alcohol. [f:inan2020] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-2cb] [f:smith-ethers] [f:smith-amine-salts] [f:unodc-ewa]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-2cb] [f:smith-ethers] [f:smith-amine-salts] [f:unodc-ewa] [f:checkir-classification] [f:papaseit2018] [f:inan2020] [f:ubc-counselling-guidelines]
 
 ## license
 
