@@ -10,7 +10,7 @@ For chemists and health workers. Sheets are published under CC BY-SA 4.0.
 
 ## Review
 - A chemist checks the analytical content (bands, forms, limits of FTIR).
-- **A health reviewer always approves the health texts** (effects, risks, harm-reduction points). No maintainer approves them alone. Until a section is approved, the program shows "text under review" instead.
+- **A listed reviewer always approves the health texts** (effects, risks, harm-reduction points). No maintainer approves them alone. Until a section is approved, the program shows "text under review" instead.
 - Doses only follow the project rules and are never given for potent substances.
 
 ## Rules

@@ -20,3 +20,6 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 
 ## Trappole
 - `tsc` non controlla `sw.js` né `web/wasm`. Nuovi moduli: aggiungerli a `FILES` in `sw.js`.
+
+## Logo
+The logo is a round pill with a check mark. The check mark is allowed only in the logo, favicon and app icons (neutral theme colour); it never appears in the results interface (no check mark, "ok" or green on a substance or a match).
