@@ -45,6 +45,7 @@ async function start() {
     box?.refresh();
     refreshHeader();
     document.title = `${heading.textContent} · ${APP_NAME}`;
+    document.body.dataset.langReady = currentLang();
   };
   render();
   document.body.dataset.ready = "1";
