@@ -104,6 +104,7 @@
   "alert.spectral_twin.label": "Gemello spettrale",
   "alert.spectral_twin.reason": "Quasi uguale in libreria: {twin}",
   "app.skip": "Vai al contenuto",
+  "card.band_of": "Assegnazione della banda di {name}",
   "card.close": "Chiudi la scheda",
   "card.crowded": "In questa zona cadono più regole.",
   "card.explained_by": "Spiegato da",

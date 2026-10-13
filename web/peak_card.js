@@ -1,5 +1,5 @@
 // @ts-check
-import { groupName, modeDefinition, modeName, modeOf, ruleOf, rulesOfGroup, ruleText, sourceTitles } from "./bands_data.js";
+import { groupName, modeDefinition, modeName, modeOf, ruleOf, rulesOfGroup, ruleText, sourceTitles, substanceBandOf } from "./bands_data.js";
 import { el } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
 import { modeFigure } from "./mode_anim.js";
@@ -63,14 +63,16 @@ function levelPicker(level, ctx) {
   return group;
 }
 
-/** One reading: group and mode, its text at the level, source and status of the rule. @param {import("./peaks.js").Reading} r @param {import("./state.js").TextLevel} level @returns {HTMLElement} */
-function reading(r, level) {
+/** One reading: group and mode, its text at the level, source and status of the rule (or of the band of the substance, named, when the reading is its assignment). @param {import("./peaks.js").Reading} r @param {import("./state.js").TextLevel} level @param {{ substance: string, form: string, name: string | null, cm1: number } | null} owner @returns {HTMLElement} */
+function reading(r, level, owner) {
   const rule = r.rule_id ? ruleOf(r.rule_id) : undefined;
   const text = r.rule_id ? ruleText(r.rule_id, level) : null;
+  const band = !r.rule_id && owner ? substanceBandOf(owner.substance, owner.form, r.group, r.mode, owner.cm1) : null;
   const li = el("li", { class: "reading", "data-rule": r.rule_id ?? "" }, [el("strong", {}, [`${groupName(r.group)} · ${modeName(r.mode)}`])]);
-  li.append(el("p", { class: "reading-text" }, [text ? text.text : t("card.no_text")]));
+  if (band) li.append(el("p", { class: "note reading-owner" }, [t("card.band_of", { name: owner?.name ?? owner?.substance ?? "" })]));
+  li.append(el("p", { class: "reading-text" }, [text ? text.text : (band?.text ?? t("card.no_text"))]));
   if (text && text.level !== level) li.append(el("p", { class: "note" }, [t("card.level_fallback", { level: levelWord(/** @type {any} */ (text.level)) })]));
-  const src = rule ? sourceTitles(rule.sources).join("; ") : "";
+  const src = rule ? sourceTitles(rule.sources).join("; ") : band ? sourceTitles(band.sources).join("; ") : "";
   li.append(el("p", { class: "note reading-source" }, [`${statusWord(r.rule_status)}${src ? ` · ${t("card.sources")}: ${src}` : ""}`]));
   return li;
 }
@@ -128,7 +130,7 @@ export function renderPeakCard(host, s, ctx, track) {
   const head = el("div", { class: "card-head" }, [el("h3", { id: "peak-card-title" }, [t("card.title", { pos: approx(p.position) })]), close]);
   const body = [head, facts(p, name), levelPicker(s.textLevel, ctx), el("h4", {}, [t("card.readings")])];
   if (!first) body.push(el("p", { class: "note" }, [t("card.no_reading")]));
-  else body.push(el("ol", { class: "readings" }, p.readings.slice(0, MAX_READINGS).map((r) => reading(r, s.textLevel))), ...(p.crowded ? [el("p", { class: "note" }, [t("card.crowded")])] : []), vibration(first, s, ctx, track));
+  else body.push(el("ol", { class: "readings" }, p.readings.slice(0, MAX_READINGS).map((r) => reading(r, s.textLevel, chosen?.substance ? { substance: chosen.substance, form: chosen.form ?? "", name, cm1: p.by ?? p.position } : null))), ...(p.crowded ? [el("p", { class: "note" }, [t("card.crowded")])] : []), vibration(first, s, ctx, track));
   const more = first ? others(first.group, first.rule_id, ctx) : null;
   if (more) body.push(more);
   host.replaceChildren(...body);

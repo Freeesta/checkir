@@ -415,3 +415,29 @@ fn a_free_nh2_stretch_is_not_read_as_water() {
     ];
     assert_eq!(water_at(&wet, 3400.0), (Some(Shape::VeryBroad), true));
 }
+
+#[test]
+fn the_band_of_the_explaining_substance_is_read_before_the_generic_rules() {
+    let list = [rule("ether", 1190, 1230, "")];
+    let mut c = ctx(&list);
+    c.substance_bands = vec![SubstanceBands {
+        substance_id: "sub".into(),
+        form: "hcl".into(),
+        bands: vec![band(1210.0, "amine", Origin::Literature)],
+    }];
+    let sample: Vec<B> = vec![(1700.0, 8.0, 1.0), (1210.0, 8.0, 0.6)];
+    let a = run(&sample, &candidate(&sample), &c);
+    let item = (a.items.iter())
+        .find(|i| {
+            i.explained_by
+                .as_ref()
+                .is_some_and(|b| (b.ref_peak_cm1 - 1210.0).abs() < 3.0)
+        })
+        .expect("explained at 1210");
+    let groups: Vec<_> = item
+        .interpretations
+        .iter()
+        .map(|i| i.group.as_str())
+        .collect();
+    assert_eq!(groups, ["amine", "g_ether"], "{a:?}");
+}
