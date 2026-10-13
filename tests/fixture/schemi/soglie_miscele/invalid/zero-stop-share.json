@@ -22,6 +22,12 @@
     "smooth_window": 15,
     "smooth_polyorder": 3
   },
+  "proposal": {
+    "min_components": 2,
+    "max_unexplained_variance_share": 0.3,
+    "min_explained_peaks": 1,
+    "minor_variance_share": 0.003
+  },
   "residual": {
     "high_residual_variance_share": 0.15
   },

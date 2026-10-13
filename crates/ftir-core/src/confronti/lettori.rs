@@ -41,3 +41,26 @@ pub fn from_reader(s: &FromReader) -> EngineResult<Spectrum> {
     let y = s.y.values.iter().map(|v| v * scale).collect();
     Ok(Spectrum::new(role, unit, x, y))
 }
+
+/// The unit a page or caller names (`absorbance`, `transmittance` = `transmittance_percent`, `transmittance_fraction`):
+/// the core unit and the factor that brings the values to it (a fraction becomes percent, so `T ≤ 0` stays an absent
+/// point in the step that follows). `None` = unknown name.
+pub fn unit_named(name: &str) -> Option<(YUnit, f64)> {
+    match name {
+        "absorbance" => Some((YUnit::Absorbance, 1.0)),
+        "transmittance" | "transmittance_percent" => Some((YUnit::Transmittance, 1.0)),
+        "transmittance_fraction" => Some((YUnit::Transmittance, 100.0)),
+        _ => None,
+    }
+}
+
+/// A spectrum from the unit name of `unit_named` (an unknown name reads as absorbance, as before); NaN stays NaN.
+pub fn spectrum_in(role: Role, unit: &str, x: Vec<f64>, y: Vec<f64>) -> Spectrum {
+    let (u, k) = unit_named(unit).unwrap_or((YUnit::Absorbance, 1.0));
+    let y = if k == 1.0 {
+        y
+    } else {
+        y.iter().map(|v| v * k).collect()
+    };
+    Spectrum::new(role, u, x, y)
+}

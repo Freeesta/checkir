@@ -1,6 +1,6 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
-import { parseDocument } from "./spectrum.js";
+import { engineUnit, parseDocument } from "./spectrum.js";
 import { getState, update } from "./state.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
@@ -100,7 +100,7 @@ async function readOne(file, engine) {
   if ("error" in r) return update({ fileError: r.error });
   const warnings = [...r.notices];
   if (r.more > 0) warnings.push({ key: "reader.more_spectra", params: { count: String(r.more) } });
-  if (r.spectrum.y_unit !== "Absorbance") warnings.push({ key: "reader.y_unit_other", params: {} });
+  if (engineUnit(r.spectrum) === null) warnings.push({ key: "reader.y_unit_other", params: {} });
   addSpectrum(r.spectrum, { name: file.name, resolutionCm1: r.resolutionCm1, sampling: r.sampling, warnings });
 }
 

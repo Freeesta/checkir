@@ -137,7 +137,7 @@ async function sync(libs) {
   for (const lib of libs) if (lib.rows && held.get(lib.id) === lib.version) indexLibrary(lib).catch(() => scope.postMessage({ type: "peak_index", id: lib.id, done: 0, total: 0, ready: false, how: "failed" }));
 }
 
-/** @param {{ runId: number, query: unknown, options: any, mixture?: boolean }} job `mixture`: after the comparison, look for a mixture when peaks stay unexplained */
+/** @param {{ runId: number, query: unknown, options: any, mixture?: boolean }} job `mixture`: after the comparison, look for a mixture (the engine decides whether there is one) */
 async function run(job) {
   await engine();
   const json = mod.confronta(JSON.stringify(job.query), JSON.stringify(job.options));
@@ -146,7 +146,7 @@ async function run(job) {
   const result = JSON.parse(json);
   let proposal = null;
   try {
-    proposal = result.error_key ? null : mixtureProposal(mod, data, job.options.libraries ?? [], job.query, result);
+    proposal = result.error_key ? null : mixtureProposal(mod, data, job.options.libraries ?? [], job.query);
   } catch {
     proposal = null;
   }

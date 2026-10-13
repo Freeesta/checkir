@@ -1,9 +1,10 @@
 //! Bridge of the peak index (`peak-index/1`): one index per library, kept in memory (thread-local). Thin functions that
 //! return JSON text or bytes; the index itself lives in `ftir_core::peak_index`.
+use ftir_core::confronti::lettori::spectrum_in;
 use ftir_core::error::EngineError;
 use ftir_core::peak_index::{query, PeakIndex};
 use ftir_core::peaks::{self, Thresholds};
-use ftir_core::spectrum::{Role, Spectrum, YUnit};
+use ftir_core::spectrum::Role;
 use std::cell::RefCell;
 use std::collections::HashMap;
 use wasm_bindgen::prelude::*;
@@ -59,12 +60,7 @@ pub fn peak_index_add(lib: &str, y_unit: &str, wavenumber_cm1: &[f64], y: &[f64]
         )
         .json();
     }
-    let unit = if y_unit == "transmittance" {
-        YUnit::Transmittance
-    } else {
-        YUnit::Absorbance
-    };
-    let s = Spectrum::new(Role::Reference, unit, wavenumber_cm1.to_vec(), y.to_vec());
+    let s = spectrum_in(Role::Reference, y_unit, wavenumber_cm1.to_vec(), y.to_vec());
     let t = match thresholds() {
         Ok(t) => t,
         Err(e) => return e.json(),

@@ -1,5 +1,6 @@
 // @ts-check
 import { candidateName } from "./results.js";
+import { axisKind } from "./spectrum.js";
 
 /**
  * Local export of what is on screen: CSV text of the spectrum shown, of its peaks and of the candidates of the comparison. Everything is
@@ -20,7 +21,7 @@ export function toCsv(rows) {
 
 /** The points of a spectrum, numbers in the machine form (dot decimal). @param {import("./spectrum.js").Spectrum} s @param {{ min: number, max: number }} [view] limit to a range @returns {string} */
 export function spectrumCsv(s, view) {
-  const unit = s.y_unit === "Transmittance" ? "transmittance" : s.y_unit === undefined || s.y_unit === "Absorbance" ? "absorbance" : "intensity";
+  const unit = axisKind(s);
   const rows = /** @type {unknown[][]} */ ([["wavenumber_cm1", unit]]);
   s.wavenumber_cm1.forEach((x, i) => {
     if (!view || (x >= view.min && x <= view.max)) rows.push([x, s.y[i]]);

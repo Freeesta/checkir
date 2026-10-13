@@ -1,10 +1,11 @@
 //! Bridge of the library comparison: one engine per page (thread-local), thin functions that return JSON text.
 //! The comparison itself, the caches and the twins live in `ftir_core::confronti`.
+use ftir_core::confronti::lettori::spectrum_in;
 use ftir_core::confronti::libreria::LibEntry;
 use ftir_core::confronti::motore::Motore;
 use ftir_core::error::EngineError;
 use ftir_core::readers::model::Limits;
-use ftir_core::spectrum::{Role, Spectrum, YUnit};
+use ftir_core::spectrum::Role;
 use std::cell::RefCell;
 use wasm_bindgen::prelude::*;
 
@@ -71,12 +72,7 @@ pub fn confronto_libreria_aggiungi(
         )
         .json();
     }
-    let unit = if y_unit == "transmittance" {
-        YUnit::Transmittance
-    } else {
-        YUnit::Absorbance
-    };
-    let s = Spectrum::new(Role::Reference, unit, wavenumber_cm1.to_vec(), y.to_vec());
+    let s = spectrum_in(Role::Reference, y_unit, wavenumber_cm1.to_vec(), y.to_vec());
     answer(with(|m| {
         m.add(lib, entry(id, substance, display_name, form, classes), &s)
     }))
