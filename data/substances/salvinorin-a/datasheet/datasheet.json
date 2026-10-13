@@ -1,0 +1,67 @@
+{
+  "schema": "datasheet/1",
+  "substance": "salvinorin-a",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "salvinorin-b",
+        "reaction": "hydrolysis_ester",
+        "source": "tsujikawa2009"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "salvinorin-b",
+        "active": null,
+        "source": "tsujikawa2009"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "salvinorin-a.setting",
+      "topic": "set_setting",
+      "source": "maqueda2016"
+    },
+    {
+      "key": "salvinorin-a.mental-health",
+      "topic": "mental_health",
+      "source": "mahendran2015"
+    },
+    {
+      "key": "salvinorin-a.route",
+      "topic": "route",
+      "source": "johnson2016"
+    }
+  ]
+}

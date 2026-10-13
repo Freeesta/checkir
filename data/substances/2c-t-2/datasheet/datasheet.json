@@ -1,0 +1,87 @@
+{
+  "schema": "datasheet/1",
+  "substance": "2c-t-2",
+  "version": 1,
+  "family": "2c",
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "caution",
+      "mechanism": "maoi",
+      "source": "theobald2006"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "S-oxidised N-acetylated metabolites",
+        "reaction": "other",
+        "source": "theobald2005"
+      },
+      {
+        "from": "parent",
+        "to": "O-demethylated metabolites",
+        "reaction": "o_demethylation",
+        "source": "theobald2005"
+      },
+      {
+        "from": "parent",
+        "to": "deaminated alcohol and acid metabolites",
+        "reaction": "deamination",
+        "enzymes": [
+          "MAO-A",
+          "MAO-B",
+          "CYP2D6"
+        ],
+        "source": "theobald2006"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "2c-t-2-n-acetyl-sulfoxide",
+        "active": null,
+        "source": "kanamori2016"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "2ct2.dosing",
+      "topic": "dosing",
+      "source": "halberstadt2022"
+    },
+    {
+      "key": "2ct2.combination",
+      "topic": "combination",
+      "source": "theobald2006"
+    }
+  ]
+}

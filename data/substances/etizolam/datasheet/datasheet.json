@@ -1,0 +1,68 @@
+{
+  "schema": "datasheet/1",
+  "substance": "etizolam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "opioid",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "sun2017"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "alpha-hydroxyetizolam",
+        "reaction": "hydroxylation",
+        "source": "fracasso1991"
+      }
+    ],
+    "half_life_h": {
+      "min": 3.4,
+      "max": 3.4,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "fracasso1991"
+    }
+  },
+  "counselling": [
+    {
+      "key": "etizolam.combination",
+      "topic": "combination",
+      "source": "sun2017"
+    },
+    {
+      "key": "etizolam.redosing",
+      "topic": "redosing",
+      "source": "fracasso1991"
+    }
+  ]
+}

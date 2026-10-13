@@ -740,6 +740,442 @@
       "tier": "database"
     },
     {
+      "id": "passie2008",
+      "type": "paper",
+      "title": "The pharmacology of lysergic acid diethylamide: a review (CNS Neurosci Ther 14(4):295-314)",
+      "authors": [
+        "T. Passie",
+        "J. H. Halpern",
+        "D. O. Stichtenoth",
+        "H. M. Emrich",
+        "A. Hintzen"
+      ],
+      "year": 2008,
+      "doi": "10.1111/j.1755-5949.2008.00059.x",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6494066/",
+      "archive_url": "https://web.archive.org/web/20261011190703/https://pmc.ncbi.nlm.nih.gov/articles/PMC6494066/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "holze2023",
+      "type": "paper",
+      "title": "Pharmacokinetics, pharmacodynamics and urinary recovery of oral lysergic acid diethylamide administration in healthy participants (Br J Clin Pharmacol 90(1):200-208)",
+      "authors": [
+        "F. Holze",
+        "L. Erne",
+        "U. Duthaler",
+        "M. E. Liechti"
+      ],
+      "year": 2023,
+      "doi": "10.1111/bcp.15887",
+      "url": "https://doi.org/10.1111/bcp.15887",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "vizeli2021",
+      "type": "paper",
+      "title": "Genetic influence of CYP2D6 on pharmacokinetics and acute subjective effects of LSD in a pooled analysis (Sci Rep 11:10851)",
+      "authors": [
+        "P. Vizeli",
+        "I. Straumann",
+        "F. Holze",
+        "Y. Schmid",
+        "P. C. Dolder",
+        "M. E. Liechti"
+      ],
+      "year": 2021,
+      "doi": "10.1038/s41598-021-90343-y",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8149637/",
+      "archive_url": "https://web.archive.org/web/20251129190609/https://pmc.ncbi.nlm.nih.gov/articles/PMC8149637/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "luethi2019",
+      "type": "paper",
+      "title": "Cytochrome P450 enzymes contribute to the metabolism of LSD to nor-LSD and 2-oxo-3-hydroxy-LSD: Implications for clinical LSD use (Biochem Pharmacol 164:129-138)",
+      "authors": [
+        "D. Luethi",
+        "M. C. Hoener",
+        "S. Krähenbühl",
+        "M. E. Liechti",
+        "U. Duthaler"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.bcp.2019.04.013",
+      "url": "https://doi.org/10.1016/j.bcp.2019.04.013",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "hampsey2026",
+      "type": "paper",
+      "title": "A systematic review of the pharmacokinetics of classical serotonergic psychedelic compounds in healthy adult subjects (J Psychopharmacol)",
+      "authors": [
+        "E. Hampsey",
+        "K. Martin",
+        "M. Kalfas",
+        "L. Benson",
+        "S. Wihlborg",
+        "L. Jelen",
+        "A. H. Young",
+        "J. Rucker"
+      ],
+      "year": 2026,
+      "doi": "10.1177/02698811261453938",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13415903/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "hasler1997",
+      "type": "paper",
+      "title": "Determination of psilocin and 4-hydroxyindole-3-acetic acid in plasma by HPLC-ECD and pharmacokinetic profiles of oral and intravenous psilocybin in man (Pharm Acta Helv 72(3):175-184)",
+      "authors": [
+        "F. Hasler",
+        "D. Bourquin",
+        "R. Brenneisen",
+        "T. Bär",
+        "F. X. Vollenweider"
+      ],
+      "year": 1997,
+      "doi": "10.1016/s0031-6865(97)00014-9",
+      "url": "https://doi.org/10.1016/s0031-6865(97)00014-9",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "hasler2004",
+      "type": "paper",
+      "title": "Acute psychological and physiological effects of psilocybin in healthy humans: a double-blind, placebo-controlled dose-effect study (Psychopharmacology 172(2):145-156)",
+      "authors": [
+        "F. Hasler",
+        "U. Grimberg",
+        "M. A. Benz",
+        "T. Huber",
+        "F. X. Vollenweider"
+      ],
+      "year": 2004,
+      "doi": "10.1007/s00213-003-1640-6",
+      "url": "https://doi.org/10.1007/s00213-003-1640-6",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "thomann2024",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolism of psilocybin's active metabolite psilocin (Front Pharmacol 15:1391689)",
+      "authors": [
+        "J. Thomann",
+        "K. E. Kolaczynska",
+        "O. V. Stoeckmann",
+        "D. Rudin",
+        "P. Vizeli",
+        "M. C. Hoener",
+        "C. R. Pryce",
+        "F. X. Vollenweider",
+        "M. E. Liechti",
+        "U. Duthaler"
+      ],
+      "year": 2024,
+      "doi": "10.3389/fphar.2024.1391689",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11089204/",
+      "archive_url": "https://web.archive.org/web/20260211054307/https://pmc.ncbi.nlm.nih.gov/articles/PMC11089204/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "mueller2025",
+      "type": "paper",
+      "title": "Pharmacokinetics, Pharmacodynamics, and Urinary Recovery of Oral Mescaline Hydrochloride in Healthy Participants (Clin Pharmacokinet 64(10):1495-1506)",
+      "authors": [
+        "L. Mueller",
+        "A. Klaiber",
+        "L. Ley",
+        "A. M. Becker",
+        "J. Thomann",
+        "D. Luethi",
+        "Y. Schmid",
+        "M. E. Liechti"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s40262-025-01544-x",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12479620/",
+      "archive_url": "https://web.archive.org/web/20260526031601/https://pmc.ncbi.nlm.nih.gov/articles/PMC12479620/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "klaiber2024",
+      "type": "paper",
+      "title": "Acute dose-dependent effects of mescaline in a double-blind placebo-controlled study in healthy subjects (Transl Psychiatry 14:395)",
+      "authors": [
+        "A. Klaiber",
+        "Y. Schmid",
+        "A. M. Becker",
+        "I. Straumann",
+        "L. Erne",
+        "A. Jelusic",
+        "J. Thomann",
+        "D. Luethi",
+        "M. E. Liechti"
+      ],
+      "year": 2024,
+      "doi": "10.1038/s41398-024-03116-2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11442856/",
+      "archive_url": "https://web.archive.org/web/20260928035150/https://pmc.ncbi.nlm.nih.gov/articles/PMC11442856/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "vogt2023",
+      "type": "paper",
+      "title": "Acute effects of intravenous DMT in a randomized placebo-controlled study in healthy participants (Transl Psychiatry 13:172)",
+      "authors": [
+        "S. B. Vogt",
+        "L. Ley",
+        "L. Erne",
+        "I. Straumann",
+        "A. M. Becker",
+        "A. Klaiber",
+        "F. Holze",
+        "A. Vandersmissen",
+        "L. Mueller",
+        "U. Duthaler",
+        "D. Rudin",
+        "D. Luethi",
+        "N. Varghese",
+        "A. Eckert",
+        "M. E. Liechti"
+      ],
+      "year": 2023,
+      "doi": "10.1038/s41398-023-02477-4",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10206108/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "riba2003",
+      "type": "paper",
+      "title": "Human pharmacology of ayahuasca: subjective and cardiovascular effects, monoamine metabolite excretion, and pharmacokinetics (J Pharmacol Exp Ther 306(1):73-83)",
+      "authors": [
+        "J. Riba",
+        "M. Valle",
+        "G. Urbano",
+        "M. Yritia",
+        "A. Morte",
+        "M. J. Barbanoj"
+      ],
+      "year": 2003,
+      "doi": "10.1124/jpet.103.049882",
+      "url": "https://doi.org/10.1124/jpet.103.049882",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "collyer2026",
+      "type": "paper",
+      "title": "Pharmacological, clinical, and translational evidence for N,N-dimethyltryptamine, 5-methoxy-N,N-dimethyltryptamine, and zalsupindole: a systematic review (Prog Neuropsychopharmacol Biol Psychiatry 150:111966)",
+      "authors": [
+        "C. Collyer",
+        "G. H. Le",
+        "M. Hassan",
+        "S. Wong",
+        "R. S. McIntyre"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.pnpbp.2026.111966",
+      "url": "https://doi.org/10.1016/j.pnpbp.2026.111966",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "shen2010",
+      "type": "paper",
+      "title": "Effects of monoamine oxidase inhibitor and cytochrome P450 2D6 status on 5-methoxy-N,N-dimethyltryptamine metabolism and pharmacokinetics (Biochem Pharmacol 80(1):122-128)",
+      "authors": [
+        "H. W. Shen",
+        "C. Wu",
+        "X. L. Jiang",
+        "A. M. Yu"
+      ],
+      "year": 2010,
+      "doi": "10.1016/j.bcp.2010.02.020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2879007/",
+      "archive_url": "https://web.archive.org/web/20260227063333/https://pmc.ncbi.nlm.nih.gov/articles/PMC2879007/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "shen2010b",
+      "type": "paper",
+      "title": "Psychedelic 5-methoxy-N,N-dimethyltryptamine: metabolism, pharmacokinetics, drug interactions, and pharmacological actions (Curr Drug Metab 11(8):659-666)",
+      "authors": [
+        "H. W. Shen",
+        "X. L. Jiang",
+        "J. C. Winter",
+        "A. M. Yu"
+      ],
+      "year": 2010,
+      "doi": "10.2174/138920010794233495",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3028383/",
+      "archive_url": "https://web.archive.org/web/20261005065953/https://pmc.ncbi.nlm.nih.gov/articles/PMC3028383/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "shen2011",
+      "type": "paper",
+      "title": "Nonlinear pharmacokinetics of 5-methoxy-N,N-dimethyltryptamine in mice (Drug Metab Dispos 39(7):1227-1234)",
+      "authors": [
+        "H. W. Shen",
+        "X. L. Jiang",
+        "A. M. Yu"
+      ],
+      "year": 2011,
+      "doi": "10.1124/dmd.111.039107",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3127237/",
+      "archive_url": "https://web.archive.org/web/20260721003228/https://pmc.ncbi.nlm.nih.gov/articles/PMC3127237/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "araujo2015",
+      "type": "paper",
+      "title": "The hallucinogenic world of tryptamines: an updated review (Arch Toxicol 89(8):1151-1173)",
+      "authors": [
+        "A. M. Araújo",
+        "F. Carvalho",
+        "M. de L. Bastos",
+        "P. Guedes de Pinho",
+        "M. Carvalho"
+      ],
+      "year": 2015,
+      "doi": "10.1007/s00204-015-1513-x",
+      "url": "https://doi.org/10.1007/s00204-015-1513-x",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "johnson2008",
+      "type": "paper",
+      "title": "Human hallucinogen research: guidelines for safety (J Psychopharmacol 22(6):603-620)",
+      "authors": [
+        "M. W. Johnson",
+        "W. A. Richards",
+        "R. R. Griffiths"
+      ],
+      "year": 2008,
+      "doi": "10.1177/0269881108093587",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3056407/",
+      "archive_url": "https://web.archive.org/web/20261012023249/https://pmc.ncbi.nlm.nih.gov/articles/PMC3056407/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "nayak2021",
+      "type": "paper",
+      "title": "Classic Psychedelic Coadministration with Lithium, but Not Lamotrigine, is Associated with Seizures: An Analysis of Online Psychedelic Experience Reports (Pharmacopsychiatry 54(5):240-245)",
+      "authors": [
+        "S. M. Nayak",
+        "N. Gukasyan",
+        "F. S. Barrett",
+        "E. Erowid",
+        "F. Erowid",
+        "R. R. Griffiths"
+      ],
+      "year": 2021,
+      "doi": "10.1055/a-1524-2794",
+      "url": "https://doi.org/10.1055/a-1524-2794",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "halpern2018",
+      "type": "paper",
+      "title": "A Review of Hallucinogen Persisting Perception Disorder (HPPD) and an Exploratory Study of Subjects Claiming Symptoms of HPPD (Curr Top Behav Neurosci 36:333-360)",
+      "authors": [
+        "J. H. Halpern",
+        "A. G. Lerner",
+        "T. Passie"
+      ],
+      "year": 2018,
+      "doi": "10.1007/7854_2016_457",
+      "url": "https://doi.org/10.1007/7854_2016_457",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "shanks2015",
+      "type": "paper",
+      "title": "Fatal Intoxications with 25B-NBOMe and 25I-NBOMe in Indiana During 2014 (J Anal Toxicol 39(8):602-606)",
+      "authors": [
+        "K. G. Shanks",
+        "T. Sozio",
+        "G. S. Behonick"
+      ],
+      "year": 2015,
+      "doi": "10.1093/jat/bkv058",
+      "url": "https://doi.org/10.1093/jat/bkv058",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "nichols2025",
+      "type": "paper",
+      "title": "History of psychedelic drug science and molecular pharmacology (Int Rev Neurobiol 181:3-43)",
+      "authors": [
+        "D. E. Nichols",
+        "C. D. Nichols"
+      ],
+      "year": 2025,
+      "doi": "10.1016/bs.irn.2025.02.001",
+      "url": "https://doi.org/10.1016/bs.irn.2025.02.001",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "euda-lsd",
+      "type": "institution",
+      "title": "EUDA, Lysergide (LSD) drug profile",
+      "url": "https://euda.europa.eu/publications/drug-profiles/lsd_en",
+      "archive_url": "https://web.archive.org/web/20260907150006/https://www.euda.europa.eu/publications/drug-profiles/lsd_en",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "euda-mushrooms",
+      "type": "institution",
+      "title": "EUDA, Hallucinogenic mushrooms drug profile",
+      "url": "https://www.euda.europa.eu/publications/drug-profiles/mushrooms_en",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
       "id": "checkir-section-pending",
       "type": "project",
       "title": "Placeholder: this section is not drafted yet; no claim is made. It will be written from verifiable sources and signed by a health professional before it is shown",
@@ -2518,6 +2954,2045 @@
       "tier": "primary"
     },
     {
+      "id": "anchondo2025",
+      "type": "paper",
+      "title": "Locomotor and discriminative stimulus effects of fluorinated analogs of amphetamine and methamphetamine in mice and rats (J Pharmacol Exp Ther)",
+      "authors": [
+        "Anchondo",
+        "Shetty",
+        "Gatch"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.jpet.2025.103617",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40553972/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "dean2013",
+      "type": "paper",
+      "title": "2C or Not 2C: Phenethylamine Designer Drug Review (J Med Toxicol 9(2):172-178)",
+      "authors": [
+        "Be Vang Dean",
+        "Samuel J. Stellpflug",
+        "Aaron M. Burnett",
+        "Kristin M. Engebretsen"
+      ],
+      "year": 2013,
+      "doi": "10.1007/s13181-013-0295-x",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3657019/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "theobald2007",
+      "type": "paper",
+      "title": "Identification of monoamine oxidase and cytochrome P450 isoenzymes involved in the deamination of phenethylamine-derived designer drugs (2C-series) (Biochem Pharmacol 73(2):287-297)",
+      "authors": [
+        "Denis S. Theobald",
+        "Hans H. Maurer"
+      ],
+      "year": 2007,
+      "doi": "10.1016/j.bcp.2006.09.022",
+      "url": "https://doi.org/10.1016/j.bcp.2006.09.022",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "theobald2006d",
+      "type": "paper",
+      "title": "Studies on the metabolism and toxicological detection of the designer drug 2,5-dimethoxy-4-methyl-beta-phenethylamine (2C-D) in rat urine using gas chromatographic/mass spectrometric techniques (J Mass Spectrom 41(11):1509-1519)",
+      "authors": [
+        "Denis S. Theobald",
+        "Hans H. Maurer"
+      ],
+      "year": 2006,
+      "doi": "10.1002/jms.1128",
+      "url": "https://doi.org/10.1002/jms.1128",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "theobald2006e",
+      "type": "paper",
+      "title": "Studies on the metabolism and toxicological detection of the designer drug 4-ethyl-2,5-dimethoxy-beta-phenethylamine (2C-E) in rat urine using gas chromatographic-mass spectrometric techniques (J Chromatogr B 842(1):76-90)",
+      "authors": [
+        "Denis S. Theobald",
+        "Hans H. Maurer"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.jchromb.2006.03.001",
+      "url": "https://doi.org/10.1016/j.jchromb.2006.03.001",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "theobald2006i",
+      "type": "paper",
+      "title": "New designer drug 4-iodo-2,5-dimethoxy-beta-phenethylamine (2C-I): studies on its metabolism and toxicological detection in rat urine using gas chromatographic/mass spectrometric and capillary electrophoretic/mass spectrometric techniques (J Mass Spectrom 41(7):872-886)",
+      "authors": [
+        "Denis S. Theobald",
+        "Markus Pütz",
+        "Eberhard Schneider",
+        "Hans H. Maurer"
+      ],
+      "year": 2006,
+      "doi": "10.1002/jms.1045",
+      "url": "https://doi.org/10.1002/jms.1045",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "rickli2015",
+      "type": "paper",
+      "title": "Receptor interaction profiles of novel N-2-methoxybenzyl (NBOMe) derivatives of 2,5-dimethoxy-substituted phenethylamines (2C drugs) (Neuropharmacology 99:546-553)",
+      "authors": [
+        "A. Rickli",
+        "D. Luethi",
+        "J. Reinisch",
+        "D. Buchy",
+        "M. C. Hoener",
+        "M. E. Liechti"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.neuropharm.2015.08.034",
+      "url": "https://doi.org/10.1016/j.neuropharm.2015.08.034",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "sacks2012",
+      "type": "paper",
+      "title": "Fatal toxic leukoencephalopathy secondary to overdose of a new psychoactive designer drug 2C-E (\"Europa\") (Proc (Bayl Univ Med Cent) 25(4):374-376)",
+      "authors": [
+        "J. Sacks",
+        "M. J. Ray",
+        "S. Williams",
+        "M. J. Opatowsky"
+      ],
+      "year": 2012,
+      "doi": "10.1080/08998280.2012.11928883",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3448584/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "iwersen2019",
+      "type": "paper",
+      "title": "Mass poisoning with NPS: 2C-E and Bromo-DragonFly (Int J Legal Med 133(1):123-129)",
+      "authors": [
+        "S. Iwersen-Bergmann",
+        "S. Lehmann",
+        "A. Heinemann",
+        "C. Schröder",
+        "A. Müller",
+        "H. Jungen",
+        "H. Andresen-Streichert",
+        "K. Pueschel",
+        "C. Vidal",
+        "K. Mercer-Chalmers-Bender"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00414-018-1882-9",
+      "url": "https://doi.org/10.1007/s00414-018-1882-9",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "drees2009",
+      "type": "paper",
+      "title": "Morbidity involving the hallucinogenic designer amines MDA and 2C-I (J Forensic Sci 54(6):1485-1487)",
+      "authors": [
+        "J. C. Drees",
+        "J. A. Stone",
+        "A. H. Wu"
+      ],
+      "year": 2009,
+      "doi": "10.1111/j.1556-4029.2009.01199.x",
+      "url": "https://doi.org/10.1111/j.1556-4029.2009.01199.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "kim2021",
+      "type": "paper",
+      "title": "New designer phenethylamines 2C-C and 2C-P have abuse potential and induce neurotoxicity in rodents (Arch Toxicol 95(4):1413-1429)",
+      "authors": [
+        "Young-Jung Kim",
+        "Shi-Xun Ma",
+        "Kwang-Hyun Hur",
+        "Youyoung Lee",
+        "Yong-Hyun Ko",
+        "Bo-Ram Lee",
+        "Seon-Kyung Kim",
+        "Su-Jeong Sung",
+        "Kyeong-Man Kim",
+        "Hyoung-Chun Kim",
+        "Seok-Yong Lee",
+        "Choon-Gon Jang"
+      ],
+      "year": 2021,
+      "doi": "10.1007/s00204-021-02980-x",
+      "url": "https://doi.org/10.1007/s00204-021-02980-x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "swgdrug-2ct2",
+      "type": "database",
+      "title": "SWGDRUG monograph: 2,5-Dimethoxy-4-ethylthiophenethylamine (2C-T-2) (IR: HCl, diamond ATR; vapour phase)",
+      "url": "https://www.swgdrug.org/Monographs/2,5-DIMETHOXY-4-ETHYLTHIOPHENYLAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-2ct7",
+      "type": "database",
+      "title": "SWGDRUG monograph: 2C-T-7 (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/2C-T-7.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20241213082647/https://swgdrug.org/Monographs/2C-T-7.pdf"
+    },
+    {
+      "id": "swgdrug-doi",
+      "type": "database",
+      "title": "SWGDRUG monograph: 2,5-Dimethoxy-4-iodoamphetamine (DOI) (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/DOI.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-25c-nbome",
+      "type": "database",
+      "title": "SWGDRUG monograph: 25C-NBOMe (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/25C-NBOMe.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-25i-nbome",
+      "type": "database",
+      "title": "SWGDRUG monograph: 25I-NBOMe (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/25I-NBOMe.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20260101173922/https://www.swgdrug.org/Monographs/25I-NBOMe.pdf"
+    },
+    {
+      "id": "theobald2006",
+      "type": "paper",
+      "title": "Identification of monoamine oxidase and cytochrome P450 isoenzymes involved in the deamination of phenethylamine-derived designer drugs (2C-series) (Biochem Pharmacol 73(2):287-297)",
+      "authors": [
+        "D. S. Theobald",
+        "H. H. Maurer"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.bcp.2006.09.022",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17067556/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "theobald2005",
+      "type": "paper",
+      "title": "New designer drug 2,5-dimethoxy-4-ethylthio-beta-phenethylamine (2C-T-2): studies on its metabolism and toxicological detection in rat urine using gas chromatography/mass spectrometry (J Mass Spectrom 40(9):1157-1172)",
+      "authors": [
+        "D. S. Theobald",
+        "R. F. Staack",
+        "M. Puetz",
+        "H. H. Maurer"
+      ],
+      "year": 2005,
+      "doi": "10.1002/jms.890",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16041763/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251115115324/https://pubmed.ncbi.nlm.nih.gov/16041763/"
+    },
+    {
+      "id": "wagmann2018",
+      "type": "paper",
+      "title": "Interactions of phenethylamine-derived psychoactive substances of the 2C-series with human monoamine oxidases (Drug Test Anal 11(2):318-324)",
+      "authors": [
+        "L. Wagmann",
+        "S. D. Brandt",
+        "A. Stratford",
+        "H. H. Maurer",
+        "M. R. Meyer"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2494",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30188017/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260209130142/https://pubmed.ncbi.nlm.nih.gov/30188017/"
+    },
+    {
+      "id": "kanamori2016",
+      "type": "paper",
+      "title": "Urinary Excretion Profiles of 2,5-Dimethoxy-4-alkylthiophenethylamine Analogs in Rats (Biol Pharm Bull 39(5):883-886)",
+      "authors": [
+        "T. Kanamori",
+        "K. Kuwayama",
+        "K. Tsujikawa",
+        "Y. T. Iwata",
+        "H. Inoue"
+      ],
+      "year": 2016,
+      "doi": "10.1248/bpb.b15-00953",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27150156/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "halberstadt2022",
+      "type": "paper",
+      "title": "Use of the head-twitch response to investigate the structure-activity relationships of 4-thio-substituted 2,5-dimethoxyphenylalkylamines (Psychopharmacology 240:115-126)",
+      "authors": [
+        "A. L. Halberstadt",
+        "D. Luethi",
+        "M. C. Hoener",
+        "D. Trachsel",
+        "S. D. Brandt",
+        "M. E. Liechti"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00213-022-06279-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36477925/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260305071332/https://pubmed.ncbi.nlm.nih.gov/36477925/"
+    },
+    {
+      "id": "gil-martins2024",
+      "type": "paper",
+      "title": "Mechanistic Insights into the Neurotoxicity of 2,5-Dimethoxyphenethylamines (2C) and Corresponding-(2-methoxybenzyl)phenethylamine (NBOMe) Drugs (J Xenobiot 14:772-797)",
+      "authors": [
+        "E. Gil-Martins",
+        "F. Cagide-Fagin",
+        "C. Martins",
+        "F. Borges",
+        "R. Silva"
+      ],
+      "year": 2024,
+      "doi": "10.3390/jox14020044",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38921653/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204021639/https://pubmed.ncbi.nlm.nih.gov/38921653/"
+    },
+    {
+      "id": "curtis2003",
+      "type": "paper",
+      "title": "Postmortem identification and quantitation of 2,5-dimethoxy-4-n-propylthiophenethylamine using GC-MSD and GC-NPD (J Anal Toxicol 27(7):493-498)",
+      "authors": [
+        "B. Curtis",
+        "P. Kemp",
+        "L. Harty",
+        "C. Choi",
+        "D. Christensen"
+      ],
+      "year": 2003,
+      "doi": "10.1093/jat/27.7.493",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14607005/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260418121317/https://pubmed.ncbi.nlm.nih.gov/14607005/"
+    },
+    {
+      "id": "caspar2017",
+      "type": "paper",
+      "title": "Metabolic fate and detectability of the new psychoactive substances 25B-NBOMe and 25C-NBOMe in human and rat urine by GC-MS, LC-MS, and LC-HR-MS/MS approaches (J Pharm Biomed Anal 134:158-169)",
+      "authors": [
+        "A. T. Caspar",
+        "S. D. Brandt",
+        "A. E. Stoever",
+        "M. R. Meyer",
+        "H. H. Maurer"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.jpba.2016.11.040",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27915193/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204021229/https://pubmed.ncbi.nlm.nih.gov/27915193/"
+    },
+    {
+      "id": "halberstadt2017",
+      "type": "paper",
+      "title": "Pharmacology and Toxicology of N-Benzylphenethylamine (\"NBOMe\") Hallucinogens (Curr Top Behav Neurosci 32:283-311)",
+      "authors": [
+        "A. L. Halberstadt"
+      ],
+      "year": 2017,
+      "doi": "10.1007/7854_2016_64",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28097528/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "suzuki2015",
+      "type": "paper",
+      "title": "Toxicities associated with NBOMe ingestion, a novel class of potent hallucinogens: a review of the literature (Psychosomatics 56(2):129-139)",
+      "authors": [
+        "J. Suzuki",
+        "M. A. Dekker",
+        "E. S. Valenti",
+        "F. A. Arbelo Cruz",
+        "A. M. Correa",
+        "J. L. Poklis",
+        "A. Poklis"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.psym.2014.11.002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25659919/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260924121602/https://pubmed.ncbi.nlm.nih.gov/25659919/"
+    },
+    {
+      "id": "herian2023",
+      "type": "paper",
+      "title": "25X-NBOMe compounds - chemistry, pharmacology and toxicology. A comprehensive review (Crit Rev Toxicol 53(1):15-33)",
+      "authors": [
+        "M. Herian",
+        "P. Swit"
+      ],
+      "year": 2023,
+      "doi": "10.1080/10408444.2023.2194907",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37115704/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250905233459/https://pubmed.ncbi.nlm.nih.gov/37115704/"
+    },
+    {
+      "id": "hill2013-25i",
+      "type": "paper",
+      "title": "Severe clinical toxicity associated with analytically confirmed recreational use of 25I-NBOMe: case series (Clin Toxicol 51(6):487-492)",
+      "authors": [
+        "S. L. Hill",
+        "T. Doris",
+        "S. Gurung",
+        "S. Katebe",
+        "A. Lomas",
+        "M. Dunn",
+        "P. Blain",
+        "S. H. L. Thomas"
+      ],
+      "year": 2013,
+      "doi": "10.3109/15563650.2013.802795",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23731373/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260426180655/https://pubmed.ncbi.nlm.nih.gov/23731373/"
+    },
+    {
+      "id": "hieger2015",
+      "type": "paper",
+      "title": "Severe poisoning after self-reported use of 2-(4-iodo-2,5-dimethoxyphenyl)-N-[(2-methoxyphenyl)methyl]ethanamine, a novel substituted amphetamine: a case series (Am J Emerg Med 33(12):1843.e1-3)",
+      "authors": [
+        "M. A. Hieger",
+        "S. R. Rose",
+        "K. L. Cumpston",
+        "P. E. Stromberg",
+        "S. Miller",
+        "B. K. Wills"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.ajem.2015.04.065",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25983267/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206073254/https://pubmed.ncbi.nlm.nih.gov/25983267/"
+    },
+    {
+      "id": "kueppers2015",
+      "type": "paper",
+      "title": "25I-NBOMe related death in Australia: a case report (Forensic Sci Int 249:e15-e18)",
+      "authors": [
+        "V. B. Kueppers",
+        "C. T. Cooke"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.forsciint.2015.02.010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25747271/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "schifano2021",
+      "type": "paper",
+      "title": "New psychoactive substances (NPS) and serotonin syndrome onset: A systematic review (Exp Neurol 339:113638)",
+      "authors": [
+        "F. Schifano",
+        "S. Chiappini",
+        "A. Miuli",
+        "J. M. Corkery",
+        "N. Scherbaum",
+        "F. Napoletano",
+        "D. Arillotta",
+        "C. Zangani",
+        "V. Catalani",
+        "A. Vento",
+        "M. Pettorruso",
+        "G. Martinotti",
+        "D. M. Giannantonio",
+        "A. Guirguis"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.expneurol.2021.113638",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33571533/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250904032553/https://pubmed.ncbi.nlm.nih.gov/33571533/"
+    },
+    {
+      "id": "nichols2016",
+      "type": "paper",
+      "title": "Psychedelics (Pharmacol Rev 68(2):264-355)",
+      "authors": [
+        "D. E. Nichols"
+      ],
+      "year": 2016,
+      "doi": "10.1124/pr.115.011478",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26841800/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261008201701/https://pubmed.ncbi.nlm.nih.gov/26841800/"
+    },
+    {
+      "id": "swgdrug-2mmc",
+      "type": "database",
+      "title": "SWGDRUG monograph: 2-Methylmethcathinone (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/2-MMC.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241212103357/https://swgdrug.org/Monographs/2-MMC.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-3cmc",
+      "type": "database",
+      "title": "SWGDRUG monograph: 3-Chloromethcathinone (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/3-Chloromethcathinone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250904091532/https://www.swgdrug.org/Monographs/3-Chloromethcathinone.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-ethylone",
+      "type": "database",
+      "title": "SWGDRUG monograph: Ethylone (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Ethylone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207125206/https://swgdrug.org/Monographs/Ethylone.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-methcathinone",
+      "type": "database",
+      "title": "SWGDRUG monograph: Methcathinone (IR: KBr pellet, hydrochloride and base)",
+      "url": "https://www.swgdrug.org/Monographs/Methcathinone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207124110/https://swgdrug.org/Monographs/METHCATHINONE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "boudin2026",
+      "type": "paper",
+      "title": "Emergence of 2-MMC in the French Alps: description of 13 clinical and forensic toxicology cases (Int J Legal Med 140(4):2089-2099)",
+      "authors": [
+        "Coralie Boudin",
+        "Bruno Revol",
+        "Hélène Eysseric-Guérin",
+        "Mireille Bartoli",
+        "Françoise Stanke-Labesque",
+        "Virginie Scolan",
+        "Théo Willeman"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00414-026-03791-4",
+      "url": "https://doi.org/10.1007/s00414-026-03791-4",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "bassi2025",
+      "type": "paper",
+      "title": "3-CMC: Acute Effects in Male and Female Mice, Human Intoxication Case Series (Italy, 2014-2025), and Prediction of ADMET Properties (Int J Mol Sci 26(23))",
+      "authors": [
+        "Marta Bassi",
+        "Elisa Roda",
+        "Giorgia Corli",
+        "Sabrine Bilel",
+        "Fabrizio De Luca",
+        "Tatiana Bernardi",
+        "Adolfo Gregori",
+        "Fabiana Di Rosa",
+        "Davide Lonati",
+        "Carlo Alessandro Locatelli",
+        "Matteo Marti"
+      ],
+      "year": 2025,
+      "doi": "10.3390/ijms262311600",
+      "url": "https://doi.org/10.3390/ijms262311600",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "adamowicz2026",
+      "type": "paper",
+      "title": "Prevalence and toxicological significance of 3-CMC and 4-CMC: a retrospective study of over 250 forensic cases (2015-2025) (Int J Legal Med)",
+      "authors": [
+        "Piotr Adamowicz",
+        "Dominik Bakalarz",
+        "Joanna Gieroń",
+        "Dominika Gil",
+        "Wojciech Lechowicz",
+        "Agnieszka Skulska-Birgiel",
+        "Marta Suchan",
+        "Bogdan Tokarczyk"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00414-026-03969-w",
+      "url": "https://doi.org/10.1007/s00414-026-03969-w",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "poyatos2025",
+      "type": "paper",
+      "title": "Oral Fluid Concentrations and Pharmacological Effects of Clephedrone and Methylone in Humans (Int J Mol Sci 27(1))",
+      "authors": [
+        "Lourdes Poyatos",
+        "Melani Núñez-Montero",
+        "Olga Hladun",
+        "Georgina De la Rosa",
+        "Soraya Martín",
+        "Sebastian Videla",
+        "Silvia Martínez-Couselo",
+        "Mireia Ventura",
+        "Nunzia La Maida",
+        "Annagiulia Di Trana",
+        "Francesco Paolo Busardò",
+        "Marta Torrens",
+        "Simona Pichini",
+        "Clara Pérez-Mañá",
+        "Magí Farré",
+        "Esther Papaseit"
+      ],
+      "year": 2025,
+      "doi": "10.3390/ijms27010089",
+      "url": "https://doi.org/10.3390/ijms27010089",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "asser2019",
+      "type": "paper",
+      "title": "Acute effects of methcathinone and manganese in mice: a dose response study (Heliyon 5(9):e02475)",
+      "authors": [
+        "Andres Asser",
+        "Sulev Kõks",
+        "Ursel Soomets",
+        "Anton Terasmaa",
+        "Martin Sauk",
+        "Mall Eltermaa",
+        "Piret Piip",
+        "Kumari Ubhayasekera",
+        "Jonas Bergquist",
+        "Pille Taba"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.heliyon.2019.e02475",
+      "url": "https://doi.org/10.1016/j.heliyon.2019.e02475",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "sanotsky2020",
+      "type": "paper",
+      "title": "Neuropathological Findings in Ephedrone Encephalopathy (Mov Disord 35(10):1858-1863)",
+      "authors": [
+        "Yanosh Sanotsky",
+        "Marianna Selikhova",
+        "Ludmyla Fedoryshyn",
+        "Petro Kuzyk",
+        "Yuriy Matviyenko",
+        "Orest Semeryak",
+        "Dorota Dziewulska",
+        "Janice L. Holton",
+        "Andrew J. Lees"
+      ],
+      "year": 2020,
+      "doi": "10.1002/mds.28125",
+      "url": "https://doi.org/10.1002/mds.28125",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "selikhova2016",
+      "type": "paper",
+      "title": "Analysis of a distinct speech disorder seen in chronic manganese toxicity following Ephedrone abuse (Clin Neurol Neurosurg 147:71-77)",
+      "authors": [
+        "M. Selikhova",
+        "E. Tripoliti",
+        "L. Fedoryshyn",
+        "Y. Matvienko",
+        "H. Stanetska",
+        "M. Boychuk",
+        "I. Komnatska",
+        "A. J. Lees",
+        "Y. Sanotsky"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.clineuro.2016.05.027",
+      "url": "https://doi.org/10.1016/j.clineuro.2016.05.027",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "ennok2019",
+      "type": "paper",
+      "title": "Cognitive profile of patients with manganese-methcathinone encephalopathy (Neurotoxicology 76:138-143)",
+      "authors": [
+        "Margus Ennok",
+        "Katrin Sikk",
+        "Sulev Haldre",
+        "Pille Taba"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuro.2019.10.007",
+      "url": "https://doi.org/10.1016/j.neuro.2019.10.007",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "lee2015",
+      "type": "paper",
+      "title": "Ethylone-Related Deaths: Toxicological Findings (J Anal Toxicol 39(7):567-571)",
+      "authors": [
+        "Dayong Lee",
+        "Chris W. Chronister",
+        "Jennifer Hoyer",
+        "Bruce A. Goldberger"
+      ],
+      "year": 2015,
+      "doi": "10.1093/jat/bkv053",
+      "url": "https://doi.org/10.1093/jat/bkv053",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "lai2022",
+      "type": "paper",
+      "title": "Relative reinforcing effects of dibutylone, ethylone, and N-ethylpentylone: self-administration and behavioral economics analysis in rats (Psychopharmacology 239(9):2875-2884)",
+      "authors": [
+        "Miaojun Lai",
+        "Dan Fu",
+        "Zeming Xu",
+        "Han Du",
+        "Huifen Liu",
+        "Youmei Wang",
+        "Peng Xu",
+        "Wenhua Zhou"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00213-022-06173-x",
+      "url": "https://doi.org/10.1007/s00213-022-06173-x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "yeh2025",
+      "type": "paper",
+      "title": "In vitro metabolic profiling of methylenedioxy-substituted synthetic cathinones for enhanced detection in urine sample analysis (J Food Drug Anal 33(2):132-149)",
+      "authors": [
+        "Ya-Ling Yeh",
+        "Chin-Lin Hsieh",
+        "Yi-Jia Huang",
+        "Yu-Hsiang Chang",
+        "Sheng-Meng Wang"
+      ],
+      "year": 2025,
+      "doi": "10.38212/2224-6614.3543",
+      "url": "https://doi.org/10.38212/2224-6614.3543",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "uralets2014",
+      "type": "paper",
+      "title": "Testing for designer stimulants: metabolic profiles of 16 synthetic cathinones excreted free in human urine (J Anal Toxicol 38(5):233-241)",
+      "authors": [
+        "Victor Uralets",
+        "Sumandeep Rana",
+        "Stewart Morgan",
+        "Wayne Ross"
+      ],
+      "year": 2014,
+      "doi": "10.1093/jat/bku021",
+      "url": "https://doi.org/10.1093/jat/bku021",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "strickland2019",
+      "type": "paper",
+      "title": "Development and Validation of a Novel All-Inclusive LC-MS-MS Designer Drug Method (J Anal Toxicol 43(3):161-169)",
+      "authors": [
+        "Erin C. Strickland",
+        "Oneka T. Cummings",
+        "Allyson L. Mellinger",
+        "Gregory L. McIntire"
+      ],
+      "year": 2019,
+      "doi": "10.1093/jat/bky087",
+      "url": "https://doi.org/10.1093/jat/bky087",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "johnson2016",
+      "type": "paper",
+      "title": "Time course of pharmacokinetic and hormonal effects of inhaled high-dose salvinorin A in humans (J Psychopharmacol 30:323-329)",
+      "authors": [
+        "M. W. Johnson",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1177/0269881116629125",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26880225/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251006053331/https://pubmed.ncbi.nlm.nih.gov/26880225/"
+    },
+    {
+      "id": "maqueda2016",
+      "type": "paper",
+      "title": "Naltrexone but not ketanserin antagonizes the subjective, cardiovascular, and neuroendocrine effects of salvinorin-A in humans (Int J Neuropsychopharmacol 19:pyw016)",
+      "authors": [
+        "A. E. Maqueda",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1093/ijnp/pyw016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4966277/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261004041507/https://pmc.ncbi.nlm.nih.gov/articles/PMC4966277/"
+    },
+    {
+      "id": "mahendran2015",
+      "type": "paper",
+      "title": "Salvia divinorum: an overview of the usage, misuse, and addiction processes (Asia Pac Psychiatry 8:23-31)",
+      "authors": [
+        "R. Mahendran",
+        "et al."
+      ],
+      "year": 2015,
+      "doi": "10.1111/appy.12225",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26617400/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250202051823/https://pubmed.ncbi.nlm.nih.gov/26617400/"
+    },
+    {
+      "id": "elkhoury2015",
+      "type": "paper",
+      "title": "The association of Salvia divinorum and psychotic disorders: a review of the literature and case series (J Psychoactive Drugs 47:286-292)",
+      "authors": [
+        "J. El-Khoury",
+        "et al."
+      ],
+      "year": 2015,
+      "doi": "10.1080/02791072.2015.1073815",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26317561/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250202195400/https://pubmed.ncbi.nlm.nih.gov/26317561/"
+    },
+    {
+      "id": "tsujikawa2009",
+      "type": "paper",
+      "title": "In vitro stability and metabolism of salvinorin A in rat plasma (Xenobiotica 39:391-398)",
+      "authors": [
+        "K. Tsujikawa",
+        "K. Kuwayama",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Inoue"
+      ],
+      "year": 2009,
+      "doi": "10.1080/00498250902769967",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19280383/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260224042646/https://pubmed.ncbi.nlm.nih.gov/19280383/"
+    },
+    {
+      "id": "stangeland2025",
+      "type": "paper",
+      "title": "Nitazenes: review of comparative pharmacology and antagonist action (Clin Toxicol 63:393-406)",
+      "authors": [
+        "M. Stangeland",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1080/15563650.2025.2504133",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40422647/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260527163241/https://pubmed.ncbi.nlm.nih.gov/40422647/"
+    },
+    {
+      "id": "el-balkhi2023",
+      "type": "paper",
+      "title": "Designer benzodiazepines: effects, toxicity, and interactions (Ther Drug Monit 45:494-507)",
+      "authors": [
+        "S. El Balkhi",
+        "C. Abbara"
+      ],
+      "year": 2023,
+      "doi": "10.1097/FTD.0000000000001071",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36750450/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20241203125520/https://pubmed.ncbi.nlm.nih.gov/36750450/"
+    },
+    {
+      "id": "wu2023",
+      "type": "paper",
+      "title": "Recent findings and advancements in the detection of designer benzodiazepines: a brief review (Arh Hig Rada Toksikol 74:224-231)",
+      "authors": [
+        "D. Wu",
+        "L. Fu"
+      ],
+      "year": 2023,
+      "doi": "10.2478/aiht-2023-74-3771",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10750316/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20251217012644/https://pmc.ncbi.nlm.nih.gov/articles/PMC10750316/"
+    },
+    {
+      "id": "gameli2024",
+      "type": "paper",
+      "title": "Metabolism and detection of designer benzodiazepines: a systematic review (Drug Metab Rev 56:359-384)",
+      "authors": [
+        "P. S. Gameli",
+        "M. A. Huestis",
+        "A. Balloni",
+        "F. P. Busardò",
+        "J. Carlier"
+      ],
+      "year": 2024,
+      "doi": "10.1080/03602532.2024.2410747",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39340261/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250203165931/https://pubmed.ncbi.nlm.nih.gov/39340261/"
+    },
+    {
+      "id": "lo-faro2023",
+      "type": "paper",
+      "title": "New psychoactive substances intoxications and fatalities during the COVID-19 epidemic (Biology 12:273)",
+      "authors": [
+        "A. F. Lo Faro",
+        "et al."
+      ],
+      "year": 2023,
+      "doi": "10.3390/biology12020273",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36829550/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261011063959/https://pubmed.ncbi.nlm.nih.gov/36829550"
+    },
+    {
+      "id": "lobato-freitas2021",
+      "type": "paper",
+      "title": "Overview of synthetic cannabinoids ADB-FUBINACA and AMB-FUBINACA: clinical, analytical, and forensic implications (Pharmaceuticals 14:186)",
+      "authors": [
+        "C. Lobato-Freitas",
+        "A. M. Brito-da-Costa",
+        "R. J. Dinis-Oliveira",
+        "H. Carmo",
+        "F. Carvalho",
+        "J. P. Silva",
+        "D. Dias-da-Silva"
+      ],
+      "year": 2021,
+      "doi": "10.3390/ph14030186",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7996508/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250410112312/https://pmc.ncbi.nlm.nih.gov/articles/PMC7996508/"
+    },
+    {
+      "id": "jones2025",
+      "type": "paper",
+      "title": "The resurgence of synthetic cannabinoid receptor agonists as adulterants in the era of cannabis legalization: lessons from prior epidemics and clinical implications (Neurosci Biobehav Rev 170:106043)",
+      "authors": [
+        "A. T. Jones",
+        "A. Marwan Abu Taha",
+        "G. P. Miller"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.neubiorev.2025.106043",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39922438/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250403151157/https://pubmed.ncbi.nlm.nih.gov/39922438/"
+    },
+    {
+      "id": "ricci2026",
+      "type": "paper",
+      "title": "Acute and long-term psychiatric consequences of synthetic cannabinoids and related novel psychoactive substances: a systematic review (Psychiatry Res 360:117056)",
+      "authors": [
+        "V. Ricci",
+        "S. Chiappini",
+        "G. Martinotti",
+        "G. Maina"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.psychres.2026.117056",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41793795/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260406224152/https://pubmed.ncbi.nlm.nih.gov/41793795/"
+    },
+    {
+      "id": "machacek2026",
+      "type": "paper",
+      "title": "Triggers of highly lethal seizures induced by novel stimulants: a systematic review focused on synthetic cathinones and phenethylamines (Neurotoxicology 113:103391)",
+      "authors": [
+        "M. Macháček",
+        "M. Bébarová"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.neuro.2026.103391",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41544778/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "gresnigt2026",
+      "type": "paper",
+      "title": "Acute cardiovascular complications of sympathomimetic recreational drug use (Clin Toxicol 64:850-864)",
+      "authors": [
+        "F. M. J. Gresnigt"
+      ],
+      "year": 2026,
+      "doi": "10.1080/15563650.2026.2701369",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42504704/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "swgdrug-alprazolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Alprazolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Alprazolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213092300/https://swgdrug.org/Monographs/Alprazolam.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-bromazolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Bromazolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Bromazolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213095838/https://swgdrug.org/Monographs/Bromazolam.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-diazepam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Diazepam (IR spectrum only as an image)",
+      "url": "https://www.swgdrug.org/Monographs/DIAZEPAM.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250403031944/http://www.swgdrug.org/Monographs/DIAZEPAM.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-etizolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Etizolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Etizolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "greenblatt1993",
+      "type": "paper",
+      "title": "Clinical pharmacokinetics of alprazolam. Therapeutic implications (Clin Pharmacokinet 24(6):453-471)",
+      "authors": [
+        "D. J. Greenblatt",
+        "C. E. Wright"
+      ],
+      "year": 1993,
+      "doi": "10.2165/00003088-199324060-00003",
+      "url": "https://doi.org/10.2165/00003088-199324060-00003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "greenblatt1993b",
+      "type": "paper",
+      "title": "Alprazolam pharmacokinetics, metabolism, and plasma levels: clinical implications (J Clin Psychiatry 54 Suppl:4-11)",
+      "authors": [
+        "D. J. Greenblatt",
+        "L. L. von Moltke",
+        "J. S. Harmatz",
+        "D. A. Ciraulo",
+        "R. I. Shader"
+      ],
+      "year": 1993,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8262889/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "huybrechts1991",
+      "type": "paper",
+      "title": "The pharmacology of alprazolam: a review (Clin Ther 13(1):100-117)",
+      "authors": [
+        "I. Huybrechts"
+      ],
+      "year": 1991,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2029716/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "juergens1991",
+      "type": "paper",
+      "title": "Alprazolam and diazepam: addiction potential (J Subst Abuse Treat 8(1-2):43-51)",
+      "authors": [
+        "S. Juergens"
+      ],
+      "year": 1991,
+      "doi": "10.1016/0740-5472(91)90026-7",
+      "url": "https://doi.org/10.1016/0740-5472(91)90026-7",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "mandelli1978",
+      "type": "paper",
+      "title": "Clinical pharmacokinetics of diazepam (Clin Pharmacokinet 3(1):72-91)",
+      "authors": [
+        "M. Mandelli",
+        "G. Tognoni",
+        "S. Garattini"
+      ],
+      "year": 1978,
+      "doi": "10.2165/00003088-197803010-00005",
+      "url": "https://doi.org/10.2165/00003088-197803010-00005",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "abernethy1981",
+      "type": "paper",
+      "title": "Effects of desmethyldiazepam on diazepam kinetics: a study of effects of a metabolite on parent drug disposition (Clin Pharmacol Ther 29(6):757-761)",
+      "authors": [
+        "D. R. Abernethy",
+        "D. J. Greenblatt"
+      ],
+      "year": 1981,
+      "doi": "10.1038/clpt.1981.107",
+      "url": "https://doi.org/10.1038/clpt.1981.107",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "fracasso1991",
+      "type": "paper",
+      "title": "Single and multiple dose pharmacokinetics of etizolam in healthy subjects (Eur J Clin Pharmacol 40(2):181-185)",
+      "authors": [
+        "C. Fracasso",
+        "S. Confalonieri",
+        "S. Garattini",
+        "S. Caccia"
+      ],
+      "year": 1991,
+      "doi": "10.1007/BF00280074",
+      "url": "https://doi.org/10.1007/BF00280074",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "rodda2024",
+      "type": "paper",
+      "title": "The surge of bromazolam-related fatalities replacing other novel designer benzodiazepines-related fatalities in San Francisco (Addiction 119(8):1487-1490)",
+      "authors": [
+        "Luke N. Rodda"
+      ],
+      "year": 2024,
+      "doi": "10.1111/add.16520",
+      "url": "https://doi.org/10.1111/add.16520",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ballotari2024",
+      "type": "paper",
+      "title": "A postmortem case report involving fentanyl, desalkylgidazepam, and bromazolam (J Anal Toxicol 48(8):636-640)",
+      "authors": [
+        "Marco Ballotari",
+        "Michael T. Truver",
+        "Leena R. Dhoble",
+        "Amy M. Kinsey",
+        "Jennifer L. Hoyer",
+        "Chris W. Chronister",
+        "Bruce A. Goldberger"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae059",
+      "url": "https://doi.org/10.1093/jat/bkae059",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "sun2017",
+      "type": "paper",
+      "title": "Association between concurrent use of prescription opioids and benzodiazepines and overdose: retrospective analysis (BMJ 356:j760)",
+      "authors": [
+        "Eric C. Sun",
+        "Anjali Dixit",
+        "Keith Humphreys",
+        "Beth D. Darnall",
+        "Laurence C. Baker",
+        "Sean Mackey"
+      ],
+      "year": 2017,
+      "doi": "10.1136/bmj.j760",
+      "url": "https://doi.org/10.1136/bmj.j760",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "petursson1994",
+      "type": "paper",
+      "title": "The benzodiazepine withdrawal syndrome (Addiction 89(11):1455-1459)",
+      "authors": [
+        "H. Pétursson"
+      ],
+      "year": 1994,
+      "doi": "10.1111/j.1360-0443.1994.tb03743.x",
+      "url": "https://doi.org/10.1111/j.1360-0443.1994.tb03743.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "vandeputte2024",
+      "type": "paper",
+      "title": "In vitro structure-activity relationships and forensic case series of emerging 2-benzylbenzimidazole 'nitazene' opioids (Arch Toxicol 98:2999-3018)",
+      "authors": [
+        "L. M. De Vrieze",
+        "S. E. Walton",
+        "E. Pottie",
+        "D. Papsun",
+        "B. K. Logan",
+        "A. J. Krotulski",
+        "C. P. Stove",
+        "M. M. Vandeputte"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00204-024-03774-7",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11324687/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "krotulski2021",
+      "type": "paper",
+      "title": "Metonitazene in the United States: forensic toxicology assessment of a potent new synthetic opioid using liquid chromatography mass spectrometry (Drug Test Anal 13:1697-1711)",
+      "authors": [
+        "A. J. Krotulski",
+        "D. M. Papsun",
+        "S. E. Walton",
+        "B. K. Logan"
+      ],
+      "year": 2021,
+      "doi": "10.1002/dta.3115",
+      "url": "https://doi.org/10.1002/dta.3115",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "tishion2025",
+      "type": "paper",
+      "title": "Evaluation of the metabolites 5-aminoisotonitazene, 4'-hydroxy nitazene, N-desethyl isotonitazene, and N-desethyl metonitazene in authentic isotonitazene and metonitazene positive postmortem cases (J Forensic Sci 71:509-515)",
+      "authors": [
+        "P. Tishion",
+        "D. Derrick",
+        "J. Sorrentino",
+        "G. Cooper"
+      ],
+      "year": 2025,
+      "doi": "10.1111/1556-4029.70196",
+      "url": "https://doi.org/10.1111/1556-4029.70196",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "monti2024",
+      "type": "paper",
+      "title": "Detection of N-desethyl etonitazene in a drug checking sample: chemical analysis and pharmacological characterization of a recent member of the 2-benzylbenzimidazole 'nitazene' class (J Pharm Biomed Anal 251:116453)",
+      "authors": [
+        "M. C. Monti",
+        "L. M. De Vrieze",
+        "M. M. Vandeputte",
+        "M. Persson",
+        "H. Gréen",
+        "C. P. Stove",
+        "G. Schlotterbeck"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.116453",
+      "url": "https://doi.org/10.1016/j.jpba.2024.116453",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "mmwr2013-acetylfentanyl",
+      "type": "paper",
+      "title": "Acetyl fentanyl overdose fatalities - Rhode Island, March-May 2013 (MMWR Morb Mortal Wkly Rep 62:703-704)",
+      "authors": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "year": 2013,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4604997/",
+      "tier": "agency",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "lozier2015",
+      "type": "paper",
+      "title": "Acetyl fentanyl, a novel fentanyl analog, causes 14 overdose deaths in Rhode Island, March-May 2013 (J Med Toxicol 11:208-217)",
+      "authors": [
+        "M. J. Lozier",
+        "M. Boyd",
+        "C. Stanley",
+        "L. Ogilvie",
+        "E. King",
+        "C. Martin",
+        "L. Lewis"
+      ],
+      "year": 2015,
+      "doi": "10.1007/s13181-015-0477-9",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4469714/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "mmwr2014-fentanyl-ri",
+      "type": "paper",
+      "title": "Notes from the field: increase in fentanyl-related overdose deaths - Rhode Island, November 2013-March 2014 (MMWR Morb Mortal Wkly Rep 63:531)",
+      "authors": [
+        "M. C. Mercado-Crespo",
+        "S. A. Sumner",
+        "M. B. Spelke",
+        "D. E. Sugerman",
+        "C. Stanley"
+      ],
+      "year": 2014,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5779372/",
+      "tier": "agency",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "poklis2015",
+      "type": "paper",
+      "title": "Postmortem tissue distribution of acetyl fentanyl, fentanyl and their respective nor-metabolites analyzed by ultrahigh performance liquid chromatography with tandem mass spectrometry (Forensic Sci Int 257:435-441)",
+      "authors": [
+        "J. Poklis",
+        "A. Poklis",
+        "C. Wolf",
+        "M. Mainland",
+        "L. Hair",
+        "K. Devers",
+        "L. Chrostowski",
+        "E. Arbefeville",
+        "M. Merves",
+        "J. Pearson"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.forsciint.2015.10.021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4879818/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "busardo2019",
+      "type": "paper",
+      "title": "Ultra-high-performance liquid chromatography-tandem mass spectrometry assay for quantifying fentanyl and 22 analogs and metabolites in whole blood, urine, and hair (Front Chem 7:184)",
+      "authors": [
+        "F. P. Busardò",
+        "J. Carlier",
+        "R. Giorgetti",
+        "A. Tagliabracci",
+        "R. Pacifici",
+        "M. Gottardi",
+        "S. Pichini"
+      ],
+      "year": 2019,
+      "doi": "10.3389/fchem.2019.00184",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6454115/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "song2023",
+      "type": "paper",
+      "title": "New trends of new psychoactive substances (NPS)-infused chocolate: Identification and quantification of trace level of NPS in complex matrix by GC-MS and NMR (Talanta 255:124257)",
+      "authors": [
+        "C. H. Song",
+        "W. Jia",
+        "C. M. Liu",
+        "Z. D. Hua",
+        "X. Meng",
+        "Y. B. Zhao",
+        "T. Li",
+        "L. S. Cai",
+        "X. Zhao"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.talanta.2023.124257",
+      "url": "https://doi.org/10.1016/j.talanta.2023.124257",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "olesti2020",
+      "type": "paper",
+      "title": "LC-MS/MS method for the quantification of new psychoactive substances and evaluation of their urinary detection in humans for doping control analysis (Drug Test Anal 12:785-797)",
+      "authors": [
+        "E. Olesti",
+        "J. A. Pascual",
+        "M. Ventura",
+        "E. Papaseit",
+        "M. Farré",
+        "R. de la Torre",
+        "O. J. Pozo"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2768",
+      "url": "https://doi.org/10.1002/dta.2768",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "refstad2003",
+      "type": "paper",
+      "title": "Paramethoxyamphetamine (PMA) poisoning; a 'party drug' with lethal effects (Acta Anaesthesiol Scand 47:1298-9)",
+      "authors": [
+        "S. Refstad"
+      ],
+      "year": 2003,
+      "doi": "10.1046/j.1399-6576.2003.00245.x",
+      "url": "https://doi.org/10.1046/j.1399-6576.2003.00245.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "rojek2016",
+      "type": "paper",
+      "title": "Medicolegal aspects of PMA-related deaths (Leg Med (Tokyo) 21:64-72)",
+      "authors": [
+        "S. Rojek",
+        "F. Bolechała",
+        "K. Kula",
+        "M. Maciów-Głąb",
+        "M. Kłys"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.legalmed.2016.06.002",
+      "url": "https://doi.org/10.1016/j.legalmed.2016.06.002",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "jang2016",
+      "type": "paper",
+      "title": "A fatal case of paramethoxyamphetamine poisoning and its detection in hair (Forensic Sci Int 266:e27-e31)",
+      "authors": [
+        "M. Jang",
+        "W. Yang",
+        "S. Jeong",
+        "S. Park",
+        "J. Kim"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.forsciint.2016.06.030",
+      "url": "https://doi.org/10.1016/j.forsciint.2016.06.030",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lurie2012",
+      "type": "paper",
+      "title": "Severe paramethoxymethamphetamine (PMMA) and paramethoxyamphetamine (PMA) outbreak in Israel (Clin Toxicol (Phila) 50:39-43)",
+      "authors": [
+        "Y. Lurie",
+        "A. Gopher",
+        "O. Lavon",
+        "S. Almog",
+        "L. Sulimani",
+        "Y. Bentur"
+      ],
+      "year": 2012,
+      "doi": "10.3109/15563650.2011.635148",
+      "url": "https://doi.org/10.3109/15563650.2011.635148",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lin2007",
+      "type": "paper",
+      "title": "Recent paramethoxymethamphetamine (PMMA) deaths in Taiwan (J Anal Toxicol 31:109-13)",
+      "authors": [
+        "D. L. Lin",
+        "H. C. Liu",
+        "H. L. Yin"
+      ],
+      "year": 2007,
+      "doi": "10.1093/jat/31.2.109",
+      "url": "https://doi.org/10.1093/jat/31.2.109",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "vevelstad2017",
+      "type": "paper",
+      "title": "Studies on Para-Methoxymethamphetamine (PMMA) Metabolite Pattern and Influence of CYP2D6 Genetics in Human Liver Microsomes and Authentic Samples from Fatal PMMA Intoxications (Drug Metab Dispos 45:1326-1335)",
+      "authors": [
+        "M. Vevelstad",
+        "E. L. Øiestad",
+        "E. Nerem",
+        "M. Arnestad",
+        "I. L. Bogen"
+      ],
+      "year": 2017,
+      "doi": "10.1124/dmd.117.077263",
+      "url": "https://doi.org/10.1124/dmd.117.077263",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "epain2024",
+      "type": "paper",
+      "title": "Alpha-methyltryptamine and 5-(2-methylaminopropyl)-benzofuran (5-MAPB) fatal co-intoxication: case report and review of literature (Int J Legal Med 138:1813-1820)",
+      "authors": [
+        "M. Epain",
+        "N. Cartiser",
+        "F. Bevalot",
+        "C. Bottinelli",
+        "C. Chatenay",
+        "L. Fanton"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00414-024-03236-w",
+      "url": "https://doi.org/10.1007/s00414-024-03236-w",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "brandt2020",
+      "type": "paper",
+      "title": "The psychoactive aminoalkylbenzofuran derivatives, 5-APB and 6-APB, mimic the effects of 3,4-methylenedioxyamphetamine (MDA) on monoamine transmission in male rats (Psychopharmacology (Berl) 237:3703-3714)",
+      "authors": [
+        "S. D. Brandt",
+        "H. M. Walters",
+        "J. S. Partilla",
+        "B. E. Blough",
+        "P. V. Kavanagh",
+        "M. H. Baumann"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s00213-020-05648-z",
+      "url": "https://doi.org/10.1007/s00213-020-05648-z",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "roquebravo2020",
+      "type": "paper",
+      "title": "Emerging club drugs: 5-(2-aminopropyl)benzofuran (5-APB) is more toxic than its isomer 6-(2-aminopropyl)benzofuran (6-APB) in hepatocyte cellular models (Arch Toxicol 94:609-629)",
+      "authors": [
+        "R. Roque Bravo",
+        "H. Carmo",
+        "J. P. Silva",
+        "M. J. Valente",
+        "F. Carvalho",
+        "M. d. L. Bastos",
+        "D. Dias da Silva"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s00204-019-02638-9",
+      "url": "https://doi.org/10.1007/s00204-019-02638-9",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "welter2015",
+      "type": "paper",
+      "title": "Metabolic fate, mass spectral fragmentation, detectability, and differentiation in urine of the benzofuran designer drugs 6-APB and 6-MAPB in comparison to their 5-isomers using GC-MS and LC-(HR)-MS(n) techniques (Anal Bioanal Chem 407:3457-70)",
+      "authors": [
+        "J. Welter",
+        "S. D. Brandt",
+        "P. Kavanagh",
+        "M. R. Meyer",
+        "H. H. Maurer"
+      ],
+      "year": 2015,
+      "doi": "10.1007/s00216-015-8552-2",
+      "url": "https://doi.org/10.1007/s00216-015-8552-2",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "hofmann2022",
+      "type": "paper",
+      "title": "Simultaneous Determination of 5- and 6-APB in Blood, Other Body Fluids, Hair and Various Tissues by HPLC--MS-MS (J Anal Toxicol 46:264-269)",
+      "authors": [
+        "V. Hofmann",
+        "T. R. Sundermann",
+        "A. Landmann",
+        "S. Rechtsteiner",
+        "G. Schmitt",
+        "M. Bartel"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkab018",
+      "url": "https://doi.org/10.1093/jat/bkab018",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "deville2019",
+      "type": "paper",
+      "title": "Death following consumption of MDAI and 5-EAPB (Forensic Sci Int 299:89-94)",
+      "authors": [
+        "M. Deville",
+        "N. Dubois",
+        "E. Cieckiewicz",
+        "P. De Tullio",
+        "E. Lemaire",
+        "C. Charlier"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.forsciint.2019.03.023",
+      "url": "https://doi.org/10.1016/j.forsciint.2019.03.023",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gallagher2012",
+      "type": "paper",
+      "title": "5,6-Methylenedioxy-2-aminoindane: from laboratory curiosity to 'legal high' (Hum Psychopharmacol 27:106-12)",
+      "authors": [
+        "C. T. Gallagher",
+        "S. Assi",
+        "J. L. Stair",
+        "S. Fergus",
+        "O. Corazza",
+        "J. M. Corkery",
+        "F. Schifano"
+      ],
+      "year": 2012,
+      "doi": "10.1002/hup.1255",
+      "url": "https://doi.org/10.1002/hup.1255",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "pinterova2017",
+      "type": "paper",
+      "title": "Synthetic Aminoindanes: A Summary of Existing Knowledge (Front Psychiatry 8:236)",
+      "authors": [
+        "N. Pinterova",
+        "R. R. Horsley",
+        "T. Palenicek"
+      ],
+      "year": 2017,
+      "doi": "10.3389/fpsyt.2017.00236",
+      "url": "https://doi.org/10.3389/fpsyt.2017.00236",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "simmler2014",
+      "type": "paper",
+      "title": "Pharmacological profiles of aminoindanes, piperazines, and pipradrol derivatives (Biochem Pharmacol 88:237-44)",
+      "authors": [
+        "L. D. Simmler",
+        "A. Rickli",
+        "Y. Schramm",
+        "M. C. Hoener",
+        "M. E. Liechti"
+      ],
+      "year": 2014,
+      "doi": "10.1016/j.bcp.2014.01.024",
+      "url": "https://doi.org/10.1016/j.bcp.2014.01.024",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "zidkova2017",
+      "type": "paper",
+      "title": "Study on the metabolism of 5,6-methylenedioxy-2-aminoindane (MDAI) in rats: identification of urinary metabolites (Xenobiotica 47:505-514)",
+      "authors": [
+        "M. Židková",
+        "I. Linhart",
+        "M. Balíková",
+        "M. Himl",
+        "L. Váňa",
+        "M. Vetýška",
+        "T. Páleníček",
+        "E. Lhotková",
+        "M. Dušek"
+      ],
+      "year": 2017,
+      "doi": "10.1080/00498254.2016.1199919",
+      "url": "https://doi.org/10.1080/00498254.2016.1199919",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "angerer2024",
+      "type": "paper",
+      "title": "Acute psychotropic, autonomic, and endocrine effects of 5,6-methylenedioxy-2-aminoindane (MDAI) compared with 3,4-methylenedioxymethamphetamine (MDMA) in human volunteers: A self-administration study (Drug Test Anal 16:1002-1011)",
+      "authors": [
+        "V. Angerer",
+        "Y. Schmid",
+        "F. Franz",
+        "H. Gnann",
+        "J. M. Speer",
+        "A. Gnann",
+        "S. Helmecke",
+        "A. Buchwald",
+        "S. D. Brandt",
+        "T. Passie",
+        "M. E. Liechti",
+        "V. Auwärter"
+      ],
+      "year": 2024,
+      "doi": "10.1002/dta.3622",
+      "url": "https://doi.org/10.1002/dta.3622",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "staeheli2017",
+      "type": "paper",
+      "title": "Postmortem distribution and redistribution of MDAI and 2-MAPB in blood and alternative matrices (Forensic Sci Int 279:83-87)",
+      "authors": [
+        "S. N. Staeheli",
+        "M. I. Boxler",
+        "A. Oestreich",
+        "M. Marti",
+        "D. Gascho",
+        "S. A. Bolliger",
+        "T. Kraemer",
+        "A. E. Steuer"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.forsciint.2017.08.007",
+      "url": "https://doi.org/10.1016/j.forsciint.2017.08.007",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "swgdrug-pma",
+      "type": "database",
+      "title": "SWGDRUG monograph: p-Methoxyamphetamine (PMA) (IR: HCl and base, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/p-METHOXYAMPHETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213090134/https://swgdrug.org/Monographs/p-METHOXYAMPHETAMINE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-pmma",
+      "type": "database",
+      "title": "SWGDRUG monograph: p-Methoxymethamphetamine (PMMA) (IR: HCl and base, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/p-METHOXYMETHAMPHETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213081332/https://swgdrug.org/Monographs/p-METHOXYMETHAMPHETAMINE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-6apb",
+      "type": "database",
+      "title": "SWGDRUG monograph: 6-(2-Aminopropyl)benzofuran (6-APB) (IR: ATR, no labelled bands)",
+      "url": "https://www.swgdrug.org/Monographs/6APB.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213083209/https://swgdrug.org/Monographs/6APB.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-mdai",
+      "type": "database",
+      "title": "SWGDRUG monograph: 5,6-MDAI (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/5,6-MDAI.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241212101632/https://swgdrug.org/Monographs/5,6-MDAI.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "krotulski2021b",
+      "type": "paper",
+      "title": "Brorphine - investigation and quantitation of a new potent synthetic opioid in forensic toxicology casework using liquid chromatography-mass spectrometry (J Forensic Sci 66:664-676)",
+      "authors": [
+        "A. J. Krotulski",
+        "D. M. Papsun",
+        "C. Noble",
+        "S. L. Kacinko",
+        "B. K. Logan"
+      ],
+      "year": 2021,
+      "doi": "10.1111/1556-4029.14623",
+      "url": "https://doi.org/10.1111/1556-4029.14623",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "vandeputte2024-brorphine",
+      "type": "paper",
+      "title": "Elucidating the harm potential of brorphine analogues as new synthetic opioids: synthesis, in vitro, and in vivo characterization (Neuropharmacology 260:110113)",
+      "authors": [
+        "M. M. Vandeputte",
+        "et al."
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.neuropharm.2024.110113",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39154855/",
+      "archive_url": "https://web.archive.org/web/20260808153208/https://pubmed.ncbi.nlm.nih.gov/39154855/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "marchei2026",
+      "type": "paper",
+      "title": "Brorphine and its analogues: pharmacology, toxicology, and biomonitoring (Ther Drug Monit 48:424-431)",
+      "authors": [
+        "E. Marchei",
+        "S. Graziano",
+        "S. Pichini",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1097/FTD.0000000000001446",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41622550/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "jadhav2025",
+      "type": "paper",
+      "title": "Biotransformation and kinetics of selected benzimidazole synthetic opioids in human hepatocytes (Front Pharmacol 16:1656437)",
+      "authors": [
+        "G. R. Jadhav",
+        "P. S. Fasinu"
+      ],
+      "year": 2025,
+      "doi": "10.3389/fphar.2025.1656437",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41394146/",
+      "archive_url": "https://web.archive.org/web/20260416054536/https://pubmed.ncbi.nlm.nih.gov/41394146/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "taoussi2025",
+      "type": "paper",
+      "title": "In vitro metabolism of a benzofuran-substituted nitazene: ethyleneoxynitazene (Metabolites 15)",
+      "authors": [
+        "O. Taoussi",
+        "D. Y. Ovat",
+        "F. Tavoletta",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.3390/metabo15100679",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41149656/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "huang2025",
+      "type": "paper",
+      "title": "Metabolism of six novel nitazenes in human liver microsomes based on ultra-high-performance liquid chromatography coupled with high-resolution mass spectrometry (Drug Test Anal 17:1323-1335)",
+      "authors": [
+        "B. Huang",
+        "Z. Hua",
+        "C. Liu",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1002/dta.3838",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39659178/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "hataoka2025",
+      "type": "paper",
+      "title": "Evaluation of rewarding effects of nitazene analogs: results from conditioned place preference tests and in vivo microdialysis experiments in mice (J Toxicol Sci 50:33-43)",
+      "authors": [
+        "K. Hataoka",
+        "M. Hojo",
+        "S. Nomura",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.2131/jts.50.33",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39779230/",
+      "archive_url": "https://web.archive.org/web/20250202190702/https://pubmed.ncbi.nlm.nih.gov/39779230/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "gatch2025",
+      "type": "paper",
+      "title": "Discriminative stimulus and antinociceptive effects of sixteen nitazene analogs in rodents (Neuropharmacology 272:110416)",
+      "authors": [
+        "M. B. Gatch",
+        "R. D. Hill",
+        "M. Sundar",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.neuropharm.2025.110416",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40120927/",
+      "archive_url": "https://web.archive.org/web/20260228112646/https://pubmed.ncbi.nlm.nih.gov/40120927/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
       "id": "bossong2005",
       "type": "paper",
       "title": "Methylone and mCPP, two new drugs of abuse? (Addiction biology 10)",
@@ -2727,21 +5202,6 @@
       "tier": "primary",
       "doi": "10.1007/BF00265954",
       "url": "https://doi.org/10.1007/BF00265954"
-    },
-    {
-      "id": "rickli2015",
-      "type": "paper",
-      "title": "Monoamine transporter and receptor interaction profiles of novel psychoactive substances: para-halogenated amphetamines and pyrovalerone cathinones (European neuropsychopharmacology : the journal of the European College of Neuropsychopharmacology 25)",
-      "authors": [
-        "Anna Rickli",
-        "Marius C Hoener",
-        "Matthias E Liechti"
-      ],
-      "year": 2015,
-      "consulted": "2026-10-13",
-      "tier": "primary",
-      "doi": "10.1016/j.euroneuro.2014.12.012",
-      "url": "https://doi.org/10.1016/j.euroneuro.2014.12.012"
     },
     {
       "id": "rotzinger1998",

@@ -18,7 +18,7 @@ import { canSubtract } from "./subtract.js";
  *   exportCsv: () => void, exportReport: () => void, exportSvg: () => void, exportPng: () => void, copyText: (text: string) => Promise<void>, copyCursor: () => void, recallCycleMode: () => void, viewBack: () => void, recallOpen: () => void, recallAdd: (ref: import("./state.js").Recalled) => boolean, recallRemove: (i: number) => void, recallClear: () => void, setRecall: (patch: Partial<import("./state.js").RecallState>) => void, recallKeep: () => string | null,
  *   setPreset: (id: string) => void, setRanges: (ranges: Array<[number, number]>) => void, addRange: (range: [number, number]) => void, removeRange: (i: number) => void, clearRanges: () => void, rejectRange: () => void, rangeFromCursors: () => void, openRanges: () => void,
  *   inverseOpen: (position?: number | null) => void,
- *   importLibrary: (files: File[], name: string, sampling: string) => Promise<void>, cancelImport: () => void, removeLibrary: (id: string) => void, renameLibrary: (id: string, name: string) => void, toggleLibrary: (id: string, on: boolean) => void,
+ *   importLibrary: (files: File[], name: string, sampling: string) => Promise<void>, importPackages: (files: File[]) => Promise<void>, cancelImport: () => void, removeLibrary: (id: string) => void, renameLibrary: (id: string, name: string) => void, toggleLibrary: (id: string, on: boolean) => void,
  * }} Ctx
  * @typedef {{
  *   choose: () => Promise<void>, resume: () => Promise<void>, stop: () => void, setRemember: (on: boolean) => Promise<void>, setAuto: (on: boolean) => void,

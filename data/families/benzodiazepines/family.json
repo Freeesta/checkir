@@ -1,0 +1,45 @@
+{
+  "schema": "family-sheet/1",
+  "id": "benzodiazepines",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "interactions": [
+    {
+      "with": "opioid",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "el-balkhi2023"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "benzodiazepines.opioids",
+      "topic": "combination",
+      "source": "el-balkhi2023"
+    },
+    {
+      "key": "benzodiazepines.potency",
+      "topic": "dosing",
+      "source": "gameli2024"
+    },
+    {
+      "key": "benzodiazepines.impairment",
+      "topic": "set_setting",
+      "source": "wu2023"
+    }
+  ],
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

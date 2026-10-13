@@ -1,4 +1,4 @@
-"""Quality metrics of a spectrum (ARCHITETTO_DATI_2 §8) computed from the JCAMP data; thresholds are provisional.
+"""Quality metrics of a spectrum computed from the JCAMP data; thresholds are provisional.
 
 Each check returns (criterion, result, value) with result in pass / warning / fail. The same function writes `quality` in the
 generator and verifies it in the data checker, so the stored values can never drift from the file.

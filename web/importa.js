@@ -6,7 +6,7 @@
  * @typedef {import("./state.js").Notice} Notice
  * @typedef {{ done: number, total: number }} Progress
  * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array, native?: Uint8Array }} Built
- * @typedef {{ built: Built | null, imported: number, unrecognized: number, repeated: number, skipped: { file: string, notice: Notice }[], cancelled: boolean, error: Notice | null }} Outcome
+ * @typedef {{ built: Built | null, imported: number, unrecognized: number, repeated: number, warnings: Notice[], skipped: { file: string, notice: Notice }[], cancelled: boolean, error: Notice | null }} Outcome
  */
 import { BUDGET } from "./files.js";
 
@@ -46,6 +46,50 @@ export function noticeOf(e) {
 /** @param {number} ms @returns {Promise<void>} */
 const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/** Extension of a file name, lower case, with the dot. @param {string} name @returns {string} */
+const extOf = (name) => (/\.[^.]*$/.exec(name)?.[0] ?? "").toLowerCase();
+/** @param {string} name @returns {string} */
+const stemOf = (name) => name.replace(/\.[^.]*$/, "").toLowerCase();
+
+/**
+ * Group the chosen files in the units to read. A Shimadzu library is one unit with many entries: the `.L01` with the `.nam` of the same name (or the only
+ * `.nam` chosen); the `.IDX` and the `.nam` accompany the `.L01` and are not files to read. Any other file is a unit alone.
+ * @typedef {{ file: File, nam?: File }} Unit
+ * @param {File[]} files @returns {Unit[]}
+ */
+export function unitsOf(files) {
+  const l01 = files.filter((f) => extOf(f.name) === ".l01");
+  const nams = files.filter((f) => extOf(f.name) === ".nam");
+  const rest = files.filter((f) => extOf(f.name) !== ".l01" && !(l01.length && [".nam", ".idx"].includes(extOf(f.name))));
+  const nameFile = (/** @type {File} */ f) => nams.find((n) => stemOf(n.name) === stemOf(f.name)) ?? (l01.length === 1 && nams.length === 1 ? nams[0] : undefined);
+  return [...l01.map((file) => ({ file, nam: nameFile(file) })), ...rest.map((file) => ({ file }))];
+}
+
+/**
+ * One spectrum of the library: on the grid and as the file gives it.
+ * @typedef {{ title: string, resampled: Float32Array, native: Float32Array }} Item
+ */
+
+/** The records `[points, resolution, x…, y…]` one after the other, cut one by one. @param {Float32Array} all @returns {Float32Array[]} */
+function records(all) {
+  /** @type {Float32Array[]} */
+  const out = [];
+  for (let at = 0; at < all.length; at += 2 + 2 * all[at]) out.push(all.slice(at, at + 2 + 2 * all[at]));
+  return out;
+}
+
+/**
+ * The entries of a Shimadzu library, named by the `.nam` file (an entry without a name takes the file name and its number); the reader's notices go to `warnings`.
+ * @param {import("./engine.js").Engine} engine @param {Uint8Array} l01 @param {Uint8Array} nam @param {string} base @param {Notice[]} warnings @returns {Item[]}
+ */
+function shimadzuItems(engine, l01, nam, base, warnings) {
+  const meta = JSON.parse(engine.library_shimadzu_meta(l01, nam, BUDGET.maxBytes));
+  const values = Float32Array.from(engine.library_shimadzu_resample(l01, nam, BUDGET.maxBytes));
+  const native = records(Float32Array.from(engine.library_shimadzu_native(l01, nam, BUDGET.maxBytes)));
+  for (const w of meta.warnings) warnings.push({ key: w.key, params: Object.fromEntries(Object.entries(w.params).map(([k, v]) => [k, String(v)])) });
+  return meta.names.map((/** @type {string} */ name, /** @type {number} */ k) => ({ title: name.trim() || `${base} ${k + 1}`, resampled: values.slice(k * POINTS, (k + 1) * POINTS), native: native[k] ?? new Float32Array() }));
+}
+
 /**
  * @param {import("./engine.js").Engine} engine
  * @param {File[]} files
@@ -55,7 +99,7 @@ const pause = (ms) => new Promise((r) => setTimeout(r, ms));
  */
 export async function buildPrivateLibrary(engine, files, identity, hooks) {
   /** @type {Outcome} */
-  const out = { built: null, imported: 0, unrecognized: 0, repeated: 0, skipped: [], cancelled: false, error: null };
+  const out = { built: null, imported: 0, unrecognized: 0, repeated: 0, skipped: [], warnings: [], cancelled: false, error: null };
   /** @type {Float32Array[]} */
   const rows = [];
   /** @type {Float32Array[]} */
@@ -63,8 +107,10 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
   /** @type {object[]} */
   const index = [];
   const hashes = new Set();
+  const units = unitsOf(files);
   let last = performance.now();
-  for (const [i, file] of files.entries()) {
+  for (const [i, unit] of units.entries()) {
+    const { file } = unit;
     if (hooks.signal.aborted) return { ...out, cancelled: true };
     try {
       if (file.size > BUDGET.maxBytes) throw JSON.stringify({ error_key: "reader.limit_exceeded", params: { limit: "bytes", max: BUDGET.maxBytes } });
@@ -74,19 +120,22 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
       if (hashes.has(hash)) out.repeated++;
       else {
         hashes.add(hash);
-        const resampled = Float32Array.from(engine.library_resample(file.name, bytes));
-        natives.push(Float32Array.from(engine.library_native(file.name, bytes)));
-        rows.push(resampled);
-        const id = `u${rows.length}`;
-        const title = file.name.replace(/\.[^.]*$/, "");
-        index.push({ id, form: "", substance: slug(title), names: { en: title }, classes: [], quality: "pass", provenance_type: "user_import" });
+        const base = file.name.replace(/\.[^.]*$/, "");
+        const nam = unit.nam ? new Uint8Array(await unit.nam.arrayBuffer()) : new Uint8Array();
+        if (unit.nam && unit.nam.size > BUDGET.maxBytes) throw JSON.stringify({ error_key: "reader.limit_exceeded", params: { limit: "bytes", max: BUDGET.maxBytes } });
+        const items = extOf(file.name) === ".l01" ? shimadzuItems(engine, bytes, nam, base, out.warnings) : [{ title: base, resampled: Float32Array.from(engine.library_resample(file.name, bytes)), native: Float32Array.from(engine.library_native(file.name, bytes)) }];
+        for (const item of items) {
+          natives.push(item.native);
+          rows.push(item.resampled);
+          index.push({ id: `u${rows.length}`, form: "", substance: slug(item.title), names: { en: item.title }, classes: [], quality: "pass", provenance_type: "user_import" });
+        }
       }
     } catch (e) {
       const notice = noticeOf(e);
       if (notice.key === "reader.unknown_format") out.unrecognized++;
       else out.skipped.push({ file: file.name, notice });
     }
-    hooks.onProgress({ done: i + 1, total: files.length });
+    hooks.onProgress({ done: i + 1, total: units.length });
     if (performance.now() - last > 30) {
       await pause(0);
       last = performance.now();
@@ -104,4 +153,26 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
   natives.reduce((at, r) => (native.set(r, at), at + r.length), 0);
   out.built = { id: identity.id, manifest: JSON.stringify(built.manifest), index: JSON.stringify(built.index), data: new Uint8Array(values.buffer), native: new Uint8Array(native.buffer) };
   return out;
+}
+
+/**
+ * Choose the files of ready-made private packages (`manifest.json`, `index.json`, `data.bin`, optional `native.bin`) and group them by the folder that holds them:
+ * a whole folder of packages gives one group per package, the four files of one package chosen together give one group without a folder name.
+ * @typedef {{ name: string, manifest?: File, index?: File, data?: File, native?: File }} PackageGroup
+ * @param {File[]} files @returns {PackageGroup[]}
+ */
+export function groupPackages(files) {
+  /** @type {Map<string, PackageGroup>} */
+  const groups = new Map();
+  const slots = /** @type {const} */ ({ "manifest.json": "manifest", "index.json": "index", "data.bin": "data", "native.bin": "native" });
+  for (const file of files) {
+    const slot = slots[/** @type {keyof typeof slots} */ (file.name)];
+    if (!slot) continue;
+    const parts = (file.webkitRelativePath || file.name).split("/");
+    const dir = parts.slice(0, -1).join("/");
+    const group = groups.get(dir) ?? { name: parts.length > 1 ? parts[parts.length - 2] : "" };
+    group[slot] = file;
+    groups.set(dir, group);
+  }
+  return [...groups.values()];
 }

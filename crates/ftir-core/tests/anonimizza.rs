@@ -3,7 +3,7 @@
 use ftir_core::anonimizza::{action_for, clean, contract_json, listed_action, Action, CONTRACT};
 use ftir_core::readers::export::to_json;
 use ftir_core::readers::model::{Document, Limits, Options};
-use ftir_core::readers::{ispd, jcamp, opus, pick, spa, spc, text, READERS};
+use ftir_core::readers::{ispd, jcamp, opus, pick, shimadzu_lib, spa, spc, text, READERS};
 use std::path::PathBuf;
 
 const JCAMP: &str = "##TITLE=Case 4711 powder\r\n##JCAMP-DX=4.24 $$ exported by C:\\Users\\mrossi\\Desktop\r\n##DATA TYPE=INFRARED SPECTRUM\r\n\
@@ -75,6 +75,7 @@ fn declared(reader: &str) -> Vec<String> {
             v
         }
         "bruker-opus" => strs(opus::KNOWN),
+        "shimadzu-lib" => strs(shimadzu_lib::KNOWN),
         "thermo-spa" => strs(spa::KNOWN),
         "galactic-spc" => strs(spc::KNOWN),
         other => panic!(

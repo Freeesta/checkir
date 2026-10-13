@@ -3,6 +3,13 @@
 //!     cargo run --release -p ftir-lib --bin costruisci-libreria -- [--data data] [--out target/libreria] \
 //!         [--library checkir-community | --config tools/libreria/librerie.json] [--date AAAA-MM-GG] \
 //!         [--sampling atr_diamond|atr_ge|atr_znse|transmission_kbr|unknown] [--identity identita.csv]
+//!     cargo run --release -p ftir-lib --bin costruisci-libreria -- --from-files <folder> --id <id> --private \
+//!         [--out target/libreria] [--date AAAA-MM-GG] [--sampling …] [--identity identita.csv]
+//!
+//! `--from-files` builds ONE private package (`private: true`, licence `LicenseRef-private`) from a folder of files of any
+//! format a reader recognises (subfolders included), with the rules of the page's import: one row per file, duplicates
+//! (SHA-256) dropped; it writes `<out>/<id>/{manifest,index,data,native}`. `--private` is required: no public package is
+//! built this way.
 //!
 //! `--identity` (columns `name,inchikey,substance`) gives each row the identity of its name, so the same substance under
 //! different names is one substance in the margin; names the table does not know are listed in the report.
@@ -16,9 +23,11 @@ use ftir_core::campionamento;
 use ftir_core::passi::json::parse;
 use ftir_core::passi::Value;
 use ftir_lib::build::{build_one, Built, Source};
+use ftir_lib::files::{from_files, slug};
 use ftir_lib::identity;
+use ftir_lib::index::Row;
 use ftir_lib::manifest::Grid;
-use ftir_lib::package::{write_package, Identity};
+use ftir_lib::package::{write_package, Files, Identity};
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
@@ -55,6 +64,9 @@ struct Args {
     date: String,
     sampling: Option<&'static str>,
     identity: Option<PathBuf>,
+    from_files: Option<PathBuf>,
+    id: Option<String>,
+    private: bool,
 }
 
 fn parse_args() -> Result<Args, String> {
@@ -66,9 +78,16 @@ fn parse_args() -> Result<Args, String> {
         date: today(),
         sampling: None,
         identity: None,
+        from_files: None,
+        id: None,
+        private: false,
     };
     let mut it = std::env::args().skip(1);
     while let Some(flag) = it.next() {
+        if flag == "--private" {
+            a.private = true;
+            continue;
+        }
         let value = it.next().ok_or(format!("missing value for {flag}"))?;
         match flag.as_str() {
             "--data" => a.data = value.into(),
@@ -77,6 +96,8 @@ fn parse_args() -> Result<Args, String> {
             "--config" => a.config = Some(value.into()),
             "--date" => a.date = value,
             "--identity" => a.identity = Some(value.into()),
+            "--from-files" => a.from_files = Some(value.into()),
+            "--id" => a.id = Some(value),
             "--sampling" => {
                 a.sampling = Some(
                     campionamento::known(&value)
@@ -154,6 +175,108 @@ fn library_sampling(built: &[Built], default: Option<&'static str>) -> Option<St
         .map(str::to_string)
 }
 
+/// Gives the rows the identity of their names from the `--identity` table (none = nothing changes); returns the names
+/// the table does not know.
+fn apply_identity(
+    rows: &mut [(Row, Vec<f32>)],
+    table: Option<&Path>,
+) -> Result<Vec<String>, String> {
+    let Some(path) = table else {
+        return Ok(Vec::new());
+    };
+    let csv = fs::read_to_string(path).map_err(|e| format!("{}: {e}", path.display()))?;
+    let table = identity::parse_table(&csv)?;
+    let mut only: Vec<_> = rows.iter().map(|(r, _)| r.clone()).collect();
+    let unknown = identity::apply(&mut only, &table);
+    rows.iter_mut().zip(only).for_each(|(slot, r)| slot.0 = r);
+    Ok(unknown)
+}
+
+/// Writes the four files of a package into `<out>/<name>/`.
+fn write_files(out: &Path, name: &str, files: Files, native: Vec<u8>) -> Result<(), String> {
+    let dir = out.join(name);
+    fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
+    fs::write(dir.join("manifest.json"), files.manifest_json).map_err(|e| e.to_string())?;
+    fs::write(dir.join("index.json"), files.index_json).map_err(|e| e.to_string())?;
+    fs::write(dir.join("data.bin"), files.data_bin).map_err(|e| e.to_string())?;
+    fs::write(dir.join("native.bin"), native).map_err(|e| e.to_string())
+}
+
+/// Every file under `dir` (subfolders included) as `(path relative to dir, bytes)`, in path order.
+fn read_tree(dir: &Path, base: &Path, out: &mut Vec<(String, Vec<u8>)>) -> Result<(), String> {
+    for p in sorted_entries(dir) {
+        if p.is_dir() {
+            read_tree(&p, base, out)?;
+        } else {
+            let rel = p
+                .strip_prefix(base)
+                .unwrap_or(&p)
+                .to_string_lossy()
+                .replace('\\', "/");
+            out.push((
+                rel,
+                fs::read(&p).map_err(|e| format!("{}: {e}", p.display()))?,
+            ));
+        }
+    }
+    Ok(())
+}
+
+/// `--from-files`: one private package from a folder of spectra; returns the report line.
+fn build_from_folder(args: &Args, folder: &Path) -> Result<String, String> {
+    let id = args.id.as_deref().ok_or("--from-files needs --id")?;
+    if !args.private {
+        return Err("--from-files builds private packages only: add --private".into());
+    }
+    if id != slug(id) {
+        return Err(format!(
+            "--id {id}: use lower case letters, digits and single dashes"
+        ));
+    }
+    let mut files = Vec::new();
+    read_tree(folder, folder, &mut files)?;
+    let mut got = from_files(&files);
+    if got.rows.is_empty() {
+        return Err(format!("{}: no readable spectrum", folder.display()));
+    }
+    let unknown = apply_identity(&mut got.rows, args.identity.as_deref())?;
+    let identity = Identity {
+        name: id.to_string(),
+        version: "1".into(),
+        date: args.date.clone(),
+        license: "LicenseRef-private".into(),
+        attribution_it: Some(format!(
+            "Libreria privata di checkIR ({id}); uso interno, non redistribuibile"
+        )),
+        attribution_en: format!(
+            "Private checkIR library ({id}); internal use, not redistributable"
+        ),
+        terms_it: None,
+        terms_en: None,
+        private: true,
+        sampling: args
+            .sampling
+            .and_then(campionamento::normalise)
+            .map(str::to_string),
+    };
+    let n = got.rows.len();
+    let files = write_package(&identity, &Grid::STANDARD, got.rows).map_err(|e| e.json())?;
+    write_files(&args.out, id, files, got.native)?;
+    let mut report = format!(
+        "{id}: {n} spectra, {} duplicates, {} unrecognized, {} skipped",
+        got.repeated,
+        got.unrecognized,
+        got.skipped.len()
+    );
+    for (file, key) in &got.skipped {
+        report.push_str(&format!("\n  skipped {file}: {key}"));
+    }
+    if args.identity.is_some() {
+        report.push_str(&format!("\n{id}: {} names without identity", unknown.len()));
+    }
+    Ok(format!("{report} -> {}", args.out.join(id).display()))
+}
+
 /// Builds one library into `<out>/<name>/`; returns its version and number of spectra.
 fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize, Vec<String>), String> {
     let name = conf.id.as_str();
@@ -187,24 +310,9 @@ fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize, Vec<Stri
         .flat_map(|b| b.native.iter().flat_map(|v| v.to_le_bytes()))
         .collect();
     let mut rows: Vec<_> = built.into_iter().map(|b| (b.row, b.values)).collect();
-    let unknown = match &args.identity {
-        Some(path) => {
-            let csv = fs::read_to_string(path).map_err(|e| format!("{}: {e}", path.display()))?;
-            let table = identity::parse_table(&csv)?;
-            let mut only: Vec<_> = rows.iter().map(|(r, _)| r.clone()).collect();
-            let unknown = identity::apply(&mut only, &table);
-            rows.iter_mut().zip(only).for_each(|(slot, r)| slot.0 = r);
-            unknown
-        }
-        None => Vec::new(),
-    };
+    let unknown = apply_identity(&mut rows, args.identity.as_deref())?;
     let files = write_package(&identity, &Grid::STANDARD, rows).map_err(|e| e.json())?;
-    let dir = args.out.join(name);
-    fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
-    fs::write(dir.join("manifest.json"), files.manifest_json).map_err(|e| e.to_string())?;
-    fs::write(dir.join("index.json"), files.index_json).map_err(|e| e.to_string())?;
-    fs::write(dir.join("data.bin"), files.data_bin).map_err(|e| e.to_string())?;
-    fs::write(dir.join("native.bin"), native).map_err(|e| e.to_string())?;
+    write_files(&args.out, name, files, native)?;
     Ok((version, n, unknown))
 }
 
@@ -251,6 +359,9 @@ fn wanted(args: &Args) -> Result<Vec<LibConf>, String> {
 
 fn run() -> Result<String, String> {
     let args = parse_args()?;
+    if let Some(folder) = &args.from_files {
+        return build_from_folder(&args, folder);
+    }
     let mut entries = Vec::new();
     let mut report = Vec::new();
     for conf in wanted(&args)? {

@@ -1,0 +1,59 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mdai",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MDAI",
+      "synonyms": [
+        "5,6-methylenedioxy-2-aminoindane",
+        "5,6-methylenedioxy-2-aminoindan"
+      ]
+    },
+    "it": {
+      "preferred": "MDAI",
+      "synonyms": [
+        "5,6-metilendiossi-2-amminoindano"
+      ]
+    }
+  },
+  "iupac": "6,7-dihydro-5H-cyclopenta[f][1,3]benzodioxol-6-amine",
+  "formula": "C10H11NO2",
+  "molar_mass_g_mol": 177.2,
+  "smiles": "C1C(CC2=CC3=C(C=C21)OCO3)N",
+  "inchi": "InChI=1S/C10H11NO2/c11-8-1-6-3-9-10(13-5-12-9)4-7(6)2-8/h3-4,8H,1-2,5,11H2",
+  "inchikey": "FQDRMHHCWZAXJM-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q6715120",
+    "cas": "132741-81-2",
+    "pubchem_cid": 125558
+  },
+  "classes": {
+    "chemical": [
+      "aminoindanes"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

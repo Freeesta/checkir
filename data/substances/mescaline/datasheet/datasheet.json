@@ -1,0 +1,80 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mescaline",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "3,4,5-trimethoxyphenylacetic acid",
+        "reaction": "deamination",
+        "source": "mueller2025"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "trimethoxyphenylacetic-acid",
+        "active": null,
+        "source": "mueller2025",
+        "marker": true
+      }
+    ],
+    "half_life_h": {
+      "min": 3.5,
+      "max": 3.5,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "mueller2025"
+    }
+  },
+  "counselling": [
+    {
+      "key": "mescaline.nausea",
+      "topic": "sleep_food_water",
+      "source": "klaiber2024"
+    },
+    {
+      "key": "mescaline.duration",
+      "topic": "dosing",
+      "source": "klaiber2024"
+    },
+    {
+      "key": "mescaline.heart",
+      "topic": "mental_health",
+      "source": "klaiber2024"
+    },
+    {
+      "key": "mescaline.set_setting",
+      "topic": "set_setting",
+      "source": "johnson2008"
+    }
+  ]
+}

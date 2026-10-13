@@ -1,0 +1,59 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-mapb",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-MAPB",
+      "synonyms": [
+        "5-(2-methylaminopropyl)benzofuran",
+        "1-(1-benzofuran-5-yl)-N-methylpropan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "5-MAPB",
+      "synonyms": [
+        "5-(2-metilamminopropil)benzofurano"
+      ]
+    }
+  },
+  "iupac": "1-(1-benzofuran-5-yl)-N-methylpropan-2-amine",
+  "formula": "C12H15NO",
+  "molar_mass_g_mol": 189.25,
+  "smiles": "CC(CC1=CC2=C(C=C1)OC=C2)NC",
+  "inchi": "InChI=1S/C12H15NO/c1-9(13-2)7-10-3-4-12-11(8-10)5-6-14-12/h3-6,8-9,13H,7H2,1-2H3",
+  "inchikey": "ZOVRTIPCNFERHY-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q4639615",
+    "cas": "1354631-77-8",
+    "pubchem_cid": 102336592
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

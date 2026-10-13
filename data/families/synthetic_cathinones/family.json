@@ -1,0 +1,40 @@
+{
+  "schema": "family-sheet/1",
+  "id": "synthetic_cathinones",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "interactions": [
+    {
+      "with": "stimulant",
+      "severity": "risky",
+      "mechanism": "sympathomimetic",
+      "source": "gresnigt2026"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "synthetic-cathinones.stimulants",
+      "topic": "combination",
+      "source": "gresnigt2026"
+    },
+    {
+      "key": "synthetic-cathinones.signs",
+      "topic": "overdose_signs",
+      "source": "machacek2026"
+    }
+  ],
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

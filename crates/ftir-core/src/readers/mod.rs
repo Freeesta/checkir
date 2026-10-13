@@ -8,6 +8,7 @@ pub(crate) mod le;
 pub mod model;
 pub mod opus;
 pub mod sha256;
+pub mod shimadzu_lib;
 pub mod spa;
 pub mod spc;
 pub mod text;
@@ -31,6 +32,7 @@ pub static READERS: &[Reader] = &[
     jcamp::READER,
     text::READER,
     ispd::READER,
+    shimadzu_lib::READER,
     spa::READER,
     spc::READER,
     opus::READER,

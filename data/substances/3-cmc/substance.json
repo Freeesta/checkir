@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "3-cmc",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "3-CMC",
+      "synonyms": [
+        "3-chloromethcathinone",
+        "metaclephedrone"
+      ]
+    },
+    "it": {
+      "preferred": "3-CMC",
+      "synonyms": [
+        "3-clorometcatinone"
+      ]
+    }
+  },
+  "iupac": "1-(3-chlorophenyl)-2-(methylamino)propan-1-one",
+  "formula": "C10H12ClNO",
+  "molar_mass_g_mol": 197.66,
+  "smiles": "CC(C(=O)C1=CC(=CC=C1)Cl)NC",
+  "inchi": "InChI=1S/C10H12ClNO/c1-7(12-2)10(13)8-4-3-5-9(11)6-8/h3-7,12H,1-2H3",
+  "inchikey": "VOEFELLSAAJCHJ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1049677-59-9",
+    "pubchem_cid": 50999285
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
