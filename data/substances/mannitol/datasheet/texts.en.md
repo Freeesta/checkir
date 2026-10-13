@@ -6,6 +6,12 @@ D-Mannitol ((2R,3R,4R,5R)-hexane-1,2,3,4,5,6-hexol), formula C6H14O6, molar mass
 
 Chemical class: sugar alcohol (polyol, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent or excipient. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## cuts
+
+Mannitol is among the sugars reported as cuts of cocaine. [f:unodc-cocaine2012]
+
+Internal guidelines of a drug checking service report lidocaine and mannitol as the most frequent cuts of cocaine in Italy, and describe inert cuts as substances that add weight and volume. [f:ubc-counselling-guidelines]
+
 ## effects
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
@@ -26,7 +32,7 @@ Not drafted yet. This section will be written from verifiable sources and signed
 
 ## sources
 
-Sources used for the claims in this sheet: [f:lenhart2017]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:lenhart2017] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
 
 ## license
 

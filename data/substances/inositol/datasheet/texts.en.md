@@ -26,7 +26,7 @@ Not drafted yet. This section will be written from verifiable sources and signed
 
 ## sources
 
-Sources used for the claims in this sheet: [f:carlomagno2011]
+Sources used for the claims in this sheet: [f:carlomagno2011] [f:chebi] [f:checkir-classification] [f:pubchem] [f:wikidata]
 
 ## license
 

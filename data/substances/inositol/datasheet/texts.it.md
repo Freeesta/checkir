@@ -26,7 +26,7 @@ Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:carlomagno2011]
+Fonti usate per le affermazioni di questa scheda: [f:carlomagno2011] [f:chebi] [f:checkir-classification] [f:pubchem] [f:wikidata]
 
 ## license
 

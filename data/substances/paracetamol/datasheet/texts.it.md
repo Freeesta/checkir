@@ -6,6 +6,12 @@ Paracetamolo (N-(4-hydroxyphenyl)acetamide), formula C8H9NO2, massa molare 151.1
 
 Classe chimica: analgesico (non oppioide, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## metabolism
+
+Gran parte di una quantità terapeutica è convertita in glucuronide inattivo (52-57 % dei metaboliti urinari) e in solfato (30-44 %). Una frazione minore (5-10 %) è ossidata, soprattutto da CYP2E1 e CYP1A2, nel metabolita reattivo NAPQI, neutralizzato dal glutatione. [f:mazaleuskaya2015]
+
+L'emivita plasmatica è di 1.5-2.5 ore alle dosi raccomandate e di 4-8 ore dopo un sovradosaggio. Oltre l'intervallo terapeutico si satura prima la solfatazione; dopo una dose altamente tossica si satura anche la glucuronidazione. [f:mazaleuskaya2015]
+
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -24,9 +30,13 @@ La presentazione clinica dell'epatotossicità da paracetamolo può variare e la 
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
 
+## counselling
+
+Chiedi se la persona assume anche medicinali che contengono paracetamolo: il danno epatico può seguire anche un sovradosaggio non intenzionale, e la quantità presente in un campione è ignota. [f:yoon2016]
+
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:yoon2016]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:mazaleuskaya2015] [f:pubchem] [f:wikidata] [f:yoon2016]
 
 ## license
 

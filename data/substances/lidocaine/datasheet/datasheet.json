@@ -1,14 +1,17 @@
 {
   "schema": "datasheet/1",
   "substance": "lidocaine",
-  "version": 2,
+  "version": 3,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
@@ -27,5 +30,58 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "monoethylglycinexylidide (MEGX)",
+        "reaction": "other",
+        "enzymes": [
+          "CYP1A2",
+          "CYP3A4"
+        ],
+        "source": "olkkola2005"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "megx",
+        "active": null,
+        "source": "olkkola2005"
+      }
+    ],
+    "half_life_h": {
+      "min": 2.6,
+      "max": 2.6,
+      "matrix": "plasma",
+      "route": "intravenous",
+      "source": "olkkola2005"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "cocaine",
+      "frequency": "common",
+      "source": "unodc-cocaine2012"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "local-anaesthetic.injecting",
+      "topic": "route",
+      "source": "neal2010"
+    },
+    {
+      "key": "lidocaine.fluvoxamine",
+      "topic": "combination",
+      "source": "olkkola2005"
+    }
+  ],
+  "identity_extra": {
+    "salt_forms": [
+      "lidocaine-hcl-h2o"
+    ]
+  }
 }

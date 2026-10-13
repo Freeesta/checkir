@@ -1,14 +1,16 @@
 {
   "schema": "datasheet/1",
   "substance": "paracetamol",
-  "version": 2,
+  "version": 3,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "metabolism": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
@@ -21,5 +23,63 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "paracetamol glucuronide",
+        "reaction": "glucuronidation",
+        "source": "mazaleuskaya2015"
+      },
+      {
+        "from": "parent",
+        "to": "paracetamol sulfate",
+        "reaction": "sulfation",
+        "source": "mazaleuskaya2015"
+      },
+      {
+        "from": "parent",
+        "to": "NAPQI",
+        "reaction": "other",
+        "enzymes": [
+          "CYP1A2",
+          "other"
+        ],
+        "source": "mazaleuskaya2015"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "paracetamol-glucuronide",
+        "active": false,
+        "source": "mazaleuskaya2015"
+      },
+      {
+        "name_key": "paracetamol-sulfate",
+        "active": null,
+        "source": "mazaleuskaya2015"
+      },
+      {
+        "name_key": "napqi",
+        "active": null,
+        "source": "mazaleuskaya2015"
+      }
+    ],
+    "half_life_h": {
+      "min": 1.5,
+      "max": 2.5,
+      "matrix": "plasma",
+      "route": "recommended doses",
+      "source": "mazaleuskaya2015"
+    }
+  },
+  "counselling": [
+    {
+      "key": "paracetamol.other-medicines",
+      "topic": "combination",
+      "source": "yoon2016"
+    }
+  ]
 }
