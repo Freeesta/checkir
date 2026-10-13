@@ -1,7 +1,7 @@
 {
   "schema": "datasheet/1",
   "substance": "lactose",
-  "version": 1,
+  "version": 2,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
