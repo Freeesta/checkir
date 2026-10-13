@@ -8,7 +8,7 @@ export const SECTIONS = ["molecule", "category", "ftir_limits", "effects", "dose
 export const SANITARY = new Set(["effects", "doses", "risks", "interactions", "harm_reduction"]);
 
 /** Marker of a section that is still a placeholder. */
-const PENDING = "checkir-section-pending";
+const PENDING = /\[f:[a-z]+-section-pending\]/;
 
 /** @typedef {{ id: string, names: Record<string, string>, version: number, section_state: Record<string, string>, reviewers: any[], reviewed: string, review_by: string, ai_assisted: boolean, texts: Record<string, Record<string, string>> }} Sheet */
 /** @typedef {{ title: string, url?: string, doi?: string, year?: number }} Source */
@@ -51,7 +51,7 @@ export function isApproved(sheet, key) {
  */
 export function sectionStatus(sheet, key, lang) {
   const text = sectionText(sheet, key, lang);
-  if (!text || text.includes(`[f:${PENDING}]`)) return "preparing";
+  if (!text || PENDING.test(text)) return "preparing";
   if (SANITARY.has(key) && !isApproved(sheet, key)) return "preparing";
   return "shown";
 }
