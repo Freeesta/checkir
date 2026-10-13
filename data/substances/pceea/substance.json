@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "pceea",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "PCEEA",
+      "synonyms": [
+        "N-(1-phenylcyclohexyl)-2-ethoxyethanamine",
+        "N-(2-ethoxyethyl)-1-phenylcyclohexanamine"
+      ]
+    },
+    "it": {
+      "preferred": "PCEEA",
+      "synonyms": [
+        "N-(1-fenilcicloesil)-2-etossietanammina"
+      ]
+    }
+  },
+  "iupac": "N-(2-ethoxyethyl)-1-phenylcyclohexan-1-amine",
+  "formula": "C16H25NO",
+  "molar_mass_g_mol": 247.4,
+  "smiles": "CCOCCNC1(CCCCC1)C2=CC=CC=C2",
+  "inchi": "InChI=1S/C16H25NO/c1-2-18-14-13-17-16(11-7-4-8-12-16)15-9-5-3-6-10-15/h3,5-6,9-10,17H,2,4,7-8,11-14H2,1H3",
+  "inchikey": "PRQVCBDFWYTXDD-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1072895-05-6",
+    "pubchem_cid": 46839345
+  },
+  "classes": {
+    "chemical": [
+      "arylcyclohexylamines"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
