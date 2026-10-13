@@ -66,7 +66,7 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
       natives.push(Float32Array.from(engine.library_native(file.name, bytes)));
       rows.push(resampled);
       const id = `u${rows.length}`;
-      index.push({ id, form: "imported", substance: id, names: { en: file.name.replace(/\.[^.]*$/, "") }, classes: [], quality: "pass", provenance_type: "user_import" });
+      index.push({ id, form: "", substance: id, names: { en: file.name.replace(/\.[^.]*$/, "") }, classes: [], quality: "pass", provenance_type: "user_import" });
     } catch (e) {
       const notice = noticeOf(e);
       if (notice.key === "reader.unknown_format") out.unrecognized++;

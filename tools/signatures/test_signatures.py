@@ -154,12 +154,12 @@ class Signatures(unittest.TestCase):
         head = files(sheet(version=2), texts("Edited. [f:a]"))
         self.assertEqual(keys(Fake(base, head)), [])
 
-    def test_ftir_limits_needs_chemist_and_health(self):
-        base = files(sheet(), "## ftir_limits\nold\n")
-        state = dict(ALL_DRAFT, ftir_limits="approved")
-        entries = [{"public_name": "Chem Ist", "role": "chemist", "sections": ["ftir_limits"], "date": "2026-10-13"}]
-        head = files(sheet(version=2, section_state=state, reviewers=entries, reviewed="2026-10-13", review_by="2028-10-12"), "## ftir_limits\nnew\n")
-        self.assertEqual(keys(Fake(base, head, [review("Chem")])), ["signatures.missing_approval"])
+    def test_chemist_cannot_sign_a_health_section(self):
+        base = files(sheet(), "## effects\nold\n")
+        state = dict(ALL_DRAFT, effects="approved")
+        entries = [{"public_name": "Chem Ist", "role": "chemist", "sections": ["effects"], "date": "2026-10-13"}]
+        head = files(sheet(version=2, section_state=state, reviewers=entries, reviewed="2026-10-13", review_by="2028-10-12"), "## effects\nnew\n")
+        self.assertEqual(keys(Fake(base, head, [review("Chem")])), ["signatures.missing_approval", "signatures.role_cannot_sign"])
 
     def test_dose_data_change_is_a_health_change(self):
         base = base_approved()

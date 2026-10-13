@@ -74,7 +74,7 @@ def spectrum(sid: str, text: str, xs: list[float], ys: list[float]) -> dict:
     return meta
 
 
-SECTIONS = ["molecule", "category", "ftir_limits", "effects", "doses", "risks", "interactions", "harm_reduction", "sources", "license"]
+SECTIONS = ["molecule", "category", "effects", "doses", "risks", "interactions", "sources", "license"]
 CLAIM = {"en": "Placeholder statement for tests, not a real claim. [f:synthetic-generator]", "it": "Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generator]"}
 
 

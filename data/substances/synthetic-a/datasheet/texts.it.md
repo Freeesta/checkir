@@ -6,10 +6,6 @@ Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generato
 
 Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generator]
 
-## ftir_limits
-
-Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generator]
-
 ## effects
 
 Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generator]
@@ -23,10 +19,6 @@ Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generato
 Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generator]
 
 ## interactions
-
-Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generator]
-
-## harm_reduction
 
 Frase segnaposto per i test, non è un'affermazione reale. [f:synthetic-generator]
 

@@ -61,8 +61,8 @@ export async function sheetsScenario(browser, base, check, axe) {
   const text = (await page.textContent("dialog .substance-sheet")) ?? "";
   check("sheets: the sheet is the one of the candidate", /^synthetic-/.test((await page.getAttribute("dialog .substance-sheet", "data-substance")) ?? ""));
   check("sheets: no banner, no note and no tick", (await page.locator("dialog [role=note]").count()) === 0 && !/Bozza non firmata/.test(text) && (await page.locator("dialog .substance-sheet svg use[href$='#check']").count()) === 0);
-  check("sheets: the ten sections with a state each", (await page.locator("dialog .sheet-section").count()) === 10 && (await page.locator("dialog .sheet-section .state-tag").count()) === 10);
-  check("sheets: version and signed sections are written", /Versione \d+ · sezioni firmate: 0 su 10/.test(text), text.slice(0, 200));
+  check("sheets: the eight sections with a state each", (await page.locator("dialog .sheet-section").count()) === 8 && (await page.locator("dialog .sheet-section .state-tag").count()) === 8);
+  check("sheets: version and signed sections are written", /Versione \d+ · sezioni firmate: 0 su 8/.test(text), text.slice(0, 200));
   check("sheets: every section that has text shows it, nothing is held back", (await page.locator('dialog [data-section="doses"] p:not([data-empty])').count()) >= 1 && (await page.locator("dialog [data-empty]").count()) === 0 && !/preparazione/.test(text));
   check("sheets: no raw [f:...] marker and nothing that reassures", !/\[f:/.test(text) && !REASSURING.test(text), text.slice(0, 200));
   const v = await axe(page);
