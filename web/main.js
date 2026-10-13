@@ -23,6 +23,8 @@ import { loadBands } from "./regions.js";
 import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
+import { buildSubtractView } from "./subtract_view.js";
+import { subtractActions } from "./subtract.js";
 import { buildLimits, buildNextStep } from "./workarea.js";
 
 /** @param {string} id @returns {HTMLElement} */
@@ -107,10 +109,12 @@ async function start() {
     ...languageActions(() => redrawAll(), announce),
     ...matchActions(announce),
     ...peaksActions(engine, announce),
+    ...subtractActions(engine, announce),
     ...decisionActions(announce),
     ...talkActions(announce),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
+    closeSection: () => panels.closeSection(),
     openDialog: (id) => openDialog(id),
     folder: createFolder({ engine, announce }),
     ...libraryActions(engine, announce),
@@ -119,6 +123,7 @@ async function start() {
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
   const next = buildNextStep($("workbar"), ctx);
   const limits = buildLimits($("limits"));
+  const subtraction = buildSubtractView($("subtract"), ctx);
   const talk = wireTalk($("sheet-host"));
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
@@ -134,6 +139,8 @@ async function start() {
       chart.set(code ? (spectrumOf(code) ?? null) : null);
     }
     layers.sync(s, shown ?? null);
+    document.body.toggleAttribute("data-subtract", s.subtraction !== null);
+    subtraction.refresh(s);
     header.refresh(s);
     panels.refresh(s);
     next.refresh(s);

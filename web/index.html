@@ -41,14 +41,15 @@
       <div class="workbar" id="workbar">
         <div class="toolbar" id="chart-toolbar"></div>
       </div>
-      <section aria-labelledby="chart-title">
+      <section id="chart-section" aria-labelledby="chart-title">
         <div class="title-row"><h2 id="chart-title" data-i18n="chart.title"></h2><span id="chart-help"></span></div>
         <p id="peaks-summary" class="peaks-summary" hidden></p>
         <div id="chart" tabindex="0" role="group" data-i18n-aria="chart.title"></div>
         <p id="range" aria-live="polite"></p>
       </section>
+      <section id="subtract" hidden aria-labelledby="subtract-title"></section>
       <div class="limits" id="limits" role="note"></div>
-      <section aria-labelledby="table-title">
+      <section id="table-section" aria-labelledby="table-title">
         <h2 id="table-title" data-i18n="table.title"></h2>
         <div id="table" class="scroll" tabindex="0" role="region" data-i18n-aria="table.region"></div>
       </section>

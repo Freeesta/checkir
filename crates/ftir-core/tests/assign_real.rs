@@ -3,7 +3,8 @@
 //! unexplained peak; with 20 % of a cut added, the unexplained peaks fall on peaks of the cut. Skipped without `CHECKIR_DATA`.
 mod common;
 use ftir_core::assign::result::{ReferenceId, State};
-use ftir_core::assign::{assign, PeakSet, Reference};
+use ftir_core::assign::rules::RuleSet;
+use ftir_core::assign::{assign, assign_with, Context, PeakSet, Reference};
 use ftir_core::confronti::{grid_absorbance, lettori::from_reader};
 use ftir_core::peaks::{detect, Thresholds};
 use ftir_core::readers::{self, model::Limits, model::Options};
@@ -161,4 +162,30 @@ fn the_active_alone_has_no_false_unexplained_peak_and_a_cut_shows_up_from_twenty
             }
         }
     }
+}
+
+#[test]
+fn cocaine_hydrochloride_gets_the_ester_carbonyl_interpretation_near_1712() {
+    let Some(root) = common::private_dir() else {
+        eprintln!("skipped: CHECKIR_DATA not set");
+        return;
+    };
+    let t = Thresholds::embedded().expect("thresholds");
+    let (_, file, ref_file, _, _) = cases(&root).remove(0);
+    let sample = peaks(&normalized(&root, &file), &t);
+    let refs = [reference(peaks(&normalized(&root, &ref_file), &t))];
+    let ctx = Context {
+        rules: Some(RuleSet::embedded().expect("rules")),
+        ..Context::empty()
+    };
+    let a = assign_with(&sample, &refs, &ctx, &t);
+    let found: Vec<_> = sample
+        .peaks
+        .iter()
+        .zip(&a.items)
+        .filter(|(p, _)| (p.position_cm1 - 1712.0).abs() <= 6.0)
+        .flat_map(|(_, i)| i.interpretations.iter().map(|r| r.group.clone()))
+        .collect();
+    eprintln!("cocaine HCl near 1712: {found:?}");
+    assert!(found.iter().any(|g| g.starts_with("ester")), "{found:?}");
 }

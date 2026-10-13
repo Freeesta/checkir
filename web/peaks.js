@@ -75,6 +75,12 @@ function peaksOfSpectrum(s) {
   return sampleCache.get(s);
 }
 
+/** Noise of a spectrum in its own absorbance units (σ of the peak detection), or null when the engine cannot tell. @param {import("./spectrum.js").Spectrum} s @returns {number | null} */
+export function noiseOf(s) {
+  const n = peaksOfSpectrum(s)?.noise_abs;
+  return typeof n === "number" && Number.isFinite(n) ? n : null;
+}
+
 /** @param {any} p @returns {"strong" | "medium" | "weak"} */
 function intensityOf(p) {
   const r = Number(p.prominence_rel);
