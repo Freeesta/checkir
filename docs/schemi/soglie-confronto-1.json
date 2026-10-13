@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:soglie-confronto:1",
+  "title": "Thresholds of the library comparison",
+  "title_it": "Soglie del confronto con le librerie",
+  "description": "Thresholds of the library comparison",
+  "description_it": "Soglie del confronto con le librerie",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "soglie-confronto/1"
+    },
+    "version": {
+      "description": "Version of the thresholds; a result stores it.",
+      "description_it": "Versione delle soglie; il risultato la salva.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "calibration": {
+      "description": "Where the numbers come from.",
+      "description_it": "Da dove vengono i numeri.",
+      "type": "object",
+      "properties": {
+        "bench": {
+          "description": "Bench the numbers come from.",
+          "description_it": "Banco da cui vengono i numeri.",
+          "type": "string"
+        },
+        "chain": {
+          "description": "Id of the chain of steps used.",
+          "description_it": "Id della catena di passi usata.",
+          "type": "string"
+        },
+        "searches": {
+          "description": "Searches of the bench.",
+          "description_it": "Ricerche del banco.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "substances": {
+          "description": "Substances of the bench.",
+          "description_it": "Sostanze del banco.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "validation": {
+          "description": "How the thresholds were validated.",
+          "description_it": "Come sono state validate le soglie.",
+          "type": "string"
+        },
+        "date": {
+          "description": "Year and month of the calibration.",
+          "description_it": "Anno e mese della taratura.",
+          "type": "string",
+          "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+        }
+      },
+      "required": [
+        "bench",
+        "chain",
+        "searches",
+        "substances",
+        "validation",
+        "date"
+      ],
+      "additionalProperties": false
+    },
+    "probable": {
+      "description": "Rule of the level probable.",
+      "description_it": "Regola del livello probabile.",
+      "type": "object",
+      "properties": {
+        "r1_min": {
+          "description": "Lowest r of the first candidate for the level probable.",
+          "description_it": "r minimo del primo candidato per il livello probabile.",
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "margin_min": {
+          "description": "Lowest margin over the first other substance.",
+          "description_it": "Margine minimo sulla prima altra sostanza.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "coverage_min": {
+          "description": "Lowest coverage of the candidate (share of the points).",
+          "description_it": "Copertura minima del candidato (quota dei punti).",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "r1_min",
+        "margin_min",
+        "coverage_min"
+      ],
+      "additionalProperties": false
+    },
+    "to_check": {
+      "description": "Rule of the level to check.",
+      "description_it": "Regola del livello da verificare.",
+      "type": "object",
+      "properties": {
+        "r1_min": {
+          "description": "Lowest r of the first candidate for the level to check.",
+          "description_it": "r minimo del primo candidato per il livello da verificare.",
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "r1_min"
+      ],
+      "additionalProperties": false
+    },
+    "ambiguity": {
+      "description": "Rule of the alert ambiguity.",
+      "description_it": "Regola dell'allerta ambiguita.",
+      "type": "object",
+      "properties": {
+        "margin_below": {
+          "description": "A margin under this value raises the alert ambiguity.",
+          "description_it": "Un margine sotto questo valore fa scattare l'allerta ambiguita.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        }
+      },
+      "required": [
+        "margin_below"
+      ],
+      "additionalProperties": false
+    },
+    "spectral_twin": {
+      "description": "Rule of the alert spectral twin.",
+      "description_it": "Regola dell'allerta gemello spettrale.",
+      "type": "object",
+      "properties": {
+        "r_min": {
+          "description": "Lowest r with a different substance to be a twin.",
+          "description_it": "r minimo con un'altra sostanza per essere un gemello.",
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "r_min"
+      ],
+      "additionalProperties": false
+    },
+    "range_limits": {
+      "description": "Smallest range accepted.",
+      "description_it": "Regione minima accettata.",
+      "type": "object",
+      "properties": {
+        "min_cm1": {
+          "description": "Least total width of the chosen ranges (cm-1).",
+          "description_it": "Larghezza totale minima delle regioni scelte (cm-1).",
+          "type": "number",
+          "minimum": 0
+        },
+        "min_points": {
+          "description": "Fewest grid points of the chosen ranges.",
+          "description_it": "Punti minimi della griglia nelle regioni scelte.",
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "min_cm1",
+        "min_points"
+      ],
+      "additionalProperties": false
+    },
+    "regions": {
+      "description": "Fixed regions that explain where a candidate agrees.",
+      "description_it": "Regioni fisse che spiegano dove un candidato concorda.",
+      "type": "array",
+      "items": {
+        "description": "A region.",
+        "description_it": "Una regione.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Id of the region.",
+            "description_it": "Id della regione.",
+            "type": "string",
+            "pattern": "^[0-9]+-[0-9]+$"
+          },
+          "from_cm1": {
+            "description": "Lower end (cm-1).",
+            "description_it": "Estremo basso (cm-1).",
+            "type": "number",
+            "minimum": 0
+          },
+          "to_cm1": {
+            "description": "Upper end (cm-1).",
+            "description_it": "Estremo alto (cm-1).",
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "from_cm1",
+          "to_cm1"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "range_presets": {
+      "description": "Named range selections; only a calibrated one may reach the level probable.",
+      "description_it": "Selezioni di regioni con nome; solo una tarata puo arrivare al livello probabile.",
+      "type": "array",
+      "items": {
+        "description": "A preset.",
+        "description_it": "Una preimpostazione.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Id of the preset.",
+            "description_it": "Id della preimpostazione.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$"
+          },
+          "ranges": {
+            "description": "Ranges of the preset.",
+            "description_it": "Regioni della preimpostazione.",
+            "type": "array",
+            "items": {
+              "description": "A range [from, to] in cm-1.",
+              "description_it": "Un intervallo [da, a] in cm-1.",
+              "type": "array",
+              "items": {
+                "type": "number",
+                "description": "Wavenumber (cm-1).",
+                "description_it": "Numero d'onda (cm-1)."
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "minItems": 1
+          },
+          "calibrated": {
+            "description": "Thresholds calibrated for this selection.",
+            "description_it": "Soglie tarate per questa selezione.",
+            "type": "boolean"
+          },
+          "probable_r1": {
+            "description": "Own lowest r for probable, if different.",
+            "description_it": "r minimo proprio per probabile, se diverso.",
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          },
+          "probable_margin": {
+            "description": "Own lowest margin for probable, if different.",
+            "description_it": "Margine minimo proprio per probabile, se diverso.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 2
+          }
+        },
+        "required": [
+          "id",
+          "ranges",
+          "calibrated"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "calibration",
+    "probable",
+    "to_check",
+    "ambiguity",
+    "spectral_twin",
+    "range_limits",
+    "regions",
+    "range_presets"
+  ],
+  "additionalProperties": false
+}
