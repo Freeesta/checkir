@@ -6,7 +6,7 @@
  * `result`, `peak_result` (answer to `peak_query`), `error`.
  * The library test adds `prova-start` (libraries to test; the same libraries carry on where it stopped), `prova-stop` and
  * `prova-csv` in, `prova` (progress), `prova-report` (the report so far: when it stops or finishes), `prova-csv`, `prova-error` out.
- * @typedef {{ id: string, version: string, rows?: Array<{ id: string, substance?: string, form?: string, names: { it?: string, en: string } }>, values?: Float32Array, from?: number, step?: number }} LibMessage
+ * @typedef {{ id: string, version: string, rows?: Array<{ id: string, substance?: string, form?: string, names: { it?: string, en: string } }>, sampling?: string, values?: Float32Array, from?: number, step?: number }} LibMessage
  */
 import { ensurePeakIndex } from "./peak_index_job.js";
 
@@ -40,6 +40,7 @@ function addLibrary(lib) {
   const n = rows.length ? Math.round(values.length / rows.length) : 0;
   const axis = Float64Array.from({ length: n }, (_, i) => from + step * i);
   mod.confronto_libreria_inizia(lib.id, lib.version);
+  if (lib.sampling) mod.confronto_libreria_campionamento(lib.id, lib.sampling);
   for (let i = 0; i < rows.length; i++) {
     const r = rows[i];
     const answer = JSON.parse(mod.confronto_libreria_aggiungi(lib.id, r.id, r.substance ?? "", r.names.en, r.form ?? "", "absorbance", axis, Float64Array.from(values.subarray(i * n, (i + 1) * n))));

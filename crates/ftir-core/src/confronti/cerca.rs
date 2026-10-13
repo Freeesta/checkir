@@ -2,13 +2,13 @@
 //! `pearson_spettro/1` is scored beside it (never part of the level rule) and `pearson_regioni/1` explains the top ten.
 use super::controlli::quality_alerts;
 use super::indice::Index;
-use super::livello::{alert, build_alerts, propose, AlertInput};
+use super::livello::{alert, build_alerts, propose, sampling_differs, AlertInput};
 use super::opzioni::Options;
 use super::pearson::pearson;
 use super::punteggio::{score, RowRef, Selection};
 use super::risultato::{Alert, Candidate, Outcome};
 use super::soglie::Thresholds;
-use super::{grid_absorbance, prepare, GRID_STEP_CM1};
+use super::{grid_absorbance, grid_x, prepare, GRID_STEP_CM1};
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::Value;
 use crate::spectrum::{Role, Spectrum};
@@ -83,6 +83,43 @@ fn rows_of(index: &Index, g: usize, spectrum: bool) -> RowRef<'_> {
     }
 }
 
+/// Share (0-1) of the energy of the sample derivative that falls in each explanation region (energy = sum of the
+/// squares over the points of the comparison, the diamond zone excluded).
+fn region_signal(deriv: &[f64], t: &Thresholds) -> Vec<(String, f64)> {
+    let energy = |from: f64, to: f64| -> f64 {
+        deriv
+            .iter()
+            .enumerate()
+            .filter(|(i, v)| v.is_finite() && (from..=to).contains(&grid_x(*i)))
+            .map(|(_, v)| v * v)
+            .sum()
+    };
+    let total = energy(f64::MIN, f64::MAX);
+    t.regions
+        .iter()
+        .map(|r| {
+            let share = if total > 0.0 {
+                energy(r.from_cm1, r.to_cm1) / total
+            } else {
+                0.0
+            };
+            (r.id.clone(), share)
+        })
+        .collect()
+}
+
+fn region_states(
+    r_regions: &[(String, Option<f64>)],
+    signal: &[(String, f64)],
+    t: &Thresholds,
+) -> Vec<(String, &'static str)> {
+    r_regions
+        .iter()
+        .zip(signal)
+        .map(|((id, r), (_, share))| (id.clone(), t.region_agreement.state(*r, *share)))
+        .collect()
+}
+
 fn regions(index: &Index, deriv: &[f64], g: usize, t: &Thresholds) -> Vec<(String, Option<f64>)> {
     t.regions
         .iter()
@@ -111,6 +148,31 @@ fn score_all(index: &Index, sel: (&Selection, &Selection), searched: &[usize]) -
         }
     }
     rows
+}
+
+/// The ranked candidates with their regional r and the state of each region.
+fn candidates_of(
+    index: &Index,
+    rows: &[Scored],
+    order: &[usize],
+    sample: (&[f64], &[(String, f64)]),
+    t: &Thresholds,
+) -> Vec<Candidate> {
+    order
+        .iter()
+        .map(|i| {
+            let s = &rows[*i];
+            let r_regions = regions(index, sample.0, s.g, t);
+            Candidate {
+                region_states: region_states(&r_regions, sample.1, t),
+                g: s.g,
+                r_derivative: s.r,
+                r_spectrum: s.r_spectrum,
+                coverage: s.coverage,
+                r_regions,
+            }
+        })
+        .collect()
 }
 
 /// The alerts about the measurement: `same_as_previous` (r of the derivative with the sample before it in the session
@@ -183,20 +245,17 @@ pub fn search_with(
         .iter()
         .min_by(|a, b| b.r_spectrum.total_cmp(&a.r_spectrum).then(a.g.cmp(&b.g)))
         .map_or((top.g, top.r_spectrum), |s| (s.g, s.r_spectrum));
-    let candidates: Vec<Candidate> = order
-        .iter()
-        .map(|i| {
-            let s = &rows[*i];
-            Candidate {
-                g: s.g,
-                r_derivative: s.r,
-                r_spectrum: s.r_spectrum,
-                coverage: s.coverage,
-                r_regions: regions(index, &p.deriv, s.g, t),
-            }
-        })
-        .collect();
-    let (level, level_caps) = propose(top.r, margin, top.coverage, o, t);
+    let signal = region_signal(&p.deriv, t);
+    let candidates = candidates_of(index, &rows, &order, (&p.deriv, &signal), t);
+    let top_library = index.libs[index.locate(top.g).0].sampling.as_deref();
+    let (level, level_caps) = propose(
+        top.r,
+        margin,
+        top.coverage,
+        sampling_differs(o, top_library),
+        o,
+        t,
+    );
     let measurement = measurement_alerts(query, &p, previous, t);
     let input = AlertInput {
         index,
@@ -216,6 +275,7 @@ pub fn search_with(
         margin_vs: second,
         level,
         level_caps,
+        region_signal: signal,
         alerts,
         ranges: o.ranges.clone(),
         range_preset: o.range_preset.clone(),
@@ -223,5 +283,6 @@ pub fn search_with(
         origin: o.origin.clone(),
         searched,
         thresholds_version: t.version,
+        region_agreement: t.region_agreement,
     })
 }
