@@ -1,0 +1,39 @@
+/* Regions and peaks (section 4 and the chart): a region is a fill pattern per family plus a label, a peak is told by the shape of its marker. */
+.region-ground { fill: var(--text-muted); fill-opacity: 0.12; }
+.region-ink { fill: var(--text); stroke: var(--text); stroke-width: 0.8; opacity: 0.4; }
+circle.region-ink, rect.region-ink { stroke: none; }
+.region { stroke: none; pointer-events: none; }
+.fam-oh_nh .region-ground { fill: var(--oi-sky); fill-opacity: 0.25; }
+.fam-ch .region-ground { fill: var(--oi-green); fill-opacity: 0.2; }
+.fam-carbonyl .region-ground { fill: var(--oi-vermillion); fill-opacity: 0.2; }
+.fam-double .region-ground { fill: var(--oi-purple); fill-opacity: 0.25; }
+.fam-co_cn .region-ground { fill: var(--oi-orange); fill-opacity: 0.25; }
+.fam-oop .region-ground { fill: var(--oi-blue); fill-opacity: 0.2; }
+.fam-heavy .region-ground { fill: var(--oi-yellow); fill-opacity: 0.25; }
+.region-label { font-size: 10px; }
+.peaks-summary { margin: 0.2rem 0 0.4rem; font-weight: 600; }
+.peak { stroke-width: 2; }
+.peak-explained { fill: var(--text); stroke: var(--bg); }
+.peak-unexplained { fill: var(--bg); stroke: var(--text); }
+.peak-minor { fill: var(--bg); stroke: var(--text-muted); stroke-width: 1.5; }
+.peak-plain { fill: var(--text-muted); stroke: var(--bg); }
+.peak-artifact { fill: none; stroke: var(--text-muted); stroke-dasharray: 1 2; }
+.peak-shoulder { stroke-dasharray: 3 2; }
+.peak-focus { stroke: var(--focus); stroke-width: 3; }
+.peak-label { font-weight: 600; }
+.peak-table .sort { font: inherit; font-weight: 600; color: var(--text); background: transparent; border: 0; padding: 0.15rem 0.3rem; min-height: 24px; cursor: pointer; text-align: left; }
+.peak-table th[aria-sort="ascending"] .sort::after { content: " ▲"; }
+.peak-table th[aria-sort="descending"] .sort::after { content: " ▼"; }
+.peak-table tr[aria-current="true"] { outline: 2px solid var(--focus); outline-offset: -2px; }
+.regions, .peak-list { list-style: none; margin: 0.3rem 0; padding: 0; }
+.regions li { display: flex; align-items: center; gap: 0.4rem; min-height: 1.5rem; font-size: 0.9rem; }
+.swatch { flex: none; width: 1.1rem; height: 1.1rem; border: 1px solid var(--text-muted); background-color: var(--color-region); }
+.region-agrees .swatch { background-image: radial-gradient(var(--text) 1.2px, transparent 1.6px); background-size: 6px 6px; }
+.region-partial .swatch { background-image: repeating-linear-gradient(45deg, var(--text) 0 1px, transparent 1px 5px); }
+.region-disagrees .swatch { background-image: repeating-linear-gradient(45deg, var(--text) 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, var(--text) 0 1px, transparent 1px 5px); }
+.region-low_signal .swatch { background-color: transparent; border-style: dashed; }
+.peak-list { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; }
+.peak-item { display: inline-flex; align-items: center; gap: 0.25rem; min-height: 1.5rem; padding: 0 0.4rem; font: inherit; font-size: 0.9rem; color: var(--text); background: transparent; border: 1px solid var(--border); border-radius: 0.3rem; cursor: pointer; }
+.peak-item[aria-pressed="true"] { border-color: var(--focus); border-width: 2px; font-weight: 600; }
+.peaks-ref { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; margin: 0.4rem 0; }
+@media (forced-colors: active) { .region-ground { fill: Canvas; } .peak-minor { fill: Canvas; stroke: CanvasText; } .region-ink { fill: CanvasText; stroke: CanvasText; } .peak-explained { fill: CanvasText; } .peak-unexplained { fill: Canvas; stroke: CanvasText; } .peak-focus { stroke: Highlight; } }

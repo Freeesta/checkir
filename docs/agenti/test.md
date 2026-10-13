@@ -11,7 +11,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `tests_e2e/registri.mjs` (conformità di `ACTIONS`/`PANELS`, senza browser, chiamato da `fumo.mjs`).
 - `tests_e2e/prova.mjs` (la Prova della libreria: libreria sintetica con un gemello noto, report, CSV, niente rete; chiamato da `fumo.mjs`).
 - `tests_e2e/riservatezza.mjs` (T1 statico + T2 canarino, vedi `riservatezza.md`; passo a parte del job `web`).
-- `tests_e2e/fumo.mjs` (Playwright + axe-core; `BROWSER` sceglie il motore del browser, `CHROMIUM_PATH` un eseguibile locale).
+- `tests_e2e/fumo.mjs` (Playwright + axe-core; `BROWSER` sceglie il motore del browser, `CHROMIUM_PATH` un eseguibile locale). Dopo le prove del guscio esegue, in ordine di nome, ogni `tests_e2e/scenari/*.mjs`: il file ha un `export default ({ browser, base, check, axe }) => …` e di norma richiama lo scenario del suo file d'area. Un pacchetto nuovo aggiunge un file (prefisso numerico per l'ordine, es. `250-nome.mjs`) e non tocca `fumo.mjs`.
 
 ## Trappole
 - I nomi dei job richiesti devono restare allineati al ruleset (`ci-ok`). Le basi delle soglie restano vuote.

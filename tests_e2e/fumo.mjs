@@ -1,28 +1,10 @@
 // Smoke e2e: the page loads, draws the synthetic spectrum with its table, is keyboard-operable, axe
 // (light and dark), fits a 320 px viewport (zoom 400 %), and numbers use the decimal point in both languages.
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { chromium, firefox, webkit } from "playwright";
-import { folderScenario } from "./cartella.mjs";
-import { FIXTURE, loadingScenario } from "./caricamento.mjs";
-import { areaScenario } from "./area.mjs";
-import { cleanScenario } from "./pulizia.mjs";
-import { demoScenario } from "./demo.mjs";
-import { matchPureScenario, matchScenario } from "./confronto.mjs";
-import { libraryTestScenario } from "./prova.mjs";
-import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
-import { inverseScenario } from "./inversa.mjs";
-import { peaksScenario } from "./picchi.mjs";
-import { collaudoScenario } from "./collaudo.mjs";
-import { exportScenario } from "./esporta.mjs";
-import { recallScenario } from "./richiamo.mjs";
-import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
+import { FIXTURE } from "./caricamento.mjs";
 import { registryScenario } from "./registri.mjs";
-import { sheetScenario } from "./scheda.mjs";
-import { sheetsPureScenario, sheetsScenario } from "./schede.mjs";
-import { subtractionScenario } from "./sottrazione.mjs";
 import { startSite } from "./sito.mjs";
-import { toolsScenario } from "./strumenti.mjs";
-import { teoriaScenario } from "./teoria.mjs";
 import { versionScenario } from "./versione.mjs";
 
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
@@ -316,30 +298,10 @@ async function run() {
     await splashScenario(browser);
     await pagesScenario(browser);
     await warningsBoxScenario(browser);
-    await loadingScenario(browser, base, check, axe);
-    await demoScenario(browser, base, check, axe);
-    await librariesPureScenario(check);
-    await librariesScenario(browser, base, check, axe);
-    await matchPureScenario(check);
-    await matchScenario(browser, base, check, axe);
-    await libraryTestScenario(browser, base, check, axe);
-    await areaScenario(browser, base, check, axe);
-    await cleanScenario(browser, base, check, axe);
-    await peaksScenario(browser, base, check, axe);
-    await collaudoScenario(browser, base, check);
-    await inverseScenario(browser, base, check, axe);
-    await subtractionScenario(browser, base, check, axe);
-    await toolsScenario(browser, base, check, axe);
-    await recallScenario(browser, base, check, axe);
-    await exportScenario(browser, base, check, axe);
-    await rangesPureScenario(check);
-    await rangesScenario(browser, base, check, axe);
-    await sheetScenario(browser, base, check, axe);
-    await teoriaScenario(browser, base, check, axe);
-    await sheetsPureScenario(check);
-    await sheetsScenario(browser, base, check, axe);
-    await offlineScenario(browser, base, check);
-    await folderScenario(browser, base, check, axe);
+    // Every tests_e2e/scenari/*.mjs default-exports one scenario; they run in name order.
+    for (const file of (await readdir(new URL("./scenari/", import.meta.url))).filter((f) => f.endsWith(".mjs")).sort()) {
+      await (await import(`./scenari/${file}`)).default({ browser, base, check, axe });
+    }
   } finally {
     await browser.close();
     close();
