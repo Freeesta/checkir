@@ -16,9 +16,25 @@ Tagli e miscele: la ketamina compare spesso, a sua volta, nei campioni di anfeta
 
 Classe chimica: arilcicloesilammine. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
 
+## history
+
+La ketamina fu sintetizzata per la prima volta negli Stati Uniti nel 1962 come anestetico dissociativo, cercando un'alternativa alla fenciclidina. [f:kalsi2011] [f:dinis-oliveira2017]
+
+## origin
+
+Composto di sintesi, usato come racemo di enantiomeri S e R. [f:peltoniemi2016]
+
+## metabolism
+
+La ketamina è N-demetilata a norketamina (attiva) soprattutto da CYP3A4 e CYP2B6; seguono deidronorketamina, idrossilazione e glucuronidazione. L'emivita di eliminazione è circa 2-4 ore per via endovenosa. Per via orale la biodisponibilità è scarsa per l'intenso metabolismo di primo passaggio. [f:peltoniemi2016] [f:dinis-oliveira2017]
+
+## cuts
+
+Nelle compresse vendute come ketamina si trovano spesso anfetamina, caffeina, cocaina ed eroina. [f:kalsi2011]
+
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Produce anestesia dissociativa: uno stato catalettico simile alla trance, con incoscienza, amnesia e analgesia profonda a riflessi conservati; gli effetti simpaticomimetici iniziano a dosi sub-anestetiche. Nei volontari sani 0.1-0.5 mg/kg bastano a indurre sintomi dissociativi e schizotipici. L'uso ricreativo avviene soprattutto per insufflazione. [f:kalsi2011]
 
 ## doses
 
@@ -26,15 +42,27 @@ Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata
 
 ## risks
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+L'uso prolungato è associato a cistite emorragica e sintomi urinari: in chi è stato esaminato, volume vescicale ridotto in 57 casi su 77 e idronefrosi in 38 su 70. Può coinvolgere le vie urinarie alte; l'astinenza è l'intervento principale. [f:kalsi2011] [f:zheng2025]
+
+Con l'uso frequente si sviluppano tolleranza e dipendenza psicologica, senza una sindrome di astinenza fisica. [f:kalsi2011]
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Sono riportate interazioni gravi con i depressori del sistema nervoso centrale (etanolo, oppioidi, barbiturici, benzodiazepine) e con i simpaticomimetici. [f:kalsi2011]
+
+## counselling
+
+Chiedere di alcol, oppioidi e benzodiazepine: i depressori del sistema nervoso centrale hanno interazioni gravi con la ketamina. [f:kalsi2011] [f:ubc-counselling-guidelines]
+
+Spiegare che con l'uso frequente la tolleranza cresce e può nascere una dipendenza psicologica, senza astinenza fisica. [f:kalsi2011] [f:ubc-counselling-guidelines]
+
+Chiedere di dolore, urgenza o sangue nelle urine: sono sintomi di danno vescicale da uso prolungato e l'astinenza è l'intervento principale. [f:kalsi2011] [f:zheng2025] [f:ubc-counselling-guidelines]
+
+Ricordare che le compresse vendute come ketamina contengono spesso anfetamina, caffeina, cocaina ed eroina. [f:kalsi2011] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-ketamine] [f:smith-carbonyl] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:unodc-ats2006]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-ketamine] [f:smith-carbonyl] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:unodc-ats2006] [f:checkir-classification] [f:kalsi2011] [f:dinis-oliveira2017] [f:peltoniemi2016] [f:zheng2025] [f:ubc-counselling-guidelines]
 
 ## license
 

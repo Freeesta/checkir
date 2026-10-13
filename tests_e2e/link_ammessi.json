@@ -122,7 +122,7 @@
       "motivo": "namespace identifier, never loaded"
     },
     {
-      "file": "web/schede_ui.js",
+      "file": "web/schede_dati.js",
       "url": "https://doi.org/",
       "motivo": "link a DOI of a cited source, opened only on the user's click (no request from the page)"
     }
