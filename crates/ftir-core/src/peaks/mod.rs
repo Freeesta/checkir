@@ -21,7 +21,7 @@ mod shoulders;
 pub mod thresholds;
 
 use refine::Cand;
-use result::{BroadBand, Kind, Peak, PeakList, Shape, Tier, Warning};
+use result::{BroadBand, IntensityClass, Kind, Peak, PeakList, Shape, Tier, Warning};
 pub use thresholds::Thresholds;
 
 pub const CHAIN_ID: &str = "peak_detect_v1";
@@ -153,6 +153,11 @@ fn finish(mut cands: Vec<Cand>, reference: f64, t: &Thresholds) -> Vec<Peak> {
                 height_abs: c.height,
                 prominence_abs: c.prominence,
                 prominence_rel: rel,
+                intensity: IntensityClass::of(
+                    rel,
+                    t.tolerances.strong_rel_min,
+                    t.tolerances.medium_rel_min,
+                ),
                 fwhm_cm1: c.fwhm.map(|w| round(w, 1)),
                 shape: c.fwhm.map(|w| shape_of(w, t)),
                 tier: if rel >= t.tiers.main_rel_min {

@@ -15,9 +15,6 @@ import { activeFile, candidateKey, getState, resultOf, update, writePref } from 
  * the engine (`assign_peaks`) says «explained» when a peak of the library spectrum lies within the tolerance of the pair, nothing more. Everything stays in memory.
  */
 
-/** Relative prominence from which a peak is told strong / medium (provisional, not calibrated); below it is weak. */
-export const STRONG_MIN = 0.5;
-export const MEDIUM_MIN = 0.2;
 /** The regions of the comparison (`soglie_confronto.json`), used as they are when there is no result yet. */
 const DEFAULT_REGION_IDS = ["3700-2500", "1900-1500", "1500-1000", "1000-650"];
 
@@ -76,18 +73,6 @@ function peaksOfSpectrum(s) {
   return sampleCache.get(s);
 }
 
-/** Noise of a spectrum in its own absorbance units (σ of the peak detection), or null when the engine cannot tell. @param {import("./spectrum.js").Spectrum} s @returns {number | null} */
-export function noiseOf(s) {
-  const n = peaksOfSpectrum(s)?.noise_abs;
-  return typeof n === "number" && Number.isFinite(n) ? n : null;
-}
-
-/** @param {any} p @returns {"strong" | "medium" | "weak"} */
-function intensityOf(p) {
-  const r = Number(p.prominence_rel);
-  return r >= STRONG_MIN ? "strong" : r >= MEDIUM_MIN ? "medium" : "weak";
-}
-
 /** Assignment of the sample peaks against the given references (`assign_peaks`, rules embedded); without any only the readings. @param {any} list @param {any[]} refs @returns {any | null} */
 function assignOf(list, refs) {
   if (!engine) return null;
@@ -131,7 +116,7 @@ function rowsOf(list, assignment, compared, names) {
   return list.peaks.map((/** @type {any} */ p) => {
     const item = /** @type {any} */ (items.get(p.id));
     const by = item?.explained_by ?? null;
-    return { id: p.id, position: p.position_cm1, state: stateOf(item, p, compared), by: by ? by.ref_peak_cm1 : null, byName: by ? (names.get(by.substance_id) ?? null) : null, delta: by ? by.delta_cm1 : null, otherForm: item?.state === "explained_other_form", group: by?.group ?? null, mode: by?.mode ?? null, readings: item?.interpretations ?? [], crowded: !!item?.crowded, regions: p.region_ids ?? [], shoulder: p.kind === "shoulder", intensity: intensityOf(p), shape: p.shape ?? null, fwhm: p.fwhm_cm1 ?? null, tier: p.tier === "secondary" ? "secondary" : "main" };
+    return { id: p.id, position: p.position_cm1, state: stateOf(item, p, compared), by: by ? by.ref_peak_cm1 : null, byName: by ? (names.get(by.substance_id) ?? null) : null, delta: by ? by.delta_cm1 : null, otherForm: item?.state === "explained_other_form", group: by?.group ?? null, mode: by?.mode ?? null, readings: item?.interpretations ?? [], crowded: !!item?.crowded, regions: p.region_ids ?? [], shoulder: p.kind === "shoulder", intensity: p.intensity, shape: p.shape ?? null, fwhm: p.fwhm_cm1 ?? null, tier: p.tier === "secondary" ? "secondary" : "main" };
   });
 }
 
