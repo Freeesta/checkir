@@ -16,9 +16,9 @@
     {"id": "inositol", "names": ["inositol"], "sheet": "inositol"},
     {"id": "lactose", "names": ["lactose"], "sheet": "lactose"},
     {"id": "sucrose", "names": ["sucrose"]},
-    {"id": "dimethyl-sulfone", "names": ["dimethyl sulfone", "dimethylsulfone", "msm"]},
-    {"id": "diltiazem", "names": ["diltiazem"]},
-    {"id": "hydroxyzine", "names": ["hydroxyzine"]},
+    {"id": "dimethyl-sulfone", "names": ["dimethyl sulfone", "dimethylsulfone", "msm"], "sheet": "dimethyl-sulfone"},
+    {"id": "diltiazem", "names": ["diltiazem"], "sheet": "diltiazem"},
+    {"id": "hydroxyzine", "names": ["hydroxyzine"], "sheet": "hydroxyzine"},
     {"id": "boric-acid", "names": ["boric acid"]},
     {"id": "glucose", "names": ["glucose"]},
     {"id": "starch", "names": ["starch"]},
@@ -31,6 +31,7 @@
     {"id": "metamizole", "names": ["metamizole"]},
     {"id": "diphenhydramine", "names": ["diphenhydramine"]},
     {"id": "xylitol", "names": ["xylitol"]},
-    {"id": "erythritol", "names": ["erythritol"]}
+    {"id": "erythritol", "names": ["erythritol"]},
+    {"id": "xylazine", "names": ["xylazine"], "sheet": "xylazine"}
   ]
 }
