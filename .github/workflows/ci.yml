@@ -39,7 +39,7 @@ jobs:
           changed=$(git diff --name-only "$BASE" "$GITHUB_SHA")
           common='^(\.github/workflows/ci\.yml|tools/controlla)'
           match() { echo "$changed" | grep -qE "$1|$common" && echo true || echo false; }
-          echo "rust=$(match '^(crates/|Cargo\.|rust-toolchain\.toml|deny\.toml|tools/clippy_base\.json)')" >> "$GITHUB_OUTPUT"
+          echo "rust=$(match '^(crates/|Cargo\.|rust-toolchain\.toml|deny\.toml|tools/clippy_base\.json|tools/libreria/)')" >> "$GITHUB_OUTPUT"
           echo "web=$(match '^(web/|tests_e2e/|tsconfig\.json|package(-lock)?\.json|tools/costruisci_sito\.sh|crates/)')" >> "$GITHUB_OUTPUT"
           echo "data=$(match '^(data/|docs/schemi/|tests/fixture/schemi/|tools/dati/|\.github/ISSUE_TEMPLATE/|\.github/labels\.yml|\.github/CODEOWNERS|\.github/pull_request_template\.md)')" >> "$GITHUB_OUTPUT"
 

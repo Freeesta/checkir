@@ -244,5 +244,20 @@
   "status.file_failed": "The file was not opened.",
   "status.file_closed": "File closed and deleted from memory.",
   "action.file_close.label": "Close",
-  "action.file_close.tip": "Close the chosen spectrum and delete it from memory"
+  "action.file_close.tip": "Close the chosen spectrum and delete it from memory",
+  "library.manifest_invalid": "The library manifest is not valid ({field}).",
+  "library.index_invalid": "The library index is not valid ({field}).",
+  "library.schema_unknown": "This library was made for another version of the program ({schema}). It must be rebuilt.",
+  "library.sha256_mismatch": "The library {name} {version} is damaged: its data does not match its checksum. Download or import it again.",
+  "library.size_mismatch": "The library data has the wrong size ({found} bytes instead of {expected}).",
+  "library.too_large": "The library is too large ({bytes} bytes, the limit is {max}).",
+  "library.too_many_spectra": "The library has too many spectra ({n}, the limit is {max}).",
+  "library.count_mismatch": "The library manifest lists {manifest} spectra but its index has {index}.",
+  "library.row_length": "Spectrum {row} has {found} points instead of {expected}.",
+  "library.no_spectrum": "The file contains no spectrum.",
+  "library.x_unit": "The spectrum is not in wavenumbers (cm⁻¹) and cannot enter a library.",
+  "library.y_unit": "The spectrum is not in absorbance or transmittance ({unit}) and cannot enter a library.",
+  "library.source_invalid": "A source file of the library is incomplete ({field}).",
+  "library.spectrum_sha256": "The spectrum file {id} does not match its recorded checksum.",
+  "library.provenance_not_allowed": "The spectrum {id} comes from an unconfirmed sample and cannot enter a public library."
 }

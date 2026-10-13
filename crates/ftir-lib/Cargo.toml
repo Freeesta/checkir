@@ -9,3 +9,7 @@ rust-version.workspace = true
 
 [dependencies]
 ftir-core = { workspace = true }
+
+[[bin]]
+name = "costruisci-libreria"
+path = "../../tools/libreria/costruisci.rs"
