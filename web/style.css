@@ -342,6 +342,7 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .region-agrees .swatch { background-image: radial-gradient(var(--text) 1.2px, transparent 1.6px); background-size: 6px 6px; }
 .region-partial .swatch { background-image: repeating-linear-gradient(45deg, var(--text) 0 1px, transparent 1px 5px); }
 .region-disagrees .swatch { background-image: repeating-linear-gradient(45deg, var(--text) 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, var(--text) 0 1px, transparent 1px 5px); }
+.region-low_signal .swatch { background-color: transparent; border-style: dashed; }
 .peak-list { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; }
 .peak-item { display: inline-flex; align-items: center; gap: 0.25rem; min-height: 1.5rem; padding: 0 0.4rem; font: inherit; font-size: 0.9rem; color: var(--text); background: transparent; border: 1px solid var(--border); border-radius: 0.3rem; cursor: pointer; }
 .peak-item[aria-pressed="true"] { border-color: var(--focus); border-width: 2px; font-weight: 600; }
