@@ -69,6 +69,7 @@ pub struct Tolerances {
     pub atr_up_cm1: f64,
     pub strong_rel_min: f64,
     pub medium_rel_min: f64,
+    pub missing_rel_min: f64,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -184,6 +185,7 @@ fn tolerances(v: &Value) -> EngineResult<Tolerances> {
         atr_up_cm1: atr("up")?,
         strong_rel_min: class("strong_rel_min")?,
         medium_rel_min: class("medium_rel_min")?,
+        missing_rel_min: num(v, &["tolerances", "missing_rel_min"])?,
     })
 }
 

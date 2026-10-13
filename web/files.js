@@ -44,10 +44,37 @@ function extent(xs) {
 export function addSpectrum(spectrum, fields) {
   const code = `C${++seq}`;
   store.set(code, spectrum);
-  const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, role: "sample", parent: null, note: null, warnings: [], ...fields };
+  const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, role: "sample", parent: null, note: null, derived: null, warnings: [], ...fields };
   const s = getState();
   update({ files: [...s.files, /** @type {FileEntry} */ (entry)], active: code, fileError: null });
   return code;
+}
+
+/** Next code of a residual: the root sample's code, `-r`, and the next number (C1 → C1-r1 → C1-r2…). @param {string} parent @returns {string} */
+function residualCode(parent) {
+  const root = parent.split("-r")[0];
+  const used = getState().files.map((f) => (f.code.startsWith(`${root}-r`) ? Number(f.code.slice(root.length + 2)) : 0));
+  return `${root}-r${Math.max(0, ...used) + 1}`;
+}
+
+/**
+ * Add a residual as a new spectrum under the one it was made from; the shown spectrum does not change and the original is never touched.
+ * @param {string} parent code of the spectrum the reference was subtracted from
+ * @param {Spectrum} spectrum
+ * @param {import("./state.js").Derived} derived
+ * @returns {string} the code
+ */
+export function addResidual(parent, spectrum, derived) {
+  const code = residualCode(parent);
+  store.set(code, spectrum);
+  const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, role: "residual", parent, note: null, derived, warnings: [] };
+  update({ files: [...getState().files, /** @type {FileEntry} */ (entry)] });
+  return code;
+}
+
+/** The last residual made, if any (the one `history.undo` takes away). @param {import("./state.js").AppState} s @returns {FileEntry | undefined} */
+export function lastResidual(s) {
+  return [...s.files].reverse().find((f) => f.role === "residual");
 }
 
 /** @param {Spectrum} demo */
@@ -108,14 +135,15 @@ export function closeFile(code) {
   const results = Object.fromEntries(Object.entries(s.results).filter(([c]) => !gone.has(c)));
   const decisions = Object.fromEntries(Object.entries(s.decisions).filter(([c]) => !gone.has(c)));
   const draft = Object.fromEntries(Object.entries(s.draft).filter(([c]) => !gone.has(c)));
-  update({ files, results, decisions, draft, active: gone.has(/** @type {string} */ (s.active)) ? (files[0]?.code ?? null) : s.active, fileError: null });
+  const open = s.subtraction && gone.has(s.subtraction.sample) ? null : s.subtraction;
+  update({ files, results, decisions, draft, subtraction: open, active: gone.has(/** @type {string} */ (s.active)) ? (files[0]?.code ?? null) : s.active, fileError: null });
 }
 
 /** Forget everything loaded. */
 export function closeAll() {
   store.clear();
   seq = 0;
-  update({ files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: false, decisions: {}, draft: {}, talk: false });
+  update({ files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: false, decisions: {}, draft: {}, talk: false, subtraction: null });
 }
 
 /**

@@ -4,7 +4,11 @@ import { STORAGE_PREFIX } from "./appname.js";
 /**
  * One loaded spectrum. The real file name never leaves the file panel and the tooltip; the header shows `code`.
  * @typedef {{ key: string, params: Record<string, string> }} Notice
- * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, warnings: Notice[] }} FileEntry
+ * What a residual was made from: the reference (its name and library) and the factor k used.
+ * @typedef {{ name: string, library: string, k: number }} Derived
+ * The open guided subtraction (memory only): the spectrum it works on, the chosen reference, the factor now shown and the one proposed.
+ * @typedef {{ sample: string, library: string, spectrumId: string, name: string, k: number, proposed: number, max: number }} Subtraction
+ * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, derived: Derived | null, warnings: Notice[] }} FileEntry
  * @typedef {{ id: string, name: string }} Offer
  * @typedef {{ supported: boolean, watching: boolean, folderName: string | null, saved: string | null, remember: boolean, auto: boolean, offers: Offer[], notice: Notice | null }} FolderState
  * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, private: boolean, enabled: boolean }} LibraryEntry
@@ -16,12 +20,12 @@ import { STORAGE_PREFIX } from "./appname.js";
  * The chemist's decision on one spectrum: level 1–5 and the chosen candidates (keys), valid for the libraries searched (`sig`). Memory only; the sheet is never stored.
  * @typedef {{ level: number, keys: string[] }} DecisionDraft
  * @typedef {{ level: number, keys: string[], sig: string }} Decision
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, folder: FolderState }} AppState
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, folder: FolderState }} AppState
  */
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, showPeaks: false, peakFocus: null, decisions: {}, draft: {}, sheetLang: null, talk: false, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, showPeaks: false, peakFocus: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();
