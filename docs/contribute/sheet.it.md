@@ -10,7 +10,7 @@ Per chimici e operatori sanitari. Le schede sono pubblicate con licenza CC BY-SA
 
 ## Revisione
 - Un chimico controlla il contenuto analitico (bande, forme, limiti dell'FTIR).
-- **Un revisore sanitario approva sempre i testi sanitari** (effetti, rischi, punti di riduzione del danno). Nessun manutentore li approva da solo. Finché una sezione non è approvata, il programma mostra «testo in revisione».
+- **Un revisore elencato approva sempre i testi sanitari** (effetti, rischi, punti di riduzione del danno). Nessun manutentore li approva da solo. Finché una sezione non è approvata, il programma mostra «testo in revisione».
 - Le dosi seguono solo le regole del progetto e non si indicano mai per le sostanze potenti.
 
 ## Regole

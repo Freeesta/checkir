@@ -16,7 +16,7 @@ checkIR is built by chemists, health workers, translators and developers. Pick y
 - No synthesis, extraction, potentiation or cutting instructions; no vendors or places to buy substances.
 - Only spectra you have the right to publish; never spectra from commercial or restricted libraries.
 - Licences: code MIT OR Apache-2.0; new spectra and data CC BY 4.0; substance sheets CC BY-SA 4.0. You keep your copyright; there is no CLA.
-- Health texts are always approved by a health reviewer. The program proposes, the chemist decides, nothing is ever "safe".
+- Health texts are always approved by a reviewer listed in data/reviewers.json. The program proposes, the chemist decides, nothing is ever "safe".
 - Report a problem or a dangerous substance family with the [issue forms](https://github.com/Freeesta/checkir/issues/new/choose).
 
 ## Propose a change to a substance sheet
