@@ -149,11 +149,23 @@ function createYAxis(say) {
   };
 }
 
-/** The menu's view of the chart. @param {{ has: () => boolean, view: () => View, full: () => View, setView: (v: View) => void, y: ReturnType<typeof createYAxis>, cursors: ReturnType<typeof createCursors>, toggleLockY: () => void, lockButton: HTMLElement, csv: () => void }} c @returns {import("./chart_menu.js").MenuChart} */
+/** Remember the view being left (at most 10); the many steps of one wheel turn count as one. @param {{ views: View[], at: number }} past @param {View} v @param {boolean} burst */
+function remember(past, v, burst) {
+  const now = Date.now();
+  if (burst && now - past.at < 500) return void (past.at = now);
+  past.at = now;
+  const last = past.views[past.views.length - 1];
+  if (last && last.min === v.min && last.max === v.max) return;
+  past.views.push({ ...v });
+  if (past.views.length > 10) past.views.shift();
+}
+
+/** The menu's view of the chart. @param {{ has: () => boolean, back: () => unknown, view: () => View, full: () => View, setView: (v: View) => void, y: ReturnType<typeof createYAxis>, cursors: ReturnType<typeof createCursors>, toggleLockY: () => void, lockButton: HTMLElement, csv: () => void }} c @returns {import("./chart_menu.js").MenuChart} */
 function menuChart(c) {
   const centre = () => (c.view().min + c.view().max) / 2;
   return {
     hasSpectrum: c.has,
+    back: c.back,
     zoomOut: () => c.setView(zoom(c.view(), c.full(), 2)),
     showAll: () => c.setView({ ...c.full() }),
     resetAll: () => (c.y.clear(), c.lockButton.setAttribute("aria-pressed", "false"), c.cursors.clear(), c.setView({ ...c.full() })),
@@ -170,7 +182,7 @@ function menuChart(c) {
  * The spectrum is swapped with `set`; with none, a short line says so. With `link`, the x axis follows the other charts joined to the same link.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
  * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean }, ctx?: import("./actions.js").Ctx, codeOf?: () => string | null }} [opts]
- * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void }} `redraw` after a language change
+ * @returns {{ back: () => unknown, redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void }} `redraw` after a language change
  */
 export function wire(el, opts = {}) {
   const say = opts.announce ?? (() => {});
@@ -184,6 +196,7 @@ export function wire(el, opts = {}) {
   let v = { ...full };
   let geom = /** @type {(import("./chart_cursors.js").Geometry & { y0: number, y1: number }) | null} */ (null);
   let frame = 0;
+  const past = /** @type {{ views: View[], at: number }} */ ({ views: [], at: 0 });
   const update = () => {
     if (frame) cancelAnimationFrame(frame);
     frame = 0;
@@ -194,6 +207,7 @@ export function wire(el, opts = {}) {
   /** @param {View} next @param {boolean} [defer] one redraw per frame while the wheel turns */
   const setView = (next, defer = false) => {
     if (!s) return;
+    remember(past, v, defer);
     v = next;
     if (v.min <= full.min && v.max >= full.max) y.clearZoom();
     publish(v);
@@ -223,10 +237,12 @@ export function wire(el, opts = {}) {
     yZoomBy: (/** @type {number} */ f) => geom && (y.zoomBy(geom, f), update()),
   };
   attachInput(el.chart, input);
-  if (opts.ctx) attachMenu(el.chart, menuChart({ has: () => s !== null, view: () => v, full: () => full, setView, y, cursors, toggleLockY, lockButton, csv: () => s && download(`${opts.codeOf?.() ?? "spectrum"}.csv`, tableCsv(s, v)) }), opts.ctx);
+  const back = () => past.views.length && ((v = /** @type {View} */ (past.views.pop())), update());
+  if (opts.ctx) attachMenu(el.chart, menuChart({ has: () => s !== null, back, view: () => v, full: () => full, setView, y, cursors, toggleLockY, lockButton, csv: () => s && download(`${opts.codeOf?.() ?? "spectrum"}.csv`, tableCsv(s, v)) }), opts.ctx);
   refresh();
   update();
   return {
+    back,
     redraw: () => (refresh(), update()),
     setLayers: (next) => ((layers = next), (v = withPeakInView(next, v, full)), update()),
     set: (next) => {
@@ -235,6 +251,7 @@ export function wire(el, opts = {}) {
         y.clear();
         lockButton.setAttribute("aria-pressed", "false");
         cursors.clear();
+        past.views = [];
         if (s) {
           full = extentOf(s);
           v = { ...full };

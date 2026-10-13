@@ -89,6 +89,9 @@ async function axisScenario(page, check) {
   await drag(at(300, 340), at(500, 340));
   check("tools: dragging along the x axis zooms that range", (await page.textContent("#range")) !== full);
   await page.mouse.dblclick(at(400, 150).x, at(400, 150).y);
+  await page.keyboard.press("b");
+  check("tools: b goes back to the previous view", (await page.textContent("#range")) !== full);
+  await page.mouse.dblclick(at(400, 150).x, at(400, 150).y);
   const ticks = await yTicksOf(page);
   await drag(at(30, 250), at(30, 120));
   const zoomedY = await yTicksOf(page);
@@ -112,7 +115,7 @@ async function menuScenario(page, check, axe) {
   await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2, { button: "right" });
   await page.waitForSelector('[role="menu"]');
   const items = await page.$$eval('[role="menu"] button', (b) => b.map((x) => x.dataset.item));
-  check("tools: right click opens the chart menu with its rows", items.length === 8 && items.includes("y.lock") && items.includes("table.export") && items.includes("peaks.toggle"), items.join(","));
+  check("tools: right click opens the chart menu with its rows", items.length === 9 && items.includes("y.lock") && items.includes("table.export") && items.includes("peaks.toggle"), items.join(","));
   check("tools: the first row has the focus", await page.evaluate(() => document.activeElement?.closest('[role="menu"]') !== null));
   const violations = await axe(page);
   check("tools: axe has no violations with the menu open", violations.length === 0, violations.join(", "));

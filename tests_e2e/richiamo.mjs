@@ -43,9 +43,9 @@ export async function recallScenario(browser, base, check, axe) {
   pureScenario(check);
   const { ctx, page } = await prepare(browser, base);
   await page.locator("body").click({ position: { x: 5, y: 5 } });
-  await page.keyboard.press("b");
+  await page.keyboard.press("n");
   await page.waitForSelector("dialog #recall-q");
-  check("recall: b opens the search", await page.isVisible("dialog #recall-q"));
+  check("recall: n opens the search", await page.isVisible("dialog #recall-q"));
   await pick(page, "bet");
   await page.waitForSelector("#recall:not([hidden]) .recall-item");
   const text = (await page.textContent("#recall")) ?? "";
@@ -67,7 +67,7 @@ export async function recallScenario(browser, base, check, axe) {
   check("recall: the scale changes the factor", (await page.textContent(".recall-numbers >> nth=1")) !== before);
   await page.check("#recall-mode-difference");
   await page.waitForSelector("#chart polyline.curve-difference");
-  check("recall: difference shows the residual and hides the references", (await page.locator("#chart polyline.curve-recalled").count()) === 0 && /Il fattore non è la quantità/.test((await page.textContent(".recall-diff")) ?? ""));
+  check("recall: difference shows the residual and hides the references", (await page.locator("#chart polyline.curve-recalled").count()) === 0 && /Differenza: campione/.test((await page.textContent(".recall-diff")) ?? ""));
   await page.click("[data-fk=recall-keep]");
   await openPanel(page, "files");
   await page.waitForFunction(() => document.body.textContent?.includes("C1-r1"));

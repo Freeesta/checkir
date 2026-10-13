@@ -6,7 +6,7 @@ import { t } from "./i18n.js";
  * The menu of the spectrum chart: right click on the chart, or the Menu key / Shift+F10 with the chart focused (the browser's own menu stays everywhere else).
  * The rows are a registry: to add one, add a line to `MENU_ITEMS`. `run` and the tests get the chart (`MenuChart`) and the page context.
  * @typedef {{
- *   hasSpectrum: () => boolean, zoomOut: () => void, showAll: () => void, resetAll: () => void, toggleLockY: () => void, isLocked: () => boolean,
+ *   hasSpectrum: () => boolean, back: () => unknown, zoomOut: () => void, showAll: () => void, resetAll: () => void, toggleLockY: () => void, isLocked: () => boolean,
  *   toggleCursors: () => void, cursorsOn: () => boolean, exportTable: () => void,
  * }} MenuChart
  * @typedef {{ id: string, labelKey: string, run: (c: MenuChart, ctx: import("./actions.js").Ctx) => void, enabled?: (c: MenuChart, ctx: import("./actions.js").Ctx) => boolean, checked?: (c: MenuChart, ctx: import("./actions.js").Ctx) => boolean }} MenuItem
@@ -14,6 +14,7 @@ import { t } from "./i18n.js";
 
 /** @type {MenuItem[]} */
 export const MENU_ITEMS = [
+  { id: "view.back", labelKey: "menu.back", run: (c) => c.back(), enabled: (c) => c.hasSpectrum() },
   { id: "view.out", labelKey: "menu.zoom_out", run: (c) => c.zoomOut(), enabled: (c) => c.hasSpectrum() },
   { id: "view.all", labelKey: "menu.show_all", run: (c) => c.showAll(), enabled: (c) => c.hasSpectrum() },
   { id: "view.reset", labelKey: "menu.reset", run: (c) => c.resetAll(), enabled: (c) => c.hasSpectrum() },

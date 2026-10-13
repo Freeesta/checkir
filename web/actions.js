@@ -15,7 +15,7 @@ import { canSubtract } from "./subtract.js";
  *   togglePeaks: () => void, focusPeak: (id: string | null) => void, stepPeak: (dir: 1 | -1) => boolean, clearPeak: () => boolean,
  *   setTextLevel: (level: import("./state.js").TextLevel) => void, stepLevel: (dir: 1 | -1) => void, toggleModeAnim: () => void, showRule: (range: import("./state.js").RuleRange | null) => void,
  *   subtractOpen: () => void, subtractClose: () => void, subtractSearch: () => Promise<boolean>, setFactor: (k: number) => void, undo: () => void,
- *   recallOpen: () => void, recallAdd: (ref: import("./state.js").Recalled) => boolean, recallRemove: (i: number) => void, recallClear: () => void, setRecall: (patch: Partial<import("./state.js").RecallState>) => void, recallKeep: () => string | null,
+ *   viewBack: () => void, recallOpen: () => void, recallAdd: (ref: import("./state.js").Recalled) => boolean, recallRemove: (i: number) => void, recallClear: () => void, setRecall: (patch: Partial<import("./state.js").RecallState>) => void, recallKeep: () => string | null,
  *   importLibrary: (files: File[], name: string) => Promise<void>, cancelImport: () => void, removeLibrary: (id: string) => void, toggleLibrary: (id: string, on: boolean) => void,
  * }} Ctx
  * @typedef {{
@@ -57,7 +57,8 @@ export const ACTIONS = [
   { id: "decision.sign", labelKey: "action.decision_sign.label", tipKey: "action.decision_sign.tip", icon: "pen", key: "f", section: "sheet", run: (c) => c.signDecision(), enabled: (s) => { const d = draftOf(s); return d !== null && decisionOf(s) === null && isSignable(d); } },
   { id: "decision.revoke", labelKey: "action.decision_revoke.label", tipKey: "action.decision_revoke.tip", icon: "back", section: "sheet", run: (c) => c.revokeDecision(), enabled: (s) => decisionOf(s) !== null },
   { id: "sheet.print", labelKey: "action.sheet_print.label", tipKey: "action.sheet_print.tip", icon: "sheet", section: "sheet", run: (c) => c.printSheet(), enabled: (s) => resultOf(s) !== null },
-  { id: "library.recall", labelKey: "action.library_recall.label", tipKey: "action.library_recall.tip", icon: "library", key: "b", section: "libraries", run: (c) => c.recallOpen(), enabled: (s) => s.files.length > 0 && activeLibraries(s).length > 0 },
+  { id: "library.recall", labelKey: "action.library_recall.label", tipKey: "action.library_recall.tip", icon: "library", key: "n", section: "libraries", run: (c) => c.recallOpen(), enabled: (s) => s.files.length > 0 && activeLibraries(s).length > 0 },
+  { id: "view.back", labelKey: "action.view_back.label", tipKey: "action.view_back.tip", icon: "back", key: "b", run: (c) => c.viewBack(), enabled: (s) => s.files.length > 0 },
   { id: "overlay.toggle", labelKey: "action.overlay_toggle.label", tipKey: "action.overlay_toggle.tip", icon: "results", key: "r", section: "results", run: (c) => c.toggleOverlay(), enabled: (s) => resultOf(s) !== null },
   { id: "peaks.toggle", labelKey: "action.peaks_toggle.label", tipKey: "action.peaks_toggle.tip", icon: "peaks", key: "p", section: "peaks", run: (c) => c.togglePeaks(), enabled: (s) => s.files.length > 0 },
   { id: "sheet.talk", labelKey: "action.sheet_talk.label", tipKey: "action.sheet_talk.tip", icon: "sheet", key: "m", section: "sheet", run: (c) => c.toggleTalk(), enabled: (s) => resultOf(s) !== null },

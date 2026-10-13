@@ -80,7 +80,7 @@ export function buildRecallView(host, ctx) {
         clear.addEventListener("click", () => ctx.recallClear());
         const head = el("div", { class: "row" }, [actionButton("library.recall", ctx, { withLabel: true, className: "btn" }), clear]);
         /** @type {Node[]} */
-        const parts = [el("h2", { id: "recall-title" }, [t("recall.title")]), head, controls(s, ctx), list, el("p", { class: "note" }, [t("recall.note")])];
+        const parts = [el("h2", { id: "recall-title" }, [t("recall.title")]), head, controls(s, ctx), list];
         if (view.error) parts.push(el("p", { class: "error", role: "alert" }, [t(view.error.key, view.error.params)]));
         if (view.difference) {
           const keep = el("button", { type: "button", class: "btn primary", "data-fk": "recall-keep" }, [t("recall.keep")]);

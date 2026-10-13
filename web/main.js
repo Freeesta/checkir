@@ -111,7 +111,7 @@ async function start() {
   await loadBands();
   await loadBandData(currentLang());
   const input = wireFileInput({ engine, announce });
-  let redrawAll = () => {};
+  let redrawAll = () => {}, viewBack = () => {};
   /** @type {import("./actions.js").Ctx} */
   const ctx = {
     getState,
@@ -123,7 +123,7 @@ async function start() {
       announce(t("status.file_closed"));
     },
     ...languageActions(() => redrawAll(), announce),
-    ...workActions(engine, announce), ...recallActions(announce), recallOpen: () => openRecallDialog(ctx),
+    ...workActions(engine, announce), ...recallActions(announce), recallOpen: () => openRecallDialog(ctx), viewBack: () => viewBack(),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     closeSection: () => panels.closeSection(),
@@ -142,6 +142,7 @@ async function start() {
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
   const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), peaks: chartPeakKeys(ctx) });
+  viewBack = chart.back;
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
   const card = createPeakCard($("peak-card"), ctx);

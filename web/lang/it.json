@@ -556,14 +556,13 @@
   "recall.scale_lsq": "Ai minimi quadrati (k)",
   "recall.offset": "Passo dello sfalsamento (assorbanza)",
   "recall.numbers": "r spettro {rs} · r derivata {rd} · fattore {k}.",
-  "recall.note": "Numeri indicativi, calcolati dalla pagina fuori dalla zona 1900–2400 cm⁻¹. Un composto scelto a mano non ha un livello: guarda quanto è lontano dal primo del confronto.",
   "recall.position": "Posizione nel confronto: {rank}º; il primo ha r {first}.",
   "recall.not_similar": "Non è tra i più simili; il primo ha r {first}.",
   "recall.no_comparison": "Nessun confronto per questo spettro.",
   "recall.remove": "Togli {name}",
   "recall.use_difference": "Usa per la differenza",
   "recall.keep": "Tieni come residuo",
-  "recall.difference_note": "Differenza: campione − k × {name}, con k = {k} e il fondo stimato insieme. Il fattore non è la quantità.",
+  "recall.difference_note": "Differenza: campione − k × {name}, con k = {k} e il fondo stimato insieme.",
   "recall.difference_label": "Differenza con {name} (k = {k})",
   "recall.search_title": "Richiama un composto",
   "recall.search_label": "Nome, inizio del nome o InChIKey",
@@ -654,5 +653,8 @@
   "mode.out_of_plane": "Moto fuori dal piano: ⊙ verso chi guarda, ⊗ via da chi guarda.",
   "mode.moving": "Il disegno si muove (un ciclo ogni 1.2 s).",
   "mode.still": "Due immagini, A e B, con frecce: gli estremi del moto.",
-  "mode.example": "Esempio con un gruppo CH₂: mostra il tipo di moto, non la molecola del campione."
+  "mode.example": "Esempio con un gruppo CH₂: mostra il tipo di moto, non la molecola del campione.",
+  "action.view_back.label": "Vista precedente",
+  "action.view_back.tip": "Torna all'ultima vista del grafico (fino a 10 zoom).",
+  "menu.back": "Vista precedente"
 }
