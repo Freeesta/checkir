@@ -154,6 +154,41 @@ class Signatures(unittest.TestCase):
         head = files(sheet(version=2), texts("Edited. [f:a]"))
         self.assertEqual(keys(Fake(base, head)), [])
 
+    def test_draft_edit_without_version_bump_passes(self):
+        base = files(sheet(), texts())
+        head = files(sheet(), texts("Edited. [f:a]"))
+        self.assertEqual(keys(Fake(base, head)), [])
+
+    def test_draft_data_edit_without_bump_passes(self):
+        base = files(sheet(), texts())
+        head = files(sheet(show_doses=True), texts())
+        self.assertEqual(keys(Fake(base, head, changed=[SHEET])), [])
+
+    def test_draft_edit_with_bigger_bump_fails(self):
+        base = files(sheet(), texts())
+        self.assertEqual(keys(Fake(base, files(sheet(version=3), texts("Edited. [f:a]")))), ["sheet.version_not_incremented"])
+
+    def test_draft_edit_with_bump_is_not_a_renewal(self):
+        base = files(sheet(), texts())
+        head = files(sheet(version=2, reviewed="2026-10-13", review_by="2028-10-12"), texts("Edited. [f:a]"))
+        self.assertEqual(keys(Fake(base, head)), [])
+
+    def test_signed_section_edit_still_needs_new_version(self):
+        base = base_approved()
+        head_doc = sheet(section_state=dict(ALL_DRAFT, effects="approved"))
+        fake = Fake(base, files(head_doc, texts("New. [f:a]")))
+        self.assertEqual(keys(fake), ["sheet.version_not_incremented", "signatures.missing_approval"])
+
+    def test_signed_section_back_to_draft_needs_bump_but_no_signature(self):
+        base = base_approved()
+        fake = Fake(base, files(sheet(version=2), texts("New. [f:a]")))
+        self.assertEqual(keys(fake), [])
+
+    def test_mixed_draft_and_signed_edit_needs_bump(self):
+        base = files(sheet(section_state=dict(ALL_DRAFT, effects="approved")), texts())
+        head = files(sheet(section_state=dict(ALL_DRAFT, effects="approved")), "## molecule\nM2\n\n## effects\nNew\n")
+        self.assertIn("sheet.version_not_incremented", keys(Fake(base, head)))
+
     def test_chemist_cannot_sign_a_health_section(self):
         base = files(sheet(), "## effects\nold\n")
         state = dict(ALL_DRAFT, effects="approved")
