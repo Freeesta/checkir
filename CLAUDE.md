@@ -42,6 +42,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 | `web/` | `docs/agenti/pagina.md` |
 | `data/`, `docs/schemi/` | `docs/agenti/dati.md` |
 | `tests_e2e/`, `tools/`, `.github/` | `docs/agenti/test.md` |
+| CSP, esportazioni, anonimizzazione, avvertenze, informativa | `docs/agenti/riservatezza.md` |
 
 ## 6. Trappole generali
 - `ftir-wasm` non ha `forbid(unsafe_code)`: il codice generato da wasm-bindgen lo richiede; non metterci logica.

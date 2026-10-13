@@ -112,6 +112,8 @@ jobs:
         run: bash tools/costruisci_sito.sh
       - name: Smoke e2e with accessibility checks (axe, keyboard, zoom 400 %, light/dark, both languages)
         run: node tests_e2e/fumo.mjs
+      - name: Privacy (T1 exact CSP and no remote URL; T2 canary file, no request out, nothing stored)
+        run: node tests_e2e/riservatezza.mjs
 
   limits:
     runs-on: ubuntu-24.04
