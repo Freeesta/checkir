@@ -44,7 +44,7 @@ function extent(xs) {
 export function addSpectrum(spectrum, fields) {
   const code = `C${++seq}`;
   store.set(code, spectrum);
-  const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, sampling: "unknown", role: "sample", parent: null, note: null, derived: null, warnings: [], ...fields };
+  const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, scans: null, sampling: "unknown", role: "sample", parent: null, note: null, derived: null, warnings: [], ...fields };
   const s = getState();
   update({ files: [...s.files, /** @type {FileEntry} */ (entry)], active: code, fileError: null });
   return code;
@@ -72,7 +72,7 @@ function residualCode(parent) {
 export function addResidual(parent, spectrum, derived) {
   const code = residualCode(parent);
   store.set(code, spectrum);
-  const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, sampling: "unknown", role: "residual", parent, note: null, derived, warnings: [] };
+  const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, scans: null, sampling: "unknown", role: "residual", parent, note: null, derived, warnings: [] };
   update({ files: [...getState().files, /** @type {FileEntry} */ (entry)] });
   return code;
 }
@@ -101,7 +101,7 @@ async function readOne(file, engine) {
   const warnings = [...r.notices];
   if (r.more > 0) warnings.push({ key: "reader.more_spectra", params: { count: String(r.more) } });
   if (engineUnit(r.spectrum) === null) warnings.push({ key: "reader.y_unit_other", params: {} });
-  addSpectrum(r.spectrum, { name: file.name, resolutionCm1: r.resolutionCm1, sampling: r.sampling, warnings });
+  addSpectrum(r.spectrum, { name: file.name, resolutionCm1: r.resolutionCm1, scans: r.scans, sampling: r.sampling, warnings });
 }
 
 /** Whether the engine reads the file now, without adding it to the analysis (a file too big is left to `openFiles`, which says so). @param {File} file @param {import("./engine.js").Engine | null} engine @returns {Promise<boolean>} */

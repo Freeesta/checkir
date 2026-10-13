@@ -73,11 +73,14 @@ fn version_of(items: &[Item]) -> Option<String> {
     })
 }
 
-pub fn open(bytes: &[u8], limits: &Limits, _options: &Options) -> ReadResult<Document> {
+pub fn open(bytes: &[u8], limits: &Limits, options: &Options) -> ReadResult<Document> {
     if bytes.len() > limits.max_bytes {
         return Err(ReadError::limit("bytes", limits.max_bytes));
     }
     let (text, fell_back, bom) = text::decode(bytes);
+    if super::text::is_headered_table(&text) {
+        return super::text::open(bytes, limits, options);
+    }
     let items = text::scan(&text, limits)?;
     if !items.iter().any(|i| matches!(i, Item::Ldr(_))) {
         return Err(ReadError::new("reader.jcamp.not_jcamp"));

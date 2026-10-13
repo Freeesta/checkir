@@ -14,8 +14,10 @@ async function pureScenario(check) {
   check("thin: a long spectrum is reduced to at most two points per bucket", kept.length <= 1400 && kept.length > 700, String(kept.length));
   check("thin: the peak and the valley survive the reduction", kept.includes(4321) && kept.includes(777));
   check("thin: a short spectrum is untouched", thin([0, 1, 2], [1, 2, 3], 700).length === 3);
-  const ok = parseDocument(JSON.stringify({ primary: 0, warnings: [], spectra: [{ x: { unit: "Cm1", values: { first: 400, last: 4000, n: 4 } }, y: { unit: "Absorbance", values: [1, 2, 3, 4] }, instrument: { resolution_cm1: 4 }, warnings: [{ key: "w", severity: "Caution", params: { a: "1" } }, { key: "i", severity: "Info", params: {} }] }] }));
-  check("parseDocument: regular axis expanded, resolution and cautions kept", "spectrum" in ok && ok.spectrum.wavenumber_cm1.join() === "400,1600,2800,4000" && ok.resolutionCm1 === 4 && ok.notices.length === 1);
+  const ok = parseDocument(JSON.stringify({ primary: 0, warnings: [], spectra: [{ x: { unit: "Cm1", values: { first: 400, last: 4000, n: 4 } }, y: { unit: "Absorbance", values: [1, 2, 3, 4] }, instrument: { resolution_cm1: 4, scans: 10 }, warnings: [{ key: "w", severity: "Caution", params: { a: "1" } }, { key: "i", severity: "Info", params: {} }] }] }));
+  check("parseDocument: regular axis expanded, resolution and cautions kept", "spectrum" in ok && ok.spectrum.wavenumber_cm1.join() === "400,1600,2800,4000" && ok.resolutionCm1 === 4 && ok.scans === 10 && ok.notices.length === 1);
+  const noScans = parseDocument(JSON.stringify({ primary: 0, warnings: [], spectra: [{ x: { unit: "Cm1", values: [1, 2] }, y: { unit: "Absorbance", values: [1, 2] }, instrument: {}, warnings: [] }] }));
+  check("parseDocument: scans stay null when the file does not state them", "spectrum" in noScans && noScans.scans === null);
   const bad = parseDocument(JSON.stringify({ error: "x", error_key: "reader.jcamp.no_data", params: {} }));
   check("parseDocument: an engine error keeps its key", "error" in bad && bad.error.key === "reader.jcamp.no_data");
   const um = parseDocument(JSON.stringify({ primary: 0, warnings: [], spectra: [{ x: { unit: "Um", values: [1, 2] }, y: { unit: "Absorbance", values: [1, 2] }, instrument: {}, warnings: [] }] }));

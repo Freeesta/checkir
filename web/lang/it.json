@@ -760,6 +760,7 @@
   "results.row": "{rank}. {name},{form} libreria {library}, Match {r}",
   "results.running": "Confronto in corso…",
   "results.sample_file": "Campione",
+  "results.scans": "scansioni",
   "results.similar": "I più simili",
   "results.step": "passo",
   "rowmenu.candidate": "Menu del candidato",

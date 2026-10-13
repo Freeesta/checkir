@@ -760,6 +760,7 @@
   "results.row": "{rank}. {name},{form} library {library}, Match {r}",
   "results.running": "Comparing…",
   "results.sample_file": "Sample",
+  "results.scans": "scans",
   "results.similar": "Most similar",
   "results.step": "step",
   "rowmenu.candidate": "Candidate menu",

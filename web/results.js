@@ -161,10 +161,11 @@ function wireArrows(list, ctx) {
   });
 }
 
-/** "4 cm⁻¹ · step 1.93 cm⁻¹" (resolution only when the file states it). @param {number | null} resolution @param {number} step @returns {string} */
-function resolutionText(resolution, step) {
+/** "4 cm⁻¹ · 10 scans · step 1.93 cm⁻¹" (resolution and scans only when the file states them). @param {number | null} resolution @param {number} step @param {number | null} [scans] @returns {string} */
+function resolutionText(resolution, step, scans = null) {
   const own = resolution === null ? "" : `${t("results.resolution")} ${formatNumber(resolution, 1)} ${t("unit.cm1")} · `;
-  return `${own}${t("results.step")} ${formatNumber(step, 2)} ${t("unit.cm1")}`;
+  const co = scans === null ? "" : `${formatNumber(scans)} ${t("results.scans")} · `;
+  return `${own}${co}${t("results.step")} ${formatNumber(step, 2)} ${t("unit.cm1")}`;
 }
 
 /** The nominal resolution and the spacing of the points of the sample and of the reference file, side by side (data, no comment). @param {any} c @param {import("./state.js").FileEntry | null} file @returns {HTMLElement} */
@@ -172,7 +173,7 @@ function resolutionLines(c, file) {
   const sample = file ? spectrumOf(file.code) : undefined;
   const ref = libraryOriginal(c.library, c.spectrum_id);
   const lines = el("dl", { class: "numbers", "data-part": "resolution" });
-  if (sample && file) lines.append(el("dt", {}, [t("results.sample_file")]), el("dd", {}, [resolutionText(file.resolutionCm1, meanStep(sample.wavenumber_cm1))]));
+  if (sample && file) lines.append(el("dt", {}, [t("results.sample_file")]), el("dd", {}, [resolutionText(file.resolutionCm1, meanStep(sample.wavenumber_cm1), file.scans)]));
   if (ref) lines.append(el("dt", {}, [t("results.reference_file")]), el("dd", {}, [resolutionText(ref.resolutionCm1, meanStep(ref.wavenumber_cm1))]));
   return lines;
 }
