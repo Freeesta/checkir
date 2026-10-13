@@ -6,17 +6,31 @@ Xylazine (N-(2,6-dimethylphenyl)-5,6-dihydro-4H-1,3-thiazin-2-amine), formula C1
 
 Chemical class: alpha-2 adrenergic agonist, a veterinary sedative (grouped here under other substances). Expected effect: depressant or sedative. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## metabolism
+
+In 28 patients who tested positive for fentanyl and xylazine, the median terminal half-life of xylazine in plasma was 12.0 h (range 5.9-20.8), longer than in animal studies. [f:lin2025]
+
+Oxo-xylazine and sulfone-xylazine were detected in all plasma specimens that contained xylazine and appear to circulate in plasma for as long as the parent compound. [f:lin2025]
+
+Animal studies indicate extensive metabolism, a high volume of distribution and rapid distribution and elimination; human data are limited and metabolites have been identified in urine. [f:owusu-antwi2025]
+
 ## cuts
 
 Xylazine is commonly found as an adulterant in illicit drug combinations with fentanyl. [f:marshall2025]
 
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Xylazine is a potent alpha-2 adrenergic agonist marketed as a veterinary sedative; its action on alpha-2 receptors in the central nervous system reduces the release of norepinephrine and dopamine and results in sedation, decreased pain perception and muscle relaxation. [f:owusu-antwi2025]
+
+In humans it can cause central nervous system and respiratory depression, bradycardia, hypotension and death; hyperglycaemia and QT interval prolongation are also described. [f:owusu-antwi2025]
+
+In animal studies the effects begin within minutes and can last up to 4 h. [f:owusu-antwi2025]
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+A systematic review of reported human exposures found doses from 40 to 4300 mg and no established toxic dose. [f:owusu-antwi2025]
+
+Xylazine misuse was more likely with other substances than alone; it is frequently mixed with cocaine and heroin. [f:owusu-antwi2025]
 
 ## risks
 
@@ -38,7 +52,7 @@ Ask whether the person has skin wounds, also away from the injection sites: revi
 
 ## sources
 
-Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:choon2023] [f:marshall2025] [f:owusu-antwi2025] [f:pubchem] [f:vaile2026] [f:wikidata]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:choon2023] [f:lin2025] [f:marshall2025] [f:owusu-antwi2025] [f:pubchem] [f:vaile2026] [f:wikidata]
 
 ## license
 

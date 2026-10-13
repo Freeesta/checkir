@@ -5,6 +5,7 @@
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "metabolism": "draft",
     "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
@@ -43,5 +44,27 @@
       "topic": "route",
       "source": "vaile2026"
     }
-  ]
+  ],
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "oxo-xylazine",
+        "reaction": "other",
+        "source": "lin2025"
+      },
+      {
+        "from": "parent",
+        "to": "sulfone-xylazine",
+        "reaction": "other",
+        "source": "lin2025"
+      }
+    ],
+    "half_life_h": {
+      "min": 5.9,
+      "max": 20.8,
+      "matrix": "plasma",
+      "source": "lin2025"
+    }
+  }
 }

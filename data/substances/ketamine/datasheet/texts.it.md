@@ -38,7 +38,11 @@ Produce anestesia dissociativa: uno stato catalettico simile alla trance, con in
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Dosi singole ricreative tipiche, come le riporta una rassegna dal rapporto di valutazione del rischio dell'EMCDDA: 50-100 mg per via endovenosa, 75-125 mg per via intramuscolare, 200-300 mg per via orale e 60-250 mg per via nasale. [f:kalsi2011]
+
+Una dose ricreativa tipica è il 10-25 % della dose anestetica generale efficace. [f:kalsi2011]
+
+Inizio e durata dell'effetto per via: endovenosa secondi e 30-45 min; intramuscolare 1-5 min e 30-45 min; orale 15-20 min e 60-120 min; nasale 5-10 min e 45-60 min. [f:kalsi2011]
 
 ## risks
 
@@ -62,7 +66,7 @@ Ricordare che le compresse vendute come ketamina contengono spesso anfetamina, c
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-ketamine] [f:smith-carbonyl] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:unodc-ats2006] [f:checkir-classification] [f:kalsi2011] [f:dinis-oliveira2017] [f:peltoniemi2016] [f:zheng2025] [f:ubc-counselling-guidelines]
+Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:dinis-oliveira2017] [f:kalsi2011] [f:peltoniemi2016] [f:pubchem] [f:smith-amine-salts] [f:smith-benzene] [f:smith-carbonyl] [f:swgdrug-ketamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-cathinones2015] [f:unodc-ewa] [f:wikidata] [f:zheng2025]
 
 ## license
 

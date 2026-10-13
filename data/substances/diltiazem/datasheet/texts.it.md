@@ -20,11 +20,15 @@ Il diltiazem è nell'elenco degli adulteranti e dei tagli che la cocaina contien
 
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Il diltiazem è un calcio-antagonista: si ritiene che i suoi effetti terapeutici siano legati all'inibizione dell'ingresso di ioni calcio durante la depolarizzazione del muscolo cardiaco e della muscolatura liscia vascolare. [f:cardizem-label]
+
+È un potente dilatatore delle arterie coronarie e riduce la frequenza cardiaca e la pressione arteriosa sistemica a carichi di esercizio submassimali e massimali; come gli altri calcio-antagonisti riduce la conduzione senoatriale e atrioventricolare nei tessuti isolati. [f:cardizem-label]
+
+Le riduzioni della pressione arteriosa possono occasionalmente causare ipotensione sintomatica. [f:cardizem-label]
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Dose del medicinale autorizzato, dalle informazioni di prescrizione statunitensi delle compresse di diltiazem, per l'angina: si inizia con 30 mg quattro volte al giorno prima dei pasti e a letto e si aumenta gradualmente a intervalli di 1-2 giorni; l'intervallo ottimale medio sembra essere 180-360 mg al giorno. [f:cardizem-label]
 
 ## risks
 
@@ -44,7 +48,7 @@ Spiega che il diltiazem è un farmaco per il cuore che a volte si trova nella co
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:chebi] [f:checkir-classification] [f:chiappini2025] [f:graudins2016] [f:hoglund1989] [f:molden2002] [f:molden2002b] [f:pubchem] [f:unodc-cocaine2012] [f:wikidata] [f:zhang2009]
+Fonti usate per le affermazioni di questa scheda: [f:cardizem-label] [f:chebi] [f:checkir-classification] [f:chiappini2025] [f:graudins2016] [f:hoglund1989] [f:molden2002] [f:molden2002b] [f:pubchem] [f:unodc-cocaine2012] [f:wikidata] [f:zhang2009]
 
 ## license
 

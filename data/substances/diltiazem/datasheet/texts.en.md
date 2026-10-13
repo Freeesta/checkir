@@ -20,11 +20,15 @@ Diltiazem is on the list of the adulterants and cutting agents that cocaine exhi
 
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Diltiazem is a calcium channel blocker: its therapeutic effects are believed to be related to inhibition of the influx of calcium ions during depolarisation of cardiac and vascular smooth muscle. [f:cardizem-label]
+
+It is a potent dilator of the coronary arteries and reduces heart rate and systemic blood pressure at submaximal and maximal exercise loads; like other calcium antagonists it decreases sinoatrial and atrioventricular conduction in isolated tissues. [f:cardizem-label]
+
+Decreases in blood pressure may occasionally result in symptomatic hypotension. [f:cardizem-label]
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Dose of the authorised medicine, from the US prescribing information of diltiazem tablets, for angina: start with 30 mg four times daily before meals and at bedtime and increase gradually at 1- to 2-day intervals; the average optimum range appears to be 180-360 mg per day. [f:cardizem-label]
 
 ## risks
 
@@ -44,7 +48,7 @@ Explain that diltiazem is a heart medicine sometimes found in cocaine: spontaneo
 
 ## sources
 
-Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:chiappini2025] [f:graudins2016] [f:hoglund1989] [f:molden2002] [f:molden2002b] [f:pubchem] [f:unodc-cocaine2012] [f:wikidata] [f:zhang2009]
+Sources used for the claims in this sheet: [f:cardizem-label] [f:chebi] [f:checkir-classification] [f:chiappini2025] [f:graudins2016] [f:hoglund1989] [f:molden2002] [f:molden2002b] [f:pubchem] [f:unodc-cocaine2012] [f:wikidata] [f:zhang2009]
 
 ## license
 

@@ -6,6 +6,14 @@ Dimethyl sulfone, also called methylsulfonylmethane or MSM (methylsulfonylmethan
 
 Chemical class: organosulfur compound (grouped here under other substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## metabolism
+
+Dimethyl sulfone (MSM) is rapidly absorbed: pharmacokinetic studies indicate about 2.1 h in rats and less than 1 h in humans. [f:butawan2017]
+
+It is detected in the urine of humans, in cerebrospinal fluid and in the brain, with an estimated half-life in the brain of 7.5 h. [f:butawan2017]
+
+The general half-life is suggested to be greater than 12 h; in rats 59-79 % of MSM is excreted in urine on the day of administration, unchanged or as another sulfur-containing metabolite, and the half-life is about 12.2 h. [f:butawan2017]
+
 ## cuts
 
 A drug checking data page of the University of Washington counts MSM as the most common substance used to cut methamphetamine in Washington State, USA, and notes that it is best known as a dietary supplement. [f:uw-adai-methamphetamine2025]

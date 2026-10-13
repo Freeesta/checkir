@@ -18,11 +18,19 @@ Hydroxyzine is on the list of the adulterants and cutting agents that cocaine ex
 
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Hydroxyzine is a first-generation antihistamine, authorised as a prescription-only medicine in the European Economic Area for anxiety disorders, skin conditions such as pruritus, dermatitis and urticaria, preoperative sedation and sleep disorders. [f:prac-hydroxyzine2015]
+
+Its sedative effect is described as well known and well characterised; it is considered a useful effect in some indications and an adverse event in others. [f:prac-hydroxyzine2015]
+
+In adults with generalised anxiety disorder, a randomised study of 80 patients found no difference in efficacy from lorazepam at 50 mg of hydroxyzine per day. [f:prac-hydroxyzine2015]
+
+A meta-analysis of five studies (884 participants) found hydroxyzine more effective than placebo for generalised anxiety disorder and equivalent to benzodiazepines and buspirone, with a higher rate of sleepiness or drowsiness than the active comparators. [f:prac-hydroxyzine2015]
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+After its review the PRAC recommended, at the lowest effective dose and for the shortest possible duration, maximum daily doses of 100 mg in adults, 2 mg/kg body weight in paediatric patients up to 40 kg and 50 mg in the elderly. [f:prac-hydroxyzine2015]
+
+Before the review the maximum daily dose in the national product information ranged from 75 mg to 400 mg, most often 300 mg. [f:prac-hydroxyzine2015]
 
 ## risks
 
