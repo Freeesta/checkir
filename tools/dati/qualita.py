@@ -23,6 +23,13 @@ def _detrended(xs: list[float], ys: list[float]) -> list[float]:
     return [y - (ys[0] + slope * (x - xs[0])) for x, y in zip(xs, ys)]
 
 
+def _point_noise(ys: list[float]) -> float:
+    """RMS noise from second differences (white noise of sigma gives sigma): broad real bands, such as the N-H+ stretches
+    of amine salts in 2500-2600 cm-1, do not count as noise."""
+    d = [(ys[i - 1] - 2 * ys[i] + ys[i + 1]) / math.sqrt(6) for i in range(1, len(ys) - 1)]
+    return math.sqrt(sum(v * v for v in d) / len(d)) if d else 0.0
+
+
 def _flat_run(ys: list[float], peak: float) -> int:
     run = best = 0
     for y in ys:
@@ -43,8 +50,8 @@ def checks(j: Jcamp, meta: dict) -> list[tuple[str, str, float | None]]:
     out.append(("scans", "pass" if scans is not None and scans >= 16 else "warning", scans))
     out.append(("saturation", "fail" if peak > 1.5 or _flat_run(ys, peak) >= 3 else "pass", round(peak, 3)))
     out.append(("signal", "fail" if peak < 0.05 else "warning" if peak < 0.1 else "pass", round(peak, 3)))
-    nx, ny = _region(j, 2500, 2600)
-    rms = math.sqrt(sum(r * r for r in _detrended(nx, ny)) / max(len(ny), 1)) if ny else 0.0
+    _, ny = _region(j, 2500, 2600)
+    rms = _point_noise(ny)
     snr = peak / rms if rms > 0 else float("inf")
     out.append(("noise", "fail" if snr < 30 else "warning" if snr < 100 else "pass", None if math.isinf(snr) else round(snr, 1)))
     cx, cy = _region(j, 2300, 2380)

@@ -191,8 +191,9 @@ def check_substance(path: Path, root: Path, ctx: dict, forbidden: list[re.Patter
         meta = load(mp)
         if meta["id"] != mp.stem or meta["form"] not in ctx["forms"] or not meta["id"].startswith(meta["form"] + "."):
             out.append(f"{mp}: id must match the file name and start with an existing form id")
-        if meta["license"] != "CC-BY-4.0":
-            out.append(f"{mp}: spectra in data/ must be CC-BY-4.0 (third-party libraries live outside data/)")
+        community = meta["library"]["name"] == "checkir-community"
+        if (meta["license"] == "CC-BY-4.0") != community:
+            out.append(f"{mp}: checkir-community spectra are CC-BY-4.0; a third-party library with written permission uses LicenseRef-permission-<body>")
         jdx = mp.with_suffix(".jdx")
         if not jdx.is_file():
             out.append(f"{mp}: missing {jdx.name}")

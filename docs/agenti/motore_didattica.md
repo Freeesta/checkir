@@ -10,4 +10,5 @@ Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore:
 
 ## Prove
 - Didattica: `tests/didactic.rs` (valori verificati, riga entro un passo, due righe a metà risoluzione non separate, larghezze relative ≈ 0.67/1.0/1.25, T↔A); `tests/didactic_parity.rs` (NumPy ≤ 1e-9, fixture da `tools/teoria_riferimento.py` a mano); `tests/didactic_vibration.rs` (momento nullo, CO₂ simmetrico inattivo).
+- Miscele e rumore: `tests/miscele_rumore.rs` (rumore bianco 0.005/0.01/0.02, 3 semi, libreria alfa/beta/gamma): trova beta + alfa, 0 picchi non spiegati, nessuna allerta. Con rumore bianco il motore non perde picchi; un LCG scadente nei test JS dava falsi picchi non spiegati (non il motore).
 - Miscele: `tests/miscele.rs` (sintetici), `tests/miscele_parita.rs` (golden di `tools/miscele_riferimento.py`, scipy), `tests/miscele_real.rs` (si salta senza `CHECKIR_DATA`: legge `studio/miscele/miscele_reale_seme11.json` del privato, fatto da `tools/miscele_riferimento_reale.py`; stessi componenti dello script Python su 16 miscele).

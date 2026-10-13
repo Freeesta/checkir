@@ -31,6 +31,8 @@ pub struct Identity {
     pub license: String,
     pub attribution_it: Option<String>,
     pub attribution_en: String,
+    pub terms_it: Option<String>,
+    pub terms_en: Option<String>,
     pub private: bool,
 }
 
@@ -75,6 +77,8 @@ pub fn write_package(
         license: identity.license.clone(),
         attribution_it: identity.attribution_it.clone(),
         attribution_en: identity.attribution_en.clone(),
+        terms_it: identity.terms_it.clone(),
+        terms_en: identity.terms_en.clone(),
         grid: grid.clone(),
         n_spectra: index.len(),
         sha256_data: sha256_hex(&data_bin),
