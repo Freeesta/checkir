@@ -20,7 +20,7 @@ const GAMMA = cand(3, "Gamma-prova", "");
 
 /** @param {string} level @param {any[]} candidates @param {Array<{ id: string, data: any }>} [alerts] @returns {any} */
 function result(level, candidates, alerts = []) {
-  return { level_proposed: level, candidates, alerts: [{ id: "fixed_limit", data: {} }, ...alerts], libraries: [{ id: "prova", version: "0", searched: true }], chain: { derivative: "confronto_v1" }, margin: 0.1, range_preset: "full", level_caps: [] };
+  return { level_proposed: level, candidates, alerts: [...alerts], libraries: [{ id: "prova", version: "0", searched: true }], chain: { derivative: "confronto_v1" }, margin: 0.1, range_preset: "full", level_caps: [] };
 }
 
 /** The six cases: the comparison result, and the decision (null = still a draft). @type {Array<{ data: any, decision: null | { level: number, keys: string[] } }>} */

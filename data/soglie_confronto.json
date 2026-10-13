@@ -1,6 +1,6 @@
 {
   "schema": "soglie-confronto/1",
-  "version": 2,
+  "version": 3,
   "calibration": {
     "bench": "banco-1",
     "chain": "confronto_v1",
@@ -14,6 +14,7 @@
   "ambiguity": { "margin_below": 0.05 },
   "spectral_twin": { "r_min": 0.9 },
   "same_as_previous": { "r_min": 0.99 },
+  "region_agreement": { "agree_min": 0.9, "partial_min": 0.7, "signal_share_min": 0.01 },
   "quality": {
     "status": "draft",
     "saturation_a": 1.5,

@@ -82,6 +82,7 @@ pub fn library_to_bytes(l: &LibraryCache) -> Vec<u8> {
     out.extend(CACHE_VERSION.to_le_bytes());
     put_str(&mut out, &l.id);
     put_str(&mut out, &l.version);
+    put_str(&mut out, l.sampling.as_deref().unwrap_or(""));
     out.extend((l.len() as u32).to_le_bytes());
     for e in &l.entries {
         put_str(&mut out, &e.id);
@@ -107,7 +108,7 @@ pub fn library_from_bytes(bytes: &[u8]) -> EngineResult<LibraryCache> {
             "the cache was built by another version",
         ));
     }
-    let (id, version) = (r.str()?, r.str()?);
+    let (id, version, sampling) = (r.str()?, r.str()?, r.str()?);
     let n = r.u32()? as usize;
     let mut entries = Vec::with_capacity(n.min(1 << 16));
     for _ in 0..n {
@@ -125,6 +126,7 @@ pub fn library_from_bytes(bytes: &[u8]) -> EngineResult<LibraryCache> {
     Ok(LibraryCache {
         id,
         version,
+        sampling: (!sampling.is_empty()).then_some(sampling),
         entries,
         deriv,
         spec,
@@ -179,6 +181,7 @@ mod test {
 
     fn library() -> LibraryCache {
         let mut l = LibraryCache::new("lib", "1.0");
+        l.sampling = Some("ATR".into());
         for k in 0..2 {
             let v: Vec<f64> = (0..GRID_N)
                 .map(|i| (i as f64 * 0.05 * (k + 1) as f64).sin())

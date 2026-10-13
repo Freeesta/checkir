@@ -81,5 +81,10 @@
       ],
       "calibrated": true
     }
-  ]
+  ],
+  "region_agreement": {
+    "agree_min": 0.9,
+    "partial_min": 0.7,
+    "signal_share_min": 0.01
+  }
 }

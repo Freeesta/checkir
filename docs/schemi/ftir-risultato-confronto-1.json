@@ -95,11 +95,24 @@
           "description": "Version of the thresholds used.",
           "description_it": "Versione delle soglie usata.",
           "type": "integer"
+        },
+        "region_agreement": {
+          "description": "Limits used to read the r of each region (agree_min, partial_min) and the share of signal under which a region is not judged (signal_share_min).",
+          "description_it": "Limiti usati per leggere l'r di ogni regione (agree_min, partial_min) e quota di segnale sotto cui una regione non si giudica (signal_share_min).",
+          "type": "object",
+          "properties": {
+            "agree_min": { "description": "Lowest regional r that agrees.", "description_it": "r regionale minimo che concorda.", "type": "number" },
+            "partial_min": { "description": "Lowest regional r that agrees in part.", "description_it": "r regionale minimo che concorda in parte.", "type": "number" },
+            "signal_share_min": { "description": "Lowest share of signal for a region to be judged.", "description_it": "Quota minima di segnale perché una regione sia giudicata.", "type": "number" }
+          },
+          "required": ["agree_min", "partial_min", "signal_share_min"],
+          "additionalProperties": false
         }
       },
       "required": [
         "schema",
-        "version"
+        "version",
+        "region_agreement"
       ],
       "additionalProperties": false
     },
@@ -299,6 +312,15 @@
               "minimum": -1,
               "maximum": 1
             }
+          },
+          "region_states": {
+            "description": "State of each fixed region for this candidate: agrees, partial, disagrees, low_signal (the sample has too little signal there: the r is shown, not judged) or unknown (no r).",
+            "description_it": "Stato di ogni regione fissa per questo candidato: agrees, partial, disagrees, low_signal (il campione ha poco segnale: l'r si mostra, non si giudica) o unknown (nessun r).",
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "enum": ["agrees", "partial", "disagrees", "low_signal", "unknown"]
+            }
           }
         },
         "required": [
@@ -313,7 +335,8 @@
           "r_spectrum",
           "hqi_euclidean",
           "coverage",
-          "r_regions"
+          "r_regions",
+          "region_states"
         ],
         "additionalProperties": false
       },
@@ -377,6 +400,18 @@
         "not_identified"
       ]
     },
+    "tier": {
+      "description": "Identification tier of the proposed level: T2 probable, T3 to check, T4 not identified. T1 (confirmed) is assigned only by the chemist.",
+      "description_it": "Livello di identificazione del livello proposto: T2 probabile, T3 da verificare, T4 non identificato. T1 (confermato) lo assegna solo il chimico.",
+      "type": "string",
+      "enum": ["T2", "T3", "T4"]
+    },
+    "region_signal": {
+      "description": "Share (0-1) of the energy of the sample derivative that falls in each fixed region.",
+      "description_it": "Quota (0-1) dell'energia della derivata del campione che cade in ciascuna regione fissa.",
+      "type": "object",
+      "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+    },
     "level_caps": {
       "description": "Why probable was lowered to to check.",
       "description_it": "Perche probabile e stato abbassato a da verificare.",
@@ -386,7 +421,8 @@
         "enum": [
           "coverage",
           "custom_range",
-          "range_not_calibrated"
+          "range_not_calibrated",
+          "sampling_not_calibrated"
         ],
         "description": "Cap.",
         "description_it": "Limite."
@@ -416,8 +452,7 @@
               "quality_noise",
               "quality_co2_vapour",
               "quality_negative_bands",
-              "custom_range",
-              "fixed_limit"
+              "custom_range"
             ]
           },
           "data": {
@@ -472,6 +507,8 @@
     "margin",
     "margin_vs",
     "level_proposed",
+    "tier",
+    "region_signal",
     "level_caps",
     "alerts",
     "twins"

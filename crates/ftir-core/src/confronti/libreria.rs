@@ -71,6 +71,8 @@ impl Matrix {
 pub struct LibraryCache {
     pub id: String,
     pub version: String,
+    /// Sampling method of the reference spectra (`ATR`, `transmission`, ...), when the library says it.
+    pub sampling: Option<String>,
     pub entries: Vec<LibEntry>,
     pub deriv: Matrix,
     pub spec: Matrix,
@@ -81,6 +83,7 @@ impl LibraryCache {
         Self {
             id: id.to_string(),
             version: version.to_string(),
+            sampling: None,
             entries: Vec::new(),
             deriv: Matrix::default(),
             spec: Matrix::default(),
