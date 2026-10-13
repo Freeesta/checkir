@@ -1,0 +1,45 @@
+{
+  "schema": "family-sheet/1",
+  "id": "nitazenes",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "interactions": [
+    {
+      "with": "benzodiazepines",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "stangeland2025"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "nitazenes.naloxone",
+      "topic": "overdose_signs",
+      "source": "stangeland2025"
+    },
+    {
+      "key": "nitazenes.potency",
+      "topic": "dosing",
+      "source": "stangeland2025"
+    },
+    {
+      "key": "nitazenes.combination",
+      "topic": "combination",
+      "source": "stangeland2025"
+    }
+  ],
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

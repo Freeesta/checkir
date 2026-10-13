@@ -2532,6 +2532,258 @@
       "license": "cited as the source of facts only",
       "consulted": "2026-10-13",
       "tier": "primary"
+    },
+    {
+      "id": "johnson2016",
+      "type": "paper",
+      "title": "Time course of pharmacokinetic and hormonal effects of inhaled high-dose salvinorin A in humans (J Psychopharmacol 30:323-329)",
+      "authors": [
+        "M. W. Johnson",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1177/0269881116629125",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26880225/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251006053331/https://pubmed.ncbi.nlm.nih.gov/26880225/"
+    },
+    {
+      "id": "maqueda2016",
+      "type": "paper",
+      "title": "Naltrexone but not ketanserin antagonizes the subjective, cardiovascular, and neuroendocrine effects of salvinorin-A in humans (Int J Neuropsychopharmacol 19:pyw016)",
+      "authors": [
+        "A. E. Maqueda",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1093/ijnp/pyw016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4966277/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261004041507/https://pmc.ncbi.nlm.nih.gov/articles/PMC4966277/"
+    },
+    {
+      "id": "mahendran2015",
+      "type": "paper",
+      "title": "Salvia divinorum: an overview of the usage, misuse, and addiction processes (Asia Pac Psychiatry 8:23-31)",
+      "authors": [
+        "R. Mahendran",
+        "et al."
+      ],
+      "year": 2015,
+      "doi": "10.1111/appy.12225",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26617400/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250202051823/https://pubmed.ncbi.nlm.nih.gov/26617400/"
+    },
+    {
+      "id": "elkhoury2015",
+      "type": "paper",
+      "title": "The association of Salvia divinorum and psychotic disorders: a review of the literature and case series (J Psychoactive Drugs 47:286-292)",
+      "authors": [
+        "J. El-Khoury",
+        "et al."
+      ],
+      "year": 2015,
+      "doi": "10.1080/02791072.2015.1073815",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26317561/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250202195400/https://pubmed.ncbi.nlm.nih.gov/26317561/"
+    },
+    {
+      "id": "tsujikawa2009",
+      "type": "paper",
+      "title": "In vitro stability and metabolism of salvinorin A in rat plasma (Xenobiotica 39:391-398)",
+      "authors": [
+        "K. Tsujikawa",
+        "K. Kuwayama",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Inoue"
+      ],
+      "year": 2009,
+      "doi": "10.1080/00498250902769967",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19280383/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260224042646/https://pubmed.ncbi.nlm.nih.gov/19280383/"
+    },
+    {
+      "id": "stangeland2025",
+      "type": "paper",
+      "title": "Nitazenes: review of comparative pharmacology and antagonist action (Clin Toxicol 63:393-406)",
+      "authors": [
+        "M. Stangeland",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1080/15563650.2025.2504133",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40422647/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260527163241/https://pubmed.ncbi.nlm.nih.gov/40422647/"
+    },
+    {
+      "id": "el-balkhi2023",
+      "type": "paper",
+      "title": "Designer benzodiazepines: effects, toxicity, and interactions (Ther Drug Monit 45:494-507)",
+      "authors": [
+        "S. El Balkhi",
+        "C. Abbara"
+      ],
+      "year": 2023,
+      "doi": "10.1097/FTD.0000000000001071",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36750450/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20241203125520/https://pubmed.ncbi.nlm.nih.gov/36750450/"
+    },
+    {
+      "id": "wu2023",
+      "type": "paper",
+      "title": "Recent findings and advancements in the detection of designer benzodiazepines: a brief review (Arh Hig Rada Toksikol 74:224-231)",
+      "authors": [
+        "D. Wu",
+        "L. Fu"
+      ],
+      "year": 2023,
+      "doi": "10.2478/aiht-2023-74-3771",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10750316/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20251217012644/https://pmc.ncbi.nlm.nih.gov/articles/PMC10750316/"
+    },
+    {
+      "id": "gameli2024",
+      "type": "paper",
+      "title": "Metabolism and detection of designer benzodiazepines: a systematic review (Drug Metab Rev 56:359-384)",
+      "authors": [
+        "P. S. Gameli",
+        "M. A. Huestis",
+        "A. Balloni",
+        "F. P. Busardò",
+        "J. Carlier"
+      ],
+      "year": 2024,
+      "doi": "10.1080/03602532.2024.2410747",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39340261/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250203165931/https://pubmed.ncbi.nlm.nih.gov/39340261/"
+    },
+    {
+      "id": "lo-faro2023",
+      "type": "paper",
+      "title": "New psychoactive substances intoxications and fatalities during the COVID-19 epidemic (Biology 12:273)",
+      "authors": [
+        "A. F. Lo Faro",
+        "et al."
+      ],
+      "year": 2023,
+      "doi": "10.3390/biology12020273",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36829550/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261011063959/https://pubmed.ncbi.nlm.nih.gov/36829550"
+    },
+    {
+      "id": "lobato-freitas2021",
+      "type": "paper",
+      "title": "Overview of synthetic cannabinoids ADB-FUBINACA and AMB-FUBINACA: clinical, analytical, and forensic implications (Pharmaceuticals 14:186)",
+      "authors": [
+        "C. Lobato-Freitas",
+        "A. M. Brito-da-Costa",
+        "R. J. Dinis-Oliveira",
+        "H. Carmo",
+        "F. Carvalho",
+        "J. P. Silva",
+        "D. Dias-da-Silva"
+      ],
+      "year": 2021,
+      "doi": "10.3390/ph14030186",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7996508/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250410112312/https://pmc.ncbi.nlm.nih.gov/articles/PMC7996508/"
+    },
+    {
+      "id": "jones2025",
+      "type": "paper",
+      "title": "The resurgence of synthetic cannabinoid receptor agonists as adulterants in the era of cannabis legalization: lessons from prior epidemics and clinical implications (Neurosci Biobehav Rev 170:106043)",
+      "authors": [
+        "A. T. Jones",
+        "A. Marwan Abu Taha",
+        "G. P. Miller"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.neubiorev.2025.106043",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39922438/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250403151157/https://pubmed.ncbi.nlm.nih.gov/39922438/"
+    },
+    {
+      "id": "ricci2026",
+      "type": "paper",
+      "title": "Acute and long-term psychiatric consequences of synthetic cannabinoids and related novel psychoactive substances: a systematic review (Psychiatry Res 360:117056)",
+      "authors": [
+        "V. Ricci",
+        "S. Chiappini",
+        "G. Martinotti",
+        "G. Maina"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.psychres.2026.117056",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41793795/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260406224152/https://pubmed.ncbi.nlm.nih.gov/41793795/"
+    },
+    {
+      "id": "machacek2026",
+      "type": "paper",
+      "title": "Triggers of highly lethal seizures induced by novel stimulants: a systematic review focused on synthetic cathinones and phenethylamines (Neurotoxicology 113:103391)",
+      "authors": [
+        "M. Macháček",
+        "M. Bébarová"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.neuro.2026.103391",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41544778/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "gresnigt2026",
+      "type": "paper",
+      "title": "Acute cardiovascular complications of sympathomimetic recreational drug use (Clin Toxicol 64:850-864)",
+      "authors": [
+        "F. M. J. Gresnigt"
+      ],
+      "year": 2026,
+      "doi": "10.1080/15563650.2026.2701369",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42504704/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
     }
   ]
 }
