@@ -95,11 +95,16 @@ async function canaryScenario(browser) {
   await page.waitForSelector("body[data-ready='1']");
   await doEverything(page);
   const dump = await storageDump(page, ctx);
+  // While a file is open the page shows it to its owner; closing every file must leave nothing of it in the page.
+  for (let i = 0; i < 20; i++) {
+    const closed = await page.evaluate(() => { const b = document.querySelector('[data-action="file.close"]:not([disabled])'); if (b instanceof HTMLElement) b.click(); return !!b; });
+    if (!closed) break;
+  }
   const dom = await page.evaluate(() => document.documentElement.outerHTML);
   check("T2 (a): no request to another origin", foreignRequests(seen.requests).length === 0, foreignRequests(seen.requests).join(", "));
   check("T2 (a): no CSP violation", seen.violations.length === 0, seen.violations.join(" | "));
   check("T2 (b): no canary in browser storage, caches, cookies", canariesIn(dump).length === 0, canariesIn(dump).join(", "));
-  check("T2 (b): no canary in the page", canariesIn(dom).length === 0, canariesIn(dom).join(", "));
+  check("T2 (b): no canary left in the page after closing the files", canariesIn(dom).length === 0, canariesIn(dom).join(", "));
   check("T2 (c): no canary in downloaded files", seen.downloads.every((t) => canariesIn(t).length === 0), String(seen.downloads.length));
   await page.reload();
   await page.waitForSelector("body[data-ready='1']");
