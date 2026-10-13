@@ -48,6 +48,7 @@
       "rank": 1,
       "spectrum_id": "a",
       "substance": "a",
+      "inchikey": null,
       "display_name": "Substance a",
       "form": "base",
       "library": "example",
@@ -55,6 +56,7 @@
       "r_derivative": 0.9999909571930726,
       "r_spectrum": 0.9999943185499236,
       "coverage": 1,
+      "same_substance": [],
       "r_regions": {
         "3700-2500": 0.9999038894572944,
         "1900-1500": 0.999995307314034,
@@ -73,6 +75,7 @@
       "rank": 2,
       "spectrum_id": "a-hcl",
       "substance": "a",
+      "inchikey": null,
       "display_name": "Substance a",
       "form": "hcl",
       "library": "example",
@@ -80,6 +83,7 @@
       "r_derivative": 0.9999288912951948,
       "r_spectrum": 0.9999064294640124,
       "coverage": 1,
+      "same_substance": [],
       "r_regions": {
         "3700-2500": 0.9998980576680218,
         "1900-1500": 0.9999953733166934,
@@ -98,6 +102,7 @@
       "rank": 3,
       "spectrum_id": "b",
       "substance": "b",
+      "inchikey": null,
       "display_name": "Substance b",
       "form": "base",
       "library": "example",
@@ -105,6 +110,7 @@
       "r_derivative": -0.015173905393447422,
       "r_spectrum": -0.13589101266362472,
       "coverage": 1,
+      "same_substance": [],
       "r_regions": {
         "3700-2500": -0.017163697429607914,
         "1900-1500": -0.014538056959642926,
@@ -133,11 +139,13 @@
       "id": "different_form",
       "data": {
         "first": {
+          "inchikey": null,
           "display_name": "Substance a",
           "form": "base",
           "r": 0.9999909571930726
         },
         "other": {
+          "inchikey": null,
           "display_name": "Substance a",
           "form": "hcl",
           "r": 0.9999288912951948

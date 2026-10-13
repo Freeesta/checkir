@@ -17,31 +17,7 @@ impl Index {
             offsets.push(total);
             total += l.len();
         }
-        let mut ids: HashMap<String, u32> = HashMap::new();
-        let (mut by_id, mut by_name) = (false, false);
-        let group = libs
-            .iter()
-            .flat_map(|l| l.entries.iter())
-            .map(|e| {
-                let key = match &e.substance {
-                    Some(s) => {
-                        by_id = true;
-                        format!("id:{s}")
-                    }
-                    None => {
-                        by_name = true;
-                        format!("name:{}", normalize_name(&e.display_name))
-                    }
-                };
-                let next = ids.len() as u32;
-                *ids.entry(key).or_insert(next)
-            })
-            .collect();
-        let grouping = match (by_id, by_name) {
-            (true, true) => Grouping::Mixed,
-            (false, true) => Grouping::Name,
-            _ => Grouping::Identity,
-        };
+        let (group, grouping) = identity_groups(&libs);
         let twins = Twins {
             r: vec![-1.0; total],
             partner: vec![u32::MAX; total],
@@ -165,6 +141,56 @@ impl Index {
             .collect();
         format!("v{CACHE_VERSION}:{}", parts.join("|"))
     }
+}
+
+/// Group id per global row. Rows join the same group when they share an InChIKey or a substance id (either link is
+/// enough); a row with neither is grouped by its normalised name. Group ids number the groups in order of first row.
+fn identity_groups(libs: &[LibraryCache]) -> (Vec<u32>, Grouping) {
+    let entries: Vec<&LibEntry> = libs.iter().flat_map(|l| l.entries.iter()).collect();
+    let mut parent: Vec<usize> = (0..entries.len()).collect();
+    fn root(parent: &mut [usize], mut x: usize) -> usize {
+        while parent[x] != x {
+            parent[x] = parent[parent[x]];
+            x = parent[x];
+        }
+        x
+    }
+    let mut seen: HashMap<String, usize> = HashMap::new();
+    let (mut by_id, mut by_name) = (false, false);
+    for (i, e) in entries.iter().enumerate() {
+        let mut keys = Vec::new();
+        if let Some(k) = &e.inchikey {
+            keys.push(format!("ik:{k}"));
+        }
+        if let Some(s) = &e.substance {
+            keys.push(format!("id:{s}"));
+        }
+        if keys.is_empty() {
+            by_name = true;
+            keys.push(format!("name:{}", normalize_name(&e.display_name)));
+        } else {
+            by_id = true;
+        }
+        for key in keys {
+            let first = *seen.entry(key).or_insert(i);
+            let (a, b) = (root(&mut parent, first), root(&mut parent, i));
+            parent[a.max(b)] = a.min(b);
+        }
+    }
+    let mut ids: HashMap<usize, u32> = HashMap::new();
+    let group = (0..entries.len())
+        .map(|i| {
+            let r = root(&mut parent, i);
+            let next = ids.len() as u32;
+            *ids.entry(r).or_insert(next)
+        })
+        .collect();
+    let grouping = match (by_id, by_name) {
+        (true, true) => Grouping::Mixed,
+        (false, true) => Grouping::Name,
+        _ => Grouping::Identity,
+    };
+    (group, grouping)
 }
 
 /// How the substances were grouped: by the identity given by the library or by the normalised name.

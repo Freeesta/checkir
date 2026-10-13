@@ -22,7 +22,7 @@ function identities(c) {
 
 /**
  * The same spectrum never appears twice: candidates that `identities` says are one collapse into the best one
- * (`others` = how many were folded into it). Ranks are renumbered and, when the first candidate had copies, the margin is
+ * (`others` = how many were folded into it, plus the rows the engine already listed as `same_substance`: same InChIKey or substance id). Ranks are renumbered and, when the first candidate had copies, the margin is
  * taken from the next different one. Returns the data unchanged when nothing repeats.
  * @param {any} data a comparison result @returns {any}
  */
@@ -35,13 +35,15 @@ export function dedupeCandidates(data) {
   for (const c of list) {
     const keys = identities(c);
     const first = keys.map((k) => seen.get(k)).find(Boolean);
-    if (first) first.others += 1;
-    else kept.push({ ...c, others: 0 });
+    if (first) {
+      first.others += 1;
+      first.merged += 1;
+    } else kept.push({ ...c, others: Array.isArray(c.same_substance) ? c.same_substance.length : 0, merged: 0 });
     for (const k of keys) if (!seen.has(k)) seen.set(k, first ?? kept[kept.length - 1]);
   }
-  if (kept.length === list.length) return data;
+  if (kept.length === list.length && kept.every((c) => c.others === 0)) return data;
   kept.forEach((c, i) => (c.rank = i + 1));
-  const margin = kept.length > 1 && kept[0].others > 0 ? kept[0].r_derivative - kept[1].r_derivative : data.margin;
+  const margin = kept.length > 1 && kept[0].merged > 0 ? kept[0].r_derivative - kept[1].r_derivative : data.margin;
   return { ...data, candidates: kept, margin };
 }
 

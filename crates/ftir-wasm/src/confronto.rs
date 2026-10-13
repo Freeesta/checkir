@@ -23,10 +23,18 @@ fn answer(r: Result<(), EngineError>) -> String {
     r.map_or_else(|e| e.json(), |()| OK.to_string())
 }
 
-fn entry(id: &str, substance: &str, display_name: &str, form: &str, classes: &str) -> LibEntry {
+fn entry(
+    id: &str,
+    substance: &str,
+    inchikey: &str,
+    display_name: &str,
+    form: &str,
+    classes: &str,
+) -> LibEntry {
     LibEntry {
         id: id.to_string(),
         substance: (!substance.is_empty()).then(|| substance.to_string()),
+        inchikey: (!inchikey.is_empty()).then(|| inchikey.to_string()),
         display_name: display_name.to_string(),
         form: form.to_string(),
         classes: classes
@@ -51,13 +59,14 @@ pub fn confronto_libreria_campionamento(lib: &str, method: &str) -> String {
 }
 
 /// Add one spectrum (axis in cm-1, `y_unit` = `absorbance` or `transmittance`, NaN = absent point).
-/// An empty `substance` means "no identity: group by name"; `classes` are class ids joined by commas. Returns `{"ok":true}` or `{error, error_key, params}`.
+/// Empty `substance` and `inchikey` mean "no identity: group by name" (same InChIKey or same substance = same substance); `classes` are class ids joined by commas. Returns `{"ok":true}` or `{error, error_key, params}`.
 #[wasm_bindgen]
 #[allow(clippy::too_many_arguments)]
 pub fn confronto_libreria_aggiungi(
     lib: &str,
     id: &str,
     substance: &str,
+    inchikey: &str,
     display_name: &str,
     form: &str,
     classes: &str,
@@ -74,7 +83,11 @@ pub fn confronto_libreria_aggiungi(
     }
     let s = spectrum_in(Role::Reference, y_unit, wavenumber_cm1.to_vec(), y.to_vec());
     answer(with(|m| {
-        m.add(lib, entry(id, substance, display_name, form, classes), &s)
+        m.add(
+            lib,
+            entry(id, substance, inchikey, display_name, form, classes),
+            &s,
+        )
     }))
 }
 
@@ -85,6 +98,7 @@ pub fn confronto_libreria_aggiungi_file(
     lib: &str,
     id: &str,
     substance: &str,
+    inchikey: &str,
     display_name: &str,
     form: &str,
     classes: &str,
@@ -101,7 +115,7 @@ pub fn confronto_libreria_aggiungi_file(
     answer(with(|m| {
         m.add_file(
             lib,
-            entry(id, substance, display_name, form, classes),
+            entry(id, substance, inchikey, display_name, form, classes),
             file_name,
             bytes,
             &limits,
@@ -225,6 +239,7 @@ mod test {
                 "demo",
                 &format!("s{k}"),
                 &format!("sub{k}"),
+                "",
                 &format!("Sub {k}"),
                 "base",
                 "",

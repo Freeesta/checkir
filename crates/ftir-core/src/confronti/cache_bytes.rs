@@ -88,6 +88,7 @@ pub fn library_to_bytes(l: &LibraryCache) -> Vec<u8> {
         put_str(&mut out, &e.id);
         out.push(u8::from(e.substance.is_some()));
         put_str(&mut out, e.substance.as_deref().unwrap_or(""));
+        put_str(&mut out, e.inchikey.as_deref().unwrap_or(""));
         put_str(&mut out, &e.display_name);
         put_str(&mut out, &e.form);
         out.extend((e.classes.len() as u32).to_le_bytes());
@@ -117,9 +118,11 @@ pub fn library_from_bytes(bytes: &[u8]) -> EngineResult<LibraryCache> {
         let id = r.str()?;
         let has = r.take(1)?[0] == 1;
         let substance = r.str()?;
+        let inchikey = r.str()?;
         entries.push(LibEntry {
             id,
             substance: has.then_some(substance),
+            inchikey: (!inchikey.is_empty()).then_some(inchikey),
             display_name: r.str()?,
             form: r.str()?,
             classes: (0..r.u32()?)
@@ -196,6 +199,7 @@ mod test {
             l.entries.push(LibEntry {
                 id: format!("s{k}"),
                 substance: (k == 0).then(|| "x".to_string()),
+                inchikey: (k == 1).then(|| "KEY".to_string()),
                 display_name: "Ünïcode".into(),
                 form: "base".into(),
                 classes: vec!["c".into()],

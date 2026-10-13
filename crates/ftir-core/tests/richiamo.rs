@@ -40,6 +40,7 @@ fn r_of_the_recall_is_the_r_of_the_comparison_row() {
     let e = LibEntry {
         id: "b".into(),
         substance: Some("B".into()),
+        inchikey: None,
         display_name: "B".into(),
         form: "base".into(),
         classes: Vec::new(),

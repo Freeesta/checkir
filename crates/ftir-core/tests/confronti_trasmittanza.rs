@@ -52,6 +52,7 @@ fn engine() -> Motore {
         let e = LibEntry {
             id: id.into(),
             substance: Some(id.to_uppercase()),
+            inchikey: None,
             display_name: format!("Substance {id}"),
             form: "base".into(),
             classes: Vec::new(),
