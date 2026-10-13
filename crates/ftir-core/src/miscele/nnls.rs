@@ -65,6 +65,21 @@ fn rss_of(cols: &[&[f64]], x: &[f64], b: &[f64]) -> f64 {
         .sum()
 }
 
+/// The column outside the passive set with the largest gradient `cᵀ(b − Ax)`, with that gradient.
+fn entering(cols: &[&[f64]], x: &[f64], b: &[f64], passive: &[usize]) -> Option<(usize, f64)> {
+    let r: Vec<f64> = (0..b.len())
+        .map(|i| b[i] - cols.iter().zip(x).map(|(c, w)| c[i] * w).sum::<f64>())
+        .collect();
+    let grad = |j: usize| cols[j].iter().zip(&r).map(|(a, r)| a * r).sum::<f64>();
+    (0..cols.len())
+        .filter(|j| !passive.contains(j))
+        .map(|j| (j, grad(j)))
+        .fold(None, |m: Option<(usize, f64)>, c| match m {
+            Some(b) if b.1 >= c.1 => Some(b),
+            _ => Some(c),
+        })
+}
+
 /// The Lawson–Hanson algorithm. Empty `cols` gives `x = []` and `rss = ‖b‖²`.
 pub fn solve(cols: &[&[f64]], b: &[f64]) -> Fit {
     let n = cols.len();
@@ -76,17 +91,7 @@ pub fn solve(cols: &[&[f64]], b: &[f64]) -> Fit {
     let mut x = vec![0.0; n];
     let mut passive: Vec<usize> = Vec::new();
     for _ in 0..(3 * n + 10) {
-        let r: Vec<f64> = (0..b.len())
-            .map(|i| b[i] - cols.iter().zip(&x).map(|(c, w)| c[i] * w).sum::<f64>())
-            .collect();
-        let grad = |j: usize| cols[j].iter().zip(&r).map(|(a, r)| a * r).sum::<f64>();
-        let best = (0..n)
-            .filter(|j| !passive.contains(j))
-            .map(|j| (j, grad(j)))
-            .fold(None, |m: Option<(usize, f64)>, c| match m {
-                Some(b) if b.1 >= c.1 => Some(b),
-                _ => Some(c),
-            });
+        let best = entering(cols, &x, b, &passive);
         match best {
             Some((j, g)) if g > tol => passive.push(j),
             _ => break,

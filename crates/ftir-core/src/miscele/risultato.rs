@@ -4,7 +4,9 @@
 //! is `{"wavenumber_cm1":[…], "y":[…], "y_unit"?}` (`null` = absent point). Output schema names:
 //! `ftir-risultato-miscele/1` and `ftir-risultato-sottrazione/1`. Numbers that are not finite are written as `null`.
 use super::iterativa::{self, Iteration};
-use super::{Alert, BandsCheck, Candidate, Cuts, Mixture, Status, Thresholds, UnexplainedPeak};
+use super::{
+    Alert, BandsCheck, Candidate, Component, Cuts, Mixture, Status, Thresholds, UnexplainedPeak,
+};
 use crate::confronti::opzioni::parse_query;
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::{self, Value};
@@ -83,94 +85,98 @@ fn bands_of(b: &Option<BandsCheck>) -> Value {
 
 impl Mixture {
     pub fn to_value(&self) -> Value {
-        let components = self.components.iter().map(|c| {
-            obj(vec![
-                ("id", text(&c.id)),
-                ("name", text(&c.name)),
-                (
-                    "substance",
-                    c.substance.as_deref().map_or(Value::Null, text),
-                ),
-                ("library", text(&c.library)),
-                ("is_cut", Value::Bool(c.is_cut)),
-                ("weight", num(c.weight)),
-                ("contribution", num(c.contribution)),
-                ("variance_gain_share", num(c.gain)),
-                ("needed_variance_share", num(c.needed)),
-                (
-                    "variant_of",
-                    c.variant_of.as_deref().map_or(Value::Null, text),
-                ),
-                ("bands_criterion", bands_of(&c.bands)),
-                (
-                    "status",
-                    text(match c.status {
-                        Status::Proposed => "proposed",
-                        Status::PossibleNotShown => "possible_not_shown",
-                    }),
-                ),
-            ])
-        });
-        obj(vec![
-            ("schema", text(MIXTURE_SCHEMA)),
-            (
-                "thresholds_version",
-                num(f64::from(self.thresholds_version)),
-            ),
-            ("cuts_version", num(f64::from(self.cuts_version))),
-            (
-                "peaks_thresholds_version",
-                num(f64::from(self.peaks_thresholds_version)),
-            ),
-            ("candidates_used", num(self.candidates_used as f64)),
-            ("components", Value::Arr(components.collect())),
-            ("unexplained_variance_share", num(self.unexplained_share)),
-            ("wavenumber_cm1", list(&self.residual.wavenumber_cm1)),
-            ("residual_y", list(&self.residual.y)),
-            ("background_y", list(&self.background)),
-            (
-                "history",
-                Value::Arr(self.residual.history.iter().map(|h| text(h)).collect()),
-            ),
-            ("unexplained_peaks", peaks_of(&self.unexplained_peaks)),
-            ("alerts", alerts_of(&self.alerts)),
-            ("notes", Value::Arr(NOTES.iter().map(|n| text(n)).collect())),
-        ])
+        mixture_value(self)
     }
 }
 
 impl Iteration {
     pub fn to_value(&self) -> Value {
-        let rounds = self.rounds.iter().map(|r| {
-            obj(vec![
-                ("id", text(&r.id)),
-                ("name", text(&r.name)),
-                ("library", text(&r.library)),
-                ("k", num(r.k)),
-                ("variance_gain_share", num(r.gain)),
-                ("zone_minimum", r.zone_minimum.map_or(Value::Null, num)),
-                ("over_subtraction", Value::Bool(r.over_subtraction)),
-            ])
-        });
-        obj(vec![
-            ("schema", text(SUBTRACTION_SCHEMA)),
-            (
-                "thresholds_version",
-                num(f64::from(self.thresholds_version)),
-            ),
-            ("rounds", Value::Arr(rounds.collect())),
-            ("unexplained_variance_share", num(self.unexplained_share)),
-            ("wavenumber_cm1", list(&self.residual.wavenumber_cm1)),
-            ("residual_y", list(&self.residual.y)),
-            (
-                "history",
-                Value::Arr(self.residual.history.iter().map(|h| text(h)).collect()),
-            ),
-            ("unexplained_peaks", peaks_of(&self.unexplained_peaks)),
-            ("alerts", alerts_of(&self.alerts)),
-            ("notes", Value::Arr(NOTES.iter().map(|n| text(n)).collect())),
-        ])
+        iteration_value(self)
     }
+}
+
+fn component_value(c: &Component) -> Value {
+    obj(vec![
+        ("id", text(&c.id)),
+        ("name", text(&c.name)),
+        (
+            "substance",
+            c.substance.as_deref().map_or(Value::Null, text),
+        ),
+        ("library", text(&c.library)),
+        ("is_cut", Value::Bool(c.is_cut)),
+        ("weight", num(c.weight)),
+        ("contribution", num(c.contribution)),
+        ("variance_gain_share", num(c.gain)),
+        ("needed_variance_share", num(c.needed)),
+        (
+            "variant_of",
+            c.variant_of.as_deref().map_or(Value::Null, text),
+        ),
+        ("bands_criterion", bands_of(&c.bands)),
+        (
+            "status",
+            text(match c.status {
+                Status::Proposed => "proposed",
+                Status::PossibleNotShown => "possible_not_shown",
+            }),
+        ),
+    ])
+}
+
+fn mixture_value(v: &Mixture) -> Value {
+    let components = v.components.iter().map(component_value);
+    obj(vec![
+        ("schema", text(MIXTURE_SCHEMA)),
+        ("thresholds_version", num(f64::from(v.thresholds_version))),
+        ("cuts_version", num(f64::from(v.cuts_version))),
+        (
+            "peaks_thresholds_version",
+            num(f64::from(v.peaks_thresholds_version)),
+        ),
+        ("candidates_used", num(v.candidates_used as f64)),
+        ("components", Value::Arr(components.collect())),
+        ("unexplained_variance_share", num(v.unexplained_share)),
+        ("wavenumber_cm1", list(&v.residual.wavenumber_cm1)),
+        ("residual_y", list(&v.residual.y)),
+        ("background_y", list(&v.background)),
+        (
+            "history",
+            Value::Arr(v.residual.history.iter().map(|h| text(h)).collect()),
+        ),
+        ("unexplained_peaks", peaks_of(&v.unexplained_peaks)),
+        ("alerts", alerts_of(&v.alerts)),
+        ("notes", Value::Arr(NOTES.iter().map(|n| text(n)).collect())),
+    ])
+}
+
+fn iteration_value(v: &Iteration) -> Value {
+    let rounds = v.rounds.iter().map(|r| {
+        obj(vec![
+            ("id", text(&r.id)),
+            ("name", text(&r.name)),
+            ("library", text(&r.library)),
+            ("k", num(r.k)),
+            ("variance_gain_share", num(r.gain)),
+            ("zone_minimum", r.zone_minimum.map_or(Value::Null, num)),
+            ("over_subtraction", Value::Bool(r.over_subtraction)),
+        ])
+    });
+    obj(vec![
+        ("schema", text(SUBTRACTION_SCHEMA)),
+        ("thresholds_version", num(f64::from(v.thresholds_version))),
+        ("rounds", Value::Arr(rounds.collect())),
+        ("unexplained_variance_share", num(v.unexplained_share)),
+        ("wavenumber_cm1", list(&v.residual.wavenumber_cm1)),
+        ("residual_y", list(&v.residual.y)),
+        (
+            "history",
+            Value::Arr(v.residual.history.iter().map(|h| text(h)).collect()),
+        ),
+        ("unexplained_peaks", peaks_of(&v.unexplained_peaks)),
+        ("alerts", alerts_of(&v.alerts)),
+        ("notes", Value::Arr(NOTES.iter().map(|n| text(n)).collect())),
+    ])
 }
 
 fn bad_input(why: &str) -> EngineError {
