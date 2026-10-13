@@ -21,11 +21,14 @@ const TITLES = {
 /** State words (literal keys). @type {Record<string, () => string>} */
 const STATES = { draft: () => t("sheets.state.draft"), in_review: () => t("sheets.state.in_review"), approved: () => t("sheets.state.approved") };
 
+/** Base of a DOI link, opened only on the user's click. */
+const DOI = "https://doi.org/";
+
 /** @param {import("./schede.js").Source} s @returns {Array<Node | string>} */
 function sourceLine(s) {
   const text = s.year ? `${s.title} (${s.year})` : s.title;
-  const href = s.doi ? `https://doi.org/${s.doi}` : s.url;
-  if (!href || !/^https:\/\//.test(href)) return [text];
+  const href = s.doi ? DOI + s.doi : s.url;
+  if (!href || !href.startsWith("https:")) return [text];
   return [text, " ", el("a", { href, target: "_blank", rel: "noopener noreferrer" }, [t("sheets.open_source")])];
 }
 

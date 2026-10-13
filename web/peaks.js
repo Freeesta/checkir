@@ -1,8 +1,10 @@
 // @ts-check
 import { EXCLUDED_CM1, referenceFor } from "./match.js";
-import { selectedCandidate } from "./results.js";
+import { candidateName, selectedCandidate } from "./results.js";
+import { peakName } from "./peaks_view.js";
 import { spectrumOf } from "./files.js";
 import { t } from "./i18n.js";
+import { getBands } from "./regions.js";
 import { activeFile, candidateKey, getState, resultOf, update } from "./state.js";
 
 /**
@@ -15,13 +17,17 @@ export const TOLERANCE_CM1 = 8;
 /** Regional r from which a region «agrees» and from which it agrees «in part»; below it does not agree (provisional, not calibrated). */
 export const AGREE_MIN = 0.9;
 export const PARTIAL_MIN = 0.7;
+/** Relative prominence from which a peak is told strong / medium (provisional, not calibrated); below it is weak. */
+export const STRONG_MIN = 0.5;
+export const MEDIUM_MIN = 0.2;
 /** The regions of the comparison (`soglie_confronto.json`), used as they are when there is no result yet. */
 const DEFAULT_REGION_IDS = ["3700-2500", "1900-1500", "1500-1000", "1000-650"];
 
 /** @typedef {"agrees" | "partial" | "disagrees" | "unknown"} Agreement */
 /** @typedef {{ id: string, from: number, to: number, r: number | null, agreement: Agreement }} Region */
-/** @typedef {{ id: string, position: number, state: "explained" | "unexplained" | "artifact" | "plain", by: number | null, regions: string[], shoulder: boolean }} PeakRow */
-/** @typedef {{ regions: Region[], peaks: PeakRow[], explained: number, unexplained: number, error: string | null }} Analysis */
+/** @typedef {"explained" | "unexplained" | "minor" | "artifact" | "plain"} PeakState */
+/** @typedef {{ id: string, position: number, state: PeakState, by: number | null, regions: string[], shoulder: boolean, intensity: "strong" | "medium" | "weak", shape: string | null, tier: "main" | "secondary" }} PeakRow */
+/** @typedef {{ regions: Region[], bands: import("./regions.js").Band[], peaks: PeakRow[], main: number, explained: number, unexplained: number, minor: number, artifact: number, error: string | null }} Analysis */
 
 /** @type {import("./engine.js").Engine | null} */
 let engine = null;
@@ -75,19 +81,33 @@ export function noiseOf(s) {
   return typeof n === "number" && Number.isFinite(n) ? n : null;
 }
 
-/** @param {any} p @param {Region[]} regions @returns {string[]} the comparison regions the position falls in */
-function regionIds(p, regions) {
-  return regions.filter((g) => p.position_cm1 >= g.from && p.position_cm1 <= g.to).map((g) => g.id);
+/** @param {any} p @returns {"strong" | "medium" | "weak"} */
+function intensityOf(p) {
+  const r = Number(p.prominence_rel);
+  return r >= STRONG_MIN ? "strong" : r >= MEDIUM_MIN ? "medium" : "weak";
 }
 
-/** @param {any} list @param {number[]} refPositions @param {Region[]} regions @param {boolean} compared @returns {PeakRow[]} */
-function rowsOf(list, refPositions, regions, compared) {
+/** A secondary peak nobody explains is «minor», never «not explained»; CO₂ and vapour are the measurement's. @param {any} p @param {boolean} compared @param {number | null} by @returns {PeakState} */
+function stateOf(p, compared, by) {
+  if (p.artifact) return "artifact";
+  if (!compared) return "plain";
+  if (by !== null) return "explained";
+  return p.tier === "secondary" ? "minor" : "unexplained";
+}
+
+/** @param {any} list @param {number[]} refPositions @param {boolean} compared @returns {PeakRow[]} */
+function rowsOf(list, refPositions, compared) {
   return list.peaks.map((/** @type {any} */ p) => {
     let by = null;
     for (const x of refPositions) if (Math.abs(x - p.position_cm1) <= TOLERANCE_CM1 && (by === null || Math.abs(x - p.position_cm1) < Math.abs(by - p.position_cm1))) by = x;
-    const state = p.artifact ? "artifact" : !compared ? "plain" : by !== null ? "explained" : "unexplained";
-    return { id: p.id, position: p.position_cm1, state, by, regions: regionIds(p, regions), shoulder: p.kind === "shoulder" };
+    return { id: p.id, position: p.position_cm1, state: stateOf(p, compared, by), by, regions: p.region_ids ?? [], shoulder: p.kind === "shoulder", intensity: intensityOf(p), shape: p.shape ?? null, tier: p.tier === "secondary" ? "secondary" : "main" };
   });
+}
+
+/** @param {PeakRow[]} peaks @returns {{ main: number, explained: number, unexplained: number, minor: number, artifact: number }} */
+function countsOf(peaks) {
+  const n = (/** @type {(p: PeakRow) => boolean} */ f) => peaks.filter(f).length;
+  return { main: n((p) => p.tier === "main" && p.state !== "artifact"), explained: n((p) => p.state === "explained"), unexplained: n((p) => p.state === "unexplained"), minor: n((p) => p.state === "minor"), artifact: n((p) => p.state === "artifact") };
 }
 
 /**
@@ -106,13 +126,13 @@ export function analyse(s) {
   const regions = withAgreement(regionsFor(result?.data ?? null), chosen);
   const list = peaksOfSpectrum(sample);
   /** @type {Analysis} */
-  let value = { regions, peaks: [], explained: 0, unexplained: 0, error: list ? null : "peaks.error" };
+  let value = { regions, bands: getBands(), peaks: [], main: 0, explained: 0, unexplained: 0, minor: 0, artifact: 0, error: list ? null : "peaks.error" };
   if (list) {
     const ref = chosen ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
     const refList = ref ? detect(ref.spectrum) : null;
     const compared = refList !== null;
-    const peaks = rowsOf(list, compared ? refList.peaks.map((/** @type {any} */ p) => p.position_cm1) : [], regions, compared);
-    value = { regions, peaks, explained: peaks.filter((p) => p.state === "explained").length, unexplained: peaks.filter((p) => p.state === "unexplained").length, error: chosen && !compared ? "peaks.error" : null };
+    const peaks = rowsOf(list, compared ? refList.peaks.map((/** @type {any} */ p) => p.position_cm1) : [], compared);
+    value = { regions, bands: getBands(), peaks, ...countsOf(peaks), error: chosen && !compared ? "peaks.error" : null };
   }
   last = { key, value };
   return value;
@@ -131,6 +151,24 @@ export function peaksActions(e, announce) {
       const on = !getState().showPeaks;
       update({ showPeaks: on, peakFocus: on ? getState().peakFocus : null });
       announce(on ? t("status.peaks_on") : t("status.peaks_off"));
+    },
+    stepPeak: (/** @type {1 | -1} */ dir) => {
+      const s = getState();
+      const a = s.showPeaks ? analyse(s) : null;
+      if (!a || !a.peaks.length) return false;
+      const order = [...a.peaks].sort((x, y) => y.position - x.position);
+      const i = order.findIndex((p) => p.id === s.peakFocus);
+      const next = order[i < 0 ? (dir > 0 ? 0 : order.length - 1) : Math.min(order.length - 1, Math.max(0, i + dir))];
+      update({ peakFocus: next.id });
+      const result = resultOf(s);
+      const chosen = result ? selectedCandidate(s, result.data) : null;
+      announce(peakName(next, chosen ? candidateName(chosen) : null));
+      return true;
+    },
+    clearPeak: () => {
+      if (!getState().peakFocus) return false;
+      update({ peakFocus: null });
+      return true;
     },
     focusPeak: (/** @type {string | null} */ id) => update({ peakFocus: id, showPeaks: id ? true : getState().showPeaks }),
   };
