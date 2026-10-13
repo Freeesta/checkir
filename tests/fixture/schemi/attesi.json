@@ -74,5 +74,11 @@
   "peaks/invalid/no-noise.json": "noise_abs",
   "peaks_thresholds/invalid/negative-distance.json": "min_distance_cm1",
   "peaks_thresholds/invalid/no-noise.json": "noise",
-  "peaks_thresholds/invalid/unknown-block.json": "extra"
+  "peaks_thresholds/invalid/unknown-block.json": "extra",
+  "tagli/invalid/no-names.json": "/cuts/0/names",
+  "tagli/invalid/bad-id-uppercase.json": "/cuts/0/id",
+  "tagli/invalid/unknown-field.json": "percent",
+  "soglie_miscele/invalid/zero-stop-share.json": "/selection/stop_variance_share",
+  "soglie_miscele/invalid/no-residual.json": "residual",
+  "soglie_miscele/invalid/pearson-out-of-range.json": "/analogues/derivative_pearson_min"
 }
