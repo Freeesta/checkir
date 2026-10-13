@@ -638,7 +638,6 @@
   "ranges.used": "Region used: {ranges} cm⁻¹ ({kind}).",
   "ranges.used_preset": "preset",
   "ranges.used_custom": "hand-picked",
-  "ranges.table.hint": "Pick one or more regions to see in which parts of the spectrum each candidate agrees.",
   "ranges.table.caption": "r of each candidate by region",
   "ranges.table.candidate": "Candidate",
   "ranges.table.full": "Whole",

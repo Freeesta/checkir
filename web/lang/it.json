@@ -638,7 +638,6 @@
   "ranges.used": "Regione usata: {ranges} cm⁻¹ ({kind}).",
   "ranges.used_preset": "preimpostazione",
   "ranges.used_custom": "scelta a mano",
-  "ranges.table.hint": "Scegli una o più regioni per vedere in quali parti dello spettro ogni candidato concorda.",
   "ranges.table.caption": "r di ogni candidato per regione",
   "ranges.table.candidate": "Candidato",
   "ranges.table.full": "Intero",
