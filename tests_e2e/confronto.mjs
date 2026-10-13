@@ -77,10 +77,10 @@ async function levelsScenario(page, check) {
 
   // English.
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("match: English shows the level word", /Not identified/.test((await page.textContent(".result .level")) ?? ""));
   await page.click('[data-lang="it"]');
-  await page.waitForFunction(() => document.documentElement.lang === "it");
+  await page.waitForFunction(() => document.body.dataset.langReady === "it");
 
 }
 
@@ -114,7 +114,7 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: a name never stands outside a block with the level", await page.evaluate(() => [...document.querySelectorAll(".cand-name")].every((n) => n.closest(".result")?.querySelector(".level"))));
   check("match: header chip shows the level word", /Probabile/.test((await page.textContent('[data-chip="result"]')) ?? ""));
   check("match: no fixed strip of warnings in the work area", (await page.locator("#limits").count()) === 0);
-  await page.waitForFunction(() => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(document.querySelector("#status")?.textContent ?? ""), null, { timeout: 5000 }).catch(() => {});
+  await page.waitForFunction(() => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(document.querySelector("#status")?.textContent ?? ""), null, { timeout: 5000 });
   check("match: announcement says candidates, level and alerts", /\d+ candidat\w*, Probabile, \d+ allert\w*/.test((await page.textContent("#status")) ?? ""), (await page.textContent("#status")) ?? "");
   check("match: the zone left out is drawn and named", (await page.locator("#chart rect.excluded").count()) === 1 && /Escluso dal confronto/.test((await page.textContent("#chart")) ?? ""));
   const v1 = await axe(page);

@@ -15,3 +15,4 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 ## Trappole
 - I nomi dei job richiesti devono restare allineati al ruleset (`ci-ok`). Le basi delle soglie restano vuote.
 - `tools/versione_sw.mjs` (ultimo passo di `costruisci_sito.sh`): scrive in `site/sw.js` la `VERSION` = primi 12 esadecimali dello SHA-256 di `sw.js` (senza la riga VERSION) e dei file di `FILES`; `web/sw.js` ha `"dev"`. Un nome di `FILES` assente dal sito ferma la build. Prova in `tests_e2e/versione.mjs` (dentro `fumo.mjs`). Le PR non toccano più `VERSION`.
+- Dopo un cambio di lingua i test aspettano `body[data-lang-ready]` (scritto da `main.js` a fine `setLang` e all'avvio, dopo il ridisegno), mai `<html lang>`, che cambia prima del ridisegno dei testi. Attese su stato o evento, non pause.

@@ -83,7 +83,7 @@ async function doEverything(page) {
   }
   for (const lang of ["en", "it"]) {
     await page.evaluate((l) => document.querySelector(`[data-lang="${l}"]`)?.click(), lang);
-    await page.waitForFunction((l) => document.documentElement.lang === l, lang);
+    await page.waitForFunction((l) => document.body.dataset.langReady === l, lang);
   }
   await page.focus("#chart");
   for (const key of ["+", "ArrowLeft", "0"]) await page.keyboard.press(key);
@@ -93,7 +93,7 @@ async function doEverything(page) {
     await page.waitForSelector("body[data-page][data-ready='1']");
     for (const l of ["en", "it"]) {
       await page.locator(`[data-lang="${l}"]`).click({ timeout: 5000 });
-      await page.waitForFunction((x) => document.documentElement.lang === x, l);
+      await page.waitForFunction((x) => document.body.dataset.langReady === x, l);
     }
     await page.goto(base);
     await page.waitForSelector("body[data-ready='1']");

@@ -75,7 +75,7 @@ async function browserScenario(browser, base, check, axe) {
   const bad = await axe(page);
   check("load: axe is clean with files and an error shown", bad.length === 0, bad.join(", "));
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   const errEn = (await page.textContent("#panel .error")) ?? "";
   check("error: the same error is translated into English", errEn.includes("not recognised"), errEn);
   await page.setInputFiles("input[type=file]", { name: "troncato.jdx", mimeType: "application/octet-stream", buffer: jdx.subarray(0, 120) });

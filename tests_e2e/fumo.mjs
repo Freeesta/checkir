@@ -86,7 +86,7 @@ async function phoneScenario(browser) {
   await page.click(".menu-button");
   check("320 px: the menu shows the tools", await page.isVisible('[data-lang="en"]'));
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   await page.keyboard.press("Escape"); // the open phone menu overlays the chart toolbar, which axe would count as an obscured target
   const axis = await page.textContent("#chart svg > text:last-child");
   check("language switch to English", axis === "Absorbance", axis ?? "");
@@ -131,10 +131,10 @@ async function shortcutsScenario(browser) {
   await page.waitForSelector("dialog", { state: "detached" });
   check("shortcuts: Esc closes the list and gives the focus back", !(await page.isVisible("dialog")) && (await page.evaluate(() => document.activeElement === document.body)));
   await page.keyboard.press("l");
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("shortcuts: l changes the language", true);
   await page.keyboard.press("l");
-  await page.waitForFunction(() => document.documentElement.lang === "it");
+  await page.waitForFunction(() => document.body.dataset.langReady === "it");
   await page.keyboard.press("t");
   check("shortcuts: t changes the theme", (await page.getAttribute("html", "data-theme")) === "light");
   const before = await page.getAttribute("body", "data-panel");
@@ -244,7 +244,7 @@ async function pagesScenario(browser) {
       for (const lang of ["it", "en"]) {
         if (lang === "en") {
           await page.click('[data-lang="en"]');
-          await page.waitForFunction(() => document.documentElement.lang === "en");
+          await page.waitForFunction(() => document.body.dataset.langReady === "en");
         }
         const tag = `[${scheme}] ${p.slug} ${lang}`;
         const raw = await page.evaluate(() => [...document.querySelectorAll("[data-i18n]")].filter((e) => !e.textContent || /^[a-z]+\.[a-z0-9_.]+$/.test(e.textContent)).map((e) => e.getAttribute("data-i18n")));
