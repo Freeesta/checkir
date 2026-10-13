@@ -5,7 +5,7 @@ import { APP_NAME } from "./appname.js";
 import { helpBody } from "./help.js";
 import { autoMatchOn, setAutoMatch } from "./match.js";
 
-/** The switch of the automatic comparison (preference `checkir.autoMatch`). @returns {HTMLElement} */
+/** The switch of the automatic comparison (stored preference `autoMatch`). @returns {HTMLElement} */
 function autoMatchSwitch() {
   const box = /** @type {HTMLInputElement} */ (el("input", { type: "checkbox", role: "switch", id: "auto-match-switch" }));
   box.checked = autoMatchOn();
