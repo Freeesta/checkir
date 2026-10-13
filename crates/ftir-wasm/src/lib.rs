@@ -4,6 +4,7 @@
 use wasm_bindgen::prelude::*;
 
 mod confronto;
+mod didactic;
 mod miscele;
 
 /// Engine version.

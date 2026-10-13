@@ -496,5 +496,16 @@
   "dev.sample.3": "Miscela",
   "dev.sample.4": "Non identificato",
   "dev.sample.5": "Probabile, famiglia segnalata",
-  "dev.sample.6": "Bozza"
+  "dev.sample.6": "Bozza",
+  "didactic.not_positive": "Il valore «{name}» deve essere un numero maggiore di zero.",
+  "didactic.no_total_reflection": "Non c'è riflessione totale: l'indice del campione ({n_sample}) deve essere minore di quello del cristallo ({n_crystal}).",
+  "didactic.invalid_angle": "L'angolo ({angle_deg}°) deve essere maggiore di 0° e al massimo 90°.",
+  "didactic.below_critical_angle": "A {angle_deg}° non c'è onda evanescente: serve un angolo maggiore dell'angolo critico ({critical_angle_deg}°).",
+  "didactic.empty": "Non ci sono dati da calcolare.",
+  "didactic.length_mismatch": "Fondo e campione devono avere lo stesso numero di punti ({sample} contro {background}).",
+  "didactic.fft_length": "La lunghezza del calcolo ({length}) deve essere una potenza di due.",
+  "didactic.too_many_points": "Il numero di punti è fuori misura (massimo {limit}).",
+  "didactic.zero_fill": "Il fattore di zero-filling ({value}) deve essere una potenza di due, da 1 in su.",
+  "didactic.unknown_apodization": "L'apodizzazione «{id}» non esiste.",
+  "didactic.invalid_input": "Il dato «{what}» non è valido."
 }
