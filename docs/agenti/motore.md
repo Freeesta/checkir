@@ -20,7 +20,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `ftir-core/src/synthetic_jcamp.rs`: scrive le fixture JCAMP sintetiche con la verità (`fixtures()`, `truth_json`); `cargo run --release -p ftir-core --example gen_jcamp_fixtures` riscrive `tests/fixtures/jcamp/`; un test verifica che i file committati siano aggiornati. I valori d'oro di `tests/golden/jcamp/` si rigenerano a mano con `tools/jcamp_riferimento.py` (libreria Python `jcamp`, fuori dalla CI).
 - `ftir-core/src/rules.rs`: vuoto; le regole sono dati JSON, non codice.
 - `ftir-core/src/synthetic.rs`: `Params`, `Band`, `generate`, `true_value`; RNG SplitMix64 scritto a mano, asse discendente come negli strumenti.
-- `ftir-lib`: vuoto. `ftir-wasm/src/lib.rs`: `version()`, `demo_spectrum()` (JSON).
+- `ftir-lib`: vuoto. `ftir-wasm/src/lib.rs`: `version()`, `demo_spectrum()` (JSON), `open_file(name, bytes, max_bytes, max_points)` (sceglie il lettore con `readers::pick`, apre, restituisce `readers::export::to_json` del documento o `{error, error_key, params}`; formato sconosciuto = `reader.unknown_format`; solo ponte, nessuna logica).
 
 ## Contratti e formati
 - `ftir-reader/1`: vedi sopra; chiavi di errore e avviso `reader.<formato>.<caso>` (e `reader.<caso>` se comuni), tradotte in `web/lang/*.json`. `steps/1`: `Step {id, version, contract, apply}`. `comparisons/1`: `Comparison {id, version, contract, score in [0,1]}`. Un contratto diverso fa fallire il test di conformità.
