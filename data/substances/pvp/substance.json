@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "pvp",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "α-PVP",
+      "synonyms": [
+        "alpha-pyrrolidinovalerophenone",
+        "α-pyrrolidinopentiophenone",
+        "flakka"
+      ]
+    },
+    "it": {
+      "preferred": "α-PVP",
+      "synonyms": [
+        "alfa-pirrolidinovalerofenone",
+        "flakka"
+      ]
+    }
+  },
+  "iupac": "1-phenyl-2-pyrrolidin-1-ylpentan-1-one",
+  "formula": "C15H21NO",
+  "molar_mass_g_mol": 231.33,
+  "smiles": "CCCC(C(=O)C1=CC=CC=C1)N2CCCC2",
+  "inchi": "InChI=1S/C15H21NO/c1-2-8-14(16-11-6-7-12-16)15(17)13-9-4-3-5-10-13/h3-5,9-10,14H,2,6-8,11-12H2,1H3",
+  "inchikey": "YDIIDRWHPFMLGR-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "14530-33-7",
+    "pubchem_cid": 11148955
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
