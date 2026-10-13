@@ -86,8 +86,23 @@ pub fn library_build(identity: &str, index: &str, values: &[f32]) -> String {
     ftir_lib::bridge::build_json(identity, index, values).unwrap_or_else(|e| e.json())
 }
 
+/// Peaks, shoulders and broad bands of a spectrum (`peaks/1` JSON). An empty `thresholds_json` uses the embedded file;
+/// errors are `{error, error_key, params}`.
+#[wasm_bindgen]
+pub fn detect_peaks(spectrum_json: &str, thresholds_json: &str) -> String {
+    ftir_core::peaks::detect_json(spectrum_json, thresholds_json).unwrap_or_else(|e| e.json())
+}
+
 #[cfg(test)]
 mod test {
+    #[test]
+    fn detect_peaks_reports_errors_as_data() {
+        let e = super::detect_peaks("{}", "");
+        assert!(e.contains("\"error_key\""), "{e}");
+        let t = super::detect_peaks("{}", "not json");
+        assert!(t.contains("\"error_key\""), "{t}");
+    }
+
     #[test]
     fn open_file_reads_jcamp_and_reports_errors() {
         let jdx = include_bytes!("../../ftir-core/tests/fixtures/jcamp/affn_ascending.jdx");

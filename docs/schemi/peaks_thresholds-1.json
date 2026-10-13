@@ -1,0 +1,547 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:peaks_thresholds:1",
+  "title": "Thresholds of the peak detection",
+  "title_it": "Soglie del rilevamento dei picchi",
+  "description": "Thresholds of the peak detection (peak_detect/1) and tolerances of the peak assignment, as data.",
+  "description_it": "Soglie del rilevamento dei picchi (peak_detect/1) e tolleranze dell'assegnazione, come dati.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "peaks_thresholds/1"
+    },
+    "version": {
+      "description": "Version of the thresholds; a result stores it.",
+      "description_it": "Versione delle soglie; il risultato la salva.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "calibration": {
+      "description": "Where the numbers come from.",
+      "description_it": "Da dove vengono i numeri.",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "draft until a calibration on the instrument is done.",
+          "description_it": "draft finche non c'e una taratura sullo strumento.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "calibrated"
+          ]
+        },
+        "bench": {
+          "description": "Bench the numbers come from.",
+          "description_it": "Banco da cui vengono i numeri.",
+          "type": "string"
+        },
+        "chain": {
+          "description": "Id of the chain of steps used.",
+          "description_it": "Id della catena di passi usata.",
+          "type": "string"
+        },
+        "date": {
+          "description": "Month of the calibration (YYYY-MM).",
+          "description_it": "Mese della taratura (AAAA-MM).",
+          "type": "string",
+          "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+        }
+      },
+      "required": [
+        "status",
+        "bench",
+        "chain",
+        "date"
+      ],
+      "additionalProperties": false
+    },
+    "noise": {
+      "description": "Estimate of the noise sigma.",
+      "description_it": "Stima del rumore sigma.",
+      "type": "object",
+      "properties": {
+        "windows_cm1": {
+          "description": "Ranges searched for noise windows; the lowest sigma wins.",
+          "description_it": "Intervalli in cui cercare le finestre di rumore; vince il sigma piu basso.",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "window_width_cm1": {
+          "description": "Width of one noise window.",
+          "description_it": "Larghezza di una finestra di rumore.",
+          "type": "number",
+          "minimum": 1
+        },
+        "min_points": {
+          "description": "Fewest points for a window to count.",
+          "description_it": "Punti minimi perche una finestra conti.",
+          "type": "integer",
+          "minimum": 3
+        },
+        "smooth_window": {
+          "description": "Savitzky-Golay window of the smoothing whose residual is the noise.",
+          "description_it": "Finestra Savitzky-Golay della lisciatura il cui residuo e il rumore.",
+          "type": "integer",
+          "minimum": 3
+        },
+        "smooth_polyorder": {
+          "description": "Savitzky-Golay polynomial order of that smoothing.",
+          "description_it": "Ordine del polinomio di quella lisciatura.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "mad_scale": {
+          "description": "Factor that turns the median absolute deviation into a standard deviation.",
+          "description_it": "Fattore che porta la deviazione assoluta mediana a deviazione standard.",
+          "type": "number",
+          "minimum": 0
+        },
+        "grid_correction": {
+          "description": "The sigma is divided by this value (the MAD underestimates it on the interpolated grid).",
+          "description_it": "Il sigma si divide per questo valore (il MAD lo sottostima sulla griglia interpolata).",
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "windows_cm1",
+        "window_width_cm1",
+        "min_points",
+        "smooth_window",
+        "smooth_polyorder",
+        "mad_scale",
+        "grid_correction"
+      ],
+      "additionalProperties": false
+    },
+    "detect": {
+      "description": "Rule of the maxima.",
+      "description_it": "Regola dei massimi.",
+      "type": "object",
+      "properties": {
+        "prominence_noise_ratio": {
+          "description": "Lowest prominence in noises.",
+          "description_it": "Prominenza minima in rumori.",
+          "type": "number",
+          "minimum": 0
+        },
+        "prominence_rel_min": {
+          "description": "Lowest prominence as a share of the highest band.",
+          "description_it": "Prominenza minima come quota della banda piu alta.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "local_window_cm1": {
+          "description": "Window of the local prominence.",
+          "description_it": "Finestra della prominenza locale.",
+          "type": "number",
+          "minimum": 2
+        },
+        "local_noise_ratio": {
+          "description": "Lowest local prominence in noises.",
+          "description_it": "Prominenza locale minima in rumori.",
+          "type": "number",
+          "minimum": 0
+        },
+        "min_distance_cm1": {
+          "description": "Lowest distance between two maxima.",
+          "description_it": "Distanza minima tra due massimi.",
+          "type": "number",
+          "minimum": 0
+        },
+        "rel_height": {
+          "description": "Share of the prominence at which the width is measured.",
+          "description_it": "Quota della prominenza a cui si misura la larghezza.",
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 1
+        },
+        "exclude_cm1": {
+          "description": "Ranges where no peak is looked for (diamond).",
+          "description_it": "Intervalli in cui non si cercano picchi (diamante).",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      },
+      "required": [
+        "prominence_noise_ratio",
+        "prominence_rel_min",
+        "local_window_cm1",
+        "local_noise_ratio",
+        "min_distance_cm1",
+        "rel_height",
+        "exclude_cm1"
+      ],
+      "additionalProperties": false
+    },
+    "tiers": {
+      "description": "Classes of peaks by prominence.",
+      "description_it": "Classi di picchi per prominenza.",
+      "type": "object",
+      "properties": {
+        "main_rel_min": {
+          "description": "Lowest prominence of a main peak (share).",
+          "description_it": "Prominenza minima di un picco principale (quota).",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "secondary_rel_min": {
+          "description": "Lowest prominence of a secondary peak (share).",
+          "description_it": "Prominenza minima di un picco secondario (quota).",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "unexplained_rel_min": {
+          "description": "Lowest prominence of a peak counted as unexplained (share).",
+          "description_it": "Prominenza minima di un picco contato come non spiegato (quota).",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "main_rel_min",
+        "secondary_rel_min",
+        "unexplained_rel_min"
+      ],
+      "additionalProperties": false
+    },
+    "shape": {
+      "description": "Limits of the shape classes by width.",
+      "description_it": "Limiti delle classi di forma per larghezza.",
+      "type": "object",
+      "properties": {
+        "narrow_below_cm1": {
+          "description": "Widths below this are narrow.",
+          "description_it": "Larghezze sotto questo valore: strette.",
+          "type": "number",
+          "minimum": 0
+        },
+        "medium_below_cm1": {
+          "description": "Widths below this are medium.",
+          "description_it": "Larghezze sotto questo valore: medie.",
+          "type": "number",
+          "minimum": 0
+        },
+        "broad_below_cm1": {
+          "description": "Widths below this are broad, above very broad.",
+          "description_it": "Larghezze sotto questo valore: larghe, sopra molto larghe.",
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "narrow_below_cm1",
+        "medium_below_cm1",
+        "broad_below_cm1"
+      ],
+      "additionalProperties": false
+    },
+    "position": {
+      "description": "Position of a peak.",
+      "description_it": "Posizione di un picco.",
+      "type": "object",
+      "properties": {
+        "centroid_from_fwhm_cm1": {
+          "description": "From this width the position is the centroid above half height, below it a parabola.",
+          "description_it": "Da questa larghezza la posizione e il baricentro sopra meta altezza, sotto una parabola.",
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "centroid_from_fwhm_cm1"
+      ],
+      "additionalProperties": false
+    },
+    "shoulders": {
+      "description": "Shoulders from the second derivative.",
+      "description_it": "Spalle dalla derivata seconda.",
+      "type": "object",
+      "properties": {
+        "derivative_window": {
+          "description": "Savitzky-Golay window of the second derivative.",
+          "description_it": "Finestra Savitzky-Golay della derivata seconda.",
+          "type": "integer",
+          "minimum": 3
+        },
+        "derivative_polyorder": {
+          "description": "Savitzky-Golay polynomial order of the second derivative.",
+          "description_it": "Ordine del polinomio della derivata seconda.",
+          "type": "integer",
+          "minimum": 2
+        },
+        "depth_noise_ratio": {
+          "description": "Lowest depth of the minimum in noises of the derivative.",
+          "description_it": "Profondita minima del minimo in rumori della derivata.",
+          "type": "number",
+          "minimum": 0
+        },
+        "min_distance_cm1": {
+          "description": "Lowest distance of a shoulder from a peak and from another shoulder.",
+          "description_it": "Distanza minima di una spalla da un picco e da un'altra spalla.",
+          "type": "number",
+          "minimum": 0
+        },
+        "min_lobe_width_cm1": {
+          "description": "Floor of the lobe width of the second derivative used to estimate the height of a shoulder (overlap narrows the lobe).",
+          "description_it": "Minimo della larghezza del lobo della derivata seconda per stimare l'altezza di una spalla (la sovrapposizione restringe il lobo).",
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "derivative_window",
+        "derivative_polyorder",
+        "depth_noise_ratio",
+        "min_distance_cm1",
+        "min_lobe_width_cm1"
+      ],
+      "additionalProperties": false
+    },
+    "broad_bands": {
+      "description": "Broad bands on a smoothed copy.",
+      "description_it": "Bande larghe su una copia lisciata.",
+      "type": "object",
+      "properties": {
+        "smooth_window": {
+          "description": "Savitzky-Golay window of the smoothed copy.",
+          "description_it": "Finestra Savitzky-Golay della copia lisciata.",
+          "type": "integer",
+          "minimum": 3
+        },
+        "smooth_polyorder": {
+          "description": "Savitzky-Golay polynomial order of the smoothed copy.",
+          "description_it": "Ordine del polinomio della copia lisciata.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "prominence_rel_min": {
+          "description": "Lowest prominence of a broad band as a share of the highest band.",
+          "description_it": "Prominenza minima di una banda larga come quota della banda piu alta.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "min_fwhm_cm1": {
+          "description": "Narrowest width of a broad band.",
+          "description_it": "Larghezza minima di una banda larga.",
+          "type": "number",
+          "minimum": 0
+        },
+        "min_sustained_fraction": {
+          "description": "Share of the points of the band that must lie above half height (rules out the footprint of a narrow peak).",
+          "description_it": "Quota dei punti della banda che deve stare sopra meta altezza (esclude l'impronta di un picco stretto).",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "smooth_window",
+        "smooth_polyorder",
+        "prominence_rel_min",
+        "min_fwhm_cm1",
+        "min_sustained_fraction"
+      ],
+      "additionalProperties": false
+    },
+    "artifacts": {
+      "description": "Artifacts of the environment.",
+      "description_it": "Artefatti dell'ambiente.",
+      "type": "object",
+      "properties": {
+        "co2_search_cm1": {
+          "description": "Range where the CO2 artifact is looked for when the alert is active.",
+          "description_it": "Intervallo in cui si cerca l'artefatto CO2 quando l'allerta e attiva.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "vapour_max_fwhm_cm1": {
+          "description": "Narrower peaks in the vapour ranges are marked as probable vapour.",
+          "description_it": "I picchi piu stretti negli intervalli del vapore sono segnati come probabile vapore.",
+          "type": "number",
+          "minimum": 0
+        },
+        "vapour_ranges_cm1": {
+          "description": "Ranges of the vapour lines.",
+          "description_it": "Intervalli delle righe del vapore.",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      },
+      "required": [
+        "co2_search_cm1",
+        "vapour_max_fwhm_cm1",
+        "vapour_ranges_cm1"
+      ],
+      "additionalProperties": false
+    },
+    "warnings": {
+      "description": "Limits of the warnings.",
+      "description_it": "Limiti degli avvisi.",
+      "type": "object",
+      "properties": {
+        "too_many_peaks": {
+          "description": "More peaks than this raise the warning too_many_peaks.",
+          "description_it": "Piu picchi di questo fanno scattare l'avviso too_many_peaks.",
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "too_many_peaks"
+      ],
+      "additionalProperties": false
+    },
+    "tolerances": {
+      "description": "Tolerances of the assignment (read by the assignment, kept here with the other thresholds).",
+      "description_it": "Tolleranze dell'assegnazione (le legge l'assegnazione, qui con le altre soglie).",
+      "type": "object",
+      "properties": {
+        "same_peak_cm1": {
+          "description": "Distance within which two peaks are the same, by shape.",
+          "description_it": "Distanza entro cui due picchi sono lo stesso, per forma.",
+          "type": "object",
+          "properties": {
+            "narrow": {
+              "description": "Narrow peaks.",
+              "description_it": "Picchi stretti.",
+              "type": "number",
+              "minimum": 0
+            },
+            "medium": {
+              "description": "Medium peaks.",
+              "description_it": "Picchi medi.",
+              "type": "number",
+              "minimum": 0
+            },
+            "broad": {
+              "description": "Broad peaks.",
+              "description_it": "Picchi larghi.",
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "additionalProperties": false
+        },
+        "atr_shift_cm1": {
+          "description": "Shift of strong bands of a transmission reference against an ATR sample.",
+          "description_it": "Spostamento delle bande forti di un riferimento in trasmissione contro un campione ATR.",
+          "type": "object",
+          "properties": {
+            "strong_rel_min": {
+              "description": "Bands at least this strong (share) may shift.",
+              "description_it": "Le bande almeno cosi forti (quota) possono spostarsi.",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "down": {
+              "description": "Allowed shift towards lower wavenumbers.",
+              "description_it": "Spostamento ammesso verso numeri d'onda piu bassi.",
+              "type": "number",
+              "minimum": 0
+            },
+            "up": {
+              "description": "Allowed shift towards higher wavenumbers.",
+              "description_it": "Spostamento ammesso verso numeri d'onda piu alti.",
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "strong_rel_min",
+            "down",
+            "up"
+          ],
+          "additionalProperties": false
+        },
+        "intensity_classes": {
+          "description": "Classes of intensity by prominence.",
+          "description_it": "Classi di intensita per prominenza.",
+          "type": "object",
+          "properties": {
+            "strong_rel_min": {
+              "description": "Lowest share of a strong peak.",
+              "description_it": "Quota minima di un picco forte.",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "medium_rel_min": {
+              "description": "Lowest share of a medium peak.",
+              "description_it": "Quota minima di un picco medio.",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "strong_rel_min",
+            "medium_rel_min"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "same_peak_cm1",
+        "atr_shift_cm1",
+        "intensity_classes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "calibration",
+    "noise",
+    "detect",
+    "tiers",
+    "shape",
+    "position",
+    "shoulders",
+    "broad_bands",
+    "artifacts",
+    "warnings",
+    "tolerances"
+  ],
+  "additionalProperties": false
+}

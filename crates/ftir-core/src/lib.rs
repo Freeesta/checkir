@@ -7,6 +7,7 @@ pub mod comparisons;
 pub mod confronti;
 pub mod error;
 pub mod passi;
+pub mod peaks;
 pub mod readers;
 pub mod rules;
 pub mod spectrum;

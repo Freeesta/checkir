@@ -1,0 +1,299 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:peaks:1",
+  "title": "Peaks of a spectrum",
+  "title_it": "Picchi di uno spettro",
+  "description": "Result of the peak detection (peak_detect/1): peaks with position, width and uncertainty, broad bands and warnings.",
+  "description_it": "Risultato del rilevamento dei picchi (peak_detect/1): picchi con posizione, larghezza e incertezza, bande larghe e avvisi.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "peaks/1"
+    },
+    "spectrum_id": {
+      "description": "Id of the spectrum, null when the caller gave none.",
+      "description_it": "Id dello spettro, null se il chiamante non l'ha dato.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "chain": {
+      "description": "Steps applied before the detection.",
+      "description_it": "Passi applicati prima del rilevamento.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Id of the chain.",
+          "description_it": "Id della catena.",
+          "type": "string"
+        },
+        "steps": {
+          "description": "Steps as id/version.",
+          "description_it": "Passi come id/versione.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "thresholds_version": {
+      "description": "Version of peaks_thresholds/1 used.",
+      "description_it": "Versione di peaks_thresholds/1 usata.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "noise_abs": {
+      "description": "Noise sigma in absorbance.",
+      "description_it": "Rumore sigma in assorbanza.",
+      "type": "number",
+      "minimum": 0
+    },
+    "reference_abs": {
+      "description": "Height of the highest band (the 100 % of the shares).",
+      "description_it": "Altezza della banda piu alta (il 100 % delle quote).",
+      "type": "number",
+      "minimum": 0
+    },
+    "peaks": {
+      "description": "Peaks, shoulders and artifacts by position.",
+      "description_it": "Picchi, spalle e artefatti per posizione.",
+      "type": "array",
+      "items": {
+        "description": "One peak, shoulder or artifact.",
+        "description_it": "Un picco, una spalla o un artefatto.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Id in the list (p1, p2, ... by position).",
+            "description_it": "Id nell'elenco (p1, p2, ... per posizione).",
+            "type": "string",
+            "pattern": "^p[0-9]+$"
+          },
+          "position_cm1": {
+            "description": "Position, one decimal (shown as a whole number).",
+            "description_it": "Posizione, un decimale (mostrata intera).",
+            "type": "number",
+            "minimum": 0
+          },
+          "height_abs": {
+            "description": "Absorbance at the position after the baseline.",
+            "description_it": "Assorbanza alla posizione dopo la linea di base.",
+            "type": "number"
+          },
+          "prominence_abs": {
+            "description": "Prominence in absorbance (for a shoulder the height above the baseline).",
+            "description_it": "Prominenza in assorbanza (per una spalla l'altezza sopra la linea di base).",
+            "type": "number"
+          },
+          "prominence_rel": {
+            "description": "Prominence as a share of the highest band.",
+            "description_it": "Prominenza come quota della banda piu alta.",
+            "type": "number",
+            "minimum": 0
+          },
+          "fwhm_cm1": {
+            "description": "Width at half prominence; null for a shoulder.",
+            "description_it": "Larghezza a meta prominenza; null per una spalla.",
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "shape": {
+            "description": "Class of the width; null for a shoulder.",
+            "description_it": "Classe della larghezza; null per una spalla.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "narrow",
+              "medium",
+              "broad",
+              "very_broad",
+              null
+            ]
+          },
+          "tier": {
+            "description": "Class by prominence.",
+            "description_it": "Classe per prominenza.",
+            "type": "string",
+            "enum": [
+              "main",
+              "secondary"
+            ]
+          },
+          "kind": {
+            "description": "Peak or shoulder.",
+            "description_it": "Picco o spalla.",
+            "type": "string",
+            "enum": [
+              "peak",
+              "shoulder"
+            ]
+          },
+          "artifact": {
+            "description": "Probable artifact of the environment, null when none.",
+            "description_it": "Probabile artefatto dell'ambiente, null se nessuno.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "co2",
+              "vapour",
+              "diamond",
+              null
+            ]
+          },
+          "region_ids": {
+            "description": "Ids of the regions (regions/1) the peak falls in.",
+            "description_it": "Id delle regioni (regions/1) in cui cade il picco.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "position_cm1",
+          "height_abs",
+          "prominence_abs",
+          "prominence_rel",
+          "fwhm_cm1",
+          "shape",
+          "tier",
+          "kind",
+          "artifact",
+          "region_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "broad_bands": {
+      "description": "Broad bands.",
+      "description_it": "Bande larghe.",
+      "type": "array",
+      "items": {
+        "description": "A broad band reported as an interval.",
+        "description_it": "Una banda larga riportata come intervallo.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Id in the list (b1, b2, ...).",
+            "description_it": "Id nell'elenco (b1, b2, ...).",
+            "type": "string",
+            "pattern": "^b[0-9]+$"
+          },
+          "from_cm1": {
+            "description": "Start of the interval at half height.",
+            "description_it": "Inizio dell'intervallo a meta altezza.",
+            "type": "number",
+            "minimum": 0
+          },
+          "to_cm1": {
+            "description": "End of the interval at half height.",
+            "description_it": "Fine dell'intervallo a meta altezza.",
+            "type": "number",
+            "minimum": 0
+          },
+          "max_cm1": {
+            "description": "Centre of the band.",
+            "description_it": "Centro della banda.",
+            "type": "number",
+            "minimum": 0
+          },
+          "prominence_rel": {
+            "description": "Prominence as a share of the highest band.",
+            "description_it": "Prominenza come quota della banda piu alta.",
+            "type": "number",
+            "minimum": 0
+          },
+          "region_ids": {
+            "description": "Ids of the regions (regions/1) the peak falls in.",
+            "description_it": "Id delle regioni (regions/1) in cui cade il picco.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "from_cm1",
+          "to_cm1",
+          "max_cm1",
+          "prominence_rel",
+          "region_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "warnings": {
+      "description": "Warnings.",
+      "description_it": "Avvisi.",
+      "type": "array",
+      "items": {
+        "description": "A warning with the numbers that raised it.",
+        "description_it": "Un avviso con i numeri che l'hanno fatto scattare.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Id of the warning.",
+            "description_it": "Id dell'avviso.",
+            "type": "string",
+            "enum": [
+              "saturation",
+              "weak_signal",
+              "noise",
+              "co2_vapour",
+              "too_many_peaks"
+            ]
+          },
+          "data": {
+            "description": "Numbers behind the warning.",
+            "description_it": "Numeri dietro l'avviso.",
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "number",
+                "string",
+                "object",
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "data"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "spectrum_id",
+    "chain",
+    "thresholds_version",
+    "noise_abs",
+    "reference_abs",
+    "peaks",
+    "broad_bands",
+    "warnings"
+  ],
+  "additionalProperties": false
+}
