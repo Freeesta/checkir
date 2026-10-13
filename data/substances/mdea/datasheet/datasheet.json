@@ -1,7 +1,7 @@
 {
   "schema": "datasheet/1",
   "substance": "mdea",
-  "version": 2,
+  "version": 1,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
