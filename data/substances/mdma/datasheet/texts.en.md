@@ -30,7 +30,9 @@ Tablets contain adulterants, cutting agents, colours, excipients and binders; in
 
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+In a review of controlled studies in healthy volunteers, MDMA showed robust effects on most subjective and physiological measures; the subjective effects matched an entactogenic profile. Pupil size, plasma cortisol and plasma prolactin increased. [f:dumont2006]
+
+Cardiovascular effects were dose-dependent: below 1.0 mg/kg no change relative to placebo was observed, above this dose all studies reported significant increases. [f:dumont2006]
 
 ## doses
 
@@ -58,7 +60,7 @@ Explain that the toxic range overlaps the recreational one and that deaths descr
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011] [f:atila2024] [f:kalant2001] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011] [f:atila2024] [f:kalant2001] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines] [f:dumont2006]
 
 ## license
 

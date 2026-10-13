@@ -1,0 +1,65 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "methadone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Methadone",
+      "synonyms": [
+        "methadon",
+        "amidone"
+      ]
+    },
+    "it": {
+      "preferred": "Metadone",
+      "synonyms": [
+        "amidone"
+      ]
+    }
+  },
+  "iupac": "6-(dimethylamino)-4,4-diphenylheptan-3-one",
+  "formula": "C21H27NO",
+  "molar_mass_g_mol": 309.4,
+  "smiles": "CCC(=O)C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2",
+  "inchi": "InChI=1S/C21H27NO/c1-5-20(23)21(16-17(2)22(3)4,18-12-8-6-9-13-18)19-14-10-7-11-15-19/h6-15,17H,5,16H2,1-4H3",
+  "inchikey": "USSIQXCVUWKGNF-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q179996",
+    "chebi": "CHEBI:6807",
+    "cas": "76-99-3",
+    "pubchem_cid": 4095
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

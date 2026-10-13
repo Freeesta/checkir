@@ -6,6 +6,12 @@ D-Mannitol ((2R,3R,4R,5R)-hexane-1,2,3,4,5,6-hexol), formula C6H14O6, molar mass
 
 Chemical class: sugar alcohol (polyol, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent or excipient. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
+## metabolism
+
+In healthy volunteers, urinary recovery after an oral dose was 8.0-39.6 % of the amount ingested; net absorption in a perfused 30 cm jejunal segment was 3.6 %. After intravenous injection recovery in urine approached 100 % and renal clearance averaged 131 mL/min. [f:laker1982]
+
+Mannitol distributes mainly in the extracellular space. In stool cultures it was degraded to acid and carbon dioxide, and it is naturally present in human urine. [f:laker1982]
+
 ## cuts
 
 Mannitol is among the sugars reported as cuts of cocaine. [f:unodc-cocaine2012]
@@ -32,7 +38,7 @@ Not drafted yet. This section will be written from verifiable sources and signed
 
 ## sources
 
-Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:lenhart2017] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:lenhart2017] [f:pubchem] [f:ubc-counselling-guidelines] [f:unodc-cocaine2012] [f:wikidata] [f:laker1982]
 
 ## license
 

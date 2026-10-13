@@ -6,6 +6,7 @@
     "molecule": "draft",
     "category": "draft",
     "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
@@ -80,6 +81,13 @@
       "key": "paracetamol.other-medicines",
       "topic": "combination",
       "source": "yoon2016"
+    }
+  ],
+  "cuts": [
+    {
+      "cut": "caffeine",
+      "frequency": "common",
+      "source": "hesse2025"
     }
   ]
 }

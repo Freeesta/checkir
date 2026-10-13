@@ -1,0 +1,64 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "buprenorphine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Buprenorphine",
+      "synonyms": [
+        "buprenorphin"
+      ]
+    },
+    "it": {
+      "preferred": "Buprenorfina",
+      "synonyms": [
+        "buprenorfina cloridrato"
+      ]
+    }
+  },
+  "iupac": "(1S,2S,6R,14R,15R,16R)-5-(cyclopropylmethyl)-16-[(2S)-2-hydroxy-3,3-dimethylbutan-2-yl]-15-methoxy-13-oxa-5-azahexacyclo[13.2.2.12,8.01,6.02,14.012,20]icosa-8(20),9,11-trien-11-ol",
+  "formula": "C29H41NO4",
+  "molar_mass_g_mol": 467.6,
+  "smiles": "C[C@]([C@H]1C[C@@]23CC[C@@]1([C@H]4[C@@]25CCN([C@@H]3CC6=C5C(=C(C=C6)O)O4)CC7CC7)OC)(C(C)(C)C)O",
+  "inchi": "InChI=1S/C29H41NO4/c1-25(2,3)26(4,32)20-15-27-10-11-29(20,33-5)24-28(27)12-13-30(16-17-6-7-17)21(27)14-18-8-9-19(31)23(34-24)22(18)28/h8-9,17,20-21,24,31-32H,6-7,10-16H2,1-5H3/t20-,21-,24-,26+,27-,28+,29-/m1/s1",
+  "inchikey": "RMRJXGBAOAMLHD-IHFGGWKQSA-N",
+  "external_ids": {
+    "wikidata": "Q407721",
+    "chebi": "CHEBI:3216",
+    "cas": "52485-79-7",
+    "pubchem_cid": 644073
+  },
+  "classes": {
+    "chemical": [
+      "morphinans"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

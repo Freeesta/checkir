@@ -1,0 +1,92 @@
+{
+  "schema": "datasheet/1",
+  "substance": "buprenorphine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "semisynthetic",
+    "precursor_classes": [
+      "opium_alkaloids"
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "norbuprenorphine",
+        "reaction": "other",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "elkader2005"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "norbuprenorphine",
+        "active": null,
+        "source": "elkader2005"
+      }
+    ],
+    "half_life_h": {
+      "min": 3,
+      "max": 44,
+      "matrix": "plasma",
+      "source": "elkader2005"
+    }
+  },
+  "doses": [],
+  "interactions": [
+    {
+      "with": "benzodiazepines",
+      "severity": "risky",
+      "mechanism": "cns_depression",
+      "source": "elkader2005"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "buprenorphine.route",
+      "topic": "route",
+      "source": "elkader2005"
+    },
+    {
+      "key": "buprenorphine.others",
+      "topic": "combination",
+      "source": "wightman2020"
+    },
+    {
+      "key": "buprenorphine.halflife",
+      "topic": "redosing",
+      "source": "elkader2005"
+    },
+    {
+      "key": "buprenorphine.benzodiazepines",
+      "topic": "overdose_signs",
+      "source": "elkader2005"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

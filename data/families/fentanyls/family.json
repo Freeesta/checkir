@@ -1,0 +1,45 @@
+{
+  "schema": "family-sheet/1",
+  "id": "fentanyls",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "interactions": [
+    {
+      "with": "benzodiazepines",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kerensky2017"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "fentanyls.potency",
+      "topic": "dosing",
+      "source": "lovrecic2019"
+    },
+    {
+      "key": "fentanyls.naloxone",
+      "topic": "overdose_signs",
+      "source": "armenian2018"
+    },
+    {
+      "key": "fentanyls.combination",
+      "topic": "combination",
+      "source": "kerensky2017"
+    }
+  ],
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
