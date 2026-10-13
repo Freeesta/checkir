@@ -1,7 +1,7 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
 import { drawBands, drawPeaks, drawRule, marksTables, svg } from "./chart_marks.js";
-import { nearestIndex, thin, visibleIndices } from "./spectrum.js";
+import { axisKind, nearestIndex, thin, visibleIndices } from "./spectrum.js";
 import { drawExtras, extraAt, extraCurves, widen } from "./chart_extra.js";
 import { drawBrushStrip, drawRangeZones } from "./chart_ranges.js";
 
@@ -19,7 +19,8 @@ let PLOT_W = W - M.l - M.r;
 
 /** @param {Spectrum} s @returns {string} */
 function yLabel(s) {
-  return s.y_unit === undefined || s.y_unit === "Absorbance" ? t("chart.axis_y") : t("chart.axis_y_other");
+  const kind = axisKind(s);
+  return kind === "absorbance" ? t("chart.axis_y") : kind === "transmittance_percent" ? t("chart.axis_y_tp") : kind === "transmittance_fraction" ? t("chart.axis_y_tf") : t("chart.axis_y_other");
 }
 
 /**

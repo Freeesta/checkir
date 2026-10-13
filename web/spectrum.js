@@ -5,6 +5,21 @@
  * @typedef {{ error: Notice } | { spectrum: Spectrum, resolutionCm1: number | null, sampling: string, notices: Notice[], more: number }} OpenResult
  */
 
+/** The unit names the engine knows, by the unit string the reader gives; `Transmittance` is the old name of percent.
+ * @type {Record<string, string>} */
+const ENGINE_UNITS = { Absorbance: "absorbance", Transmittance: "transmittance_percent", TransmittancePercent: "transmittance_percent", TransmittanceFraction: "transmittance_fraction" };
+
+/** @param {Spectrum} s @returns {string | null} the unit name the engine converts itself (the values go as they are), null for any other unit */
+export function engineUnit(s) {
+  return s.y_unit === undefined ? "absorbance" : (ENGINE_UNITS[s.y_unit] ?? null);
+}
+
+/** @param {Spectrum} s @returns {"absorbance" | "transmittance_percent" | "transmittance_fraction" | "intensity"} what the y axis shows */
+export function axisKind(s) {
+  const u = engineUnit(s);
+  return u === "absorbance" || u === "transmittance_percent" || u === "transmittance_fraction" ? u : "intensity";
+}
+
 /**
  * Parse the JSON of a spectrum coming from the engine.
  * @param {string} json
