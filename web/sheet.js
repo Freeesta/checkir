@@ -5,6 +5,7 @@ import { mixtureCandidates, mixtureTaken } from "./mixture.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, inLang, t } from "./i18n.js";
 import { candidateName, levelBadge } from "./results.js";
+import { talkCounselling } from "./schede_inline.js";
 import { decisionOf, resultOf } from "./state.js";
 
 /**
@@ -135,7 +136,8 @@ export function buildSheet(s, opts = {}) {
   sheet.setAttribute("data-draft", decided ? "0" : "1");
   inLang(lang, () => {
     sheet.setAttribute("aria-label", t("sheet.title"));
-    sheet.append(headBlock(r.code, r.data), foundBlock(choice, r.data, decided), alertsBlock(r.data, Boolean(opts.chemist)), footBlock());
+    const talk = s.talk ? talkCounselling({ cands: chosenCandidates(choice, r.data), level: choice.level, lang: s.sheetLang ?? currentLang() }) : null;
+    sheet.append(headBlock(r.code, r.data), foundBlock(choice, r.data, decided), alertsBlock(r.data, Boolean(opts.chemist)), ...(talk ? [talk] : []), footBlock());
   });
   return sheet;
 }

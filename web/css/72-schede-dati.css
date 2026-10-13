@@ -1,0 +1,27 @@
+/* Substance sheets: data blocks, the brief sheet inside the results and the sheets page */
+.sheet-identity { margin: 0.25rem 0; }
+.copyable { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; overflow-wrap: anywhere; }
+.copy-btn { padding: 0 0.5rem; font-size: 0.8rem; }
+.sheet-structure { margin: 0.5rem 0; max-width: 18rem; color: var(--text); }
+.sheet-structure:empty { display: none; }
+.structure-svg { width: 100%; height: auto; background: var(--surface); border: 1px solid var(--border-soft); border-radius: 0.3rem; }
+.sheet-cuts, .sheet-interactions, .sheet-metabolism .data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 0.4rem 0; }
+.sheet-cuts th, .sheet-cuts td, .sheet-interactions th, .sheet-interactions td, .sheet-metabolism th, .sheet-metabolism td { padding: 0.2rem 0.4rem; border-bottom: 1px solid var(--border-soft); text-align: left; vertical-align: top; }
+.sheet-cuts caption, .sheet-interactions caption, .sheet-metabolism caption { text-align: left; color: var(--text-muted); font-size: 0.85rem; padding-bottom: 0.2rem; }
+.metabolism-tree, .metabolism-tree ul { list-style: none; margin: 0.2rem 0; padding-left: 1.1rem; }
+.metabolism-root > .metabolism-tree { padding-left: 0.4rem; }
+.tree-parent { margin: 0.3rem 0 0; font-weight: 600; }
+.topic-tag { display: inline-block; font-size: 0.75rem; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); margin-right: 0.25rem; }
+.inline-sheet { margin-top: 0.75rem; padding: 0.5rem 0.75rem; border: 1px solid var(--border-soft); border-radius: 0.4rem; background: var(--panel); }
+.inline-sheet h4 { margin: 0.6rem 0 0.2rem; font-size: 0.95rem; }
+.inline-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
+.inline-head { margin: 0 0 0.4rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; }
+.audience-toggle, .inline-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.25rem 0 0.5rem; }
+.audience-toggle .btn[aria-pressed="true"], .inline-tabs .btn[aria-selected="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); font-weight: 600; }
+.sheets-page .sheet-filters { display: grid; gap: 0.3rem; max-width: 28rem; margin: 0.5rem 0; }
+.sheets-page .sheet-filters input, .sheets-page .sheet-filters select { font: inherit; padding: 0.3rem 0.4rem; width: 100%; box-sizing: border-box; }
+.sheet-list { margin: 0.5rem 0; }
+.sheet-entry { padding: 0.35rem 0; border-bottom: 1px solid var(--border-soft); overflow-wrap: anywhere; }
+.sheets-page .back { margin: 0.5rem 0; }
+.sheet-counselling h4 { margin: 0.6rem 0 0.2rem; font-size: 1em; }
+.sheet-counselling .topic-tag { font-size: 0.7em; }

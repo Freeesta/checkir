@@ -92,7 +92,7 @@ export function reset() {
 }
 
 /** Preferences are the only thing stored in the browser, always under the product prefix. */
-export const PREFS = ["lang", "theme", "panel", "shortcuts", "autoMatch", "textLevel", "modeAnim"];
+export const PREFS = ["lang", "theme", "panel", "shortcuts", "autoMatch", "textLevel", "modeAnim", "sheetAudience"];
 
 /** @returns {TextLevel} the remembered level of the explanation texts (counsellor when none) */
 function readLevel() {
