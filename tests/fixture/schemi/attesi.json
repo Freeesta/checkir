@@ -44,5 +44,11 @@
   "reviewers/invalid/bad-month.json": "/reviewers/0/expires",
   "reviewers/invalid/bad-status.json": "/reviewers/0/status",
   "reviewers/invalid/no-roles.json": "/reviewers/0/roles",
-  "reviewers/invalid/bad-github.json": "/reviewers/0/github"
+  "reviewers/invalid/bad-github.json": "/reviewers/0/github",
+  "anonimizza/invalid/bad-action.json": "/readers/jcamp-dx/fields/OWNER",
+  "anonimizza/invalid/default-not-strip.json": "/default",
+  "anonimizza/invalid/reader-extra-field.json": "email",
+  "anonimizza/invalid/no-readers.json": "/readers",
+  "anonimizza/invalid/bad-reader-id.json": "Bad_Reader",
+  "anonimizza/invalid/kept-param-not-name.json": "/warning_params_kept"
 }

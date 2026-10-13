@@ -29,7 +29,7 @@ pub fn pseudonym(secret: &[u8], kind: &str, value: &str) -> String {
 }
 
 /// `YYYY-MM` of an ISO 8601 date or of a JCAMP `LONG DATE`; `None` for anything else.
-fn year_month(v: &str) -> Option<String> {
+pub(crate) fn year_month(v: &str) -> Option<String> {
     let iso = iso_long_date(v).unwrap_or_else(|| v.to_string());
     let head = iso.get(..7)?;
     let ok = head.bytes().enumerate().all(|(i, b)| {
