@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "gbl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "GBL",
+      "synonyms": [
+        "gamma-Butyrolactone",
+        "Butyrolactone",
+        "Oxolan-2-one"
+      ]
+    },
+    "it": {
+      "preferred": "GBL",
+      "synonyms": [
+        "gamma-Butirrolattone",
+        "Butirrolattone",
+        "Ossolan-2-one"
+      ]
+    }
+  },
+  "iupac": "oxolan-2-one",
+  "formula": "C4H6O2",
+  "molar_mass_g_mol": 86.09,
+  "smiles": "C1CC(=O)OC1",
+  "inchi": "InChI=1S/C4H6O2/c5-4-2-1-3-6-4/h1-3H2",
+  "inchikey": "YEJRWHAVMIAJKC-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "96-48-0",
+    "pubchem_cid": 7302
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

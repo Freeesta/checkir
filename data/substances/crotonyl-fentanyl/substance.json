@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "crotonyl-fentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Crotonylfentanyl",
+      "synonyms": [
+        "crotonyl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Crotonilfentanil",
+      "synonyms": [
+        "crotonil fentanil"
+      ]
+    }
+  },
+  "iupac": "(E)-N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]but-2-enamide",
+  "formula": "C23H28N2O",
+  "molar_mass_g_mol": 348.5,
+  "smiles": "C/C=C/C(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C23H28N2O/c1-2-9-23(26)25(21-12-7-4-8-13-21)22-15-18-24(19-16-22)17-14-20-10-5-3-6-11-20/h2-13,22H,14-19H2,1H3/b9-2+",
+  "inchikey": "VDYXGPCGBKLRDA-XNWCZRBMSA-N",
+  "external_ids": {
+    "pubchem_cid": 10472960
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

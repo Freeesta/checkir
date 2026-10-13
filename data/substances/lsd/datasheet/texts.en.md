@@ -22,7 +22,7 @@ EUDA describes LSD as a semi-synthetic hallucinogen. Most of it is produced outs
 
 ## metabolism
 
-In vitro, CYP2D6, CYP2E1 and CYP3A4 contribute to the formation of nor-LSD, and CYP1A2, CYP2C9, CYP2E1 and CYP3A4 to 2-oxo-3-hydroxy-LSD. Nor-LSD is probably active; 2-oxo-3-hydroxy-LSD is inactive. [f:luethi2019]
+In vitro, CYP2D6, CYP2E1 and CYP3A4 contribute to the formation of nor-LSD, and CYP1A2, CYP2C9, CYP2E1 and CYP3A4 to 2-oxo-3-hydroxy-LSD. Nor-LSD is probably active; 2-oxo-3-hydroxy-LSD is inactive. [f:luethi2019-lsd]
 
 People with no functional CYP2D6 had longer LSD half-lives and about 75% higher plasma exposure (AUC) to LSD and to 2-oxo-3-hydroxy-LSD than carriers of functional CYP2D6 (81 healthy subjects pooled from 4 trials). [f:vizeli2021]
 
@@ -34,7 +34,7 @@ In 28 healthy volunteers the subjective effects lasted 9.3 ± 3.2 hours after 85
 
 The pharmacology of LSD is complex and its mechanisms of action are still not completely understood. [f:passie2008]
 
-LSD and nor-LSD are active at several serotonin receptors in vitro; 2-oxo-3-hydroxy-LSD has much weaker affinity and activity. [f:luethi2019]
+LSD and nor-LSD are active at several serotonin receptors in vitro; 2-oxo-3-hydroxy-LSD has much weaker affinity and activity. [f:luethi2019-lsd]
 
 ## doses
 
@@ -56,7 +56,7 @@ NBOMe compounds have been sold as LSD on blotter paper; two deaths of teenagers 
 
 Among 62 online reports of lithium taken with classic psychedelics such as LSD or psilocybin, 47% involved seizures; none of 34 reports with lamotrigine did. These are self-reports, not controlled data. [f:nayak2021]
 
-In vitro, rifampicin clearly increased the formation of nor-LSD and of 2-oxo-3-hydroxy-LSD; the authors state that interaction studies in humans are needed. [f:luethi2019]
+In vitro, rifampicin clearly increased the formation of nor-LSD and of 2-oxo-3-hydroxy-LSD; the authors state that interaction studies in humans are needed. [f:luethi2019-lsd]
 
 ## counselling
 
@@ -72,7 +72,7 @@ Talk about the days after: HPPD is rare, and the UBC guidelines suggest at least
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:coates2000] [f:nist-webbook] [f:smith-amides] [f:euda-lsd] [f:unodc-ewa] [f:checkir-classification] [f:passie2008] [f:luethi2019] [f:vizeli2021] [f:holze2023] [f:ubc-counselling-guidelines] [f:johnson2008] [f:halpern2018] [f:shanks2015] [f:nayak2021]
+Sources used for the claims in this sheet: [f:pubchem] [f:coates2000] [f:nist-webbook] [f:smith-amides] [f:euda-lsd] [f:unodc-ewa] [f:checkir-classification] [f:passie2008] [f:luethi2019-lsd] [f:vizeli2021] [f:holze2023] [f:ubc-counselling-guidelines] [f:johnson2008] [f:halpern2018] [f:shanks2015] [f:nayak2021]
 
 ## license
 

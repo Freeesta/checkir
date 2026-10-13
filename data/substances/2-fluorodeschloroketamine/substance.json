@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-fluorodeschloroketamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-Fluorodeschloroketamine (2-FDCK)",
+      "synonyms": [
+        "2-FDCK",
+        "2-fluoro-ketamine"
+      ]
+    },
+    "it": {
+      "preferred": "2-Fluorodeschloroketamina (2-FDCK)",
+      "synonyms": [
+        "2-FDCK"
+      ]
+    }
+  },
+  "iupac": "2-(2-fluorophenyl)-2-(methylamino)cyclohexan-1-one",
+  "formula": "C13H16FNO",
+  "molar_mass_g_mol": 221.27,
+  "smiles": "CNC1(CCCCC1=O)C2=CC=CC=C2F",
+  "inchi": "InChI=1S/C13H16FNO/c1-15-13(9-5-4-8-12(13)16)10-6-2-3-7-11(10)14/h2-3,6-7,15H,4-5,8-9H2,1H3",
+  "inchikey": "PHFAGYYTDLITTB-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "111982-50-4",
+    "pubchem_cid": 13771618
+  },
+  "classes": {
+    "chemical": [
+      "arylcyclohexylamines"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

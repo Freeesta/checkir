@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "isovalerylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Isovalerylfentanyl",
+      "synonyms": [
+        "isovaleryl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Isovalerilfentanil",
+      "synonyms": [
+        "isovaleril fentanil"
+      ]
+    }
+  },
+  "iupac": "3-methyl-N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]butanamide",
+  "formula": "C24H32N2O",
+  "molar_mass_g_mol": 364.5,
+  "smiles": "CC(C)CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C24H32N2O/c1-20(2)19-24(27)26(22-11-7-4-8-12-22)23-14-17-25(18-15-23)16-13-21-9-5-3-6-10-21/h3-12,20,23H,13-19H2,1-2H3",
+  "inchikey": "HQXKBEMWVAZFPK-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2583550-97-2",
+    "pubchem_cid": 137700067
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
