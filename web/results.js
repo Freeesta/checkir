@@ -5,6 +5,7 @@ import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { libraryRows } from "./librerie.js";
 import { activeFile, activeLibraries, candidateKey, decisionOf, resultOf } from "./state.js";
+import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
 import { attachTip, toggletip } from "./tooltip.js";
 
 /** @typedef {import("./state.js").ChemistLabel} ChemistLabel */
@@ -193,8 +194,9 @@ export function renderResults(body, s, ctx) {
   const file = activeFile(s);
   const head = el("div", { class: "row" }, [actionButton("match.run", ctx, { withLabel: true, className: "btn" })]);
   if (!file) return void body.append(el("p", { class: "empty" }, [t("panel.results.empty")]));
-  if (!result && !activeLibraries(s).length) return void body.append(head, el("p", { class: "empty" }, [t("results.no_libraries")]));
   body.append(head);
+  renderRanges(body, s, ctx);
+  if (!result && !activeLibraries(s).length) return void body.append(el("p", { class: "empty" }, [t("results.no_libraries")]));
   if (s.matchError) body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t(s.matchError.key, s.matchError.params)]));
   if (s.matching === file.code) body.append(el("p", { class: "busy", role: "status" }, [icon("compare"), t("results.running")]));
   if (!result) return void (s.matching !== file.code && body.append(el("p", { class: "empty" }, [t("results.not_run")])));
@@ -212,8 +214,10 @@ export function renderResults(body, s, ctx) {
       el("p", { class: "level-line" }, [levelBadge(n), decisionMark(dec, levelNumber(data))]),
       alertList(data),
       ...caps.map((c) => el("p", { class: "cap" }, [c])),
+      ...(usedRangeLine(data) ? [el("p", { class: "cap", "data-used-range": "1" }, [usedRangeLine(data)])] : []),
       el("h3", { class: "cands-title" }, [title]),
       list,
+      rangeTable(s),
       el("p", { class: "chain" }, [chainLine(data)]),
       detail(data, chosen, ctx, s.overlay, n),
     ]),
