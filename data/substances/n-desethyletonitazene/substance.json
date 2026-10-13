@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "n-desethyletonitazene",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "N-desethyl etonitazene"
+    },
+    "it": {
+      "preferred": "N-desethyl etonitazene"
+    }
+  },
+  "iupac": "2-[2-[(4-ethoxyphenyl)methyl]-5-nitrobenzimidazol-1-yl]-N-ethylethanamine",
+  "formula": "C20H24N4O3",
+  "molar_mass_g_mol": 368.4,
+  "smiles": "CCNCCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)OCC",
+  "inchi": "InChI=1S/C20H24N4O3/c1-3-21-11-12-23-19-10-7-16(24(25)26)14-18(19)22-20(23)13-15-5-8-17(9-6-15)27-4-2/h5-10,14,21H,3-4,11-13H2,1-2H3",
+  "inchikey": "RESPFUMJVJRUMB-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2732926-26-8",
+    "pubchem_cid": 162623580
+  },
+  "classes": {
+    "chemical": [
+      "nitazenes"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

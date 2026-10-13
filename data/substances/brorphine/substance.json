@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "brorphine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Brorphine"
+    },
+    "it": {
+      "preferred": "Brorphine"
+    }
+  },
+  "iupac": "3-[1-[1-(4-bromophenyl)ethyl]piperidin-4-yl]-1H-benzimidazol-2-one",
+  "formula": "C20H22BrN3O",
+  "molar_mass_g_mol": 400.3,
+  "smiles": "CC(C1=CC=C(C=C1)Br)N2CCC(CC2)N3C4=CC=CC=C4NC3=O",
+  "inchi": "InChI=1S/C20H22BrN3O/c1-14(15-6-8-16(21)9-7-15)23-12-10-17(11-13-23)24-19-5-3-2-4-18(19)22-20(24)25/h2-9,14,17H,10-13H2,1H3,(H,22,25)",
+  "inchikey": "CNOFBGYRMCBVLO-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2244737-98-0",
+    "pubchem_cid": 145975294
+  },
+  "classes": {
+    "chemical": [
+      "orphine_analogues"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
