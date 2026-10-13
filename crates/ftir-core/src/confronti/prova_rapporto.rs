@@ -61,7 +61,7 @@ fn wrong_levels(p: &Prova, t: &Thresholds) -> EngineResult<(Vec<Pair>, usize)> {
     let (mut probable, mut to_check) = (Vec::new(), 0);
     for k in 0..p.done {
         let margin = (p.r2[k] > -1.0).then(|| p.r1[k] - p.r2[k]);
-        match super::livello::propose(p.r1[k], margin, 1.0, &o, t).0 {
+        match super::livello::propose(p.r1[k], margin, 1.0, false, &o, t).0 {
             Level::Probable => probable.push(Pair {
                 a: p.rows[k],
                 b: p.partner[k] as usize,
