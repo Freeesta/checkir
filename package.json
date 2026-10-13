@@ -7,8 +7,8 @@
     "e2e": "node tests_e2e/fumo.mjs"
   },
   "devDependencies": {
-    "axe-core": "4.10.3",
-    "typescript": "5.9.3",
-    "playwright": "1.56.1"
+    "axe-core": "4.14.0",
+    "typescript": "7.0.2",
+    "playwright": "1.64.0"
   }
 }
