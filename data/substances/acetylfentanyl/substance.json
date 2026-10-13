@@ -1,0 +1,58 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "acetylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Acetylfentanyl",
+      "synonyms": [
+        "acetyl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Acetilfentanil",
+      "synonyms": [
+        "acetil fentanil"
+      ]
+    }
+  },
+  "iupac": "N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]acetamide",
+  "formula": "C21H26N2O",
+  "molar_mass_g_mol": 322.4,
+  "smiles": "CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C21H26N2O/c1-18(24)23(20-10-6-3-7-11-20)21-13-16-22(17-14-21)15-12-19-8-4-2-5-9-19/h2-11,21H,12-17H2,1H3",
+  "inchikey": "FYIUUQUPOKIKNI-UHFFFAOYSA-N",
+  "external_ids": {
+    "chebi": "CHEBI:233556",
+    "cas": "3258-84-2",
+    "pubchem_cid": 527015
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

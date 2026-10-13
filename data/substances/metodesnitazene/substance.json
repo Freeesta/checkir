@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "metodesnitazene",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Metodesnitazene"
+    },
+    "it": {
+      "preferred": "Metodesnitazene"
+    }
+  },
+  "iupac": "N,N-diethyl-2-[2-[(4-methoxyphenyl)methyl]benzimidazol-1-yl]ethanamine",
+  "formula": "C21H27N3O",
+  "molar_mass_g_mol": 337.5,
+  "smiles": "CCN(CC)CCN1C2=CC=CC=C2N=C1CC3=CC=C(C=C3)OC",
+  "inchi": "InChI=1S/C21H27N3O/c1-4-23(5-2)14-15-24-20-9-7-6-8-19(20)22-21(24)16-17-10-12-18(25-3)13-11-17/h6-13H,4-5,14-16H2,1-3H3",
+  "inchikey": "SFNKTTXBZXVGOH-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "14030-77-4",
+    "chebi": "CHEBI:234370",
+    "pubchem_cid": 26412
+  },
+  "classes": {
+    "chemical": [
+      "nitazenes"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "etonitazene",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Etonitazene"
+    },
+    "it": {
+      "preferred": "Etonitazene"
+    }
+  },
+  "iupac": "2-[2-[(4-ethoxyphenyl)methyl]-5-nitrobenzimidazol-1-yl]-N,N-diethylethanamine",
+  "formula": "C22H28N4O3",
+  "molar_mass_g_mol": 396.5,
+  "smiles": "CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)OCC",
+  "inchi": "InChI=1S/C22H28N4O3/c1-4-24(5-2)13-14-25-21-12-9-18(26(27)28)16-20(21)23-22(25)15-17-7-10-19(11-8-17)29-6-3/h7-12,16H,4-6,13-15H2,1-3H3",
+  "inchikey": "PXDBZSCGSQSKST-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "911-65-9",
+    "chebi": "CHEBI:234361",
+    "pubchem_cid": 13493
+  },
+  "classes": {
+    "chemical": [
+      "nitazenes"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
