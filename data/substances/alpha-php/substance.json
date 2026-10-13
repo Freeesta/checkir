@@ -1,0 +1,62 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "alpha-php",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Alpha-PHP",
+      "synonyms": [
+        "α-PHP",
+        "α-pyrrolidinohexanophenone",
+        "PV-7"
+      ]
+    },
+    "it": {
+      "preferred": "Alfa-PHP",
+      "synonyms": [
+        "α-PHP",
+        "α-pirrolidinoesanofenone",
+        "PV-7"
+      ]
+    }
+  },
+  "iupac": "1-phenyl-2-pyrrolidin-1-ylhexan-1-one",
+  "formula": "C16H23NO",
+  "molar_mass_g_mol": 245.36,
+  "smiles": "CCCCC(C(=O)C1=CC=CC=C1)N2CCCC2",
+  "inchi": "InChI=1S/C16H23NO/c1-2-3-11-15(17-12-7-8-13-17)16(18)14-9-5-4-6-10-14/h4-6,9-10,15H,2-3,7-8,11-13H2,1H3",
+  "inchikey": "KYIJLDDXQWBNGX-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q21098929",
+    "cas": "13415-86-6",
+    "pubchem_cid": 102107923
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

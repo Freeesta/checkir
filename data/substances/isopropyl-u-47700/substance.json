@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "isopropyl-u-47700",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Isopropyl-U-47700",
+      "synonyms": [
+        "isopropyl U-47700"
+      ]
+    },
+    "it": {
+      "preferred": "Isopropil-U-47700",
+      "synonyms": [
+        "isopropil U-47700"
+      ]
+    }
+  },
+  "iupac": "3,4-dichloro-N-[(1R,2R)-2-(dimethylamino)cyclohexyl]-N-propan-2-ylbenzamide",
+  "formula": "C18H26Cl2N2O",
+  "molar_mass_g_mol": 357.3,
+  "smiles": "CC(C)N(C1CCCCC1N(C)C)C(=O)C2=CC(=C(C=C2)Cl)Cl",
+  "inchi": "InChI=1S/C18H26Cl2N2O/c1-12(2)22(17-8-6-5-7-16(17)21(3)4)18(23)13-9-10-14(19)15(20)11-13/h9-12,16-17H,5-8H2,1-4H3/t16-,17-/m1/s1",
+  "inchikey": "LGYQSYWASFBSHJ-IAGOWNOFSA-N",
+  "external_ids": {
+    "cas": "2748319-16-4",
+    "pubchem_cid": 137700166
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ortho-methoxyfuranylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "ortho-Methoxyfuranylfentanyl",
+      "synonyms": [
+        "o-methoxyfuranylfentanyl",
+        "ortho-methoxyfuranyl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "ortho-Metossifuranilfentanil",
+      "synonyms": [
+        "o-metossifuranilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(2-methoxyphenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]furan-2-carboxamide",
+  "formula": "C25H28N2O3",
+  "molar_mass_g_mol": 404.5,
+  "smiles": "COC1=CC=CC=C1N(C2CCN(CC2)CCC3=CC=CC=C3)C(=O)C4=CC=CO4",
+  "inchi": "InChI=1S/C25H28N2O3/c1-29-23-11-6-5-10-22(23)27(25(28)24-12-7-19-30-24)21-14-17-26(18-15-21)16-13-20-8-3-2-4-9-20/h2-12,19,21H,13-18H2,1H3",
+  "inchikey": "DCDCWVRDPIOMBB-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "101343-50-4",
+    "pubchem_cid": 13653667
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

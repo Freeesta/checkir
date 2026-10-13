@@ -1,0 +1,67 @@
+{
+  "schema": "datasheet/1",
+  "substance": "phencyclidine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "bey2007"
+      },
+      {
+        "from": "hydroxylated-metabolites",
+        "to": "glucuronides",
+        "reaction": "glucuronidation",
+        "source": "bey2007"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "phencyclidine.behaviour",
+      "topic": "set_setting",
+      "source": "bey2007"
+    },
+    {
+      "key": "phencyclidine.unpredictable",
+      "topic": "dosing",
+      "source": "bey2007"
+    },
+    {
+      "key": "phencyclidine.cannabis",
+      "topic": "testing",
+      "source": "bey2007"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "doses": [],
+  "interactions": []
+}

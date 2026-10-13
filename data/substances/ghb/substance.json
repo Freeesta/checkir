@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ghb",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "GHB",
+      "synonyms": [
+        "gamma-Hydroxybutyric acid",
+        "4-Hydroxybutanoic acid",
+        "Sodium oxybate"
+      ]
+    },
+    "it": {
+      "preferred": "GHB",
+      "synonyms": [
+        "Acido gamma-idrossibutirrico",
+        "Acido 4-idrossibutanoico",
+        "Sodio oxibato"
+      ]
+    }
+  },
+  "iupac": "4-hydroxybutanoic acid",
+  "formula": "C4H8O3",
+  "molar_mass_g_mol": 104.1,
+  "smiles": "C(CC(=O)O)CO",
+  "inchi": "InChI=1S/C4H8O3/c5-3-1-2-4(6)7/h5H,1-3H2,(H,6,7)",
+  "inchikey": "SJZRECIVHVDYJC-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "591-81-1",
+    "pubchem_cid": 10413
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

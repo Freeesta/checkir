@@ -126,6 +126,11 @@ def collect(root: Path) -> tuple[list[str], dict]:
         problems += valida_schemi.check_file(root / name)
     if problems:
         return problems, ctx
+    for name, key in (("sources.json", "sources"), ("classes.json", "classes")):
+        ids = [x["id"] for x in load(root / name)[key]]
+        problems += [f"{name}: duplicate id '{i}'" for i in sorted({i for i in ids if ids.count(i) > 1})]
+    if problems:
+        return problems, ctx
     ctx["sources"] = {s["id"] for s in load(root / "sources.json")["sources"]}
     ctx["tiers"] = {s["id"]: s.get("tier") for s in load(root / "sources.json")["sources"]}
     ctx["classes"] = {c["id"]: c for c in load(root / "classes.json")["classes"]}
