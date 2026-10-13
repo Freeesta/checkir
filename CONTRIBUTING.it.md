@@ -12,6 +12,7 @@ checkIR è fatto da chimici, operatori sanitari, traduttori e sviluppatori. Sceg
 
 ## Regole per tutti
 - Leggi il [Codice di condotta](CODE_OF_CONDUCT.it.md).
+- Ruoli e chi decide cosa: [GOVERNANCE.it.md](GOVERNANCE.it.md).
 - Nessun dato personale in alcun contributo: niente nomi, contatti, foto, luoghi più precisi della provincia, date più precise del mese.
 - Niente istruzioni di sintesi, estrazione, potenziamento o taglio; niente venditori o luoghi dove acquistare sostanze.
 - Solo spettri che hai il diritto di pubblicare; mai spettri di librerie commerciali o con licenza ristretta.
