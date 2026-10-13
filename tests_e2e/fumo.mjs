@@ -5,6 +5,7 @@ import { chromium, firefox, webkit } from "playwright";
 import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { areaScenario } from "./area.mjs";
+import { binariesScenario } from "./binari.mjs";
 import { cleanScenario } from "./pulizia.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
@@ -295,6 +296,18 @@ async function splashScenario(browser) {
     const tag = `splash (${motion})`;
     check(`${tag}: status role, translated hidden label, no visible text`, info.role === "status" && word.test(info.label ?? "") && info.labelWidth <= 1 && info.textOutside === "", JSON.stringify(info));
     check(`${tag}: ${motion === "reduce" ? "static" : "animated"}`, motion === "reduce" ? info.animations === 0 : (info.animations ?? 0) > 0, String(info.animations));
+    const headOnWave = () => page.evaluate(() => {
+      const d = document.querySelector(".splash-wave")?.getAttribute("d") ?? "";
+      const last = d.split("L").pop()?.split(" ").map(Number) ?? [NaN, NaN];
+      const head = document.querySelector(".splash-head");
+      const hx = Number(head?.getAttribute("cx")), hy = Number(head?.getAttribute("cy"));
+      return { dist: Math.hypot(last[0] - hx, last[1] - hy), hy };
+    });
+    const a = await headOnWave();
+    await page.waitForTimeout(250);
+    const b = await headOnWave();
+    check(`${tag}: head sits on the wave end`, a.dist < 1 && b.dist < 1, JSON.stringify([a, b]));
+    check(`${tag}: head ${motion === "reduce" ? "still" : "moves with the wave"}`, motion === "reduce" ? a.hy === b.hy : a.hy !== b.hy, JSON.stringify([a, b]));
     await page.waitForSelector("body[data-ready='1']");
     await page.waitForSelector("#splash", { state: "detached", timeout: 2000 });
     check(`${tag}: removed when ready`, (await page.locator("#splash").count()) === 0);
@@ -318,6 +331,7 @@ function scenarios(browser) {
     () => pagesScenario(browser),
     () => warningsBoxScenario(browser),
     () => loadingScenario(browser, base, check, axe),
+    () => binariesScenario(browser, base, check, axe),
     () => demoScenario(browser, base, check, axe),
     () => librariesPureScenario(check),
     () => librariesScenario(browser, base, check, axe),

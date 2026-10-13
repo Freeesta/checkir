@@ -29,7 +29,7 @@ const CASES = [
   { data: result("to_check", [ALFA, BETA, GAMMA], [{ id: "ambiguity", data: { first: { display_name: "Alfa-prova", form: "HCl", r: 0.94 }, second: { display_name: "Beta-prova", form: "base", r: 0.91 } } }]), decision: { level: 3, keys: ["prova/s1", "prova/s2"] } },
   { data: result("to_check", [ALFA, BETA, GAMMA]), decision: { level: 4, keys: ["prova/s1", "prova/s3"] } },
   { data: result("not_identified", [ALFA, BETA, GAMMA]), decision: { level: 5, keys: [] } },
-  { data: result("probable", [ALFA, BETA, GAMMA], [{ id: "flagged_family", data: { family: "Delta-prova" } }, { id: "quality_noise", data: { ratio: 12, limit: 20 } }]), decision: { level: 2, keys: ["prova/s1"] } },
+  { data: result("probable", [ALFA, BETA, GAMMA], [{ id: "family_flagged", data: { class: "benzodiazepines", source: "unodc-ewa", display_name: "Alfa-prova", form: "HCl", rank: 1 } }, { id: "quality_noise", data: { ratio: 12, limit: 20 } }]), decision: { level: 2, keys: ["prova/s1"] } },
   { data: result("probable", [ALFA, BETA, GAMMA]), decision: null },
 ];
 

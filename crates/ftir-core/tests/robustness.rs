@@ -27,6 +27,16 @@ fn corpus() -> Vec<Vec<u8>> {
             .into_iter()
             .map(|f| f.bytes),
     );
+    c.extend(
+        ftir_core::synthetic_spa::fixtures()
+            .iter()
+            .map(|(_, s)| ftir_core::synthetic_spa::build(s)),
+    );
+    c.extend(
+        ftir_core::synthetic_spc::fixtures()
+            .iter()
+            .map(|(_, s)| ftir_core::synthetic_spc::build(s)),
+    );
     c.push(b"Wavenumber;Abs\r\n4000,1;0,5\r\n3990,2;0,6\r\n3980,3;0,7\r\n".to_vec());
     c.push(b"FIRSTX: 4000\nLASTX: 400\n0.1\n0.2\n0.3\n".to_vec());
     c.push(b"##TITLE=x\r\n##XYDATA=(X++(Y..Y))\r\n1 A1B2J3S9T\r\n2 %%%%\r\n".to_vec());
