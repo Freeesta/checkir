@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:peak-index:1",
+  "title": "Peak index of a library (header)",
+  "title_it": "Indice dei picchi di una libreria (intestazione)",
+  "description": "Header of the stored peak index: u32 little-endian header length, this JSON, then `rows` rows of 8 bytes (position x10 as u16, relative prominence x255 as u8, width class 0-3 as u8, spectrum index as u32), sorted by position. A cache built from the library spectra; never published with private libraries.",
+  "description_it": "Intestazione dell'indice dei picchi salvato: lunghezza dell'intestazione u32 little-endian, questo JSON, poi `rows` righe di 8 byte (posizione x10 u16, prominenza relativa x255 u8, classe di larghezza 0-3 u8, indice dello spettro u32), ordinate per posizione. È una cache costruita dagli spettri della libreria; non si pubblica con le librerie private.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "peak-index/1"
+    },
+    "library_version": {
+      "description": "Version of the library the index was built from; another version makes the cache obsolete.",
+      "description_it": "Versione della libreria da cui è costruito l'indice; un'altra versione rende obsoleta la cache.",
+      "type": "string",
+      "minLength": 1
+    },
+    "chain_id": {
+      "description": "Id of the processing chain of the peak detection.",
+      "description_it": "Id della catena di elaborazione del rilevamento dei picchi.",
+      "type": "string",
+      "minLength": 1
+    },
+    "thresholds_version": {
+      "description": "Version of the peak thresholds used.",
+      "description_it": "Versione delle soglie dei picchi usate.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "min_prominence_rel": {
+      "description": "Smallest relative prominence kept in the index (0.05 = 5 %).",
+      "description_it": "Prominenza relativa minima tenuta nell'indice (0.05 = 5 %).",
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1
+    },
+    "row_bytes": {
+      "description": "Bytes per row.",
+      "description_it": "Byte per riga.",
+      "const": 8
+    },
+    "spectra": {
+      "description": "Number of spectra indexed, with or without bands; indices in the rows are smaller than this.",
+      "description_it": "Numero di spettri indicizzati, con o senza bande; gli indici nelle righe sono minori di questo.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "rows": {
+      "description": "Number of rows after the header.",
+      "description_it": "Numero di righe dopo l'intestazione.",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "schema",
+    "library_version",
+    "chain_id",
+    "thresholds_version",
+    "min_prominence_rel",
+    "row_bytes",
+    "spectra",
+    "rows"
+  ],
+  "additionalProperties": false
+}
