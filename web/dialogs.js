@@ -4,6 +4,7 @@ import { t } from "./i18n.js";
 import { APP_NAME } from "./appname.js";
 import { helpBody } from "./help.js";
 import { autoMatchOn, setAutoMatch } from "./match.js";
+import { provaSection } from "./prova.js";
 
 /** The switch of the automatic comparison (stored preference `autoMatch`). @returns {HTMLElement} */
 function autoMatchSwitch() {
@@ -27,6 +28,7 @@ export function buildDialogs(engineVersion) {
         el("section", {}, [el("h3", {}, [t("info.privacy_title")]), el("p", {}, [t("info.privacy")])]),
         el("section", {}, [el("h3", {}, [t("info.limits_title")]), el("p", {}, [t("limits.more")])]),
         el("section", {}, [el("h3", {}, [t("info.match_title")]), autoMatchSwitch(), el("p", { class: "empty" }, [t("info.auto_match_hint")])]),
+        provaSection(),
         el("section", { id: "warnings-slot" }, [el("h3", {}, [t("info.warnings_title")]), el("p", { class: "empty" }, [t("info.warnings_empty")])]),
         el("section", {}, [
           el("h3", {}, [t("info.versions_title")]),

@@ -82,6 +82,12 @@ function syncLibraries(s) {
   sentSignature = signature;
 }
 
+/** The comparison worker, with the active libraries sent to it: the library test talks to it directly. @returns {Worker} */
+export function matchWorker() {
+  syncLibraries(getState());
+  return ensureWorker();
+}
+
 /** @param {string | undefined} unit @returns {string | null} the unit name the engine knows */
 function unitOf(unit) {
   return unit === undefined || unit === "Absorbance" ? "absorbance" : unit === "Transmittance" ? "transmittance" : null;

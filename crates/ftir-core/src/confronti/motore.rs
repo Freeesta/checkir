@@ -7,6 +7,8 @@ use super::lettori::from_reader;
 use super::libreria::{LibEntry, LibraryCache};
 use super::opzioni::{parse_options, parse_query};
 use super::prepare;
+use super::prova::{Prova, PROVA_BLOCK};
+use super::prova_rapporto;
 use super::soglie::Thresholds;
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::Value;
@@ -122,6 +124,53 @@ impl Motore {
         twins_from_bytes(self.index(), bytes)
     }
 
+    /// Start the library test over the libraries `ids`, or carry on with the one already begun for the same libraries.
+    /// Returns `(done, total)`.
+    pub fn prova_start(&mut self, ids: &[String]) -> EngineResult<(usize, usize)> {
+        let kept = self.prova.take();
+        let index = self.index();
+        let p = match kept {
+            Some(p) if p.matches(index, ids) => p,
+            _ => Prova::new(index, ids)?,
+        };
+        let progress = (p.done, p.total());
+        self.prova = Some(p);
+        Ok(progress)
+    }
+
+    /// Run `f` on the index and the test (taken out of `self` meanwhile; an index rebuilt since the test began, or a
+    /// test that does not belong to it, is a refusal and the test is dropped).
+    fn with_prova<T>(
+        &mut self,
+        f: impl FnOnce(&Index, &mut Prova) -> EngineResult<T>,
+    ) -> EngineResult<T> {
+        let mut p = self.prova.take().ok_or_else(no_prova)?;
+        let index = self.index();
+        if !p.matches(index, p.ids()) {
+            return Err(no_prova());
+        }
+        let out = f(index, &mut p);
+        self.prova = Some(p);
+        out
+    }
+
+    /// Compute the next block of the test; returns `(done, total)`.
+    pub fn prova_step(&mut self) -> EngineResult<(usize, usize)> {
+        self.with_prova(|i, p| Ok(p.step(i, PROVA_BLOCK)))
+    }
+
+    /// JSON `prova-libreria/1` of the test so far.
+    pub fn prova_report(&mut self) -> EngineResult<String> {
+        let t = Thresholds::embedded()?;
+        self.with_prova(|i, p| prova_rapporto::report(i, p, &t))
+    }
+
+    /// CSV of the test so far (ids and names only).
+    pub fn prova_csv(&mut self) -> EngineResult<String> {
+        let t = Thresholds::embedded()?;
+        self.with_prova(|i, p| prova_rapporto::csv(i, p, &t))
+    }
+
     /// `confronta`: JSON of `ftir-risultato-confronto/1`.
     pub fn compare(&mut self, query_json: &str, options_json: &str) -> EngineResult<String> {
         let t = Thresholds::embedded()?;
@@ -151,6 +200,10 @@ impl Motore {
     }
 }
 
+fn no_prova() -> EngineError {
+    EngineError::new("confronti.prova_non_avviata", "no library test in progress")
+}
+
 fn unknown(id: &str) -> EngineError {
     EngineError::new("confronti.libreria_sconosciuta", "library not loaded")
         .with_param("libreria", id)
@@ -167,5 +220,6 @@ struct Session {
 pub struct Motore {
     libraries: Vec<LibraryCache>,
     index: Option<Index>,
+    prova: Option<Prova>,
     session: Session,
 }
