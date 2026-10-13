@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "web"
 REF = "it"
 CODE_GLOBS = ("**/*.js", "**/*.html")
-DYNAMIC: tuple[str, ...] = ("err.", "library.", "reader.", "confronti.", "didactic.", "theme.")     # keys composed at run time (t(`err.${code}`), error and warning keys of the readers, of the library packages, of the comparison (`confronti.<case>`) and of the theory engine (`didactic.<case>`), t(`theme.${mode}`)): never orphans
+DYNAMIC: tuple[str, ...] = ("err.", "library.", "reader.", "confronti.", "didactic.", "peak_index.", "theme.")     # keys composed at run time (t(`err.${code}`), error and warning keys of the readers, of the library packages, of the comparison (`confronti.<case>`) and of the theory engine (`didactic.<case>`), of the peak index (`peak_index.<case>`), t(`theme.${mode}`)): never orphans
 USE = re.compile(r"""(?:\bt\(\s*["']|data-i18n(?:-[a-z]+)?=["']|\b(?:labelKey|tipKey|titleKey):\s*["'])([a-z0-9_]+(?:\.[a-z0-9_]+)+)["']""")
 PLACEHOLDER = re.compile(r"\{([a-zA-Z_][\w]*)")
 

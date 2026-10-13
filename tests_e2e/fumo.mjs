@@ -7,6 +7,7 @@ import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
+import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
 import { registryScenario } from "./registri.mjs";
 import { sheetScenario } from "./scheda.mjs";
@@ -283,6 +284,7 @@ async function run() {
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
+    await inverseScenario(browser, base, check);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
     await sheetScenario(browser, base, check, axe);

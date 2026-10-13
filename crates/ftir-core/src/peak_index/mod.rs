@@ -4,6 +4,7 @@
 //! searched by bisection. Spectra without rows (unusable or without bands) still count, so indices match the library rows.
 pub mod codec;
 pub mod query;
+mod search;
 
 use crate::peaks::result::{Artifact, PeakList, Shape};
 use crate::peaks::Thresholds;

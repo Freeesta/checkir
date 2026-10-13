@@ -5,14 +5,6 @@ use super::{PeakIndex, Row, MIN_PROMINENCE_REL, ROW_BYTES, SCHEMA};
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::{self, Value};
 
-fn damaged(what: &str) -> EngineError {
-    EngineError::new("peak_index.damaged", "damaged peak index").with_param("what", what)
-}
-
-fn text(s: &str) -> Value {
-    Value::Str(s.to_string())
-}
-
 impl PeakIndex {
     /// The header as JSON `peak-index/1`.
     pub fn header_json(&self, library_version: &str) -> String {
@@ -110,4 +102,12 @@ fn read_row(c: &[u8]) -> Row {
         width: at(3),
         spectrum: u32::from_le_bytes([at(4), at(5), at(6), at(7)]),
     }
+}
+
+fn damaged(what: &str) -> EngineError {
+    EngineError::new("peak_index.damaged", "damaged peak index").with_param("what", what)
+}
+
+fn text(s: &str) -> Value {
+    Value::Str(s.to_string())
 }
