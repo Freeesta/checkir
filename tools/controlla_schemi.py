@@ -37,6 +37,7 @@ EXCEPTIONS = {
     ("ftir-library-1.json", "/name"): "id of the library (a lowercase slug), not a person",
     ("ftir-spectrum-1.json", "/library/name"): "id of the library (a lowercase slug), not a person",
     ("ftir-form-1.json", "/notes"): "reviewed text about the chemical form, per language; no person",
+    ("substance-bands-1.json", "/note"): "reviewer note on where the band numbers come from; checked for personal data by the data checker",
 }
 
 
