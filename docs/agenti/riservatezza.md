@@ -1,0 +1,10 @@
+# Riservatezza (rete, memoria, pulizia, avvertenze)
+Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri. Regole di fondo: niente esce dal browser, nessuna telemetria, nessun dato sulla persona, un campo sconosciuto si toglie.
+
+## Rete e memoria del browser
+- CSP di `web/index.html` esatta (costante `EXPECTED_CSP` in `tests_e2e/riservatezza_statico.mjs`): `default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; connect-src 'self'; img-src 'self' data: blob:; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'`. Cambiarla = cambiare anche la costante, con una decisione del proprietario. Nessuna risorsa di terzi (CDN, font, mappe, analytics, video).
+- T1 (statico, senza browser): la CSP è uguale all'attesa; in `web/` nessun URL `http(s)://` fuori da `tests_e2e/link_ammessi.json` (file + URL + motivo; una voce che non compare più nel file fa fallire), nessun `@import`/`src="//`, nessun `sendBeacon`/`WebSocket`/`EventSource`/`XMLHttpRequest`. Un link nuovo (solo testuale) va aggiunto a `link_ammessi.json`.
+- T2 «canarino» (`tests_e2e/riservatezza.mjs`, generatore in `canarino.mjs`): un JCAMP sintetico con metadati canarino (nome campione, `C:\Users\CANARIO\`, operatore, seriale, data e ora) viene dato al selettore file e la pagina fa tutto ciò che sa fare.
+- Controlli di T2: (a) zero richieste verso altre origini e zero violazioni CSP, (b) nessun canarino in localStorage, sessionStorage, IndexedDB, OPFS, Cache Storage, cookie, DOM, file scaricati, (c) dopo il ricaricamento nessun dato del campione e solo le preferenze `checkir.lang|theme|panel`. Prove di controllo nello stesso file: una `fetch` verso un'altra origine e un canarino scritto in localStorage/OPFS DEVONO essere rilevati.
+- **Regola: ogni nuova azione o esportazione della pagina si aggiunge a T2** (`doEverything` in `riservatezza.mjs`: un click o una chiamata in più; i file scaricati sono già letti e cercati).
+- `tests_e2e/sito.mjs`: server statico di `site/` per i test. CI: job `web`, dopo `fumo.mjs`.
