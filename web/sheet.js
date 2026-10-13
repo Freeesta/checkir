@@ -1,5 +1,5 @@
 // @ts-check
-import { alertViews } from "./alerts.js";
+import { alertViews, familyParts } from "./alerts.js";
 import { chosenCandidates, shownChoice } from "./decision.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, inLang, t } from "./i18n.js";
@@ -20,11 +20,11 @@ export function setProgramVersion(version) {
 }
 
 /** Fixed order of the alerts on the sheet: a flagged family always first, hand-picked region after the quality ones. */
-const ORDER = ["flagged_family", "ambiguity", "spectral_twin", "analog_not_in_library", "different_form", "form_absent", "high_residual", "same_as_previous", "quality_saturation", "quality_weak_signal", "quality_noise", "quality_co2_vapour", "quality_negative_bands", "custom_range"];
+const ORDER = ["family_flagged", "ambiguity", "spectral_twin", "analog_not_in_library", "different_form", "form_absent", "high_residual", "same_as_previous", "quality_saturation", "quality_weak_signal", "quality_noise", "quality_co2_vapour", "quality_negative_bands", "custom_range"];
 
 /** One short plain sentence per alert (the technical reason stays in the chemist's view). @type {Record<string, (d: any) => string>} */
 const LINES = {
-  flagged_family: (d) => t("sheet.alert.flagged_family", { family: String(d.family ?? d.name ?? "") }),
+  family_flagged: (d) => t("sheet.alert.family_flagged", familyParts(d)),
   ambiguity: () => t("sheet.alert.ambiguity"),
   spectral_twin: () => t("sheet.alert.spectral_twin"),
   different_form: () => t("sheet.alert.different_form"),
@@ -50,13 +50,13 @@ function block(title, id, children) {
   return el("section", { class: "sheet-block", "data-block": id }, [el("h3", {}, [title]), ...children]);
 }
 
-/** Block 1: logo, title, local code, day, program and library versions, thresholds. No datum of the person. @param {string} code @param {any} data @returns {HTMLElement} */
+/** Block 1: title, local code, day, program and library versions, thresholds. No datum of the person. @param {string} code @param {any} data @returns {HTMLElement} */
 function headBlock(code, data) {
   const libs = (data.libraries ?? []).filter((/** @type {any} */ l) => l.searched).map((/** @type {any} */ l) => `${l.id} ${l.version}`).join(", ");
   const rows = [[t("sheet.code"), code], [t("sheet.day"), today()], [t("sheet.program"), programVersion], [t("sheet.libraries"), libs || "—"], [t("sheet.thresholds"), data.chain?.derivative ?? "—"]];
   const list = el("dl", { class: "sheet-meta" });
   for (const [k, v] of rows) list.append(el("dt", {}, [k]), el("dd", {}, [v]));
-  return el("header", { class: "sheet-head", "data-block": "head" }, [el("span", { class: "logo", "aria-hidden": "true" }), el("h2", {}, [t("sheet.title")]), list]);
+  return el("header", { class: "sheet-head", "data-block": "head" }, [el("h2", {}, [t("sheet.title")]), list]);
 }
 
 /** @param {any} c a candidate @returns {string} name and form */

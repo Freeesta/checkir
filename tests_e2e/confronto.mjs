@@ -22,6 +22,9 @@ const OTHER = [[900, 0.7, 10], [1050, 0.5, 12], [1550, 0.9, 12], [1800, 0.6, 12]
 export async function matchPureScenario(check) {
   const data = { level_proposed: "probable", candidates: new Array(10).fill({}), alerts: [{ id: "same_as_previous", data: { r: 0.99 } }] };
   check("match: level numbers follow the proposed level", levelNumber(data) === 2 && levelNumber({ level_proposed: "to_check" }) === 3 && levelNumber({ level_proposed: "other" }) === 5);
+  const fam = { level_proposed: "probable", candidates: [], alerts: [{ id: "family_flagged", data: { class: "nitazenes", source: "unodc-ewa", display_name: "Beta", form: "HCl", rank: 1 } }] };
+  const view = alertViews(fam)[0];
+  check("match: a flagged family is one alert with one reason and does not move the level", view?.id === "family_flagged" && view.reasons.length === 1 && levelNumber(fam) === 2, JSON.stringify(view));
   check("match: alerts are rows as the engine sends them", alertViews(data).length === 1 && alertViews(data)[0].id === "same_as_previous");
 }
 
@@ -61,6 +64,29 @@ async function rowsScenario(page, check, axe) {
   const v2 = await axe(page);
   check("match: axe has no violations with the overlay", v2.length === 0, v2.join(", "));
 
+}
+
+/** A row of a flagged class (set in memory: an imported library has no classes) raises the alert on a shown candidate, listed and announced, and the level stays. */
+async function familyScenario(page, check) {
+  await page.evaluate(async () => {
+    const lib = await import("/librerie.js");
+    const { getState } = await import("/state.js");
+    const { matchWorker } = await import("/match.js");
+    lib.libraryRows("sintetica")[1].classes = ["nitazenes"];
+    // The worker keeps a library by its version: a new version makes it take the rows again, with the classes.
+    const libs = getState().libraries.map((l) => (l.id === "sintetica" ? { id: l.id, version: `${l.version}-classes`, rows: lib.libraryRows(l.id), values: lib.libraryValues(l.id) } : { id: l.id, version: l.version }));
+    matchWorker().postMessage({ type: "sync", libs });
+  });
+  await page.waitForTimeout(1500);
+  await page.evaluate(() => (window.__said = []));
+  await page.keyboard.press("c");
+  await openPanel(page, "results");
+  await page.waitForSelector('.result [data-alert="family_flagged"]', { timeout: 20000 });
+  const text = (await page.textContent('.result [data-alert="family_flagged"]')) ?? "";
+  check("match: a candidate of a flagged class lists the family alert with class and source", /Famiglia segnalata/.test(text) && /Nitazeni/.test(text) && /unodc-ewa/.test(text), text);
+  check("match: the family alert does not change the level", (await page.getAttribute(".result[data-level]", "data-level")) === "2");
+  await page.waitForFunction(() => window.__said.some((t) => /, T2 · Probabile, 1 allerta/.test(t)), null, { timeout: 15000 }).catch(() => {});
+  check("match: the family alert is announced with the result", (await page.evaluate(() => window.__said)).some((t) => /, T2 · Probabile, 1 allerta/.test(t)), JSON.stringify(await page.evaluate(() => window.__said)));
 }
 
 /** Other known answers: two near-identical references (ambiguous), nothing alike (not identified), English. */
@@ -127,6 +153,7 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: axe has no violations with a result", v1.length === 0, v1.join(", "));
 
   await rowsScenario(page, check, axe);
+  await familyScenario(page, check);
   await levelsScenario(page, check);
   // Switching the automatic comparison off: a new spectrum has no result until `c`.
   await page.click('[data-action="info.open"]');

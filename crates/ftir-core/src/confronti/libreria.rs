@@ -13,6 +13,8 @@ pub struct LibEntry {
     pub substance: Option<String>,
     pub display_name: String,
     pub form: String,
+    /// Class ids of the substance (`classes.json`); the flagged-family alert reads them.
+    pub classes: Vec<String>,
 }
 
 /// Rows of `GRID_N` values plus presence flags (1 = the point exists) and a "full" flag per row
