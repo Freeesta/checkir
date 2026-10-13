@@ -49,6 +49,9 @@ TEXTS = {
     ("caffeine", "anhydrous", 1692): (
         "Banda a ~1692 cm-1: primo dei due C=O accoppiati della caffeina (l'altro è a ~1645); in miscela può spostarsi di 5-10 cm-1.",
         "Band at ~1692 cm-1: first of the two coupled C=O of caffeine (the other is at ~1645); in a mixture it may move by 5-10 cm-1."),
+    ("caffeine", "anhydrous", 1212): (
+        "Banda a ~1212 cm-1: stiramento C–N degli anelli xantinici (pirimidindione e imidazolo) della caffeina; non è un etere.",
+        "Band at ~1212 cm-1: C–N stretching of the caffeine xanthine rings (pyrimidinedione and imidazole); not an ether."),
     ("caffeine", "anhydrous", 744): (
         "Banda a ~744 cm-1: molto intensa e isolata, la più utile per riconoscere la caffeina in miscela.",
         "Band at ~744 cm-1: very intense and isolated, the most useful to recognise caffeine in a mixture."),
