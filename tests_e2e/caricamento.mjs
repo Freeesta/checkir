@@ -63,7 +63,9 @@ async function browserScenario(browser, base, check, axe) {
     },
     { bytes: [...jdx], name: "secondo.jdx" },
   );
-  await page.waitForSelector('[data-fk="sel-C2"]');
+  await page.waitForSelector('[data-fk="sel-C2"]', { state: "attached" });
+  await page.evaluate(() => { document.querySelector('details[data-panel="files"]').open = true; });
+
   check("drop: a dropped file becomes C2 and is active", (await page.textContent('[data-chip="file"]'))?.trim().startsWith("C2") === true);
   await page.click('[data-fk="sel-C1"]');
   check("tree: choosing C1 shows it again", (await page.textContent('[data-chip="file"]'))?.trim().startsWith("C1") === true);
@@ -86,6 +88,7 @@ async function browserScenario(browser, base, check, axe) {
   const stored = await page.evaluate(async () => ({ local: Object.keys(localStorage), session: sessionStorage.length, idb: (await indexedDB.databases()).length }));
   check("canary: only preferences are stored with files loaded", stored.local.every((k) => ["checkir.lang", "checkir.theme", "checkir.panel"].includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
 
+  await page.evaluate(() => { document.querySelector('details[data-panel="files"]').open = true; });
   await page.click('[data-fk="close-C1"]');
   await page.click('[data-fk="close-C2"]');
   check("close: closing every file empties chart, table and header", (await page.textContent("#chart"))?.includes("No spectrum") === true && (await page.locator("#table tbody tr").count()) === 0 && (await page.textContent('[data-chip="file"]'))?.trim() === "—");

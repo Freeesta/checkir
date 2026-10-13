@@ -1,10 +1,35 @@
-// Writes into site/sw.js the cache version of the service worker: a hash of sw.js and of every file it precaches (FILES), computed on the
-// built site, so the cache is renewed exactly when something it holds changes and no pull request has to raise a number by hand.
-// A name in FILES that is not in the site stops the build (the service worker install would fail for everybody).
+// Writes into site/sw.js the list of files it precaches (FILES: everything in the built site except sw.js and the library packages, which
+// the worker caches by itself) and its cache version: a hash of sw.js and of those files, so the cache is renewed exactly when something it
+// holds changes. No pull request edits FILES or raises a number by hand. A name in FILES that is not in the site stops the build.
 import { createHash } from "node:crypto";
-import { readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 
 const VERSION_LINE = /^const VERSION = "[^"]*";$/m;
+const FILES_BLOCK = /const FILES = \[[\s\S]*?\];/;
+const NOT_PRECACHED = (name) => name === "sw.js" || name.startsWith("librerie/");
+
+/** The precache list for the files of a site (paths relative to its root): "./" and every folder served from its index.html first, then the files. */
+export function precacheList(paths) {
+  const files = paths.filter((p) => !NOT_PRECACHED(p)).sort();
+  const folders = files.filter((p) => p.endsWith("/index.html")).map((p) => p.slice(0, -"index.html".length));
+  return ["./", ...folders, ...files];
+}
+
+/** Every file under `dir`, as paths relative to it with "/" separators. */
+export async function walk(dir, prefix = "") {
+  const out = [];
+  for (const e of await readdir(new URL(prefix, dir), { withFileTypes: true })) {
+    if (e.isDirectory()) out.push(...(await walk(dir, `${prefix}${e.name}/`)));
+    else out.push(prefix + e.name);
+  }
+  return out;
+}
+
+/** Rewrites the FILES list of `source` with `files`, one per line (the list is generated: never edited by hand). */
+export function withFiles(source, files) {
+  if (!FILES_BLOCK.test(source)) throw new Error("sw.js: no FILES list");
+  return source.replace(FILES_BLOCK, () => `const FILES = [\n${files.map((f) => `  ${JSON.stringify(f)},\n`).join("")}];`);
+}
 
 /** The names listed in `FILES` of the service worker source. */
 export function listedFiles(source) {
@@ -39,8 +64,8 @@ export function withVersion(source, version) {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const site = new URL("../site/", import.meta.url);
   const path = new URL("sw.js", site);
-  const source = await readFile(path, "utf8");
+  const source = withFiles(await readFile(path, "utf8"), precacheList(await walk(site)));
   const version = await computeVersion(source, (name) => readFile(new URL(name, site)));
   await writeFile(path, withVersion(source, version));
-  console.log(`sw.js VERSION ${version}`);
+  console.log(`sw.js VERSION ${version}, ${listedFiles(source).length} precached`);
 }
