@@ -26,3 +26,5 @@ meter { appearance: none; background: var(--surface); border: 1px solid var(--bo
 meter::-webkit-meter-bar { background: var(--surface); border: 0; }
 meter::-webkit-meter-optimum-value, meter::-webkit-meter-suboptimum-value, meter::-webkit-meter-even-less-good-value { background: var(--text-muted); }
 meter::-moz-meter-bar { background: var(--text-muted); }
+
+.lib-rename { margin: 0.25rem 0; max-width: 20rem; }

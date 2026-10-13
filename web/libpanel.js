@@ -9,6 +9,8 @@ import { attachTip } from "./tooltip.js";
 /** Name typed for the next imported library; kept here so a redraw of the panel does not lose it. */
 let typedName = "";
 let typedSampling = "unknown";
+/** The library being renamed and what is typed so far; kept here so a redraw of the panel does not close the field. */
+let renaming = { id: "", text: "" };
 /** @type {import("./actions.js").Ctx | null} */
 let current = null;
 /** @type {{ files: HTMLInputElement, folder: HTMLInputElement } | null} */
@@ -53,29 +55,66 @@ function progressBlock(job, /** @type {import("./actions.js").Ctx} */ ctx) {
   return el("div", { class: "lib-progress", role: "status" }, [bar, el("span", {}, [text]), cancel]);
 }
 
+/** Edit the name of a private library in place: Enter or leaving the field saves it, Esc keeps the old one. @param {HTMLElement} head @param {import("./state.js").LibraryEntry} l @param {import("./actions.js").Ctx} ctx */
+function startRename(head, l, ctx, restoring = false) {
+  // A double click can land on a node the panel has just replaced: use the one on the page.
+  if (!head.isConnected && !restoring) head = /** @type {HTMLElement | null} */ (document.querySelector(`[data-library="${CSS.escape(l.id)}"] .lib-head`)) ?? head;
+  if (head.parentElement?.querySelector(".lib-rename")) return;
+  const fresh = renaming.id !== l.id;
+  if (fresh) renaming = { id: l.id, text: l.label };
+  const input = el("input", { type: "text", class: "lib-rename", maxlength: "60", autocomplete: "off", "data-fk": `lib-name-${l.id}`, "aria-label": t("library.item.rename_label", { name: l.label }) });
+  input.value = renaming.text;
+  input.addEventListener("input", () => (renaming.text = input.value));
+  let settled = false;
+  const finish = (/** @type {boolean} */ save) => {
+    if (settled) return;
+    settled = true;
+    renaming = { id: "", text: "" };
+    if (save) ctx.renameLibrary(l.id, input.value);
+    input.remove();
+  };
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") finish(true);
+    else if (e.key === "Escape") finish(false);
+  });
+  // A redraw of the panel removes the field (and blurs it): only a field still on the page saves.
+  input.addEventListener("blur", () => queueMicrotask(() => input.isConnected && finish(true)));
+  head.after(input);
+  queueMicrotask(() => {
+    input.focus();
+    if (fresh) input.select();
+  });
+}
+
 /** @param {import("./state.js").LibraryEntry} l @param {import("./actions.js").Ctx} ctx */
 function libraryItem(l, ctx) {
-  const check = el("input", { type: "checkbox", "data-fk": `lib-on-${l.id}`, "aria-label": t("library.item.enable", { name: l.id }) });
+  const check = el("input", { type: "checkbox", "data-fk": `lib-on-${l.id}`, "aria-label": t("library.item.enable", { name: l.label }) });
   check.checked = l.enabled;
   check.addEventListener("change", () => ctx.toggleLibrary(l.id, check.checked));
-  const head = el("div", { class: "lib-head" }, [el("label", { class: "lib-toggle" }, [check, el("strong", {}, [l.id])]), el("span", { class: "badge" }, [t(l.private ? "library.item.private" : "library.item.public")])]);
+  const head = el("div", { class: "lib-head" }, [el("label", { class: "lib-toggle" }, [check, el("strong", {}, [l.label])]), el("span", { class: "badge" }, [t(l.private ? "library.item.private" : "library.item.public")])]);
   if (l.private) {
-    const remove = el("button", { type: "button", class: "icon-button", "data-fk": `lib-rm-${l.id}`, "aria-label": t("library.item.remove", { name: l.id }) }, [icon("close")]);
+    const remove = el("button", { type: "button", class: "icon-button", "data-fk": `lib-rm-${l.id}`, "aria-label": t("library.item.remove", { name: l.label }) }, [icon("close")]);
     remove.addEventListener("click", () => ctx.removeLibrary(l.id));
-    attachTip(remove, () => t("library.item.remove", { name: l.id }));
-    head.append(remove);
+    attachTip(remove, () => t("library.item.remove", { name: l.label }));
+    const rename = el("button", { type: "button", class: "icon-button", "data-fk": `lib-rename-${l.id}`, "aria-label": t("library.item.rename", { name: l.label }) }, [icon("pen")]);
+    rename.addEventListener("click", () => startRename(head, l, ctx));
+    attachTip(rename, () => t("library.item.rename", { name: l.label }));
+    head.querySelector("strong")?.addEventListener("dblclick", () => startRename(head, l, ctx));
+    head.append(rename, remove);
   }
   const license = l.private ? t("library.item.license_private") : l.license;
   const attribution = l.private ? t("library.item.attribution_private") : ((currentLang() === "it" && l.attribution.it) || l.attribution.en);
   // Conditions of a third-party permission (licence page of the library, never in the results); {app} = product name.
   const termsText = l.terms && ((currentLang() === "it" && l.terms.it) || l.terms.en);
   const terms = termsText ? termsText.replaceAll("{app}", APP_NAME) : "";
-  return el("li", { class: "lib-item", "data-library": l.id }, [
+  const item = el("li", { class: "lib-item", "data-library": l.id }, [
     head,
     el("span", { class: "note" }, [`${t("library.item.version", { version: l.version })} · ${t("library.item.spectra", { n: formatNumber(l.spectra) })} · ${t("library.item.license", { license })}`]),
     el("span", { class: "note" }, [t("library.item.attribution", { text: attribution })]),
     ...(terms ? [el("span", { class: "note", "data-library-terms": l.id }, [t("library.item.terms", { text: terms })])] : []),
   ]);
+  if (renaming.id === l.id) startRename(head, l, ctx, true);
+  return item;
 }
 
 /** Section 2: the libraries (public and private), the import of a private one with progress, the notices. @param {HTMLElement} body @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx */

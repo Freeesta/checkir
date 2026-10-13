@@ -5,7 +5,7 @@ import { marginScore, matchScore } from "./candidati.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { spectrumOf } from "./files.js";
-import { libraryOriginal, libraryRows } from "./librerie.js";
+import { libraryLabel, libraryOriginal, libraryRows } from "./librerie.js";
 import { meanStep } from "./match.js";
 import { hasSheet } from "./schede.js";
 import { mixtureBlock, mixtureTaken } from "./mixture.js";
@@ -130,14 +130,14 @@ function candidateRow(c, i, s, ctx, selected, data) {
   const key = candidateKey(c);
   const name = candidateName(c);
   const r = formatNumber(matchScore(c.r_derivative));
-  const select = el("button", { type: "button", class: "cand-select", "data-fk": `cand-${i}`, "aria-label": t("results.row", { rank: formatNumber(c.rank), name, form: c.form ? ` ${c.form},` : "", library: c.library, r }) }, [
+  const select = el("button", { type: "button", class: "cand-select", "data-fk": `cand-${i}`, "aria-label": t("results.row", { rank: formatNumber(c.rank), name, form: c.form ? ` ${c.form},` : "", library: libraryLabel(c.library), r }) }, [
     el("span", { class: "rank" }, [formatNumber(c.rank)]),
     el("span", { class: "cand-name" }, [name, ...othersMark(c)]),
     el("span", { class: "cand-form" }, [c.form]),
   ]);
   if (selected) select.setAttribute("aria-current", "true");
   select.addEventListener("click", () => ctx.selectCandidate(key));
-  const extra = el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [r]), marginMark(c.rank === 1 ? marginScore(data.margin) : null), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]);
+  const extra = el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [r]), marginMark(c.rank === 1 ? marginScore(data.margin) : null), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [libraryLabel(c.library)])]);
   return el("li", { class: "cand", "data-key": key, "data-label": s.labels[key] ?? "" }, [select, extra, labelGroup(key, i, s.labels[key], ctx)]);
 }
 
@@ -205,7 +205,7 @@ function detail(data, c, ctx, s, level) {
 
 /** "subtracted: name, library, k = 0.84" for a residual (written in the active language, never stored). @param {import("./state.js").Derived} d @returns {string} */
 export function derivedText(d) {
-  return t("file.derived", { name: d.name, library: d.library, k: formatNumber(d.k, 2) });
+  return t("file.derived", { name: d.name, library: libraryLabel(d.library), k: formatNumber(d.k, 2) });
 }
 
 /** The residuals made from a spectrum, at any depth, in the order they were made (a residual always comes after its parent). @param {import("./state.js").AppState} s @param {string} code @returns {import("./state.js").FileEntry[]} */
@@ -220,7 +220,7 @@ function residualRows(data) {
   (data.candidates ?? []).slice(0, SHOWN).forEach((/** @type {any} */ c) => {
     const row = el("li", { class: "cand", "data-key": candidateKey(c) }, [
       el("span", { class: "cand-select" }, [el("span", { class: "rank" }, [formatNumber(c.rank)]), el("span", { class: "cand-name" }, [candidateName(c), ...othersMark(c)]), el("span", { class: "cand-form" }, [c.form])]),
-      el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [formatNumber(matchScore(c.r_derivative))]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]),
+      el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [formatNumber(matchScore(c.r_derivative))]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [libraryLabel(c.library)])]),
     ]);
     list.append(row);
   });
