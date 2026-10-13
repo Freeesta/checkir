@@ -56,6 +56,8 @@ fn identity(source: &str) -> EngineResult<Identity> {
         attribution_en: crate::text(attribution, "en")
             .ok_or_else(|| invalid(KEY, "attribution"))?
             .to_string(),
+        terms_it: None,
+        terms_en: None,
         private: matches!(v.get("private"), Some(Value::Bool(true))),
     })
 }

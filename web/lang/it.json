@@ -360,6 +360,7 @@
   "library.item.public": "Pubblica",
   "library.item.remove": "Rimuovi la libreria {name}",
   "library.item.spectra": "Spettri: {n}",
+  "library.item.terms": "Condizioni della licenza: {text}",
   "library.item.version": "Versione {version}",
   "library.load_failed": "Le librerie pubbliche non sono disponibili: sei senza rete e non sono ancora salvate nel browser.",
   "library.manifest_invalid": "Il manifesto della libreria non è valido ({field}).",
