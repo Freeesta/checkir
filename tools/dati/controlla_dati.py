@@ -17,11 +17,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import jcamp  # noqa: E402
+import controlla_schede  # noqa: E402
 import qualita  # noqa: E402
 import valida_schemi  # noqa: E402
 
-SECTIONS = ["molecule", "category", "effects", "doses", "risks", "interactions", "sources", "license"]
-CLAIM_SECTIONS = {"effects", "doses", "risks", "interactions"}
+SECTIONS = controlla_schede.SECTIONS
 FORBIDDEN = re.compile(r"\b(sicur[oaie]|pur[oaie]|pulit[oaie]|innocu[oaie]|nessun rischio|safe|pure|clean|harmless)\b", re.I)
 ALLOWED_PHRASES = re.compile(r"nessuna dose è sicura|no dose is safe|sostanza pura|pure substance", re.I)
 PERSONAL = [
@@ -65,22 +65,14 @@ def forbidden_names() -> list[re.Pattern[str]]:
     return controlla_nomi.compile_patterns(os.environ.get("NOMI_VIETATI", ""))
 
 
-def check_texts(label: str, path: Path, source_ids: set[str]) -> list[str]:
-    out = []
+def check_texts(label: str, path: Path, ctx: dict) -> list[str]:
     text = path.read_text(encoding="utf-8")
-    heads = re.findall(r"^## (\S+)\s*$", text, re.M)
-    if heads != SECTIONS:
-        out.append(f"{label}: section headings must be exactly {SECTIONS} in this order, found {heads}")
-    for m in FORBIDDEN.finditer(ALLOWED_PHRASES.sub(" ", text)):
-        out.append(f"{label}: forbidden reassuring word '{m.group(0)}' (the program never says a sample is safe, pure or clean)")
-    for block in re.split(r"^## ", text, flags=re.M)[1:]:
-        name, _, body = block.partition("\n")
-        for para in [p.strip() for p in re.split(r"\n\s*\n", body) if p.strip()]:
-            refs = re.findall(r"\[f:([a-z0-9-]+)\]", para)
-            if name.strip() in CLAIM_SECTIONS and not refs:
-                out.append(f"{label}: section '{name.strip()}' has a statement without a source [f:id]: '{para[:50]}'")
-            out += [f"{label}: unknown source id '{r}'" for r in refs if r not in source_ids]
-    return out
+    out = controlla_schede.check_sections(label, text, SECTIONS, controlla_schede.REQUIRED, ctx["sources"], ctx["tiers"])
+    return out + wording(label, text)
+
+
+def wording(label: str, text: str) -> list[str]:
+    return [f"{label}: forbidden reassuring word '{m.group(0)}' (the program never says a sample is safe, pure or clean)" for m in FORBIDDEN.finditer(ALLOWED_PHRASES.sub(" ", text))]
 
 
 def check_sheet(label: str, sheet: dict) -> list[str]:
@@ -129,12 +121,13 @@ def check_spectrum(label: str, jdx: Path, meta_path: Path, meta: dict, forbidden
 
 def collect(root: Path) -> tuple[list[str], dict]:
     problems: list[str] = []
-    ctx: dict = {"sources": set(), "classes": {}, "substances": {}, "forms": set()}
+    ctx: dict = {"sources": set(), "tiers": {}, "cut_ids": set(), "classes": {}, "substances": {}, "forms": set()}
     for name in ("sources.json", "classes.json", "aliases.json"):
         problems += valida_schemi.check_file(root / name)
     if problems:
         return problems, ctx
     ctx["sources"] = {s["id"] for s in load(root / "sources.json")["sources"]}
+    ctx["tiers"] = {s["id"]: s.get("tier") for s in load(root / "sources.json")["sources"]}
     ctx["classes"] = {c["id"]: c for c in load(root / "classes.json")["classes"]}
     return problems, ctx
 
@@ -144,6 +137,9 @@ def check_data(root: Path) -> list[str]:
     if problems:
         return problems
     forbidden = forbidden_names()
+    tagli = root / "tagli.json"
+    ctx["cut_ids"] = {c["id"] for c in load(tagli)["cuts"]} if tagli.is_file() else set()
+    ctx["cut_ids"] |= {p.name for p in (root / "substances").glob("*") if p.is_dir()}
     seen_keys: dict[str, str] = {}
     spectra: list[tuple[str, str, list[float]]] = []
     for c in ctx["classes"].values():
@@ -155,6 +151,7 @@ def check_data(root: Path) -> list[str]:
         (ida, suba, ya), (idb, subb, yb) = spectra[a], spectra[b]
         if suba != subb and len(ya) == len(yb) and qualita.correlation(ya, yb) >= 0.98:
             problems.append(f"{ida} and {idb} (different substances) correlate >= 0.98: possible identity error or IR-indistinguishable pair (review; candidate ir_ambiguity alert)")
+    problems += controlla_schede.check_families(root, ctx, wording)
     for path in sorted((root / "alerts").glob("*.json")) if (root / "alerts").is_dir() else []:
         problems += valida_schemi.check_file(path)
     return problems
@@ -203,11 +200,11 @@ def check_substance(path: Path, root: Path, ctx: dict, forbidden: list[re.Patter
         out += personal(f"{mp}", [("", t) for t in strings(meta)], forbidden)
         if ys:
             spectra.append((meta["id"], sid, ys))
-    out += check_datasheet(folder / "datasheet", ctx, forbidden)
+    out += check_datasheet(folder / "datasheet", ctx, forbidden, sub)
     return out
 
 
-def check_datasheet(folder: Path, ctx: dict, forbidden: list[re.Pattern[str]]) -> list[str]:
+def check_datasheet(folder: Path, ctx: dict, forbidden: list[re.Pattern[str]], sub: dict | None = None) -> list[str]:
     if not folder.is_dir():
         return []
     out = valida_schemi.check_file(folder / "datasheet.json")
@@ -220,9 +217,11 @@ def check_datasheet(folder: Path, ctx: dict, forbidden: list[re.Pattern[str]]) -
     if not (folder / "texts.en.md").is_file():
         out.append(f"{folder}: texts.en.md is required (Italian falls back to English, not the reverse)")
     for tp in sorted(folder.glob("texts.*.md")):
-        out += check_texts(str(tp), tp, ctx["sources"])
+        out += check_texts(str(tp), tp, ctx)
         out += personal(str(tp), [(f":{n}", t) for n, t in enumerate(tp.read_text(encoding="utf-8").splitlines(), 1)], forbidden)
-    return out
+    texts = {tp.name.split(".")[1]: controlla_schede.parse(tp.read_text(encoding="utf-8")) for tp in sorted(folder.glob("texts.*.md"))}
+    out += controlla_schede.check_sheet_data(str(folder / "datasheet.json"), sheet, texts, ctx, sub)
+    return out + controlla_schede.check_parity(folder, SECTIONS)
 
 
 def main(argv: list[str]) -> int:

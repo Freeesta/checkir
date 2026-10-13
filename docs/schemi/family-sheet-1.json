@@ -1,0 +1,314 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:family-sheet:1",
+  "title": "Family sheet data (texts live in texts.<lang>.md)",
+  "title_it": "Dati della scheda di famiglia (i testi stanno in texts.<lingua>.md)",
+  "description": "Family sheet data (texts live in texts.<lang>.md)",
+  "description_it": "Dati della scheda di famiglia (i testi stanno in texts.<lingua>.md)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "family-sheet/1"
+    },
+    "id": {
+      "description": "Id of the family: the class id in classes.json where it exists.",
+      "description_it": "Id della famiglia: l'id di classe in classes.json dove esiste.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+    },
+    "version": {
+      "description": "Sheet version.",
+      "description_it": "Versione della scheda.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "section_state": {
+      "description": "State of each section.",
+      "description_it": "Stato di ogni sezione.",
+      "type": "object",
+      "properties": {
+        "effects": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "risks": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "interactions": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "counselling": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "sources": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        },
+        "license": {
+          "description": "Section state; production shows only approved.",
+          "description_it": "Stato della sezione; la produzione mostra solo approved.",
+          "type": "string",
+          "enum": [
+            "draft",
+            "in_review",
+            "approved"
+          ]
+        }
+      },
+      "required": [
+        "effects",
+        "risks",
+        "interactions",
+        "counselling",
+        "sources",
+        "license"
+      ],
+      "additionalProperties": false
+    },
+    "reviewers": {
+      "description": "Reviewers (public name and role).",
+      "description_it": "Revisori (nome pubblico e ruolo).",
+      "type": "array",
+      "items": {
+        "description": "Reviewer.",
+        "description_it": "Revisore.",
+        "type": "object",
+        "properties": {
+          "public_name": {
+            "description": "Public name.",
+            "description_it": "Nome pubblico.",
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "description": "Role.",
+            "description_it": "Ruolo.",
+            "type": "string",
+            "enum": [
+              "chemist",
+              "health"
+            ]
+          },
+          "sections": {
+            "description": "Sections signed.",
+            "description_it": "Sezioni firmate.",
+            "type": "array",
+            "items": {
+              "description": "Section.",
+              "description_it": "Sezione.",
+              "type": "string",
+              "enum": [
+                "effects",
+                "risks",
+                "interactions",
+                "counselling",
+                "sources",
+                "license"
+              ]
+            },
+            "minItems": 1
+          },
+          "date": {
+            "description": "Date.",
+            "description_it": "Data.",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          }
+        },
+        "required": [
+          "public_name",
+          "role",
+          "sections",
+          "date"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reviewed": {
+      "description": "Date of the last review.",
+      "description_it": "Data dell'ultima revisione.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "review_by": {
+      "description": "Review deadline, at most 24 months after the review (checked by the validator).",
+      "description_it": "Scadenza della revisione, al massimo 24 mesi dopo (controllata dal validatore).",
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "interactions": {
+      "description": "Interactions.",
+      "description_it": "Interazioni.",
+      "type": "array",
+      "items": {
+        "description": "Dangerous combination.",
+        "description_it": "Combinazione pericolosa.",
+        "type": "object",
+        "properties": {
+          "with": {
+            "description": "Substance or class id (classes.json or a substance).",
+            "description_it": "Id di sostanza o di classe (classes.json o sostanza).",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          },
+          "severity": {
+            "description": "Severity.",
+            "description_it": "Gravità.",
+            "type": "string",
+            "enum": [
+              "dangerous",
+              "risky",
+              "caution"
+            ]
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "mechanism": {
+            "description": "Mechanism of the interaction.",
+            "description_it": "Meccanismo dell'interazione.",
+            "type": "string",
+            "enum": [
+              "serotonergic",
+              "cyp_inhibition",
+              "cns_depression",
+              "sympathomimetic",
+              "qt",
+              "maoi",
+              "other"
+            ]
+          },
+          "text_key": {
+            "description": "Optional text key.",
+            "description_it": "Chiave di testo facoltativa.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "with",
+          "severity",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "counselling": {
+      "description": "Talking points for the interview, text in the 'counselling' section (one paragraph per point, same order).",
+      "description_it": "Punti del colloquio, testo nella sezione 'counselling' (un capoverso per punto, stesso ordine).",
+      "type": "array",
+      "items": {
+        "description": "A talking point.",
+        "description_it": "Un punto del colloquio.",
+        "type": "object",
+        "properties": {
+          "key": {
+            "description": "Key of the point.",
+            "description_it": "Chiave del punto.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+          },
+          "topic": {
+            "description": "Topic of the point (filter and map to the interview topics).",
+            "description_it": "Tema del punto (per filtrare e per confrontare con i temi del colloquio).",
+            "type": "string",
+            "enum": [
+              "set_setting",
+              "dosing",
+              "redosing",
+              "route",
+              "combination",
+              "overdose_signs",
+              "tolerance",
+              "dependence",
+              "mental_health",
+              "sleep_food_water",
+              "sexual_health",
+              "legal_status",
+              "testing"
+            ]
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "key",
+          "topic",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "authors": {
+      "description": "Public names of the authors.",
+      "description_it": "Nomi pubblici degli autori.",
+      "type": "array",
+      "items": {
+        "description": "Name.",
+        "description_it": "Nome.",
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "ai_assisted": {
+      "description": "True if a draft was AI-assisted; every claim must be checked by a person.",
+      "description_it": "True se la bozza è stata assistita da IA; ogni affermazione va controllata da una persona.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "version",
+    "section_state",
+    "reviewers",
+    "reviewed",
+    "review_by",
+    "authors",
+    "ai_assisted"
+  ],
+  "additionalProperties": false
+}

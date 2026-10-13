@@ -1,0 +1,160 @@
+{
+  "schema": "datasheet/1",
+  "substance": "example-amine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [
+    {
+      "public_name": "Example Chemist",
+      "role": "chemist",
+      "sections": [
+        "molecule",
+        "category",
+        "history",
+        "origin",
+        "metabolism",
+        "cuts"
+      ],
+      "date": "2026-10-12"
+    }
+  ],
+  "reviewed": "2026-10-12",
+  "review_by": "2028-09-30",
+  "family": "example-family",
+  "structure_svg": true,
+  "identity_extra": {
+    "salt_forms": [
+      "example-amine-hcl",
+      "example-amine-base"
+    ],
+    "street_forms_key": "example.street_forms"
+  },
+  "origin": {
+    "type": "natural",
+    "precursor_classes": [
+      "example_leaf_alkaloids"
+    ],
+    "typical_impurities": [
+      {
+        "substance": "example-impurity",
+        "ir_relevant": true,
+        "source": "x"
+      }
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "example-metabolite",
+        "reaction": "hydrolysis_ester",
+        "enzymes": [
+          "CES1",
+          "BChE"
+        ],
+        "source": "x"
+      },
+      {
+        "from": "parent+ethanol",
+        "to": "example-adduct",
+        "reaction": "other",
+        "enzymes": [
+          "CES1"
+        ],
+        "source": "x"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "example.metabolite",
+        "pubchem_cid": 1,
+        "active": false,
+        "marker": true,
+        "source": "x"
+      },
+      {
+        "name_key": "example.adduct",
+        "active": null,
+        "source": "x"
+      }
+    ],
+    "half_life_h": {
+      "min": 0.7,
+      "max": 1.5,
+      "matrix": "plasma",
+      "route": "intravenous",
+      "source": "x"
+    },
+    "notes_key": "example.metabolism_notes"
+  },
+  "cuts": [
+    {
+      "cut": "caffeine",
+      "frequency": "common",
+      "source": "x"
+    },
+    {
+      "cut": "lidocaine",
+      "frequency": "occasional",
+      "source": "x"
+    }
+  ],
+  "doses": [
+    {
+      "route": "oral",
+      "unit": "g",
+      "threshold": 1,
+      "light": 2,
+      "common": 3,
+      "strong": 4,
+      "source": "x",
+      "evidence_type": "user_reported"
+    }
+  ],
+  "interactions": [
+    {
+      "with": "ethanol",
+      "severity": "risky",
+      "mechanism": "other",
+      "source": "x"
+    },
+    {
+      "with": "opioids",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "text_key": "example.opioids",
+      "source": "x"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "example.redosing",
+      "topic": "sermon",
+      "source": "x"
+    },
+    {
+      "key": "example.testing",
+      "topic": "testing",
+      "source": "x"
+    }
+  ],
+  "show_doses": true,
+  "authors": [
+    "Example Author"
+  ],
+  "ai_assisted": true
+}
