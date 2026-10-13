@@ -1,2 +1,37 @@
-//! Spectral libraries: storage format and lookup. Empty on purpose; filled by the data packages.
+//! Compact spectral libraries (`ftir-library/1`): the manifest, the index and the binary data of one package,
+//! with SHA-256 and size checks on every read, and the conversion of reference spectra onto the common grid.
+//! Pure functions on bytes and text; files are read and written by the callers.
 #![forbid(unsafe_code)]
+
+pub mod build;
+pub mod data;
+pub mod index;
+pub mod manifest;
+pub mod package;
+
+use ftir_core::error::EngineError;
+use ftir_core::passi::Value;
+
+/// Library errors reuse the engine error: `{error, error_key, params}`, keys `library.<case>` translated by the page.
+pub(crate) fn invalid(key: &'static str, field: &str) -> EngineError {
+    EngineError::new(key, "invalid library document").with_param("field", field)
+}
+
+/// A string member of a JSON object.
+pub(crate) fn text<'a>(v: &'a Value, name: &str) -> Option<&'a str> {
+    v.get(name).and_then(Value::as_str)
+}
+
+/// A JSON object from its members.
+pub(crate) fn obj(members: Vec<(&str, Value)>) -> Value {
+    Value::Obj(
+        members
+            .into_iter()
+            .map(|(k, v)| (k.to_string(), v))
+            .collect(),
+    )
+}
+
+pub(crate) fn string(s: &str) -> Value {
+    Value::Str(s.to_string())
+}
