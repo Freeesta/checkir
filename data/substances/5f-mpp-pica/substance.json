@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-mpp-pica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-MPP-PICA",
+      "synonyms": [
+        "5F-MPHP-PICA",
+        "5-fluoro-MPhP-PICA",
+        "MPHP-2201"
+      ]
+    },
+    "it": {
+      "preferred": "5F-MPP-PICA",
+      "synonyms": [
+        "5F-MPHP-PICA",
+        "5-fluoro-MPhP-PICA",
+        "MPHP-2201"
+      ]
+    }
+  },
+  "iupac": "methyl 2-[[1-(5-fluoropentyl)indole-3-carbonyl]amino]-3-phenylpropanoate",
+  "formula": "C24H27FN2O3",
+  "molar_mass_g_mol": 410.5,
+  "smiles": "COC(=O)C(CC1=CC=CC=C1)NC(=O)C2=CN(C3=CC=CC=C32)CCCCCF",
+  "inchi": "InChI=1S/C24H27FN2O3/c1-30-24(29)21(16-18-10-4-2-5-11-18)26-23(28)20-17-27(15-9-3-8-14-25)22-13-7-6-12-19(20)22/h2,4-7,10-13,17,21H,3,8-9,14-16H2,1H3,(H,26,28)",
+  "inchikey": "GZGBNOYVLYYYCZ-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 165412024
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
