@@ -96,8 +96,9 @@ function showName() {
   labelSplash();
 }
 
-/** Last step of the start-up: offline support, loading screen away, page marked ready. */
-function finishStart() {
+/** Last step of the start-up: libraries, offline support, loading screen away, page marked ready. @param {import("./engine.js").Engine | null} engine */
+function finishStart(engine) {
+  if (engine) loadAllLibraries(engine);
   startExtras();
   hideSplash();
   document.body.dataset.ready = "1";
@@ -176,8 +177,7 @@ async function start() {
   startMatching({ announce });
   wireShortcuts(ctx, next);
   redrawAll();
-  if (engine) loadAllLibraries(engine);
-  finishStart();
+  finishStart(engine);
 }
 
 start().catch((e) => {
