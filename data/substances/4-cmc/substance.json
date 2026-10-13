@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-cmc",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-CMC",
+      "synonyms": [
+        "4-chloromethcathinone",
+        "clephedrone"
+      ]
+    },
+    "it": {
+      "preferred": "4-CMC",
+      "synonyms": [
+        "4-clorometcatinone",
+        "clefedrone"
+      ]
+    }
+  },
+  "iupac": "1-(4-chlorophenyl)-2-(methylamino)propan-1-one",
+  "formula": "C10H12ClNO",
+  "molar_mass_g_mol": 197.66,
+  "smiles": "CC(C(=O)C1=CC=C(C=C1)Cl)NC",
+  "inchi": "InChI=1S/C10H12ClNO/c1-7(12-2)10(13)8-3-5-9(11)6-4-8/h3-7,12H,1-2H3",
+  "inchikey": "UEJBEYOXRNGPEI-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1225843-86-6",
+    "pubchem_cid": 82100418
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "datasheet/1",
+  "substance": "2-mmc",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "nor-2-mmc",
+        "reaction": "n_demethylation",
+        "source": "boudin2026"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-2-mmc",
+        "reaction": "hydroxylation",
+        "source": "boudin2026"
+      },
+      {
+        "from": "parent",
+        "to": "dihydro-2-mmc",
+        "reaction": "reduction_keto",
+        "source": "boudin2026"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "nor-2-mmc",
+        "active": null,
+        "source": "boudin2026"
+      },
+      {
+        "name_key": "hydroxy-2-mmc",
+        "active": null,
+        "source": "boudin2026"
+      },
+      {
+        "name_key": "dihydro-2-mmc",
+        "active": null,
+        "source": "boudin2026"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "2mmc.identity",
+      "topic": "testing",
+      "source": "unodc-cathinones2015"
+    },
+    {
+      "key": "2mmc.redosing",
+      "topic": "redosing",
+      "source": "euda-cathinones"
+    },
+    {
+      "key": "2mmc.combination",
+      "topic": "combination",
+      "source": "euda-cathinones"
+    },
+    {
+      "key": "2mmc.route",
+      "topic": "route",
+      "source": "euda-cathinones"
+    }
+  ]
+}

@@ -110,7 +110,7 @@ class Structured(WithFullSheet):
 class Families(Base):
     def family(self, tweak=None):
         d = self.root / "families" / "benzodiazepines"
-        d.mkdir(parents=True)
+        d.mkdir(parents=True, exist_ok=True)
         doc = {"schema": "family-sheet/1", "id": "benzodiazepines", "version": 1, "section_state": {k: "draft" for k in cs.FAMILY_SECTIONS}, "reviewers": [],
                "reviewed": "2026-10-12", "review_by": "2028-09-30", "authors": ["Example"], "ai_assisted": True}
         if tweak:

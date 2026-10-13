@@ -172,6 +172,8 @@ const SPC: &[Rule] = &[
     strip("COMMENT"),
 ];
 
+const SHIMADZU_LIB: &[Rule] = &[keep("ENTRY"), strip("DESCRIPTION"), strip("NAME")];
+
 /// The contract: one table per reader of `READERS` (a test fails for a reader without one).
 pub static CONTRACT: &[ReaderRules] = &[
     ReaderRules {
@@ -185,6 +187,10 @@ pub static CONTRACT: &[ReaderRules] = &[
     ReaderRules {
         reader: "shimadzu-ispd",
         rules: ISPD,
+    },
+    ReaderRules {
+        reader: "shimadzu-lib",
+        rules: SHIMADZU_LIB,
     },
     ReaderRules {
         reader: "bruker-opus",

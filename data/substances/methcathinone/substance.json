@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "methcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Methcathinone",
+      "synonyms": [
+        "ephedrone",
+        "N-methylcathinone"
+      ]
+    },
+    "it": {
+      "preferred": "Metcatinone",
+      "synonyms": [
+        "efedrone",
+        "N-metilcatinone"
+      ]
+    }
+  },
+  "iupac": "2-(methylamino)-1-phenylpropan-1-one",
+  "formula": "C10H13NO",
+  "molar_mass_g_mol": 163.22,
+  "smiles": "CC(C(=O)C1=CC=CC=C1)NC",
+  "inchi": "InChI=1S/C10H13NO/c1-8(11-2)10(12)9-6-4-3-5-7-9/h3-8,11H,1-2H3",
+  "inchikey": "LPLLVINFLBSFRP-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "5650-44-2",
+    "pubchem_cid": 1576
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
