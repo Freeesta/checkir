@@ -405,7 +405,7 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .sheet-meta dd { margin: 0; }
 .sheet .level-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; }
 .sheet-strong { font-weight: 700; }
-.sheet-alerts li { display: flex; gap: 0.35rem; padding: 0.1rem 0; }
+.sheet-alerts li { display: flex; gap: 0.35rem; padding: 0.1rem 0; overflow-wrap: anywhere; }
 .sheet-alerts .icon { flex: none; align-self: flex-start; color: var(--color-alert); }
 .signature { display: flex; align-items: flex-end; gap: 0.6rem; margin-top: 0.8rem; }
 .sign-line { flex: 1; border-bottom: 1px solid var(--text); height: 1.5rem; }

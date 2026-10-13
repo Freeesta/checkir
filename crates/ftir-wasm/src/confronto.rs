@@ -22,12 +22,17 @@ fn answer(r: Result<(), EngineError>) -> String {
     r.map_or_else(|e| e.json(), |()| OK.to_string())
 }
 
-fn entry(id: &str, substance: &str, display_name: &str, form: &str) -> LibEntry {
+fn entry(id: &str, substance: &str, display_name: &str, form: &str, classes: &str) -> LibEntry {
     LibEntry {
         id: id.to_string(),
         substance: (!substance.is_empty()).then(|| substance.to_string()),
         display_name: display_name.to_string(),
         form: form.to_string(),
+        classes: classes
+            .split(',')
+            .filter(|c| !c.is_empty())
+            .map(str::to_string)
+            .collect(),
     }
 }
 
@@ -45,7 +50,7 @@ pub fn confronto_libreria_campionamento(lib: &str, method: &str) -> String {
 }
 
 /// Add one spectrum (axis in cm-1, `y_unit` = `absorbance` or `transmittance`, NaN = absent point).
-/// An empty `substance` means "no identity: group by name". Returns `{"ok":true}` or `{error, error_key, params}`.
+/// An empty `substance` means "no identity: group by name"; `classes` are class ids joined by commas. Returns `{"ok":true}` or `{error, error_key, params}`.
 #[wasm_bindgen]
 #[allow(clippy::too_many_arguments)]
 pub fn confronto_libreria_aggiungi(
@@ -54,6 +59,7 @@ pub fn confronto_libreria_aggiungi(
     substance: &str,
     display_name: &str,
     form: &str,
+    classes: &str,
     y_unit: &str,
     wavenumber_cm1: &[f64],
     y: &[f64],
@@ -72,7 +78,7 @@ pub fn confronto_libreria_aggiungi(
     };
     let s = Spectrum::new(Role::Reference, unit, wavenumber_cm1.to_vec(), y.to_vec());
     answer(with(|m| {
-        m.add(lib, entry(id, substance, display_name, form), &s)
+        m.add(lib, entry(id, substance, display_name, form, classes), &s)
     }))
 }
 
@@ -85,6 +91,7 @@ pub fn confronto_libreria_aggiungi_file(
     substance: &str,
     display_name: &str,
     form: &str,
+    classes: &str,
     file_name: &str,
     bytes: &[u8],
     max_bytes: u32,
@@ -98,7 +105,7 @@ pub fn confronto_libreria_aggiungi_file(
     answer(with(|m| {
         m.add_file(
             lib,
-            entry(id, substance, display_name, form),
+            entry(id, substance, display_name, form, classes),
             file_name,
             bytes,
             &limits,
@@ -224,6 +231,7 @@ mod test {
                 &format!("sub{k}"),
                 &format!("Sub {k}"),
                 "base",
+                "",
                 "absorbance",
                 &x,
                 &y,
