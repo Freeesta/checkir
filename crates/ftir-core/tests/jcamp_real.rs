@@ -1,7 +1,7 @@
 //! Tests on the real JCAMP libraries of the private repository: skipped without `CHECKIR_DATA`.
 mod common;
 use ftir_core::readers::jcamp;
-use ftir_core::readers::model::{Limits, Options, Order, Severity, XUnit, YUnit};
+use ftir_core::readers::model::{Background, Limits, Options, Order, Severity, XUnit, YUnit};
 use std::collections::BTreeMap;
 
 #[test]
@@ -36,6 +36,7 @@ fn all_library_files_open_and_pass_the_audit() {
         assert_eq!(s.y.values.len(), np, "{}", p.display());
         assert_eq!(s.x.values.len(), np, "{}", p.display());
         assert_eq!(s.y.unit, YUnit::Absorbance);
+        assert_eq!(doc.background, Background::NONE, "{}", p.display());
         assert_eq!(s.x.unit, XUnit::Cm1);
         let gaps = common::uncovered(&bytes, &doc, &scarti);
         assert!(gaps.is_empty(), "{}: {gaps:?}", p.display());

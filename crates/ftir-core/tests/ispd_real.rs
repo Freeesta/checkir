@@ -6,7 +6,7 @@ mod common;
 use ftir_core::readers::anonymize::anonymize;
 use ftir_core::readers::bdb;
 use ftir_core::readers::export::to_json;
-use ftir_core::readers::model::{Document, Limits, Options, Order, Role};
+use ftir_core::readers::model::{BackgroundKind, Document, Limits, Options, Order, Role};
 use ftir_core::readers::{ispd, jcamp};
 use ftir_core::synthetic_ispd::container_digest;
 use std::collections::BTreeMap;
@@ -248,6 +248,7 @@ fn measurements_carry_parameters_history_and_interferograms() {
     }
     assert!(docs.len() >= 239, "{}", docs.len());
     let (mut alerts, mut subtractions, mut coherent) = (0usize, 0usize, 0usize);
+    let mut digests = std::collections::BTreeSet::new();
     for (p, d) in &docs {
         let m = &d.spectra[d.primary];
         let ins = &m.instrument;
@@ -267,6 +268,15 @@ fn measurements_carry_parameters_history_and_interferograms() {
         let roles: Vec<Role> = d.spectra.iter().map(|s| s.role).collect();
         assert!(roles.contains(&Role::SampleInterferogram), "{name}");
         assert!(roles.contains(&Role::BackgroundInterferogram), "{name}");
+        let bg = &d.background;
+        assert_eq!(bg.present, BackgroundKind::Interferogram, "{name}");
+        let at = bg.spectrum_index.expect("background index");
+        assert_eq!(d.spectra[at].role, Role::BackgroundInterferogram, "{name}");
+        assert!(
+            bg.digest.as_deref().is_some_and(|x| x.len() == 64),
+            "{name}"
+        );
+        digests.insert(bg.digest.clone().unwrap_or_default());
         subtractions += roles.iter().filter(|r| **r == Role::Subtraction).count();
         alerts += usize::from(
             d.warnings
@@ -278,6 +288,7 @@ fn measurements_carry_parameters_history_and_interferograms() {
         let res = ins.resolution_cm1.as_ref().map_or(0.0, |r| r.value);
         coherent += usize::from(res > 0.0 && step < res);
     }
+    eprintln!("{} distinct backgrounds", digests.len());
     eprintln!("{} measurements: {subtractions} subtractions, {alerts} with instrument alerts, step < resolution in {coherent}", docs.len());
 }
 
