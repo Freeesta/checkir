@@ -350,6 +350,8 @@
   "library.import.private_note": "Imported libraries stay in this browser: they are never sent or exported. Of the files only the spectrum and the file name are kept.",
   "library.import.progress": "Importing {done} of {total}",
   "library.import.skipped": "Discarded {file}:",
+  "library.import.unrecognized_many": "{count} files not recognized.",
+  "library.import.unrecognized_one": "1 file not recognized.",
   "library.index_invalid": "The library index is not valid ({field}).",
   "library.item.attribution": "Attribution: {text}",
   "library.item.attribution_private": "imported by you, kept in this browser",

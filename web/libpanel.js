@@ -19,7 +19,6 @@ function makePicker(folder) {
   input.hidden = true;
   input.dataset.library = folder ? "folder" : "files";
   if (folder) input.setAttribute("webkitdirectory", "");
-  else input.accept = ".jdx,.dx,.jcm,.jcamp";
   input.addEventListener("change", () => {
     const chosen = [...(input.files ?? [])];
     input.value = "";
