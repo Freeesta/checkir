@@ -35,13 +35,37 @@ export function pickLang() {
  */
 export async function loadLang(lang) {
   const r = await fetch(new URL(`lang/${lang}.json`, import.meta.url));
-  catalog = await r.json();
+  const next = await r.json();
+  if (Object.keys(catalog).length) spare[current] = catalog;
+  catalog = next;
   current = lang;
   document.documentElement.lang = lang;
   try {
     localStorage.setItem(STORAGE_PREFIX + "lang", lang);
   } catch {
     // ignored: the choice just is not remembered
+  }
+}
+
+/** Catalogs of the other languages, fetched only for the counselling sheet (its language is chosen apart from the interface's). @type {Record<string, Record<string, string>>} */
+const spare = {};
+
+/** Make a second catalog available to `inLang`. @param {string} lang */
+export async function preloadLang(lang) {
+  if (lang === current || spare[lang] || !LANGS.includes(lang)) return;
+  spare[lang] = await (await fetch(new URL(`lang/${lang}.json`, import.meta.url))).json();
+}
+
+/** Run `fn` with another language's catalog (loaded by `preloadLang`); the active language is restored at once. @template T @param {string} lang @param {() => T} fn @returns {T} */
+export function inLang(lang, fn) {
+  const other = spare[lang];
+  if (lang === current || !other) return fn();
+  const [keepCatalog, keepLang] = [catalog, current];
+  [catalog, current] = [other, lang];
+  try {
+    return fn();
+  } finally {
+    [catalog, current] = [keepCatalog, keepLang];
   }
 }
 

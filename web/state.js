@@ -13,12 +13,15 @@ import { STORAGE_PREFIX } from "./appname.js";
  * @typedef {{ code: string, data: any, sig: string }} MatchResult
  * The chemist's own mark on a candidate (memory only, never stored).
  * @typedef {"accept" | "unsure" | "reject"} ChemistLabel
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, peaks: { explained: number, unexplained: number }, decision: null | { level: number }, folder: FolderState }} AppState
+ * The chemist's decision on one spectrum: level 1–5 and the chosen candidates (keys), valid for the libraries searched (`sig`). Memory only; the sheet is never stored.
+ * @typedef {{ level: number, keys: string[] }} DecisionDraft
+ * @typedef {{ level: number, keys: string[], sig: string }} Decision
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, peaks: { explained: number, unexplained: number }, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, folder: FolderState }} AppState
  */
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, peaks: { explained: 0, unexplained: 0 }, decision: null, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, peaks: { explained: 0, unexplained: 0 }, decisions: {}, draft: {}, sheetLang: null, talk: false, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();
@@ -34,6 +37,13 @@ export function activeFile(s) {
 export function resultOf(s) {
   const code = activeFile(s)?.code;
   return (code && s.results[code]) || null;
+}
+
+/** The decision on the spectrum shown, if it still matches the comparison it was made on. @param {AppState} s @returns {Decision | null} */
+export function decisionOf(s) {
+  const code = activeFile(s)?.code;
+  const d = code ? s.decisions[code] : undefined;
+  return d && resultOf(s)?.sig === d.sig ? d : null;
 }
 
 /** Key of a candidate in `labels` and `selected`. @param {{ library: string, spectrum_id: string }} c @returns {string} */

@@ -1,5 +1,6 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
+import { decisionOf, resultOf } from "./state.js";
 
 /**
  * Levels and alerts of a comparison result (`ftir-risultato-confronto/1`), as the page shows them. The program only proposes a level
@@ -8,10 +9,10 @@ import { formatNumber, t } from "./i18n.js";
  * @typedef {{ id: string, label: string, reasons: string[] }} AlertView
  */
 
-/** Level numbers of the interface (1 confirmed and 4 mixture are not proposed yet). @type {Record<string, number>} */
+/** Level numbers of the interface (the program proposes 2, 3 or 5; 1 confirmed and 4 mixture come only from the chemist's decision). @type {Record<string, number>} */
 const LEVEL_NUMBER = { probable: 2, to_check: 3, not_identified: 5 };
 /** Filled segments of the four-segment bar. @type {Record<number, number>} */
-const LEVEL_BAR = { 2: 3, 3: 2, 5: 0 };
+const LEVEL_BAR = { 1: 4, 2: 3, 3: 2, 4: 2, 5: 0 };
 
 /** @param {any} data @returns {number} */
 export function levelNumber(data) {
@@ -25,7 +26,13 @@ export function levelBar(n) {
 
 /** The word of a level in the active language (also the header chip and the announcement). @param {number} n @returns {string} */
 export function levelWord(n) {
-  return n === 2 ? t("level.2.word") : n === 3 ? t("level.3.word") : t("level.5.word");
+  return n === 1 ? t("level.1.word") : n === 2 ? t("level.2.word") : n === 3 ? t("level.3.word") : n === 4 ? t("level.4.word") : t("level.5.word");
+}
+
+/** The level on show for the spectrum shown: the chemist's decision if there is one, else the program's proposal; null without a result. @param {import("./state.js").AppState} s @returns {number | null} */
+export function shownLevel(s) {
+  const r = resultOf(s);
+  return r ? (decisionOf(s)?.level ?? levelNumber(r.data)) : null;
 }
 
 /** @param {any} r a row reference of an alert: name, form and r @returns {string} */
@@ -39,6 +46,7 @@ const num = (v, d = 2) => formatNumber(Number(v), d);
 
 /** @type {Record<string, { labelKey: string, reasons: (d: any) => string[] }>} */
 const ALERTS = {
+  flagged_family: { labelKey: "alert.flagged_family.label", reasons: (d) => [t("alert.flagged_family.reason", { family: String(d.family ?? d.name ?? "") })] },
   ambiguity: {
     labelKey: "alert.ambiguity.label",
     reasons(d) {
