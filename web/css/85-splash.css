@@ -1,4 +1,4 @@
-/* Loading screen: a photon (bright head) with its red wave; the wave runs forward one period per cycle. */
+/* Loading screen: a photon (bright head) with its red wave; splash.js draws the wave and moves the head on its last point, from one phase. */
 #splash { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: var(--bg); opacity: 1; transition: opacity 0.12s linear; }
 #splash[data-gone] { opacity: 0; pointer-events: none; }
 .splash-art { width: min(20rem, 70vw); height: auto; }
@@ -7,9 +7,7 @@
 .splash-glow-in { stop-color: var(--splash-wave); stop-opacity: 0.55; }
 .splash-glow-out { stop-color: var(--splash-wave); stop-opacity: 0; }
 @media (prefers-reduced-motion: no-preference) {
-  .splash-wave { animation: splash-run 0.9s linear infinite; }
   .splash-halo { transform-box: fill-box; transform-origin: center; animation: splash-pulse 1.4s ease-in-out infinite; }
 }
-@keyframes splash-run { to { transform: translateX(40px); } }
 @keyframes splash-pulse { 50% { transform: scale(1.35); opacity: 0.7; } }
 @media (prefers-reduced-motion: reduce) { #splash { transition: none; } }

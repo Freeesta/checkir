@@ -1,0 +1,18 @@
+{
+  "schema": "alerts/1",
+  "id": "family-synthetic-cannabinoids",
+  "status": "draft",
+  "target": {
+    "classes": [
+      "synthetic_cannabinoids"
+    ]
+  },
+  "reason": "ftir_limit",
+  "severity": "caution",
+  "sources": [
+    "unodc-ewa"
+  ],
+  "issued": "2026-10-13",
+  "review_by": "2027-10-13",
+  "reviewers": []
+}

@@ -4,3 +4,4 @@
 .propose { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
 .propose-field { display: grid; gap: 0.2rem; }
 .propose-field textarea, .propose-field input { font: inherit; width: 100%; box-sizing: border-box; }
+.propose-problems { margin: 0; padding-left: 1.2rem; }

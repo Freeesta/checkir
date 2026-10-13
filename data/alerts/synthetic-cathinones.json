@@ -1,0 +1,18 @@
+{
+  "schema": "alerts/1",
+  "id": "family-synthetic-cathinones",
+  "status": "draft",
+  "target": {
+    "classes": [
+      "synthetic_cathinones"
+    ]
+  },
+  "reason": "ir_ambiguity",
+  "severity": "caution",
+  "sources": [
+    "unodc-ewa"
+  ],
+  "issued": "2026-10-13",
+  "review_by": "2027-10-13",
+  "reviewers": []
+}
