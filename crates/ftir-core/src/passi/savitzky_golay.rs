@@ -20,7 +20,7 @@ pub const STEP: Step = Step {
 };
 
 /// Solve `a x = b` by Gaussian elimination with partial pivoting (small dense systems).
-fn solve(mut a: Vec<Vec<f64>>, mut b: Vec<f64>) -> Vec<f64> {
+pub(crate) fn solve(mut a: Vec<Vec<f64>>, mut b: Vec<f64>) -> Vec<f64> {
     let n = b.len();
     for c in 0..n {
         let piv = (c..n)

@@ -227,11 +227,90 @@ pub struct Provenance {
     pub size: usize,
 }
 
+/// What the file holds of the background (blank) measurement.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum BackgroundKind {
+    /// Nothing: the quality checks that need the background are not possible.
+    None,
+    Interferogram,
+    SingleBeam,
+    /// A background already converted to a spectrum (absorbance, transmittance...).
+    Spectrum,
+}
+
+impl BackgroundKind {
+    pub fn name(self) -> &'static str {
+        match self {
+            BackgroundKind::None => "none",
+            BackgroundKind::Interferogram => "interferogram",
+            BackgroundKind::SingleBeam => "single_beam",
+            BackgroundKind::Spectrum => "spectrum",
+        }
+    }
+}
+
+/// Link between the sample (`Document::primary`) and its background inside the same file.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Background {
+    pub present: BackgroundKind,
+    /// Index in `Document::spectra` of the background data.
+    pub spectrum_index: Option<usize>,
+    /// SHA-256 of the background values (little-endian f64), kept in memory only: it tells that two measurements share a background.
+    pub digest: Option<String>,
+}
+
+impl Background {
+    pub const NONE: Background = Background {
+        present: BackgroundKind::None,
+        spectrum_index: None,
+        digest: None,
+    };
+
+    /// Finds the background among the spectra of one file: a spectrum the file calls background, or (role unknown) one whose
+    /// y unit is single beam or interferogram. Sample data is never taken for a background.
+    pub fn find(spectra: &[Spectrum]) -> Background {
+        let hit = spectra.iter().enumerate().find_map(|(i, s)| {
+            let kind = match (s.role, s.y.unit) {
+                (Role::BackgroundInterferogram, _) => BackgroundKind::Interferogram,
+                (Role::Background, YUnit::SingleBeam) => BackgroundKind::SingleBeam,
+                (Role::Background, YUnit::Interferogram) => BackgroundKind::Interferogram,
+                (Role::Background, _) => BackgroundKind::Spectrum,
+                (Role::Unknown, YUnit::SingleBeam) => BackgroundKind::SingleBeam,
+                (Role::Unknown, YUnit::Interferogram) => BackgroundKind::Interferogram,
+                _ => return None,
+            };
+            Some((i, kind, s))
+        });
+        let Some((i, kind, s)) = hit else {
+            return Background::NONE;
+        };
+        let bytes: Vec<u8> = s.y.values.iter().flat_map(|v| v.to_le_bytes()).collect();
+        Background {
+            present: kind,
+            spectrum_index: Some(i),
+            digest: Some(super::sha256::sha256_hex(&bytes)),
+        }
+    }
+}
+
+/// Marks a history entry of a datum that checkIR computed itself (never mixed up with the instrument software's).
+pub const COMPUTED_BY: &str = "computed_by: checkir";
+
+/// History entry for a step computed by checkIR, e.g. `computed_by: checkir · single_beam`.
+pub fn computed_entry(step: &str) -> String {
+    format!("{COMPUTED_BY} · {step}")
+}
+
+pub fn is_computed(entry: &str) -> bool {
+    entry.starts_with(COMPUTED_BY)
+}
+
 #[derive(Debug, Clone, PartialEq)]
 pub struct Document {
     pub spectra: Vec<Spectrum>,
     /// Index of the spectrum to show first: the first data block.
     pub primary: usize,
+    pub background: Background,
     pub fields: Vec<Field>,
     pub warnings: Vec<Warning>,
     pub provenance: Provenance,

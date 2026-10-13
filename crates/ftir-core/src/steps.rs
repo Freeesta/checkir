@@ -1,6 +1,9 @@
 //! Processing steps registry (`STEPS`): the implementations live in `crate::passi`. Adding a step = a file there + one line here.
 use crate::error::EngineResult;
-use crate::passi::{griglia, maschera, normalizza, savitzky_golay, trasmittanza};
+use crate::passi::{
+    correzione_atr, griglia, linea_di_base_arpls, linea_di_base_asls, linea_di_base_snip, maschera,
+    normalizza, savitzky_golay, trasmittanza,
+};
 use crate::spectrum::Spectrum;
 
 /// Version of the step contract this registry accepts.
@@ -27,6 +30,10 @@ pub static STEPS: &[Step] = &[
     maschera::STEP,
     savitzky_golay::STEP,
     normalizza::STEP,
+    linea_di_base_asls::STEP,
+    linea_di_base_arpls::STEP,
+    linea_di_base_snip::STEP,
+    correzione_atr::STEP,
 ];
 
 /// The step with this `id/version` (e.g. `griglia/1`).
