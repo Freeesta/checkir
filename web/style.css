@@ -8,13 +8,15 @@
   --oi-blue: #0072b2;
   --oi-vermillion: #d55e00;
   --oi-purple: #cc79a7;
-  --bg: #fbfcfe;
-  --text: #14213d;
-  --text-muted: #46536b;
-  --border: #7f8da3; /* control outlines (3:1) */
-  --border-soft: #d3dbe7; /* hairlines between sections and table rows */
-  --surface: #f1f4f9;
-  --accent: #2457c5; /* the one blue for active states */
+  --bg: #f4f5f7; /* page: warm neutral grey */
+  --text: #1f2328;
+  --text-muted: #5b6168;
+  --border: #858c94; /* field and chart outlines (3:1) */
+  --border-soft: #dfe2e6; /* hairlines between sections and table rows */
+  --surface: #ffffff;
+  --panel: #ffffff; /* cards, panels and bars on the grey page */
+  --border-ui: #b4bac1; /* outline of labelled buttons (the label identifies them) */
+  --accent: #1f6fb2; /* the one blue for active states */
   /* Colour roles (light): what each colour means; the chart and the text use only these names. Shapes and dashes tell them apart too. */
   --color-brand: var(--accent);
   --color-sample: #3b528b;
@@ -29,7 +31,7 @@
   --series-4: #3d9d3f; /* viridis green, deepened for 3:1 on white */
   --series-5: #7f8f00;
   --line: var(--color-sample);
-  --focus: var(--oi-vermillion);
+  --focus: var(--accent);
   --splash-wave: #d7263d;
   --header-h: 3rem;
   --tabbar-h: 2.75rem;
@@ -37,13 +39,15 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0e1521;
-    --text: #e4e9f2;
-    --text-muted: #aab5c8;
-    --border: #5d6b82;
-    --border-soft: #263247;
-    --surface: #151e2d;
-    --accent: #7da2ff;
+    --bg: #16181c;
+    --text: #e6e8eb;
+    --text-muted: #a3a9b0;
+    --border: #6b727b;
+    --border-soft: #30343a;
+    --surface: #1e2126;
+    --panel: #1e2126;
+    --border-ui: #4a4f57;
+    --accent: #62aef0;
     --color-brand: var(--accent);
     --color-sample: #8da2e0;
     --color-reference: #21908d;
@@ -55,19 +59,21 @@
     --series-3: #21908d;
     --series-4: #6a85d8;
     --series-5: #a56fc4;
-    --focus: var(--oi-yellow);
+    --focus: #62aef0;
     --splash-wave: #ff6b6b;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0e1521;
-  --text: #e4e9f2;
-  --text-muted: #aab5c8;
-  --border: #5d6b82;
-  --border-soft: #263247;
-  --surface: #151e2d;
-  --accent: #7da2ff;
+  --bg: #16181c;
+  --text: #e6e8eb;
+  --text-muted: #a3a9b0;
+  --border: #6b727b;
+  --border-soft: #30343a;
+  --surface: #1e2126;
+  --panel: #1e2126;
+  --border-ui: #4a4f57;
+  --accent: #62aef0;
   --color-brand: var(--accent);
   --color-sample: #8da2e0;
   --color-reference: #21908d;
@@ -79,7 +85,7 @@
   --series-3: #21908d;
   --series-4: #6a85d8;
   --series-5: #a56fc4;
-  --focus: var(--oi-yellow);
+  --focus: #62aef0;
   --splash-wave: #ff6b6b;
   color-scheme: dark;
 }
@@ -95,7 +101,7 @@ p { margin: 0.25rem 0; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 0.5rem; top: 0.5rem; background: var(--surface); padding: 0.5rem; z-index: 40; }
-:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .icon { width: 1.25rem; height: 1.25rem; flex: none; }
 button, select { font: inherit; color: var(--text); }
 .btn, .icon-button, .chip, .lang-button, .tab, .toolbar button {
@@ -259,7 +265,7 @@ th { position: sticky; top: 0; background: var(--surface); }
 }
 @media (prefers-contrast: more) {
   :root { --border: var(--text); }
-  :focus-visible { outline-width: 4px; }
+  :focus-visible { outline-width: 3px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
