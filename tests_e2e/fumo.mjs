@@ -14,6 +14,7 @@ import { sheetsPureScenario, sheetsScenario } from "./schede.mjs";
 import { subtractionScenario } from "./sottrazione.mjs";
 import { startSite } from "./sito.mjs";
 import { toolsScenario } from "./strumenti.mjs";
+import { versionScenario } from "./versione.mjs";
 
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
 
@@ -200,7 +201,7 @@ async function shellScenario(browser) {
     session: sessionStorage.length,
     idb: (await indexedDB.databases()).length,
   }));
-  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.shortcuts", "checkir.autoMatch"];
+  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.shortcuts", "checkir.autoMatch", "checkir.textLevel", "checkir.modeAnim"];
   check("privacy: only preferences are stored, nothing of the analysis", stored.local.every((k) => allowed.includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
   await ctx.close();
 }
@@ -274,6 +275,7 @@ async function run() {
     await shellScenario(browser);
     await shortcutsScenario(browser);
     await registryScenario(check);
+    await versionScenario(check);
     await nameScenario(browser);
     await pagesScenario(browser);
     await warningsBoxScenario(browser);
