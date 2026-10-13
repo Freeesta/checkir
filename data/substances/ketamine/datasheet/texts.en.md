@@ -16,9 +16,25 @@ Cuts and mixtures: ketamine itself is often found in amphetamine-type samples in
 
 Chemical class: arylcyclohexylamines. Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
 
+## history
+
+Ketamine was first synthesised in the United States in 1962 as a dissociative anaesthetic, in a search for an alternative to phencyclidine. [f:kalsi2011] [f:dinis-oliveira2017]
+
+## origin
+
+Synthetic compound, used as a racemate of S and R enantiomers. [f:peltoniemi2016]
+
+## metabolism
+
+Ketamine is N-demethylated to norketamine (active), mainly by CYP3A4 and CYP2B6; dehydronorketamine, hydroxylation and glucuronidation follow. The elimination half-life is about 2-4 hours by the intravenous route. Oral bioavailability is poor because of strong first-pass metabolism. [f:peltoniemi2016] [f:dinis-oliveira2017]
+
+## cuts
+
+Tablets sold as ketamine are often mixed with amphetamine, caffeine, cocaine and heroin. [f:kalsi2011]
+
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+It produces dissociative anaesthesia: a trance-like cataleptic state with unconsciousness, amnesia and deep analgesia with intact reflexes; sympathomimetic effects start at sub-anaesthetic doses. In healthy volunteers 0.1-0.5 mg/kg is enough to induce dissociative and schizotypal symptoms. Recreational use is mostly by insufflation. [f:kalsi2011]
 
 ## doses
 
@@ -26,15 +42,27 @@ Not drafted yet. This section will be written from verifiable sources and signed
 
 ## risks
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Long-term use is associated with haemorrhagic cystitis and urinary symptoms: among those investigated, reduced bladder volume in 57 of 77 and hydronephrosis in 38 of 70. The upper urinary tract may be involved; abstinence is the primary intervention. [f:kalsi2011] [f:zheng2025]
+
+Frequent use brings tolerance and psychological dependence, without a physical withdrawal state. [f:kalsi2011]
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Serious interactions are reported with central nervous system depressants (ethanol, opioids, barbiturates, benzodiazepines) and with sympathomimetics. [f:kalsi2011]
+
+## counselling
+
+Ask about alcohol, opioids and benzodiazepines: central nervous system depressants have serious interactions with ketamine. [f:kalsi2011] [f:ubc-counselling-guidelines]
+
+Explain that frequent use raises tolerance and may lead to psychological dependence, without physical withdrawal. [f:kalsi2011] [f:ubc-counselling-guidelines]
+
+Ask about pain, urgency or blood in the urine: they are symptoms of bladder damage from long-term use and abstinence is the primary intervention. [f:kalsi2011] [f:zheng2025] [f:ubc-counselling-guidelines]
+
+Remember that tablets sold as ketamine are often mixed with amphetamine, caffeine, cocaine and heroin. [f:kalsi2011] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-ketamine] [f:smith-carbonyl] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:unodc-ats2006]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-ketamine] [f:smith-carbonyl] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:unodc-ats2006] [f:checkir-classification] [f:kalsi2011] [f:dinis-oliveira2017] [f:peltoniemi2016] [f:zheng2025] [f:ubc-counselling-guidelines]
 
 ## license
 

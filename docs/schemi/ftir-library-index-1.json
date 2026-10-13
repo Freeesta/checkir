@@ -34,8 +34,8 @@
             "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
           },
           "substance": {
-            "description": "Substance id.",
-            "description_it": "Id sostanza.",
+            "description": "Substance id (optional). With the InChIKey it is the identity of the row: rows sharing either count as the same substance for the margin and the candidate list; with neither, rows are grouped by name.",
+            "description_it": "Id sostanza (facoltativo). Con l'InChIKey è l'identità della riga: righe con uno dei due uguale contano come la stessa sostanza per il margine e per l'elenco dei candidati; senza nessuno dei due si raggruppa per nome.",
             "type": "string",
             "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
           },
@@ -73,8 +73,8 @@
             }
           },
           "inchikey": {
-            "description": "InChIKey.",
-            "description_it": "InChIKey.",
+            "description": "InChIKey (optional); see substance.",
+            "description_it": "InChIKey (facoltativo); vedi substance.",
             "type": "string",
             "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
           },
@@ -102,7 +102,6 @@
         "required": [
           "id",
           "form",
-          "substance",
           "names",
           "classes",
           "quality",

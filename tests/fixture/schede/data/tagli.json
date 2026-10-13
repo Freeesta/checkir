@@ -1,0 +1,21 @@
+{
+  "schema": "cuts/1",
+  "version": 1,
+  "status": "synthetic",
+  "description": "Fixture",
+  "cuts": [
+    {
+      "id": "synthetic-cut-a",
+      "names": [
+        "synthetic cut a"
+      ],
+      "sheet": "synthetic-cut-a"
+    },
+    {
+      "id": "synthetic-cut-b",
+      "names": [
+        "synthetic cut b"
+      ]
+    }
+  ]
+}

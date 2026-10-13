@@ -1,22 +1,114 @@
 {
   "schema": "datasheet/1",
   "substance": "heroin",
-  "version": 1,
+  "version": 2,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
   "reviewers": [],
   "reviewed": "2026-10-13",
   "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "semisynthetic",
+    "precursor_classes": [
+      "opium_alkaloids"
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "6-monoacetylmorphine",
+        "reaction": "hydrolysis_ester",
+        "source": "milella2023",
+        "enzymes": [
+          "BChE",
+          "CES1",
+          "CES2"
+        ]
+      },
+      {
+        "from": "6-monoacetylmorphine",
+        "to": "morphine",
+        "reaction": "hydrolysis_ester",
+        "source": "milella2023"
+      },
+      {
+        "from": "morphine",
+        "to": "morphine-6-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "milella2023"
+      }
+    ],
+    "half_life_h": {
+      "min": 0.05,
+      "max": 0.07,
+      "matrix": "blood",
+      "route": "intravenous, inhaled",
+      "source": "milella2023"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "caffeine",
+      "frequency": "common",
+      "source": "tittarelli2020"
+    },
+    {
+      "cut": "acetaminophen",
+      "frequency": "common",
+      "source": "tittarelli2020"
+    },
+    {
+      "cut": "phenacetin",
+      "frequency": "reported",
+      "source": "tittarelli2020"
+    }
+  ],
   "doses": [],
-  "interactions": [],
+  "interactions": [
+    {
+      "with": "benzodiazepines",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kerensky2017"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "heroin.tolerance",
+      "topic": "tolerance",
+      "source": "kerensky2017"
+    },
+    {
+      "key": "heroin.benzodiazepines",
+      "topic": "combination",
+      "source": "kerensky2017"
+    },
+    {
+      "key": "heroin.naloxone",
+      "topic": "overdose_signs",
+      "source": "kerensky2017"
+    },
+    {
+      "key": "heroin.route",
+      "topic": "route",
+      "source": "milella2023"
+    }
+  ],
   "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"

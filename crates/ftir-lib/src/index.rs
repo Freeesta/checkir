@@ -12,7 +12,8 @@ const KEY: &str = "library.index_invalid";
 pub struct Row {
     pub id: String,
     pub form: String,
-    pub substance: String,
+    /// Optional identity (see `ftir-library-index/1`): with `inchikey`, rows sharing either are the same substance.
+    pub substance: Option<String>,
     pub name_it: Option<String>,
     pub name_en: String,
     pub classes: Vec<String>,
@@ -46,7 +47,7 @@ fn parse_row(v: &Value) -> EngineResult<Row> {
     Ok(Row {
         id: req(v, "id")?.to_string(),
         form: req(v, "form")?.to_string(),
-        substance: req(v, "substance")?.to_string(),
+        substance: text(v, "substance").map(str::to_string),
         name_it: text(names, "it").map(str::to_string),
         name_en: req(names, "en")?.to_string(),
         classes,
@@ -65,13 +66,15 @@ fn row_json(r: &Row) -> Value {
     let mut members = vec![
         ("id", string(&r.id)),
         ("form", string(&r.form)),
-        ("substance", string(&r.substance)),
         ("names", obj(names)),
         (
             "classes",
             Value::Arr(r.classes.iter().map(|c| string(c)).collect()),
         ),
     ];
+    if let Some(sub) = &r.substance {
+        members.insert(2, ("substance", string(sub)));
+    }
     if let Some(k) = &r.inchikey {
         members.push(("inchikey", string(k)));
     }

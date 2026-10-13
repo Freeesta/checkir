@@ -1,22 +1,139 @@
 {
   "schema": "datasheet/1",
   "substance": "ketamine",
-  "version": 1,
+  "version": 2,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
+    "counselling": "draft",
     "sources": "draft",
     "license": "draft"
   },
   "reviewers": [],
   "reviewed": "2026-10-13",
   "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "norketamine",
+        "reaction": "n_demethylation",
+        "source": "peltoniemi2016",
+        "enzymes": [
+          "CYP3A4",
+          "CYP2B6"
+        ]
+      },
+      {
+        "from": "norketamine",
+        "to": "dehydronorketamine",
+        "reaction": "other",
+        "source": "dinis-oliveira2017"
+      },
+      {
+        "from": "norketamine",
+        "to": "hydroxynorketamine",
+        "reaction": "hydroxylation",
+        "source": "dinis-oliveira2017"
+      },
+      {
+        "from": "hydroxynorketamine",
+        "to": "hydroxynorketamine glucuronide",
+        "reaction": "glucuronidation",
+        "source": "dinis-oliveira2017"
+      }
+    ],
+    "half_life_h": {
+      "min": 2,
+      "max": 4,
+      "matrix": "plasma",
+      "route": "intravenous",
+      "source": "dinis-oliveira2017"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "amphetamine",
+      "frequency": "reported",
+      "source": "kalsi2011"
+    },
+    {
+      "cut": "caffeine",
+      "frequency": "reported",
+      "source": "kalsi2011"
+    },
+    {
+      "cut": "cocaine",
+      "frequency": "reported",
+      "source": "kalsi2011"
+    },
+    {
+      "cut": "heroin",
+      "frequency": "reported",
+      "source": "kalsi2011"
+    }
+  ],
   "doses": [],
-  "interactions": [],
+  "interactions": [
+    {
+      "with": "ethanol",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kalsi2011"
+    },
+    {
+      "with": "opioid",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kalsi2011"
+    },
+    {
+      "with": "benzodiazepines",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "kalsi2011"
+    },
+    {
+      "with": "stimulant",
+      "severity": "risky",
+      "mechanism": "sympathomimetic",
+      "source": "kalsi2011"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "ketamine.depressants",
+      "topic": "combination",
+      "source": "kalsi2011"
+    },
+    {
+      "key": "ketamine.tolerance",
+      "topic": "tolerance",
+      "source": "kalsi2011"
+    },
+    {
+      "key": "ketamine.bladder",
+      "topic": "dependence",
+      "source": "kalsi2011"
+    },
+    {
+      "key": "ketamine.mixtures",
+      "topic": "testing",
+      "source": "kalsi2011"
+    }
+  ],
   "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"

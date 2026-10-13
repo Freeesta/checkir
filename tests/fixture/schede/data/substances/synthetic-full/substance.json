@@ -1,0 +1,43 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "synthetic-full",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Synthetic full sheet",
+      "synonyms": [
+        "Synthetic full sheet syn"
+      ]
+    },
+    "it": {
+      "preferred": "Scheda sintetica completa"
+    }
+  },
+  "iupac": "synthetic example A (fictitious, not a real substance)",
+  "formula": "C10H10",
+  "molar_mass_g_mol": 130.19,
+  "smiles": "CCN",
+  "inchi": "InChI=1S/synthetic-a",
+  "inchikey": "SYNTHETICFULLA-EXAMPLEONE-N",
+  "external_ids": {
+    "cas": "00-00-0"
+  },
+  "classes": {
+    "chemical": [
+      "example_family"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "diluent_excipient"
+    ]
+  },
+  "sources": [
+    {
+      "field": "all",
+      "source": "synthetic-generator",
+      "consulted": "2026-10-12"
+    }
+  ]
+}

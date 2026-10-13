@@ -3,14 +3,16 @@ import { alertViews, capLines, chainLine, levelBar, levelNumber, levelWord, show
 import { actionButton } from "./controls.js";
 import { marginScore, matchScore } from "./candidati.js";
 import { el, icon } from "./dom.js";
-import { formatNumber, t } from "./i18n.js";
+import { currentLang, formatNumber, t } from "./i18n.js";
 import { spectrumOf } from "./files.js";
-import { libraryLabel, libraryOriginal, libraryRows, rowName } from "./librerie.js";
+import { libraryLabel, libraryOriginal, rowName } from "./librerie.js";
 import { meanStep } from "./match.js";
-import { hasSheet } from "./schede.js";
-import { mixtureBlock, mixtureChip, mixtureTaken } from "./mixture.js";
+import { sheetIdFor } from "./schede.js";
+import { mixtureBlock, mixtureChip, mixtureComponents, mixtureTaken } from "./mixture.js";
+import { inlineSheet, sheetOfCandidate } from "./schede_inline.js";
+import { cutContext } from "./schede_tagli.js";
 import { openSheet } from "./schede_ui.js";
-import { draftOf } from "./decision.js";
+import { chosenCandidates, draftOf, shownChoice } from "./decision.js";
 import { activeFile, activeLibraries, candidateKey, decisionOf, getState, resultOf } from "./state.js";
 import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
 import { attachTip, toggletip } from "./tooltip.js";
@@ -119,9 +121,12 @@ function marginMark(margin) {
   return cell;
 }
 
-/** Is this library one of the public packages? (an imported spectrum never has a sheet) @param {string} id @returns {boolean} */
-function libraryEntryPublic(id) {
-  return getState().libraries.some((l) => l.id === id && !l.private);
+/** What the sheets need to know about the sample: the chosen candidates, and with the mixture components what was found (for the cuts). @param {import("./state.js").AppState} s @param {any} data @returns {{ level: number, cands: any[], found: any[], cuts: import("./schede_tagli.js").CutContext }} */
+function sheetContext(s, data) {
+  const choice = shownChoice(s);
+  const cands = choice ? chosenCandidates(choice, data) : [];
+  const found = choice?.level === 4 ? [...mixtureComponents(data), ...cands] : cands;
+  return { level: choice?.level ?? 5, cands, found, cuts: cutContext(activeLibraries(s).map((l) => l.id), found) };
 }
 
 /** One row of the list: select button (name, form), r, delta from the first, coverage, library and the chemist's mark. @param {any} c @param {number} i @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @param {boolean} selected @param {any} data @returns {HTMLElement} */
@@ -189,12 +194,12 @@ function detail(data, c, ctx, s, level) {
   box.append(resolutionLines(c, activeFile(getState()) ?? null));
   const button = actionButton("overlay.toggle", ctx, { withLabel: true, className: "btn" });
   button.setAttribute("aria-pressed", String(s.overlay));
-  const row = libraryRows(c.library)?.find((/** @type {any} */ r) => r.id === c.spectrum_id);
   const tools = el("div", { class: "row" }, [button, actionButton("subtract.open", ctx, { withLabel: true, className: "btn" })]);
-  if (row?.substance && level <= 4 && libraryEntryPublic(c.library) && hasSheet(row.substance)) {
-    // level 5 names nobody ("the most similar"); an imported spectrum has no sheet: only a public library whose substance the site knows
+  const sheetId = level <= 4 ? sheetOfCandidate(c) : null;
+  if (sheetId) {
+    // level 5 names nobody ("the most similar"); any library (public or the user's own) whose substance a sheet knows by name, salt or InChIKey hooks to it
     const sheet = el("button", { type: "button", class: "btn", "data-fk": "open-sheet" }, [icon("sheet"), t("sheets.open")]);
-    sheet.addEventListener("click", () => void openSheet(row.substance, candidateName(c)));
+    sheet.addEventListener("click", () => void openSheet(sheetId, candidateName(c), sheetContext(s, data).cuts));
     tools.append(sheet);
   }
   box.append(tools);
@@ -295,6 +300,8 @@ export function renderResults(body, s, ctx) {
   (data.candidates ?? []).slice(0, SHOWN).forEach((/** @type {any} */ c, /** @type {number} */ i) => list.append(candidateRow(c, i, s, ctx, c === chosen, data)));
   wireArrows(list, ctx);
   const head = el("div", { class: "cand-head", "aria-hidden": "true" }, [el("span"), el("span", { class: "cand-r" }, [t("results.match")])]);
+  const sc = sheetContext(s, data);
+  const brief = inlineSheet({ cands: sc.cands, level: sc.level, nameOf: candidateName, badge: () => levelBadge(sc.level), found: sc.found, libraries: activeLibraries(s).map((l) => l.id), code: file.code, lang: currentLang() === "it" ? "it" : "en" });
   body.append(
     el("div", { class: "result", "data-level": String(n) }, [
       el("h2", { class: "cands-title" }, [title]),
@@ -307,6 +314,7 @@ export function renderResults(body, s, ctx) {
       list,
       el("p", { class: "chain" }, [chainLine(data)]),
       detail(data, chosen, ctx, s, n),
+      ...(brief ? [brief] : []),
     ]),
     ...residualsOf(s, file.code).map((f) => residualBlock(f, s, ctx)).filter((b) => b !== null),
   );

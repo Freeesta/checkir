@@ -1,0 +1,36 @@
+{
+  "schema": "classes/1",
+  "classes": [
+    {
+      "id": "others",
+      "axis": "chemical",
+      "names": {
+        "it": "Altre sostanze",
+        "en": "Other substances"
+      },
+      "mappings": {
+        "unodc_ewa": "Other substances"
+      },
+      "source": "unodc-ewa"
+    },
+    {
+      "id": "no_psychoactive_effect_expected",
+      "axis": "effect",
+      "names": {
+        "it": "Nessun effetto psicoattivo atteso",
+        "en": "No psychoactive effect expected"
+      },
+      "source": "checkir-classification"
+    },
+    {
+      "id": "example_family",
+      "axis": "chemical",
+      "names": {
+        "it": "Famiglia di esempio",
+        "en": "Example family"
+      },
+      "mappings": {},
+      "source": "synthetic-generator"
+    }
+  ]
+}

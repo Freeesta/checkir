@@ -92,7 +92,7 @@ fn text(s: &str) -> Value {
     Value::Str(s.to_string())
 }
 
-fn row_ref(index: &Index, g: usize, r: f64) -> Value {
+pub(super) fn row_ref(index: &Index, g: usize, r: f64) -> Value {
     let e = index.entry(g);
     Value::Obj(vec![
         ("library".into(), text(&index.libs[index.locate(g).0].id)),

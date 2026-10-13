@@ -4,9 +4,11 @@ import { SECTIONS, sectionStatus } from "../../web/schede.js";
 import { parseTexts } from "../../tools/genera_schede.mjs";
 import { REASSURING } from "../schede.mjs";
 
-const REAL_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "methamphetamine", "heroin", "3-mmc", "4-mmc", "2c-b"];
+// Sheets drafted in full (13 sections, all still draft): every section that has text is shown, a placeholder stays empty.
+const PILOT_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "heroin", "methamphetamine", "3-mmc", "4-mmc", "2c-b", "methoxetamine"];
+const REAL_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "methamphetamine", "heroin", "3-mmc", "4-mmc", "2c-b", "methoxetamine"];
 
-/** The sheets of the main substances, read from data/ as the build reads them: identity and IR text shown, the rest a placeholder, every citation known. */
+/** The sheets of the main substances, read from data/ as the build reads them: identity and IR text shown, the rest a placeholder except in the pilot sheets, every citation known. */
 export default async ({ check }) => {
   const data = new URL("../../data/", import.meta.url);
   const known = new Set(JSON.parse(await readFile(new URL("sources.json", data), "utf8")).sources.map((s) => s.id));
@@ -17,11 +19,14 @@ export default async ({ check }) => {
     const sheet = { id, names: {}, version: ds.version, section_state: ds.section_state, reviewers: ds.reviewers, reviewed: ds.reviewed, review_by: ds.review_by, ai_assisted: ds.ai_assisted, texts };
     for (const lang of ["it", "en"]) {
       const shown = SECTIONS.filter((k) => sectionStatus(sheet, k, lang) === "shown");
-      check(`sheets: ${id} (${lang}) shows molecule, category, sources and license only`, shown.join() === "molecule,category,sources,license", shown.join());
+      if (PILOT_SHEETS.includes(id)) {
+        const drafted = SECTIONS.filter((k) => texts[lang][k] && !/checkir-section-pending/.test(texts[lang][k]));
+        check(`sheets: ${id} (${lang}) shows every drafted section and no placeholder`, shown.join() === drafted.join() && ["molecule", "category", "sources", "license"].every((k) => shown.includes(k)), shown.join());
+      } else check(`sheets: ${id} (${lang}) shows molecule, category, sources and license only`, shown.join() === "molecule,category,sources,license", shown.join());
       const all = Object.values(texts[lang]).join("\n");
       const refs = [...all.matchAll(/\[f:([a-z0-9-]+)\]/g)].map((m) => m[1]);
       check(`sheets: ${id} (${lang}) cites only known sources`, refs.length > 0 && refs.every((r) => known.has(r)), refs.filter((r) => !known.has(r)).join());
-      check(`sheets: ${id} (${lang}) says nothing that reassures`, !REASSURING.test(texts[lang].molecule + texts[lang].category));
+      check(`sheets: ${id} (${lang}) says nothing that reassures`, !REASSURING.test(Object.values(texts[lang]).join("\n")));
     }
   }
 };

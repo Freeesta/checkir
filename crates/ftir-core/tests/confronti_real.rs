@@ -88,6 +88,7 @@ fn reproduces_the_levels_of_bench_1() {
         let entry = LibEntry {
             id: r.file.clone(),
             substance: Some(r.key.clone()),
+            inchikey: None,
             display_name: r.name.clone(),
             form: r.form.clone(),
             classes: Vec::new(),

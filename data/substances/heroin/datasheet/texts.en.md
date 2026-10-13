@@ -10,15 +10,29 @@ Salt or base: the base has bands at 1738, 1447, 1367, 1230, 1192, 1037, 885 and 
 
 Analogues and impurities: seized samples also contain 6-monoacetylmorphine, acetylcodeine and morphine, which share the morphinan skeleton. [f:tittarelli2020]
 
-Frequent cuts: caffeine and paracetamol are the most reported adulterants; Italian seizures also show methorphan, phenacetin and dimenhydrinate. [f:tittarelli2020]
-
 ## category
 
 Chemical class: morphinans (a semi-synthetic derivative of morphine), among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
 
+## history
+
+Diacetylmorphine was first synthesised in 1874. [f:milella2023]
+
+## origin
+
+Semisynthetic opioid derived from morphine, an alkaloid of opium. Seized samples also contain 6-monoacetylmorphine, acetylcodeine and morphine. [f:milella2023] [f:tittarelli2020]
+
+## metabolism
+
+Heroin is deacetylated rapidly to 6-monoacetylmorphine and then to morphine by plasma cholinesterases and liver carboxylesterases; morphine is glucuronidated, and morphine-6-glucuronide is active. The half-life of heroin is 3-4 minutes. [f:milella2023]
+
+## cuts
+
+Caffeine and paracetamol are the most reported adulterants; Italian seizures also show methorphan, phenacetin and dimenhydrinate. [f:tittarelli2020]
+
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Respiratory depression, with the ensuing brain hypoxia, is the most serious adverse effect of MOP agonists. Those who snort do not reach the same euphoria as those who inject or smoke. [f:milella2023]
 
 ## doses
 
@@ -26,15 +40,27 @@ Not drafted yet. This section will be written from verifiable sources and signed
 
 ## risks
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Tolerance is lost after abstinence (prison, treatment): this is a high-risk period for overdose. Benzodiazepine use is a risk factor. Heroin is sometimes mixed with fentanyl and derivatives. [f:kerensky2017]
+
+Tolerance develops to analgesia, euphoria, sedation, nausea and respiratory depression, but not to constipation. [f:milella2023]
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Benzodiazepines add to central nervous system depression and are a risk factor for overdose. [f:kerensky2017]
+
+## counselling
+
+Ask how long it has been since last use: after breaks (prison, treatment) tolerance is lost and the usual amount may no longer be tolerated. [f:kerensky2017] [f:ubc-counselling-guidelines]
+
+Ask about benzodiazepines and other sedatives: with heroin they are a risk factor for overdose. [f:kerensky2017] [f:ubc-counselling-guidelines]
+
+Talk about naloxone: it reverses respiratory depression; remember that heroin is sometimes mixed with fentanyl and derivatives. [f:kerensky2017] [f:ubc-counselling-guidelines]
+
+Ask about the route: bioavailability is 38-53% when inhaled («chasing the dragon») and about 14% when smoked in laced tobacco, so changing route changes the effect. [f:milella2023] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-heroin] [f:smith-esters] [f:smith-amine-salts] [f:tittarelli2020] [f:unodc-ewa]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-heroin] [f:smith-esters] [f:smith-amine-salts] [f:tittarelli2020] [f:unodc-ewa] [f:checkir-classification] [f:milella2023] [f:kerensky2017] [f:ubc-counselling-guidelines]
 
 ## license
 

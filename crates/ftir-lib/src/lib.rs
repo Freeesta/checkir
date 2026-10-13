@@ -6,6 +6,7 @@
 pub mod bridge;
 pub mod build;
 pub mod data;
+pub mod identity;
 pub mod index;
 pub mod manifest;
 pub mod package;
