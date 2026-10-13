@@ -285,12 +285,12 @@
   "library.provenance_not_allowed": "The spectrum {id} comes from an unconfirmed sample and cannot enter a public library.",
   "folder.title": "Instrument",
   "folder.intro": "If the spectrometer software saves measurements in a folder, {app} sees them arrive and offers to open them. Read only: it does not control the instrument and writes nothing.",
-  "folder.choose": "Choose the measurements folder",
+  "folder.choose": "Choose the folder",
   "folder.resume": "Resume the folder “{name}”",
   "folder.stop": "Stop watching",
-  "folder.watching": "Watched folder: “{name}”. Only files that arrive or change from now on are seen.",
-  "folder.remember": "Remember the folder (only the reference to the folder stays in the browser)",
-  "folder.auto": "Open new measurements at once",
+  "folder.watching": "Watched folder: “{name}”.",
+  "folder.remember": "Remember the folder",
+  "folder.auto": "Open at once",
   "folder.offers_label": "New measurements",
   "folder.offer": "New measurement: {name}",
   "folder.open": "Open",
@@ -646,5 +646,8 @@
   "ranges.table.out": "— outside the first 10",
   "ranges.table.busy": "Computing…",
   "action.ranges_open.label": "Comparison regions",
-  "action.ranges_open.tip": "Choose which part of the spectrum the comparison uses"
+  "action.ranges_open.tip": "Choose which part of the spectrum the comparison uses",
+  "folder.remember_note": "With “Remember the folder” only the reference to the folder stays in the browser.",
+  "folder.more_label": "Explain watching a folder",
+  "header.file.quality": "spectrum quality"
 }
