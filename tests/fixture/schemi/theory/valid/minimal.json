@@ -1,0 +1,38 @@
+{
+  "schema": "theory/1",
+  "id": "example",
+  "n": 1,
+  "title": "Example",
+  "key_message": "One short sentence.",
+  "body": [
+    "A paragraph."
+  ],
+  "for_chemists": [
+    "A formula."
+  ],
+  "figure": {
+    "id": "instrument",
+    "alt": "Description.",
+    "caption": "Caption.",
+    "data_table": {
+      "caption": "Data",
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          "1",
+          "2"
+        ]
+      ]
+    }
+  },
+  "further_reading": [],
+  "sources": [
+    "wiki-ftir"
+  ],
+  "glossary_terms": [],
+  "status": "draft",
+  "reviewers": []
+}

@@ -1,0 +1,42 @@
+{
+ "schema": "theory-index/1",
+ "lang": "it",
+ "chapters": [
+  {
+   "n": 1,
+   "id": "what-ftir-sees",
+   "slug": "01-che-cosa-vede",
+   "title": "Che cosa vede l'FTIR (e che cosa no)"
+  },
+  {
+   "n": 2,
+   "id": "springs",
+   "slug": "02-molle",
+   "title": "Le molecole sono molle"
+  },
+  {
+   "n": 3,
+   "id": "vibration-modes",
+   "slug": "03-modi",
+   "title": "I modi di vibrazione"
+  },
+  {
+   "n": 4,
+   "id": "dipole",
+   "slug": "04-dipolo",
+   "title": "Perché un picco è forte, debole o assente"
+  },
+  {
+   "n": 5,
+   "id": "broad-and-shifted",
+   "slug": "05-bande",
+   "title": "Perché un picco è largo o spostato"
+  },
+  {
+   "n": 6,
+   "id": "instrument",
+   "slug": "06-strumento",
+   "title": "Lo strumento"
+  }
+ ]
+}
