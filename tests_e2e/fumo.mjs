@@ -31,7 +31,7 @@ function check(name, ok, detail = "") {
 
 async function axe(page) {
   await page.evaluate(axeSource);
-  return page.evaluate(async () => (await window.axe.run(document, { runOnly: ["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"] })).violations.map((v) => `${v.id}: ${v.nodes.length}`));
+  return page.evaluate(async () => (await window.axe.run(document, { runOnly: ["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"] })).violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ") + " " + n.any.map((a) => a.message).join("; ")).join(" | ")}`));
 }
 
 /** Light and dark colour schemes: the page draws, axe is clean (also with a file loaded and with a forced data-theme). */
