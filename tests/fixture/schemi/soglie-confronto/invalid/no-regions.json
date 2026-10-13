@@ -1,0 +1,42 @@
+{
+  "schema": "soglie-confronto/1",
+  "version": 1,
+  "calibration": {
+    "bench": "banco-1",
+    "chain": "confronto_v1",
+    "searches": 502,
+    "substances": 220,
+    "validation": "cross-laboratory",
+    "date": "2026-10"
+  },
+  "probable": {
+    "r1_min": 0.95,
+    "margin_min": 0.05,
+    "coverage_min": 0.8
+  },
+  "to_check": {
+    "r1_min": 0.85
+  },
+  "ambiguity": {
+    "margin_below": 0.05
+  },
+  "spectral_twin": {
+    "r_min": 0.9
+  },
+  "range_limits": {
+    "min_cm1": 400,
+    "min_points": 150
+  },
+  "range_presets": [
+    {
+      "id": "full",
+      "ranges": [
+        [
+          650,
+          3800
+        ]
+      ],
+      "calibrated": true
+    }
+  ]
+}

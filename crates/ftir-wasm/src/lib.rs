@@ -3,6 +3,8 @@
 
 use wasm_bindgen::prelude::*;
 
+mod confronto;
+
 /// Engine version.
 #[wasm_bindgen]
 pub fn version() -> String {

@@ -1,0 +1,465 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:ftir-risultato-confronto:1",
+  "title": "Result of a library comparison",
+  "title_it": "Risultato di un confronto con le librerie",
+  "description": "Result of a library comparison",
+  "description_it": "Risultato di un confronto con le librerie",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "ftir-risultato-confronto/1"
+    },
+    "chain": {
+      "description": "Calculation chain.",
+      "description_it": "Catena di calcolo.",
+      "type": "object",
+      "properties": {
+        "derivative": {
+          "description": "Chain of the ranking score.",
+          "description_it": "Catena del punteggio di classifica.",
+          "type": "string"
+        },
+        "spectrum": {
+          "description": "Chain of the side score.",
+          "description_it": "Catena del punteggio affiancato.",
+          "type": "string"
+        },
+        "baseline": {
+          "description": "Baseline of the side score.",
+          "description_it": "Linea di base del punteggio affiancato.",
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "Baseline method.",
+              "description_it": "Metodo della linea di base.",
+              "type": "string"
+            },
+            "lam": {
+              "description": "Smoothness.",
+              "description_it": "Levigatezza.",
+              "type": "number"
+            },
+            "p": {
+              "description": "Asymmetry.",
+              "description_it": "Asimmetria.",
+              "type": "number"
+            },
+            "max_iter": {
+              "description": "Most iterations.",
+              "description_it": "Iterazioni massime.",
+              "type": "integer"
+            },
+            "tol": {
+              "description": "Stop tolerance.",
+              "description_it": "Tolleranza di arresto.",
+              "type": "number"
+            }
+          },
+          "required": [
+            "id",
+            "lam",
+            "p",
+            "max_iter",
+            "tol"
+          ],
+          "additionalProperties": false
+        },
+        "cache_version": {
+          "description": "Version of the prepared vectors.",
+          "description_it": "Versione dei vettori preparati.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "derivative",
+        "spectrum",
+        "baseline",
+        "cache_version"
+      ],
+      "additionalProperties": false
+    },
+    "thresholds": {
+      "description": "Thresholds used.",
+      "description_it": "Soglie usate.",
+      "type": "object",
+      "properties": {
+        "schema": {
+          "description": "Schema of the thresholds.",
+          "description_it": "Schema delle soglie.",
+          "type": "string"
+        },
+        "version": {
+          "description": "Version of the thresholds used.",
+          "description_it": "Versione delle soglie usata.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "schema",
+        "version"
+      ],
+      "additionalProperties": false
+    },
+    "query": {
+      "description": "The searched spectrum.",
+      "description_it": "Lo spettro cercato.",
+      "type": "object",
+      "properties": {
+        "role": {
+          "description": "Role of the searched spectrum.",
+          "description_it": "Ruolo dello spettro cercato.",
+          "type": "string",
+          "enum": [
+            "sample",
+            "reference",
+            "residual",
+            "subtraction",
+            "mean"
+          ]
+        },
+        "origin": {
+          "description": "Id of the spectrum a residual comes from.",
+          "description_it": "Id dello spettro da cui viene un residuo.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "role",
+        "origin"
+      ],
+      "additionalProperties": false
+    },
+    "libraries": {
+      "description": "Libraries loaded.",
+      "description_it": "Librerie caricate.",
+      "type": "array",
+      "items": {
+        "description": "A library.",
+        "description_it": "Una libreria.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Id.",
+            "description_it": "Id.",
+            "type": "string"
+          },
+          "version": {
+            "description": "Version.",
+            "description_it": "Versione.",
+            "type": "string"
+          },
+          "spectra": {
+            "description": "Number of spectra.",
+            "description_it": "Numero di spettri.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "searched": {
+            "description": "Searched in this comparison.",
+            "description_it": "Cercata in questo confronto.",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "spectra",
+          "searched"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "ranges": {
+      "description": "Ranges compared (cm-1).",
+      "description_it": "Regioni confrontate (cm-1).",
+      "type": "array",
+      "items": {
+        "description": "A range [from, to] in cm-1.",
+        "description_it": "Un intervallo [da, a] in cm-1.",
+        "type": "array",
+        "items": {
+          "type": "number",
+          "description": "Wavenumber (cm-1).",
+          "description_it": "Numero d'onda (cm-1)."
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 1
+    },
+    "range_preset": {
+      "description": "Preset used; null for hand-chosen ranges.",
+      "description_it": "Preimpostazione usata; null per regioni scelte a mano.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "grouping": {
+      "description": "How substances were grouped for the margin.",
+      "description_it": "Come sono state raggruppate le sostanze per il margine.",
+      "type": "string",
+      "enum": [
+        "identity",
+        "name",
+        "mixed"
+      ]
+    },
+    "candidates": {
+      "description": "The best candidates, ranked.",
+      "description_it": "I migliori candidati, in classifica.",
+      "type": "array",
+      "items": {
+        "description": "A ranked candidate.",
+        "description_it": "Un candidato in classifica.",
+        "type": "object",
+        "properties": {
+          "rank": {
+            "description": "Position, from 1.",
+            "description_it": "Posizione, da 1.",
+            "type": "integer",
+            "minimum": 1
+          },
+          "spectrum_id": {
+            "description": "Id of the library spectrum.",
+            "description_it": "Id dello spettro di libreria.",
+            "type": "string"
+          },
+          "substance": {
+            "description": "Identity of the substance (null when grouped by name).",
+            "description_it": "Identita della sostanza (null se raggruppata per nome).",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "Name shown.",
+            "description_it": "Nome mostrato.",
+            "type": "string"
+          },
+          "form": {
+            "description": "Form (base, salt, ...); may be empty.",
+            "description_it": "Forma (base, sale, ...); puo essere vuota.",
+            "type": "string"
+          },
+          "library": {
+            "description": "Id of the library.",
+            "description_it": "Id della libreria.",
+            "type": "string"
+          },
+          "library_version": {
+            "description": "Version of the library.",
+            "description_it": "Versione della libreria.",
+            "type": "string"
+          },
+          "r_derivative": {
+            "description": "Pearson r of the first derivatives (the ranking score).",
+            "description_it": "r di Pearson delle derivate prime (il punteggio di classifica).",
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          },
+          "r_spectrum": {
+            "description": "Pearson r of the spectra after the baseline.",
+            "description_it": "r di Pearson degli spettri dopo la linea di base.",
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          },
+          "coverage": {
+            "description": "Share of the compared points the candidate has.",
+            "description_it": "Quota dei punti confrontati che il candidato ha.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "r_regions": {
+            "description": "r of the derivative in each fixed region; null = too few points.",
+            "description_it": "r della derivata in ciascuna regione fissa; null = punti troppo pochi.",
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -1,
+              "maximum": 1
+            }
+          }
+        },
+        "required": [
+          "rank",
+          "spectrum_id",
+          "substance",
+          "display_name",
+          "form",
+          "library",
+          "library_version",
+          "r_derivative",
+          "r_spectrum",
+          "coverage",
+          "r_regions"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 10
+    },
+    "margin": {
+      "description": "r of the first candidate minus the best r of another substance; null with one substance.",
+      "description_it": "r del primo candidato meno il miglior r di un'altra sostanza; null con una sola sostanza.",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "margin_vs": {
+      "description": "The best row of another substance.",
+      "description_it": "La riga migliore di un'altra sostanza.",
+      "anyOf": [
+        {
+          "description": "The best row of another substance.",
+          "description_it": "La riga migliore di un'altra sostanza.",
+          "type": "object",
+          "properties": {
+            "display_name": {
+              "description": "Name shown.",
+              "description_it": "Nome mostrato.",
+              "type": "string"
+            },
+            "form": {
+              "description": "Form.",
+              "description_it": "Forma.",
+              "type": "string"
+            },
+            "r_derivative": {
+              "description": "Pearson r of the derivatives.",
+              "description_it": "r di Pearson delle derivate.",
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "display_name",
+            "form",
+            "r_derivative"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "level_proposed": {
+      "description": "Level proposed by the program; the chemist decides.",
+      "description_it": "Livello proposto dal programma; decide il chimico.",
+      "type": "string",
+      "enum": [
+        "probable",
+        "to_check",
+        "not_identified"
+      ]
+    },
+    "level_caps": {
+      "description": "Why probable was lowered to to check.",
+      "description_it": "Perche probabile e stato abbassato a da verificare.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "coverage",
+          "custom_range",
+          "range_not_calibrated"
+        ],
+        "description": "Cap.",
+        "description_it": "Limite."
+      }
+    },
+    "alerts": {
+      "description": "Alerts, each with the data that raised it.",
+      "description_it": "Allerte, ciascuna con i dati che l'hanno fatta scattare.",
+      "type": "array",
+      "items": {
+        "description": "An alert.",
+        "description_it": "Un'allerta.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Alert id.",
+            "description_it": "Id dell'allerta.",
+            "type": "string",
+            "enum": [
+              "ambiguity",
+              "spectral_twin",
+              "different_form",
+              "custom_range",
+              "fixed_limit"
+            ]
+          },
+          "data": {
+            "description": "Data of the alert.",
+            "description_it": "Dati dell'allerta.",
+            "type": "object",
+            "additionalProperties": {}
+          }
+        },
+        "required": [
+          "id",
+          "data"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "twins": {
+      "description": "Progress of the spectral twins.",
+      "description_it": "Avanzamento dei gemelli spettrali.",
+      "type": "object",
+      "properties": {
+        "done": {
+          "description": "Rows whose spectral twin is computed.",
+          "description_it": "Righe di cui il gemello spettrale e calcolato.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "total": {
+          "description": "Rows of the active libraries.",
+          "description_it": "Righe delle librerie attive.",
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "done",
+        "total"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "chain",
+    "thresholds",
+    "query",
+    "libraries",
+    "ranges",
+    "range_preset",
+    "grouping",
+    "candidates",
+    "margin",
+    "margin_vs",
+    "level_proposed",
+    "level_caps",
+    "alerts",
+    "twins"
+  ],
+  "additionalProperties": false
+}
