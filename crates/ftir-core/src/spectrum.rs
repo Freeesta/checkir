@@ -24,6 +24,8 @@ pub struct Spectrum {
     pub y_unit: YUnit,
     pub wavenumber_cm1: Vec<f64>,
     pub y: Vec<f64>,
+    /// Steps applied so far, oldest first, as `id/version {params}`. Empty for a spectrum straight from a reader.
+    pub history: Vec<String>,
 }
 
 impl Spectrum {
@@ -34,6 +36,7 @@ impl Spectrum {
             y_unit,
             wavenumber_cm1,
             y,
+            history: Vec::new(),
         }
     }
 
