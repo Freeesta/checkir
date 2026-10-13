@@ -116,8 +116,8 @@ fn find_takes_single_beam_and_interferogram_of_unknown_role_but_never_the_sample
     // Same values, same digest; different values, different digest.
     let other = spectrum(Role::Unknown, YUnit::SingleBeam, vec![3.0, 4.5]);
     assert_eq!(
-        Background::find(&[sb.clone()]).digest,
-        Background::find(&[sb]).digest
+        Background::find(std::slice::from_ref(&sb)).digest,
+        Background::find(&[spectrum(Role::Unknown, YUnit::SingleBeam, vec![3.0, 4.0])]).digest
     );
     assert_ne!(
         Background::find(&[other]).digest,
