@@ -150,7 +150,7 @@ async function start() {
       announce(t("status.file_closed"));
     },
     ...languageActions(() => redrawAll(), announce),
-    ...workActions(engine, announce), ...recallActions(announce), ...exportActions(announce), ...chartExportActions(announce), ...copyActions(announce, { cursorValues: () => chart.cursorValues() }), recallOpen: () => openRecallDialog(ctx), inverseOpen: (position) => openInverseDialog(ctx, position === undefined ? focusedPosition(getState()) : position), viewBack: () => viewBack(),
+    ...workActions(engine, announce), ...recallActions(announce, engine), ...exportActions(announce), ...chartExportActions(announce), ...copyActions(announce, { cursorValues: () => chart.cursorValues() }), recallOpen: () => openRecallDialog(ctx), inverseOpen: (position) => openInverseDialog(ctx, position === undefined ? focusedPosition(getState()) : position), viewBack: () => viewBack(),
     ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
