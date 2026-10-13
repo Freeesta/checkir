@@ -23,6 +23,8 @@ export async function librariesPureScenario(check) {
   check("names: the InChIKey is searchable and the limit is respected", searchNames(index, "zpucind").length === 1 && searchNames(index, "co", 1).length === 1);
   check("names: an empty or unknown query finds nothing", searchNames(index, " ").length === 0 && searchNames(index, "xyz").length === 0);
   check("import: names become safe ids and ids stay unique", slug("Mia Libreria Èè!") === "mia-libreria-ee" && slug("***") === "library" && uniqueId("x", new Set(["x", "x-2"])) === "x-3");
+  const { isMeasure } = await import(new URL("../web/cartella.js", import.meta.url));
+  check("folder: the watched folder lists every reader's extension (JCAMP, .ispd, OPUS .0, SPA, SPC, CSV) and nothing else", ["a.JDX", "b.ispd", "c.0", "c.12", "d.SPA", "e.spc", "f.csv"].every(isMeasure) && !["g.pdf", "h.png", "notes"].some(isMeasure));
   const { buildPrivateLibrary } = await import(new URL("../web/importa.js", import.meta.url));
   const aborted = new AbortController();
   aborted.abort();
