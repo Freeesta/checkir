@@ -1,0 +1,117 @@
+{
+ "schema": "theory/1",
+ "id": "springs",
+ "n": 2,
+ "title": "Molecules are springs",
+ "key_message": "The stiffer the bond and the lighter the atoms, the higher the frequency: so C–H is on the left, C–Cl on the right.",
+ "body": [
+  "Imagine two balls joined by a spring. If the spring is stiff or the balls are light, they vibrate quickly; if the spring is soft or the balls are heavy, they vibrate slowly. In molecules it is the same: a bond to hydrogen (light) vibrates fast and sits on the left of the spectrum; a C=O double bond (stiff) sits in the middle; bonds to heavy atoms sit on the right.",
+  "Try it: move the sliders or pick a bond and watch how the [[wavenumber|wavenumber]] changes. The model predicts the order of the bands, not the exact value."
+ ],
+ "for_chemists": [
+  "[[harmonic-oscillator|Harmonic oscillator]]: ν̃ = (1/2πc)·√(k/μ), with the [[reduced-mass|reduced mass]] μ = m₁m₂/(m₁+m₂) and the [[force-constant|force constant]] k. With k in N/m and μ in u, ν̃ ≈ 130.3·√(k/μ) cm⁻¹. C–H example: k ≈ 500 N/m, μ = 0.93 u, ν̃ ≈ 3020 cm⁻¹ against 2850–2960 observed.",
+  "Replacing H with D lowers ν̃ by the factor √(μ_D/μ_H): for O–H and O–D it is about 1.37, not √2. The k values in the figure are orders of magnitude from teaching literature, not measurements; the model predicts the order (C≡N > C=O > C–C, X–H on top), not the exact value. F–H falls above C–H despite the slightly larger reduced mass: the increase in k matters more.",
+  "The real potential is not a parabola ([[anharmonicity|anharmonicity]]): levels get closer as they go up and the first [[overtone|overtone]] falls a little below twice the fundamental."
+ ],
+ "figure": {
+  "id": "spring",
+  "alt": "Two balls joined by a zigzag spring. The dashed outline shows the extreme position of the vibration; the heavier ball moves less.",
+  "caption": "Two masses and a spring: the wavenumber is calculated by the engine with Hooke's law."
+ },
+ "interactive": {
+  "id": "spring",
+  "labels": {
+   "k": "Spring stiffness k",
+   "m1": "Mass A",
+   "m2": "Mass B",
+   "result": "Reduced mass {mu} u: calculated wavenumber about {nu} reciprocal centimetres (cm⁻¹).",
+   "error": "Invalid values.",
+   "presets": "Try a few bonds (indicative k):",
+   "note": "Simplified model: it gives the order of the bands, not the exact value. The k constants are orders of magnitude.",
+   "table_caption": "Examples calculated with the model",
+   "col_bond": "Bond",
+   "col_k": "k (N/m)",
+   "col_mu": "μ (u)",
+   "col_calc": "Calculated (cm⁻¹)",
+   "col_obs": "Typical observed (cm⁻¹)",
+   "svg_title": "Two masses and a spring",
+   "svg_desc": "Two balls joined by a zigzag spring; the dashed outline is the extreme position of the vibration.",
+   "ghost": "Dashed outline: extreme position"
+  },
+  "items": [
+   {
+    "id": "ch",
+    "label": "C–H",
+    "text": "",
+    "value": "2850–2960",
+    "params": [
+     500,
+     12.011,
+     1.008
+    ]
+   },
+   {
+    "id": "oh",
+    "label": "O–H",
+    "text": "",
+    "value": "3620–3670 (free)",
+    "params": [
+     770,
+     15.999,
+     1.008
+    ]
+   },
+   {
+    "id": "od",
+    "label": "O–D",
+    "text": "",
+    "value": "~2600",
+    "params": [
+     770,
+     15.999,
+     2.014
+    ]
+   },
+   {
+    "id": "co",
+    "label": "C=O",
+    "text": "",
+    "value": "~1715 (ketone)",
+    "params": [
+     1210,
+     12.011,
+     15.999
+    ]
+   },
+   {
+    "id": "cn",
+    "label": "C≡N",
+    "text": "",
+    "value": "2220–2250",
+    "params": [
+     1773,
+     12.011,
+     14.007
+    ]
+   }
+  ]
+ },
+ "further_reading": [
+  "phet-molecules-light",
+  "libretexts-ir-theory"
+ ],
+ "sources": [
+  "wiki-molecular-vibration",
+  "libretexts-ir-theory",
+  "engine-calculation"
+ ],
+ "glossary_terms": [
+  "wavenumber",
+  "force-constant",
+  "reduced-mass",
+  "harmonic-oscillator",
+  "anharmonicity"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

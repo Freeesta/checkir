@@ -18,3 +18,18 @@ body > :not(.sheet-host) { display: none; }
 .sheet[data-draft="1"]::after { color: #999; font-size: 34pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .sign-line { height: 16pt; border-bottom-color: #000; }
 .signature { margin-top: 8pt; }
+
+/* The chemist's report: one A4 page, black and white. It prints alone while body[data-printing="report"] is set. */
+@page report { size: A4; margin: 15mm; }
+body[data-printing="report"] > :not(.report-host) { display: none; }
+body[data-printing="report"] .report-host { display: block; page: report; }
+.report { font-size: 10pt; line-height: 1.35; color: #000; }
+.report h2 { margin: 0 0 6pt; font-size: 14pt; }
+.report h3 { margin: 8pt 0 2pt; padding-top: 3pt; border-top: 0.5pt solid #000; font-size: 11pt; }
+.report-facts { display: grid; grid-template-columns: auto 1fr; gap: 1pt 8pt; margin: 0; }
+.report-facts dt { font-weight: 600; }
+.report-facts dd { margin: 0; }
+.report-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.report-table th, .report-table td { padding: 1pt 4pt; border-bottom: 0.5pt solid #000; text-align: left; }
+.report-sign { margin-top: 18pt; }
+.report-line { height: 22pt; border-bottom: 0.5pt solid #000; }
