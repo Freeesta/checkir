@@ -1,5 +1,6 @@
 // @ts-check
 import { actionById } from "./actions.js";
+import { renderFolder } from "./cartella_ui.js";
 import { actionButton } from "./controls.js";
 import { el, icon, keepFocus, setIcon } from "./dom.js";
 import { fileRange } from "./files.js";
@@ -63,8 +64,9 @@ function fileTree(s, ctx, parent) {
 function renderFiles(body, s, ctx) {
   body.append(el("div", { class: "row" }, [actionButton("file.open", ctx, { withLabel: true, className: "btn" }), actionButton("demo.load", ctx, { withLabel: true, className: "btn" }), actionButton("file.close", ctx)]));
   if (s.fileError) body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t(s.fileError.key, s.fileError.params)]));
-  if (!s.files.length) return emptyLine(body, t("panel.files.empty"));
-  body.append(fileTree(s, ctx, null));
+  if (s.files.length) body.append(fileTree(s, ctx, null));
+  else emptyLine(body, t("panel.files.empty"));
+  renderFolder(body, s.folder, ctx.folder);
 }
 
 /** @param {() => string} text @returns {PanelDef["render"]} */

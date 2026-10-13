@@ -41,6 +41,46 @@ async function resultLevel(page) {
   return page.getAttribute(".result[data-level]", "data-level");
 }
 
+/** Rows: arrows move the selection, the chemist's mark is only in memory, "scarto" folds the row, the overlay adds a column. */
+async function rowsScenario(page, check, axe) {
+  await page.focus('[data-fk="cand-0"]');
+  await page.keyboard.press("ArrowDown");
+  check("match: ArrowDown selects the next row", (await page.getAttribute('[data-fk="cand-1"]', "aria-current")) === "true");
+  await page.click('[data-fk="lab-1-reject"]');
+  check("match: reject folds the row", (await page.getAttribute(".cand:nth-child(2)", "data-label")) === "reject");
+  await page.click('[data-fk="lab-1-reject"]');
+  check("match: clicking the same mark clears it", (await page.getAttribute(".cand:nth-child(2)", "data-label")) === "");
+  await page.click('[data-fk="lab-0-accept"]');
+  await page.click('[data-action="overlay.toggle"]');
+  check("match: overlay draws the reference as a dashed curve with a table column", (await page.locator("#chart polyline.curve-reference").count()) === 1 && /Riferimento/.test((await page.textContent("#table thead")) ?? ""));
+  const stored = await page.evaluate(async () => ({ local: JSON.stringify({ ...localStorage }), idb: (await indexedDB.databases()).length }));
+  check("match: marks are not in localStorage or IndexedDB", !/accept|reject|unsure/.test(stored.local) && stored.idb === 0, JSON.stringify(stored));
+  const v2 = await axe(page);
+  check("match: axe has no violations with the overlay", v2.length === 0, v2.join(", "));
+
+}
+
+/** Other known answers: two near-identical references (ambiguous), nothing alike (not identified), English. */
+async function levelsScenario(page, check) {
+  // Two near-identical library spectra -> not a sure identification, with the reason.
+  await load(page, "campione_alfa.jdx", ALFA);
+  await page.waitForFunction(() => document.querySelector(".result")?.getAttribute("data-level") === "3", null, { timeout: 20000 });
+  check("match: ambiguous sample -> Da verificare with the ambiguity alert", (await page.locator('.alert[data-alert="ambiguity"]').count()) === 1);
+
+  // Nothing alike -> "not identified", the list is titled "I più simili".
+  await load(page, "campione_altro.jdx", OTHER);
+  await page.waitForFunction(() => document.querySelector(".result")?.getAttribute("data-level") === "5", null, { timeout: 20000 });
+  check("match: unknown sample -> Non identificato, titled 'I più simili'", /più simili/i.test((await page.textContent(".cands-title")) ?? ""));
+
+  // English.
+  await page.click('[data-lang="en"]');
+  await page.waitForFunction(() => document.documentElement.lang === "en");
+  check("match: English shows the level word and the limits", /Not identified/.test((await page.textContent(".result .level")) ?? "") && (await page.isVisible("#limits")));
+  await page.click('[data-lang="it"]');
+  await page.waitForFunction(() => document.documentElement.lang === "it");
+
+}
+
 /** @param {import("playwright").Browser} browser */
 export async function matchScenario(browser, base, check, axe) {
   const ctx = await browser.newContext({ locale: "it-IT", viewport: { width: 1366, height: 900 } });
@@ -76,39 +116,8 @@ export async function matchScenario(browser, base, check, axe) {
   const v1 = await axe(page);
   check("match: axe has no violations with a result", v1.length === 0, v1.join(", "));
 
-  // Rows: arrows move the selection, the chemist's mark is only in memory, "scarto" folds the row.
-  await page.focus('[data-fk="cand-0"]');
-  await page.keyboard.press("ArrowDown");
-  check("match: ArrowDown selects the next row", (await page.getAttribute('[data-fk="cand-1"]', "aria-current")) === "true");
-  await page.click('[data-fk="lab-1-reject"]');
-  check("match: reject folds the row", (await page.getAttribute(".cand:nth-child(2)", "data-label")) === "reject");
-  await page.click('[data-fk="lab-1-reject"]');
-  check("match: clicking the same mark clears it", (await page.getAttribute(".cand:nth-child(2)", "data-label")) === "");
-  await page.click('[data-fk="lab-0-accept"]');
-  await page.click('[data-action="overlay.toggle"]');
-  check("match: overlay draws the reference as a dashed curve with a table column", (await page.locator("#chart polyline.curve-reference").count()) === 1 && /Riferimento/.test((await page.textContent("#table thead")) ?? ""));
-  const stored = await page.evaluate(async () => ({ local: JSON.stringify({ ...localStorage }), idb: (await indexedDB.databases()).length }));
-  check("match: marks are not in localStorage or IndexedDB", !/accept|reject|unsure/.test(stored.local) && stored.idb === 0, JSON.stringify(stored));
-  const v2 = await axe(page);
-  check("match: axe has no violations with the overlay", v2.length === 0, v2.join(", "));
-
-  // Two near-identical library spectra -> not a sure identification, with the reason.
-  await load(page, "campione_alfa.jdx", ALFA);
-  await page.waitForFunction(() => document.querySelector(".result")?.getAttribute("data-level") === "3", null, { timeout: 20000 });
-  check("match: ambiguous sample -> Da verificare with the ambiguity alert", (await page.locator('.alert[data-alert="ambiguity"]').count()) === 1);
-
-  // Nothing alike -> "not identified", the list is titled "I più simili".
-  await load(page, "campione_altro.jdx", OTHER);
-  await page.waitForFunction(() => document.querySelector(".result")?.getAttribute("data-level") === "5", null, { timeout: 20000 });
-  check("match: unknown sample -> Non identificato, titled 'I più simili'", /più simili/i.test((await page.textContent(".cands-title")) ?? ""));
-
-  // English.
-  await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
-  check("match: English shows the level word and the limits", /Not identified/.test((await page.textContent(".result .level")) ?? "") && (await page.isVisible("#limits")));
-  await page.click('[data-lang="it"]');
-  await page.waitForFunction(() => document.documentElement.lang === "it");
-
+  await rowsScenario(page, check, axe);
+  await levelsScenario(page, check);
   // Switching the automatic comparison off: a new spectrum has no result until `c`.
   await page.click('[data-action="info.open"]');
   await page.uncheck("#auto-match-switch");

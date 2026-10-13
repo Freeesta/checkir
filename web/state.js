@@ -5,18 +5,20 @@ import { STORAGE_PREFIX } from "./appname.js";
  * One loaded spectrum. The real file name never leaves the file panel and the tooltip; the header shows `code`.
  * @typedef {{ key: string, params: Record<string, string> }} Notice
  * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, warnings: Notice[] }} FileEntry
+ * @typedef {{ id: string, name: string }} Offer
+ * @typedef {{ supported: boolean, watching: boolean, folderName: string | null, saved: string | null, remember: boolean, auto: boolean, offers: Offer[], notice: Notice | null }} FolderState
  * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, private: boolean, enabled: boolean }} LibraryEntry
  * @typedef {{ done: number, total: number, name: string }} LibraryJob
  * One comparison: `data` is the `ftir-risultato-confronto/1` document, `code` the spectrum it was run on, `sig` the libraries searched.
  * @typedef {{ code: string, data: any, sig: string }} MatchResult
  * The chemist's own mark on a candidate (memory only, never stored).
  * @typedef {"accept" | "unsure" | "reject"} ChemistLabel
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, peaks: { explained: number, unexplained: number }, decision: null | { level: number } }} AppState
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, peaks: { explained: number, unexplained: number }, decision: null | { level: number }, folder: FolderState }} AppState
  */
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, peaks: { explained: 0, unexplained: 0 }, decision: null };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, peaks: { explained: 0, unexplained: 0 }, decision: null, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();
@@ -61,9 +63,9 @@ export function subscribe(fn) {
   return () => listeners.delete(fn);
 }
 
-/** Forget the whole analysis (and notify). */
+/** Forget the whole analysis (and notify); the folder watch is a separate switch of the user and stays as it is. */
 export function reset() {
-  update(emptyState());
+  update({ ...emptyState(), folder: state.folder });
 }
 
 /** Preferences are the only thing stored in the browser, always under the product prefix. */
