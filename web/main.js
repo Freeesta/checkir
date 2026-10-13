@@ -17,6 +17,7 @@ import { attachShortcuts, onShortcutsChange } from "./shortcuts.js";
 import { parseSpectrum } from "./spectrum.js";
 import { buildLayers } from "./layers.js";
 import { matchActions, startMatching } from "./match.js";
+import { peaksActions } from "./peaks.js";
 import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
@@ -102,6 +103,7 @@ async function start() {
     },
     ...languageActions(() => redrawAll(), announce),
     ...matchActions(announce),
+    ...peaksActions(engine, announce),
     ...decisionActions(announce),
     ...talkActions(announce),
     togglePanel: () => panels.toggle(),

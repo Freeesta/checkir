@@ -12,7 +12,7 @@
       "motivo": "SVG namespace, an identifier"
     },
     {
-      "file": "web/chart.js",
+      "file": "web/chart_marks.js",
       "url": "http://www.w3.org/2000/svg",
       "motivo": "SVG namespace, an identifier"
     },
