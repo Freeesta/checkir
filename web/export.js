@@ -38,9 +38,9 @@ export function candidatesCsv(candidates) {
   return toCsv([["rank", "name", "form", "library", "r_derivative", "coverage"], ...candidates.map((c) => [c.rank, candidateName(c), c.form, c.library, c.r_derivative, c.coverage])]);
 }
 
-/** Offer a text as a local download (nothing leaves the browser). @param {string} name @param {string} text */
-export function download(name, text) {
-  const url = URL.createObjectURL(new Blob([text], { type: "text/csv" }));
+/** Offer a text or a file as a local download (nothing leaves the browser). @param {string} name @param {BlobPart} data @param {string} [type] */
+export function download(name, data, type = "text/csv") {
+  const url = URL.createObjectURL(new Blob([data], { type }));
   const a = Object.assign(document.createElement("a"), { href: url, download: name });
   document.body.append(a);
   a.click();

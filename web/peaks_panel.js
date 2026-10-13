@@ -32,7 +32,7 @@ function regionList(a) {
   const list = el("ul", { class: "regions", "aria-label": t("peaks.regions_label") });
   for (const g of a.regions) {
     const r = (g.r === null ? "" : ` · ${t("results.match")} ${formatNumber(matchScore(g.r))}`) + (g.share === null ? "" : ` · ${t("peaks.signal_share", { share: formatNumber(g.share * 100, 1) })}`);
-    list.append(el("li", { class: `region-item region-${g.agreement}`, "data-region": g.id }, [el("span", { class: "swatch", "aria-hidden": "true" }), `${formatNumber(g.from)}–${formatNumber(g.to)} cm⁻¹${r} · ${agreementWord(g.agreement)}`]));
+    list.append(el("li", { class: `region-item region-${g.agreement}`, "data-region": g.id, "data-from": String(g.from), "data-to": String(g.to), tabindex: "0" }, [el("span", { class: "swatch", "aria-hidden": "true" }), `${formatNumber(g.from)}–${formatNumber(g.to)} cm⁻¹${r} · ${agreementWord(g.agreement)}`]));
   }
   return list;
 }
@@ -46,7 +46,7 @@ function peakList(a, s, ctx) {
   for (const p of a.peaks) {
     const pos = approx(p.position);
     const by = p.by === null ? "" : ` → ${approx(p.by)}`;
-    const b = el("button", { type: "button", class: "peak-item", "data-fk": `peak-${p.id}`, "data-state": p.state, "aria-pressed": String(s.peakFocus === p.id), "aria-label": peakName(p, who) }, [el("span", { class: "glyph", "aria-hidden": "true" }, [peakGlyph(p.state)]), `${pos}${by}`]);
+    const b = el("button", { type: "button", class: "peak-item", "data-fk": `peak-${p.id}`, "data-peak": p.id, "data-state": p.state, "aria-pressed": String(s.peakFocus === p.id), "aria-label": peakName(p, who) }, [el("span", { class: "glyph", "aria-hidden": "true" }, [peakGlyph(p.state)]), `${pos}${by}`]);
     b.addEventListener("click", () => ctx.focusPeak(s.peakFocus === p.id ? null : p.id));
     list.append(el("li", {}, [b]));
   }
@@ -63,7 +63,7 @@ export function renderPeaks(body, s, ctx) {
   if (a.error) return void body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t("peaks.error")]));
   const result = resultOf(s);
   const chosen = result ? selectedCandidate(s, result.data) : null;
-  if (result && chosen) body.append(el("p", { class: "peaks-ref" }, [levelBadge(levelNumber(result.data)), ` ${t("peaks.against", { name: candidateName(chosen), library: chosen.library })}`]));
+  if (result && chosen) body.append(el("p", { class: "peaks-ref" }, [levelBadge(levelNumber(result.data)), ` ${a.refName ? t("peaks.against_mixture", { name: a.refName }) : t("peaks.against", { name: candidateName(chosen), library: chosen.library })}`]));
   else body.append(el("p", { class: "empty" }, [t("peaks.no_result")]));
   body.append(el("p", { class: "peaks-counts" }, [peaksSummary(s)]), regionList(a));
   if (!a.peaks.length) body.append(el("p", { class: "empty" }, [t("panel.peaks.empty")]));

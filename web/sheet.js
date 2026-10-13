@@ -1,6 +1,7 @@
 // @ts-check
 import { alertViews, familyParts } from "./alerts.js";
 import { chosenCandidates, shownChoice } from "./decision.js";
+import { mixtureCandidates, mixtureTaken } from "./mixture.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, inLang, t } from "./i18n.js";
 import { candidateName, levelBadge } from "./results.js";
@@ -64,13 +65,25 @@ function nameOf(c) {
   return c.form ? `${candidateName(c)} (${c.form})` : candidateName(c);
 }
 
+/** «Possible mixture: A, B» when the program proposes one that the choice does not already hold. @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {HTMLElement[]} */
+function mixtureLine(choice, data) {
+  const parts = mixtureCandidates(data);
+  if (!parts.length || (choice.level === 4 && mixtureTaken(data, choice.keys))) return [];
+  return [el("p", { class: "sheet-mixture" }, [t("sheet.found.mixture", { names: parts.map(nameOf).join(", ") })])];
+}
+
 /** The sentence or names of block 2, by level. @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {Array<Node | string>} */
 function foundLines(choice, data) {
+  return [...levelLines(choice, data), ...mixtureLine(choice, data)];
+}
+
+/** @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {Array<Node | string>} */
+function levelLines(choice, data) {
   const picked = chosenCandidates(choice, data);
   const names = picked.map((c) => el("strong", { class: "sheet-name" }, [nameOf(c)]));
   const joined = picked.map(nameOf).join(", ");
   if (choice.level === 5 || !picked.length) {
-    return [el("p", {}, [t("sheet.found.none")]), el("p", { class: "sheet-strong" }, [t("sheet.found.none_active")])];
+    return [el("p", {}, [t("sheet.found.none")])];
   }
   if (choice.level <= 2) return [el("p", {}, names)];
   if (choice.level === 3 && picked.length === 2) return [el("p", {}, [t("sheet.found.between", { a: nameOf(picked[0]), b: nameOf(picked[1]) })]), el("p", {}, names)];
@@ -122,10 +135,6 @@ export function buildSheet(s, opts = {}) {
   sheet.setAttribute("data-draft", decided ? "0" : "1");
   inLang(lang, () => {
     sheet.setAttribute("aria-label", t("sheet.title"));
-    if (!decided) {
-      sheet.setAttribute("data-watermark", t("sheet.draft"));
-      sheet.append(el("p", { class: "sheet-banner" }, [icon("warning"), t("sheet.draft")]));
-    }
     sheet.append(headBlock(r.code, r.data), foundBlock(choice, r.data, decided), alertsBlock(r.data, Boolean(opts.chemist)), footBlock());
   });
   return sheet;

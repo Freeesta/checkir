@@ -1,16 +1,14 @@
 {
   "schema": "datasheet/1",
   "substance": "paracetamol",
-  "version": 1,
+  "version": 2,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
-    "ftir_limits": "draft",
     "effects": "draft",
     "doses": "draft",
     "risks": "draft",
     "interactions": "draft",
-    "harm_reduction": "draft",
     "sources": "draft",
     "license": "draft"
   },

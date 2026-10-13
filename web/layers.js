@@ -42,17 +42,17 @@ export function buildLayers(chart, summary) {
       lastOffset = offset;
       const name = chosen ? candidateName(chosen) : null;
       summary.hidden = !analysis || !!analysis.error;
-      summary.textContent = analysis && !analysis.error ? summaryText(analysis, name) : "";
+      summary.textContent = analysis && !analysis.error ? summaryText(analysis, analysis.refName ?? name) : "";
       const sample = shown ? spectrumOf(shown) : undefined;
       const ref = r && chosen && s.overlay && sample ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
       chart.setLayers({
         ranges: s.rangeChoice.preset === "full" ? null : { chosen: rangesOf(s.rangeChoice), name: (n) => t("ranges.name", { n: String(n) }) },
         excluded: r ? { from: EXCLUDED_CM1[0], to: EXCLUDED_CM1[1], label: t("chart.excluded") } : null,
         marks: analysis && { bands: analysis.bands, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus, shoulder: p.shoulder })), rows: analysis.peaks, name, focus: s.peakFocus, rule: s.ruleRange && { from: s.ruleRange.from, to: s.ruleRange.to, label: t("card.rule_window", { from: formatNumber(Math.round(s.ruleRange.from)), to: formatNumber(Math.round(s.ruleRange.to)) }) } },
-        recalled: s.recall.mode === "difference" ? [] : recall.rows.map((r, i) => ({ spectrum: recall.curves[i].spectrum, label: `${r.name} · ${r.ref.form}`, style: i })),
+        recalled: s.recall.mode === "difference" ? [] : recall.rows.map((r, i) => ({ spectrum: recall.curves[i].spectrum, label: [r.name, r.ref.form].filter(Boolean).join(" · "), style: i })),
         difference: recall.difference && { spectrum: recall.difference.spectrum, label: t("recall.difference_label", { name: recall.difference.name, k: formatNumber(recall.difference.k, 2) }) },
         offset,
-        reference: ref && chosen ? { spectrum: ref.spectrum, scale: ref.scale, label: t("chart.reference_legend", { rank: chosen.rank, library: chosen.library }) } : null,
+        reference: ref && chosen ? { spectrum: ref.spectrum, scale: ref.scale, label: t("chart.reference_legend", { name: name ?? "" }) } : null,
       });
     },
   };

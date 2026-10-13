@@ -79,7 +79,7 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
         rows.push(resampled);
         const id = `u${rows.length}`;
         const title = file.name.replace(/\.[^.]*$/, "");
-        index.push({ id, form: "imported", substance: slug(title), names: { en: title }, classes: [], quality: "pass", provenance_type: "user_import" });
+        index.push({ id, form: "", substance: slug(title), names: { en: title }, classes: [], quality: "pass", provenance_type: "user_import" });
       }
     } catch (e) {
       const notice = noticeOf(e);

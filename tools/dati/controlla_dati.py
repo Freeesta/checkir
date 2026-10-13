@@ -20,7 +20,7 @@ import jcamp  # noqa: E402
 import qualita  # noqa: E402
 import valida_schemi  # noqa: E402
 
-SECTIONS = ["molecule", "category", "ftir_limits", "effects", "doses", "risks", "interactions", "harm_reduction", "sources", "license"]
+SECTIONS = ["molecule", "category", "effects", "doses", "risks", "interactions", "sources", "license"]
 CLAIM_SECTIONS = {"effects", "doses", "risks", "interactions"}
 FORBIDDEN = re.compile(r"\b(sicur[oaie]|pur[oaie]|pulit[oaie]|innocu[oaie]|nessun rischio|safe|pure|clean|harmless)\b", re.I)
 ALLOWED_PHRASES = re.compile(r"nessuna dose è sicura|no dose is safe|sostanza pura|pure substance", re.I)

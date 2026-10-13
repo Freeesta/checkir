@@ -195,6 +195,25 @@ fn coverage_counts_substances_with_only_a_base_or_only_a_salt() {
     assert_eq!(got, [4.0, 1.0, 1.0, 1.0, 1.0]);
 }
 
+/// Library entries carry the form id (`<substance>-<form>`), not its name: the last part decides.
+#[test]
+fn coverage_reads_the_form_id_of_a_library_entry() {
+    let index = index_of(&[
+        ("a1", "A", "caffeine-base", A, 1),
+        ("b1", "B", "procaine-hcl", B, 2),
+        ("c1", "C", "paracetamol-neutral", C, 3),
+        ("c2", "C", "lidocaine-hcl-h2o", C, 5),
+        ("d1", "D", "cocaine-free-base", D, 4),
+    ]);
+    let rep = json(&index, &finished(&index));
+    let c = &rep.get("coverage").and_then(Value::as_arr).unwrap()[0];
+    let got: Vec<f64> = ["substances", "base_only", "salt_only", "both", "no_form"]
+        .iter()
+        .map(|k| num(c, k))
+        .collect();
+    assert_eq!(got, [4.0, 2.0, 1.0, 1.0, 0.0]);
+}
+
 #[test]
 fn blocks_can_stop_and_carry_on_and_the_memory_stays_small() {
     let index = index_of(&FOUR);

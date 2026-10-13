@@ -6,10 +6,6 @@ Placeholder statement for tests, not a real claim. [f:synthetic-generator]
 
 Placeholder statement for tests, not a real claim. [f:synthetic-generator]
 
-## ftir_limits
-
-Placeholder statement for tests, not a real claim. [f:synthetic-generator]
-
 ## effects
 
 Placeholder statement for tests, not a real claim. [f:synthetic-generator]
@@ -23,10 +19,6 @@ Placeholder statement for tests, not a real claim. [f:synthetic-generator]
 Placeholder statement for tests, not a real claim. [f:synthetic-generator]
 
 ## interactions
-
-Placeholder statement for tests, not a real claim. [f:synthetic-generator]
-
-## harm_reduction
 
 Placeholder statement for tests, not a real claim. [f:synthetic-generator]
 

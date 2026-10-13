@@ -6,10 +6,6 @@ Levamisolo ((6S)-6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole), formul
 
 Classe chimica: antielmintico (tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico, segnalato soprattutto nella cocaina. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
-## ftir_limits
-
-Lo spettro di una miscela riflette i suoi componenti principali. I componenti sotto circa il 5 % del campione in genere non sono rilevabili e l'FTIR non misura la concentrazione. Le sostanze potenti attive a dosi molto basse, come il fentanil e i suoi analoghi (quando presenti, di solito circa 3-10 % p/p) e i nitazeni, non possono essere escluse con questa analisi. Un match è una proposta che una persona esperta valuta, non una diagnosi, e vale solo se l'identificazione è corretta; sono consigliati test complementari. [f:checkir-ftir-limits] Il levamisolo è spesso un componente minore delle miscele, a livelli che possono essere sotto il limite dell'FTIR, quindi un risultato senza levamisolo non lo esclude. La forma in libreria (base o cloridrato) deve corrispondere alla forma del campione.
-
 ## effects
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
@@ -25,10 +21,6 @@ Il levamisolo nella cocaina di strada è stato collegato ad agranulocitosi (fort
 Le rassegne sull'uso medico riportano leucopenia e agranulocitosi, e vasculite (infiammazione dei vasi sanguigni, spesso con interessamento dei lobi delle orecchie), che possono ripresentarsi alla riesposizione. Le complicanze nei consumatori di cocaina sono state pubblicate per la prima volta nel 2009. [f:larocque2012]
 
 ## interactions
-
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
-
-## harm_reduction
 
 Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
 

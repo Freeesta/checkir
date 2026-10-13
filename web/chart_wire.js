@@ -178,7 +178,7 @@ function onWidthChange(host, redraw) {
  * The spectrum is swapped with `set`; with none, a short line says so. With `link`, the x axis follows the other charts joined to the same link.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
  * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, onBrush?: (from: number, to: number) => void, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean, pick: (id: string) => void }, ctx?: import("./actions.js").Ctx, codeOf?: () => string | null }} [opts]
- * @returns {{ back: () => unknown, redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void, cursorRange: () => [number, number] | null }} `redraw` after a language change
+ * @returns {{ back: () => unknown, redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void, cursorRange: () => [number, number] | null, cursorValues: () => Array<{ x: number, y: number }> }} `redraw` after a language change
  */
 export function wire(el, opts = {}) {
   const say = opts.announce ?? (() => {});
@@ -241,7 +241,7 @@ export function wire(el, opts = {}) {
   onWidthChange(el.chart, () => frame || (frame = requestAnimationFrame(update)));
   return {
     back,
-    cursorRange: () => cursors.pair(),
+    cursorRange: () => cursors.pair(), cursorValues: () => cursors.values(),
     redraw,
     setLayers: (next) => ((layers = next), (v = withPeakInView(next, v, full)), update()),
     set: (next) => {

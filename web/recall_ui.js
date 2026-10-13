@@ -29,7 +29,7 @@ function rowItem(row, i, s, ctx) {
   const swatch = el("span", { class: `recall-swatch recall-swatch-${i}`, "aria-hidden": "true" });
   const remove = el("button", { type: "button", class: "icon-button", "data-fk": `recall-remove-${i}`, "aria-label": t("recall.remove", { name: row.name }) }, [icon("close")]);
   remove.addEventListener("click", () => ctx.recallRemove(i));
-  const kids = [swatch, el("span", { class: "recall-name" }, [`${row.name} · ${row.ref.form} · ${row.ref.library}`]), remove];
+  const kids = [swatch, el("span", { class: "recall-name" }, [[row.name, row.ref.form, row.ref.library].filter(Boolean).join(" · ")]), remove];
   const numbers = el("p", { class: "recall-numbers" }, [t("recall.numbers", { rs: num(row.rSpectrum), rd: num(row.rDerivative), k: formatNumber(row.k, 2) }), " ", positionText(row)]);
   const item = el("li", { class: "recall-item", "data-ref": `${row.ref.library}/${row.ref.spectrumId}` }, [el("div", { class: "row" }, kids), numbers]);
   if (s.recall.mode === "difference") {
@@ -112,7 +112,7 @@ export function openRecallDialog(ctx) {
     list.replaceChildren(...items.map((it) => {
       const on = refs.some((r) => r.library === it.library && r.spectrumId === it.spectrumId);
       const version = ctx.getState().libraries.find((l) => l.id === it.library)?.version ?? "";
-      const b = el("button", { type: "button", class: "btn", "aria-pressed": String(on) }, [`${recalledName({ library: it.library, spectrumId: it.spectrumId, form: it.form })} · ${it.form} · ${it.library} ${version}`]);
+      const b = el("button", { type: "button", class: "btn", "aria-pressed": String(on) }, [`${[recalledName({ library: it.library, spectrumId: it.spectrumId, form: it.form }), it.form, it.library].filter(Boolean).join(" · ")} ${version}`]);
       b.addEventListener("click", () => {
         if (on) ctx.recallRemove(refs.findIndex((r) => r.library === it.library && r.spectrumId === it.spectrumId));
         else ctx.recallAdd({ library: it.library, spectrumId: it.spectrumId, form: it.form });

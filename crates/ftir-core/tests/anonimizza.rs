@@ -3,7 +3,7 @@
 use ftir_core::anonimizza::{action_for, clean, contract_json, listed_action, Action, CONTRACT};
 use ftir_core::readers::export::to_json;
 use ftir_core::readers::model::{Document, Limits, Options};
-use ftir_core::readers::{ispd, jcamp, pick, spa, spc, text, READERS};
+use ftir_core::readers::{ispd, jcamp, opus, pick, spa, spc, text, READERS};
 use std::path::PathBuf;
 
 const JCAMP: &str = "##TITLE=Case 4711 powder\r\n##JCAMP-DX=4.24 $$ exported by C:\\Users\\mrossi\\Desktop\r\n##DATA TYPE=INFRARED SPECTRUM\r\n\
@@ -12,6 +12,12 @@ const JCAMP: &str = "##TITLE=Case 4711 powder\r\n##JCAMP-DX=4.24 $$ exported by 
 ##XUNITS=1/CM\r\n##YUNITS=ABSORBANCE\r\n##FIRSTX=4000\r\n##LASTX=3998\r\n##NPOINTS=3\r\n##XYDATA=(X++(Y..Y))\r\n4000 1 2 3\r\n##END=\r\n";
 
 const TEXT: &str = "Operator: Giulia Neri\r\nSample: kitchen-table-9\r\nWavenumber (cm-1),Abs\r\n4000,0.1\r\n3990.5,0.2\r\n3981,0.3\r\n";
+
+fn opus_bytes() -> Vec<u8> {
+    use ftir_core::synthetic::Params;
+    use ftir_core::synthetic_opus::{write, Spec};
+    write(&Spec::from_params(&Params::demo()))
+}
 
 fn fixture_dir(name: &str) -> PathBuf {
     PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -25,6 +31,7 @@ fn documents() -> Vec<Document> {
     let mut docs = vec![
         jcamp::open(JCAMP.as_bytes(), &Limits::STANDARD, &o).expect("jcamp"),
         text::open(TEXT.as_bytes(), &Limits::STANDARD, &o).expect("text"),
+        opus::open(&opus_bytes(), &Limits::STANDARD, &o).expect("opus"),
     ];
     for dir in ["jcamp", "ispd", "spa", "spc"] {
         let mut names: Vec<_> = std::fs::read_dir(fixture_dir(dir))
@@ -67,6 +74,7 @@ fn declared(reader: &str) -> Vec<String> {
             v.extend(ispd::KNOWN_IDS.iter().map(|id| format!("param.{id}")));
             v
         }
+        "bruker-opus" => strs(opus::KNOWN),
         "thermo-spa" => strs(spa::KNOWN),
         "galactic-spc" => strs(spc::KNOWN),
         other => panic!(

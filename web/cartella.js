@@ -13,7 +13,7 @@ import { getState, update } from "./state.js";
  */
 
 /** Extensions of measurement files; the rest of the folder is not looked at. */
-export const EXTENSIONS = [".ispd", ".dx", ".jdx", ".csv", ".txt"];
+export const EXTENSIONS = [".ispd", ".dx", ".jdx", ".jcm", ".jcamp", ".csv", ".txt", ".spa", ".spc"];
 /** Scan period without a native observer, with one (safety net), and time after which an unreadable file is reported. */
 export const POLL_MS = 2000;
 export const SAFETY_MS = 30000;
@@ -185,8 +185,8 @@ class Folder {
   }
 }
 
-/** @param {string} name */
-const isMeasure = (name) => EXTENSIONS.some((e) => name.toLowerCase().endsWith(e));
+/** Whether the name looks like a measurement file: a listed extension or an OPUS number (`.0`, `.1`…). @param {string} name @returns {boolean} */
+export const isMeasure = (name) => EXTENSIONS.some((e) => name.toLowerCase().endsWith(e)) || /\.\d+$/.test(name);
 
 /** Whether the browser can watch a folder (Chrome and Edge on a computer). @returns {boolean} */
 export function folderSupported() {

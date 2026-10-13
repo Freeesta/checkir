@@ -209,9 +209,7 @@ th { position: sticky; top: 0; background: var(--surface); }
 .page-tools { margin-left: auto; display: flex; align-items: center; }
 .page { max-width: 46rem; margin: 0 auto; padding: 1rem; }
 .page h1 { margin-bottom: 0.75rem; font-size: 1.5rem; }
-.page a, .footer a, .warnings-box a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 0.15em; }
-.draft { padding: 0.5rem 0.75rem; border: 2px dashed var(--border); border-radius: 0.4rem; background: var(--surface); font-weight: 600; }
-.warnings-box { margin: 1rem 0; padding: 0.6rem 0.9rem; border: 1px solid var(--border); border-left: 0.35rem solid var(--color-alert); border-radius: 0.4rem; background: var(--surface); }
+.page a, .footer a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 0.15em; }
 .doc { margin: 1rem 0 0; padding: 0; list-style: none; counter-reset: section; }
 .doc > li { margin-bottom: 1rem; counter-increment: section; }
 .doc h2::before { content: counter(section) ". "; color: var(--text-muted); font-variant-numeric: tabular-nums; }

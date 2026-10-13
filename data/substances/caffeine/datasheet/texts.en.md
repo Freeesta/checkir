@@ -6,10 +6,6 @@ Caffeine (1,3,7-trimethylpurine-2,6-dione), formula C8H10N4O2, molar mass 194.19
 
 Chemical class: xanthine alkaloid (grouped here under other substances). Expected effect: stimulant. Typical role in samples: pharmacological adulterant, also found as a declared ingredient. This classification is a checkir proposal awaiting review. [f:checkir-classification]
 
-## ftir_limits
-
-The spectrum of a mixture reflects its main components. Components below about 5 % of the sample are generally not detectable, and FTIR does not measure concentration. Potent substances active at very low doses, such as fentanyl and its analogues (when found, usually at about 3-10 % w/w) and nitazenes, cannot be ruled out by this analysis. A match is a proposal for an expert to evaluate, not a diagnosis, and it holds only if the identification is correct; complementary tests are advisable. [f:checkir-ftir-limits] Caffeine is common in mixtures; as a minor component its bands can be hidden by those of the main component, and the anhydrous and hydrated forms can give slightly different spectra.
-
 ## effects
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
@@ -27,10 +23,6 @@ The same review identified women of reproductive age and children as subgroups a
 ## interactions
 
 Fluvoxamine, an antidepressant that inhibits the enzyme CYP1A2, greatly reduced the clearance of caffeine in healthy volunteers given a single dose; the study found no change in caffeine's effects but could not rule out adverse effects from accumulation with daily intake. [f:culm-merdek2005]
-
-## harm_reduction
-
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
 
 ## sources
 

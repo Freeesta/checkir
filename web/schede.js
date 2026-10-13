@@ -2,7 +2,7 @@
 // Substance sheets of the public site: loading, the rule of what may be shown, and the text parser. No DOM here.
 
 /** The ten fixed sections, in display order. */
-export const SECTIONS = ["molecule", "category", "ftir_limits", "effects", "doses", "risks", "interactions", "harm_reduction", "sources", "license"];
+export const SECTIONS = ["molecule", "category", "effects", "doses", "risks", "interactions", "sources", "license"];
 
 /** Marker of a section that is still a placeholder. */
 const PENDING = /\[f:[a-z]+-section-pending\]/;

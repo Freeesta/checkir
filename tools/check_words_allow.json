@@ -1,6 +1,5 @@
 {
   "allowed": {
-    "warnings.s6.text": "Says the program never uses these words: a phrase that denies them.",
-    "warnings.short": "Says a result does not mean the substance is safe: a phrase that denies the word."
+    "warnings.s6.text": "Says the program never uses these words: a phrase that denies them."
   }
 }

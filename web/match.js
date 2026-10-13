@@ -31,6 +31,8 @@ let sentSignature = "";
 const started = new Set();
 /** Progress of the peak index of each library, as the worker reports it. @type {Map<string, { done: number, total: number, ready: boolean }>} */
 const indexStatus = new Map();
+/** Waiting for the mixture proposal that follows a comparison. @type {Map<number, (proposal: any) => void>} */
+const mixtureWaiting = new Map();
 /** @type {Map<number, (answer: { results: Array<{ lib: string, json: string }>, missing: string[] } | null) => void>} */
 const peakWaiting = new Map();
 /** @type {(text: string) => void} */
@@ -77,6 +79,9 @@ function ensureWorker() {
     if (m.type === "result" || (m.type === "error" && m.runId !== undefined)) {
       waiting.get(m.runId)?.(m.type === "result" ? m.json : null);
       waiting.delete(m.runId);
+    } else if (m.type === "mixture") {
+      mixtureWaiting.get(m.runId)?.(m.proposal);
+      mixtureWaiting.delete(m.runId);
     } else if (m.type === "peak_index") {
       indexStatus.set(m.id, { done: m.done, total: m.total, ready: m.ready });
     } else if (m.type === "peak_result") {
@@ -134,28 +139,39 @@ function unitOf(unit) {
   return unit === undefined || unit === "Absorbance" ? "absorbance" : unit === "Transmittance" ? "transmittance" : null;
 }
 
-/** @param {unknown} query @param {unknown} options @returns {Promise<string | null>} */
-function ask(query, options) {
+/** @param {unknown} query @param {unknown} options @param {((proposal: any) => void) | null} [onMixture] asked for the mixture search that follows the comparison @returns {Promise<string | null>} */
+function ask(query, options, onMixture = null) {
   const runId = ++runSeq;
   return new Promise((resolve) => {
     waiting.set(runId, resolve);
-    ensureWorker().postMessage({ type: "run", runId, query, options });
+    if (onMixture) mixtureWaiting.set(runId, onMixture);
+    ensureWorker().postMessage({ type: "run", runId, query, options, mixture: onMixture !== null });
   });
 }
 
 /**
  * One engine comparison of a loaded spectrum with the active libraries; `null` when the engine did not answer.
  * @param {string} code @param {Record<string, unknown>} options region and sample id
+ * @param {((proposal: any) => void) | null} [onMixture] called with the mixture proposal (or null) once the worker has looked for one
  * @returns {Promise<string | null>} the result text (`ftir-risultato-confronto/1` or an error)
  */
-export function compareWith(code, options) {
+export function compareWith(code, options, onMixture = null) {
   const spectrum = spectrumOf(code);
   const unit = unitOf(spectrum?.y_unit);
   if (!spectrum || !unit) return Promise.resolve(null);
   return ask(
     { role: "sample", y_unit: unit, wavenumber_cm1: spectrum.wavenumber_cm1, y: spectrum.y },
     { libraries: activeLibraries(getState()).map((l) => l.id), ...options },
+    onMixture,
   );
+}
+
+/** Put the mixture proposal in the result it belongs to (same spectrum, same libraries and region); a stale answer is dropped. @param {string} code @param {string} sig @param {any} proposal */
+function attachMixture(code, sig, proposal) {
+  const now = getState();
+  const r = now.results[code];
+  if (!r || r.sig !== sig || !proposal) return;
+  update({ results: { ...now.results, [code]: { ...r, data: { ...r.data, mixture: proposal } } } });
 }
 
 /**
@@ -177,7 +193,7 @@ export async function runMatch(code) {
   const signature = matchSignature(s);
   pending++;
   update({ matching: code, matchError: null, rangeError: null });
-  const json = await compareWith(code, { sample_id: code, ...optionsOf(choice) });
+  const json = await compareWith(code, { sample_id: code, ...optionsOf(choice) }, s.files.find((f) => f.code === code)?.role === "sample" ? (proposal) => attachMixture(code, signature, proposal) : null);
   pending--;
   const now = getState();
   const done = { matching: pending > 0 ? now.matching : null };
