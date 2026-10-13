@@ -50,13 +50,13 @@ function block(title, id, children) {
   return el("section", { class: "sheet-block", "data-block": id }, [el("h3", {}, [title]), ...children]);
 }
 
-/** Block 1: logo, title, local code, day, program and library versions, thresholds. No datum of the person. @param {string} code @param {any} data @returns {HTMLElement} */
+/** Block 1: title, local code, day, program and library versions, thresholds. No datum of the person. @param {string} code @param {any} data @returns {HTMLElement} */
 function headBlock(code, data) {
   const libs = (data.libraries ?? []).filter((/** @type {any} */ l) => l.searched).map((/** @type {any} */ l) => `${l.id} ${l.version}`).join(", ");
   const rows = [[t("sheet.code"), code], [t("sheet.day"), today()], [t("sheet.program"), programVersion], [t("sheet.libraries"), libs || "—"], [t("sheet.thresholds"), data.chain?.derivative ?? "—"]];
   const list = el("dl", { class: "sheet-meta" });
   for (const [k, v] of rows) list.append(el("dt", {}, [k]), el("dd", {}, [v]));
-  return el("header", { class: "sheet-head", "data-block": "head" }, [el("span", { class: "logo", "aria-hidden": "true" }), el("h2", {}, [t("sheet.title")]), list]);
+  return el("header", { class: "sheet-head", "data-block": "head" }, [el("h2", {}, [t("sheet.title")]), list]);
 }
 
 /** @param {any} c a candidate @returns {string} name and form */
