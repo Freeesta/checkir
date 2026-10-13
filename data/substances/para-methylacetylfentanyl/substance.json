@@ -1,19 +1,20 @@
 {
   "schema": "ftir-substance/1",
-  "id": "4-methylacetylfentanyl",
+  "id": "para-methylacetylfentanyl",
   "type": "compound",
   "names": {
     "en": {
-      "preferred": "4-Methylacetylfentanyl",
+      "preferred": "para-Methylacetylfentanyl",
       "synonyms": [
-        "para-methylacetylfentanyl",
-        "p-methyl acetyl fentanyl"
+        "p-methylacetylfentanyl",
+        "4-methylacetylfentanyl"
       ]
     },
     "it": {
-      "preferred": "4-Metilacetilfentanil",
+      "preferred": "para-Metilacetilfentanil",
       "synonyms": [
-        "para-metilacetilfentanil"
+        "p-metilacetilfentanil",
+        "4-metilacetilfentanil"
       ]
     }
   },

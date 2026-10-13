@@ -1,11 +1,10 @@
 {
   "schema": "datasheet/1",
-  "substance": "4-methylacetylfentanyl",
+  "substance": "para-fluoroacetylfentanyl",
   "version": 1,
   "section_state": {
     "molecule": "draft",
     "category": "draft",
-    "history": "draft",
     "origin": "draft",
     "metabolism": "draft",
     "cuts": "draft",

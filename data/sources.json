@@ -7220,6 +7220,48 @@
       "archive_url": "https://web.archive.org/web/20250203224939/https://pubmed.ncbi.nlm.nih.gov/31123661/"
     },
     {
+      "id": "iwaki2026",
+      "type": "paper",
+      "title": "Differentiation of 2-, 3-, and 4-fluorofuranylfentanyl using high performance liquid chromatography-mass spectrometry and human liver microsomes (J Anal Toxicol 50(6))",
+      "authors": [
+        "T. Iwaki",
+        "Y. Oida",
+        "M. Morikawa",
+        "K. Itoh",
+        "K. Iwai",
+        "K. Abe",
+        "E. Kohyama",
+        "T. Ito",
+        "H. Tanaka",
+        "T. Yokoi",
+        "K. Kitaichi"
+      ],
+      "year": 2026,
+      "doi": "10.1093/jat/bkag056",
+      "url": "https://doi.org/10.1093/jat/bkag056",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "rojkiewicz2017",
+      "type": "paper",
+      "title": "Identification and physicochemical characterization of 4-fluorobutyrfentanyl (1-((4-fluorophenyl)(1-phenethylpiperidin-4-yl)amino)butan-1-one, 4-FBF) in seized materials and post-mortem biological samples (Drug Test Anal 9(3):405-414)",
+      "authors": [
+        "M. Rojkiewicz",
+        "M. Majchrzak",
+        "R. Celiński",
+        "P. Kuś",
+        "M. Sajewicz"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2135",
+      "url": "https://doi.org/10.1002/dta.2135",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
       "id": "ono2022",
       "type": "paper",
       "title": "Hepatic and renal toxicities and metabolism of fentanyl analogues in rats (Naunyn Schmiedebergs Arch Pharmacol 396(1):149-159)",
@@ -7369,26 +7411,6 @@
       "tier": "primary"
     },
     {
-      "id": "varshneya2022",
-      "type": "paper",
-      "title": "Structurally diverse fentanyl analogs yield differential locomotor activities in mice (Pharmacol Biochem Behav 222:173496)",
-      "authors": [
-        "N. B. Varshneya",
-        "D. M. Walentiny",
-        "D. L. Stevens",
-        "T. D. Walker",
-        "L. R. Akinfiresoye",
-        "P. M. Beardsley"
-      ],
-      "year": 2022,
-      "doi": "10.1016/j.pbb.2022.173496",
-      "url": "https://doi.org/10.1016/j.pbb.2022.173496",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-13",
-      "tier": "primary",
-      "archive_url": "https://web.archive.org/web/20260210215912/https://pubmed.ncbi.nlm.nih.gov/36435268/"
-    },
-    {
       "id": "polke2024",
       "type": "paper",
       "title": "Development and validation of a liquid chromatography-tandem mass spectrometry (LC-MS/MS) method including 25 novel synthetic opioids in hair and subsequent analysis of a Swiss opioid consumer cohort (Drug Test Anal 16(11):1384-1391)",
@@ -7464,26 +7486,6 @@
       "consulted": "2026-10-13",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20240604065203/https://pubmed.ncbi.nlm.nih.gov/34791285/"
-    },
-    {
-      "id": "barajas2025",
-      "type": "paper",
-      "title": "ortho/meta/para-Methylacetylfentanyl-Induced Unique Interferences in Fentanyl Urine Drug Testing with Immunoassay and LC-MS/MS (J Appl Lab Med 10(6):1755-1758)",
-      "authors": [
-        "D. A. Barajas",
-        "H. C. Noda Carter",
-        "M. R. Tomedi",
-        "G. D. Reynolds",
-        "H. T. Dinh",
-        "M. S. Castaneto",
-        "P. Ke"
-      ],
-      "year": 2025,
-      "doi": "10.1093/jalm/jfaf116",
-      "url": "https://doi.org/10.1093/jalm/jfaf116",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-13",
-      "tier": "primary"
     }
   ]
 }
