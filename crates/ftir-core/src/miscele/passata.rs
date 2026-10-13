@@ -67,6 +67,11 @@ impl Run<'_> {
             Some(b) if self.th.enforce_bands && !b.passed => Status::PossibleNotShown,
             _ => Status::Proposed,
         };
+        // A minor component joined for the peaks the others left: count them there, not on the peaks of the whole sample.
+        let explained_peaks = match (&bands, sel.picks[n].minor) {
+            (Some(b), true) => b.explained,
+            _ => bands_check(peaks, &curve, self.th).explained,
+        };
         Ok(Component {
             candidate: r.index,
             id: c.id.clone(),
@@ -81,7 +86,7 @@ impl Run<'_> {
             variant_of: self.variant_of(k, done),
             bands,
             status,
-            explained_peaks: bands_check(peaks, &curve, self.th).explained,
+            explained_peaks,
             minor: sel.picks[n].minor,
         })
     }
