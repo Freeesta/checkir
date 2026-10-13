@@ -1,6 +1,7 @@
 {
   "schema": "aliases/1",
   "aliases": {
+    "2-fdck": "2-fluorodeschloroketamine",
     "2c-c-nbome": "25c-nbome",
     "2c-i-nbome": "25i-nbome",
     "2cb": "2c-b",
@@ -12,9 +13,11 @@
     "2ct2": "2c-t-2",
     "2ct7": "2c-t-7",
     "2fa": "2-fa",
+    "2fdck": "2-fluorodeschloroketamine",
     "2mmc": "2-mmc",
     "3cmc": "3-cmc",
     "3fa": "3-fa",
+    "3meopcp": "3-meo-pcp",
     "4cmc": "4-cmc",
     "5-methoxy-dmt": "5-meo-dmt",
     "bk-mdea": "ethylone",
@@ -22,6 +25,7 @@
     "clephedrone": "4-cmc",
     "depas": "etizolam",
     "dimethyltryptamine": "dmt",
+    "dxm": "dextromethorphan",
     "efedrone": "methcathinone",
     "ephedrone": "methcathinone",
     "etilone": "ethylone",
@@ -36,12 +40,14 @@
     "metoxetamine": "methoxetamine",
     "mezcaline": "mescaline",
     "mxe": "methoxetamine",
+    "pcp": "phencyclidine",
     "psilocibina": "psilocybin",
     "psilocybine": "psilocybin",
     "rivotril": "clonazepam",
     "salvinorin": "salvinorin-a",
     "tenamfetamine": "mda",
     "valium": "diazepam",
-    "xanax": "alprazolam"
+    "xanax": "alprazolam",
+    "xilazina": "xylazine"
   }
 }

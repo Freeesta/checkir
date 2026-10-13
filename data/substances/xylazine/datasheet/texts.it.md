@@ -6,6 +6,14 @@ Xilazina (N-(2,6-dimetilfenil)-5,6-diidro-4H-1,3-tiazin-2-ammina), formula C12H1
 
 Classe chimica: agonista adrenergico alfa-2, un sedativo veterinario (tra le altre sostanze). Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
 
+## history
+
+Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+
+## origin
+
+Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+
 ## metabolism
 
 In 28 pazienti risultati positivi a fentanil e xilazina, l'emivita terminale mediana della xilazina nel plasma è stata 12.0 h (intervallo 5.9-20.8), più lunga che negli studi sugli animali. [f:lin2025]

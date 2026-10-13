@@ -4265,6 +4265,191 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "review"
+    },
+    {
+      "id": "bey2007",
+      "type": "paper",
+      "title": "Phencyclidine intoxication and adverse effects: a clinical and pharmacological review of an illicit drug (Cal J Emerg Med 8(1):9-14)",
+      "authors": [
+        "T. Bey",
+        "A. Patel"
+      ],
+      "year": 2007,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2859735/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "burns2013",
+      "type": "paper",
+      "title": "Antitussives and substance abuse (Subst Abuse Rehabil 4:75-82)",
+      "authors": [
+        "J. M. Burns",
+        "E. W. Boyer"
+      ],
+      "year": 2013,
+      "doi": "10.2147/SAR.S36761",
+      "url": "https://doi.org/10.2147/SAR.S36761",
+      "license": "CC BY-NC 3.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "riess2024",
+      "type": "paper",
+      "title": "2-Fluorodeschloroketamine consumption: about two deaths and a case of self-mutilation (J Anal Toxicol)",
+      "authors": [
+        "S. Riess",
+        "M. Chèze",
+        "A. Muckensturm"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae021",
+      "url": "https://doi.org/10.1093/jat/bkae021",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "zhang2026",
+      "type": "paper",
+      "title": "Metabolite Profiling and Pathway Elucidation of 2-Fluorodeschloroketamine and 2-Fluoro-N-ethylketamine in Rats Using HPLC-QTOF Mass Spectrometry (Metabolites 16(6):394)",
+      "authors": [
+        "Y. Zhang",
+        "Q. Wang",
+        "Y. Wang"
+      ],
+      "year": 2026,
+      "doi": "10.3390/metabo16060394",
+      "url": "https://doi.org/10.3390/metabo16060394",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "mezaache2026",
+      "type": "paper",
+      "title": "Emerging new psychoactive ketamine analogues: patterns of use and health risks identified by the French Addictovigilance Network (Int J Drug Policy)",
+      "authors": [
+        "S. Mezaache",
+        "M. Pochard",
+        "E. Peyrière",
+        "M. Fouilhé Sam-Laï",
+        "J. Micallef"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.drugpo.2026.105326",
+      "url": "https://doi.org/10.1016/j.drugpo.2026.105326",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "wang2026",
+      "type": "paper",
+      "title": "Exposure to Ketamine and 2-Fluorodeschloroketamine Impairs Mitochondrial Oxidative Phosphorylation in Human Cerebral Organoids (Curr Neuropharmacol)",
+      "authors": [
+        "J. Wang",
+        "R. Zhang",
+        "Y. Ma"
+      ],
+      "year": 2026,
+      "doi": "10.2174/011570159X445463260422181312",
+      "url": "https://doi.org/10.2174/011570159X445463260422181312",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "copeland2022",
+      "type": "paper",
+      "title": "The First Fatal Intoxication with 3-MeO-PCP in the UK and a Review of the Literature (J Anal Toxicol)",
+      "authors": [
+        "C. S. Copeland",
+        "S. Hudson",
+        "R. Treble"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkac015",
+      "url": "https://doi.org/10.1093/jat/bkac015",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "arbouche2021",
+      "type": "paper",
+      "title": "Determination of 3-MeO-PCP in human blood and urine in a fatal intoxication case, with a specific focus on metabolites identification (Forensic Sci Res)",
+      "authors": [
+        "N. Arbouche",
+        "P. Kintz",
+        "C. Zagdoun",
+        "C. Gheddar",
+        "J.-S. Raul",
+        "A. Ameline"
+      ],
+      "year": 2021,
+      "doi": "10.1080/20961790.2021.1928821",
+      "url": "https://doi.org/10.1080/20961790.2021.1928821",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "pepe2024",
+      "type": "paper",
+      "title": "3-Methoxy-Phencyclidine Induced Psychotic Disorder: A Literature Review and an 18F-FDG PET/CT Case Report (Pharmaceuticals 17(4):452)",
+      "authors": [
+        "M. Pepe",
+        "M. Di Nicola",
+        "F. Cocciolillo"
+      ],
+      "year": 2024,
+      "doi": "10.3390/ph17040452",
+      "url": "https://doi.org/10.3390/ph17040452",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "zanda2016",
+      "type": "paper",
+      "title": "Methoxetamine, a novel psychoactive substance with serious adverse pharmacological effects: a review of case reports and preclinical findings (Behav Pharmacol)",
+      "authors": [
+        "M. T. Zanda",
+        "P. Fadda",
+        "C. Chiamulera"
+      ],
+      "year": 2016,
+      "doi": "10.1097/FBP.0000000000000241",
+      "url": "https://doi.org/10.1097/FBP.0000000000000241",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "schifano2021-otc",
+      "type": "paper",
+      "title": "Focus on Over-the-Counter Drugs' Misuse: A Systematic Review on Antihistamines, Cough Medicines, and Decongestants (Front Psychiatry 12:657397)",
+      "authors": [
+        "F. Schifano",
+        "S. Chiappini",
+        "A. Miuli",
+        "A. Mosca",
+        "M. C. Santovito",
+        "J. M. Corkery",
+        "A. Guirguis",
+        "M. Pettorruso",
+        "M. Di Giannantonio",
+        "G. Martinotti"
+      ],
+      "year": 2021,
+      "doi": "10.3389/fpsyt.2021.657397",
+      "url": "https://doi.org/10.3389/fpsyt.2021.657397",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
     }
   ]
 }

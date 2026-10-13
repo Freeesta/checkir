@@ -1,0 +1,66 @@
+{
+  "schema": "datasheet/1",
+  "substance": "3-meo-pcp",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "demethyl-3-MeO-PCP",
+        "reaction": "other",
+        "source": "arbouche2021"
+      },
+      {
+        "from": "parent",
+        "to": "piperidine-OH-3-MeO-PCP",
+        "reaction": "hydroxylation",
+        "source": "arbouche2021"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "3-meo-pcp.exercise",
+      "topic": "set_setting",
+      "source": "copeland2022"
+    },
+    {
+      "key": "3-meo-pcp.range",
+      "topic": "dosing",
+      "source": "arbouche2021"
+    },
+    {
+      "key": "3-meo-pcp.psychosis",
+      "topic": "mental_health",
+      "source": "pepe2024"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "doses": [],
+  "interactions": []
+}
