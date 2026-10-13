@@ -2,7 +2,7 @@
 //! return JSON text or bytes; the index itself lives in `ftir_core::peak_index`.
 use ftir_core::confronti::lettori::spectrum_in;
 use ftir_core::error::EngineError;
-use ftir_core::peak_index::{query, PeakIndex};
+use ftir_core::peak_index::{query, rank, PeakIndex};
 use ftir_core::peaks::{self, Thresholds};
 use ftir_core::spectrum::Role;
 use std::cell::RefCell;
@@ -146,6 +146,40 @@ pub fn peak_index_query(lib: &str, query_json: &str) -> String {
                     .with_param("library", lib),
             ),
         })
+    };
+    run().unwrap_or_else(|e| e.json())
+}
+
+/// The inverse search on several libraries at once, merged and ordered by the engine (`ftir_core::peak_index::rank`).
+/// `libs_json` = the library ids in display order, `query_json` as in `peak_index_query`. Returns
+/// `{total, truncated, missing, failed, hits:[{lib, spectrum, found, bands}]}`; `missing` = libraries without an index.
+#[wasm_bindgen]
+pub fn peak_index_query_all(libs_json: &str, query_json: &str) -> String {
+    let run = || -> Result<String, EngineError> {
+        let q = query::parse_query(query_json)?;
+        query::check(&q)?;
+        let t = thresholds()?;
+        let libs: Vec<String> = ftir_core::passi::json::parse(libs_json)?
+            .as_arr()
+            .unwrap_or_default()
+            .iter()
+            .filter_map(|v| v.as_str().map(str::to_string))
+            .collect();
+        let (mut parts, mut missing, mut failed) = (Vec::new(), Vec::new(), 0);
+        INDEXES.with(|m| {
+            for lib in libs {
+                match m
+                    .borrow()
+                    .get(&lib)
+                    .map(|s| s.index.query(&q, &t.tolerances))
+                {
+                    None => missing.push(lib),
+                    Some(Ok(r)) => parts.push((lib, r)),
+                    Some(Err(_)) => failed += 1,
+                }
+            }
+        });
+        Ok(rank::rank(parts).to_json(&missing, failed))
     };
     run().unwrap_or_else(|e| e.json())
 }

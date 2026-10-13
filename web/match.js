@@ -34,7 +34,7 @@ const started = new Set();
 const indexStatus = new Map();
 /** Waiting for the mixture proposal that follows a comparison. @type {Map<number, (proposal: any) => void>} */
 const mixtureWaiting = new Map();
-/** @type {Map<number, (answer: { results: Array<{ lib: string, json: string }>, missing: string[] } | null) => void>} */
+/** @type {Map<number, (answer: { json: string, missing: string[] } | null) => void>} */
 const peakWaiting = new Map();
 /** @type {(text: string) => void} */
 let say = () => {};
@@ -91,7 +91,7 @@ function ensureWorker() {
     } else if (m.type === "peak_index") {
       indexStatus.set(m.id, { done: m.done, total: m.total, ready: m.ready });
     } else if (m.type === "peak_result") {
-      peakWaiting.get(m.runId)?.({ results: m.results, missing: m.missing });
+      peakWaiting.get(m.runId)?.({ json: m.json, missing: m.missing });
       peakWaiting.delete(m.runId);
     } else if (m.type === "error") {
       update({ matchError: { key: m.key, params: {} } });
@@ -128,9 +128,10 @@ export function peakIndexStatus(id) {
 }
 
 /**
- * Which spectra of the active libraries have a band here? `query` is the JSON of `peak_index_query`; each result is the engine's
- * answer for one library (row numbers of that library); `missing` lists the libraries whose index is still being built.
- * @param {unknown} query @returns {Promise<{ results: Array<{ lib: string, json: string }>, missing: string[] } | null>}
+ * Which spectra of the active libraries have a band here? `query` is the JSON of `peak_index_query`; `json` is the engine's answer
+ * for all the libraries, merged and ordered (`peak_index_query_all`: hits carry `lib` and the row number in that library); `missing`
+ * lists the libraries whose index is still being built.
+ * @param {unknown} query @returns {Promise<{ json: string, missing: string[] } | null>}
  */
 export function searchPeaks(query) {
   const runId = ++runSeq;
@@ -248,29 +249,6 @@ export function libraryCurve(library, spectrumId) {
 /** Mean spacing of the points of a spectrum, cm⁻¹ (0 with fewer than two points). @param {number[]} x @returns {number} */
 export function meanStep(x) {
   return x.length > 1 ? Math.abs(x[x.length - 1] - x[0]) / (x.length - 1) : 0;
-}
-
-/**
- * The library spectrum of a candidate, scaled to the highest band of the sample outside the excluded zone, for the overlay.
- * @param {string} library @param {string} spectrumId
- * @param {import("./spectrum.js").Spectrum} sample
- * @param {[number, number]} excluded zone left out of the comparison, cm⁻¹
- * @returns {{ spectrum: import("./spectrum.js").Spectrum, scale: number } | null}
- */
-export function referenceFor(library, spectrumId, sample, excluded) {
-  const curve = libraryCurve(library, spectrumId);
-  if (!curve) return null;
-  const { wavenumber_cm1: x, y } = curve;
-  const inside = (/** @type {number} */ v) => v < excluded[0] || v > excluded[1];
-  const top = (/** @type {number[]} */ xs, /** @type {number[]} */ ys) => {
-    let best = 0;
-    for (let k = 0; k < xs.length; k++) if (xs[k] >= x[0] && xs[k] <= x[x.length - 1] && inside(xs[k]) && Number.isFinite(ys[k]) && ys[k] > best) best = ys[k];
-    return best;
-  };
-  const ref = top(x, y);
-  const own = top(sample.wavenumber_cm1, sample.y);
-  const scale = ref > 0 && own > 0 ? own / ref : 1;
-  return { spectrum: { wavenumber_cm1: x, y: y.map((v) => v * scale) }, scale };
 }
 
 /**

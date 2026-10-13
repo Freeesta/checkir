@@ -66,7 +66,8 @@ pub(super) fn invalid(what: &str) -> EngineError {
     EngineError::new("peak_index.query_invalid", "invalid peak query").with_param("what", what)
 }
 
-pub(super) fn check(q: &Query) -> EngineResult<()> {
+/// The query is well formed (at least one band, positions in range), else `peak_index.query_invalid`.
+pub fn check(q: &Query) -> EngineResult<()> {
     let pos_ok = |x: f64| x.is_finite() && (0.0..=6553.5).contains(&x);
     if q.wanted.is_empty() {
         return Err(invalid("no_peaks"));
@@ -100,33 +101,35 @@ fn num(x: f64, decimals: i32) -> Value {
     Value::Num((x * k).round() / k)
 }
 
+/// One hit as JSON: the spectrum (row of the library), the bands found and the band-by-band numbers.
+pub(super) fn hit_value(h: &Hit) -> Value {
+    let bands = h.found.iter().map(|f| {
+        Value::Obj(vec![
+            ("wanted".into(), Value::Num(f.wanted as f64)),
+            ("position_cm1".into(), num(f.row.position_cm1(), 1)),
+            ("prominence_rel".into(), num(f.row.prominence_rel(), 3)),
+            ("delta_cm1".into(), num(f.delta_cm1, 1)),
+            (
+                "width".into(),
+                Value::Str(WIDTH_NAMES[usize::from(f.row.width).min(3)].into()),
+            ),
+        ])
+    });
+    Value::Obj(vec![
+        ("spectrum".into(), Value::Num(f64::from(h.spectrum))),
+        ("found".into(), Value::Num(h.found.len() as f64)),
+        ("bands".into(), Value::Arr(bands.collect())),
+    ])
+}
+
 impl QueryResult {
     pub fn to_json(&self) -> String {
-        let hit = |h: &Hit| {
-            let bands = h.found.iter().map(|f| {
-                Value::Obj(vec![
-                    ("wanted".into(), Value::Num(f.wanted as f64)),
-                    ("position_cm1".into(), num(f.row.position_cm1(), 1)),
-                    ("prominence_rel".into(), num(f.row.prominence_rel(), 3)),
-                    ("delta_cm1".into(), num(f.delta_cm1, 1)),
-                    (
-                        "width".into(),
-                        Value::Str(WIDTH_NAMES[usize::from(f.row.width).min(3)].into()),
-                    ),
-                ])
-            });
-            Value::Obj(vec![
-                ("spectrum".into(), Value::Num(f64::from(h.spectrum))),
-                ("found".into(), Value::Num(h.found.len() as f64)),
-                ("bands".into(), Value::Arr(bands.collect())),
-            ])
-        };
         Value::Obj(vec![
             ("total".into(), Value::Num(self.total as f64)),
             ("required".into(), Value::Num(self.required as f64)),
             (
                 "hits".into(),
-                Value::Arr(self.hits.iter().map(hit).collect()),
+                Value::Arr(self.hits.iter().map(hit_value).collect()),
             ),
         ])
         .write()

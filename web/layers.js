@@ -1,6 +1,7 @@
 // @ts-check
 import { currentLang, formatNumber, t } from "./i18n.js";
-import { EXCLUDED_CM1, referenceFor } from "./match.js";
+import { EXCLUDED_CM1 } from "./match.js";
+import { referenceFor } from "./reference.js";
 import { candidateName, selectedCandidate } from "./results.js";
 import { analyse } from "./peaks.js";
 import { summaryText } from "./peaks_view.js";
