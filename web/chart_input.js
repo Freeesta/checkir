@@ -17,6 +17,7 @@ import { t } from "./i18n.js";
  *   yZoomBy: (factor: number) => void,
  *   announce: (text: string) => void,
  *   brush?: (from: number, to: number) => void,
+ *   snap?: (wn: number) => number,
  * }} ChartApi */
 
 const DRAG_PX = 4;
@@ -95,7 +96,7 @@ function attachPointer(host, api) {
     const p = pointOf(host, api, e);
     if (!d || !p) return;
     if (d.start.zone === "plot" && Math.abs(e.clientX - d.cx) <= DRAG_PX) {
-      if (p.zone === "plot") api.cursors.set(d.alt ? 1 : 0, wavenumberAt(api, p.x));
+      if (p.zone === "plot") api.cursors.set(d.alt ? 1 : 0, e.shiftKey && api.snap ? api.snap(wavenumberAt(api, p.x)) : wavenumberAt(api, p.x));
       return;
     }
     if (d.start.zone === "brush") return endBrush(api, d.start, p, e.clientX - d.cx);
@@ -139,4 +140,10 @@ function attachKeys(host, api) {
 export function attachInput(host, api) {
   attachPointer(host, api);
   attachKeys(host, api);
+}
+
+/** The wavenumber under a mouse event, or null when it is not over the plot. @param {HTMLElement} host @param {ChartApi} api @param {MouseEvent} e @returns {number | null} */
+export function clientWavenumber(host, api, e) {
+  const p = pointOf(host, api, e);
+  return p?.zone === "plot" ? wavenumberAt(api, p.x) : null;
 }

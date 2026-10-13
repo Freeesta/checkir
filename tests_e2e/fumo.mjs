@@ -11,6 +11,7 @@ import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
+import { exportScenario } from "./esporta.mjs";
 import { recallScenario } from "./richiamo.mjs";
 import { rangesPureScenario, rangesScenario } from "./regioni.mjs";
 import { registryScenario } from "./registri.mjs";
@@ -323,6 +324,7 @@ async function run() {
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
     await recallScenario(browser, base, check, axe);
+    await exportScenario(browser, base, check, axe);
     await rangesPureScenario(check);
     await rangesScenario(browser, base, check, axe);
     await sheetScenario(browser, base, check, axe);
