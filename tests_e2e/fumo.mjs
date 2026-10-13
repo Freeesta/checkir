@@ -5,6 +5,7 @@ import { chromium, firefox, webkit } from "playwright";
 import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { areaScenario } from "./area.mjs";
+import { binariesScenario } from "./binari.mjs";
 import { cleanScenario } from "./pulizia.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
@@ -330,6 +331,7 @@ function scenarios(browser) {
     () => pagesScenario(browser),
     () => warningsBoxScenario(browser),
     () => loadingScenario(browser, base, check, axe),
+    () => binariesScenario(browser, base, check, axe),
     () => demoScenario(browser, base, check, axe),
     () => librariesPureScenario(check),
     () => librariesScenario(browser, base, check, axe),
