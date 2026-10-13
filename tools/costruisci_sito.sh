@@ -9,6 +9,7 @@ fi
 cargo build --locked --release --target wasm32-unknown-unknown -p ftir-wasm
 rm -rf site && mkdir -p site && cp -r web/. site/
 node tools/genera_identita.mjs
+node tools/genera_schede.mjs
 wasm-bindgen --target web --no-typescript --out-dir site/wasm target/wasm32-unknown-unknown/release/ftir_wasm.wasm
 # Library packages (never committed) and the general manifest with one switch per library; the service worker caches them.
 cargo run --locked --release -p ftir-lib --bin costruisci-libreria -- --config tools/libreria/librerie.json --out site/librerie

@@ -10,6 +10,7 @@ import { librariesPureScenario, librariesScenario, offlineScenario } from "./lib
 import { peaksScenario } from "./picchi.mjs";
 import { registryScenario } from "./registri.mjs";
 import { sheetScenario } from "./scheda.mjs";
+import { sheetsPureScenario, sheetsScenario } from "./schede.mjs";
 import { subtractionScenario } from "./sottrazione.mjs";
 import { startSite } from "./sito.mjs";
 import { toolsScenario } from "./strumenti.mjs";
@@ -286,6 +287,8 @@ async function run() {
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
     await sheetScenario(browser, base, check, axe);
+    await sheetsPureScenario(check);
+    await sheetsScenario(browser, base, check, axe);
     await offlineScenario(browser, base, check);
     await folderScenario(browser, base, check, axe);
   } finally {
