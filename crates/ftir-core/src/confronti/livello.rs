@@ -61,6 +61,10 @@ pub struct AlertInput<'a> {
     pub spectrum_top: (usize, f64),
     pub options: &'a Options,
     pub thresholds: &'a Thresholds,
+    /// Libraries actually searched (positions in the index).
+    pub searched: &'a [usize],
+    /// Alerts about the measurement itself (same as the previous sample, quality), already in display order.
+    pub measurement: &'a [Alert],
 }
 
 fn text(s: &str) -> Value {
@@ -76,7 +80,7 @@ fn row_ref(index: &Index, g: usize, r: f64) -> Value {
     ])
 }
 
-fn alert(id: &'static str, data: Vec<(&str, Value)>) -> Alert {
+pub(super) fn alert(id: &'static str, data: Vec<(&str, Value)>) -> Alert {
     Alert {
         id,
         data: data.into_iter().map(|(k, v)| (k.to_string(), v)).collect(),
@@ -153,12 +157,51 @@ fn different_form(a: &AlertInput) -> Option<Alert> {
     ))
 }
 
-/// Alerts in display order: ambiguity, spectral twin, different form, custom range, fixed limit (always).
+fn normal_form(s: &str) -> String {
+    s.trim().to_lowercase()
+}
+
+/// The chemist (or the peak analysis) expects a form that the library has not got for the substance of the first
+/// candidate: the score is lower than usual and a missing form is not a missing substance.
+fn form_absent(a: &AlertInput) -> Option<Alert> {
+    let top = a.candidates.first()?;
+    let expected = normal_form(a.options.expected_form.as_deref()?);
+    if expected.is_empty() {
+        return None;
+    }
+    let mut forms: Vec<String> = a
+        .searched
+        .iter()
+        .flat_map(|li| a.index.lib_range(*li))
+        .filter(|g| a.index.group[*g] == a.index.group[top.g])
+        .map(|g| a.index.entry(g).form.clone())
+        .collect();
+    forms.sort();
+    forms.dedup();
+    if forms.iter().any(|f| normal_form(f) == expected) {
+        return None;
+    }
+    Some(alert(
+        "form_absent",
+        vec![
+            ("expected_form", text(&expected)),
+            ("first", row_ref(a.index, top.g, top.r_derivative)),
+            (
+                "forms_in_library",
+                Value::Arr(forms.iter().map(|f| text(f)).collect()),
+            ),
+        ],
+    ))
+}
+
+/// Alerts in display order: ambiguity, spectral twin, different form, form absent, same as previous, quality,
+/// custom range, fixed limit (always).
 pub fn build_alerts(a: &AlertInput) -> Vec<Alert> {
-    let mut out: Vec<Alert> = [ambiguity(a), twin(a), different_form(a)]
+    let mut out: Vec<Alert> = [ambiguity(a), twin(a), different_form(a), form_absent(a)]
         .into_iter()
         .flatten()
         .collect();
+    out.extend(a.measurement.iter().cloned());
     if a.options.custom {
         let ranges = a
             .options
@@ -186,6 +229,8 @@ mod test {
             probable_margin: None,
             libraries: None,
             origin: None,
+            expected_form: None,
+            sample_id: None,
         }
     }
 

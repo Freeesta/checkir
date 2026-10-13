@@ -5,7 +5,14 @@ use crate::passi::json::{self, Value};
 use crate::spectrum::{Role, Spectrum, YUnit};
 
 const MAX_RANGES: usize = 16;
-const KNOWN: [&str; 4] = ["ranges", "range_preset", "libraries", "origin"];
+const KNOWN: [&str; 6] = [
+    "ranges",
+    "range_preset",
+    "libraries",
+    "origin",
+    "expected_form",
+    "sample_id",
+];
 
 /// Options of `confronta`. Without `ranges` or `range_preset` the comparison uses the whole grid (preset `full`).
 #[derive(Debug, Clone, PartialEq)]
@@ -24,6 +31,11 @@ pub struct Options {
     pub libraries: Option<Vec<String>>,
     /// Id of the spectrum a residual comes from (recorded in the result).
     pub origin: Option<String>,
+    /// Form the chemist (or the peak analysis) expects, e.g. `hydrochloride`: `form_absent` fires when the library
+    /// has not got it for the substance of the first candidate.
+    pub expected_form: Option<String>,
+    /// Id of the sample in the session: lets `same_as_previous` compare with the sample before it.
+    pub sample_id: Option<String>,
 }
 
 fn invalid(field: &'static str, why: &str) -> EngineError {
@@ -96,6 +108,14 @@ pub fn parse_options(text: &str, t: &Thresholds) -> EngineResult<Options> {
             .map(|l| text_list(l, "libraries"))
             .transpose()?,
         origin: v.get("origin").and_then(Value::as_str).map(str::to_string),
+        expected_form: v
+            .get("expected_form")
+            .and_then(Value::as_str)
+            .map(str::to_string),
+        sample_id: v
+            .get("sample_id")
+            .and_then(Value::as_str)
+            .map(str::to_string),
     };
     match (v.get("ranges"), preset_id) {
         (Some(_), Some(_)) => {
