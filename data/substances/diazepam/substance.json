@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "diazepam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Diazepam",
+      "synonyms": [
+        "Valium"
+      ]
+    },
+    "it": {
+      "preferred": "Diazepam",
+      "synonyms": [
+        "Valium"
+      ]
+    }
+  },
+  "iupac": "7-chloro-1-methyl-5-phenyl-3H-1,4-benzodiazepin-2-one",
+  "formula": "C16H13ClN2O",
+  "molar_mass_g_mol": 284.74,
+  "smiles": "CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C16H13ClN2O/c1-19-14-8-7-12(17)9-13(14)16(18-10-15(19)20)11-5-3-2-4-6-11/h2-9H,10H2,1H3",
+  "inchikey": "AAOVKJBEBIDNHE-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "439-14-5",
+    "pubchem_cid": 3016
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

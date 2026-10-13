@@ -3800,6 +3800,219 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13",
       "tier": "primary"
+    },
+    {
+      "id": "swgdrug-alprazolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Alprazolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Alprazolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213092300/https://swgdrug.org/Monographs/Alprazolam.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-bromazolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Bromazolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Bromazolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213095838/https://swgdrug.org/Monographs/Bromazolam.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-diazepam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Diazepam (IR spectrum only as an image)",
+      "url": "https://www.swgdrug.org/Monographs/DIAZEPAM.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250403031944/http://www.swgdrug.org/Monographs/DIAZEPAM.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-etizolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Etizolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Etizolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "greenblatt1993",
+      "type": "paper",
+      "title": "Clinical pharmacokinetics of alprazolam. Therapeutic implications (Clin Pharmacokinet 24(6):453-471)",
+      "authors": [
+        "D. J. Greenblatt",
+        "C. E. Wright"
+      ],
+      "year": 1993,
+      "doi": "10.2165/00003088-199324060-00003",
+      "url": "https://doi.org/10.2165/00003088-199324060-00003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "greenblatt1993b",
+      "type": "paper",
+      "title": "Alprazolam pharmacokinetics, metabolism, and plasma levels: clinical implications (J Clin Psychiatry 54 Suppl:4-11)",
+      "authors": [
+        "D. J. Greenblatt",
+        "L. L. von Moltke",
+        "J. S. Harmatz",
+        "D. A. Ciraulo",
+        "R. I. Shader"
+      ],
+      "year": 1993,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8262889/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "huybrechts1991",
+      "type": "paper",
+      "title": "The pharmacology of alprazolam: a review (Clin Ther 13(1):100-117)",
+      "authors": [
+        "I. Huybrechts"
+      ],
+      "year": 1991,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2029716/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "juergens1991",
+      "type": "paper",
+      "title": "Alprazolam and diazepam: addiction potential (J Subst Abuse Treat 8(1-2):43-51)",
+      "authors": [
+        "S. Juergens"
+      ],
+      "year": 1991,
+      "doi": "10.1016/0740-5472(91)90026-7",
+      "url": "https://doi.org/10.1016/0740-5472(91)90026-7",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "mandelli1978",
+      "type": "paper",
+      "title": "Clinical pharmacokinetics of diazepam (Clin Pharmacokinet 3(1):72-91)",
+      "authors": [
+        "M. Mandelli",
+        "G. Tognoni",
+        "S. Garattini"
+      ],
+      "year": 1978,
+      "doi": "10.2165/00003088-197803010-00005",
+      "url": "https://doi.org/10.2165/00003088-197803010-00005",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "abernethy1981",
+      "type": "paper",
+      "title": "Effects of desmethyldiazepam on diazepam kinetics: a study of effects of a metabolite on parent drug disposition (Clin Pharmacol Ther 29(6):757-761)",
+      "authors": [
+        "D. R. Abernethy",
+        "D. J. Greenblatt"
+      ],
+      "year": 1981,
+      "doi": "10.1038/clpt.1981.107",
+      "url": "https://doi.org/10.1038/clpt.1981.107",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "fracasso1991",
+      "type": "paper",
+      "title": "Single and multiple dose pharmacokinetics of etizolam in healthy subjects (Eur J Clin Pharmacol 40(2):181-185)",
+      "authors": [
+        "C. Fracasso",
+        "S. Confalonieri",
+        "S. Garattini",
+        "S. Caccia"
+      ],
+      "year": 1991,
+      "doi": "10.1007/BF00280074",
+      "url": "https://doi.org/10.1007/BF00280074",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "rodda2024",
+      "type": "paper",
+      "title": "The surge of bromazolam-related fatalities replacing other novel designer benzodiazepines-related fatalities in San Francisco (Addiction 119(8):1487-1490)",
+      "authors": [
+        "Luke N. Rodda"
+      ],
+      "year": 2024,
+      "doi": "10.1111/add.16520",
+      "url": "https://doi.org/10.1111/add.16520",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ballotari2024",
+      "type": "paper",
+      "title": "A postmortem case report involving fentanyl, desalkylgidazepam, and bromazolam (J Anal Toxicol 48(8):636-640)",
+      "authors": [
+        "Marco Ballotari",
+        "Michael T. Truver",
+        "Leena R. Dhoble",
+        "Amy M. Kinsey",
+        "Jennifer L. Hoyer",
+        "Chris W. Chronister",
+        "Bruce A. Goldberger"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae059",
+      "url": "https://doi.org/10.1093/jat/bkae059",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "sun2017",
+      "type": "paper",
+      "title": "Association between concurrent use of prescription opioids and benzodiazepines and overdose: retrospective analysis (BMJ 356:j760)",
+      "authors": [
+        "Eric C. Sun",
+        "Anjali Dixit",
+        "Keith Humphreys",
+        "Beth D. Darnall",
+        "Laurence C. Baker",
+        "Sean Mackey"
+      ],
+      "year": 2017,
+      "doi": "10.1136/bmj.j760",
+      "url": "https://doi.org/10.1136/bmj.j760",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "petursson1994",
+      "type": "paper",
+      "title": "The benzodiazepine withdrawal syndrome (Addiction 89(11):1455-1459)",
+      "authors": [
+        "H. Pétursson"
+      ],
+      "year": 1994,
+      "doi": "10.1111/j.1360-0443.1994.tb03743.x",
+      "url": "https://doi.org/10.1111/j.1360-0443.1994.tb03743.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
     }
   ]
 }

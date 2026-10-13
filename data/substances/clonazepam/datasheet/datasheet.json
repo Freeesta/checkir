@@ -1,0 +1,46 @@
+{
+  "schema": "datasheet/1",
+  "substance": "clonazepam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "opioid",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "sun2017"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "counselling": [
+    {
+      "key": "clonazepam.combination",
+      "topic": "combination",
+      "source": "sun2017"
+    },
+    {
+      "key": "clonazepam.dependence",
+      "topic": "dependence",
+      "source": "petursson1994"
+    }
+  ]
+}
