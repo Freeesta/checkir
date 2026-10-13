@@ -153,13 +153,16 @@ export function closeAll() {
 
 /**
  * Connect the file chooser and the drop of files on the page to `openFiles`.
- * @param {{ engine: import("./engine.js").Engine | null, announce: (text: string) => void }} deps
+ * A Shimadzu library among the chosen or dropped files (`.L01`, with its `.nam` and `.IDX`) is not a sample: all the files go to `onLibrary`, which imports them as a private library.
+ * @param {{ engine: import("./engine.js").Engine | null, announce: (text: string) => void, onLibrary: (files: File[]) => void }} deps
  * @returns {{ choose: () => void }}
  */
-export function wireFileInput({ engine, announce }) {
+export function wireFileInput({ engine, announce, onLibrary }) {
   /** @param {Iterable<File>} files */
   const load = async (files) => {
-    const opened = await openFiles(files, engine);
+    const all = [...files];
+    if (all.some((f) => /\.l01$/i.test(f.name))) return onLibrary(all);
+    const opened = await openFiles(all, engine);
     const s = getState();
     announce(s.fileError ? `${t("status.file_failed")} ${t(s.fileError.key, s.fileError.params)}` : opened ? t("status.file_loaded", { code: s.active ?? "" }) : "");
   };

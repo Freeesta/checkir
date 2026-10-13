@@ -1,0 +1,66 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mdai",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "5,6-dihydroxy-2-aminoindane",
+        "reaction": "other",
+        "source": "zidkova2017"
+      },
+      {
+        "from": "parent",
+        "to": "N-acetyl-5,6-methylenedioxy-2-aminoindane",
+        "reaction": "other",
+        "source": "zidkova2017"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "mdai.identity",
+      "topic": "testing",
+      "source": "gallagher2012"
+    },
+    {
+      "key": "mdai.combination",
+      "topic": "combination",
+      "source": "pinterova2017"
+    },
+    {
+      "key": "mdai.detection",
+      "topic": "testing",
+      "source": "angerer2024"
+    }
+  ]
+}

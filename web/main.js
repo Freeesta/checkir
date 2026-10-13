@@ -12,6 +12,7 @@ import { decisionActions } from "./decision.js";
 import { setProgramVersion } from "./sheet.js";
 import { hideSplash, labelSplash } from "./splash.js";
 import { talkActions, wireTalk } from "./talk.js";
+import { proposedLibraryName } from "./candidati.js";
 import { libraryActions, loadAllLibraries } from "./librerie.js";
 import { buildPanels } from "./panels.js";
 import { addDemo, closeFile, spectrumOf, wireFileInput } from "./files.js";
@@ -137,7 +138,7 @@ async function start() {
   const engine = await loadEngine().catch(() => null);
   await loadBands();
   await loadBandData(currentLang());
-  const input = wireFileInput({ engine, announce });
+  const input = wireFileInput({ engine, announce, onLibrary: (files) => ctx.importLibrary(files, proposedLibraryName(files) || t("library.import.name_default"), "unknown") });
   let redrawAll = () => {}, viewBack = () => {};
   /** @type {import("./actions.js").Ctx} */
   const ctx = {
