@@ -31,6 +31,7 @@ import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
 import { buildSubtractView } from "./subtract_view.js";
 import { recallActions } from "./recall.js";
 import { focusedPosition, openInverseDialog } from "./inverse_ui.js";
+import { exportActions } from "./report.js";
 import { buildRecallView, openRecallDialog } from "./recall_ui.js";
 import { subtractActions } from "./subtract.js";
 import { buildCandidates, buildNextStep } from "./workarea.js";
@@ -142,7 +143,7 @@ async function start() {
       announce(t("status.file_closed"));
     },
     ...languageActions(() => redrawAll(), announce),
-    ...workActions(engine, announce), ...recallActions(announce), recallOpen: () => openRecallDialog(ctx), inverseOpen: (position) => openInverseDialog(ctx, position === undefined ? focusedPosition(getState()) : position), viewBack: () => viewBack(),
+    ...workActions(engine, announce), ...recallActions(announce), ...exportActions(announce), recallOpen: () => openRecallDialog(ctx), inverseOpen: (position) => openInverseDialog(ctx, position === undefined ? focusedPosition(getState()) : position), viewBack: () => viewBack(),
     ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),

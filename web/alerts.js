@@ -4,13 +4,14 @@ import { decisionOf, resultOf } from "./state.js";
 
 /**
  * Levels and alerts of a comparison result (`ftir-risultato-confronto/1`), as the page shows them. The program only proposes a level
- * (never "confirmed": that belongs to the chemist). The engine already sends the alerts in display order; `fixed_limit` is not a row
- * because the fixed strip of limits says it all the time.
+ * (never "confirmed": that belongs to the chemist). The engine already sends the alerts in display order.
  * @typedef {{ id: string, label: string, reasons: string[] }} AlertView
  */
 
 /** Level numbers of the interface (the program proposes 2, 3 or 5; 1 confirmed and 4 mixture come only from the chemist's decision). @type {Record<string, number>} */
 const LEVEL_NUMBER = { probable: 2, to_check: 3, not_identified: 5 };
+/** Identification tier shown before the word (T1 is only the chemist's; the mixture level has none). @type {Record<number, string>} */
+const TIER = { 1: "T1", 2: "T2", 3: "T3", 5: "T4" };
 /** Filled segments of the four-segment bar. @type {Record<number, number>} */
 const LEVEL_BAR = { 1: 4, 2: 3, 3: 2, 4: 2, 5: 0 };
 
@@ -26,7 +27,9 @@ export function levelBar(n) {
 
 /** The word of a level in the active language (also the header chip and the announcement). @param {number} n @returns {string} */
 export function levelWord(n) {
-  return n === 1 ? t("level.1.word") : n === 2 ? t("level.2.word") : n === 3 ? t("level.3.word") : n === 4 ? t("level.4.word") : t("level.5.word");
+  const word = n === 1 ? t("level.1.word") : n === 2 ? t("level.2.word") : n === 3 ? t("level.3.word") : n === 4 ? t("level.4.word") : t("level.5.word");
+  const tier = TIER[n];
+  return tier ? t("level.tier", { tier, word }) : word;
 }
 
 /** The level on show for the spectrum shown: the chemist's decision if there is one, else the program's proposal; null without a result. @param {import("./state.js").AppState} s @returns {number | null} */
@@ -83,7 +86,6 @@ export function alertViews(data) {
   /** @type {AlertView[]} */
   const out = [];
   for (const a of data.alerts ?? []) {
-    if (a.id === "fixed_limit") continue;
     const def = ALERTS[a.id];
     out.push({ id: a.id, label: def ? t(def.labelKey) : a.id, reasons: def ? def.reasons(a.data ?? {}) : [] });
   }
@@ -93,7 +95,7 @@ export function alertViews(data) {
 /** Why the level cannot go higher, one line per cap. @param {any} data @returns {string[]} */
 export function capLines(data) {
   /** @type {Record<string, () => string>} */
-  const lines = { coverage: () => t("results.cap.coverage"), custom_range: () => t("results.cap.custom_range"), range_not_calibrated: () => t("results.cap.range_not_calibrated") };
+  const lines = { coverage: () => t("results.cap.coverage"), custom_range: () => t("results.cap.custom_range"), range_not_calibrated: () => t("results.cap.range_not_calibrated"), sampling_not_calibrated: () => t("results.cap.sampling_not_calibrated") };
   return (data.level_caps ?? []).map((/** @type {string} */ c) => lines[c]?.() ?? c);
 }
 

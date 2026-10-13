@@ -1,0 +1,114 @@
+{
+ "schema": "sources/1",
+ "sources": [
+  {
+   "id": "wiki-molecular-vibration",
+   "type": "web",
+   "title": "Molecular vibration (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Molecular_vibration",
+   "consulted": "2026-10-13",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "id": "wiki-infrared-spectroscopy",
+   "type": "web",
+   "title": "Infrared spectroscopy (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Infrared_spectroscopy",
+   "consulted": "2026-10-13",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "id": "wiki-ir-correlation",
+   "type": "web",
+   "title": "Infrared spectroscopy correlation table (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Infrared_spectroscopy_correlation_table",
+   "consulted": "2026-10-13",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "id": "wiki-ftir",
+   "type": "web",
+   "title": "Fourier-transform infrared spectroscopy (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy",
+   "consulted": "2026-10-13",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "id": "wiki-spettroscopia-ir",
+   "type": "web",
+   "title": "Spettroscopia IR (Wikipedia)",
+   "url": "https://it.wikipedia.org/wiki/Spettroscopia_IR",
+   "consulted": "2026-10-13",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "id": "libretexts-ir-theory",
+   "type": "web",
+   "title": "Infrared: Theory (Chemistry LibreTexts)",
+   "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Vibrational_Spectroscopy/Infrared_Spectroscopy/Infrared%3A_Theory",
+   "consulted": "2026-10-13",
+   "license": "CC BY 4.0"
+  },
+  {
+   "id": "nist-water",
+   "type": "database",
+   "title": "Water, vibrational data (NIST Chemistry WebBook)",
+   "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=800",
+   "consulted": "2026-10-13",
+   "license": "© (link)"
+  },
+  {
+   "id": "smith-amine-salts",
+   "type": "paper",
+   "title": "Organic Nitrogen Compounds V: Amine Salts (Spectroscopy, 2019)",
+   "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-v-amine-salts",
+   "consulted": "2026-10-13",
+   "license": "© (link)"
+  },
+  {
+   "id": "reusch-vibrational",
+   "type": "web",
+   "title": "The Nature of Vibrational Spectroscopy (Virtual Textbook of Organic Chemistry, archive)",
+   "url": "https://reusch-archive.organicchemistrydata.org/Spectrpy/InfraRed/irspec1.htm",
+   "consulted": "2026-10-13",
+   "license": "© (link)"
+  },
+  {
+   "id": "commons-ir-modes",
+   "type": "web",
+   "title": "Category: Infrared vibrational modes (Wikimedia Commons)",
+   "url": "https://commons.wikimedia.org/wiki/Category:Infrared_vibrational_modes",
+   "consulted": "2026-10-13",
+   "license": "PD / CC BY-SA 4.0"
+  },
+  {
+   "id": "phet-molecules-light",
+   "type": "web",
+   "title": "Molecules and Light (PhET Interactive Simulations)",
+   "url": "https://phet.colorado.edu/en/simulations/molecules-and-light",
+   "consulted": "2026-10-13",
+   "license": "CC BY 4.0 (link)"
+  },
+  {
+   "id": "openstax-orgchem-ir",
+   "type": "web",
+   "title": "Organic Chemistry, section 12.6 Infrared Spectroscopy (OpenStax)",
+   "url": "https://openstax.org/books/organic-chemistry/pages/12-6-infrared-spectroscopy",
+   "consulted": "2026-10-13",
+   "license": "CC BY-NC-SA 4.0 (link)"
+  },
+  {
+   "id": "demo-spectra",
+   "type": "project",
+   "title": "Spettri dimostrativi / demonstration spectra (data/demo/)",
+   "consulted": "2026-10-13",
+   "license": "CC BY 4.0"
+  },
+  {
+   "id": "engine-calculation",
+   "type": "project",
+   "title": "Calcolo del motore / engine calculation (didactic)",
+   "consulted": "2026-10-13"
+  }
+ ]
+}

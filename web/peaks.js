@@ -12,17 +12,14 @@ import { activeFile, candidateKey, getState, resultOf, update, writePref } from 
  * the engine (`assign_peaks`) says «explained» when a peak of the library spectrum lies within the tolerance of the pair, nothing more. Everything stays in memory.
  */
 
-/** Regional r from which a region «agrees» and from which it agrees «in part»; below it does not agree (provisional, not calibrated). */
-export const AGREE_MIN = 0.9;
-export const PARTIAL_MIN = 0.7;
 /** Relative prominence from which a peak is told strong / medium (provisional, not calibrated); below it is weak. */
 export const STRONG_MIN = 0.5;
 export const MEDIUM_MIN = 0.2;
 /** The regions of the comparison (`soglie_confronto.json`), used as they are when there is no result yet. */
 const DEFAULT_REGION_IDS = ["3700-2500", "1900-1500", "1500-1000", "1000-650"];
 
-/** @typedef {"agrees" | "partial" | "disagrees" | "unknown"} Agreement */
-/** @typedef {{ id: string, from: number, to: number, r: number | null, agreement: Agreement }} Region */
+/** @typedef {"agrees" | "partial" | "disagrees" | "low_signal" | "unknown"} Agreement */
+/** @typedef {{ id: string, from: number, to: number, r: number | null, share: number | null, agreement: Agreement }} Region */
 /** @typedef {"explained" | "unexplained" | "minor" | "artifact" | "plain"} PeakState */
 /** @typedef {{ rule_id: string | null, group: string, mode: string, rank: number, rule_status: string, origin: string | null }} Reading */
 /** @typedef {{ id: string, position: number, state: PeakState, by: number | null, delta: number | null, otherForm: boolean, group: string | null, mode: string | null, readings: Reading[], crowded: boolean, regions: string[], shoulder: boolean, intensity: "strong" | "medium" | "weak", shape: string | null, tier: "main" | "secondary" }} PeakRow */
@@ -35,10 +32,11 @@ const sampleCache = new WeakMap();
 /** @type {{ key: string, value: Analysis } | null} */
 let last = null;
 
-/** @param {number | null} r @returns {Agreement} */
-export function agreementOf(r) {
-  if (r === null || !Number.isFinite(r)) return "unknown";
-  return r >= AGREE_MIN ? "agrees" : r >= PARTIAL_MIN ? "partial" : "disagrees";
+/** Agreement of a regional r by the limits the result carries (`thresholds.region_agreement`, from `soglie_confronto.json`); «unknown» without them. @param {number | null} r @param {any | null} data @returns {Agreement} */
+export function agreementOf(r, data) {
+  const a = data?.thresholds?.region_agreement;
+  if (r === null || !Number.isFinite(r) || !a) return "unknown";
+  return r >= a.agree_min ? "agrees" : r >= a.partial_min ? "partial" : "disagrees";
 }
 
 /** The regions to show: those of the result with their r, else the defaults without one. @param {any | null} data @returns {Region[]} */
@@ -47,16 +45,17 @@ export function regionsFor(data) {
   const ids = chosen ? Object.keys(chosen) : DEFAULT_REGION_IDS;
   return ids.map((id) => {
     const [a, b] = id.split("-").map(Number);
-    return { id, from: Math.min(a, b), to: Math.max(a, b), r: null, agreement: "unknown" };
+    return { id, from: Math.min(a, b), to: Math.max(a, b), r: null, share: null, agreement: "unknown" };
   });
 }
 
-/** @param {Region[]} regions @param {any | null} candidate @returns {Region[]} */
-function withAgreement(regions, candidate) {
+/** The state of each region comes from the engine (`region_states`: agrees, partial, disagrees, low_signal), with the share of signal it was judged on. @param {Region[]} regions @param {any | null} candidate @param {any | null} data @returns {Region[]} */
+function withAgreement(regions, candidate, data) {
   return regions.map((g) => {
     const r = candidate?.r_regions?.[g.id];
-    const value = typeof r === "number" ? r : null;
-    return { ...g, r: value, agreement: candidate ? agreementOf(value) : "unknown" };
+    const share = data?.region_signal?.[g.id];
+    const state = candidate?.region_states?.[g.id];
+    return { ...g, r: typeof r === "number" ? r : null, share: typeof share === "number" ? share : null, agreement: candidate && typeof state === "string" ? /** @type {Agreement} */ (state) : "unknown" };
   });
 }
 
@@ -131,7 +130,7 @@ export function analyse(s) {
   const chosen = result ? selectedCandidate(s, result.data) : null;
   const key = [file.code, result?.sig, chosen && candidateKey(chosen), engine ? 1 : 0].join("|");
   if (last && last.key === key && sampleCache.has(sample)) return last.value;
-  const regions = withAgreement(regionsFor(result?.data ?? null), chosen);
+  const regions = withAgreement(regionsFor(result?.data ?? null), chosen, result?.data ?? null);
   const list = peaksOfSpectrum(sample);
   /** @type {Analysis} */
   let value = { regions, bands: getBands(), peaks: [], main: 0, explained: 0, unexplained: 0, minor: 0, artifact: 0, error: list ? null : "peaks.error" };

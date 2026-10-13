@@ -20,9 +20,9 @@ const OTHER = [[900, 0.7, 10], [1050, 0.5, 12], [1550, 0.9, 12], [1800, 0.6, 12]
 
 /** Level and alert views from a hand-made result, no browser. */
 export async function matchPureScenario(check) {
-  const data = { level_proposed: "probable", candidates: new Array(10).fill({}), alerts: [{ id: "fixed_limit", data: {} }, { id: "same_as_previous", data: { r: 0.99 } }] };
+  const data = { level_proposed: "probable", candidates: new Array(10).fill({}), alerts: [{ id: "same_as_previous", data: { r: 0.99 } }] };
   check("match: level numbers follow the proposed level", levelNumber(data) === 2 && levelNumber({ level_proposed: "to_check" }) === 3 && levelNumber({ level_proposed: "other" }) === 5);
-  check("match: fixed_limit is not a row of alerts", alertViews(data).length === 1 && alertViews(data)[0].id === "same_as_previous");
+  check("match: alerts are rows as the engine sends them", alertViews(data).length === 1 && alertViews(data)[0].id === "same_as_previous");
 }
 
 async function openPanel(page, name) {
@@ -118,11 +118,11 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: the first candidate is beta", /beta/i.test(first), first);
   check("match: every row shows its library", (await page.locator(".cand .cand-lib").allTextContents()).every((x) => x === "sintetica"));
   check("match: a name never stands outside a block with the level", await page.evaluate(() => [...document.querySelectorAll(".cand-name")].every((n) => n.closest(".result")?.querySelector(".level"))));
-  check("match: header chip shows the level word", /Probabile/.test((await page.textContent('[data-chip="result"]')) ?? ""));
+  check("match: header chip shows the tier and level word", /T2 · Probabile/.test((await page.textContent('[data-chip="result"]')) ?? ""));
   check("match: no fixed strip of warnings in the work area", (await page.locator("#limits").count()) === 0);
   const said = () => page.evaluate(() => window.__said);
-  await page.waitForFunction(() => window.__said.some((t) => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(t)), null, { timeout: 15000 }).catch(() => {});
-  check("match: announcement says candidates, level and alerts", (await said()).some((t) => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(t)), JSON.stringify(await said()));
+  await page.waitForFunction(() => window.__said.some((t) => /\d+ candidat\w*, T2 · Probabile, \d+ allert\w*/.test(t)), null, { timeout: 15000 }).catch(() => {});
+  check("match: announcement says candidates, level and alerts", (await said()).some((t) => /\d+ candidat\w*, T2 · Probabile, \d+ allert\w*/.test(t)), JSON.stringify(await said()));
   check("match: the zone left out is drawn and named", (await page.locator("#chart rect.excluded").count()) === 1 && /Escluso dal confronto/.test((await page.textContent("#chart")) ?? ""));
   const v1 = await axe(page);
   check("match: axe has no violations with a result", v1.length === 0, v1.join(", "));
