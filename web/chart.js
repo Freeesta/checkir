@@ -1,6 +1,6 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
-import { drawBands, drawPeaks, marksTables, svg } from "./chart_marks.js";
+import { drawBands, drawPeaks, drawRule, marksTables, svg } from "./chart_marks.js";
 import { nearestIndex, thin, visibleIndices } from "./spectrum.js";
 import { clamp, pan, zoom } from "./view.js";
 import { createCursors } from "./chart_cursors.js";
@@ -102,6 +102,7 @@ export function draw(host, s, v, layers = {}, opts = {}) {
   drawGrid(root, v, { y0, y1 }, px, py);
   drawExcluded(root, layers.excluded, v, px);
   if (layers.marks) drawBands(root, layers.marks.bands, v, px, { top: M.t, height: H - M.t - M.b });
+  if (layers.marks?.rule) drawRule(root, layers.marks.rule, v, px, { top: M.t, height: H - M.t - M.b });
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
   if (ref) drawReference(root, ref, v, layers, px, py);
   root.append(svg("polyline", { class: "curve", points: thin(idx, s.y, PLOT_W).map((i) => `${px(s.wavenumber_cm1[i])},${py(s.y[i])}`).join(" ") }));
@@ -239,10 +240,11 @@ function withPeakInView(layers, v, full) {
   return clamp({ min: at - (v.max - v.min) / 2, max: at + (v.max - v.min) / 2 }, full);
 }
 
-/** With the peaks shown, ← → pick the previous / next peak (Shift+← → still pans) and Esc clears the pick. @param {KeyboardEvent} e @param {{ step: (dir: 1 | -1) => boolean, clear: () => boolean }} peaks @returns {boolean} true when the key was used */
+/** With the peaks shown, ← → pick the previous / next peak (Shift+← → still pans) and ↑ ↓ change the level of the card text, Esc clears the pick. @param {KeyboardEvent} e @param {{ step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean }} peaks @returns {boolean} true when the key was used */
 function peakKey(e, peaks) {
   if (e.key === "Escape") return peaks.clear();
   if (e.shiftKey || e.ctrlKey || e.altKey || e.metaKey) return false;
+  if (e.key === "ArrowUp" || e.key === "ArrowDown") return peaks.level(e.key === "ArrowUp" ? -1 : 1);
   return e.key === "ArrowRight" ? peaks.step(1) : e.key === "ArrowLeft" ? peaks.step(-1) : false;
 }
 
@@ -250,7 +252,7 @@ function peakKey(e, peaks) {
  * Wire the chart: keyboard (+ - arrows 0 and the cursor keys), pointer (cursors, zoom box, wheel, double click) and buttons. The spectrum is swapped with `set`;
  * with none, a short line says so. With `link`, the x axis follows the other charts joined to the same link.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
- * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean } }} [opts]
+ * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean } }} [opts]
  * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void }} `redraw` after a language change
  */
 export function wire(el, opts = {}) {
