@@ -2,12 +2,14 @@
 /**
  * Private libraries live in the origin private file system (OPFS): the user's own spectra, in this browser only.
  * One directory per library under `<prefix>-libraries/` (the prefix of appname.js), with the three files of the package.
- * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array }} StoredLibrary
+ * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array, native?: Uint8Array }} StoredLibrary
  */
 import { STORAGE_PREFIX } from "./appname.js";
 
 const ROOT = `${STORAGE_PREFIX.replace(/\.$/, "")}-libraries`;
 const FILES = ["manifest.json", "index.json", "data.bin"];
+/** The spectra as the files gave them (for drawing); a package saved before it existed has none. */
+const NATIVE = "native.bin";
 
 /** Whether this browser can keep files for the page (Safari before 26 cannot write from the main thread). @returns {boolean} */
 export function canStore() {
@@ -23,8 +25,8 @@ async function root() {
 export async function saveLibrary(lib) {
   const dir = await (await root()).getDirectoryHandle(lib.id, { create: true });
   /** @type {Record<string, string | Uint8Array>} */
-  const content = { "manifest.json": lib.manifest, "index.json": lib.index, "data.bin": lib.data };
-  for (const name of FILES) {
+  const content = { "manifest.json": lib.manifest, "index.json": lib.index, "data.bin": lib.data, [NATIVE]: lib.native ?? new Uint8Array(0) };
+  for (const name of lib.native ? [...FILES, NATIVE] : FILES) {
     const w = await (await dir.getFileHandle(name, { create: true })).createWritable();
     await w.write(/** @type {BufferSource | string} */ (content[name]));
     await w.close();
@@ -41,7 +43,8 @@ export async function loadLibraries() {
     try {
       const [manifest, index, data] = await Promise.all(FILES.map(async (n) => (await (await handle.getFileHandle(n)).getFile()).arrayBuffer()));
       const text = new TextDecoder();
-      out.push({ id, manifest: text.decode(manifest), index: text.decode(index), data: new Uint8Array(/** @type {ArrayBuffer} */ (data)) });
+      const native = await (await handle.getFileHandle(NATIVE)).getFile().then((/** @type {File} */ f) => f.arrayBuffer()).catch(() => null);
+      out.push({ id, manifest: text.decode(manifest), index: text.decode(index), data: new Uint8Array(/** @type {ArrayBuffer} */ (data)), ...(native ? { native: new Uint8Array(native) } : {}) });
     } catch {
       // incomplete package: ignored
     }
