@@ -20,10 +20,12 @@
     "bk-mdea": "ethylone",
     "clefedrone": "4-cmc",
     "clephedrone": "4-cmc",
+    "depas": "etizolam",
     "dimethyltryptamine": "dmt",
     "efedrone": "methcathinone",
     "ephedrone": "methcathinone",
     "etilone": "ethylone",
+    "klonopin": "clonazepam",
     "lsd-25": "lsd",
     "lysergide": "lsd",
     "mde": "mdea",
@@ -36,7 +38,10 @@
     "mxe": "methoxetamine",
     "psilocibina": "psilocybin",
     "psilocybine": "psilocybin",
+    "rivotril": "clonazepam",
     "salvinorin": "salvinorin-a",
-    "tenamfetamine": "mda"
+    "tenamfetamine": "mda",
+    "valium": "diazepam",
+    "xanax": "alprazolam"
   }
 }
