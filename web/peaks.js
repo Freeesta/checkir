@@ -1,4 +1,5 @@
 // @ts-check
+import { assignContext } from "./bands_data.js";
 import { EXCLUDED_CM1 } from "./match.js";
 import { referenceFor, useReferenceEngine } from "./reference.js";
 import { mixtureComponents } from "./mixture.js";
@@ -73,10 +74,10 @@ function peaksOfSpectrum(s) {
   return sampleCache.get(s);
 }
 
-/** Assignment of the sample peaks against the given references (`assign_peaks`, rules embedded); without any only the readings. @param {any} list @param {any[]} refs @returns {any | null} */
-function assignOf(list, refs) {
+/** Assignment of the sample peaks against the given references (`assign_peaks`, rules embedded); without any only the readings. @param {any} list @param {any[]} refs @param {Array<string | undefined>} owners the substance each reference stands for (its bands) @returns {any | null} */
+function assignOf(list, refs, owners) {
   if (!engine) return null;
-  const out = JSON.parse(engine.assign_peaks(JSON.stringify(list), JSON.stringify(refs), "", ""));
+  const out = JSON.parse(engine.assign_peaks(JSON.stringify(list), JSON.stringify(refs), assignContext(refs, owners), ""));
   return out.error_key ? null : out;
 }
 
@@ -84,22 +85,25 @@ function assignOf(list, refs) {
  * The references the peaks are assigned against: the components of the mixture proposal when there is one (each marker then names the
  * component that explains it), else the chosen candidate. Empty when a reference curve is missing.
  * @param {import("./spectrum.js").Spectrum} sample @param {any | null} chosen @param {import("./mixture.js").Component[]} parts
- * @returns {{ refs: any[], names: Map<string, string> }}
+ * @returns {{ refs: any[], names: Map<string, string>, owners: Array<string | undefined> }}
  */
 function referencesOf(sample, chosen, parts) {
   /** @type {any[]} */
   const refs = [];
   /** @type {Map<string, string>} */
   const names = new Map();
+  /** @type {Array<string | undefined>} */
+  const owners = [];
   const wanted = parts.length ? parts.map((c) => ({ id: `${c.library}/${c.id}`, library: c.library, spectrum_id: c.id, substance: c.substance ?? "", form: "", name: candidateName({ library: c.library, spectrum_id: c.id, display_name: c.name }) })) : chosen ? [{ id: chosen.substance ?? "", library: chosen.library, spectrum_id: chosen.spectrum_id, substance: chosen.substance ?? "", form: chosen.form ?? "", name: "" }] : [];
   for (const w of wanted) {
     const ref = referenceFor(w.library, w.spectrum_id, sample, EXCLUDED_CM1);
     const peaks = ref ? detect(ref.spectrum) : null;
-    if (!peaks) return { refs: [], names: new Map() };
+    if (!peaks) return { refs: [], names: new Map(), owners: [] };
     refs.push({ substance_id: w.id, form: w.form, library: w.library, version: parts.length ? null : chosen?.library_version ?? null, peaks });
+    owners.push(w.substance || undefined);
     if (parts.length) names.set(w.id, w.name);
   }
-  return { refs, names };
+  return { refs, names, owners };
 }
 
 /** @param {any} item the assignment of one peak, if any @param {any} p @param {boolean} compared @returns {PeakState} */
@@ -123,7 +127,8 @@ function rowsOf(list, assignment, compared, names) {
 /** @param {PeakRow[]} peaks @returns {{ main: number, explained: number, unexplained: number, minor: number, artifact: number }} */
 function countsOf(peaks) {
   const n = (/** @type {(p: PeakRow) => boolean} */ f) => peaks.filter(f).length;
-  return { main: n((p) => p.tier === "main" && p.state !== "artifact"), explained: n((p) => p.state === "explained"), unexplained: n((p) => p.state === "unexplained"), minor: n((p) => p.state === "minor"), artifact: n((p) => p.state === "artifact") };
+  const main = (/** @type {PeakRow} */ p) => p.tier === "main" && p.state !== "artifact";
+  return { main: n(main), explained: n((p) => main(p) && p.state === "explained"), unexplained: n((p) => main(p) && p.state === "unexplained"), minor: n((p) => p.state === "minor"), artifact: n((p) => p.state === "artifact") };
 }
 
 /**
@@ -145,9 +150,9 @@ export function analyse(s) {
   /** @type {Analysis} */
   let value = { refName: null, regions, bands: getBands(), peaks: [], main: 0, explained: 0, unexplained: 0, minor: 0, artifact: 0, error: list ? null : "peaks.error" };
   if (list) {
-    const { refs, names } = referencesOf(sample, chosen, parts);
+    const { refs, names, owners } = referencesOf(sample, chosen, parts);
     const compared = refs.length > 0;
-    const assignment = assignOf(list, refs);
+    const assignment = assignOf(list, refs, owners);
     const peaks = rowsOf(list, assignment, compared, names);
     const refName = parts.length ? parts.map((c) => candidateName({ library: c.library, spectrum_id: c.id, display_name: c.name })).join(" + ") : null;
     value = { refName, regions, bands: getBands(), peaks, ...countsOf(peaks), error: (chosen || parts.length) && (!compared || !assignment) ? "peaks.error" : null };

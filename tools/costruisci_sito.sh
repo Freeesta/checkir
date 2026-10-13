@@ -12,6 +12,8 @@ rm -rf site && mkdir -p site && cp -r web/. site/
 cat web/css/*.css >> site/style.css && rm -rf site/css
 # The IR band data the page explains peaks with (regions, rules, groups, modes, texts, sources): one source, copied here.
 mkdir -p site/bands && cp data/bands/regions.json data/bands/rules.json data/bands/groups.json data/bands/modes.json data/bands/texts.it.json data/bands/texts.en.json site/bands/ && cp data/sources.json site/bands/sources.json
+# The assignments of the bands of each substance (substance-bands/1) in one file, read by the card of the peak.
+node -e 'const fs=require("fs"),d="data/bands/substance-bands/";fs.writeFileSync("site/bands/substance-bands.json",JSON.stringify({files:fs.readdirSync(d).filter(f=>f.endsWith(".json")).sort().map(f=>JSON.parse(fs.readFileSync(d+f)))}))'
 node tools/genera_identita.mjs
 # Data of the theory section taken from data/ (one copy of the truth): the vibration modes and two demonstration spectra.
 mkdir -p site/teoria/dati && cp data/bands/modes.json data/demo/demo-01.jdx data/demo/demo-02.jdx site/teoria/dati/

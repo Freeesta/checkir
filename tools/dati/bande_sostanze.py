@@ -87,6 +87,7 @@ SUBSTANCES = [
          (1692, 10, "s", "s", "co.imide", None, None, ("nist-webbook", "dzodic2024"), True),
          (1645, 10, "s", "s", "co.amide", None, None, ("nist-webbook", "dzodic2024"), True),
          (1546, 10, "m", "s", None, "imine", "stretch", ("nist-webbook",), True),
+         (1212, 10, "m", "s", None, "amine", "stretch", ("nist-webbook",), True),
          (744, 8, "s", "s", None, "aromatic_ring", "oop", ("nist-webbook",), True),
      ]},
     {"substance": "paracetamol", "form": "solid", "spectra": (),
