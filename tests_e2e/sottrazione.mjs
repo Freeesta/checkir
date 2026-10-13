@@ -169,7 +169,7 @@ async function closeScenario(page, check) {
   await page.keyboard.press("d");
   await page.waitForSelector("#subtract:not([hidden])");
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en" && /Guided subtraction/.test(document.getElementById("subtract-title")?.textContent ?? "")); // the view is redrawn after the language attribute changes
+  await page.waitForFunction(() => document.body.dataset.langReady === "en" && /Guided subtraction/.test(document.getElementById("subtract-title")?.textContent ?? "")); // the view is redrawn after the language attribute changes
   check("subtract: English names the view and the sentence", /Guided subtraction/.test((await page.textContent("#subtract-title")) ?? "") && /The factor is not the quantity/.test((await page.textContent("#subtract")) ?? ""));
   await page.click('[data-lang="it"]');
   const stored = await page.evaluate(async () => ({ local: JSON.stringify({ ...localStorage }), idb: (await indexedDB.databases()).length }));

@@ -83,7 +83,7 @@ async function doEverything(page) {
   }
   for (const lang of ["en", "it"]) {
     await page.evaluate((l) => document.querySelector(`[data-lang="${l}"]`)?.click(), lang);
-    await page.waitForFunction((l) => document.documentElement.lang === l, lang);
+    await page.waitForFunction((l) => document.body.dataset.langReady === l, lang);
   }
   await page.focus("#chart");
   for (const key of ["+", "ArrowLeft", "0"]) await page.keyboard.press(key);
@@ -93,7 +93,7 @@ async function doEverything(page) {
     await page.waitForSelector("body[data-page][data-ready='1']");
     for (const l of ["en", "it"]) {
       await page.locator(`[data-lang="${l}"]`).click({ timeout: 5000 });
-      await page.waitForFunction((x) => document.documentElement.lang === x, l);
+      await page.waitForFunction((x) => document.body.dataset.langReady === x, l);
     }
     await page.goto(base);
     await page.waitForSelector("body[data-ready='1']");
@@ -169,7 +169,8 @@ async function libraryImportScenario(browser) {
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"] summary').click();
   await page.locator('[data-library="checkir-community"]').waitFor();
-  await page.waitForLoadState("networkidle"); // the start-up loads (engine, public libraries, their peak index) are over
+  // Start-up loads the engine twice by itself (page, then the comparison worker once the first library is synced): the second load is not the import's.
+  for (let t = 0; t < 400 && own.filter((u) => u.endsWith("ftir_wasm_bg.wasm")).length < 2; t++) await page.waitForTimeout(50);
   const start = own.length;
   await page.setInputFiles('input[data-library="files"]', { name: "riferimento.jdx", mimeType: "chemical/x-jcamp-dx", buffer: Buffer.from(canaryJcamp(), "latin1") });
   await page.locator('[data-library="mia-libreria"]').waitFor();

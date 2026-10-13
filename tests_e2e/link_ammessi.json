@@ -3,8 +3,13 @@
   "links": [
     {
       "file": "web/appname.js",
-      "url": "https://freeesta.github.io/checkir/",
-      "motivo": "public address of the site (text, Open Graph tags)"
+      "url": "https://github.com/${REPO_OWNER}/${REPO_NAME}/`;",
+      "motivo": "base of the project on GitHub, built from the repository constants (text; opened only on the user's click, no request from the page)"
+    },
+    {
+      "file": "web/appname.js",
+      "url": "https://${PAGES_HOST}/${REPO_NAME}/`;",
+      "motivo": "public address of the site, built from the repository constants (text, Open Graph tags)"
     },
     {
       "file": "web/dom.js",
@@ -45,11 +50,6 @@
       "file": "web/img/logo-scuro.svg",
       "url": "http://www.w3.org/2000/svg",
       "motivo": "SVG namespace, an identifier"
-    },
-    {
-      "file": "web/pagine/informativa/index.html",
-      "url": "https://github.com/Freeesta/checkir/issues",
-      "motivo": "link to the public issues of the project (text; the browser follows it only on click)"
     },
     {
       "file": "web/pagine/informativa/index.html",
@@ -125,11 +125,6 @@
       "file": "web/schede_ui.js",
       "url": "https://doi.org/",
       "motivo": "link a DOI of a cited source, opened only on the user's click (no request from the page)"
-    },
-    {
-      "file": "web/proponi.js",
-      "url": "https://github.com/Freeesta/checkir/",
-      "motivo": "base of the pre-filled issue and history links, opened only on the user's click (no request from the page)"
     }
   ]
 }

@@ -45,6 +45,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 | `web/` | `docs/agenti/pagina.md` (guscio, stile, pagine), `pagina_grafico.md` (grafico, picchi, regioni), `pagina_confronto.md` (risultati, scheda, sottrazione), `pagina_file.md` (file, residui, cartella) |
 | `data/`, `docs/schemi/` | `docs/agenti/dati.md` (struttura, contratti, bande), `dati_revisione.md` (revisori, firme, contributi) |
 | `tests_e2e/`, `tools/`, `.github/` | `docs/agenti/test.md` |
+| Trasferimento del repository (proprietario, organizzazione) | `docs/trasferimento.md` (il nome sta in `web/appname.js`) |
 | CSP, esportazioni, anonimizzazione, avvertenze, informativa | `docs/agenti/riservatezza.md` |
 
 ## 6. Trappole generali

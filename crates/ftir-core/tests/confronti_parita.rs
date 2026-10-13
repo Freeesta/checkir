@@ -71,6 +71,7 @@ fn build_index(lib: &[Spectrum]) -> Index {
             substance: Some(format!("sub{i}")),
             display_name: format!("S{i}"),
             form: "base".into(),
+            classes: Vec::new(),
         };
         cache.add(entry, s).expect("add");
     }
