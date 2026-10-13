@@ -24,6 +24,44 @@ impl Shape {
     }
 }
 
+/// Intensity class of a peak (`tolerances.intensity_classes` of the thresholds).
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum IntensityClass {
+    Strong,
+    Medium,
+    Weak,
+}
+
+impl IntensityClass {
+    pub fn id(self) -> &'static str {
+        match self {
+            IntensityClass::Strong => "strong",
+            IntensityClass::Medium => "medium",
+            IntensityClass::Weak => "weak",
+        }
+    }
+
+    pub fn from_id(id: &str) -> Option<Self> {
+        match id {
+            "strong" => Some(IntensityClass::Strong),
+            "medium" => Some(IntensityClass::Medium),
+            "weak" => Some(IntensityClass::Weak),
+            _ => None,
+        }
+    }
+
+    /// Class of a relative prominence against the two cuts.
+    pub fn of(prominence_rel: f64, strong_min: f64, medium_min: f64) -> Self {
+        if prominence_rel >= strong_min {
+            IntensityClass::Strong
+        } else if prominence_rel >= medium_min {
+            IntensityClass::Medium
+        } else {
+            IntensityClass::Weak
+        }
+    }
+}
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Tier {
     Main,
@@ -49,6 +87,7 @@ pub struct Peak {
     pub height_abs: f64,
     pub prominence_abs: f64,
     pub prominence_rel: f64,
+    pub intensity: IntensityClass,
     /// `None` for a shoulder (it has no valley to measure a width from).
     pub fwhm_cm1: Option<f64>,
     pub shape: Option<Shape>,
@@ -111,6 +150,7 @@ impl Peak {
             ("height_abs".into(), num(self.height_abs)),
             ("prominence_abs".into(), num(self.prominence_abs)),
             ("prominence_rel".into(), num(self.prominence_rel)),
+            ("intensity".into(), text(self.intensity.id())),
             ("fwhm_cm1".into(), self.fwhm_cm1.map_or(Value::Null, num)),
             ("shape".into(), opt(self.shape.map(Shape::id))),
             ("tier".into(), text(tier)),

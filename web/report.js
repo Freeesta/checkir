@@ -7,6 +7,7 @@ import { spectrumOf } from "./files.js";
 import { el } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
 import { mixtureComponents } from "./mixture.js";
+import { libraryLabel } from "./librerie.js";
 import { analyse } from "./peaks.js";
 import { candidateName, LISTED } from "./results.js";
 import { activeFile, decisionOf, getState, resultOf } from "./state.js";
@@ -42,7 +43,7 @@ export function buildReport(s) {
 /** @param {any} data @returns {HTMLElement} */
 function candidatesBlock(data) {
   const head = el("tr", {}, [t("report.col_rank"), t("report.col_name"), t("report.col_form"), t("report.col_library"), t("report.col_r"), t("report.col_coverage")].map((name) => el("th", { scope: "col" }, [name])));
-  const rows = (data.candidates ?? []).slice(0, LISTED).map((/** @type {any} */ c) => el("tr", {}, [formatNumber(c.rank), candidateName(c), c.form, c.library, formatNumber(matchScore(c.r_derivative)), formatNumber(c.coverage * 100)].map((v) => el("td", {}, [String(v)]))));
+  const rows = (data.candidates ?? []).slice(0, LISTED).map((/** @type {any} */ c) => el("tr", {}, [formatNumber(c.rank), candidateName(c), c.form, libraryLabel(c.library), formatNumber(matchScore(c.r_derivative)), formatNumber(c.coverage * 100)].map((v) => el("td", {}, [String(v)]))));
   return el("div", {}, [el("h3", {}, [t("report.candidates")]), el("table", { class: "report-table" }, [el("thead", {}, [head]), el("tbody", {}, rows)])]);
 }
 
@@ -51,7 +52,7 @@ function mixtureBlock(data) {
   const parts = mixtureComponents(data);
   if (!parts.length) return [];
   const head = el("tr", {}, [t("report.col_name"), t("report.col_library"), t("report.col_contribution"), t("report.col_explained")].map((name) => el("th", { scope: "col" }, [name])));
-  const rows = parts.map((c) => el("tr", {}, [candidateName({ library: c.library, spectrum_id: c.id, display_name: c.name }), c.library, formatNumber(c.contribution, 2), c.explained === null ? "—" : formatNumber(c.explained)].map((v) => el("td", {}, [String(v)]))));
+  const rows = parts.map((c) => el("tr", {}, [candidateName({ library: c.library, spectrum_id: c.id, display_name: c.name }), libraryLabel(c.library), formatNumber(c.contribution, 2), c.explained === null ? "—" : formatNumber(c.explained)].map((v) => el("td", {}, [String(v)]))));
   return [el("h3", {}, [t("report.mixture")]), el("table", { class: "report-table", "data-report": "mixture" }, [el("thead", {}, [head]), el("tbody", {}, rows)]), el("p", {}, [t("mixture.unexplained", { n: formatNumber(data.mixture.unexplained ?? 0) })])];
 }
 

@@ -302,3 +302,43 @@ fn the_json_entry_point_reads_a_spectrum_and_an_id_and_reports_errors_as_data() 
     let bad = ftir_core::peaks::detect_json(&q, r#"{"schema":"x/1"}"#).expect_err("thresholds");
     assert_eq!(bad.error_key, "peaks.soglie_non_valide");
 }
+
+/// Class of the peak at `cm1` when the cuts of the thresholds file are `strong`/`medium`.
+fn class_at(s: &Spectrum, strong: &str, medium: &str, cm1: f64) -> String {
+    let file = include_str!("../../../data/soglie/peaks_thresholds-1.json").replace(
+        "\"intensity_classes\": { \"strong_rel_min\": 0.5, \"medium_rel_min\": 0.2 }",
+        &format!(
+            "\"intensity_classes\": {{ \"strong_rel_min\": {strong}, \"medium_rel_min\": {medium} }}"
+        ),
+    );
+    let t = Thresholds::parse(&file).expect("thresholds");
+    let list = detect(s, &t).expect("detect");
+    let json = list.to_json();
+    assert!(json.contains("\"intensity\""), "{json}");
+    let p = list
+        .peaks
+        .iter()
+        .find(|p| (p.position_cm1 - cm1).abs() < 1.0)
+        .expect("peak");
+    p.intensity.id().to_string()
+}
+
+#[test]
+fn the_intensity_class_follows_the_cuts_of_the_thresholds_file() {
+    let s = spectrum(BANDS, 0.0005, 2.0, 7);
+    // 1450 cm-1 has a prominence of about half the highest band.
+    let rel = run(&s)
+        .peaks
+        .iter()
+        .find(|p| (p.position_cm1 - 1450.0).abs() < 1.0)
+        .expect("peak")
+        .prominence_rel;
+    assert!((0.3..0.7).contains(&rel), "{rel}");
+    assert_eq!(
+        class_at(&s, "0.5", "0.2", 1450.0),
+        if rel >= 0.5 { "strong" } else { "medium" }
+    );
+    assert_eq!(class_at(&s, "0.95", "0.9", 1450.0), "weak");
+    assert_eq!(class_at(&s, "0.95", "0.1", 1450.0), "medium");
+    assert_eq!(class_at(&s, "0.1", "0.05", 1450.0), "strong");
+}

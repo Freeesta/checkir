@@ -265,3 +265,9 @@ mod test {
         assert!(confronto_prova_inizia("[\"nope\"]").contains("confronti.libreria_sconosciuta"));
     }
 }
+
+/// Grid, excluded zone and smallest region of the comparison, as JSON (the page keeps no copy of these numbers).
+#[wasm_bindgen]
+pub fn comparison_limits() -> String {
+    ftir_core::confronti::limiti::limiti_json().unwrap_or_else(|e| e.json())
+}

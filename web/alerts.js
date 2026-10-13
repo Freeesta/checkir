@@ -2,6 +2,7 @@
 import { matchScore } from "./candidati.js";
 import { formatNumber, t } from "./i18n.js";
 import { samplingName } from "./campionamento.js";
+import { libraryLabel } from "./librerie.js";
 import { decisionOf, resultOf } from "./state.js";
 
 /**
@@ -143,7 +144,7 @@ export function announcement(data) {
 
 /** The chain and the libraries used: `confronto_v1 · response (1200 spectra) · my-folder (12 spectra)`. @param {any} data @returns {string} */
 export function chainLine(data) {
-  const libs = (data.libraries ?? []).filter((/** @type {any} */ l) => l.searched).map((/** @type {any} */ l) => (l.spectra === 1 ? t("results.lib_count_one", { name: l.id }) : t("results.lib_count", { name: l.id, n: formatNumber(l.spectra) })));
+  const libs = (data.libraries ?? []).filter((/** @type {any} */ l) => l.searched).map((/** @type {any} */ l) => (l.spectra === 1 ? t("results.lib_count_one", { name: libraryLabel(l.id) }) : t("results.lib_count", { name: libraryLabel(l.id), n: formatNumber(l.spectra) })));
   return [data.chain?.derivative ?? "", ...libs].filter(Boolean).join(" · ");
 }
 
