@@ -86,5 +86,8 @@
   "theory/invalid/figure-without-table.json": "data_table",
   "theory/invalid/unknown-field.json": "author_email",
   "theory-index/invalid/bad-slug.json": "/chapters/0/slug",
-  "glossary/invalid/no-definition.json": "definition"
+  "glossary/invalid/no-definition.json": "definition",
+  "peak-index/invalid/wrong-row-size.json": "row_bytes",
+  "peak-index/invalid/no-version.json": "library_version",
+  "peak-index/invalid/extra-field.json": "substance"
 }

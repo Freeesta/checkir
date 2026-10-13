@@ -10,6 +10,7 @@ import { loadEngine } from "./engine.js";
 import { createFolder } from "./cartella.js";
 import { decisionActions } from "./decision.js";
 import { setProgramVersion } from "./sheet.js";
+import { hideSplash, labelSplash } from "./splash.js";
 import { talkActions, wireTalk } from "./talk.js";
 import { libraryActions, loadAllLibraries } from "./librerie.js";
 import { buildPanels } from "./panels.js";
@@ -19,6 +20,8 @@ import { parseSpectrum } from "./spectrum.js";
 import { buildLayers } from "./layers.js";
 import { matchActions, startMatching } from "./match.js";
 import { peaksActions } from "./peaks.js";
+import { rangeContext } from "./ranges.js";
+import { startRangeTable } from "./ranges_table.js";
 import { loadBands } from "./regions.js";
 import { loadBandData } from "./bands_data.js";
 import { createPeakCard } from "./peak_card.js";
@@ -27,7 +30,7 @@ import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
 import { buildSubtractView } from "./subtract_view.js";
 import { subtractActions } from "./subtract.js";
-import { buildLimits, buildNextStep } from "./workarea.js";
+import { buildCandidates, buildNextStep } from "./workarea.js";
 
 /** @param {string} id @returns {HTMLElement} */
 function $(id) {
@@ -91,6 +94,21 @@ function startExtras() {
   if (["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) import("./schede_prova.js").then((m) => m.mountSamples());
 }
 
+/** Title and footer carry the product name; the loading screen gets its translated label. */
+function showName() {
+  document.title = APP_NAME;
+  $("footer-name").textContent = APP_NAME;
+  labelSplash();
+}
+
+/** Last step of the start-up: libraries, offline support, loading screen away, page marked ready. @param {import("./engine.js").Engine | null} engine */
+function finishStart(engine) {
+  if (engine) loadAllLibraries(engine);
+  startExtras();
+  hideSplash();
+  document.body.dataset.ready = "1";
+}
+
 /** The actions of the analysis work: matching, peaks, subtraction, decision and talk mode. @param {import("./engine.js").Engine | null} engine @param {(text: string) => void} announce */
 function workActions(engine, announce) {
   return { ...matchActions(announce), ...peaksActions(engine, announce), ...subtractActions(engine, announce), ...decisionActions(announce), ...talkActions(announce) };
@@ -104,7 +122,7 @@ function chartPeakKeys(ctx) {
 async function start() {
   initTheme();
   await loadLang(pickLang());
-  document.title = APP_NAME;
+  showName();
   const engine = await loadEngine().catch(() => null);
   await loadBands();
   await loadBandData(currentLang());
@@ -122,6 +140,7 @@ async function start() {
     },
     ...languageActions(() => redrawAll(), announce),
     ...workActions(engine, announce),
+    ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     closeSection: () => panels.closeSection(),
@@ -132,13 +151,13 @@ async function start() {
   const header = buildHeader(/** @type {HTMLElement} */ ($("app-header")), ctx, APP_NAME);
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
   const next = buildNextStep($("workbar"), ctx);
-  const limits = buildLimits($("limits"));
+  const candidates = buildCandidates($("candidates"), ctx);
   const subtraction = buildSubtractView($("subtract"), ctx);
   const talk = wireTalk($("sheet-host"));
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), peaks: chartPeakKeys(ctx) });
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
   const card = createPeakCard($("peak-card"), ctx);
@@ -156,11 +175,10 @@ async function start() {
     header.refresh(s);
     panels.refresh(s);
     next.refresh(s);
-    limits.refresh();
+    candidates.refresh(s);
     talk.refresh(s);
     refreshActionButtons(s);
     hideIfDetached();
-    $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");
   };
   redrawAll = () => {
     layers.reset();
@@ -172,12 +190,12 @@ async function start() {
     chart.redraw();
   };
   subscribe(renderUi);
-  startMatching({ announce });
-  wireShortcuts(ctx, next);
-  redrawAll();
-  if (engine) loadAllLibraries(engine);
-  startExtras();
-  document.body.dataset.ready = "1";
+  startMatching({ announce }); startRangeTable();
+  wireShortcuts(ctx, next); redrawAll();
+  finishStart(engine);
 }
 
-start();
+start().catch((e) => {
+  hideSplash();
+  throw e;
+});

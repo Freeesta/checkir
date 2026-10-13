@@ -32,12 +32,19 @@ pub struct Negative {
 }
 
 #[derive(Debug, Clone, PartialEq)]
+pub struct BackgroundEnergy {
+    /// Warn when the background energy is below this fraction of the reference median.
+    pub low_ratio: f64,
+}
+
+#[derive(Debug, Clone, PartialEq)]
 pub struct Thresholds {
     pub version: u32,
     pub status: String,
     pub co2: Co2,
     pub vapour: Vapour,
     pub negative: Negative,
+    pub background_energy: BackgroundEnergy,
 }
 
 fn bad(field: &str) -> EngineError {
@@ -143,6 +150,9 @@ impl Thresholds {
             co2: co2(&v)?,
             vapour: vapour(&v)?,
             negative: negative(&v)?,
+            background_energy: BackgroundEnergy {
+                low_ratio: positive(&v, &["background_energy", "low_ratio"])?,
+            },
         })
     }
 

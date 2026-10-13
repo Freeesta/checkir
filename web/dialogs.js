@@ -24,10 +24,12 @@ export function buildDialogs(engineVersion) {
     info: () => ({
       titleKey: "info.title",
       body: [
-        el("section", {}, [el("h3", {}, [t("info.privacy_title")]), el("p", {}, [t("info.privacy")])]),
-        el("section", {}, [el("h3", {}, [t("info.limits_title")]), el("p", {}, [t("limits.more")])]),
         el("section", {}, [el("h3", {}, [t("info.match_title")]), autoMatchSwitch(), el("p", { class: "empty" }, [t("info.auto_match_hint")])]),
-        el("section", { id: "warnings-slot" }, [el("h3", {}, [t("info.warnings_title")]), el("p", { class: "empty" }, [t("info.warnings_empty")])]),
+        el("section", {}, [el("h3", {}, [t("info.pages_title")]), el("nav", { class: "footer-links", "aria-label": t("info.pages_title") }, [
+          el("a", { href: "pagine/avvertenze/" }, [t("info.link_warnings")]),
+          el("a", { href: "pagine/informativa/" }, [t("info.link_notice")]),
+          el("a", { href: "teoria/" }, [t("info.link_theory")]),
+        ])]),
         el("section", {}, [
           el("h3", {}, [t("info.versions_title")]),
           el("p", {}, [`${APP_NAME} · ${engineVersion() ? t("engine.version", { version: engineVersion() ?? "" }) : t("engine.error")}`]),

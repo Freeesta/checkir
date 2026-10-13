@@ -1,0 +1,9 @@
+{
+  "schema": "peak-index/1",
+  "chain_id": "peak_detect_v1",
+  "thresholds_version": 1,
+  "min_prominence_rel": 0.05,
+  "row_bytes": 8,
+  "spectra": 4000,
+  "rows": 120000
+}

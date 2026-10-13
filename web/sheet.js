@@ -7,14 +7,14 @@ import { candidateName, levelBadge } from "./results.js";
 import { decisionOf, resultOf } from "./state.js";
 
 /**
- * The counselling sheet: seven blocks in a fixed order, built from the state in memory after the chemist's decision (before it, a draft
+ * The counselling sheet: four blocks in a fixed order (head, found, alerts, foot with the signature line), built from the state in memory after the chemist's decision (before it, a draft
  * with a watermark). It is never stored. Its language is chosen apart from the interface's. Short sentences, no score, no
- * percentage, and never a word that reassures: the limits of the FTIR are a block that is always there, in print too.
+ * percentage, and never a word that reassures; no fixed warning text, only data of the sample and of this result.
  */
 
 let programVersion = "";
 
-/** The version of the program, for the foot of the sheet. @param {string} version */
+/** The version of the program, for the head of the sheet. @param {string} version */
 export function setProgramVersion(version) {
   programVersion = version;
 }
@@ -99,24 +99,10 @@ function alertsBlock(data, chemist) {
   return block(t("sheet.alerts.title"), "alerts", [views.length ? list : el("p", {}, [t("sheet.alerts.none")])]);
 }
 
-/** Block 4: the fixed limits of the FTIR, never foldable, in print too. @returns {HTMLElement} */
-function limitsBlock() {
-  const lines = [t("sheet.limit.undetected"), t("sheet.limit.potent"), t("sheet.limit.quantity"), t("sheet.limit.expected")];
-  const list = el("ul", { class: "sheet-limits" }, lines.map((l) => el("li", {}, [icon("limits"), l])));
-  return block(t("sheet.limits.title"), "limits", [list]);
-}
-
-/** Block 5: harm reduction. Only sections approved by the health reviewer may appear; until the substance sheets are published it says so. @returns {HTMLElement} */
-function harmBlock() {
-  return block(t("sheet.harm.title"), "harm", [el("p", {}, [t("sheet.harm.review")])]);
-}
-
-/** Block 7: foot with the program, the chemist's signature line and the fixed "not a diagnosis". @returns {HTMLElement} */
+/** Block 4: foot with the chemist's signature line. @returns {HTMLElement} */
 function footBlock() {
   return el("footer", { class: "sheet-foot", "data-block": "foot" }, [
-    el("p", {}, [t("sheet.foot.line", { version: programVersion })]),
     el("p", { class: "signature" }, [el("span", { class: "sign-label" }, [t("sheet.foot.sign")]), el("span", { class: "sign-line" })]),
-    el("p", { class: "sheet-strong" }, [t("sheet.foot.nodiag")]),
   ]);
 }
 
@@ -140,7 +126,7 @@ export function buildSheet(s, opts = {}) {
       sheet.setAttribute("data-watermark", t("sheet.draft"));
       sheet.append(el("p", { class: "sheet-banner" }, [icon("warning"), t("sheet.draft")]));
     }
-    sheet.append(headBlock(r.code, r.data), foundBlock(choice, r.data, decided), alertsBlock(r.data, Boolean(opts.chemist)), limitsBlock(), harmBlock(), block(t("sheet.emergency.title"), "emergency", [el("p", {}, [t("sheet.emergency.line")])]), footBlock());
+    sheet.append(headBlock(r.code, r.data), foundBlock(choice, r.data, decided), alertsBlock(r.data, Boolean(opts.chemist)), footBlock());
   });
   return sheet;
 }

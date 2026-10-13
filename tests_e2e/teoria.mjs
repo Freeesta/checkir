@@ -151,6 +151,7 @@ export async function teoriaScenario(browser, base, check, axe) {
   const { ctx, page } = await open(browser, base);
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
-  check("app: the footer links to the theory section", (await page.locator('.footer-links a[href="teoria/"]').count()) === 1);
+  await page.click('[data-action="info.open"]');
+  check("app: the info dialog links to the theory section", (await page.locator('dialog a[href="teoria/"]').count()) === 1);
   await ctx.close();
 }
