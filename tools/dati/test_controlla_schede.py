@@ -17,12 +17,14 @@ def full_texts(lang, **override):
     return "".join(f"## {k}\n\n" + "\n\n".join(v) + "\n\n" for k, v in body.items())
 
 
-class Full(Base):
+class WithFullSheet(Base):
     def full(self, **override):
         self.edit_json(SHEET, lambda o: o.update(section_state={k: "draft" for k in cs.SECTIONS}))
         for lang in ("en", "it"):
             (self.root / SUB / "datasheet" / f"texts.{lang}.md").write_text(full_texts(lang, **override.get(lang, {})), encoding="utf-8")
 
+
+class Full(WithFullSheet):
     def test_thirteen_sections_pass(self):
         self.full()
         self.assertEqual(self.problems(), "")
@@ -68,6 +70,9 @@ class Full(Base):
                                          o.update(reviewers=[{"public_name": "A", "role": "chemist", "sections": ["molecule"], "date": "2026-10-12"}])))
         self.assertIn("'cuts' is approved without a signature by a chemist", self.problems())
 
+
+
+class Structured(WithFullSheet):
     def test_unknown_cut(self):
         self.full()
         self.edit_json(SHEET, lambda o: o.update(cuts=[{"cut": "unobtainium", "frequency": "common", "source": "synthetic-generator"}]))
