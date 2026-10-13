@@ -14,6 +14,7 @@ import { sheetScenario } from "./scheda.mjs";
 import { subtractionScenario } from "./sottrazione.mjs";
 import { startSite } from "./sito.mjs";
 import { toolsScenario } from "./strumenti.mjs";
+import { versionScenario } from "./versione.mjs";
 
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
 
@@ -274,6 +275,7 @@ async function run() {
     await shellScenario(browser);
     await shortcutsScenario(browser);
     await registryScenario(check);
+    await versionScenario(check);
     await nameScenario(browser);
     await pagesScenario(browser);
     await warningsBoxScenario(browser);

@@ -14,3 +14,5 @@ node tools/genera_identita.mjs
 wasm-bindgen --target web --no-typescript --out-dir site/wasm target/wasm32-unknown-unknown/release/ftir_wasm.wasm
 # Library packages (never committed) and the general manifest with one switch per library; the service worker caches them.
 cargo run --locked --release -p ftir-lib --bin costruisci-libreria -- --config tools/libreria/librerie.json --out site/librerie
+# Last step: the cache version of the service worker is a hash of what it precaches (nothing to raise by hand).
+node tools/versione_sw.mjs
