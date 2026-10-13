@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "isotonitazene",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Isotonitazene"
+    },
+    "it": {
+      "preferred": "Isotonitazene"
+    }
+  },
+  "iupac": "N,N-diethyl-2-[5-nitro-2-[(4-propan-2-yloxyphenyl)methyl]benzimidazol-1-yl]ethanamine",
+  "formula": "C23H30N4O3",
+  "molar_mass_g_mol": 410.5,
+  "smiles": "CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)OC(C)C",
+  "inchi": "InChI=1S/C23H30N4O3/c1-5-25(6-2)13-14-26-22-12-9-19(27(28)29)16-21(22)24-23(26)15-18-7-10-20(11-8-18)30-17(3)4/h7-12,16-17H,5-6,13-15H2,1-4H3",
+  "inchikey": "OIOQREYBGDAYGT-UHFFFAOYSA-N",
+  "external_ids": {
+    "chebi": "CHEBI:234360",
+    "cas": "14188-81-9",
+    "pubchem_cid": 145721979
+  },
+  "classes": {
+    "chemical": [
+      "nitazenes"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

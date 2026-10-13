@@ -223,7 +223,7 @@ export async function importLibrary(engine, files, name, sampling, say) {
   else if (stored) head = { key: "library.import.done", params: { name: id, ok: String(out.imported), skipped: String(out.skipped.length + out.repeated) } };
   const skipped = out.skipped.slice(0, 5).map((s) => ({ key: "library.import.skipped", params: { file: s.file, reason_key: s.notice.key, ...s.notice.params } }));
   const unknown = out.unrecognized ? [{ key: out.unrecognized === 1 ? "library.import.unrecognized_one" : "library.import.unrecognized_many", params: { count: String(out.unrecognized) } }] : [];
-  const all = [...(head ? [head] : []), ...notices, ...unknown, ...skipped];
+  const all = [...(head ? [head] : []), ...notices, ...(out.imported ? out.warnings : []), ...unknown, ...skipped];
   update({ libraryJob: null, libraryNotices: all });
   if (all[0]) say(all[0]);
 }

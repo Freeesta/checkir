@@ -1,0 +1,62 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "pmma",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "PMMA",
+      "synonyms": [
+        "4-methoxymethamphetamine",
+        "p-methoxymethamphetamine",
+        "paramethoxymethamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "PMMA",
+      "synonyms": [
+        "4-metossimetamfetamina",
+        "p-metossimetamfetamina",
+        "parametossimetamfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(4-methoxyphenyl)-N-methylpropan-2-amine",
+  "formula": "C11H17NO",
+  "molar_mass_g_mol": 179.26,
+  "smiles": "CC(CC1=CC=C(C=C1)OC)NC",
+  "inchi": "InChI=1S/C11H17NO/c1-9(12-2)8-10-4-6-11(13-3)7-5-10/h4-7,9,12H,8H2,1-3H3",
+  "inchikey": "UGFMBZYKVQSQFX-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q1948506",
+    "cas": "22331-70-0",
+    "pubchem_cid": 90766
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -94,6 +94,36 @@ pub fn library_native(name: &str, bytes: &[u8]) -> Result<Vec<f32>, String> {
     ftir_lib::bridge::native_standard_file(name, bytes).map_err(|e| e.json())
 }
 
+/// A Shimadzu library (`.L01` and, when given, its `.nam`; an empty `nam` means none): the values of all entries on the
+/// library grid one after the other (float32). The names and the warnings come from `library_shimadzu_meta`, the
+/// records for drawing from `library_shimadzu_native`. Errors are thrown as JSON text.
+#[wasm_bindgen]
+pub fn library_shimadzu_resample(
+    l01: &[u8],
+    nam: &[u8],
+    max_bytes: u32,
+) -> Result<Vec<f32>, String> {
+    ftir_lib::bridge::shimadzu_standard(l01, (!nam.is_empty()).then_some(nam), max_bytes as usize)
+        .map(|e| e.values)
+        .map_err(|e| e.json())
+}
+
+/// The native records of a Shimadzu library, one after the other (see `library_native` for one record).
+#[wasm_bindgen]
+pub fn library_shimadzu_native(l01: &[u8], nam: &[u8], max_bytes: u32) -> Result<Vec<f32>, String> {
+    ftir_lib::bridge::shimadzu_standard(l01, (!nam.is_empty()).then_some(nam), max_bytes as usize)
+        .map(|e| e.native)
+        .map_err(|e| e.json())
+}
+
+/// The names and the reader warnings of a Shimadzu library as JSON `{"names":[…],"warnings":[{"key","params"}]}`.
+#[wasm_bindgen]
+pub fn library_shimadzu_meta(l01: &[u8], nam: &[u8], max_bytes: u32) -> Result<String, String> {
+    ftir_lib::bridge::shimadzu_standard(l01, (!nam.is_empty()).then_some(nam), max_bytes as usize)
+        .map(|e| ftir_lib::bridge::shimadzu_meta_json(&e))
+        .map_err(|e| e.json())
+}
+
 /// Builds the manifest and the index of an imported library: `{"manifest":{...},"index":{...}}` or `{error, ...}`.
 #[wasm_bindgen]
 pub fn library_build(identity: &str, index: &str, values: &[f32]) -> String {

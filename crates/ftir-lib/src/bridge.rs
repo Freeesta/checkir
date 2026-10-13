@@ -1,6 +1,9 @@
 //! Text-in, text-out entry points for the browser bridge: open a package that was stored or fetched, and build the
 //! package of a library imported by the user. The wasm crate only forwards to these functions.
-use crate::build::{native_record, native_record_file, resample_file, resample_jcamp};
+use crate::build::{
+    native_record, native_record_file, resample_file, resample_jcamp, shimadzu_entries,
+    ShimadzuEntries,
+};
 use crate::data::Limits;
 use crate::index::parse_index;
 use crate::invalid;
@@ -48,6 +51,50 @@ pub fn resample_standard_file(name: &str, bytes: &[u8]) -> EngineResult<Vec<f32>
 /// Any file the readers recognise as the file gives it (`build::native_record_file`).
 pub fn native_standard_file(name: &str, bytes: &[u8]) -> EngineResult<Vec<f32>> {
     native_record_file(name, bytes)
+}
+
+/// A Shimadzu library on the standard grid: `(entries, names and warnings as JSON)`. The page splits the entries by
+/// the count in the JSON.
+pub fn shimadzu_standard(
+    l01: &[u8],
+    nam: Option<&[u8]>,
+    max_bytes: usize,
+) -> EngineResult<ShimadzuEntries> {
+    shimadzu_entries(l01, nam, max_bytes, &Grid::STANDARD)
+}
+
+/// The names and warnings of a `ShimadzuEntries` as JSON: `{"names":[...],"warnings":[{"key":..,"params":{..}}]}`.
+pub fn shimadzu_meta_json(e: &ShimadzuEntries) -> String {
+    let q = |s: &str| {
+        let mut o = String::from("\"");
+        for c in s.chars() {
+            match c {
+                '"' => o.push_str("\\\""),
+                '\\' => o.push_str("\\\\"),
+                c if (c as u32) < 0x20 => o.push_str(&format!("\\u{:04x}", c as u32)),
+                c => o.push(c),
+            }
+        }
+        o.push('"');
+        o
+    };
+    let names: Vec<String> = e.names.iter().map(|n| q(n)).collect();
+    let warnings: Vec<String> = e
+        .warnings
+        .iter()
+        .map(|(k, ps)| {
+            let p: Vec<String> = ps
+                .iter()
+                .map(|(a, b)| format!("{}:{}", q(a), q(b)))
+                .collect();
+            format!("{{\"key\":{},\"params\":{{{}}}}}", q(k), p.join(","))
+        })
+        .collect();
+    format!(
+        "{{\"names\":[{}],\"warnings\":[{}]}}",
+        names.join(","),
+        warnings.join(",")
+    )
 }
 
 fn identity(source: &str) -> EngineResult<Identity> {
