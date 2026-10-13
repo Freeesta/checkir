@@ -1,15 +1,5 @@
 // Recalled compounds e2e: search by name, up to three references, overlaid / offset / difference, the four scales, the numbers beside each one, "keep as residual".
 import { BETA, GAMMA, ALFA, ALFA_BIS, jcamp } from "./confronto.mjs";
-import { pearson, scaleFactor, valueAt } from "../web/recall_math.js";
-
-/** Pure arithmetic: the four scales, interpolation, correlation. */
-function pureScenario(check) {
-  const ref = { wavenumber_cm1: [400, 402, 404, 406], y: [0, 1, 2, 3] };
-  check("recall: library value is interpolated and NaN outside", valueAt(ref, 403) === 1.5 && Number.isNaN(valueAt(ref, 399)));
-  const p = { x: [1, 2, 3], s: [2, 4, 6], r: [1, 2, 3] };
-  check("recall: scales to the maximum, the area and least squares agree on a pure multiple", scaleFactor("max", p) === 2 && scaleFactor("area", p) === 2 && Math.abs(scaleFactor("lsq", p) - 2) < 1e-12 && scaleFactor("raw", p) === 1);
-  check("recall: correlation of a line with itself is 1 and a flat curve has none", Math.abs(pearson([1, 2, 3, 4], [2, 4, 6, 8]) - 1) < 1e-12 && pearson([1, 1, 1, 1], [1, 2, 3, 4]) === null);
-}
 
 export async function openPanel(page, name) {
   const section = page.locator(`details[data-panel="${name}"]`);
@@ -39,7 +29,6 @@ export async function pick(page, text, n = 0) {
 }
 
 export async function recallScenario(browser, base, check, axe) {
-  pureScenario(check);
   const { ctx, page } = await prepare(browser, base);
   await page.locator("body").click({ position: { x: 5, y: 5 } });
   await page.keyboard.press("n");

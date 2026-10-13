@@ -2,6 +2,7 @@
 import { EXCLUDED_CM1, referenceFor } from "./match.js";
 import { mixtureComponents } from "./mixture.js";
 import { candidateName, selectedCandidate } from "./results.js";
+import { engineUnit } from "./spectrum.js";
 import { peakName } from "./peaks_view.js";
 import { spectrumOf } from "./files.js";
 import { t } from "./i18n.js";
@@ -63,7 +64,7 @@ function withAgreement(regions, candidate, data) {
 /** @param {import("./spectrum.js").Spectrum} s @returns {any | null} */
 function detect(s) {
   if (!engine) return null;
-  const unit = s.y_unit === "Transmittance" ? "transmittance" : "absorbance";
+  const unit = engineUnit(s) ?? "absorbance";
   const out = JSON.parse(engine.detect_peaks(JSON.stringify({ role: "sample", y_unit: unit, wavenumber_cm1: s.wavenumber_cm1, y: s.y }), ""));
   return out.error_key ? null : out;
 }

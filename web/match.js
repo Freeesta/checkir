@@ -2,6 +2,7 @@
 import { announcement } from "./alerts.js";
 import { dedupeCandidates } from "./candidati.js";
 import { spectrumOf } from "./files.js";
+import { engineUnit } from "./spectrum.js";
 import { libraryOriginal, libraryRows, libraryValues } from "./librerie.js";
 import { selectedCandidate } from "./results.js";
 import { t } from "./i18n.js";
@@ -139,11 +140,6 @@ export function searchPeaks(query) {
   });
 }
 
-/** @param {string | undefined} unit @returns {string | null} the unit name the engine knows */
-function unitOf(unit) {
-  return unit === undefined || unit === "Absorbance" ? "absorbance" : unit === "Transmittance" ? "transmittance" : null;
-}
-
 /** @param {unknown} query @param {unknown} options @param {((proposal: any) => void) | null} [onMixture] asked for the mixture search that follows the comparison @returns {Promise<string | null>} */
 function ask(query, options, onMixture = null) {
   const runId = ++runSeq;
@@ -162,7 +158,7 @@ function ask(query, options, onMixture = null) {
  */
 export function compareWith(code, options, onMixture = null) {
   const spectrum = spectrumOf(code);
-  const unit = unitOf(spectrum?.y_unit);
+  const unit = spectrum ? engineUnit(spectrum) : null;
   if (!spectrum || !unit) return Promise.resolve(null);
   return ask(
     { role: "sample", y_unit: unit, wavenumber_cm1: spectrum.wavenumber_cm1, y: spectrum.y },
@@ -189,7 +185,7 @@ export async function runMatch(code) {
   const spectrum = spectrumOf(code);
   const libs = activeLibraries(s);
   if (!spectrum || !libs.length) return;
-  const unit = unitOf(spectrum.y_unit);
+  const unit = engineUnit(spectrum);
   if (!unit) return update({ matchError: { key: "err.match.unit_unsupported", params: {} } });
   const choice = effectiveChoice(s);
   const narrow = choice.preset ? null : narrowError(choice.ranges);
