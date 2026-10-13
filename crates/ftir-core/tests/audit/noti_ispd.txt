@@ -1,0 +1,44 @@
+# Properties of a Berkeley DB `.ispd` file that the reader knows (first word, or the full text when several share it).
+# A test keeps this list equal to `ispd::KNOWN`.
+0 ##$CORRECTIONDATE
+0 ##CASNAME
+0 ##DATE
+0 ##JCAMP-DX
+0 ##MINX
+0 ##MINY
+0 ##MOLFORM
+0 ##MW
+0 ##NAMES
+0 ##NOTES
+0 ##ORIGIN
+0 ##OWNER
+0 ##RESOLUTION
+0 ##SAMPLEDESCRIPTION
+0 ##SAMPLINGPROCEDURE
+0 ##SOURCEREFERENCE
+0 ##TITLE
+0 ##ZPD
+100000
+100001
+100003
+100004
+100008
+100022 0
+100022 2
+100036
+100400
+100401
+100600
+100700
+103700 FTIRX000 Instrument Parameters
+103701
+104500
+104501
+105600
+2 Description
+2 DisplayObject
+AO
+CD
+CO
+MEMBERS
+NON_BTREE_DATA
