@@ -1,0 +1,60 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-fa",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-FA",
+      "synonyms": [
+        "2-fluoroamphetamine",
+        "1-(2-fluorophenyl)propan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "2-FA",
+      "synonyms": [
+        "2-fluoroanfetamina",
+        "1-(2-fluorofenil)propan-2-ammina"
+      ]
+    }
+  },
+  "iupac": "1-(2-fluorophenyl)propan-2-amine",
+  "formula": "C9H12FN",
+  "molar_mass_g_mol": 153.2,
+  "smiles": "CC(CC1=CC=CC=C1F)N",
+  "inchi": "InChI=1S/C9H12FN/c1-7(11)6-8-4-2-3-5-9(8)10/h2-5,7H,6,11H2,1H3",
+  "inchikey": "GDSXNLDTQFFIEU-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q4029768",
+    "cas": "1716-60-5",
+    "pubchem_cid": 121531
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

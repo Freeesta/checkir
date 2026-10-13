@@ -2,12 +2,16 @@
   "schema": "aliases/1",
   "aliases": {
     "2cb": "2c-b",
+    "2fa": "2-fa",
+    "3fa": "3-fa",
     "4fa": "4-fa",
     "gamma-butyrolactone": "gbl",
     "gamma-hydroxybutyrate": "ghb",
     "m-cpp": "mcpp",
+    "mde": "mdea",
     "mephedrone": "4-mmc",
     "metoxetamine": "methoxetamine",
-    "mxe": "methoxetamine"
+    "mxe": "methoxetamine",
+    "tenamfetamine": "mda"
   }
 }

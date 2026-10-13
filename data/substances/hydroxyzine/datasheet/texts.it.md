@@ -18,11 +18,19 @@ L'idrossizina è nell'elenco degli adulteranti e dei tagli che la cocaina contie
 
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+L'idrossizina è un antistaminico di prima generazione, autorizzato come medicinale soggetto a prescrizione nello Spazio economico europeo per i disturbi d'ansia, per condizioni della pelle come prurito, dermatite e orticaria, per la sedazione preoperatoria e per i disturbi del sonno. [f:prac-hydroxyzine2015]
+
+Il suo effetto sedativo è descritto come ben noto e ben caratterizzato; è considerato un effetto utile in alcune indicazioni e un evento avverso in altre. [f:prac-hydroxyzine2015]
+
+Negli adulti con disturbo d'ansia generalizzato, uno studio randomizzato su 80 pazienti non ha trovato differenze di efficacia rispetto al lorazepam con 50 mg di idrossizina al giorno. [f:prac-hydroxyzine2015]
+
+Una metanalisi di cinque studi (884 partecipanti) ha trovato l'idrossizina più efficace del placebo nel disturbo d'ansia generalizzato e equivalente a benzodiazepine e buspirone, con un tasso più alto di sonnolenza rispetto ai comparatori attivi. [f:prac-hydroxyzine2015]
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Dopo la revisione il PRAC ha raccomandato, alla dose efficace più bassa e per la durata più breve possibile, dosi massime giornaliere di 100 mg negli adulti, 2 mg/kg di peso corporeo nei pazienti pediatrici fino a 40 kg e 50 mg negli anziani. [f:prac-hydroxyzine2015]
+
+Prima della revisione la dose massima giornaliera nelle informazioni di prodotto nazionali andava da 75 mg a 400 mg, il più spesso 300 mg. [f:prac-hydroxyzine2015]
 
 ## risks
 

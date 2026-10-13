@@ -65,7 +65,32 @@
     }
   ],
   "doses": [],
-  "interactions": [],
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "dangerous",
+      "mechanism": "maoi",
+      "source": "evekeo-label"
+    },
+    {
+      "with": "serotonergic_drugs",
+      "severity": "risky",
+      "mechanism": "serotonergic",
+      "source": "evekeo-label"
+    },
+    {
+      "with": "cyp2d6_inhibitors",
+      "severity": "caution",
+      "mechanism": "cyp_inhibition",
+      "source": "evekeo-label"
+    },
+    {
+      "with": "acidifying_agents",
+      "severity": "caution",
+      "mechanism": "other",
+      "source": "evekeo-label"
+    }
+  ],
   "counselling": [
     {
       "key": "amphetamine.sleep_food",
