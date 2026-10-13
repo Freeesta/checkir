@@ -5,6 +5,7 @@ use ftir_core::assign::interpret::at_position_json;
 use ftir_core::assign::result::{Assignment, ReferenceId, State};
 use ftir_core::assign::rules::RuleSet;
 use ftir_core::assign::{assign_json, assign_with, PeakSet, Reference};
+use ftir_core::peaks::result::Shape;
 use ftir_core::peaks::{detect, Thresholds};
 use ftir_core::synthetic::{generate, Band, Params};
 
@@ -329,4 +330,58 @@ fn json_in_json_out_reads_the_embedded_rules_and_a_context() {
     let bad =
         assign_json(&sample, "[]", r#"{"cuts":{"cuts":[{"id":1}]}}"#, "").expect_err("invalid");
     assert_eq!(bad.error_key, "assign.contesto_non_valido");
+}
+
+/// A rule of the given shape and any intensity at 1700 (above the fingerprint limit, so no candidate is needed).
+fn shaped(shape: &str) -> String {
+    rule("r", 1650, 1750, "").replace(
+        r#""intensity":"strong","shape":"sharp""#,
+        &format!(r#""intensity":"variable","shape":"{shape}""#),
+    )
+}
+
+/// Shape of the peak × shape of the rule: a broad rule reads only broad and very broad peaks, a sharp rule only
+/// narrow and medium ones, the others every peak. Lorentz FWHM 8, 14, 28, 40, 90 cm⁻¹ (half-widths 4, 7, 14, 20, 45).
+#[test]
+fn the_shape_of_a_rule_reads_only_the_peaks_of_a_compatible_width() {
+    let t = Thresholds::embedded().expect("thresholds");
+    let [narrow, medium, broad] = t.shape_below_cm1;
+    let read = |shape: &str, half: f64| {
+        let c = ctx(&[shaped(shape)]);
+        let a = run(&[(1700.0, half, 1.0)], &[], &c);
+        let peaks = peaks_of(&[(1700.0, half, 1.0)], 1);
+        assert_eq!(a.items.len(), 1, "one peak");
+        (peaks.peaks[0].shape, !a.items[0].interpretations.is_empty())
+    };
+    for (fwhm, half) in [
+        (8.0, 4.0),
+        (14.0, 7.0),
+        (28.0, 14.0),
+        (40.0, 20.0),
+        (90.0, 45.0),
+    ] {
+        let (shape, _) = read("sharp", half);
+        let shape = shape.expect("shape");
+        let expect = if fwhm < narrow {
+            Shape::Narrow
+        } else if fwhm < medium {
+            Shape::Medium
+        } else if fwhm < broad {
+            Shape::Broad
+        } else {
+            Shape::VeryBroad
+        };
+        assert!(shape == expect || fwhm == medium, "FWHM {fwhm}: {shape:?}");
+        let is_broad = matches!(shape, Shape::Broad | Shape::VeryBroad);
+        assert_eq!(read("sharp", half).1, !is_broad, "sharp rule, FWHM {fwhm}");
+        assert_eq!(read("broad", half).1, is_broad, "broad rule, FWHM {fwhm}");
+        assert_eq!(
+            read("very_broad", half).1,
+            is_broad,
+            "very_broad rule, FWHM {fwhm}"
+        );
+        for any in ["medium", "doublet", "multiplet"] {
+            assert!(read(any, half).1, "{any} rule, FWHM {fwhm}");
+        }
+    }
 }

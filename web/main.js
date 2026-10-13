@@ -82,6 +82,7 @@ function languageActions(redraw, say) {
     await loadLang(code);
     await loadBandData(code);
     redraw();
+    document.body.dataset.langReady = code;
     say(t("status.lang_changed", { lang: t(code === "it" ? "lang.it" : "lang.en") }));
   };
   return {
@@ -114,6 +115,7 @@ function finishStart(engine) {
   startExtras();
   hideSplash();
   document.body.dataset.ready = "1";
+  document.body.dataset.langReady = currentLang();
 }
 
 /** The actions of the analysis work: matching, peaks, subtraction, decision and talk mode. @param {import("./engine.js").Engine | null} engine @param {(text: string) => void} announce */

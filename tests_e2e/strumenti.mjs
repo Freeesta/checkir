@@ -19,16 +19,25 @@ async function pureScenario(check) {
   check("tools: a linked view reaches the others, not its sender", seen.length === 1 && seen[0][0] === "b" && seen[0][1] === 1000);
 }
 
+/** Record every announcement: the live region keeps only the last one, and another message may land after the one awaited. */
+const recordSaid = (page) => page.evaluate(() => {
+  const live = document.getElementById("status");
+  window.__said = [];
+  new MutationObserver(() => live.textContent && window.__said.push(live.textContent)).observe(live, { childList: true, characterData: true, subtree: true });
+});
+const saidMatch = (page, re) => page.waitForFunction((src) => window.__said.some((x) => new RegExp(src).test(x)), re.source).then(() => true);
+
 const frames = (page) => page.evaluate(() => new Promise((done) => requestAnimationFrame(() => requestAnimationFrame(done))));
 const reading = async (page) => (await frames(page), page.$$eval("#chart .cursor-text", (n) => n.filter((x) => x.style.display !== "none").map((x) => x.textContent ?? "").filter(Boolean)));
 
 /** Keyboard only: k places cursor 1 then 2, the comma moves the active one, the reading is announced, y locks, Esc clears. */
 async function keyboardScenario(page, check) {
   await page.focus("#chart");
+  await recordSaid(page);
   await page.keyboard.press("k");
   let r = await reading(page);
   check("tools: k places cursor 1 with position and value", r.length === 2 && r.includes("1") && r.some((x) => /^~\d+\.\d cm⁻¹ · A -?\d+\.\d{3}$/.test(x)), r.join(" | "));
-  await page.waitForFunction(() => /cm⁻¹/.test(document.getElementById("status")?.textContent ?? ""));
+  await saidMatch(page, /cm⁻¹/);
   const before = r.find((x) => x.startsWith("~"));
   await page.keyboard.press("k");
   await page.keyboard.press(".");
@@ -103,9 +112,10 @@ async function axisScenario(page, check) {
   check("tools: Shift+ArrowUp zooms y from the keyboard", (await yTicksOf(page)) !== ticks);
   await page.keyboard.press("0");
   await page.mouse.dblclick(at(400, 150).x, at(400, 150).y);
+  await recordSaid(page);
   await page.keyboard.press("y");
   await drag(at(30, 250), at(30, 120));
-  check("tools: with y locked the y axis does not zoom and says so", (await yTicksOf(page)) === ticks && (await page.waitForFunction(() => /bloccato/.test(document.getElementById("status")?.textContent ?? "")).then(() => true)));
+  check("tools: with y locked the y axis does not zoom and says so", (await yTicksOf(page)) === ticks && (await saidMatch(page, /bloccato/)));
   await page.keyboard.press("y");
 }
 
