@@ -137,6 +137,8 @@ export function createCursors(announce) {
     },
     /** @returns {[number, number] | null} the span between the two cursors, low to high, or null unless both are placed */
     pair: () => (st.pos[0] !== null && st.pos[1] !== null ? [Math.min(st.pos[0], st.pos[1]), Math.max(st.pos[0], st.pos[1])] : null),
+    /** @returns {Array<{ x: number, y: number }>} wavenumber and value at the nearest point, for each cursor that is placed */
+    values: () => (s ? st.pos.flatMap((x) => (x === null ? [] : [{ x, y: s ? s.y[nearestIndex(s, x)] : 0 }])) : []),
     /** @returns {boolean} some cursor is shown */
     any: () => st.pos[0] !== null || st.pos[1] !== null,
     /** The `k` key: cursor 1 at `centre`, then cursor 2, then both away. @param {number} centre */

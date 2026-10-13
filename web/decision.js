@@ -1,6 +1,7 @@
 // @ts-check
 import { levelNumber, levelWord } from "./alerts.js";
 import { preloadLang, t } from "./i18n.js";
+import { mixtureCandidates, mixtureKeys } from "./mixture.js";
 import { LISTED } from "./results.js";
 import { candidateKey, decisionOf, getState, resultOf, update } from "./state.js";
 
@@ -13,9 +14,11 @@ import { candidateKey, decisionOf, getState, resultOf, update } from "./state.js
 /** How many candidates a level takes: [min, max]. Levels 1 and 2 name one substance, 3 one or two, 4 two or more, 5 none. @type {Record<number, [number, number]>} */
 export const TAKES = { 1: [1, 1], 2: [1, 1], 3: [1, 2], 4: [2, Infinity], 5: [0, 0] };
 
-/** The candidates the page lists, in order. @param {any} data @returns {any[]} */
+/** The candidates the page lists, in order, then the components of the mixture proposal that are not among them. @param {any} data @returns {any[]} */
 export function listed(data) {
-  return (data.candidates ?? []).slice(0, LISTED);
+  const top = (data.candidates ?? []).slice(0, LISTED);
+  const known = new Set(top.map(candidateKey));
+  return [...top, ...mixtureCandidates(data).filter((c) => !known.has(candidateKey(c)))];
 }
 
 /** The proposal as a draft: the proposed level and the candidates it rests on (the first one, or the two of an ambiguity). @param {any} data @returns {Draft} */
@@ -57,7 +60,7 @@ function setDraft(patch, announce) {
   const now = draftOf(s);
   if (!code || !now || decisionOf(s)) return;
   const next = { ...now, ...patch };
-  if (patch.level !== undefined && patch.level !== now.level) {
+  if (patch.level !== undefined && patch.level !== now.level && patch.keys === undefined) {
     const data = /** @type {any} */ (resultOf(s)).data;
     next.keys = patch.level === 5 ? [] : now.keys.length ? now.keys.slice(0, TAKES[patch.level][1]) : proposedDraft(data).keys;
   }
@@ -86,6 +89,11 @@ export function decisionActions(announce) {
       delete decisions[code];
       update({ decisions, draft: old ? { ...s.draft, [code]: { level: old.level, keys: old.keys } } : s.draft });
       announce(t("status.decision_revoked"));
+    },
+    // The mixture proposal taken as the decision: level 4 and its components. The chemist still signs.
+    acceptMixture: () => {
+      const r = resultOf(getState());
+      if (r) setDraft({ level: 4, keys: mixtureKeys(r.data) }, announce);
     },
     setSheetLang: async (/** @type {string} */ lang) => {
       await preloadLang(lang);

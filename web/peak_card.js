@@ -40,7 +40,7 @@ function signed(d) {
 /** @param {PeakRow} p @param {string | null} name @returns {HTMLElement} */
 function facts(p, name) {
   const delta = p.delta !== null && Math.abs(p.delta) >= MIN_DELTA_CM1 ? ` (Δ ${signed(p.delta)} cm⁻¹)` : "";
-  const by = p.by === null ? "—" : `${name ?? ""} ${approx(p.by)} cm⁻¹${delta}`.trim();
+  const by = p.by === null ? "—" : `${p.byName ?? name ?? ""} ${approx(p.by)} cm⁻¹${delta}`.trim();
   const width = p.fwhm === null ? shapeWord(p.shape) : t("card.shape_width", { fwhm: formatNumber(p.fwhm, 1), shape: shapeWord(p.shape) });
   const rows = [[t("table.peak_intensity"), intensityWord(p.intensity)], [t("table.peak_shape"), width], [t("table.peak_state"), `${stateWord(p.state)}${p.otherForm ? ` · ${t("card.other_form")}` : ""}`], [t("card.explained_by"), by]];
   return el("dl", { class: "card-facts" }, rows.flatMap(([k, v]) => [el("dt", {}, [k]), el("dd", {}, [v])]));
