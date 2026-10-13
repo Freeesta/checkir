@@ -95,6 +95,14 @@ pub fn detect_peaks(spectrum_json: &str, thresholds_json: &str) -> String {
     ftir_core::peaks::detect_json(spectrum_json, thresholds_json).unwrap_or_else(|e| e.json())
 }
 
+/// Measurement-quality checks of an absorbance spectrum (`measurement_quality/1` JSON): residual CO2, water vapour,
+/// negative bands; warnings only. An empty `thresholds_json` uses the embedded file; errors are `{error, error_key, params}`.
+#[wasm_bindgen]
+pub fn measurement_quality(spectrum_json: &str, thresholds_json: &str) -> String {
+    ftir_core::measurement_quality::check_json(spectrum_json, thresholds_json)
+        .unwrap_or_else(|e| e.json())
+}
+
 #[cfg(test)]
 mod test {
     #[test]
