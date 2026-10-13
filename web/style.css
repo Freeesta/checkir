@@ -156,6 +156,7 @@ body[data-panel="rail"] .panel-head { justify-content: center; }
 .files .files { padding-left: 1.1rem; border-left: 1px solid var(--border); margin-left: 0.5rem; }
 .file-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.35rem; }
 .file-select { flex: 1; display: inline-flex; align-items: center; gap: 0.35rem; min-height: 1.75rem; padding: 0.1rem 0.35rem; text-align: left; font: inherit; color: inherit; background: none; border: 0; border-left: 3px solid transparent; border-radius: 0.25rem; cursor: pointer; }
+.sampling-choice { max-width: 100%; min-height: 1.75rem; font-size: 0.9em; }
 .file-select[aria-current] { border-left-color: var(--color-brand); font-weight: 600; background: var(--surface); }
 .libs, .notes { list-style: none; margin: 0.5rem 0 0; padding: 0; font-size: 0.9rem; }
 .lib-item { padding: 0.35rem 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.1rem; }

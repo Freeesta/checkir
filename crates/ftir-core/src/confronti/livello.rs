@@ -10,10 +10,16 @@ use crate::passi::json::Value;
 /// True when the sample and the library of the first candidate are both said to be measured with a sampling method
 /// and the two differ (e.g. transmission against ATR: bands shift by 2-4 cm⁻¹ and the thresholds do not hold).
 pub fn sampling_differs(o: &Options, library: Option<&str>) -> bool {
-    match (o.sampling.as_deref(), library) {
-        (Some(a), Some(b)) => !a.trim().eq_ignore_ascii_case(b.trim()),
+    match (o.sampling.as_deref().and_then(said), library.and_then(said)) {
+        (Some(a), Some(b)) => !a.eq_ignore_ascii_case(b),
         _ => false,
     }
+}
+
+/// A sampling method that is actually named (not empty, not `unknown`).
+fn said(method: &str) -> Option<&str> {
+    let m = method.trim();
+    (!m.is_empty() && m != crate::campionamento::UNKNOWN).then_some(m)
 }
 
 /// Level from the first candidate's r, the margin over the first different substance and the coverage. A coverage

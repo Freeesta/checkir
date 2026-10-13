@@ -2,8 +2,9 @@
 Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 
 ## Formato `ftir-library/1`
-- Un pacchetto per libreria, in tre file: `manifest.json` (`ftir-library/1`: nome, versione, data, licenza SPDX, attribuzione it/en, `terms` it/en facoltativo = condizioni di un permesso di terzi, `{app}` sta per il nome del prodotto, griglia, `n_spectra`, `sha256_data`, `private` solo per le librerie importate dall'utente).
+- Un pacchetto per libreria, in tre file: `manifest.json` (`ftir-library/1`: nome, versione, data, licenza SPDX, attribuzione it/en, `terms` it/en facoltativo = condizioni di un permesso di terzi, `{app}` sta per il nome del prodotto, griglia, `n_spectra`, `sha256_data`, `sampling` (opzionale, vedi sotto), `private` solo per le librerie importate dall'utente).
 - `index.json` (`ftir-library-index/1`: una riga per spettro nell'ordine di `data.bin`: id, forma, sostanza, nomi it/en, classi, InChIKey, qualità `pass`/`warning`, tipo di provenienza).
+- `sampling` del manifesto: come sono stati misurati gli spettri, un id di `ftir-core/src/campionamento.rs`; assente o `unknown` = non indicato (compatibile all'indietro), un id fuori elenco = `library.manifest_invalid`.
 - `data.bin` (float32 little-endian, uno spettro dopo l'altro sulla griglia del manifesto; punto non misurato = NaN, i bit si conservano). Schemi in `docs/schemi/ftir-library-1.json` e `ftir-library-index-1.json`.
 - `native.bin` (facoltativo, float32 little-endian, nell'ordine di `index.json`: per spettro `[punti, risoluzione_cm1|NaN, x…, y…]`; i punti del file originale in assorbanza, solo conversione d'unità, mai ricampionati né lisciati). La pagina lo disegna come «il riferimento»; `data.bin` serve solo al calcolo. Una libreria senza `native.bin` (cache vecchia) non ha sovrapposizione finché non si reimporta.
 - Griglia di `Grid::STANDARD`: 650-3800 cm⁻¹, passo 2 (1576 punti, 6304 byte per spettro), la stessa di `griglia/1`; la decide MATCH.
@@ -17,7 +18,8 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - Limiti e SHA-256 si controllano PRIMA di decodificare; un byte cambiato → `library.sha256_mismatch`. Errori come `EngineError` con chiavi `library.<caso>` (tradotte in `web/lang/*.json`; il prefisso `library.` è dinamico in `controlla_lingue.py`).
 
 ## Costruttore (`tools/libreria/`)
-- `costruisci.rs` è il binario `costruisci-libreria` di `ftir-lib`: `cargo run --release -p ftir-lib --bin costruisci-libreria -- [--data data] [--out target/libreria] [--library checkir-community] [--date AAAA-MM-GG]` legge `data/substances/*/spectra/*.json+.jdx`, tiene gli spettri con `library.name` richiesto (una sola versione) e scrive `<out>/<libreria>/{manifest.json,index.json,data.bin}`.
+- `costruisci.rs` è il binario `costruisci-libreria` di `ftir-lib`: `cargo run --release -p ftir-lib --bin costruisci-libreria -- [--data data] [--out target/libreria] [--library checkir-community] [--date AAAA-MM-GG] [--sampling atr_diamond|atr_ge|atr_znse|transmission_kbr|unknown]` legge `data/substances/*/spectra/*.json+.jdx`, tiene gli spettri con `library.name` richiesto (una sola versione) e scrive `<out>/<libreria>/{manifest.json,index.json,data.bin}`.
+- Il `sampling` del manifesto costruito è quello che hanno TUTTI gli spettri (dal `technique` della scheda: ATR con cristallo diamond/Ge/ZnSe; dove la scheda non lo dice vale `--sampling`, il predefinito delle librerie private); se differiscono o nessuno lo dice, il manifesto non ha `sampling`.
 - `librerie.json`: elenco delle librerie da pubblicare (`id`, `enabled`; senza `license` = comunitaria CC BY 4.0, altrimenti `license`, `attribution` it/en obbligatoria e `terms` it/en); `--config` le costruisce tutte e scrive il manifesto generale.
 - `riferimento.py` (a mano, fuori dalla CI; NumPy) riscrive `crates/ftir-lib/tests/golden/resample.json`: tre file JCAMP (asse discendente passo 1.93, ascendente passo 1.03 più largo della griglia, trasmittanza % passo 4) con il risultato di `numpy.interp`.
 

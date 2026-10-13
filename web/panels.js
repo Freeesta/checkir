@@ -1,6 +1,7 @@
 // @ts-check
 import { actionById } from "./actions.js";
 import { renderFolder } from "./cartella_ui.js";
+import { samplingChoice } from "./campionamento.js";
 import { actionButton } from "./controls.js";
 import { el, icon, keepFocus, setIcon } from "./dom.js";
 import { fileRange } from "./files.js";
@@ -45,6 +46,7 @@ function fileRow(f, active, ctx) {
   close.addEventListener("click", () => ctx.closeFile(f.code));
   attachTip(close, () => t("file.close_one", { code: f.code }));
   const row = el("div", { class: "file-row" }, [select, close]);
+  if (f.role === "sample") row.append(samplingChoice(f));
   if (f.note) row.append(el("span", { class: "note" }, [f.note]));
   if (f.derived) row.append(el("span", { class: "note" }, [derivedText(f.derived)]));
   for (const w of f.warnings) row.append(el("span", { class: "warn" }, [icon("warning"), t(w.key, w.params)]));

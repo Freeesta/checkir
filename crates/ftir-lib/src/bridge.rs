@@ -72,6 +72,7 @@ fn identity(source: &str) -> EngineResult<Identity> {
         terms_it: None,
         terms_en: None,
         private: matches!(v.get("private"), Some(Value::Bool(true))),
+        sampling: crate::sampling(&v, KEY)?,
     })
 }
 

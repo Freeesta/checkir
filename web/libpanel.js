@@ -1,4 +1,5 @@
 // @ts-check
+import { SAMPLING_IDS, samplingName } from "./campionamento.js";
 import { APP_NAME } from "./appname.js";
 import { proposedLibraryName } from "./candidati.js";
 import { el, icon } from "./dom.js";
@@ -7,6 +8,7 @@ import { attachTip } from "./tooltip.js";
 
 /** Name typed for the next imported library; kept here so a redraw of the panel does not lose it. */
 let typedName = "";
+let typedSampling = "unknown";
 /** @type {import("./actions.js").Ctx | null} */
 let current = null;
 /** @type {{ files: HTMLInputElement, folder: HTMLInputElement } | null} */
@@ -23,7 +25,7 @@ function makePicker(folder) {
   input.addEventListener("change", () => {
     const chosen = [...(input.files ?? [])];
     input.value = "";
-    if (chosen.length) current?.importLibrary(chosen, typedName.trim() || proposedLibraryName(chosen) || t("library.import.name_default"));
+    if (chosen.length) current?.importLibrary(chosen, typedName.trim() || proposedLibraryName(chosen) || t("library.import.name_default"), typedSampling);
   });
   document.body.append(input);
   return input;
@@ -89,10 +91,14 @@ export function renderLibraries(body, s, ctx) {
   const name = el("input", { type: "text", id: "lib-name", class: "lib-name", maxlength: "60", autocomplete: "off", placeholder: t("library.import.name_placeholder") });
   name.value = typedName;
   name.addEventListener("input", () => (typedName = name.value));
+  const how = el("select", { id: "lib-sampling", class: "chip sampling-choice", "aria-label": t("library.import.sampling_label") }, SAMPLING_IDS.map((id) => el("option", { value: id }, [`${t("sampling.prefix")} ${samplingName(id)}`])));
+  how.value = typedSampling;
+  how.addEventListener("change", () => (typedSampling = how.value));
   body.append(
     el("div", { class: "row" }, [files, folder]),
     el("label", { for: "lib-name", class: "note" }, [t("library.import.name_label")]),
     name,
+    how,
     el("p", { class: "note" }, [icon("lock"), t("library.import.private_note")]),
   );
   if (s.libraryJob) body.append(progressBlock(s.libraryJob, ctx));

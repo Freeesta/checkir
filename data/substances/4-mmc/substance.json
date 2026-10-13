@@ -1,0 +1,66 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-mmc",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-MMC",
+      "synonyms": [
+        "mephedrone",
+        "4-methylmethcathinone"
+      ]
+    },
+    "it": {
+      "preferred": "4-MMC",
+      "synonyms": [
+        "mefedrone",
+        "4-metilmetcatinone"
+      ]
+    }
+  },
+  "iupac": "2-(methylamino)-1-(4-methylphenyl)propan-1-one",
+  "formula": "C11H15NO",
+  "molar_mass_g_mol": 177.24,
+  "smiles": "CC1=CC=C(C=C1)C(=O)C(C)NC",
+  "inchi": "InChI=1S/C11H15NO/c1-8-4-6-10(7-5-8)11(13)9(2)12-3/h4-7,9,12H,1-3H3",
+  "inchikey": "YELGFTGWJGBAQU-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q262613",
+    "chebi": "CHEBI:59331",
+    "cas": "1189805-46-6",
+    "pubchem_cid": 45266826
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
