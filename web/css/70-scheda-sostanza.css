@@ -1,0 +1,4 @@
+/* Substance sheet (dialog) */
+.substance-sheet h3 { font-size: 1rem; margin: 1rem 0 0.25rem; }
+.substance-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
+.sheet-sources { font-size: 0.85rem; color: var(--text-muted); }

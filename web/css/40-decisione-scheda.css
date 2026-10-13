@@ -1,0 +1,37 @@
+/* Decision form and counselling sheet (section 5), and talk mode. The sheet host exists for print and talk mode only. */
+.decision { margin: 0 0 0.5rem; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 0.4rem; }
+.decision legend { display: flex; align-items: center; gap: 0.35rem; padding: 0 0.3rem; font-weight: 600; }
+.pick-levels, .pick-cands { display: flex; flex-direction: column; margin-bottom: 0.4rem; }
+.pick { display: flex; align-items: center; gap: 0.5rem; min-height: 1.75rem; padding: 0.1rem 0; }
+.pick input { width: 1.25rem; height: 1.25rem; flex: none; }
+.decision .hint { margin: 0; color: var(--text-muted); font-size: 0.85rem; }
+.decision-state { display: flex; align-items: center; gap: 0.35rem; margin: 0 0 0.5rem; font-size: 0.9rem; }
+.lang-group { display: flex; gap: 0.25rem; margin-bottom: 0.5rem; }
+.lang-group .btn[aria-pressed="true"] { background: var(--surface); box-shadow: inset 0 -3px 0 var(--color-brand); font-weight: 700; }
+.sheet { position: relative; padding: 0.6rem 0.75rem; border: 1px solid var(--border); border-radius: 0.4rem; background: var(--bg); color: var(--text); font-size: 0.9rem; }
+.sheet-host { display: none; }
+.sheet h2, .sheet h3 { margin: 0.6rem 0 0.2rem; font-size: 1em; }
+.sheet h2 { margin: 0; font-size: 1.15em; }
+.sheet p, .sheet ul { margin: 0.15rem 0; }
+.sheet ul { padding: 0; list-style: none; }
+.sheet-head { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 0.25rem 0.6rem; }
+.sheet-head .sheet-meta { grid-column: 1 / -1; }
+.sheet-meta { display: grid; grid-template-columns: auto 1fr; gap: 0 0.6rem; margin: 0; }
+.sheet-meta dt { color: var(--text-muted); }
+.sheet-meta dd { margin: 0; }
+.sheet .level-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; }
+.sheet-strong { font-weight: 700; }
+.sheet-alerts li { display: flex; gap: 0.35rem; padding: 0.1rem 0; overflow-wrap: anywhere; }
+.sheet-alerts .icon { flex: none; align-self: flex-start; color: var(--color-alert); }
+.signature { display: flex; align-items: flex-end; gap: 0.6rem; margin-top: 0.8rem; }
+.sign-line { flex: 1; border-bottom: 1px solid var(--text); height: 1.5rem; }
+.sheet[data-draft="1"]::after { content: attr(data-watermark); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transform: rotate(-24deg); color: var(--border); font-size: 2.4rem; font-weight: 800; text-align: center; pointer-events: none; }
+.sheet-banner { margin: 0 0 0.4rem; padding: 0.2rem 0.5rem; border: 2px dashed var(--text); font-weight: 700; }
+body[data-talk] > :not(.sheet-host):not(#status) { display: none; }
+body[data-talk] .sheet-host { display: block; max-width: 56rem; margin: 0 auto; padding: 1rem; }
+body[data-talk] .sheet { padding: 1.25rem 1.5rem; font-size: 1.35rem; line-height: 1.5; }
+body[data-talk] .sheet-meta { font-size: 0.8em; }
+.talk-exit { position: sticky; top: 0.5rem; margin-bottom: 0.5rem; }
+.sheet-host .talk-exit { display: none; }
+body[data-talk] .sheet-host .talk-exit { display: inline-flex; }
+.dev-bar { position: fixed; right: 0.5rem; bottom: 3.5rem; z-index: 5; display: flex; gap: 0.25rem; padding: 0.25rem; border: 1px dashed var(--text); background: var(--bg); }

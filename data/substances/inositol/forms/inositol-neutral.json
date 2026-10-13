@@ -1,0 +1,24 @@
+{
+  "schema": "ftir-form/1",
+  "id": "inositol-neutral",
+  "substance": "inositol",
+  "form_type": "unspecified",
+  "stereo": "unspecified",
+  "inchikey_form": "CDAISMWEOUEBRE-GPIVLXJGSA-N",
+  "notes": {
+    "en": "myo-inositol, neutral molecule.",
+    "it": "mio-inositolo, molecola neutra."
+  },
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

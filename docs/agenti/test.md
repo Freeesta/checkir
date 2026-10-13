@@ -12,7 +12,7 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri.
 - `tests_e2e/registri.mjs` (conformità di `ACTIONS`/`PANELS`, senza browser, chiamato da `fumo.mjs`).
 - `tests_e2e/prova.mjs` (la Prova della libreria: libreria sintetica con un gemello noto, report, CSV, niente rete; chiamato da `fumo.mjs`).
 - `tests_e2e/riservatezza.mjs` (T1 statico + T2 canarino, vedi `riservatezza.md`; passo a parte del job `web`).
-- `tests_e2e/fumo.mjs` (Playwright + axe-core; `BROWSER` sceglie il motore del browser, `CHROMIUM_PATH` un eseguibile locale; `SHARD=i/n` esegue gli scenari i, i+n, … dell'elenco `scenarios()`: la CI ne lancia 3 in parallelo, senza `SHARD` gira tutto. Uno scenario nuovo = una riga in `scenarios()`).
+- `tests_e2e/fumo.mjs` (Playwright + axe-core; `BROWSER` sceglie il motore del browser, `CHROMIUM_PATH` un eseguibile locale; `SHARD=i/n` esegue gli scenari i, i+n, … dell'elenco `scenarios()` (prove del guscio, poi ogni `tests_e2e/scenari/*.mjs` in ordine di nome); la CI ne lancia 3 in parallelo, senza `SHARD` gira tutto. Ogni file di `scenari/` ha un `export default ({ browser, base, check, axe }) => …` e di norma richiama lo scenario del suo file d'area. Uno scenario nuovo = un file (prefisso numerico per l'ordine, es. `250-nome.mjs`), senza toccare `fumo.mjs`).
 
 ## Cache e concorrenza della CI
 - Le cache (`rust-`, `site-`: cargo, `target`, `wasm-bindgen`) si SALVANO solo nei push su main (`actions/cache/save`) e si ripristinano in ogni corsa con `restore-keys`; i rami delle PR leggono quelle di main. `node_modules` e i browser Playwright sono in `.github/actions/node-deps` (chiave = hash di `package-lock.json`). Il job `site` salva la cache che usa anche `pages.yml`.

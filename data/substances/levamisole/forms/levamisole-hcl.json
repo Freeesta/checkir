@@ -1,0 +1,26 @@
+{
+  "schema": "ftir-form/1",
+  "id": "levamisole-hcl",
+  "substance": "levamisole",
+  "form_type": "salt",
+  "counterion": "chloride",
+  "stoichiometry": "1:1",
+  "stereo": "S",
+  "inchikey_form": "LAZPBGZRMVRFKY-HNCPQSOCSA-N",
+  "notes": {
+    "en": "Hydrochloride of the (S) enantiomer.",
+    "it": "Cloridrato dell'enantiomero (S)."
+  },
+  "sources": [
+    {
+      "field": "inchikey_form",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "form_type",
+      "source": "swgdrug-ir-library",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
