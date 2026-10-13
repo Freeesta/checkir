@@ -173,6 +173,7 @@ async function fallbackScenario(browser, base, check, axe) {
   const page = await ctx.newPage();
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
+  await page.waitForSelector('[data-library="swgdrug-ir"]', { state: "attached" });
   await page.click('.folder button[aria-label^="Spiega"]');
   check("folder (no API): only the latest-measurement button, with the limits said behind the info button", (await page.locator("#folder-choose").count()) === 0 && (await page.locator("#folder-last").count()) === 1 && ((await page.textContent("body")) ?? "").includes("Chrome o Edge"));
   check("folder (no API): axe is clean", (await axe(page)).length === 0);
