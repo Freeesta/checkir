@@ -52,7 +52,6 @@
 .theory table.data th, .theory table.data td { overflow-wrap: anywhere; padding: 0.3rem 0.4rem; border: 1px solid var(--border); text-align: left; font-variant-numeric: tabular-nums; }
 .theory details { margin: 0.75rem 0; }
 .theory summary { cursor: pointer; font-weight: 600; min-height: 1.75rem; }
-.limit-note { margin: 0.75rem 0; padding: 0.6rem 0.9rem; border: 2px solid var(--color-alert); border-radius: 0.4rem; background: var(--bg); }
 .for-chemists { padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 0.4rem; }
 .sources { padding-left: 1.25rem; }
 .pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }

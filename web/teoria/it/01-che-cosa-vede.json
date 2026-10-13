@@ -6,7 +6,7 @@
  "key_message": "La luce infrarossa fa vibrare i legami: ogni sostanza ha la sua impronta, ma un componente sotto circa il 5 % può non comparire.",
  "body": [
   "Mettiamo un po' di polvere su un piccolo diamante e la illuminiamo con luce [[mid-infrared|infrarossa]], invisibile ai nostri occhi. I legami tra gli atomi vibrano e assorbono solo certi «colori» di questa luce. Lo spettro è il disegno di quali colori sono stati assorbiti: ogni sostanza ha il suo.",
-  "L'FTIR però vede bene solo ciò che c'è in quantità: sotto il 5-10 % circa un componente può non comparire, e le sostanze attive a dosi piccolissime possono sfuggire del tutto. Lo spettro è un indizio che la persona esperta valuta; non è una diagnosi."
+  "L'FTIR però vede bene solo ciò che c'è in quantità: sotto il 5-10 % circa un componente può non comparire, e le sostanze attive a dosi piccolissime possono sfuggire del tutto."
  ],
  "for_chemists": [
   "Lo spettro della figura è in [[absorbance|assorbanza]] (A = −log₁₀T), misurato in ATR a diamante con una riflessione e risoluzione 4 cm⁻¹. Il [[mid-infrared|medio infrarosso]] va da 4000 a 400 cm⁻¹, circa 48–4.8 kJ/mol: basta per far vibrare i legami, non per romperli.",
@@ -56,10 +56,6 @@
     ]
    ]
   }
- },
- "limit_note": {
-  "title": "Che cosa l'FTIR non vede",
-  "text": "Componenti sotto il 5-10 % circa; sostanze potenti a dosi minime (come fentanili e nitazeni); la quantità di una sostanza, perché lo spettro dice che cosa c'è, non quanto. Per questo si usano anche altri test e, quando serve, un laboratorio."
  },
  "further_reading": [
   "libretexts-ir-theory"

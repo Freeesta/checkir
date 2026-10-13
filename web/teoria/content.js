@@ -7,7 +7,7 @@ import { el } from "../dom.js";
  * @typedef {{ id: string, labels: Record<string, string>, items?: Item[] }} Interactive
  * @typedef {{ caption: string, columns: string[], rows: string[][] }} DataTable
  * @typedef {{ id: string, alt: string, caption: string, labels?: Record<string, string>, data_table?: DataTable }} Figure
- * @typedef {{ schema: string, id: string, n: number, title: string, key_message: string, body: string[], for_chemists: string[], figure: Figure, limit_note?: { title: string, text: string }, interactive?: Interactive, further_reading: string[], sources: string[], glossary_terms: string[], status: string, reviewers: string[] }} Chapter
+ * @typedef {{ schema: string, id: string, n: number, title: string, key_message: string, body: string[], for_chemists: string[], figure: Figure, interactive?: Interactive, further_reading: string[], sources: string[], glossary_terms: string[], status: string, reviewers: string[] }} Chapter
  * @typedef {{ id: string, term: string, term_other_lang: string, definition: string, see_also: string[] }} Entry
  * @typedef {{ id: string, type: string, title: string, url?: string, license?: string }} Source
  * @typedef {{ n: number, id: string, slug: string, title: string }} IndexEntry

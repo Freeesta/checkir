@@ -40,8 +40,6 @@ async function indexAndChapters(browser, base, check, axe) {
     check(`theory ${n}: sources with licence on the links and nothing outside the site`, (await page.locator(".sources").count()) >= 1 && outside.length === 0, outside.join(", "));
   }
   check("theory: each chapter was fetched only when opened", loaded.length === CHAPTERS, String(loaded.length));
-  await go(page, base, "1");
-  check("theory 1: the box with the limits is a note", (await page.locator("aside.limit-note[role=note]").count()) === 1);
   await go(page, base, "glossario");
   const entries = await page.locator(".glossary .entry").count();
   check("theory: the glossary has 60 terms", entries === 60, String(entries));

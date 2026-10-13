@@ -23,7 +23,7 @@ const host = /** @type {HTMLElement} */ (document.getElementById("view"));
 function renderIndex(chapters) {
   const title = el("h1", { id: "view-title", tabindex: "-1" }, [t("teoria.title")]);
   const list = el("ol", { class: "chapters" }, chapters.map((c) => el("li", {}, [el("a", { href: `#${c.n}` }, [c.title])])));
-  host.replaceChildren(title, el("p", { class: "draft", role: "note" }, [t("teoria.draft")]), el("p", {}, [t("teoria.intro")]), el("nav", { "aria-label": t("teoria.nav") }, [list]), el("p", {}, [el("a", { href: "#glossario" }, [t("teoria.glossary.title")])]));
+  host.replaceChildren(title, el("p", {}, [t("teoria.intro")]), el("nav", { "aria-label": t("teoria.nav") }, [list]), el("p", {}, [el("a", { href: "#glossario" }, [t("teoria.glossary.title")])]));
   return title;
 }
 

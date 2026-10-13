@@ -78,7 +78,6 @@ export function renderChapter(host, ch, env) {
     el("p", { class: "key-message" }, [el("strong", {}, [ch.key_message])]),
     ...body,
     figureBlock(ch, env.ctx),
-    ...(ch.limit_note ? [el("aside", { class: "limit-note", role: "note" }, [el("strong", {}, [`${ch.limit_note.title}. `]), ch.limit_note.text])] : []),
     chem,
     ...(used.length ? [el("h3", {}, [t("teoria.sources")]), el("ul", { class: "sources" }, used.map((s) => sourceItem(s, false)))] : []),
     ...(more.length ? [el("h3", {}, [t("teoria.further")]), el("ul", { class: "sources" }, more.map((s) => sourceItem(s, true)))] : []),

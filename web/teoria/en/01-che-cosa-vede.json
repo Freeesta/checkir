@@ -6,7 +6,7 @@
  "key_message": "Infrared light makes bonds vibrate: every substance has its own fingerprint, but a component below about 5 % may not show up.",
  "body": [
   "We put a little powder on a small diamond and shine [[mid-infrared|infrared]] light on it, invisible to our eyes. The bonds between atoms vibrate and absorb only certain «colours» of this light. The spectrum is the picture of which colours were absorbed: every substance has its own.",
-  "But FTIR only sees well what is present in quantity: below about 5-10 % a component may not show up, and substances that are active at tiny doses may be missed altogether. The spectrum is a clue that the expert person weighs; it is not a diagnosis."
+  "But FTIR only sees well what is present in quantity: below about 5-10 % a component may not show up, and substances that are active at tiny doses may be missed altogether."
  ],
  "for_chemists": [
   "The spectrum in the figure is in [[absorbance|absorbance]] (A = −log₁₀T), measured by diamond ATR with one reflection at 4 cm⁻¹ resolution. The [[mid-infrared|mid-infrared]] runs from 4000 to 400 cm⁻¹, about 48–4.8 kJ/mol: enough to make bonds vibrate, not to break them.",
@@ -56,10 +56,6 @@
     ]
    ]
   }
- },
- "limit_note": {
-  "title": "What FTIR does not see",
-  "text": "Components below about 5-10 %; potent substances at tiny doses (such as fentanyls and nitazenes); the amount of a substance, because the spectrum tells what is there, not how much. This is why other tests are used too and, when needed, a laboratory."
  },
  "further_reading": [
   "libretexts-ir-theory"

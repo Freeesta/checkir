@@ -152,30 +152,6 @@
       ],
       "additionalProperties": false
     },
-    "limit_note": {
-      "description": "A box with the limits that the chapter must say.",
-      "description_it": "Un riquadro con i limiti che il capitolo deve dire.",
-      "type": "object",
-      "properties": {
-        "title": {
-          "description": "Title of the box.",
-          "description_it": "Titolo del riquadro.",
-          "type": "string",
-          "minLength": 1
-        },
-        "text": {
-          "description": "Text of the box.",
-          "description_it": "Testo del riquadro.",
-          "type": "string",
-          "minLength": 1
-        }
-      },
-      "required": [
-        "title",
-        "text"
-      ],
-      "additionalProperties": false
-    },
     "interactive": {
       "description": "An interactive figure; the engine does the calculation, the page draws.",
       "description_it": "Una figura interattiva: il calcolo è del motore, la pagina disegna.",

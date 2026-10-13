@@ -53,7 +53,7 @@ def shape(ch: dict) -> dict:
         "n": ch["n"], "id": ch["id"], "figure": fig["id"], "labels": sorted(fig.get("labels", {})),
         "table": [len(fig["data_table"]["columns"]), len(fig["data_table"]["rows"])] if "data_table" in fig else None,
         "interactive": None if inter is None else [inter["id"], sorted(inter["labels"]), [(i["id"], i.get("params")) for i in inter.get("items", [])]],
-        "limit_note": "limit_note" in ch, "paragraphs": [len(ch["body"]), len(ch["for_chemists"])],
+        "paragraphs": [len(ch["body"]), len(ch["for_chemists"])],
         "refs": [ch["sources"], ch["further_reading"], ch["glossary_terms"], ch["status"]],
         "links": sorted({m[0] for m in LINK.findall(" ".join(ch["body"] + ch["for_chemists"]))}),
     }
