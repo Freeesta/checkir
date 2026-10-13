@@ -5,6 +5,13 @@ import { duplicatedActions } from "./registri.mjs";
 
 const SECTIONS = ["files", "libraries", "results", "peaks", "sheet"];
 
+/** Load a file and wait for its own result: the chip shows its code first, so a result left over from the previous file is not taken for the new one. */
+async function loadAndWait(page, name, code) {
+  await page.setInputFiles("input[type=file]", [{ name, mimeType: "application/octet-stream", buffer: jcamp(name, BETA) }]);
+  await page.waitForFunction((c) => document.querySelector('[data-chip="file"]')?.textContent?.trim().startsWith(c), code);
+  await page.waitForSelector(".result[data-level]", { timeout: 20000 });
+}
+
 async function openSections(page) {
   return page.evaluate(() => [...document.querySelectorAll("details[data-panel][open]")].map((d) => d.getAttribute("data-panel")));
 }
@@ -32,12 +39,10 @@ async function oneButtonScenario(page, check, axe) {
 /** E5: a result opens the candidates from an early section, never takes a later one; the subtraction closes the decision. */
 async function followScenario(page, check) {
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.setInputFiles("input[type=file]", [{ name: "beta.jdx", mimeType: "application/octet-stream", buffer: jcamp("beta", BETA) }]);
-  await page.waitForSelector(".result[data-level]", { timeout: 20000 });
+  await loadAndWait(page, "beta.jdx", "C2");
   check("follow: a result arriving opens the candidates from an early section", (await openSections(page)).join() === "results", (await openSections(page)).join());
   await page.locator('details[data-panel="sheet"] summary').click();
-  await page.setInputFiles("input[type=file]", [{ name: "beta2.jdx", mimeType: "application/octet-stream", buffer: jcamp("beta2", BETA) }]);
-  await page.waitForSelector(".result[data-level]", { timeout: 20000 });
+  await loadAndWait(page, "beta2.jdx", "C3");
   await page.waitForTimeout(500);
   check("follow: a result does not take the panel away from the sheet", (await openSections(page)).join() === "sheet", (await openSections(page)).join());
   await page.keyboard.press("d");
