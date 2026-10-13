@@ -14,6 +14,7 @@ import { librariesPureScenario, librariesScenario, offlineScenario } from "./lib
 import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
 import { collaudoScenario } from "./collaudo.mjs";
+import { collaudoCScenario } from "./collaudo_c.mjs";
 import { exportScenario } from "./esporta.mjs";
 import { rowMenuScenario } from "./menu_righe.mjs";
 import { recallScenario } from "./richiamo.mjs";
@@ -343,6 +344,7 @@ function scenarios(browser) {
     () => cleanScenario(browser, base, check, axe),
     () => peaksScenario(browser, base, check, axe),
     () => collaudoScenario(browser, base, check),
+    () => collaudoCScenario(browser, base, check),
     () => inverseScenario(browser, base, check, axe),
     () => subtractionScenario(browser, base, check, axe),
     () => toolsScenario(browser, base, check, axe),

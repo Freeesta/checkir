@@ -578,3 +578,13 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .report-host { display: none; }
 .chart-menu button { display: flex; justify-content: space-between; gap: 1.5rem; }
 .menu-key { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+
+/* Layout pass: full-width chart, regions strip, coverage only when partial, test bar out of the way */
+#chart { max-width: none; }
+.region-label { paint-order: stroke; stroke: var(--bg); stroke-width: 3px; stroke-linejoin: round; }
+.cov-none { display: none; }
+@media (min-width: 46em) {
+  .candidates .cov-none { display: block; grid-area: cov; }
+}
+.dev-bar { position: static; justify-content: flex-end; margin: 0.5rem; }

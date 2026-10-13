@@ -89,8 +89,9 @@ function labelGroup(key, i, current, ctx) {
   return group;
 }
 
-/** @param {number} value 0..1 @param {string} label @returns {HTMLMeterElement} */
+/** The coverage bar tells candidates apart only when it is below 100 %: a full bar is left out (the cell stays empty so the columns keep their place). @param {number} value 0..1 @param {string} label @returns {HTMLElement} */
 function coverageMeter(value, label) {
+  if (value >= 0.995) return el("span", { class: "cov-none", "aria-hidden": "true" });
   const m = /** @type {HTMLMeterElement} */ (el("meter", { min: "0", max: "1", "aria-label": label }));
   m.value = Math.max(0, Math.min(1, value));
   return m;
