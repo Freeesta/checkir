@@ -16,7 +16,7 @@ Composto di sintesi, descritto come droga di design. [f:johansen2012]
 
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Solo dati su animali; non è stato trovato alcuno studio umano controllato sugli effetti della 3-FA. Nel topo la 3-fluoroanfetamina ha prodotto una stimolazione locomotoria dipendente da dose e tempo, con un picco simile a quello della metanfetamina; nel ratto addestrato a distinguere la metanfetamina dalla soluzione salina l'ha sostituita completamente. [f:anchondo2025]
 
 ## doses
 
@@ -38,7 +38,7 @@ Chiedere di altre sostanze e di farmaci: le linee d'indirizzo UBC sconsigliano d
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:swgdrug-3fa] [f:smith-benzene] [f:johansen2012] [f:kranenburg2020] [f:unodc-ewa] [f:checkir-classification] [f:luethi2019] [f:ubc-counselling-guidelines] [f:inan2020]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:swgdrug-3fa] [f:smith-benzene] [f:johansen2012] [f:kranenburg2020] [f:unodc-ewa] [f:checkir-classification] [f:luethi2019] [f:ubc-counselling-guidelines] [f:inan2020] [f:anchondo2025]
 
 ## license
 
