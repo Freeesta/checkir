@@ -105,7 +105,7 @@ export async function areaScenario(browser, base, check, axe) {
     check(`area: axe has no violations (${scheme}, it)`, v.length === 0, v.join(", "));
   }
   await page.click('[data-lang="en"]');
-  await page.waitForFunction(() => document.documentElement.lang === "en");
+  await page.waitForFunction(() => document.body.dataset.langReady === "en");
   const ven = await axe(page);
   check("area: axe has no violations (en)", ven.length === 0, ven.join(", "));
   check("area: English table title and candidates", /\(\d+ rows\)/.test((await page.textContent("#table-section > summary")) ?? "") && /Candidates|Most similar/.test((await page.textContent(".cands-title")) ?? ""));
