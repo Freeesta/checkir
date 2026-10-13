@@ -6,7 +6,8 @@
       "type": "institution",
       "title": "UNODC Early Warning Advisory on New Psychoactive Substances: FAQs (substance groups)",
       "url": "https://www.unodc.org/LSS/Page/NPS/FAQs",
-      "consulted": "2026-10-12"
+      "consulted": "2026-10-12",
+      "tier": "agency"
     },
     {
       "id": "checkir-classification",
@@ -26,7 +27,8 @@
       "title": "Wikidata (chemical identity)",
       "url": "https://www.wikidata.org/",
       "consulted": "2026-10-12",
-      "license": "CC0-1.0"
+      "license": "CC0-1.0",
+      "tier": "database"
     },
     {
       "id": "chebi",
@@ -34,7 +36,8 @@
       "title": "ChEBI (chemical identity)",
       "url": "https://www.ebi.ac.uk/chebi/",
       "consulted": "2026-10-12",
-      "license": "CC-BY-4.0"
+      "license": "CC-BY-4.0",
+      "tier": "database"
     },
     {
       "id": "coates2000",
@@ -94,7 +97,8 @@
       "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-v-amine-salts",
       "archive_url": "https://web.archive.org/web/20260209085920/https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-v-amine-salts",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-hydrocarbons",
@@ -107,7 +111,8 @@
       "url": "https://www.spectroscopyonline.com/view/the-big-review-iv-hydrocarbons",
       "archive_url": "https://web.archive.org/web/20261008091911/https://www.spectroscopyonline.com/view/the-big-review-iv-hydrocarbons",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-co-bond",
@@ -119,7 +124,8 @@
       "year": 2025,
       "url": "https://www.spectroscopyonline.com/view/the-big-review-v-the-c-o-bond",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-carbonyl",
@@ -131,7 +137,8 @@
       "year": 2025,
       "url": "https://www.spectroscopyonline.com/view/the-big-review-vi-carbonyl-compounds",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-nitrogen",
@@ -144,7 +151,8 @@
       "url": "https://www.spectroscopyonline.com/view/the-big-review-viii-organic-nitrogen-compounds",
       "archive_url": "https://web.archive.org/web/20261008091910/https://www.spectroscopyonline.com/view/the-big-review-viii-organic-nitrogen-compounds",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-nitro",
@@ -157,7 +165,8 @@
       "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-x-nitro-groups-an-explosive-proposition",
       "archive_url": "https://web.archive.org/web/20260130134546/https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-x-nitro-groups-an-explosive-proposition",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-benzene",
@@ -170,7 +179,8 @@
       "url": "https://www.spectroscopyonline.com/view/distinguishing-structural-isomers-mono-and-di-substituted-benzene-rings",
       "archive_url": "https://web.archive.org/web/20250926005911/https://www.spectroscopyonline.com/view/distinguishing-structural-isomers-mono-and-di-substituted-benzene-rings",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-fingers",
@@ -183,7 +193,8 @@
       "url": "https://www.spectroscopyonline.com/view/benzene-fingers-part-i-overtone-and-combination-bands",
       "archive_url": "https://web.archive.org/web/20260825120404/https://www.spectroscopyonline.com/view/benzene-fingers-part-i-overtone-and-combination-bands",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-ethers",
@@ -196,7 +207,8 @@
       "url": "https://www.spectroscopyonline.com/view/c-o-bond-iii-ethers-knockout",
       "archive_url": "https://web.archive.org/web/20260907060910/https://www.spectroscopyonline.com/view/c-o-bond-iii-ethers-knockout",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-esters",
@@ -209,7 +221,8 @@
       "url": "https://www.spectroscopyonline.com/view/co-bond-part-vi-esters-and-rule-three",
       "archive_url": "https://web.archive.org/web/20260603110406/https://www.spectroscopyonline.com/view/co-bond-part-vi-esters-and-rule-three",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-arom-esters",
@@ -221,7 +234,8 @@
       "year": 2018,
       "url": "https://www.spectroscopyonline.com/view/co-bond-part-vii-aromatic-esters-organic-carbonates-and-more-rule-three",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-inorg1",
@@ -234,7 +248,8 @@
       "url": "https://www.spectroscopyonline.com/view/inorganics-i-introduction",
       "archive_url": "https://web.archive.org/web/20261008091915/https://www.spectroscopyonline.com/view/inorganics-i-introduction",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-inorg2",
@@ -247,7 +262,8 @@
       "url": "https://www.spectroscopyonline.com/view/inorganics-ii-the-spectra",
       "archive_url": "https://web.archive.org/web/20261008091914/https://www.spectroscopyonline.com/view/inorganics-ii-the-spectra",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-inorg3",
@@ -260,7 +276,8 @@
       "url": "https://www.spectroscopyonline.com/view/inorganics-iii-even-more-spectra-and-the-grand-finale",
       "archive_url": "https://web.archive.org/web/20261008091913/https://www.spectroscopyonline.com/view/inorganics-iii-even-more-spectra-and-the-grand-finale",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-halogen",
@@ -273,7 +290,8 @@
       "url": "https://www.spectroscopyonline.com/view/halogenated-organic-compounds",
       "archive_url": "https://web.archive.org/web/20261008091915/https://www.spectroscopyonline.com/view/halogenated-organic-compounds",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-amines23",
@@ -286,7 +304,8 @@
       "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-iii-secondary-and-tertiary-amines",
       "archive_url": "https://web.archive.org/web/20260114012452/https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-iii-secondary-and-tertiary-amines",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-imides",
@@ -298,7 +317,8 @@
       "year": 2020,
       "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-viii-imides",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "smith-amides",
@@ -311,7 +331,8 @@
       "url": "https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-vii-amides-rest-story",
       "archive_url": "https://web.archive.org/web/20260113204621/https://www.spectroscopyonline.com/view/organic-nitrogen-compounds-vii-amides-rest-story",
       "consulted": "2026-10-12",
-      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied"
+      "license": "© MJH Life Sciences; cited as the source of numbers only, text not copied",
+      "tier": "secondary"
     },
     {
       "id": "goncalves2021",
@@ -370,7 +391,8 @@
       "url": "https://www.swgdrug.org/Monographs/COCAINE.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
       "consulted": "2026-10-12",
-      "archive_url": "https://web.archive.org/web/20261005185553/https://www.swgdrug.org/Monographs/COCAINE.pdf"
+      "archive_url": "https://web.archive.org/web/20261005185553/https://www.swgdrug.org/Monographs/COCAINE.pdf",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-amphetamine",
@@ -378,7 +400,8 @@
       "title": "SWGDRUG monograph: Amphetamine (IR: HCl, sulfate, phosphate, ATR)",
       "url": "https://www.swgdrug.org/Monographs/AMPHETAMINE.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
-      "consulted": "2026-10-12"
+      "consulted": "2026-10-12",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-mdma",
@@ -386,7 +409,8 @@
       "title": "SWGDRUG monograph: 3,4-Methylenedioxymethamphetamine (IR: HCl KBr, base ATR)",
       "url": "https://www.swgdrug.org/Monographs/3,4-METHYLENEDIOXYMETHAMPHETAMINE.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
-      "consulted": "2026-10-12"
+      "consulted": "2026-10-12",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-4mmc",
@@ -394,7 +418,8 @@
       "title": "SWGDRUG monograph: 4-Methylmethcathinone (IR: HCl ATR)",
       "url": "https://www.swgdrug.org/Monographs/4-methylmethcathinone.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
-      "consulted": "2026-10-12"
+      "consulted": "2026-10-12",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-4cmc",
@@ -403,7 +428,8 @@
       "url": "https://www.swgdrug.org/Monographs/4-Chloromethcathinone.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
       "consulted": "2026-10-12",
-      "archive_url": "https://web.archive.org/web/20241213085638/https://swgdrug.org/Monographs/4-Chloromethcathinone.pdf"
+      "archive_url": "https://web.archive.org/web/20241213085638/https://swgdrug.org/Monographs/4-Chloromethcathinone.pdf",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-ketamine",
@@ -412,7 +438,8 @@
       "url": "https://www.swgdrug.org/Monographs/KETAMINE.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
       "consulted": "2026-10-12",
-      "archive_url": "https://web.archive.org/web/20250123160825/https://www.swgdrug.org/Monographs/KETAMINE.pdf"
+      "archive_url": "https://web.archive.org/web/20250123160825/https://www.swgdrug.org/Monographs/KETAMINE.pdf",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-thca-a",
@@ -420,7 +447,8 @@
       "title": "SWGDRUG monograph: THCA-A (IR: free acid, ATR)",
       "url": "https://www.swgdrug.org/Monographs/THCA-A.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
-      "consulted": "2026-10-12"
+      "consulted": "2026-10-12",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-ir-library",
@@ -428,7 +456,8 @@
       "title": "SWGDRUG Infrared Spectral Library (ATR-FTIR), JCAMP-DX release of 15 May 2024",
       "url": "https://www.swgdrug.org/ir.htm",
       "license": "used with the written permission of SWGDRUG (non-commercial, with citation); see the library credits",
-      "consulted": "2026-10-13"
+      "consulted": "2026-10-13",
+      "tier": "agency"
     },
     {
       "id": "rodrigues2013",
@@ -454,7 +483,8 @@
       "url": "https://www.unodc.org/documents/scientific/Cocaine_Manual_Rev_1.pdf",
       "license": "© United Nations; cited as the source of numbers only",
       "consulted": "2026-10-12",
-      "archive_url": "https://web.archive.org/web/20260822112454/https://www.unodc.org/documents/scientific/Cocaine_Manual_Rev_1.pdf"
+      "archive_url": "https://web.archive.org/web/20260822112454/https://www.unodc.org/documents/scientific/Cocaine_Manual_Rev_1.pdf",
+      "tier": "agency"
     },
     {
       "id": "mendez-hernandez2020",
@@ -566,7 +596,8 @@
       "doi": "10.1038/clpt.2010.156",
       "url": "https://doi.org/10.1038/clpt.2010.156",
       "consulted": "2026-10-13",
-      "archive_url": "https://web.archive.org/web/20260226005448/https://pubmed.ncbi.nlm.nih.gov/20668440/"
+      "archive_url": "https://web.archive.org/web/20260226005448/https://pubmed.ncbi.nlm.nih.gov/20668440/",
+      "tier": "primary"
     },
     {
       "id": "larocque2012",
@@ -580,7 +611,8 @@
       "doi": "10.3109/15563650.2012.665455",
       "url": "https://doi.org/10.3109/15563650.2012.665455",
       "consulted": "2026-10-13",
-      "archive_url": "https://web.archive.org/web/20260411000919/https://pubmed.ncbi.nlm.nih.gov/22455354/"
+      "archive_url": "https://web.archive.org/web/20260411000919/https://pubmed.ncbi.nlm.nih.gov/22455354/",
+      "tier": "primary"
     },
     {
       "id": "neal2010",
@@ -704,7 +736,8 @@
       "type": "database",
       "title": "PubChem (chemical identity)",
       "url": "https://pubchem.ncbi.nlm.nih.gov/",
-      "consulted": "2026-10-13"
+      "consulted": "2026-10-13",
+      "tier": "database"
     },
     {
       "id": "checkir-section-pending",
@@ -719,7 +752,8 @@
       "url": "https://www.swgdrug.org/Monographs/METHAMPHETAMINE.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
       "consulted": "2026-10-13",
-      "archive_url": "https://web.archive.org/web/20241212100840/https://swgdrug.org/Monographs/METHAMPHETAMINE.pdf"
+      "archive_url": "https://web.archive.org/web/20241212100840/https://swgdrug.org/Monographs/METHAMPHETAMINE.pdf",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-heroin",
@@ -728,7 +762,8 @@
       "url": "https://www.swgdrug.org/Monographs/HEROIN.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
       "consulted": "2026-10-13",
-      "archive_url": "https://web.archive.org/web/20250429214116/https://www.swgdrug.org/Monographs/HEROIN.pdf"
+      "archive_url": "https://web.archive.org/web/20250429214116/https://www.swgdrug.org/Monographs/HEROIN.pdf",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-3mmc",
@@ -737,7 +772,8 @@
       "url": "https://www.swgdrug.org/Monographs/3-MMC.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
       "consulted": "2026-10-13",
-      "archive_url": "https://web.archive.org/web/20241213100156/https://swgdrug.org/Monographs/3-MMC.pdf"
+      "archive_url": "https://web.archive.org/web/20241213100156/https://swgdrug.org/Monographs/3-MMC.pdf",
+      "tier": "agency"
     },
     {
       "id": "swgdrug-2cb",
@@ -746,7 +782,8 @@
       "url": "https://www.swgdrug.org/Monographs/4-BROMO-2,5-DIMETHOXYPHENETHYLAMINE.pdf",
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
       "consulted": "2026-10-13",
-      "archive_url": "https://web.archive.org/web/20250729084740/https://www.swgdrug.org/Monographs/4-BROMO-2,5-DIMETHOXYPHENETHYLAMINE.pdf"
+      "archive_url": "https://web.archive.org/web/20250729084740/https://www.swgdrug.org/Monographs/4-BROMO-2,5-DIMETHOXYPHENETHYLAMINE.pdf",
+      "tier": "agency"
     },
     {
       "id": "unodc-ats2006",
@@ -756,7 +793,8 @@
       "url": "https://www.unodc.org/pdf/scientific/stnar34.pdf",
       "license": "© United Nations; cited as the source of numbers only",
       "consulted": "2026-10-13",
-      "archive_url": "https://web.archive.org/web/20261012060314/https://www.unodc.org/pdf/scientific/stnar34.pdf"
+      "archive_url": "https://web.archive.org/web/20261012060314/https://www.unodc.org/pdf/scientific/stnar34.pdf",
+      "tier": "agency"
     },
     {
       "id": "unodc-cathinones2015",
@@ -782,8 +820,10 @@
       ],
       "year": 2020,
       "doi": "10.26355/eurrev_202004_21028",
-      "url": "https://doi.org/10.26355/eurrev_202004_21028",
-      "consulted": "2026-10-13"
+      "url": "https://www.europeanreview.org/article/21028",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261010012359/https://www.europeanreview.org/article/21028"
     },
     {
       "id": "becker2012",
@@ -898,6 +938,388 @@
       "year": 2026,
       "consulted": "2026-10-13",
       "tier": "secondary"
+    },
+    {
+      "id": "roque-bravo2022",
+      "type": "paper",
+      "title": "Cocaine: An Updated Overview on Chemistry, Detection, Biokinetics, and Pharmacotoxicological Aspects including Abuse Pattern (Toxins 14(4):278)",
+      "authors": [
+        "R. Roque Bravo",
+        "A. C. Faria",
+        "A. M. Brito-da-Costa",
+        "H. Carmo",
+        "P. Mladěnka",
+        "D. Dias da Silva",
+        "F. Remião"
+      ],
+      "year": 2022,
+      "doi": "10.3390/toxins14040278",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9032145",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260701005516/https://pmc.ncbi.nlm.nih.gov/articles/PMC9032145"
+    },
+    {
+      "id": "cami1998",
+      "type": "paper",
+      "title": "Cocaine metabolism in humans after use of alcohol. Clinical and research implications (Recent Dev Alcohol 14:437-455)",
+      "authors": [
+        "J. Cami",
+        "M. Farré",
+        "M. L. González",
+        "J. Segura",
+        "R. de la Torre"
+      ],
+      "year": 1998,
+      "doi": "10.1007/0-306-47148-5_22",
+      "url": "https://doi.org/10.1007/0-306-47148-5_22",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "iorio2024",
+      "type": "paper",
+      "title": "Cocaine- and Levamisole-Induced Vasculitis: Defining the Spectrum of Autoimmune Manifestations (J Clin Med 13(17):5116)",
+      "authors": [
+        "L. Iorio",
+        "F. Davanzo",
+        "D. Cazzador",
+        "M. Codirenzi",
+        "E. Fiorin",
+        "E. Zanatta",
+        "P. Nicolai",
+        "A. Doria",
+        "R. Padoan"
+      ],
+      "year": 2024,
+      "doi": "10.3390/jcm13175116",
+      "url": "https://doi.org/10.3390/jcm13175116",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "milella2023",
+      "type": "paper",
+      "title": "Heroin and its metabolites: relevance to heroin use disorder (Transl Psychiatry 13:120)",
+      "authors": [
+        "M. S. Milella",
+        "G. D'Ottavio",
+        "S. De Pirro",
+        "M. Barra",
+        "D. Caprioli",
+        "A. Badiani"
+      ],
+      "year": 2023,
+      "doi": "10.1038/s41398-023-02406-5",
+      "url": "https://doi.org/10.1038/s41398-023-02406-5",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "kerensky2017",
+      "type": "paper",
+      "title": "Opioid overdose prevention and naloxone rescue kits: what we know and what we don't know (Addict Sci Clin Pract 12:4)",
+      "authors": [
+        "T. Kerensky",
+        "A. Y. Walley"
+      ],
+      "year": 2017,
+      "doi": "10.1186/s13722-016-0068-3",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5219773/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260627195015/https://pmc.ncbi.nlm.nih.gov/articles/PMC5219773/"
+    },
+    {
+      "id": "peltoniemi2016",
+      "type": "paper",
+      "title": "Ketamine: A Review of Clinical Pharmacokinetics and Pharmacodynamics in Anesthesia and Pain Therapy (Clin Pharmacokinet 55:1059-1077)",
+      "authors": [
+        "M. A. Peltoniemi",
+        "N. M. Hagelberg",
+        "K. T. Olkkola",
+        "T. I. Saari"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s40262-016-0383-6",
+      "url": "https://doi.org/10.1007/s40262-016-0383-6",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "dinis-oliveira2017",
+      "type": "paper",
+      "title": "Metabolism and metabolomics of ketamine: a toxicological approach (Forensic Sci Res 2(1):2-10)",
+      "authors": [
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2017,
+      "doi": "10.1080/20961790.2017.1285219",
+      "url": "https://doi.org/10.1080/20961790.2017.1285219",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "kalsi2011",
+      "type": "paper",
+      "title": "The epidemiology and patterns of acute and chronic toxicity associated with recreational ketamine use (Emerg Health Threats J 4:7107)",
+      "authors": [
+        "S. S. Kalsi",
+        "D. M. Wood",
+        "P. I. Dargan"
+      ],
+      "year": 2011,
+      "doi": "10.3402/ehtj.v4i0.7107",
+      "url": "https://doi.org/10.3402/ehtj.v4i0.7107",
+      "license": "CC BY-NC 3.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "zheng2025",
+      "type": "paper",
+      "title": "Ketamine-associated upper urinary tract dysfunction: What we know from current literature (Asian J Urol 12(1):33-42)",
+      "authors": [
+        "Z. Zheng",
+        "Z. Li",
+        "J. Yuan",
+        "F. Han",
+        "L. Huang",
+        "Z. Wang"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.ajur.2024.05.004",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11840321/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20251211013054/https://pmc.ncbi.nlm.nih.gov/articles/PMC11840321/"
+    },
+    {
+      "id": "segura2005",
+      "type": "paper",
+      "title": "Contribution of cytochrome P450 2D6 to 3,4-methylenedioxymethamphetamine disposition in humans: use of paroxetine as a metabolic inhibitor probe (Clin Pharmacokinet 44(6):649-660)",
+      "authors": [
+        "M. Segura",
+        "M. Farré",
+        "S. Pichini",
+        "A. M. Peiró",
+        "P. N. Roset",
+        "A. Ramírez",
+        "J. Ortuño",
+        "R. Pacifici",
+        "P. Zuccaro",
+        "J. Segura",
+        "R. de la Torre"
+      ],
+      "year": 2005,
+      "doi": "10.2165/00003088-200544060-00006",
+      "url": "https://doi.org/10.2165/00003088-200544060-00006",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "pizarro2004",
+      "type": "paper",
+      "title": "Stereochemical analysis of 3,4-methylenedioxymethamphetamine and its main metabolites in human samples including the catechol-type metabolite (3,4-dihydroxymethamphetamine) (Drug Metab Dispos 32(9):1001-1007)",
+      "authors": [
+        "N. Pizarro",
+        "M. Farré",
+        "M. Pujadas",
+        "A. M. Peiró",
+        "P. N. Roset",
+        "J. Joglar",
+        "R. de la Torre"
+      ],
+      "year": 2004,
+      "doi": "10.1016/s0090-9556(24)02984-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15319342/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260608181936/https://pubmed.ncbi.nlm.nih.gov/15319342/"
+    },
+    {
+      "id": "yubero-lahoz2011",
+      "type": "paper",
+      "title": "Sex differences in 3,4-methylenedioxymethamphetamine (MDMA; ecstasy)-induced cytochrome P450 2D6 inhibition in humans (Clin Pharmacokinet 50(5):319-329)",
+      "authors": [
+        "S. Yubero-Lahoz",
+        "R. Pardo",
+        "M. Farré",
+        "B. O'Mahony",
+        "M. Torrens",
+        "C. Mustata",
+        "C. Pérez-Mañá",
+        "M. L. Carbó",
+        "R. de la Torre"
+      ],
+      "year": 2011,
+      "doi": "10.2165/11584550-000000000-00000",
+      "url": "https://doi.org/10.2165/11584550-000000000-00000",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "atila2024",
+      "type": "paper",
+      "title": "Oxytocin and the Role of Fluid Restriction in MDMA-Induced Hyponatremia: A Secondary Analysis of 4 Randomized Clinical Trials (JAMA Netw Open 7(12):e2445278)",
+      "authors": [
+        "C. Atila",
+        "I. Straumann",
+        "P. Vizeli",
+        "J. Beck",
+        "S. Monnerat",
+        "F. Holze",
+        "M. E. Liechti",
+        "M. Christ-Crain"
+      ],
+      "year": 2024,
+      "doi": "10.1001/jamanetworkopen.2024.45278",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11568463/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260930152027/https://pmc.ncbi.nlm.nih.gov/articles/PMC11568463/"
+    },
+    {
+      "id": "kalant2001",
+      "type": "paper",
+      "title": "The pharmacology and toxicology of \"ecstasy\" (MDMA) and related drugs (CMAJ 165(7):917-928; abstract consulted)",
+      "authors": [
+        "H. Kalant"
+      ],
+      "year": 2001,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11599334/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260925100505/https://pubmed.ncbi.nlm.nih.gov/11599334/"
+    },
+    {
+      "id": "vuori2003",
+      "type": "paper",
+      "title": "Death following ingestion of MDMA (ecstasy) and moclobemide (Addiction 98(3):365-368)",
+      "authors": [
+        "E. Vuori",
+        "J. A. Henry",
+        "I. Ojanperä",
+        "R. Nieminen",
+        "T. Savolainen",
+        "P. Wahlsten",
+        "M. Jäntti"
+      ],
+      "year": 2003,
+      "doi": "10.1046/j.1360-0443.2003.00292.x",
+      "url": "https://doi.org/10.1046/j.1360-0443.2003.00292.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "pilgrim2012",
+      "type": "paper",
+      "title": "Serotonin toxicity involving MDMA (ecstasy) and moclobemide (Forensic Sci Int 215(1-3):184-188)",
+      "authors": [
+        "J. L. Pilgrim",
+        "D. Gerostamoulos",
+        "N. Woodford",
+        "O. H. Drummer"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.forsciint.2011.04.008",
+      "url": "https://doi.org/10.1016/j.forsciint.2011.04.008",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "papaseit2012",
+      "type": "paper",
+      "title": "Surviving life-threatening MDMA (3,4-methylenedioxymethamphetamine, ecstasy) toxicity caused by ritonavir (RTV) (Intensive Care Med 38(7):1239-1240)",
+      "authors": [
+        "E. Papaseit",
+        "A. Vázquez",
+        "C. Pérez-Mañá",
+        "M. Pujadas",
+        "R. de la Torre",
+        "M. Farré",
+        "J. Nolla"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00134-012-2537-9",
+      "url": "https://doi.org/10.1007/s00134-012-2537-9",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "dolder2017",
+      "type": "paper",
+      "title": "Pharmacokinetics and Pharmacodynamics of Lisdexamfetamine Compared with D-Amphetamine in Healthy Subjects (Front Pharmacol 8:617)",
+      "authors": [
+        "P. C. Dolder",
+        "P. Strajhar",
+        "P. Vizeli",
+        "F. Hammann",
+        "A. Odermatt",
+        "M. E. Liechti"
+      ],
+      "year": 2017,
+      "doi": "10.3389/fphar.2017.00617",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5594082/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260927214026/https://pmc.ncbi.nlm.nih.gov/articles/PMC5594082/"
+    },
+    {
+      "id": "heal2013",
+      "type": "paper",
+      "title": "Amphetamine, past and present - a pharmacological and clinical perspective (J Psychopharmacol 27(6):479-496)",
+      "authors": [
+        "D. J. Heal",
+        "S. L. Smith",
+        "J. Gosden",
+        "D. J. Nutt"
+      ],
+      "year": 2013,
+      "doi": "10.1177/0269881113482532",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3666194",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261011231842/https://pmc.ncbi.nlm.nih.gov/articles/PMC3666194"
+    },
+    {
+      "id": "losacker2021",
+      "type": "paper",
+      "title": "Enantioselective Quantification of Amphetamine and Metabolites in Serum Samples: Forensic Evaluation and Estimation of Consumption Time (Metabolites 11(8):521)",
+      "authors": [
+        "M. Losacker",
+        "M. Kraemer",
+        "A. Philipsen",
+        "K. Duecker",
+        "N. Dreimueller",
+        "J. Engelmann",
+        "J. Roehrich",
+        "C. Hess"
+      ],
+      "year": 2021,
+      "doi": "10.3390/metabo11080521",
+      "url": "https://doi.org/10.3390/metabo11080521",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
     }
   ]
 }

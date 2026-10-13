@@ -10,11 +10,23 @@ Sale o base: la base non ha l'inviluppo N-H2+ tra circa 2400 e 3000 cm-1; la mon
 
 Analoghi non distinguibili da una sola banda: le tre bande del metilendiossi indicano il gruppo, presente anche in MDA, MDEA, MBDB e nei catinoni metilendiossi come il metilone; serve lo spettro completo di riferimento. [f:unodc-ats2006] [f:unodc-cathinones2015] [f:smith-ethers]
 
-Tagli frequenti: le compresse contengono adulteranti, diluenti, coloranti, eccipienti e leganti; in alcune regioni caffeina e ketamina si trovano spesso nei campioni di anfetamine. [f:unodc-ats2006]
-
 ## category
 
 Classe chimica: fenetilammine, sottogruppo metilendiossi. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+
+## origin
+
+Composto di sintesi. Precursori: 3,4-metilendiossifenil-2-propanone, safrolo (anche tramite isosafrolo) e piperonale. La N-formil-MDMA è un sottoprodotto della via Leuckart. [f:unodc-ats2006]
+
+## metabolism
+
+L'MDMA è metabolizzata a MDA, HHMA e HMMA; il contributo del CYP2D6 non supera il 30%. È un inibitore meccanismo-dipendente del CYP2D6: l'attività torna al 90% dopo circa 10 giorni, con emivita di recupero di 36.6 ± 22.9 ore nelle donne e 27.6 negli uomini. [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011]
+
+L'emivita è di 4.8 ore per (S)-MDMA e 14.8 ore per (R)-MDMA. [f:pizarro2004]
+
+## cuts
+
+Le compresse contengono adulteranti, tagli, coloranti, eccipienti e leganti; in alcune regioni caffeina e ketamina sono spesso presenti nei campioni di tipo anfetaminico. [f:unodc-ats2006]
 
 ## effects
 
@@ -22,19 +34,31 @@ Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Le compresse contengono 40-140 mg di MDMA; la media europea è circa 60-70 mg, contro circa 100 mg a metà degli anni Novanta. [f:unodc-ats2006]
 
 ## risks
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Dopo una singola dose di MDMA l'iponatriemia acuta è comparsa nel 31% dei partecipanti (96 persone in 4 studi randomizzati); la restrizione dei liquidi l'ha attenuata. [f:atila2024]
+
+Nei decessi da ecstasy sono descritti ipertermia, rabdomiolisi, coagulopatia, necrosi epatica, aritmie e ictus; l'intervallo tossico e letale si sovrappone a quello ricreativo. È descritta neurotossicità serotoninergica. [f:kalant2001]
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+MDMA con moclobemide (inibitore reversibile della MAO-A) ha causato sindrome serotoninergica fatale. Il ritonavir, inibitore del CYP, ha causato una tossicità grave di MDMA; la paroxetina aumenta l'AUC dell'MDMA del 27%. [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:segura2005]
+
+## counselling
+
+Chiedere dei farmaci in corso: con moclobemide (inibitore della MAO-A) sono descritti casi fatali di tossicità serotoninergica. [f:vuori2003] [f:pilgrim2012] [f:ubc-counselling-guidelines]
+
+Chiedere di farmaci antivirali: con il ritonavir è descritto un caso di tossicità grave di MDMA. [f:papaseit2012] [f:ubc-counselling-guidelines]
+
+Parlare di liquidi: dopo l'MDMA il sodio può scendere e nei studi la restrizione dei liquidi ha attenuato l'iponatriemia. [f:atila2024] [f:ubc-counselling-guidelines]
+
+Spiegare che l'intervallo tossico si sovrappone a quello ricreativo e che nei decessi sono descritte ipertermia e rabdomiolisi: nessuna quantità offre garanzie. [f:kalant2001] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011] [f:atila2024] [f:kalant2001] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines]
 
 ## license
 

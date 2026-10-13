@@ -10,15 +10,27 @@ Salt or base: the SWGDRUG monograph gives the spectra of the hydrochloride, sulf
 
 Isomers and analogues: methamphetamine has the same monosubstituted ring, so the bands below 800 cm-1 are not enough on their own. [f:smith-benzene] The optically active forms and the racemate are told apart by dedicated methods such as the melting point or microcrystal tests. [f:unodc-ats2006]
 
-Frequent cuts: caffeine, and in some regions ketamine, are often found in amphetamine-type samples. [f:unodc-ats2006]
-
 ## category
 
 Chemical class: phenethylamines, amphetamines subgroup. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
 
+## origin
+
+Synthetic compound. Precursor: phenyl-2-propanone (P-2-P/BMK). By-products of the Leuckart route: N-formylamphetamine and 4-methyl-5-phenylpyrimidine. [f:unodc-ats2006]
+
+## metabolism
+
+Amphetamine is metabolised to norephedrine and 4-hydroxyamphetamine; CYP2D6, which is polymorphic and stereoselective, is involved. (S)-amphetamine has a shorter elimination half-life than (R). [f:losacker2021]
+
+After 40 mg of oral d-amphetamine the half-life is 7.9 hours (95% CI 6.9-9.1; range 4.3-15 hours). [f:dolder2017]
+
+## cuts
+
+Amphetamine-type samples often contain caffeine and, in some regions, ketamine. [f:unodc-ats2006]
+
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+It releases dopamine and noradrenaline; dopamine is the primary mediator of the stimulant and euphoriant properties. It also releases adrenaline from the peripheral sympathetic nervous system, an action linked to the cardiovascular effects. [f:heal2013]
 
 ## doses
 
@@ -26,15 +38,23 @@ Not drafted yet. This section will be written from verifiable sources and signed
 
 ## risks
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Anorexia, weight loss and insomnia are predictable and frequent adverse effects. The move from the oral route to snorting, smoking or injection, which reach the brain faster, makes use more hazardous. [f:heal2013]
 
 ## interactions
 
 Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
 
+## counselling
+
+Ask about sleep and food: insomnia and anorexia are frequent effects, so plan for rest and meals. [f:heal2013] [f:ubc-counselling-guidelines]
+
+Ask about the route: snorting, smoking or injection reach the brain faster than the oral route and are more hazardous. [f:heal2013] [f:ubc-counselling-guidelines]
+
+Remember that amphetamine-type samples often contain caffeine and, in some regions, ketamine. [f:unodc-ats2006] [f:ubc-counselling-guidelines]
+
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-amphetamine] [f:smith-inorg2] [f:smith-amine-salts] [f:smith-benzene] [f:unodc-ewa]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-amphetamine] [f:smith-inorg2] [f:smith-amine-salts] [f:smith-benzene] [f:unodc-ewa] [f:checkir-classification] [f:losacker2021] [f:dolder2017] [f:heal2013] [f:ubc-counselling-guidelines]
 
 ## license
 
