@@ -23,14 +23,16 @@
   },
   "query": {
     "role": "sample",
-    "origin": "sample-1"
+    "origin": "sample-1",
+    "sampling": null
   },
   "libraries": [
     {
       "id": "example",
       "version": "1.0",
       "spectra": 3,
-      "searched": true
+      "searched": true,
+      "sampling": null
     }
   ],
   "ranges": [

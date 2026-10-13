@@ -2,7 +2,7 @@
 /**
  * @typedef {{ wavenumber_cm1: number[], y: number[], y_unit?: string }} Spectrum
  * @typedef {{ key: string, params: Record<string, string> }} Notice
- * @typedef {{ error: Notice } | { spectrum: Spectrum, resolutionCm1: number | null, notices: Notice[], more: number }} OpenResult
+ * @typedef {{ error: Notice } | { spectrum: Spectrum, resolutionCm1: number | null, sampling: string, notices: Notice[], more: number }} OpenResult
  */
 
 /**
@@ -69,6 +69,7 @@ export function parseDocument(json) {
   return {
     spectrum: { wavenumber_cm1: xs, y: sp.y.values, y_unit: sp.y.unit },
     resolutionCm1: typeof sp.instrument?.resolution_cm1 === "number" ? sp.instrument.resolution_cm1 : null,
+    sampling: typeof sp.instrument?.sampling === "string" ? sp.instrument.sampling : "unknown",
     notices,
     more: doc.spectra.length - 1,
   };

@@ -23,6 +23,20 @@ pub(crate) fn text<'a>(v: &'a Value, name: &str) -> Option<&'a str> {
     v.get(name).and_then(Value::as_str)
 }
 
+/// The `sampling` member: `None` when absent or `unknown`; an id outside the list is an error naming the member (`key`).
+pub(crate) fn sampling(
+    v: &Value,
+    key: &'static str,
+) -> ftir_core::error::EngineResult<Option<String>> {
+    match text(v, "sampling") {
+        None => Ok(None),
+        Some(id) if ftir_core::campionamento::known(id).is_some() => {
+            Ok(ftir_core::campionamento::normalise(id).map(str::to_string))
+        }
+        Some(_) => Err(invalid(key, "sampling")),
+    }
+}
+
 /// A JSON object from its members.
 pub(crate) fn obj(members: Vec<(&str, Value)>) -> Value {
     Value::Obj(

@@ -8,13 +8,13 @@ import { STORAGE_PREFIX } from "./appname.js";
  * @typedef {{ name: string, library: string, k: number }} Derived
  * The open guided subtraction (memory only): the spectrum it works on, the chosen reference, the factor now shown and the one proposed.
  * @typedef {{ sample: string, library: string, spectrumId: string, name: string, k: number, proposed: number, max: number }} Subtraction
- * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, derived: Derived | null, warnings: Notice[] }} FileEntry
+ * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, sampling: string, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, derived: Derived | null, warnings: Notice[] }} FileEntry
  * A compound recalled from a library to look at beside the sample, and how the recalled ones are shown (memory only).
  * @typedef {{ library: string, spectrumId: string, form: string }} Recalled
  * @typedef {{ refs: Recalled[], mode: "overlay" | "offset" | "difference", scale: "raw" | "max" | "area" | "lsq", offset: number, current: number }} RecallState
  * @typedef {{ id: string, name: string }} Offer
  * @typedef {{ supported: boolean, watching: boolean, folderName: string | null, saved: string | null, remember: boolean, auto: boolean, offers: Offer[], notice: Notice | null }} FolderState
- * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, terms?: { it: string | null, en: string } | null, private: boolean, enabled: boolean }} LibraryEntry
+ * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, terms?: { it: string | null, en: string } | null, private: boolean, enabled: boolean, sampling: string | null }} LibraryEntry
  * @typedef {{ done: number, total: number, name: string }} LibraryJob
  * One comparison: `data` is the `ftir-risultato-confronto/1` document, `code` the spectrum it was run on, `sig` the libraries searched.
  * @typedef {{ code: string, data: any, sig: string }} MatchResult

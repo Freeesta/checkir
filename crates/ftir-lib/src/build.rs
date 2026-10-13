@@ -27,6 +27,8 @@ pub struct Built {
     pub native: Vec<f32>,
     pub library_name: String,
     pub library_version: String,
+    /// Sampling method the spectrum record declares (`technique`); `None` = not said or not enough to name it.
+    pub sampling: Option<&'static str>,
 }
 
 fn spectrum_error(id: &str, key: &'static str) -> EngineError {
@@ -145,6 +147,19 @@ fn member_str(v: &Value, path: &[&str]) -> Option<String> {
     member(v, path).and_then(Value::as_str).map(str::to_string)
 }
 
+/// Sampling id of the `technique` of a spectrum record. Only an ATR with a named crystal gives one: the record does
+/// not say what a transmission measurement was made on.
+fn sampling_of(spectrum: &Value) -> Option<&'static str> {
+    let part = |k: &str| member_str(spectrum, &["technique", k]).unwrap_or_default();
+    let (method, crystal) = (part("method"), part("crystal"));
+    match (method.as_str(), crystal.as_str()) {
+        ("ATR", "diamond") => Some("atr_diamond"),
+        ("ATR", "Ge") => Some("atr_ge"),
+        ("ATR", "ZnSe") => Some("atr_znse"),
+        _ => None,
+    }
+}
+
 /// `pass` unless some quality check is not a pass.
 fn worst_quality(spectrum: &Value) -> &'static str {
     let checks = member(spectrum, &["quality", "checks"]).and_then(Value::as_arr);
@@ -203,5 +218,6 @@ pub fn build_one(src: &Source, grid: &Grid) -> EngineResult<Built> {
         library_name: member_str(&spec, &["library", "name"]).ok_or_else(|| bad("library"))?,
         library_version: member_str(&spec, &["library", "version"])
             .ok_or_else(|| bad("library"))?,
+        sampling: sampling_of(&spec),
     })
 }

@@ -189,10 +189,16 @@ pub fn date_is_ambiguous(v: &str) -> bool {
     matches!(nums.as_slice(), [a, b, _] if a != b && *a <= 12 && *b <= 12)
 }
 
+/// The sampling method named by `##SAMPLING PROCEDURE`, when it says enough to be one of the list.
+fn sampling_of(fields: &[Field]) -> Option<&'static str> {
+    text_of(fields, "SAMPLINGPROCEDURE").and_then(|s| crate::campionamento::classify(&s.value))
+}
+
 /// Fills the standard fields from the field list and marks the fields as `mapped`.
 pub fn standard(fields: &mut [Field], warnings: &mut Vec<Warning>) -> (Instrument, Measurement) {
     let mut ins = Instrument {
         model: text_of(fields, "SPECTROMETERDATASYSTEM"),
+        sampling: sampling_of(fields),
         ..Instrument::default()
     };
     let mut mea = Measurement {
