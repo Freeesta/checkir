@@ -1,0 +1,66 @@
+/* Theory section: layout of the chapters and colours of the figures (only variables of style.css, light and dark follow it). */
+.theory { max-width: 48rem; }
+.theory h1 { font-size: 1.6rem; }
+.theory h2 { margin: 0 0 0.5rem; font-size: 1.35rem; }
+.theory h3 { margin-top: 1.25rem; }
+.theory p { margin: 0.5rem 0; }
+.chapters { padding-left: 1.5rem; }
+.chapters li { margin: 0.35rem 0; }
+.chapters a, .theory a, .pager a { color: var(--color-brand); text-underline-offset: 0.15em; }
+.key-message { margin: 0.75rem 0; padding: 0.6rem 0.9rem; border-left: 4px solid var(--color-brand); background: var(--surface); }
+.theory-figure { margin: 1rem 0; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; background: var(--surface); }
+.theory-figure figcaption { margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem; }
+.stage[aria-busy="true"]::before { content: ""; display: block; min-height: 6rem; }
+.theory-figure { min-width: 0; }
+@media (max-width: 30em) { .theory table.data { font-size: 0.8rem; } .theory-figure { padding: 0.5rem; } }
+.theory-svg { display: block; width: 100%; max-width: 30rem; height: auto; margin: 0 auto; }
+.fig-text { fill: var(--text); font-size: 11px; font-family: system-ui, sans-serif; }
+.fig-muted { fill: var(--text-muted); }
+.fig-strong { font-weight: 600; }
+.fig-line { stroke: var(--line); stroke-width: 1.6; }
+.fig-sample { stroke: var(--color-sample); }
+.fig-reference { stroke: var(--color-reference); stroke-width: 2.2; }
+.fig-dash { stroke-dasharray: 5 4; }
+.fig-axis { stroke: var(--text-muted); stroke-width: 1; }
+.fig-band { fill: var(--color-region); stroke: none; }
+.fig-box { fill: var(--bg); stroke: var(--text-muted); stroke-width: 1.2; }
+.fig-bs { stroke: var(--text); stroke-width: 3; }
+.fig-mass { fill: var(--bg); stroke: var(--color-brand); stroke-width: 3; }
+.fig-mass-b { stroke: var(--text); }
+.fig-ghost { fill: none; stroke: var(--text-muted); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.fig-atom-c { fill: var(--surface); stroke: var(--text); stroke-width: 2.5; }
+.fig-atom-h { fill: var(--bg); stroke: var(--text); stroke-width: 1.8; }
+.fig-bond { stroke: var(--text); stroke-width: 2.5; }
+.fig-arrow line { stroke: var(--color-brand); stroke-width: 2.4; }
+.fig-arrow polygon { fill: var(--color-brand); }
+.fig-ray line { stroke: var(--color-reference); stroke-width: 3; }
+.fig-ray polygon { fill: var(--color-reference); }
+.fig-dot { fill: var(--color-brand); }
+.controls { display: grid; gap: 0.5rem; margin: 0.75rem 0; }
+.choice { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; border: 0; }
+.choice legend { padding: 0; margin-bottom: 0.25rem; font-weight: 600; }
+.choice [aria-pressed="true"] { border-color: var(--color-brand); border-width: 2px; font-weight: 600; background: var(--bg); }
+.range-row { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "label value" "input input"; gap: 0.1rem 0.75rem; align-items: baseline; }
+.range-row label { grid-area: label; }
+.range-row output { grid-area: value; }
+.range-row input { grid-area: input; width: 100%; min-height: 1.75rem; accent-color: var(--color-brand); }
+.range-value { font-variant-numeric: tabular-nums; color: var(--text-muted); }
+.result { padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 0.4rem; background: var(--bg); font-weight: 600; }
+.hint, .note { color: var(--text-muted); font-size: 0.95rem; }
+.theory table.data { width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 0.92rem; }
+.theory table.data caption { text-align: left; color: var(--text-muted); padding-bottom: 0.25rem; }
+.theory table.data th, .theory table.data td { overflow-wrap: anywhere; padding: 0.3rem 0.4rem; border: 1px solid var(--border); text-align: left; font-variant-numeric: tabular-nums; }
+.theory details { margin: 0.75rem 0; }
+.theory summary { cursor: pointer; font-weight: 600; min-height: 1.75rem; }
+.limit-note { margin: 0.75rem 0; padding: 0.6rem 0.9rem; border: 2px solid var(--color-alert); border-radius: 0.4rem; background: var(--bg); }
+.for-chemists { padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 0.4rem; }
+.sources { padding-left: 1.25rem; }
+.pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+.glossary .entry { margin: 0.6rem 0; }
+.glossary dt { font-weight: 600; }
+.glossary dd { margin: 0.1rem 0 0 1rem; }
+.glossary .target { outline: 3px solid var(--color-brand); outline-offset: 2px; }
+.other-lang, .see { color: var(--text-muted); font-weight: 400; }
+#glossary-search { display: block; width: 100%; min-height: 2.5rem; margin: 0.25rem 0; padding: 0.25rem 0.5rem; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 0.4rem; }
+.error { color: var(--text); border-left: 4px solid var(--color-alert); padding-left: 0.5rem; }
+@media (prefers-reduced-motion: reduce) { .theory * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

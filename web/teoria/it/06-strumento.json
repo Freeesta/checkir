@@ -1,0 +1,87 @@
+{
+ "schema": "theory/1",
+ "id": "instrument",
+ "n": 6,
+ "title": "Lo strumento",
+ "key_message": "Una sorgente calda, un interferometro con uno specchio che si muove, un laser che fa da righello, un rivelatore.",
+ "body": [
+  "Dentro l'FTIR c'è una sorgente che scalda una ceramica e manda luce infrarossa; un [[michelson-interferometer|interferometro]] divide la luce in due fasci e la ricombina dopo uno specchio che si muove; un [[reference-laser|laser rosso]] misura con precisione dove si trova lo specchio; un rivelatore (nel nostro strumento un [[dlatgs|DLaTGS]], che lavora a temperatura ambiente) registra quanta luce arriva."
+ ],
+ "for_chemists": [
+  "Sorgente: [[globar|globar]] di carburo di silicio, circa 1200 K. [[beamsplitter|Divisore di fascio]] di KBr con un deposito di germanio (altri materiali per altri intervalli). La [[opd|differenza di cammino]] è il doppio dello spostamento dello specchio; il segnale in funzione di essa è l'[[interferogram|interferogramma]]. Il laser HeNe (632.8 nm) fissa i punti di campionamento: scala dei numeri d'onda molto precisa ([[connes-advantage|vantaggio di Connes]]).",
+  "[[spectral-resolution|Risoluzione]] Δν̃ ≈ 1/OPD_max. Rispetto a uno strumento dispersivo: [[fellgett-advantage|Fellgett]] (tutte le frequenze insieme, meno rumore) e [[jacquinot-advantage|Jacquinot]] (niente fenditure, più luce). Rivelatori: [[dlatgs|DLaTGS]] piroelettrico a temperatura ambiente, lineare; [[mct|MCT]] raffreddato ad azoto liquido, più veloce e sensibile. Il campione in ATR sta sul cristallo, nel percorso del fascio."
+ ],
+ "figure": {
+  "id": "instrument",
+  "alt": "Schema del banco ottico: la sorgente manda la luce al divisore di fascio; da lì parte verso lo specchio fisso e lo specchio mobile e ritorna; poi passa dal campione sul cristallo ATR e arriva al rivelatore. Un laser separato misura la posizione dello specchio.",
+  "caption": "Schema semplificato dell'interferometro: non è in scala e non mostra tutti gli specchi.",
+  "labels": {
+   "title": "Schema del banco ottico",
+   "source": "Sorgente",
+   "fixed": "Specchio fisso",
+   "moving": "Specchio mobile",
+   "sample": "Campione (ATR)",
+   "detector": "Rivelatore",
+   "laser": "Laser",
+   "splitter": "Divisore di fascio",
+   "moves": "si muove"
+  },
+  "data_table": {
+   "caption": "Parti dello strumento e loro compito",
+   "columns": [
+    "Parte",
+    "Compito"
+   ],
+   "rows": [
+    [
+     "Sorgente (globar)",
+     "Manda luce infrarossa di tutti i colori."
+    ],
+    [
+     "Divisore di fascio",
+     "Divide la luce in due fasci e li ricombina."
+    ],
+    [
+     "Specchio fisso",
+     "Riflette uno dei due fasci sempre dalla stessa distanza."
+    ],
+    [
+     "Specchio mobile",
+     "Cambia la distanza del secondo fascio: crea la differenza di cammino."
+    ],
+    [
+     "Laser di riferimento",
+     "Misura la posizione dello specchio e decide quando campionare."
+    ],
+    [
+     "Campione (ATR)",
+     "Assorbe parte della luce a contatto con il cristallo."
+    ],
+    [
+     "Rivelatore",
+     "Registra quanta luce arriva."
+    ]
+   ]
+  }
+ },
+ "further_reading": [
+  "wiki-ftir",
+  "libretexts-ir-theory"
+ ],
+ "sources": [
+  "wiki-ftir",
+  "libretexts-ir-theory"
+ ],
+ "glossary_terms": [
+  "michelson-interferometer",
+  "reference-laser",
+  "dlatgs",
+  "globar",
+  "beamsplitter",
+  "opd",
+  "interferogram",
+  "spectral-resolution"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

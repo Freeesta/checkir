@@ -80,5 +80,11 @@
   "tagli/invalid/unknown-field.json": "percent",
   "soglie_miscele/invalid/zero-stop-share.json": "/selection/stop_variance_share",
   "soglie_miscele/invalid/no-residual.json": "residual",
-  "soglie_miscele/invalid/pearson-out-of-range.json": "/analogues/derivative_pearson_min"
+  "soglie_miscele/invalid/pearson-out-of-range.json": "/analogues/derivative_pearson_min",
+  "theory/invalid/missing-key-message.json": "key_message",
+  "theory/invalid/bad-status.json": "/status",
+  "theory/invalid/figure-without-table.json": "data_table",
+  "theory/invalid/unknown-field.json": "author_email",
+  "theory-index/invalid/bad-slug.json": "/chapters/0/slug",
+  "glossary/invalid/no-definition.json": "definition"
 }

@@ -1,0 +1,98 @@
+{
+ "schema": "theory/1",
+ "id": "dipole",
+ "n": 4,
+ "title": "Perché un picco è forte, debole o assente",
+ "key_message": "Assorbe solo la vibrazione che fa oscillare la carica: il C=O è fortissimo, il CO₂ simmetrico è invisibile.",
+ "body": [
+  "La luce infrarossa «spinge» le cariche elettriche. Se una vibrazione fa oscillare la distribuzione della carica, assorbe; se no, è invisibile. Il gruppo C=O ha cariche molto diverse sui due atomi: dà picchi fortissimi. Nel CO₂ l'allungamento simmetrico non cambia nulla nella carica: non si vede.",
+  "Nella figura ci sono i modi di CO₂ e acqua: la freccia è il [[dipole-moment|dipolo]] che oscilla."
+ ],
+ "for_chemists": [
+  "[[selection-rule|Regola di selezione]]: un modo è IR-attivo se il momento di dipolo cambia lungo la coordinata (∂μ/∂Q ≠ 0); l'intensità cresce con (∂μ/∂Q)². Non serve un dipolo permanente: lo stiramento asimmetrico del CO₂ è attivo. N₂ e O₂ non assorbono. Nell'oscillatore armonico Δv = ±1; con l'[[anharmonicity|anarmonicità]] sono possibili, deboli, anche Δv = ±2, ±3.",
+  "CO₂ (lineare, 3N−5 = 4 modi): νas 2349 e piegamento 667 (doppio, degenere) assorbono; νs è inattivo in IR (Raman, doppietto di Fermi 1285/1388). H₂O (3N−6 = 3 modi): tutti attivi, in fase gassosa 3656.7 (νs), 1594.6 (δ), 3755.8 (νas) cm⁻¹. Un C=C simmetrico di un alchene può non vedersi.",
+  "Nella figura geometria, cariche parziali e ampiezze sono illustrative, non calcolate: servono a mostrare se il dipolo cambia, non quanto."
+ ],
+ "figure": {
+  "id": "dipole",
+  "alt": "Una molecola di CO₂ o di acqua che vibra; sotto, una freccia mostra la variazione del dipolo e un piccolo grafico il dipolo nel tempo.",
+  "caption": "Il dipolo che oscilla: solo i modi in cui cambia assorbono l'infrarosso."
+ },
+ "interactive": {
+  "id": "dipole",
+  "labels": {
+   "svg_title": "Dipolo che oscilla",
+   "svg_desc": "Una molecola che vibra; sotto la molecola una freccia mostra la variazione del dipolo e un grafico lo mostra nel tempo, per un periodo.",
+   "dipole": "Variazione del dipolo",
+   "zero": "Il dipolo non cambia: nessun assorbimento",
+   "time": "Dipolo nel tempo (un periodo)",
+   "phase": "Fase del movimento",
+   "choose": "Scegli una molecola e un modo",
+   "active": "{mode}: il dipolo oscilla, quindi il modo assorbe l'infrarosso (IR-attivo).",
+   "inactive": "{mode}: il dipolo resta fermo, quindi il modo non assorbe l'infrarosso (IR-inattivo).",
+   "note": "Cariche parziali e ampiezze sono illustrative, non calcolate. δ+ e δ−: segno della carica parziale. Numeri d'onda osservati in fase gassosa.",
+   "table_caption": "Quali modi assorbono (calcolato dal motore)",
+   "col_mode": "Modo",
+   "col_active": "Assorbe l'IR?",
+   "col_obs": "Osservato (cm⁻¹)",
+   "yes": "Sì",
+   "no": "No"
+  },
+  "items": [
+   {
+    "id": "co2.sym",
+    "label": "CO₂ · stiramento simmetrico",
+    "text": "",
+    "value": "— (Raman: 1285 e 1388)"
+   },
+   {
+    "id": "co2.asym",
+    "label": "CO₂ · stiramento asimmetrico",
+    "text": "",
+    "value": "2349"
+   },
+   {
+    "id": "co2.bend",
+    "label": "CO₂ · piegamento",
+    "text": "",
+    "value": "667"
+   },
+   {
+    "id": "h2o.sym",
+    "label": "H₂O · stiramento simmetrico",
+    "text": "",
+    "value": "3657"
+   },
+   {
+    "id": "h2o.bend",
+    "label": "H₂O · piegamento",
+    "text": "",
+    "value": "1595"
+   },
+   {
+    "id": "h2o.asym",
+    "label": "H₂O · stiramento asimmetrico",
+    "text": "",
+    "value": "3756"
+   }
+  ]
+ },
+ "further_reading": [
+  "libretexts-ir-theory",
+  "phet-molecules-light"
+ ],
+ "sources": [
+  "wiki-infrared-spectroscopy",
+  "nist-water",
+  "checkir-calculation"
+ ],
+ "glossary_terms": [
+  "dipole-moment",
+  "selection-rule",
+  "ir-active",
+  "anharmonicity",
+  "degrees-of-freedom"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

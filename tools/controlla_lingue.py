@@ -43,6 +43,13 @@ def used_keys() -> set[str]:
     return keys
 
 
+def theory_problems() -> list[str]:
+    """Chapters, glossary and sources of the theory section (tools/controlla_teoria.py): same keys in it and en."""
+    from controlla_teoria import problems
+
+    return ["theory: " + p for p in problems()]
+
+
 def main() -> int:
     cats = catalogs()
     if REF not in cats:
@@ -58,6 +65,7 @@ def main() -> int:
         for k in sorted(set(ref) & set(cat)):
             if set(PLACEHOLDER.findall(ref[k])) != set(PLACEHOLDER.findall(cat[k])):
                 bad.append(f"placeholders differ in {code}: {k}")
+    bad += theory_problems()
     used = used_keys()
     bad += [f"used in the code but not defined: {k}" for k in sorted(used - set(ref))]
     bad += [f"orphan key (never used): {k}" for k in sorted(set(ref) - used) if not k.startswith(DYNAMIC)]

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; connect-src 'self'; img-src 'self' data: blob:; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="color-scheme" content="light dark">
+  <title>Teoria</title>
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="teoria.css">
+</head>
+<body data-page="theory">
+  <a class="skip" href="#main-content" data-i18n="app.skip"></a>
+  <header class="app-header" id="app-header"></header>
+  <main id="main-content" class="page theory">
+    <div id="view"></div>
+  </main>
+  <footer class="footer">
+    <nav class="footer-links" data-i18n-aria="footer.nav_label">
+      <a href="../" data-i18n="footer.link_home"></a>
+      <a href="../pagine/avvertenze/" data-i18n="footer.link_warnings"></a>
+      <a href="../pagine/informativa/" data-i18n="footer.link_notice"></a>
+    </nav>
+    <p data-i18n="footer.notice"></p>
+  </footer>
+  <p class="sr-only" id="status" role="status" aria-live="polite"></p>
+  <script type="module" src="teoria.js"></script>
+</body>
+</html>

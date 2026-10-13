@@ -1,0 +1,80 @@
+{
+ "schema": "theory/1",
+ "id": "what-ftir-sees",
+ "n": 1,
+ "title": "Che cosa vede l'FTIR (e che cosa no)",
+ "key_message": "La luce infrarossa fa vibrare i legami: ogni sostanza ha la sua impronta, ma un componente sotto circa il 5 % può non comparire.",
+ "body": [
+  "Mettiamo un po' di polvere su un piccolo diamante e la illuminiamo con luce [[mid-infrared|infrarossa]], invisibile ai nostri occhi. I legami tra gli atomi vibrano e assorbono solo certi «colori» di questa luce. Lo spettro è il disegno di quali colori sono stati assorbiti: ogni sostanza ha il suo.",
+  "L'FTIR però vede bene solo ciò che c'è in quantità: sotto il 5-10 % circa un componente può non comparire, e le sostanze attive a dosi piccolissime possono sfuggire del tutto. Lo spettro è un indizio che la persona esperta valuta; non è una diagnosi."
+ ],
+ "for_chemists": [
+  "Lo spettro della figura è in [[absorbance|assorbanza]] (A = −log₁₀T), misurato in ATR a diamante con una riflessione e risoluzione 4 cm⁻¹. Il [[mid-infrared|medio infrarosso]] va da 4000 a 400 cm⁻¹, circa 48–4.8 kJ/mol: basta per far vibrare i legami, non per romperli.",
+  "L'asse x decresce da sinistra a destra, come si usa in IR. Sopra circa 1500 cm⁻¹ c'è la [[functional-group-region|regione dei gruppi funzionali]], sotto la [[fingerprint-region|impronta digitale]]; alcune fonti collocano l'impronta tra 1300 e 650 cm⁻¹, quindi la convenzione va sempre dichiarata.",
+  "Il limite di rivelazione dipende dal componente, dal contatto con il cristallo e dalla forza delle sue bande: come ordine di grandezza 5-10 %. Sostanze molto potenti, presenti in tracce, non si vedono."
+ ],
+ "figure": {
+  "id": "spectrum_bands",
+  "alt": "Spettro dimostrativo, in assorbanza, di una polvere identificata dal servizio come cocaina cloridrato, da 4000 a 500 cm⁻¹ con i valori decrescenti verso destra. Tre bande sono indicate: una banda larga intorno a 2540, il C=O intorno a 1712 e il C–H aromatico intorno a 729 cm⁻¹.",
+  "caption": "Spettro dimostrativo (misurato, ATR a diamante): tre bande riconoscibili. L'identità è una proposta del servizio, non confermata con altre tecniche.",
+  "labels": {
+   "title": "Spettro dimostrativo con tre bande indicate",
+   "axis_x": "Numero d'onda (centimetri alla meno uno, cm⁻¹)",
+   "axis_note": "i valori decrescono da sinistra a destra, come si usa in IR",
+   "axis_y": "Assorbanza",
+   "band1": "N–H⁺ larga",
+   "band2": "C=O",
+   "band3": "C–H aromatico",
+   "demo": "Spettro dimostrativo, misurato"
+  },
+  "data_table": {
+   "caption": "Bande indicate nella figura (posizioni lette sullo spettro dimostrativo)",
+   "columns": [
+    "Banda",
+    "Posizione (cm⁻¹)",
+    "Che cosa è",
+    "Zona"
+   ],
+   "rows": [
+    [
+     "N–H⁺ larga",
+     "~2540",
+     "Stiramento N–H⁺ del sale di ammina (cloridrato), dentro un inviluppo largo",
+     "Gruppi funzionali (sopra ~1500)"
+    ],
+    [
+     "C=O",
+     "~1712",
+     "Stiramento del C=O degli esteri",
+     "Gruppi funzionali (sopra ~1500)"
+    ],
+    [
+     "C–H aromatico",
+     "~729",
+     "Piegamento C–H fuori dal piano dell'anello monosostituito (intervallo tipico 770–710)",
+     "Impronta digitale (sotto ~1500)"
+    ]
+   ]
+  }
+ },
+ "limit_note": {
+  "title": "Che cosa l'FTIR non vede",
+  "text": "Componenti sotto il 5-10 % circa; sostanze potenti a dosi minime (come fentanili e nitazeni); la quantità di una sostanza, perché lo spettro dice che cosa c'è, non quanto. Per questo si usano anche altri test e, quando serve, un laboratorio."
+ },
+ "further_reading": [
+  "libretexts-ir-theory"
+ ],
+ "sources": [
+  "wiki-infrared-spectroscopy",
+  "wiki-spettroscopia-ir",
+  "checkir-demo-spectra"
+ ],
+ "glossary_terms": [
+  "mid-infrared",
+  "absorbance",
+  "functional-group-region",
+  "fingerprint-region"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

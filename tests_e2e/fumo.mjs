@@ -12,6 +12,7 @@ import { registryScenario } from "./registri.mjs";
 import { sheetScenario } from "./scheda.mjs";
 import { startSite } from "./sito.mjs";
 import { toolsScenario } from "./strumenti.mjs";
+import { teoriaScenario } from "./teoria.mjs";
 
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
 
@@ -284,6 +285,7 @@ async function run() {
     await peaksScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
     await sheetScenario(browser, base, check, axe);
+    await teoriaScenario(browser, base, check, axe);
     await offlineScenario(browser, base, check);
     await folderScenario(browser, base, check, axe);
   } finally {

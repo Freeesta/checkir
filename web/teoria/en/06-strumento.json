@@ -1,0 +1,87 @@
+{
+ "schema": "theory/1",
+ "id": "instrument",
+ "n": 6,
+ "title": "The instrument",
+ "key_message": "A hot source, an interferometer with a moving mirror, a laser acting as a ruler, a detector.",
+ "body": [
+  "Inside the FTIR there is a source that heats a ceramic and sends out infrared light; an [[michelson-interferometer|interferometer]] splits the light into two beams and recombines it after a moving mirror; a [[reference-laser|red laser]] measures precisely where the mirror is; a detector (in our instrument a [[dlatgs|DLaTGS]], which works at room temperature) records how much light arrives."
+ ],
+ "for_chemists": [
+  "Source: silicon carbide [[globar|globar]], about 1200 K. [[beamsplitter|Beamsplitter]] of KBr with a germanium coating (other materials for other ranges). The [[opd|path difference]] is twice the mirror displacement; the signal as a function of it is the [[interferogram|interferogram]]. The HeNe laser (632.8 nm) sets the sampling points: a very precise wavenumber scale ([[connes-advantage|Connes advantage]]).",
+  "[[spectral-resolution|Resolution]] Δν̃ ≈ 1/OPD_max. Compared with a dispersive instrument: [[fellgett-advantage|Fellgett]] (all frequencies together, less noise) and [[jacquinot-advantage|Jacquinot]] (no slits, more light). Detectors: pyroelectric [[dlatgs|DLaTGS]] at room temperature, linear; [[mct|MCT]] cooled with liquid nitrogen, faster and more sensitive. The ATR sample sits on the crystal, in the beam path."
+ ],
+ "figure": {
+  "id": "instrument",
+  "alt": "Diagram of the optical bench: the source sends light to the beamsplitter; from there it goes to the fixed mirror and the moving mirror and returns; then it passes through the sample on the ATR crystal and reaches the detector. A separate laser measures the mirror position.",
+  "caption": "Simplified diagram of the interferometer: not to scale and not showing every mirror.",
+  "labels": {
+   "title": "Diagram of the optical bench",
+   "source": "Source",
+   "fixed": "Fixed mirror",
+   "moving": "Moving mirror",
+   "sample": "Sample (ATR)",
+   "detector": "Detector",
+   "laser": "Laser",
+   "splitter": "Beamsplitter",
+   "moves": "moves"
+  },
+  "data_table": {
+   "caption": "Parts of the instrument and their job",
+   "columns": [
+    "Part",
+    "Job"
+   ],
+   "rows": [
+    [
+     "Source (globar)",
+     "Sends infrared light of all colours."
+    ],
+    [
+     "Beamsplitter",
+     "Splits the light into two beams and recombines them."
+    ],
+    [
+     "Fixed mirror",
+     "Reflects one of the two beams always from the same distance."
+    ],
+    [
+     "Moving mirror",
+     "Changes the distance of the second beam: creates the path difference."
+    ],
+    [
+     "Reference laser",
+     "Measures the mirror position and decides when to sample."
+    ],
+    [
+     "Sample (ATR)",
+     "Absorbs part of the light in contact with the crystal."
+    ],
+    [
+     "Detector",
+     "Records how much light arrives."
+    ]
+   ]
+  }
+ },
+ "further_reading": [
+  "wiki-ftir",
+  "libretexts-ir-theory"
+ ],
+ "sources": [
+  "wiki-ftir",
+  "libretexts-ir-theory"
+ ],
+ "glossary_terms": [
+  "michelson-interferometer",
+  "reference-laser",
+  "dlatgs",
+  "globar",
+  "beamsplitter",
+  "opd",
+  "interferogram",
+  "spectral-resolution"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Loader of the calculation engine (the .wasm built by the workflow; it is not committed).
- * @typedef {{ version: () => string, demo_spectrum: () => string, open_file: (name: string, bytes: Uint8Array, maxBytes: number, maxPoints: number) => string, library_open: (manifest: string, index: string, data: Uint8Array, maxBytes: number, maxSpectra: number) => string, library_resample: (jdx: Uint8Array) => Float32Array, library_build: (identity: string, index: string, values: Float32Array) => string, detect_peaks: (spectrumJson: string, thresholdsJson: string) => string }} Engine
+ * @typedef {{ version: () => string, demo_spectrum: () => string, open_file: (name: string, bytes: Uint8Array, maxBytes: number, maxPoints: number) => string, library_open: (manifest: string, index: string, data: Uint8Array, maxBytes: number, maxSpectra: number) => string, library_resample: (jdx: Uint8Array) => Float32Array, library_build: (identity: string, index: string, values: Float32Array) => string, detect_peaks: (spectrumJson: string, thresholdsJson: string) => string, didactic_spring: (k: number, massA: number, massB: number) => string, didactic_penetration_depth: (nu: number, nCrystal: number, nSample: number, angle: number) => string, didactic_ratio: (sample: Float64Array, background: Float64Array) => string, didactic_interferogram_from_lines: (linesJson: string, halfPoints: number, stepCm: number) => string, didactic_spectrum_from_interferogram: (intensity: Float64Array, stepCm: number, zpdIndex: number, optionsJson: string) => string, didactic_vibration_frames: (atomsJson: string, frameCount: number) => string }} Engine
  */
 
 /**
