@@ -62,6 +62,21 @@ impl Value {
     }
 }
 
+/// Parse a JSON text (nesting limited to 32 levels).
+pub fn parse(text: &str) -> EngineResult<Value> {
+    let mut p = Parser {
+        b: text.as_bytes(),
+        i: 0,
+        depth: 0,
+    };
+    let v = p.value()?;
+    p.ws();
+    if p.i != p.b.len() {
+        return Err(bad(p.i));
+    }
+    Ok(v)
+}
+
 fn quote(s: &str) -> String {
     let mut o = String::from("\"");
     for c in s.chars() {
@@ -85,21 +100,6 @@ struct Parser<'a> {
     b: &'a [u8],
     i: usize,
     depth: usize,
-}
-
-/// Parse a JSON text (nesting limited to 32 levels).
-pub fn parse(text: &str) -> EngineResult<Value> {
-    let mut p = Parser {
-        b: text.as_bytes(),
-        i: 0,
-        depth: 0,
-    };
-    let v = p.value()?;
-    p.ws();
-    if p.i != p.b.len() {
-        return Err(bad(p.i));
-    }
-    Ok(v)
 }
 
 impl Parser<'_> {
