@@ -1,7 +1,7 @@
 """Exports a fixed subset of the private mixture bench (seed 11) for `crates/ftir-core/tests/miscele_real.rs`.
 
 Needs the private repository (env CHECKIR_DATA, default /home/user/checkir-data) with the bench in
-`scratchpad/esperimenti/matematica` and its `cache_grid.npz` (run its `build_cache.py` first). It imports the bench
+`studio/esperimenti/matematica` and its `cache_grid.npz` (run its `build_cache.py` first). It imports the bench
 code at runtime and writes `studio/miscele/miscele_reale_seme11.json` INSIDE the private repository: the file holds
 library spectra and must never be committed here. Per mixture it stores the sample (raw absorbance on the grid),
 the candidate indices (top 25 of the bench ranking + cuts) and the components chosen by the bench rule
@@ -14,7 +14,7 @@ import sys
 import numpy as np
 
 DATA = os.environ.get('CHECKIR_DATA', '/home/user/checkir-data')
-BENCH = os.path.join(DATA, 'scratchpad', 'esperimenti', 'matematica')
+BENCH = os.path.join(DATA, 'studio', 'esperimenti', 'matematica')
 sys.path.insert(0, BENCH)
 import bench_mix as B  # noqa: E402
 import common as C  # noqa: E402

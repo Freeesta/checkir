@@ -1,5 +1,5 @@
 # Pagina: file, residui, cartella
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`, `pagina_miscele.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri.
 
 ## Struttura
 - Residui: `files.js` `addResidual(parent, spettro, derived)` dà il codice radice + `-r` + numero (C1-r1, poi C1-r2 anche se il padre è C1-r1), ruolo `residual`, `derived {name, library, k}` (la frase «sottratto: nome, libreria, k = 0.84» si scrive al disegno); l'originale non cambia mai. Sotto il grafico i candidati del residuo stanno SOTTO quelli del campione (`results.js` `residualBlock`, righe di sola lettura con livello e allerte; «Mostra C1-r1» apre il suo pannello completo).
