@@ -218,7 +218,6 @@
   "substance_bands.4_mmc.hydrochloride.1686": "Band at ~1686 cm-1: aryl-ketone C=O, typical of cathinones; it falls near caffeine, lidocaine and amides.",
   "substance_bands.4_mmc.hydrochloride.833": "Band at ~833 cm-1: out-of-plane bend of the para-disubstituted ring; a hint of the 4-substituted isomer, only with a candidate.",
   "substance_bands.amphetamine.sulfate_racemate.1049": "Band at ~1049 cm-1: sulfate stretch, very intense and broad; it tells the sulfate from the hydrochloride.",
-  "substance_bands.caffeine.anhydrous.1212": "Band at ~1212 cm-1: C–N stretching of the caffeine xanthine rings (pyrimidinedione and imidazole); not an ether.",
   "substance_bands.caffeine.anhydrous.1692": "Band at ~1692 cm-1: first of the two coupled C=O of caffeine (the other is at ~1645); in a mixture it may move by 5-10 cm-1.",
   "substance_bands.caffeine.anhydrous.744": "Band at ~744 cm-1: very intense and isolated, the most useful to recognise caffeine in a mixture.",
   "substance_bands.cellulose.microcrystalline.1029": "Band at ~1029 cm-1: group of strong broad C-O bands, typical of polysaccharides; it does not tell cellulose from sugars.",
