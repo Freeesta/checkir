@@ -1,0 +1,58 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "pregabalin",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Pregabalin"
+    },
+    "it": {
+      "preferred": "Pregabalin"
+    }
+  },
+  "iupac": "(3S)-3-(aminomethyl)-5-methylhexanoic acid",
+  "formula": "C8H17NO2",
+  "molar_mass_g_mol": 159.23,
+  "smiles": "CC(C)C[C@@H](CC(=O)O)CN",
+  "inchi": "InChI=1S/C8H17NO2/c1-6(2)3-7(5-9)4-8(10)11/h6-7H,3-5,9H2,1-2H3,(H,10,11)/t7-/m0/s1",
+  "inchikey": "AYXYPKUFHZROOJ-ZETCQYMHSA-N",
+  "external_ids": {
+    "wikidata": "Q412174",
+    "chebi": "CHEBI:64356",
+    "cas": "148553-50-8",
+    "pubchem_cid": 5486971
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "chebi",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

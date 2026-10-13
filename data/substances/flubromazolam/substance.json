@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "flubromazolam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Flubromazolam"
+    },
+    "it": {
+      "preferred": "Flubromazolam"
+    }
+  },
+  "iupac": "8-bromo-6-(2-fluorophenyl)-1-methyl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepine",
+  "formula": "C17H12BrFN4",
+  "molar_mass_g_mol": 371.2,
+  "smiles": "CC1=NN=C2N1C3=C(C=C(C=C3)Br)C(=NC2)C4=CC=CC=C4F",
+  "inchi": "InChI=1S/C17H12BrFN4/c1-10-21-22-16-9-20-17(12-4-2-3-5-14(12)19)13-8-11(18)6-7-15(13)23(10)16/h2-8H,9H2,1H3",
+  "inchikey": "VXGSZBZQCBNUIP-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q5462609",
+    "cas": "612526-40-6",
+    "unii": "1BF1HN5GWD",
+    "pubchem_cid": 21930924
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
