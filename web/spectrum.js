@@ -118,3 +118,15 @@ export function nearestIndex(s, x) {
   }
   return Math.abs(xs[lo] - x) <= Math.abs(xs[hi] - x) ? lo : hi;
 }
+
+/**
+ * The wavenumber of the highest point within `half` cm⁻¹ of `x` (the top of the peak the pointer is on); `x` itself when the spectrum has no points there.
+ * @param {Spectrum} s @param {number} x @param {number} half @returns {number}
+ */
+export function topNear(s, x, half) {
+  let best = -1;
+  s.wavenumber_cm1.forEach((w, i) => {
+    if (Math.abs(w - x) <= half && Number.isFinite(s.y[i]) && (best < 0 || s.y[i] > s.y[best])) best = i;
+  });
+  return best < 0 ? x : s.wavenumber_cm1[best];
+}

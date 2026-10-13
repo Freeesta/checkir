@@ -545,3 +545,7 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .propose-field { display: grid; gap: 0.2rem; }
 .propose-field textarea, .propose-field input { font: inherit; width: 100%; box-sizing: border-box; }
 .propose-problems { margin: 0; padding-left: 1.2rem; }
+
+.report-host { display: none; }
+.chart-menu button { display: flex; justify-content: space-between; gap: 1.5rem; }
+.menu-key { color: var(--text-muted); font-variant-numeric: tabular-nums; }
