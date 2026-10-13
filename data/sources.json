@@ -6308,6 +6308,206 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13"
+    },
+    {
+      "id": "baumann2020",
+      "type": "paper",
+      "title": "U-47700 and Its Analogs: Non-Fentanyl Synthetic Opioids Impacting the Recreational Drug Market (Brain Sci 10:895)",
+      "authors": [
+        "M. H. Baumann",
+        "G. Tocco",
+        "D. M. Papsun",
+        "A. L. Mohr",
+        "M. F. Fogarty",
+        "A. J. Krotulski"
+      ],
+      "year": 2020,
+      "doi": "10.3390/brainsci10110895",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7700279/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260623071622/https://pmc.ncbi.nlm.nih.gov/articles/PMC7700279/"
+    },
+    {
+      "id": "varshneya2021",
+      "type": "paper",
+      "title": "Fentanyl-related substances elicit antinociception and hyperlocomotion in mice via opioid receptors (Pharmacol Biochem Behav 208:173242)",
+      "authors": [
+        "N. B. Varshneya",
+        "D. M. Walentiny",
+        "L. T. Moisa",
+        "T. D. Walker",
+        "L. R. Akinfiresoye",
+        "P. M. Beardsley"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.pbb.2021.173242",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9044821/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260221013801/https://pmc.ncbi.nlm.nih.gov/articles/PMC9044821/"
+    },
+    {
+      "id": "feasel2016",
+      "type": "paper",
+      "title": "Metabolism of Carfentanil, an Ultra-Potent Opioid, in Human Liver Microsomes and Human Hepatocytes by High-Resolution Mass Spectrometry (AAPS J 18:1489-1499)",
+      "authors": [
+        "M. G. Feasel",
+        "A. Wohlfarth",
+        "J. M. Nilles",
+        "S. Pang",
+        "R. L. Kristovich",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1208/s12248-016-9963-5",
+      "url": "https://doi.org/10.1208/s12248-016-9963-5",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "kanamori2019",
+      "type": "paper",
+      "title": "Metabolism of Butyrylfentanyl in Fresh Human Hepatocytes: Chemical Synthesis of Authentic Metabolite Standards for Definitive Identification (Biol Pharm Bull 42:623-630)",
+      "authors": [
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Segawa",
+        "T. Yamamuro",
+        "K. Kuwayama",
+        "K. Tsujikawa",
+        "H. Inoue"
+      ],
+      "year": 2019,
+      "doi": "10.1248/bpb.b18-00765",
+      "url": "https://doi.org/10.1248/bpb.b18-00765",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "steuer2017",
+      "type": "paper",
+      "title": "Studies on the metabolism of the fentanyl-derived designer drug butyrfentanyl in human in vitro liver preparations and authentic human samples using liquid chromatography-high resolution mass spectrometry (Drug Test Anal 9:1085-1092)",
+      "authors": [
+        "A. E. Steuer",
+        "E. Williner",
+        "S. N. Staeheli",
+        "T. Kraemer"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2111",
+      "url": "https://doi.org/10.1002/dta.2111",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "meyer2012",
+      "type": "paper",
+      "title": "Qualitative studies on the metabolism and the toxicological detection of the fentanyl-derived designer drugs 3-methylfentanyl and isofentanyl in rats using liquid chromatography-linear ion trap-mass spectrometry (Anal Bioanal Chem 402:1249-1255)",
+      "authors": [
+        "M. R. Meyer",
+        "J. Dinger",
+        "A. E. Schwaninger",
+        "D. K. Wissenbach",
+        "J. Zapp",
+        "G. Fritschi",
+        "H. H. Maurer"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00216-011-5528-8",
+      "url": "https://doi.org/10.1007/s00216-011-5528-8",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "murakami2026",
+      "type": "paper",
+      "title": "In vitro comparative assessment of metabolic stability and structure-metabolism relationships of five fentanyl analogs with varying N-acyl side chain lengths (Arch Toxicol 100:1515-1526)",
+      "authors": [
+        "T. Murakami",
+        "S. Watanabe",
+        "Y. Imamura",
+        "K. Kanda",
+        "R. Ishimaru",
+        "S. Chinaka"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00204-025-04281-z",
+      "url": "https://doi.org/10.1007/s00204-025-04281-z",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "cutler2019",
+      "type": "paper",
+      "title": "In vitro metabolism of the novel synthetic opioid agonist cyclopropylfentanyl and subsequent confirmation in authentic human samples using liquid chromatography-high resolution mass spectrometry (Drug Test Anal 11:1134-1143)",
+      "authors": [
+        "C. Cutler",
+        "S. Hudson"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2611",
+      "url": "https://doi.org/10.1002/dta.2611",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "vikingsson2019",
+      "type": "paper",
+      "title": "LC-QTOF-MS Identification of Major Urinary Cyclopropylfentanyl Metabolites Using Synthesized Standards (J Anal Toxicol 43:607-614)",
+      "authors": [
+        "S. Vikingsson",
+        "T. Rautio",
+        "J. Wallgren",
+        "A. Åstrand",
+        "S. Watanabe",
+        "J. Dahlén",
+        "A. Wohlfarth",
+        "P. Konradsson",
+        "X. Wu",
+        "R. Kronstrand",
+        "H. Gréen"
+      ],
+      "year": 2019,
+      "doi": "10.1093/jat/bkz057",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6936316/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250421181953/https://pmc.ncbi.nlm.nih.gov/articles/PMC6936316/"
+    },
+    {
+      "id": "wallgren2021",
+      "type": "paper",
+      "title": "Structure Elucidation of Urinary Metabolites of Fentanyl and Five Fentanyl Analogs using LC-QTOF-MS, Hepatocyte Incubations and Synthesized Reference Standards (J Anal Toxicol 44:993-1003)",
+      "authors": [
+        "J. Wallgren",
+        "S. Vikingsson",
+        "T. Rautio",
+        "E. Nasr",
+        "A. Åstrand",
+        "S. Watanabe",
+        "R. Kronstrand",
+        "H. Gréen",
+        "J. Dahlén",
+        "X. Wu",
+        "P. Konradsson"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7819469/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20251009154451/https://pmc.ncbi.nlm.nih.gov/articles/PMC7819469/"
     }
   ]
 }
