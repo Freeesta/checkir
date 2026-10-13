@@ -161,7 +161,6 @@ fn the_result_records_chain_libraries_thresholds_and_ranges() {
     assert_eq!(text(&res, "range_preset"), "full");
     assert_eq!(text(&res, "grouping"), "identity");
     assert_eq!(text(res.get("query").unwrap(), "role"), "sample");
-    assert!(alert(&res, "fixed_limit").is_some());
     let words = ["confirmed", "sure", "pure", "clean"];
     assert!(!words
         .iter()

@@ -20,9 +20,9 @@ const OTHER = [[900, 0.7, 10], [1050, 0.5, 12], [1550, 0.9, 12], [1800, 0.6, 12]
 
 /** Level and alert views from a hand-made result, no browser. */
 export async function matchPureScenario(check) {
-  const data = { level_proposed: "probable", candidates: new Array(10).fill({}), alerts: [{ id: "fixed_limit", data: {} }, { id: "same_as_previous", data: { r: 0.99 } }] };
+  const data = { level_proposed: "probable", candidates: new Array(10).fill({}), alerts: [{ id: "same_as_previous", data: { r: 0.99 } }] };
   check("match: level numbers follow the proposed level", levelNumber(data) === 2 && levelNumber({ level_proposed: "to_check" }) === 3 && levelNumber({ level_proposed: "other" }) === 5);
-  check("match: fixed_limit is not a row of alerts", alertViews(data).length === 1 && alertViews(data)[0].id === "same_as_previous");
+  check("match: alerts are rows as the engine sends them", alertViews(data).length === 1 && alertViews(data)[0].id === "same_as_previous");
 }
 
 async function openPanel(page, name) {

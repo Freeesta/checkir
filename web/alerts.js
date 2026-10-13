@@ -4,8 +4,7 @@ import { decisionOf, resultOf } from "./state.js";
 
 /**
  * Levels and alerts of a comparison result (`ftir-risultato-confronto/1`), as the page shows them. The program only proposes a level
- * (never "confirmed": that belongs to the chemist). The engine already sends the alerts in display order; `fixed_limit` is not a row
- * because the fixed strip of limits says it all the time.
+ * (never "confirmed": that belongs to the chemist). The engine already sends the alerts in display order.
  * @typedef {{ id: string, label: string, reasons: string[] }} AlertView
  */
 
@@ -87,7 +86,6 @@ export function alertViews(data) {
   /** @type {AlertView[]} */
   const out = [];
   for (const a of data.alerts ?? []) {
-    if (a.id === "fixed_limit") continue;
     const def = ALERTS[a.id];
     out.push({ id: a.id, label: def ? t(def.labelKey) : a.id, reasons: def ? def.reasons(a.data ?? {}) : [] });
   }

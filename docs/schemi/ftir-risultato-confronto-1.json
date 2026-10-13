@@ -452,8 +452,7 @@
               "quality_noise",
               "quality_co2_vapour",
               "quality_negative_bands",
-              "custom_range",
-              "fixed_limit"
+              "custom_range"
             ]
           },
           "data": {

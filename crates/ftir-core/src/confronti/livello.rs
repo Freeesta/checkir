@@ -225,7 +225,6 @@ pub fn build_alerts(a: &AlertInput) -> Vec<Alert> {
             .collect();
         out.push(alert("custom_range", vec![("ranges", Value::Arr(ranges))]));
     }
-    out.push(alert("fixed_limit", Vec::new()));
     out
 }
 
