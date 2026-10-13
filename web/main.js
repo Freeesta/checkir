@@ -32,6 +32,9 @@ import { buildSubtractView } from "./subtract_view.js";
 import { recallActions } from "./recall.js";
 import { focusedPosition, openInverseDialog } from "./inverse_ui.js";
 import { exportActions } from "./report.js";
+import { chartExportActions } from "./chart_export.js";
+import { copyActions } from "./copy.js";
+import { attachRowMenus } from "./row_menus.js";
 import { buildRecallView, openRecallDialog } from "./recall_ui.js";
 import { subtractActions } from "./subtract.js";
 import { buildCandidates, buildNextStep } from "./workarea.js";
@@ -143,7 +146,7 @@ async function start() {
       announce(t("status.file_closed"));
     },
     ...languageActions(() => redrawAll(), announce),
-    ...workActions(engine, announce), ...recallActions(announce), ...exportActions(announce), recallOpen: () => openRecallDialog(ctx), inverseOpen: (position) => openInverseDialog(ctx, position === undefined ? focusedPosition(getState()) : position), viewBack: () => viewBack(),
+    ...workActions(engine, announce), ...recallActions(announce), ...exportActions(announce), ...chartExportActions(announce), ...copyActions(announce, { cursorValues: () => chart.cursorValues() }), recallOpen: () => openRecallDialog(ctx), inverseOpen: (position) => openInverseDialog(ctx, position === undefined ? focusedPosition(getState()) : position), viewBack: () => viewBack(),
     ...rangeContext(announce, { cursorRange: () => chart.cursorRange(), openResults: () => panels.openSection("results") }),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
@@ -163,7 +166,7 @@ async function start() {
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
   const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
-  viewBack = chart.back;
+  viewBack = chart.back; attachRowMenus(ctx);
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
   const card = createPeakCard($("peak-card"), ctx);

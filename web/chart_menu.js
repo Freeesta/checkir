@@ -1,6 +1,6 @@
 // @ts-check
 import { ACTIONS } from "./actions.js";
-import { el } from "./dom.js";
+import { isMenuKey, openMenu } from "./context_menu.js";
 import { t } from "./i18n.js";
 import { activeKey } from "./shortcuts.js";
 
@@ -25,13 +25,6 @@ export const MENU_ITEMS = [
   { id: "cursor.2", labelKey: "menu.cursor_2", run: (c, _x, at) => at !== null && c.cursorAt(1, at), enabled: (c, _x, at) => c.hasSpectrum() && at !== null },
 ];
 
-/** @param {number} x @param {number} y @param {HTMLElement} menu place the menu at the pointer, kept inside the window */
-function place(x, y, menu) {
-  const r = menu.getBoundingClientRect();
-  menu.style.left = `${Math.max(0, Math.min(x, window.innerWidth - r.width))}px`;
-  menu.style.top = `${Math.max(0, Math.min(y, window.innerHeight - r.height))}px`;
-}
-
 /**
  * Attach the menu to the chart host.
  * @param {HTMLElement} host
@@ -39,63 +32,28 @@ function place(x, y, menu) {
  * @param {import("./actions.js").Ctx} ctx
  */
 export function attachMenu(host, chart, ctx) {
-  /** @type {HTMLElement | null} */
-  let open = null;
-  const close = (/** @type {boolean} */ refocus) => {
-    open?.remove();
-    open = null;
-    if (refocus) host.focus();
-  };
   /** @param {number} x @param {number} y @param {number | null} at wavenumber under the pointer, if any */
   const show = (x, y, at) => {
-    close(false);
-    const menu = el("div", { class: "chart-menu", role: "menu", "aria-label": t("menu.label") });
     const state = ctx.getState();
-    /** @type {Array<{ id: string, label: string, key?: string, checked?: boolean, disabled: boolean, run: () => void }>} */
-    const rows = [
-      ...MENU_ITEMS.map((i) => ({ id: i.id, label: t(i.labelKey), checked: i.checked?.(chart, ctx, at), disabled: i.enabled ? !i.enabled(chart, ctx, at) : false, run: () => i.run(chart, ctx, at) })),
-      ...ACTIONS.filter((a) => a.menu).map((a) => ({ id: a.id, label: t(a.labelKey), key: activeKey(a), checked: a.id === "peaks.toggle" ? state.showPeaks : undefined, disabled: !a.enabled(state), run: () => a.run(ctx) })),
-    ];
-    const buttons = rows.map((r) => {
-      const checkable = r.checked !== undefined;
-      const b = el("button", { type: "button", role: checkable ? "menuitemcheckbox" : "menuitem", tabindex: "-1", "data-item": r.id }, [el("span", {}, [r.label]), el("span", { class: "menu-key" }, [r.key ?? ""])]);
-      if (checkable) b.setAttribute("aria-checked", String(r.checked === true));
-      b.disabled = r.disabled;
-      b.addEventListener("click", () => {
-        close(true);
-        r.run();
-      });
-      return b;
+    openMenu({
+      x,
+      y,
+      label: t("menu.label"),
+      returnFocus: host,
+      rows: [
+        ...MENU_ITEMS.map((i) => ({ id: i.id, label: t(i.labelKey), checked: i.checked?.(chart, ctx, at), disabled: i.enabled ? !i.enabled(chart, ctx, at) : false, run: () => i.run(chart, ctx, at) })),
+        ...ACTIONS.filter((a) => a.menu).map((a) => ({ id: a.id, label: t(a.labelKey), key: activeKey(a), checked: a.id === "peaks.toggle" ? state.showPeaks : undefined, disabled: !a.enabled(state), run: () => a.run(ctx) })),
+      ],
     });
-    menu.append(...buttons);
-    menu.addEventListener("keydown", (e) => {
-      const live = buttons.filter((b) => !b.disabled);
-      const at = live.indexOf(/** @type {HTMLButtonElement} */ (document.activeElement));
-      const go = { ArrowDown: at + 1, ArrowUp: at - 1, Home: 0, End: live.length - 1 }[/** @type {string} */ (e.key)];
-      if (go !== undefined) live[(go + live.length) % live.length]?.focus();
-      else if (e.key === "Escape") close(true);
-      else if (e.key === "Tab") return close(false);
-      else return;
-      e.preventDefault();
-      e.stopPropagation();
-    });
-    document.body.append(menu);
-    place(x, y, menu);
-    open = menu;
-    buttons.find((b) => !b.disabled)?.focus();
   };
   host.addEventListener("contextmenu", (e) => {
     e.preventDefault();
     show(e.clientX, e.clientY, chart.wnAt(e));
   });
   host.addEventListener("keydown", (e) => {
-    if (e.key !== "ContextMenu" && !(e.shiftKey && e.key === "F10")) return;
+    if (!isMenuKey(e)) return;
     e.preventDefault();
     const r = host.getBoundingClientRect();
     show(r.left + r.width / 2, r.top + 40, null);
   });
-  document.addEventListener("pointerdown", (e) => {
-    if (open && !open.contains(/** @type {Node} */ (e.target))) close(false);
-  });
-  window.addEventListener("blur", () => close(false));
 }
