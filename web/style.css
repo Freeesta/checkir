@@ -395,9 +395,6 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section { display
 /* Substance sheet (dialog) */
 .substance-sheet h3 { font-size: 1rem; margin: 1rem 0 0.25rem; }
 .substance-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
-.substance-sheet .empty { display: flex; gap: 0.35rem; }
-.substance-sheet .icon { flex: none; align-self: flex-start; }
-.draft-banner { display: flex; gap: 0.4rem; padding: 0.5rem 0.75rem; border: 2px solid var(--color-alert); border-radius: 0.4rem; }
 .sheet-sources { font-size: 0.85rem; color: var(--text-muted); }
 
 /* Peak card (explanation of the picked peak) and the drawing of a vibration mode. */

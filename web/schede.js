@@ -4,9 +4,6 @@
 /** The ten fixed sections, in display order. */
 export const SECTIONS = ["molecule", "category", "ftir_limits", "effects", "doses", "risks", "interactions", "harm_reduction", "sources", "license"];
 
-/** Sections of health content: they appear only once a health reviewer has approved them. */
-export const SANITARY = new Set(["effects", "doses", "risks", "interactions", "harm_reduction"]);
-
 /** Marker of a section that is still a placeholder. */
 const PENDING = /\[f:[a-z]+-section-pending\]/;
 
@@ -44,26 +41,18 @@ export function isApproved(sheet, key) {
 }
 
 /**
- * What the page may do with a section: show its text, say it is in preparation, or say the review is not done yet.
- * A placeholder and a health section that is not approved never appear as content.
+ * Whether a section has text to show; a placeholder ("not written yet") counts as empty. The state of a section is data, not a gate.
  * @param {Sheet} sheet @param {string} key @param {string} lang
- * @returns {"shown" | "preparing"}
+ * @returns {"shown" | "empty"}
  */
 export function sectionStatus(sheet, key, lang) {
   const text = sectionText(sheet, key, lang);
-  if (!text || PENDING.test(text)) return "preparing";
-  if (SANITARY.has(key) && !isApproved(sheet, key)) return "preparing";
-  return "shown";
+  return !text || PENDING.test(text) ? "empty" : "shown";
 }
 
 /** Text of a section in the language, or in English when the language lacks it. @param {Sheet} sheet @param {string} key @param {string} lang @returns {string} */
 export function sectionText(sheet, key, lang) {
   return (sheet.texts[lang]?.[key] ?? sheet.texts.en?.[key] ?? "").trim();
-}
-
-/** True when no section of the sheet is signed off: the whole sheet is a draft. @param {Sheet} sheet @returns {boolean} */
-export function isDraft(sheet) {
-  return SECTIONS.some((k) => !isApproved(sheet, k));
 }
 
 /**

@@ -1,8 +1,8 @@
 // @ts-check
 import { showDialog } from "./dialogs.js";
-import { el, icon } from "./dom.js";
+import { el } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
-import { isApproved, isDraft, loadSheet, loadSources, parseParagraphs, SECTIONS, sectionStatus, sectionText } from "./schede.js";
+import { isApproved, loadSheet, loadSources, parseParagraphs, SECTIONS, sectionStatus, sectionText } from "./schede.js";
 
 /** Names of the sections (literal keys, so the catalog check can see them). @type {Record<string, () => string>} */
 const TITLES = {
@@ -32,14 +32,14 @@ function sourceLine(s) {
   return [text, " ", el("a", { href, target: "_blank", rel: "noopener noreferrer" }, [t("sheets.open_source")])];
 }
 
-/** One section: title, state, and the text with numbered citations, or "in preparation". @param {import("./schede.js").Sheet} sheet @param {string} key @param {string} lang @param {string[]} order @returns {HTMLElement} */
+/** One section: title, state, and the text with numbered citations, or "not written yet". @param {import("./schede.js").Sheet} sheet @param {string} key @param {string} lang @param {string[]} order @returns {HTMLElement} */
 function sectionView(sheet, key, lang, order) {
   const state = sheet.section_state[key] ?? "draft";
   const box = el("section", { class: "sheet-section", "data-section": key, "data-state": state, "aria-labelledby": `sh-${key}` }, [
     el("h3", { id: `sh-${key}` }, [TITLES[key](), " ", el("span", { class: "state-tag" }, [(STATES[state] ?? STATES.draft)()])]),
   ]);
-  if (sectionStatus(sheet, key, lang) === "preparing") {
-    box.append(el("p", { class: "empty", "data-preparing": "1" }, [icon("warning"), t("sheets.preparing")]));
+  if (sectionStatus(sheet, key, lang) === "empty") {
+    box.append(el("p", { class: "empty", "data-empty": "1" }, [t("sheets.empty")]));
     return box;
   }
   for (const parts of parseParagraphs(sectionText(sheet, key, lang), order)) {
@@ -48,10 +48,9 @@ function sectionView(sheet, key, lang, order) {
   return box;
 }
 
-/** The whole sheet: draft banner, version line, the ten sections, the numbered sources. @param {import("./schede.js").Sheet} sheet @param {Record<string, import("./schede.js").Source>} sources @param {string} lang @returns {HTMLElement} */
+/** The whole sheet: version line, the ten sections, the numbered sources. @param {import("./schede.js").Sheet} sheet @param {Record<string, import("./schede.js").Source>} sources @param {string} lang @returns {HTMLElement} */
 export function buildSheetView(sheet, sources, lang) {
   const root = el("div", { class: "substance-sheet", "data-substance": sheet.id }, []);
-  if (isDraft(sheet)) root.append(el("p", { class: "draft-banner", role: "note" }, [icon("warning"), el("strong", {}, [t("sheets.banner")]), " ", t("sheets.banner_more")]));
   const signed = SECTIONS.filter((k) => isApproved(sheet, k)).length;
   root.append(el("p", { class: "note" }, [t("sheets.version", { version: formatNumber(sheet.version), signed: formatNumber(signed), total: formatNumber(SECTIONS.length), until: sheet.review_by })]));
   /** @type {string[]} */

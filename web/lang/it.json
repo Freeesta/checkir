@@ -541,11 +541,8 @@
   "chart.y_locked": "Asse y bloccato",
   "chart.y_unlocked": "Asse y automatico",
   "sheets.open": "Scheda della sostanza",
-  "sheets.none": "Per questa sostanza il sito non ha ancora una scheda. Chiedi all'operatore.",
-  "sheets.banner": "Bozza non firmata.",
-  "sheets.banner_more": "Testo scritto con assistenza di IA, non ancora controllato da un chimico né da personale sanitario: serve solo come punto di partenza.",
+  "sheets.none": "Nessuna scheda per questa sostanza.",
   "sheets.version": "Versione {version} · sezioni firmate: {signed} su {total} · da rivedere entro {until}",
-  "sheets.preparing": "In preparazione: chiedere all'operatore.",
   "sheets.open_source": "(apri la fonte)",
   "sheets.sources_list": "Fonti citate",
   "sheets.state.draft": "bozza",
@@ -632,5 +629,6 @@
   "mode.out_of_plane": "Moto fuori dal piano: ⊙ verso chi guarda, ⊗ via da chi guarda.",
   "mode.moving": "Il disegno si muove (un ciclo ogni 1.2 s).",
   "mode.still": "Due immagini, A e B, con frecce: gli estremi del moto.",
-  "mode.example": "Esempio con un gruppo CH₂: mostra il tipo di moto, non la molecola del campione."
+  "mode.example": "Esempio con un gruppo CH₂: mostra il tipo di moto, non la molecola del campione.",
+  "sheets.empty": "Non ancora redatta."
 }

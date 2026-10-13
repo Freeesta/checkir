@@ -541,11 +541,8 @@
   "chart.y_locked": "y axis locked",
   "chart.y_unlocked": "y axis automatic",
   "sheets.open": "Substance sheet",
-  "sheets.none": "The site has no sheet for this substance yet. Ask the operator.",
-  "sheets.banner": "Unsigned draft.",
-  "sheets.banner_more": "Text written with AI assistance, not yet checked by a chemist or by health staff: use it only as a starting point.",
+  "sheets.none": "No sheet for this substance.",
   "sheets.version": "Version {version} · signed sections: {signed} of {total} · review due by {until}",
-  "sheets.preparing": "In preparation: ask the operator.",
   "sheets.open_source": "(open the source)",
   "sheets.sources_list": "Cited sources",
   "sheets.state.draft": "draft",
@@ -632,5 +629,6 @@
   "mode.out_of_plane": "Out-of-plane motion: ⊙ towards the viewer, ⊗ away from the viewer.",
   "mode.moving": "The drawing moves (one cycle every 1.2 s).",
   "mode.still": "Two images, A and B, with arrows: the extremes of the motion.",
-  "mode.example": "Example with a CH₂ group: it shows the kind of motion, not the sample's molecule."
+  "mode.example": "Example with a CH₂ group: it shows the kind of motion, not the sample's molecule.",
+  "sheets.empty": "Not written yet."
 }

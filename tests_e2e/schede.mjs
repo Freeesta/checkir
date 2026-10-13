@@ -1,5 +1,5 @@
-// Substance sheet e2e: the sheet opens from the candidate's detail, shows version and state per section, keeps health sections and
-// placeholders out, says "unsigned draft", cites sources, makes no request to another origin, and works by keyboard at 320 px.
+// Substance sheet e2e: the sheet opens from the candidate's detail, shows version and state per section, shows what exists
+// with no banner and nothing hidden for caution (the state is plain data), cites sources, makes no request to another origin, and works by keyboard at 320 px.
 import { readFile } from "node:fs/promises";
 import { parseParagraphs, sectionStatus } from "../web/schede.js";
 
@@ -8,12 +8,10 @@ const SPECTRUM = new URL("../data/substances/synthetic-a/spectra/synthetic-a-bas
 
 /** The rules of what may be shown, on hand-made sheets, no browser. */
 export async function sheetsPureScenario(check) {
-  const sheet = (state, reviewers, effects) => ({ id: "x", names: {}, version: 1, section_state: { effects: state, risks: state, molecule: "draft" }, reviewers, reviewed: "", review_by: "", ai_assisted: true, texts: { en: { effects, risks: "Some fact. [f:a]", molecule: "A molecule. [f:b]" } } });
-  check("sheets: a placeholder is never content", sectionStatus(sheet("approved", [{}], "Not written yet. [f:checkir-section-pending]"), "effects", "en") === "preparing");
-  check("sheets: a health section that is not approved is never content", sectionStatus(sheet("draft", [], "A fact. [f:a]"), "risks", "en") === "preparing");
-  check("sheets: an approved health section with a reviewer is shown", sectionStatus(sheet("approved", [{}], "A fact. [f:a]"), "risks", "en") === "shown");
-  check("sheets: approved without a reviewer is not enough", sectionStatus(sheet("approved", [], "A fact. [f:a]"), "risks", "en") === "preparing");
-  check("sheets: a draft chemistry section is shown (with the draft banner)", sectionStatus(sheet("draft", [], ""), "molecule", "en") === "shown");
+  const sheet = (text) => ({ id: "x", names: {}, version: 1, section_state: { effects: "draft" }, reviewers: [], reviewed: "", review_by: "", ai_assisted: true, texts: { en: { effects: text } } });
+  check("sheets: a placeholder is an empty section", sectionStatus(sheet("Not written yet. [f:abc-section-pending]"), "effects", "en") === "empty");
+  check("sheets: a missing section is empty", sectionStatus(sheet(""), "doses", "en") === "empty");
+  check("sheets: a draft section with text is shown as it is", sectionStatus(sheet("A fact. [f:a]"), "effects", "en") === "shown");
   const order = [];
   const p = parseParagraphs("One. [f:a] Two. [f:b] [f:a]\n\nThree.", order);
   check("sheets: citations are numbered in order of first appearance", order.join() === "a,b" && p.length === 2 && p[0].filter((x) => x.ref).map((x) => x.n).join() === "1,2,1");
@@ -41,10 +39,10 @@ export async function sheetsScenario(browser, base, check, axe) {
   await page.waitForSelector("dialog .substance-sheet");
   const text = (await page.textContent("dialog .substance-sheet")) ?? "";
   check("sheets: the sheet is the one of the candidate", /^synthetic-/.test((await page.getAttribute("dialog .substance-sheet", "data-substance")) ?? ""));
-  check("sheets: unsigned draft banner at the top, no tick or green", (await page.locator("dialog .draft-banner").count()) === 1 && /Bozza non firmata/.test(text) && (await page.locator("dialog .substance-sheet svg use[href$='#check']").count()) === 0);
+  check("sheets: no banner, no note and no tick", (await page.locator("dialog [role=note]").count()) === 0 && !/Bozza non firmata/.test(text) && (await page.locator("dialog .substance-sheet svg use[href$='#check']").count()) === 0);
   check("sheets: the ten sections with a state each", (await page.locator("dialog .sheet-section").count()) === 10 && (await page.locator("dialog .sheet-section .state-tag").count()) === 10);
   check("sheets: version and signed sections are written", /Versione \d+ · sezioni firmate: 0 su 10/.test(text), text.slice(0, 200));
-  check("sheets: health sections say 'in preparazione', never content", (await page.locator('dialog [data-section="doses"] [data-preparing]').count()) === 1 && (await page.locator('dialog [data-section="harm_reduction"] [data-preparing]').count()) === 1);
+  check("sheets: the text that exists is shown and a section not written says so", (await page.locator('dialog [data-section="ftir_limits"] p:not([data-empty])').count()) >= 1 && (await page.locator('dialog [data-section="doses"] [data-empty]').count()) === 1 && !/preparazione/.test(text));
   check("sheets: no raw [f:...] marker and nothing that reassures", !/\[f:/.test(text) && !REASSURING.test(text), text.slice(0, 200));
   const v = await axe(page);
   check("sheets: axe has no violations with the sheet open", v.length === 0, v.join(", "));
