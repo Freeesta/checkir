@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2c-h",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2C-H",
+      "synonyms": [
+        "2,5-dimethoxyphenethylamine"
+      ]
+    },
+    "it": {
+      "preferred": "2C-H",
+      "synonyms": [
+        "2,5-dimetossifenetilammina"
+      ]
+    }
+  },
+  "iupac": "2-(2,5-dimethoxyphenyl)ethanamine",
+  "formula": "C10H15NO2",
+  "molar_mass_g_mol": 181.23,
+  "smiles": "COC1=CC(=C(C=C1)OC)CCN",
+  "inchi": "InChI=1S/C10H15NO2/c1-12-9-3-4-10(13-2)8(7-9)5-6-11/h3-4,7H,5-6,11H2,1-2H3",
+  "inchikey": "WNCUVUUEJZEATP-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "3600-86-0",
+    "pubchem_cid": 76632
+  },
+  "classes": {
+    "chemical": [
+      "2c"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

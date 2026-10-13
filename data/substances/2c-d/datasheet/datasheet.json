@@ -1,0 +1,124 @@
+{
+  "schema": "datasheet/1",
+  "substance": "2c-d",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "caution",
+      "mechanism": "maoi",
+      "source": "theobald2007"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "family": "2c",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "O-desmethyl-2C-D",
+        "reaction": "o_demethylation",
+        "source": "theobald2006d"
+      },
+      {
+        "from": "parent",
+        "to": "N-acetyl-O-desmethyl-2C-D",
+        "reaction": "other",
+        "source": "theobald2006d"
+      },
+      {
+        "from": "parent",
+        "to": "2C-D carboxylic acid",
+        "reaction": "deamination",
+        "enzymes": [
+          "MAO-A",
+          "MAO-B",
+          "CYP2D6"
+        ],
+        "source": "theobald2007"
+      },
+      {
+        "from": "parent",
+        "to": "2C-D alcohol",
+        "reaction": "deamination",
+        "enzymes": [
+          "MAO-A",
+          "MAO-B",
+          "CYP2D6"
+        ],
+        "source": "theobald2007"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-2C-D (methyl group)",
+        "reaction": "hydroxylation",
+        "source": "theobald2006d"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "2c-d-odesmethyl",
+        "active": null,
+        "source": "theobald2006d"
+      },
+      {
+        "name_key": "2c-d-acid",
+        "active": null,
+        "source": "theobald2006d"
+      },
+      {
+        "name_key": "2c-d-alcohol",
+        "active": null,
+        "source": "theobald2006d"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "2cd.identity",
+      "topic": "testing",
+      "source": "dean2013"
+    },
+    {
+      "key": "2cd.setting",
+      "topic": "set_setting",
+      "source": "dean2013"
+    },
+    {
+      "key": "2cd.dosing",
+      "topic": "dosing",
+      "source": "dean2013"
+    },
+    {
+      "key": "2cd.combination",
+      "topic": "combination",
+      "source": "dean2013"
+    }
+  ]
+}

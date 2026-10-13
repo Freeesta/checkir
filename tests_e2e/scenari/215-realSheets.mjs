@@ -5,8 +5,8 @@ import { parseTexts } from "../../tools/genera_schede.mjs";
 import { REASSURING } from "../schede.mjs";
 
 // Sheets drafted in full (13 sections, all still draft): every section that has text is shown, a placeholder stays empty.
-const PILOT_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "heroin", "methamphetamine", "3-mmc", "4-mmc", "2c-b", "methoxetamine"];
-const REAL_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "methamphetamine", "heroin", "3-mmc", "4-mmc", "2c-b", "methoxetamine"];
+const PILOT_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "heroin", "methamphetamine", "3-mmc", "4-mmc", "2c-b", "methoxetamine", "lsd", "psilocybin", "dmt", "5-meo-dmt", "mescaline"];
+const REAL_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "methamphetamine", "heroin", "3-mmc", "4-mmc", "2c-b", "methoxetamine", "lsd", "psilocybin", "dmt", "5-meo-dmt", "mescaline"];
 
 /** The sheets of the main substances, read from data/ as the build reads them: identity and IR text shown, the rest a placeholder except in the pilot sheets, every citation known. */
 export default async ({ check }) => {
