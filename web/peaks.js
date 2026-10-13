@@ -69,6 +69,12 @@ function peaksOfSpectrum(s) {
   return sampleCache.get(s);
 }
 
+/** Noise of a spectrum in its own absorbance units (σ of the peak detection), or null when the engine cannot tell. @param {import("./spectrum.js").Spectrum} s @returns {number | null} */
+export function noiseOf(s) {
+  const n = peaksOfSpectrum(s)?.noise_abs;
+  return typeof n === "number" && Number.isFinite(n) ? n : null;
+}
+
 /** @param {any} p @param {Region[]} regions @returns {string[]} the comparison regions the position falls in */
 function regionIds(p, regions) {
   return regions.filter((g) => p.position_cm1 >= g.from && p.position_cm1 <= g.to).map((g) => g.id);

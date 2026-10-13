@@ -7,7 +7,7 @@ import { fileRange } from "./files.js";
 import { renderLibraries } from "./libpanel.js";
 import { peaksLabel, peaksSummary, renderPeaks } from "./peaks_panel.js";
 import { renderSheetPanel, sheetSummary } from "./sheet_panel.js";
-import { renderResults, resultsSummary } from "./results.js";
+import { derivedText, renderResults, resultsSummary } from "./results.js";
 import { formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
 import { activeFile, activeLibraries, readPref, writePref } from "./state.js";
@@ -38,7 +38,7 @@ const ROLE_ICON = { sample: "file", reference: "library", residual: "subtract", 
  * @param {import("./state.js").FileEntry} f @param {boolean} active @param {import("./actions.js").Ctx} ctx
  */
 function fileRow(f, active, ctx) {
-  const select = el("button", { type: "button", class: "file-select", "data-fk": `sel-${f.code}`, "aria-label": t("file.select", { code: f.code, role: ROLE_LABEL[f.role]() }) }, [icon(ROLE_ICON[f.role]), el("strong", {}, [f.code]), ` ${f.name ?? t("file.demo_name")} · ${fileRange(f)}`]);
+  const select = el("button", { type: "button", class: "file-select", "data-fk": `sel-${f.code}`, "aria-label": t("file.select", { code: f.code, role: ROLE_LABEL[f.role]() }) }, [icon(ROLE_ICON[f.role]), el("strong", {}, [f.code]), ` ${f.name ?? (f.derived ? "" : t("file.demo_name"))} · ${fileRange(f)}`]);
   if (active) select.setAttribute("aria-current", "true");
   select.addEventListener("click", () => ctx.selectFile(f.code));
   const close = el("button", { type: "button", class: "icon-button", "data-fk": `close-${f.code}`, "aria-label": t("file.close_one", { code: f.code }) }, [icon("close")]);
@@ -46,6 +46,7 @@ function fileRow(f, active, ctx) {
   attachTip(close, () => t("file.close_one", { code: f.code }));
   const row = el("div", { class: "file-row" }, [select, close]);
   if (f.note) row.append(el("span", { class: "note" }, [f.note]));
+  if (f.derived) row.append(el("span", { class: "note" }, [derivedText(f.derived)]));
   for (const w of f.warnings) row.append(el("span", { class: "warn" }, [icon("warning"), t(w.key, w.params)]));
   return row;
 }
@@ -92,7 +93,7 @@ function sectionOf(id) {
  * Build the side panel and the phone tab bar into their (empty) hosts.
  * @param {{ panel: HTMLElement, tabbar: HTMLElement }} hosts
  * @param {import("./actions.js").Ctx} ctx
- * @returns {{ refresh: (s: import("./state.js").AppState) => void, openSection: (id: string) => void, toggle: () => void, isRail: () => boolean }}
+ * @returns {{ refresh: (s: import("./state.js").AppState) => void, openSection: (id: string) => void, closeSection: () => void, toggle: () => void, isRail: () => boolean }}
  */
 export function buildPanels(hosts, ctx) {
   const isRail = () => document.body.dataset.panel === "rail";
@@ -147,6 +148,7 @@ export function buildPanels(hosts, ctx) {
     syncTabs();
     section.querySelector("summary")?.focus();
   }
+  const closeSection = () => (delete document.body.dataset.section, syncTabs());
   const refresh = (/** @type {import("./state.js").AppState} */ s) => {
     for (const p of PANELS) {
       const section = /** @type {HTMLElement} */ (sectionOf(p.id));
@@ -168,5 +170,5 @@ export function buildPanels(hosts, ctx) {
   };
   setRail(readPref("panel") === "rail");
   sectionOf("files")?.setAttribute("open", "");
-  return { refresh, openSection, toggle: () => setRail(!isRail()), isRail };
+  return { refresh, openSection, closeSection, toggle: () => setRail(!isRail()), isRail };
 }

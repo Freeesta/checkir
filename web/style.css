@@ -356,6 +356,24 @@ body[data-talk] .sheet-limits li { margin: 0.3rem 0; }
 body[data-talk] .sheet-host .talk-exit { display: inline-flex; }
 .dev-bar { position: fixed; right: 0.5rem; bottom: 3.5rem; z-index: 5; display: flex; gap: 0.25rem; padding: 0.25rem; border: 1px dashed var(--text); background: var(--bg); }
 
+/* Guided subtraction: stacked strips, the factor control, the warning. The reference strip is dashed and the residual has a zero line (never colour alone). */
+body[data-subtract] #chart-section, body[data-subtract] #table-section { display: none; }
+.factor { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin: 0.5rem 0; }
+.factor input[type="range"] { flex: 1 1 12rem; min-height: 1.5rem; accent-color: var(--color-residual); }
+.factor input[type="text"] { width: 5rem; min-height: 1.5rem; padding: 0.2rem 0.4rem; border: 1px solid var(--border); border-radius: 0.3rem; background: var(--bg); color: var(--text); font: inherit; text-align: right; }
+.subtract-formula { margin: 0.25rem 0; font-weight: 600; }
+.subtract-warning:not(:empty) { display: flex; align-items: center; gap: 0.35rem; margin: 0.5rem 0; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-left: 0.35rem solid var(--color-alert); border-radius: 0.3rem; font-size: 0.9rem; }
+.subtract-warning .icon { color: var(--color-alert); flex: none; }
+.strips svg { width: 100%; height: auto; display: block; }
+.strip-sample, .strip-reference, .strip-residual { fill: none; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.strip-sample { stroke: var(--color-sample); }
+.strip-reference { stroke: var(--color-reference); stroke-width: 2; stroke-dasharray: 7 4; }
+.strip-residual { stroke: var(--color-residual); }
+.grid.zero { stroke-opacity: 0.9; stroke-dasharray: 2 3; }
+.strip-name { font-weight: 600; }
+.factor-note { margin: 0.5rem 0; color: var(--text-muted); font-size: 0.9rem; }
+.result-residual { margin-top: 1rem; border-top: 2px solid var(--border); padding-top: 0.75rem; }
+@media (forced-colors: active) { .strip-sample, .strip-residual { stroke: CanvasText; } .strip-reference { stroke: Highlight; } }
 /* Chart instruments: reading cursors and zoom box. Cursor 1 is solid, cursor 2 dashed (never colour alone); nothing animates. */
 #chart svg { user-select: none; touch-action: pan-y; }
 .cursor { stroke: var(--text); stroke-width: 1.5; vector-effect: non-scaling-stroke; }

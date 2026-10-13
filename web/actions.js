@@ -1,16 +1,19 @@
 // @ts-check
 import { draftOf, isSignable } from "./decision.js";
+import { lastResidual } from "./files.js";
 import { activeLibraries, decisionOf, resultOf } from "./state.js";
+import { canSubtract } from "./subtract.js";
 /**
  * Registry of everything the user can do. Header, panel, work-area bar, phone menu and (later) shortcut help are generated from it.
- * `step` orders the guided flow: the "next step" button shows the first enabled action by `step`. `key` is the single-key shortcut (same in every language, run by shortcuts.js); an action not built yet has `soon` and `enabled` = never (the shortcut list shows it grey).
+ * `step` orders the guided flow: the "next step" button shows the first enabled action by `step`. `key` is the single-key shortcut (same in every language, run by shortcuts.js); an action not built yet has `soon` and `enabled` always false (the shortcut list shows it grey).
  * @typedef {{
  *   getState: () => import("./state.js").AppState,
  *   openFile: () => void, loadDemo: () => void, selectFile: (code: string) => void, closeFile: (code: string) => void, setLang: (code: string) => void, toggleLang: () => void, cycleTheme: () => void,
- *   togglePanel: () => void, goto: (panelId: string) => void, openDialog: (id: string) => void, folder: FolderCtx,
+ *   togglePanel: () => void, goto: (panelId: string) => void, closeSection: () => void, openDialog: (id: string) => void, folder: FolderCtx,
  *   setDraft: (patch: Partial<import("./state.js").DecisionDraft>) => void, signDecision: () => void, revokeDecision: () => void, setSheetLang: (lang: string) => Promise<void>, toggleTalk: () => void, printSheet: () => void,
  *   runMatch: () => void, selectCandidate: (key: string) => void, setLabel: (key: string, label: import("./state.js").ChemistLabel | null) => void, toggleOverlay: () => void,
  *   togglePeaks: () => void, focusPeak: (id: string | null) => void,
+ *   subtractOpen: () => void, subtractClose: () => void, subtractSearch: () => Promise<boolean>, setFactor: (k: number) => void, undo: () => void,
  *   importLibrary: (files: File[], name: string) => Promise<void>, cancelImport: () => void, removeLibrary: (id: string) => void, toggleLibrary: (id: string, on: boolean) => void,
  * }} Ctx
  * @typedef {{
@@ -24,7 +27,6 @@ import { activeLibraries, decisionOf, resultOf } from "./state.js";
  */
 
 const always = () => true;
-const never = () => false;
 
 /** @param {number} n @param {string} id @param {string} icon @returns {Action} */
 function gotoAction(n, id, icon) {
@@ -46,7 +48,9 @@ export const ACTIONS = [
   { id: "demo.load", labelKey: "action.demo_load.label", tipKey: "action.demo_load.tip", icon: "demo", section: "files", run: (c) => c.loadDemo(), enabled: always },
   { id: "file.close", labelKey: "action.file_close.label", tipKey: "action.file_close.tip", icon: "close", section: "files", run: (c) => { const code = c.getState().active; if (code) c.closeFile(code); }, enabled: (s) => s.files.length > 0 },
   { id: "match.run", labelKey: "action.match_run.label", tipKey: "action.match_run.tip", icon: "compare", key: "c", section: "results", step: 2, run: (c) => c.runMatch(), enabled: (s) => s.files.length > 0 && activeLibraries(s).length > 0 },
-  { id: "subtract.open", labelKey: "action.subtract_open.label", tipKey: "action.subtract_open.tip", icon: "subtract", key: "d", section: "files", step: 3, run: () => {}, soon: true, enabled: never },
+  { id: "subtract.open", labelKey: "action.subtract_open.label", tipKey: "action.subtract_open.tip", icon: "subtract", key: "d", section: "results", step: 3, run: (c) => { c.subtractOpen(); c.closeSection(); }, enabled: (s) => s.subtraction === null && canSubtract(s) },
+  { id: "subtract.search", labelKey: "action.subtract_search.label", tipKey: "action.subtract_search.tip", icon: "compare", section: "results", run: async (c) => { if (await c.subtractSearch()) c.goto("results"); }, enabled: (s) => s.subtraction !== null },
+  { id: "subtract.close", labelKey: "action.subtract_close.label", tipKey: "action.subtract_close.tip", icon: "close", section: "results", run: (c) => c.subtractClose(), enabled: (s) => s.subtraction !== null },
   { id: "sheet.open", labelKey: "action.sheet_open.label", tipKey: "action.sheet_open.tip", icon: "sheet", key: "s", section: "sheet", step: 4, run: (c) => c.goto("sheet"), enabled: (s) => resultOf(s) !== null },
   { id: "decision.sign", labelKey: "action.decision_sign.label", tipKey: "action.decision_sign.tip", icon: "pen", key: "f", section: "sheet", run: (c) => c.signDecision(), enabled: (s) => { const d = draftOf(s); return d !== null && decisionOf(s) === null && isSignable(d); } },
   { id: "decision.revoke", labelKey: "action.decision_revoke.label", tipKey: "action.decision_revoke.tip", icon: "back", section: "sheet", run: (c) => c.revokeDecision(), enabled: (s) => decisionOf(s) !== null },
@@ -54,7 +58,7 @@ export const ACTIONS = [
   { id: "overlay.toggle", labelKey: "action.overlay_toggle.label", tipKey: "action.overlay_toggle.tip", icon: "results", key: "r", section: "results", run: (c) => c.toggleOverlay(), enabled: (s) => resultOf(s) !== null },
   { id: "peaks.toggle", labelKey: "action.peaks_toggle.label", tipKey: "action.peaks_toggle.tip", icon: "peaks", key: "p", section: "peaks", run: (c) => c.togglePeaks(), enabled: (s) => s.files.length > 0 },
   { id: "sheet.talk", labelKey: "action.sheet_talk.label", tipKey: "action.sheet_talk.tip", icon: "sheet", key: "m", section: "sheet", run: (c) => c.toggleTalk(), enabled: (s) => resultOf(s) !== null },
-  { id: "history.undo", labelKey: "action.history_undo.label", tipKey: "action.history_undo.tip", icon: "back", key: "u", run: () => {}, soon: true, enabled: never },
+  { id: "history.undo", labelKey: "action.history_undo.label", tipKey: "action.history_undo.tip", icon: "back", key: "u", run: (c) => c.undo(), enabled: (s) => lastResidual(s) !== undefined },
   { id: "panel.toggle", labelKey: "action.panel_toggle.label", tipKey: "action.panel_toggle.tip", icon: "panel-open", key: "[", run: (c) => c.togglePanel(), enabled: always },
   gotoAction(1, "files", "file"),
   gotoAction(2, "libraries", "library"),

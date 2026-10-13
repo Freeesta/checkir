@@ -134,8 +134,53 @@ function detail(data, c, ctx, overlay, level) {
   );
   const button = actionButton("overlay.toggle", ctx, { withLabel: true, className: "btn" });
   button.setAttribute("aria-pressed", String(overlay));
-  box.append(button);
+  box.append(el("div", { class: "row" }, [button, actionButton("subtract.open", ctx, { withLabel: true, className: "btn" })]));
   return box;
+}
+
+/** "subtracted: name, library, k = 0.84" for a residual (written in the active language, never stored). @param {import("./state.js").Derived} d @returns {string} */
+export function derivedText(d) {
+  return t("file.derived", { name: d.name, library: d.library, k: formatNumber(d.k, 2) });
+}
+
+/** The residuals made from a spectrum, at any depth, in the order they were made (a residual always comes after its parent). @param {import("./state.js").AppState} s @param {string} code @returns {import("./state.js").FileEntry[]} */
+function residualsOf(s, code) {
+  const known = new Set([code]);
+  return s.files.filter((f) => f.role === "residual" && f.parent !== null && known.has(f.parent) && known.add(f.code));
+}
+
+/** Read-only rows of a residual's candidates; the full panel (labels, detail, overlay) is the residual's own, one click away. @param {any} data @returns {HTMLElement} */
+function residualRows(data) {
+  const list = el("ol", { class: "cands", "aria-label": t("results.candidates") });
+  (data.candidates ?? []).slice(0, LISTED).forEach((/** @type {any} */ c) => {
+    const row = el("li", { class: "cand", "data-key": candidateKey(c) }, [
+      el("span", { class: "cand-select" }, [el("span", { class: "rank" }, [formatNumber(c.rank)]), el("span", { class: "cand-name" }, [candidateName(c)]), el("span", { class: "cand-form" }, [c.form])]),
+      el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [formatNumber(c.r_derivative, 2)]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]),
+    ]);
+    list.append(row);
+  });
+  return list;
+}
+
+/** The search on a residual, shown under the one on its sample and never in its place. @param {import("./state.js").FileEntry} f @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @returns {HTMLElement | null} */
+function residualBlock(f, s, ctx) {
+  const result = s.results[f.code];
+  const head = el("h3", { class: "cands-title" }, [t("results.on_residual", { code: f.code })]);
+  const note = el("p", { class: "note" }, [f.derived ? derivedText(f.derived) : ""]);
+  if (!result) return s.matching === f.code ? el("div", { class: "result-residual", "data-code": f.code }, [head, note, el("p", { class: "busy", role: "status" }, [icon("compare"), t("results.running")])]) : null;
+  const n = levelNumber(result.data);
+  const show = el("button", { type: "button", class: "btn", "data-fk": `show-${f.code}` }, [icon("results"), t("results.residual_show", { code: f.code })]);
+  show.addEventListener("click", () => ctx.selectFile(f.code));
+  return el("div", { class: "result result-residual", "data-level": String(n), "data-code": f.code }, [
+    head,
+    note,
+    el("p", { class: "level-line" }, [levelBadge(n), el("span", { class: "proposed" }, [t("results.proposed")])]),
+    alertList(result.data),
+    el("h3", { class: "cands-title" }, [n === 5 ? t("results.similar") : t("results.candidates")]),
+    residualRows(result.data),
+    el("p", { class: "chain" }, [chainLine(result.data)]),
+    show,
+  ]);
 }
 
 /**
@@ -172,6 +217,7 @@ export function renderResults(body, s, ctx) {
       el("p", { class: "chain" }, [chainLine(data)]),
       detail(data, chosen, ctx, s.overlay, n),
     ]),
+    ...residualsOf(s, file.code).map((f) => residualBlock(f, s, ctx)).filter((b) => b !== null),
   );
 }
 
