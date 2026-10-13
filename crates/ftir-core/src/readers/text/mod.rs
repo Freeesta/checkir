@@ -56,6 +56,30 @@ pub fn detect(name: &str, head: &[u8]) -> Confidence {
     }
 }
 
+/// An export of an instrument program: JCAMP-style `##KEY=value` header lines (no data label) followed by bare `x y` rows.
+/// The JCAMP reader hands such a file over to this reader (`open`), which takes the units from `##XUNITS` and `##YUNITS`.
+pub fn is_headered_table(text: &str) -> bool {
+    let mut rows = 0usize;
+    for line in text.lines().map(str::trim).filter(|l| !l.is_empty()) {
+        if let Some(rest) = line.strip_prefix("##") {
+            let label = jtext::normalize(rest.split('=').next().unwrap_or(""));
+            if jtext::DATA_LABELS.contains(&label.as_str()) || label == "NTUPLES" || label == "END"
+            {
+                return false;
+            }
+        } else if rows < 10
+            && SEPARATORS.iter().any(|&s| {
+                DECIMALS
+                    .iter()
+                    .any(|&d| numbers::row(line, s, d).is_some_and(|r| r.len() >= 2))
+            })
+        {
+            rows += 1;
+        }
+    }
+    rows >= 10
+}
+
 /// The reading chosen for a file.
 pub(crate) struct Chosen {
     pub eval: Eval,
