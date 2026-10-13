@@ -1,0 +1,129 @@
+{
+  "schema": "ftir-risultato-confronto/1",
+  "chain": {
+    "derivative": "confronto_v1",
+    "spectrum": "confronto_spettro_v1",
+    "baseline": {
+      "id": "asls",
+      "lam": 10000000,
+      "p": 0.01,
+      "max_iter": 50,
+      "tol": 0.001
+    },
+    "cache_version": 1
+  },
+  "thresholds": {
+    "schema": "soglie-confronto/1",
+    "version": 1
+  },
+  "query": {
+    "role": "sample",
+    "origin": "sample-1"
+  },
+  "libraries": [
+    {
+      "id": "example",
+      "version": "1.0",
+      "spectra": 3,
+      "searched": true
+    }
+  ],
+  "ranges": [
+    [
+      650,
+      3800
+    ]
+  ],
+  "range_preset": "full",
+  "grouping": "identity",
+  "candidates": [
+    {
+      "rank": 1,
+      "spectrum_id": "a",
+      "substance": "a",
+      "display_name": "Substance a",
+      "form": "base",
+      "library": "example",
+      "library_version": "1.0",
+      "r_derivative": 0.9999909571930726,
+      "r_spectrum": 0.9999943185499236,
+      "coverage": 1,
+      "r_regions": {
+        "3700-2500": 0.9999038894572944,
+        "1900-1500": 0.999995307314034,
+        "1500-1000": 0.9999970135081266,
+        "1000-650": 0.9999910667829235
+      }
+    },
+    {
+      "rank": 2,
+      "spectrum_id": "a-hcl",
+      "substance": "a",
+      "display_name": "Substance a",
+      "form": "hcl",
+      "library": "example",
+      "library_version": "1.0",
+      "r_derivative": 0.9999288912951948,
+      "r_spectrum": 0.9999064294640124,
+      "coverage": 1,
+      "r_regions": {
+        "3700-2500": 0.9998980576680218,
+        "1900-1500": 0.9999953733166934,
+        "1500-1000": 0.9998964451314247,
+        "1000-650": 0.9999899046716704
+      }
+    },
+    {
+      "rank": 3,
+      "spectrum_id": "b",
+      "substance": "b",
+      "display_name": "Substance b",
+      "form": "base",
+      "library": "example",
+      "library_version": "1.0",
+      "r_derivative": -0.015173905393447422,
+      "r_spectrum": -0.13589101266362472,
+      "coverage": 1,
+      "r_regions": {
+        "3700-2500": -0.017163697429607914,
+        "1900-1500": -0.014538056959642926,
+        "1500-1000": -0.019965461344490676,
+        "1000-650": -0.008454516213503977
+      }
+    }
+  ],
+  "margin": 1.01516486258652,
+  "margin_vs": {
+    "display_name": "Substance b",
+    "form": "base",
+    "r_derivative": -0.015173905393447422
+  },
+  "level_proposed": "confirmed",
+  "level_caps": [],
+  "alerts": [
+    {
+      "id": "different_form",
+      "data": {
+        "first": {
+          "display_name": "Substance a",
+          "form": "base",
+          "r": 0.9999909571930726
+        },
+        "other": {
+          "display_name": "Substance a",
+          "form": "hcl",
+          "r": 0.9999288912951948
+        },
+        "other_rank": 2
+      }
+    },
+    {
+      "id": "fixed_limit",
+      "data": {}
+    }
+  ],
+  "twins": {
+    "done": 2,
+    "total": 3
+  }
+}

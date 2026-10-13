@@ -4,6 +4,7 @@
 pub mod anonimizza;
 pub mod budget;
 pub mod comparisons;
+pub mod confronti;
 pub mod error;
 pub mod passi;
 pub mod readers;

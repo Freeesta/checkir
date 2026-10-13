@@ -1,0 +1,185 @@
+//! The active libraries searched together: rows numbered across libraries, substance groups, and the spectral twins
+//! (for every row, the best r with a row of a different substance). Twins cost ~n² dot products, so they are computed
+//! in blocks of rows while the search already works; a result says "twins in progress" until its row is done.
+use super::libreria::{LibEntry, LibraryCache};
+use super::punteggio::{pair, RowRef};
+use super::CACHE_VERSION;
+use std::collections::HashMap;
+
+/// Rows per twin block (the page calls `twins_step` repeatedly and may save the state between blocks).
+pub const TWIN_BLOCK: usize = 256;
+
+impl Index {
+    pub fn new(libs: Vec<LibraryCache>) -> Self {
+        let mut offsets = Vec::with_capacity(libs.len());
+        let mut total = 0;
+        for l in &libs {
+            offsets.push(total);
+            total += l.len();
+        }
+        let mut ids: HashMap<String, u32> = HashMap::new();
+        let (mut by_id, mut by_name) = (false, false);
+        let group = libs
+            .iter()
+            .flat_map(|l| l.entries.iter())
+            .map(|e| {
+                let key = match &e.substance {
+                    Some(s) => {
+                        by_id = true;
+                        format!("id:{s}")
+                    }
+                    None => {
+                        by_name = true;
+                        format!("name:{}", normalize_name(&e.display_name))
+                    }
+                };
+                let next = ids.len() as u32;
+                *ids.entry(key).or_insert(next)
+            })
+            .collect();
+        let grouping = match (by_id, by_name) {
+            (true, true) => Grouping::Mixed,
+            (false, true) => Grouping::Name,
+            _ => Grouping::Identity,
+        };
+        let twins = Twins {
+            r: vec![-1.0; total],
+            partner: vec![u32::MAX; total],
+            done: 0,
+        };
+        Self {
+            libs,
+            offsets,
+            group,
+            grouping,
+            twins,
+        }
+    }
+
+    pub fn total(&self) -> usize {
+        self.group.len()
+    }
+
+    /// Library index and row inside it for global row `g`.
+    pub fn locate(&self, g: usize) -> (usize, usize) {
+        let li = self.offsets.partition_point(|o| *o <= g) - 1;
+        (li, g - self.offsets[li])
+    }
+
+    pub fn entry(&self, g: usize) -> &LibEntry {
+        let (li, i) = self.locate(g);
+        &self.libs[li].entries[i]
+    }
+
+    pub fn lib_range(&self, li: usize) -> std::ops::Range<usize> {
+        self.offsets[li]..self.offsets[li] + self.libs[li].len()
+    }
+
+    pub fn deriv_row(&self, g: usize) -> RowRef<'_> {
+        let (li, i) = self.locate(g);
+        let m = &self.libs[li].deriv;
+        RowRef {
+            v: m.row(i),
+            p: m.presence(i),
+            full: m.full[i],
+        }
+    }
+
+    /// The twin of row `g`: `(r, partner row)` once computed and when one exists.
+    pub fn twin(&self, g: usize) -> Option<(f64, usize)> {
+        (g < self.twins.done && self.twins.partner[g] != u32::MAX)
+            .then(|| (self.twins.r[g], self.twins.partner[g] as usize))
+    }
+
+    /// Compute the next block of at most `rows` rows; returns `(done, total)`.
+    pub fn twins_step(&mut self, rows: usize) -> (usize, usize) {
+        let total = self.total();
+        let end = (self.twins.done + rows).min(total);
+        for g in self.twins.done..end {
+            let a = self.deriv_row(g);
+            let (mut best, mut partner) = (-1.0, u32::MAX);
+            for (li, lib) in self.libs.iter().enumerate() {
+                for i in 0..lib.len() {
+                    let h = self.offsets[li] + i;
+                    if self.group[h] == self.group[g] {
+                        continue;
+                    }
+                    let b = RowRef {
+                        v: lib.deriv.row(i),
+                        p: lib.deriv.presence(i),
+                        full: lib.deriv.full[i],
+                    };
+                    let r = pair(a, b);
+                    if r > best {
+                        (best, partner) = (r, h as u32);
+                    }
+                }
+            }
+            self.twins.r[g] = best;
+            self.twins.partner[g] = partner;
+        }
+        self.twins.done = end;
+        (end, total)
+    }
+
+    /// Identity of this set of libraries: a saved twin state is valid only for the same fingerprint.
+    pub fn fingerprint(&self) -> String {
+        let parts: Vec<String> = self
+            .libs
+            .iter()
+            .map(|l| format!("{}@{}#{}", l.id, l.version, l.len()))
+            .collect();
+        format!("v{CACHE_VERSION}:{}", parts.join("|"))
+    }
+}
+
+/// How the substances were grouped: by the identity given by the library or by the normalised name.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Grouping {
+    Identity,
+    Name,
+    Mixed,
+}
+
+#[derive(Debug, Clone)]
+pub struct Twins {
+    /// Best r with a different substance, valid for rows `< done`.
+    pub r: Vec<f64>,
+    /// Global row of that twin (`u32::MAX` = none).
+    pub partner: Vec<u32>,
+    pub done: usize,
+}
+
+/// Lowercase, letters and digits only, single spaces: the fallback identity when a library gives none.
+pub fn normalize_name(s: &str) -> String {
+    let lower: String = s
+        .chars()
+        .map(|c| {
+            if c.is_alphanumeric() {
+                c.to_lowercase().next().unwrap_or(c)
+            } else {
+                ' '
+            }
+        })
+        .collect();
+    lower.split_whitespace().collect::<Vec<_>>().join(" ")
+}
+
+#[derive(Debug)]
+pub struct Index {
+    pub libs: Vec<LibraryCache>,
+    offsets: Vec<usize>,
+    pub group: Vec<u32>,
+    pub grouping: Grouping,
+    pub twins: Twins,
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn names_are_normalised() {
+        assert_eq!(normalize_name("  MDMA (Lot #4) HCl "), "mdma lot 4 hcl");
+    }
+}
