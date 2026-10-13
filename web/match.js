@@ -28,6 +28,10 @@ const waiting = new Map();
 let sentSignature = "";
 /** @type {Set<string>} */
 const started = new Set();
+/** Progress of the peak index of each library, as the worker reports it. @type {Map<string, { done: number, total: number, ready: boolean }>} */
+const indexStatus = new Map();
+/** @type {Map<number, (answer: { results: Array<{ lib: string, json: string }>, missing: string[] } | null) => void>} */
+const peakWaiting = new Map();
 /** @type {(text: string) => void} */
 let say = () => {};
 
@@ -72,6 +76,11 @@ function ensureWorker() {
     if (m.type === "result" || (m.type === "error" && m.runId !== undefined)) {
       waiting.get(m.runId)?.(m.type === "result" ? m.json : null);
       waiting.delete(m.runId);
+    } else if (m.type === "peak_index") {
+      indexStatus.set(m.id, { done: m.done, total: m.total, ready: m.ready });
+    } else if (m.type === "peak_result") {
+      peakWaiting.get(m.runId)?.({ results: m.results, missing: m.missing });
+      peakWaiting.delete(m.runId);
     } else if (m.type === "error") {
       update({ matchError: { key: m.key, params: {} } });
     }
@@ -93,6 +102,24 @@ function syncLibraries(s) {
     }),
   });
   sentSignature = signature;
+}
+
+/** Progress of the peak index of a library; null while the worker has not started it. @param {string} id @returns {{ done: number, total: number, ready: boolean } | null} */
+export function peakIndexStatus(id) {
+  return indexStatus.get(id) ?? null;
+}
+
+/**
+ * Which spectra of the active libraries have a band here? `query` is the JSON of `peak_index_query`; each result is the engine's
+ * answer for one library (row numbers of that library); `missing` lists the libraries whose index is still being built.
+ * @param {unknown} query @returns {Promise<{ results: Array<{ lib: string, json: string }>, missing: string[] } | null>}
+ */
+export function searchPeaks(query) {
+  const runId = ++runSeq;
+  return new Promise((resolve) => {
+    peakWaiting.set(runId, resolve);
+    ensureWorker().postMessage({ type: "peak_query", runId, libs: activeLibraries(getState()).map((l) => l.id), query });
+  });
 }
 
 /** @param {string | undefined} unit @returns {string | null} the unit name the engine knows */

@@ -1,10 +1,12 @@
 // @ts-check
 /**
  * The comparison runs here so the page stays responsive. This worker has its own engine (and its own copy of the libraries,
- * sent by the page); it never touches the network or any storage. Messages in: `sync` (the libraries to hold) and `run`;
- * messages out: `synced`, `twins` (progress of the spectral twins), `result`, `error`.
+ * sent by the page); it never touches the network; its only storage is the cache of the peak indexes (`peak_index_cache.js`). Messages in: `sync` (the libraries to hold), `run` and `peak_query`;
+ * messages out: `synced`, `twins` (progress of the spectral twins), `peak_index` (progress of the peak index of a library),
+ * `result`, `peak_result` (answer to `peak_query`), `error`.
  * @typedef {{ id: string, version: string, rows?: Array<{ id: string, substance?: string, form?: string, names: { it?: string, en: string } }>, values?: Float32Array, from?: number, step?: number }} LibMessage
  */
+import { ensurePeakIndex } from "./peak_index_job.js";
 
 /** The worker global scope (typed loosely: the project compiles with the DOM library only). @type {any} */
 const scope = self;
@@ -13,6 +15,8 @@ let mod = null;
 /** @type {Map<string, string>} */
 const held = new Map();
 let twinsRunning = false;
+/** Libraries whose peak index is ready to answer. @type {Set<string>} */
+const indexed = new Set();
 
 async function engine() {
   if (mod) return mod;
@@ -49,6 +53,21 @@ async function stepTwins() {
   twinsRunning = false;
 }
 
+/** Builds (or reads from the cache) the peak index of a library, then tells the page. @param {LibMessage} lib */
+async function indexLibrary(lib) {
+  const { rows = [], values = new Float32Array(), from = 650, step = 2 } = lib;
+  const progress = (/** @type {number} */ done, /** @type {number} */ total) => scope.postMessage({ type: "peak_index", id: lib.id, done, total, ready: false });
+  const how = await ensurePeakIndex(mod, { id: lib.id, version: lib.version, rows, values, from, step }, progress, () => held.get(lib.id) !== lib.version);
+  if (how === "cache" || how === "built") indexed.add(lib.id);
+  if (how !== "stale") scope.postMessage({ type: "peak_index", id: lib.id, done: rows.length, total: rows.length, ready: indexed.has(lib.id), how });
+}
+
+/** @param {{ runId: number, libs: string[], query: unknown }} job the libraries to search (those without an index yet are left out) */
+function peakQuery(job) {
+  const results = job.libs.filter((id) => indexed.has(id)).map((id) => ({ lib: id, json: mod.peak_index_query(id, JSON.stringify(job.query)) }));
+  scope.postMessage({ type: "peak_result", runId: job.runId, results, missing: job.libs.filter((id) => !indexed.has(id)) });
+}
+
 /** @param {LibMessage[]} libs the libraries to hold; `rows` is present only for those not sent before */
 async function sync(libs) {
   await engine();
@@ -56,6 +75,8 @@ async function sync(libs) {
   for (const id of [...held.keys()]) {
     if (!want.has(id) || libs.some((l) => l.id === id && l.rows && held.get(id) !== l.version)) {
       mod.confronto_libreria_togli(id);
+      mod.peak_index_remove(id);
+      indexed.delete(id);
       held.delete(id);
     }
   }
@@ -67,6 +88,7 @@ async function sync(libs) {
   }
   scope.postMessage({ type: "synced", ids: [...held.keys()] });
   stepTwins();
+  for (const lib of libs) if (lib.rows && held.get(lib.id) === lib.version) indexLibrary(lib).catch(() => scope.postMessage({ type: "peak_index", id: lib.id, done: 0, total: 0, ready: false, how: "failed" }));
 }
 
 /** @param {{ runId: number, query: unknown, options: unknown }} job */
@@ -80,4 +102,5 @@ scope.addEventListener("message", (/** @type {MessageEvent} */ e) => {
   const failed = (/** @type {unknown} */ err) => scope.postMessage({ type: "error", runId: m.runId, key: "engine.error", detail: String(err) });
   if (m.type === "sync") sync(m.libs).catch(failed);
   else if (m.type === "run") run(m).catch(failed);
+  else if (m.type === "peak_query") peakQuery(m);
 });

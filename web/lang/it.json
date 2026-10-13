@@ -1,5 +1,10 @@
 {
   "app.skip": "Vai al contenuto",
+  "peak_index.damaged": "L'indice dei picchi salvato è danneggiato ({what}); viene ricostruito dagli spettri.",
+  "peak_index.missing": "L'indice dei picchi della libreria «{library}» non è ancora pronto.",
+  "peak_index.obsolete": "L'indice dei picchi salvato è di un'altra versione della libreria; viene ricostruito.",
+  "peak_index.query_invalid": "La ricerca per picchi non è valida ({what}).",
+  "peak_index.spectrum_invalid": "Uno spettro della libreria non si è potuto indicizzare: asse e valori di lunghezza diversa.",
   "share.description": "Analisi FTIR open source per il drug checking. Il programma propone, la persona esperta decide.",
   "lang.label": "Lingua",
   "lang.it": "Italiano",
