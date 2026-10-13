@@ -91,5 +91,17 @@
   "glossary/invalid/no-definition.json": "definition",
   "peak-index/invalid/wrong-row-size.json": "row_bytes",
   "peak-index/invalid/no-version.json": "library_version",
-  "peak-index/invalid/extra-field.json": "substance"
+  "peak-index/invalid/extra-field.json": "substance",
+  "datasheet/invalid/unknown-enzyme.json": "/metabolism/pathways/0/enzymes/0",
+  "datasheet/invalid/bad-origin-type.json": "/origin/type",
+  "datasheet/invalid/bad-cut-frequency.json": "/cuts/0/frequency",
+  "datasheet/invalid/bad-counselling-topic.json": "/counselling/0/topic",
+  "datasheet/invalid/bad-mechanism.json": "/interactions/0/mechanism",
+  "datasheet/invalid/unknown-section-state.json": "foo",
+  "datasheet/invalid/cut-without-source.json": "source",
+  "sources/invalid/bad-tier.json": "/sources/0/tier",
+  "tagli/invalid/bad-sheet.json": "/cuts/0/sheet",
+  "family-sheet/invalid/missing-counselling-state.json": "counselling",
+  "family-sheet/invalid/signs-molecule.json": "/reviewers/0/sections/0",
+  "family-sheet/invalid/unknown-section.json": "history"
 }

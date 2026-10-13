@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wikidata",
+      "type": "database",
+      "title": "Wikidata",
+      "url": "https://www.wikidata.org/",
+      "consulted": "2026-10-12",
+      "license": "CC0-1.0",
+      "tier": "agency"
+    }
+  ]
+}

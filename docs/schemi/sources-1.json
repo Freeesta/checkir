@@ -92,6 +92,18 @@
             "description_it": "Id SPDX o breve dichiarazione di licenza della fonte.",
             "type": "string",
             "minLength": 1
+          },
+          "tier": {
+            "description": "Reliability tier: primary (peer-reviewed paper), review, agency (EUDA/EMCDDA, UNODC, WHO, NIDA, pharmacopoeia), database (numbers only), secondary (community sites).",
+            "description_it": "Livello di affidabilità: primary (articolo con revisione), review, agency (EUDA/EMCDDA, UNODC, WHO, NIDA, farmacopea), database (solo numeri), secondary (siti di comunità).",
+            "type": "string",
+            "enum": [
+              "primary",
+              "review",
+              "agency",
+              "database",
+              "secondary"
+            ]
           }
         },
         "required": [

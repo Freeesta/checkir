@@ -6,20 +6,26 @@ import json
 import re
 from datetime import date
 
-SECTIONS = ("molecule", "category", "effects", "doses", "risks", "interactions", "sources", "license")
+SECTIONS = ("molecule", "category", "history", "origin", "metabolism", "cuts", "effects", "doses", "risks", "interactions", "counselling", "sources", "license")
 # Roles that must sign a changed section (docs/agenti/dati_revisione.md): health texts need a health professional, chemistry a chemist.
 REQUIRED_ROLES = {
     "molecule": ("chemist",),
     "category": ("chemist",),
+    "history": ("chemist",),
+    "origin": ("chemist",),
+    "metabolism": ("chemist",),
+    "cuts": ("chemist",),
     "effects": ("health",),
     "doses": ("health",),
     "risks": ("health",),
     "interactions": ("health",),
+    "counselling": ("health",),
     "sources": (),
     "license": (),
 }
 # Data fields of datasheet.json that belong to a signed section; every other field is metadata.
-FIELD_SECTION = {"doses": "doses", "show_doses": "doses", "timings": "effects", "interactions": "interactions"}
+FIELD_SECTION = {"doses": "doses", "show_doses": "doses", "timings": "effects", "interactions": "interactions", "origin": "origin", "metabolism": "metabolism",
+                 "cuts": "cuts", "counselling": "counselling", "identity_extra": "molecule", "structure_svg": "molecule"}
 METADATA_FIELDS = ("schema", "substance", "version", "section_state", "reviewers", "reviewed", "review_by", "authors", "ai_assisted")
 RENEWAL_FIELDS = ("version", "reviewed", "review_by", "reviewers")
 
