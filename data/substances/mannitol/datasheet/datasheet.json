@@ -5,6 +5,7 @@
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "origin": "draft",
     "metabolism": "draft",
     "cuts": "draft",
     "effects": "draft",
@@ -34,5 +35,8 @@
   ],
   "metabolism": {
     "pathways": []
+  },
+  "origin": {
+    "type": "semisynthetic"
   }
 }

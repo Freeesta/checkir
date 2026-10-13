@@ -2,16 +2,20 @@
   "schema": "aliases/1",
   "aliases": {
     "2cb": "2c-b",
+    "2fa": "2-fa",
+    "3fa": "3-fa",
     "5-methoxy-dmt": "5-meo-dmt",
     "dimethyltryptamine": "dmt",
     "lsd-25": "lsd",
     "lysergide": "lsd",
+    "mde": "mdea",
     "mephedrone": "4-mmc",
     "mescalina": "mescaline",
     "metoxetamine": "methoxetamine",
     "mezcaline": "mescaline",
     "mxe": "methoxetamine",
     "psilocibina": "psilocybin",
-    "psilocybine": "psilocybin"
+    "psilocybine": "psilocybin",
+    "tenamfetamine": "mda"
   }
 }

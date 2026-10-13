@@ -34,7 +34,7 @@ It releases dopamine and noradrenaline; dopamine is the primary mediator of the 
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Doses of the authorised medicine, from the US prescribing information of amphetamine sulfate tablets: in narcolepsy the usual dose is 5-60 mg per day in divided doses; in attention deficit disorder with hyperactivity, children aged 6 or over start with 5 mg once or twice daily and it is only rarely necessary to exceed 40 mg per day; in exogenous obesity the usual dose is up to 30 mg daily. [f:evekeo-label]
 
 ## risks
 
@@ -42,7 +42,13 @@ Anorexia, weight loss and insomnia are predictable and frequent adverse effects.
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Use during or within 14 days after monoamine oxidase inhibitors is contraindicated: they slow amphetamine metabolism and potentiate its release of norepinephrine and other monoamines, which can cause headache and other signs of hypertensive crisis; neurological toxic effects and malignant hyperpyrexia can occur, sometimes with fatal results. [f:evekeo-label]
+
+The concomitant use of serotonergic drugs increases the risk of serotonin syndrome. [f:evekeo-label]
+
+CYP2D6 inhibitors (for example paroxetine, fluoxetine, quinidine, ritonavir) may increase the exposure to amphetamine and the risk of serotonin syndrome. [f:evekeo-label]
+
+Gastrointestinal acidifying agents (guanethidine, reserpine, glutamic acid HCl, ascorbic acid, fruit juices) lower the absorption of amphetamines and urinary acidifying agents increase their urinary excretion; both lower blood levels. [f:evekeo-label]
 
 ## counselling
 
@@ -54,7 +60,7 @@ Remember that amphetamine-type samples often contain caffeine and, in some regio
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-amphetamine] [f:smith-inorg2] [f:smith-amine-salts] [f:smith-benzene] [f:unodc-ewa] [f:checkir-classification] [f:losacker2021] [f:dolder2017] [f:heal2013] [f:ubc-counselling-guidelines]
+Sources used for the claims in this sheet: [f:chebi] [f:checkir-classification] [f:dolder2017] [f:evekeo-label] [f:heal2013] [f:losacker2021] [f:pubchem] [f:smith-amine-salts] [f:smith-benzene] [f:smith-inorg2] [f:swgdrug-amphetamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-ewa] [f:wikidata]
 
 ## license
 

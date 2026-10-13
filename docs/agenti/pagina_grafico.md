@@ -1,5 +1,5 @@
 # Pagina: grafico, picchi, regioni
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`, `pagina_miscele.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri.
 
 ## Struttura
 - `chart.js`: `draw` (SVG, curva ridotta con `thin` a ≤ 2 punti per pixel), `table` (dati dell'intervallo visibile, ≤ 400 righe), `wire(el)` → `{redraw, set(spettro|null)}` `setLayers(layers)` (banda grigia `rect.excluded` 1900–2400 cm⁻¹, curva di riferimento tratteggiata `--color-reference` e colonna «Riferimento (scalato)» nella tabella; `layers.js` li calcola; senza spettro `chart.empty`; l'etichetta y dice «intensità» se l'unità non è assorbanza).

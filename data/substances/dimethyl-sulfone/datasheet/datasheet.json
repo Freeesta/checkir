@@ -5,6 +5,7 @@
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "metabolism": "draft",
     "cuts": "draft",
     "effects": "draft",
     "doses": "draft",
@@ -30,5 +31,8 @@
       "frequency": "common",
       "source": "uw-adai-methamphetamine2025"
     }
-  ]
+  ],
+  "metabolism": {
+    "pathways": []
+  }
 }

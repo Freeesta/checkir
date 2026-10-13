@@ -13,29 +13,31 @@ let typedSampling = "unknown";
 let renaming = { id: "", text: "" };
 /** @type {import("./actions.js").Ctx | null} */
 let current = null;
-/** @type {{ files: HTMLInputElement, folder: HTMLInputElement } | null} */
+/** @type {{ files: HTMLInputElement, folder: HTMLInputElement, packages: HTMLInputElement, package: HTMLInputElement } | null} */
 let pickers = null;
 
-/** @param {boolean} folder @returns {HTMLInputElement} */
-function makePicker(folder) {
+/** @param {"files" | "folder" | "packages" | "package"} kind spectra to import (files, folder) or ready-made packages (a folder of them, or the files of one) @returns {HTMLInputElement} */
+function makePicker(kind) {
+  const folder = kind === "folder" || kind === "packages";
   const input = document.createElement("input");
   input.type = "file";
   input.multiple = true;
   input.hidden = true;
-  input.dataset.library = folder ? "folder" : "files";
+  input.dataset.library = kind;
   if (folder) input.setAttribute("webkitdirectory", "");
   input.addEventListener("change", () => {
     const chosen = [...(input.files ?? [])];
     input.value = "";
-    if (chosen.length) current?.importLibrary(chosen, typedName.trim() || proposedLibraryName(chosen) || t("library.import.name_default"), typedSampling);
+    if (chosen.length && kind.startsWith("package")) current?.importPackages(chosen);
+    else if (chosen.length) current?.importLibrary(chosen, typedName.trim() || proposedLibraryName(chosen) || t("library.import.name_default"), typedSampling);
   });
   document.body.append(input);
   return input;
 }
 
-/** The two hidden file choosers (files, folder), created on first use. */
+/** The hidden file choosers, created on first use. */
 function choosers() {
-  pickers ??= { files: makePicker(false), folder: makePicker(true) };
+  pickers ??= { files: makePicker("files"), folder: makePicker("folder"), packages: makePicker("packages"), package: makePicker("package") };
   return pickers;
 }
 
@@ -124,9 +126,13 @@ export function renderLibraries(body, s, ctx) {
   const pick = choosers();
   const files = el("button", { type: "button", class: "btn", "data-fk": "lib-import-files" }, [icon("file"), t("library.import.files")]);
   const folder = el("button", { type: "button", class: "btn", "data-fk": "lib-import-folder" }, [icon("library"), t("library.import.folder")]);
-  files.disabled = folder.disabled = busy;
+  const packages = el("button", { type: "button", class: "btn", "data-fk": "lib-import-packages" }, [icon("library"), t("library.import.packages")]);
+  const onePackage = el("button", { type: "button", class: "btn", "data-fk": "lib-import-package" }, [icon("file"), t("library.import.package")]);
+  files.disabled = folder.disabled = packages.disabled = onePackage.disabled = busy;
   files.addEventListener("click", () => pick.files.click());
   folder.addEventListener("click", () => pick.folder.click());
+  packages.addEventListener("click", () => pick.packages.click());
+  onePackage.addEventListener("click", () => pick.package.click());
   const name = el("input", { type: "text", id: "lib-name", class: "lib-name", maxlength: "60", autocomplete: "off", placeholder: t("library.import.name_placeholder") });
   name.value = typedName;
   name.addEventListener("input", () => (typedName = name.value));
@@ -135,6 +141,7 @@ export function renderLibraries(body, s, ctx) {
   how.addEventListener("change", () => (typedSampling = how.value));
   body.append(
     el("div", { class: "row" }, [files, folder]),
+    el("div", { class: "row" }, [packages, onePackage]),
     el("label", { for: "lib-name", class: "note" }, [t("library.import.name_label")]),
     name,
     how,
