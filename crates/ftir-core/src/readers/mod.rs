@@ -5,6 +5,7 @@ pub mod export;
 pub mod ispd;
 pub mod jcamp;
 pub mod model;
+pub mod opus;
 pub mod sha256;
 pub mod text;
 
@@ -23,7 +24,7 @@ pub struct Reader {
     pub open: fn(&[u8], &Limits, &Options) -> ReadResult<Document>,
 }
 
-pub static READERS: &[Reader] = &[jcamp::READER, text::READER, ispd::READER];
+pub static READERS: &[Reader] = &[jcamp::READER, text::READER, ispd::READER, opus::READER];
 
 /// Picks the reader that is surest about the file; ties go to the registry order.
 pub fn pick(name: &str, head: &[u8]) -> Option<&'static Reader> {

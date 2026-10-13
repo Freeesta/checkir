@@ -25,3 +25,9 @@ name = "text"
 path = "fuzz_targets/text.rs"
 test = false
 doc = false
+
+[[bin]]
+name = "opus"
+path = "fuzz_targets/opus.rs"
+test = false
+doc = false
