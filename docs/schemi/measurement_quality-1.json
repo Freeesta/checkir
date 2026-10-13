@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:measurement_quality:1",
+  "title": "Measurement quality",
+  "title_it": "Qualita della misura",
+  "description": "Warnings about the measurement seen in the absorbance spectrum. Warnings only, never blocks.",
+  "description_it": "Avvisi sulla misura visti nello spettro in assorbanza. Solo avvisi, mai blocchi.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema.",
+      "const": "measurement_quality/1"
+    },
+    "thresholds": {
+      "description": "Thresholds used.",
+      "description_it": "Soglie usate.",
+      "type": "object",
+      "properties": {
+        "version": {
+          "description": "Version.",
+          "description_it": "Versione.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "description": "draft or calibrated.",
+          "description_it": "draft o calibrated.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "blocks": {
+      "description": "Always false: the checks never block.",
+      "description_it": "Sempre false: i controlli non bloccano mai.",
+      "const": false
+    },
+    "summary_key": {
+      "description": "Catalogue key of the neutral summary.",
+      "description_it": "Chiave di catalogo del riepilogo neutro.",
+      "type": "string",
+      "enum": [
+        "quality.summary.attention",
+        "quality.summary.no_signal"
+      ]
+    },
+    "checks": {
+      "description": "The checks done, in order.",
+      "description_it": "I controlli fatti, in ordine.",
+      "type": "array",
+      "items": {
+        "description": "One check.",
+        "description_it": "Un controllo.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Check id.",
+            "description_it": "Id del controllo.",
+            "type": "string",
+            "enum": [
+              "co2",
+              "vapour",
+              "negative"
+            ]
+          },
+          "outcome": {
+            "description": "no_signal (no anomalous signal found), attention, or not_evaluable (range missing). Never a pass mark.",
+            "description_it": "no_signal (nessun segnale anomalo trovato), attention o not_evaluable (intervallo mancante). Mai un voto di idoneita.",
+            "type": "string",
+            "enum": [
+              "no_signal",
+              "attention",
+              "not_evaluable"
+            ]
+          },
+          "severity": {
+            "description": "strong for a negative band below the strong limit, else null.",
+            "description_it": "strong per una banda negativa sotto il limite forte, altrimenti null.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "strong",
+              null
+            ]
+          },
+          "value": {
+            "description": "Measured value, null when not evaluable.",
+            "description_it": "Valore misurato, null se non valutabile.",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "threshold": {
+            "description": "Limit used.",
+            "description_it": "Limite usato.",
+            "type": "number"
+          },
+          "unit": {
+            "description": "Unit of value and threshold.",
+            "description_it": "Unita di value e soglia.",
+            "type": "string",
+            "enum": [
+              "A",
+              "A/cm-1"
+            ]
+          },
+          "at_cm1": {
+            "description": "Wavenumber of the largest deviation or lowest value.",
+            "description_it": "Numero d'onda dello scarto massimo o del valore minimo.",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "message_key": {
+            "description": "Catalogue key of the text.",
+            "description_it": "Chiave di catalogo del testo.",
+            "type": "string"
+          },
+          "action_key": {
+            "description": "Catalogue key of the advice for the lab; only with attention.",
+            "description_it": "Chiave di catalogo del consiglio per il laboratorio; solo con attention.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "outcome",
+          "severity",
+          "value",
+          "threshold",
+          "unit",
+          "at_cm1",
+          "message_key"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "thresholds",
+    "blocks",
+    "summary_key",
+    "checks"
+  ],
+  "additionalProperties": false
+}

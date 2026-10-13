@@ -1,0 +1,27 @@
+{
+  "schema": "quality_thresholds/1",
+  "version": 1,
+  "calibration": {
+    "status": "draft",
+    "bench": "none",
+    "chain": "measurement_quality_v1",
+    "date": "2026-10"
+  },
+  "co2": {
+    "band_cm1": [2300, 2380],
+    "flanks_cm1": [[2210, 2250], [2440, 2480]],
+    "max_deviation_abs": 0.02,
+    "min_points": 5
+  },
+  "vapour": {
+    "band_cm1": [3700, 3900],
+    "roughness_ratio": 5,
+    "reference_median_roughness": 0.00082,
+    "min_points": 20
+  },
+  "negative": {
+    "excluded_cm1": [[0, 500], [1900, 2400]],
+    "min_abs": -0.02,
+    "strong_min_abs": -0.05
+  }
+}
