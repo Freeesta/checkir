@@ -127,6 +127,8 @@ async function shortcutsScenario(browser) {
   await page.keyboard.press("l");
   check("shortcuts: with the dialog open the letters do nothing", (await page.getAttribute("html", "lang")) === "it");
   await page.keyboard.press("Escape");
+  // The browser handles the close request after the key event returns, so wait for the dialog to go before looking at the focus.
+  await page.waitForSelector("dialog", { state: "detached" });
   check("shortcuts: Esc closes the list and gives the focus back", !(await page.isVisible("dialog")) && (await page.evaluate(() => document.activeElement === document.body)));
   await page.keyboard.press("l");
   await page.waitForFunction(() => document.documentElement.lang === "en");
