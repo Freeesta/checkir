@@ -2,6 +2,7 @@
   "schema": "datasheet/1",
   "substance": "2c-t-7",
   "version": 1,
+  "family": "2c",
   "section_state": {
     "molecule": "draft",
     "category": "draft",

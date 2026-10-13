@@ -14,7 +14,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 
 ## 2. Regole di lavoro
 - **Consegna = sito pubblicato**: finito quando è in `main` e il workflow `pages` di quel commit è riuscito.
-- **Flusso**: ramo `claude/<argomento>` da `origin/main` → PR → merge commit (mai rebase né push forzato). Prima di unire `git merge origin/main`. Le PR le unisce il Coordinatore a CI verde; le chat di sviluppo lasciano la PR aperta.
+- **Flusso**: ramo `claude/<argomento>` da `origin/main` → PR → merge commit (mai rebase né push forzato). Ramo = `claude/<id-riga-minuscolo>`. La chat apre la PR, ne abilita il merge automatico (MERGE), corregge CI rossa e conflitti (`git merge origin/main`) e la segue fino all'unione; poi aggiorna la propria riga di `STATO.md`.
 - **Perimetro**: ogni chat tocca solo ciò che dice il suo prompt; a fine lavoro UN messaggio al Coordinatore (max 5 righe).
 - **Due persone** (Federico e Dave) con privilegi identici e chat che non si parlano: il lavoro si prende solo da una riga di `STATO.md` del privato `Freeesta/checkir-data` secondo `REGOLE.md` §3 (una chat = una riga = il suo perimetro). A PR aperta la chat non tocca altro.
 - **Commit**: titolo breve in italiano + 1-3 righe; codice e commenti in inglese; mai nomi di modelli nei commit e nel codice.

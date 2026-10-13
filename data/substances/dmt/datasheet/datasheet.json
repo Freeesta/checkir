@@ -1,0 +1,72 @@
+{
+  "schema": "datasheet/1",
+  "substance": "dmt",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "risky",
+      "mechanism": "maoi",
+      "source": "riba2003"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "half_life_h": {
+      "min": 0.08,
+      "max": 0.27,
+      "matrix": "plasma",
+      "route": "intravenous",
+      "source": "vogt2023"
+    }
+  },
+  "counselling": [
+    {
+      "key": "dmt.maoi",
+      "topic": "combination",
+      "source": "riba2003"
+    },
+    {
+      "key": "dmt.duration",
+      "topic": "route",
+      "source": "vogt2023"
+    },
+    {
+      "key": "dmt.set_setting",
+      "topic": "set_setting",
+      "source": "vogt2023"
+    },
+    {
+      "key": "dmt.tolerance",
+      "topic": "tolerance",
+      "source": "vogt2023"
+    }
+  ],
+  "family": "tryptamines"
+}

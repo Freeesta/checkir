@@ -1,0 +1,50 @@
+{
+  "schema": "family-sheet/1",
+  "id": "2c",
+  "version": 1,
+  "section_state": {
+    "effects": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "caution",
+      "mechanism": "maoi",
+      "source": "theobald2007"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "2c.setting",
+      "topic": "set_setting",
+      "source": "dean2013"
+    },
+    {
+      "key": "2c.identity",
+      "topic": "testing",
+      "source": "dean2013"
+    },
+    {
+      "key": "2c.signs",
+      "topic": "overdose_signs",
+      "source": "dean2013"
+    },
+    {
+      "key": "2c.combination",
+      "topic": "combination",
+      "source": "theobald2007"
+    }
+  ],
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

@@ -1,0 +1,115 @@
+{
+  "schema": "datasheet/1",
+  "substance": "lsd",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "lithium",
+      "severity": "dangerous",
+      "mechanism": "other",
+      "source": "nayak2021"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "semisynthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "nor-LSD",
+        "reaction": "n_demethylation",
+        "source": "luethi2019",
+        "enzymes": [
+          "CYP2D6",
+          "CYP3A4",
+          "other"
+        ]
+      },
+      {
+        "from": "parent",
+        "to": "2-oxo-3-hydroxy-LSD",
+        "reaction": "hydroxylation",
+        "source": "luethi2019",
+        "enzymes": [
+          "CYP1A2",
+          "CYP2C9",
+          "CYP3A4",
+          "other"
+        ]
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "nor-lsd",
+        "active": true,
+        "source": "luethi2019"
+      },
+      {
+        "name_key": "2-oxo-3-hydroxy-lsd",
+        "active": false,
+        "source": "holze2023",
+        "marker": true
+      }
+    ],
+    "half_life_h": {
+      "min": 3.7,
+      "max": 4.0,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "holze2023"
+    }
+  },
+  "counselling": [
+    {
+      "key": "lsd.testing",
+      "topic": "testing",
+      "source": "shanks2015"
+    },
+    {
+      "key": "lsd.duration",
+      "topic": "redosing",
+      "source": "holze2023"
+    },
+    {
+      "key": "lsd.set_setting",
+      "topic": "set_setting",
+      "source": "johnson2008"
+    },
+    {
+      "key": "lsd.lithium",
+      "topic": "combination",
+      "source": "nayak2021"
+    },
+    {
+      "key": "lsd.after",
+      "topic": "mental_health",
+      "source": "halpern2018"
+    }
+  ],
+  "family": "tryptamines"
+}
