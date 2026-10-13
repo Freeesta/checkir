@@ -1,0 +1,85 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mcpp",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "cocaine",
+      "severity": "caution",
+      "mechanism": "cyp_inhibition",
+      "source": "staack2007"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxy-mCPP",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP2D6"
+        ],
+        "source": "staack2007"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "hydroxy-mcpp",
+        "active": null,
+        "source": "staack2007"
+      }
+    ],
+    "half_life_h": {
+      "min": 2.6,
+      "max": 6.1,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "feuchtl2004"
+    }
+  },
+  "counselling": [
+    {
+      "key": "mcpp.mdma",
+      "topic": "testing",
+      "source": "vogels2009"
+    },
+    {
+      "key": "mcpp.anxiety",
+      "topic": "mental_health",
+      "source": "feuchtl2004"
+    },
+    {
+      "key": "mcpp.cocaine",
+      "topic": "combination",
+      "source": "staack2007"
+    }
+  ]
+}

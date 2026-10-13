@@ -43,7 +43,7 @@
         "from": "parent",
         "to": "nor-LSD",
         "reaction": "n_demethylation",
-        "source": "luethi2019",
+        "source": "luethi2019-lsd",
         "enzymes": [
           "CYP2D6",
           "CYP3A4",
@@ -54,7 +54,7 @@
         "from": "parent",
         "to": "2-oxo-3-hydroxy-LSD",
         "reaction": "hydroxylation",
-        "source": "luethi2019",
+        "source": "luethi2019-lsd",
         "enzymes": [
           "CYP1A2",
           "CYP2C9",
@@ -67,7 +67,7 @@
       {
         "name_key": "nor-lsd",
         "active": true,
-        "source": "luethi2019"
+        "source": "luethi2019-lsd"
       },
       {
         "name_key": "2-oxo-3-hydroxy-lsd",

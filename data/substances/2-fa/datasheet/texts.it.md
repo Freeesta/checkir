@@ -32,13 +32,13 @@ Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata
 
 ## counselling
 
-Chiedere quale fluoroanfetamina la persona si aspetta: 2-FA, 3-FA e 4-FA sono isomeri di posizione, e 3-FA e 4-FA coeluiscono in LC-MS/MS e vanno distinte dal rapporto tra ioni; la 4-FA inibisce inoltre il trasportatore della serotonina più dell'anfetamina, e le linee d'indirizzo UBC descrivono effetti entactogeni solo per la 4-FA, quindi le tre non vanno trattate come intercambiabili. [f:johansen2012] [f:luethi2019] [f:ubc-counselling-guidelines]
+Chiedere quale fluoroanfetamina la persona si aspetta: 2-FA, 3-FA e 4-FA sono isomeri di posizione, e 3-FA e 4-FA coeluiscono in LC-MS/MS e vanno distinte dal rapporto tra ioni; la 4-FA inibisce inoltre il trasportatore della serotonina più dell'anfetamina, e le linee d'indirizzo UBC descrivono effetti entactogeni solo per la 4-FA, quindi le tre non vanno trattate come intercambiabili. [f:johansen2012] [f:luethi2019-halogen] [f:ubc-counselling-guidelines]
 
 Chiedere di altre sostanze e di farmaci: le linee d'indirizzo UBC sconsigliano di associare alcol e altri stimolanti perché gli effetti delle interazioni sono praticamente sconosciuti; per la 4-FA, l'isomero più studiato tra i vicini, una rassegna prevede interazioni farmacodinamiche con i farmaci per l'ADHD e con gli antidepressivi. [f:inan2020] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:swgdrug-2fa] [f:smith-benzene] [f:johansen2012] [f:kranenburg2020] [f:unodc-ewa] [f:checkir-classification] [f:luethi2019] [f:ubc-counselling-guidelines] [f:inan2020] [f:anchondo2025]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:swgdrug-2fa] [f:smith-benzene] [f:johansen2012] [f:kranenburg2020] [f:unodc-ewa] [f:checkir-classification] [f:luethi2019-halogen] [f:ubc-counselling-guidelines] [f:inan2020] [f:anchondo2025]
 
 ## license
 

@@ -22,7 +22,7 @@ L'EUDA descrive l'LSD come un allucinogeno semisintetico. La maggior parte è pr
 
 ## metabolism
 
-In vitro CYP2D6, CYP2E1 e CYP3A4 contribuiscono alla formazione di nor-LSD, e CYP1A2, CYP2C9, CYP2E1 e CYP3A4 a quella di 2-oxo-3-idrossi-LSD. Il nor-LSD è probabilmente attivo; il 2-oxo-3-idrossi-LSD è inattivo. [f:luethi2019]
+In vitro CYP2D6, CYP2E1 e CYP3A4 contribuiscono alla formazione di nor-LSD, e CYP1A2, CYP2C9, CYP2E1 e CYP3A4 a quella di 2-oxo-3-idrossi-LSD. Il nor-LSD è probabilmente attivo; il 2-oxo-3-idrossi-LSD è inattivo. [f:luethi2019-lsd]
 
 Chi non ha CYP2D6 funzionante aveva emivite dell'LSD più lunghe e un'esposizione plasmatica (AUC) di LSD e di 2-oxo-3-idrossi-LSD più alta di circa il 75% rispetto ai portatori di CYP2D6 funzionante (81 soggetti sani di 4 studi). [f:vizeli2021]
 
@@ -34,7 +34,7 @@ In 28 volontari sani gli effetti soggettivi sono durati 9.3 ± 3.2 ore dopo 85 �
 
 La farmacologia dell'LSD è complessa e i suoi meccanismi d'azione non sono ancora del tutto compresi. [f:passie2008]
 
-In vitro LSD e nor-LSD sono attivi su diversi recettori della serotonina; il 2-oxo-3-idrossi-LSD ha affinità e attività molto più deboli. [f:luethi2019]
+In vitro LSD e nor-LSD sono attivi su diversi recettori della serotonina; il 2-oxo-3-idrossi-LSD ha affinità e attività molto più deboli. [f:luethi2019-lsd]
 
 ## doses
 
@@ -56,7 +56,7 @@ Composti NBOMe sono stati venduti come LSD su carta assorbente; due morti di ado
 
 Tra 62 segnalazioni online di litio assunto con psichedelici classici come LSD o psilocibina, il 47% riguardava crisi convulsive; nessuna delle 34 segnalazioni con lamotrigina. Sono resoconti personali, non dati controllati. [f:nayak2021]
 
-In vitro la rifampicina ha aumentato nettamente la formazione di nor-LSD e di 2-oxo-3-idrossi-LSD; gli autori affermano che servono studi di interazione nell'uomo. [f:luethi2019]
+In vitro la rifampicina ha aumentato nettamente la formazione di nor-LSD e di 2-oxo-3-idrossi-LSD; gli autori affermano che servono studi di interazione nell'uomo. [f:luethi2019-lsd]
 
 ## counselling
 
@@ -72,7 +72,7 @@ Parla dei giorni dopo: l'HPPD è raro, e le linee UBC suggeriscono almeno un gio
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:coates2000] [f:nist-webbook] [f:smith-amides] [f:euda-lsd] [f:unodc-ewa] [f:checkir-classification] [f:passie2008] [f:luethi2019] [f:vizeli2021] [f:holze2023] [f:ubc-counselling-guidelines] [f:johnson2008] [f:halpern2018] [f:shanks2015] [f:nayak2021]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:coates2000] [f:nist-webbook] [f:smith-amides] [f:euda-lsd] [f:unodc-ewa] [f:checkir-classification] [f:passie2008] [f:luethi2019-lsd] [f:vizeli2021] [f:holze2023] [f:ubc-counselling-guidelines] [f:johnson2008] [f:halpern2018] [f:shanks2015] [f:nayak2021]
 
 ## license
 

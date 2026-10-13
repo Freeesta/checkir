@@ -1,0 +1,82 @@
+{
+  "schema": "datasheet/1",
+  "substance": "gbl",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "ethanol",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "tay2022"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "GHB",
+        "reaction": "hydrolysis_ester",
+        "enzymes": [
+          "other"
+        ],
+        "source": "tay2022"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "ghb",
+        "active": true,
+        "source": "busardo2015"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "gbl.dosing",
+      "topic": "dosing",
+      "source": "busardo2015"
+    },
+    {
+      "key": "gbl.combination",
+      "topic": "combination",
+      "source": "tay2022"
+    },
+    {
+      "key": "gbl.dependence",
+      "topic": "dependence",
+      "source": "busardo2015"
+    },
+    {
+      "key": "gbl.signs",
+      "topic": "overdose_signs",
+      "source": "schep2012"
+    }
+  ]
+}

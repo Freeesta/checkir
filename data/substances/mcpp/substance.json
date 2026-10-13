@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mcpp",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "mCPP",
+      "synonyms": [
+        "meta-Chlorophenylpiperazine",
+        "1-(3-Chlorophenyl)piperazine",
+        "m-CPP"
+      ]
+    },
+    "it": {
+      "preferred": "mCPP",
+      "synonyms": [
+        "meta-Clorofenilpiperazina",
+        "1-(3-Clorofenil)piperazina",
+        "m-CPP"
+      ]
+    }
+  },
+  "iupac": "1-(3-chlorophenyl)piperazine",
+  "formula": "C10H13ClN2",
+  "molar_mass_g_mol": 196.67,
+  "smiles": "C1CN(CCN1)C2=CC(=CC=C2)Cl",
+  "inchi": "InChI=1S/C10H13ClN2/c11-9-2-1-3-10(8-9)13-6-4-12-5-7-13/h1-3,8,12H,4-7H2",
+  "inchikey": "VHFVKMTVMIZMIK-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "6640-24-0",
+    "pubchem_cid": 1355
+  },
+  "classes": {
+    "chemical": [
+      "piperazines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
