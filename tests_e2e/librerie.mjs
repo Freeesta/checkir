@@ -50,8 +50,11 @@ export async function librariesScenario(browser, base, check, axe) {
   await pub.waitFor();
   const text = (await pub.textContent()) ?? "";
   check("libraries: the public library shows version, spectra, licence and attribution", /Versione/.test(text) && /Spettri: 1/.test(text) && /CC-BY-4\.0/.test(text) && /Attribuzione: Libreria comunitaria/.test(text) && /Pubblica/.test(text), text);
-  check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 1"));
+  check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes("2 · 12"));
+  const swg = (await page.locator('[data-library="swgdrug-ir"]').textContent()) ?? "";
+  check("libraries: a library under a written permission shows its citation, licence terms, disclaimer and no endorsement", /SWGDRUG IR Library v2024-05-15/.test(swg) && /LicenseRef-permission-swgdrug/.test(swg) && /Condizioni della licenza: Solo uso non commerciale/.test(swg) && /without warranty or liability/.test(swg) && /SWGDRUG does not endorse \S+ or any software/.test(swg) && !swg.includes("{app}"), swg);
   await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
+  await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   check("libraries: switching a library off empties the header chip", ((await page.textContent('[data-chip="library"]')) ?? "").includes("—"));
   await page.getByRole("checkbox", { name: /checkir-community/ }).check();
   const violations = await axe(page);
