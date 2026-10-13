@@ -3,6 +3,15 @@ import { el, icon } from "./dom.js";
 import { t } from "./i18n.js";
 import { APP_NAME } from "./appname.js";
 import { helpBody } from "./help.js";
+import { autoMatchOn, setAutoMatch } from "./match.js";
+
+/** The switch of the automatic comparison (stored preference `autoMatch`). @returns {HTMLElement} */
+function autoMatchSwitch() {
+  const box = /** @type {HTMLInputElement} */ (el("input", { type: "checkbox", role: "switch", id: "auto-match-switch" }));
+  box.checked = autoMatchOn();
+  box.addEventListener("change", () => setAutoMatch(box.checked));
+  return el("div", { class: "switch-row" }, [box, el("label", { for: "auto-match-switch" }, [t("info.auto_match")])]);
+}
 
 /**
  * Modal dialogs (native <dialog>), rebuilt each time they open so they are always in the active language.
@@ -17,6 +26,7 @@ export function buildDialogs(engineVersion) {
       body: [
         el("section", {}, [el("h3", {}, [t("info.privacy_title")]), el("p", {}, [t("info.privacy")])]),
         el("section", {}, [el("h3", {}, [t("info.limits_title")]), el("p", {}, [t("limits.more")])]),
+        el("section", {}, [el("h3", {}, [t("info.match_title")]), autoMatchSwitch(), el("p", { class: "empty" }, [t("info.auto_match_hint")])]),
         el("section", { id: "warnings-slot" }, [el("h3", {}, [t("info.warnings_title")]), el("p", { class: "empty" }, [t("info.warnings_empty")])]),
         el("section", {}, [
           el("h3", {}, [t("info.versions_title")]),

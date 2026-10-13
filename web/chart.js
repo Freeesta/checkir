@@ -5,6 +5,8 @@ import { clamp, pan, zoom } from "./view.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** @typedef {import("./view.js").View} View */
+/** Extra curves and zones drawn with the sample: the library spectrum of a candidate (already scaled) and the zone left out of the comparison.
+ * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null }} Layers */
 
 const NS = "http://www.w3.org/2000/svg";
 const W = 800;
@@ -44,19 +46,38 @@ function ticks(lo, hi, n) {
   return out;
 }
 
+/** Draw the zone left out of the comparison as a grey band with a dashed edge and a label (never colour alone). @param {SVGElement} root @param {Layers["excluded"]} zone @param {View} v @param {(x: number) => number} px */
+function drawExcluded(root, zone, v, px) {
+  if (!zone || zone.to < v.min || zone.from > v.max) return;
+  const a = px(Math.min(zone.to, v.max));
+  const b = px(Math.max(zone.from, v.min));
+  root.append(svg("rect", { class: "excluded", x: a, y: M.t, width: b - a, height: H - M.t - M.b }));
+  const label = svg("text", { class: "label excluded-label", x: (a + b) / 2, y: M.t + 14, "text-anchor": "middle" });
+  label.textContent = zone.label;
+  root.append(label);
+}
+
 /**
  * Draw the chart into `host`: SVG with axes, ticks and the curve; x axis runs from high to low wavenumber.
  * @param {HTMLElement} host
  * @param {Spectrum} s
  * @param {View} v
+ * @param {Layers} [layers]
  */
-export function draw(host, s, v) {
+export function draw(host, s, v, layers = {}) {
   const idx = visibleIndices(s, v.min, v.max);
+  const ref = layers.reference?.spectrum ?? null;
+  const refIdx = ref ? visibleIndices(ref, v.min, v.max) : [];
   let y0 = 0;
   let y1 = -Infinity;
   for (const i of idx) {
     if (s.y[i] < y0) y0 = s.y[i];
     if (s.y[i] > y1) y1 = s.y[i];
+  }
+  for (const i of refIdx) {
+    if (!Number.isFinite(ref?.y[i])) continue;
+    if (/** @type {Spectrum} */ (ref).y[i] < y0) y0 = /** @type {Spectrum} */ (ref).y[i];
+    if (/** @type {Spectrum} */ (ref).y[i] > y1) y1 = /** @type {Spectrum} */ (ref).y[i];
   }
   y1 = y1 > y0 ? (y1 - y0) * 1.05 + y0 : y0 + 1;
   const px = (/** @type {number} */ x) => M.l + ((v.max - x) / (v.max - v.min)) * (W - M.l - M.r);
@@ -74,7 +95,15 @@ export function draw(host, s, v) {
     e.textContent = formatNumber(y, 1);
     root.append(e);
   }
+  drawExcluded(root, layers.excluded, v, px);
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
+  if (ref) {
+    const kept = thin(refIdx.filter((i) => Number.isFinite(ref.y[i])), ref.y, PLOT_W);
+    root.append(svg("polyline", { class: "curve-reference", points: kept.map((i) => `${px(ref.wavenumber_cm1[i])},${py(ref.y[i])}`).join(" ") }));
+    const legend = svg("text", { class: "label reference-label", x: W - M.r - 6, y: M.t + 28, "text-anchor": "end" });
+    legend.textContent = /** @type {{ label: string }} */ (layers.reference).label;
+    root.append(legend);
+  }
   root.append(svg("polyline", { class: "curve", points: thin(idx, s.y, PLOT_W).map((i) => `${px(s.wavenumber_cm1[i])},${py(s.y[i])}`).join(" ") }));
   const ex = svg("text", { class: "label", x: W / 2, y: H - 6, "text-anchor": "middle" });
   ex.textContent = t("chart.axis_x");
@@ -84,20 +113,29 @@ export function draw(host, s, v) {
   host.replaceChildren(root);
 }
 
+/** The scaled library value nearest to a wavenumber (the library grid is regular), or null outside it. @param {Spectrum} ref @param {number} x @returns {number | null} */
+function referenceAt(ref, x) {
+  const step = ref.wavenumber_cm1[1] - ref.wavenumber_cm1[0];
+  const i = Math.round((x - ref.wavenumber_cm1[0]) / step);
+  return i >= 0 && i < ref.y.length && Number.isFinite(ref.y[i]) ? ref.y[i] : null;
+}
+
 /**
- * Accessible table with the points in the view (thinned to at most MAX_RIGHE rows).
+ * Accessible table with the points in the view (thinned to at most MAX_RIGHE rows); with a reference curve it has one more column.
  * @param {HTMLElement} host
  * @param {Spectrum} s
  * @param {View} v
+ * @param {Layers} [layers]
  */
-export function table(host, s, v) {
+export function table(host, s, v, layers = {}) {
+  const ref = layers.reference ?? null;
   const idx = visibleIndices(s, v.min, v.max);
   const stride = Math.max(1, Math.ceil(idx.length / MAX_RIGHE));
   const tab = document.createElement("table");
   const cap = tab.createCaption();
-  cap.textContent = t("table.caption");
+  cap.textContent = ref ? `${t("table.caption")} ${t("table.reference_note", { label: ref.label, scale: formatNumber(ref.scale, 2) })}` : t("table.caption");
   const row = tab.createTHead().insertRow();
-  for (const name of [t("table.wavenumber"), yLabel(s)]) {
+  for (const name of [t("table.wavenumber"), yLabel(s), ...(ref ? [t("table.reference")] : [])]) {
     const th = document.createElement("th");
     th.scope = "col";
     th.textContent = name;
@@ -108,18 +146,35 @@ export function table(host, s, v) {
     const r = body.insertRow();
     r.insertCell().textContent = formatNumber(s.wavenumber_cm1[idx[j]]);
     r.insertCell().textContent = formatNumber(s.y[idx[j]], 4);
+    if (ref) {
+      const value = referenceAt(ref.spectrum, s.wavenumber_cm1[idx[j]]);
+      r.insertCell().textContent = value === null ? "—" : formatNumber(value, 4);
+    }
   }
   host.replaceChildren(tab);
+}
+
+/** @param {Spectrum} s @returns {View} the whole range of the spectrum */
+function extentOf(s) {
+  let min = Infinity;
+  let max = -Infinity;
+  for (const x of s.wavenumber_cm1) {
+    if (x < min) min = x;
+    if (x > max) max = x;
+  }
+  return { min, max };
 }
 
 /**
  * Wire the chart: keyboard (+ - arrows 0) and buttons, both without any drag. The spectrum is swapped with `set`; with none, a short line says so.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
- * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void }} `redraw` after a language change
+ * @returns {{ redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void }} `redraw` after a language change
  */
 export function wire(el) {
   /** @type {Spectrum | null} */
   let s = null;
+  /** @type {Layers} */
+  let layers = {};
   let full = { min: 0, max: 1 };
   let v = { ...full };
   const update = () => {
@@ -128,8 +183,8 @@ export function wire(el) {
       el.range.textContent = "";
       return;
     }
-    draw(el.chart, s, v);
-    table(el.tab, s, v);
+    draw(el.chart, s, v, layers);
+    table(el.tab, s, v, layers);
     el.range.textContent = t("chart.range", { from: formatNumber(v.min), to: formatNumber(v.max) });
   };
   /** @type {Array<[string, () => string, () => View]>} */
@@ -174,17 +229,15 @@ export function wire(el) {
       relabel();
       update();
     },
+    setLayers: (next) => {
+      layers = next;
+      update();
+    },
     set: (next) => {
       if (next !== s) {
         s = next;
         if (s) {
-          let lo = Infinity;
-          let hi = -Infinity;
-          for (const x of s.wavenumber_cm1) {
-            if (x < lo) lo = x;
-            if (x > hi) hi = x;
-          }
-          full = { min: lo, max: hi };
+          full = extentOf(s);
           v = { ...full };
         }
       }

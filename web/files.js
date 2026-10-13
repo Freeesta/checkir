@@ -105,14 +105,15 @@ export function closeFile(code) {
   for (const c of gone) store.delete(c);
   const files = s.files.filter((f) => !gone.has(f.code));
   if (!files.length) seq = 0;
-  update({ files, active: gone.has(/** @type {string} */ (s.active)) ? (files[0]?.code ?? null) : s.active, fileError: null });
+  const results = Object.fromEntries(Object.entries(s.results).filter(([c]) => !gone.has(c)));
+  update({ files, results, active: gone.has(/** @type {string} */ (s.active)) ? (files[0]?.code ?? null) : s.active, fileError: null });
 }
 
 /** Forget everything loaded. */
 export function closeAll() {
   store.clear();
   seq = 0;
-  update({ files: [], active: null, fileError: null });
+  update({ files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: false });
 }
 
 /**

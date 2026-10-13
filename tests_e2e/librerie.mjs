@@ -86,7 +86,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await openLibraries(page);
   await page.locator('[data-library="mia-libreria"]').waitFor();
   check("import: the private library is still there after a reload", true);
-  check("import: only preferences are kept in localStorage", await page.evaluate(() => Object.keys(localStorage).every((k) => /^checkir\.(lang|theme|panel|shortcuts)$/.test(k))));
+  check("import: only preferences are kept in localStorage", await page.evaluate(() => Object.keys(localStorage).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch)$/.test(k))));
   await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
   await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
   const left = await page.evaluate(async () => {
