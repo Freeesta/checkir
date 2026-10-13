@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "fentanyl-carbamate",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Fentanyl carbamate",
+      "synonyms": [
+        "fentanyl ethylformate",
+        "ethylformate fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Fentanil carbammato",
+      "synonyms": [
+        "fentanil etilformiato"
+      ]
+    }
+  },
+  "iupac": "ethyl N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]carbamate",
+  "formula": "C22H28N2O2",
+  "molar_mass_g_mol": 352.5,
+  "smiles": "CCOC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C22H28N2O2/c1-2-26-22(25)24(20-11-7-4-8-12-20)21-14-17-23(18-15-21)16-13-19-9-5-3-6-10-19/h3-12,21H,2,13-18H2,1H3",
+  "inchikey": "BPXVEPWHWMDYCP-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1465-20-9",
+    "pubchem_cid": 44371939
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

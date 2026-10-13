@@ -796,7 +796,7 @@
       "tier": "primary"
     },
     {
-      "id": "luethi2019",
+      "id": "luethi2019-lsd",
       "type": "paper",
       "title": "Cytochrome P450 enzymes contribute to the metabolism of LSD to nor-LSD and 2-oxo-3-hydroxy-LSD: Implications for clinical LSD use (Biochem Pharmacol 164:129-138)",
       "authors": [
@@ -2859,7 +2859,7 @@
       "archive_url": "https://web.archive.org/web/20250214053716/https://pmc.ncbi.nlm.nih.gov/articles/PMC7240807/"
     },
     {
-      "id": "luethi2019",
+      "id": "luethi2019-halogen",
       "type": "paper",
       "title": "para-Halogenation Affects Monoamine Transporter Inhibition Properties and Hepatocellular Toxicity of Amphetamines and Methcathinones (Front Pharmacol 10:438)",
       "authors": [
@@ -5725,6 +5725,791 @@
       "tier": "review"
     },
     {
+      "id": "bossong2005",
+      "type": "paper",
+      "title": "Methylone and mCPP, two new drugs of abuse? (Addiction biology 10)",
+      "authors": [
+        "M G Bossong",
+        "J P Van Dijk",
+        "R J M Niesink"
+      ],
+      "year": 2005,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1080/13556210500350794",
+      "url": "https://doi.org/10.1080/13556210500350794"
+    },
+    {
+      "id": "busardo2015",
+      "type": "paper",
+      "title": "GHB pharmacology and toxicology: acute intoxication, concentrations in blood and urine in forensic cases and treatment of the withdrawal syndrome (Current neuropharmacology 13)",
+      "authors": [
+        "Francesco P Busardò",
+        "Alan W Jones"
+      ],
+      "year": 2015,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.2174/1570159X13666141210215423",
+      "url": "https://doi.org/10.2174/1570159X13666141210215423"
+    },
+    {
+      "id": "chan2008",
+      "type": "paper",
+      "title": "Urinary elimination of ephedrines following administration of the Traditional Chinese Medicine preparation Kakkon-to (Journal of analytical toxicology 32)",
+      "authors": [
+        "Kuei Hui Chan",
+        "Ryh-Nan Pan",
+        "Mei-Chich Hsu",
+        "Ku-Fu Hsu"
+      ],
+      "year": 2008,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1093/jat/32.9.763",
+      "url": "https://doi.org/10.1093/jat/32.9.763"
+    },
+    {
+      "id": "feuchtl2004",
+      "type": "paper",
+      "title": "Pharmacokinetics of m-chlorophenylpiperazine after intravenous and oral administration in healthy male volunteers: implication for the pharmacodynamic profile (Pharmacopsychiatry 37)",
+      "authors": [
+        "A Feuchtl",
+        "M Bagli",
+        "R Stephan",
+        "C Frahnert",
+        "H Kölsch",
+        "K U Kühn",
+        "M L Rao"
+      ],
+      "year": 2004,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1055/s-2004-827175",
+      "url": "https://doi.org/10.1055/s-2004-827175"
+    },
+    {
+      "id": "gerostamoulos2023",
+      "type": "paper",
+      "title": "Fatal Intoxications from a Combination of 4-Fluoroamphetamine and 25C-NBOMe (Journal of analytical toxicology 47)",
+      "authors": [
+        "Dimitri Gerostamoulos",
+        "Linda Glowacki",
+        "Maria Pricone",
+        "Kerryn Crump",
+        "Matthew Di Rago",
+        "Samantha Joubert",
+        "Matthew J Lynch",
+        "Noel W Woodford",
+        "Olaf H Drummer"
+      ],
+      "year": 2023,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1093/jat/bkac059",
+      "url": "https://doi.org/10.1093/jat/bkac059"
+    },
+    {
+      "id": "gresnigt2022",
+      "type": "paper",
+      "title": "4-Fluoroamphetamine (4-FA) intoxication results in exaggerated blood pressure effects compared to MDMA and amphetamine: A retrospective analysis (Journal of the American College of Emergency Physicians open 3)",
+      "authors": [
+        "Femke M J Gresnigt",
+        "Anouk Snik",
+        "Eric J F Franssen",
+        "Joost W Vanhommerig",
+        "Dylan W de Lange",
+        "Robert K Riezebos"
+      ],
+      "year": 2022,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1002/emp2.12813",
+      "url": "https://doi.org/10.1002/emp2.12813"
+    },
+    {
+      "id": "haller2000",
+      "type": "paper",
+      "title": "Adverse cardiovascular and central nervous system events associated with dietary supplements containing ephedra alkaloids (The New England journal of medicine 343)",
+      "authors": [
+        "C A Haller",
+        "N L Benowitz"
+      ],
+      "year": 2000,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1056/NEJM200012213432502",
+      "url": "https://doi.org/10.1056/NEJM200012213432502"
+    },
+    {
+      "id": "haller2002",
+      "type": "paper",
+      "title": "Pharmacology of ephedra alkaloids and caffeine after single-dose dietary supplement use (Clinical pharmacology and therapeutics 71)",
+      "authors": [
+        "Christine A Haller",
+        "Peyton Jacob",
+        "Neal L Benowitz"
+      ],
+      "year": 2002,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1067/mcp.2002.124523",
+      "url": "https://doi.org/10.1067/mcp.2002.124523"
+    },
+    {
+      "id": "hondebrink2018",
+      "type": "paper",
+      "title": "Fatalities, Cerebral Hemorrhage, and Severe Cardiovascular Toxicity After Exposure to the New Psychoactive Substance 4-Fluoroamphetamine: A Prospective Cohort Study (Annals of emergency medicine 71)",
+      "authors": [
+        "Laura Hondebrink",
+        "Johanna J Nugteren-van Lonkhuyzen",
+        "Saskia J Rietjens",
+        "Tibor M Brunt",
+        "Bastiaan Venhuis",
+        "Vidija Soerdjbalie-Maikoe",
+        "Beitske E Smink",
+        "Antoinette J H P van Riel",
+        "Irma de Vries"
+      ],
+      "year": 2018,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.annemergmed.2017.07.482",
+      "url": "https://doi.org/10.1016/j.annemergmed.2017.07.482"
+    },
+    {
+      "id": "liechti2016",
+      "type": "paper",
+      "title": "Pharmacokinetics and pharmacodynamics of γ-hydroxybutyrate in healthy subjects (British journal of clinical pharmacology 81)",
+      "authors": [
+        "Matthias E Liechti",
+        "Boris B Quednow",
+        "Evangelia Liakoni",
+        "Dario Dornbierer",
+        "Robin von Rotz",
+        "Maria Salomé Gachet",
+        "Jürg Gertsch",
+        "Erich Seifritz",
+        "Oliver G Bosch"
+      ],
+      "year": 2016,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1111/bcp.12863",
+      "url": "https://doi.org/10.1111/bcp.12863"
+    },
+    {
+      "id": "nugteren2015",
+      "type": "paper",
+      "title": "Pharmacokinetics, pharmacodynamics and toxicology of new psychoactive substances (NPS): 2C-B, 4-fluoroamphetamine and benzofurans (Drug and alcohol dependence 157)",
+      "authors": [
+        "Johanna J Nugteren-van Lonkhuyzen",
+        "Antoinette J H P van Riel",
+        "Tibor M Brunt",
+        "Laura Hondebrink"
+      ],
+      "year": 2015,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1016/j.drugalcdep.2015.10.011",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2015.10.011"
+    },
+    {
+      "id": "palatini1993",
+      "type": "paper",
+      "title": "Dose-dependent absorption and elimination of gamma-hydroxybutyric acid in healthy volunteers (European journal of clinical pharmacology 45)",
+      "authors": [
+        "P Palatini",
+        "L Tedeschi",
+        "G Frison",
+        "R Padrini",
+        "R Zordan",
+        "R Orlando",
+        "L Gallimberti",
+        "G L Gessa",
+        "S D Ferrara"
+      ],
+      "year": 1993,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/BF00265954",
+      "url": "https://doi.org/10.1007/BF00265954"
+    },
+    {
+      "id": "rotzinger1998",
+      "type": "paper",
+      "title": "Trazodone is metabolized to m-chlorophenylpiperazine by CYP3A4 from human sources (Drug metabolism and disposition: the biological fate of chemicals 26)",
+      "authors": [
+        "S Rotzinger",
+        "J Fang",
+        "G B Baker"
+      ],
+      "year": 1998,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9616194/"
+    },
+    {
+      "id": "schep2012",
+      "type": "paper",
+      "title": "The clinical toxicology of γ-hydroxybutyrate, γ-butyrolactone and 1,4-butanediol (Clinical toxicology (Philadelphia, Pa.) 50)",
+      "authors": [
+        "Leo J Schep",
+        "Kai Knudsen",
+        "Robin J Slaughter",
+        "J Allister Vale",
+        "Bruno Mégarbane"
+      ],
+      "year": 2012,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.3109/15563650.2012.702218",
+      "url": "https://doi.org/10.3109/15563650.2012.702218"
+    },
+    {
+      "id": "sever1975",
+      "type": "paper",
+      "title": "The metabolism of (-)-ephedrine in man (European journal of clinical pharmacology 9)",
+      "authors": [
+        "P S Sever",
+        "L G Dring",
+        "R T Williams"
+      ],
+      "year": 1975,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/BF00614017",
+      "url": "https://doi.org/10.1007/BF00614017"
+    },
+    {
+      "id": "staack2007",
+      "type": "paper",
+      "title": "Proof of a 1-(3-chlorophenyl)piperazine (mCPP) intake: use as adulterant of cocaine resulting in drug-drug interactions? (Journal of chromatography. B, Analytical technologies in the biomedical and life sciences 855)",
+      "authors": [
+        "Roland F Staack",
+        "Liane D Paul",
+        "Dagmar Schmid",
+        "Gabriele Roider",
+        "Burkhard Rolf"
+      ],
+      "year": 2007,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.jchromb.2007.05.017",
+      "url": "https://doi.org/10.1016/j.jchromb.2007.05.017"
+    },
+    {
+      "id": "swgdrug-4fa",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Fluoroamphetamine (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4-FA.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241212105436/https://swgdrug.org/Monographs/4-FA.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-ephedrine",
+      "type": "database",
+      "title": "SWGDRUG monograph: d-Ephedrine (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/d-Ephedrine.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207115757/https://swgdrug.org/Monographs/d-Ephedrine.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-gbl",
+      "type": "database",
+      "title": "SWGDRUG monograph: Gamma-butyrolactone (IR: neat, ATR, vapour)",
+      "url": "https://www.swgdrug.org/Monographs/GAMMA-BUTYROLACTONE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250831001249/https://www.swgdrug.org/Monographs/GAMMA-BUTYROLACTONE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-ghb",
+      "type": "database",
+      "title": "SWGDRUG monograph: Gamma-hydroxybutyrate / butyric acid (IR: sodium salt and free acid)",
+      "url": "https://www.swgdrug.org/Monographs/GAMMA-HYDROXYBUTYRATE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260917194548/https://www.swgdrug.org/Monographs/GAMMA-HYDROXYBUTYRATE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "tay2022",
+      "type": "paper",
+      "title": "Current Insights on the Impact of Gamma-Hydroxybutyrate (GHB) Abuse (Substance abuse and rehabilitation 13)",
+      "authors": [
+        "Emma Tay",
+        "Wing Kwan Winky Lo",
+        "Bridin Murnion"
+      ],
+      "year": 2022,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.2147/SAR.S315720",
+      "url": "https://doi.org/10.2147/SAR.S315720"
+    },
+    {
+      "id": "toennes2020",
+      "type": "paper",
+      "title": "Excretion of 4-fluoroamphetamine and three metabolites in urine after controlled oral ingestion (Journal of pharmaceutical and biomedical analysis 179)",
+      "authors": [
+        "Stefan W Toennes",
+        "David Schneider",
+        "Werner Pogoda",
+        "Alexander Paulke",
+        "Cora Wunder",
+        "Eef L Theunissen",
+        "Elizabeth B de Sousa Fernandes Perna",
+        "Johannes G Ramaekers"
+      ],
+      "year": 2020,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.jpba.2019.113008",
+      "url": "https://doi.org/10.1016/j.jpba.2019.113008"
+    },
+    {
+      "id": "vogels2009",
+      "type": "paper",
+      "title": "Content of ecstasy in the Netherlands: 1993-2008 (Addiction (Abingdon, England) 104)",
+      "authors": [
+        "Neeltje Vogels",
+        "Tibor M Brunt",
+        "Sander Rigter",
+        "Peter van Dijk",
+        "Hylke Vervaeke",
+        "Raymond J M Niesink"
+      ],
+      "year": 2009,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1111/j.1360-0443.2009.02707.x",
+      "url": "https://doi.org/10.1111/j.1360-0443.2009.02707.x"
+    },
+    {
+      "id": "wen2008",
+      "type": "paper",
+      "title": "Detection of novel reactive metabolites of trazodone: evidence for CYP2D6-mediated bioactivation of m-chlorophenylpiperazine (Drug metabolism and disposition: the biological fate of chemicals 36)",
+      "authors": [
+        "Bo Wen",
+        "Li Ma",
+        "A David Rodrigues",
+        "Mingshe Zhu"
+      ],
+      "year": 2008,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1124/dmd.107.019471",
+      "url": "https://doi.org/10.1124/dmd.107.019471"
+    },
+    {
+      "id": "white1997",
+      "type": "paper",
+      "title": "Pharmacokinetics and cardiovascular effects of ma-huang (Ephedra sinica) in normotensive adults (Journal of clinical pharmacology 37)",
+      "authors": [
+        "L M White",
+        "S F Gardner",
+        "B J Gurley",
+        "M A Marx",
+        "P L Wang",
+        "M Estes"
+      ],
+      "year": 1997,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1002/j.1552-4604.1997.tb04769.x",
+      "url": "https://doi.org/10.1002/j.1552-4604.1997.tb04769.x"
+    },
+    {
+      "id": "wijers2018",
+      "type": "paper",
+      "title": "Haemorrhagic stroke related to the use of 4-fluoroamphetamine (Journal of neurology 265)",
+      "authors": [
+        "C H W Wijers",
+        "M C Visser",
+        "R T H van Litsenburg",
+        "R J M Niesink",
+        "R B Willemse",
+        "Esther A Croes"
+      ],
+      "year": 2018,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/s00415-018-8888-6",
+      "url": "https://doi.org/10.1007/s00415-018-8888-6"
+    },
+    {
+      "id": "wong2004",
+      "type": "paper",
+      "title": "Gamma-hydroxybutyric acid: neurobiology and toxicology of a recreational drug (Toxicological reviews 23)",
+      "authors": [
+        "C Guin Ting Wong",
+        "Katherine F Y Chan",
+        "K Michael Gibson",
+        "O Carter Snead"
+      ],
+      "year": 2004,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.2165/00139709-200423010-00002",
+      "url": "https://doi.org/10.2165/00139709-200423010-00002"
+    },
+    {
+      "id": "zheng2023",
+      "type": "paper",
+      "title": "Ephedrae herba: A comprehensive review of its traditional uses, phytochemistry, pharmacology, and toxicology (Journal of ethnopharmacology 307)",
+      "authors": [
+        "Qingge Zheng",
+        "Xiangyu Mu",
+        "Shaobin Pan",
+        "Ruqiao Luan",
+        "Pan Zhao"
+      ],
+      "year": 2023,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1016/j.jep.2023.116153",
+      "url": "https://doi.org/10.1016/j.jep.2023.116153"
+    },
+    {
+      "id": "varshneya2023",
+      "type": "paper",
+      "title": "Fentanyl analog structure-activity relationships demonstrate determinants of diverging potencies for antinociception and respiratory depression (Pharmacol Biochem Behav 226:173572)",
+      "authors": [
+        "N. B. Varshneya",
+        "S. H. Hassanien",
+        "M. C. Holt",
+        "D. L. Stevens",
+        "N. K. Layle",
+        "J. R. Bassman",
+        "D. M. Iula",
+        "P. M. Beardsley"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.pbb.2023.173572",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37236405/",
+      "archive_url": "https://web.archive.org/web/20260211014311/https://pubmed.ncbi.nlm.nih.gov/37236405/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "varshneya2019",
+      "type": "paper",
+      "title": "Opioid-like antinociceptive and locomotor effects of emerging fentanyl-related substances (Neuropharmacology 151:171-179)",
+      "authors": [
+        "N. B. Varshneya",
+        "D. M. Walentiny",
+        "L. T. Moisa",
+        "T. D. Walker",
+        "L. R. Akinfiresoye",
+        "P. M. Beardsley"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2019.03.023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8992608/",
+      "archive_url": "https://web.archive.org/web/20260308104752/https://pmc.ncbi.nlm.nih.gov/articles/PMC8992608/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "watanabe2017",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolite identification studies for the new synthetic opioids acetylfentanyl, acrylfentanyl, furanylfentanyl, and 4-fluoro-isobutyrylfentanyl (AAPS J 19:1102-1122)",
+      "authors": [
+        "S. Watanabe",
+        "S. Vikingsson",
+        "M. Roman",
+        "H. Green",
+        "R. Kronstrand",
+        "A. Wohlfarth"
+      ],
+      "year": 2017,
+      "doi": "10.1208/s12248-017-0070-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28382544/",
+      "archive_url": "https://web.archive.org/web/20260218104342/https://pubmed.ncbi.nlm.nih.gov/28382544/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "giltner2022",
+      "type": "paper",
+      "title": "Fentanyl analog trends in Washington D.C. observed in needle-exchange syringes (Forensic Sci Int 338:111393)",
+      "authors": [
+        "A. Giltner",
+        "A. Evans",
+        "C. Cicco",
+        "S. Leach",
+        "W. Rowe"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.forsciint.2022.111393",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35908338/",
+      "archive_url": "https://web.archive.org/web/20250422095312/https://pubmed.ncbi.nlm.nih.gov/35908338/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "otte2022",
+      "type": "paper",
+      "title": "Investigation of the μ- and κ-opioid receptor activation by eight new synthetic opioids using the [35S]-GTPγS assay: U-47700, isopropyl U-47700, U-49900, U-47931E, N-methyl U-47931E, U-51754, U-48520, and U-48800 (Drug Test Anal 14:1187-1199)",
+      "authors": [
+        "L. Otte",
+        "M. Wilde",
+        "V. Auwärter",
+        "K. E. Grafinger"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3238",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35142070/",
+      "archive_url": "https://web.archive.org/web/20240720165327/https://pubmed.ncbi.nlm.nih.gov/35142070/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "fogarty2022-u48800",
+      "type": "paper",
+      "title": "Analysis of the illicit opioid U-48800 and related compounds by LC-MS-MS and case series of fatalities involving U-48800 (J Anal Toxicol 46:17-24)",
+      "authors": [
+        "M. F. Fogarty",
+        "A. L. A. Mohr",
+        "D. M. Papsun",
+        "B. K. Logan"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkaa180",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33237987/",
+      "archive_url": "https://web.archive.org/web/20260504110444/https://pubmed.ncbi.nlm.nih.gov/33237987/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "krotulski2019-mining",
+      "type": "paper",
+      "title": "Sample mining and data mining: combined real-time and retrospective approaches for the identification of emerging novel psychoactive substances (J Forensic Sci 65:550-562)",
+      "authors": [
+        "A. J. Krotulski",
+        "S. Jansen Varnum",
+        "B. K. Logan"
+      ],
+      "year": 2019,
+      "doi": "10.1111/1556-4029.14184",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31498433/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "baumann2020",
+      "type": "paper",
+      "title": "U-47700 and Its Analogs: Non-Fentanyl Synthetic Opioids Impacting the Recreational Drug Market (Brain Sci 10:895)",
+      "authors": [
+        "M. H. Baumann",
+        "G. Tocco",
+        "D. M. Papsun",
+        "A. L. Mohr",
+        "M. F. Fogarty",
+        "A. J. Krotulski"
+      ],
+      "year": 2020,
+      "doi": "10.3390/brainsci10110895",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7700279/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260623071622/https://pmc.ncbi.nlm.nih.gov/articles/PMC7700279/"
+    },
+    {
+      "id": "varshneya2021",
+      "type": "paper",
+      "title": "Fentanyl-related substances elicit antinociception and hyperlocomotion in mice via opioid receptors (Pharmacol Biochem Behav 208:173242)",
+      "authors": [
+        "N. B. Varshneya",
+        "D. M. Walentiny",
+        "L. T. Moisa",
+        "T. D. Walker",
+        "L. R. Akinfiresoye",
+        "P. M. Beardsley"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.pbb.2021.173242",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9044821/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260221013801/https://pmc.ncbi.nlm.nih.gov/articles/PMC9044821/"
+    },
+    {
+      "id": "feasel2016",
+      "type": "paper",
+      "title": "Metabolism of Carfentanil, an Ultra-Potent Opioid, in Human Liver Microsomes and Human Hepatocytes by High-Resolution Mass Spectrometry (AAPS J 18:1489-1499)",
+      "authors": [
+        "M. G. Feasel",
+        "A. Wohlfarth",
+        "J. M. Nilles",
+        "S. Pang",
+        "R. L. Kristovich",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1208/s12248-016-9963-5",
+      "url": "https://doi.org/10.1208/s12248-016-9963-5",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "kanamori2019",
+      "type": "paper",
+      "title": "Metabolism of Butyrylfentanyl in Fresh Human Hepatocytes: Chemical Synthesis of Authentic Metabolite Standards for Definitive Identification (Biol Pharm Bull 42:623-630)",
+      "authors": [
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Segawa",
+        "T. Yamamuro",
+        "K. Kuwayama",
+        "K. Tsujikawa",
+        "H. Inoue"
+      ],
+      "year": 2019,
+      "doi": "10.1248/bpb.b18-00765",
+      "url": "https://doi.org/10.1248/bpb.b18-00765",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "steuer2017",
+      "type": "paper",
+      "title": "Studies on the metabolism of the fentanyl-derived designer drug butyrfentanyl in human in vitro liver preparations and authentic human samples using liquid chromatography-high resolution mass spectrometry (Drug Test Anal 9:1085-1092)",
+      "authors": [
+        "A. E. Steuer",
+        "E. Williner",
+        "S. N. Staeheli",
+        "T. Kraemer"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2111",
+      "url": "https://doi.org/10.1002/dta.2111",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "meyer2012",
+      "type": "paper",
+      "title": "Qualitative studies on the metabolism and the toxicological detection of the fentanyl-derived designer drugs 3-methylfentanyl and isofentanyl in rats using liquid chromatography-linear ion trap-mass spectrometry (Anal Bioanal Chem 402:1249-1255)",
+      "authors": [
+        "M. R. Meyer",
+        "J. Dinger",
+        "A. E. Schwaninger",
+        "D. K. Wissenbach",
+        "J. Zapp",
+        "G. Fritschi",
+        "H. H. Maurer"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00216-011-5528-8",
+      "url": "https://doi.org/10.1007/s00216-011-5528-8",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "murakami2026",
+      "type": "paper",
+      "title": "In vitro comparative assessment of metabolic stability and structure-metabolism relationships of five fentanyl analogs with varying N-acyl side chain lengths (Arch Toxicol 100:1515-1526)",
+      "authors": [
+        "T. Murakami",
+        "S. Watanabe",
+        "Y. Imamura",
+        "K. Kanda",
+        "R. Ishimaru",
+        "S. Chinaka"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00204-025-04281-z",
+      "url": "https://doi.org/10.1007/s00204-025-04281-z",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "cutler2019",
+      "type": "paper",
+      "title": "In vitro metabolism of the novel synthetic opioid agonist cyclopropylfentanyl and subsequent confirmation in authentic human samples using liquid chromatography-high resolution mass spectrometry (Drug Test Anal 11:1134-1143)",
+      "authors": [
+        "C. Cutler",
+        "S. Hudson"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2611",
+      "url": "https://doi.org/10.1002/dta.2611",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "vikingsson2019",
+      "type": "paper",
+      "title": "LC-QTOF-MS Identification of Major Urinary Cyclopropylfentanyl Metabolites Using Synthesized Standards (J Anal Toxicol 43:607-614)",
+      "authors": [
+        "S. Vikingsson",
+        "T. Rautio",
+        "J. Wallgren",
+        "A. Åstrand",
+        "S. Watanabe",
+        "J. Dahlén",
+        "A. Wohlfarth",
+        "P. Konradsson",
+        "X. Wu",
+        "R. Kronstrand",
+        "H. Gréen"
+      ],
+      "year": 2019,
+      "doi": "10.1093/jat/bkz057",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6936316/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250421181953/https://pmc.ncbi.nlm.nih.gov/articles/PMC6936316/"
+    },
+    {
+      "id": "wallgren2021",
+      "type": "paper",
+      "title": "Structure Elucidation of Urinary Metabolites of Fentanyl and Five Fentanyl Analogs using LC-QTOF-MS, Hepatocyte Incubations and Synthesized Reference Standards (J Anal Toxicol 44:993-1003)",
+      "authors": [
+        "J. Wallgren",
+        "S. Vikingsson",
+        "T. Rautio",
+        "E. Nasr",
+        "A. Åstrand",
+        "S. Watanabe",
+        "R. Kronstrand",
+        "H. Gréen",
+        "J. Dahlén",
+        "X. Wu",
+        "P. Konradsson"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7819469/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20251009154451/https://pmc.ncbi.nlm.nih.gov/articles/PMC7819469/"
+    },
+    {
       "id": "ono2022",
       "type": "paper",
       "title": "Hepatic and renal toxicities and metabolism of fentanyl analogues in rats (Naunyn Schmiedebergs Arch Pharmacol 396(1):149-159)",
@@ -5874,25 +6659,6 @@
       "tier": "primary"
     },
     {
-      "id": "varshneya2021",
-      "type": "paper",
-      "title": "Fentanyl-related substances elicit antinociception and hyperlocomotion in mice via opioid receptors (Pharmacol Biochem Behav 208:173242)",
-      "authors": [
-        "N. B. Varshneya",
-        "D. M. Walentiny",
-        "L. T. Moisa",
-        "T. D. Walker",
-        "L. R. Akinfiresoye",
-        "P. M. Beardsley"
-      ],
-      "year": 2021,
-      "doi": "10.1016/j.pbb.2021.173242",
-      "url": "https://doi.org/10.1016/j.pbb.2021.173242",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-13",
-      "tier": "primary"
-    },
-    {
       "id": "varshneya2022",
       "type": "paper",
       "title": "Structurally diverse fentanyl analogs yield differential locomotor activities in mice (Pharmacol Biochem Behav 222:173496)",
@@ -6008,25 +6774,6 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13",
       "tier": "primary"
-    },
-    {
-      "id": "giltner2022",
-      "type": "paper",
-      "title": "Fentanyl analog trends in Washington D.C. observed in needle-exchange syringes (Forensic Sci Int 338:111393)",
-      "authors": [
-        "A. Giltner",
-        "A. Evans",
-        "C. Cicco",
-        "S. Leach",
-        "W. Rowe"
-      ],
-      "year": 2022,
-      "doi": "10.1016/j.forsciint.2022.111393",
-      "url": "https://doi.org/10.1016/j.forsciint.2022.111393",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-13",
-      "tier": "primary",
-      "archive_url": "https://web.archive.org/web/20250422095312/https://pubmed.ncbi.nlm.nih.gov/35908338/"
     }
   ]
 }

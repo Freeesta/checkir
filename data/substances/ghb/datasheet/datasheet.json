@@ -1,0 +1,115 @@
+{
+  "schema": "datasheet/1",
+  "substance": "ghb",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [
+    {
+      "with": "ethanol",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "tay2022"
+    }
+  ],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic",
+    "precursor_classes": [
+      "gamma_butyrolactone"
+    ],
+    "typical_impurities": [
+      {
+        "substance": "gbl",
+        "ir_relevant": true,
+        "source": "swgdrug-ghb"
+      }
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "succinic semialdehyde",
+        "reaction": "other",
+        "enzymes": [
+          "other"
+        ],
+        "source": "busardo2015"
+      },
+      {
+        "from": "parent",
+        "to": "succinic acid",
+        "reaction": "other",
+        "source": "busardo2015"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "succinic-semialdehyde",
+        "active": null,
+        "source": "busardo2015"
+      },
+      {
+        "name_key": "succinic-acid",
+        "active": null,
+        "source": "busardo2015"
+      }
+    ],
+    "half_life_h": {
+      "min": 0.5,
+      "max": 0.83,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "busardo2015"
+    }
+  },
+  "counselling": [
+    {
+      "key": "ghb.dosing",
+      "topic": "dosing",
+      "source": "busardo2015"
+    },
+    {
+      "key": "ghb.combination",
+      "topic": "combination",
+      "source": "tay2022"
+    },
+    {
+      "key": "ghb.alone",
+      "topic": "set_setting",
+      "source": "busardo2015"
+    },
+    {
+      "key": "ghb.signs",
+      "topic": "overdose_signs",
+      "source": "busardo2015"
+    },
+    {
+      "key": "ghb.dependence",
+      "topic": "dependence",
+      "source": "schep2012"
+    }
+  ]
+}

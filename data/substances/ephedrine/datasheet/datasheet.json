@@ -1,0 +1,79 @@
+{
+  "schema": "datasheet/1",
+  "substance": "ephedrine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "norephedrine",
+        "reaction": "n_demethylation",
+        "source": "sever1975"
+      },
+      {
+        "from": "parent",
+        "to": "benzoic acid",
+        "reaction": "deamination",
+        "source": "sever1975"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "norephedrine",
+        "active": null,
+        "source": "sever1975"
+      },
+      {
+        "name_key": "benzoic-acid",
+        "active": null,
+        "source": "sever1975"
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "ephedrine.speed",
+      "topic": "testing",
+      "source": "unodc-ats2006"
+    },
+    {
+      "key": "ephedrine.cardiac",
+      "topic": "overdose_signs",
+      "source": "haller2000"
+    },
+    {
+      "key": "ephedrine.lag",
+      "topic": "combination",
+      "source": "haller2002"
+    }
+  ]
+}

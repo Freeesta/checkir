@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "meta-fluorobutyrylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "meta-Fluorobutyrylfentanyl",
+      "synonyms": [
+        "m-fluorobutyrylfentanyl",
+        "meta-fluorobutyryl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "meta-Fluorobutirrilfentanil",
+      "synonyms": [
+        "m-fluorobutirrilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(3-fluorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]butanamide",
+  "formula": "C23H29FN2O",
+  "molar_mass_g_mol": 368.5,
+  "smiles": "CCCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC(=CC=C3)F",
+  "inchi": "InChI=1S/C23H29FN2O/c1-2-7-23(27)26(22-11-6-10-20(24)18-22)21-13-16-25(17-14-21)15-12-19-8-4-3-5-9-19/h3-6,8-11,18,21H,2,7,12-17H2,1H3",
+  "inchikey": "BSGQPGPNNBBEEQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2306827-51-8",
+    "pubchem_cid": 129522083
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
