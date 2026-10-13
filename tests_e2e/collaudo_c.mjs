@@ -75,6 +75,23 @@ async function phoneScenario(browser, base, check) {
     return { cut: v ? v.scrollWidth - v.clientWidth : 99, text: v?.textContent ?? "", inside: c ? c.right <= window.innerWidth && c.left >= 0 : false, scroll: document.documentElement.scrollWidth - document.documentElement.clientWidth };
   });
   check("layout: D6 at 320 px the level in the result chip is whole and visible", chip.cut <= 0 && chip.inside && chip.scroll <= 0 && chip.text.length > 3 && !chip.text.includes("…"), JSON.stringify(chip));
+  // With a wider font and the "region" mark on the result chip the chips still stop before the menu button and the page does not scroll sideways.
+  await page.keyboard.press("g");
+  await page.focus('[data-fk="range-new-from"]');
+  await page.keyboard.type("650");
+  await page.keyboard.press("Tab");
+  await page.keyboard.type("1800");
+  await page.keyboard.press("Tab");
+  await page.focus('[data-fk="range-add"]');
+  await page.keyboard.press("Enter");
+  await page.waitForSelector('.chip[data-chip="result"] [data-chip-region]');
+  await page.evaluate(() => document.documentElement.style.setProperty("font-family", '"DejaVu Sans"', "important"));
+  const fit = await page.evaluate(() => {
+    const chips = document.querySelector(".chips")?.getBoundingClientRect();
+    const menu = document.querySelector(".menu-button")?.getBoundingClientRect();
+    return { gap: menu && chips ? menu.left - chips.right : -99, scroll: document.documentElement.scrollWidth - document.documentElement.clientWidth };
+  });
+  check("layout: D6 at 320 px with a wide font the chips end before the menu and nothing scrolls sideways", fit.gap >= 0 && fit.scroll <= 0, JSON.stringify(fit));
   await ctx.close();
 }
 

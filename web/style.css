@@ -552,11 +552,16 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 }
 .dev-bar { position: static; justify-content: flex-end; margin: 0.5rem; }
 @media (max-width: 45em) {
-  .chips [data-chip="file"] { min-width: 0; flex: 0 1 auto; overflow: hidden; }
+  .chips { flex: 0 1 auto; }
+  .chips [data-chip="file"] { min-width: 0; flex: 0 100 auto; overflow: hidden; }
   .chips [data-chip="file"] .chip-value { min-width: 0; flex: 0 1 auto; }
-  .chips [data-chip="result"] { flex: none; }
-  .chips [data-chip="result"] .chip-value { max-width: none; overflow: visible; }
+  .chips [data-chip="result"] { min-width: 0; flex: 0 0.01 auto; overflow: hidden; }
+  .chips [data-chip="result"] .chip-value { max-width: none; min-width: 0; }
+  .chips [data-chip="result"] .chip-extra { flex: none; }
 }
 @media (max-width: 26em) {
+  .app-header { gap: 0.25rem; padding-inline: 0.25rem; }
+  .chips { gap: 0.25rem; }
+  .chips .chip { gap: 0.25rem; padding-inline: 0.4rem; }
   .brand h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
