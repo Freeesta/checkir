@@ -4,7 +4,7 @@
  * sent by the page); it never touches the network; its only storage is the cache of the peak indexes (`peak_index_cache.js`). Messages in: `sync` (the libraries to hold), `run` and `peak_query`;
  * messages out: `synced`, `twins` (progress of the spectral twins), `peak_index` (progress of the peak index of a library),
  * `result`, `peak_result` (answer to `peak_query`), `error`.
- * @typedef {{ id: string, version: string, rows?: Array<{ id: string, substance?: string, form?: string, names: { it?: string, en: string } }>, values?: Float32Array, from?: number, step?: number }} LibMessage
+ * @typedef {{ id: string, version: string, rows?: Array<{ id: string, substance?: string, form?: string, names: { it?: string, en: string } }>, sampling?: string, values?: Float32Array, from?: number, step?: number }} LibMessage
  */
 import { ensurePeakIndex } from "./peak_index_job.js";
 
@@ -38,6 +38,7 @@ function addLibrary(lib) {
   const n = rows.length ? Math.round(values.length / rows.length) : 0;
   const axis = Float64Array.from({ length: n }, (_, i) => from + step * i);
   mod.confronto_libreria_inizia(lib.id, lib.version);
+  if (lib.sampling) mod.confronto_libreria_campionamento(lib.id, lib.sampling);
   for (let i = 0; i < rows.length; i++) {
     const r = rows[i];
     const answer = JSON.parse(mod.confronto_libreria_aggiungi(lib.id, r.id, r.substance ?? "", r.names.en, r.form ?? "", "absorbance", axis, Float64Array.from(values.subarray(i * n, (i + 1) * n))));

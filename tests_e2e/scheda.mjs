@@ -116,7 +116,7 @@ async function flowScenario(browser, base, check) {
   await page.evaluate(() => /** @type {HTMLElement} */ (document.activeElement)?.blur());
   await page.keyboard.press("f");
   await page.waitForFunction(() => document.querySelector(".sheet-preview .sheet")?.getAttribute("data-draft") === "0");
-  check("flow: f signs; the result and the chip show level 4 decided", (await page.getAttribute(".result", "data-level")) === "4" && /Miscela/.test((await page.textContent('[data-chip="result"]')) ?? "") && /proposto: Probabile/.test((await page.textContent(".result .decided")) ?? ""));
+  check("flow: f signs; the result and the chip show level 4 decided", (await page.getAttribute(".result", "data-level")) === "4" && /Miscela/.test((await page.textContent('[data-chip="result"]')) ?? "") && /proposto: T2 · Probabile/.test((await page.textContent(".result .decided")) ?? ""));
   const stored = await page.evaluate(async () => ({ local: JSON.stringify({ ...localStorage }), session: JSON.stringify({ ...sessionStorage }), idb: (await indexedDB.databases()).length }));
   check("flow: nothing of the decision or the sheet is stored", !/decision|sheet|draft|Beta|beta/.test(stored.local + stored.session) && stored.idb <= 1, JSON.stringify(stored));
   await page.reload();
