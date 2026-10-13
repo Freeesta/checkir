@@ -15,7 +15,7 @@ pub const STEP: Step = Step {
     inverse: None,
 };
 
-fn intervals(p: &Value) -> EngineResult<Vec<(f64, f64)>> {
+pub(crate) fn intervals(p: &Value) -> EngineResult<Vec<(f64, f64)>> {
     let Some(list) = p.get("intervals_cm1") else {
         return Ok(vec![(1900.0, 2400.0)]);
     };

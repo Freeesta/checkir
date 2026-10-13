@@ -4,7 +4,7 @@
     clippy::indexing_slicing,
     clippy::cast_possible_truncation
 )]
-use super::model::{Document, Field, Sourced, Spectrum, Warning, XValues};
+use super::model::{Background, Document, Field, Sourced, Spectrum, Warning, XValues};
 
 fn s(v: &str) -> String {
     let mut o = String::with_capacity(v.len() + 2);
@@ -103,11 +103,21 @@ fn spectrum(sp: &Spectrum) -> String {
     )
 }
 
+fn background(b: &Background) -> String {
+    format!(
+        "{{\"present\":\"{}\",\"spectrum_index\":{},\"digest\":{}}}",
+        b.present.name(),
+        b.spectrum_index
+            .map_or("null".to_string(), |i| i.to_string()),
+        b.digest.as_deref().map_or("null".to_string(), s)
+    )
+}
+
 /// The whole document as one JSON text, identical byte for byte for identical documents.
 pub fn to_json(d: &Document) -> String {
     format!(
         "{{\"provenance\":{{\"reader\":{},\"version\":{},\"format\":{},\"variant\":{},\"sha256\":{},\"size\":{}}},\
-         \"primary\":{},\"fields\":[{}],\"warnings\":[{}],\"spectra\":[{}]}}\n",
+         \"primary\":{},\"background\":{},\"fields\":[{}],\"warnings\":[{}],\"spectra\":[{}]}}\n",
         s(d.provenance.reader),
         s(d.provenance.reader_version),
         s(&d.provenance.format),
@@ -115,6 +125,7 @@ pub fn to_json(d: &Document) -> String {
         s(&d.provenance.sha256),
         d.provenance.size,
         d.primary,
+        background(&d.background),
         list(&d.fields, field),
         list(&d.warnings, warning),
         list(&d.spectra, spectrum)
