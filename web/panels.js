@@ -2,7 +2,10 @@
 import { actionById } from "./actions.js";
 import { actionButton } from "./controls.js";
 import { el, icon, keepFocus, setIcon } from "./dom.js";
+import { fileRange } from "./files.js";
+import { activeFile } from "./header.js";
 import { formatNumber, t } from "./i18n.js";
+import { attachTip } from "./tooltip.js";
 import { readPref, writePref } from "./state.js";
 
 /**
@@ -23,22 +26,44 @@ function emptyLine(body, text) {
   body.append(el("p", { class: "empty" }, [text]));
 }
 
-/** @param {import("./state.js").FileEntry} f @returns {string} */
-export function fileRange(f) {
-  return `${formatNumber(f.fromCm1)}–${formatNumber(f.toCm1)} · ${formatNumber(f.stepCm1)} ${t("unit.cm1")}`;
+/** @type {Record<string, () => string>} */
+const ROLE_LABEL = { sample: () => t("file.role.sample"), reference: () => t("file.role.reference"), residual: () => t("file.role.residual"), subtraction: () => t("file.role.subtraction"), mean: () => t("file.role.mean") };
+const ROLE_ICON = { sample: "file", reference: "library", residual: "subtract", subtraction: "subtract", mean: "file" };
+
+/**
+ * One row of the file tree: the button that shows the spectrum, its range, warnings, and "close and delete". The original file name appears only here.
+ * @param {import("./state.js").FileEntry} f @param {boolean} active @param {import("./actions.js").Ctx} ctx
+ */
+function fileRow(f, active, ctx) {
+  const select = el("button", { type: "button", class: "file-select", "data-fk": `sel-${f.code}`, "aria-label": t("file.select", { code: f.code, role: ROLE_LABEL[f.role]() }) }, [icon(ROLE_ICON[f.role]), el("strong", {}, [f.code]), ` ${f.name ?? t("file.demo_name")} · ${fileRange(f)}`]);
+  if (active) select.setAttribute("aria-current", "true");
+  select.addEventListener("click", () => ctx.selectFile(f.code));
+  const close = el("button", { type: "button", class: "icon-button", "data-fk": `close-${f.code}`, "aria-label": t("file.close_one", { code: f.code }) }, [icon("close")]);
+  close.addEventListener("click", () => ctx.closeFile(f.code));
+  attachTip(close, () => t("file.close_one", { code: f.code }));
+  const row = el("div", { class: "file-row" }, [select, close]);
+  if (f.note) row.append(el("span", { class: "note" }, [f.note]));
+  for (const w of f.warnings) row.append(el("span", { class: "warn" }, [icon("warning"), t(w.key, w.params)]));
+  return row;
+}
+
+/** Tree of the loaded spectra: a sample and, under it, the spectra derived from it (residuals). @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @param {string | null} parent */
+function fileTree(s, ctx, parent) {
+  const list = el("ul", { class: "files" });
+  for (const f of s.files.filter((x) => x.parent === parent)) {
+    const item = el("li", {}, [fileRow(f, f.code === (activeFile(s)?.code ?? null), ctx)]);
+    if (s.files.some((x) => x.parent === f.code)) item.append(fileTree(s, ctx, f.code));
+    list.append(item);
+  }
+  return list;
 }
 
 /** @param {HTMLElement} body @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx */
 function renderFiles(body, s, ctx) {
-  body.append(el("div", { class: "row" }, [actionButton("file.open", ctx, { withLabel: true, className: "btn" }), actionButton("demo.load", ctx, { withLabel: true, className: "btn" })]));
+  body.append(el("div", { class: "row" }, [actionButton("file.open", ctx, { withLabel: true, className: "btn" }), actionButton("demo.load", ctx, { withLabel: true, className: "btn" }), actionButton("file.close", ctx)]));
+  if (s.fileError) body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t(s.fileError.key, s.fileError.params)]));
   if (!s.files.length) return emptyLine(body, t("panel.files.empty"));
-  const list = el("ul", { class: "files" });
-  for (const f of s.files) {
-    const item = el("li", {}, [icon("file"), el("strong", {}, [f.code]), ` ${f.name ?? t("file.demo_name")} · ${fileRange(f)}`]);
-    for (const w of f.warnings) item.append(el("span", { class: "warn" }, [icon("warning"), t(w)]));
-    list.append(item);
-  }
-  body.append(list);
+  body.append(fileTree(s, ctx, null));
 }
 
 /** @param {() => string} text @returns {PanelDef["render"]} */
