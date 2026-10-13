@@ -5,6 +5,7 @@ import { actionButton } from "./controls.js";
 import { el, icon, keepFocus, setIcon } from "./dom.js";
 import { fileRange } from "./files.js";
 import { renderLibraries } from "./libpanel.js";
+import { renderSheetPanel, sheetSummary } from "./sheet_panel.js";
 import { renderResults, resultsSummary } from "./results.js";
 import { formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
@@ -20,7 +21,6 @@ import { activeFile, activeLibraries, readPref, writePref } from "./state.js";
  * }} PanelDef
  */
 
-const DASH = "—";
 const MOBILE = "(max-width: 45em)";
 
 /** @param {HTMLElement} body @param {string} text */
@@ -84,7 +84,7 @@ export const PANELS = [
   },
   { id: "results", n: 3, titleKey: "panel.results.title", tipKey: "panel.results.tip", icon: "results", summary: resultsSummary, render: renderResults },
   { id: "peaks", n: 4, titleKey: "panel.peaks.title", tipKey: "panel.peaks.tip", icon: "peaks", summary: (s) => `● ${formatNumber(s.peaks.explained)} ○ ${formatNumber(s.peaks.unexplained)}`, label: (s) => t("panel.peaks.counts", { explained: formatNumber(s.peaks.explained), unexplained: formatNumber(s.peaks.unexplained) }), render: renderEmpty(() => t("panel.peaks.empty")) },
-  { id: "sheet", n: 5, titleKey: "panel.sheet.title", tipKey: "panel.sheet.tip", icon: "sheet", summary: (s) => (s.decision ? formatNumber(s.decision.level) : DASH), render: renderEmpty(() => t("panel.sheet.empty")) },
+  { id: "sheet", n: 5, titleKey: "panel.sheet.title", tipKey: "panel.sheet.tip", icon: "sheet", summary: sheetSummary, render: renderSheetPanel },
 ];
 
 /** @param {string} id @returns {HTMLDetailsElement | null} */

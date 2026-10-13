@@ -2,7 +2,7 @@
 import { alertViews, levelNumber } from "../web/alerts.js";
 
 /** Lorentzian bands [centre, height, half-width] on 400-4000 cm-1, step 2, as a JCAMP XYPOINTS file. */
-function jcamp(title, bands) {
+export function jcamp(title, bands) {
   const rows = [];
   for (let x = 400; x <= 4000; x += 2) {
     let y = 0.01;
@@ -12,10 +12,10 @@ function jcamp(title, bands) {
   return Buffer.from(["##TITLE=" + title, "##JCAMP-DX=4.24", "##DATA TYPE=INFRARED SPECTRUM", "##XUNITS=1/CM", "##YUNITS=ABSORBANCE", "##XFACTOR=1", "##YFACTOR=1", `##NPOINTS=${rows.length}`, "##XYPOINTS=(XY..XY)", ...rows, "##END=", ""].join("\n"));
 }
 
-const ALFA = [[700, 0.6, 12], [1000, 0.9, 14], [1250, 0.5, 10], [1500, 0.7, 16], [2900, 0.4, 20]];
-const BETA = [[800, 0.5, 12], [1100, 0.8, 14], [1350, 0.9, 10], [1650, 0.6, 16], [3000, 0.5, 20]];
-const GAMMA = [[750, 0.7, 12], [1200, 0.6, 14], [1450, 0.8, 10], [1700, 0.5, 16], [3100, 0.3, 20]];
-const ALFA_BIS = [...ALFA, [1600, 0.03, 10]];
+export const ALFA = [[700, 0.6, 12], [1000, 0.9, 14], [1250, 0.5, 10], [1500, 0.7, 16], [2900, 0.4, 20]];
+export const BETA = [[800, 0.5, 12], [1100, 0.8, 14], [1350, 0.9, 10], [1650, 0.6, 16], [3000, 0.5, 20]];
+export const GAMMA = [[750, 0.7, 12], [1200, 0.6, 14], [1450, 0.8, 10], [1700, 0.5, 16], [3100, 0.3, 20]];
+export const ALFA_BIS = [...ALFA, [1600, 0.03, 10]];
 const OTHER = [[900, 0.7, 10], [1050, 0.5, 12], [1550, 0.9, 12], [1800, 0.6, 12], [3400, 0.6, 25]];
 
 /** Level and alert views from a hand-made result, no browser. */
@@ -111,6 +111,7 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: a name never stands outside a block with the level", await page.evaluate(() => [...document.querySelectorAll(".cand-name")].every((n) => n.closest(".result")?.querySelector(".level"))));
   check("match: header chip shows the level word", /Probabile/.test((await page.textContent('[data-chip="result"]')) ?? ""));
   check("match: the strip of limits is visible with a result", await page.isVisible("#limits"));
+  await page.waitForFunction(() => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(document.querySelector("#status")?.textContent ?? ""), null, { timeout: 5000 }).catch(() => {});
   check("match: announcement says candidates, level and alerts", /\d+ candidat\w*, Probabile, \d+ allert\w*/.test((await page.textContent("#status")) ?? ""), (await page.textContent("#status")) ?? "");
   check("match: the zone left out is drawn and named", (await page.locator("#chart rect.excluded").count()) === 1 && /Escluso dal confronto/.test((await page.textContent("#chart")) ?? ""));
   const v1 = await axe(page);

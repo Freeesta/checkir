@@ -2,7 +2,7 @@
 import { actionById } from "./actions.js";
 import { actionButton } from "./controls.js";
 import { levelIcon } from "./results.js";
-import { alertViews, isPartialRange, levelNumber, levelWord } from "./alerts.js";
+import { alertViews, isPartialRange, levelWord, shownLevel } from "./alerts.js";
 import { el, icon, setIcon } from "./dom.js";
 import { LANGS, currentLang, formatNumber, t } from "./i18n.js";
 import { fileRange } from "./files.js";
@@ -35,7 +35,7 @@ const CHIPS = [
   },
   {
     id: "result", panel: 3, icon: "results", labelKey: "header.result.label", tipKey: "header.result.tip",
-    value: (s) => { const r = resultOf(s); return r ? levelWord(levelNumber(r.data)) : DASH; },
+    value: (s) => { const n = shownLevel(s); return n ? levelWord(n) : DASH; },
     tip: (s) => { const r = resultOf(s); return r ? [t("header.result.tip"), r.data.chain.derivative, isPartialRange(r.data) ? t("header.result.region") : ""].filter(Boolean).join(" · ") : t("header.result.tip"); },
   },
 ];
@@ -45,14 +45,14 @@ function resultChip(chip, s) {
   if (!chip) return;
   const r = resultOf(s);
   const svg = chip.querySelector("svg");
-  if (svg) setIcon(svg, r ? levelIcon(levelNumber(r.data)) : "results");
+  if (svg) setIcon(svg, r ? levelIcon(shownLevel(s) ?? 5) : "results");
   chip.querySelectorAll(".chip-extra").forEach((e) => e.remove());
   if (!r) return;
   const alerts = alertViews(r.data).length;
   if (alerts) chip.append(el("span", { class: "chip-extra", "data-chip-alerts": String(alerts) }, [icon("warning"), formatNumber(alerts)]));
   if (isPartialRange(r.data)) chip.append(el("span", { class: "chip-extra", "data-chip-region": "1" }, [icon("region")]));
   chip.toggleAttribute("data-warn", alerts > 0);
-  chip.setAttribute("aria-label", `${t("header.result.label")}: ${levelWord(levelNumber(r.data))}${alerts ? `, ${t("header.result.alerts", { count: formatNumber(alerts) })}` : ""}${isPartialRange(r.data) ? `, ${t("header.result.region")}` : ""}`);
+  chip.setAttribute("aria-label", `${t("header.result.label")}: ${levelWord(shownLevel(s) ?? 5)}${alerts ? `, ${t("header.result.alerts", { count: formatNumber(alerts) })}` : ""}${isPartialRange(r.data) ? `, ${t("header.result.region")}` : ""}`);
 }
 
 /**

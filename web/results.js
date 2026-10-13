@@ -1,16 +1,16 @@
 // @ts-check
-import { alertViews, capLines, chainLine, levelBar, levelNumber, levelWord } from "./alerts.js";
+import { alertViews, capLines, chainLine, levelBar, levelNumber, levelWord, shownLevel } from "./alerts.js";
 import { actionButton } from "./controls.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { libraryRows } from "./librerie.js";
-import { activeFile, activeLibraries, candidateKey, resultOf } from "./state.js";
+import { activeFile, activeLibraries, candidateKey, decisionOf, resultOf } from "./state.js";
 import { attachTip, toggletip } from "./tooltip.js";
 
 /** @typedef {import("./state.js").ChemistLabel} ChemistLabel */
 
 /** How many candidates the panel lists. */
-const TOP = 10;
+export const LISTED = 10;
 
 /** The name of a candidate in the active language, from the library index (the result carries only the library's own name). @param {any} c @returns {string} */
 export function candidateName(c) {
@@ -20,29 +20,37 @@ export function candidateName(c) {
 
 /** The candidate that is selected: the chosen one if it is still in the result, else the first. @param {import("./state.js").AppState} s @param {any} data @returns {any | null} */
 export function selectedCandidate(s, data) {
-  const list = (data.candidates ?? []).slice(0, TOP);
+  const list = (data.candidates ?? []).slice(0, LISTED);
   return list.find((/** @type {any} */ c) => candidateKey(c) === s.selected) ?? list[0] ?? null;
 }
 
 /** Icon of a level. @param {number} n @returns {string} */
 export function levelIcon(n) {
-  return n === 2 ? "level-2" : n === 3 ? "level-3" : "level-5";
+  return n >= 1 && n <= 4 ? `level-${n}` : "level-5";
 }
 
 /** Glyph used in the numeric summaries (the same shapes as the icons). @param {number} n @returns {string} */
 export function levelGlyph(n) {
-  return n === 2 ? "◆" : n === 3 ? "◇" : "○";
+  return n === 1 || n === 2 ? "◆" : n === 3 ? "◇" : n === 4 ? "◫" : "○";
 }
 
 /**
  * The level component: shape, word and a four-segment bar. Colour is never the only signal.
- * @param {number} n level number (2 probable, 3 to check, 5 not identified)
+ * @param {number} n level number (1 confirmed … 5 not identified)
+ * @param {boolean} [withBar] the four-segment bar (the counselling sheet leaves it out: shape and word say it)
  * @returns {HTMLElement}
  */
-export function levelBadge(n) {
+export function levelBadge(n, withBar = true) {
   const bar = el("span", { class: "level-bar", role: "img", "aria-label": t("level.bar", { n: formatNumber(levelBar(n)) }) });
   for (let i = 0; i < 4; i++) bar.append(el("span", { class: i < levelBar(n) ? "seg on" : "seg" }));
-  return el("span", { class: "level", "data-level": String(n) }, [icon(levelIcon(n)), el("strong", {}, [levelWord(n)]), bar]);
+  return el("span", { class: "level", "data-level": String(n) }, [icon(levelIcon(n)), el("strong", {}, [levelWord(n)]), ...(withBar ? [bar] : [])]);
+}
+
+/** "proposed by the program", or the pen and "decided by the chemist" (with the proposal when it differs). @param {import("./state.js").Decision | null} dec @param {number} proposed @returns {HTMLElement} */
+function decisionMark(dec, proposed) {
+  if (!dec) return el("span", { class: "proposed" }, [t("results.proposed")]);
+  const was = dec.level === proposed ? "" : ` · ${t("results.proposed_was", { level: levelWord(proposed) })}`;
+  return el("span", { class: "proposed decided" }, [icon("pen"), `${t("results.decided")}${was}`]);
 }
 
 /** @param {any} data @returns {HTMLElement} */
@@ -111,13 +119,13 @@ function wireArrows(list, ctx) {
   });
 }
 
-/** Detail of the selected candidate, always in the same reserved space. @param {any} data @param {any | null} c @param {import("./actions.js").Ctx} ctx @param {boolean} overlay @returns {HTMLElement} */
-function detail(data, c, ctx, overlay) {
+/** Detail of the selected candidate, always in the same reserved space. @param {any} data @param {any | null} c @param {import("./actions.js").Ctx} ctx @param {boolean} overlay @param {number} level @returns {HTMLElement} */
+function detail(data, c, ctx, overlay, level) {
   const box = el("section", { class: "detail", "aria-label": t("results.detail") });
   if (!c) return box;
   const delta = c.rank === 1 ? data.margin : data.candidates[0].r_derivative - c.r_derivative;
   box.append(
-    el("p", { class: "detail-head" }, [el("strong", {}, [candidateName(c)]), ` ${c.form} · `, levelBadge(levelNumber(data))]),
+    el("p", { class: "detail-head" }, [el("strong", {}, [candidateName(c)]), ` ${c.form} · `, levelBadge(level)]),
     el("dl", { class: "numbers" }, [
       el("dt", {}, ["r"]), el("dd", {}, [formatNumber(c.r_derivative, 2)]),
       el("dt", {}, [t("results.delta")]), el("dd", {}, [delta === null ? "—" : formatNumber(delta, 2)]),
@@ -146,22 +154,23 @@ export function renderResults(body, s, ctx) {
   if (s.matching === file.code) body.append(el("p", { class: "busy", role: "status" }, [icon("compare"), t("results.running")]));
   if (!result) return void (s.matching !== file.code && body.append(el("p", { class: "empty" }, [t("results.not_run")])));
   const data = result.data;
-  const n = levelNumber(data);
+  const dec = decisionOf(s);
+  const n = dec?.level ?? levelNumber(data);
   const chosen = selectedCandidate(s, data);
   const title = n === 5 ? t("results.similar") : t("results.candidates");
   const list = el("ol", { class: "cands", "aria-label": title });
-  (data.candidates ?? []).slice(0, TOP).forEach((/** @type {any} */ c, /** @type {number} */ i) => list.append(candidateRow(c, i, s, ctx, c === chosen)));
+  (data.candidates ?? []).slice(0, LISTED).forEach((/** @type {any} */ c, /** @type {number} */ i) => list.append(candidateRow(c, i, s, ctx, c === chosen)));
   wireArrows(list, ctx);
   const caps = capLines(data);
   body.append(
     el("div", { class: "result", "data-level": String(n) }, [
-      el("p", { class: "level-line" }, [levelBadge(n), el("span", { class: "proposed" }, [t("results.proposed")])]),
+      el("p", { class: "level-line" }, [levelBadge(n), decisionMark(dec, levelNumber(data))]),
       alertList(data),
       ...caps.map((c) => el("p", { class: "cap" }, [c])),
       el("h3", { class: "cands-title" }, [title]),
       list,
       el("p", { class: "chain" }, [chainLine(data)]),
-      detail(data, chosen, ctx, s.overlay),
+      detail(data, chosen, ctx, s.overlay, n),
     ]),
   );
 }
@@ -169,5 +178,6 @@ export function renderResults(body, s, ctx) {
 /** Numeric summary of section 3: the shape and word of the level, or a dash. @param {import("./state.js").AppState} s @returns {string} */
 export function resultsSummary(s) {
   const r = resultOf(s);
-  return r ? `${levelGlyph(levelNumber(r.data))} ${levelWord(levelNumber(r.data))}` : "—";
+  const n = shownLevel(s);
+  return r && n ? `${levelGlyph(n)} ${levelWord(n)}` : "—";
 }

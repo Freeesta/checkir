@@ -1,0 +1,20 @@
+/* Counselling sheet on paper: one A5 page, black and white, body 10 pt or more. Only the sheet host prints. */
+@page { size: A5; margin: 10mm; }
+html, body { background: #fff; color: #000; font-family: sans-serif; }
+body > :not(.sheet-host) { display: none; }
+.sheet-host { display: block; }
+.sheet-host .talk-exit { display: none; }
+.sheet { position: static; padding: 0; border: 0; border-radius: 0; background: #fff; color: #000; font-size: 10pt; line-height: 1.3; }
+.sheet h2 { font-size: 13pt; }
+.sheet h3 { margin: 4pt 0 1pt; padding-top: 2pt; border-top: 0.5pt solid #000; font-size: 10pt; }
+.sheet p, .sheet ul { margin: 1pt 0; }
+.sheet-block, .sheet-head, .sheet-foot { break-inside: avoid; }
+.sheet-head { grid-template-columns: auto 1fr; gap: 2pt 6pt; }
+.sheet-head .logo { width: 22pt; height: 22pt; background: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.sheet-meta { grid-template-columns: auto 1fr auto 1fr; gap: 0 6pt; font-size: 10pt; }
+.sheet-meta dt { color: #000; }
+.sheet .level .icon, .sheet-alerts .icon, .sheet-limits .icon { width: 11pt; height: 11pt; color: #000; }
+.sheet-banner { border: 1.5pt dashed #000; }
+.sheet[data-draft="1"]::after { color: #999; font-size: 34pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.sign-line { height: 16pt; border-bottom-color: #000; }
+.signature { margin-top: 8pt; }

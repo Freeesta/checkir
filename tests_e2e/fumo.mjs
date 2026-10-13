@@ -8,6 +8,7 @@ import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { registryScenario } from "./registri.mjs";
+import { sheetScenario } from "./scheda.mjs";
 import { startSite } from "./sito.mjs";
 
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
@@ -105,7 +106,7 @@ async function shortcutsScenario(browser) {
   await page.waitForSelector("body[data-ready='1']");
   await page.keyboard.press("?");
   check("shortcuts: ? opens the list", await page.isVisible("dialog[open] .help-table"));
-  check("shortcuts: the list has a row for every key and greys out what is coming", (await page.locator("dialog[open] .help-table tbody tr").count()) >= 18 && (await page.locator("dialog[open] .soon-tag").count()) >= 5);
+  check("shortcuts: the list has a row for every key and greys out what is coming", (await page.locator("dialog[open] .help-table tbody tr").count()) >= 18 && (await page.locator("dialog[open] .soon-tag").count()) >= 4);
   const violations = await axe(page);
   check("shortcuts: axe has no violations on the dialog", violations.length === 0, violations.join(", "));
   for (const n of [1, 2]) {
@@ -278,6 +279,7 @@ async function run() {
     await librariesScenario(browser, base, check, axe);
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
+    await sheetScenario(browser, base, check, axe);
     await offlineScenario(browser, base, check);
     await folderScenario(browser, base, check, axe);
   } finally {
