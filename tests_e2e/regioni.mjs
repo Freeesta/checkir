@@ -58,7 +58,10 @@ async function setup(browser, base, locale = "it-IT", viewport = { width: 1366, 
 
 /** Numeric fields, keyboard only: the region is used, the chip, the alert, the cap, the chart zones and the table. */
 async function fieldsScenario(page, check) {
-  check("ranges: the picker is in section 3 and starts on the whole spectrum", (await page.locator("fieldset.ranges").count()) === 1 && (await page.getAttribute('[data-fk="range-preset-full"]', "aria-pressed")) === "true");
+  check("ranges: the picker is not always in view", (await page.locator("fieldset.ranges").count()) === 0);
+  await page.focus("body");
+  await page.keyboard.press("g");
+  check("ranges: g shows the picker in section 3, on the whole spectrum", (await page.locator("fieldset.ranges").count()) === 1 && (await page.getAttribute('[data-fk="range-preset-full"]', "aria-pressed")) === "true");
   check("ranges: with the whole range no chip mark and the table asks to choose regions", (await page.locator("[data-chip-region]").count()) === 0 && (await page.locator(".ranges-table").count()) === 0);
   await addByKeyboard(page, 650, 1800);
   await page.waitForFunction(() => document.querySelector(".result [data-alert='custom_range']"), null, { timeout: 20000 });
@@ -74,8 +77,8 @@ async function fieldsScenario(page, check) {
   check("ranges: every cell has its number and a word, never colour alone", cells.length >= 3 && cells.every((c) => /\d[.,]\d\d · \S/.test(c) || /fuori dai primi/.test(c)), cells.slice(0, 4).join(" | "));
   const first = await page.locator(".ranges-table tbody tr").first().textContent();
   check("ranges: the first row is the best candidate (beta) and agrees on the whole range", /beta/i.test(first ?? "") && /Concorda/.test(first ?? ""), first ?? "");
-  check("ranges: the chart greys what is outside the region and names it", (await page.locator("#chart rect.range-out").count()) >= 1 && /fuori regione/.test((await page.textContent("#chart")) ?? "") && /Regione 1/.test((await page.textContent("#chart")) ?? ""));
-  check("ranges: the left-out zone is still there", (await page.locator("#chart rect.excluded:not(.range-out)").count()) === 1);
+  check("ranges: the chart draws a light band under the axis with the region number", (await page.locator("#chart rect.range-band").count()) === 1 && /Regione 1/.test((await page.textContent("#chart")) ?? ""));
+  check("ranges: the left-out zone is still there", (await page.locator("#chart rect.excluded").count()) === 1);
 }
 
 /** The error under 400 cm-1, the cursors as keyboard brush, removal, and the key g. */
@@ -100,7 +103,9 @@ async function errorsScenario(page, check) {
   check("ranges: removing the last region goes back to the whole spectrum", (await page.getAttribute('[data-fk="range-preset-full"]', "aria-pressed")) === "true");
   await page.focus("body");
   await page.keyboard.press("g");
-  check("ranges: the key g moves the focus to the picker", await page.evaluate(() => document.activeElement?.closest("fieldset.ranges") !== null));
+  check("ranges: g hides the picker again", (await page.locator("fieldset.ranges").count()) === 0);
+  await page.keyboard.press("g");
+  check("ranges: g shows it and moves the focus into it", await page.evaluate(() => document.activeElement?.closest("fieldset.ranges") !== null));
 }
 
 /** The brush on the x axis: a drag in the strip under the plot adds a region (pointer; the fields and the cursors are the keyboard way). */
@@ -135,7 +140,7 @@ async function stateScenario(page, check, axe) {
   await page.evaluate(() => (document.documentElement.dataset.theme = "light"));
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
-  check("ranges: English table and chart words", /Whole/.test((await page.textContent(".ranges-table thead")) ?? "") && /outside the region/.test((await page.textContent("#chart")) ?? ""));
+  check("ranges: English table and band words", /Whole/.test((await page.textContent(".ranges-table thead")) ?? "") && /Region 1/.test((await page.textContent("#chart")) ?? ""));
   const v3 = await axe(page);
   check("ranges: axe is clean in English", v3.length === 0, v3.join(", "));
 }
@@ -150,6 +155,8 @@ export async function rangesScenario(browser, base, check, axe) {
   check("ranges: no page errors", errors.length === 0, errors.join(" | "));
   await ctx.close();
   const phone = await setup(browser, base, "it-IT", { width: 320, height: 640 });
+  await phone.page.focus("body");
+  await phone.page.keyboard.press("g");
   await addByKeyboard(phone.page, 650, 1800);
   await phone.page.waitForSelector(".ranges-table tbody tr", { timeout: 20000 });
   check("ranges: 320 px has no horizontal scroll with the picker and the table", await phone.page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));

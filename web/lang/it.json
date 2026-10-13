@@ -581,7 +581,6 @@
   "regions.far.name": "Atomi pesanti e reticolo",
   "regions.far.tag": "pesanti",
   "ranges.title": "Regione del confronto",
-  "ranges.note": "La zona 1900–2400 cm⁻¹ è sempre esclusa. Con una regione scelta a mano le soglie non sono tarate e il livello resta «da verificare».",
   "ranges.presets": "Preimpostazioni della regione",
   "ranges.preset.full": "Tutto lo spettro",
   "ranges.preset.full_tip": "Confronta su tutto l'intervallo 650–3800 cm⁻¹ (zona esclusa a parte): le soglie sono tarate.",
@@ -602,7 +601,6 @@
   "err.range.invalid": "Intervallo non valido: scrivi due numeri diversi in cm⁻¹.",
   "ranges.status.preset": "Regione del confronto: {name}.",
   "ranges.status.custom": "Regione del confronto scelta a mano: {count} intervalli.",
-  "ranges.outside": "fuori regione",
   "ranges.used": "Regione usata: {ranges} cm⁻¹ ({kind}).",
   "ranges.used_preset": "preimpostazione",
   "ranges.used_custom": "scelta a mano",
@@ -613,7 +611,6 @@
   "ranges.table.region": "Regione {n}: {from}–{to}",
   "ranges.table.out": "— fuori dai primi 10",
   "ranges.table.busy": "Calcolo in corso…",
-  "ranges.table.note": "Il confronto di ogni regione è fatto da solo; le parole (concorda, in parte, non concorda) usano soglie provvisorie non tarate.",
   "action.ranges_open.label": "Regioni del confronto",
   "action.ranges_open.tip": "Scegli su quale parte dello spettro fare il confronto"
 }

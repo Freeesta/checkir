@@ -581,7 +581,6 @@
   "regions.far.name": "Heavy atoms and lattice",
   "regions.far.tag": "heavy",
   "ranges.title": "Comparison region",
-  "ranges.note": "The 1900–2400 cm⁻¹ zone is always left out. With a hand-picked region the thresholds are not calibrated and the level stays «to check».",
   "ranges.presets": "Region presets",
   "ranges.preset.full": "Whole spectrum",
   "ranges.preset.full_tip": "Compares over the whole 650–3800 cm⁻¹ range (the left-out zone apart): the thresholds are calibrated.",
@@ -602,7 +601,6 @@
   "err.range.invalid": "Invalid range: type two different numbers in cm⁻¹.",
   "ranges.status.preset": "Comparison region: {name}.",
   "ranges.status.custom": "Hand-picked comparison region: {count} ranges.",
-  "ranges.outside": "outside the region",
   "ranges.used": "Region used: {ranges} cm⁻¹ ({kind}).",
   "ranges.used_preset": "preset",
   "ranges.used_custom": "hand-picked",
@@ -613,7 +611,6 @@
   "ranges.table.region": "Region {n}: {from}–{to}",
   "ranges.table.out": "— outside the first 10",
   "ranges.table.busy": "Computing…",
-  "ranges.table.note": "Each region is compared on its own; the words (agrees, in part, does not agree) use provisional, uncalibrated thresholds.",
   "action.ranges_open.label": "Comparison regions",
   "action.ranges_open.tip": "Choose which part of the spectrum the comparison uses"
 }

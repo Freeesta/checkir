@@ -133,7 +133,11 @@ export function rangeContext(announce, hooks) {
       if (pair) actions.addRange([Math.round(pair[0]), Math.round(pair[1])]);
       else announce(t("ranges.cursors_missing"));
     },
+    // `g` shows the picker (and puts the focus in it) or hides it again.
     openRanges: () => {
+      const open = !getState().rangesOpen;
+      update({ rangesOpen: open });
+      if (!open) return;
       hooks.openResults();
       /** @type {HTMLElement | null} */ (document.querySelector('[data-fk="range-preset-full"]'))?.focus();
     },

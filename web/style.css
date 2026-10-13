@@ -334,7 +334,7 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .range-input { box-sizing: border-box; width: 5.5rem; min-height: 2rem; padding: 0 0.4rem; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 0.3rem; }
 .range-presets .btn[aria-pressed="true"] { border: 2px solid var(--focus); font-weight: 600; }
 .range-custom { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.9rem; }
-.range-chosen { fill: var(--text); fill-opacity: 0.6; }
+.range-band { fill: var(--text); fill-opacity: 0.35; }
 .range-name { font-weight: 600; font-size: 11px; }
 .brush-strip { fill: transparent; cursor: col-resize; pointer-events: all; }
 .ranges-table-wrap { overflow-x: auto; min-height: 12rem; margin: 0.5rem 0; }
@@ -342,7 +342,7 @@ circle.region-ink, rect.region-ink { stroke: none; }
 .ranges-table caption { text-align: left; font-weight: 600; padding-bottom: 0.2rem; }
 .ranges-table th, .ranges-table td { padding: 0.25rem 0.4rem; border: 1px solid var(--border); text-align: left; vertical-align: middle; }
 .ranges-table td > span { display: inline-flex; align-items: center; gap: 0.3rem; }
-@media (forced-colors: active) { .range-chosen { fill: CanvasText; } .range-input { border-color: ButtonText; } }
+@media (forced-colors: active) { .range-band { fill: CanvasText; } .range-input { border-color: ButtonText; } }
 
 /* Decision form and counselling sheet (section 5), and talk mode. The sheet host exists for print and talk mode only. */
 .decision { margin: 0 0 0.5rem; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 0.4rem; }

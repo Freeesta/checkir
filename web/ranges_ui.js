@@ -66,8 +66,9 @@ function addForm(ctx) {
  * @param {HTMLElement} body @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx
  */
 export function renderRanges(body, s, ctx) {
+  if (!s.rangesOpen) return;
   const box = el("fieldset", { class: "ranges", "data-ranges": "1" }, [el("legend", {}, [icon("region"), t("ranges.title")])]);
-  box.append(el("p", { class: "cap" }, [t("ranges.note")]), presetGroup(s, ctx));
+  box.append(presetGroup(s, ctx));
   if (s.rangeChoice.preset === null) box.append(rangeList(s, ctx));
   box.append(addForm(ctx));
   if (s.rangeError) box.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t(s.rangeError.key, s.rangeError.params)]));
@@ -103,7 +104,7 @@ export function rangeTable(s) {
     body.append(el("tr", {}, [el("th", { scope: "row" }, [`${formatNumber(c.rank)}. ${candidateName(c)} (${c.form})`]), ...table.columns.map((col) => cell(table.cells[col.id]?.[key], table.busy))]));
   });
   tab.append(body);
-  return el("div", { class: "ranges-table-wrap", role: "region", tabindex: "0", "aria-label": t("ranges.table.caption") }, [tab, el("p", { class: "cap" }, [t("ranges.table.note")])]);
+  return el("div", { class: "ranges-table-wrap", role: "region", tabindex: "0", "aria-label": t("ranges.table.caption") }, [tab]);
 }
 
 /** One line saying which region the shown result was computed on, or "" for the whole range. @param {any} data @returns {string} */

@@ -38,7 +38,7 @@ export function buildLayers(chart, summary) {
       const sample = shown ? spectrumOf(shown) : undefined;
       const ref = r && chosen && s.overlay && sample ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
       chart.setLayers({
-        ranges: s.rangeChoice.preset === "full" ? null : { chosen: rangesOf(s.rangeChoice), outsideLabel: t("ranges.outside"), name: (n) => t("ranges.name", { n: String(n) }) },
+        ranges: s.rangeChoice.preset === "full" ? null : { chosen: rangesOf(s.rangeChoice), name: (n) => t("ranges.name", { n: String(n) }) },
         excluded: r ? { from: EXCLUDED_CM1[0], to: EXCLUDED_CM1[1], label: t("chart.excluded") } : null,
         marks: analysis && { bands: analysis.bands, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus, shoulder: p.shoulder })), rows: analysis.peaks, name, focus: s.peakFocus },
         reference: ref && chosen ? { spectrum: ref.spectrum, scale: ref.scale, label: t("chart.reference_legend", { rank: chosen.rank, library: chosen.library }) } : null,
