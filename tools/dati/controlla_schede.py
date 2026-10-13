@@ -19,7 +19,7 @@ ROLE_OF = {s: "chemist" for s in ("molecule", "category", "history", "origin", "
 LIMITS = {"molecule": 2400, "counselling": 1500}  # characters of a section per language; every other section 1200
 DEFAULT_LIMIT = 1200
 NO_DOSES_CLASSES = {"fentanyls", "nitazenes", "nbome"}
-NO_DOSES_SUBSTANCES = {"ghb", "gbl"}
+NO_DOSES_SUBSTANCES = {"ghb", "gbl", "isopropyl-u-47700"}
 SYNTHESIS = re.compile(
     r"°\s?C|\b\d+(?:[.,]\d+)?\s?(?:mL|ml|g|mg|mol|M|h|min)\b|\b(?:riflusso|reflux|resa|yield|aggiungere|add|gocciolare|dropwise|filtrare|filter|"
     r"ricristallizzare|recrystalli[sz]e|step|procedura|procedure)\b", re.I)

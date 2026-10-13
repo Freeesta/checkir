@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "meta-chlorofentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "meta-Chlorofentanyl",
+      "synonyms": [
+        "m-chlorofentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "meta-Clorofentanil",
+      "synonyms": [
+        "m-clorofentanil"
+      ]
+    }
+  },
+  "iupac": "N-(3-chlorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]propanamide",
+  "formula": "C22H27ClN2O",
+  "molar_mass_g_mol": 370.9,
+  "smiles": "CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC(=CC=C3)Cl",
+  "inchi": "InChI=1S/C22H27ClN2O/c1-2-22(26)25(21-10-6-9-19(23)17-21)20-12-15-24(16-13-20)14-11-18-7-4-3-5-8-18/h3-10,17,20H,2,11-16H2,1H3",
+  "inchikey": "PEGQDTGCZUMBDF-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 165365055
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -6175,6 +6175,139 @@
       "tier": "review",
       "doi": "10.1016/j.jep.2023.116153",
       "url": "https://doi.org/10.1016/j.jep.2023.116153"
+    },
+    {
+      "id": "varshneya2023",
+      "type": "paper",
+      "title": "Fentanyl analog structure-activity relationships demonstrate determinants of diverging potencies for antinociception and respiratory depression (Pharmacol Biochem Behav 226:173572)",
+      "authors": [
+        "N. B. Varshneya",
+        "S. H. Hassanien",
+        "M. C. Holt",
+        "D. L. Stevens",
+        "N. K. Layle",
+        "J. R. Bassman",
+        "D. M. Iula",
+        "P. M. Beardsley"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.pbb.2023.173572",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37236405/",
+      "archive_url": "https://web.archive.org/web/20260211014311/https://pubmed.ncbi.nlm.nih.gov/37236405/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "varshneya2019",
+      "type": "paper",
+      "title": "Opioid-like antinociceptive and locomotor effects of emerging fentanyl-related substances (Neuropharmacology 151:171-179)",
+      "authors": [
+        "N. B. Varshneya",
+        "D. M. Walentiny",
+        "L. T. Moisa",
+        "T. D. Walker",
+        "L. R. Akinfiresoye",
+        "P. M. Beardsley"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2019.03.023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8992608/",
+      "archive_url": "https://web.archive.org/web/20260308104752/https://pmc.ncbi.nlm.nih.gov/articles/PMC8992608/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "watanabe2017",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolite identification studies for the new synthetic opioids acetylfentanyl, acrylfentanyl, furanylfentanyl, and 4-fluoro-isobutyrylfentanyl (AAPS J 19:1102-1122)",
+      "authors": [
+        "S. Watanabe",
+        "S. Vikingsson",
+        "M. Roman",
+        "H. Green",
+        "R. Kronstrand",
+        "A. Wohlfarth"
+      ],
+      "year": 2017,
+      "doi": "10.1208/s12248-017-0070-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28382544/",
+      "archive_url": "https://web.archive.org/web/20260218104342/https://pubmed.ncbi.nlm.nih.gov/28382544/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "giltner2022",
+      "type": "paper",
+      "title": "Fentanyl analog trends in Washington D.C. observed in needle-exchange syringes (Forensic Sci Int 338:111393)",
+      "authors": [
+        "A. Giltner",
+        "A. Evans",
+        "C. Cicco",
+        "S. Leach",
+        "W. Rowe"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.forsciint.2022.111393",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35908338/",
+      "archive_url": "https://web.archive.org/web/20250422095312/https://pubmed.ncbi.nlm.nih.gov/35908338/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "otte2022",
+      "type": "paper",
+      "title": "Investigation of the μ- and κ-opioid receptor activation by eight new synthetic opioids using the [35S]-GTPγS assay: U-47700, isopropyl U-47700, U-49900, U-47931E, N-methyl U-47931E, U-51754, U-48520, and U-48800 (Drug Test Anal 14:1187-1199)",
+      "authors": [
+        "L. Otte",
+        "M. Wilde",
+        "V. Auwärter",
+        "K. E. Grafinger"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3238",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35142070/",
+      "archive_url": "https://web.archive.org/web/20240720165327/https://pubmed.ncbi.nlm.nih.gov/35142070/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "fogarty2022-u48800",
+      "type": "paper",
+      "title": "Analysis of the illicit opioid U-48800 and related compounds by LC-MS-MS and case series of fatalities involving U-48800 (J Anal Toxicol 46:17-24)",
+      "authors": [
+        "M. F. Fogarty",
+        "A. L. A. Mohr",
+        "D. M. Papsun",
+        "B. K. Logan"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkaa180",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33237987/",
+      "archive_url": "https://web.archive.org/web/20260504110444/https://pubmed.ncbi.nlm.nih.gov/33237987/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "krotulski2019-mining",
+      "type": "paper",
+      "title": "Sample mining and data mining: combined real-time and retrospective approaches for the identification of emerging novel psychoactive substances (J Forensic Sci 65:550-562)",
+      "authors": [
+        "A. J. Krotulski",
+        "S. Jansen Varnum",
+        "B. K. Logan"
+      ],
+      "year": 2019,
+      "doi": "10.1111/1556-4029.14184",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31498433/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
     }
   ]
 }
