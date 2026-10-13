@@ -3,7 +3,7 @@ import { APP_ID, APP_NAME } from "./appname.js";
 import { wire } from "./chart.js";
 import { refreshActionButtons } from "./controls.js";
 import { buildDialogs } from "./dialogs.js";
-import { activeFile, buildHeader } from "./header.js";
+import { buildHeader } from "./header.js";
 import { applyCatalog, currentLang, LANGS, loadLang, pickLang, t } from "./i18n.js";
 import { loadEngine } from "./engine.js";
 import { libraryActions, loadAllLibraries } from "./librerie.js";
@@ -11,7 +11,9 @@ import { buildPanels } from "./panels.js";
 import { addDemo, closeFile, spectrumOf, wireFileInput } from "./files.js";
 import { attachShortcuts, onShortcutsChange } from "./shortcuts.js";
 import { parseSpectrum } from "./spectrum.js";
-import { getState, subscribe, update } from "./state.js";
+import { buildLayers } from "./layers.js";
+import { matchActions, startMatching } from "./match.js";
+import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
 import { buildLimits, buildNextStep } from "./workarea.js";
@@ -42,6 +44,15 @@ function wireShortcuts(ctx, next) {
   attachShortcuts(ctx);
 }
 
+/** @param {import("./engine.js").Engine | null} engine @param {(text: string) => void} announce @returns {() => void} */
+function demoLoader(engine, announce) {
+  return () => {
+    if (!engine) return announce(t("engine.error"));
+    addDemo(parseSpectrum(engine.demo_spectrum()));
+    announce(t("status.demo_loaded"));
+  };
+}
+
 async function start() {
   initTheme();
   await loadLang(pickLang());
@@ -53,11 +64,7 @@ async function start() {
   const ctx = {
     getState,
     openFile: () => input.choose(),
-    loadDemo: () => {
-      if (!engine) return announce(t("engine.error"));
-      addDemo(parseSpectrum(engine.demo_spectrum()));
-      announce(t("status.demo_loaded"));
-    },
+    loadDemo: demoLoader(engine, announce),
     selectFile: (code) => update({ active: code }),
     closeFile: (code) => {
       closeFile(code);
@@ -75,6 +82,7 @@ async function start() {
       refreshActionButtons(getState());
       announce(`${t("action.theme_cycle.label")}: ${t(`theme.${mode}`)}`);
     },
+    ...matchActions(announce),
     togglePanel: () => panels.toggle(),
     goto: (id) => panels.openSection(id),
     openDialog: (id) => openDialog(id),
@@ -89,6 +97,7 @@ async function start() {
   const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") });
   /** @type {string | null | undefined} */
   let shown;
+  const layers = buildLayers(chart);
   const renderUi = () => {
     const s = getState();
     const code = activeFile(s)?.code ?? null;
@@ -96,6 +105,7 @@ async function start() {
       shown = code;
       chart.set(code ? (spectrumOf(code) ?? null) : null);
     }
+    layers.sync(s, shown ?? null);
     header.refresh(s);
     panels.refresh(s);
     next.refresh(s);
@@ -105,6 +115,7 @@ async function start() {
     $("engine-version").textContent = engine ? t("engine.version", { version: engine.version() }) : t("engine.error");
   };
   redrawAll = () => {
+    layers.reset();
     applyCatalog();
     setDescription();
     relabelToggletips();
@@ -112,6 +123,7 @@ async function start() {
     chart.redraw();
   };
   subscribe(renderUi);
+  startMatching({ announce });
   wireShortcuts(ctx, next);
   redrawAll();
   if (engine) loadAllLibraries(engine);

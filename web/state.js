@@ -7,17 +7,37 @@ import { STORAGE_PREFIX } from "./appname.js";
  * @typedef {{ code: string, name: string | null, demo: boolean, points: number, fromCm1: number, toCm1: number, resolutionCm1: number | null, role: "sample" | "reference" | "residual" | "subtraction" | "mean", parent: string | null, note: string | null, warnings: Notice[] }} FileEntry
  * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, private: boolean, enabled: boolean }} LibraryEntry
  * @typedef {{ done: number, total: number, name: string }} LibraryJob
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], result: null | { level: number, alerts: number }, peaks: { explained: number, unexplained: number }, decision: null | { level: number } }} AppState
+ * One comparison: `data` is the `ftir-risultato-confronto/1` document, `code` the spectrum it was run on, `sig` the libraries searched.
+ * @typedef {{ code: string, data: any, sig: string }} MatchResult
+ * The chemist's own mark on a candidate (memory only, never stored).
+ * @typedef {"accept" | "unsure" | "reject"} ChemistLabel
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, peaks: { explained: number, unexplained: number }, decision: null | { level: number } }} AppState
  */
 
 /** @returns {AppState} */
-function initial() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], result: null, peaks: { explained: 0, unexplained: 0 }, decision: null };
+export function emptyState() {
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: false, peaks: { explained: 0, unexplained: 0 }, decision: null };
 }
 
-let state = initial();
+let state = emptyState();
 /** @type {Set<(s: AppState) => void>} */
 const listeners = new Set();
+
+/** The spectrum shown: the active code, or the first one. @param {AppState} s @returns {FileEntry | undefined} */
+export function activeFile(s) {
+  return s.files.find((f) => f.code === s.active) ?? s.files[0];
+}
+
+/** The comparison of the spectrum shown, if it was run. @param {AppState} s @returns {MatchResult | null} */
+export function resultOf(s) {
+  const code = activeFile(s)?.code;
+  return (code && s.results[code]) || null;
+}
+
+/** Key of a candidate in `labels` and `selected`. @param {{ library: string, spectrum_id: string }} c @returns {string} */
+export function candidateKey(c) {
+  return `${c.library}/${c.spectrum_id}`;
+}
 
 /** Libraries that take part in the comparison. @param {AppState} s @returns {LibraryEntry[]} */
 export function activeLibraries(s) {
@@ -43,11 +63,11 @@ export function subscribe(fn) {
 
 /** Forget the whole analysis (and notify). */
 export function reset() {
-  update(initial());
+  update(emptyState());
 }
 
 /** Preferences are the only thing stored in the browser, always under the product prefix. */
-export const PREFS = ["lang", "theme", "panel", "shortcuts"];
+export const PREFS = ["lang", "theme", "panel", "shortcuts", "autoMatch"];
 
 /** @param {string} name @returns {string | null} */
 export function readPref(name) {

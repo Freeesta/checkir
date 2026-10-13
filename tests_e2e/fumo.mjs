@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { chromium, firefox, webkit } from "playwright";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { demoScenario } from "./demo.mjs";
+import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { registryScenario } from "./registri.mjs";
 import { startSite } from "./sito.mjs";
@@ -193,7 +194,7 @@ async function shellScenario(browser) {
     session: sessionStorage.length,
     idb: (await indexedDB.databases()).length,
   }));
-  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.shortcuts"];
+  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.shortcuts", "checkir.autoMatch"];
   check("privacy: only preferences are stored, nothing of the analysis", stored.local.every((k) => allowed.includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
   await ctx.close();
 }
@@ -274,6 +275,8 @@ async function run() {
     await demoScenario(browser, base, check, axe);
     await librariesPureScenario(check);
     await librariesScenario(browser, base, check, axe);
+    await matchPureScenario(check);
+    await matchScenario(browser, base, check, axe);
     await offlineScenario(browser, base, check);
   } finally {
     await browser.close();

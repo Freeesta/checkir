@@ -30,6 +30,11 @@ export function libraryValues(id) {
   return loaded.get(id)?.values ?? null;
 }
 
+/** @param {string} id @returns {import("./nomi.js").IndexRow[] | null} the index rows of a library, in the order of its values */
+export function libraryRows(id) {
+  return loaded.get(id)?.rows ?? null;
+}
+
 /** Compounds whose name (or InChIKey) starts with the text, in the active libraries. @param {string} query @param {number} [limit] */
 export function findNames(query, limit = 20) {
   names ??= buildNameIndex([...loaded.values()].filter((l) => l.entry.enabled).map((l) => ({ id: l.entry.id, rows: l.rows })));

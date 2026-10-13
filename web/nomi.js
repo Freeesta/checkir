@@ -3,7 +3,7 @@
  * Index of the names of the active libraries, to recall a compound by typing the start of its name (no accents, no case).
  * @typedef {{ key: string, name: string, lang: "it" | "en" | "key", library: string, spectrum: string, substance: string, classes: string[] }} NameEntry
  * @typedef {{ id: string, rows: IndexRow[] }} NamedLibrary
- * @typedef {{ id: string, substance: string, names: { it?: string, en: string }, classes: string[], inchikey?: string }} IndexRow
+ * @typedef {{ id: string, substance: string, form?: string, names: { it?: string, en: string }, classes: string[], inchikey?: string }} IndexRow
  */
 
 /** Lower case, without accents or combining marks, single spaces. @param {string} s @returns {string} */
