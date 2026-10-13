@@ -137,7 +137,10 @@ fn readings(
     reading: Option<&Reading>,
 ) -> (Vec<Interpretation>, bool) {
     let mut all = own;
-    all.extend(reading.map_or_else(Vec::new, |r| r.of_peak(p, named)));
+    let generic = reading.map_or_else(Vec::new, |r| r.of_peak(p, named));
+    let same = |g: &Interpretation| all.iter().any(|o| o.group == g.group && o.mode == g.mode);
+    let generic: Vec<_> = generic.into_iter().filter(|g| !same(g)).collect();
+    all.extend(generic);
     let crowded = all.len() > MAX_INTERPRETATIONS;
     all.truncate(MAX_INTERPRETATIONS);
     for (i, r) in all.iter_mut().enumerate() {
@@ -160,10 +163,13 @@ fn item(p: &Peak, run: &Run) -> Item {
         .and_then(|by| with_band(by, run.ctx))
         .into_iter()
         .collect();
-    let own = match (run.refs.first(), &explained_by) {
-        (Some(c), None) if p.artifact.is_none() => {
-            let id = &c.id;
-            let band = link::band_at(run.ctx, &id.substance_id, &id.form, p.position_cm1);
+    // The candidate's own assignment of the band comes first, whether or not its spectrum explains the peak.
+    let own = match run.refs.first() {
+        Some(c) if p.artifact.is_none() => {
+            let at = explained_by
+                .as_ref()
+                .map_or(p.position_cm1, |by| by.ref_peak_cm1);
+            let band = link::band_at(run.ctx, &c.id.substance_id, &c.id.form, at);
             band.map(link::from_band).into_iter().collect()
         }
         _ => Vec::new(),

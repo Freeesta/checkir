@@ -136,7 +136,8 @@ function rowsOf(list, assignment, compared, names) {
 /** @param {PeakRow[]} peaks @returns {{ main: number, explained: number, unexplained: number, minor: number, artifact: number }} */
 function countsOf(peaks) {
   const n = (/** @type {(p: PeakRow) => boolean} */ f) => peaks.filter(f).length;
-  return { main: n((p) => p.tier === "main" && p.state !== "artifact"), explained: n((p) => p.state === "explained"), unexplained: n((p) => p.state === "unexplained"), minor: n((p) => p.state === "minor"), artifact: n((p) => p.state === "artifact") };
+  const main = (/** @type {PeakRow} */ p) => p.tier === "main" && p.state !== "artifact";
+  return { main: n(main), explained: n((p) => main(p) && p.state === "explained"), unexplained: n((p) => main(p) && p.state === "unexplained"), minor: n((p) => p.state === "minor"), artifact: n((p) => p.state === "artifact") };
 }
 
 /**
