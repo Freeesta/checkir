@@ -105,3 +105,25 @@ export async function buildPrivateLibrary(engine, files, identity, hooks) {
   out.built = { id: identity.id, manifest: JSON.stringify(built.manifest), index: JSON.stringify(built.index), data: new Uint8Array(values.buffer), native: new Uint8Array(native.buffer) };
   return out;
 }
+
+/**
+ * Choose the files of ready-made private packages (`manifest.json`, `index.json`, `data.bin`, optional `native.bin`) and group them by the folder that holds them:
+ * a whole folder of packages gives one group per package, the four files of one package chosen together give one group without a folder name.
+ * @typedef {{ name: string, manifest?: File, index?: File, data?: File, native?: File }} PackageGroup
+ * @param {File[]} files @returns {PackageGroup[]}
+ */
+export function groupPackages(files) {
+  /** @type {Map<string, PackageGroup>} */
+  const groups = new Map();
+  const slots = /** @type {const} */ ({ "manifest.json": "manifest", "index.json": "index", "data.bin": "data", "native.bin": "native" });
+  for (const file of files) {
+    const slot = slots[/** @type {keyof typeof slots} */ (file.name)];
+    if (!slot) continue;
+    const parts = (file.webkitRelativePath || file.name).split("/");
+    const dir = parts.slice(0, -1).join("/");
+    const group = groups.get(dir) ?? { name: parts.length > 1 ? parts[parts.length - 2] : "" };
+    group[slot] = file;
+    groups.set(dir, group);
+  }
+  return [...groups.values()];
+}
