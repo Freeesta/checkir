@@ -23,6 +23,8 @@ import { activeFile, getState, subscribe, update } from "./state.js";
 import { cycleTheme, initTheme } from "./theme.js";
 import { hideIfDetached, relabelToggletips, toggletip } from "./tooltip.js";
 import { buildSubtractView } from "./subtract_view.js";
+import { recallActions } from "./recall.js";
+import { buildRecallView, openRecallDialog } from "./recall_ui.js";
 import { subtractActions } from "./subtract.js";
 import { buildLimits, buildNextStep } from "./workarea.js";
 
@@ -108,6 +110,8 @@ async function start() {
     ...matchActions(announce),
     ...peaksActions(engine, announce),
     ...subtractActions(engine, announce),
+    ...recallActions(announce),
+    recallOpen: () => openRecallDialog(ctx),
     ...decisionActions(announce),
     ...talkActions(announce),
     togglePanel: () => panels.toggle(),
@@ -122,6 +126,7 @@ async function start() {
   const next = buildNextStep($("workbar"), ctx);
   const limits = buildLimits($("limits"));
   const subtraction = buildSubtractView($("subtract"), ctx);
+  const recalled = buildRecallView($("recall"), ctx);
   const talk = wireTalk($("sheet-host"));
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
@@ -138,9 +143,7 @@ async function start() {
     }
     layers.sync(s, shown ?? null);
     document.body.toggleAttribute("data-subtract", s.subtraction !== null);
-    subtraction.refresh(s);
-    header.refresh(s);
-    panels.refresh(s);
+    for (const part of [subtraction, recalled, header, panels]) part.refresh(s);
     next.refresh(s);
     limits.refresh();
     talk.refresh(s);

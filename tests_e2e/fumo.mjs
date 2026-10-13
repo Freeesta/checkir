@@ -8,6 +8,7 @@ import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { peaksScenario } from "./picchi.mjs";
+import { recallScenario } from "./richiamo.mjs";
 import { registryScenario } from "./registri.mjs";
 import { sheetScenario } from "./scheda.mjs";
 import { subtractionScenario } from "./sottrazione.mjs";
@@ -285,6 +286,7 @@ async function run() {
     await peaksScenario(browser, base, check, axe);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);
+    await recallScenario(browser, base, check, axe);
     await sheetScenario(browser, base, check, axe);
     await offlineScenario(browser, base, check);
     await folderScenario(browser, base, check, axe);

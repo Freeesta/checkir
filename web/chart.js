@@ -4,12 +4,13 @@ import { drawPeaks, drawRegions, marksTables, svg } from "./chart_marks.js";
 import { nearestIndex, thin, visibleIndices } from "./spectrum.js";
 import { clamp, pan, zoom } from "./view.js";
 import { createCursors } from "./chart_cursors.js";
+import { drawExtras, extraAt, extraCurves, widen } from "./chart_extra.js";
 import { attachInput } from "./chart_input.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** @typedef {import("./view.js").View} View */
 /** Extra curves and zones drawn with the sample: the library spectrum of a candidate (already scaled) and the zone left out of the comparison.
- * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null, marks?: import("./chart_marks.js").Marks | null }} Layers */
+ * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null, marks?: import("./chart_marks.js").Marks | null, recalled?: Array<{ spectrum: Spectrum, label: string, style: number }>, difference?: { spectrum: Spectrum, label: string } | null, offset?: number }} Layers */
 
 const W = 800;
 const H = 360;
@@ -95,7 +96,8 @@ function drawGrid(root, v, y, px, py) {
 export function draw(host, s, v, layers = {}, opts = {}) {
   const idx = visibleIndices(s, v.min, v.max);
   const ref = layers.reference?.spectrum ?? null;
-  const { y0, y1 } = opts.yLock ?? yExtent(s, idx, ref, ref ? visibleIndices(ref, v.min, v.max) : []);
+  const extras = extraCurves(layers);
+  const { y0, y1 } = opts.yLock ?? widen(yExtent(s, idx, ref, ref ? visibleIndices(ref, v.min, v.max) : []), extras, v);
   const px = (/** @type {number} */ x) => M.l + ((v.max - x) / (v.max - v.min)) * (W - M.l - M.r);
   const py = (/** @type {number} */ y) => H - M.b - ((y - y0) / (y1 - y0)) * (H - M.t - M.b);
   const root = svg("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": t("chart.title") });
@@ -104,6 +106,7 @@ export function draw(host, s, v, layers = {}, opts = {}) {
   if (layers.marks) drawRegions(root, layers.marks.regions, v, px, { top: M.t, height: H - M.t - M.b });
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
   if (ref) drawReference(root, ref, v, layers, px, py);
+  drawExtras(root, extras, v, PLOT_W, { px, py, right: W - M.r });
   root.append(svg("polyline", { class: "curve", points: thin(idx, s.y, PLOT_W).map((i) => `${px(s.wavenumber_cm1[i])},${py(s.y[i])}`).join(" ") }));
   if (layers.marks) drawPeaks(root, layers.marks.peaks, v, px, (x) => py(s.y[Math.max(0, nearestIndex(s, x))]));
   const ex = svg("text", { class: "label", x: W / 2, y: H - 6, "text-anchor": "middle" });
@@ -144,13 +147,14 @@ function referenceAt(ref, x) {
  */
 export function table(host, s, v, layers = {}) {
   const ref = layers.reference ?? null;
+  const extras = extraCurves(layers);
   const idx = visibleIndices(s, v.min, v.max);
   const stride = Math.max(1, Math.ceil(idx.length / MAX_RIGHE));
   const tab = document.createElement("table");
   const cap = tab.createCaption();
   cap.textContent = ref ? `${t("table.caption")} ${t("table.reference_note", { label: ref.label, scale: formatNumber(ref.scale, 2) })}` : t("table.caption");
   const row = tab.createTHead().insertRow();
-  for (const name of [t("table.wavenumber"), yLabel(s), ...(ref ? [t("table.reference")] : [])]) {
+  for (const name of [t("table.wavenumber"), yLabel(s), ...(ref ? [t("table.reference")] : []), ...extras.map((e) => e.label)]) {
     const th = document.createElement("th");
     th.scope = "col";
     th.textContent = name;
@@ -163,6 +167,10 @@ export function table(host, s, v, layers = {}) {
     r.insertCell().textContent = formatNumber(s.y[idx[j]], 4);
     if (ref) {
       const value = referenceAt(ref.spectrum, s.wavenumber_cm1[idx[j]]);
+      r.insertCell().textContent = value === null ? "—" : formatNumber(value, 4);
+    }
+    for (const e of extras) {
+      const value = extraAt(e, s.wavenumber_cm1[idx[j]]);
       r.insertCell().textContent = value === null ? "—" : formatNumber(value, 4);
     }
   }
