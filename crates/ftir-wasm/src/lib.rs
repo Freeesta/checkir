@@ -9,6 +9,7 @@ mod miscele;
 mod peak_index;
 #[cfg(test)]
 mod peak_index_test;
+mod richiamo;
 mod sottrazione;
 
 /// Engine version.

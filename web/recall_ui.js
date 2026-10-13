@@ -4,8 +4,7 @@ import { actionButton } from "./controls.js";
 import { el, icon, keepFocus } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
 import { findNames, libraryRows } from "./librerie.js";
-import { MAX_REFS, recalledName, recallView } from "./recall.js";
-import { SCALES } from "./recall_math.js";
+import { MAX_REFS, recalledName, recallView, SCALES } from "./recall.js";
 
 /**
  * The recalled compounds beside the chart: the search dialog (`library.recall`, key `b`) and the section under the chart with the view (overlaid,

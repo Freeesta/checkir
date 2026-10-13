@@ -15,6 +15,7 @@ pub mod passi;
 pub mod peak_index;
 pub mod peaks;
 pub mod readers;
+pub mod richiamo;
 pub mod rules;
 pub mod single_beam;
 pub mod spectrum;
