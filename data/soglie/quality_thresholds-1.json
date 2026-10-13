@@ -19,6 +19,9 @@
     "reference_median_roughness": 0.00082,
     "min_points": 20
   },
+  "background_energy": {
+    "low_ratio": 0.5
+  },
   "negative": {
     "excluded_cm1": [[0, 500], [1900, 2400]],
     "min_abs": -0.02,

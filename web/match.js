@@ -202,6 +202,8 @@ function onState(s) {
  */
 export function startMatching({ announce }) {
   say = announce;
+  // The libraries may have loaded before this call; without a later state change the worker would never hear of them.
+  if (getState().libraries.length) syncLibraries(getState());
   subscribe((s) => {
     if (s.libraries.length) syncLibraries(s);
     onState(s);
