@@ -42,6 +42,12 @@ export function effectiveText(sheet, family, key, lang) {
   return { text: "", fromFamily: false };
 }
 
+/** A table in a keyboard-reachable box that scrolls sideways on a narrow screen. @param {HTMLElement} table @returns {HTMLElement} */
+export function scrollBox(table) {
+  const label = table.querySelector("caption")?.textContent ?? "";
+  return el("div", { class: "table-scroll", tabindex: "0", role: "region", "aria-label": label }, [table]);
+}
+
 /** Numbered citation of a source, in order of first use. @param {string[]} order @param {string} id @returns {HTMLElement} */
 export function cite(order, id) {
   if (!order.includes(id)) order.push(id);
@@ -177,7 +183,7 @@ export function cutsBlock(sheet, order, ctx, nameOf) {
     ]);
   });
   const head = el("tr", {}, [t("sheets.cuts.col.cut"), t("sheets.cuts.col.frequency"), t("sheets.cuts.col.detect"), t("sheets.cuts.col.source")].map((k) => el("th", { scope: "col" }, [k])));
-  return el("table", { class: "data-table sheet-cuts", "data-part": "cuts" }, [el("caption", {}, [t("sheets.cuts.caption")]), el("thead", {}, [head]), el("tbody", {}, rows)]);
+  return scrollBox(el("table", { class: "data-table sheet-cuts", "data-part": "cuts" }, [el("caption", {}, [t("sheets.cuts.caption")]), el("thead", {}, [head]), el("tbody", {}, rows)]));
 }
 
 /** @type {Record<string, () => string>} */
@@ -203,7 +209,7 @@ export function interactionsBlock(list, order, nameOf) {
     el("td", {}, [i.mechanism ? (MECHANISM[i.mechanism] ?? MECHANISM.other)() : ""]),
     el("td", {}, [cite(order, i.source)]),
   ]));
-  return el("table", { class: "data-table sheet-interactions", "data-part": "interactions" }, [el("caption", {}, [t("sheets.interactions.caption")]), el("thead", {}, [head]), el("tbody", {}, rows)]);
+  return scrollBox(el("table", { class: "data-table sheet-interactions", "data-part": "interactions" }, [el("caption", {}, [t("sheets.interactions.caption")]), el("thead", {}, [head]), el("tbody", {}, rows)]));
 }
 
 /** The talking points: one paragraph per point in the order of `counselling`, each with its topic. @param {import("./schede.js").Sheet} sheet @param {string} text @param {string[]} order @returns {HTMLElement[]} */

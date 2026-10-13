@@ -9,7 +9,7 @@ const FIXTURE = new URL("../tests/fixture/schede/data/", import.meta.url);
 /** Serves the fixture bundles in place of schede/ (the service worker is blocked in these contexts, or it would answer first). @param {import("playwright").Page} page */
 async function serveFixture(page) {
   const files = await collect(FIXTURE);
-  await page.route("**/schede/*", (route) => {
+  await page.route((url) => /^\/schede\/[^/]+$/.test(url.pathname), (route) => {
     const name = new URL(route.request().url()).pathname.split("/").pop() ?? "";
     const body = files.get(name);
     if (body === undefined) return route.fulfill({ status: 404, body: "" });
@@ -98,9 +98,14 @@ export async function sheetsPageScenario(browser, base, check, axe) {
 async function analyse(page, base, spectra, sample) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
-  await page.locator('details[data-panel="libraries"] summary').click();
+  await page.evaluate(() => {
+    window.__said = [];
+    new MutationObserver(() => document.getElementById("status")?.textContent && window.__said.push(document.getElementById("status").textContent)).observe(document.getElementById("status"), { childList: true, characterData: true, subtree: true });
+  });
+  const panel = page.locator('details[data-panel="libraries"]');
+  if (!(await panel.evaluate((d) => d.open))) await panel.locator("summary").click();
   await page.fill("#lib-name", "Privata");
-  await page.setInputFiles('input[data-library="files"]', spectra.map(([title, bands], i) => ({ name: `s${i}.jdx`, buffer: jcamp(title, bands) })));
+  await page.setInputFiles('input[data-library="files"]', spectra.map(([title, bands]) => ({ name: `${title}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(title, bands) })));
   await page.waitForFunction((n) => new RegExp(String(n)).test(document.querySelector('[data-library="privata"]')?.textContent ?? ""), spectra.length);
   await page.setInputFiles("input[type=file]:not([data-library])", [{ name: "campione.jdx", mimeType: "chemical/x-jcamp-dx", buffer: jcamp("campione", sample) }]);
   await page.waitForSelector(".result[data-level]", { state: "attached", timeout: 20000 });
@@ -113,11 +118,12 @@ export async function inlineScenario(browser, base, check, axe) {
   await page.waitForSelector('.inline-panel[data-sheet="synthetic-full"] .audience-toggle');
   check("inline sheet: a private library entry named like a sheet hooks to it, at a level 1-3 one sheet", (await page.locator(".inline-sheet").count()) === 1 && (await page.locator(".inline-panel").count()) === 1);
   check("inline sheet: the sheet name stands beside the level and the signed sections", /Scheda: Scheda sintetica completa/.test((await page.textContent(".inline-head")) ?? "") && (await page.locator(".inline-head .level").count()) === 1 && /2 sezioni firmate su 13/.test((await page.textContent(".inline-head")) ?? ""));
-  check("inline sheet: Chemist is the first view, with the metabolism tree and the cuts", (await page.getAttribute('[data-audience="chemist"]', "aria-pressed")) === "true" && (await page.locator(".inline-panel .metabolism-tree").count()) === 1 && (await page.locator('.inline-panel [data-part="cuts"]').count()) === 1);
-  check("inline sheet: the availability was announced", /Scheda di Scheda sintetica completa disponibile/.test((await page.textContent("#status")) ?? ""));
+  check("inline sheet: Chemist is the first view, with the metabolism tree and the cuts", (await page.getAttribute('[data-audience="chemist"]', "aria-pressed")) === "true" && (await page.locator('.inline-panel [data-part="metabolism-tree"]').count()) === 1 && (await page.locator('.inline-panel [data-part="cuts"]').count()) === 1);
+  check("inline sheet: the availability was announced", (await page.evaluate(() => window.__said)).some((m) => /Scheda di Scheda sintetica completa disponibile/.test(m)));
   await page.click('[data-audience="counsellor"]');
   check("inline sheet: the Counsellor view shows the talking points with their topics and the family text", (await page.getAttribute('[data-audience="counsellor"]', "aria-pressed")) === "true" && (await page.locator('.inline-panel [data-topic]').count()) === 2 && (await page.locator('.inline-panel [data-section="effects"] [data-family-text]').count()) === 1);
   check("inline sheet: an unwritten section is left out of the brief view", (await page.locator('.inline-panel [data-section="history"]').count()) === 0);
+  await page.evaluate(() => window.scrollTo(0, 0));
   const v = await axe(page);
   check("inline sheet: axe has no violations with the brief sheet", v.length === 0, v.join(", "));
   await page.click('[data-fk="inline-open-sheet"]');

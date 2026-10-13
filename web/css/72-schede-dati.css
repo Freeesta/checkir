@@ -25,3 +25,4 @@
 .sheets-page .back { margin: 0.5rem 0; }
 .sheet-counselling h4 { margin: 0.6rem 0 0.2rem; font-size: 1em; }
 .sheet-counselling .topic-tag { font-size: 0.7em; }
+.table-scroll { overflow-x: auto; max-width: 100%; }

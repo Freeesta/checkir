@@ -3,7 +3,7 @@
 // Names of reactions and columns are words of the interface; the facts come from the sheet.
 import { el } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
-import { cite } from "./schede_dati.js";
+import { cite, scrollBox } from "./schede_dati.js";
 
 /** Kinds of reaction (literal keys, so the catalog check can see them). @type {Record<string, () => string>} */
 const REACTIONS = {
@@ -91,7 +91,7 @@ function metaboliteTable(metabolites, pathways, order) {
 
 /** @param {any} h @param {string[]} order @returns {HTMLElement} */
 function halfLife(h, order) {
-  const range = h.min === h.max ? formatNumber(h.min) : `${formatNumber(h.min)}–${formatNumber(h.max)}`;
+  const range = h.min === h.max ? formatNumber(h.min, 1) : `${formatNumber(h.min, 1)}–${formatNumber(h.max, 1)}`;
   const where = [h.matrix, h.route].filter(Boolean).map(words).join(", ");
   return el("p", { class: "half-life", "data-part": "half-life" }, [t("sheets.metabolism.half_life", { range, where }), " ", cite(order, h.source)]);
 }
@@ -102,8 +102,8 @@ export function metabolismBlock(metabolism, order, parentName) {
   /** @type {Pathway[]} */
   const pathways = metabolism.pathways ?? [];
   const box = el("div", { class: "sheet-metabolism", "data-part": "metabolism" });
-  if (pathways.length) box.append(tree(pathways, order, parentName), pathwayTable(pathways, order));
-  if (metabolism.metabolites?.length) box.append(metaboliteTable(metabolism.metabolites, pathways, order));
+  if (pathways.length) box.append(tree(pathways, order, parentName), scrollBox(pathwayTable(pathways, order)));
+  if (metabolism.metabolites?.length) box.append(scrollBox(metaboliteTable(metabolism.metabolites, pathways, order)));
   if (metabolism.half_life_h) box.append(halfLife(metabolism.half_life_h, order));
   return box.childElementCount ? box : null;
 }
