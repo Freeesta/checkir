@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Private libraries live in the origin private file system (OPFS): the user's own spectra, in this browser only.
- * One directory per library under `checkir-libraries/`, with the three files of the package.
+ * One directory per library under `<prefix>-libraries/` (the prefix of appname.js), with the three files of the package.
  * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array }} StoredLibrary
  */
 import { STORAGE_PREFIX } from "./appname.js";
