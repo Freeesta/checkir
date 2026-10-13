@@ -9,8 +9,7 @@ body > :not(.sheet-host) { display: none; }
 .sheet h3 { margin: 4pt 0 1pt; padding-top: 2pt; border-top: 0.5pt solid #000; font-size: 10pt; }
 .sheet p, .sheet ul { margin: 1pt 0; }
 .sheet-block, .sheet-head, .sheet-foot { break-inside: avoid; }
-.sheet-head { grid-template-columns: auto 1fr; gap: 2pt 6pt; }
-.sheet-head .logo { width: 22pt; height: 22pt; background: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.sheet-head { grid-template-columns: 1fr; gap: 2pt 6pt; }
 .sheet-meta { grid-template-columns: auto 1fr auto 1fr; gap: 0 6pt; font-size: 10pt; }
 .sheet-meta dt { color: #000; }
 .sheet .level .icon, .sheet-alerts .icon { width: 11pt; height: 11pt; color: #000; }
