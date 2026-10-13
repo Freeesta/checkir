@@ -25,7 +25,7 @@ async function wideScenario(browser, base, check) {
   page.__base = base;
   await loadResult(page);
   const open = await page.evaluate(() => [...document.querySelectorAll("details[data-panel][open]")].map((d) => d.getAttribute("data-panel")));
-  check("layout: E5 after the result the libraries section is closed and the results one is open", !open.includes("libraries") && open.includes("results"), open.join(","));
+  check("layout: E5 after the result the libraries section, opened by hand, stays open", open.includes("libraries") && !open.includes("results"), open.join(","));
   const box = await page.evaluate(() => {
     const host = document.querySelector("#chart");
     const svg = host?.querySelector("svg");

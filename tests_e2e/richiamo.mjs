@@ -49,7 +49,7 @@ export async function recallScenario(browser, base, check, axe) {
   await pick(page, "bet");
   await page.waitForSelector("#recall:not([hidden]) .recall-item");
   const text = (await page.textContent("#recall")) ?? "";
-  check("recall: the first hit is in the comparison at position 1 with its numbers", /Posizione nel confronto: 1º/.test(text) && /r spettro \d\.\d\d · r derivata/.test(text), text);
+  check("recall: the first hit is in the comparison at position 1 with its numbers", /Posizione nel confronto: 1º/.test(text) && /Match spettro \d{1,3} · Match derivata/.test(text), text);
   check("recall: no level is shown beside a compound picked by hand", !/Livello|Probabile|Da verificare/.test(text));
   await pick(page, "gam");
   await pick(page, "alf");

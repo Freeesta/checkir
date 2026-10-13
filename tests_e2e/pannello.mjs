@@ -31,6 +31,7 @@ export async function pannelloScenario(browser, base, check) {
   check("pannello: a file that repeats another is left out of the import (3 spectra of 4 files)", /Spettri: 3/.test((await page.textContent('[data-library="miscela"]')) ?? ""));
   await page.setInputFiles('input[data-library="folder"]', dir);
   await page.locator('[data-library="miscela-2"]').waitFor();
+  await page.waitForFunction(() => !document.querySelector(".lib-progress") && /miscela-2» importata/.test(document.querySelector('details[data-panel="libraries"] .notes')?.textContent ?? ""));
 
   // Section 2 is open by hand and stays so, with the same nodes, when the result arrives.
   await page.evaluate(() => (document.querySelector("#lib-name").__keep = 1));

@@ -74,7 +74,7 @@ async function fieldsScenario(page, check) {
   const heads = await page.locator(".ranges-table thead th").allTextContents();
   check("ranges: the table has candidate, whole and region 1", heads.length === 3 && /Intero/.test(heads[1]) && /Regione 1/.test(heads[2]), heads.join(" | "));
   const cells = await page.locator(".ranges-table tbody td").allTextContents();
-  check("ranges: every cell has its number and a word, never colour alone", cells.length >= 2 && cells.every((c) => /\d[.,]\d\d · \S/.test(c) || /fuori dai primi/.test(c)), cells.slice(0, 4).join(" | "));
+  check("ranges: every cell has its number and a word, never colour alone", cells.length >= 2 && cells.every((c) => /\d+ · \S/.test(c) || /fuori dai primi/.test(c)), cells.slice(0, 4).join(" | "));
   check("ranges: the table is in the detail of the chosen candidate, one row", (await page.locator(".detail .ranges-table tbody tr").count()) === 1);
   const first = await page.locator(".ranges-table tbody tr").first().textContent();
   check("ranges: the first row is the best candidate (beta) and agrees on the whole range", /beta/i.test(first ?? "") && /Concorda/.test(first ?? ""), first ?? "");

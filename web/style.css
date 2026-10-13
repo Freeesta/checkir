@@ -505,7 +505,7 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 @media (prefers-reduced-motion: reduce) { #splash { transition: none; } }
 
 /* Candidates under the chart: the space is reserved once a spectrum is shown, so the result arriving moves nothing */
-.candidates[data-open] { min-height: 28rem; margin-top: 0.75rem; }
+.candidates[data-open] { min-height: 29rem; margin-top: 0.75rem; }
 .candidates .cand-name { overflow: visible; white-space: normal; }
 .candidates .detail { min-height: 4rem; }
 .cand-head { display: none; }
