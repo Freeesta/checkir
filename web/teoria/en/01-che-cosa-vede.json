@@ -1,0 +1,76 @@
+{
+ "schema": "theory/1",
+ "id": "what-ftir-sees",
+ "n": 1,
+ "title": "What FTIR sees (and what it does not)",
+ "key_message": "Infrared light makes bonds vibrate: every substance has its own fingerprint, but a component below about 5 % may not show up.",
+ "body": [
+  "We put a little powder on a small diamond and shine [[mid-infrared|infrared]] light on it, invisible to our eyes. The bonds between atoms vibrate and absorb only certain «colours» of this light. The spectrum is the picture of which colours were absorbed: every substance has its own.",
+  "But FTIR only sees well what is present in quantity: below about 5-10 % a component may not show up, and substances that are active at tiny doses may be missed altogether."
+ ],
+ "for_chemists": [
+  "The spectrum in the figure is in [[absorbance|absorbance]] (A = −log₁₀T), measured by diamond ATR with one reflection at 4 cm⁻¹ resolution. The [[mid-infrared|mid-infrared]] runs from 4000 to 400 cm⁻¹, about 48–4.8 kJ/mol: enough to make bonds vibrate, not to break them.",
+  "The x axis decreases from left to right, as is usual in IR. Above about 1500 cm⁻¹ lies the [[functional-group-region|functional group region]], below it the [[fingerprint-region|fingerprint region]]; some sources place the fingerprint between 1300 and 650 cm⁻¹, so the convention should always be stated.",
+  "The detection limit depends on the component, on the contact with the crystal and on the strength of its bands: as an order of magnitude 5-10 %. Very potent substances present in traces are not seen."
+ ],
+ "figure": {
+  "id": "spectrum_bands",
+  "alt": "Demonstration absorbance spectrum of a powder identified by the service as cocaine hydrochloride, from 4000 to 500 cm⁻¹ with values decreasing to the right. Three bands are marked: a broad band around 2540, the C=O around 1712 and the aromatic C–H around 729 cm⁻¹.",
+  "caption": "Demonstration spectrum (measured, diamond ATR): three recognisable bands. The identity is a proposal of the service, not confirmed with other techniques.",
+  "labels": {
+   "title": "Demonstration spectrum with three bands marked",
+   "axis_x": "Wavenumber (reciprocal centimetres, cm⁻¹)",
+   "axis_note": "values decrease from left to right, as is usual in IR",
+   "axis_y": "Absorbance",
+   "band1": "broad N–H⁺",
+   "band2": "C=O",
+   "band3": "aromatic C–H",
+   "demo": "Demonstration spectrum, measured"
+  },
+  "data_table": {
+   "caption": "Bands marked in the figure (positions read on the demonstration spectrum)",
+   "columns": [
+    "Band",
+    "Position (cm⁻¹)",
+    "What it is",
+    "Region"
+   ],
+   "rows": [
+    [
+     "broad N–H⁺",
+     "~2540",
+     "N–H⁺ stretch of the amine salt (hydrochloride), inside a wide envelope",
+     "Functional groups (above ~1500)"
+    ],
+    [
+     "C=O",
+     "~1712",
+     "C=O stretch of the esters",
+     "Functional groups (above ~1500)"
+    ],
+    [
+     "aromatic C–H",
+     "~729",
+     "C–H out-of-plane bend of the monosubstituted ring (typical range 770–710)",
+     "Fingerprint (below ~1500)"
+    ]
+   ]
+  }
+ },
+ "further_reading": [
+  "libretexts-ir-theory"
+ ],
+ "sources": [
+  "wiki-infrared-spectroscopy",
+  "wiki-spettroscopia-ir",
+  "demo-spectra"
+ ],
+ "glossary_terms": [
+  "mid-infrared",
+  "absorbance",
+  "functional-group-region",
+  "fingerprint-region"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

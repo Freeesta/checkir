@@ -9,6 +9,7 @@ pub mod json;
 pub mod ratio;
 pub mod spectrum;
 pub mod spring;
+pub mod vibration;
 
 use crate::error::EngineError;
 

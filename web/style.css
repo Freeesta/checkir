@@ -545,3 +545,6 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .rule-range { fill: none; stroke: var(--focus); stroke-width: 2; stroke-dasharray: 6 3; pointer-events: none; }
 .rule-label { font-weight: 600; }
 @media (forced-colors: active) { .mode-atom { fill: Canvas; stroke: CanvasText; } .mode-bond, .mode-arrow { stroke: CanvasText; } .mode-head, .mode-el, .mode-z { fill: CanvasText; } .rule-range { stroke: Highlight; } }
+.report-host { display: none; }
+.chart-menu button { display: flex; justify-content: space-between; gap: 1.5rem; }
+.menu-key { color: var(--text-muted); font-variant-numeric: tabular-nums; }

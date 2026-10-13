@@ -119,6 +119,15 @@ function keep() {
   return made;
 }
 
+/** The view mode, the next one: overlaid, offset, difference (key `x`). */
+function cycleMode() {
+  const r = getState().recall;
+  if (!r.refs.length) return;
+  const next = r.mode === "overlay" ? "offset" : r.mode === "offset" ? "difference" : "overlay";
+  setRecall({ mode: next });
+  say(next === "overlay" ? t("recall.mode_overlay") : next === "offset" ? t("recall.mode_offset") : t("recall.mode_difference"));
+}
+
 /** @param {(text: string) => void} announce */
 export function recallActions(announce) {
   say = announce;
@@ -128,5 +137,6 @@ export function recallActions(announce) {
     recallClear: () => setRecall({ refs: [], current: 0 }),
     setRecall,
     recallKeep: keep,
+    recallCycleMode: cycleMode,
   };
 }

@@ -1,0 +1,12 @@
+{
+  "schema": "theory-index/1",
+  "lang": "it",
+  "chapters": [
+    {
+      "n": 1,
+      "id": "example",
+      "slug": "Example",
+      "title": "Example"
+    }
+  ]
+}

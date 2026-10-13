@@ -30,6 +30,7 @@ export function buildDialogs(engineVersion) {
         el("section", {}, [el("h3", {}, [t("info.pages_title")]), el("nav", { class: "footer-links", "aria-label": t("info.pages_title") }, [
           el("a", { href: "pagine/avvertenze/" }, [t("info.link_warnings")]),
           el("a", { href: "pagine/informativa/" }, [t("info.link_notice")]),
+          el("a", { href: "teoria/" }, [t("info.link_theory")]),
         ])]),
         el("section", {}, [
           el("h3", {}, [t("info.versions_title")]),

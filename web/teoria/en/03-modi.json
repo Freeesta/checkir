@@ -1,0 +1,96 @@
+{
+ "schema": "theory/1",
+ "id": "vibration-modes",
+ "n": 3,
+ "title": "Modes of vibration",
+ "key_message": "A group of atoms vibrates in a few modes: it stretches (together or in turn), bends like scissors, rocks, wags, twists.",
+ "body": [
+  "A group like CH₂ can stretch its two bonds together ([[symmetric-stretching|symmetric stretch]]) or in turn ([[asymmetric-stretching|asymmetric]]), close and open the angle like [[scissoring|scissors]], [[rocking|rock]] in the plane, or move the hydrogens out of the plane in the same direction ([[wagging|wagging]]) or in opposite directions ([[twisting|twisting]]). Each mode has its own frequency: this is why a single group gives several peaks.",
+  "Choose a mode and see where it falls in the spectrum."
+ ],
+ "for_chemists": [
+  "Notation: ν stretch (νs, νas), δ scissoring, ρ rocking, ω wagging, τ twisting, γ out of plane. A molecule of N atoms has 3N−6 modes (3N−5 if linear); not all are seen: some are inactive, degenerate, weak or out of range.",
+  "CH₂: νas ~2925, νs ~2850, scissoring ~1465–1470, rocking 720 ± 10 (chains with at least 4 consecutive CH₂); wagging and twisting give weak bands below 1500, with no verified value here. CH₃: νas/νs 2960/2870, symmetric deformation ~1380. Primary NH₂: two bands between 3400 and 3500 (80–100 apart) and scissoring 1560–1640.",
+  "[[oop-bending|Aromatic C–H out of plane]]: mono 770–710, ortho 770–735, meta 810–750, para 860–790 cm⁻¹; the position depends on the number of adjacent H. Ring «breathing» (benzene 992 cm⁻¹) is a concept, not a diagnostic IR band."
+ ],
+ "figure": {
+  "id": "modes",
+  "alt": "One carbon atom and two hydrogen atoms drawn with their bonds; arrows or + and − signs show how they move in the chosen mode.",
+  "caption": "The six modes of a CH₂ group: choose a mode, watch the motion and where it falls in the spectrum."
+ },
+ "interactive": {
+  "id": "modes",
+  "labels": {
+   "svg_title": "Vibrating CH₂ group",
+   "svg_desc": "One carbon atom in the middle and two hydrogen atoms; the bonds move according to the chosen mode.",
+   "toward": "+",
+   "away": "−",
+   "phase": "Phase of the motion",
+   "choose": "Choose a mode",
+   "where": "In the spectrum, in cm⁻¹:",
+   "note": "Arrows: direction of the in-plane motion. + and −: the hydrogen moves toward the viewer (+) or away (−). The amplitude is enlarged. The wavenumbers are typical of a CH₂ in an alkyl chain.",
+   "table_caption": "Where the six CH₂ modes fall",
+   "col_mode": "Mode",
+   "col_where": "Typical wavenumber (cm⁻¹)"
+  },
+  "items": [
+   {
+    "id": "stretch_sym",
+    "label": "Symmetric stretch",
+    "text": "The two C–H bonds lengthen and shorten together.",
+    "value": "~2850"
+   },
+   {
+    "id": "stretch_asym",
+    "label": "Asymmetric stretch",
+    "text": "One bond lengthens while the other shortens.",
+    "value": "~2925"
+   },
+   {
+    "id": "scissoring",
+    "label": "Scissoring",
+    "text": "The H–C–H angle opens and closes, in the plane.",
+    "value": "~1465"
+   },
+   {
+    "id": "rocking",
+    "label": "Rocking",
+    "text": "The group swings as a block from side to side, in the plane.",
+    "value": "~720 (chains of at least 4 CH₂)"
+   },
+   {
+    "id": "wagging",
+    "label": "Wagging",
+    "text": "The two H move forward and back together, out of the plane.",
+    "value": "below 1500, weak"
+   },
+   {
+    "id": "twisting",
+    "label": "Twisting",
+    "text": "One H moves forward while the other moves back, out of the plane.",
+    "value": "below 1500, weak"
+   }
+  ]
+ },
+ "further_reading": [
+  "commons-ir-modes",
+  "openstax-orgchem-ir"
+ ],
+ "sources": [
+  "wiki-molecular-vibration",
+  "wiki-ir-correlation",
+  "wiki-spettroscopia-ir"
+ ],
+ "glossary_terms": [
+  "symmetric-stretching",
+  "asymmetric-stretching",
+  "bending",
+  "scissoring",
+  "rocking",
+  "wagging",
+  "twisting",
+  "degrees-of-freedom"
+ ],
+ "status": "draft",
+ "reviewers": []
+}

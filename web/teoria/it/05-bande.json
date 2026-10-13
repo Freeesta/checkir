@@ -1,0 +1,72 @@
+{
+ "schema": "theory/1",
+ "id": "broad-and-shifted",
+ "n": 5,
+ "title": "Perché un picco è largo o spostato",
+ "key_message": "Il legame a idrogeno allarga O–H e N–H; i sali danno bande larghe tra 3200 e 2300; il solido e il cristallo spostano i picchi.",
+ "body": [
+  "Quando un O–H o un N–H forma [[hydrogen-bond|legami a idrogeno]] con le molecole vicine, ogni molecola vibra in modo un po' diverso e il picco si allarga. I [[amine-salt|sali]] (per esempio i cloridrati) hanno un N–H con carica positiva che dà una banda larghissima tra 3200 e 2300. Anche la forma cristallina e l'acqua nel cristallo spostano i picchi: la stessa sostanza come sale o come [[free-base|base]] ha due spettri diversi.",
+  "Nella figura, due spettri dimostrativi della stessa molecola: la forma di sale e la base libera."
+ ],
+ "for_chemists": [
+  "Legame a idrogeno: O–H alcolico libero 3620–3670 (stretto), associato 3200–3500 (largo); dimero di un acido carbossilico 2500–3300, molto largo. La [[conjugation|coniugazione]] abbassa il C=O di circa 30–40 cm⁻¹ (chetone saturo 1715, α,β-insaturo 1685, aromatico 1690); la [[ring-strain|tensione d'anello]] lo alza (cicloesanone 1715, ciclopentanone 1750, ciclobutanone 1785).",
+  "[[fermi-resonance|Risonanza di Fermi]]: un'armonica o una combinazione di energia vicina a una fondamentale la divide in due (aldeidi: doppietto C–H a ~2820 e ~2720). Sali di ammina: primari ~3200–2800, secondari ~3000–2700, terziari ~2700–2300, con bande di combinazione tra 2800 e 2000; piegamento NH₃⁺ 1625–1560 e 1550–1500, NH₂⁺ 1620–1560, nessuno per NH⁺.",
+  "In fase gassosa le bande hanno struttura rotazionale; in liquidi e solidi no. Nei cristalli contano impaccamento e [[polymorphism|polimorfismo]]. La coppia della figura è una proposta del servizio con l'FTIR (cocaina cloridrato e cocaina base), non confermata con altre tecniche."
+ ],
+ "figure": {
+  "id": "salt_base",
+  "alt": "Due spettri dimostrativi in assorbanza, da 4000 a 500 cm⁻¹: la forma di sale (linea continua) ha un inviluppo largo tra 3200 e 2300 cm⁻¹ che manca alla base libera (linea tratteggiata). L'intervallo è evidenziato.",
+  "caption": "Sale e base libera della stessa molecola: la banda larga del N–H⁺ è la differenza più visibile.",
+  "labels": {
+   "title": "Sale e base libera a confronto",
+   "axis_x": "Numero d'onda (centimetri alla meno uno, cm⁻¹)",
+   "axis_note": "i valori decrescono da sinistra a destra, come si usa in IR",
+   "axis_y": "Assorbanza",
+   "region": "N–H⁺ del sale",
+   "salt": "Linea continua: sale (cloridrato)",
+   "base": "Linea tratteggiata: base libera",
+   "demo": "Spettri dimostrativi, misurati"
+  },
+  "data_table": {
+   "caption": "Confronto tra i due spettri dimostrativi (calcolo nostro sui dati)",
+   "columns": [
+    "Spettro",
+    "Assorbanza media 2300–2800 cm⁻¹",
+    "C=O: massimo tra 1680 e 1780 cm⁻¹"
+   ],
+   "rows": [
+    [
+     "Sale (cloridrato)",
+     "0.063",
+     "~1712"
+    ],
+    [
+     "Base libera",
+     "0.019",
+     "~1707"
+    ]
+   ]
+  }
+ },
+ "further_reading": [
+  "libretexts-ir-theory",
+  "openstax-orgchem-ir"
+ ],
+ "sources": [
+  "smith-amine-salts",
+  "wiki-ir-correlation",
+  "reusch-vibrational",
+  "demo-spectra"
+ ],
+ "glossary_terms": [
+  "hydrogen-bond",
+  "amine-salt",
+  "free-base",
+  "polymorphism",
+  "conjugation",
+  "ring-strain",
+  "fermi-resonance"
+ ],
+ "status": "draft",
+ "reviewers": []
+}
