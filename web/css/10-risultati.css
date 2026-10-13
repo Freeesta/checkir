@@ -38,8 +38,8 @@
 .excluded-label { fill: var(--text-muted); font-size: 11px; }
 .curve-reference { fill: none; stroke: var(--color-reference); stroke-width: 2; stroke-dasharray: 7 4; vector-effect: non-scaling-stroke; }
 @media (forced-colors: active) { .curve-reference { stroke: Highlight; } .excluded { fill: GrayText; } }
-/* narrow phones: the level word of the result chip wraps instead of being cut (the file name has already given way) */
+/* narrow phones: the level word of the result chip stays whole on one line (the header keeps its height): tighter padding, no ellipsis */
 @media (max-width: 24em) {
-  .chips [data-chip="result"] { flex: 0 1 auto; white-space: normal; text-align: start; }
-  .chips [data-chip="result"] .chip-value { max-width: none; overflow-wrap: anywhere; overflow: visible; }
+  .chips [data-chip="result"] { flex: 0 0 auto; gap: 0.15rem; padding-inline: 0.25rem; }
+  .chips [data-chip="result"] .chip-value { max-width: none; overflow: visible; }
 }
