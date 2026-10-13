@@ -1,0 +1,18 @@
+{
+  "schema": "alerts/1",
+  "id": "family-nitazenes",
+  "status": "draft",
+  "target": {
+    "classes": [
+      "nitazenes"
+    ]
+  },
+  "reason": "potent_analogue",
+  "severity": "serious",
+  "sources": [
+    "unodc-ewa"
+  ],
+  "issued": "2026-10-13",
+  "review_by": "2027-10-13",
+  "reviewers": []
+}
