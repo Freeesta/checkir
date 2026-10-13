@@ -97,6 +97,27 @@ function compute(sub) {
   return { strips };
 }
 
+/**
+ * The factor the engine proposes for a sample and a library curve, and the residual at a factor (same step as the guided subtraction, baseline estimated together).
+ * Used by the recalled references; nothing is stored here.
+ * @param {string} sampleCode @param {string} library @param {string} spectrumId
+ * @returns {{ proposed: number } | { error: import("./state.js").Notice }}
+ */
+export function proposedFactor(sampleCode, library, spectrumId) {
+  const sample = spectrumOf(sampleCode);
+  const ref = libraryCurve(library, spectrumId);
+  if (!engine || !sample || !ref) return { error: { key: "err.subtract.reference", params: {} } };
+  const out = call(engine.fattore_proposto, sample, ref, {});
+  return out.error_key ? { error: noticeOf(out) } : { proposed: Math.max(0, out.k) };
+}
+
+/** @param {string} sampleCode @param {string} library @param {string} spectrumId @param {number} k @returns {{ x: number[], y: number[] } | { error: import("./state.js").Notice }} the residual without the points the step could not work out */
+export function residualAt(sampleCode, library, spectrumId, k) {
+  const value = compute({ sample: sampleCode, library, spectrumId, name: "", k, proposed: k, max: k });
+  if ("error" in value) return value;
+  return { x: value.strips.x, y: value.strips.residual };
+}
+
 /** @param {number} k @param {number} max @returns {number} the factor kept inside the slider and at two decimals */
 export function clampFactor(k, max) {
   return Math.round(Math.min(max, Math.max(0, Number.isFinite(k) ? k : 0)) * 100) / 100;
