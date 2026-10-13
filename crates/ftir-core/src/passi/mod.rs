@@ -7,12 +7,19 @@ use crate::error::{EngineError, EngineResult};
 use crate::spectrum::{Spectrum, YUnit};
 
 pub mod catene;
+pub mod correzione_atr;
 pub mod griglia;
 pub mod json;
+mod linea_di_base;
+pub mod linea_di_base_arpls;
+pub mod linea_di_base_asls;
+pub mod linea_di_base_snip;
 pub mod maschera;
 pub mod normalizza;
 pub mod savitzky_golay;
+pub mod sottrazione;
 pub mod trasmittanza;
+pub mod whittaker;
 
 pub use json::Value;
 

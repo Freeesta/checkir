@@ -16,8 +16,8 @@ mod spectrum;
 
 use super::bdb::{self, Kind};
 use super::model::{
-    Confidence, Document, Field, Limits, Options, Provenance, ReadError, ReadResult, Severity,
-    Spectrum, Warning,
+    Background, Confidence, Document, Field, Limits, Options, Provenance, ReadError, ReadResult,
+    Severity, Spectrum, Warning,
 };
 use super::sha256::sha256_hex;
 use super::Reader;
@@ -226,8 +226,10 @@ pub fn open(bytes: &[u8], limits: &Limits, _options: &Options) -> ReadResult<Doc
         .and_then(|s| <[u8; 4]>::try_from(s).ok())
         .map(u32::from_le_bytes)
         .unwrap_or(0);
+    let background = Background::find(&b.spectra);
     Ok(Document {
         spectra: b.spectra,
+        background,
         primary: b.primary,
         fields: doc_fields,
         warnings,
