@@ -2127,6 +2127,340 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13",
       "tier": "primary"
+    },
+    {
+      "id": "swgdrug-mda",
+      "type": "database",
+      "title": "SWGDRUG monograph: 3,4-Methylenedioxyamphetamine (IR: HCl and sulfate, ATR)",
+      "url": "https://www.swgdrug.org/Monographs/3,4-METHYLENEDIOXYAMPHETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20261012081750/https://swgdrug.org/Monographs/3,4-METHYLENEDIOXYAMPHETAMINE.pdf"
+    },
+    {
+      "id": "swgdrug-doc",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Chloro-2,5-dimethoxyamphetamine (DOC) (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4-Chloro-2,5-dimethoxyamphetamine.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20241212101514/https://swgdrug.org/Monographs/4-Chloro-2,5-dimethoxyamphetamine.pdf"
+    },
+    {
+      "id": "swgdrug-2fa",
+      "type": "database",
+      "title": "SWGDRUG monograph: 2-Fluoroamphetamine (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/2-FA.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20241212104710/https://swgdrug.org/Monographs/2-FA.pdf"
+    },
+    {
+      "id": "swgdrug-3fa",
+      "type": "database",
+      "title": "SWGDRUG monograph: 3-Fluoroamphetamine (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/3-FA.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20241212115830/https://swgdrug.org/Monographs/3-FA.pdf"
+    },
+    {
+      "id": "meyer2009mda",
+      "type": "paper",
+      "title": "Investigations on the human hepatic cytochrome P450 isozymes involved in the metabolism of 3,4-methylenedioxy-amphetamine (MDA) and benzodioxolyl-butanamine (BDB) enantiomers (Toxicol Lett 190(1):54-60)",
+      "authors": [
+        "M. R. Meyer",
+        "F. T. Peters",
+        "H. H. Maurer"
+      ],
+      "year": 2009,
+      "doi": "10.1016/j.toxlet.2009.06.866",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19576971/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260831193423/https://pubmed.ncbi.nlm.nih.gov/19576971/"
+    },
+    {
+      "id": "meyer2009mdea",
+      "type": "paper",
+      "title": "The role of human hepatic cytochrome P450 isozymes in the metabolism of racemic 3,4-methylenedioxyethylamphetamine and its single enantiomers (Drug Metab Dispos 37(6):1152-1156)",
+      "authors": [
+        "M. R. Meyer",
+        "F. T. Peters",
+        "H. H. Maurer"
+      ],
+      "year": 2009,
+      "doi": "10.1124/dmd.108.026203",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19299523/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204073609/https://pubmed.ncbi.nlm.nih.gov/19299523/"
+    },
+    {
+      "id": "baggott2019",
+      "type": "paper",
+      "title": "Effects of the Psychedelic Amphetamine MDA (3,4-Methylenedioxyamphetamine) in Healthy Volunteers (J Psychoactive Drugs 51(2):108-117)",
+      "authors": [
+        "M. J. Baggott",
+        "K. J. Garrison",
+        "J. R. Coyle",
+        "G. P. Galloway",
+        "A. J. Barnes",
+        "M. A. Huestis",
+        "J. E. Mendelson"
+      ],
+      "year": 2019,
+      "doi": "10.1080/02791072.2019.1593560",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30967099/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251103192746/https://pubmed.ncbi.nlm.nih.gov/30967099/"
+    },
+    {
+      "id": "kolaczynska2022",
+      "type": "paper",
+      "title": "Pharmacological characterization of 3,4-methylenedioxyamphetamine (MDA) analogs and two amphetamine-based compounds: N,alpha-DEPEA and DPIA (Eur Neuropsychopharmacol 59:9-22)",
+      "authors": [
+        "K. E. Kolaczynska",
+        "P. Ducret",
+        "D. Trachsel",
+        "M. C. Hoener",
+        "M. E. Liechti",
+        "D. Luethi"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.euroneuro.2022.03.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35378384/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260916195443/https://pubmed.ncbi.nlm.nih.gov/35378384/"
+    },
+    {
+      "id": "brunt2012",
+      "type": "paper",
+      "title": "Linking the pharmacological content of ecstasy tablets to the subjective experiences of drug users (Psychopharmacology 220(4):751-762)",
+      "authors": [
+        "T. M. Brunt",
+        "M. W. Koeter",
+        "R. J. Niesink",
+        "W. van den Brink"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00213-011-2529-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21993879/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260819172441/https://pubmed.ncbi.nlm.nih.gov/21993879/"
+    },
+    {
+      "id": "freudenmann2004",
+      "type": "paper",
+      "title": "The Neuropsychopharmacology and Toxicology of 3,4-methylenedioxy-N-ethyl-amphetamine (MDEA) (CNS Drug Rev 10(2):89-116)",
+      "authors": [
+        "R. W. Freudenmann",
+        "M. Spitzer"
+      ],
+      "year": 2004,
+      "doi": "10.1111/j.1527-3458.2004.tb00007.x",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6741736",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260928091858/https://pmc.ncbi.nlm.nih.gov/articles/PMC6741736/"
+    },
+    {
+      "id": "hermle1993",
+      "type": "paper",
+      "title": "Psychological effects of MDE in normal subjects. Are entactogens a new class of psychoactive agents? (Neuropsychopharmacology 8(2):171-176)",
+      "authors": [
+        "L. Hermle",
+        "M. Spitzer",
+        "D. Borchardt",
+        "K. A. Kovar",
+        "E. Gouzoulis"
+      ],
+      "year": 1993,
+      "doi": "10.1038/npp.1993.19",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8471129/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261005220752/https://pubmed.ncbi.nlm.nih.gov/8471129/"
+    },
+    {
+      "id": "ewald2008",
+      "type": "paper",
+      "title": "2,5-Dimethoxyamphetamine-derived designer drugs: studies on the identification of cytochrome P450 (CYP) isoenzymes involved in formation of their main metabolites and on their capability to inhibit CYP2D6 (Toxicol Lett 183(1-3):52-57)",
+      "authors": [
+        "A. H. Ewald",
+        "H. H. Maurer"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.toxlet.2008.09.014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18938231/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "eshleman2014",
+      "type": "paper",
+      "title": "Behavioral and neurochemical pharmacology of six psychoactive substituted phenethylamines: mouse locomotion, rat drug discrimination and in vitro receptor and transporter binding and function (Psychopharmacology 231(5):875-888)",
+      "authors": [
+        "A. J. Eshleman",
+        "M. J. Forster",
+        "K. M. Wolfrum",
+        "R. A. Johnson",
+        "A. Janowsky",
+        "M. B. Gatch"
+      ],
+      "year": 2014,
+      "doi": "10.1007/s00213-013-3303-6",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3945162",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260930203625/https://pmc.ncbi.nlm.nih.gov/articles/PMC3945162/"
+    },
+    {
+      "id": "barnett2014",
+      "type": "paper",
+      "title": "A fatal intoxication of 2,5-dimethoxy-4-chloroamphetamine: a case report (J Anal Toxicol 38(8):589-591)",
+      "authors": [
+        "R. Y. Barnett",
+        "D. D. Baker",
+        "N. E. Kelly",
+        "C. E. McGuire",
+        "T. C. Fassette",
+        "J. M. Gorniak"
+      ],
+      "year": 2014,
+      "doi": "10.1093/jat/bku087",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25217551/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "lelievre2022",
+      "type": "paper",
+      "title": "Difficulties interpreting concentrations in fatal cases: example of 2,5-dimethoxy-4-chloroamphetamine (Forensic Toxicol 40(2):383-392)",
+      "authors": [
+        "B. Lelievre",
+        "V. Dupont",
+        "C. Buchaillet",
+        "N. Jousset",
+        "M. Deguigne",
+        "V. Cirimele"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s11419-022-00628-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36454420/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250202095237/https://pubmed.ncbi.nlm.nih.gov/36454420/"
+    },
+    {
+      "id": "palamar2025",
+      "type": "paper",
+      "title": "The Epidemiology of Recreational Use and Availability of DOC and DOI in the United States (J Psychoactive Drugs, online 9 Oct 2025)",
+      "authors": [
+        "J. J. Palamar",
+        "N. D. Fitzgerald"
+      ],
+      "year": 2025,
+      "doi": "10.1080/02791072.2025.2570937",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12645445",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260812222709/https://pmc.ncbi.nlm.nih.gov/articles/PMC12645445"
+    },
+    {
+      "id": "johansen2012",
+      "type": "paper",
+      "title": "Isomers of fluoroamphetamines detected in forensic cases in Denmark (Int J Legal Med 126(4):541-547)",
+      "authors": [
+        "S. S. Johansen",
+        "T. M. Hansen"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00414-012-0671-0",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22286570/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260904073037/https://pubmed.ncbi.nlm.nih.gov/22286570/"
+    },
+    {
+      "id": "kranenburg2020",
+      "type": "paper",
+      "title": "Mass-Spectrometry-Based Identification of Synthetic Drug Isomers Using Infrared Ion Spectroscopy (Anal Chem 92(10):7282-7288)",
+      "authors": [
+        "R. F. Kranenburg",
+        "F. A. M. G. van Geenen",
+        "G. Berden",
+        "J. Oomens",
+        "J. Martens",
+        "A. C. van Asten"
+      ],
+      "year": 2020,
+      "doi": "10.1021/acs.analchem.0c00915",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7240807",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250214053716/https://pmc.ncbi.nlm.nih.gov/articles/PMC7240807/"
+    },
+    {
+      "id": "luethi2019",
+      "type": "paper",
+      "title": "para-Halogenation Affects Monoamine Transporter Inhibition Properties and Hepatocellular Toxicity of Amphetamines and Methcathinones (Front Pharmacol 10:438)",
+      "authors": [
+        "D. Luethi",
+        "M. Walter",
+        "X. Zhou",
+        "D. Rudin",
+        "S. Krahenbuhl",
+        "M. E. Liechti"
+      ],
+      "year": 2019,
+      "doi": "10.3389/fphar.2019.00438",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31068823/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260723035434/https://pubmed.ncbi.nlm.nih.gov/31068823/"
+    },
+    {
+      "id": "cha2018",
+      "type": "paper",
+      "title": "Rewarding and reinforcing effects of 4-chloro-2,5-dimethoxyamphetamine and AH-7921 in rodents (Neurosci Lett 676:66-70)",
+      "authors": [
+        "H. J. Cha",
+        "S. Y. Jeon",
+        "H. J. Jang",
+        "J. Shin",
+        "Y.-H. Kim",
+        "S. K. Suh"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.neulet.2018.04.009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29626650/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250318000434/https://pubmed.ncbi.nlm.nih.gov/29626650/"
     }
   ]
 }
