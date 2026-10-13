@@ -1,0 +1,22 @@
+# Motore: passi del segnale, sottrazione
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area del motore: `motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md`, `motore_confronto.md`, `motore_picchi.md`, `motore_didattica.md`.
+
+## Struttura
+- `ftir-core/src/passi/` (pacchetto SEGNALE): ogni passo è `apply(&Spectrum, &str JSON) -> EngineResult<Spectrum>`, puro: l'originale non cambia, il risultato ha lo stesso ruolo e un passo in più in `history`; parametro sconosciuto = `passi.parametro_sconosciuto`.
+- `passi/trasmittanza.rs`: `trasmittanza_in_assorbanza/1` e inversa `assorbanza_in_trasmittanza/1` (`percent` true, T ≤ 0 = assente, già nell'unità richiesta = copia). `griglia.rs`: `griglia/1`, 650-3800 passo 2 = 1576 punti, interpolazione lineare come `numpy.interp`, fuori intervallo = assente, asse anche discendente. `maschera.rs`: `maschera/1`, `intervals_cm1` predefinito [[1900,2400]], i punti diventano assenti.
+- `passi/savitzky_golay.rs`: `savitzky_golay/1`, finestra 15, polinomio 3, derivata 0-2, bordi `mode="interp"`; derivata rispetto a cm⁻¹ col passo con segno; ogni tratto presente si filtra da solo, più corto della finestra = assente; asse non uniforme = `passi.griglia_non_uniforme`.
+- `passi/normalizza.rs`: `normalizza/1` con `vettore` (norma 2 = 1), `snv` (dev. st. n−1), `minmax`; spettro costante = `passi.spettro_costante`. `json.rs`: JSON minimo per parametri e catene.
+- `passi/linea_di_base_asls.rs`: `linea_di_base_asls/1` (predefinita; λ 1e7, p 0.01, ordine 2, 50 iterazioni, tol 1e-3, come `pybaselines.asls`);
+- `passi/linea_di_base_arpls.rs` (`/1`, λ 1e7), `linea_di_base_snip.rs` (`/1`, `max_half_window` 40, filtro di ordine 2, bordi replicati come `pad_kwargs`).
+- Le tre linee di base restituiscono lo spettro corretto (`y − linea`) o, con `"output":"baseline"`, la linea; ogni tratto di punti presenti si tratta da solo (gli indici sono posizioni: griglia uniforme). `linea_di_base_asls::baseline()` dà solo il vettore. `linea_di_base.rs` è la parte comune; `whittaker.rs` risolve il sistema `(W + λDᵀD)z = Wy` con Cholesky a bande (nessuna dipendenza).
+- `passi/correzione_atr.rs`: `correzione_atr/1`, A × ν/`ref_cm1` (1000), spenta: solo per riferimenti in trasmissione, corregge le intensità non le posizioni (tra librerie ATR peggiora 0.871 → 0.831); su trasmittanza = errore.
+- `passi/sottrazione.rs` (fuori da `STEPS`: due ingressi): `subtract(campione, riferimento, params)` → `Subtraction {residual (ruolo Residual, storia «sottratto: <id>, <libreria>, k = 0.84»), k, zone_minimum}`; params `k` (1.0), `reference_id`, `library`, `baseline` (true); assorbanza su griglia predefinita con AsLS, solo sulla sovrapposizione; `zone_minimum` = minimo del residuo dove il riferimento supera il 10 % del suo massimo.
+- `fattore_proposto(...)` → `Proposal {k (arrotondato 0.01, mai negativo), k_unrounded, background, ...}`: minimi quadrati di campione ≈ k·rif + a + b·x (x in [−1, 1] su 650-3800) fuori da `intervals_cm1` (1900-2400); se k < 0 → k = 0 e si rifà a, b; il fondo non si sottrae dal residuo.
+- Con fondo libero k ha un piccolo bias, circa ΣA·ΣB/(n·ΣB²), per bande positive disgiunte.
+- Ponte `ftir-wasm/src/sottrazione.rs`: `fattore_proposto(unità, x, y campione, unità, x, y riferimento, params_json)` e `sottrai(...)` → JSON di `passi/sottrazione_json.rs` (`{k, k_unrounded, points_used, wavenumber_cm1, background}`, `{k, zone_minimum, residual{role, wavenumber_cm1, y, history}}`, assente = `null`); l'avviso di sovrasottrazione lo decide la pagina.
+- `passi/catene.rs`: `catene/1`, dato `{schema, id, steps:[{id:"nome/versione", params}]}`; `CONFRONTO_V1` = assorbanza → griglia → SG derivata 1 → maschera; `run(&Spectrum, catena)`.
+- `ftir-core/src/synthetic.rs`: `Params`, `Band`, `generate`, `true_value`; RNG SplitMix64, asse discendente come negli strumenti.
+
+## Prove
+- `tests/segnale_base.rs`: parità con `pybaselines` (1e-9 relativa al massimo; 1e-8 per λ 1e7, 1576 punti, ordine 3: `pybaselines` dista ~4e-9 dall'esatto), linea nota recuperata, ATR, sottrazione (A + 0.6·B → k = 0.60 ± 0.01, residuo = A entro 1e-9), fattore come `numpy.linalg.lstsq`, mai negativo.
+- `tests/segnale.rs`: parità ≤ 1e-9 con NumPy/SciPy sulle fixture `tests/golden/segnale/*.json` (`tools/segnale_riferimento.py`, fuori CI; `null` = assente), verità sintetica (bande conservate, derivata nulla al centro, andata e ritorno %T), catena = passi uno a uno.

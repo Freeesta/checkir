@@ -17,7 +17,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 - **Flusso**: ramo `claude/<argomento>` da `origin/main` → PR → merge commit (mai rebase né push forzato). Prima di unire `git merge origin/main`. Le PR le unisce il Coordinatore a CI verde; le chat di sviluppo lasciano la PR aperta.
 - **Perimetro**: ogni chat tocca solo ciò che dice il suo prompt; a fine lavoro UN messaggio al Coordinatore (max 5 righe).
 - **Commit**: titolo breve in italiano + 1-3 righe; codice e commenti in inglese; mai nomi di modelli nei commit e nel codice.
-- **Documenti**: CLAUDE.md e `docs/agenti/` descrivono solo lo stato attuale; quando cambi un comportamento RISCRIVI la riga; una funzione nuova = una riga nel file della sua area; riga ≤ 600 caratteri, file ≤ 25 KB.
+- **Documenti**: CLAUDE.md e `docs/agenti/` descrivono solo lo stato attuale; quando cambi un comportamento RISCRIVI la riga; una funzione nuova = una riga nel file della sua area; riga ≤ 600 caratteri; file d'area ≤ 15 KB (se ci si avvicina, dividilo per argomento e aggiorna la tabella §5).
 - **Consumo**: una sessione per pacchetto; leggi solo il file d'area che serve; `grep -n` e letture a intervalli; raggruppa le modifiche e prova una volta alla fine. A fine PR, sopra 200k token, blocco di consegna al Coordinatore e stop.
 - **Subagenti** (`.claude/agents/`): cercatore, verificatore, controllo-github, archivista, sostituzioni, estrattore, inventario-testi, stato-sessioni. Mai a un subagente: decisioni, codice nuovo, testi scientifici o sanitari, asserzioni dei test, commit, push, merge.
 
@@ -40,9 +40,9 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 ## 5. File d'area (leggi solo quello del tuo lavoro)
 | Se tocchi… | Leggi |
 |---|---|
-| `crates/ftir-core`, `crates/ftir-wasm` | `docs/agenti/motore.md` |
+| `crates/ftir-core`, `crates/ftir-wasm` | `docs/agenti/motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md` (passi, sottrazione), `motore_confronto.md` (confronto, allerte), `motore_picchi.md` (picchi, indice, assegnazione, qualità), `motore_didattica.md` (teoria, miscele) |
 | `crates/ftir-lib`, `tools/libreria/` | `docs/agenti/libreria.md` |
-| `web/` | `docs/agenti/pagina.md` |
+| `web/` | `docs/agenti/pagina.md` (guscio, stile, pagine), `pagina_grafico.md` (grafico, picchi, regioni), `pagina_confronto.md` (risultati, scheda, sottrazione), `pagina_file.md` (file, residui, cartella) |
 | `data/`, `docs/schemi/` | `docs/agenti/dati.md` |
 | `tests_e2e/`, `tools/`, `.github/` | `docs/agenti/test.md` |
 | CSP, esportazioni, anonimizzazione, avvertenze, informativa | `docs/agenti/riservatezza.md` |
@@ -51,7 +51,8 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 - `ftir-wasm` non ha `forbid(unsafe_code)`: il codice generato da wasm-bindgen lo richiede; non metterci logica.
 - La versione di `wasm-bindgen-cli` deve essere uguale a quella in `Cargo.lock`, altrimenti il sito non parte (lo script la legge da solo).
 - `cargo fmt` può allungare una funzione oltre 80 righe: rilancia `controlla_soglie.py`.
-- Il service worker precarica l'elenco `FILES` di `web/sw.js`: un modulo nuovo va aggiunto lì (`VERSION` la scrive la build, `tools/versione_sw.mjs`: mai alzarla a mano; un nome di `FILES` che non c'è nel sito ferma la build).
+- Il service worker precarica tutto `site/`: l'elenco `FILES` e la `VERSION` di `sw.js` li scrive la build (`tools/versione_sw.mjs`); non toccarli mai a mano, un modulo nuovo in `web/` non richiede nulla in `sw.js`.
+- Le chiavi di `web/lang/*.json` stanno in ordine alfabetico: dopo averne aggiunte `python3 tools/ordina_cataloghi.py`.
 - Ogni chiave del catalogo deve comparire nel codice come `t("x.y")` o `data-i18n*="x.y"` letterale, altrimenti `controlla_lingue.py` la dà orfana.
 
 ## Compact instructions
