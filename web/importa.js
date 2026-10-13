@@ -6,9 +6,15 @@
  * @typedef {import("./state.js").Notice} Notice
  * @typedef {{ done: number, total: number }} Progress
  * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array, native?: Uint8Array }} Built
- * @typedef {{ built: Built | null, imported: number, ignored: number, skipped: { file: string, notice: Notice }[], cancelled: boolean, error: Notice | null }} Outcome
+ * @typedef {{ built: Built | null, imported: number, ignored: number, repeated: number, skipped: { file: string, notice: Notice }[], cancelled: boolean, error: Notice | null }} Outcome
  */
 import { BUDGET } from "./files.js";
+
+/** Hex SHA-256 of the bytes, to leave out a file that is the same spectrum as one already read. @param {ArrayBuffer} bytes @returns {Promise<string>} */
+async function digest(bytes) {
+  const h = new Uint8Array(await crypto.subtle.digest("SHA-256", bytes));
+  return Array.from(h, (b) => b.toString(16).padStart(2, "0")).join("");
+}
 
 const JCAMP = /\.(jdx|dx|jcm|jcamp)$/i;
 /** Points of the library grid (650–3800 cm⁻¹, step 2). */
@@ -51,24 +57,32 @@ const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 export async function buildPrivateLibrary(engine, files, identity, hooks) {
   const usable = files.filter((f) => JCAMP.test(f.name));
   /** @type {Outcome} */
-  const out = { built: null, imported: 0, ignored: files.length - usable.length, skipped: [], cancelled: false, error: null };
+  const out = { built: null, imported: 0, ignored: files.length - usable.length, repeated: 0, skipped: [], cancelled: false, error: null };
   /** @type {Float32Array[]} */
   const rows = [];
   /** @type {Float32Array[]} */
   const natives = [];
   /** @type {object[]} */
   const index = [];
+  const hashes = new Set();
   let last = performance.now();
   for (const [i, file] of usable.entries()) {
     if (hooks.signal.aborted) return { ...out, cancelled: true };
     try {
       if (file.size > BUDGET.maxBytes) throw JSON.stringify({ error_key: "reader.limit_exceeded", params: { limit: "bytes", max: BUDGET.maxBytes } });
-      const bytes = new Uint8Array(await file.arrayBuffer());
-      const resampled = Float32Array.from(engine.library_resample(bytes));
-      natives.push(Float32Array.from(engine.library_native(bytes)));
-      rows.push(resampled);
-      const id = `u${rows.length}`;
-      index.push({ id, form: "imported", substance: id, names: { en: file.name.replace(/\.[^.]*$/, "") }, classes: [], quality: "pass", provenance_type: "user_import" });
+      const buffer = await file.arrayBuffer();
+      const bytes = new Uint8Array(buffer);
+      const hash = await digest(buffer);
+      if (hashes.has(hash)) out.repeated += 1;
+      else {
+        hashes.add(hash);
+        const resampled = Float32Array.from(engine.library_resample(bytes));
+        natives.push(Float32Array.from(engine.library_native(bytes)));
+        rows.push(resampled);
+        const id = `u${rows.length}`;
+        const title = file.name.replace(/\.[^.]*$/, "");
+        index.push({ id, form: "imported", substance: slug(title), names: { en: title }, classes: [], quality: "pass", provenance_type: "user_import" });
+      }
     } catch (e) {
       out.skipped.push({ file: file.name, notice: noticeOf(e) });
     }

@@ -1,4 +1,5 @@
 // @ts-check
+import { proposedLibraryName } from "./candidati.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
@@ -22,7 +23,7 @@ function makePicker(folder) {
   input.addEventListener("change", () => {
     const chosen = [...(input.files ?? [])];
     input.value = "";
-    if (chosen.length) current?.importLibrary(chosen, typedName.trim() || t("library.import.name_default"));
+    if (chosen.length) current?.importLibrary(chosen, typedName.trim() || proposedLibraryName(chosen) || t("library.import.name_default"));
   });
   document.body.append(input);
   return input;
@@ -81,7 +82,7 @@ export function renderLibraries(body, s, ctx) {
   files.disabled = folder.disabled = busy;
   files.addEventListener("click", () => pick.files.click());
   folder.addEventListener("click", () => pick.folder.click());
-  const name = el("input", { type: "text", id: "lib-name", class: "lib-name", maxlength: "60", autocomplete: "off", placeholder: t("library.import.name_default") });
+  const name = el("input", { type: "text", id: "lib-name", class: "lib-name", maxlength: "60", autocomplete: "off", placeholder: t("library.import.name_placeholder") });
   name.value = typedName;
   name.addEventListener("input", () => (typedName = name.value));
   body.append(

@@ -1,4 +1,5 @@
 // @ts-check
+import { matchScore } from "./candidati.js";
 import { chainLine, levelWord, shownLevel } from "./alerts.js";
 import { chosenCandidates } from "./decision.js";
 import { candidatesCsv, download, peaksCsv, spectrumCsv } from "./export.js";
@@ -40,7 +41,7 @@ export function buildReport(s) {
 /** @param {any} data @returns {HTMLElement} */
 function candidatesBlock(data) {
   const head = el("tr", {}, [t("report.col_rank"), t("report.col_name"), t("report.col_form"), t("report.col_library"), t("report.col_r"), t("report.col_coverage")].map((name) => el("th", { scope: "col" }, [name])));
-  const rows = (data.candidates ?? []).slice(0, LISTED).map((/** @type {any} */ c) => el("tr", {}, [formatNumber(c.rank), candidateName(c), c.form, c.library, formatNumber(c.r_derivative, 2), formatNumber(c.coverage * 100)].map((v) => el("td", {}, [String(v)]))));
+  const rows = (data.candidates ?? []).slice(0, LISTED).map((/** @type {any} */ c) => el("tr", {}, [formatNumber(c.rank), candidateName(c), c.form, c.library, formatNumber(matchScore(c.r_derivative)), formatNumber(c.coverage * 100)].map((v) => el("td", {}, [String(v)]))));
   return el("div", {}, [el("h3", {}, [t("report.candidates")]), el("table", { class: "report-table" }, [el("thead", {}, [head]), el("tbody", {}, rows)])]);
 }
 

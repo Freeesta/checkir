@@ -22,6 +22,20 @@ async function getJson(path) {
   return res.json();
 }
 
+/** @type {Set<string> | null} ids of the sheets the site has, once the index is read */
+let known = null;
+
+/** Read the index of the sheets once; `done` runs when it is known (the buttons that open a sheet depend on it). @param {() => void} [done] */
+export function loadSheetIndex(done) {
+  if (known) return;
+  getJson("schede/index.json").then((i) => (known = new Set(Array.isArray(i.sheets) ? i.sheets : []))).catch(() => (known = new Set())).then(() => done?.());
+}
+
+/** Does the site have a sheet for this substance? false until the index is read. @param {string} id @returns {boolean} */
+export function hasSheet(id) {
+  return known?.has(id) ?? false;
+}
+
 /** The sheet of a substance, or null when the site has none (or it cannot be read). @param {string} id @returns {Promise<Sheet | null>} */
 export function loadSheet(id) {
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) return Promise.resolve(null);

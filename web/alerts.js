@@ -1,4 +1,5 @@
 // @ts-check
+import { matchScore } from "./candidati.js";
 import { formatNumber, t } from "./i18n.js";
 import { decisionOf, resultOf } from "./state.js";
 
@@ -41,7 +42,7 @@ export function shownLevel(s) {
 /** @param {any} r a row reference of an alert: name, form and r @returns {string} */
 function rowText(r) {
   const name = r?.form ? `${r.display_name} (${r.form})` : String(r?.display_name ?? "");
-  return `${name} ${formatNumber(Number(r?.r), 2)}`;
+  return `${name} ${formatNumber(matchScore(Number(r?.r)))}`;
 }
 
 /** @param {unknown} v @param {number} [d] @returns {string} */
@@ -131,9 +132,9 @@ export function announcement(data) {
   return alerts === 1 ? t("status.match_done_one", params) : t("status.match_done", params);
 }
 
-/** The chain and the libraries used: `confronto_v1 · RESPONSE 2024 · BCCSU 2025`. @param {any} data @returns {string} */
+/** The chain and the libraries used: `confronto_v1 · response (1200 spectra) · my-folder (12 spectra)`. @param {any} data @returns {string} */
 export function chainLine(data) {
-  const libs = (data.libraries ?? []).filter((/** @type {any} */ l) => l.searched).map((/** @type {any} */ l) => `${l.id} ${l.version}`);
+  const libs = (data.libraries ?? []).filter((/** @type {any} */ l) => l.searched).map((/** @type {any} */ l) => (l.spectra === 1 ? t("results.lib_count_one", { name: l.id }) : t("results.lib_count", { name: l.id, n: formatNumber(l.spectra) })));
   return [data.chain?.derivative ?? "", ...libs].filter(Boolean).join(" · ");
 }
 

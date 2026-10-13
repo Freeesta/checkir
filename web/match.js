@@ -1,5 +1,6 @@
 // @ts-check
 import { announcement } from "./alerts.js";
+import { dedupeCandidates } from "./candidati.js";
 import { spectrumOf } from "./files.js";
 import { libraryOriginal, libraryRows, libraryValues } from "./librerie.js";
 import { selectedCandidate } from "./results.js";
@@ -181,7 +182,8 @@ export async function runMatch(code) {
   const now = getState();
   const done = { matching: pending > 0 ? now.matching : null };
   /** @type {any} */
-  const data = json ? JSON.parse(json) : { error_key: "engine.error", params: {} };
+  const parsed = json ? JSON.parse(json) : { error_key: "engine.error", params: {} };
+  const data = parsed.error_key ? parsed : dedupeCandidates(parsed);
   if (data.error_key || !now.files.some((f) => f.code === code)) {
     return update({ ...done, matchError: data.error_key ? { key: data.error_key, params: data.params ?? {} } : now.matchError });
   }

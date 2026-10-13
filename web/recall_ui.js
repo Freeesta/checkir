@@ -1,4 +1,5 @@
 // @ts-check
+import { matchScore } from "./candidati.js";
 import { actionButton } from "./controls.js";
 import { el, icon, keepFocus } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
@@ -14,7 +15,7 @@ import { SCALES } from "./recall_math.js";
 const MODES = /** @type {const} */ (["overlay", "offset", "difference"]);
 
 /** @param {number | null} r @returns {string} */
-const num = (r) => (r === null ? "—" : formatNumber(r, 2));
+const num = (r) => (r === null ? "—" : formatNumber(matchScore(r)));
 
 /** @param {import("./recall.js").RecallRow} row @returns {string} the position in the comparison, in words */
 function positionText(row) {

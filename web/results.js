@@ -1,11 +1,13 @@
 // @ts-check
 import { alertViews, capLines, chainLine, levelBar, levelNumber, levelWord, shownLevel } from "./alerts.js";
 import { actionButton } from "./controls.js";
+import { marginScore, matchScore } from "./candidati.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { spectrumOf } from "./files.js";
 import { libraryOriginal, libraryRows } from "./librerie.js";
 import { meanStep } from "./match.js";
+import { hasSheet } from "./schede.js";
 import { openSheet } from "./schede_ui.js";
 import { activeFile, activeLibraries, candidateKey, decisionOf, getState, resultOf } from "./state.js";
 import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
@@ -97,20 +99,43 @@ function coverageMeter(value, label) {
   return m;
 }
 
+/** "+2" after a name that has other spectra folded into it, with the explanation as a tooltip. @param {any} c @returns {HTMLElement[]} */
+function othersMark(c) {
+  if (!c.others) return [];
+  const mark = el("span", { class: "cand-others", role: "note", tabindex: "0", "aria-label": t("results.others_label", { n: formatNumber(c.others) }) }, [` +${formatNumber(c.others)}`]);
+  attachTip(mark, () => t("results.others_label", { n: formatNumber(c.others) }));
+  return [mark];
+}
+
+/** The margin, shown once, on the first row: "margin 61" (empty cell elsewhere so the columns keep their place). @param {number | null} margin @returns {HTMLElement} */
+function marginMark(margin) {
+  const cell = el("span", { class: "cand-delta" }, margin === null ? [] : [t("results.margin", { n: formatNumber(margin) })]);
+  if (margin !== null) {
+    cell.setAttribute("role", "note");
+    cell.tabIndex = 0;
+    attachTip(cell, () => t("results.margin_tip"));
+  }
+  return cell;
+}
+
+/** Is this library one of the public packages? (an imported spectrum never has a sheet) @param {string} id @returns {boolean} */
+function libraryEntryPublic(id) {
+  return getState().libraries.some((l) => l.id === id && !l.private);
+}
+
 /** One row of the list: select button (name, form), r, delta from the first, coverage, library and the chemist's mark. @param {any} c @param {number} i @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @param {boolean} selected @param {any} data @returns {HTMLElement} */
 function candidateRow(c, i, s, ctx, selected, data) {
   const key = candidateKey(c);
   const name = candidateName(c);
-  const r = formatNumber(c.r_derivative, 2);
+  const r = formatNumber(matchScore(c.r_derivative));
   const select = el("button", { type: "button", class: "cand-select", "data-fk": `cand-${i}`, "aria-label": t("results.row", { rank: formatNumber(c.rank), name, form: c.form, library: c.library, r }) }, [
     el("span", { class: "rank" }, [formatNumber(c.rank)]),
-    el("span", { class: "cand-name" }, [name]),
+    el("span", { class: "cand-name" }, [name, ...othersMark(c)]),
     el("span", { class: "cand-form" }, [c.form]),
   ]);
   if (selected) select.setAttribute("aria-current", "true");
   select.addEventListener("click", () => ctx.selectCandidate(key));
-  const delta = c.rank === 1 ? data.margin : data.candidates[0].r_derivative - c.r_derivative;
-  const extra = el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [r]), el("span", { class: "cand-delta" }, [`${t("results.delta")} ${delta === null ? "—" : formatNumber(delta, 2)}`]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]);
+  const extra = el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [r]), marginMark(c.rank === 1 ? marginScore(data.margin) : null), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]);
   return el("li", { class: "cand", "data-key": key, "data-label": s.labels[key] ?? "" }, [select, extra, labelGroup(key, i, s.labels[key], ctx)]);
 }
 
@@ -150,12 +175,12 @@ function resolutionLines(c, file) {
 function detail(data, c, ctx, s, level) {
   const box = el("section", { class: "detail", "aria-label": t("results.detail") });
   if (!c) return box;
-  const delta = c.rank === 1 ? data.margin : data.candidates[0].r_derivative - c.r_derivative;
+  const margin = c.rank === 1 ? marginScore(data.margin) : null;
   box.append(
     el("p", { class: "detail-head" }, [el("strong", {}, [candidateName(c)]), ` ${c.form} · `, levelBadge(level)]),
     el("dl", { class: "numbers" }, [
-      el("dt", {}, ["r"]), el("dd", {}, [formatNumber(c.r_derivative, 2)]),
-      el("dt", {}, [t("results.delta")]), el("dd", {}, [delta === null ? "—" : formatNumber(delta, 2)]),
+      el("dt", {}, [t("results.match")]), el("dd", {}, [formatNumber(matchScore(c.r_derivative))]),
+      ...(margin === null ? [] : [el("dt", {}, [t("results.margin_label")]), el("dd", {}, [formatNumber(margin), " ", toggletip(() => t("results.margin_tip"), () => t("results.margin_tip_label"))])]),
       el("dt", {}, [t("results.coverage")]), el("dd", {}, [`${formatNumber(c.coverage * 100)} %`, " ", toggletip(() => t("results.coverage_tip"), () => t("results.coverage_tip_label"))]),
     ]),
   );
@@ -164,8 +189,8 @@ function detail(data, c, ctx, s, level) {
   button.setAttribute("aria-pressed", String(s.overlay));
   const row = libraryRows(c.library)?.find((/** @type {any} */ r) => r.id === c.spectrum_id);
   const tools = el("div", { class: "row" }, [button, actionButton("subtract.open", ctx, { withLabel: true, className: "btn" })]);
-  if (row?.substance && level <= 4) {
-    // level 5 names nobody ("the most similar"): the sheet of a substance stays closed
+  if (row?.substance && level <= 4 && libraryEntryPublic(c.library) && hasSheet(row.substance)) {
+    // level 5 names nobody ("the most similar"); an imported spectrum has no sheet: only a public library whose substance the site knows
     const sheet = el("button", { type: "button", class: "btn", "data-fk": "open-sheet" }, [icon("sheet"), t("sheets.open")]);
     sheet.addEventListener("click", () => void openSheet(row.substance, candidateName(c)));
     tools.append(sheet);
@@ -192,8 +217,8 @@ function residualRows(data) {
   const list = el("ol", { class: "cands", "aria-label": t("results.candidates") });
   (data.candidates ?? []).slice(0, SHOWN).forEach((/** @type {any} */ c) => {
     const row = el("li", { class: "cand", "data-key": candidateKey(c) }, [
-      el("span", { class: "cand-select" }, [el("span", { class: "rank" }, [formatNumber(c.rank)]), el("span", { class: "cand-name" }, [candidateName(c)]), el("span", { class: "cand-form" }, [c.form])]),
-      el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [formatNumber(c.r_derivative, 2)]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]),
+      el("span", { class: "cand-select" }, [el("span", { class: "rank" }, [formatNumber(c.rank)]), el("span", { class: "cand-name" }, [candidateName(c), ...othersMark(c)]), el("span", { class: "cand-form" }, [c.form])]),
+      el("span", { class: "cand-extra" }, [el("span", { class: "cand-r" }, [formatNumber(matchScore(c.r_derivative))]), coverageMeter(c.coverage, t("results.coverage_label", { value: formatNumber(c.coverage * 100) })), el("span", { class: "cand-lib" }, [c.library])]),
     ]);
     list.append(row);
   });
@@ -250,6 +275,7 @@ export function renderResults(body, s, ctx) {
   const list = el("ol", { class: "cands", "aria-label": title });
   (data.candidates ?? []).slice(0, SHOWN).forEach((/** @type {any} */ c, /** @type {number} */ i) => list.append(candidateRow(c, i, s, ctx, c === chosen, data)));
   wireArrows(list, ctx);
+  const head = el("div", { class: "cand-head", "aria-hidden": "true" }, [el("span"), el("span", { class: "cand-r" }, [t("results.match")])]);
   body.append(
     el("div", { class: "result", "data-level": String(n) }, [
       el("h2", { class: "cands-title" }, [title]),
@@ -257,6 +283,7 @@ export function renderResults(body, s, ctx) {
       alertList(data),
       ...capLines(data).map((c) => el("p", { class: "cap" }, [c])),
       ...(usedRangeLine(data) ? [el("p", { class: "cap", "data-used-range": "1" }, [usedRangeLine(data)])] : []),
+      head,
       list,
       el("p", { class: "chain" }, [chainLine(data)]),
       detail(data, chosen, ctx, s, n),

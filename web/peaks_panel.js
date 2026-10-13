@@ -1,4 +1,5 @@
 // @ts-check
+import { matchScore } from "./candidati.js";
 import { agreementWord } from "./chart_marks.js";
 import { approx, peakName } from "./peaks_view.js";
 import { actionButton } from "./controls.js";
@@ -30,7 +31,7 @@ export function peaksLabel(s) {
 function regionList(a) {
   const list = el("ul", { class: "regions", "aria-label": t("peaks.regions_label") });
   for (const g of a.regions) {
-    const r = (g.r === null ? "" : ` · r ${formatNumber(g.r, 2)}`) + (g.share === null ? "" : ` · ${t("peaks.signal_share", { share: formatNumber(g.share * 100, 1) })}`);
+    const r = (g.r === null ? "" : ` · ${t("results.match")} ${formatNumber(matchScore(g.r))}`) + (g.share === null ? "" : ` · ${t("peaks.signal_share", { share: formatNumber(g.share * 100, 1) })}`);
     list.append(el("li", { class: `region-item region-${g.agreement}`, "data-region": g.id }, [el("span", { class: "swatch", "aria-hidden": "true" }), `${formatNumber(g.from)}–${formatNumber(g.to)} cm⁻¹${r} · ${agreementWord(g.agreement)}`]));
   }
   return list;

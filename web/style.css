@@ -508,10 +508,14 @@ body[data-subtract] #chart-section, body[data-subtract] #table-section, body[dat
 .candidates[data-open] { min-height: 28rem; margin-top: 0.75rem; }
 .candidates .cand-name { overflow: visible; white-space: normal; }
 .candidates .detail { min-height: 4rem; }
+.cand-head { display: none; }
+.cand-others { color: var(--text-muted); white-space: nowrap; }
 .cand-delta { font-variant-numeric: tabular-nums; color: var(--text-muted); white-space: nowrap; }
 @media (min-width: 46em) {
   .candidates .cand { grid-template-columns: minmax(0, 1fr) 3.5rem 5.5rem 3.5rem minmax(4rem, 8rem) auto; grid-template-areas: "sel r delta cov lib labels"; min-height: 2.3rem; }
   .candidates .cand-extra { display: contents; }
+  .candidates .cand-head { display: grid; grid-template-columns: minmax(0, 1fr) 3.5rem 5.5rem; font-size: 0.8rem; color: var(--text-muted); }
+  .candidates .cand-head .cand-r { grid-column: 2; font-weight: 400; }
   .candidates .cand-r { grid-area: r; text-align: right; }
   .candidates .cand-delta { grid-area: delta; padding-left: 0.5rem; }
   .candidates .cand meter { grid-area: cov; }
