@@ -264,13 +264,13 @@ mod test {
     #[test]
     fn embedded_file_is_valid_and_has_the_agreed_values() {
         let t = Thresholds::embedded().expect("embedded thresholds");
-        assert_eq!(t.version, 1);
+        assert_eq!(t.version, 2);
         assert_eq!(t.noise.windows_cm1.len(), 3);
         assert_eq!(
             (t.detect.prominence_noise_ratio, t.detect.prominence_rel_min),
             (5.0, 0.02)
         );
-        assert_eq!(t.shape_below_cm1, [15.0, 40.0, 150.0]);
+        assert_eq!(t.shape_below_cm1, [15.0, 65.0, 150.0]);
         assert_eq!(t.tolerances.same_peak_cm1, [6.0, 6.0, 15.0]);
         assert_eq!(t.too_many_peaks, 80);
     }

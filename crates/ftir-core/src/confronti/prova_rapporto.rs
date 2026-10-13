@@ -112,14 +112,18 @@ fn histogram(p: &Prova) -> Value {
     ])
 }
 
-/// Is a form name the free base? (the rest, when named, are salts, hydrates or other forms)
+/// Is a form the free base? Reads a name ("Free base") or a form id whose last part says so ("lidocaine-base");
+/// the rest, when named, are salts, hydrates or other forms.
 fn is_base(form: &str) -> bool {
-    let f: String = form
-        .to_lowercase()
-        .chars()
-        .filter(|c| c.is_alphanumeric())
-        .collect();
-    matches!(f.as_str(), "base" | "freebase" | "basefree" | "neutral")
+    let base = |s: &str| {
+        let f: String = s
+            .to_lowercase()
+            .chars()
+            .filter(|c| c.is_alphanumeric())
+            .collect();
+        matches!(f.as_str(), "base" | "freebase" | "basefree" | "neutral")
+    };
+    base(form) || form.rsplit_once('-').is_some_and(|(_, last)| base(last))
 }
 
 /// Per library: substances, and how many have only a base form, only salt (or other) forms, both, or no form named.
