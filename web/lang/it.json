@@ -9,7 +9,7 @@
   "chart.title": "Spettro",
   "chart.axis_x": "Numero d'onda (cm⁻¹)",
   "chart.axis_y": "Assorbanza",
-  "chart.help": "Con il grafico selezionato: + e − zoom, frecce sinistra e destra spostano, 0 azzera; k mette il primo e il secondo cursore (virgola e punto li spostano, con Maiusc di 10 punti), y blocca l'asse y, Esc toglie i cursori. Con il mouse: clic = cursore, Alt+clic = secondo cursore, trascina = zoom a riquadro, rotella = zoom, doppio clic = vista intera.",
+  "chart.help": "Con il grafico selezionato: + e − zoom, frecce sinistra e destra spostano, 0 azzera; k mette il primo e il secondo cursore (virgola e punto li spostano, con Maiusc di 10 punti), y blocca l'asse y, Esc toglie i cursori. Con il mouse: clic = cursore, Alt+clic = secondo cursore, trascina = zoom a riquadro, rotella = zoom, doppio clic = vista intera. Trascina sull'asse x o sull'asse y (se non è bloccato) per ingrandire quell'intervallo; Maiusc+freccia su o giù ingrandisce la y. Tasto destro, tasto Menu o Maiusc+F10: menu del grafico.",
   "chart.zoom_in": "Ingrandisci",
   "chart.zoom_out": "Riduci",
   "chart.pan_left": "Sposta a sinistra",
@@ -612,5 +612,15 @@
   "regions.oop.name": "Deformazioni fuori piano (impronta digitale)",
   "regions.oop.tag": "fuori piano",
   "regions.far.name": "Atomi pesanti e reticolo",
-  "regions.far.tag": "pesanti"
+  "regions.far.tag": "pesanti",
+  "menu.label": "Menu del grafico",
+  "menu.zoom_out": "Zoom indietro",
+  "menu.show_all": "Mostra tutto",
+  "menu.reset": "Azzera la vista",
+  "menu.lock_y": "Blocca l'asse y",
+  "menu.cursors": "Cursore doppio",
+  "menu.export_table": "Esporta la tabella dei dati (CSV)",
+  "menu.recall": "Richiama composto…",
+  "menu.peaks": "Mostra i picchi",
+  "chart.y_locked_hint": "L'asse y è bloccato: sbloccalo per ingrandirlo."
 }

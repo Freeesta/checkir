@@ -5,10 +5,10 @@ import { nearestIndex } from "./spectrum.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** Plot area and mappings of the last drawn chart (SVG user units).
- * @typedef {{ left: number, right: number, top: number, bottom: number, width: number, px: (x: number) => number, py: (y: number) => number }} Geometry */
-/** @typedef {{ hover: SVGElement, line: SVGElement[], tag: SVGElement[], read: SVGElement[], box: SVGElement }} Layer */
+ * @typedef {{ left: number, right: number, top: number, bottom: number, width: number, height: number, px: (x: number) => number, py: (y: number) => number }} Geometry */
+/** @typedef {{ hover: SVGElement, line: SVGElement[], tag: SVGElement[], read: SVGElement[], box: SVGElement, ybox: SVGElement }} Layer */
 /** What the layer shows: wavenumbers of cursor 1 and 2, the one under the pointer and the zoom box.
- * @typedef {{ pos: Array<number | null>, hover: number | null, box: [number, number] | null }} Shown */
+ * @typedef {{ pos: Array<number | null>, hover: number | null, band: { kind: "x" | "y", range: [number, number] } | null }} Shown */
 
 /** @param {Spectrum} s @returns {string} */
 const unitOf = (s) => (s.y_unit === undefined || s.y_unit === "Absorbance" ? t("chart.unit_abs") : t("chart.unit_other"));
@@ -35,11 +35,12 @@ function buildLayer(g) {
     tag: [text({ y: g.top + 12 }), text({ y: g.top + 12 })],
     read: [text({ x: g.right, y: 13, "text-anchor": "end" }), text({ x: g.right, y: 27, "text-anchor": "end" })],
     box: svg("rect", { class: "zoom-box", y: g.top, height: g.bottom - g.top }),
+    ybox: svg("rect", { class: "zoom-box", x: g.left, width: g.right - g.left }),
   };
   layer.tag[0].textContent = "1";
   layer.tag[1].textContent = "2";
   const group = svg("g", { class: "cursors", "aria-hidden": "true" });
-  group.append(layer.box, layer.hover, ...layer.line, ...layer.tag, ...layer.read);
+  group.append(svg("rect", { class: "axis-hit-x", x: g.left, y: g.bottom, width: g.right - g.left, height: g.height - g.bottom }), svg("rect", { class: "axis-hit-y", x: 0, y: g.top, width: g.left, height: g.bottom - g.top }), layer.box, layer.ybox, layer.hover, ...layer.line, ...layer.tag, ...layer.read);
   return { group, layer };
 }
 
@@ -66,11 +67,14 @@ function paintLayer(layer, g, s, st) {
   const [a, b] = st.pos;
   layer.read[0].textContent = first === null ? "" : readPoint(s, first);
   layer.read[1].textContent = a !== null && b !== null ? readDelta(s, a, b) : "";
-  layer.box.style.display = st.box ? "" : "none";
-  if (!st.box) return;
-  const [x0, x1] = [g.px(st.box[0]), g.px(st.box[1])];
-  layer.box.setAttribute("x", String(Math.min(x0, x1)));
-  layer.box.setAttribute("width", String(Math.abs(x0 - x1)));
+  const band = st.band;
+  layer.box.style.display = band?.kind === "x" ? "" : "none";
+  layer.ybox.style.display = band?.kind === "y" ? "" : "none";
+  if (!band) return;
+  const [lo, hi] = band.kind === "x" ? band.range.map((w) => g.px(w)) : band.range;
+  const rect = band.kind === "x" ? layer.box : layer.ybox;
+  rect.setAttribute(band.kind === "x" ? "x" : "y", String(Math.min(lo, hi)));
+  rect.setAttribute(band.kind === "x" ? "width" : "height", String(Math.abs(lo - hi)));
 }
 
 /**
@@ -80,7 +84,7 @@ function paintLayer(layer, g, s, st) {
  */
 export function createCursors(announce) {
   /** @type {Shown} */
-  const st = { pos: [null, null], hover: null, box: null };
+  const st = { pos: [null, null], hover: null, band: null };
   let active = 0;
   let frame = 0;
   let layer = /** @type {Layer | null} */ (null);
@@ -126,9 +130,9 @@ export function createCursors(announce) {
       st.hover = x;
       schedule();
     },
-    /** @param {[number, number] | null} b */
-    box(b) {
-      st.box = b;
+    /** The zoom band being dragged: wavenumbers for "x", SVG y values for "y", or none. @param {"x" | "y" | null} kind @param {[number, number]} [range] */
+    band(kind, range) {
+      st.band = kind && range ? { kind, range } : null;
       schedule();
     },
     /** @returns {boolean} some cursor is shown */

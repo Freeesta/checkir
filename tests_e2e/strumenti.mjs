@@ -73,6 +73,67 @@ async function pointerScenario(page, check) {
   await page.keyboard.press("0");
 }
 
+const yTicksOf = (page) => page.$$eval("#chart text.label", (n) => n.map((x) => x.textContent ?? "").filter((x) => /^-?\d+\.\d$/.test(x)).join(","));
+
+/** Drag along the axes zooms that range; the y axis only when it is not locked. */
+async function axisScenario(page, check) {
+  const box = await page.locator("#chart svg").boundingBox();
+  const at = (sx, sy) => ({ x: box.x + (box.width * sx) / 800, y: box.y + (box.height * sy) / 360 });
+  const drag = async (a, b) => {
+    await page.mouse.move(a.x, a.y);
+    await page.mouse.down();
+    await page.mouse.move(b.x, b.y, { steps: 5 });
+    await page.mouse.up();
+  };
+  const full = await page.textContent("#range");
+  await drag(at(300, 340), at(500, 340));
+  check("tools: dragging along the x axis zooms that range", (await page.textContent("#range")) !== full);
+  await page.mouse.dblclick(at(400, 150).x, at(400, 150).y);
+  const ticks = await yTicksOf(page);
+  await drag(at(30, 250), at(30, 120));
+  const zoomedY = await yTicksOf(page);
+  check("tools: dragging along the y axis zooms the y range", zoomedY !== ticks, `${ticks} -> ${zoomedY}`);
+  await page.mouse.dblclick(at(400, 150).x, at(400, 150).y);
+  check("tools: a double click brings the y axis back", (await yTicksOf(page)) === ticks);
+  await page.focus("#chart");
+  await page.keyboard.press("Shift+ArrowUp");
+  check("tools: Shift+ArrowUp zooms y from the keyboard", (await yTicksOf(page)) !== ticks);
+  await page.keyboard.press("0");
+  await page.mouse.dblclick(at(400, 150).x, at(400, 150).y);
+  await page.keyboard.press("y");
+  await drag(at(30, 250), at(30, 120));
+  check("tools: with y locked the y axis does not zoom and says so", (await yTicksOf(page)) === ticks && (await page.waitForFunction(() => /bloccato/.test(document.getElementById("status")?.textContent ?? "")).then(() => true)));
+  await page.keyboard.press("y");
+}
+
+/** The chart menu: right click, Menu key and Shift+F10, rows, check marks, Escape, the browser menu left alone elsewhere, the CSV. */
+async function menuScenario(page, check, axe) {
+  const box = await page.locator("#chart svg").boundingBox();
+  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2, { button: "right" });
+  await page.waitForSelector('[role="menu"]');
+  const items = await page.$$eval('[role="menu"] button', (b) => b.map((x) => x.dataset.item));
+  check("tools: right click opens the chart menu with its rows", items.length === 8 && items.includes("y.lock") && items.includes("table.export") && items.includes("peaks.toggle"), items.join(","));
+  check("tools: the first row has the focus", await page.evaluate(() => document.activeElement?.closest('[role="menu"]') !== null));
+  const violations = await axe(page);
+  check("tools: axe has no violations with the menu open", violations.length === 0, violations.join(", "));
+  await page.keyboard.press("ArrowDown");
+  await page.keyboard.press("Escape");
+  check("tools: Escape closes the menu and gives the focus back to the chart", !(await page.isVisible('[role="menu"]')) && (await page.evaluate(() => document.activeElement?.id)) === "chart");
+  await page.keyboard.press("Shift+F10");
+  await page.waitForSelector('[role="menu"]');
+  check("tools: Shift+F10 opens it from the keyboard", true);
+  await page.click('[data-item="y.lock"]');
+  check("tools: a check row shows its state", (await page.getAttribute("#chart-toolbar button:last-child", "aria-pressed")) === "true");
+  await page.keyboard.press("ContextMenu");
+  await page.waitForSelector('[role="menu"]');
+  check("tools: the checked row is marked", (await page.getAttribute('[data-item="y.lock"]', "aria-checked")) === "true");
+  await page.click('[data-item="y.lock"]');
+  const [download] = await Promise.all([page.waitForEvent("download"), page.keyboard.press("Shift+F10").then(() => page.click('[data-item="table.export"]'))]);
+  const lines = (await (await import("node:fs/promises")).readFile(await download.path(), "utf8")).split("\n");
+  check("tools: the CSV is named by the code and holds only the sample", download.suggestedFilename() === "C1.csv" && lines[0] === "wavenumber_cm1,absorbance" && /^\d+(\.\d+)?,-?[\d.e-]+$/.test(lines[1]), download.suggestedFilename() + " " + lines[0]);
+  check("tools: outside the chart the browser's own menu is left alone", await page.evaluate(() => { const e = new MouseEvent("contextmenu", { bubbles: true, cancelable: true }); document.getElementById("range")?.dispatchEvent(e); return !e.defaultPrevented; }));
+}
+
 /** @param {import("playwright").Browser} browser @param {string} base */
 export async function toolsScenario(browser, base, check, axe) {
   await pureScenario(check);
@@ -86,6 +147,8 @@ export async function toolsScenario(browser, base, check, axe) {
     if (scheme === "light") {
       await keyboardScenario(page, check);
       await pointerScenario(page, check);
+      await axisScenario(page, check);
+      await menuScenario(page, check, axe);
     }
     await page.focus("#chart");
     await page.keyboard.press("k");

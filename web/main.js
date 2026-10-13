@@ -1,6 +1,6 @@
 // @ts-check
 import { APP_ID, APP_NAME } from "./appname.js";
-import { wire } from "./chart.js";
+import { wire } from "./chart_wire.js";
 import { createViewLink } from "./view_link.js";
 import { refreshActionButtons } from "./controls.js";
 import { buildDialogs } from "./dialogs.js";
@@ -133,7 +133,7 @@ async function start() {
   if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, link: createViewLink(), peaks: { step: (dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak() } });
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), peaks: { step: (dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak() } });
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
   const renderUi = () => {

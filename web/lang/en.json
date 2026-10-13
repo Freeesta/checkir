@@ -9,7 +9,7 @@
   "chart.title": "Spectrum",
   "chart.axis_x": "Wavenumber (cm⁻¹)",
   "chart.axis_y": "Absorbance",
-  "chart.help": "With the chart focused: + and − zoom, left and right arrows pan, 0 resets; k places the first and the second cursor (comma and full stop move them, with Shift by 10 points), y locks the y axis, Esc removes the cursors. With the mouse: click = cursor, Alt+click = second cursor, drag = box zoom, wheel = zoom, double click = full view.",
+  "chart.help": "With the chart focused: + and − zoom, left and right arrows pan, 0 resets; k places the first and the second cursor (comma and full stop move them, with Shift by 10 points), y locks the y axis, Esc removes the cursors. With the mouse: click = cursor, Alt+click = second cursor, drag = box zoom, wheel = zoom, double click = full view. Drag along the x axis or the y axis (when it is not locked) to zoom that range; Shift+up or down arrow zooms y. Right click, the Menu key or Shift+F10: chart menu.",
   "chart.zoom_in": "Zoom in",
   "chart.zoom_out": "Zoom out",
   "chart.pan_left": "Pan left",
@@ -612,5 +612,15 @@
   "regions.oop.name": "Out-of-plane bending (fingerprint)",
   "regions.oop.tag": "out of plane",
   "regions.far.name": "Heavy atoms and lattice",
-  "regions.far.tag": "heavy"
+  "regions.far.tag": "heavy",
+  "menu.label": "Chart menu",
+  "menu.zoom_out": "Zoom out",
+  "menu.show_all": "Show everything",
+  "menu.reset": "Reset the view",
+  "menu.lock_y": "Lock the y axis",
+  "menu.cursors": "Double cursor",
+  "menu.export_table": "Export the data table (CSV)",
+  "menu.recall": "Recall a compound…",
+  "menu.peaks": "Show the peaks",
+  "chart.y_locked_hint": "The y axis is locked: unlock it to zoom it."
 }
