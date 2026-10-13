@@ -69,6 +69,7 @@ fn build_index(lib: &[Spectrum]) -> Index {
         let entry = LibEntry {
             id: format!("s{i}"),
             substance: Some(format!("sub{i}")),
+            inchikey: None,
             display_name: format!("S{i}"),
             form: "base".into(),
             classes: Vec::new(),

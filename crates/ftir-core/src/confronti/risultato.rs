@@ -164,6 +164,8 @@ pub struct Candidate {
     pub r_derivative: f64,
     pub r_spectrum: f64,
     pub coverage: f64,
+    /// The same identity and form in other rows (other libraries), as `(global row, r)`, best first.
+    pub same_substance: Vec<(usize, f64)>,
     /// r of the derivative in each fixed region; `None` = too few points.
     pub r_regions: Vec<(String, Option<f64>)>,
     /// State of each region (`agrees`, `partial`, `disagrees`, `low_signal`, `unknown`).
@@ -235,6 +237,10 @@ fn candidate_json(rank: usize, c: &Candidate, index: &Index) -> Value {
             "substance".into(),
             e.substance.as_deref().map_or(Value::Null, text),
         ),
+        (
+            "inchikey".into(),
+            e.inchikey.as_deref().map_or(Value::Null, text),
+        ),
         ("display_name".into(), text(&e.display_name)),
         ("form".into(), text(&e.form)),
         ("library".into(), text(&lib.id)),
@@ -246,6 +252,15 @@ fn candidate_json(rank: usize, c: &Candidate, index: &Index) -> Value {
             num(super::hqi::from_r(c.r_derivative)),
         ),
         ("coverage".into(), num(c.coverage)),
+        (
+            "same_substance".into(),
+            Value::Arr(
+                c.same_substance
+                    .iter()
+                    .map(|(g, r)| super::livello::row_ref(index, *g, *r))
+                    .collect(),
+            ),
+        ),
         ("r_regions".into(), Value::Obj(regions)),
         (
             "region_states".into(),

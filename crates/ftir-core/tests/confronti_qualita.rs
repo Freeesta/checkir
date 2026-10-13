@@ -60,6 +60,7 @@ fn entry(id: &str, substance: &str, form: &str) -> LibEntry {
     LibEntry {
         id: id.into(),
         substance: Some(substance.into()),
+        inchikey: None,
         display_name: format!("Substance {substance}"),
         form: form.into(),
         classes: Vec::new(),

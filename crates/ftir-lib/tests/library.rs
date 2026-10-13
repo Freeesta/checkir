@@ -26,7 +26,7 @@ fn row(id: &str) -> Row {
     Row {
         id: id.into(),
         form: "form-a".into(),
-        substance: "sub-a".into(),
+        substance: Some("sub-a".into()),
         name_it: Some("Sostanza \"A\"".into()),
         name_en: "Substance A".into(),
         classes: vec!["opioids".into(), "stimulant".into()],
@@ -343,7 +343,7 @@ fn a_spectrum_of_data_becomes_a_row_and_a_package() {
     };
     let b = build_one(&src, &Grid::STANDARD).expect("build");
     assert_eq!(b.row.id, "synthetic-a-base.checkir.001");
-    assert_eq!(b.row.substance, "synthetic-a");
+    assert_eq!(b.row.substance.as_deref(), Some("synthetic-a"));
     assert_eq!(b.row.quality, "pass");
     assert_eq!(
         (b.library_name.as_str(), b.library_version.as_str()),

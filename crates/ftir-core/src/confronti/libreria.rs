@@ -6,11 +6,13 @@ use crate::error::EngineResult;
 use crate::spectrum::Spectrum;
 
 /// What the page knows about a spectrum of the library. `substance` is the identity (same substance, any form);
-/// without it the search groups by the normalised `display_name` and says so in the result.
+/// without it (and without `inchikey`) the search groups by the normalised `display_name` and says so in the result.
 #[derive(Debug, Clone, PartialEq)]
 pub struct LibEntry {
     pub id: String,
     pub substance: Option<String>,
+    /// InChIKey of the compound; two rows with the same one are the same substance even under different names.
+    pub inchikey: Option<String>,
     pub display_name: String,
     pub form: String,
     /// Class ids of the substance (`classes.json`); the flagged-family alert reads them.

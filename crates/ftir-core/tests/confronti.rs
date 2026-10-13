@@ -70,6 +70,7 @@ fn entry(id: &str, substance: &str, form: &str) -> LibEntry {
     LibEntry {
         id: id.into(),
         substance: Some(substance.into()),
+        inchikey: None,
         display_name: format!("Substance {substance}"),
         form: form.into(),
         classes: Vec::new(),
@@ -445,6 +446,7 @@ fn transmittance_queries_and_names_without_identity_work() {
             LibEntry {
                 id: id.into(),
                 substance: None,
+                inchikey: None,
                 display_name: name.into(),
                 form: String::new(),
                 classes: Vec::new(),

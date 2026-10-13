@@ -52,6 +52,7 @@ fn index(class_of_a: &[&str]) -> Index {
         let entry = LibEntry {
             id: id.into(),
             substance: Some(id.into()),
+            inchikey: None,
             display_name: format!("Substance {id}"),
             form: "base".into(),
             classes: classes.iter().map(|c| c.to_string()).collect(),

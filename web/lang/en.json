@@ -750,7 +750,7 @@
   "results.no_libraries": "No active library: switch one on in section 2.",
   "results.not_run": "Comparison not run yet.",
   "results.on_residual": "On the residual {code}",
-  "results.others_label": "{n} other spectra with the same name in the library; the best one is shown",
+  "results.others_label": "{n} other spectra of the same substance (same name or other libraries); the best one is shown",
   "results.proposed": "proposed by the program",
   "results.proposed_was": "proposed: {level}",
   "results.reference_file": "Reference",
