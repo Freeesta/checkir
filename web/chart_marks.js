@@ -9,7 +9,7 @@ import { approx, bandTable, peakTable } from "./peaks_view.js";
  * dotted = measurement artifact, dashed outline = shoulder.
  * @typedef {{ id: string, from: number, to: number, family: string }} MarkBand
  * @typedef {{ id: string, x: number, state: "explained" | "unexplained" | "minor" | "artifact" | "plain", focus: boolean, shoulder: boolean }} MarkPeak
- * @typedef {{ bands: MarkBand[], peaks: MarkPeak[], rows: import("./peaks.js").PeakRow[], name: string | null, focus: string | null }} Marks
+ * @typedef {{ bands: MarkBand[], peaks: MarkPeak[], rows: import("./peaks.js").PeakRow[], name: string | null, focus: string | null, rule?: { from: number, to: number, label: string } | null }} Marks
  */
 
 const NS = "http://www.w3.org/2000/svg";
@@ -75,6 +75,17 @@ export function drawBands(root, bands, v, px, box) {
     label.textContent = bandTag(g.id);
     root.append(clip, label);
   }
+}
+
+/** The window of a band rule picked in the peak card: an outlined frame with its range, drawn over the regions. @param {SVGElement} root @param {{ from: number, to: number, label: string }} rule @param {{ min: number, max: number }} v @param {(x: number) => number} px @param {{ top: number, height: number }} box */
+export function drawRule(root, rule, v, px, box) {
+  if (rule.to < v.min || rule.from > v.max) return;
+  const a = px(Math.min(rule.to, v.max));
+  const b = px(Math.max(rule.from, v.min));
+  root.append(svg("rect", { class: "rule-range", x: a, y: box.top, width: b - a, height: box.height, "data-rule-window": "1" }));
+  const label = svg("text", { class: "label rule-label", x: a + 3, y: box.top + box.height - 8 });
+  label.textContent = rule.label;
+  root.append(label);
 }
 
 /** @param {MarkPeak} p @param {number} cx @param {number} cy @returns {SVGElement} */
