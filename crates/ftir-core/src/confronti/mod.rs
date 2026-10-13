@@ -20,6 +20,7 @@ pub mod hqi;
 pub mod indice;
 pub mod lettori;
 pub mod libreria;
+pub mod limiti;
 pub mod livello;
 pub mod motore;
 pub mod opzioni;

@@ -100,6 +100,12 @@
             "type": "number",
             "minimum": 0
           },
+          "intensity": {
+            "description": "Intensity class of the peak (strong, medium, weak) from the cuts of tolerances.intensity_classes in the thresholds.",
+            "description_it": "Classe d'intensita del picco (strong, medium, weak) dai tagli di tolerances.intensity_classes nelle soglie.",
+            "type": "string",
+            "enum": ["strong", "medium", "weak"]
+          },
           "fwhm_cm1": {
             "description": "Width at half prominence; null for a shoulder.",
             "description_it": "Larghezza a meta prominenza; null per una spalla.",
@@ -171,6 +177,7 @@
           "height_abs",
           "prominence_abs",
           "prominence_rel",
+          "intensity",
           "fwhm_cm1",
           "shape",
           "tier",
