@@ -8,6 +8,7 @@ import { areaScenario } from "./area.mjs";
 import { cleanScenario } from "./pulizia.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
+import { libraryTestScenario } from "./prova.mjs";
 import { librariesPureScenario, librariesScenario, offlineScenario } from "./librerie.mjs";
 import { inverseScenario } from "./inversa.mjs";
 import { peaksScenario } from "./picchi.mjs";
@@ -319,6 +320,7 @@ async function run() {
     await librariesScenario(browser, base, check, axe);
     await matchPureScenario(check);
     await matchScenario(browser, base, check, axe);
+    await libraryTestScenario(browser, base, check, axe);
     await areaScenario(browser, base, check, axe);
     await cleanScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
