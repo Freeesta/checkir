@@ -4,7 +4,7 @@
 //!         [--library checkir-community | --config tools/libreria/librerie.json] [--date AAAA-MM-GG] \
 //!         [--sampling atr_diamond|atr_ge|atr_znse|transmission_kbr|unknown]
 //!
-//! Writes `<out>/<library>/{manifest.json,index.json,data.bin}` and the general manifest `<out>/libraries.json`
+//! Writes `<out>/<library>/{manifest.json,index.json,data.bin,native.bin}` (`native.bin` = the spectra as the files give them, for drawing) and the general manifest `<out>/libraries.json`
 //! (`ftir-libraries/1`: one entry per package with an `enabled` switch). With `--config` every library of the file is
 //! built. The manifest says how the spectra were measured (`sampling`) when every spectrum agrees: from its record
 //! (`technique`) or, where the record does not say, from `--sampling` (the default of a private library). Packages are
@@ -151,6 +151,10 @@ fn build_library(args: &Args, name: &str) -> Result<(String, usize), String> {
         sampling: library_sampling(&built, args.sampling),
     };
     let n = built.len();
+    let native: Vec<u8> = built
+        .iter()
+        .flat_map(|b| b.native.iter().flat_map(|v| v.to_le_bytes()))
+        .collect();
     let rows = built.into_iter().map(|b| (b.row, b.values)).collect();
     let files = write_package(&identity, &Grid::STANDARD, rows).map_err(|e| e.json())?;
     let dir = args.out.join(name);
@@ -158,6 +162,7 @@ fn build_library(args: &Args, name: &str) -> Result<(String, usize), String> {
     fs::write(dir.join("manifest.json"), files.manifest_json).map_err(|e| e.to_string())?;
     fs::write(dir.join("index.json"), files.index_json).map_err(|e| e.to_string())?;
     fs::write(dir.join("data.bin"), files.data_bin).map_err(|e| e.to_string())?;
+    fs::write(dir.join("native.bin"), native).map_err(|e| e.to_string())?;
     Ok((version, n))
 }
 

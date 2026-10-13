@@ -5,8 +5,9 @@
  * holds only what the panel shows.
  * @typedef {import("./state.js").Notice} Notice
  * @typedef {import("./state.js").LibraryEntry} LibraryEntry
- * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array }} PackageFiles
- * @typedef {{ entry: LibraryEntry, rows: import("./nomi.js").IndexRow[], values: Float32Array }} Loaded
+ * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array, native?: Uint8Array }} PackageFiles
+ * @typedef {{ data: Float32Array, at: number[] }} Native the spectra as the files give them: float32 records `[points, resolution_cm1 or NaN, x…, y…]`, `at` = start of each record
+ * @typedef {{ entry: LibraryEntry, rows: import("./nomi.js").IndexRow[], values: Float32Array, native: Native | null }} Loaded
  */
 import { buildNameIndex, searchNames } from "./nomi.js";
 import { buildPrivateLibrary, noticeOf, slug, uniqueId } from "./importa.js";
@@ -34,6 +35,36 @@ export function libraryValues(id) {
 /** @param {string} id @returns {import("./nomi.js").IndexRow[] | null} the index rows of a library, in the order of its values */
 export function libraryRows(id) {
   return loaded.get(id)?.rows ?? null;
+}
+
+/**
+ * The spectrum of a library exactly as its file gives it (points, order and nominal resolution), or null when this package
+ * has no such copy (a private library imported before it existed: import it again). The resampled values are for the calculation only.
+ * @param {string} id @param {string} spectrumId
+ * @returns {{ wavenumber_cm1: number[], y: number[], y_unit: string, resolutionCm1: number | null } | null}
+ */
+export function libraryOriginal(id, spectrumId) {
+  const lib = loaded.get(id);
+  const i = lib?.rows.findIndex((r) => r.id === spectrumId) ?? -1;
+  if (!lib?.native || i < 0) return null;
+  const { data, at } = lib.native;
+  const n = data[at[i]];
+  const resolution = data[at[i] + 1];
+  const from = at[i] + 2;
+  return { wavenumber_cm1: Array.from(data.subarray(from, from + n)), y: Array.from(data.subarray(from + n, from + 2 * n)), y_unit: "Absorbance", resolutionCm1: Number.isFinite(resolution) ? resolution : null };
+}
+
+/** Where each record starts; null when the file does not hold exactly one record per spectrum. @param {Uint8Array | undefined} bytes @param {number} count @returns {Native | null} */
+function parseNative(bytes, count) {
+  if (!bytes || bytes.byteLength % 4 !== 0 || !bytes.byteLength) return null;
+  const data = new Float32Array((bytes.byteOffset % 4 === 0 ? bytes : bytes.slice()).buffer, bytes.byteOffset % 4 === 0 ? bytes.byteOffset : 0, bytes.byteLength / 4);
+  const at = [];
+  for (let pos = 0; pos < data.length; pos += 2 + 2 * data[pos]) {
+    if (!(data[pos] >= 0)) return null;
+    at.push(pos);
+  }
+  const end = at.length ? at[at.length - 1] + 2 + 2 * data[at[at.length - 1]] : 0;
+  return at.length === count && end === data.length ? { data, at } : null;
 }
 
 /** Compounds whose name (or InChIKey) starts with the text, in the active libraries. @param {string} query @param {number} [limit] */
@@ -65,6 +96,7 @@ export function registerPackage(engine, files, enabled) {
   loaded.set(files.id, {
     rows: JSON.parse(files.index).spectra,
     values: new Float32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4),
+    native: parseNative(files.native, checked.n_spectra),
     entry: { id: files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, private: checked.private === true, enabled, sampling: typeof checked.sampling === "string" ? checked.sampling : null },
   });
   publish();
@@ -85,8 +117,9 @@ export async function loadAllLibraries(engine) {
     for (const lib of general.libraries ?? []) {
       if (!/^[a-z0-9-]+$/.test(String(lib.path))) continue;
       const [manifest, index, data] = await Promise.all(["manifest.json", "index.json", "data.bin"].map((f) => fetchBytes(`${BASE}${lib.path}/${f}`)));
+      const native = await fetchBytes(`${BASE}${lib.path}/native.bin`).catch(() => undefined);
       const text = new TextDecoder();
-      const bad = registerPackage(engine, { id: String(lib.id), manifest: text.decode(manifest), index: text.decode(index), data: /** @type {Uint8Array} */ (data) }, lib.enabled !== false);
+      const bad = registerPackage(engine, { id: String(lib.id), manifest: text.decode(manifest), index: text.decode(index), data: /** @type {Uint8Array} */ (data), ...(native ? { native } : {}) }, lib.enabled !== false);
       if (bad) addNotice(bad);
     }
   } catch {

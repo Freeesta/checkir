@@ -2,6 +2,8 @@
 import { showDialog } from "./dialogs.js";
 import { el } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
+import { buildProposer } from "./proponi_ui.js";
+import { historyUrl } from "./proponi.js";
 import { isApproved, loadSheet, loadSources, parseParagraphs, SECTIONS, sectionStatus, sectionText } from "./schede.js";
 
 /** Names of the sections (literal keys, so the catalog check can see them). @type {Record<string, () => string>} */
@@ -32,19 +34,35 @@ function sourceLine(s) {
   return [text, " ", el("a", { href, target: "_blank", rel: "noopener noreferrer" }, [t("sheets.open_source")])];
 }
 
-/** One section: title, state, and the text with numbered citations, or "not written yet". @param {import("./schede.js").Sheet} sheet @param {string} key @param {string} lang @param {string[]} order @returns {HTMLElement} */
-function sectionView(sheet, key, lang, order) {
+/** The "propose a change" button of a section; it opens the editor under the text and closes it again. @param {import("./schede.js").Sheet} sheet @param {string} key @param {string} lang @param {Set<string>} known @returns {HTMLElement} */
+function proposeControl(sheet, key, lang, known) {
+  const button = el("button", { type: "button", class: "propose-toggle", "data-fk": "propose", "aria-expanded": "false" }, [t("propose.button")]);
+  const wrap = el("div", { class: "propose-wrap" }, [button]);
+  button.addEventListener("click", () => {
+    const open = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!open));
+    if (open) return wrap.querySelector(".propose")?.remove();
+    const current = sectionStatus(sheet, key, lang) === "empty" ? "" : sectionText(sheet, key, lang);
+    wrap.append(buildProposer(sheet, key, lang, current, known));
+    wrap.querySelector("textarea")?.focus();
+  });
+  return wrap;
+}
+
+/** One section: title, state, and the text with numbered citations, or "not written yet". @param {import("./schede.js").Sheet} sheet @param {string} key @param {string} lang @param {string[]} order @param {Set<string>} known @returns {HTMLElement} */
+function sectionView(sheet, key, lang, order, known) {
   const state = sheet.section_state[key] ?? "draft";
   const box = el("section", { class: "sheet-section", "data-section": key, "data-state": state, "aria-labelledby": `sh-${key}` }, [
     el("h3", { id: `sh-${key}` }, [TITLES[key](), " ", el("span", { class: "state-tag" }, [(STATES[state] ?? STATES.draft)()])]),
   ]);
   if (sectionStatus(sheet, key, lang) === "empty") {
-    box.append(el("p", { class: "empty", "data-empty": "1" }, [t("sheets.empty")]));
+    box.append(el("p", { class: "empty", "data-empty": "1" }, [t("sheets.empty")]), proposeControl(sheet, key, lang, known));
     return box;
   }
   for (const parts of parseParagraphs(sectionText(sheet, key, lang), order)) {
     box.append(el("p", {}, parts.map((p) => ("ref" in p ? el("sup", { class: "ref" }, [`[${formatNumber(p.n)}]`]) : p.text))));
   }
+  box.append(proposeControl(sheet, key, lang, known));
   return box;
 }
 
@@ -55,12 +73,14 @@ export function buildSheetView(sheet, sources, lang) {
   root.append(el("p", { class: "note" }, [t("sheets.version", { version: formatNumber(sheet.version), signed: formatNumber(signed), total: formatNumber(SECTIONS.length), until: sheet.review_by })]));
   /** @type {string[]} */
   const order = [];
-  for (const key of SECTIONS) root.append(sectionView(sheet, key, lang, order));
+  const known = new Set(Object.keys(sources));
+  for (const key of SECTIONS) root.append(sectionView(sheet, key, lang, order, known));
   if (order.length) {
     const list = el("ol", { class: "sheet-sources", "aria-label": t("sheets.sources_list") });
     for (const id of order) list.append(el("li", { "data-source": id }, sources[id] ? sourceLine(sources[id]) : [id]));
     root.append(list);
   }
+  root.append(el("p", {}, [el("a", { href: historyUrl(sheet.id), target: "_blank", rel: "noopener noreferrer", "data-fk": "sheet-history" }, [t("propose.history")])]));
   return root;
 }
 

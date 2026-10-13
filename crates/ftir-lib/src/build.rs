@@ -23,6 +23,8 @@ pub struct Source<'a> {
 pub struct Built {
     pub row: Row,
     pub values: Vec<f32>,
+    /// The record of `native_record`, kept next to the resampled values.
+    pub native: Vec<f32>,
     pub library_name: String,
     pub library_version: String,
     /// Sampling method the spectrum record declares (`technique`); `None` = not said or not enough to name it.
@@ -33,8 +35,9 @@ fn spectrum_error(id: &str, key: &'static str) -> EngineError {
     EngineError::new(key, "the spectrum cannot enter the library").with_param("id", id)
 }
 
-/// Reads a JCAMP-DX file and returns its main spectrum on `grid` in absorbance, `NaN` where it was not measured.
-pub fn resample_jcamp(jdx: &[u8], grid: &Grid) -> EngineResult<Vec<f64>> {
+/// Reads a JCAMP-DX file and returns its main spectrum in absorbance (only the unit is converted) and the nominal
+/// resolution the file states, if any.
+fn read_absorbance(jdx: &[u8]) -> EngineResult<(Spectrum, Option<f64>)> {
     let doc = (jcamp::READER.open)(jdx, &Limits::STANDARD, &Options::default()).map_err(|e| {
         e.params.iter().fold(
             EngineError::new(e.key, "the JCAMP-DX file cannot be read"),
@@ -71,11 +74,31 @@ pub fn resample_jcamp(jdx: &[u8], grid: &Grid) -> EngineResult<Vec<f64>> {
     if let Some(p) = trans_params {
         spectrum = trasmittanza::to_absorbance(&spectrum, p)?;
     }
+    let resolution = s.instrument.resolution_cm1.as_ref().map(|r| r.value);
+    Ok((spectrum, resolution))
+}
+
+/// Reads a JCAMP-DX file and returns its main spectrum on `grid` in absorbance, `NaN` where it was not measured.
+pub fn resample_jcamp(jdx: &[u8], grid: &Grid) -> EngineResult<Vec<f64>> {
+    let (spectrum, _) = read_absorbance(jdx)?;
     let params = format!(
         r#"{{"from_cm1":{},"to_cm1":{},"step_cm1":{}}}"#,
         grid.from_cm1, grid.to_cm1, grid.step_cm1
     );
     Ok(griglia::apply(&spectrum, &params)?.y)
+}
+
+/// The spectrum exactly as the file gives it, for drawing: one float32 record `[points, resolution_cm1 (NaN when the
+/// file does not state it), x…, y…]` in the order of the file, absorbance (a transmittance file is only converted).
+/// The resampled vectors serve the calculation and are never drawn as "the reference".
+pub fn native_record(jdx: &[u8]) -> EngineResult<Vec<f32>> {
+    let (s, resolution) = read_absorbance(jdx)?;
+    let mut out = Vec::with_capacity(2 + 2 * s.y.len());
+    out.push(s.y.len() as f32);
+    out.push(resolution.map_or(f32::NAN, |r| r as f32));
+    out.extend(s.wavenumber_cm1.iter().map(|v| *v as f32));
+    out.extend(s.y.iter().map(|v| *v as f32));
+    Ok(out)
 }
 
 fn strings(v: Option<&Value>) -> Vec<String> {
@@ -148,6 +171,7 @@ pub fn build_one(src: &Source, grid: &Grid) -> EngineResult<Built> {
         .into_iter()
         .map(|v| v as f32)
         .collect();
+    let native = native_record(src.jdx)?;
     let row = Row {
         id,
         form: member_str(&spec, &["form"]).ok_or_else(|| bad("form"))?,
@@ -162,6 +186,7 @@ pub fn build_one(src: &Source, grid: &Grid) -> EngineResult<Built> {
     Ok(Built {
         row,
         values,
+        native,
         library_name: member_str(&spec, &["library", "name"]).ok_or_else(|| bad("library"))?,
         library_version: member_str(&spec, &["library", "version"])
             .ok_or_else(|| bad("library"))?,
