@@ -1,5 +1,5 @@
 # Pagina: confronto, risultati, scheda, sottrazione
-Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`.
+Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagina: `pagina.md` (guscio, stile, pagine), `pagina_grafico.md`, `pagina_confronto.md`, `pagina_file.md`, `pagina_miscele.md` (proposta di miscela).
 
 ## Struttura
 - Confronto: `match.worker.js` (Web Worker con la propria istanza wasm; riceve le librerie una volta, calcola i gemelli a blocchi) e `match.js` (`runMatch`, parte da solo quando lo spettro è mostrato e le librerie attive sono pronte, se `checkir.autoMatch` non è «off»; interruttore nel dialogo ⓘ; `c` = `match.run`; `referenceFor` scala la curva libreria sul massimo del campione fuori dalla zona esclusa). Azioni `match.run`, `overlay.toggle` (sovrapposizione), scelta riga, etichetta.
@@ -22,13 +22,6 @@ Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Altri file d'area della pagin
 - Strisce: `computeStrips` chiama `sottrai` a k e a k = 0 e dà tre strisce sugli stessi punti (campione preparato = residuo a k = 0; riferimento × k = differenza; residuo); `over` = `zone_minimum` sotto −3 σ del campione (`noiseOf` di `peaks.js`), l'avviso di sovrasottrazione è della pagina.
 - Vista: `subtract_view.js` (sezione `#subtract` al posto di `#chart-section` e `#table-section`, `body[data-subtract]`): cursore `<input type=range>` con ↑/↓ ±0.01 e PagSu/PagGiù ±0.10, campo di testo (virgola o punto), «Proposto: k», avviso `role=alert`, tabella.
 - `strips.js`: tre strisce SVG con la scala dei numeri d'onda in comune (riferimento tratteggiato, residuo con la riga dello zero, banda grigia 1900-2400); `stripsTable` ha una colonna per striscia. Azioni `subtract.open` (`d`, anche «Sottrai» nel dettaglio del candidato), `subtract.search`, `subtract.close`, `history.undo` (`u`).
-- Miscele (worker): dopo il confronto di un campione `match.worker.js` chiama `mixtureProposal` (`miscele_job.js`, solo worker, tiene le librerie in `data`). Se il migliore candidato lascia picchi principali non spiegati (`assign_peaks`), manda il pool intero delle librerie attive a `miscele_analizza` (soglie e tagli incorporati) e risponde `mixture`.
-- Miscele (stato): `match.js` `attachMixture` mette la proposta in `results[code].data.mixture` (scartata se firma o spettro non coincidono). C'è proposta solo con ≥ 2 componenti `proposed` non varianti, altrimenti `null`. Il worker conta anche i picchi principali che ogni componente spiega.
-- `mixture.js`: `mixtureComponents|Candidates|Keys|Taken` e `mixtureBlock`, la sezione `[data-mixture]` sopra la tabella in `results.js`: «Miscela: A + B» e per componente «contributo allo spettro 0.70 · picchi spiegati n» (quota dell'area spiegata, mai % né quantità).
-- Miscele (sezione): «Picchi non spiegati: n», le allerte della ricerca (`high_residual`, `over_subtraction`, in `alerts.js`) e il pulsante `data-fk=mixture-accept`.
-- Miscele (decisione): `decision.js` `listed` aggiunge i componenti ai candidati scegliibili e `acceptMixture` mette la bozza a livello 4 con i componenti (il chimico firma). `sheet.js` scrive «Possibile miscela: …» finché la scelta non la contiene; `report.js` ha la tabella `[data-report=mixture]`.
-- Miscele (marcatori): `peaks.js` `referencesOf` con una proposta assegna i picchi ai componenti (`byName` = chi spiega, `refName` per riassunto e pannello).
-- `tests_e2e/scenari/135-miscele.mjs` (scoperto da `fumo.mjs`; CSS in `web/css/55-miscele.css`): 0.7·beta + 0.3·alfa (rumore bianco a seme fisso 0.01) su libreria alfa/beta/gamma → «Miscela: beta + alfa», contributi, 0 non spiegati, niente % né «quantità», accettazione a livello 4, scheda, rapporto, marcatori con `byName`, axe e 320 px; beta puro → nessuna proposta.
 
 
 ## Prove
