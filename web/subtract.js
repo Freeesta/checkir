@@ -1,6 +1,7 @@
 // @ts-check
 import { addResidual, lastResidual, closeFile, spectrumOf } from "./files.js";
 import { t } from "./i18n.js";
+import { engineUnit } from "./spectrum.js";
 import { libraryCurve, runMatch } from "./match.js";
 import { noiseOf } from "./peaks.js";
 import { candidateName, selectedCandidate } from "./results.js";
@@ -36,7 +37,7 @@ let lastComputed = null;
 
 /** @param {import("./spectrum.js").Spectrum} s @returns {string} the unit name the engine knows */
 function unitName(s) {
-  return s.y_unit === "Transmittance" ? "transmittance" : "absorbance";
+  return engineUnit(s) ?? "absorbance";
 }
 
 /** @param {import("./engine.js").SubtractionCall} fn @param {import("./spectrum.js").Spectrum} sample @param {import("./spectrum.js").Spectrum} ref @param {object} params @returns {any} */

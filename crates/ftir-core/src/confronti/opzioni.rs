@@ -1,8 +1,9 @@
 //! JSON in: the options of a comparison and the query spectrum (the page sends both as text).
+use super::lettori::{spectrum_in, unit_named};
 use super::soglie::Thresholds;
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::{self, Value};
-use crate::spectrum::{Role, Spectrum, YUnit};
+use crate::spectrum::{Role, Spectrum};
 
 const MAX_RANGES: usize = 16;
 const KNOWN: [&str; 7] = [
@@ -177,8 +178,8 @@ pub fn parse_query(text: &str) -> EngineResult<Spectrum> {
         Some(r) => role_of(r).ok_or_else(|| bad_query("unknown role"))?,
     };
     let unit = match v.get("y_unit").and_then(Value::as_str) {
-        None | Some("absorbance") => YUnit::Absorbance,
-        Some("transmittance") => YUnit::Transmittance,
+        None => "absorbance",
+        Some(u) if unit_named(u).is_some() => u,
         Some(_) => return Err(bad_query("unknown y_unit")),
     };
     let axis = v
@@ -203,7 +204,7 @@ pub fn parse_query(text: &str) -> EngineResult<Spectrum> {
         })
         .collect::<EngineResult<Vec<f64>>>()?;
     let y = y.iter().map(|n| n.as_f64().unwrap_or(f64::NAN)).collect();
-    Ok(Spectrum::new(role, unit, x, y))
+    Ok(spectrum_in(role, unit, x, y))
 }
 
 #[cfg(test)]
