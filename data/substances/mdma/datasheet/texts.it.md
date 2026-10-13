@@ -30,7 +30,9 @@ Le compresse contengono adulteranti, tagli, coloranti, eccipienti e leganti; in 
 
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+In una rassegna di studi controllati su volontari sani, MDMA ha mostrato effetti robusti sulla maggior parte delle misure soggettive e fisiologiche; gli effetti soggettivi corrispondevano a un profilo entactogeno. Sono aumentati il diametro pupillare, il cortisolo e la prolattina plasmatici. [f:dumont2006]
+
+Gli effetti cardiovascolari dipendevano dalla dose: sotto 1.0 mg/kg non si osservava alcuna variazione rispetto al placebo, sopra questa dose tutti gli studi riportavano aumenti significativi. [f:dumont2006]
 
 ## doses
 
@@ -58,7 +60,7 @@ Spiegare che l'intervallo tossico si sovrappone a quello ricreativo e che nei de
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011] [f:atila2024] [f:kalant2001] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011] [f:atila2024] [f:kalant2001] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines] [f:dumont2006]
 
 ## license
 

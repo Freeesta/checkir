@@ -1794,6 +1794,102 @@
       "consulted": "2026-10-13",
       "archive_url": "https://web.archive.org/web/2026/https://pubmed.ncbi.nlm.nih.gov/19420129/",
       "tier": "primary"
+    },
+    {
+      "id": "dumont2006",
+      "type": "paper",
+      "title": "A review of acute effects of 3,4-methylenedioxymethamphetamine in healthy volunteers (J Psychopharmacol 20:176-187)",
+      "authors": [
+        "Dumont, G.J.H.",
+        "Verkes, R.J."
+      ],
+      "year": 2006,
+      "doi": "10.1177/0269881106063271",
+      "url": "https://doi.org/10.1177/0269881106063271",
+      "tier": "review",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "spiller2014",
+      "type": "paper",
+      "title": "Identification of N-Hydroxy-para-aminobenzoic acid in a cyanotic child after benzocaine exposure (Clin Toxicol 52:976-979)",
+      "authors": [
+        "Spiller, H.A.",
+        "Russell, J.L.",
+        "Casavant, M.J.",
+        "Ho, R.Y.",
+        "Gerona, R.R."
+      ],
+      "year": 2014,
+      "doi": "10.3109/15563650.2014.958615",
+      "url": "https://doi.org/10.3109/15563650.2014.958615",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "laker1982",
+      "type": "paper",
+      "title": "Evaluation of mannitol for use as a probe marker of gastrointestinal permeability in man (Eur J Clin Invest 12:485-491)",
+      "authors": [
+        "Laker, M.F.",
+        "Bull, H.J.",
+        "Menzies, I.S."
+      ],
+      "year": 1982,
+      "doi": "10.1111/j.1365-2362.1982.tb02230.x",
+      "url": "https://doi.org/10.1111/j.1365-2362.1982.tb02230.x",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "schneider2011",
+      "type": "paper",
+      "title": "Analysis of illicit cocaine and heroin samples seized in Luxembourg from 2005-2010 (Forensic Sci Int 212:242-246)",
+      "authors": [
+        "Schneider, S.",
+        "Meys, F."
+      ],
+      "year": 2011,
+      "doi": "10.1016/j.forsciint.2011.06.027",
+      "url": "https://doi.org/10.1016/j.forsciint.2011.06.027",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "hesse2025",
+      "type": "paper",
+      "title": "Purity and adulterants in street heroin in Denmark from 2006 to 2024 (Forensic Sci Int 380:112795)",
+      "authors": [
+        "Hesse, M.",
+        "Andersen, C.U.",
+        "Reitzel, L.A.",
+        "Eriksen, T.S.",
+        "Lindholst, C."
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.forsciint.2025.112795",
+      "url": "https://doi.org/10.1016/j.forsciint.2025.112795",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "risser2007",
+      "type": "paper",
+      "title": "Is there a relationship between street heroin purity and drug-related emergencies and/or drug-related deaths? An analysis from Vienna, Austria (J Forensic Sci 52:1171-1176)",
+      "authors": [
+        "Risser, D.",
+        "Uhl, A.",
+        "Oberndorfer, F.",
+        "Hönigschnabl, S.",
+        "Stichenwirth, M.",
+        "Hirz, R.",
+        "Sebald, D."
+      ],
+      "year": 2007,
+      "doi": "10.1111/j.1556-4029.2007.00507.x",
+      "url": "https://doi.org/10.1111/j.1556-4029.2007.00507.x",
+      "tier": "primary",
+      "consulted": "2026-10-13"
     }
   ]
 }
