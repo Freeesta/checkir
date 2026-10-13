@@ -1,0 +1,60 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "3-mmc",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "3-MMC",
+      "synonyms": [
+        "3-methylmethcathinone",
+        "metaphedrone"
+      ]
+    },
+    "it": {
+      "preferred": "3-MMC",
+      "synonyms": [
+        "3-metilmetcatinone",
+        "metafedrone"
+      ]
+    }
+  },
+  "iupac": "2-(methylamino)-1-(3-methylphenyl)propan-1-one",
+  "formula": "C11H15NO",
+  "molar_mass_g_mol": 177.24,
+  "smiles": "CC1=CC(=CC=C1)C(=O)C(C)NC",
+  "inchi": "InChI=1S/C11H15NO/c1-8-5-4-6-10(7-8)11(13)9(2)12-3/h4-7,9,12H,1-3H3",
+  "inchikey": "QDNXSIYWHYGMCD-UHFFFAOYSA-N",
+  "external_ids": {
+    "wikidata": "Q17067265",
+    "cas": "1246911-86-3",
+    "pubchem_cid": 71741532
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "identity",
+      "source": "wikidata",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

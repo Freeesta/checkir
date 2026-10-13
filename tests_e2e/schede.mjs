@@ -6,7 +6,7 @@ import { GITHUB_URL } from "../web/appname.js";
 import { buildIssueUrl, checkProposal, MAX_URL } from "../web/proponi.js";
 import { CANARIES, CANARY_STRINGS } from "./canarino.mjs";
 
-const REASSURING = /sicur|\bpur[oai]\b|pulit|via libera|\bok\b|negativ|\bsafe\b|\bpure\b|\bclean\b|all clear/i;
+export const REASSURING = /sicur|\bpur[oai]\b|pulit|via libera|\bok\b|negativ|\bsafe\b|\bpure\b|\bclean\b|all clear/i;
 const SPECTRUM = new URL("../data/substances/synthetic-a/spectra/synthetic-a-base.checkir.001.jdx", import.meta.url);
 
 /** The synthetic spectrum with the canary metadata of PRIVACY T2 added to its header. @param {string} jdx @returns {string} */
