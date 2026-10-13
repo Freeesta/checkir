@@ -7,10 +7,10 @@ import { fileRange } from "./files.js";
 import { renderLibraries } from "./libpanel.js";
 import { peaksLabel, peaksSummary, renderPeaks } from "./peaks_panel.js";
 import { renderSheetPanel, sheetSummary } from "./sheet_panel.js";
-import { derivedText, renderResults, resultsSummary } from "./results.js";
+import { derivedText, renderResultsPanel, resultsSummary } from "./results.js";
 import { formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
-import { activeFile, activeLibraries, readPref, writePref } from "./state.js";
+import { activeFile, activeLibraries, readPref, resultOf, writePref } from "./state.js";
 
 /**
  * Registry of the side-panel sections (1 File … 5 Scheda). The panel, the phone tab bar and the header chips are generated from it.
@@ -64,7 +64,7 @@ function fileTree(s, ctx, parent) {
 
 /** @param {HTMLElement} body @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx */
 function renderFiles(body, s, ctx) {
-  body.append(el("div", { class: "row" }, [actionButton("file.open", ctx, { withLabel: true, className: "btn" }), actionButton("demo.load", ctx, { withLabel: true, className: "btn" }), actionButton("file.close", ctx)]));
+  body.append(el("div", { class: "row" }, [actionButton("demo.load", ctx, { withLabel: true, className: "btn" }), actionButton("file.close", ctx)]));
   if (s.fileError) body.append(el("p", { class: "error", role: "alert" }, [icon("warning"), t(s.fileError.key, s.fileError.params)]));
   if (s.files.length) body.append(fileTree(s, ctx, null));
   else emptyLine(body, t("panel.files.empty"));
@@ -79,7 +79,7 @@ export const PANELS = [
     summary: (s) => `${formatNumber(activeLibraries(s).length)} · ${formatNumber(activeLibraries(s).reduce((a, l) => a + l.spectra, 0))}`,
     render: renderLibraries,
   },
-  { id: "results", n: 3, titleKey: "panel.results.title", tipKey: "panel.results.tip", icon: "results", summary: resultsSummary, render: renderResults },
+  { id: "results", n: 3, titleKey: "panel.results.title", tipKey: "panel.results.tip", icon: "results", summary: resultsSummary, render: renderResultsPanel },
   { id: "peaks", n: 4, titleKey: "panel.peaks.title", tipKey: "panel.peaks.tip", icon: "peaks", summary: peaksSummary, label: peaksLabel, render: renderPeaks },
   { id: "sheet", n: 5, titleKey: "panel.sheet.title", tipKey: "panel.sheet.tip", icon: "sheet", summary: sheetSummary, render: renderSheetPanel },
 ];
@@ -87,6 +87,36 @@ export const PANELS = [
 /** @param {string} id @returns {HTMLDetailsElement | null} */
 function sectionOf(id) {
   return document.querySelector(`details[data-panel="${id}"]`);
+}
+
+/**
+ * The panel follows the step without taking the focus: a new result opens the candidates (unless a later section is in use or a folder is watched, whose offers sit in section 1), the subtraction opens them and closes the rest, a file error opens section 1.
+ * @param {() => boolean} isRail
+ * @returns {(s: import("./state.js").AppState) => void}
+ */
+function createFollow(isRail) {
+  /** @type {Set<string>} */
+  let known = new Set();
+  let lastSubtract = false;
+  /** @type {import("./state.js").Notice | null} */
+  let lastError = null;
+  return (s) => {
+    const r = resultOf(s);
+    const result = r ? `${r.code}|${r.sig}` : "";
+    const subtract = s.subtraction !== null;
+    const arrived = result !== "" && !known.has(result);
+    const opened = subtract && !lastSubtract;
+    const failed = s.fileError !== null && s.fileError !== lastError;
+    known = new Set(Object.entries(s.results).map(([code, x]) => `${code}|${x.sig}`));
+    lastSubtract = subtract;
+    lastError = s.fileError;
+    if (isRail() || matchMedia(MOBILE).matches) return;
+    const current = document.querySelector("details[data-panel][open]");
+    const early = !current || PANELS.findIndex((p) => p.id === current.getAttribute("data-panel")) < 2;
+    if (failed) sectionOf("files")?.setAttribute("open", "");
+    const results = sectionOf("results");
+    if (results && ((arrived && early && !s.folder.watching) || opened)) results.open = true;
+  };
 }
 
 /**
@@ -149,7 +179,9 @@ export function buildPanels(hosts, ctx) {
     section.querySelector("summary")?.focus();
   }
   const closeSection = () => (delete document.body.dataset.section, syncTabs());
+  const follow = createFollow(isRail);
   const refresh = (/** @type {import("./state.js").AppState} */ s) => {
+    follow(s);
     for (const p of PANELS) {
       const section = /** @type {HTMLElement} */ (sectionOf(p.id));
       const title = t(p.titleKey);

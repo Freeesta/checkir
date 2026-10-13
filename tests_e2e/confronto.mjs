@@ -51,8 +51,11 @@ async function rowsScenario(page, check, axe) {
   await page.click('[data-fk="lab-1-reject"]');
   check("match: clicking the same mark clears it", (await page.getAttribute(".cand:nth-child(2)", "data-label")) === "");
   await page.click('[data-fk="lab-0-accept"]');
-  await page.click('[data-action="overlay.toggle"]');
-  check("match: overlay draws the reference as a dashed curve with a table column", (await page.locator("#chart polyline.curve-reference").count()) === 1 && /Riferimento/.test((await page.textContent("#table thead")) ?? ""));
+  check("match: the chosen candidate is overlaid by itself, as a dashed curve with a table column", (await page.locator("#chart polyline.curve-reference").count()) === 1 && /Riferimento/.test((await page.textContent("#table thead")) ?? ""));
+  await page.keyboard.press("r");
+  check("match: r takes the overlay off and back", (await page.locator("#chart polyline.curve-reference").count()) === 0);
+  await page.keyboard.press("r");
+  check("match: r puts the overlay back", (await page.locator("#chart polyline.curve-reference").count()) === 1);
   const stored = await page.evaluate(async () => ({ local: JSON.stringify({ ...localStorage }), idb: (await indexedDB.databases()).length }));
   check("match: marks are not in localStorage or IndexedDB", !/accept|reject|unsure/.test(stored.local) && stored.idb === 0, JSON.stringify(stored));
   const v2 = await axe(page);
@@ -75,7 +78,7 @@ async function levelsScenario(page, check) {
   // English.
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
-  check("match: English shows the level word and the limits", /Not identified/.test((await page.textContent(".result .level")) ?? "") && (await page.isVisible("#limits")));
+  check("match: English shows the level word", /Not identified/.test((await page.textContent(".result .level")) ?? ""));
   await page.click('[data-lang="it"]');
   await page.waitForFunction(() => document.documentElement.lang === "it");
 
@@ -89,6 +92,11 @@ export async function matchScenario(browser, base, check, axe) {
   page.on("pageerror", (e) => errors.push(String(e)));
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
+  // Every announcement is recorded: the live region keeps only the last one, and another message (a library import) may land after the result's.
+  await page.evaluate(() => {
+    window.__said = [];
+    new MutationObserver(() => document.getElementById("status")?.textContent && window.__said.push(document.getElementById("status").textContent)).observe(document.getElementById("status"), { childList: true, characterData: true, subtree: true });
+  });
   await openPanel(page, "libraries");
   await page.getByRole("checkbox", { name: /checkir-community/ }).uncheck();
   await page.fill("#lib-name", "Sintetica");
@@ -110,9 +118,10 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: every row shows its library", (await page.locator(".cand .cand-lib").allTextContents()).every((x) => x === "sintetica"));
   check("match: a name never stands outside a block with the level", await page.evaluate(() => [...document.querySelectorAll(".cand-name")].every((n) => n.closest(".result")?.querySelector(".level"))));
   check("match: header chip shows the level word", /Probabile/.test((await page.textContent('[data-chip="result"]')) ?? ""));
-  check("match: the strip of limits is visible with a result", await page.isVisible("#limits"));
-  await page.waitForFunction(() => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(document.querySelector("#status")?.textContent ?? ""), null, { timeout: 5000 }).catch(() => {});
-  check("match: announcement says candidates, level and alerts", /\d+ candidat\w*, Probabile, \d+ allert\w*/.test((await page.textContent("#status")) ?? ""), (await page.textContent("#status")) ?? "");
+  check("match: no fixed strip of warnings in the work area", (await page.locator("#limits").count()) === 0);
+  const said = () => page.evaluate(() => window.__said);
+  await page.waitForFunction(() => window.__said.some((t) => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(t)), null, { timeout: 15000 }).catch(() => {});
+  check("match: announcement says candidates, level and alerts", (await said()).some((t) => /\d+ candidat\w*, Probabile, \d+ allert\w*/.test(t)), JSON.stringify(await said()));
   check("match: the zone left out is drawn and named", (await page.locator("#chart rect.excluded").count()) === 1 && /Escluso dal confronto/.test((await page.textContent("#chart")) ?? ""));
   const v1 = await axe(page);
   check("match: axe has no violations with a result", v1.length === 0, v1.join(", "));
@@ -137,13 +146,12 @@ export async function matchScenario(browser, base, check, axe) {
   check("match: no page errors", errors.length === 0, errors.join(" | "));
   await ctx.close();
 
-  // Phone width: no horizontal scroll, the strip of limits is still there.
+  // Phone width: no horizontal scroll.
   const phone = await browser.newContext({ locale: "it-IT", viewport: { width: 320, height: 640 } });
   const p = await phone.newPage();
   await p.goto(base);
   await p.waitForSelector("body[data-ready='1']");
   await p.setInputFiles("input[type=file]", [{ name: "x.jdx", mimeType: "application/octet-stream", buffer: jcamp("x", BETA) }]);
-  await p.click("#tabbar [data-goto='results']");
   await p.waitForSelector(".result", { timeout: 20000 }).catch(() => {});
   check("match: 320 px has no horizontal scroll with a result", await p.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
   await phone.close();

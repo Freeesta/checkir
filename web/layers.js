@@ -6,6 +6,7 @@ import { analyse } from "./peaks.js";
 import { summaryText } from "./peaks_view.js";
 import { candidateKey, resultOf } from "./state.js";
 import { spectrumOf } from "./files.js";
+import { choiceKey, rangesOf } from "./ranges.js";
 
 /**
  * The extra layers of the chart: the zone left out of the comparison (whenever the shown spectrum has a result) and the library
@@ -27,7 +28,7 @@ export function buildLayers(chart, summary) {
       const r = resultOf(s);
       const chosen = r ? selectedCandidate(s, r.data) : null;
       const analysis = s.showPeaks ? analyse(s) : null;
-      const key = [shown, r?.sig, chosen && candidateKey(chosen), s.overlay, currentLang(), s.showPeaks, s.peakFocus, s.ruleRange?.ruleId].join("|");
+      const key = [shown, r?.sig, chosen && candidateKey(chosen), s.overlay, currentLang(), s.showPeaks, s.peakFocus, s.ruleRange?.ruleId, choiceKey(s.rangeChoice)].join("|");
       if (key === last && analysis === lastAnalysis) return;
       last = key;
       lastAnalysis = analysis;
@@ -37,6 +38,7 @@ export function buildLayers(chart, summary) {
       const sample = shown ? spectrumOf(shown) : undefined;
       const ref = r && chosen && s.overlay && sample ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
       chart.setLayers({
+        ranges: s.rangeChoice.preset === "full" ? null : { chosen: rangesOf(s.rangeChoice), name: (n) => t("ranges.name", { n: String(n) }) },
         excluded: r ? { from: EXCLUDED_CM1[0], to: EXCLUDED_CM1[1], label: t("chart.excluded") } : null,
         marks: analysis && { bands: analysis.bands, peaks: analysis.peaks.map((p) => ({ id: p.id, x: p.position, state: p.state, focus: p.id === s.peakFocus, shoulder: p.shoulder })), rows: analysis.peaks, name, focus: s.peakFocus, rule: s.ruleRange && { from: s.ruleRange.from, to: s.ruleRange.to, label: t("card.rule_window", { from: formatNumber(Math.round(s.ruleRange.from)), to: formatNumber(Math.round(s.ruleRange.to)) }) } },
         reference: ref && chosen ? { spectrum: ref.spectrum, scale: ref.scale, label: t("chart.reference_legend", { rank: chosen.rank, library: chosen.library }) } : null,

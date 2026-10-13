@@ -67,6 +67,7 @@ async function chartScenario(page, check, axe) {
 
 /** The summary above the chart, the sortable table, the arrows between peaks and Esc. */
 async function viewScenario(page, check, axe) {
+  await page.evaluate(() => (document.getElementById("table-section").open = true)); // the data table is folded by default
   const summary = (await page.textContent("#peaks-summary")) ?? "";
   check("peaks: the summary counts the main peaks and names the one not explained", /Picchi principali: 6 · spiegati da .*: 5 · non spiegati: 1 \(~26\d\d\)/.test(summary), summary);
   check("peaks: no reassuring word in the summary", !/sicur|pur[oa]|pulit/i.test(summary), summary);

@@ -19,4 +19,4 @@ Stato attuale. ≤ 25 KB, righe ≤ 600 caratteri. Regole di fondo: niente esce 
 
 ## Avvertenze e informativa
 - Pagine bilingui in `web/pagine/` (testi da revisione legale: titolare, contatto e numero di giorni dell'archivio restano da definire). Contatto = issue pubbliche del repository, nessuna email. Il riquadro breve è `buildWarningsBox` in `web/avvertenze.js`: le schede delle sostanze lo riusano.
-- `fumo.mjs` (`pagesScenario`, `warningsBoxScenario`) prova raggiungibilità dal piè di pagina, testi tradotti, axe chiaro/scuro it/en, 320 px; T2 visita le due pagine.
+- `fumo.mjs` (`pagesScenario`, `warningsBoxScenario`) prova raggiungibilità dalla finestra ⓘ, testi tradotti, axe chiaro/scuro it/en, 320 px; T2 visita le due pagine.

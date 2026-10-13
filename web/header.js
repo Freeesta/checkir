@@ -26,7 +26,7 @@ const CHIPS = [
   {
     id: "file", panel: 1, icon: "file", labelKey: "header.file.label", tipKey: "header.file.tip",
     value: (s) => { const f = activeFile(s); return f ? fileChip(f) : DASH; },
-    tip: (s) => { const f = activeFile(s); return f ? `${f.name ?? t("file.demo_name")} · ${t("header.file.points", { points: formatNumber(f.points) })}` : t("header.file.tip"); },
+    tip: (s) => { const f = activeFile(s); return f ? [`${f.name ?? t("file.demo_name")} · ${t("header.file.points", { points: formatNumber(f.points) })}`, ...qualityViews(s).map((v) => `${v.label}: ${v.reasons.join(" ")}`)].join(" · ") : t("header.file.tip"); },
   },
   {
     id: "library", panel: 2, icon: "library", labelKey: "header.library.label", tipKey: "header.library.tip",
@@ -39,6 +39,24 @@ const CHIPS = [
     tip: (s) => { const r = resultOf(s); return r ? [t("header.result.tip"), r.data.chain.derivative, isPartialRange(r.data) ? t("header.result.region") : ""].filter(Boolean).join(" · ") : t("header.result.tip"); },
   },
 ];
+
+/** The quality problems of the shown spectrum (saturation, weak signal, noise, CO₂/vapour, negative bands) from the alerts the comparison already computed. @param {import("./state.js").AppState} s @returns {import("./alerts.js").AlertView[]} */
+function qualityViews(s) {
+  const r = resultOf(s);
+  return r ? alertViews(r.data).filter((a) => a.id.startsWith("quality_")) : [];
+}
+
+/** The file chip carries the quality words next to a warning shape: a short list, never colour alone. @param {HTMLButtonElement | undefined} chip @param {import("./state.js").AppState} s */
+function qualityChip(chip, s) {
+  if (!chip) return;
+  chip.querySelectorAll(".chip-extra").forEach((e) => e.remove());
+  const views = qualityViews(s);
+  chip.toggleAttribute("data-quality", views.length > 0);
+  if (!views.length) return;
+  const words = views.length > 2 ? `${views[0].label} +${formatNumber(views.length - 1)}` : views.map((v) => v.label).join(", ");
+  chip.append(el("span", { class: "chip-extra", "data-chip-quality": String(views.length) }, [icon("warning"), words]));
+  chip.setAttribute("aria-label", `${chip.getAttribute("aria-label")}, ${t("header.file.quality")}: ${views.map((v) => v.label).join(", ")}`);
+}
 
 /** The result chip shows the shape of the level, the alert count and a "region" mark when the comparison did not use the whole range. @param {HTMLButtonElement | undefined} chip @param {import("./state.js").AppState} s */
 function resultChip(chip, s) {
@@ -125,6 +143,7 @@ export function buildHeader(host, ctx, appName) {
         b.querySelector(".chip-value")?.replaceChildren(value);
         b.setAttribute("aria-label", `${t(c.labelKey)}: ${value}`);
       }
+      qualityChip(chipButtons.get("file"), s);
       resultChip(chipButtons.get("result"), s);
       const warn = activeFile(s)?.warnings.length;
       chipButtons.get("file")?.toggleAttribute("data-warn", Boolean(warn));
