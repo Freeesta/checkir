@@ -48,30 +48,36 @@ function patterns() {
 }
 
 /**
- * The regions as vertical bands under the curve, each with a short label (clipped to its width, full name on hover and in the table). Bands that
- * overlap put their labels on different rows. The instrument zone is grey and says so.
+ * The regions as a strip along the foot of the plot: one row per overlap level, each band a short block with its label (clipped to its width, full name on hover
+ * and in the table), so the curve above stays readable. The instrument zone is grey and says so.
  * @param {SVGElement} root @param {MarkBand[]} bands @param {{ min: number, max: number }} v @param {(x: number) => number} px @param {{ top: number, height: number }} box
  */
 export function drawBands(root, bands, v, px, box) {
   root.append(patterns());
   /** @type {number[]} */
   const lanes = [];
+  const placed = [];
   for (const g of [...bands].sort((a, b) => b.to - a.to)) {
     if (g.to < v.min || g.from > v.max) continue;
     const a = px(Math.min(g.to, v.max));
     const b = px(Math.max(g.from, v.min));
+    let lane = lanes.findIndex((end) => end <= a);
+    if (lane < 0) lane = lanes.length;
+    lanes[lane] = b;
+    placed.push({ g, a, b, lane });
+  }
+  const foot = box.top + box.height - lanes.length * LANE;
+  for (const { g, a, b, lane } of placed) {
     const family = g.family in INK ? g.family : "artifact";
-    const rect = svg("rect", { class: `region region-band fam-${family}`, x: a, y: box.top, width: b - a, height: box.height, fill: `url(#pat-${family})`, "data-region": g.id });
+    const y = foot + lane * LANE;
+    const rect = svg("rect", { class: `region region-band fam-${family}`, x: a, y, width: b - a, height: LANE, fill: `url(#pat-${family})`, "data-region": g.id });
     const title = svg("title", {});
     title.textContent = `${bandName(g.id)} · ${formatNumber(g.from)}–${formatNumber(g.to)} cm⁻¹`;
     rect.append(title);
     root.append(rect);
-    let lane = lanes.findIndex((end) => end <= a);
-    if (lane < 0) lane = lanes.length;
-    lanes[lane] = b;
     const clip = svg("clipPath", { id: `clip-${g.id}` });
-    clip.append(svg("rect", { x: a, y: box.top, width: b - a, height: box.height }));
-    const label = svg("text", { class: "label region-label", x: a + 3, y: box.top + 11 + lane * LANE, "clip-path": `url(#clip-${g.id})`, "data-region-label": g.id });
+    clip.append(svg("rect", { x: a, y, width: b - a, height: LANE }));
+    const label = svg("text", { class: "label region-label", x: a + 3, y: y + 10, "clip-path": `url(#clip-${g.id})`, "data-region-label": g.id });
     label.textContent = bandTag(g.id);
     root.append(clip, label);
   }

@@ -10,11 +10,12 @@ import { drawBrushStrip, drawRangeZones } from "./chart_ranges.js";
 /** Extra curves and zones drawn with the sample: the library spectrum of a candidate (already scaled) and the zone left out of the comparison.
  * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null, marks?: import("./chart_marks.js").Marks | null, ranges?: import("./chart_ranges.js").RangeLayer | null, recalled?: Array<{ spectrum: Spectrum, label: string, style: number }>, difference?: { spectrum: Spectrum, label: string } | null, offset?: number }} Layers */
 
-const W = 800;
-const H = 360;
+/** Size of the drawing, set by each `draw`: the width of the host when it is wide (the chart fills the area, the height stays within 44 % of the window), else 800 x 360. */
+let W = 800;
+let H = 360;
 const M = { l: 56, r: 16, t: 30, b: 44 };
 const MAX_RIGHE = 400;
-const PLOT_W = W - M.l - M.r;
+let PLOT_W = W - M.l - M.r;
 
 /** @param {Spectrum} s @returns {string} */
 function yLabel(s) {
@@ -80,6 +81,14 @@ function drawGrid(root, v, y, px, py) {
   }
 }
 
+/** Choose W and H from the host width: wide hosts get a drawing as wide as the host and as high as 44 % of the window. @param {HTMLElement} host */
+function fitSize(host) {
+  const w = host.clientWidth;
+  W = w >= 640 ? Math.min(Math.round(w), 1400) : 800;
+  H = w >= 640 ? Math.max(240, Math.min(Math.round(W * 0.45), Math.round(window.innerHeight * 0.44))) : 360;
+  PLOT_W = W - M.l - M.r;
+}
+
 /** Options of a redraw: a locked y range, and the cursor layer mounted under the axis titles. @typedef {{ yLock?: { y0: number, y1: number } | null, cursors?: ReturnType<typeof import("./chart_cursors.js").createCursors> }} DrawOptions */
 
 /**
@@ -92,6 +101,7 @@ function drawGrid(root, v, y, px, py) {
  * @returns {import("./chart_cursors.js").Geometry & { y0: number, y1: number }}
  */
 export function draw(host, s, v, layers = {}, opts = {}) {
+  fitSize(host);
   const idx = visibleIndices(s, v.min, v.max);
   const ref = layers.reference?.spectrum ?? null;
   const extras = extraCurves(layers);

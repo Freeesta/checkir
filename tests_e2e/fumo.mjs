@@ -5,6 +5,7 @@ import { chromium, firefox, webkit } from "playwright";
 import { folderScenario } from "./cartella.mjs";
 import { FIXTURE, loadingScenario } from "./caricamento.mjs";
 import { areaScenario } from "./area.mjs";
+import { collaudoCScenario } from "./collaudo_c.mjs";
 import { cleanScenario } from "./pulizia.mjs";
 import { demoScenario } from "./demo.mjs";
 import { matchPureScenario, matchScenario } from "./confronto.mjs";
@@ -320,6 +321,7 @@ async function run() {
     await areaScenario(browser, base, check, axe);
     await cleanScenario(browser, base, check, axe);
     await peaksScenario(browser, base, check, axe);
+    await collaudoCScenario(browser, base, check);
     await inverseScenario(browser, base, check);
     await subtractionScenario(browser, base, check, axe);
     await toolsScenario(browser, base, check, axe);

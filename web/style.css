@@ -537,3 +537,21 @@ meter::-moz-meter-bar { background: var(--text-muted); }
 .rule-range { fill: none; stroke: var(--focus); stroke-width: 2; stroke-dasharray: 6 3; pointer-events: none; }
 .rule-label { font-weight: 600; }
 @media (forced-colors: active) { .mode-atom { fill: Canvas; stroke: CanvasText; } .mode-bond, .mode-arrow { stroke: CanvasText; } .mode-head, .mode-el, .mode-z { fill: CanvasText; } .rule-range { stroke: Highlight; } }
+
+/* Layout pass: full-width chart, regions strip, coverage only when partial, test bar out of the way */
+#chart { max-width: none; }
+.region-label { paint-order: stroke; stroke: var(--bg); stroke-width: 3px; stroke-linejoin: round; }
+.cov-none { display: none; }
+@media (min-width: 46em) {
+  .candidates .cov-none { display: block; grid-area: cov; }
+}
+.dev-bar { position: static; justify-content: flex-end; margin: 0.5rem; }
+@media (max-width: 45em) {
+  .chips [data-chip="file"] { min-width: 0; flex: 0 1 auto; overflow: hidden; }
+  .chips [data-chip="file"] .chip-value { min-width: 0; flex: 0 1 auto; }
+  .chips [data-chip="result"] { flex: none; }
+  .chips [data-chip="result"] .chip-value { max-width: none; overflow: visible; }
+}
+@media (max-width: 26em) {
+  .brand h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
