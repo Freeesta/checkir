@@ -286,6 +286,35 @@ kbd { display: inline-block; min-width: 1.4rem; padding: 0 0.35rem; border: 1px 
 .curve-reference { fill: none; stroke: var(--color-reference); stroke-width: 2; stroke-dasharray: 7 4; vector-effect: non-scaling-stroke; }
 @media (forced-colors: active) { .curve-reference { stroke: Highlight; } .excluded { fill: GrayText; } }
 
+/* Regions and peaks (section 4 and the chart): the agreement of a region is a fill pattern (dots / diagonal / crossed) plus its r, a peak is a filled or hollow marker. */
+.region-ground { fill: var(--color-region); }
+.region-ink { fill: var(--text); stroke: var(--text); stroke-width: 0.8; opacity: 0.55; }
+circle.region-ink { stroke: none; }
+.region { stroke: none; pointer-events: none; }
+.region-unknown { fill: var(--color-region); }
+.region-agrees { fill: url(#pat-agrees); }
+.region-partial { fill: url(#pat-partial); }
+.region-disagrees { fill: url(#pat-disagrees); }
+.region-label { font-size: 11px; }
+.peak { stroke-width: 2; }
+.peak-explained { fill: var(--text); stroke: var(--bg); }
+.peak-unexplained { fill: var(--bg); stroke: var(--text); }
+.peak-plain { fill: var(--text-muted); stroke: var(--bg); }
+.peak-artifact { fill: none; stroke: var(--text-muted); stroke-dasharray: 2 2; }
+.peak-focus { stroke: var(--focus); stroke-width: 3; }
+.peak-label { font-weight: 600; }
+.regions, .peak-list { list-style: none; margin: 0.3rem 0; padding: 0; }
+.regions li { display: flex; align-items: center; gap: 0.4rem; min-height: 1.5rem; font-size: 0.9rem; }
+.swatch { flex: none; width: 1.1rem; height: 1.1rem; border: 1px solid var(--text-muted); background-color: var(--color-region); }
+.region-agrees .swatch { background-image: radial-gradient(var(--text) 1.2px, transparent 1.6px); background-size: 6px 6px; }
+.region-partial .swatch { background-image: repeating-linear-gradient(45deg, var(--text) 0 1px, transparent 1px 5px); }
+.region-disagrees .swatch { background-image: repeating-linear-gradient(45deg, var(--text) 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, var(--text) 0 1px, transparent 1px 5px); }
+.peak-list { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; }
+.peak-item { display: inline-flex; align-items: center; gap: 0.25rem; min-height: 1.5rem; padding: 0 0.4rem; font: inherit; font-size: 0.9rem; color: var(--text); background: transparent; border: 1px solid var(--border); border-radius: 0.3rem; cursor: pointer; }
+.peak-item[aria-pressed="true"] { border-color: var(--focus); border-width: 2px; font-weight: 600; }
+.peaks-ref { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; margin: 0.4rem 0; }
+@media (forced-colors: active) { .region-ground { fill: Canvas; } .region-ink { fill: CanvasText; stroke: CanvasText; } .peak-explained { fill: CanvasText; } .peak-unexplained { fill: Canvas; stroke: CanvasText; } .peak-focus { stroke: Highlight; } }
+
 /* Decision form and counselling sheet (section 5), and talk mode. The sheet host exists for print and talk mode only. */
 .decision { margin: 0 0 0.5rem; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 0.4rem; }
 .decision legend { display: flex; align-items: center; gap: 0.35rem; padding: 0 0.3rem; font-weight: 600; }

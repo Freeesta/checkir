@@ -1,14 +1,14 @@
 // @ts-check
 import { formatNumber, t } from "./i18n.js";
-import { thin, visibleIndices } from "./spectrum.js";
+import { drawPeaks, drawRegions, marksTables, svg } from "./chart_marks.js";
+import { nearestIndex, thin, visibleIndices } from "./spectrum.js";
 import { clamp, pan, zoom } from "./view.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** @typedef {import("./view.js").View} View */
 /** Extra curves and zones drawn with the sample: the library spectrum of a candidate (already scaled) and the zone left out of the comparison.
- * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null }} Layers */
+ * @typedef {{ reference?: { spectrum: Spectrum, label: string, scale: number } | null, excluded?: { from: number, to: number, label: string } | null, marks?: import("./chart_marks.js").Marks | null }} Layers */
 
-const NS = "http://www.w3.org/2000/svg";
 const W = 800;
 const H = 360;
 const M = { l: 56, r: 16, t: 12, b: 44 };
@@ -18,17 +18,6 @@ const PLOT_W = W - M.l - M.r;
 /** @param {Spectrum} s @returns {string} */
 function yLabel(s) {
   return s.y_unit === undefined || s.y_unit === "Absorbance" ? t("chart.axis_y") : t("chart.axis_y_other");
-}
-
-/**
- * @param {string} name
- * @param {Record<string, string | number>} attr
- * @returns {SVGElement}
- */
-function svg(name, attr) {
-  const el = document.createElementNS(NS, name);
-  for (const [k, v] of Object.entries(attr)) el.setAttribute(k, String(v));
-  return el;
 }
 
 /**
@@ -96,6 +85,7 @@ export function draw(host, s, v, layers = {}) {
     root.append(e);
   }
   drawExcluded(root, layers.excluded, v, px);
+  if (layers.marks) drawRegions(root, layers.marks.regions, v, px, { top: M.t, height: H - M.t - M.b });
   root.append(svg("rect", { class: "axis", x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b }));
   if (ref) {
     const kept = thin(refIdx.filter((i) => Number.isFinite(ref.y[i])), ref.y, PLOT_W);
@@ -105,6 +95,7 @@ export function draw(host, s, v, layers = {}) {
     root.append(legend);
   }
   root.append(svg("polyline", { class: "curve", points: thin(idx, s.y, PLOT_W).map((i) => `${px(s.wavenumber_cm1[i])},${py(s.y[i])}`).join(" ") }));
+  if (layers.marks) drawPeaks(root, layers.marks.peaks, v, px, (x) => py(s.y[Math.max(0, nearestIndex(s, x))]));
   const ex = svg("text", { class: "label", x: W / 2, y: H - 6, "text-anchor": "middle" });
   ex.textContent = t("chart.axis_x");
   const ey = svg("text", { class: "label", x: 14, y: H / 2, "text-anchor": "middle", transform: `rotate(-90 14 ${H / 2})` });
@@ -151,7 +142,7 @@ export function table(host, s, v, layers = {}) {
       r.insertCell().textContent = value === null ? "—" : formatNumber(value, 4);
     }
   }
-  host.replaceChildren(tab);
+  host.replaceChildren(tab, ...(layers.marks ? marksTables(layers.marks) : []));
 }
 
 /** @param {Spectrum} s @returns {View} the whole range of the spectrum */
