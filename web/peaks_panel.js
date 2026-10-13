@@ -1,10 +1,10 @@
 // @ts-check
 import { agreementWord } from "./chart_marks.js";
-import { approx, stateWord } from "./peaks_view.js";
+import { approx, peakName } from "./peaks_view.js";
 import { actionButton } from "./controls.js";
 import { el, icon } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
-import { analyse, TOLERANCE_CM1 } from "./peaks.js";
+import { analyse } from "./peaks.js";
 import { candidateName, levelBadge, selectedCandidate } from "./results.js";
 import { levelNumber } from "./alerts.js";
 import { resultOf } from "./state.js";
@@ -38,11 +38,14 @@ function regionList(a) {
 
 /** @param {import("./peaks.js").Analysis} a @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @returns {HTMLElement} */
 function peakList(a, s, ctx) {
+  const result = resultOf(s);
+  const chosen = result ? selectedCandidate(s, result.data) : null;
+  const who = chosen ? candidateName(chosen) : null;
   const list = el("ul", { class: "peak-list", "aria-label": t("peaks.list_label") });
   for (const p of a.peaks) {
     const pos = approx(p.position);
     const by = p.by === null ? "" : ` → ${approx(p.by)}`;
-    const b = el("button", { type: "button", class: "peak-item", "data-fk": `peak-${p.id}`, "data-state": p.state, "aria-pressed": String(s.peakFocus === p.id), "aria-label": `${pos} cm⁻¹, ${stateWord(p.state)}` }, [el("span", { class: "glyph", "aria-hidden": "true" }, [peakGlyph(p.state)]), `${pos}${by}`]);
+    const b = el("button", { type: "button", class: "peak-item", "data-fk": `peak-${p.id}`, "data-state": p.state, "aria-pressed": String(s.peakFocus === p.id), "aria-label": peakName(p, who) }, [el("span", { class: "glyph", "aria-hidden": "true" }, [peakGlyph(p.state)]), `${pos}${by}`]);
     b.addEventListener("click", () => ctx.focusPeak(s.peakFocus === p.id ? null : p.id));
     list.append(el("li", {}, [b]));
   }
@@ -63,5 +66,5 @@ export function renderPeaks(body, s, ctx) {
   else body.append(el("p", { class: "empty" }, [t("peaks.no_result")]));
   body.append(el("p", { class: "peaks-counts" }, [peaksSummary(s)]), regionList(a));
   if (!a.peaks.length) body.append(el("p", { class: "empty" }, [t("panel.peaks.empty")]));
-  else body.append(peakList(a, s, ctx), el("p", { class: "note" }, [t("peaks.tolerance", { tol: formatNumber(TOLERANCE_CM1) })]), el("p", { class: "note" }, [t("peaks.keys")]));
+  else body.append(peakList(a, s, ctx), el("p", { class: "note" }, [t("peaks.tolerance")]), el("p", { class: "note" }, [t("peaks.keys")]));
 }

@@ -5,15 +5,13 @@ import { peakName } from "./peaks_view.js";
 import { spectrumOf } from "./files.js";
 import { t } from "./i18n.js";
 import { getBands } from "./regions.js";
-import { activeFile, candidateKey, getState, resultOf, update } from "./state.js";
+import { activeFile, candidateKey, getState, resultOf, update, writePref } from "./state.js";
 
 /**
  * Which peaks of the shown spectrum the chosen candidate explains, and how well each IR region agrees with it. The program proposes:
- * a peak is «explained» when a peak of the library spectrum lies within the tolerance, nothing more. Everything stays in memory.
+ * the engine (`assign_peaks`) says «explained» when a peak of the library spectrum lies within the tolerance of the pair, nothing more. Everything stays in memory.
  */
 
-/** A sample peak is explained by a library peak this close, cm⁻¹ (decision of the matching architect, provisional). */
-export const TOLERANCE_CM1 = 8;
 /** Regional r from which a region «agrees» and from which it agrees «in part»; below it does not agree (provisional, not calibrated). */
 export const AGREE_MIN = 0.9;
 export const PARTIAL_MIN = 0.7;
@@ -26,7 +24,8 @@ const DEFAULT_REGION_IDS = ["3700-2500", "1900-1500", "1500-1000", "1000-650"];
 /** @typedef {"agrees" | "partial" | "disagrees" | "unknown"} Agreement */
 /** @typedef {{ id: string, from: number, to: number, r: number | null, agreement: Agreement }} Region */
 /** @typedef {"explained" | "unexplained" | "minor" | "artifact" | "plain"} PeakState */
-/** @typedef {{ id: string, position: number, state: PeakState, by: number | null, regions: string[], shoulder: boolean, intensity: "strong" | "medium" | "weak", shape: string | null, tier: "main" | "secondary" }} PeakRow */
+/** @typedef {{ rule_id: string | null, group: string, mode: string, rank: number, rule_status: string, origin: string | null }} Reading */
+/** @typedef {{ id: string, position: number, state: PeakState, by: number | null, delta: number | null, otherForm: boolean, group: string | null, mode: string | null, readings: Reading[], crowded: boolean, regions: string[], shoulder: boolean, intensity: "strong" | "medium" | "weak", shape: string | null, tier: "main" | "secondary" }} PeakRow */
 /** @typedef {{ regions: Region[], bands: import("./regions.js").Band[], peaks: PeakRow[], main: number, explained: number, unexplained: number, minor: number, artifact: number, error: string | null }} Analysis */
 
 /** @type {import("./engine.js").Engine | null} */
@@ -87,20 +86,29 @@ function intensityOf(p) {
   return r >= STRONG_MIN ? "strong" : r >= MEDIUM_MIN ? "medium" : "weak";
 }
 
-/** A secondary peak nobody explains is «minor», never «not explained»; CO₂ and vapour are the measurement's. @param {any} p @param {boolean} compared @param {number | null} by @returns {PeakState} */
-function stateOf(p, compared, by) {
-  if (p.artifact) return "artifact";
-  if (!compared) return "plain";
-  if (by !== null) return "explained";
-  return p.tier === "secondary" ? "minor" : "unexplained";
+/** Assignment of the sample peaks against the chosen candidate's peaks (`assign_peaks`, rules embedded); without a candidate only the readings. @param {any} list @param {any | null} refList @param {any | null} chosen @returns {any | null} */
+function assignOf(list, refList, chosen) {
+  if (!engine) return null;
+  const refs = refList && chosen ? [{ substance_id: chosen.substance ?? "", form: chosen.form ?? "", library: chosen.library, version: chosen.library_version ?? null, peaks: refList }] : [];
+  const out = JSON.parse(engine.assign_peaks(JSON.stringify(list), JSON.stringify(refs), "", ""));
+  return out.error_key ? null : out;
 }
 
-/** @param {any} list @param {number[]} refPositions @param {boolean} compared @returns {PeakRow[]} */
-function rowsOf(list, refPositions, compared) {
+/** @param {any} item the assignment of one peak, if any @param {any} p @param {boolean} compared @returns {PeakState} */
+function stateOf(item, p, compared) {
+  if (p.artifact || item?.state === "artifact") return "artifact";
+  if (!compared) return "plain";
+  const st = item?.state;
+  return st === "explained" || st === "explained_other_form" ? "explained" : st === "minor" || p.tier === "secondary" ? "minor" : "unexplained";
+}
+
+/** @param {any} list @param {any | null} assignment @param {boolean} compared @returns {PeakRow[]} */
+function rowsOf(list, assignment, compared) {
+  const items = new Map((assignment?.items ?? []).map((/** @type {any} */ i) => [i.peak_id, i]));
   return list.peaks.map((/** @type {any} */ p) => {
-    let by = null;
-    for (const x of refPositions) if (Math.abs(x - p.position_cm1) <= TOLERANCE_CM1 && (by === null || Math.abs(x - p.position_cm1) < Math.abs(by - p.position_cm1))) by = x;
-    return { id: p.id, position: p.position_cm1, state: stateOf(p, compared, by), by, regions: p.region_ids ?? [], shoulder: p.kind === "shoulder", intensity: intensityOf(p), shape: p.shape ?? null, tier: p.tier === "secondary" ? "secondary" : "main" };
+    const item = /** @type {any} */ (items.get(p.id));
+    const by = item?.explained_by ?? null;
+    return { id: p.id, position: p.position_cm1, state: stateOf(item, p, compared), by: by ? by.ref_peak_cm1 : null, delta: by ? by.delta_cm1 : null, otherForm: item?.state === "explained_other_form", group: by?.group ?? null, mode: by?.mode ?? null, readings: item?.interpretations ?? [], crowded: !!item?.crowded, regions: p.region_ids ?? [], shoulder: p.kind === "shoulder", intensity: intensityOf(p), shape: p.shape ?? null, tier: p.tier === "secondary" ? "secondary" : "main" };
   });
 }
 
@@ -131,8 +139,9 @@ export function analyse(s) {
     const ref = chosen ? referenceFor(chosen.library, chosen.spectrum_id, sample, EXCLUDED_CM1) : null;
     const refList = ref ? detect(ref.spectrum) : null;
     const compared = refList !== null;
-    const peaks = rowsOf(list, compared ? refList.peaks.map((/** @type {any} */ p) => p.position_cm1) : [], compared);
-    value = { regions, bands: getBands(), peaks, ...countsOf(peaks), error: chosen && !compared ? "peaks.error" : null };
+    const assignment = assignOf(list, refList, chosen);
+    const peaks = rowsOf(list, assignment, compared);
+    value = { regions, bands: getBands(), peaks, ...countsOf(peaks), error: chosen && (!compared || !assignment) ? "peaks.error" : null };
   }
   last = { key, value };
   return value;
@@ -159,17 +168,35 @@ export function peaksActions(e, announce) {
       const order = [...a.peaks].sort((x, y) => y.position - x.position);
       const i = order.findIndex((p) => p.id === s.peakFocus);
       const next = order[i < 0 ? (dir > 0 ? 0 : order.length - 1) : Math.min(order.length - 1, Math.max(0, i + dir))];
-      update({ peakFocus: next.id });
+      update({ peakFocus: next.id, ruleRange: null });
       const result = resultOf(s);
       const chosen = result ? selectedCandidate(s, result.data) : null;
       announce(peakName(next, chosen ? candidateName(chosen) : null));
       return true;
     },
     clearPeak: () => {
-      if (!getState().peakFocus) return false;
-      update({ peakFocus: null });
+      const s = getState();
+      if (!s.peakFocus && !s.ruleRange) return false;
+      update({ peakFocus: null, ruleRange: null });
       return true;
     },
-    focusPeak: (/** @type {string | null} */ id) => update({ peakFocus: id, showPeaks: id ? true : getState().showPeaks }),
+    focusPeak: (/** @type {string | null} */ id) => update({ peakFocus: id, ruleRange: null, showPeaks: id ? true : getState().showPeaks }),
+    setTextLevel: (/** @type {import("./state.js").TextLevel} */ level) => {
+      writePref("textLevel", level);
+      update({ textLevel: level });
+    },
+    stepLevel: (/** @type {1 | -1} */ dir) => {
+      const order = ["counsellor", "chemist", "teaching"];
+      const level = /** @type {import("./state.js").TextLevel} */ (order[Math.min(2, Math.max(0, order.indexOf(getState().textLevel) + dir))]);
+      writePref("textLevel", level);
+      update({ textLevel: level });
+      announce(t("card.level_now", { level: t(level === "counsellor" ? "card.level.counsellor" : level === "chemist" ? "card.level.chemist" : "card.level.teaching") }));
+    },
+    toggleModeAnim: () => {
+      const on = !getState().modeAnim;
+      writePref("modeAnim", on ? "on" : "off");
+      update({ modeAnim: on });
+    },
+    showRule: (/** @type {import("./state.js").RuleRange | null} */ range) => update({ ruleRange: range }),
   };
 }
