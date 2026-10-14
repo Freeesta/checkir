@@ -1,0 +1,69 @@
+{
+  "schema": "datasheet/1",
+  "substance": "fenethylline",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "amphetamine",
+        "reaction": "other",
+        "source": "wenthur2017"
+      },
+      {
+        "from": "parent",
+        "to": "theophylline",
+        "reaction": "other",
+        "source": "wenthur2017"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "amphetamine",
+        "pubchem_cid": 3007,
+        "active": true,
+        "source": "wenthur2017"
+      },
+      {
+        "name_key": "theophylline",
+        "pubchem_cid": 2153,
+        "active": true,
+        "source": "wenthur2017"
+      }
+    ]
+  },
+  "cuts": [
+    {
+      "cut": "caffeine",
+      "frequency": "reported",
+      "source": "alabdalla2005"
+    }
+  ],
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

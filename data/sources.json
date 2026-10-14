@@ -52,6 +52,137 @@
       "license": "© John Wiley & Sons; cited as the source of numbers only, text not copied"
     },
     {
+      "id": "staack2004",
+      "type": "paper",
+      "title": "Cytochrome P450 dependent metabolism of the new designer drug 1-(3-trifluoromethylphenyl)piperazine (TFMPP) (Biochem Pharmacol 67:235-244)",
+      "authors": [
+        "R. F. Staack",
+        "L. D. Paul",
+        "D. Springer",
+        "T. Kraemer",
+        "H. H. Maurer"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.bcp.2003.08.029",
+      "url": "https://doi.org/10.1016/j.bcp.2003.08.029",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "arbo2012",
+      "type": "paper",
+      "title": "Piperazine compounds as drugs of abuse (Drug Alcohol Depend 122:174-185)",
+      "authors": [
+        "M. D. Arbo",
+        "M. L. Bastos",
+        "H. F. Carmo"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.drugalcdep.2011.10.007",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2011.10.007",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "teja2020",
+      "type": "paper",
+      "title": "Abuse, Toxicology and the Resurgence of Propylhexedrine: A Case Report and Review of Literature (Cureus 12:e10868)",
+      "authors": [
+        "N. Teja",
+        "C. P. Dodge",
+        "C. N. Stanciu"
+      ],
+      "year": 2020,
+      "doi": "10.7759/cureus.10868",
+      "url": "https://doi.org/10.7759/cureus.10868",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250408212825/https://pmc.ncbi.nlm.nih.gov/articles/PMC7652022/"
+    },
+    {
+      "id": "tsujikawa2011",
+      "type": "paper",
+      "title": "Urinary excretion profiles of N-hydroxy-3,4-methylenedioxymethamphetamine in rats (Xenobiotica 41:578-584)",
+      "authors": [
+        "K. Tsujikawa",
+        "T. Mikuma",
+        "K. Kuwayama",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Inoue"
+      ],
+      "year": 2011,
+      "doi": "10.3109/00498254.2011.565821",
+      "url": "https://doi.org/10.3109/00498254.2011.565821",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "makino1989",
+      "type": "paper",
+      "title": "Identification and quantification of p-hydroxyethylamphetamine as a novel metabolite of ethylamphetamine in rat by gas chromatography-mass spectrometry (Forensic Sci Int 41:83-91)",
+      "authors": [
+        "Y. Makino",
+        "T. Higuchi",
+        "S. Ohta",
+        "M. Hirobe"
+      ],
+      "year": 1989,
+      "doi": "10.1016/0379-0738(89)90239-9",
+      "url": "https://doi.org/10.1016/0379-0738(89)90239-9",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "delbeke1986",
+      "type": "paper",
+      "title": "The influence of diuretics on the excretion and metabolism of doping agents. III. Etilamfetamine (Arzneimittelforschung 36:1413-1416)",
+      "authors": [
+        "F. T. Delbeke",
+        "M. Debackere"
+      ],
+      "year": 1986,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3790195/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kunalan2009",
+      "type": "paper",
+      "title": "Characterization of Route Specific Impurities Found in Methamphetamine Synthesized by the Leuckart and Reductive Amination Methods (Anal Chem 81:7342-7348)",
+      "authors": [
+        "V. Kunalan",
+        "N. Nic Daeid",
+        "W. J. Kerr",
+        "H. A. S. Buchanan",
+        "A. R. McPherson"
+      ],
+      "year": 2009,
+      "doi": "10.1021/ac9005588",
+      "url": "https://doi.org/10.1021/ac9005588",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "who-pmebf2018",
+      "type": "institution",
+      "title": "WHO Expert Committee on Drug Dependence, Critical Review Report: p-Methoxy-butyrylfentanyl (S. D. Brandt)",
+      "year": 2018,
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/9579",
+      "archive_url": "https://web.archive.org/web/20250325211657/https://researchonline.ljmu.ac.uk/id/eprint/9579/",
+      "tier": "agency",
+      "license": "© WHO; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
       "id": "wikipedia-ir-table",
       "type": "web",
       "title": "Wikipedia: Infrared spectroscopy correlation table",
@@ -15594,6 +15725,152 @@
       "consulted": "2026-10-14",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20260112184122/https://pubmed.ncbi.nlm.nih.gov/30779257/"
+    },
+    {
+      "id": "katselou2016",
+      "type": "paper",
+      "title": "Fenethylline (Captagon) Abuse - Local Problems from an Old Drug Become Universal (Basic Clin Pharmacol Toxicol 119)",
+      "authors": [
+        "Katselou",
+        "Papoutsis",
+        "Nikolaou",
+        "Qammaz",
+        "Spiliopoulou"
+      ],
+      "year": 2016,
+      "doi": "10.1111/bcpt.12584",
+      "url": "https://doi.org/10.1111/bcpt.12584",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "wenthur2017",
+      "type": "paper",
+      "title": "Vaccine-driven pharmacodynamic dissection and mitigation of fenethylline psychoactivity (Nature 548)",
+      "authors": [
+        "Wenthur",
+        "Zhou",
+        "Janda"
+      ],
+      "year": 2017,
+      "doi": "10.1038/nature23464",
+      "url": "https://doi.org/10.1038/nature23464",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "alabdalla2005",
+      "type": "paper",
+      "title": "Chemical characterization of counterfeit captagon tablets seized in Jordan (Forensic Sci Int 152)",
+      "authors": [
+        "Alabdalla"
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.forsciint.2004.08.004",
+      "url": "https://doi.org/10.1016/j.forsciint.2004.08.004",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "pennick2010",
+      "type": "paper",
+      "title": "Absorption of lisdexamfetamine dimesylate and its enzymatic conversion to d-amphetamine (Neuropsychiatr Dis Treat 6)",
+      "authors": [
+        "Pennick"
+      ],
+      "year": 2010,
+      "doi": "10.2147/ndt.s9749",
+      "url": "https://doi.org/10.2147/ndt.s9749",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "xu2022",
+      "type": "paper",
+      "title": "N-isopropylbenzylamine, a methamphetamine mimics, produces toxicity via increasing nitric oxide in vitro (Toxicology 480)",
+      "authors": [
+        "Xu",
+        "Li",
+        "Qiu",
+        "Xiao",
+        "Qiu"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.tox.2022.153337",
+      "url": "https://doi.org/10.1016/j.tox.2022.153337",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lai2024",
+      "type": "paper",
+      "title": "N-Isopropylbenzylamine-induced conditioned place preference, sensitization behaviour and self-administration in rodents (Addict Biol 29)",
+      "authors": [
+        "Lai",
+        "Fu",
+        "Li",
+        "Zhuang",
+        "Wang"
+      ],
+      "year": 2024,
+      "doi": "10.1111/adb.13370",
+      "url": "https://doi.org/10.1111/adb.13370",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kintz1997",
+      "type": "paper",
+      "title": "Excretion of MBDB and BDB in urine, saliva, and sweat following single oral administration (J Anal Toxicol 21)",
+      "authors": [
+        "Kintz"
+      ],
+      "year": 1997,
+      "doi": "10.1093/jat/21.7.570",
+      "url": "https://doi.org/10.1093/jat/21.7.570",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nagai2002",
+      "type": "paper",
+      "title": "Enantiomer analysis of a new street drug, 3,4-methylenedioxy-N-methyl-butanamine, in rat urine (J Anal Toxicol 26)",
+      "authors": [
+        "Nagai",
+        "Matsushima",
+        "Suzuki",
+        "Saotome",
+        "Kurosu"
+      ],
+      "year": 2002,
+      "doi": "10.1093/jat/26.2.104",
+      "url": "https://doi.org/10.1093/jat/26.2.104",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "bach1999",
+      "type": "paper",
+      "title": "Involvement of CYP2D6 in the in vitro metabolism of amphetamine, two N-alkylamphetamines and their 4-methoxylated derivatives (Xenobiotica 29)",
+      "authors": [
+        "Bach",
+        "Coutts",
+        "Baker"
+      ],
+      "year": 1999,
+      "doi": "10.1080/004982599238344",
+      "url": "https://doi.org/10.1080/004982599238344",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     },
     {
       "id": "cohen2015",
