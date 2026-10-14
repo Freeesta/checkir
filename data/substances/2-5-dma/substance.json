@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-5-dma",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2,5-DMA",
+      "synonyms": [
+        "2,5-dimethoxyamphetamine",
+        "DMA"
+      ]
+    },
+    "it": {
+      "preferred": "2,5-DMA",
+      "synonyms": [
+        "2,5-dimetossianfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(2,5-dimethoxyphenyl)propan-2-amine",
+  "formula": "C11H17NO2",
+  "molar_mass_g_mol": 195.3,
+  "smiles": "CC(CC1=C(C=CC(=C1)OC)OC)N",
+  "inchi": "InChI=1S/C11H17NO2/c1-8(12)6-9-7-10(13-2)4-5-11(9)14-3/h4-5,7-8H,6,12H2,1-3H3",
+  "inchikey": "LATVFYDIBMDBSY-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 62787
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
