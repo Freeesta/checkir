@@ -1,6 +1,6 @@
 ## molecule
 
-LSD, (6aR,9R)-N,N-dietil-7-metil-6.6a,8.9-tetraidro-4H-indolo[4.3-fg]chinolina-9-carbossammide. Base: C20H25N3O, 323.4 g/mol, CAS 50-37-3. Identità controllata su PubChem. [f:pubchem]
+LSD, (6aR,9R)-N,N-dietil-7-metil-6,6a,8,9-tetraidro-4H-indolo[4,3-fg]chinolina-9-carbossammide. Base: C20H25N3O, 323.4 g/mol, CAS 50-37-3. Identità controllata su PubChem. [f:pubchem]
 
 Struttura: sistema ad anello ergolinico con un indolo, un'ammide terziaria dietilica e un'ammina terziaria. Bande attese: N-H dell'indolo a 3380-3490 cm-1 e C=O dell'ammide a 1620-1690 cm-1. Nei dati pubblici non c'è uno spettro di riferimento dell'LSD: gli intervalli indicano solo i gruppi. [f:coates2000] [f:nist-webbook] [f:smith-amides]
 
