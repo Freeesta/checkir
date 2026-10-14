@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "zolpidem",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Zolpidem",
+      "synonyms": [
+        "Ambien"
+      ]
+    },
+    "it": {
+      "preferred": "Zolpidem",
+      "synonyms": [
+        "Ambien"
+      ]
+    }
+  },
+  "iupac": "N,N-dimethyl-2-[6-methyl-2-(4-methylphenyl)imidazo[1,2-a]pyridin-3-yl]acetamide",
+  "formula": "C19H21N3O",
+  "molar_mass_g_mol": 307.4,
+  "smiles": "CC1=CC=C(C=C1)C2=C(N3C=C(C=CC3=N2)C)CC(=O)N(C)C",
+  "inchi": "InChI=1S/C19H21N3O/c1-13-5-8-15(9-6-13)19-16(11-18(23)21(3)4)22-12-14(2)7-10-17(22)20-19/h5-10,12H,11H2,1-4H3",
+  "inchikey": "ZAFYATHCZYHLPB-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "82626-48-0",
+    "pubchem_cid": 5732
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

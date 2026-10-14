@@ -11981,6 +11981,128 @@
       "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "agency"
+    },
+    {
+      "id": "restoril-label",
+      "type": "institution",
+      "title": "RESTORIL (temazepam) capsules, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bc56f7fd-1aaf-48ff-8aa7-d467e59e1015",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260802150116/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bc56f7fd-1aaf-48ff-8aa7-d467e59e1015",
+      "tier": "agency"
+    },
+    {
+      "id": "triazolam-label",
+      "type": "institution",
+      "title": "Triazolam tablets (Mylan Pharmaceuticals Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260804030030/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf",
+      "tier": "agency"
+    },
+    {
+      "id": "ambien-label",
+      "type": "institution",
+      "title": "AMBIEN (zolpidem tartrate) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260828133129/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452",
+      "tier": "agency"
+    },
+    {
+      "id": "telazol-label",
+      "type": "institution",
+      "title": "TELAZOL (tiletamine hydrochloride and zolazepam hydrochloride) for injection, veterinary prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2023,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3ef51363-2236-40aa-bf32-601c9f1c722a",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260731133604/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3ef51363-2236-40aa-bf32-601c9f1c722a",
+      "tier": "agency"
+    },
+    {
+      "id": "vonmoltke1999",
+      "type": "paper",
+      "title": "Zolpidem metabolism in vitro: responsible cytochromes, chemical inhibitors, and in vivo correlations (Br J Clin Pharmacol 48:89-97)",
+      "authors": [
+        "L. L. von Moltke",
+        "D. J. Greenblatt",
+        "B. W. Granda",
+        "S. X. Duan",
+        "J. M. Grassi",
+        "K. Venkatakrishnan",
+        "J. S. Harmatz",
+        "R. I. Shader"
+      ],
+      "year": 1999,
+      "doi": "10.1046/j.1365-2125.1999.00953.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10383565/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250418190101/https://pubmed.ncbi.nlm.nih.gov/10383565/"
+    },
+    {
+      "id": "becquemont1999",
+      "type": "paper",
+      "title": "Cytochrome P-450 3A4 and 2C8 are involved in zopiclone metabolism (Drug Metab Dispos 27:1068-1073)",
+      "authors": [
+        "L. Becquemont",
+        "S. Mouajjah",
+        "O. Escaffre",
+        "P. Beaune",
+        "C. Funck-Brentano",
+        "P. Jaillon"
+      ],
+      "year": 1999,
+      "doi": "10.1016/S0090-9556(24)15027-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10460808/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260113101310/https://pubmed.ncbi.nlm.nih.gov/10460808/"
+    },
+    {
+      "id": "liakoni2019",
+      "type": "paper",
+      "title": "Butanediol conversion to gamma-hydroxybutyrate markedly reduced by the alcohol dehydrogenase blocker fomepizole (Clin Pharmacol Ther 105:1196-1203)",
+      "authors": [
+        "E. Liakoni",
+        "H. Gugelmann",
+        "D. A. Dempsey",
+        "T. J. Wiegand",
+        "C. Havel",
+        "P. Jacob",
+        "N. L. Benowitz"
+      ],
+      "year": 2019,
+      "doi": "10.1002/cpt.1306",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30450642/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "skryabin2023",
+      "type": "paper",
+      "title": "Consequences of 1,4-butanediol misuse: a review (Psychopharmacol Bull 53:48-53)",
+      "authors": [
+        "V. Skryabin",
+        "Y. Shevtsova",
+        "E. A. Novoselova"
+      ],
+      "year": 2023,
+      "doi": "10.64719/pb.4475",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38076667/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
     }
   ]
 }
