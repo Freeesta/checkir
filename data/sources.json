@@ -13169,6 +13169,61 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "narimatsu2006",
+      "type": "paper",
+      "title": "Oxidative metabolism of 5-methoxy-N,N-diisopropyltryptamine (Foxy) by human liver microsomes and recombinant cytochrome P450 enzymes (Biochem Pharmacol 71(9):1377-1385)",
+      "authors": [
+        "S. Narimatsu",
+        "R. Yonemoto",
+        "K. Saito",
+        "K. Takaya",
+        "T. Kumamoto",
+        "et al.",
+        "N. Hanioka"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.bcp.2006.01.015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16510126/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "zhao2024",
+      "type": "paper",
+      "title": "Biotransformation of 5-methoxy-N-isopropyl-N-methyltryptamine by zebrafish and human liver microsome with high-resolution mass spectrometry (J Pharm Biomed Anal 241:115987)",
+      "authors": [
+        "S. Zhao",
+        "Y. Wang",
+        "C. Zhong",
+        "J. Chen",
+        "L. Meng"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.115987",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38280235/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "meng2025",
+      "type": "paper",
+      "title": "Metabolic profiling of 5-Methoxy-N,N-diallyltryptamine in human liver microsomes and zebrafish using LC-Orbitrap MS (J Chromatogr B 1256:124557)",
+      "authors": [
+        "L. Meng",
+        "Y. Wang",
+        "C. Zhong",
+        "S. Zhao"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.jchromb.2025.124557",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40081218/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
