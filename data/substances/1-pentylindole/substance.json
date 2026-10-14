@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "1-pentylindole",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "1-Pentylindole",
+      "synonyms": [
+        "N-pentylindole",
+        "1-pentyl-1H-indole"
+      ]
+    },
+    "it": {
+      "preferred": "1-Pentilindolo",
+      "synonyms": [
+        "N-pentilindolo",
+        "1-pentil-1H-indolo"
+      ]
+    }
+  },
+  "iupac": "1-pentylindole",
+  "formula": "C13H17N",
+  "molar_mass_g_mol": 187.3,
+  "smiles": "CCCCCN1C=CC2=CC=CC=C21",
+  "inchi": "InChI=1S/C13H17N/c1-2-3-6-10-14-11-9-12-7-4-5-8-13(12)14/h4-5,7-9,11H,2-3,6,10H2,1H3",
+  "inchikey": "QWLCOOAYMQWDPR-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "59529-21-4",
+    "pubchem_cid": 3454683
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

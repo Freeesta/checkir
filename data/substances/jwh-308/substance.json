@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "jwh-308",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "JWH-308",
+      "synonyms": [
+        "JWH308"
+      ]
+    },
+    "it": {
+      "preferred": "JWH-308",
+      "synonyms": [
+        "JWH308"
+      ]
+    }
+  },
+  "iupac": "[5-(4-fluorophenyl)-1-pentylpyrrol-3-yl]-naphthalen-1-ylmethanone",
+  "formula": "C26H24FNO",
+  "molar_mass_g_mol": 385.5,
+  "smiles": "CCCCCN1C=C(C=C1C2=CC=C(C=C2)F)C(=O)C3=CC=CC4=CC=CC=C43",
+  "inchi": "InChI=1S/C26H24FNO/c1-2-3-6-16-28-18-21(17-25(28)20-12-14-22(27)15-13-20)26(29)24-11-7-9-19-8-4-5-10-23(19)24/h4-5,7-15,17-18H,2-3,6,16H2,1H3",
+  "inchikey": "PJNACIYIFHTDCK-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "914458-39-2",
+    "pubchem_cid": 44418355
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

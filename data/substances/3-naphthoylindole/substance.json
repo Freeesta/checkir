@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "3-naphthoylindole",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "3-Naphthoylindole",
+      "synonyms": [
+        "3-(1-naphthoyl)indole"
+      ]
+    },
+    "it": {
+      "preferred": "3-Naftoilindolo",
+      "synonyms": [
+        "3-(1-naftoil)indolo"
+      ]
+    }
+  },
+  "iupac": "1H-indol-3-yl(naphthalen-1-yl)methanone",
+  "formula": "C19H13NO",
+  "molar_mass_g_mol": 271.3,
+  "smiles": "C1=CC=C2C(=C1)C=CC=C2C(=O)C3=CNC4=CC=CC=C43",
+  "inchi": "InChI=1S/C19H13NO/c21-19(17-12-20-18-11-4-3-9-15(17)18)16-10-5-7-13-6-1-2-8-14(13)16/h1-12,20H",
+  "inchikey": "QIXQGVQLBPQVOR-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "109555-87-5",
+    "pubchem_cid": 10355825
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

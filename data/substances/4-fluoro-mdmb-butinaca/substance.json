@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-fluoro-mdmb-butinaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-Fluoro-MDMB-BUTINACA",
+      "synonyms": [
+        "4F-MDMB-BINACA",
+        "4F-MDMB-BUTINACA",
+        "4F-ADB"
+      ]
+    },
+    "it": {
+      "preferred": "4-Fluoro-MDMB-BUTINACA",
+      "synonyms": [
+        "4F-MDMB-BINACA"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-2-[[1-(4-fluorobutyl)indazole-3-carbonyl]amino]-3,3-dimethylbutanoate",
+  "formula": "C19H26FN3O3",
+  "molar_mass_g_mol": 363.4,
+  "smiles": "CC(C)(C)[C@@H](C(=O)OC)NC(=O)C1=NN(C2=CC=CC=C21)CCCCF",
+  "inchi": "InChI=1S/C19H26FN3O3/c1-19(2,3)16(18(25)26-4)21-17(24)15-13-9-5-6-10-14(13)23(22-15)12-8-7-11-20/h5-6,9-10,16H,7-8,11-12H2,1-4H3,(H,21,24)/t16-/m1/s1",
+  "inchikey": "GZGKSDAMWRWYOZ-MRXNPFEDSA-N",
+  "external_ids": {
+    "cas": "2390036-46-9",
+    "pubchem_cid": 145707216
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

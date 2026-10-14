@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ab-chminaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "AB-CHMINACA"
+    },
+    "it": {
+      "preferred": "AB-CHMINACA"
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-3-methyl-1-oxobutan-2-yl]-1-(cyclohexylmethyl)indazole-3-carboxamide",
+  "formula": "C20H28N4O2",
+  "molar_mass_g_mol": 356.5,
+  "smiles": "CC(C)[C@@H](C(=O)N)NC(=O)C1=NN(C2=CC=CC=C21)CC3CCCCC3",
+  "inchi": "InChI=1S/C20H28N4O2/c1-13(2)17(19(21)25)22-20(26)18-15-10-6-7-11-16(15)24(23-18)12-14-8-4-3-5-9-14/h6-7,10-11,13-14,17H,3-5,8-9,12H2,1-2H3,(H2,21,25)(H,22,26)/t17-/m0/s1",
+  "inchikey": "KJNZIEGLNLCWTQ-KRWDZBQOSA-N",
+  "external_ids": {
+    "cas": "1185887-21-1",
+    "pubchem_cid": 44206133
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

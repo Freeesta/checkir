@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mam-2201",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MAM-2201",
+      "synonyms": [
+        "MAM2201",
+        "5F-JWH-122",
+        "4-methyl-AM-2201"
+      ]
+    },
+    "it": {
+      "preferred": "MAM-2201",
+      "synonyms": [
+        "MAM2201",
+        "5F-JWH-122",
+        "4-methyl-AM-2201"
+      ]
+    }
+  },
+  "iupac": "[1-(5-fluoropentyl)indol-3-yl]-(4-methylnaphthalen-1-yl)methanone",
+  "formula": "C25H24FNO",
+  "molar_mass_g_mol": 373.5,
+  "smiles": "CC1=CC=C(C2=CC=CC=C12)C(=O)C3=CN(C4=CC=CC=C43)CCCCCF",
+  "inchi": "InChI=1S/C25H24FNO/c1-18-13-14-22(20-10-4-3-9-19(18)20)25(28)23-17-27(16-8-2-7-15-26)24-12-6-5-11-21(23)24/h3-6,9-14,17H,2,7-8,15-16H2,1H3",
+  "inchikey": "IGBHZHCGWLHBAE-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1354631-24-5",
+    "pubchem_cid": 66570720
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
