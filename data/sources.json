@@ -14380,6 +14380,147 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "mclaughlin2017",
+      "type": "paper",
+      "title": "Analytical characterization and pharmacological evaluation of the new psychoactive substance 4-fluoromethylphenidate (4F-MPH) and differentiation between the (±)-threo and (±)-erythro diastereomers (Drug Test Anal 9:347-357)",
+      "authors": [
+        "G. McLaughlin",
+        "N. Morris",
+        "P. V. Kavanagh",
+        "J. D. Power",
+        "G. Dowling",
+        "B. Twamley",
+        "J. O'Brien",
+        "G. Hessman",
+        "B. Murphy",
+        "D. Walther",
+        "J. S. Partilla",
+        "M. H. Baumann",
+        "S. D. Brandt"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2167",
+      "url": "https://doi.org/10.1002/dta.2167",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "moore1994",
+      "type": "paper",
+      "title": "Determination and in-depth chromatographic analyses of alkaloids in South American and greenhouse-cultivated coca leaves (J Chromatogr A 659:163-175)",
+      "authors": [
+        "J. M. Moore",
+        "J. F. Casale",
+        "R. F. Klein",
+        "D. A. Cooper",
+        "J. Lydon"
+      ],
+      "year": 1994,
+      "doi": "10.1016/0021-9673(94)85018-6",
+      "url": "https://doi.org/10.1016/0021-9673(94)85018-6",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "janzen1992",
+      "type": "paper",
+      "title": "Comparison analysis of illicit cocaine samples (J Forensic Sci 37:436-445)",
+      "authors": [
+        "K. E. Janzen",
+        "L. Walter",
+        "A. R. Fernando"
+      ],
+      "year": 1992,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1500892/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "casale2007",
+      "type": "paper",
+      "title": "Four new illicit cocaine impurities from the oxidation of crude cocaine base: formation and characterization of the diastereomeric 2,3-dihydroxy-3-phenylpropionylecgonine methyl esters from cis- and trans-cinnamoylcocaine (J Forensic Sci 52:860-866)",
+      "authors": [
+        "J. F. Casale",
+        "P. A. Hays",
+        "S. G. Toske",
+        "A. L. Berrier"
+      ],
+      "year": 2007,
+      "doi": "10.1111/j.1556-4029.2007.00476.x",
+      "url": "https://doi.org/10.1111/j.1556-4029.2007.00476.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "oliynyk2012",
+      "type": "paper",
+      "title": "The pharmacology of actoprotectors: practical application for improvement of mental and physical performance (Biomol Ther 20:446-456)",
+      "authors": [
+        "S. Oliynyk",
+        "S. Oh"
+      ],
+      "year": 2012,
+      "doi": "10.4062/biomolther.2012.20.5.446",
+      "url": "https://doi.org/10.4062/biomolther.2012.20.5.446",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "rice2018",
+      "type": "paper",
+      "title": "Stereochemistry of ephedrine and its environmental significance: Exposure and effects directed approach (J Hazard Mater 348:39-46)",
+      "authors": [
+        "J. Rice",
+        "K. Proctor",
+        "L. Lopardo",
+        "S. Evans",
+        "B. Kasprzyk-Hordern"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jhazmat.2018.01.020",
+      "url": "https://doi.org/10.1016/j.jhazmat.2018.01.020",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nuvigil-label",
+      "type": "institution",
+      "title": "NUVIGIL (armodafinil) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a69631d0-1263-769e-b232-4ab9160e0fa3",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20260803160041/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a69631d0-1263-769e-b232-4ab9160e0fa3"
+    },
+    {
+      "id": "atomoxetine-label",
+      "type": "institution",
+      "title": "Atomoxetine capsules (Glenmark Pharmaceuticals Inc., USA), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20260803160003/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f"
+    },
+    {
+      "id": "bupropion-label",
+      "type": "institution",
+      "title": "Bupropion hydrochloride extended-release tablets (XL) (NuCare Pharmaceuticals Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5d44daa9-d0e9-eec0-e063-6394a90a81e4",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
     }
   ]
 }

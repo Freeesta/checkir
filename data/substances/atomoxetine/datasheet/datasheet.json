@@ -1,0 +1,85 @@
+{
+  "schema": "datasheet/1",
+  "substance": "atomoxetine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "4-hydroxyatomoxetine",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP2D6"
+        ],
+        "source": "atomoxetine-label"
+      },
+      {
+        "from": "4-hydroxyatomoxetine",
+        "to": "4-hydroxyatomoxetine-o-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "atomoxetine-label"
+      },
+      {
+        "from": "parent",
+        "to": "n-desmethylatomoxetine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP2C19"
+        ],
+        "source": "atomoxetine-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "4-hydroxyatomoxetine",
+        "active": true,
+        "source": "atomoxetine-label"
+      },
+      {
+        "name_key": "4-hydroxyatomoxetine-o-glucuronide",
+        "active": null,
+        "marker": true,
+        "source": "atomoxetine-label"
+      },
+      {
+        "name_key": "n-desmethylatomoxetine",
+        "active": null,
+        "source": "atomoxetine-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 5.2,
+      "max": 21.6,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "atomoxetine-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
