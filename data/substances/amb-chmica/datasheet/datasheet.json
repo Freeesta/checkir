@@ -1,0 +1,57 @@
+{
+  "schema": "datasheet/1",
+  "substance": "amb-chmica",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "O-demethylated (acid) metabolite",
+        "reaction": "o_demethylation",
+        "source": "mardal2018-ambchmica"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated metabolites (methylhexyl moiety)",
+        "reaction": "hydroxylation",
+        "source": "mardal2018-ambchmica"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "o-demethylated",
+        "active": null,
+        "marker": true,
+        "source": "morales2022-zebrafish"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-ethylmethcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-Ethylmethcathinone",
+      "synonyms": [
+        "2-EMC"
+      ]
+    },
+    "it": {
+      "preferred": "2-Ethylmethcathinone",
+      "synonyms": [
+        "2-EMC"
+      ]
+    }
+  },
+  "iupac": "1-(2-ethylphenyl)-2-(methylamino)propan-1-one",
+  "formula": "C12H17NO",
+  "molar_mass_g_mol": 191.27,
+  "smiles": "CCC1=CC=CC=C1C(=O)C(C)NC",
+  "inchi": "InChI=1S/C12H17NO/c1-4-10-7-5-6-8-11(10)12(14)9(2)13-3/h5-9,13H,4H2,1-3H3",
+  "inchikey": "FHQMNXWCKXZQEW-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1863642-82-3",
+    "pubchem_cid": 91693752
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

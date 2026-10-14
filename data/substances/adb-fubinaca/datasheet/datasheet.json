@@ -1,0 +1,81 @@
+{
+  "schema": "datasheet/1",
+  "substance": "adb-fubinaca",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "alkyl and indazole hydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "carlier2017-adb-fubinaca"
+      },
+      {
+        "from": "parent",
+        "to": "terminal amide hydrolysis metabolites",
+        "reaction": "other",
+        "source": "carlier2017-adb-fubinaca"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "glucuronides",
+        "reaction": "glucuronidation",
+        "source": "carlier2017-adb-fubinaca"
+      },
+      {
+        "from": "parent",
+        "to": "dehydrogenated metabolites",
+        "reaction": "other",
+        "source": "carlier2017-adb-fubinaca"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "adb-fubinaca-hydroxyalkyl",
+        "active": null,
+        "marker": true,
+        "source": "carlier2017-adb-fubinaca"
+      },
+      {
+        "name_key": "adb-fubinaca-hydroxydehydroalkyl",
+        "active": null,
+        "marker": true,
+        "source": "carlier2017-adb-fubinaca"
+      },
+      {
+        "name_key": "adb-fubinaca-hydroxyindazole",
+        "active": null,
+        "marker": true,
+        "source": "carlier2017-adb-fubinaca"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
