@@ -16384,6 +16384,204 @@
       "tier": "review",
       "license": "cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "markowitz2017",
+      "type": "paper",
+      "title": "The Clinical Pharmacokinetics of Amphetamines Utilized in the Treatment of Attention-Deficit/Hyperactivity Disorder (J Child Adolesc Psychopharmacol 27:678-689)",
+      "authors": [
+        "J. S. Markowitz",
+        "K. S. Patrick"
+      ],
+      "year": 2017,
+      "doi": "10.1089/cap.2017.0071",
+      "url": "https://doi.org/10.1089/cap.2017.0071",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "wan1978",
+      "type": "paper",
+      "title": "Kinetics, salivary excretion of amphetamine isomers, and effect of urinary pH (Clin Pharmacol Ther 23:585-90)",
+      "authors": [
+        "S. H. Wan",
+        "S. B. Matin",
+        "D. L. Azarnoff"
+      ],
+      "year": 1978,
+      "doi": "10.1002/cpt1978235585",
+      "url": "https://doi.org/10.1002/cpt1978235585",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "poklis1998",
+      "type": "paper",
+      "title": "Urinary excretion of d-amphetamine following oral doses in humans: implications for urine drug testing (J Anal Toxicol 22:481-6)",
+      "authors": [
+        "A. Poklis",
+        "J. Still",
+        "P. W. Slattum",
+        "L. F. Edinboro",
+        "J. J. Saady",
+        "A. Costantino"
+      ],
+      "year": 1998,
+      "doi": "10.1093/jat/22.6.481",
+      "url": "https://doi.org/10.1093/jat/22.6.481",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "cody2004",
+      "type": "paper",
+      "title": "Amphetamine excretion profile following multidose administration of mixed salt amphetamine preparation (J Anal Toxicol 28:563-74)",
+      "authors": [
+        "J. T. Cody",
+        "S. Valtier",
+        "S. L. Nelson"
+      ],
+      "year": 2004,
+      "doi": "10.1093/jat/28.7.563",
+      "url": "https://doi.org/10.1093/jat/28.7.563",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "helland2025",
+      "type": "paper",
+      "title": "Drug detection in oral fluid and urine after single therapeutic doses of dexamphetamine, lisdexamphetamine, and methylphenidate in healthy volunteers (J Anal Toxicol 49:65-72)",
+      "authors": [
+        "A. Helland",
+        "S. Muller",
+        "O. Spigset",
+        "H. M. Krabseth",
+        "M. Hansen",
+        "R. B. Skråstad"
+      ],
+      "year": 2025,
+      "doi": "10.1093/jat/bkae097",
+      "url": "https://doi.org/10.1093/jat/bkae097",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "miranda2007",
+      "type": "paper",
+      "title": "Determination of amphetamine, methamphetamine, and hydroxyamphetamine derivatives in urine by gas chromatography-mass spectrometry and its relation to CYP2D6 phenotype of drug users (J Anal Toxicol 31:31-6)",
+      "authors": [
+        "E. Miranda-G",
+        "M. Sordo",
+        "A. M. Salazar",
+        "C. Contreras",
+        "L. Bautista",
+        "A. E. R. García",
+        "P. Ostrosky-Wegman"
+      ],
+      "year": 2007,
+      "doi": "10.1093/jat/31.1.31",
+      "url": "https://doi.org/10.1093/jat/31.1.31",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "rothman2001",
+      "type": "paper",
+      "title": "Amphetamine-type central nervous system stimulants release norepinephrine more potently than they release dopamine and serotonin (Synapse 39:32-41)",
+      "authors": [
+        "R. B. Rothman",
+        "M. H. Baumann",
+        "C. M. Dersch",
+        "D. V. Romero",
+        "K. C. Rice",
+        "F. I. Carroll",
+        "J. S. Partilla"
+      ],
+      "year": 2001,
+      "doi": "10.1002/1098-2396(20010101)39:1<32::AID-SYN5>3.0.CO;2-3",
+      "url": "https://doi.org/10.1002/1098-2396(20010101)39:1<32::AID-SYN5>3.0.CO;2-3",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "sulzer2005",
+      "type": "paper",
+      "title": "Mechanisms of neurotransmitter release by amphetamines: a review (Prog Neurobiol 75:406-33)",
+      "authors": [
+        "D. Sulzer",
+        "M. S. Sonders",
+        "N. W. Poulsen",
+        "A. Galli"
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.pneurobio.2005.04.003",
+      "url": "https://doi.org/10.1016/j.pneurobio.2005.04.003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "spiller2013",
+      "type": "paper",
+      "title": "Overdose of drugs for attention-deficit hyperactivity disorder: clinical presentation, mechanisms of toxicity, and management (CNS Drugs 27:531-43)",
+      "authors": [
+        "H. A. Spiller",
+        "H. L. Hays",
+        "A. Aleguas"
+      ],
+      "year": 2013,
+      "doi": "10.1007/s40263-013-0084-8",
+      "url": "https://doi.org/10.1007/s40263-013-0084-8",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "carvalho2012",
+      "type": "paper",
+      "title": "Toxicity of amphetamines: an update (Arch Toxicol 86:1167-231)",
+      "authors": [
+        "M. Carvalho",
+        "H. Carmo",
+        "V. M. Costa",
+        "J. P. Capela",
+        "H. Pontes",
+        "F. Remião",
+        "F. Carvalho",
+        "M. d. L. Bastos"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00204-012-0815-5",
+      "url": "https://doi.org/10.1007/s00204-012-0815-5",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "kirkpatrick2012",
+      "type": "paper",
+      "title": "Comparison of intranasal methamphetamine and d-amphetamine self-administration by humans (Addiction 107:783-91)",
+      "authors": [
+        "M. G. Kirkpatrick",
+        "E. W. Gunderson",
+        "C. E. Johanson",
+        "F. R. Levin",
+        "R. W. Foltin",
+        "C. L. Hart"
+      ],
+      "year": 2012,
+      "doi": "10.1111/j.1360-0443.2011.03706.x",
+      "url": "https://doi.org/10.1111/j.1360-0443.2011.03706.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
