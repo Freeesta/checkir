@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "nitrazolam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Nitrazolam"
+    },
+    "it": {
+      "preferred": "Nitrazolam"
+    }
+  },
+  "iupac": "1-methyl-8-nitro-6-phenyl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepine",
+  "formula": "C17H13N5O2",
+  "molar_mass_g_mol": 319.32,
+  "smiles": "CC1=NN=C2N1C3=C(C=C(C=C3)[N+](=O)[O-])C(=NC2)C4=CC=CC=C4",
+  "inchi": "InChI=1S/C17H13N5O2/c1-11-19-20-16-10-18-17(12-5-3-2-4-6-12)14-9-13(22(23)24)7-8-15(14)21(11)16/h2-9H,10H2,1H3",
+  "inchikey": "OYRPNABWTHDOFK-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "28910-99-8",
+    "pubchem_cid": 20317278
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

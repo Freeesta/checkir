@@ -1,0 +1,73 @@
+{
+  "schema": "datasheet/1",
+  "substance": "metizolam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "benzodiazepines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "ethyl-hydroxymetizolam",
+        "reaction": "hydroxylation",
+        "source": "kintz2017"
+      },
+      {
+        "from": "parent",
+        "to": "n-hydroxymetizolam",
+        "reaction": "hydroxylation",
+        "source": "kintz2017"
+      },
+      {
+        "from": "ethyl-hydroxymetizolam",
+        "to": "ethyl-hydroxymetizolam-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "kintz2017"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "ethyl-hydroxymetizolam",
+        "active": null,
+        "source": "kintz2017"
+      },
+      {
+        "name_key": "n-hydroxymetizolam",
+        "active": null,
+        "source": "kintz2017"
+      },
+      {
+        "name_key": "ethyl-hydroxymetizolam-glucuronide",
+        "active": null,
+        "source": "kintz2017"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
