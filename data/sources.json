@@ -9433,6 +9433,375 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "franz2017-mdmb-chmica",
+      "type": "paper",
+      "title": "Phase I metabolism of the highly potent synthetic cannabinoid MDMB-CHMICA and detection in human urine samples (Drug Test Anal 9:744-753)",
+      "authors": [
+        "F. Franz",
+        "V. Angerer",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2049",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27504870/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mogler2018",
+      "type": "paper",
+      "title": "Phase I metabolism of the carbazole-derived synthetic cannabinoids EG-018, EG-2201, and MDMB-CHMCZCA and detection in human urine samples (Drug Test Anal 10:1417-1429)",
+      "authors": [
+        "L. Mogler",
+        "F. Franz",
+        "M. Wilde",
+        "L. M. Huppertz",
+        "S. Halter",
+        "V. Angerer",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2398",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29726116/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "presley2019",
+      "type": "paper",
+      "title": "In vitro Phase I metabolism of indazole carboxamide synthetic cannabinoid MDMB-CHMINACA via human liver microsome incubation and high-resolution mass spectrometry (Drug Test Anal 11:1264-1276)",
+      "authors": [
+        "B. C. Presley",
+        "B. K. Logan",
+        "S. A. Jansen-Varnum"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2615",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31108568/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "xu2021",
+      "type": "paper",
+      "title": "Rapid Identification of MDMB-CHMINACA Metabolites Using Zebrafish and Human Liver Microsomes as the Biotransformation System by LC-QE-HF-MS (J Anal Toxicol 44:1012-1026)",
+      "authors": [
+        "D. Q. Xu",
+        "Y. Dai",
+        "W. F. Zhang",
+        "J. F. Wang",
+        "Y. Y. Wang",
+        "Y. Zhang",
+        "Q. L. Zhao",
+        "X. Li"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa001",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32020177/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kong2017",
+      "type": "paper",
+      "title": "Metabolic characterization of (1-(5-fluoropentyl)-1H-indol-3-yl)(4-methyl-1-naphthalenyl)-methanone (MAM-2201) using human liver microsomes and cDNA-overexpressed cytochrome P450 enzymes (Anal Bioanal Chem 409:1667-1680)",
+      "authors": [
+        "T. Y. Kong",
+        "J. H. Kim",
+        "W. G. Choi",
+        "J. Y. Lee",
+        "H. S. Kim",
+        "J. Y. Kim",
+        "M. K. In",
+        "H. S. Lee"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s00216-016-0113-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27924364/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kim2018-mam2201",
+      "type": "paper",
+      "title": "Targeted and non-targeted metabolite identification of MAM-2201 in human, mouse, and rat hepatocytes (Drug Test Anal)",
+      "authors": [
+        "J. H. Kim",
+        "T. Y. Kong",
+        "J. Y. Moon",
+        "K. H. Choi",
+        "Y. Y. Cho",
+        "H. C. Kang",
+        "J. Y. Lee",
+        "H. S. Lee"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2389",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29608249/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "deventer2024",
+      "type": "paper",
+      "title": "In vitro cannabinoid activity profiling of generic ban-evading brominated synthetic cannabinoid receptor agonists and their analogs (Drug Test Anal 16:616-628)",
+      "authors": [
+        "M. H. Deventer",
+        "M. Persson",
+        "C. Norman",
+        "H. Liu",
+        "M. J. Connolly",
+        "N. N. Daéid",
+        "C. McKenzie",
+        "H. Gréen",
+        "C. P. Stove"
+      ],
+      "year": 2024,
+      "doi": "10.1002/dta.3592",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37903509/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "watanabe2019",
+      "type": "paper",
+      "title": "Biotransformation of the New Synthetic Cannabinoid with an Alkene, MDMB-4en-PINACA, by Human Hepatocytes, Human Liver Microsomes, and Human Urine and Blood (AAPS J 22:13)",
+      "authors": [
+        "S. Watanabe",
+        "S. Vikingsson",
+        "A. Åstrand",
+        "H. Gréen",
+        "R. Kronstrand"
+      ],
+      "year": 2019,
+      "doi": "10.1208/s12248-019-0381-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31848852/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "erolozturk2021",
+      "type": "paper",
+      "title": "In Vitro Phase I Metabolism of the Recently Emerged Synthetic MDMB-4en-PINACA and Its Detection in Human Urine Samples (J Anal Toxicol 44:976-984)",
+      "authors": [
+        "Y. Erol Ozturk",
+        "O. Yeter"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32091101/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gu2022",
+      "type": "paper",
+      "title": "Metabolic profiles and screening tactics for MDMB-4en-PINACA in human urine and serum samples (J Pharm Biomed Anal 220:114985)",
+      "authors": [
+        "K. Gu",
+        "S. Qin",
+        "Y. Zhang",
+        "W. Zhang",
+        "G. Xin",
+        "B. Shi",
+        "J. Wang",
+        "Y. Wang",
+        "J. Lu"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.jpba.2022.114985",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35985137/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "norman2020",
+      "type": "paper",
+      "title": "Detection and quantitation of synthetic cannabinoid receptor agonists in infused papers from prisons in a constantly evolving illicit market (Drug Test Anal 12:538-554)",
+      "authors": [
+        "C. Norman",
+        "G. Walker",
+        "B. McKirdy",
+        "C. McDonald",
+        "D. Fletcher",
+        "L. H. Antonides",
+        "O. B. Sutcliffe",
+        "N. Nic Daéid",
+        "C. McKenzie"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2767",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31944624/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kronstrand2022",
+      "type": "paper",
+      "title": "The metabolism of the synthetic cannabinoids ADB-BUTINACA and ADB-4en-PINACA and their detection in forensic toxicology casework and infused papers seized in prisons (Drug Test Anal 14:634-652)",
+      "authors": [
+        "R. Kronstrand",
+        "C. Norman",
+        "S. Vikingsson",
+        "A. Biemans",
+        "B. Valencia Crespo",
+        "D. Edwards",
+        "D. Fletcher",
+        "N. Gilbert",
+        "M. Persson",
+        "R. Reid",
+        "O. Semenova",
+        "F. Al Teneiji",
+        "X. Wu",
+        "J. Dahlén",
+        "N. NicDaéid",
+        "F. Tarbah",
+        "O. B. Sutcliffe",
+        "C. McKenzie",
+        "H. Gréen"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3203",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34811926/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "giorgetti2022",
+      "type": "paper",
+      "title": "Detection of AP-237 and synthetic cannabinoids on an infused letter sent to a German prisoner (Drug Test Anal 14:1779-1784)",
+      "authors": [
+        "A. Giorgetti",
+        "P. Brunetti",
+        "S. Pelotti",
+        "V. Auwärter"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3351",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35918775/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gardner2026",
+      "type": "paper",
+      "title": "Identification and quantification of Δ-9-tetrahydrocannabinol and the synthetic cannabinoid MDMB-4en-PINACA in edible products seized by United Kingdom police in 2024 (Addiction)",
+      "authors": [
+        "M. Gardner",
+        "K. Proctor",
+        "M. Old",
+        "G. Cozier",
+        "O. Sutcliffe",
+        "J. Scott",
+        "S. M. Husbands",
+        "T. P. Freeman",
+        "P. Sunderland",
+        "C. R. Pudney"
+      ],
+      "year": 2026,
+      "doi": "10.1111/add.70611",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42866963/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "osman2026",
+      "type": "paper",
+      "title": "Severe MDMB-4en-PINACA toxicity following use of an electronic vaping device (Clin Toxicol (Phila))",
+      "authors": [
+        "A. Osman",
+        "L. Starbrook",
+        "M. Pucci"
+      ],
+      "year": 2026,
+      "doi": "10.1080/15563650.2026.2743727",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42861996/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "dearaujo2023",
+      "type": "paper",
+      "title": "The mystery behind the apprehensions of the selective cannabinoid receptor type-2 agonist BZO-HEXOXIZID (MDA-19) as a drug of abuse (Forensic Toxicol 41:142-150)",
+      "authors": [
+        "K. R. G. de Araujo",
+        "A. L. Fabris",
+        "L. F. Neves Júnior",
+        "J. de Carvalho Ponce",
+        "A. L. Soares",
+        "J. L. Costa",
+        "M. Yonamine"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s11419-022-00646-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36652069/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lee2022-oxizid",
+      "type": "paper",
+      "title": "Identification of Optimal Urinary Biomarkers of Synthetic Cannabinoids BZO-HEXOXIZID, BZO-POXIZID, 5F-BZO-POXIZID, and BZO-CHMOXIZID for Illicit Abuse Monitoring (Clin Chem 68:1436-1448)",
+      "authors": [
+        "K. Z. H. Lee",
+        "Z. Wang",
+        "C. Y. Fong",
+        "E. M. L. Goh",
+        "H. Y. Moy",
+        "E. C. Y. Chan"
+      ],
+      "year": 2022,
+      "doi": "10.1093/clinchem/hvac138",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36175111/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "monti2025",
+      "type": "paper",
+      "title": "Tail-less precursors in synthetic cannabinoid production: investigating a clandestine laboratory, seized samples, and CB(1) activity (Arch Toxicol 99:3641-3661)",
+      "authors": [
+        "M. C. Monti",
+        "T. Rautio",
+        "M. H. Deventer",
+        "M. Schläpfer",
+        "J. Tveit",
+        "A. J. Krotulski",
+        "V. Marland",
+        "R. Reid",
+        "N. N. Daeid",
+        "C. McKenzie",
+        "C. P. Stove",
+        "H. Green",
+        "C. Norman"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s00204-025-04086-0",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40407906/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }

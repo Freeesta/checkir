@@ -373,7 +373,20 @@
     "jwh251": "jwh-251",
     "jwh307": "jwh-307",
     "jwh308": "jwh-308",
-    "jwh368": "jwh-368"
+    "jwh368": "jwh-368",
+    "jwh369": "jwh-369",
+    "mam2201": "mam-2201",
+    "5f-jwh-122": "mam-2201",
+    "4-methyl-am-2201": "mam-2201",
+    "mda19": "mda-19",
+    "bzo-hexoxizid": "mda-19",
+    "mdmb-4-en-pinaca": "mdmb-4en-pinaca",
+    "mdmb-peninaca": "mdmb-4en-pinaca",
+    "mdmb-5-br-inaca": "mdmb-5br-inaca",
+    "5br-mdmb-inaca": "mdmb-5br-inaca",
+    "egmb-chminaca": "mdmb-chmczca",
+    "mmb-chminaca": "mdmb-chmica",
+    "mdmb-n-chm": "mdmb-chminaca"
   },
   "schema": "aliases/1"
 }
