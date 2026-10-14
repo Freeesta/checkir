@@ -16222,6 +16222,104 @@
       "consulted": "2026-10-14"
     },
     {
+      "id": "holze2020",
+      "title": "Acute dose-dependent effects of lysergic acid diethylamide in a double-blind placebo-controlled study in healthy subjects (Neuropsychopharmacology 46(3):537-544)",
+      "authors": [
+        "F. Holze",
+        "P. Vizeli",
+        "L. Ley",
+        "F. Müller",
+        "P. Dolder",
+        "M. Stocker",
+        "U. Duthaler",
+        "N. Varghese",
+        "A. Eckert",
+        "S. Borgwardt",
+        "M. E. Liechti"
+      ],
+      "year": 2020,
+      "doi": "10.1038/s41386-020-00883-6",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1038/s41386-020-00883-6"
+    },
+    {
+      "id": "holze2020-micro",
+      "title": "Pharmacokinetics and pharmacodynamics of lysergic acid diethylamide microdoses in healthy participants (Clin Pharmacol Ther 109(3):658-666)",
+      "authors": [
+        "F. Holze",
+        "M. E. Liechti",
+        "N. R. P. W. Hutten",
+        "N. L. Mason",
+        "P. C. Dolder",
+        "E. L. Theunissen",
+        "U. Duthaler",
+        "A. Feilding",
+        "J. G. Ramaekers",
+        "K. P. C. Kuypers"
+      ],
+      "year": 2020,
+      "doi": "10.1002/cpt.2057",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1002/cpt.2057"
+    },
+    {
+      "id": "dolder2015",
+      "title": "Pharmacokinetics and concentration-effect relationship of oral LSD in humans (Int J Neuropsychopharmacol 19(1):pyv072)",
+      "authors": [
+        "P. C. Dolder",
+        "Y. Schmid",
+        "M. Haschke",
+        "K. M. Rentsch",
+        "M. E. Liechti"
+      ],
+      "year": 2015,
+      "doi": "10.1093/ijnp/pyv072",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1093/ijnp/pyv072"
+    },
+    {
+      "id": "rickli2016",
+      "title": "Receptor interaction profiles of novel psychoactive tryptamines compared with classic hallucinogens (Eur Neuropsychopharmacol 26(8):1327-1337)",
+      "authors": [
+        "A. Rickli",
+        "O. D. Moning",
+        "M. C. Hoener",
+        "M. E. Liechti"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.euroneuro.2016.05.001",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/j.euroneuro.2016.05.001"
+    },
+    {
+      "id": "bonson1996",
+      "title": "Chronic administration of serotonergic antidepressants attenuates the subjective effects of LSD in humans (Neuropsychopharmacology 14(6):425-436)",
+      "authors": [
+        "K. R. Bonson",
+        "J. W. Buckholtz",
+        "D. L. Murphy"
+      ],
+      "year": 1996,
+      "doi": "10.1016/0893-133X(95)00145-4",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/0893-133X(95)00145-4"
+    },
+    {
       "id": "jeffcoat1989",
       "type": "paper",
       "title": "Cocaine disposition in humans after intravenous injection, nasal insufflation (snorting), or smoking (Drug Metab Dispos 17(2):153-159)",
