@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-eapb",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-EAPB",
+      "synonyms": [
+        "5-(2-ethylaminopropyl)benzofuran",
+        "1-(1-benzofuran-5-yl)-N-ethylpropan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "5-EAPB",
+      "synonyms": [
+        "5-(2-etilamminopropil)benzofurano"
+      ]
+    }
+  },
+  "iupac": "1-(1-benzofuran-5-yl)-N-ethylpropan-2-amine",
+  "formula": "C13H17NO",
+  "molar_mass_g_mol": 203.28,
+  "smiles": "CCNC(C)CC1=CC2=C(C=C1)OC=C2",
+  "inchi": "InChI=1S/C13H17NO/c1-3-14-10(2)8-11-4-5-13-12(9-11)6-7-15-13/h4-7,9-10,14H,3,8H2,1-2H3",
+  "inchikey": "ZBZDDOARNPAMSP-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1445566-01-7",
+    "pubchem_cid": 102336590
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

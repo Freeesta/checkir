@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-mapdi",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-MAPDI",
+      "synonyms": [
+        "N-methyl-5-(2-aminopropyl)indane",
+        "1-(2,3-dihydro-1H-inden-5-yl)-N-methylpropan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "5-MAPDI",
+      "synonyms": [
+        "N-metil-5-(2-amminopropil)indano"
+      ]
+    }
+  },
+  "iupac": "1-(2,3-dihydro-1H-inden-5-yl)-N-methylpropan-2-amine",
+  "formula": "C13H19N",
+  "molar_mass_g_mol": 189.3,
+  "smiles": "CC(CC1=CC2=C(CCC2)C=C1)NC",
+  "inchi": "InChI=1S/C13H19N/c1-10(14-2)8-11-6-7-12-4-3-5-13(12)9-11/h6-7,9-10,14H,3-5,8H2,1-2H3",
+  "inchikey": "MHBKJTHGGWQKSG-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1310153-27-5",
+    "pubchem_cid": 57461970
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
