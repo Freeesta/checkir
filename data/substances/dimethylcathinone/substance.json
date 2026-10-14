@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "dimethylcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Dimethylcathinone (metamfepramone)",
+      "synonyms": [
+        "N,N-dimethylcathinone",
+        "metamfepramone",
+        "dimethylpropion"
+      ]
+    },
+    "it": {
+      "preferred": "Dimetilcatinone (metamfepramone)",
+      "synonyms": [
+        "N,N-dimetilcatinone",
+        "metamfepramone"
+      ]
+    }
+  },
+  "iupac": "2-(dimethylamino)-1-phenylpropan-1-one",
+  "formula": "C11H15NO",
+  "molar_mass_g_mol": 177.24,
+  "smiles": "CC(C(=O)C1=CC=CC=C1)N(C)C",
+  "inchi": "InChI=1S/C11H15NO/c1-9(12(2)3)11(13)10-7-5-4-6-8-10/h4-9H,1-3H3",
+  "inchikey": "KBHMHROOFHVLBA-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "15351-09-4",
+    "pubchem_cid": 71872
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
