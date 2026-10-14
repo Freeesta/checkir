@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-ethylethcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-Ethylethcathinone",
+      "synonyms": [
+        "4-EEC"
+      ]
+    },
+    "it": {
+      "preferred": "4-Ethylethcathinone",
+      "synonyms": [
+        "4-EEC"
+      ]
+    }
+  },
+  "iupac": "2-(ethylamino)-1-(4-ethylphenyl)propan-1-one",
+  "formula": "C13H19NO",
+  "molar_mass_g_mol": 205.3,
+  "smiles": "CCC1=CC=C(C=C1)C(=O)C(C)NCC",
+  "inchi": "InChI=1S/C13H19NO/c1-4-11-6-8-12(9-7-11)13(15)10(3)14-5-2/h6-10,14H,4-5H2,1-3H3",
+  "inchikey": "FAXVCSOMTSWQNT-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1225619-32-8",
+    "pubchem_cid": 82100224
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

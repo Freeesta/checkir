@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-chloropentedrone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-Chloropentedrone",
+      "synonyms": [
+        "4-CPD"
+      ]
+    },
+    "it": {
+      "preferred": "4-Chloropentedrone",
+      "synonyms": [
+        "4-CPD"
+      ]
+    }
+  },
+  "iupac": "1-(4-chlorophenyl)-2-(methylamino)pentan-1-one",
+  "formula": "C12H16ClNO",
+  "molar_mass_g_mol": 225.7,
+  "smiles": "CCCC(C(=O)C1=CC=C(C=C1)Cl)NC",
+  "inchi": "InChI=1S/C12H16ClNO/c1-3-4-11(14-2)12(15)9-5-7-10(13)8-6-9/h5-8,11,14H,3-4H2,1-2H3",
+  "inchikey": "OPCMVVKRCLOEDQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2167949-43-9",
+    "pubchem_cid": 132989289
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
