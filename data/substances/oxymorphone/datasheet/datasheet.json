@@ -1,0 +1,61 @@
+{
+  "schema": "datasheet/1",
+  "substance": "oxymorphone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "semisynthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "oxymorphone-3-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "oxymorphone-label"
+      },
+      {
+        "from": "parent",
+        "to": "6-OH-oxymorphone",
+        "reaction": "reduction_keto",
+        "source": "oxymorphone-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "oxymorphone-3-glucuronide",
+        "active": null,
+        "source": "oxymorphone-label"
+      },
+      {
+        "name_key": "6-oh-oxymorphone",
+        "active": true,
+        "source": "oxymorphone-label"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

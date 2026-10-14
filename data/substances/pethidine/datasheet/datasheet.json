@@ -1,0 +1,60 @@
+{
+  "schema": "datasheet/1",
+  "substance": "pethidine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "normeperidine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP3A4",
+          "CYP2B6"
+        ],
+        "source": "demerol-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "normeperidine",
+        "active": true,
+        "source": "demerol-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 2,
+      "max": 5,
+      "matrix": "plasma",
+      "source": "demerol-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
