@@ -14054,6 +14054,9 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/24573804/",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "wink2016",
       "type": "paper",
       "title": "Diphenidine, a new psychoactive substance: metabolic fate elucidated with rat urine and human liver preparations and detectability in urine using GC-MS, LC-MS, and LC-HR-MS (Drug Test Anal 8(10):1005-1014)",
