@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "dimethazine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Dimethazine",
+      "synonyms": [
+        "Mebolazine",
+        "Dymethazine"
+      ]
+    },
+    "it": {
+      "preferred": "Dimetazina",
+      "synonyms": [
+        "mebolazina"
+      ]
+    }
+  },
+  "iupac": "(2R,3E,5S,8R,9S,10S,13S,14S,17S)-3-[(E)-[(2R,5S,8R,9S,10S,13S,14S,17S)-17-hydroxy-2,10,13,17-tetramethyl-2,4,5,6,7,8,9,11,12,14,15,16-dodecahydro-1H-cyclopenta[a]phenanthren-3-ylidene]hydrazinylidene]-2,10,13,17-tetramethyl-2,4,5,6,7,8,9,11,12,14,15,16-dodecahydro-1H-cyclopenta[a]phenanthren-17-ol",
+  "formula": "C42H68N2O2",
+  "molar_mass_g_mol": 633.0,
+  "smiles": "C[C@H]1/C(=N/N=C\\2/[C@@H](C[C@@]3([C@@H]4[C@H]([C@H]5[C@@]([C@](CC5)(O)C)(CC4)C)CC[C@H]3C2)C)C)/C[C@H]6[C@](C1)([C@@H]7[C@H]([C@H]8[C@@]([C@](CC8)(O)C)(CC7)C)CC6)C",
+  "inchi": "InChI=1S/C42H68N2O2/c1-25-23-37(3)27(9-11-29-31(37)13-17-39(5)33(29)15-19-41(39,7)45)21-35(25)43-44-36-22-28-10-12-30-32(38(28,4)24-26(36)2)14-18-40(6)34(30)16-20-42(40,8)46/h25-34,45-46H,9-24H2,1-8H3/b43-35+,44-36+/t25-,26-,27+,28+,29-,30-,31+,32+,33+,34+,37+,38+,39+,40+,41+,42+/m1/s1",
+  "inchikey": "POPWFGNRCCUJGU-RSSVFQIBSA-N",
+  "external_ids": {
+    "cas": "3625-07-8",
+    "pubchem_cid": 66847280
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
