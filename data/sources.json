@@ -14539,6 +14539,122 @@
       "license": "© marketing authorisation holder; cited as the source of facts only",
       "tier": "agency",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "hong2011",
+      "type": "paper",
+      "title": "Comparison of contents of five ephedrine alkaloids in three official origins of Ephedra Herb in China by high-performance liquid chromatography (J Nat Med 65)",
+      "authors": [
+        "H Hong",
+        "H-B Chen",
+        "D-H Yang",
+        "M-Y Shang",
+        "X Wang",
+        "S-Q Cai",
+        "M Mikage"
+      ],
+      "year": 2011,
+      "doi": "10.1007/s11418-011-0528-8",
+      "url": "https://doi.org/10.1007/s11418-011-0528-8",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "barroso2011",
+      "type": "paper",
+      "title": "Determination of urinary concentrations of pseudoephedrine and cathine after therapeutic administration of pseudoephedrine-containing medications to healthy subjects (Drug Test Anal 3)",
+      "authors": [
+        "O Barroso",
+        "D Goudreault",
+        "M-l Carbó Banús",
+        "C Ayotte",
+        "I Mazzoni",
+        "T Boghosian",
+        "O Rabin"
+      ],
+      "year": 2011,
+      "doi": "10.1002/dta.291",
+      "url": "https://doi.org/10.1002/dta.291",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "helfer2014",
+      "type": "paper",
+      "title": "Elucidation of the metabolites of the novel psychoactive substance 4-methyl-N-ethyl-cathinone (4-MEC) in human urine and pooled liver microsomes by GC-MS and LC-HR-MS/MS techniques (Drug Test Anal 7)",
+      "authors": [
+        "A G Helfer",
+        "A Turcant",
+        "D Boels",
+        "S Ferec",
+        "B Lelièvre",
+        "J Welter",
+        "M R Meyer",
+        "H H Maurer"
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1682",
+      "url": "https://doi.org/10.1002/dta.1682",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "carlier2019",
+      "type": "paper",
+      "title": "Use of cognitive enhancers: methylphenidate and analogs (Eur Rev Med Pharmacol Sci 23)",
+      "authors": [
+        "J Carlier",
+        "R Giorgetti",
+        "M R Varì",
+        "F Pirani",
+        "G Ricci",
+        "F P Busardò"
+      ],
+      "year": 2019,
+      "doi": "10.26355/eurrev_201901_16741",
+      "url": "https://doi.org/10.26355/eurrev_201901_16741",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "sakamoto2023",
+      "type": "paper",
+      "title": "Analytical characterization and differentiation between threo- and erythro-4-fluoroethylphenidate (Forensic Toxicol 41)",
+      "authors": [
+        "M Sakamoto",
+        "T Suzuki",
+        "D Teraoka",
+        "K Tanaka",
+        "Y Saeki",
+        "K Kishimoto",
+        "M Nagashima",
+        "J Nakajima",
+        "J Suzuki",
+        "A Inomata",
+        "T Moriyasu",
+        "H Fukaya"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s11419-023-00664-y",
+      "url": "https://doi.org/10.1007/s11419-023-00664-y",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "jin2008",
+      "type": "paper",
+      "title": "Analysis of indandione anticoagulant rodenticides in animal liver by eluent generator reagent free ion chromatography coupled with electrospray mass spectrometry (J Chromatogr A 1213)",
+      "authors": [
+        "M Jin",
+        "X Chen",
+        "M Ye",
+        "Y Zhu"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.chroma.2008.08.100",
+      "url": "https://doi.org/10.1016/j.chroma.2008.08.100",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
