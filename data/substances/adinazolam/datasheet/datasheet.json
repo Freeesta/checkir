@@ -1,0 +1,78 @@
+{
+  "schema": "datasheet/1",
+  "substance": "adinazolam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "benzodiazepines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "n-desmethyladinazolam",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP3A4",
+          "CYP2C19"
+        ],
+        "source": "venkatakrishnan1998"
+      },
+      {
+        "from": "n-desmethyladinazolam",
+        "to": "didesmethyladinazolam",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP3A4",
+          "CYP2C19",
+          "CYP2C9"
+        ],
+        "source": "venkatakrishnan1998"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "n-desmethyladinazolam",
+        "active": true,
+        "source": "venkatakrishnan2005"
+      },
+      {
+        "name_key": "didesmethyladinazolam",
+        "active": null,
+        "source": "venkatakrishnan1998"
+      }
+    ],
+    "half_life_h": {
+      "min": 2.9,
+      "max": 2.9,
+      "matrix": "plasma",
+      "route": "intravenous",
+      "source": "venkatakrishnan2005"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

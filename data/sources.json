@@ -11280,6 +11280,159 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "leung2024",
+      "type": "paper",
+      "title": "N,N-dimethylpentylone poisoning: Clinical manifestations, analytical detection, and metabolic characterization (Forensic Sci Int 361:112116)",
+      "authors": [
+        "Leung HS",
+        "Tang MHY",
+        "Tong HF",
+        "Chong YK"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.forsciint.2024.112116",
+      "url": "https://doi.org/10.1016/j.forsciint.2024.112116",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "fogarty2025",
+      "type": "paper",
+      "title": "Toxicological evaluation, postmortem case descriptions, and pharmacological activity of N,N-dimethylpentylone and related analogs (J Anal Toxicol 49:143-151)",
+      "authors": [
+        "Fogarty MF",
+        "Walton SE",
+        "Truver MT",
+        "Glatfelter GC",
+        "Krotulski AJ",
+        "Papsun DM",
+        "Lamb M",
+        "Chronister CW",
+        "Goldberger BA",
+        "Walther D",
+        "Barba K",
+        "Baumann MH",
+        "Logan BK"
+      ],
+      "year": 2025,
+      "doi": "10.1093/jat/bkaf002",
+      "url": "https://doi.org/10.1093/jat/bkaf002",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "venkatakrishnan1998",
+      "type": "paper",
+      "title": "Kinetic characterization and identification of the enzymes responsible for the hepatic biotransformation of adinazolam and N-desmethyladinazolam in man (J Pharm Pharmacol 50:265-74)",
+      "authors": [
+        "Venkatakrishnan K",
+        "von Moltke LL",
+        "Duan SX",
+        "Fleishaker JC",
+        "Shader RI",
+        "Greenblatt DJ"
+      ],
+      "year": 1998,
+      "doi": "10.1111/j.2042-7158.1998.tb06859.x",
+      "url": "https://doi.org/10.1111/j.2042-7158.1998.tb06859.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "venkatakrishnan2005",
+      "type": "paper",
+      "title": "Kinetics and dynamics of intravenous adinazolam, N-desmethyl adinazolam, and alprazolam in healthy volunteers (J Clin Pharmacol 45:529-37)",
+      "authors": [
+        "Venkatakrishnan K",
+        "Culm KE",
+        "Ehrenberg BL",
+        "Harmatz JS",
+        "Corbett KE",
+        "Fleishaker JC",
+        "Greenblatt DJ"
+      ],
+      "year": 2005,
+      "doi": "10.1177/0091270004269105",
+      "url": "https://doi.org/10.1177/0091270004269105",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "borisova2021",
+      "type": "paper",
+      "title": "GABAA receptor agonist cinazepam and its active metabolite 3-hydroxyphenazepam act differently at the presynaptic site (Eur Neuropsychopharmacol 45:39-51)",
+      "authors": [
+        "Borisova T",
+        "Pozdnyakova N",
+        "Dudarenko M",
+        "Krisanova N",
+        "Andronati S"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.euroneuro.2021.03.013",
+      "url": "https://doi.org/10.1016/j.euroneuro.2021.03.013",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "luo2025",
+      "type": "paper",
+      "title": "Characterizing the in vitro metabolic features of seven α-pyrrolidinophenone-derived synthetic cathinone-type new psychoactive substances (Arch Toxicol 99:4145-4158)",
+      "authors": [
+        "Luo X",
+        "Zhang F",
+        "Huang K",
+        "Liu X",
+        "Yang N",
+        "Luo Q"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s00204-025-04097-x",
+      "url": "https://doi.org/10.1007/s00204-025-04097-x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "meltzer2006",
+      "type": "paper",
+      "title": "1-(4-Methylphenyl)-2-pyrrolidin-1-yl-pentan-1-one (Pyrovalerone) analogues: a promising class of monoamine uptake inhibitors (J Med Chem 49:1420-32)",
+      "authors": [
+        "Meltzer PC",
+        "Butler D",
+        "Deschamps JR",
+        "Madras BK"
+      ],
+      "year": 2006,
+      "doi": "10.1021/jm050797a",
+      "url": "https://doi.org/10.1021/jm050797a",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "zherdev1985",
+      "type": "paper",
+      "title": "[Pharmacokinetics of fenazepam and its metabolite 3-oxyfenazepam in animals of different species and in man] (Farmakol Toksikol 48:31-5)",
+      "authors": [
+        "Zherdev VP",
+        "Martynova LA",
+        "Caccia S",
+        "Garattini S",
+        "Ekonomov AL"
+      ],
+      "year": 1985,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2858403/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
