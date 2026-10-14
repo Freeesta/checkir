@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "akb-57",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "AKB-57",
+      "synonyms": [
+        "AKB57",
+        "APINAC"
+      ]
+    },
+    "it": {
+      "preferred": "AKB-57",
+      "synonyms": [
+        "AKB57",
+        "APINAC"
+      ]
+    }
+  },
+  "iupac": "1-adamantyl 1-pentylindazole-3-carboxylate",
+  "formula": "C23H30N2O2",
+  "molar_mass_g_mol": 366.5,
+  "smiles": "CCCCCN1C2=CC=CC=C2C(=N1)C(=O)OC34CC5CC(C3)CC(C5)C4",
+  "inchi": "InChI=1S/C23H30N2O2/c1-2-3-6-9-25-20-8-5-4-7-19(20)21(24-25)22(26)27-23-13-16-10-17(14-23)12-18(11-16)15-23/h4-5,7-8,16-18H,2-3,6,9-15H2,1H3",
+  "inchikey": "KCCVWUAAHDXNNQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2219331-93-6",
+    "pubchem_cid": 129532609
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

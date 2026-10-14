@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "cannabinol",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Cannabinol",
+      "synonyms": [
+        "CBN"
+      ]
+    },
+    "it": {
+      "preferred": "Cannabinolo",
+      "synonyms": [
+        "CBN"
+      ]
+    }
+  },
+  "iupac": "6,6,9-trimethyl-3-pentylbenzo[c]chromen-1-ol",
+  "formula": "C21H26O2",
+  "molar_mass_g_mol": 310.4,
+  "smiles": "CCCCCC1=CC(=C2C(=C1)OC(C3=C2C=C(C=C3)C)(C)C)O",
+  "inchi": "InChI=1S/C21H26O2/c1-5-6-7-8-15-12-18(22)20-16-11-14(2)9-10-17(16)21(3,4)23-19(20)13-15/h9-13,22H,5-8H2,1-4H3",
+  "inchikey": "VBGLYOIFKLUMQG-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "521-35-7",
+    "pubchem_cid": 2543
+  },
+  "classes": {
+    "chemical": [
+      "plant_based"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
