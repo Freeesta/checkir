@@ -1,0 +1,43 @@
+## molecule
+
+Phenobarbital, 5-ethyl-5-phenyl-1,3-diazinane-2,4,6-trione. Formula C12H12N2O3, 232.2 g/mol. Identity checked on PubChem. [f:pubchem]
+
+## category
+
+Chemical class: other substances. It is a barbiturate, and no family sheet covers barbiturates, so none is attached. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:phenobarbital-label] [f:checkir-classification]
+
+## origin
+
+A synthetic pharmaceutical substance: a barbiturate. [f:phenobarbital-label]
+
+## metabolism
+
+Barbiturates are metabolized mainly by the hepatic microsomal enzyme system; the inactive metabolites are excreted in urine, less commonly in feces, as glucuronic acid conjugates. The plasma half-life of phenobarbital in adults ranges between 53 and 118 hours, with a mean of 79 hours. [f:phenobarbital-label]
+
+## cuts
+
+Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
+## effects
+
+Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
+## doses
+
+Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
+## risks
+
+Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
+## interactions
+
+Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
+## sources
+
+Sources used for the claims in this sheet: [f:pubchem] [f:checkir-classification] [f:phenobarbital-label]
+
+## license
+
+Text licensed CC BY-SA 4.0. Status: draft written with AI assistance, not yet checked by a chemist or a health professional; every statement must be checked against the cited source before review.
