@@ -1,0 +1,84 @@
+{
+  "schema": "datasheet/1",
+  "substance": "alpha-benzyl-n-methylphenethylamine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "n-demethyl-bnmpa",
+        "reaction": "n_demethylation",
+        "source": "moore1995b"
+      },
+      {
+        "from": "parent",
+        "to": "p-hydroxy-bnmpa",
+        "reaction": "hydroxylation",
+        "source": "moore1995b"
+      },
+      {
+        "from": "n-demethyl-bnmpa",
+        "to": "p-hydroxy-n-demethyl-bnmpa",
+        "reaction": "hydroxylation",
+        "source": "moore1995b"
+      },
+      {
+        "from": "parent",
+        "to": "1-3-diphenyl-2-propanone",
+        "reaction": "deamination",
+        "source": "moore1995b"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "n-demethyl-bnmpa",
+        "active": null,
+        "source": "moore1995b"
+      },
+      {
+        "name_key": "p-hydroxy-bnmpa",
+        "active": null,
+        "marker": true,
+        "source": "moore1996"
+      },
+      {
+        "name_key": "p-hydroxy-n-demethyl-bnmpa",
+        "active": null,
+        "marker": true,
+        "source": "moore1996"
+      },
+      {
+        "name_key": "1-3-diphenyl-2-propanone",
+        "active": null,
+        "source": "moore1995b"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

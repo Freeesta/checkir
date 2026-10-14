@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "clobenzorex",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Clobenzorex",
+      "synonyms": [
+        "(2S)-N-[(2-chlorophenyl)methyl]-1-phenylpropan-2-amine",
+        "N-(2-chlorobenzyl)amphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "Clobenzorex",
+      "synonyms": [
+        "N-(2-clorobenzil)anfetamina"
+      ]
+    }
+  },
+  "iupac": "(2S)-N-[(2-chlorophenyl)methyl]-1-phenylpropan-2-amine",
+  "formula": "C16H18ClN",
+  "molar_mass_g_mol": 259.8,
+  "smiles": "C[C@@H](CC1=CC=CC=C1)NCC2=CC=CC=C2Cl",
+  "inchi": "InChI=1S/C16H18ClN/c1-13(11-14-7-3-2-4-8-14)18-12-15-9-5-6-10-16(15)17/h2-10,13,18H,11-12H2,1H3/t13-/m0/s1",
+  "inchikey": "LRXXRIXDSAEIOR-ZDUSSCGKSA-N",
+  "external_ids": {
+    "cas": "13364-32-4",
+    "pubchem_cid": 735998
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
