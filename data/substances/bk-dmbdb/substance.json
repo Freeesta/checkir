@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "bk-dmbdb",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "bk-DMBDB",
+      "synonyms": [
+        "dibutylone",
+        "1-(1,3-benzodioxol-5-yl)-2-(dimethylamino)butan-1-one"
+      ]
+    },
+    "it": {
+      "preferred": "bk-DMBDB",
+      "synonyms": [
+        "dibutilone",
+        "1-(1,3-benzodiossol-5-il)-2-(dimetilammino)butan-1-one"
+      ]
+    }
+  },
+  "iupac": "1-(1,3-benzodioxol-5-yl)-2-(dimethylamino)butan-1-one",
+  "formula": "C13H17NO3",
+  "molar_mass_g_mol": 235.28,
+  "smiles": "CCC(C(=O)C1=CC2=C(C=C1)OCO2)N(C)C",
+  "inchi": "InChI=1S/C13H17NO3/c1-4-10(14(2)3)13(15)9-5-6-11-12(7-9)17-8-16-11/h5-7,10H,4,8H2,1-3H3",
+  "inchikey": "USEBIPUIVPERGC-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "802286-83-5",
+    "pubchem_cid": 71308182
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
