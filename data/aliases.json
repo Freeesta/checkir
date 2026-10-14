@@ -441,7 +441,22 @@
     "2-5-dmmc": "2-5-dimethylmethcathinone",
     "2-eec": "2-ethylethcathinone",
     "2-emc": "2-ethylmethcathinone",
-    "2-fec": "2-fluoroethcathinone"
+    "2-fec": "2-fluoroethcathinone",
+    "4-cdmc": "4-chloro-n-n-dimethylcathinone",
+    "4-cl-n-n-dmc": "4-chloro-n-n-dimethylcathinone",
+    "4-cbc": "4-chlorobutylcathinone",
+    "4-chloro-n-butylcathinone": "4-chlorobutylcathinone",
+    "4-cec": "4-chloroethcathinone",
+    "4-cpd": "4-chloropentedrone",
+    "4-eec": "4-ethylethcathinone",
+    "4-emc": "4-ethylmethcathinone",
+    "4f-3-me-pvp": "4-fluoro-3-methyl-alpha-pyrrolidinovalerophenone",
+    "4f-3m-pvp": "4-fluoro-3-methyl-alpha-pyrrolidinovalerophenone",
+    "4f-3-me-a-pvp": "4-fluoro-3-methyl-alpha-pyrrolidinovalerophenone",
+    "4-fluoro-3-methyl-pvp": "4-fluoro-3-methyl-alpha-pyrrolidinovalerophenone",
+    "4f-php": "4-fluoro-alpha-php",
+    "4f-a-php": "4-fluoro-alpha-php",
+    "4-fluoro-php": "4-fluoro-alpha-php"
   },
   "schema": "aliases/1"
 }
