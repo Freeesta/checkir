@@ -36,7 +36,7 @@ L'O-acetilazione ha ridotto di circa 10-20 volte la potenza in vitro sul 5-HT2A 
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -48,7 +48,7 @@ L'etichettatura delle caramelle analizzate a Portland era inesatta in molti prod
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

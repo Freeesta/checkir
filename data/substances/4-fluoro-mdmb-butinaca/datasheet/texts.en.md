@@ -24,7 +24,7 @@ In vitro, the ester hydrolysis metabolites of 5F-MDMB-PINACA and 4F-MDMB-BINACA 
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

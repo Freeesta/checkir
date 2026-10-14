@@ -1,4 +1,4 @@
-"""Writes the synthetic example data under data/ (two fictitious substances, one form each, one spectrum, one draft datasheet).
+"""Writes the synthetic example data under data/ (two fictitious substances, one form each, one spectrum, one datasheet).
 
 Nothing here is a real substance or a real measurement: Lorentz bands on a linear baseline with seeded noise, as in
 `ftir_core::synthetic` (same model; this Python copy exists because the data tools are standard-library Python).
@@ -59,7 +59,7 @@ def form(sid: str, key: str) -> dict:
 def spectrum(sid: str, text: str, xs: list[float], ys: list[float]) -> dict:
     sp_id = f"{sid}-base.checkir.001"
     meta = {
-        "schema": "ftir-spectrum/1", "id": sp_id, "form": f"{sid}-base", "role": "reference",
+        "schema": "ftir-spectrum/2", "id": sp_id, "form": f"{sid}-base", "role": "reference",
         "technique": {"method": "ATR", "crystal": "diamond", "reflections": 1},
         "instrument": {"manufacturer": "Synthetic", "model": "Generator"}, "resolution_cm1": 4, "scans": 32,
         "range_cm1": [400, 4000], "step_cm1": 2, "y_axis": "absorbance", "atr_correction": False, "processing": [],
@@ -67,7 +67,6 @@ def spectrum(sid: str, text: str, xs: list[float], ys: list[float]) -> dict:
         "library": {"name": "checkir-demo", "version": "0.0.1"},
         "contributors": [{"public_name": "checkir synthetic generator"}], "license": "CC-BY-4.0",
         "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(), "original_format": "JCAMP-DX 5.01",
-        "review": {"state": "proposed", "reviewers": [], "date": DAY},
     }
     j = jcamp.parse(text)
     meta["quality"] = {"checks": [{"criterion": c, "result": r, **({} if v is None else {"value": v})} for c, r, v in qualita.checks(j, meta)]}
@@ -79,8 +78,8 @@ CLAIM = {"en": "Placeholder statement for tests, not a real claim. [f:synthetic-
 
 
 def datasheet(sid: str) -> dict:
-    return {"schema": "datasheet/1", "substance": sid, "version": 1, "section_state": {k: "draft" for k in SECTIONS}, "reviewers": [],
-            "reviewed": DAY, "review_by": "2028-09-30", "doses": [], "show_doses": False, "authors": ["checkir synthetic generator"], "ai_assisted": True}
+    return {"schema": "datasheet/2", "substance": sid, "version": 1, "doses": [], "authors": ["checkir synthetic generator"],
+            "ai_assisted": True}
 
 
 def texts(lang: str) -> str:

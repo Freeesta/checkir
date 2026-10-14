@@ -22,7 +22,7 @@ Ester hydrolysis gives the same metabolite as FUB-PB-22, fluorobenzylindole-3-ca
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

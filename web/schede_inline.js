@@ -1,13 +1,13 @@
 // @ts-check
 // The brief sheet inside the results: the sheet of the substance the choice names (level 1–3), one per component at level 4, none at level 5.
-// It shows what the sheet holds, section by section with its signing state, for two audiences (chemist, counsellor); texts are the sheet's own.
+// It shows what the sheet holds, section by section, for two audiences (chemist, counsellor); texts are the sheet's own.
 import { el } from "./dom.js";
 import { formatNumber, t } from "./i18n.js";
 import { libraryRows } from "./librerie.js";
-import { isApproved, loadSheet, loadSources, SECTIONS, sectionStatus, sheetIdFor } from "./schede.js";
+import { loadSheet, loadSources, SECTIONS, sectionStatus, sheetIdFor, writtenCount } from "./schede.js";
 import { counsellingPoints, sourcesList } from "./schede_dati.js";
 import { cutContext } from "./schede_tagli.js";
-import { loadExtras, openSheet, sectionNodes, STATES, TITLES } from "./schede_ui.js";
+import { loadExtras, openSheet, sectionNodes, TITLES } from "./schede_ui.js";
 import { readPref, writePref } from "./state.js";
 
 /** Sections each audience reads first. */
@@ -34,8 +34,8 @@ export function sheetOfCandidate(c) {
   return sheetIdFor(row ?? { substance: c.substance ?? undefined, names: { en: c.display_name ?? c.name } });
 }
 
-/** @param {import("./schede.js").Sheet} sheet @returns {string} */
-const signedText = (sheet) => t("sheets.signed_count", { signed: formatNumber(SECTIONS.filter((k) => isApproved(sheet, k)).length), total: formatNumber(SECTIONS.length) });
+/** @param {import("./schede.js").Sheet} sheet @param {string} lang @returns {string} */
+const writtenText = (sheet, lang) => t("sheets.written_count", { written: formatNumber(writtenCount(sheet, SECTIONS, lang)), total: formatNumber(SECTIONS.length) });
 
 /** The two audiences as a pair of toggle buttons. @param {() => void} redraw @returns {HTMLElement} */
 function audienceToggle(redraw) {
@@ -55,7 +55,7 @@ function audienceToggle(redraw) {
   return group;
 }
 
-/** The sections of the audience that have something to show, with the signing state of each. @param {import("./schede.js").Sheet} sheet @param {string} lang @param {import("./schede_ui.js").SheetExtras} x @param {Record<string, import("./schede.js").Source>} sources @returns {HTMLElement} */
+/** The sections of the audience that have something to show. @param {import("./schede.js").Sheet} sheet @param {string} lang @param {import("./schede_ui.js").SheetExtras} x @param {Record<string, import("./schede.js").Source>} sources @returns {HTMLElement} */
 function sectionsFor(sheet, lang, x, sources) {
   const body = el("div", { class: "inline-sections", "data-audience-body": audience });
   /** @type {string[]} */
@@ -63,8 +63,7 @@ function sectionsFor(sheet, lang, x, sources) {
   for (const key of AUDIENCES[audience]) {
     const nodes = sectionNodes(sheet, key, lang, order, x);
     if (!nodes.length) continue;
-    const state = sheet.section_state[key] ?? "draft";
-    body.append(el("section", { class: "inline-section", "data-section": key, "data-state": state }, [el("h4", {}, [TITLES[key](), " ", el("span", { class: "state-tag" }, [(STATES[state] ?? STATES.draft)()])]), ...nodes]));
+    body.append(el("section", { class: "inline-section", "data-section": key }, [el("h4", {}, [TITLES[key]()]), ...nodes]));
   }
   if (!body.childElementCount) body.append(el("p", { class: "empty", "data-empty": "1" }, [t("sheets.inline_empty")]));
   const list = sourcesList(order, sources);
@@ -85,7 +84,7 @@ function panelOf(id, name, level, badge, lang, found, libraries, code) {
     redraw();
     const full = el("button", { type: "button", class: "btn", "data-fk": "inline-open-sheet" }, [t("sheets.open")]);
     full.addEventListener("click", () => void openSheet(id, name, cuts));
-    box.replaceChildren(el("p", { class: "inline-head" }, [el("strong", {}, [t("sheets.of", { name: shown })]), " ", badge(), el("span", { class: "note" }, [` · ${signedText(sheet)}`])]), audienceToggle(redraw), holder, full);
+    box.replaceChildren(el("p", { class: "inline-head" }, [el("strong", {}, [t("sheets.of", { name: shown })]), " ", badge(), el("span", { class: "note" }, [` · ${writtenText(sheet, lang)}`])]), audienceToggle(redraw), holder, full);
     const mark = `${code}/${id}`;
     if (!announced.has(mark)) {
       announced.add(mark);

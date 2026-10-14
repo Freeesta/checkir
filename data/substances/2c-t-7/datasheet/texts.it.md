@@ -32,7 +32,7 @@ Nel topo la potenza, misurata con la risposta di scosse della testa, aumenta qua
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

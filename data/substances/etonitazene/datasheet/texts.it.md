@@ -22,7 +22,7 @@ Il 4'-idrossi-nitazene è descritto come metabolita comune a tutti i nitazeni ch
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

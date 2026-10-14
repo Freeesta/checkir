@@ -34,7 +34,7 @@ Sonnolenza e sedazione sono coerenti con l'azione agonista sul recettore benzodi
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

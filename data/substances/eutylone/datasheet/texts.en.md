@@ -8,7 +8,7 @@ Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulan
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -24,7 +24,7 @@ In an ex vivo perfused pig liver its plasma half-life was 0.25 min and the main 
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -32,7 +32,7 @@ Synthetic cathinones have stimulant and, in part, hallucinogenic properties; no 
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

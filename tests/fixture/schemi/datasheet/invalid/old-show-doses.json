@@ -1,0 +1,18 @@
+{
+  "schema": "datasheet/2",
+  "substance": "example-amine",
+  "version": 1,
+  "doses": [
+    {
+      "route": "oral",
+      "unit": "mg",
+      "source": "x",
+      "evidence_type": "clinical"
+    }
+  ],
+  "authors": [
+    "Example Author"
+  ],
+  "ai_assisted": false,
+  "show_doses": false
+}

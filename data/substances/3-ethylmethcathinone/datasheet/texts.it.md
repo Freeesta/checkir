@@ -12,11 +12,11 @@ Una sostanza di sintesi del gruppo dei catinoni sintetici. [f:unodc-ewa]
 
 ## metabolism
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -24,7 +24,7 @@ I catinoni sintetici hanno proprietà stimolanti e, in parte, allucinogene. [f:m
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

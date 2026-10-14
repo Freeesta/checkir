@@ -1,7 +1,6 @@
 {
-  "schema": "tagli/1",
+  "schema": "tagli/2",
   "version": 1,
-  "status": "draft",
   "description": "Common cutting agents, diluents and adulterants met in drug checking. A candidate whose substance id or name matches an entry is a cut: cuts are always allowed in the mixture search. Not a health statement.",
   "cuts": [
     {

@@ -1,8 +1,6 @@
 # Only the administrators are code owners: GitHub requires write permission for code owners.
-# Content reviewers (chemists, health professionals, linguists) have NO write permission: their signature is a pull request
-# approval, counted by the future `signatures` check against data/reviewers.json.
+# Contributions arrive as pull requests: what is merged into main (with ci-ok green) is published.
 * @Freeesta
-/data/reviewers.json @Freeesta
 /.github/ @Freeesta
 /tools/ @Freeesta
 /docs/schemi/ @Freeesta

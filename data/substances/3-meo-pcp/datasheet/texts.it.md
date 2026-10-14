@@ -30,7 +30,7 @@ La 3-MeO-PCP è un antagonista non competitivo del recettore NMDA, con un legame
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -42,7 +42,7 @@ Sono descritti sintomi psicotici persistenti e deficit cognitivi dopo l'uso; le 
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

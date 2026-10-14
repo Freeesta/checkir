@@ -18,7 +18,7 @@ La monoidrossilazione combinata con l'idrolisi dell'estere metilico terminale d√
 
 ## cuts
 
-Non ancora redatta. Questa sezione sar√† scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

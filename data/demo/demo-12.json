@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "mixture-cocaine-hydrochloride.demo.012",
   "form": "mixture-cocaine-hydrochloride",
   "role": "reference",
@@ -39,11 +39,6 @@
   "license": "CC-BY-4.0",
   "sha256": "026f364e2fdcd37ea0a12f504ba21f6826a55575f6892f02ba5b51b427ecc06e",
   "original_format": "Shimadzu LabSolutions IR (.ispd), cleaned with anonimizza/1",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-13"
-  },
   "quality": {
     "checks": [
       {

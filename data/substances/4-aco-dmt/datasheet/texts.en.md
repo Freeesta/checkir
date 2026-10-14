@@ -36,7 +36,7 @@ O-acetylation lowered the in vitro 5-HT2A potency of the 4-hydroxy compounds abo
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -48,7 +48,7 @@ Labelling of the gummies analysed in Portland was inaccurate in many products: s
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

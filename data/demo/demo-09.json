@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "caffeine-anhydrous.demo.009",
   "form": "caffeine-anhydrous",
   "role": "reference",
@@ -39,11 +39,6 @@
   "license": "CC-BY-4.0",
   "sha256": "917409a4a5314d7ae3e007c9312f29f8f8e80c40a5b6a4d416ce1f5befbd841d",
   "original_format": "Shimadzu LabSolutions IR (.ispd), cleaned with anonimizza/1",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-13"
-  },
   "quality": {
     "checks": [
       {

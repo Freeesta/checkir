@@ -20,7 +20,7 @@ Animal data only; no controlled human study of 2-FA effects was found. In mice, 
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -28,7 +28,7 @@ In three Danish forensic cases (mainly driving under the influence) 2-FA was fou
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

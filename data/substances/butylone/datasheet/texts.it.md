@@ -32,7 +32,7 @@ Nel topo l'iperlocomozione causata dalla butilone è stata impedita da ketanseri
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -42,7 +42,7 @@ Negli epatociti primari di ratto la butilone è risultata citotossica (EC50 1.21
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

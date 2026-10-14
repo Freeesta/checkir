@@ -38,7 +38,7 @@ def strings(node: object) -> list[str]:
     if isinstance(node, list):
         return [s for x in node for s in strings(x)]
     if isinstance(node, dict):
-        return [s for k, v in node.items() if k not in ("id", "slug", "schema", "lang", "status", "params") for s in strings(v)]
+        return [s for k, v in node.items() if k not in ("id", "slug", "schema", "lang", "params") for s in strings(v)]
     return []
 
 
@@ -54,7 +54,7 @@ def shape(ch: dict) -> dict:
         "table": [len(fig["data_table"]["columns"]), len(fig["data_table"]["rows"])] if "data_table" in fig else None,
         "interactive": None if inter is None else [inter["id"], sorted(inter["labels"]), [(i["id"], i.get("params")) for i in inter.get("items", [])]],
         "paragraphs": [len(ch["body"]), len(ch["for_chemists"])],
-        "refs": [ch["sources"], ch["further_reading"], ch["glossary_terms"], ch["status"]],
+        "refs": [ch["sources"], ch["further_reading"], ch["glossary_terms"]],
         "links": sorted({m[0] for m in LINK.findall(" ".join(ch["body"] + ch["for_chemists"]))}),
     }
 

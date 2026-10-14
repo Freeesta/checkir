@@ -1,12 +1,12 @@
 # Trasferimento in un'organizzazione
 
-Nel codice della pagina il repository è scritto in UNA riga: `REPO_OWNER` (e `REPO_NAME`) in `web/appname.js`. Da lì derivano `GITHUB_URL` e `SITE_URL` (usati da `web/proponi.js`, `web/pagina.js` per il link delle issue nell'informativa, `tools/genera_identita.mjs`) e i test (`tests_e2e/schede.mjs`). Il sito usa percorsi relativi. I workflow usano `${{ github.repository }}`: non vanno toccati.
+Nel codice della pagina il repository è scritto in UNA riga: `REPO_OWNER` (e `REPO_NAME`) in `web/appname.js`. Da lì derivano `GITHUB_URL` e `SITE_URL` (usati da `web/pagina.js` per il link delle issue nell'informativa, `tools/genera_identita.mjs`). Il sito usa percorsi relativi. I workflow usano `${{ github.repository }}`: non vanno toccati.
 
 ## Da cambiare a mano (nome scritto)
 - `web/appname.js`: `REPO_OWNER` (e `REPO_NAME` se cambia).
 - `Cargo.toml` (`repository`), `CITATION.cff` (`repository-code`).
-- `README.md`, `README.it.md` (indirizzo del sito); `CONTRIBUTING.md`/`.it.md`, `GOVERNANCE.md`/`.it.md`, `docs/contribute/*.md` (link a issue e moduli).
-- `.github/ISSUE_TEMPLATE/config.yml` (tre URL), `.github/CODEOWNERS` (`@Freeesta`: in un'organizzazione usa `@org/team`), `data/reviewers.json` (account del manutentore, resta personale).
+- `README.md`, `README.it.md` (indirizzo del sito); `CONTRIBUTING.md`/`.it.md`, `GOVERNANCE.md`/`.it.md`, `docs/contribute/develop*.md`.
+- `.github/ISSUE_TEMPLATE/config.yml` (tre URL), `.github/CODEOWNERS` (`@Freeesta`: in un'organizzazione usa `@org/team`).
 - `CLAUDE.md` (righe 1 e «Dati privati»), `docs/agenti/dati.md`, `docs/agenti/pagina_confronto.md`, `.claude/agents/controllo-github.md` (nome `Freeesta/checkir[-data]`).
 - `tests_e2e/link_ammessi.json` e `tools/controlla_nome.py` NON cambiano (leggono la costante).
 - Anche `Freeesta/checkir-data` va trasferito (o ricreato) nella stessa organizzazione; aggiorna segreti e variabile `CHECKIR_DATA`.

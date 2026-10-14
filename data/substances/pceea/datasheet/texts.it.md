@@ -18,7 +18,7 @@ Con CYP umani espressi da cDNA, l'O-deetilazione della PCEEA era catalizzata da 
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -26,7 +26,7 @@ Fenciclidina, ketamina e i loro analoghi agiscono come antagonisti non competiti
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

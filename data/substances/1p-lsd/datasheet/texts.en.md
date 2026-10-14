@@ -48,7 +48,7 @@ A 2026 in silico study predicted toxicity parameters for 1P-LSD and four related
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

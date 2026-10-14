@@ -1,5 +1,5 @@
 {
-  "schema": "theory/1",
+  "schema": "theory/2",
   "id": "example",
   "n": 1,
   "title": "Example",
@@ -20,8 +20,6 @@
     "wiki-ftir"
   ],
   "glossary_terms": [],
-  "status": "draft",
-  "reviewers": [],
   "interactive": {
     "id": "spring",
     "labels": {

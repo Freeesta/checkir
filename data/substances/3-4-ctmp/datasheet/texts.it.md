@@ -20,7 +20,7 @@ Nell'urina di ratto sono stati trovati sette metaboliti di fase I e nessuno di f
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -28,15 +28,15 @@ Nelle fettine di cervello di ratto la 3,4-CTMP ha aumentato di circa 6 volte il 
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## sources
 

@@ -62,7 +62,7 @@ function classSelect(options) {
 
 /** @param {import("../../schede.js").IndexEntry} e @param {Record<string, { axis: string, names: Record<string, string> }>} classes @returns {HTMLElement} */
 function entryItem(e, classes) {
-  const sub = [classNames(e, classes).join(", "), t("sheets.signed_count", { signed: formatNumber(e.signed), total: formatNumber(SECTIONS.length) })].filter(Boolean).join(" · ");
+  const sub = [classNames(e, classes).join(", "), t("sheets.written_count", { written: formatNumber(e.written), total: formatNumber(SECTIONS.length) })].filter(Boolean).join(" · ");
   return el("li", { class: "sheet-entry", "data-sheet": e.id }, [el("a", { href: `#${e.id}`, class: "sheet-entry-link" }, [nameIn(e.names)]), el("span", { class: "note" }, [` ${sub}`])]);
 }
 

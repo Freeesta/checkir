@@ -16,7 +16,7 @@ In human liver microsomes with ethanol, 5F-MDMB-PINACA is transesterified by car
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

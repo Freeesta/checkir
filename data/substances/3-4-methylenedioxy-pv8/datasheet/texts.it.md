@@ -16,11 +16,11 @@ Una sostanza di sintesi del gruppo dei catinoni sintetici. [f:unodc-ewa]
 
 ## metabolism
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -30,7 +30,7 @@ In vitro, tra 58 stimolanti testati, i catinoni N-pirrolidinici con gruppo metil
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

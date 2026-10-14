@@ -16,7 +16,7 @@ Nei microsomi epatici umani con etanolo, 5F-MDMB-PINACA è transesterificato da 
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

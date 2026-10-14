@@ -1,4 +1,4 @@
-//! Interpretations (group rules of `bands/1`) of a peak. A rule interprets, it never explains: only a substance does.
+//! Interpretations (group rules of `bands/2`) of a peak. A rule interprets, it never explains: only a substance does.
 //! Order: (a) diagnostic for a class of the candidate, (b) more conditions satisfied, (c) the
 //! narrower interval, (d) intensity compatible with the peak. No number is shown, only the order.
 use super::result::Interpretation;

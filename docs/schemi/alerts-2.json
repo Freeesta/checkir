@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:alerts:2",
+  "title": "Alert on a substance or class (data only)",
+  "title_it": "Allerta su una sostanza o classe (solo dati)",
+  "description": "Alert on a substance or class (data only)",
+  "description_it": "Allerta su una sostanza o classe (solo dati)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "alerts/2",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "id": {
+      "description": "Alert id.",
+      "description_it": "Id dell'allerta.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "status": {
+      "description": "active, or withdrawn (kept for the history, never shown).",
+      "description_it": "active, oppure withdrawn (resta per la storia, non si mostra).",
+      "type": "string",
+      "enum": [
+        "active",
+        "withdrawn"
+      ]
+    },
+    "target": {
+      "description": "Substances and/or classes the alert is about.",
+      "description_it": "Sostanze e/o classi a cui si riferisce l'allerta.",
+      "type": "object",
+      "properties": {
+        "substances": {
+          "description": "Substance ids.",
+          "description_it": "Id sostanza.",
+          "type": "array",
+          "items": {
+            "description": "Id.",
+            "description_it": "Id.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "classes": {
+          "description": "Class ids.",
+          "description_it": "Id classe.",
+          "type": "array",
+          "items": {
+            "description": "Id.",
+            "description_it": "Id.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "substances"
+          ],
+          "properties": {
+            "substances": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "required": [
+            "classes"
+          ],
+          "properties": {
+            "classes": {
+              "minItems": 1
+            }
+          }
+        }
+      ]
+    },
+    "reason": {
+      "description": "ir_ambiguity: indistinguishable by FTIR; potent_analogue; network_report: official alert (with link); ftir_limit: active below detection.",
+      "description_it": "ir_ambiguity: indistinguibili all'FTIR; potent_analogue; network_report: allerta ufficiale (con link); ftir_limit: attivo sotto la rilevabilità.",
+      "type": "string",
+      "enum": [
+        "ir_ambiguity",
+        "potent_analogue",
+        "network_report",
+        "ftir_limit"
+      ]
+    },
+    "severity": {
+      "description": "Severity.",
+      "description_it": "Gravità.",
+      "type": "string",
+      "enum": [
+        "informative",
+        "caution",
+        "serious"
+      ]
+    },
+    "sources": {
+      "description": "Sources; an alert without source is rejected.",
+      "description_it": "Fonti; un'allerta senza fonte è rifiutata.",
+      "type": "array",
+      "items": {
+        "description": "Source id.",
+        "description_it": "Id fonte.",
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "minItems": 1
+    },
+    "issued": {
+      "description": "Date issued.",
+      "description_it": "Data di emissione.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "status",
+    "target",
+    "reason",
+    "severity",
+    "sources",
+    "issued"
+  ],
+  "additionalProperties": false
+}

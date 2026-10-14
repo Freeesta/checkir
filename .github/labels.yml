@@ -1,19 +1,13 @@
 # Labels of the repository, as data. The workflow `labels` (labels.yml) creates or updates them; it never deletes any.
-# Issue forms apply some of them (bug, sheet, new-sheet, spectrum, translation, alert, proposal, needs-review).
+# The only issue form (bug) applies `bug`; the others sort issues and pull requests.
 - {name: bug, color: "d73a4a", description: "Something does not work or a text is wrong / Qualcosa non funziona o un testo è sbagliato"}
 - {name: sheet, color: "0e8a16", description: "Substance sheet / Scheda di sostanza"}
-- {name: new-sheet, color: "0e8a16", description: "Request for a new substance sheet / Richiesta di una nuova scheda"}
 - {name: spectrum, color: "1d76db", description: "Reference spectrum / Spettro di riferimento"}
 - {name: alert, color: "b60205", description: "Alert about a substance or family / Allerta su una sostanza o famiglia"}
 - {name: translation, color: "5319e7", description: "Translation / Traduzione"}
-- {name: proposal, color: "c5def5", description: "Proposed change from the community / Modifica proposta dalla comunità"}
-- {name: needs-review, color: "fbca04", description: "Waits for a reviewer / Attende un revisore"}
-- {name: in-review, color: "fef2c0", description: "A reviewer is on it / Un revisore se ne sta occupando"}
-- {name: urgent, color: "b60205", description: "Review labelled within 48 hours / Etichetta di revisione entro 48 ore"}
-- {name: expiring, color: "f9d0c4", description: "Review expires within a month / La revisione scade entro un mese"}
-- {name: expired, color: "e99695", description: "Review has expired / Revisione scaduta"}
+- {name: triage, color: "fbca04", description: "Not yet sorted by a maintainer / Non ancora smistata"}
+- {name: urgent, color: "b60205", description: "To be sorted within 48 hours / Da smistare entro 48 ore"}
 - {name: blocked, color: "000000", description: "Cannot go on until something else is done / Non può proseguire finché non si risolve altro"}
 - {name: conduct, color: "8a6cc9", description: "Code of Conduct matter / Questione di codice di condotta"}
 - {name: "lang:it", color: "ededed", description: "Italian / Italiano"}
 - {name: "lang:en", color: "ededed", description: "English / Inglese"}
-- {name: good-first-proposal, color: "7057ff", description: "Good for a first contribution / Adatta a un primo contributo"}

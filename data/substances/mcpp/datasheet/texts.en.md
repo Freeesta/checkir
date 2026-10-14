@@ -38,7 +38,7 @@ It is an agonist at serotonin 2C, 1A, 1B and 1D receptors. [f:feuchtl2004]
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

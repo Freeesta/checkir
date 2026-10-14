@@ -28,7 +28,7 @@ From the kinetics of the compound and its metabolite, etizolam can be regarded a
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

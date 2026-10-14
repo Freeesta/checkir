@@ -10,7 +10,7 @@ Chemical class: benzodiazepines. Expected effect: central nervous system depress
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -24,7 +24,7 @@ After intravenous infusion in nine healthy volunteers the elimination half-life 
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -36,7 +36,7 @@ In healthy volunteers intravenous adinazolam produced observer-rated sedation. [
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

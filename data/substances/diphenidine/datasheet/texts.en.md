@@ -18,7 +18,7 @@ In human liver preparations hydroxy-aryl, hydroxy-piperidine and bis-hydroxy-pip
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -26,7 +26,7 @@ Diphenidine is a dissociative substance; in 17 patients positive for diphenidine
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -36,7 +36,7 @@ In 87 % of the cases other substances were also present, so the picture is not d
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## sources
 

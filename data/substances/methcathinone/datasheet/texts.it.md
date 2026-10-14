@@ -32,7 +32,7 @@ Nei topi basse dosi di metcatinone (10 e 25 mg/kg) hanno stimolato l'attività l
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -44,7 +44,7 @@ Nei topi la dose letale 50 era 201.7 mg/kg per la sola metcatinone e 110.2 mg di
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

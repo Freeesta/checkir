@@ -26,7 +26,7 @@ La stima dell'emivita terminale su quella persona è 10-20 ore; il picco nel sie
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

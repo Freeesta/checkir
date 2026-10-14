@@ -1,25 +1,7 @@
 {
-  "schema": "datasheet/1",
+  "schema": "datasheet/2",
   "substance": "pregabalin",
   "version": 1,
-  "section_state": {
-    "molecule": "draft",
-    "category": "draft",
-    "history": "draft",
-    "origin": "draft",
-    "metabolism": "draft",
-    "cuts": "draft",
-    "effects": "draft",
-    "doses": "draft",
-    "risks": "draft",
-    "interactions": "draft",
-    "counselling": "draft",
-    "sources": "draft",
-    "license": "draft"
-  },
-  "reviewers": [],
-  "reviewed": "2026-10-13",
-  "review_by": "2028-09-30",
   "structure_svg": true,
   "metabolism": {
     "pathways": [
@@ -88,7 +70,6 @@
     }
   ],
   "doses": [],
-  "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"
   ],

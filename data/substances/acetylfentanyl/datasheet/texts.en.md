@@ -24,7 +24,7 @@ In urine of 5 cases the mean concentrations were 1874 μg/L for acetyl fentanyl 
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

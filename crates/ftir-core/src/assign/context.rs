@@ -1,5 +1,5 @@
 //! What the assignment is told besides the peaks: the group rules, the classes of the candidate, the assignments of
-//! its bands (`substance-bands/1`) and the diagnostic bands of the common cuts (`tagli/1` with `diagnostic_bands`).
+//! its bands (`substance-bands/2`) and the diagnostic bands of the common cuts (`tagli/2` with `diagnostic_bands`).
 use super::rules::RuleSet;
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::{self, Value};
@@ -34,7 +34,7 @@ pub struct SubstanceBand {
     pub status: String,
 }
 
-/// The assignments of one form of one substance (`substance-bands/1`).
+/// The assignments of one form of one substance (`substance-bands/2`).
 #[derive(Debug, Clone, PartialEq)]
 pub struct SubstanceBands {
     pub substance_id: String,
@@ -151,7 +151,7 @@ fn list_of<T>(v: &Value, key: &str, f: impl Fn(&Value) -> EngineResult<T>) -> En
 }
 
 impl Context {
-    /// `{rules?: bands/1, candidate_classes?: [id], substance_bands?: [substance-bands/1], cuts?: tagli/1}`; empty text
+    /// `{rules?: bands/2, candidate_classes?: [id], substance_bands?: [substance-bands/2], cuts?: tagli/2}`; empty text
     /// = `Context::empty()`. Missing `rules` mean the embedded file is used by the caller.
     pub fn parse(text_json: &str) -> EngineResult<Context> {
         if text_json.trim().is_empty() {

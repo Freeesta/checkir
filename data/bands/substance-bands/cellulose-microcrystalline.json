@@ -1,12 +1,12 @@
 {
- "schema": "substance-bands/1",
+ "schema": "substance-bands/2",
  "version": "2026-10.1",
  "substance": "cellulose",
  "form": "microcrystalline",
- "note": "Broad O-H and a group of strong C-O bands around 1000-1100; the exact subpeaks depend on crystallinity. No open ATR source with these numbers (draft).",
+ "note": "Broad O-H and a group of strong C-O bands around 1000-1100; the exact subpeaks depend on crystallinity. No open ATR source with these numbers (literature only, not yet verified on two spectra).",
  "bands": [
-  {"position_cm1": 3330, "tolerance_cm1": 50, "intensity": "medium", "shape": "broad", "group": "hydroxyl", "mode": "stretch", "rule_id": "oh.hbonded", "sources": ["smith-co-bond", "coates2000"], "status": "draft", "verified_on": ["vs-c37a27732694"]},
-  {"position_cm1": 1103, "tolerance_cm1": 10, "intensity": "medium", "shape": "sharp", "group": "ether", "mode": "stretch_asym", "rule_id": "c_o_c.ether", "sources": ["smith-co-bond"], "status": "draft", "verified_on": ["vs-c37a27732694"]},
-  {"position_cm1": 1029, "tolerance_cm1": 15, "intensity": "strong", "shape": "broad", "group": "alcohol", "mode": "stretch", "rule_id": "c_o.alcohol", "text_key": "substance_bands.cellulose.microcrystalline.1029", "sources": ["smith-co-bond", "coates2000"], "status": "draft", "verified_on": ["vs-c37a27732694"]}
+  {"position_cm1": 3330, "tolerance_cm1": 50, "intensity": "medium", "shape": "broad", "group": "hydroxyl", "mode": "stretch", "rule_id": "oh.hbonded", "sources": ["smith-co-bond", "coates2000"], "status": "literature", "verified_on": ["vs-c37a27732694"]},
+  {"position_cm1": 1103, "tolerance_cm1": 10, "intensity": "medium", "shape": "sharp", "group": "ether", "mode": "stretch_asym", "rule_id": "c_o_c.ether", "sources": ["smith-co-bond"], "status": "literature", "verified_on": ["vs-c37a27732694"]},
+  {"position_cm1": 1029, "tolerance_cm1": 15, "intensity": "strong", "shape": "broad", "group": "alcohol", "mode": "stretch", "rule_id": "c_o.alcohol", "text_key": "substance_bands.cellulose.microcrystalline.1029", "sources": ["smith-co-bond", "coates2000"], "status": "literature", "verified_on": ["vs-c37a27732694"]}
  ]
 }

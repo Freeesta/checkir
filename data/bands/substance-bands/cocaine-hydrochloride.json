@@ -1,9 +1,9 @@
 {
- "schema": "substance-bands/1",
+ "schema": "substance-bands/2",
  "version": "2026-10.1",
  "substance": "cocaine",
  "form": "hydrochloride",
- "note": "Positions re-checked on two library spectra of the hydrochloride (ATR). The two C=O are assigned to the methyl ester (higher) and the benzoate (lower) following the monograph; to be confirmed by the reviewer. The N-H+ envelope is much weaker in ATR than in KBr.",
+ "note": "Positions re-checked on two library spectra of the hydrochloride (ATR). The two C=O are assigned to the methyl ester (higher) and the benzoate (lower) following the monograph; still to be confirmed on more spectra. The N-H+ envelope is much weaker in ATR than in KBr.",
  "bands": [
   {"position_cm1": 2540, "tolerance_cm1": 40, "intensity": "weak", "shape": "very_broad", "group": "ammonium_tertiary", "mode": "stretch", "rule_id": "nhplus.stretch", "sources": ["rodrigues2013", "mendez-hernandez2020", "smith-amine-salts"], "status": "verified_spectra", "verified_on": ["vs-7978c81846f0", "vs-88f33b27b982"]},
   {"position_cm1": 1728, "tolerance_cm1": 6, "intensity": "medium", "shape": "sharp", "group": "ester", "mode": "stretch", "rule_id": "co.ester.sat", "text_key": "substance_bands.cocaine.hydrochloride.1728", "sources": ["swgdrug-cocaine", "rodrigues2013"], "status": "verified_spectra", "verified_on": ["vs-7978c81846f0", "vs-88f33b27b982"]},

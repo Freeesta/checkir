@@ -24,7 +24,7 @@ Uno studio sui microsomi del 2026 ha identificato nove metaboliti di AB-CHMINACA
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

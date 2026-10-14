@@ -29,4 +29,4 @@ Open the site: <https://freeesta.github.io/checkir/>. Load a spectrum file (or p
 - The code is developed with the help of AI assistants; the AI is not an author, the people who publish are responsible for everything.
 
 ## Contribute
-You do not need to be a programmer: see [CONTRIBUTING.md](CONTRIBUTING.md) for the four paths (chemists, health workers, translators, developers). Please read the [Code of Conduct](CODE_OF_CONDUCT.md). Security issues: [SECURITY.md](SECURITY.md).
+Report an error with the bug form or fix code: see [CONTRIBUTING.md](CONTRIBUTING.md). Please read the [Code of Conduct](CODE_OF_CONDUCT.md). Security issues: [SECURITY.md](SECURITY.md).

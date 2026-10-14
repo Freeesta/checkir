@@ -1,5 +1,5 @@
 {
- "schema": "theory/1",
+ "schema": "theory/2",
  "id": "what-ftir-sees",
  "n": 1,
  "title": "Che cosa vede l'FTIR (e che cosa no)",
@@ -70,7 +70,5 @@
   "absorbance",
   "functional-group-region",
   "fingerprint-region"
- ],
- "status": "draft",
- "reviewers": []
+ ]
 }

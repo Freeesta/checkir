@@ -1,10 +1,10 @@
-//! `bands/1`: the group rules, read from JSON. The engine holds no wavenumber; rules are data
+//! `bands/2`: the group rules, read from JSON. The engine holds no wavenumber; rules are data
 //! (`data/bands/rules.json`, embedded here, or a file given by the caller).
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::{self, Value};
 
 pub const DEFAULT_JSON: &str = include_str!("../../../../data/bands/rules.json");
-pub const SCHEMA: &str = "bands/1";
+pub const SCHEMA: &str = "bands/2";
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Intensity {
@@ -49,7 +49,7 @@ pub struct RuleSet {
 }
 
 fn bad(field: &str) -> EngineError {
-    EngineError::new("assign.regole_non_valide", "invalid bands/1 file").with_param("campo", field)
+    EngineError::new("assign.regole_non_valide", "invalid bands/2 file").with_param("campo", field)
 }
 
 fn text(v: &Value, key: &str) -> EngineResult<String> {

@@ -18,7 +18,7 @@ Approvato negli Stati Uniti nel 1995. [f:tramadol-label]
 
 ## origin
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## metabolism
 
@@ -30,7 +30,7 @@ L'emivita terminale media è 6.3 ore per il tramadolo e 7.4 ore per M1; circa il
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

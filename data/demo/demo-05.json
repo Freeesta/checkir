@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "amphetamine-sulfate-racemate.demo.005",
   "form": "amphetamine-sulfate-racemate",
   "role": "reference",
@@ -39,11 +39,6 @@
   "license": "CC-BY-4.0",
   "sha256": "4b2fc2f8d8c87dc92b61d76c5739769067b4b25f88ec21b0d1a9fe4faa4eece1",
   "original_format": "Shimadzu LabSolutions IR (.ispd), cleaned with anonimizza/1",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-13"
-  },
   "quality": {
     "checks": [
       {

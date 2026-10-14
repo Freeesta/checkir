@@ -18,7 +18,7 @@ Approved in the United States in 1995. [f:tramadol-label]
 
 ## origin
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## metabolism
 
@@ -30,7 +30,7 @@ The mean terminal half-life is 6.3 hours for tramadol and 7.4 hours for M1; abou
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

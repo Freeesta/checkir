@@ -32,7 +32,7 @@ In mice the hyperlocomotion caused by butylone was prevented by ketanserin or ha
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -42,7 +42,7 @@ In primary rat hepatocytes butylone was cytotoxic (EC50 1.21 mM) and liver metab
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

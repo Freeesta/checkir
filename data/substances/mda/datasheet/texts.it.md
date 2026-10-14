@@ -38,7 +38,7 @@ Nello stesso studio l'MDA ha provocato aumenti netti di frequenza cardiaca e pre
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

@@ -8,7 +8,7 @@ Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto att
 
 ## history
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## origin
 
@@ -30,7 +30,7 @@ Il CBD è un composto non psicoattivo con potenziali proprietà antinfiammatorie
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

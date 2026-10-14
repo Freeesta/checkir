@@ -30,7 +30,7 @@ The sources read give no controlled data on the effects of 2-MMC. For ring-subst
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -40,7 +40,7 @@ Post-mortem blood concentrations ranged from 4.7 to 3,030 ng/mL and plasma conce
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

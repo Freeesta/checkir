@@ -8,7 +8,7 @@ Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto att
 
 ## history
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## origin
 
@@ -20,7 +20,7 @@ Nei microsomi epatici umani e nelle urine di ratto diversi metaboliti erano comu
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -28,7 +28,7 @@ Nel ratto anestetizzato la catina ha prodotto una tachicardia marcata (aumenti s
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -36,7 +36,7 @@ Lo studio sul ratto suggerisce possibili implicazioni per gli effetti cardiovasc
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## sources
 

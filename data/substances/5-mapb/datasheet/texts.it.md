@@ -16,7 +16,7 @@ Sostanza sintetica, un analogo benzofuranico della metamfetamina. [f:brandt2020]
 
 ## metabolism
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un chimico prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -26,7 +26,7 @@ I 2-amminopropilbenzofurani sono stati consumati per i loro effetti euforici ed 
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

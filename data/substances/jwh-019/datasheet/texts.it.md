@@ -16,7 +16,7 @@ Nei campioni di urina di pazienti, monoidrossilazione, diidrossilazione e il met
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

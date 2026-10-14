@@ -30,7 +30,7 @@ Le fonti lette non danno dati controllati sugli effetti della 2-MMC. Per i catin
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -40,7 +40,7 @@ Le concentrazioni nel sangue post mortem variavano da 4.7 a 3,030 ng/mL e quelle
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "synthetic-a-base.checkir.001",
   "form": "synthetic-a-base",
   "role": "reference",
@@ -39,11 +39,6 @@
   "license": "CC-BY-4.0",
   "sha256": "b6809b53e17ae31eec8c7f2ee890ae7113dfc2c0606acc514d9c3f919a02f391",
   "original_format": "JCAMP-DX 5.01",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-12"
-  },
   "quality": {
     "checks": [
       {

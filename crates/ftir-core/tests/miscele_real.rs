@@ -70,7 +70,7 @@ fn chosen_components_match_the_python_rule_on_the_fixed_subset() {
             .map(|&i| format!("\"{}\"", text(&library[i], "substance").to_lowercase()))
             .collect();
         let cuts_json = format!(
-            "{{\"schema\":\"tagli/1\",\"version\":1,\"status\":\"draft\",\"cuts\":[{{\"id\":\"bench\",\"names\":[{}]}}]}}",
+            "{{\"schema\":\"tagli/2\",\"version\":1,\"cuts\":[{{\"id\":\"bench\",\"names\":[{}]}}]}}",
             names.join(",")
         );
         let cuts = Cuts::parse(&cuts_json).expect("cuts");

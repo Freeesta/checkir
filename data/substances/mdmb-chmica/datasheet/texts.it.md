@@ -18,7 +18,7 @@ Nei condensati di fumo la pirolisi ha spezzato l'estere metilico e il legame amm
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

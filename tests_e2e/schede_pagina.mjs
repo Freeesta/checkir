@@ -33,7 +33,7 @@ async function listScenario(page, base, check) {
   await page.goto(`${base}pagine/schede/`);
   await page.waitForSelector("body[data-page='sheets'][data-ready='1']");
   check("sheets page: the list holds the two fixture sheets and the family", (await page.locator(".sheet-entry").count()) === 2 && (await page.locator(".family-list a").count()) === 1);
-  check("sheets page: each entry says how many sections are signed", /2 sezioni firmate su 13/.test((await page.textContent('.sheet-entry[data-sheet="synthetic-full"]')) ?? ""));
+  check("sheets page: each entry says how many sections are written", /11 sezioni scritte su 13/.test((await page.textContent('.sheet-entry[data-sheet="synthetic-full"]')) ?? ""));
   await page.fill("#sheet-search", "full sheet syn");
   check("sheets page: search finds a synonym", (await page.locator(".sheet-entry").count()) === 1 && (await page.getAttribute(".sheet-entry", "data-sheet")) === "synthetic-full");
   await page.fill("#sheet-search", "zzz");
@@ -50,8 +50,8 @@ async function listScenario(page, base, check) {
 /** The thirteen sections of the fixture sheet and what each one shows. */
 async function sheetScenario(page, check, axe) {
   const text = (await page.textContent(".substance-sheet")) ?? "";
-  check("sheets page: thirteen sections with a state each", (await page.locator(".sheet-section").count()) === 13 && (await page.locator(".sheet-section .state-tag").count()) === 13);
-  check("sheets page: version line counts the signed sections", /sezioni firmate: 2 su 13/.test(text), text.slice(0, 120));
+  check("sheets page: thirteen sections, with no state tag", (await page.locator(".sheet-section").count()) === 13 && (await page.locator(".sheet-section .state-tag").count()) === 0);
+  check("sheets page: version line counts the written sections", /sezioni scritte: 11 su 13/.test(text), text.slice(0, 120));
   check("sheets page: the unwritten history says so, the family fills effects with its own label", (await page.locator("[data-empty]").count()) === 1 && (await page.locator('[data-section="effects"] [data-family-text]').count()) === 1 && /Famiglia di esempio/.test((await page.textContent('[data-section="effects"]')) ?? ""));
   await page.waitForSelector("svg.structure-svg");
   check("sheets page: identity is copyable and the structure is an inline drawing without styles", (await page.locator(".sheet-identity .copy-btn").count()) === 2 && (await page.locator("svg.structure-svg [style]").count()) === 0 && (await page.getAttribute("svg.structure-svg", "role")) === "img");
@@ -117,7 +117,7 @@ export async function inlineScenario(browser, base, check, axe) {
   await analyse(page, base, [["Synthetic full sheet", ALFA], ["Synthetic cut A", BETA], ["gamma", GAMMA]], ALFA);
   await page.waitForSelector('.inline-panel[data-sheet="synthetic-full"] .audience-toggle');
   check("inline sheet: a private library entry named like a sheet hooks to it, at a level 1-3 one sheet", (await page.locator(".inline-sheet").count()) === 1 && (await page.locator(".inline-panel").count()) === 1);
-  check("inline sheet: the sheet name stands beside the level and the signed sections", /Scheda: Scheda sintetica completa/.test((await page.textContent(".inline-head")) ?? "") && (await page.locator(".inline-head .level").count()) === 1 && /2 sezioni firmate su 13/.test((await page.textContent(".inline-head")) ?? ""));
+  check("inline sheet: the sheet name stands beside the level and the written sections", /Scheda: Scheda sintetica completa/.test((await page.textContent(".inline-head")) ?? "") && (await page.locator(".inline-head .level").count()) === 1 && /11 sezioni scritte su 13/.test((await page.textContent(".inline-head")) ?? ""));
   check("inline sheet: Chemist is the first view, with the metabolism tree and the cuts", (await page.getAttribute('[data-audience="chemist"]', "aria-pressed")) === "true" && (await page.locator('.inline-panel [data-part="metabolism-tree"]').count()) === 1 && (await page.locator('.inline-panel [data-part="cuts"]').count()) === 1);
   check("inline sheet: the availability was announced", (await page.evaluate(() => window.__said)).some((m) => /Scheda di Scheda sintetica completa disponibile/.test(m)));
   await page.click('[data-audience="counsellor"]');

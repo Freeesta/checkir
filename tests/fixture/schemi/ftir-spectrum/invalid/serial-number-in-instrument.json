@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "example-amine-hcl.checkir.001",
   "form": "example-amine-hcl",
   "role": "reference",
@@ -47,10 +47,5 @@
         "result": "pass"
       }
     ]
-  },
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-12"
   }
 }

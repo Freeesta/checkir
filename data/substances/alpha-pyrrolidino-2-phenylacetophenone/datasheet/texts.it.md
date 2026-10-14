@@ -16,7 +16,7 @@ Una sostanza di sintesi, un catinone sintetico: pirrolidinofenone con un secondo
 
 ## metabolism
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## cuts
 
@@ -30,7 +30,7 @@ In vitro α-D2PV è un potente inibitore della ricaptazione di dopamina e noradr
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

@@ -1,5 +1,5 @@
 {
- "schema": "theory/1",
+ "schema": "theory/2",
  "id": "vibration-modes",
  "n": 3,
  "title": "I modi di vibrazione",
@@ -90,7 +90,5 @@
   "wagging",
   "twisting",
   "degrees-of-freedom"
- ],
- "status": "draft",
- "reviewers": []
+ ]
 }

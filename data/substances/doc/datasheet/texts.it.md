@@ -24,7 +24,7 @@ Nei ratti il DOC si è sostituito a diversi allucinogeni usati come farmaci di a
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

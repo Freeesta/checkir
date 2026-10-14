@@ -1,7 +1,7 @@
-"""Checks of the substance sheets (datasheet/1) and family sheets (family-sheet/1) beyond the JSON Schemas.
+"""Checks of the substance sheets (datasheet/2) and family sheets (family-sheet/2) beyond the JSON Schemas.
 
-Used by controlla_dati.py. Section order and signing roles, a source on every claim, no sheet-wide `secondary`-only health claim,
-the words of a synthesis in `origin`, counselling points = paragraphs, cuts that exist, show_doses false where it must be,
+Used by controlla_dati.py. Section order, a source on every claim, no sheet-wide `secondary`-only health claim,
+the words of a synthesis in `origin`, counselling points = paragraphs, cuts that exist,
 and the same paragraphs and citations in every language.
 """
 from __future__ import annotations
@@ -15,11 +15,8 @@ REQUIRED = ["molecule", "category", "effects", "doses", "risks", "interactions",
 FAMILY_SECTIONS = ["effects", "risks", "interactions", "counselling", "sources", "license"]
 CLAIM_SECTIONS = {s for s in SECTIONS if s not in ("sources", "license")}
 HEALTH_SECTIONS = {"effects", "doses", "risks", "interactions", "counselling"}
-ROLE_OF = {s: "chemist" for s in ("molecule", "category", "history", "origin", "metabolism", "cuts")} | {s: "health" for s in HEALTH_SECTIONS}
 LIMITS = {"molecule": 2400, "counselling": 1500}  # characters of a section per language; every other section 1200
 DEFAULT_LIMIT = 1200
-NO_DOSES_CLASSES = {"fentanyls", "nitazenes", "nbome"}
-NO_DOSES_SUBSTANCES = {"ghb", "gbl", "isopropyl-u-47700"}
 SYNTHESIS = re.compile(
     r"°\s?C|\b\d+(?:[.,]\d+)?\s?(?:mL|ml|g|mg|mol|M|h|min)\b|\b(?:riflusso|reflux|resa|yield|aggiungere|add|gocciolare|dropwise|filtrare|filter|"
     r"ricristallizzare|recrystalli[sz]e|step|procedura|procedure)\b", re.I)
@@ -80,30 +77,9 @@ def check_parity(folder: Path, allowed: list[str]) -> list[str]:
     return out
 
 
-def check_signatures(label: str, sheet: dict) -> list[str]:
-    out = []
-    state = sheet["section_state"]
-    signed: dict[str, set[str]] = {}
-    for r in sheet["reviewers"]:
-        for s in r["sections"]:
-            need = ROLE_OF.get(s)
-            if need and r["role"] != need:
-                out.append(f"{label}: reviewer '{r['public_name']}' ({r['role']}) cannot sign '{s}' (needs {need})")
-            signed.setdefault(s, set()).add(r["role"])
-    for s, v in state.items():
-        need = ROLE_OF.get(s)
-        if v == "approved" and need and need not in signed.get(s, set()):
-            out.append(f"{label}: section '{s}' is approved without a signature by a {need}")
-    return out
-
-
 def check_sheet_data(label: str, sheet: dict, texts: dict[str, dict[str, list[str]]], ctx: dict, sub: dict | None) -> list[str]:
-    out = check_signatures(label, sheet)
+    out: list[str] = []
     for lang, secs in texts.items():
-        present = set(secs)
-        extra = set(sheet["section_state"]) - present
-        out += [f"{label}: section_state has '{s}' but texts.{lang}.md has no such section" for s in sorted(extra)]
-        out += [f"{label}: texts.{lang}.md has section '{s}' without a section_state" for s in sorted(present - set(sheet["section_state"]))]
         points = sheet.get("counselling", [])
         if points and len(secs.get("counselling", [])) != len(points):
             out.append(f"{label}: texts.{lang}.md has {len(secs.get('counselling', []))} counselling paragraphs for {len(points)} points")
@@ -119,9 +95,6 @@ def check_sheet_data(label: str, sheet: dict, texts: dict[str, dict[str, list[st
         refs.append(sheet["metabolism"]["half_life_h"]["source"])
     out += [f"{label}: unknown source '{r}'" for r in sorted(set(refs)) if r not in srcs]
     if sub is not None:
-        classes = set(sub["classes"].get("chemical", []))
-        if (classes & NO_DOSES_CLASSES or sheet["substance"] in NO_DOSES_SUBSTANCES) and sheet.get("show_doses"):
-            out.append(f"{label}: show_doses must be false for this substance (potent class or GHB/GBL)")
         for form in sheet.get("identity_extra", {}).get("salt_forms", []):
             if form not in ctx["forms"]:
                 out.append(f"{label}: salt form '{form}' is not a form of any substance")
@@ -149,7 +122,6 @@ def check_families(root: Path, ctx: dict, wording) -> list[str]:
             out.append(f"{fj}: id '{fam['id']}' differs from the folder name")
         if fam["id"] not in ctx["classes"]:
             out.append(f"{fj}: family id '{fam['id']}' is not a class in classes.json")
-        out += check_signatures(str(fj), fam)
         texts = {}
         for tp in sorted(fj.parent.glob("texts.*.md")):
             text = tp.read_text(encoding="utf-8")

@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "lidocaine-hcl-h2o.swgdrug.375",
   "form": "lidocaine-hcl-h2o",
   "role": "reference",
@@ -50,11 +50,6 @@
   },
   "sha256": "4d68b8d226e798da1a6879e535d8ea2a9223cd7e0fb96c05e8c506c4777a9aaf",
   "original_format": "JCAMP-DX 5.01 (OMNIC), (X++(Y..Y))",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-13"
-  },
   "quality": {
     "checks": [
       {

@@ -28,7 +28,7 @@ In vitro la N-etilpentilone inibisce con forza i trasportatori di dopamina (IC50
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -40,7 +40,7 @@ In un decesso la temperatura corporea era 105.5 °F e il pH del sangue 6.7, con 
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

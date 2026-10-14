@@ -18,7 +18,7 @@ CYP2C19, CYP2D6, CYP3A4 e CYP3A5 erano coinvolti nei primi passaggi; nelle urine
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

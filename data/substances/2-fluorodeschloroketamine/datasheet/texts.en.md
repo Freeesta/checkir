@@ -30,7 +30,7 @@ Adverse effects reported to the French Addictovigilance Network for ketamine ana
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -42,7 +42,7 @@ In human cerebral organoids and mouse neurons, 2-FDCK impaired mitochondrial oxi
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

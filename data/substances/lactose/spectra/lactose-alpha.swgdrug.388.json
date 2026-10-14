@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "lactose-alpha.swgdrug.388",
   "form": "lactose-alpha",
   "role": "reference",
@@ -50,11 +50,6 @@
   },
   "sha256": "a0fc31e39a9ed29b5d081dcfb750cf2f4fe7562ab0c8027f58a5ac4befc3c785",
   "original_format": "JCAMP-DX 5.01 (OMNIC), (X++(Y..Y))",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-13"
-  },
   "quality": {
     "checks": [
       {

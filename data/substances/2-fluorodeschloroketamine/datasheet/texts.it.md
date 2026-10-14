@@ -30,7 +30,7 @@ Gli effetti avversi segnalati alla rete francese di addictovigilanza per gli ana
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -42,7 +42,7 @@ In organoidi cerebrali umani e in neuroni di topo la 2-FDCK ha compromesso la fo
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

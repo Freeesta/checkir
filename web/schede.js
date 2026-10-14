@@ -12,11 +12,11 @@ const PENDING = /\[f:[a-z]+-section-pending\]/;
 
 /**
  * @typedef {{ formula?: string, molar_mass_g_mol?: number, smiles?: string, inchikey?: string, iupac?: string, cas?: string }} Identity
- * @typedef {{ id: string, names: Record<string, string>, version: number, section_state: Record<string, string>, reviewers: any[], reviewed: string, review_by: string, ai_assisted: boolean, texts: Record<string, Record<string, string>>,
+ * @typedef {{ id: string, names: Record<string, string>, version: number, ai_assisted: boolean, texts: Record<string, Record<string, string>>,
  *   identity?: Identity, classes?: { chemical?: string[], effect?: string[] }, structure?: boolean, family?: string, origin?: any, metabolism?: any, cuts?: Array<{ cut: string, frequency: string, source: string }>,
  *   counselling?: Array<{ key: string, topic: string, source: string }>, interactions?: any[] }} Sheet
- * @typedef {{ id: string, names: Record<string, string>, version: number, section_state: Record<string, string>, reviewers: any[], reviewed: string, review_by: string, ai_assisted: boolean, texts: Record<string, Record<string, string>>, interactions?: any[], counselling?: any[] }} FamilySheet
- * @typedef {{ id: string, names: Record<string, string>, terms: string[], classes: { chemical?: string[], effect?: string[] }, signed: number, family?: string }} IndexEntry
+ * @typedef {{ id: string, names: Record<string, string>, version: number, ai_assisted: boolean, texts: Record<string, Record<string, string>>, interactions?: any[], counselling?: any[] }} FamilySheet
+ * @typedef {{ id: string, names: Record<string, string>, terms: string[], classes: { chemical?: string[], effect?: string[] }, written: number, family?: string }} IndexEntry
  * @typedef {{ keys: string[], public: boolean, sheet?: string }} CutInfo
  * @typedef {{ sheets: string[], entries: IndexEntry[], families: Array<{ id: string, names: Record<string, string> }>, cuts: Record<string, CutInfo> }} SheetIndex
  */
@@ -118,13 +118,13 @@ export function loadClasses() {
   return classes;
 }
 
-/** @param {Sheet | FamilySheet} sheet @param {string} key @returns {boolean} the section was signed off */
-export function isApproved(sheet, key) {
-  return sheet.section_state[key] === "approved" && sheet.reviewers.length > 0;
+/** Number of the given sections that have text to show (placeholders do not count). @param {Sheet | FamilySheet} sheet @param {string[]} keys @param {string} lang @returns {number} */
+export function writtenCount(sheet, keys, lang) {
+  return keys.filter((k) => sectionStatus(sheet, k, lang) === "shown").length;
 }
 
 /**
- * Whether a section has text to show; a placeholder ("not written yet") counts as empty. The state of a section is data, not a gate.
+ * Whether a section has text to show; a placeholder ("not written yet") counts as empty.
  * @param {Sheet | FamilySheet} sheet @param {string} key @param {string} lang
  * @returns {"shown" | "empty"}
  */

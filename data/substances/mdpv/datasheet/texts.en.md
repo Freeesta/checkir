@@ -32,7 +32,7 @@ The clinical effects of MDPV and α-PVP are individual and depend on the dose an
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -44,7 +44,7 @@ MDPV and α-PVP have been involved in a growing number of acute intoxications an
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

@@ -38,7 +38,7 @@ Un uomo di 29 anni è morto in un contesto di chemsex con 18 mg/L di NEP nel san
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

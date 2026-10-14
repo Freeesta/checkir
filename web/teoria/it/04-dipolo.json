@@ -1,5 +1,5 @@
 {
- "schema": "theory/1",
+ "schema": "theory/2",
  "id": "dipole",
  "n": 4,
  "title": "Perché un picco è forte, debole o assente",
@@ -92,7 +92,5 @@
   "ir-active",
   "anharmonicity",
   "degrees-of-freedom"
- ],
- "status": "draft",
- "reviewers": []
+ ]
 }

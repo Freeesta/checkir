@@ -16,7 +16,7 @@ A synthetic substance, a synthetic cathinone: a pyrrolidinophenone with a second
 
 ## metabolism
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## cuts
 
@@ -30,7 +30,7 @@ In vitro α-D2PV is a potent inhibitor of dopamine and norepinephrine uptake, wi
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

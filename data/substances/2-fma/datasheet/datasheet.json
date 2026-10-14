@@ -1,30 +1,13 @@
 {
-  "schema": "datasheet/1",
+  "schema": "datasheet/2",
   "substance": "2-fma",
   "version": 1,
-  "section_state": {
-    "molecule": "draft",
-    "category": "draft",
-    "origin": "draft",
-    "metabolism": "draft",
-    "cuts": "draft",
-    "effects": "draft",
-    "doses": "draft",
-    "risks": "draft",
-    "interactions": "draft",
-    "sources": "draft",
-    "license": "draft"
-  },
-  "reviewers": [],
-  "reviewed": "2026-10-14",
-  "review_by": "2028-09-30",
   "structure_svg": true,
   "origin": {
     "type": "synthetic"
   },
   "doses": [],
   "interactions": [],
-  "show_doses": false,
   "authors": [
     "checkir project (AI-assisted draft)"
   ],

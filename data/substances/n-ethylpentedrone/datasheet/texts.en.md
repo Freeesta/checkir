@@ -38,7 +38,7 @@ A 29-year-old man died in a chemsex context with 18 mg/L of NEP in peripheral bl
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

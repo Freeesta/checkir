@@ -16,7 +16,7 @@ Nei microsomi epatici umani (10 µmol/L, 1 h) AFUBIATA è stato metabolizzato pe
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

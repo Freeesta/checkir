@@ -14,7 +14,6 @@
 .topic-tag { display: inline-block; font-size: 0.75rem; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); margin-right: 0.25rem; }
 .inline-sheet { margin-top: 0.75rem; padding: 0.5rem 0.75rem; border: 1px solid var(--border-soft); border-radius: 0.4rem; background: var(--panel); }
 .inline-sheet h4 { margin: 0.6rem 0 0.2rem; font-size: 0.95rem; }
-.inline-sheet .state-tag { font-size: 0.75rem; font-weight: normal; border: 1px solid var(--border); border-radius: 0.6rem; padding: 0 0.4rem; color: var(--text-muted); }
 .inline-head { margin: 0 0 0.4rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; }
 .audience-toggle, .inline-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.25rem 0 0.5rem; }
 .audience-toggle .btn[aria-pressed="true"], .inline-tabs .btn[aria-selected="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); font-weight: 600; }

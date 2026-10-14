@@ -8,7 +8,7 @@ Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: c
 
 ## history
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## origin
 
@@ -22,7 +22,7 @@ La deaminazione ossidativa è la biotrasformazione comune a PX-1, PX-2 e PX-3, c
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

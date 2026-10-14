@@ -1,5 +1,5 @@
 //! Links of a peak to the data of the candidate and to the common cuts: the assignment of a band of the substance
-//! (`substance-bands/1`) and the suspects (`tagli/1` with diagnostic bands).
+//! (`substance-bands/2`) and the suspects (`tagli/2` with diagnostic bands).
 use super::context::{Context, Cut, SubstanceBand};
 use super::result::Interpretation;
 use super::{tolerance, usable, PeakSet, MAX_SUSPECTS};
