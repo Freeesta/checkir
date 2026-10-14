@@ -12593,6 +12593,141 @@
       "tier": "primary"
     },
     {
+      "id": "peter2024",
+      "type": "paper",
+      "title": "Pharmacokinetics, Pharmacodynamics, and Side Effects of Midazolam: A Review and Case Example (Pharmaceuticals 17:473)",
+      "authors": [
+        "J. U. Peter",
+        "P. Dieudonné",
+        "O. Zolk"
+      ],
+      "year": 2024,
+      "doi": "10.3390/ph17040473",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11054797/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "konishi2017",
+      "type": "paper",
+      "title": "Identification of enzymes responsible for nitrazepam metabolism and toxicity in human (Biochem Pharmacol 140:150-160)",
+      "authors": [
+        "K. Konishi",
+        "T. Fukami",
+        "S. Gotoh",
+        "M. Nakajima"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.bcp.2017.06.114",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28606603/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "vangerven1998",
+      "type": "paper",
+      "title": "Pharmacodynamics and pharmacokinetics of a single oral dose of nitrazepam in healthy volunteers: an interethnic comparison (J Clin Pharmacol 38:1129-1136)",
+      "authors": [
+        "J. M. van Gerven",
+        "E. Uchida",
+        "N. Uchida"
+      ],
+      "year": 1998,
+      "doi": "10.1177/009127009803801207",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11301565/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kintz2017",
+      "type": "paper",
+      "title": "Detection of the designer benzodiazepine metizolam in urine and preliminary data on its metabolism (Drug Test Anal 9:1026-1033)",
+      "authors": [
+        "P. Kintz",
+        "C. Richeval",
+        "C. Jamey",
+        "A. Ameline"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2099",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27671107/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "court2002",
+      "type": "paper",
+      "title": "Stereoselective conjugation of oxazepam by human UDP-glucuronosyltransferases (UGTs): S-oxazepam is glucuronidated by UGT2B15, while R-oxazepam is glucuronidated by UGT2B7 and UGT1A9 (Drug Metab Dispos 30:1257-1265)",
+      "authors": [
+        "M. H. Court",
+        "S. X. Duan",
+        "C. Guillemette",
+        "K. Journault",
+        "S. Krishnaswamy"
+      ],
+      "year": 2002,
+      "doi": "10.1124/dmd.30.11.1257",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12386133/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "sonne1988",
+      "type": "paper",
+      "title": "Bioavailability and pharmacokinetics of oxazepam (Eur J Clin Pharmacol 35:385-389)",
+      "authors": [
+        "J. Sonne",
+        "S. Loft",
+        "M. Døssing",
+        "A. Vollmer-Larsen",
+        "K. L. Olesen"
+      ],
+      "year": 1988,
+      "doi": "10.1007/bf00561369",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3197746/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "greenblatt1988",
+      "type": "paper",
+      "title": "Desmethyldiazepam pharmacokinetics: studies following intravenous and oral desmethyldiazepam, oral clorazepate, and intravenous diazepam (J Clin Pharmacol 28:853-859)",
+      "authors": [
+        "D. J. Greenblatt",
+        "M. K. Divoll",
+        "M. H. Soong",
+        "H. G. Boxenbaum",
+        "J. S. Harmatz"
+      ],
+      "year": 1988,
+      "doi": "10.1002/j.1552-4604.1988.tb03228.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2906643/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "stpierre1993",
+      "type": "paper",
+      "title": "Kinetics of sequential metabolism. II. Formation and metabolism of nordiazepam and oxazepam from diazepam in the perfused murine liver (J Pharmacol Exp Ther 265:1437-1445)",
+      "authors": [
+        "M. V. St-Pierre",
+        "K. S. Pang"
+      ],
+      "year": 1993,
+      "doi": "10.1016/s0022-3565(25)38281-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8510020/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
       "type": "paper",
       "title": "First reported fatalities associated with the 'research chemical' 2-methoxydiphenidine (J Anal Toxicol 39:287-293)",
       "authors": [

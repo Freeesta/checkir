@@ -755,7 +755,16 @@
     "ro-5-3448": "diclazepam",
     "chlorodiazepam": "diclazepam",
     "prosom": "estazolam",
-    "eurodin": "estazolam"
+    "eurodin": "estazolam",
+    "desmethyldiazepam": "nordiazepam",
+    "desmethyletizolam": "metizolam",
+    "desmetildiazepam": "nordiazepam",
+    "desmetiletizolam": "metizolam",
+    "fenazepam": "phenazepam",
+    "fenazepam-4-ossido": "phenazepam-4-oxide",
+    "n-desmethyldiazepam": "nordiazepam",
+    "nordazepam": "nordiazepam",
+    "phenazepam-n-oxide": "phenazepam-4-oxide"
   },
   "schema": "aliases/1"
 }
