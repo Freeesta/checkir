@@ -1,0 +1,85 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mitragynine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "7-hydroxymitragynine",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "basiliere2020"
+      },
+      {
+        "from": "parent",
+        "to": "9-O-demethylmitragynine",
+        "reaction": "o_demethylation",
+        "enzymes": [
+          "CYP2C19",
+          "CYP3A4",
+          "CYP2D6"
+        ],
+        "source": "basiliere2020"
+      },
+      {
+        "from": "parent",
+        "to": "16-carboxymitragynine",
+        "reaction": "other",
+        "enzymes": [
+          "CYP2D6",
+          "CYP2C19",
+          "other"
+        ],
+        "source": "basiliere2020"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "7-hydroxymitragynine",
+        "active": true,
+        "source": "basiliere2020"
+      },
+      {
+        "name_key": "9-o-demethylmitragynine",
+        "active": null,
+        "marker": true,
+        "source": "basiliere2020"
+      },
+      {
+        "name_key": "16-carboxymitragynine",
+        "active": null,
+        "source": "basiliere2020"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

@@ -13460,6 +13460,79 @@
       "tier": "agency",
       "license": "© marketing authorisation holder; cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "brandt2017",
+      "type": "paper",
+      "title": "Return of the lysergamides. Part IV: Analytical and pharmacological characterization of lysergic acid morpholide (LSM-775) (Drug Test Anal 10:310-322)",
+      "authors": [
+        "Brandt SD",
+        "Kavanagh PV",
+        "Twamley B",
+        "Westphal F",
+        "Elliott SP",
+        "Wallach J",
+        "Stratford A",
+        "Klein LM",
+        "McCorvy JD",
+        "Nichols DE",
+        "Halberstadt AL"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2222",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28585392/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "basiliere2020",
+      "type": "paper",
+      "title": "CYP450-mediated metabolism of mitragynine and investigation of metabolites in human urine (J Anal Toxicol 44:301-313)",
+      "authors": [
+        "Basiliere S",
+        "Kerrigan S"
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkz108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32008041/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ya2019",
+      "type": "paper",
+      "title": "Pharmacokinetics of mitragynine, a major analgesic alkaloid in kratom (Mitragyna speciosa): a systematic review (Asian J Psychiatr 43:73-82)",
+      "authors": [
+        "Ya K",
+        "Tangamornsuksan W",
+        "Scholfield CN",
+        "Methaneethorn J",
+        "Lohitnavy M"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.ajp.2019.05.016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31100603/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "horniakova2024",
+      "type": "paper",
+      "title": "Development of a CZE-MS/MS method with dynamic pH junction sample pretreatment for analysis of kratom psychoactive alkaloids in urine (Anal Chim Acta 1323:343076)",
+      "authors": [
+        "Horniakova A",
+        "Mikus P",
+        "Piestansky J"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.aca.2024.343076",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39182975/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }

@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "isolysergic-acid-diethylamide",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "iso-LSD",
+      "synonyms": [
+        "isolysergic acid diethylamide",
+        "iso-LSD"
+      ]
+    },
+    "it": {
+      "preferred": "iso-LSD",
+      "synonyms": [
+        "dietilamide dell'acido isolisergico"
+      ]
+    }
+  },
+  "iupac": "(6aR,9S)-N,N-diethyl-7-methyl-6,6a,8,9-tetrahydro-4H-indolo[4,3-fg]quinoline-9-carboxamide",
+  "formula": "C20H25N3O",
+  "molar_mass_g_mol": 323.4,
+  "smiles": "CCN(CC)C(=O)[C@@H]1CN([C@@H]2CC3=CNC4=CC=CC(=C34)C2=C1)C",
+  "inchi": "InChI=1S/C20H25N3O/c1-4-23(5-2)20(24)14-9-16-15-7-6-8-17-19(15)13(11-21-17)10-18(16)22(3)12-14/h6-9,11,14,18,21H,4-5,10,12H2,1-3H3/t14-,18+/m0/s1",
+  "inchikey": "VAYOSLLFUXYJDT-KBXCAEBGSA-N",
+  "external_ids": {
+    "pubchem_cid": 638252
+  },
+  "classes": {
+    "chemical": [
+      "lysergamides"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
