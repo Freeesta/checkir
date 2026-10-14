@@ -1,0 +1,76 @@
+{
+  "schema": "datasheet/1",
+  "substance": "midazolam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "benzodiazepines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "1-hydroxymidazolam",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP3A4",
+          "CYP3A5"
+        ],
+        "source": "peter2024"
+      },
+      {
+        "from": "1-hydroxymidazolam",
+        "to": "1-hydroxymidazolam-glucuronide",
+        "reaction": "glucuronidation",
+        "enzymes": [
+          "UGT1A*",
+          "UGT2B7"
+        ],
+        "source": "peter2024"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "1-hydroxymidazolam",
+        "active": true,
+        "source": "peter2024"
+      },
+      {
+        "name_key": "1-hydroxymidazolam-glucuronide",
+        "active": null,
+        "source": "peter2024"
+      }
+    ],
+    "half_life_h": {
+      "min": 1.5,
+      "max": 3.0,
+      "matrix": "plasma",
+      "source": "peter2024"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

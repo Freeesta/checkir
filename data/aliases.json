@@ -631,7 +631,16 @@
     "naftirone": "beta-naphyrone",
     "dibutylone": "bk-dmbdb",
     "dibutilone": "bk-dmbdb",
-    "bk-dimbdb": "bk-dmbdb"
+    "bk-dimbdb": "bk-dmbdb",
+    "desmethyldiazepam": "nordiazepam",
+    "desmethyletizolam": "metizolam",
+    "desmetildiazepam": "nordiazepam",
+    "desmetiletizolam": "metizolam",
+    "fenazepam": "phenazepam",
+    "fenazepam-4-ossido": "phenazepam-4-oxide",
+    "n-desmethyldiazepam": "nordiazepam",
+    "nordazepam": "nordiazepam",
+    "phenazepam-n-oxide": "phenazepam-4-oxide"
   },
   "schema": "aliases/1"
 }
