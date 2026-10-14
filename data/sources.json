@@ -11788,6 +11788,80 @@
       "id": "lorazepam-label",
       "license": "© marketing authorisation holder; cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "roldan2014",
+      "type": "paper",
+      "title": "Phenytoin toxicity from cocaine adulteration (West J Emerg Med 15:127-130)",
+      "authors": [
+        "C. J. Roldan"
+      ],
+      "year": 2014,
+      "doi": "10.5811/westjem.2013.12.20010",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3966464/",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "ema-azaperone-mrl",
+      "type": "institution",
+      "title": "Azaperone, Summary Report (1), Committee for Veterinary Medicinal Products (EMEA)",
+      "year": 1997,
+      "url": "https://www.ema.europa.eu/en/documents/mrl-report/azaperone-summary-report-1-committee-veterinary-medicinal-products_en.pdf",
+      "tier": "agency",
+      "license": "© European Medicines Agency; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dilantin-label",
+      "type": "institution",
+      "title": "DILANTIN (extended phenytoin sodium capsules), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=86dd27d1-9cee-48ae-b55d-e2d2f7dbc593",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "tegretol-label",
+      "type": "institution",
+      "title": "TEGRETOL (carbamazepine) tablets, suspension and XR tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8d409411-aa9f-4f3a-a52c-fbcb0c3ec053",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "carisoprodol-label",
+      "type": "institution",
+      "title": "Carisoprodol tablets (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b83f7fd1-11e3-4e94-ae53-4637e892b372",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "chlorzoxazone-label",
+      "type": "institution",
+      "title": "Chlorzoxazone tablets USP (Par Health USA, LLC), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7c5a835d-3754-4c25-a0e2-335b8eceb2d2",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "butalbital-label",
+      "type": "institution",
+      "title": "Butalbital, acetaminophen and caffeine tablets USP (Actavis Pharma, Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a6cbc17f-5c60-489c-8029-84b0add556d8",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
     }
   ]
 }
