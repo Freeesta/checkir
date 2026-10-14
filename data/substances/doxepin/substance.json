@@ -1,0 +1,48 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "doxepin",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Doxepin",
+      "synonyms": []
+    },
+    "it": {
+      "preferred": "Doxepina",
+      "synonyms": []
+    }
+  },
+  "iupac": "3-(6H-benzo[c][1]benzoxepin-11-ylidene)-N,N-dimethylpropan-1-amine",
+  "formula": "C19H21NO",
+  "molar_mass_g_mol": 279.4,
+  "smiles": "CN(C)CCC=C1C2=CC=CC=C2COC3=CC=CC=C31",
+  "inchi": "InChI=1S/C19H21NO/c1-20(2)13-7-11-17-16-9-4-3-8-15(16)14-21-19-12-6-5-10-18(17)19/h3-6,8-12H,7,13-14H2,1-2H3",
+  "inchikey": "ODQWQRRAPPTVAG-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1668-19-5",
+    "pubchem_cid": 3158
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
