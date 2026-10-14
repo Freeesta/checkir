@@ -1,0 +1,73 @@
+{
+  "schema": "datasheet/1",
+  "substance": "carbamazepine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "carbamazepine-10,11-epoxide",
+        "reaction": "other",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "tegretol-label"
+      },
+      {
+        "from": "carbamazepine-10-11-epoxide",
+        "to": "carbamazepine-10,11-transdiol",
+        "reaction": "hydrolysis_ester",
+        "enzymes": [
+          "other"
+        ],
+        "source": "tegretol-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "carbamazepine-10-11-epoxide",
+        "active": true,
+        "source": "tegretol-label"
+      },
+      {
+        "name_key": "carbamazepine-10-11-transdiol",
+        "active": null,
+        "source": "tegretol-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 12,
+      "max": 17,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "tegretol-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

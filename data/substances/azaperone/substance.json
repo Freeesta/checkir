@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "azaperone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Azaperone",
+      "synonyms": [
+        "Stresnil",
+        "Fluoperidol"
+      ]
+    },
+    "it": {
+      "preferred": "Azaperone",
+      "synonyms": [
+        "Stresnil",
+        "Fluoperidol"
+      ]
+    }
+  },
+  "iupac": "1-(4-fluorophenyl)-4-(4-pyridin-2-ylpiperazin-1-yl)butan-1-one",
+  "formula": "C19H22FN3O",
+  "molar_mass_g_mol": 327.4,
+  "smiles": "C1CN(CCN1CCCC(=O)C2=CC=C(C=C2)F)C3=CC=CC=N3",
+  "inchi": "InChI=1S/C19H22FN3O/c20-17-8-6-16(7-9-17)18(24)4-3-11-22-12-14-23(15-13-22)19-5-1-2-10-21-19/h1-2,5-10H,3-4,11-15H2",
+  "inchikey": "XTKDAFGWCDAMPY-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1649-18-9",
+    "pubchem_cid": 15443
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
