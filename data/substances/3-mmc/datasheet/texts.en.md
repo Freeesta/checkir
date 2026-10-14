@@ -20,9 +20,11 @@ A synthetic substance, a ring-substituted cathinone, racemic. Its precursors are
 
 ## metabolism
 
-There are no clinical pharmacokinetic or human metabolism studies; in the pig the half-life is 0.8 h and oral bioavailability 7 %. [f:who-ecdd45-3mmc]
+There are no controlled human pharmacokinetic studies (absorption, half-life, clearance). The only kinetic data are from 3 pigs: oral bioavailability about 7%, peak at 5-10 minutes, plasma half-life 0.8 h; the authors warn against extrapolating to people (small sample, low dose). [f:shimshoni2015]
 
-Nor-3-MMC, dihydro-3-MMC, nor-dihydro-3-MMC, hydroxytolyl-3-MMC, 3-carboxy-3-MMC and 3-carboxy-dihydro-3-MMC were detected in cases: the routes in our list are inferred from these metabolites, and metabolism may resemble that of 4-MMC. [f:who-ecdd45-3mmc]
+In human liver microsomes and cytosol three products formed: a hydroxylated, a keto-reduced and an N-desmethyl derivative (nor-3-MMC). All three were found in 31 positive human samples (plasma, urine, saliva, hair): 16%, 52% and 42% of samples, with 61% positive for at least one. Enzymes and activity of the metabolites were not determined. [f:vanwichelen2024]
+
+Nor-3-MMC, dihydro-3-MMC, nor-dihydro-3-MMC, hydroxytolyl-3-MMC, 3-carboxy-3-MMC and 3-carboxy-dihydro-3-MMC were detected in cases; metabolism may resemble that of 4-MMC. [f:who-ecdd45-3mmc]
 
 ## cuts
 
@@ -30,9 +32,11 @@ Among the common adulterants of cathinones the UNODC manual lists paracetamol, c
 
 ## effects
 
-The routes described are nasal, oral and intravenous; injection is reported in chemsex ("slamsex"). Effects seem shorter and less intense than those of mephedrone, but the finding is uncertain. [f:who-ecdd45-3mmc]
+In vitro, in HEK293 cells with human transporters, 3-MMC inhibited the noradrenaline transporter and acted as a substrate-type monoamine releaser like classic amphetamines. Unlike other mephedrone analogues it did not inhibit the serotonin transporter more than the dopamine one, so the profile is stimulant-like rather than MDMA-like. [f:luethi2018-analogs]
 
-In vitro the DAT:SERT release ratio is about 10: the selectivity is catecholaminergic. [f:who-ecdd45-3mmc]
+In 14 healthy volunteers (crossover, placebo-controlled) 25, 50 and 100 mg raised the pressure-pain threshold and lowered perceived painfulness, most at 50 and 100 mg and for up to 5 hours; mood rose at 1 hour but not at 5. The abstract does not state the route and reports no other effects. [f:ramaekers2025-3mmc]
+
+The routes described by users are nasal, oral and intravenous; injection is reported in chemsex ("slamsex"). Effects seem shorter and less intense than those of mephedrone, but the finding is uncertain. [f:who-ecdd45-3mmc]
 
 ## doses
 
@@ -44,13 +48,15 @@ User-reported duration: orally 4-6 h in total (onset 10-30 min, peak 2-3 h); nas
 
 In Sweden, in 50 patients (August 2012 - March 2014), tachycardia (48 %), agitation (44 %), hypertension (38 %), dilated pupils (24 %), seizures (8 %) and hyperthermia above 39 °C (6 %) were seen. [f:who-ecdd45-3mmc]
 
+Blood concentrations in 95 forensic cases in Poland ranged from traces (<1 ng/mL) to 1.6 µg/mL (median 18.5 ng/mL), mostly with other drugs. A review found no correlation between concentration and severity, and most intoxications and deaths involved several substances. [f:adamowicz2016] [f:kelecevic2024]
+
 The EMCDDA counts 27 deaths with confirmed exposure, 8 of them with 3-MMC attributed or contributing; the literature reports 34 deaths. Some are in a chemsex context. [f:who-ecdd45-3mmc]
 
-There are no dependence studies. [f:who-ecdd45-3mmc]
+Dependence: no studies; a review suggests a potential for psychological dependence. [f:who-ecdd45-3mmc] [f:kelecevic2024]
 
 ## interactions
 
-Co-exposure was common in the deaths (alcohol, GHB, benzodiazepines); the sources do not prove a causal link. [f:who-ecdd45-3mmc]
+Co-exposure was common in the deaths (alcohol, GHB, benzodiazepines); the sources do not prove a causal link. No controlled interaction study was found. [f:who-ecdd45-3mmc] [f:kelecevic2024]
 
 ## counselling
 
@@ -66,7 +72,7 @@ Remember that 2-MMC, 3-MMC and 4-MMC share a formula: the ring band below 900 cm
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:swgdrug-3mmc] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:who-ecdd45-3mmc] [f:ubc-counselling-guidelines]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:swgdrug-3mmc] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:who-ecdd45-3mmc] [f:ubc-counselling-guidelines] [f:shimshoni2015] [f:vanwichelen2024] [f:luethi2018-analogs] [f:ramaekers2025-3mmc] [f:adamowicz2016] [f:kelecevic2024]
 
 ## license
 

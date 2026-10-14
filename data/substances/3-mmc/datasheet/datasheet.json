@@ -1,11 +1,23 @@
 {
   "schema": "datasheet/2",
   "substance": "3-mmc",
-  "version": 2,
+  "version": 3,
   "doses": [],
   "interactions": [
     {
       "with": "ghb",
+      "severity": "caution",
+      "mechanism": "other",
+      "source": "who-ecdd45-3mmc"
+    },
+    {
+      "with": "ethanol",
+      "severity": "caution",
+      "mechanism": "other",
+      "source": "who-ecdd45-3mmc"
+    },
+    {
+      "with": "benzodiazepines",
       "severity": "caution",
       "mechanism": "other",
       "source": "who-ecdd45-3mmc"
