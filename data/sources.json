@@ -7735,6 +7735,181 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13",
       "tier": "primary"
+    },
+    {
+      "id": "wohlfarth2014",
+      "type": "paper",
+      "title": "Metabolism of synthetic cannabinoids PB-22 and its 5-fluoro analog, 5F-PB-22, by human hepatocyte incubation and high-resolution mass spectrometry (Anal Bioanal Chem 406:1763-1780)",
+      "authors": [
+        "A. Wohlfarth",
+        "A. S. Gandhi",
+        "S. Pang",
+        "M. Zhu",
+        "K. B. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2014,
+      "doi": "10.1007/s00216-014-7668-0",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24518903/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "erratico2015",
+      "type": "paper",
+      "title": "In vitro and in vivo human metabolism of the synthetic cannabinoid AB-CHMINACA (Drug Test Anal 7:866-876)",
+      "authors": [
+        "C. Erratico",
+        "N. Negreira",
+        "H. Norouzizadeh",
+        "A. Covaci",
+        "H. Neels",
+        "K. Maudens",
+        "A. L. N. van Nuijs"
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1796",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25865117/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "eccarius2026",
+      "type": "paper",
+      "title": "In vitro metabolic profile characterization for synthetic cannabinoids MDMB-BINACA, MDMB-PICA, and AB-CHMINACA (J Anal Toxicol 50:bkag034)",
+      "authors": [
+        "L. K. Eccarius",
+        "B. N. Stang",
+        "S. E. Walton",
+        "A. J. Krotulski",
+        "B. K. Logan"
+      ],
+      "year": 2026,
+      "doi": "10.1093/jat/bkag034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42226022/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "li2018-abfubica",
+      "type": "paper",
+      "title": "UPLC-HR-MS/MS-based determination study on the metabolism of four synthetic cannabinoids, ADB-FUBICA, AB-FUBICA, AB-BICA and ADB-BICA, by human liver microsomes (Biomed Chromatogr 32:e4113)",
+      "authors": [
+        "J. Li",
+        "C. Liu",
+        "T. Li",
+        "Z. Hua"
+      ],
+      "year": 2018,
+      "doi": "10.1002/bmc.4113",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28992356/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "qian2016",
+      "type": "paper",
+      "title": "Four types of cannabimimetic indazole and indole derivatives, ADB-BINACA, AB-FUBICA, ADB-FUBICA, and AB-BICA, identified as new psychoactive substances (Forensic Toxicol 34:133-143)",
+      "authors": [
+        "Z. Qian",
+        "Z. Hua",
+        "C. Liu",
+        "W. Jia"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s11419-015-0297-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26793280/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260210142512/https://pubmed.ncbi.nlm.nih.gov/26793280/"
+    },
+    {
+      "id": "franz2017",
+      "type": "paper",
+      "title": "In vitro metabolism of the synthetic cannabinoid 3,5-AB-CHMFUPPYCA and its 5,3-regioisomer and investigation of their thermal stability (Drug Test Anal 9:311-316)",
+      "authors": [
+        "F. Franz",
+        "V. Angerer",
+        "S. D. Brandt",
+        "G. McLaughlin",
+        "P. V. Kavanagh",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.1950",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26888282/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "banister2019",
+      "type": "paper",
+      "title": "The chemistry and pharmacology of putative synthetic cannabinoid receptor agonist (SCRA) new psychoactive substances (NPS) 5F-PY-PICA, 5F-PY-PINACA, and their analogs (Drug Test Anal 11:976-989)",
+      "authors": [
+        "S. D. Banister",
+        "R. C. Kevin",
+        "L. Martin",
+        "A. Adams",
+        "C. Macdonald",
+        "J. J. Manning",
+        "R. Boyd",
+        "M. Cunningham",
+        "M. Y. Stevens",
+        "I. S. McGregor",
+        "M. Glass",
+        "M. Connor",
+        "R. R. Gerona"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2583",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30838752/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260822132220/https://pubmed.ncbi.nlm.nih.gov/30838752/"
+    },
+    {
+      "id": "mardal2018",
+      "type": "paper",
+      "title": "Metabolism of the synthetic cannabinoid 5F-PY-PICA by human and rat hepatocytes and identification of biliary analytical targets by directional efflux in sandwich-cultured rat hepatocytes using UHPLC-HR-MS/MS (J Pharm Biomed Anal 149:296-307)",
+      "authors": [
+        "M. Mardal",
+        "P. Annaert",
+        "C. Noble",
+        "M. Oorts",
+        "K. Linnet"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jpba.2017.11.027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29128830/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "richter2019",
+      "type": "paper",
+      "title": "Cytotoxicity of new psychoactive substances and other drugs of abuse studied in human HepG2 cells using an adopted high content screening assay (Toxicol Lett 301:79-89)",
+      "authors": [
+        "L. H. J. Richter",
+        "A. Beck",
+        "V. Flockerzi",
+        "H. H. Maurer",
+        "M. R. Meyer"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.toxlet.2018.11.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30465810/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }

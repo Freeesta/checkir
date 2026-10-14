@@ -234,7 +234,14 @@
     "5-fluoro-sdb-005-indole": "nm-2201",
     "5f-sdb-005-indole": "nm-2201",
     "cbl-2201": "nm-2201",
-    "nm2201": "nm-2201"
+    "nm2201": "nm-2201",
+    "5f-pb22": "5f-pb-22",
+    "5-fluoro-pb-22": "5f-pb-22",
+    "5f-qupic": "5f-pb-22",
+    "5-fluoro-py-pinaca": "5f-py-pinaca",
+    "ab-chfupyca": "ab-chfupyca-ab-chmfuppyca",
+    "ab-chmfuppyca": "ab-chfupyca-ab-chmfuppyca",
+    "35-ab-chmfuppyca": "ab-chfupyca-ab-chmfuppyca"
   },
   "schema": "aliases/1"
 }
