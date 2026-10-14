@@ -1,0 +1,85 @@
+{
+  "schema": "datasheet/1",
+  "substance": "eutylone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cathinones",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "O-demethylenated (catechol) metabolite",
+        "reaction": "other",
+        "enzymes": [
+          "CYP2D6",
+          "CYP2C19",
+          "CYP2B6"
+        ],
+        "source": "lee2026"
+      },
+      {
+        "from": "parent",
+        "to": "N-deethylated metabolite",
+        "reaction": "other",
+        "source": "lee2026"
+      },
+      {
+        "from": "parent",
+        "to": "beta-keto reduced metabolite",
+        "reaction": "reduction_keto",
+        "source": "lee2026"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated metabolite",
+        "reaction": "hydroxylation",
+        "source": "lee2026"
+      },
+      {
+        "from": "parent",
+        "to": "O-methylated catechol metabolite",
+        "reaction": "other",
+        "source": "lee2026"
+      },
+      {
+        "from": "parent",
+        "to": "glucuronide conjugate",
+        "reaction": "glucuronidation",
+        "source": "lee2026"
+      },
+      {
+        "from": "parent",
+        "to": "sulfate conjugate",
+        "reaction": "sulfation",
+        "source": "lee2026"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

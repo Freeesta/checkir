@@ -1,0 +1,62 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mdphp",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cathinones",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxy-mdphp",
+        "reaction": "hydroxylation",
+        "source": "brueckner2025"
+      },
+      {
+        "from": "parent",
+        "to": "demethylenyl-methyl-mdphp",
+        "reaction": "other",
+        "source": "brueckner2025"
+      },
+      {
+        "from": "parent",
+        "to": "pyrrolidine-oxidised-mdphp",
+        "reaction": "other",
+        "source": "brueckner2025"
+      },
+      {
+        "from": "parent",
+        "to": "primary-amine-mdphp",
+        "reaction": "other",
+        "source": "brueckner2025"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

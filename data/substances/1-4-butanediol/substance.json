@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "1-4-butanediol",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "1,4-Butanediol",
+      "synonyms": [
+        "BDO",
+        "1,4-BD",
+        "tetramethylene glycol"
+      ]
+    },
+    "it": {
+      "preferred": "1,4-Butandiolo",
+      "synonyms": [
+        "BDO",
+        "1,4-BD",
+        "tetramethylene glycol"
+      ]
+    }
+  },
+  "iupac": "butane-1,4-diol",
+  "formula": "C4H10O2",
+  "molar_mass_g_mol": 90.12,
+  "smiles": "C(CCO)CO",
+  "inchi": "InChI=1S/C4H10O2/c5-3-1-2-4-6/h5-6H,1-4H2",
+  "inchikey": "WERYXYBDKMZEQL-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "110-63-4",
+    "pubchem_cid": 8064
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

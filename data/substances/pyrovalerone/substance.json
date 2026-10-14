@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "pyrovalerone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Pyrovalerone",
+      "synonyms": [
+        "4'-Methyl-2-(1-pyrrolidinyl)valerophenone"
+      ]
+    },
+    "it": {
+      "preferred": "Pirovalerone",
+      "synonyms": [
+        "4'-Methyl-2-(1-pyrrolidinyl)valerophenone"
+      ]
+    }
+  },
+  "iupac": "1-(4-methylphenyl)-2-pyrrolidin-1-ylpentan-1-one",
+  "formula": "C16H23NO",
+  "molar_mass_g_mol": 245.36,
+  "smiles": "CCCC(C(=O)C1=CC=C(C=C1)C)N2CCCC2",
+  "inchi": "InChI=1S/C16H23NO/c1-3-6-15(17-11-4-5-12-17)16(18)14-9-7-13(2)8-10-14/h7-10,15H,3-6,11-12H2,1-2H3",
+  "inchikey": "SWUVZKWCOBGPTH-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "3563-49-3",
+    "pubchem_cid": 14373
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
