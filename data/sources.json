@@ -9938,6 +9938,197 @@
       "consulted": "2026-10-14"
     },
     {
+      "id": "sia2021",
+      "type": "paper",
+      "title": "Urinary Metabolite Biomarkers for the Detection of Synthetic Cannabinoid ADB-BUTINACA Abuse (Clin Chem 67:1534-1544)",
+      "authors": [
+        "C. H. Sia",
+        "Z. Wang",
+        "E. M. L. Goh",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1093/clinchem/hvab134",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34387654/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20241213194357/https://pubmed.ncbi.nlm.nih.gov/34387654/"
+    },
+    {
+      "id": "gish2025",
+      "type": "paper",
+      "title": "ADB-BUTINACA, a synthetic cannabinoid receptor agonist: overview of its presence in the \"Chimique\" in Mayotte (Environ Sci Pollut Res 32:29905-29916)",
+      "authors": [
+        "A. Gish",
+        "A. Peyré",
+        "C. Richeval",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1007/s11356-025-37270-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41372739/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260514025453/https://pubmed.ncbi.nlm.nih.gov/41372739/"
+    },
+    {
+      "id": "gish2025-fubiata",
+      "type": "paper",
+      "title": "Elucidation of human metabolism of ADB-FUBIATA for population exposure assessment (Environ Sci Pollut Res 32:30871-30880)",
+      "authors": [
+        "A. Gish",
+        "A. Peyré",
+        "C. Richeval",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1007/s11356-025-36571-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40576895/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "carlier2017-adb-fubinaca",
+      "type": "paper",
+      "title": "Metabolite Profiling of ADB-FUBINACA, A New Synthetic Cannabinoid (Curr Neuropharmacol 15:682-691)",
+      "authors": [
+        "J. Carlier",
+        "X. Diao",
+        "A. Wohlfarth",
+        "K. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2017,
+      "doi": "10.2174/1570159X15666161108123419",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5771045/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "deventer2025",
+      "type": "paper",
+      "title": "Outsmarting generic legislation: 4 years into the cat-and-mouse game of the synthetic cannabinoid receptor agonist market since the Chinese ban in 2021 (Arch Toxicol 99:4757-4784)",
+      "authors": [
+        "M. H. Deventer",
+        "C. P. Stove"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s00204-025-04191-0",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40983778/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260209072916/https://pubmed.ncbi.nlm.nih.gov/40983778/"
+    },
+    {
+      "id": "zschiesche2026",
+      "type": "paper",
+      "title": "Synthetic cannabinoids in human post-mortem samples - ADB-BUTINACA and metabolites in three fatalities (Front Toxicol 8:1826767)",
+      "authors": [
+        "A. Zschiesche",
+        "S. Köpfler",
+        "C. Wunder",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.3389/ftox.2026.1826767",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13215650/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "de-simone2026",
+      "type": "paper",
+      "title": "Human Stem Cell-Derived Neurospheroids and a Multi-Assay Strategy Provide Brain Cytotoxicity New Insights from ADB-FUBIATA Exposure (Neurotox Res 44(4))",
+      "authors": [
+        "U. De Simone",
+        "C. A. Locatelli",
+        "F. Caloni",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1007/s12640-026-00808-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42461479/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "hermanns-clausen2026",
+      "type": "paper",
+      "title": "Acute toxicity of ADB-CHMINACA - a case series of patients with pronounced central nervous symptoms including the posterior reversible encephalopathic syndrome (Br J Clin Pharmacol)",
+      "authors": [
+        "M. Hermanns-Clausen",
+        "M. Sommer",
+        "A. Zschiesche",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1002/bcp.70538",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41916726/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260514033516/https://pubmed.ncbi.nlm.nih.gov/41916726/"
+    },
+    {
+      "id": "filipiuc2026",
+      "type": "paper",
+      "title": "Acute Toxicity of Three Synthetic Cannabinoids: First In Vivo Preclinical Study (Molecules 31:2365)",
+      "authors": [
+        "S.-I. Filipiuc",
+        "C. Solcan",
+        "B.-I. Tamba",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.3390/molecules31132365",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13362526/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gaunitz2019",
+      "type": "paper",
+      "title": "Solid-phase extraction-liquid chromatography-tandem mass spectrometry method for the qualitative analysis of 61 synthetic cannabinoid metabolites in urine (Drug Test Anal 12:27-40)",
+      "authors": [
+        "F. Gaunitz",
+        "T. Kieliba",
+        "M. Thevis",
+        "K. Mercer-Chalmers-Bender"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2680",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31412168/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "al-matrouk2019-adb",
+      "type": "paper",
+      "title": "Identification of synthetic cannabinoids that were seized, consumed, or associated with deaths in Kuwait in 2018 using GC-MS and LC-MS-MS analysis (Forensic Sci Int 303:109960)",
+      "authors": [
+        "A. Al-Matrouk",
+        "M. Alqallaf",
+        "A. AlShemmeri",
+        "H. BoJbarah"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.forsciint.2019.109960",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31550599/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260216063116/https://pubmed.ncbi.nlm.nih.gov/31550599/"
+    },
+    {
       "id": "watanabe2023",
       "type": "paper",
       "title": "In vitro metabolic profiling of new synthetic cannabinoids, ADB-FUBIATA, AFUBIATA, CH-FUBIATA, and CH-PIATA (Arch Toxicol 97:3085-3094)",

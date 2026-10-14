@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "adb-chmica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "ADB-CHMICA",
+      "synonyms": [
+        "ADB-CHMINACA",
+        "MAB-CHMINACA"
+      ]
+    },
+    "it": {
+      "preferred": "ADB-CHMICA",
+      "synonyms": [
+        "ADB-CHMINACA",
+        "MAB-CHMINACA"
+      ]
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-3,3-dimethyl-1-oxobutan-2-yl]-1-(cyclohexylmethyl)indazole-3-carboxamide",
+  "formula": "C21H30N4O2",
+  "molar_mass_g_mol": 370.5,
+  "smiles": "CC(C)(C)[C@@H](C(=O)N)NC(=O)C1=NN(C2=CC=CC=C21)CC3CCCCC3",
+  "inchi": "InChI=1S/C21H30N4O2/c1-21(2,3)18(19(22)26)23-20(27)17-15-11-7-8-12-16(15)25(24-17)13-14-9-5-4-6-10-14/h7-8,11-12,14,18H,4-6,9-10,13H2,1-3H3,(H2,22,26)(H,23,27)/t18-/m1/s1",
+  "inchikey": "ZWCCSIUBHCZKOY-GOSISDBHSA-N",
+  "external_ids": {
+    "cas": "1185887-13-1",
+    "pubchem_cid": 68894304
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

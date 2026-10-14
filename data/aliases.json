@@ -398,7 +398,13 @@
     "xanax": "alprazolam",
     "xilazina": "xylazine",
     "xlr-11": "5-fluoro-ur-144",
-    "xlr11": "5-fluoro-ur-144"
+    "xlr11": "5-fluoro-ur-144",
+    "adb-5-br-inaca": "adb-5br-inaca",
+    "admb-butinaca": "adb-butinaca",
+    "adb-chminaca": "adb-chmica",
+    "mab-chminaca": "adb-chmica",
+    "fub-acadb": "adb-fubiata",
+    "adb-fubiaca": "adb-fubiata"
   },
   "schema": "aliases/1"
 }
