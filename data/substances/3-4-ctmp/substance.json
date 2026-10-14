@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "3-4-ctmp",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "3,4-Dichloromethylphenidate",
+      "synonyms": [
+        "3,4-CTMP",
+        "3,4-DCMP"
+      ]
+    },
+    "it": {
+      "preferred": "3,4-Diclorometilfenidato",
+      "synonyms": [
+        "3,4-CTMP",
+        "3,4-DCMP"
+      ]
+    }
+  },
+  "iupac": "methyl 2-(3,4-dichlorophenyl)-2-piperidin-2-ylacetate",
+  "formula": "C14H17Cl2NO2",
+  "molar_mass_g_mol": 302.2,
+  "smiles": "COC(=O)C(C1CCCCN1)C2=CC(=C(C=C2)Cl)Cl",
+  "inchi": "InChI=1S/C14H17Cl2NO2/c1-19-14(18)13(12-4-2-3-7-17-12)9-5-6-10(15)11(16)8-9/h5-6,8,12-13,17H,2-4,7H2,1H3",
+  "inchikey": "JUKMAYKVHWKRKY-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1400742-68-8",
+    "pubchem_cid": 44418862
+  },
+  "classes": {
+    "chemical": [
+      "phenidates"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
