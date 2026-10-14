@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-mapdb",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-MAPDB",
+      "synonyms": [
+        "5-(2-methylaminopropyl)-2,3-dihydrobenzofuran",
+        "1-(2,3-dihydro-1-benzofuran-5-yl)-N-methylpropan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "5-MAPDB",
+      "synonyms": [
+        "5-(2-metilamminopropil)-2,3-diidrobenzofurano"
+      ]
+    }
+  },
+  "iupac": "1-(2,3-dihydro-1-benzofuran-5-yl)-N-methylpropan-2-amine",
+  "formula": "C12H17NO",
+  "molar_mass_g_mol": 191.27,
+  "smiles": "CC(CC1=CC2=C(C=C1)OCC2)NC",
+  "inchi": "InChI=1S/C12H17NO/c1-9(13-2)7-10-3-4-12-11(8-10)5-6-14-12/h3-4,8-9,13H,5-7H2,1-2H3",
+  "inchikey": "PLQTZOCLUHHCOI-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1354631-78-9",
+    "pubchem_cid": 112500533
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
