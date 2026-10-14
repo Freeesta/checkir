@@ -13223,7 +13223,9 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40081218/",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
-      "tier": "primary",
+      "tier": "primary"
+    },
+    {
       "id": "dybek2019",
       "type": "paper",
       "title": "Syntheses and analytical characterizations of the research chemical 1-[1-(2-fluorophenyl)-2-phenylethyl]pyrrolidine (fluorolintane) and five of its isomers (Drug Test Anal 11:1144-1161)",
