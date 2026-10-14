@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "cathine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Cathine ((+)-norpseudoephedrine)",
+      "synonyms": [
+        "d-norpseudoephedrine",
+        "(1S,2S)-2-amino-1-phenylpropan-1-ol"
+      ]
+    },
+    "it": {
+      "preferred": "Catina ((+)-norpseudoefedrina)",
+      "synonyms": [
+        "d-norpseudoefedrina",
+        "(1S,2S)-2-ammino-1-fenilpropan-1-olo"
+      ]
+    }
+  },
+  "iupac": "(1S,2S)-2-amino-1-phenylpropan-1-ol",
+  "formula": "C9H13NO",
+  "molar_mass_g_mol": 151.21,
+  "smiles": "C[C@@H]([C@H](C1=CC=CC=C1)O)N",
+  "inchi": "InChI=1S/C9H13NO/c1-7(10)9(11)8-5-3-2-4-6-8/h2-7,9,11H,10H2,1H3/t7-,9+/m0/s1",
+  "inchikey": "DLNKOYKMWOXYQA-IONNQARKSA-N",
+  "external_ids": {
+    "cas": "492-39-7",
+    "pubchem_cid": 441457
+  },
+  "classes": {
+    "chemical": [
+      "plant_based"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

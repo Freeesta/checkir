@@ -11581,6 +11581,408 @@
       "tier": "primary"
     },
     {
+      "type": "paper",
+      "title": "Detection and identification of the designer benzodiazepine flubromazepam and preliminary data on its metabolism and pharmacokinetics (J Mass Spectrom 48:1150-1159)",
+      "authors": [
+        "B. Moosmann",
+        "L. M. Huppertz",
+        "M. Hutter",
+        "A. Buchwald",
+        "S. Ferlaino",
+        "V. Auwärter"
+      ],
+      "year": 2013,
+      "doi": "10.1002/jms.3279",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24259203/",
+      "tier": "primary",
+      "id": "moosmann2013",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260909095202/https://pubmed.ncbi.nlm.nih.gov/24259203/"
+    },
+    {
+      "type": "paper",
+      "title": "Metabolic profile of flunitrazepam: clinical and forensic toxicological aspects (Drug Metab Lett 11:14-20)",
+      "authors": [
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2017,
+      "doi": "10.2174/1872312811666170407164216",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28403803/",
+      "tier": "review",
+      "id": "dinis-oliveira2017a",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250709164138/https://pubmed.ncbi.nlm.nih.gov/28403803/"
+    },
+    {
+      "type": "paper",
+      "title": "Metabolic profile of oxazepam and related benzodiazepines: clinical and forensic aspects (Drug Metab Rev 49:451-463)",
+      "authors": [
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2017,
+      "doi": "10.1080/03602532.2017.1377223",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28903606/",
+      "tier": "review",
+      "id": "dinis-oliveira2017b",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "CYP3A4 is the major CYP isoform mediating the in vitro hydroxylation and demethylation of flunitrazepam (Drug Metab Dispos 29:133-140)",
+      "authors": [
+        "L. M. Hesse",
+        "K. Venkatakrishnan",
+        "L. L. von Moltke",
+        "R. I. Shader",
+        "D. J. Greenblatt"
+      ],
+      "year": 2001,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11159802/",
+      "tier": "primary",
+      "id": "hesse2001",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "The glucuronidation of R- and S-lorazepam: human liver microsomal kinetics, UDP-glucuronosyltransferase enzyme selectivity, and inhibition by drugs (Drug Metab Dispos 41:1273-1284)",
+      "authors": [
+        "V. Uchaipichat",
+        "C. Suthisisang",
+        "J. O. Miners"
+      ],
+      "year": 2013,
+      "doi": "10.1124/dmd.113.051656",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23554428/",
+      "tier": "primary",
+      "id": "uchaipichat2013",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Effect of the UGT2B15 genotype on the pharmacokinetics, pharmacodynamics, and drug interactions of intravenous lorazepam in healthy volunteers (Clin Pharmacol Ther 77:486-494)",
+      "authors": [
+        "J. Y. Chung",
+        "J. Y. Cho",
+        "K. S. Yu",
+        "J. R. Kim",
+        "H. R. Jung",
+        "K. S. Lim",
+        "et al."
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.clpt.2005.02.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15961980/",
+      "tier": "primary",
+      "id": "chung2005",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Eszopiclone, a nonbenzodiazepine sedative-hypnotic agent for the treatment of transient and chronic insomnia (Clin Ther 28:491-516)",
+      "authors": [
+        "J. Najib"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.clinthera.2006.04.014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16750462/",
+      "tier": "review",
+      "id": "najib2006",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Identifying metabolites of meclonazepam by high-resolution mass spectrometry using human liver microsomes, hepatocytes, a mouse model, and authentic urine samples (AAPS J 19:736-742)",
+      "authors": [
+        "S. Vikingsson",
+        "A. Wohlfarth",
+        "M. Andersson",
+        "H. Gréen",
+        "M. Roman",
+        "M. Josefsson",
+        "et al."
+      ],
+      "year": 2017,
+      "doi": "10.1208/s12248-016-0040-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28091881/",
+      "tier": "primary",
+      "id": "vikingsson2017",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Identification of main human urinary metabolites of the designer nitrobenzodiazepines clonazolam, meclonazepam, and nifoxipam by nano-liquid chromatography-high-resolution mass spectrometry for drug testing purposes (Anal Bioanal Chem 408:3571-3591)",
+      "authors": [
+        "M. R. Meyer",
+        "M. P. Bergstrand",
+        "A. Helander",
+        "O. Beck"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s00216-016-9439-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27071765/",
+      "tier": "primary",
+      "id": "meyer2016",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Plasma levels and urinary excretion of lormetazepam in patients with liver cirrhosis and in healthy volunteers (Eur J Drug Metab Pharmacokinet 15:19-26)",
+      "authors": [
+        "M. Hildebrand",
+        "A. Hellstern",
+        "M. Hümpel",
+        "D. Hellenbrecht",
+        "R. Saller"
+      ],
+      "year": 1990,
+      "doi": "10.1007/BF03190123",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1974495/",
+      "tier": "primary",
+      "id": "hildebrand1990",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Initial study of methylclonazepam in generalized anxiety disorder. Evidence for greater power in the cross-over design (Psychopharmacology 87:130-135)",
+      "authors": [
+        "M. Ansseau",
+        "A. Doumont",
+        "D. Thiry",
+        "R. von Frenckell",
+        "J. Collard"
+      ],
+      "year": 1985,
+      "doi": "10.1007/BF00431795",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3931136/",
+      "tier": "primary",
+      "id": "ansseau1985",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "institution",
+      "title": "Eszopiclone tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=00fc3250-3e29-4a4b-ac0c-74910659337c",
+      "tier": "agency",
+      "id": "lunesta-label",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "institution",
+      "title": "Lorazepam tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=00960fbd-a5da-408b-9867-62982f20906f",
+      "tier": "agency",
+      "id": "lorazepam-label",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "patel2015",
+      "type": "paper",
+      "title": "\"Natural Amphetamine\" Khat: A Cultural Tradition or a Drug of Abuse? (Int Rev Neurobiol 120:235-55)",
+      "authors": [
+        "Patel NB"
+      ],
+      "year": 2015,
+      "doi": "10.1016/bs.irn.2015.02.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26070760/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "atlabachew2016",
+      "type": "paper",
+      "title": "Isolation and in vitro permeation of phenylpropylamino alkaloids from Khat (Catha edulis) across oral and intestinal mucosal tissues (J Ethnopharmacol 194:307-315)",
+      "authors": [
+        "Atlabachew M",
+        "Combrinck S",
+        "Viljoen AM",
+        "Hamman JH",
+        "Gouws C"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.jep.2016.09.012",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27616032/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "park2026",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolism profiles of cathinone and pseudoephedrine: Discrimination between khat and pseudoephedrine uses (J Forensic Sci 71:1758-1766)",
+      "authors": [
+        "Park JS",
+        "Yu JS",
+        "Kim Y",
+        "Kim HS",
+        "Cheong JC",
+        "Kim JY",
+        "Yoo HH"
+      ],
+      "year": 2026,
+      "doi": "10.1111/1556-4029.70314",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41846256/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "godoi2025",
+      "type": "paper",
+      "title": "In vitro metabolism and metabolite identification of eutylone using rat liver microsomes (J Pharm Biomed Anal 260:116827)",
+      "authors": [
+        "Godoi AB",
+        "Antunes NJ",
+        "Rodrigues LC",
+        "Martins AF",
+        "Costa JL"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.jpba.2025.116827",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40121735/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "pelletier2025",
+      "type": "paper",
+      "title": "Cathinone metabolism and biliary excretion in an ex-vivo pig liver model: Example of 4-Cl-PVP and eutylone (Food Chem Toxicol 196:115217)",
+      "authors": [
+        "Pelletier R",
+        "Le Daré B",
+        "Kerforne T",
+        "Parvedy NP",
+        "Lemaitre F",
+        "Tron C",
+        "Maunand K",
+        "Corlu A",
+        "Morel I",
+        "Rayar M",
+        "Gicquel T"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.fct.2024.115217",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39793951/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "lee2026",
+      "type": "paper",
+      "title": "Cross-species metabolic characterization of eutylone and mechanism-based inhibition of CYP2D6 and CYP2B6 with drug interaction implications (Sci Rep 16:)",
+      "authors": [
+        "Lee MS",
+        "Song IS",
+        "Jang Y",
+        "Cho YY",
+        "Lee JY",
+        "Kang HC",
+        "Kim JH",
+        "Lee HS"
+      ],
+      "year": 2026,
+      "doi": "10.1038/s41598-026-48814-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41991640/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "yang2022",
+      "type": "paper",
+      "title": "Detection of amfepramone and its metabolite cathinone in human hair: Application to a uthentic cases of amfepramone use (Drug Test Anal 14:101-109)",
+      "authors": [
+        "Yang H",
+        "Wang X",
+        "Liu M",
+        "Deng H",
+        "Yu M",
+        "Xiang P"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3149",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34405558/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "alsufyani2024",
+      "type": "paper",
+      "title": "The stimulant cathine from Khat causes tachycardia indirectly in the rat (Basic Clin Pharmacol Toxicol 135:345-352)",
+      "authors": [
+        "Alsufyani HA"
+      ],
+      "year": 2024,
+      "doi": "10.1111/bcpt.14057",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39034439/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "swgdrug-bk-mddma",
+      "type": "database",
+      "title": "SWGDRUG monograph: bk-MDDMA (dimethylone) (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/bk-MDDMA.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-buphedrone",
+      "type": "database",
+      "title": "SWGDRUG monograph: Buphedrone (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/Buphedrone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-dimethylcathinone",
+      "type": "database",
+      "title": "SWGDRUG monograph: N,N-Dimethylcathinone (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/N,N-Dimethylcathinone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-ethcathinone",
+      "type": "database",
+      "title": "SWGDRUG monograph: Ethcathinone (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/Ethcathinone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "swgdrug-mdpbp",
+      "type": "database",
+      "title": "SWGDRUG monograph: MDPBP (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/MDPBP.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
       "id": "restoril-label",
       "type": "institution",
       "title": "RESTORIL (temazepam) capsules, US prescribing information (DailyMed, U.S. National Library of Medicine)",
