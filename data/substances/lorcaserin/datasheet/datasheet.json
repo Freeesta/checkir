@@ -1,0 +1,60 @@
+{
+  "schema": "datasheet/1",
+  "substance": "lorcaserin",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "lorcaserin N-carbamoyl glucuronide",
+        "reaction": "other",
+        "source": "sharma2020"
+      },
+      {
+        "from": "parent",
+        "to": "lorcaserin N-sulfamate",
+        "reaction": "sulfation",
+        "source": "sharma2020"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "lorcaserin-n-carbamoyl-glucuronide",
+        "active": null,
+        "source": "sharma2020"
+      },
+      {
+        "name_key": "lorcaserin-n-sulfamate",
+        "active": null,
+        "source": "sharma2020"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

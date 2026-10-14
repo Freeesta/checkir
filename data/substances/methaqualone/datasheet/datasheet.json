@@ -1,0 +1,99 @@
+{
+  "schema": "datasheet/1",
+  "substance": "methaqualone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "4'-hydroxymethaqualone",
+        "reaction": "hydroxylation",
+        "source": "prost2003"
+      },
+      {
+        "from": "parent",
+        "to": "3'-hydroxymethaqualone",
+        "reaction": "hydroxylation",
+        "source": "prost2001"
+      },
+      {
+        "from": "parent",
+        "to": "2'-hydroxymethaqualone (tolyl)",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "prost2003"
+      },
+      {
+        "from": "parent",
+        "to": "2-hydroxymethaqualone (quinazolinone)",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "prost2003"
+      },
+      {
+        "from": "parent",
+        "to": "6-hydroxymethaqualone",
+        "reaction": "hydroxylation",
+        "source": "prost2001"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "4-hydroxymethaqualone",
+        "active": null,
+        "source": "prost2003"
+      },
+      {
+        "name_key": "3-hydroxymethaqualone",
+        "active": null,
+        "source": "prost2001"
+      },
+      {
+        "name_key": "2-hydroxymethaqualone-tolyl",
+        "active": null,
+        "source": "prost2003"
+      },
+      {
+        "name_key": "2-hydroxymethaqualone-quinazolinone",
+        "active": null,
+        "source": "prost2003"
+      },
+      {
+        "name_key": "6-hydroxymethaqualone",
+        "active": null,
+        "source": "prost2001"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

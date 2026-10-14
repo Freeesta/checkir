@@ -1,0 +1,47 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "etaqualone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Etaqualone",
+      "synonyms": []
+    },
+    "it": {
+      "preferred": "Etaqualone",
+      "synonyms": []
+    }
+  },
+  "iupac": "3-(2-ethylphenyl)-2-methylquinazolin-4-one",
+  "formula": "C17H16N2O",
+  "molar_mass_g_mol": 264.32,
+  "smiles": "CCC1=CC=CC=C1N2C(=NC3=CC=CC=C3C2=O)C",
+  "inchi": "InChI=1S/C17H16N2O/c1-3-13-8-4-7-11-16(13)19-12(2)18-15-10-6-5-9-14(15)17(19)20/h4-11H,3H2,1-2H3",
+  "inchikey": "UVTJKLLUVOTSOB-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 23914
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
