@@ -1,0 +1,50 @@
+{
+  "schema": "datasheet/1",
+  "substance": "jwh-073",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "ω-hydroxy metabolite (JWH-073-M5)",
+        "reaction": "hydroxylation",
+        "source": "rajasekaran2013-cb2"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "omega-hydroxy-metabolite-m5",
+        "active": true,
+        "source": "rajasekaran2013-cb2"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
