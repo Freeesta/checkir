@@ -1,0 +1,61 @@
+{
+  "schema": "datasheet/1",
+  "substance": "levomethorphan",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "levorphanol",
+        "reaction": "o_demethylation",
+        "source": "lofaro2023"
+      },
+      {
+        "from": "levorphanol",
+        "to": "levorphanol glucuronide",
+        "reaction": "glucuronidation",
+        "source": "prommer2007"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "levorphanol",
+        "active": true,
+        "source": "prommer2007"
+      },
+      {
+        "name_key": "levorphanol-glucuronide",
+        "active": null,
+        "source": "prommer2007"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

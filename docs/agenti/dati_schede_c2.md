@@ -2,3 +2,4 @@
 Stato attuale. ≤ 15 KB, righe ≤ 600 caratteri. Continua `dati_schede_c.md` (pieno): stesse regole, una riga breve per pacchetto (id, family, segnaposto), aggiunta in fondo; i dubbi aperti stanno nel privato.
 
 ## Pacchetti
+- Schede essenziali (C, SCH-C-44): `s-ketamine` e `r-ketamine` (enantiomeri, schede proprie distinte dalla `ketamine` racemica) e `n-ethylnorketamine` (`family: arylcyclohexylamines`, `show_doses: false`); `fluorolintane` (diariletilammina), `lauflumide` (= flmodafinil), `levomethorphan`, `racemorphan`, `memantine` senza `family` (la scheda di famiglia non li copre). Segnaposto: `cuts` (tutte), `metabolism` di NENK e fluorolintane, `history` di racemorphan. Alias `esketamine`, `arketamine`, `nenk`, `flmodafinil`, `namenda`.

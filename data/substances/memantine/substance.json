@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "memantine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Memantine",
+      "synonyms": [
+        "Namenda"
+      ]
+    },
+    "it": {
+      "preferred": "Memantina",
+      "synonyms": [
+        "Namenda"
+      ]
+    }
+  },
+  "iupac": "3,5-dimethyladamantan-1-amine",
+  "formula": "C12H21N",
+  "molar_mass_g_mol": 179.3,
+  "smiles": "CC12CC3CC(C1)(CC(C3)(C2)N)C",
+  "inchi": "InChI=1S/C12H21N/c1-10-3-9-4-11(2,6-10)8-12(13,5-9)7-10/h9H,3-8,13H2,1-2H3",
+  "inchikey": "BUGYDGFZZOZRHP-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "19982-08-2",
+    "pubchem_cid": 4054
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
