@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "n-n-dimethylamphetamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "N,N-Dimethylamphetamine",
+      "synonyms": [
+        "dimethylamphetamine",
+        "N,N-dimethyl-1-phenylpropan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "N,N-Dimetilanfetamina",
+      "synonyms": [
+        "dimetilanfetamina"
+      ]
+    }
+  },
+  "iupac": "N,N-dimethyl-1-phenylpropan-2-amine",
+  "formula": "C11H17N",
+  "molar_mass_g_mol": 163.26,
+  "smiles": "CC(CC1=CC=CC=C1)N(C)C",
+  "inchi": "InChI=1S/C11H17N/c1-10(12(2)3)9-11-7-5-4-6-8-11/h4-8,10H,9H2,1-3H3",
+  "inchikey": "OBDSVYOSYSKVMX-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 20006
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
