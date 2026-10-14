@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ab-fubinaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "AB-FUBINACA"
+    },
+    "it": {
+      "preferred": "AB-FUBINACA"
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-3-methyl-1-oxobutan-2-yl]-1-[(4-fluorophenyl)methyl]indazole-3-carboxamide",
+  "formula": "C20H21FN4O2",
+  "molar_mass_g_mol": 368.4,
+  "smiles": "CC(C)[C@@H](C(=O)N)NC(=O)C1=NN(C2=CC=CC=C21)CC3=CC=C(C=C3)F",
+  "inchi": "InChI=1S/C20H21FN4O2/c1-12(2)17(19(22)26)23-20(27)18-15-5-3-4-6-16(15)25(24-18)11-13-7-9-14(21)10-8-13/h3-10,12,17H,11H2,1-2H3,(H2,22,26)(H,23,27)/t17-/m0/s1",
+  "inchikey": "AKOOIMKXADOPDA-KRWDZBQOSA-N",
+  "external_ids": {
+    "cas": "1185282-01-2",
+    "pubchem_cid": 58124325
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
