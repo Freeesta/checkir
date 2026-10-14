@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "nordiazepam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Nordiazepam",
+      "synonyms": [
+        "Nordazepam",
+        "Desmethyldiazepam",
+        "N-Desmethyldiazepam"
+      ]
+    },
+    "it": {
+      "preferred": "Nordazepam",
+      "synonyms": [
+        "Nordiazepam",
+        "Desmetildiazepam",
+        "N-Desmetildiazepam"
+      ]
+    }
+  },
+  "iupac": "7-chloro-5-phenyl-1,3-dihydro-1,4-benzodiazepin-2-one",
+  "formula": "C15H11ClN2O",
+  "molar_mass_g_mol": 270.71,
+  "smiles": "C1C(=O)NC2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C15H11ClN2O/c16-11-6-7-13-12(8-11)15(17-9-14(19)18-13)10-4-2-1-3-5-10/h1-8H,9H2,(H,18,19)",
+  "inchikey": "AKPLHCDWDRPJGD-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1088-11-5",
+    "pubchem_cid": 2997
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

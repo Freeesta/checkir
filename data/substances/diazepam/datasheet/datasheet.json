@@ -37,7 +37,7 @@
     "pathways": [
       {
         "from": "parent",
-        "to": "desmethyldiazepam",
+        "to": "nordiazepam",
         "reaction": "n_demethylation",
         "source": "mandelli1978"
       }
