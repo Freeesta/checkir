@@ -1,0 +1,85 @@
+<svg role="img" aria-label="2-(methylamino)-2-phenylcyclohexan-1-one" version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve' viewBox='0 0 320 240'>
+<path class='bond-0 atom-0 atom-1' d='M 226.6,27.2 L 192.3,58.0' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-1 atom-1 atom-2' d='M 186.4,75.2 L 196.1,120.9' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-2 atom-2 atom-3' d='M 196.1,120.9 L 188.1,177.2' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-3 atom-3 atom-4' d='M 188.1,177.2 L 232.9,212.2' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-4 atom-4 atom-5' d='M 232.9,212.2 L 285.7,190.9' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-5 atom-5 atom-6' d='M 285.7,190.9 L 293.6,134.6' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-6 atom-6 atom-7' d='M 293.6,134.6 L 248.8,99.6' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-7 atom-7 atom-8' d='M 252.7,102.6 L 259.5,54.2' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-7 atom-7 atom-8' d='M 244.2,101.4 L 251.1,53.0' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-8 atom-2 atom-9' d='M 196.1,120.9 L 139.3,122.8' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-9 atom-9 atom-10' d='M 139.3,122.8 L 109.2,74.6' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-9 atom-9 atom-10' d='M 129.4,123.1 L 104.5,83.3' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-10 atom-10 atom-11' d='M 109.2,74.6 L 52.3,76.5' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-11 atom-11 atom-12' d='M 52.3,76.5 L 25.6,126.7' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-11 atom-11 atom-12' d='M 57.5,84.9 L 35.4,126.4' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-12 atom-12 atom-13' d='M 25.6,126.7 L 55.7,174.9' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-13 atom-13 atom-14' d='M 55.7,174.9 L 112.5,173.0' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-13 atom-13 atom-14' d='M 60.3,166.2 L 107.3,164.6' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-14 atom-7 atom-2' d='M 248.8,99.6 L 196.1,120.9' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path class='bond-15 atom-14 atom-9' d='M 112.5,173.0 L 139.3,122.8' fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" />
+<path d='M 188.5,174.3 L 188.1,177.2 L 190.4,178.9' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 230.7,210.4 L 232.9,212.2 L 235.6,211.1' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 283.0,192.0 L 285.7,190.9 L 286.0,188.1' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 293.2,137.4 L 293.6,134.6 L 291.4,132.9' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 251.1,101.3 L 248.8,99.6 L 246.2,100.7' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 110.7,77.0 L 109.2,74.6 L 106.3,74.7' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 55.2,76.4 L 52.3,76.5 L 51.0,79.0' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 26.9,124.2 L 25.6,126.7 L 27.1,129.1' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 54.2,172.5 L 55.7,174.9 L 58.5,174.8' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path d='M 109.7,173.1 L 112.5,173.0 L 113.9,170.5' fill="none" stroke="currentColor" stroke-width="2.0px" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-opacity="1" />
+<path class='atom-1' d='M 162.4 57.2
+L 164.6 57.2
+L 164.6 64.0
+L 172.8 64.0
+L 172.8 57.2
+L 175.0 57.2
+L 175.0 73.3
+L 172.8 73.3
+L 172.8 65.8
+L 164.6 65.8
+L 164.6 73.3
+L 162.4 73.3
+L 162.4 57.2
+' fill='currentColor'/>
+<path class='atom-1' d='M 180.7 57.2
+L 186.0 65.7
+Q 186.5 66.5, 187.4 68.1
+Q 188.2 69.6, 188.3 69.7
+L 188.3 57.2
+L 190.4 57.2
+L 190.4 73.3
+L 188.2 73.3
+L 182.5 64.0
+Q 181.9 62.9, 181.2 61.6
+Q 180.5 60.4, 180.3 60.0
+L 180.3 73.3
+L 178.2 73.3
+L 178.2 57.2
+L 180.7 57.2
+' fill='currentColor'/>
+<path class='atom-8' d='M 249.4 43.3
+Q 249.4 39.5, 251.3 37.3
+Q 253.2 35.1, 256.8 35.1
+Q 260.3 35.1, 262.2 37.3
+Q 264.2 39.5, 264.2 43.3
+Q 264.2 47.2, 262.2 49.5
+Q 260.3 51.7, 256.8 51.7
+Q 253.2 51.7, 251.3 49.5
+Q 249.4 47.3, 249.4 43.3
+M 256.8 49.9
+Q 259.2 49.9, 260.5 48.2
+Q 261.9 46.6, 261.9 43.3
+Q 261.9 40.2, 260.5 38.6
+Q 259.2 37.0, 256.8 37.0
+Q 254.3 37.0, 253.0 38.6
+Q 251.6 40.1, 251.6 43.3
+Q 251.6 46.6, 253.0 48.2
+Q 254.3 49.9, 256.8 49.9
+' fill='currentColor'/>
+</svg>

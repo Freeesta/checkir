@@ -14054,6 +14054,81 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/24573804/",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
+      "id": "wink2016",
+      "type": "paper",
+      "title": "Diphenidine, a new psychoactive substance: metabolic fate elucidated with rat urine and human liver preparations and detectability in urine using GC-MS, LC-MS, and LC-HR-MS (Drug Test Anal 8(10):1005-1014)",
+      "authors": [
+        "C. S. D. Wink",
+        "G. M. Michely",
+        "N. Jacobsen-Bauer",
+        "J. Zapp",
+        "H. H. Maurer"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1946",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26811026/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260115140435/https://pubmed.ncbi.nlm.nih.gov/26811026/"
+    },
+    {
+      "id": "helander2015",
+      "type": "paper",
+      "title": "Intoxications by the dissociative new psychoactive substances diphenidine and methoxphenidine (Clin Toxicol 53(5):446-453)",
+      "authors": [
+        "A. Helander",
+        "O. Beck",
+        "M. Bäckberg"
+      ],
+      "year": 2015,
+      "doi": "10.3109/15563650.2015.1033630",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25881797/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261011064011/https://pubmed.ncbi.nlm.nih.gov/25881797"
+    },
+    {
+      "id": "kang2017",
+      "type": "paper",
+      "title": "Ephenidine: A new psychoactive agent with ketamine-like NMDA receptor antagonist properties (Neuropharmacology 112:144-149)",
+      "authors": [
+        "H. Kang",
+        "P. Park",
+        "Z. A. Bortolotto",
+        "S. D. Brandt",
+        "T. Colestock",
+        "J. Wallach",
+        "G. L. Collingridge",
+        "D. Lodge"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.neuropharm.2016.08.004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27520396/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260421072923/https://pubmed.ncbi.nlm.nih.gov/27520396/"
+    },
+    {
+      "id": "paskanova2026",
+      "type": "paper",
+      "title": "Determination of Enantiomers of Deschloroketamine and Its Metabolites in Wistar Rat Brains (J Sep Sci 49(9):e70503)",
+      "authors": [
+        "Paškanová",
+        "Hrubá",
+        "Frühauf",
+        "Jurásek",
+        "Kuchař",
+        "Řezanka",
+        "Kohout"
+      ],
+      "year": 2026,
+      "doi": "10.1002/jssc.70503",
+      "url": "https://doi.org/10.1002/jssc.70503",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-14",
       "tier": "primary"
     }
   ]

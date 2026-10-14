@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ephenidine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Ephenidine",
+      "synonyms": [
+        "NEDPA",
+        "N-ethyl-1,2-diphenylethylamine"
+      ]
+    },
+    "it": {
+      "preferred": "Efenidina",
+      "synonyms": [
+        "NEDPA",
+        "N-etil-1,2-difeniletilammina"
+      ]
+    }
+  },
+  "iupac": "N-ethyl-1,2-diphenylethanamine",
+  "formula": "C16H19N",
+  "molar_mass_g_mol": 225.33,
+  "smiles": "CCNC(CC1=CC=CC=C1)C2=CC=CC=C2",
+  "inchi": "InChI=1S/C16H19N/c1-2-17-16(15-11-7-4-8-12-15)13-14-9-5-3-6-10-14/h3-12,16-17H,2,13H2,1H3",
+  "inchikey": "IGFZMQXEKIZPDR-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "60951-19-1",
+    "pubchem_cid": 110821
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
