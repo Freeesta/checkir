@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-methoxyamphetamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-Methoxyamphetamine",
+      "synonyms": [
+        "2-MA",
+        "OMA",
+        "ortho-methoxyamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "2-Metossianfetamina",
+      "synonyms": [
+        "2-MA",
+        "OMA",
+        "orto-metossianfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(2-methoxyphenyl)propan-2-amine",
+  "formula": "C10H15NO",
+  "molar_mass_g_mol": 165.2,
+  "smiles": "CC(CC1=CC=CC=C1OC)N",
+  "inchi": "InChI=1S/C10H15NO/c1-8(11)7-9-5-3-4-6-10(9)12-2/h3-6,8H,7,11H2,1-2H3",
+  "inchikey": "VBAHFEPKESUPDE-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 159755
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
