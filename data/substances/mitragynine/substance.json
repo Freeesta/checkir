@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mitragynine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Mitragynine",
+      "synonyms": [
+        "kratom alkaloid"
+      ]
+    },
+    "it": {
+      "preferred": "Mitragynina",
+      "synonyms": [
+        "alcaloide del kratom"
+      ]
+    }
+  },
+  "iupac": "methyl (E)-2-[(2S,3S,12bS)-3-ethyl-8-methoxy-1,2,3,4,6,7,12,12b-octahydroindolo[2,3-a]quinolizin-2-yl]-3-methoxyprop-2-enoate",
+  "formula": "C23H30N2O4",
+  "molar_mass_g_mol": 398.5,
+  "smiles": "CC[C@@H]1CN2CCC3=C([C@@H]2C[C@@H]1/C(=C\\OC)/C(=O)OC)NC4=C3C(=CC=C4)OC",
+  "inchi": "InChI=1S/C23H30N2O4/c1-5-14-12-25-10-9-15-21-18(7-6-8-20(21)28-3)24-22(15)19(25)11-16(14)17(13-27-2)23(26)29-4/h6-8,13-14,16,19,24H,5,9-12H2,1-4H3/b17-13+/t14-,16+,19+/m1/s1",
+  "inchikey": "LELBFTMXCIIKKX-QVRQZEMUSA-N",
+  "external_ids": {
+    "pubchem_cid": 3034396
+  },
+  "classes": {
+    "chemical": [
+      "plant_based"
+    ],
+    "effect": [
+      "stimulant",
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
