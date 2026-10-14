@@ -52,6 +52,137 @@
       "license": "© John Wiley & Sons; cited as the source of numbers only, text not copied"
     },
     {
+      "id": "staack2004",
+      "type": "paper",
+      "title": "Cytochrome P450 dependent metabolism of the new designer drug 1-(3-trifluoromethylphenyl)piperazine (TFMPP) (Biochem Pharmacol 67:235-244)",
+      "authors": [
+        "R. F. Staack",
+        "L. D. Paul",
+        "D. Springer",
+        "T. Kraemer",
+        "H. H. Maurer"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.bcp.2003.08.029",
+      "url": "https://doi.org/10.1016/j.bcp.2003.08.029",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "arbo2012",
+      "type": "paper",
+      "title": "Piperazine compounds as drugs of abuse (Drug Alcohol Depend 122:174-185)",
+      "authors": [
+        "M. D. Arbo",
+        "M. L. Bastos",
+        "H. F. Carmo"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.drugalcdep.2011.10.007",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2011.10.007",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "teja2020",
+      "type": "paper",
+      "title": "Abuse, Toxicology and the Resurgence of Propylhexedrine: A Case Report and Review of Literature (Cureus 12:e10868)",
+      "authors": [
+        "N. Teja",
+        "C. P. Dodge",
+        "C. N. Stanciu"
+      ],
+      "year": 2020,
+      "doi": "10.7759/cureus.10868",
+      "url": "https://doi.org/10.7759/cureus.10868",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250408212825/https://pmc.ncbi.nlm.nih.gov/articles/PMC7652022/"
+    },
+    {
+      "id": "tsujikawa2011",
+      "type": "paper",
+      "title": "Urinary excretion profiles of N-hydroxy-3,4-methylenedioxymethamphetamine in rats (Xenobiotica 41:578-584)",
+      "authors": [
+        "K. Tsujikawa",
+        "T. Mikuma",
+        "K. Kuwayama",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Inoue"
+      ],
+      "year": 2011,
+      "doi": "10.3109/00498254.2011.565821",
+      "url": "https://doi.org/10.3109/00498254.2011.565821",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "makino1989",
+      "type": "paper",
+      "title": "Identification and quantification of p-hydroxyethylamphetamine as a novel metabolite of ethylamphetamine in rat by gas chromatography-mass spectrometry (Forensic Sci Int 41:83-91)",
+      "authors": [
+        "Y. Makino",
+        "T. Higuchi",
+        "S. Ohta",
+        "M. Hirobe"
+      ],
+      "year": 1989,
+      "doi": "10.1016/0379-0738(89)90239-9",
+      "url": "https://doi.org/10.1016/0379-0738(89)90239-9",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "delbeke1986",
+      "type": "paper",
+      "title": "The influence of diuretics on the excretion and metabolism of doping agents. III. Etilamfetamine (Arzneimittelforschung 36:1413-1416)",
+      "authors": [
+        "F. T. Delbeke",
+        "M. Debackere"
+      ],
+      "year": 1986,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3790195/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kunalan2009",
+      "type": "paper",
+      "title": "Characterization of Route Specific Impurities Found in Methamphetamine Synthesized by the Leuckart and Reductive Amination Methods (Anal Chem 81:7342-7348)",
+      "authors": [
+        "V. Kunalan",
+        "N. Nic Daeid",
+        "W. J. Kerr",
+        "H. A. S. Buchanan",
+        "A. R. McPherson"
+      ],
+      "year": 2009,
+      "doi": "10.1021/ac9005588",
+      "url": "https://doi.org/10.1021/ac9005588",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "who-pmebf2018",
+      "type": "institution",
+      "title": "WHO Expert Committee on Drug Dependence, Critical Review Report: p-Methoxy-butyrylfentanyl (S. D. Brandt)",
+      "year": 2018,
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/9579",
+      "archive_url": "https://web.archive.org/web/20250325211657/https://researchonline.ljmu.ac.uk/id/eprint/9579/",
+      "tier": "agency",
+      "license": "© WHO; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
       "id": "wikipedia-ir-table",
       "type": "web",
       "title": "Wikipedia: Infrared spectroscopy correlation table",
@@ -15472,135 +15603,128 @@
       "tier": "agency"
     },
     {
-      "id": "staack2004",
-      "type": "paper",
-      "title": "Cytochrome P450 dependent metabolism of the new designer drug 1-(3-trifluoromethylphenyl)piperazine (TFMPP) (Biochem Pharmacol 67:235-244)",
-      "authors": [
-        "R. F. Staack",
-        "L. D. Paul",
-        "D. Springer",
-        "T. Kraemer",
-        "H. H. Maurer"
-      ],
-      "year": 2004,
-      "doi": "10.1016/j.bcp.2003.08.029",
-      "url": "https://doi.org/10.1016/j.bcp.2003.08.029",
-      "tier": "primary",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14"
-    },
-    {
-      "id": "arbo2012",
-      "type": "paper",
-      "title": "Piperazine compounds as drugs of abuse (Drug Alcohol Depend 122:174-185)",
-      "authors": [
-        "M. D. Arbo",
-        "M. L. Bastos",
-        "H. F. Carmo"
-      ],
-      "year": 2012,
-      "doi": "10.1016/j.drugalcdep.2011.10.007",
-      "url": "https://doi.org/10.1016/j.drugalcdep.2011.10.007",
-      "tier": "review",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14"
-    },
-    {
-      "id": "teja2020",
-      "type": "paper",
-      "title": "Abuse, Toxicology and the Resurgence of Propylhexedrine: A Case Report and Review of Literature (Cureus 12:e10868)",
-      "authors": [
-        "N. Teja",
-        "C. P. Dodge",
-        "C. N. Stanciu"
-      ],
-      "year": 2020,
-      "doi": "10.7759/cureus.10868",
-      "url": "https://doi.org/10.7759/cureus.10868",
-      "tier": "review",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14",
-      "archive_url": "https://web.archive.org/web/20250408212825/https://pmc.ncbi.nlm.nih.gov/articles/PMC7652022/"
-    },
-    {
-      "id": "tsujikawa2011",
-      "type": "paper",
-      "title": "Urinary excretion profiles of N-hydroxy-3,4-methylenedioxymethamphetamine in rats (Xenobiotica 41:578-584)",
-      "authors": [
-        "K. Tsujikawa",
-        "T. Mikuma",
-        "K. Kuwayama",
-        "H. Miyaguchi",
-        "T. Kanamori",
-        "Y. T. Iwata",
-        "H. Inoue"
-      ],
-      "year": 2011,
-      "doi": "10.3109/00498254.2011.565821",
-      "url": "https://doi.org/10.3109/00498254.2011.565821",
-      "tier": "primary",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14"
-    },
-    {
-      "id": "makino1989",
-      "type": "paper",
-      "title": "Identification and quantification of p-hydroxyethylamphetamine as a novel metabolite of ethylamphetamine in rat by gas chromatography-mass spectrometry (Forensic Sci Int 41:83-91)",
-      "authors": [
-        "Y. Makino",
-        "T. Higuchi",
-        "S. Ohta",
-        "M. Hirobe"
-      ],
-      "year": 1989,
-      "doi": "10.1016/0379-0738(89)90239-9",
-      "url": "https://doi.org/10.1016/0379-0738(89)90239-9",
-      "tier": "primary",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14"
-    },
-    {
-      "id": "delbeke1986",
-      "type": "paper",
-      "title": "The influence of diuretics on the excretion and metabolism of doping agents. III. Etilamfetamine (Arzneimittelforschung 36:1413-1416)",
-      "authors": [
-        "F. T. Delbeke",
-        "M. Debackere"
-      ],
-      "year": 1986,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/3790195/",
-      "tier": "primary",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14"
-    },
-    {
-      "id": "kunalan2009",
-      "type": "paper",
-      "title": "Characterization of Route Specific Impurities Found in Methamphetamine Synthesized by the Leuckart and Reductive Amination Methods (Anal Chem 81:7342-7348)",
-      "authors": [
-        "V. Kunalan",
-        "N. Nic Daeid",
-        "W. J. Kerr",
-        "H. A. S. Buchanan",
-        "A. R. McPherson"
-      ],
-      "year": 2009,
-      "doi": "10.1021/ac9005588",
-      "url": "https://doi.org/10.1021/ac9005588",
-      "tier": "primary",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14"
-    },
-    {
-      "id": "who-pmebf2018",
+      "id": "catapres-tts-label",
       "type": "institution",
-      "title": "WHO Expert Committee on Drug Dependence, Critical Review Report: p-Methoxy-butyrylfentanyl (S. D. Brandt)",
-      "year": 2018,
-      "url": "https://researchonline.ljmu.ac.uk/id/eprint/9579",
-      "archive_url": "https://web.archive.org/web/20250325211657/https://researchonline.ljmu.ac.uk/id/eprint/9579/",
+      "title": "Catapres-TTS (clonidine transdermal system), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d4a55825-7041-42f4-b3b2-dd7a25dbe793",
       "tier": "agency",
-      "license": "© WHO; cited as the source of facts only",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "cyclobenzaprine-label",
+      "type": "institution",
+      "title": "Cyclobenzaprine hydrochloride tablets USP (SA3, LLC), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a4ae481f-9e47-470a-b4d1-5a33c0df8761",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803162439/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a4ae481f-9e47-470a-b4d1-5a33c0df8761"
+    },
+    {
+      "id": "norpramin-label",
+      "type": "institution",
+      "title": "NORPRAMIN (desipramine hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=70b562ea-9f21-4e4a-b3ed-0590b2892f6a",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803151806/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=70b562ea-9f21-4e4a-b3ed-0590b2892f6a"
+    },
+    {
+      "id": "silenor-label",
+      "type": "institution",
+      "title": "SILENOR (doxepin) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1bec1223-5239-4eb6-a9e8-62444106d2c0",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803132828/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1bec1223-5239-4eb6-a9e8-62444106d2c0"
+    },
+    {
+      "id": "diclegis-label",
+      "type": "institution",
+      "title": "DICLEGIS (doxylamine succinate and pyridoxine hydrochloride) delayed-release tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8bde08f6-e8bd-4e90-baa7-82e01876a86a",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260731133310/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8bde08f6-e8bd-4e90-baa7-82e01876a86a"
+    },
+    {
+      "id": "akutsu2006",
+      "type": "paper",
+      "title": "Identification of human cytochrome P450 isozymes involved in diphenhydramine N-demethylation",
+      "authors": [
+        "Akutsu, T",
+        "Kobayashi, K",
+        "Sakurada, K",
+        "Ikegaya, H",
+        "Furihata, T",
+        "Chiba, K"
+      ],
+      "year": 2006,
+      "doi": "10.1124/dmd.106.012088",
+      "url": "https://doi.org/10.1124/dmd.106.012088",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260816050807/https://pubmed.ncbi.nlm.nih.gov/17020955/"
+    },
+    {
+      "id": "lockwood2021",
+      "type": "paper",
+      "title": "High concentrations of illicit stimulants and cutting agents cause false positives on fentanyl test strips",
+      "authors": [
+        "Lockwood, TE",
+        "Vervoordt, A",
+        "Lieberman, M"
+      ],
+      "year": 2021,
+      "doi": "10.1186/s12954-021-00478-4",
+      "url": "https://doi.org/10.1186/s12954-021-00478-4",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "geldof2016",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolism studies of dimethazine",
+      "authors": [
+        "Geldof, L",
+        "Tudela, E",
+        "Lootens, L",
+        "van Lysebeth, J",
+        "Meuleman, P",
+        "Leroux-Roels, G",
+        "van Eenoo, P",
+        "Deventer, K"
+      ],
+      "year": 2016,
+      "doi": "10.1002/bmc.3668",
+      "url": "https://doi.org/10.1002/bmc.3668",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ehling2019",
+      "type": "paper",
+      "title": "Diphenhydramine pharmacokinetics after oral and intravenous administration of diphenhydramine and oral administration of dimenhydrinate to healthy dogs, and pharmacodynamic effect on histamine-induced wheal formation: a pilot study",
+      "authors": [
+        "Ehling, S",
+        "Bäumer, W",
+        "Papich, MG"
+      ],
+      "year": 2019,
+      "doi": "10.1111/vde.12727",
+      "url": "https://doi.org/10.1111/vde.12727",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260112184122/https://pubmed.ncbi.nlm.nih.gov/30779257/"
     }
   ]
 }
