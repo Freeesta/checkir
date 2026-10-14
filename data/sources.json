@@ -10234,6 +10234,157 @@
       "consulted": "2026-10-14",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20251228171627/https://pubmed.ncbi.nlm.nih.gov/26105953/"
+    },
+    {
+      "id": "rouxinol2019",
+      "type": "paper",
+      "title": "Biodistribution and metabolic profile of 3,4-dimethylmethcathinone (3,4-DMMC) in Wistar rats through gas chromatography-mass spectrometry (GC-MS) analysis (Toxicol Lett 320:113-123)",
+      "authors": [
+        "Rouxinol D",
+        "Dias da Silva D",
+        "Silva JP",
+        "Carvalho F",
+        "Bastos ML",
+        "Carmo H"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.toxlet.2019.10.003",
+      "url": "https://doi.org/10.1016/j.toxlet.2019.10.003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "manier2020",
+      "type": "paper",
+      "title": "Use of UPLC-HRMS/MS for In Vitro and In Vivo Metabolite Identification of Three Methylphenidate-derived New Psychoactive Substances (J Anal Toxicol 44(2):156-162)",
+      "authors": [
+        "Manier SK",
+        "Niedermeier S",
+        "Schäper J",
+        "Meyer MR"
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkz052",
+      "url": "https://doi.org/10.1093/jat/bkz052",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "davidson2018",
+      "type": "paper",
+      "title": "Neurochemical Assessment of Methylphenidate and Its \"Legal High\" Analogs 3,4-CTMP and Ethylphenidate in Rat Nucleus Accumbens and Bed Nucleus of the Stria Terminalis (Front Psychiatry 9:149)",
+      "authors": [
+        "Davidson C",
+        "Raby CAR",
+        "Barrese V",
+        "Ramsey J"
+      ],
+      "year": 2018,
+      "doi": "10.3389/fpsyt.2018.00149",
+      "url": "https://doi.org/10.3389/fpsyt.2018.00149",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "florou2024",
+      "type": "paper",
+      "title": "Nuclear Magnetic Resonance Spectroscopic Characterization and Determination of the New Psychoactive Substance Benzylone: Application in a Biological Fluid (Magn Reson Chem 63(3):195-204)",
+      "authors": [
+        "Florou D",
+        "Boumba VA",
+        "Tsiafoulis GC"
+      ],
+      "year": 2024,
+      "doi": "10.1002/mrc.5500",
+      "url": "https://doi.org/10.1002/mrc.5500",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "stalberga2026",
+      "type": "paper",
+      "title": "Comprehensive in vitro profiling of traditional and emerging stimulants at monoamine transporters and the 5-HT2A receptor (Br J Pharmacol 183(19):5871-5894)",
+      "authors": [
+        "Stalberga D",
+        "Kronstrand R",
+        "Schranz B",
+        "van Zijl N",
+        "Karlman S",
+        "Aref S",
+        "Rautio T",
+        "Vikingsson S",
+        "Persson M",
+        "Green H"
+      ],
+      "year": 2026,
+      "doi": "10.1111/bph.70587",
+      "url": "https://doi.org/10.1111/bph.70587",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nadarajan2025",
+      "type": "paper",
+      "title": "Wastewater analysis as a global toxicovigilance tool for the monitoring of new psychoactive substances (Water Res 289:124847)",
+      "authors": [
+        "Nadarajan D",
+        "Laimou-Geraniou M",
+        "Chappell A",
+        "Bade R",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.watres.2025.124847",
+      "url": "https://doi.org/10.1016/j.watres.2025.124847",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "sprega2023",
+      "type": "paper",
+      "title": "Usefulness of Oral Fluid for Measurement of Methylone and Its Metabolites: Correlation with Plasma Drug Concentrations and the Effect of Oral Fluid pH (Metabolites 13(4):468)",
+      "authors": [
+        "Sprega G",
+        "Di Giorgi A",
+        "Poyatos L",
+        "Papaseit E",
+        "Pérez-Mañá C",
+        "Tini A",
+        "Pichini S",
+        "Busardò FP",
+        "Lo Faro AF",
+        "Farré M"
+      ],
+      "year": 2023,
+      "doi": "10.3390/metabo13040468",
+      "url": "https://doi.org/10.3390/metabo13040468",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "westphal2012",
+      "type": "paper",
+      "title": "Mass, NMR and IR spectroscopic characterization of pentedrone and pentylone and identification of their isocathinone by-products (Forensic Sci Int 217(1-3):157-167)",
+      "authors": [
+        "Westphal F",
+        "Junge T",
+        "Girreser U",
+        "Greibl W",
+        "Doering C"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.forsciint.2011.10.045",
+      "url": "https://doi.org/10.1016/j.forsciint.2011.10.045",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
