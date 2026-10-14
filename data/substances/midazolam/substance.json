@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "midazolam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Midazolam"
+    },
+    "it": {
+      "preferred": "Midazolam"
+    }
+  },
+  "iupac": "8-chloro-6-(2-fluorophenyl)-1-methyl-4H-imidazo[1,5-a][1,4]benzodiazepine",
+  "formula": "C18H13ClFN3",
+  "molar_mass_g_mol": 325.8,
+  "smiles": "CC1=NC=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4F",
+  "inchi": "InChI=1S/C18H13ClFN3/c1-11-21-9-13-10-22-18(14-4-2-3-5-16(14)20)15-8-12(19)6-7-17(15)23(11)13/h2-9H,10H2,1H3",
+  "inchikey": "DDLIGBOFAVUZHB-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "59467-70-8",
+    "pubchem_cid": 4192
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
