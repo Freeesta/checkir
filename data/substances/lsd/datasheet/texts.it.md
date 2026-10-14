@@ -1,6 +1,6 @@
 ## molecule
 
-LSD, (6aR,9R)-N,N-dietil-7-metil-6,6a,8,9-tetraidro-4H-indolo[4,3-fg]chinolina-9-carbossammide. Base: C20H25N3O, 323.4 g/mol, CAS 50-37-3. Identità controllata su PubChem. [f:pubchem]
+LSD, (6aR,9R)-N,N-dietil-7-metil-6.6a,8.9-tetraidro-4H-indolo[4.3-fg]chinolina-9-carbossammide. Base: C20H25N3O, 323.4 g/mol, CAS 50-37-3. Identità controllata su PubChem. [f:pubchem]
 
 Struttura: sistema ad anello ergolinico con un indolo, un'ammide terziaria dietilica e un'ammina terziaria. Bande attese: N-H dell'indolo a 3380-3490 cm-1 e C=O dell'ammide a 1620-1690 cm-1. Nei dati pubblici non c'è uno spettro di riferimento dell'LSD: gli intervalli indicano solo i gruppi. [f:coates2000] [f:nist-webbook] [f:smith-amides]
 
@@ -24,9 +24,9 @@ L'EUDA descrive l'LSD come un allucinogeno semisintetico. La maggior parte è pr
 
 In vitro, CYP2D6, CYP2E1 e CYP3A4 contribuiscono alla formazione di nor-LSD, e CYP1A2, CYP2C9, CYP2E1 e CYP3A4 a quella di 2-oxo-3-idrossi-LSD. La nor-LSD è probabilmente attiva; la 2-oxo-3-idrossi-LSD è inattiva. [f:luethi2019-lsd]
 
-Dopo 200 µg per bocca in 16 soggetti sani il picco era 4,5 ± 1,4 ng/mL a una mediana di 1,5 ore (intervallo 0,5-4); l'emivita era 3,6 ± 0,9 ore fino a 12 ore, poi più lenta (terminale 8,9 ± 5,9 ore), senza differenze di sesso. [f:dolder2015]
+Dopo 200 µg per bocca in 16 soggetti sani il picco era 4.5 ± 1.4 ng/mL a una mediana di 1.5 ore (intervallo 0.5-4); l'emivita era 3.6 ± 0.9 ore fino a 12 ore, poi più lenta (terminale 8.9 ± 5.9 ore), senza differenze di sesso. [f:dolder2015]
 
-Dopo 85 e 170 µg per bocca le emivite di eliminazione erano 3,7 e 4,0 ore. In 24 ore l'1% della dose si ritrovava immutato nelle urine e il 16% come 2-oxo-3-idrossi-LSD. [f:holze2023]
+Dopo 85 e 170 µg per bocca le emivite di eliminazione erano 3.7 e 4.0 ore. In 24 ore l'1% della dose si ritrovava immutato nelle urine e il 16% come 2-oxo-3-idrossi-LSD. [f:holze2023]
 
 Chi non ha CYP2D6 funzionale aveva emivite più lunghe e un'esposizione plasmatica (AUC) circa il 75% più alta rispetto ai portatori di CYP2D6 funzionale (81 soggetti sani da 4 studi riuniti). [f:vizeli2021]
 
@@ -36,15 +36,15 @@ L'LSD agisce soprattutto sui recettori serotoninergici 5-HT2A: in 16 soggetti sa
 
 In vitro su recettori umani l'LSD legava il 5-HT2A più fortemente di psilocina o DMT e, a differenza delle triptamine provate, interagiva anche con recettori adrenergici e dopaminergici; la 2-oxo-3-idrossi-LSD ha affinità e attività molto più deboli. [f:rickli2016] [f:luethi2019-lsd]
 
-Gli effetti dipendono dalla dose a partire da 25 µg; l'effetto positivo raggiunge un massimo a 100 µg, mentre 200 µg davano più dissoluzione dell'io e ansia significativa. La durata saliva da 6,7 ore (25 µg) a 11 ore (200 µg); pressione e frequenza cardiaca aumentavano in modo moderato. [f:holze2020]
+Gli effetti dipendono dalla dose a partire da 25 µg; l'effetto positivo raggiunge un massimo a 100 µg, mentre 200 µg davano più dissoluzione dell'io e ansia significativa. La durata saliva da 6.7 ore (25 µg) a 11 ore (200 µg); pressione e frequenza cardiaca aumentavano in modo moderato. [f:holze2020]
 
 Gli effetti seguivano da vicino le concentrazioni plasmatiche e non mostravano tolleranza acuta nella singola sessione. [f:dolder2015]
 
 ## doses
 
-Soglia degli effetti psicotropi: 10 µg di LSD base per bocca. In 23 partecipanti sani 5 µg non avevano effetti significativi; con 10 µg gli effetti iniziavano dopo circa 1,1 ore, avevano il picco a 2,5 ore e finivano a 5,1 ore; 20 µg aumentavano anche i «bad drug effects». [f:holze2020-micro]
+Soglia degli effetti psicotropi: 10 µg di LSD base per bocca. In 23 partecipanti sani 5 µg non avevano effetti significativi; con 10 µg gli effetti iniziavano dopo circa 1.1 ore, avevano il picco a 2.5 ore e finivano a 5.1 ore; 20 µg aumentavano anche i «bad drug effects». [f:holze2020-micro]
 
-Dosi di studio da 25 a 200 µg per bocca agivano in modo dose-dipendente; 85 e 170 µg davano picchi di 1,8 e 3,4 ng/mL, proporzionali alla dose. [f:holze2020] [f:holze2023]
+Dosi di studio da 25 a 200 µg per bocca agivano in modo dose-dipendente; 85 e 170 µg davano picchi di 1.8 e 3.4 ng/mL, proporzionali alla dose. [f:holze2020] [f:holze2023]
 
 Le linee UBC indicano 50-150 µg come intervallo usuale e 150-400 µg per esperienze molto intense, con inizio dopo 20-60 minuti ed effetti per 8-12 ore; le dosi di studio di 85 e 170 µg cadono in questi due intervalli. [f:ubc-counselling-guidelines] [f:holze2023]
 
