@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-mta",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-MTA",
+      "synonyms": [
+        "4-Methylthioamphetamine",
+        "para-Methylthioamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-MTA",
+      "synonyms": [
+        "4-Metiltioamfetamina",
+        "para-metiltioamfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(4-methylsulfanylphenyl)propan-2-amine",
+  "formula": "C10H15NS",
+  "molar_mass_g_mol": 181.3,
+  "smiles": "CC(CC1=CC=C(C=C1)SC)N",
+  "inchi": "InChI=1S/C10H15NS/c1-8(11)7-9-3-5-10(12-2)6-4-9/h3-6,8H,7,11H2,1-2H3",
+  "inchikey": "OLEWMKVPSUCNLG-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 151900
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
