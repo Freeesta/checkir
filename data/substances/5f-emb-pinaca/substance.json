@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-emb-pinaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-EMB-PINACA",
+      "synonyms": [
+        "5F-AEB",
+        "5-fluoro-EMB-PINACA",
+        "5-fluoro-AEB"
+      ]
+    },
+    "it": {
+      "preferred": "5F-EMB-PINACA",
+      "synonyms": [
+        "5F-AEB",
+        "5-fluoro-EMB-PINACA",
+        "5-fluoro-AEB"
+      ]
+    }
+  },
+  "iupac": "ethyl (2S)-2-[[1-(5-fluoropentyl)indazole-3-carbonyl]amino]-3-methylbutanoate",
+  "formula": "C20H28FN3O3",
+  "molar_mass_g_mol": 377.5,
+  "smiles": "CCOC(=O)[C@H](C(C)C)NC(=O)C1=NN(C2=CC=CC=C21)CCCCCF",
+  "inchi": "InChI=1S/C20H28FN3O3/c1-4-27-20(26)17(14(2)3)22-19(25)18-15-10-6-7-11-16(15)24(23-18)13-9-5-8-12-21/h6-7,10-11,14,17H,4-5,8-9,12-13H2,1-3H3,(H,22,25)/t17-/m0/s1",
+  "inchikey": "YWSYUMWEKPNAHT-KRWDZBQOSA-N",
+  "external_ids": {
+    "cas": "2365471-51-6",
+    "pubchem_cid": 125181449
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
