@@ -639,7 +639,19 @@
     "naftirone": "beta-naphyrone",
     "dibutylone": "bk-dmbdb",
     "dibutilone": "bk-dmbdb",
-    "bk-dimbdb": "bk-dmbdb"
+    "bk-dimbdb": "bk-dmbdb",
+    "1-4-bd": "1-4-butanediol",
+    "bdo": "1-4-butanediol",
+    "butane-1-4-diol": "1-4-butanediol",
+    "1-4-butandiolo": "1-4-butanediol",
+    "butandiolo": "1-4-butanediol",
+    "tetramethylene-glycol": "1-4-butanediol",
+    "pirazolam": "pyrazolam",
+    "restoril": "temazepam",
+    "normison": "temazepam",
+    "halcion": "triazolam",
+    "ambien": "zolpidem",
+    "imovane": "zopiclone"
   },
   "schema": "aliases/1"
 }
