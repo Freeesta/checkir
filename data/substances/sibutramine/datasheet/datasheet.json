@@ -1,0 +1,66 @@
+{
+  "schema": "datasheet/1",
+  "substance": "sibutramine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "monodesmethylsibutramine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP2B6"
+        ],
+        "source": "bae2008"
+      },
+      {
+        "from": "monodesmethylsibutramine",
+        "to": "didesmethylsibutramine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP2B6"
+        ],
+        "source": "bae2008"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "monodesmethylsibutramine",
+        "active": true,
+        "source": "bae2008"
+      },
+      {
+        "name_key": "didesmethylsibutramine",
+        "active": true,
+        "source": "bae2008"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

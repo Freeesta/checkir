@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "sibutramine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Sibutramine",
+      "synonyms": [
+        "Meridia"
+      ]
+    },
+    "it": {
+      "preferred": "Sibutramina",
+      "synonyms": [
+        "Reductil"
+      ]
+    }
+  },
+  "iupac": "1-[1-(4-chlorophenyl)cyclobutyl]-N,N,3-trimethylbutan-1-amine",
+  "formula": "C17H26ClN",
+  "molar_mass_g_mol": 279.8,
+  "smiles": "CC(C)CC(C1(CCC1)C2=CC=C(C=C2)Cl)N(C)C",
+  "inchi": "InChI=1S/C17H26ClN/c1-13(2)12-16(19(3)4)17(10-5-11-17)14-6-8-15(18)9-7-14/h6-9,13,16H,5,10-12H2,1-4H3",
+  "inchikey": "UNAANXDKBXWMLN-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "106650-56-0",
+    "pubchem_cid": 5210
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

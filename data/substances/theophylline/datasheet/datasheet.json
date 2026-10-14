@@ -1,0 +1,109 @@
+{
+  "schema": "datasheet/1",
+  "substance": "theophylline",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "1-methylxanthine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP1A2"
+        ],
+        "source": "theophylline-label"
+      },
+      {
+        "from": "parent",
+        "to": "3-methylxanthine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP1A2"
+        ],
+        "source": "theophylline-label"
+      },
+      {
+        "from": "parent",
+        "to": "1-3-dimethyluric-acid",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "other"
+        ],
+        "source": "theophylline-label"
+      },
+      {
+        "from": "1-methylxanthine",
+        "to": "1-methyluric-acid",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "other"
+        ],
+        "source": "theophylline-label"
+      },
+      {
+        "from": "parent",
+        "to": "caffeine",
+        "reaction": "other",
+        "source": "theophylline-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "1-methylxanthine",
+        "active": null,
+        "source": "theophylline-label"
+      },
+      {
+        "name_key": "3-methylxanthine",
+        "active": true,
+        "source": "theophylline-label"
+      },
+      {
+        "name_key": "1-3-dimethyluric-acid",
+        "active": null,
+        "source": "theophylline-label"
+      },
+      {
+        "name_key": "1-methyluric-acid",
+        "active": null,
+        "source": "theophylline-label"
+      },
+      {
+        "name_key": "caffeine",
+        "active": true,
+        "source": "theophylline-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 6.1,
+      "max": 12.8,
+      "matrix": "serum",
+      "route": "oral",
+      "source": "theophylline-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
