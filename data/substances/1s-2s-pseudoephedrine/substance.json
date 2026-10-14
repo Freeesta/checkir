@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "1s-2s-pseudoephedrine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Pseudoephedrine",
+      "synonyms": [
+        "(+)-Pseudoephedrine",
+        "d-Pseudoephedrine"
+      ]
+    },
+    "it": {
+      "preferred": "Pseudoefedrina",
+      "synonyms": [
+        "(+)-Pseudoefedrina",
+        "d-Pseudoefedrina"
+      ]
+    }
+  },
+  "iupac": "(1S,2S)-2-(methylamino)-1-phenylpropan-1-ol",
+  "formula": "C10H15NO",
+  "molar_mass_g_mol": 165.23,
+  "smiles": "C[C@@H]([C@H](C1=CC=CC=C1)O)NC",
+  "inchi": "InChI=1S/C10H15NO/c1-8(11-2)10(12)9-6-4-3-5-7-9/h3-8,10-12H,1-2H3/t8-,10+/m0/s1",
+  "inchikey": "KWGRBVOPPLSCSI-WCBMZHEXSA-N",
+  "external_ids": {
+    "cas": "90-82-4",
+    "pubchem_cid": 7028
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle",
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "datasheet/1",
+  "substance": "theobromine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "3-methylxanthine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "other"
+        ],
+        "source": "gates1999"
+      },
+      {
+        "from": "parent",
+        "to": "7-methylxanthine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP1A2",
+          "other"
+        ],
+        "source": "gates1999"
+      },
+      {
+        "from": "parent",
+        "to": "3-7-dimethyluric-acid",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "other"
+        ],
+        "source": "gates1999"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "3-methylxanthine",
+        "active": null,
+        "source": "gates1999"
+      },
+      {
+        "name_key": "7-methylxanthine",
+        "active": null,
+        "source": "gates1999"
+      },
+      {
+        "name_key": "3-7-dimethyluric-acid",
+        "active": null,
+        "source": "gates1999"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

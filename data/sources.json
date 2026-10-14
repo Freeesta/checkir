@@ -14541,6 +14541,645 @@
       "consulted": "2026-10-14"
     },
     {
+      "id": "seo2018",
+      "type": "paper",
+      "title": "Metabolic profile determination of 25N-NBOMe in human liver microsomes by liquid chromatography-quadrupole time-of-flight mass spectrometry (Int J Legal Med 133:833-841)",
+      "authors": [
+        "H. Seo",
+        "I. S. Kim",
+        "Y. H. Kim",
+        "H. H. Yoo",
+        "J. Hong"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00414-018-1904-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30090972/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204105932/https://pubmed.ncbi.nlm.nih.gov/30090972/"
+    },
+    {
+      "id": "eshleman2018",
+      "type": "paper",
+      "title": "Neurochemical pharmacology of psychoactive substituted N-benzylphenethylamines: High potency agonists at 5-HT2A receptors (Biochem Pharmacol 158:27-34)",
+      "authors": [
+        "A. J. Eshleman",
+        "K. M. Wolfrum",
+        "J. F. Reed",
+        "S. O. Kim",
+        "R. A. Johnson",
+        "A. Janowsky"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.bcp.2018.09.024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30261175/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "xiang2024",
+      "type": "paper",
+      "title": "Metabolic characterization of 25X-NBOH and 25X-NBOMe phenethylamines based on UHPLC-Q-Exactive Orbitrap MS in human liver microsomes (J Pharm Biomed Anal 242:116020)",
+      "authors": [
+        "J. Xiang",
+        "D. Wen",
+        "W. Zhai",
+        "J. Zhao",
+        "P. Xiang",
+        "C. Ma",
+        "Y. Shi"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.116020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38359493/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "halberstadt2019",
+      "type": "paper",
+      "title": "Comparison of the behavioral responses induced by phenylalkylamine hallucinogens and their tetrahydrobenzodifuran (\"FLY\") and benzodifuran (\"DragonFLY\") analogs (Neuropharmacology 144:368-376)",
+      "authors": [
+        "A. L. Halberstadt",
+        "M. Chatha",
+        "A. Stratford",
+        "M. Grill",
+        "S. D. Brandt"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2018.10.037",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30385253/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "stoller2017",
+      "type": "paper",
+      "title": "Mistaking 2C-P for 2C-B: What a Difference a Letter Makes (J Anal Toxicol 41:77-79)",
+      "authors": [
+        "A. Stoller",
+        "P. C. Dolder",
+        "M. Bodmer",
+        "F. Hammann",
+        "K. M. Rentsch",
+        "A. K. Exadaktylos",
+        "M. E. Liechti",
+        "E. Liakoni"
+      ],
+      "year": 2017,
+      "doi": "10.1093/jat/bkw108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28130544/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260928103958/https://pubmed.ncbi.nlm.nih.gov/28130544/"
+    },
+    {
+      "id": "hong2011",
+      "type": "paper",
+      "title": "Comparison of contents of five ephedrine alkaloids in three official origins of Ephedra Herb in China by high-performance liquid chromatography (J Nat Med 65)",
+      "authors": [
+        "H Hong",
+        "H-B Chen",
+        "D-H Yang",
+        "M-Y Shang",
+        "X Wang",
+        "S-Q Cai",
+        "M Mikage"
+      ],
+      "year": 2011,
+      "doi": "10.1007/s11418-011-0528-8",
+      "url": "https://doi.org/10.1007/s11418-011-0528-8",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "barroso2011",
+      "type": "paper",
+      "title": "Determination of urinary concentrations of pseudoephedrine and cathine after therapeutic administration of pseudoephedrine-containing medications to healthy subjects (Drug Test Anal 3)",
+      "authors": [
+        "O Barroso",
+        "D Goudreault",
+        "M-l Carbó Banús",
+        "C Ayotte",
+        "I Mazzoni",
+        "T Boghosian",
+        "O Rabin"
+      ],
+      "year": 2011,
+      "doi": "10.1002/dta.291",
+      "url": "https://doi.org/10.1002/dta.291",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "helfer2014",
+      "type": "paper",
+      "title": "Elucidation of the metabolites of the novel psychoactive substance 4-methyl-N-ethyl-cathinone (4-MEC) in human urine and pooled liver microsomes by GC-MS and LC-HR-MS/MS techniques (Drug Test Anal 7)",
+      "authors": [
+        "A G Helfer",
+        "A Turcant",
+        "D Boels",
+        "S Ferec",
+        "B Lelièvre",
+        "J Welter",
+        "M R Meyer",
+        "H H Maurer"
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1682",
+      "url": "https://doi.org/10.1002/dta.1682",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "carlier2019",
+      "type": "paper",
+      "title": "Use of cognitive enhancers: methylphenidate and analogs (Eur Rev Med Pharmacol Sci 23)",
+      "authors": [
+        "J Carlier",
+        "R Giorgetti",
+        "M R Varì",
+        "F Pirani",
+        "G Ricci",
+        "F P Busardò"
+      ],
+      "year": 2019,
+      "doi": "10.26355/eurrev_201901_16741",
+      "url": "https://doi.org/10.26355/eurrev_201901_16741",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "sakamoto2023",
+      "type": "paper",
+      "title": "Analytical characterization and differentiation between threo- and erythro-4-fluoroethylphenidate (Forensic Toxicol 41)",
+      "authors": [
+        "M Sakamoto",
+        "T Suzuki",
+        "D Teraoka",
+        "K Tanaka",
+        "Y Saeki",
+        "K Kishimoto",
+        "M Nagashima",
+        "J Nakajima",
+        "J Suzuki",
+        "A Inomata",
+        "T Moriyasu",
+        "H Fukaya"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s11419-023-00664-y",
+      "url": "https://doi.org/10.1007/s11419-023-00664-y",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "jin2008",
+      "type": "paper",
+      "title": "Analysis of indandione anticoagulant rodenticides in animal liver by eluent generator reagent free ion chromatography coupled with electrospray mass spectrometry (J Chromatogr A 1213)",
+      "authors": [
+        "M Jin",
+        "X Chen",
+        "M Ye",
+        "Y Zhu"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.chroma.2008.08.100",
+      "url": "https://doi.org/10.1016/j.chroma.2008.08.100",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mclaughlin2017",
+      "type": "paper",
+      "title": "Analytical characterization and pharmacological evaluation of the new psychoactive substance 4-fluoromethylphenidate (4F-MPH) and differentiation between the (±)-threo and (±)-erythro diastereomers (Drug Test Anal 9:347-357)",
+      "authors": [
+        "G. McLaughlin",
+        "N. Morris",
+        "P. V. Kavanagh",
+        "J. D. Power",
+        "G. Dowling",
+        "B. Twamley",
+        "J. O'Brien",
+        "G. Hessman",
+        "B. Murphy",
+        "D. Walther",
+        "J. S. Partilla",
+        "M. H. Baumann",
+        "S. D. Brandt"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2167",
+      "url": "https://doi.org/10.1002/dta.2167",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "moore1994",
+      "type": "paper",
+      "title": "Determination and in-depth chromatographic analyses of alkaloids in South American and greenhouse-cultivated coca leaves (J Chromatogr A 659:163-175)",
+      "authors": [
+        "J. M. Moore",
+        "J. F. Casale",
+        "R. F. Klein",
+        "D. A. Cooper",
+        "J. Lydon"
+      ],
+      "year": 1994,
+      "doi": "10.1016/0021-9673(94)85018-6",
+      "url": "https://doi.org/10.1016/0021-9673(94)85018-6",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "janzen1992",
+      "type": "paper",
+      "title": "Comparison analysis of illicit cocaine samples (J Forensic Sci 37:436-445)",
+      "authors": [
+        "K. E. Janzen",
+        "L. Walter",
+        "A. R. Fernando"
+      ],
+      "year": 1992,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1500892/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "casale2007",
+      "type": "paper",
+      "title": "Four new illicit cocaine impurities from the oxidation of crude cocaine base: formation and characterization of the diastereomeric 2,3-dihydroxy-3-phenylpropionylecgonine methyl esters from cis- and trans-cinnamoylcocaine (J Forensic Sci 52:860-866)",
+      "authors": [
+        "J. F. Casale",
+        "P. A. Hays",
+        "S. G. Toske",
+        "A. L. Berrier"
+      ],
+      "year": 2007,
+      "doi": "10.1111/j.1556-4029.2007.00476.x",
+      "url": "https://doi.org/10.1111/j.1556-4029.2007.00476.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "oliynyk2012",
+      "type": "paper",
+      "title": "The pharmacology of actoprotectors: practical application for improvement of mental and physical performance (Biomol Ther 20:446-456)",
+      "authors": [
+        "S. Oliynyk",
+        "S. Oh"
+      ],
+      "year": 2012,
+      "doi": "10.4062/biomolther.2012.20.5.446",
+      "url": "https://doi.org/10.4062/biomolther.2012.20.5.446",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "rice2018",
+      "type": "paper",
+      "title": "Stereochemistry of ephedrine and its environmental significance: Exposure and effects directed approach (J Hazard Mater 348:39-46)",
+      "authors": [
+        "J. Rice",
+        "K. Proctor",
+        "L. Lopardo",
+        "S. Evans",
+        "B. Kasprzyk-Hordern"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jhazmat.2018.01.020",
+      "url": "https://doi.org/10.1016/j.jhazmat.2018.01.020",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nuvigil-label",
+      "type": "institution",
+      "title": "NUVIGIL (armodafinil) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a69631d0-1263-769e-b232-4ab9160e0fa3",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20260803160041/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a69631d0-1263-769e-b232-4ab9160e0fa3"
+    },
+    {
+      "id": "atomoxetine-label",
+      "type": "institution",
+      "title": "Atomoxetine capsules (Glenmark Pharmaceuticals Inc., USA), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20260803160003/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f"
+    },
+    {
+      "id": "bupropion-label",
+      "type": "institution",
+      "title": "Bupropion hydrochloride extended-release tablets (XL) (NuCare Pharmaceuticals Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5d44daa9-d0e9-eec0-e063-6394a90a81e4",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "amitriptyline-label",
+      "type": "institution",
+      "title": "Amitriptyline hydrochloride tablets USP (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=56379133-cd11-4dff-b511-7cdfc9a360ca",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "citalopram-label",
+      "type": "institution",
+      "title": "Citalopram tablets (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=625a78b2-4751-4ca5-91b6-7c85fd9f8c2e",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "theophylline-label",
+      "type": "institution",
+      "title": "Theophylline (anhydrous) extended-release tablets (Proficient Rx LP), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=882657ae-e15b-4c86-a571-b55460bd4726",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "hicks2017",
+      "type": "paper",
+      "title": "Clinical Pharmacogenetics Implementation Consortium guideline (CPIC) for CYP2D6 and CYP2C19 genotypes and dosing of tricyclic antidepressants: 2016 update (Clin Pharmacol Ther 102:37-44)",
+      "authors": [
+        "J. K. Hicks",
+        "K. Sangkuhl",
+        "J. J. Swen",
+        "V. L. Ellingrod",
+        "D. J. Müller",
+        "K. Shimoda",
+        "J. R. Bishop",
+        "E. D. Kharasch",
+        "T. C. Skaar",
+        "A. Gaedigk",
+        "H. M. Dunnenberger",
+        "T. E. Klein",
+        "K. E. Caudle",
+        "J. C. Stingl"
+      ],
+      "year": 2017,
+      "doi": "10.1002/cpt.597",
+      "url": "https://doi.org/10.1002/cpt.597",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "gates1999",
+      "type": "paper",
+      "title": "Cytochrome P450 isoform selectivity in human hepatic theobromine metabolism (Br J Clin Pharmacol 47:299-305)",
+      "authors": [
+        "S. Gates",
+        "J. O. Miners"
+      ],
+      "year": 1999,
+      "doi": "10.1046/j.1365-2125.1999.00890.x",
+      "url": "https://doi.org/10.1046/j.1365-2125.1999.00890.x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "bae2008",
+      "type": "paper",
+      "title": "Cytochrome P450 2B6 catalyzes the formation of pharmacologically active sibutramine metabolites in human liver microsomes (Drug Metab Dispos 36:1679-1688)",
+      "authors": [
+        "S. K. Bae",
+        "S. Cao",
+        "K.-A. Seo",
+        "H. Kim",
+        "M.-J. Kim",
+        "J.-H. Shon",
+        "K.-H. Liu",
+        "H.-H. Zhou",
+        "J.-G. Shin"
+      ],
+      "year": 2008,
+      "doi": "10.1124/dmd.108.020727",
+      "url": "https://doi.org/10.1124/dmd.108.020727",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kim2009",
+      "type": "paper",
+      "title": "Association of CYP2B6, CYP3A5, and CYP2C19 genetic polymorphisms with sibutramine pharmacokinetics in healthy Korean subjects (Clin Pharmacol Ther 86:511-518)",
+      "authors": [
+        "K. A. Kim",
+        "W. K. Song",
+        "J. Y. Park"
+      ],
+      "year": 2009,
+      "doi": "10.1038/clpt.2009.145",
+      "url": "https://doi.org/10.1038/clpt.2009.145",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "tucker2018",
+      "type": "paper",
+      "title": "Unapproved Pharmaceutical Ingredients Included in Dietary Supplements Associated With US Food and Drug Administration Warnings (JAMA Netw Open 1:e183337)",
+      "authors": [
+        "J. Tucker",
+        "T. Fischer",
+        "L. Upjohn",
+        "D. Mazzera",
+        "M. Kumar"
+      ],
+      "year": 2018,
+      "doi": "10.1001/jamanetworkopen.2018.3337",
+      "url": "https://doi.org/10.1001/jamanetworkopen.2018.3337",
+      "tier": "primary",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "carles2025",
+      "type": "paper",
+      "title": "Presence of sibutramine and sildenafil in weight loss dietary supplements: a case series with analytical and clinical investigation (Clin Toxicol 63:193-195)",
+      "authors": [
+        "M. Carles",
+        "T. Pietri",
+        "J. Micallef",
+        "C. Corteggiani-Giraud",
+        "M. Richez",
+        "C. Solas-Chesneau",
+        "B. Lacarelle",
+        "N. Fabresse"
+      ],
+      "year": 2025,
+      "doi": "10.1080/15563650.2025.2452297",
+      "url": "https://doi.org/10.1080/15563650.2025.2452297",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "pascali2018",
+      "type": "paper",
+      "title": "Application of HRAM screening and LC-MS/MS confirmation of active pharmaceutical ingredient in \"natural\" herbal supplements (Forensic Sci Int 286:e28-e31)",
+      "authors": [
+        "J. P. Pascali",
+        "P. Fais",
+        "F. Vaiano",
+        "E. Bertol"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.forsciint.2018.03.014",
+      "url": "https://doi.org/10.1016/j.forsciint.2018.03.014",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "laposchan2022",
+      "type": "paper",
+      "title": "Impurities, adulterants and cutting agents in cocaine as potential candidates for retrospective mining of GC-MS data (Sci Justice 62:60-75)",
+      "authors": [
+        "S. Laposchan",
+        "R. F. Kranenburg",
+        "A. C. van Asten"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.scijus.2021.11.004",
+      "url": "https://doi.org/10.1016/j.scijus.2021.11.004",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "goya2022",
+      "type": "paper",
+      "title": "From Cocoa to Chocolate: Effect of Processing on Flavanols and Methylxanthines and Their Mechanisms of Action (Int J Mol Sci 23:14365)",
+      "authors": [
+        "L. Goya",
+        "J. E. Kongor",
+        "S. de Pascual-Teresa"
+      ],
+      "year": 2022,
+      "doi": "10.3390/ijms232214365",
+      "url": "https://doi.org/10.3390/ijms232214365",
+      "tier": "review",
+      "license": "CC BY 4.0; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "cova2019",
+      "type": "paper",
+      "title": "Exploring cocoa properties: is theobromine a cognitive modulator? (Psychopharmacology 236:561-572)",
+      "authors": [
+        "I. Cova",
+        "V. Leta",
+        "C. Mariani",
+        "L. Pantoni",
+        "S. Pomati"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00213-019-5172-0",
+      "url": "https://doi.org/10.1007/s00213-019-5172-0",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "hansen1995",
+      "type": "paper",
+      "title": "Fungal transformations of antihistamines: metabolism of brompheniramine, chlorpheniramine, and pheniramine to N-oxide and N-demethylated metabolites by the fungus Cunninghamella elegans (Xenobiotica 25:1081-1092)",
+      "authors": [
+        "E. B. Hansen",
+        "B. P. Cho",
+        "W. A. Korfmacher",
+        "C. E. Cerniglia"
+      ],
+      "year": 1995,
+      "doi": "10.3109/00498259509061908",
+      "url": "https://doi.org/10.3109/00498259509061908",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "ahmadi2012",
+      "type": "paper",
+      "title": "Synthesis and anti-inflammatory effects of new piperazine and ethanolamine derivatives of H1-antihistaminic drugs (Mini Rev Med Chem 12:1282-1292)",
+      "authors": [
+        "A. Ahmadi",
+        "M. Khalili",
+        "A. Nafarie",
+        "A. Yazdani",
+        "B. Nahri-Niknafs"
+      ],
+      "year": 2012,
+      "doi": "10.2174/138955712802762013",
+      "url": "https://doi.org/10.2174/138955712802762013",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dinisoliveira2017",
+      "type": "paper",
+      "title": "Metabolomics of Methylphenidate and Ethylphenidate: Implications in Pharmacological and Toxicological Effects (Eur J Drug Metab Pharmacokinet 42(1):11-16)",
+      "authors": [
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s13318-016-0362-1",
+      "url": "https://doi.org/10.1007/s13318-016-0362-1",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "knych2018",
+      "type": "paper",
+      "title": "L- and D-threo ethylphenidate concentrations, pharmacokinetics, and pharmacodynamics in horses (Drug Test Anal 10(10):1508-1517)",
+      "authors": [
+        "H. K. Knych",
+        "D. S. McKemie",
+        "K. Seminoff",
+        "P. Hartmann",
+        "L. Hovda",
+        "D. Benson"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2408",
+      "url": "https://doi.org/10.1002/dta.2408",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "katselou2016",
       "type": "paper",
       "title": "Fenethylline (Captagon) Abuse - Local Problems from an Old Drug Become Universal (Basic Clin Pharmacol Toxicol 119)",

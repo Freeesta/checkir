@@ -1,0 +1,72 @@
+{
+  "schema": "datasheet/1",
+  "substance": "25n-nbome",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "nbome",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxy-25n-nbome",
+        "reaction": "hydroxylation",
+        "source": "seo2018"
+      },
+      {
+        "from": "parent",
+        "to": "o-desmethyl-25n-nbome",
+        "reaction": "o_demethylation",
+        "source": "seo2018"
+      },
+      {
+        "from": "parent",
+        "to": "2c-n",
+        "reaction": "other",
+        "source": "grafinger2018"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "hydroxy-25n-nbome",
+        "active": null,
+        "source": "seo2018"
+      },
+      {
+        "name_key": "o-desmethyl-25n-nbome",
+        "active": null,
+        "source": "seo2018"
+      },
+      {
+        "name_key": "2c-n",
+        "active": null,
+        "source": "grafinger2018"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
