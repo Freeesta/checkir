@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "deschloroetizolam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Deschloroetizolam",
+      "synonyms": [
+        "Dechloroetizolam"
+      ]
+    },
+    "it": {
+      "preferred": "Deschloroetizolam",
+      "synonyms": [
+        "Dechloroetizolam"
+      ]
+    }
+  },
+  "iupac": "4-ethyl-13-methyl-7-phenyl-3-thia-1,8,11,12-tetrazatricyclo[8.3.0.02,6]trideca-2(6),4,7,10,12-pentaene",
+  "formula": "C17H16N4S",
+  "molar_mass_g_mol": 308.4,
+  "smiles": "CCC1=CC2=C(S1)N3C(=NN=C3CN=C2C4=CC=CC=C4)C",
+  "inchi": "InChI=1S/C17H16N4S/c1-3-13-9-14-16(12-7-5-4-6-8-12)18-10-15-20-19-11(2)21(15)17(14)22-13/h4-9H,3,10H2,1-2H3",
+  "inchikey": "JIOBORXCOGMHSV-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "40054-73-7",
+    "pubchem_cid": 827322
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

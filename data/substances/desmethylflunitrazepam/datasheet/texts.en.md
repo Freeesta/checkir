@@ -1,0 +1,51 @@
+## molecule
+
+Desmethylflunitrazepam, 5-(2-fluorophenyl)-7-nitro-1,3-dihydro-1,4-benzodiazepin-2-one. Formula C15H10FN3O3, 299.26 g/mol, CAS 2558-30-7. Identity checked on PubChem (achiral molecule: a single entry). [f:pubchem]
+
+## category
+
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+
+## origin
+
+Synthetic substance: the active desmethyl metabolite of flunitrazepam, also known as fonazepam or norflunitrazepam, seized as powder and tablets in Europe between 2014 and 2016. [f:katselou2017]
+
+## metabolism
+
+It is an active metabolite of flunitrazepam. [f:katselou2017]
+
+In human liver microsomes it undergoes monohydroxylation and nitro reduction. [f:moosmann2016]
+
+## cuts
+
+Not yet drafted. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
+## effects
+
+Designer benzodiazepines have effects similar to those of therapeutic ones: they act on the GABA-A receptor and produce sedation, hypnosis, anxiolysis, muscle relaxation, euphoria, amnesia and dependence. [f:el-balkhi2023]
+
+They are central nervous system depressants and sedatives that can cause psychomotor impairment. [f:wu2023]
+
+## doses
+
+Not yet drafted. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+
+## risks
+
+Physical dependence on benzodiazepines comes with a withdrawal syndrome with sleep disturbance, irritability, anxiety, tremor, sweating and palpitations; at high doses seizures and psychotic reactions are also described. [f:petursson1994]
+
+The relative potency is hard to establish, because it depends on the structure and on the many GABA-A receptor subtypes; for many of these molecules human metabolism data are scarce. [f:el-balkhi2023] [f:gameli2024]
+
+## interactions
+
+Pharmacodynamic interactions with other central nervous system depressants, such as opioids, are widely documented; with other sedatives the risk of overdose rises. [f:el-balkhi2023] [f:wu2023]
+
+Concurrent use of an opioid and a benzodiazepine is associated with a higher risk of emergency visit or admission for opioid overdose (adjusted odds ratio 2.14, 95% confidence interval 2.05-2.24; US insured patients 2001-2013, retrospective study: an association, not proof of cause). [f:sun2017]
+
+## sources
+
+Sources used for the claims of this sheet: [f:pubchem] [f:unodc-ewa] [f:checkir-classification] [f:katselou2017] [f:moosmann2016] [f:checkir-section-pending] [f:el-balkhi2023] [f:wu2023] [f:gameli2024] [f:petursson1994] [f:sun2017]
+
+## license
+
+Text under the CC BY-SA 4.0 licence. Status: draft written with AI assistance, not yet checked by a chemist or a health professional; every claim must be checked against the cited source before review.
