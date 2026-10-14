@@ -28,7 +28,7 @@ Efedrina e pseudoefedrina, precursori, possono restare nel prodotto. [f:unodc-at
 
 ## metabolism
 
-Biodisponibilità nei volontari: orale circa 67%, intranasale 79%, fumata 67% della dose erogata (37.4% della dose nella pipa), con picchi a 2.5-2.7 h per le vie intranasale e fumata. [f:harris2003] [f:cook1993] L'emivita di eliminazione è 10.7-11.4 h qualunque sia la via, il volume di distribuzione 4.2 L/kg. [f:harris2003]
+Biodisponibilità nei volontari: orale circa 67%, intranasale 79%, fumata 67% della dose erogata (37.4% della dose nella pipa), con picchi a 2.5-2.7 h per le vie intranasale e fumata. [f:harris2003-meth] [f:cook1993] L'emivita di eliminazione è 10.7-11.4 h qualunque sia la via, il volume di distribuzione 4.2 L/kg. [f:harris2003-meth]
 
 CYP2D6 compie sia la 4-idrossilazione sia la N-demetilazione ad anfetamina (microsomi epatici umani, enzima ricombinante), quindi sono probabili interazioni con altri substrati di CYP2D6. [f:lin1997-cyp2d6] In due uomini il 22% di una dose orale è stato escreto immodificato il primo giorno e il 15% come 4-idrossimetanfetamina. [f:caldwell1972] L'esposizione plasmatica all'anfetamina è circa il 21% di quella alla metanfetamina. [f:schepers2003]
 
@@ -72,7 +72,7 @@ Altri substrati di CYP2D6 possono interagire dal punto di vista farmacocinetico,
 
 ## counselling
 
-Chiedere la via: fumata e intranasale sono ben assorbite (67-79%) e raggiungono il cervello più in fretta; con l'iniezione chiedere se si condivide il materiale (HIV, epatiti). [f:harris2003] [f:euda-meth] [f:ubc-counselling-guidelines]
+Chiedere la via: fumata e intranasale sono ben assorbite (67-79%) e raggiungono il cervello più in fretta; con l'iniezione chiedere se si condivide il materiale (HIV, epatiti). [f:harris2003-meth] [f:euda-meth] [f:ubc-counselling-guidelines]
 
 Gli effetti durano molte ore e con dosi alte o ripetute possono superare le 24 ore: suggerire di non ripetere la dose e di lasciare tempo per la discesa. [f:euda-meth] [f:ubc-counselling-guidelines]
 
@@ -86,7 +86,7 @@ Chiedere di alcol e altri stimolanti (cocaina, anfetamina, MDMA): le combinazion
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:caldwell1972] [f:checkir-classification] [f:cook1993] [f:cruickshank2009] [f:euda-meth] [f:harris2003] [f:huestis2007] [f:isoardi2019] [f:kirkpatrick2012] [f:lin1997-cyp2d6] [f:liu2023-taar1] [f:mendelson2006] [f:pubchem] [f:rothman2001] [f:schep2010] [f:schepers2003] [f:smith-amine-salts] [f:smith-benzene] [f:sulzer2005] [f:swgdrug-methamphetamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-ewa] [f:wikidata]
+Fonti usate per le affermazioni di questa scheda: [f:caldwell1972] [f:checkir-classification] [f:cook1993] [f:cruickshank2009] [f:euda-meth] [f:harris2003-meth] [f:huestis2007] [f:isoardi2019] [f:kirkpatrick2012] [f:lin1997-cyp2d6] [f:liu2023-taar1] [f:mendelson2006] [f:pubchem] [f:rothman2001] [f:schep2010] [f:schepers2003] [f:smith-amine-salts] [f:smith-benzene] [f:sulzer2005] [f:swgdrug-methamphetamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-ewa] [f:wikidata]
 
 ## license
 

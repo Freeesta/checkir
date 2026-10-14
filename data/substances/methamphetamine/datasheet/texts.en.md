@@ -28,7 +28,7 @@ Ephedrine and pseudoephedrine, the precursors, may remain in the product. [f:uno
 
 ## metabolism
 
-Bioavailability in volunteers: oral about 67%, intranasal 79%, smoked 67% of the delivered dose (37.4% of the dose in the pipe), with peaks at 2.5-2.7 h by the intranasal and smoked routes. [f:harris2003] [f:cook1993] Elimination half-life is 10.7-11.4 h whatever the route, distribution volume 4.2 L/kg. [f:harris2003]
+Bioavailability in volunteers: oral about 67%, intranasal 79%, smoked 67% of the delivered dose (37.4% of the dose in the pipe), with peaks at 2.5-2.7 h by the intranasal and smoked routes. [f:harris2003-meth] [f:cook1993] Elimination half-life is 10.7-11.4 h whatever the route, distribution volume 4.2 L/kg. [f:harris2003-meth]
 
 CYP2D6 carries out both the 4-hydroxylation and the N-demethylation to amphetamine (human liver microsomes, recombinant enzyme), so interactions with other CYP2D6 substrates are likely. [f:lin1997-cyp2d6] In two men, 22% of an oral dose was excreted unchanged on day 1 and 15% as 4-hydroxymethamphetamine. [f:caldwell1972] Amphetamine plasma exposure is about 21% of that of methamphetamine. [f:schepers2003]
 
@@ -72,7 +72,7 @@ Other CYP2D6 substrates may interact pharmacokinetically, since CYP2D6 carries t
 
 ## counselling
 
-Ask the route: smoked and intranasal are well absorbed (67-79%) and reach the brain faster; with injection ask whether equipment is shared (HIV, hepatitis). [f:harris2003] [f:euda-meth] [f:ubc-counselling-guidelines]
+Ask the route: smoked and intranasal are well absorbed (67-79%) and reach the brain faster; with injection ask whether equipment is shared (HIV, hepatitis). [f:harris2003-meth] [f:euda-meth] [f:ubc-counselling-guidelines]
 
 Effects last many hours and with high doses or redosing can exceed 24 hours: suggest not redosing and allowing time for the comedown. [f:euda-meth] [f:ubc-counselling-guidelines]
 
@@ -86,7 +86,7 @@ Ask about alcohol and other stimulants (cocaine, amphetamine, MDMA): the combina
 
 ## sources
 
-Sources used for the claims in this sheet: [f:caldwell1972] [f:checkir-classification] [f:cook1993] [f:cruickshank2009] [f:euda-meth] [f:harris2003] [f:huestis2007] [f:isoardi2019] [f:kirkpatrick2012] [f:lin1997-cyp2d6] [f:liu2023-taar1] [f:mendelson2006] [f:pubchem] [f:rothman2001] [f:schep2010] [f:schepers2003] [f:smith-amine-salts] [f:smith-benzene] [f:sulzer2005] [f:swgdrug-methamphetamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-ewa] [f:wikidata]
+Sources used for the claims in this sheet: [f:caldwell1972] [f:checkir-classification] [f:cook1993] [f:cruickshank2009] [f:euda-meth] [f:harris2003-meth] [f:huestis2007] [f:isoardi2019] [f:kirkpatrick2012] [f:lin1997-cyp2d6] [f:liu2023-taar1] [f:mendelson2006] [f:pubchem] [f:rothman2001] [f:schep2010] [f:schepers2003] [f:smith-amine-salts] [f:smith-benzene] [f:sulzer2005] [f:swgdrug-methamphetamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-ewa] [f:wikidata]
 
 ## license
 
