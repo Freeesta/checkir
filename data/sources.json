@@ -14539,6 +14539,104 @@
       "license": "© marketing authorisation holder; cited as the source of facts only",
       "tier": "agency",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "seo2018",
+      "type": "paper",
+      "title": "Metabolic profile determination of 25N-NBOMe in human liver microsomes by liquid chromatography-quadrupole time-of-flight mass spectrometry (Int J Legal Med 133:833-841)",
+      "authors": [
+        "H. Seo",
+        "I. S. Kim",
+        "Y. H. Kim",
+        "H. H. Yoo",
+        "J. Hong"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00414-018-1904-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30090972/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204105932/https://pubmed.ncbi.nlm.nih.gov/30090972/"
+    },
+    {
+      "id": "eshleman2018",
+      "type": "paper",
+      "title": "Neurochemical pharmacology of psychoactive substituted N-benzylphenethylamines: High potency agonists at 5-HT2A receptors (Biochem Pharmacol 158:27-34)",
+      "authors": [
+        "A. J. Eshleman",
+        "K. M. Wolfrum",
+        "J. F. Reed",
+        "S. O. Kim",
+        "R. A. Johnson",
+        "A. Janowsky"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.bcp.2018.09.024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30261175/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "xiang2024",
+      "type": "paper",
+      "title": "Metabolic characterization of 25X-NBOH and 25X-NBOMe phenethylamines based on UHPLC-Q-Exactive Orbitrap MS in human liver microsomes (J Pharm Biomed Anal 242:116020)",
+      "authors": [
+        "J. Xiang",
+        "D. Wen",
+        "W. Zhai",
+        "J. Zhao",
+        "P. Xiang",
+        "C. Ma",
+        "Y. Shi"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.116020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38359493/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "halberstadt2019",
+      "type": "paper",
+      "title": "Comparison of the behavioral responses induced by phenylalkylamine hallucinogens and their tetrahydrobenzodifuran (\"FLY\") and benzodifuran (\"DragonFLY\") analogs (Neuropharmacology 144:368-376)",
+      "authors": [
+        "A. L. Halberstadt",
+        "M. Chatha",
+        "A. Stratford",
+        "M. Grill",
+        "S. D. Brandt"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2018.10.037",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30385253/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "stoller2017",
+      "type": "paper",
+      "title": "Mistaking 2C-P for 2C-B: What a Difference a Letter Makes (J Anal Toxicol 41:77-79)",
+      "authors": [
+        "A. Stoller",
+        "P. C. Dolder",
+        "M. Bodmer",
+        "F. Hammann",
+        "K. M. Rentsch",
+        "A. K. Exadaktylos",
+        "M. E. Liechti",
+        "E. Liakoni"
+      ],
+      "year": 2017,
+      "doi": "10.1093/jat/bkw108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28130544/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260928103958/https://pubmed.ncbi.nlm.nih.gov/28130544/"
     }
   ]
 }
