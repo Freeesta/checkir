@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-fluoromethcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-Fluoromethcathinone",
+      "synonyms": [
+        "4-FMC",
+        "Flephedrone"
+      ]
+    },
+    "it": {
+      "preferred": "4-Fluorometcatinone",
+      "synonyms": [
+        "4-FMC",
+        "Flefedrone"
+      ]
+    }
+  },
+  "iupac": "1-(4-fluorophenyl)-2-(methylamino)propan-1-one",
+  "formula": "C10H12FNO",
+  "molar_mass_g_mol": 181.21,
+  "smiles": "CC(C(=O)C1=CC=C(C=C1)F)NC",
+  "inchi": "InChI=1S/C10H12FNO/c1-7(12-2)10(13)8-3-5-9(11)6-4-8/h3-7,12H,1-2H3",
+  "inchikey": "MWKQPIROPJSFRI-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "447-40-5",
+    "pubchem_cid": 49853406
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
