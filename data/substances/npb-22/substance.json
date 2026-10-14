@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "npb-22",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "NPB-22"
+    },
+    "it": {
+      "preferred": "NPB-22"
+    }
+  },
+  "iupac": "quinolin-8-yl 1-pentylindazole-3-carboxylate",
+  "formula": "C22H21N3O2",
+  "molar_mass_g_mol": 359.4,
+  "smiles": "CCCCCN1C2=CC=CC=C2C(=N1)C(=O)OC3=CC=CC4=C3N=CC=C4",
+  "inchi": "InChI=1S/C22H21N3O2/c1-2-3-6-15-25-18-12-5-4-11-17(18)21(24-25)22(26)27-19-13-7-9-16-10-8-14-23-20(16)19/h4-5,7-14H,2-3,6,15H2,1H3",
+  "inchikey": "UWICFJAXLKCHTQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1445579-61-2",
+    "pubchem_cid": 118796435
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
