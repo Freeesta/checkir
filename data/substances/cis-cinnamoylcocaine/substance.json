@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "cis-cinnamoylcocaine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "cis-Cinnamoylcocaine",
+      "synonyms": [
+        "(Z)-cinnamoylcocaine"
+      ]
+    },
+    "it": {
+      "preferred": "cis-Cinnamoilcocaina",
+      "synonyms": [
+        "(Z)-cinnamoilcocaina"
+      ]
+    }
+  },
+  "iupac": "methyl (1R,2R,3S,5S)-8-methyl-3-[(Z)-3-phenylprop-2-enoyl]oxy-8-azabicyclo[3.2.1]octane-2-carboxylate",
+  "formula": "C19H23NO4",
+  "molar_mass_g_mol": 329.4,
+  "smiles": "CN1[C@H]2CC[C@@H]1[C@H]([C@H](C2)OC(=O)/C=C\\C3=CC=CC=C3)C(=O)OC",
+  "inchi": "InChI=1S/C19H23NO4/c1-20-14-9-10-15(20)18(19(22)23-2)16(12-14)24-17(21)11-8-13-6-4-3-5-7-13/h3-8,11,14-16,18H,9-10,12H2,1-2H3/b11-8-/t14-,15+,16-,18+/m0/s1",
+  "inchikey": "MQIXMJWNEKUAOZ-ZFYRMRLISA-N",
+  "external_ids": {
+    "cas": "50763-21-8",
+    "pubchem_cid": 12798013
+  },
+  "classes": {
+    "chemical": [
+      "tropane_esters"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
