@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "r-ketamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Arketamine",
+      "synonyms": [
+        "(R)-ketamine",
+        "R-ketamine"
+      ]
+    },
+    "it": {
+      "preferred": "Arketamina",
+      "synonyms": [
+        "(R)-ketamina"
+      ]
+    }
+  },
+  "iupac": "(2R)-2-(2-chlorophenyl)-2-(methylamino)cyclohexan-1-one",
+  "formula": "C13H16ClNO",
+  "molar_mass_g_mol": 237.72,
+  "smiles": "CN[C@]1(CCCCC1=O)C2=CC=CC=C2Cl",
+  "inchi": "InChI=1S/C13H16ClNO/c1-15-13(9-5-4-8-12(13)16)10-6-2-3-7-11(10)14/h2-3,6-7,15H,4-5,8-9H2,1H3/t13-/m1/s1",
+  "inchikey": "YQEZLKZALYSWHR-CYBMUJFWSA-N",
+  "external_ids": {
+    "cas": "33643-49-1",
+    "pubchem_cid": 644025
+  },
+  "classes": {
+    "chemical": [
+      "arylcyclohexylamines"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
