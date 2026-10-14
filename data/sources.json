@@ -10431,6 +10431,98 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "nowak2026",
+      "type": "paper",
+      "title": "4-Bromomethcathinone (4-BMC) Revisited: The First Reported Fatal Case and Toxicological Insights (Metabolites 16)",
+      "authors": [
+        "Nowak K",
+        "Szpot P",
+        "Zawadzki M",
+        "Chłopaś-Konowałek A"
+      ],
+      "year": 2026,
+      "doi": "10.3390/metabo16070507",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42506458/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "machado2017",
+      "type": "paper",
+      "title": "Brephedrone: A new psychoactive substance seized in Brazil (Forensic Sci Int 275:302-307)",
+      "authors": [
+        "Machado Y",
+        "Coelho Neto J",
+        "Barbosa PEN",
+        "Lordeiro RA",
+        "Alves RB"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.forsciint.2017.04.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28445860/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204213233/https://pubmed.ncbi.nlm.nih.gov/28445860/"
+    },
+    {
+      "id": "meneses2026",
+      "type": "paper",
+      "title": "Gastrointestinal permeability and hepatic mechanisms of toxicity of chloro-cathinones (Food Chem Toxicol 210:115981)",
+      "authors": [
+        "Meneses M",
+        "Ferreira I",
+        "Gomes AP",
+        "Pacheco R",
+        "Gaspar H"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.fct.2026.115981",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41605297/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "qian2017",
+      "type": "paper",
+      "title": "Identification of five pyrrolidinyl substituted cathinones and the collision-induced dissociation of electrospray-generated pyrrolidinyl substituted cathinones (Drug Test Anal 9:778-787)",
+      "authors": [
+        "Qian Z",
+        "Jia W",
+        "Li T",
+        "Hua Z",
+        "Liu C"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2035",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27367446/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250205225801/https://pubmed.ncbi.nlm.nih.gov/27367446/"
+    },
+    {
+      "id": "wojcieszak2019",
+      "type": "paper",
+      "title": "Methcathinone and 3-Fluoromethcathinone Stimulate Spontaneous Horizontal Locomotor Activity in Mice and Elevate Extracellular Dopamine and Serotonin Levels in the Mouse Striatum (Neurotox Res 35:594-605)",
+      "authors": [
+        "Wojcieszak J",
+        "Andrzejczak D",
+        "Wojtas A",
+        "Gołembiowska K",
+        "Zawilska JB"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s12640-018-9973-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30377956/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250526044158/https://pubmed.ncbi.nlm.nih.gov/30377956/"
     }
   ]
 }
