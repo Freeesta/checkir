@@ -1,0 +1,59 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "alpha-ethyltryptamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "alpha-Ethyltryptamine",
+      "synonyms": [
+        "AET",
+        "etryptamine",
+        "alphaET",
+        "Monase"
+      ]
+    },
+    "it": {
+      "preferred": "alfa-etiltriptamina",
+      "synonyms": [
+        "AET",
+        "etriptamina",
+        "alfaET",
+        "Monase"
+      ]
+    }
+  },
+  "iupac": "1-(1H-indol-3-yl)butan-2-amine",
+  "formula": "C12H16N2",
+  "molar_mass_g_mol": 188.27,
+  "smiles": "CCC(CC1=CNC2=CC=CC=C21)N",
+  "inchi": "InChI=1S/C12H16N2/c1-2-10(13)7-9-8-14-12-6-4-3-5-11(9)12/h3-6,8,10,14H,2,7,13H2,1H3",
+  "inchikey": "ZXUMUPVQYAFTLF-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2235-90-7",
+    "pubchem_cid": 8367
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "entactogen",
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

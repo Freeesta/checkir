@@ -13171,6 +13171,61 @@
       "tier": "primary"
     },
     {
+      "id": "narimatsu2006",
+      "type": "paper",
+      "title": "Oxidative metabolism of 5-methoxy-N,N-diisopropyltryptamine (Foxy) by human liver microsomes and recombinant cytochrome P450 enzymes (Biochem Pharmacol 71(9):1377-1385)",
+      "authors": [
+        "S. Narimatsu",
+        "R. Yonemoto",
+        "K. Saito",
+        "K. Takaya",
+        "T. Kumamoto",
+        "et al.",
+        "N. Hanioka"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.bcp.2006.01.015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16510126/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "zhao2024",
+      "type": "paper",
+      "title": "Biotransformation of 5-methoxy-N-isopropyl-N-methyltryptamine by zebrafish and human liver microsome with high-resolution mass spectrometry (J Pharm Biomed Anal 241:115987)",
+      "authors": [
+        "S. Zhao",
+        "Y. Wang",
+        "C. Zhong",
+        "J. Chen",
+        "L. Meng"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.115987",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38280235/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "meng2025",
+      "type": "paper",
+      "title": "Metabolic profiling of 5-Methoxy-N,N-diallyltryptamine in human liver microsomes and zebrafish using LC-Orbitrap MS (J Chromatogr B 1256:124557)",
+      "authors": [
+        "L. Meng",
+        "Y. Wang",
+        "C. Zhong",
+        "S. Zhao"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.jchromb.2025.124557",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40081218/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "dybek2019",
       "type": "paper",
       "title": "Syntheses and analytical characterizations of the research chemical 1-[1-(2-fluorophenyl)-2-phenylethyl]pyrrolidine (fluorolintane) and five of its isomers (Drug Test Anal 11:1144-1161)",
@@ -13533,6 +13588,133 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "knuijver2024",
+      "type": "paper",
+      "title": "The pharmacokinetics and pharmacodynamics of ibogaine in opioid use disorder patients (J Psychopharmacol)",
+      "authors": [
+        "T. Knuijver",
+        "R. ter Heine",
+        "A. F. A. Schellekens",
+        "P. Heydari",
+        "L. Lucas",
+        "S. Westra",
+        "M. Belgers",
+        "T. van Oosteren",
+        "R. J. Verkes",
+        "C. Kramers"
+      ],
+      "year": 2024,
+      "doi": "10.1177/02698811241237873",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11102648/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "mash2023",
+      "type": "paper",
+      "title": "Ibogaine - A legacy within the current renaissance of psychedelic therapy, IUPHAR invited review",
+      "authors": [
+        "D. C. Mash"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.phrs.2022.106620",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36907284/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "brunt2026",
+      "type": "paper",
+      "title": "Rare but relevant: Ibogaine and cardiovascular complications - prolonged QT interval and ventricular arrhythmias (Addiction)",
+      "authors": [
+        "T. M. Brunt"
+      ],
+      "year": 2026,
+      "doi": "10.1111/add.70319",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13155281/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "degroot1998",
+      "type": "paper",
+      "title": "Ergot alkaloids. Current status and review of clinical pharmacology and therapeutic use compared with other oxytocics in obstetrics and gynaecology (Drugs)",
+      "authors": [
+        "A. N. de Groot",
+        "P. W. van Dongen",
+        "T. B. Vree",
+        "Y. A. Hekster",
+        "J. van Roosmalen"
+      ],
+      "year": 1998,
+      "doi": "10.2165/00003495-199856040-00002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9806101/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "silverman2025",
+      "type": "paper",
+      "title": "Dual modulation of 5-HT2A receptors and SERT by alpha-ethyltryptamine and its optical isomers (ACS Chem Neurosci)",
+      "authors": [
+        "J. M. Silverman",
+        "M. Fiorillo",
+        "J. Younkin",
+        "C. B. Jones",
+        "J. L. Maltman",
+        "I. Herszenhorn",
+        "A. Artigas",
+        "J. T. Wolstenholme",
+        "M. Dukat",
+        "J. Gonzalez-Maeso"
+      ],
+      "year": 2025,
+      "doi": "10.1021/acschemneuro.5c00468",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41359995/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "cozzi2009",
+      "type": "paper",
+      "title": "Dimethyltryptamine and other hallucinogenic tryptamines exhibit substrate behavior at the serotonin uptake transporter and the vesicle monoamine transporter (J Neural Transm 116(12):1591-1599)",
+      "authors": [
+        "N. V. Cozzi",
+        "A. Gopalakrishnan",
+        "L. L. Anderson",
+        "J. T. Feih",
+        "A. T. Shulgin",
+        "P. F. Daley",
+        "A. E. Ruoho"
+      ],
+      "year": 2009,
+      "doi": "10.1007/s00702-009-0308-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19756361/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "hurst2026",
+      "type": "paper",
+      "title": "N,N-Diisopropyltryptamine and diptogenia: proposed mechanisms for a frequency-selective pitch-distorting psychedelic (Brain Commun)",
+      "authors": [
+        "A. Hurst",
+        "V. M. Bajo"
+      ],
+      "year": 2026,
+      "doi": "10.1093/braincomms/fcag093",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13069925/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
     }
   ]
 }
