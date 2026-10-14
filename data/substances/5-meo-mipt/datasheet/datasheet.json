@@ -1,0 +1,69 @@
+{
+  "schema": "datasheet/1",
+  "substance": "5-meo-mipt",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "tryptamines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "5-meo-nipt",
+        "reaction": "n_demethylation",
+        "source": "zhao2024"
+      },
+      {
+        "from": "parent",
+        "to": "5-o-demethylated-5-meo-mipt",
+        "reaction": "o_demethylation",
+        "source": "zhao2024"
+      },
+      {
+        "from": "parent",
+        "to": "indole-hydroxylated-5-meo-mipt",
+        "reaction": "hydroxylation",
+        "source": "zhao2024"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "5-meo-nipt",
+        "active": null,
+        "source": "zhao2024",
+        "marker": true
+      },
+      {
+        "name_key": "indole-hydroxylated-5-meo-mipt",
+        "active": null,
+        "source": "zhao2024",
+        "marker": true
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
