@@ -26,7 +26,7 @@ Alcaloide naturale contenuto nelle foglie di Erythroxylum coca; la pasta di coca
 
 Cinetica nell'umano (cocaina radiomarcata): half-time di assorbimento 1,1 min fumata e 11,7 min intranasale; biodisponibilità intranasale 80%; emivita di distribuzione 11 min, di eliminazione 78 min per via endovenosa; legame alle proteine basso; volume di distribuzione 2,70 L/kg. [f:jeffcoat1989] Le esterasi danno benzoilecgonina (CES1) ed ecgonina metil estere (BChE, CES2), entrambe inattive; il CYP3A4 N-demetila una parte a norcocaina, attiva ed epatotossica. L'emivita media è di 40-90 minuti. [f:roque-bravo2022]
 
-Nelle urine la benzoilecgonina è il 39%, 30% e 16% della dose dopo uso endovenoso, intranasale e fumato; la cocaina scende sotto ~1 ng/mL entro 24 h; fumando si aggiunge l'anidroecgonina metil estere. [f:cone1998] Nei consumatori cronici il primo campione di urina negativo per benzoilecgonina (< 300 ng/mL) è comparso a 43,6 ± 17,1 h (16-66 h). [f:preston2002]
+Nelle urine la benzoilecgonina è il 39%, 30% e 16% della dose dopo uso endovenoso, intranasale e fumato; la cocaina scende sotto ~1 ng/mL entro 24 h; fumando si aggiunge l'anidroecgonina metil estere. [f:cone1998] Nei consumatori cronici la benzoilecgonina è scesa per la prima volta sotto 300 ng/mL nelle urine a 43,6 ± 17,1 h (16-66 h). [f:preston2002]
 
 Con l'alcol il 17 ± 6% di una dose endovenosa diventa cocaetilene (attivo, emivita 148 ± 15 min), marcatore dell'uso combinato. [f:harris2003] [f:roque-bravo2022]
 
