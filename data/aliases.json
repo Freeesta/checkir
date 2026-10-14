@@ -333,7 +333,21 @@
     "1-pentyl-1h-indole": "1-pentylindole",
     "1-pentilindolo": "1-pentylindole",
     "n-pentilindolo": "1-pentylindole",
-    "1-pentil-1h-indolo": "1-pentylindole"
+    "1-pentil-1h-indolo": "1-pentylindole",
+    "sgt-56": "cumyl-pica",
+    "sgt-24": "cumyl-pinaca",
+    "eam2201": "eam-2201",
+    "fu-aeb": "emb-fubinaca",
+    "fdu-pb22": "fdu-pb-22",
+    "fub-ur-144": "fub-144",
+    "fu-f": "furanylfentanyl",
+    "furanyl-fentanyl": "furanylfentanyl",
+    "2-furanylfentanyl": "furanylfentanyl",
+    "fur-fentanyl": "furanylfentanyl",
+    "furanilfentanil": "furanylfentanyl",
+    "fluorafinil": "crl-40-941",
+    "fladrafinil": "crl-40-941",
+    "crl-40941": "crl-40-941"
   },
   "schema": "aliases/1"
 }

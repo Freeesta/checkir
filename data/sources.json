@@ -8770,6 +8770,110 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13"
+    },
+    {
+      "id": "kevin2017",
+      "type": "paper",
+      "title": "In vitro and in vivo pharmacokinetics and metabolism of synthetic cannabinoids CUMYL-PICA and 5F-CUMYL-PICA (Forensic Toxicol 35:333-347)",
+      "authors": [
+        "R. C. Kevin",
+        "T. W. Lefever",
+        "R. W. Snyder",
+        "P. R. Patel",
+        "T. R. Fennell",
+        "J. L. Wiley",
+        "I. S. McGregor",
+        "B. F. Thomas"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s11419-017-0361-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28824730/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kim2016-eam2201",
+      "type": "paper",
+      "title": "In vitro metabolism of a novel synthetic cannabinoid, EAM-2201, in human liver microsomes and human recombinant cytochrome P450s (J Pharm Biomed Anal 119:50-58)",
+      "authors": [
+        "J. H. Kim",
+        "H. S. Kim",
+        "T. Y. Kong",
+        "J. Y. Lee",
+        "J. Y. Kim",
+        "M. K. In",
+        "H. S. Lee"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.jpba.2015.11.023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26641707/",
+      "archive_url": "https://web.archive.org/web/20250703031449/https://pubmed.ncbi.nlm.nih.gov/26641707/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "diao2016-fdupb22",
+      "type": "paper",
+      "title": "In vitro and in vivo human metabolism of synthetic cannabinoids FDU-PB-22 and FUB-PB-22 (AAPS J 18:455-464)",
+      "authors": [
+        "X. Diao",
+        "K. B. Scheidweiler",
+        "A. Wohlfarth",
+        "S. Pang",
+        "R. Kronstrand",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1208/s12248-016-9867-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26810398/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kim2026-fub144",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolism of the synthetic cannabinoid FUB-144: comprehensive phase I and II profiling using UHPLC-HRMS (Arch Toxicol 100:2411-2419)",
+      "authors": [
+        "D. E. Kim",
+        "J. Park",
+        "Y. T. Park",
+        "S. Farzand",
+        "H. Lee",
+        "J. Kim",
+        "B. H. Jung",
+        "H. Lee"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00204-026-04321-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41807793/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dowling2017",
+      "type": "paper",
+      "title": "Outsmarted by nootropics? An investigation into the thermal degradation of modafinil, modafinic acid, adrafinil, CRL-40,940 and CRL-40,941 in the GC injector (Drug Test Anal 9:518-528)",
+      "authors": [
+        "G. Dowling",
+        "P. V. Kavanagh",
+        "B. Talbot",
+        "J. O'Brien",
+        "G. Hessman",
+        "G. McLaughlin",
+        "B. Twamley",
+        "S. D. Brandt"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2142",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27928893/",
+      "archive_url": "https://web.archive.org/web/20260621022155/https://pubmed.ncbi.nlm.nih.gov/27928893/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
     }
   ]
 }
