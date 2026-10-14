@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "fluorexetamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Fluorexetamine",
+      "synonyms": [
+        "FXE",
+        "2-oxo-3-F-PCE",
+        "fluoroeticyclidinone"
+      ]
+    },
+    "it": {
+      "preferred": "Fluorexetamina",
+      "synonyms": [
+        "FXE",
+        "2-oxo-3-F-PCE"
+      ]
+    }
+  },
+  "iupac": "2-(ethylamino)-2-(3-fluorophenyl)cyclohexan-1-one",
+  "formula": "C14H18FNO",
+  "molar_mass_g_mol": 235.3,
+  "smiles": "CCNC1(CCCCC1=O)C2=CC(=CC=C2)F",
+  "inchi": "InChI=1S/C14H18FNO/c1-2-16-14(9-4-3-8-13(14)17)11-6-5-7-12(15)10-11/h5-7,10,16H,2-4,8-9H2,1H3",
+  "inchikey": "FCETYWCLCUZFJI-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 137332183
+  },
+  "classes": {
+    "chemical": [
+      "arylcyclohexylamines"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
