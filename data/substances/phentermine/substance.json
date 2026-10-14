@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "phentermine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Phentermine",
+      "synonyms": [
+        "2-methyl-1-phenylpropan-2-amine",
+        "alpha,alpha-dimethylphenethylamine"
+      ]
+    },
+    "it": {
+      "preferred": "Fentermina",
+      "synonyms": [
+        "α,α-dimetilfenetilamina"
+      ]
+    }
+  },
+  "iupac": "2-methyl-1-phenylpropan-2-amine",
+  "formula": "C10H15N",
+  "molar_mass_g_mol": 149.23,
+  "smiles": "CC(C)(CC1=CC=CC=C1)N",
+  "inchi": "InChI=1S/C10H15N/c1-10(2,11)8-9-6-4-3-5-7-9/h3-7H,8,11H2,1-2H3",
+  "inchikey": "DHHVAGZRUROJKS-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "122-09-8",
+    "pubchem_cid": 4771
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

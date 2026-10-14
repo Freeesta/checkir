@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "pcc",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "PCC",
+      "synonyms": [
+        "1-piperidinocyclohexanecarbonitrile",
+        "1-(piperidin-1-yl)cyclohexane-1-carbonitrile"
+      ]
+    },
+    "it": {
+      "preferred": "PCC",
+      "synonyms": [
+        "1-piperidinocicloesancarbonitrile"
+      ]
+    }
+  },
+  "iupac": "1-piperidin-1-ylcyclohexane-1-carbonitrile",
+  "formula": "C12H20N2",
+  "molar_mass_g_mol": 192.3,
+  "smiles": "C1CCC(CC1)(C#N)N2CCCCC2",
+  "inchi": "InChI=1S/C12H20N2/c13-11-12(7-3-1-4-8-12)14-9-5-2-6-10-14/h1-10H2",
+  "inchikey": "WWSAYKJWUZJLRT-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "3867-15-0",
+    "pubchem_cid": 62529
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
