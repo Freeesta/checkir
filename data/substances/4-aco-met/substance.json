@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-aco-met",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-AcO-MET",
+      "synonyms": [
+        "metacetin",
+        "4-acetoxy-N-methyl-N-ethyltryptamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-AcO-MET",
+      "synonyms": [
+        "metacetin",
+        "4-acetoxy-N-methyl-N-ethyltryptamine"
+      ]
+    }
+  },
+  "iupac": "[3-[2-[ethyl(methyl)amino]ethyl]-1H-indol-4-yl] acetate",
+  "formula": "C15H20N2O2",
+  "molar_mass_g_mol": 260.3,
+  "smiles": "CCN(C)CCC1=CNC2=C1C(=CC=C2)OC(=O)C",
+  "inchi": "InChI=1S/C15H20N2O2/c1-4-17(3)9-8-12-10-16-13-6-5-7-14(15(12)13)19-11(2)18/h5-7,10,16H,4,8-9H2,1-3H3",
+  "inchikey": "OMDKHOOGGJRLLX-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1445751-40-5",
+    "pubchem_cid": 71308138
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
