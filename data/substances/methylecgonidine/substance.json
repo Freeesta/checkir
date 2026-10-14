@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "methylecgonidine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Methylecgonidine",
+      "synonyms": [
+        "Anhydroecgonine methyl ester",
+        "AEME"
+      ]
+    },
+    "it": {
+      "preferred": "Metilecgonidina",
+      "synonyms": [
+        "Anhydroecgonine methyl ester",
+        "AEME"
+      ]
+    }
+  },
+  "iupac": "methyl (1R,5S)-8-methyl-8-azabicyclo[3.2.1]oct-2-ene-2-carboxylate",
+  "formula": "C10H15NO2",
+  "molar_mass_g_mol": 181.23,
+  "smiles": "CN1[C@H]2CC[C@@H]1C(=CC2)C(=O)OC",
+  "inchi": "InChI=1S/C10H15NO2/c1-11-7-3-5-8(10(12)13-2)9(11)6-4-7/h5,7,9H,3-4,6H2,1-2H3/t7-,9-/m1/s1",
+  "inchikey": "MPSNEAHFGOEKBI-VXNVDRBHSA-N",
+  "external_ids": {
+    "pubchem_cid": 119478
+  },
+  "classes": {
+    "chemical": [
+      "tropane_esters"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

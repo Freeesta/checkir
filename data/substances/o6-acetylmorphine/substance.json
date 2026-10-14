@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "o6-acetylmorphine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "O6-Acetylmorphine",
+      "synonyms": [
+        "6-Monoacetylmorphine",
+        "6-Acetylmorphine",
+        "6-MAM"
+      ]
+    },
+    "it": {
+      "preferred": "O6-Acetilmorfina",
+      "synonyms": [
+        "6-Monoacetylmorphine",
+        "6-Acetylmorphine",
+        "6-MAM"
+      ]
+    }
+  },
+  "iupac": "[(4R,4aR,7S,7aR,12bS)-9-hydroxy-3-methyl-2,4,4a,7,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinolin-7-yl] acetate",
+  "formula": "C19H21NO4",
+  "molar_mass_g_mol": 327.4,
+  "smiles": "CC(=O)O[C@H]1C=C[C@H]2[C@H]3CC4=C5[C@]2([C@H]1OC5=C(C=C4)O)CCN3C",
+  "inchi": "InChI=1S/C19H21NO4/c1-10(21)23-15-6-4-12-13-9-11-3-5-14(22)17-16(11)19(12,18(15)24-17)7-8-20(13)2/h3-6,12-13,15,18,22H,7-9H2,1-2H3/t12-,13+,15-,18-,19-/m0/s1",
+  "inchikey": "JJGYGPZNTOPXGV-SSTWWWIQSA-N",
+  "external_ids": {
+    "pubchem_cid": 5462507
+  },
+  "classes": {
+    "chemical": [
+      "morphinans"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

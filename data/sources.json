@@ -12726,6 +12726,185 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "jacob1990",
+      "type": "paper",
+      "title": "A pyrolysis product, anhydroecgonine methyl ester (methylecgonidine), is in the urine of cocaine smokers (J Anal Toxicol 14:353-357)",
+      "authors": [
+        "P. Jacob 3rd",
+        "E. R. Lewis",
+        "B. A. Elias-Baker",
+        "R. T. Jones"
+      ],
+      "year": 1990,
+      "doi": "10.1093/jat/14.6.353",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2087095/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "romero-norena2024",
+      "type": "paper",
+      "title": "Toxicology of anhydroecgonine methyl ester: a systematic review of a cocaine pyrolysis product (Toxicol Rep 13:101690)",
+      "authors": [
+        "A. Romero-Noreña",
+        "H. J. Contreras-Martinez",
+        "M. Mendivil-Perez"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.toxrep.2024.101690",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39104366/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250204001811/https://pubmed.ncbi.nlm.nih.gov/39104366/"
+    },
+    {
+      "id": "luethi2018",
+      "type": "paper",
+      "title": "Pharmacological profile of methylphenidate-based designer drugs (Neuropharmacology 134:133-140)",
+      "authors": [
+        "D. Luethi",
+        "P. J. Kaeser",
+        "S. D. Brandt",
+        "S. Krähenbühl",
+        "M. C. Hoener",
+        "M. E. Liechti"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.neuropharm.2017.08.020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28823611/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "barbosa2016",
+      "type": "paper",
+      "title": "Comparative metabolism of tramadol and tapentadol: a toxicological perspective (Drug Metab Rev 48:577-592)",
+      "authors": [
+        "J. Barbosa",
+        "J. Faria",
+        "O. Queirós",
+        "R. Moreira",
+        "F. Carvalho",
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2016,
+      "doi": "10.1080/03602532.2016.1229788",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27580162/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "prommer2006",
+      "type": "paper",
+      "title": "Oxymorphone: a review (Support Care Cancer 14:109-115)",
+      "authors": [
+        "E. Prommer"
+      ],
+      "year": 2006,
+      "doi": "10.1007/s00520-005-0917-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16317569/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250202095451/https://pubmed.ncbi.nlm.nih.gov/16317569/"
+    },
+    {
+      "id": "latta2002",
+      "type": "paper",
+      "title": "Meperidine: a critical review (Am J Ther 9:53-68)",
+      "authors": [
+        "K. S. Latta",
+        "B. Ginsberg",
+        "R. L. Barkin"
+      ],
+      "year": 2002,
+      "doi": "10.1097/00045391-200201000-00010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11782820/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "deluca2022",
+      "type": "paper",
+      "title": "Pharmacological characterization of novel synthetic opioids: isotonitazene, metonitazene, and piperidylthiambutene as potent μ-opioid receptor agonists (Neuropharmacology 221:109263)",
+      "authors": [
+        "M. A. De Luca",
+        "G. Tocco",
+        "R. Mostallino",
+        "A. Laus",
+        "F. Caria",
+        "A. Musa",
+        "N. Pintori",
+        "M. Ucha",
+        "C. Poza",
+        "E. Ambrosio",
+        "G. Di Chiara",
+        "M. P. Castelli"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.neuropharm.2022.109263",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36154843/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20251106032420/https://pubmed.ncbi.nlm.nih.gov/36154843/"
+    },
+    {
+      "id": "vandeputte2020",
+      "type": "paper",
+      "title": "In vitro functional characterization of a panel of non-fentanyl opioid new psychoactive substances (Arch Toxicol 94:3819-3830)",
+      "authors": [
+        "M. M. Vandeputte",
+        "A. Cannaert",
+        "C. P. Stove"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s00204-020-02855-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32734307/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260927084616/https://pubmed.ncbi.nlm.nih.gov/32734307/"
+    },
+    {
+      "id": "nucynta-label",
+      "type": "institution",
+      "title": "NUCYNTA (tapentadol hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=80938c30-9fe3-4c7d-9d9c-5476638cfb2d",
+      "archive_url": "https://web.archive.org/web/20260804032839/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=80938c30-9fe3-4c7d-9d9c-5476638cfb2d",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "oxymorphone-label",
+      "type": "institution",
+      "title": "Oxymorphone hydrochloride tablets (Hikma Pharmaceuticals USA Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3eb971cf-ab82-49f3-a46c-4d76a8ce599e",
+      "archive_url": "https://web.archive.org/web/20260802152427/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3eb971cf-ab82-49f3-a46c-4d76a8ce599e",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "demerol-label",
+      "type": "institution",
+      "title": "DEMEROL (meperidine hydrochloride) injection (Hospira, Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+      "archive_url": "https://web.archive.org/web/20260803191703/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
     }
   ]
 }
