@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "lorcaserin",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Lorcaserin",
+      "synonyms": [
+        "Belviq"
+      ]
+    },
+    "it": {
+      "preferred": "Lorcaserin",
+      "synonyms": [
+        "Belviq"
+      ]
+    }
+  },
+  "iupac": "(5R)-7-chloro-5-methyl-2,3,4,5-tetrahydro-1H-3-benzazepine",
+  "formula": "C11H14ClN",
+  "molar_mass_g_mol": 195.69,
+  "smiles": "C[C@H]1CNCCC2=C1C=C(C=C2)Cl",
+  "inchi": "InChI=1S/C11H14ClN/c1-8-7-13-5-4-9-2-3-10(12)6-11(8)9/h2-3,6,8,13H,4-5,7H2,1H3/t8-/m0/s1",
+  "inchikey": "XTTZERNUQAFMOF-QMMMGPOBSA-N",
+  "external_ids": {
+    "pubchem_cid": 11658860
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

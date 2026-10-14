@@ -1,0 +1,47 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "meprobamate",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Meprobamate",
+      "synonyms": []
+    },
+    "it": {
+      "preferred": "Meprobamato",
+      "synonyms": []
+    }
+  },
+  "iupac": "[2-(carbamoyloxymethyl)-2-methylpentyl] carbamate",
+  "formula": "C9H18N2O4",
+  "molar_mass_g_mol": 218.25,
+  "smiles": "CCCC(C)(COC(=O)N)COC(=O)N",
+  "inchi": "InChI=1S/C9H18N2O4/c1-3-4-9(2,5-14-7(10)12)6-15-8(11)13/h3-6H2,1-2H3,(H2,10,12)(H2,11,13)",
+  "inchikey": "NPPQSCRMBWNHMW-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 4064
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
