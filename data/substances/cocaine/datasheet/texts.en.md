@@ -26,7 +26,7 @@ Natural alkaloid found in the leaves of Erythroxylum coca; coca paste is an inte
 
 Human kinetics (radiolabelled cocaine): absorption half-time 1.1 min smoked and 11.7 min intranasal; intranasal bioavailability 80%; distribution half-life 11 min, elimination half-life 78 min intravenous; low protein binding; volume of distribution 2.70 L/kg. [f:jeffcoat1989] Esterases give benzoylecgonine (CES1) and ecgonine methyl ester (BChE, CES2), both inactive; CYP3A4 N-demethylates a part to norcocaine, active and hepatotoxic. The mean half-life is 40-90 minutes. [f:roque-bravo2022]
 
-In urine benzoylecgonine is 39%, 30% and 16% of the dose after intravenous, intranasal and smoked use; cocaine falls below ~1 ng/mL within 24 h; smoking adds anhydroecgonine methyl ester. [f:cone1998] In chronic users the first benzoylecgonine-negative urine (< 300 ng/mL) came at 43.6 ± 17.1 h (16-66 h). [f:preston2002]
+In urine benzoylecgonine is 39%, 30% and 16% of the dose after intravenous, intranasal and smoked use; cocaine falls below ~1 ng/mL within 24 h; smoking adds anhydroecgonine methyl ester. [f:cone1998] In chronic users benzoylecgonine fell below 300 ng/mL in urine for the first time at 43.6 ± 17.1 h (16-66 h). [f:preston2002]
 
 With alcohol, 17 ± 6% of an intravenous dose becomes cocaethylene (active, half-life 148 ± 15 min), a marker of combined use. [f:harris2003] [f:roque-bravo2022]
 
