@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "urb-597",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "URB597",
+      "synonyms": [
+        "KDS-4103",
+        "URB 597"
+      ]
+    },
+    "it": {
+      "preferred": "URB597",
+      "synonyms": [
+        "KDS-4103",
+        "URB 597"
+      ]
+    }
+  },
+  "iupac": "[3-(3-carbamoylphenyl)phenyl] N-cyclohexylcarbamate",
+  "formula": "C20H22N2O3",
+  "molar_mass_g_mol": 338.4,
+  "smiles": "C1CCC(CC1)NC(=O)OC2=CC=CC(=C2)C3=CC(=CC=C3)C(=O)N",
+  "inchi": "InChI=1S/C20H22N2O3/c21-19(23)16-8-4-6-14(12-16)15-7-5-11-18(13-15)25-20(24)22-17-9-2-1-3-10-17/h4-8,11-13,17H,1-3,9-10H2,(H2,21,23)(H,22,24)",
+  "inchikey": "ROFVXGGUISEHAM-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "546141-08-6",
+    "pubchem_cid": 1383884
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
