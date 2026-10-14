@@ -1,0 +1,70 @@
+{
+  "schema": "datasheet/1",
+  "substance": "fdu-pb-22",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "fluorobenzylindole-3-carboxylic acid (FBI-COOH)",
+        "reaction": "hydrolysis_ester",
+        "source": "diao2016-fdupb22"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated FBI-COOH",
+        "reaction": "hydroxylation",
+        "source": "diao2016-fdupb22"
+      },
+      {
+        "from": "parent",
+        "to": "glucuronide conjugates",
+        "reaction": "glucuronidation",
+        "source": "diao2016-fdupb22"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "fbi-cooh",
+        "active": null,
+        "marker": true,
+        "source": "diao2016-fdupb22"
+      },
+      {
+        "name_key": "hydroxylated-fbi-cooh",
+        "active": null,
+        "marker": true,
+        "source": "diao2016-fdupb22"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

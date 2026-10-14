@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "eam-2201",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "EAM-2201",
+      "synonyms": [
+        "EAM2201",
+        "JWH-210 N-(5-fluoropentyl)"
+      ]
+    },
+    "it": {
+      "preferred": "EAM-2201",
+      "synonyms": [
+        "EAM2201",
+        "JWH-210 N-(5-fluoropentil)"
+      ]
+    }
+  },
+  "iupac": "(4-ethylnaphthalen-1-yl)-[1-(5-fluoropentyl)indol-3-yl]methanone",
+  "formula": "C26H26FNO",
+  "molar_mass_g_mol": 387.5,
+  "smiles": "CCC1=CC=C(C2=CC=CC=C12)C(=O)C3=CN(C4=CC=CC=C43)CCCCCF",
+  "inchi": "InChI=1S/C26H26FNO/c1-2-19-14-15-23(21-11-5-4-10-20(19)21)26(29)24-18-28(17-9-3-8-16-27)25-13-7-6-12-22(24)25/h4-7,10-15,18H,2-3,8-9,16-17H2,1H3",
+  "inchikey": "NSCXPXDWLZORPX-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1364933-60-7",
+    "pubchem_cid": 71308187
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
