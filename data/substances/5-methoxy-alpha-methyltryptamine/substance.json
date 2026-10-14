@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-methoxy-alpha-methyltryptamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-MeO-AMT",
+      "synonyms": [
+        "5-methoxy-α-methyltryptamine",
+        "α,O-dimethylserotonin"
+      ]
+    },
+    "it": {
+      "preferred": "5-MeO-AMT",
+      "synonyms": [
+        "5-metossi-α-metiltriptamina",
+        "α,O-dimetilserotonina"
+      ]
+    }
+  },
+  "iupac": "1-(5-methoxy-1H-indol-3-yl)propan-2-amine",
+  "formula": "C12H16N2O",
+  "molar_mass_g_mol": 204.27,
+  "smiles": "CC(CC1=CNC2=C1C=C(C=C2)OC)N",
+  "inchi": "InChI=1S/C12H16N2O/c1-8(13)5-9-7-14-12-4-3-10(15-2)6-11(9)12/h3-4,6-8,14H,5,13H2,1-2H3",
+  "inchikey": "OGNJZVNNKBZFRM-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1137-04-8",
+    "pubchem_cid": 36906
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
