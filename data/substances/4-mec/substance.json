@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-mec",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-MEC (4-methylethcathinone)",
+      "synonyms": [
+        "4-methyl-N-ethylcathinone",
+        "4'-methyl-N-ethylmethcathinone"
+      ]
+    },
+    "it": {
+      "preferred": "4-MEC (4-metiletcatinone)",
+      "synonyms": [
+        "4-metil-N-etilcatinone"
+      ]
+    }
+  },
+  "iupac": "2-(ethylamino)-1-(4-methylphenyl)propan-1-one",
+  "formula": "C12H17NO",
+  "molar_mass_g_mol": 191.27,
+  "smiles": "CCNC(C)C(=O)C1=CC=C(C=C1)C",
+  "inchi": "InChI=1S/C12H17NO/c1-4-13-10(3)12(14)11-7-5-9(2)6-8-11/h5-8,10,13H,4H2,1-3H3",
+  "inchikey": "ZOXZWYWOECCBSH-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1225617-18-4",
+    "pubchem_cid": 52988259
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
