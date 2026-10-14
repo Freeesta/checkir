@@ -8342,6 +8342,95 @@
       "tier": "primary"
     },
     {
+      "id": "wagmann2022-hces",
+      "type": "paper",
+      "title": "Going deeper into the toxicokinetics of synthetic cannabinoids: in vitro contribution of human carboxylesterases (Arch Toxicol 96:2755-2766)",
+      "authors": [
+        "L. Wagmann",
+        "R. G. Stiller",
+        "S. Fischmann",
+        "F. Westphal",
+        "M. R. Meyer"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00204-022-03332-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35788413/",
+      "archive_url": "https://web.archive.org/web/20260131121604/https://pubmed.ncbi.nlm.nih.gov/35788413/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "morales2022-zebrafish",
+      "type": "paper",
+      "title": "Metabolism of third generation synthetic cannabinoids using zebrafish larvae (Drug Test Anal 14:594-603)",
+      "authors": [
+        "A. Morales-Noé",
+        "F. A. Esteve-Turrillas",
+        "S. Armenta"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3195",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34750997/",
+      "archive_url": "https://web.archive.org/web/20250205002748/https://pubmed.ncbi.nlm.nih.gov/34750997/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "fabregat2022",
+      "type": "paper",
+      "title": "In-depth comparison of the metabolic and pharmacokinetic behaviour of the structurally related synthetic cannabinoids AMB-FUBINACA and AMB-CHMICA in rats (Commun Biol 5:161)",
+      "authors": [
+        "D. Fabregat-Safont",
+        "M. Mata-Pesquera",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1038/s42003-022-03113-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35210552/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mardal2018-ambchmica",
+      "type": "paper",
+      "title": "Metabolism of the synthetic cannabinoids AMB-CHMICA and 5C-AKB48 in pooled human hepatocytes and rat hepatocytes analyzed by UHPLC-(IMS)-HR-MS(E) (J Chromatogr B 1083:189-197)",
+      "authors": [
+        "M. Mardal",
+        "P. W. Dalsgaard",
+        "B. Qi",
+        "C. B. Mollerup",
+        "P. Annaert",
+        "K. Linnet"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jchromb.2018.03.016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29549742/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "watanabe2023",
+      "type": "paper",
+      "title": "In vitro metabolic profiling of new synthetic cannabinoids, ADB-FUBIATA, AFUBIATA, CH-FUBIATA, and CH-PIATA (Arch Toxicol 97:3085-3094)",
+      "authors": [
+        "S. Watanabe",
+        "H. Yamane",
+        "T. Iwai",
+        "R. Matsushita",
+        "Y. Seto"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s00204-023-03605-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37755504/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "richter2019",
       "type": "paper",
       "title": "Cytotoxicity of new psychoactive substances and other drugs of abuse studied in human HepG2 cells using an adopted high content screening assay (Toxicol Lett 301:79-89)",
@@ -10431,6 +10520,98 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "nowak2026",
+      "type": "paper",
+      "title": "4-Bromomethcathinone (4-BMC) Revisited: The First Reported Fatal Case and Toxicological Insights (Metabolites 16)",
+      "authors": [
+        "Nowak K",
+        "Szpot P",
+        "Zawadzki M",
+        "Chłopaś-Konowałek A"
+      ],
+      "year": 2026,
+      "doi": "10.3390/metabo16070507",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42506458/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "machado2017",
+      "type": "paper",
+      "title": "Brephedrone: A new psychoactive substance seized in Brazil (Forensic Sci Int 275:302-307)",
+      "authors": [
+        "Machado Y",
+        "Coelho Neto J",
+        "Barbosa PEN",
+        "Lordeiro RA",
+        "Alves RB"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.forsciint.2017.04.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28445860/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204213233/https://pubmed.ncbi.nlm.nih.gov/28445860/"
+    },
+    {
+      "id": "meneses2026",
+      "type": "paper",
+      "title": "Gastrointestinal permeability and hepatic mechanisms of toxicity of chloro-cathinones (Food Chem Toxicol 210:115981)",
+      "authors": [
+        "Meneses M",
+        "Ferreira I",
+        "Gomes AP",
+        "Pacheco R",
+        "Gaspar H"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.fct.2026.115981",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41605297/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "qian2017",
+      "type": "paper",
+      "title": "Identification of five pyrrolidinyl substituted cathinones and the collision-induced dissociation of electrospray-generated pyrrolidinyl substituted cathinones (Drug Test Anal 9:778-787)",
+      "authors": [
+        "Qian Z",
+        "Jia W",
+        "Li T",
+        "Hua Z",
+        "Liu C"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2035",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27367446/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250205225801/https://pubmed.ncbi.nlm.nih.gov/27367446/"
+    },
+    {
+      "id": "wojcieszak2019",
+      "type": "paper",
+      "title": "Methcathinone and 3-Fluoromethcathinone Stimulate Spontaneous Horizontal Locomotor Activity in Mice and Elevate Extracellular Dopamine and Serotonin Levels in the Mouse Striatum (Neurotox Res 35:594-605)",
+      "authors": [
+        "Wojcieszak J",
+        "Andrzejczak D",
+        "Wojtas A",
+        "Gołembiowska K",
+        "Zawilska JB"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s12640-018-9973-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30377956/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250526044158/https://pubmed.ncbi.nlm.nih.gov/30377956/"
     },
     {
       "id": "rouxinol2019",
