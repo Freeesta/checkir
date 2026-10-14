@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "sunifiram",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Sunifiram",
+      "synonyms": [
+        "DM235",
+        "DM-235"
+      ]
+    },
+    "it": {
+      "preferred": "Sunifiram",
+      "synonyms": [
+        "DM235",
+        "DM-235"
+      ]
+    }
+  },
+  "iupac": "1-(4-benzoylpiperazin-1-yl)propan-1-one",
+  "formula": "C14H18N2O2",
+  "molar_mass_g_mol": 246.3,
+  "smiles": "CCC(=O)N1CCN(CC1)C(=O)C2=CC=CC=C2",
+  "inchi": "InChI=1S/C14H18N2O2/c1-2-13(17)15-8-10-16(11-9-15)14(18)12-6-4-3-5-7-12/h3-7H,2,8-11H2,1H3",
+  "inchikey": "DGOWDUFJCINDGI-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 4223812
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
