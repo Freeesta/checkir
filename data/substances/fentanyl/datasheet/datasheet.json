@@ -1,7 +1,7 @@
 {
   "schema": "datasheet/2",
   "substance": "fentanyl",
-  "version": 1,
+  "version": 2,
   "structure_svg": true,
   "family": "fentanyls",
   "origin": {
@@ -16,7 +16,7 @@
         "enzymes": [
           "CYP3A4"
         ],
-        "source": "kharasch2004"
+        "source": "feierman1996"
       }
     ],
     "metabolites": [
@@ -24,7 +24,7 @@
         "name_key": "norfentanyl",
         "active": null,
         "marker": true,
-        "source": "kharasch2004"
+        "source": "feierman1996"
       }
     ]
   },
@@ -35,6 +35,18 @@
       "severity": "dangerous",
       "mechanism": "cns_depression",
       "source": "kerensky2017"
+    },
+    {
+      "with": "ethanol",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "fentanyl-injection-label"
+    },
+    {
+      "with": "cyp3a4_inhibitors",
+      "severity": "risky",
+      "mechanism": "cyp_inhibition",
+      "source": "olkkola1999"
     }
   ],
   "counselling": [
@@ -67,5 +79,12 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "cuts": [
+    {
+      "cut": "xylazine",
+      "frequency": "reported",
+      "source": "marshall2025"
+    }
+  ]
 }

@@ -16220,6 +16220,198 @@
       "tier": "primary",
       "license": "cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "stanley2014",
+      "title": "The fentanyl story (J Pain 15(12):1215-1226)",
+      "authors": [
+        "T. H. Stanley"
+      ],
+      "year": 2014,
+      "doi": "10.1016/j.jpain.2014.08.010",
+      "tier": "review",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/j.jpain.2014.08.010"
+    },
+    {
+      "id": "feierman1996",
+      "title": "Metabolism of fentanyl, a synthetic opioid analgesic, by human liver microsomes. Role of CYP3A4 (Drug Metab Dispos 24(9):932-939)",
+      "authors": [
+        "D. E. Feierman",
+        "J. M. Lasker"
+      ],
+      "year": 1996,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8886601/",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only"
+    },
+    {
+      "id": "streisand1991",
+      "title": "Absorption and bioavailability of oral transmucosal fentanyl citrate (Anesthesiology 75(2):223-229)",
+      "authors": [
+        "J. B. Streisand",
+        "J. R. Varvel",
+        "D. R. Stanski",
+        "L. Le Maire",
+        "M. A. Ashburn",
+        "B. I. Hague",
+        "S. D. Tarver",
+        "T. H. Stanley"
+      ],
+      "year": 1991,
+      "doi": "10.1097/00000542-199108000-00009",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1097/00000542-199108000-00009"
+    },
+    {
+      "id": "streisand1993",
+      "title": "Fentanyl-induced rigidity and unconsciousness in human volunteers. Incidence, duration, and plasma concentrations (Anesthesiology 78(4):629-634)",
+      "authors": [
+        "J. B. Streisand",
+        "P. L. Bailey",
+        "L. LeMaire",
+        "M. A. Ashburn",
+        "S. D. Tarver",
+        "J. Varvel",
+        "T. H. Stanley"
+      ],
+      "year": 1993,
+      "doi": "10.1097/00000542-199304000-00003",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1097/00000542-199304000-00003"
+    },
+    {
+      "id": "olkkola1999",
+      "title": "Ritonavir's role in reducing fentanyl clearance and prolonging its half-life (Anesthesiology 91(3):681-685)",
+      "authors": [
+        "K. T. Olkkola",
+        "V. J. Palkama",
+        "P. J. Neuvonen"
+      ],
+      "year": 1999,
+      "doi": "10.1097/00000542-199909000-00020",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1097/00000542-199909000-00020"
+    },
+    {
+      "id": "burns2016",
+      "title": "Could chest wall rigidity be a factor in rapid death from illicit fentanyl abuse? (Clin Toxicol 54(5):420-423)",
+      "authors": [
+        "G. Burns",
+        "R. T. DeRienz",
+        "D. D. Baker",
+        "M. Casavant",
+        "H. A. Spiller"
+      ],
+      "year": 2016,
+      "doi": "10.3109/15563650.2016.1157722",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.3109/15563650.2016.1157722"
+    },
+    {
+      "id": "moss2022",
+      "title": "Effect of sustained high buprenorphine plasma concentrations on fentanyl-induced respiratory depression (PLoS One 17(1):e0256752)",
+      "authors": [
+        "L. M. Moss",
+        "M. H. Algera",
+        "R. Dobbins",
+        "F. Gray",
+        "S. Strafford",
+        "A. Heath",
+        "M. van Velzen",
+        "J. A. A. C. Heuberger",
+        "M. Niesters",
+        "E. Olofsen",
+        "C. M. Laffont",
+        "A. Dahan",
+        "G. J. Groeneveld"
+      ],
+      "year": 2022,
+      "doi": "10.1371/journal.pone.0256752",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1371/journal.pone.0256752"
+    },
+    {
+      "id": "volpe2011",
+      "title": "Uniform assessment and ranking of opioid mu receptor binding constants for selected opioid drugs (Regul Toxicol Pharmacol 59(3):385-390)",
+      "authors": [
+        "D. A. Volpe",
+        "G. A. McMahon Tobin",
+        "R. D. Mellon",
+        "A. G. Katki",
+        "R. J. Parker",
+        "T. Colatsky",
+        "T. J. Kropp",
+        "S. L. Verbois"
+      ],
+      "year": 2011,
+      "doi": "10.1016/j.yrtph.2010.12.007",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/j.yrtph.2010.12.007"
+    },
+    {
+      "id": "saunders2011",
+      "title": "Assessment of the relative potency of fentanyl buccal tablet to intravenous morphine in healthy volunteers using a thermally induced hyperalgesia pain model (J Clin Pharmacol 52(6):870-879)",
+      "authors": [
+        "D. L. Saunders",
+        "J. Messina",
+        "M. Darwish",
+        "F. Xie",
+        "K. J. Leary",
+        "L. R. Cantilena"
+      ],
+      "year": 2011,
+      "doi": "10.1177/0091270011407496",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1177/0091270011407496"
+    },
+    {
+      "id": "meuldermans1982",
+      "title": "Plasma protein binding and distribution of fentanyl, sufentanil, alfentanil and lofentanil in blood (Arch Int Pharmacodyn Ther 257(1):4-19)",
+      "authors": [
+        "W. E. Meuldermans",
+        "R. M. Hurkmans",
+        "J. J. Heykants"
+      ],
+      "year": 1982,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6214227/",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only"
+    },
+    {
+      "id": "fentanyl-injection-label",
+      "type": "institution",
+      "title": "Fentanyl Citrate Injection, prescribing information (openFDA/DailyMed, set id 0c10e465-4117-48ba-a454-23ccb7a3fcc7)",
+      "url": "https://api.fda.gov/drug/label.json?search=set_id:%220c10e465-4117-48ba-a454-23ccb7a3fcc7%22",
+      "tier": "agency",
+      "consulted": "2026-10-14"
     }
   ]
 }
