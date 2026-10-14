@@ -126,7 +126,8 @@ export function buildHeader(host, ctx, appName) {
   document.addEventListener("click", (e) => {
     if (host.hasAttribute("data-menu") && !host.contains(/** @type {Node} */ (e.target))) closeMenu();
   });
-  host.append(brand, chips, menu, tools);
+  const sheets = el("a", { class: "chip sheets-link", href: "pagine/schede/", "data-fk": "header-sheets" }, [icon("sheet"), el("span", { class: "sheets-link-text" })]);
+  host.append(brand, chips, sheets, menu, tools);
   for (const c of CHIPS) {
     const b = /** @type {HTMLButtonElement} */ (chipButtons.get(c.id));
     attachTip(b, () => c.tip(lastState));
@@ -147,6 +148,8 @@ export function buildHeader(host, ctx, appName) {
       resultChip(chipButtons.get("result"), s);
       const warn = activeFile(s)?.warnings.length;
       chipButtons.get("file")?.toggleAttribute("data-warn", Boolean(warn));
+      sheets.querySelector(".sheets-link-text")?.replaceChildren(t("header.sheets"));
+      sheets.setAttribute("aria-label", t("header.sheets"));
       menu.setAttribute("aria-label", t("header.menu.label"));
       langGroup.setAttribute("aria-label", t("lang.label"));
       for (const [code, b] of langButtons) {

@@ -254,6 +254,7 @@
   "header.result.label": "Result",
   "header.result.region": "Comparison on part of the range",
   "header.result.tip": "Proposed by the program, decided by the expert",
+  "header.sheets": "Sheets",
   "help.chart_keys": "Zoom and move the chart (focus on the chart)",
   "help.col_action": "Action",
   "help.col_icon": "Icon",
