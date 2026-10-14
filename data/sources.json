@@ -9927,42 +9927,6 @@
       "tier": "primary"
     },
     {
-      "id": "mardal2018-amb-chmica",
-      "type": "paper",
-      "title": "Metabolism of the synthetic cannabinoids AMB-CHMICA and 5C-AKB48 in pooled human hepatocytes and rat hepatocytes analyzed by UHPLC-(IMS)-HR-MS (J Chromatogr B 1083:189-197)",
-      "authors": [
-        "M. Mardal",
-        "P. W. Dalsgaard",
-        "B. Qi",
-        "C. B. Mollerup",
-        "P. Annaert",
-        "K. Linnet"
-      ],
-      "year": 2018,
-      "doi": "10.1016/j.jchromb.2018.03.016",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/29549742/",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14",
-      "tier": "primary"
-    },
-    {
-      "id": "antonides2019",
-      "type": "paper",
-      "title": "Enantiospecific synthesis, chiral separation, and biological activity of four indazole-3-carboxamide-type synthetic cannabinoid receptor agonists and their detection in seized drug samples (Front Chem 7:321)",
-      "authors": [
-        "L. H. Antonides",
-        "A. Cannaert",
-        "et al.",
-        "C. McKenzie"
-      ],
-      "year": 2019,
-      "doi": "10.3389/fchem.2019.00321",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/31157203/",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14",
-      "tier": "primary"
-    },
-    {
       "id": "vikingsson2016",
       "type": "paper",
       "title": "Identification of AB-FUBINACA metabolites in authentic urine samples suitable as urinary markers of drug intake using liquid chromatography quadrupole tandem time of flight mass spectrometry (Drug Test Anal 8:950-956)",
