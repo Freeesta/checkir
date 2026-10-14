@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-methylbuphedrone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-Methylbuphedrone (4-MeMABP)",
+      "synonyms": [
+        "4-MeMABP",
+        "2-(methylamino)-1-(4-methylphenyl)butan-1-one"
+      ]
+    },
+    "it": {
+      "preferred": "4-Metilbufedrone (4-MeMABP)",
+      "synonyms": [
+        "2-(metilammino)-1-(4-metilfenil)butan-1-one"
+      ]
+    }
+  },
+  "iupac": "2-(methylamino)-1-(4-methylphenyl)butan-1-one",
+  "formula": "C12H17NO",
+  "molar_mass_g_mol": 191.27,
+  "smiles": "CCC(C(=O)C1=CC=C(C=C1)C)NC",
+  "inchi": "InChI=1S/C12H17NO/c1-4-11(13-3)12(14)10-7-5-9(2)6-8-10/h5-8,11,13H,4H2,1-3H3",
+  "inchikey": "ZOGGCQVVLHCLHY-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1337016-51-9",
+    "pubchem_cid": 71750237
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
