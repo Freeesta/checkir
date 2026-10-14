@@ -1,0 +1,71 @@
+{
+  "schema": "datasheet/1",
+  "substance": "armodafinil",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "armodafinil-acid",
+        "reaction": "other",
+        "source": "nuvigil-label"
+      },
+      {
+        "from": "parent",
+        "to": "modafinil-sulfone",
+        "reaction": "other",
+        "enzymes": [
+          "CYP3A4",
+          "CYP3A5"
+        ],
+        "source": "nuvigil-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "armodafinil-acid",
+        "active": null,
+        "source": "nuvigil-label"
+      },
+      {
+        "name_key": "modafinil-sulfone",
+        "active": null,
+        "source": "nuvigil-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 15,
+      "max": 15,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "nuvigil-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
