@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-thiophenoyl-fentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-Thiophenoyl-fentanyl",
+      "synonyms": [
+        "Thiofuranylfentanyl",
+        "Thiophenefentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "2-Thiophenoyl-fentanyl",
+      "synonyms": [
+        "Thiofuranylfentanyl",
+        "Thiophenefentanyl"
+      ]
+    }
+  },
+  "iupac": "N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]thiophene-2-carboxamide",
+  "formula": "C24H26N2OS",
+  "molar_mass_g_mol": 390.5,
+  "smiles": "C1CN(CCC1N(C2=CC=CC=C2)C(=O)C3=CC=CS3)CCC4=CC=CC=C4",
+  "inchi": "InChI=1S/C24H26N2OS/c27-24(23-12-7-19-28-23)26(21-10-5-2-6-11-21)22-14-17-25(18-15-22)16-13-20-8-3-1-4-9-20/h1-12,19,22H,13-18H2",
+  "inchikey": "CCHPKGYUIHSQIE-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2306823-38-9",
+    "pubchem_cid": 137700027
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

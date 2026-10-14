@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-mdmb-pica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-MDMB-PICA",
+      "synonyms": [
+        "5F-MDMB-2201",
+        "5-fluoro-MDMB-PICA",
+        "MDMB-2201 (5-fluoropentyl)"
+      ]
+    },
+    "it": {
+      "preferred": "5F-MDMB-PICA",
+      "synonyms": [
+        "5F-MDMB-2201",
+        "5-fluoro-MDMB-PICA"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-2-[[1-(5-fluoropentyl)indole-3-carbonyl]amino]-3,3-dimethylbutanoate",
+  "formula": "C21H29FN2O3",
+  "molar_mass_g_mol": 376.5,
+  "smiles": "CC(C)(C)[C@@H](C(=O)OC)NC(=O)C1=CN(C2=CC=CC=C21)CCCCCF",
+  "inchi": "InChI=1S/C21H29FN2O3/c1-21(2,3)18(20(26)27-4)23-19(25)16-14-24(13-9-5-8-12-22)17-11-7-6-10-15(16)17/h6-7,10-11,14,18H,5,8-9,12-13H2,1-4H3,(H,23,25)/t18-/m1/s1",
+  "inchikey": "CHSUEEBESACQDV-GOSISDBHSA-N",
+  "external_ids": {
+    "cas": "1971007-88-1",
+    "pubchem_cid": 129597835
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

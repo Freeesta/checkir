@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "meta-methylfuranylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "meta-Methylfuranylfentanyl",
+      "synonyms": [
+        "m-methylfuranylfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "meta-Metilfuranilfentanil",
+      "synonyms": [
+        "m-metilfuranilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(3-methylphenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]furan-2-carboxamide",
+  "formula": "C25H28N2O2",
+  "molar_mass_g_mol": 388.5,
+  "smiles": "CC1=CC(=CC=C1)N(C2CCN(CC2)CCC3=CC=CC=C3)C(=O)C4=CC=CO4",
+  "inchi": "InChI=1S/C25H28N2O2/c1-20-7-5-10-23(19-20)27(25(28)24-11-6-18-29-24)22-13-16-26(17-14-22)15-12-21-8-3-2-4-9-21/h2-11,18-19,22H,12-17H2,1H3",
+  "inchikey": "MAUKPWKPNGATGI-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 137700039
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

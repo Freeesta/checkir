@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "meta-methylacetylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "meta-Methylacetylfentanyl",
+      "synonyms": [
+        "m-methylacetylfentanyl",
+        "3-methylacetylfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "meta-Metilacetilfentanil",
+      "synonyms": [
+        "m-metilacetilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(3-methylphenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]acetamide",
+  "formula": "C22H28N2O",
+  "molar_mass_g_mol": 336.5,
+  "smiles": "CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC(=CC=C3)C",
+  "inchi": "InChI=1S/C22H28N2O/c1-18-7-6-10-22(17-18)24(19(2)25)21-12-15-23(16-13-21)14-11-20-8-4-3-5-9-20/h3-10,17,21H,11-16H2,1-2H3",
+  "inchikey": "SZZZZTBKJBQTDR-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 615724
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -6,13 +6,17 @@ meta-Fluorofentanil, N-(3-fluorofenil)-N-[1-(2-feniletil)piperidin-4-il]propanam
 
 Classe chimica: analoghi del fentanil (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
 
+## history
+
+Il meta-fluorofentanil è stato inserito nella Tabella I del Controlled Substances Act statunitense da una regola finale della DEA in vigore dal 7 dicembre 2023. [f:dea-fr2023-26694]
+
 ## origin
 
 Una sostanza sintetica, un analogo del fentanil. [f:armenian2018]
 
 ## metabolism
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Negli epatociti umani ciascun isomero del fluorofentanil (orto, meta, para) ha dato 14 metaboliti; il principale era il prodotto di N-dealchilazione norfluorofentanil, con metaboliti idrossilati, N-ossido, diidrodiolo e idrossimetossi. [f:gundersen2020]
 
 ## cuts
 
@@ -40,7 +44,7 @@ Le benzodiazepine e altri sedativi assunti con gli oppioidi sono un fattore di r
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:unodc-ewa] [f:checkir-classification] [f:armenian2018] [f:varshneya2023] [f:lovrecic2019] [f:kerensky2017]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:unodc-ewa] [f:checkir-classification] [f:armenian2018] [f:varshneya2023] [f:lovrecic2019] [f:kerensky2017] [f:dea-fr2023-26694] [f:gundersen2020]
 
 ## license
 
