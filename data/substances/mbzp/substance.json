@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mbzp",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MBZP",
+      "synonyms": [
+        "1-benzyl-4-methylpiperazine",
+        "methylbenzylpiperazine"
+      ]
+    },
+    "it": {
+      "preferred": "MBZP",
+      "synonyms": [
+        "1-benzil-4-metilpiperazina",
+        "metilbenzilpiperazina"
+      ]
+    }
+  },
+  "iupac": "1-benzyl-4-methylpiperazine",
+  "formula": "C12H18N2",
+  "molar_mass_g_mol": 190.28,
+  "smiles": "CN1CCN(CC1)CC2=CC=CC=C2",
+  "inchi": "InChI=1S/C12H18N2/c1-13-7-9-14(10-8-13)11-12-5-3-2-4-6-12/h2-6H,7-11H2,1H3",
+  "inchikey": "MLJOKPBESJWYGL-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 763557
+  },
+  "classes": {
+    "chemical": [
+      "piperazines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

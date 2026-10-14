@@ -32,6 +32,7 @@
     {"id": "diphenhydramine", "names": ["diphenhydramine"]},
     {"id": "xylitol", "names": ["xylitol"]},
     {"id": "erythritol", "names": ["erythritol"]},
-    {"id": "xylazine", "names": ["xylazine"], "sheet": "xylazine"}
+    {"id": "xylazine", "names": ["xylazine"], "sheet": "xylazine"},
+    {"id": "isopropylbenzylamine", "names": ["isopropylbenzylamine", "n-isopropylbenzylamine"], "sheet": "isopropylbenzylamine"}
   ]
 }
