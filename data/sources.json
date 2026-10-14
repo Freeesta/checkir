@@ -15472,6 +15472,130 @@
       "tier": "agency"
     },
     {
+      "id": "catapres-tts-label",
+      "type": "institution",
+      "title": "Catapres-TTS (clonidine transdermal system), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d4a55825-7041-42f4-b3b2-dd7a25dbe793",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "cyclobenzaprine-label",
+      "type": "institution",
+      "title": "Cyclobenzaprine hydrochloride tablets USP (SA3, LLC), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a4ae481f-9e47-470a-b4d1-5a33c0df8761",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803162439/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a4ae481f-9e47-470a-b4d1-5a33c0df8761"
+    },
+    {
+      "id": "norpramin-label",
+      "type": "institution",
+      "title": "NORPRAMIN (desipramine hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=70b562ea-9f21-4e4a-b3ed-0590b2892f6a",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803151806/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=70b562ea-9f21-4e4a-b3ed-0590b2892f6a"
+    },
+    {
+      "id": "silenor-label",
+      "type": "institution",
+      "title": "SILENOR (doxepin) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1bec1223-5239-4eb6-a9e8-62444106d2c0",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803132828/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1bec1223-5239-4eb6-a9e8-62444106d2c0"
+    },
+    {
+      "id": "diclegis-label",
+      "type": "institution",
+      "title": "DICLEGIS (doxylamine succinate and pyridoxine hydrochloride) delayed-release tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8bde08f6-e8bd-4e90-baa7-82e01876a86a",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260731133310/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8bde08f6-e8bd-4e90-baa7-82e01876a86a"
+    },
+    {
+      "id": "akutsu2006",
+      "type": "paper",
+      "title": "Identification of human cytochrome P450 isozymes involved in diphenhydramine N-demethylation",
+      "authors": [
+        "Akutsu, T",
+        "Kobayashi, K",
+        "Sakurada, K",
+        "Ikegaya, H",
+        "Furihata, T",
+        "Chiba, K"
+      ],
+      "year": 2006,
+      "doi": "10.1124/dmd.106.012088",
+      "url": "https://doi.org/10.1124/dmd.106.012088",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260816050807/https://pubmed.ncbi.nlm.nih.gov/17020955/"
+    },
+    {
+      "id": "lockwood2021",
+      "type": "paper",
+      "title": "High concentrations of illicit stimulants and cutting agents cause false positives on fentanyl test strips",
+      "authors": [
+        "Lockwood, TE",
+        "Vervoordt, A",
+        "Lieberman, M"
+      ],
+      "year": 2021,
+      "doi": "10.1186/s12954-021-00478-4",
+      "url": "https://doi.org/10.1186/s12954-021-00478-4",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "geldof2016",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolism studies of dimethazine",
+      "authors": [
+        "Geldof, L",
+        "Tudela, E",
+        "Lootens, L",
+        "van Lysebeth, J",
+        "Meuleman, P",
+        "Leroux-Roels, G",
+        "van Eenoo, P",
+        "Deventer, K"
+      ],
+      "year": 2016,
+      "doi": "10.1002/bmc.3668",
+      "url": "https://doi.org/10.1002/bmc.3668",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ehling2019",
+      "type": "paper",
+      "title": "Diphenhydramine pharmacokinetics after oral and intravenous administration of diphenhydramine and oral administration of dimenhydrinate to healthy dogs, and pharmacodynamic effect on histamine-induced wheal formation: a pilot study",
+      "authors": [
+        "Ehling, S",
+        "Bäumer, W",
+        "Papich, MG"
+      ],
+      "year": 2019,
+      "doi": "10.1111/vde.12727",
+      "url": "https://doi.org/10.1111/vde.12727",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260112184122/https://pubmed.ncbi.nlm.nih.gov/30779257/"
+    },
+    {
       "id": "katselou2016",
       "type": "paper",
       "title": "Fenethylline (Captagon) Abuse - Local Problems from an Old Drug Become Universal (Basic Clin Pharmacol Toxicol 119)",

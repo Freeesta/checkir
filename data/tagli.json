@@ -29,7 +29,7 @@
     {"id": "acetylsalicylic-acid", "names": ["acetylsalicylic acid", "aspirin"]},
     {"id": "ibuprofen", "names": ["ibuprofen"]},
     {"id": "metamizole", "names": ["metamizole"]},
-    {"id": "diphenhydramine", "names": ["diphenhydramine"]},
+    {"id": "diphenhydramine", "names": ["diphenhydramine"], "sheet": "diphenhydramine"},
     {"id": "xylitol", "names": ["xylitol"]},
     {"id": "erythritol", "names": ["erythritol"]},
     {"id": "xylazine", "names": ["xylazine"], "sheet": "xylazine"},
