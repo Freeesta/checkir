@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "am-2201-4-methoxynaphthyl-analogue",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "AM-2201 4-methoxynaphthyl analogue",
+      "synonyms": [
+        "4-MeO-AM-2201"
+      ]
+    },
+    "it": {
+      "preferred": "AM-2201 4-methoxynaphthyl analogue",
+      "synonyms": [
+        "4-MeO-AM-2201"
+      ]
+    }
+  },
+  "iupac": "[1-(5-fluoropentyl)indol-3-yl]-(4-methoxynaphthalen-1-yl)methanone",
+  "formula": "C25H24FNO2",
+  "molar_mass_g_mol": 389.5,
+  "smiles": "COC1=CC=C(C2=CC=CC=C21)C(=O)C3=CN(C4=CC=CC=C43)CCCCCF",
+  "inchi": "InChI=1S/C25H24FNO2/c1-29-24-14-13-21(18-9-3-4-11-20(18)24)25(28)22-17-27(16-8-2-7-15-26)23-12-6-5-10-19(22)23/h3-6,9-14,17H,2,7-8,15-16H2,1H3",
+  "inchikey": "BIESBZORWYRYDT-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1364933-61-8",
+    "pubchem_cid": 91864522
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
