@@ -1,0 +1,69 @@
+{
+  "schema": "datasheet/1",
+  "substance": "tetrahydrofuran-fentanyl",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "fentanyls",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "THF-norfentanyl",
+        "reaction": "other",
+        "source": "krotulski2018-thff"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxyl-THFF",
+        "reaction": "hydroxylation",
+        "source": "krotulski2018-thff"
+      },
+      {
+        "from": "parent",
+        "to": "dihydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "gampfer2020"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "thf-norfentanyl",
+        "active": null,
+        "marker": true,
+        "source": "krotulski2018-thff"
+      },
+      {
+        "name_key": "hydroxyl-thff",
+        "active": null,
+        "source": "krotulski2018-thff"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

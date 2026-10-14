@@ -1,0 +1,69 @@
+{
+  "schema": "datasheet/1",
+  "substance": "jwh-122",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "methylnaphthyl-hydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "davidsen2020-jwh122"
+      },
+      {
+        "from": "parent",
+        "to": "ω-COOH metabolites",
+        "reaction": "other",
+        "source": "davidsen2020-jwh122"
+      },
+      {
+        "from": "parent",
+        "to": "ω-O-glucuronide and methylnaphthyl O-glucuronide conjugates",
+        "reaction": "glucuronidation",
+        "source": "davidsen2020-jwh122"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "omega-cooh-metabolite",
+        "active": null,
+        "marker": true,
+        "source": "davidsen2020-jwh122"
+      },
+      {
+        "name_key": "methylnaphthyl-hydroxylated-metabolite",
+        "active": null,
+        "marker": true,
+        "source": "davidsen2020-jwh122"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

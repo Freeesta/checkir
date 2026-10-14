@@ -1,0 +1,72 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mdmb-4en-pinaca",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic",
+    "precursor_classes": [
+      "tail-less-indazole-carboxamides"
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "ester hydrolysis metabolites",
+        "reaction": "hydrolysis_ester",
+        "source": "watanabe2019"
+      },
+      {
+        "from": "parent",
+        "to": "dihydrodiol metabolites of the pentenyl chain",
+        "reaction": "other",
+        "source": "watanabe2019"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "gu2022"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "mdmb-4en-pinaca-ester-hydrolysis-dihydrodiol",
+        "active": null,
+        "source": "watanabe2019",
+        "marker": true
+      },
+      {
+        "name_key": "mdmb-4en-pinaca-ester-hydrolysis",
+        "active": null,
+        "source": "watanabe2019",
+        "marker": true
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

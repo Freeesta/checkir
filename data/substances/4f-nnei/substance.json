@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4f-nnei",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4F-NNEI",
+      "synonyms": [
+        "4-fluoro-NNEI",
+        "4F-MN-24"
+      ]
+    },
+    "it": {
+      "preferred": "4F-NNEI",
+      "synonyms": [
+        "4-fluoro-NNEI"
+      ]
+    }
+  },
+  "iupac": "1-(4-fluoropentyl)-N-naphthalen-1-ylindole-3-carboxamide",
+  "formula": "C24H23FN2O",
+  "molar_mass_g_mol": 374.4,
+  "smiles": "CC(CCCN1C=C(C2=CC=CC=C21)C(=O)NC3=CC=CC4=CC=CC=C43)F",
+  "inchi": "InChI=1S/C24H23FN2O/c1-17(25)8-7-15-27-16-21(20-12-4-5-14-23(20)27)24(28)26-22-13-6-10-18-9-2-3-11-19(18)22/h2-6,9-14,16-17H,7-8,15H2,1H3,(H,26,28)",
+  "inchikey": "PSTMVUJRDHDKHN-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2365471-80-1",
+    "pubchem_cid": 132988812
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

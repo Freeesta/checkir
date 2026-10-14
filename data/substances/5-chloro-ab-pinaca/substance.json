@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-chloro-ab-pinaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-Chloro-AB-PINACA",
+      "synonyms": [
+        "5Cl-AB-PINACA",
+        "AB-PINACA 5-chloropentyl analog"
+      ]
+    },
+    "it": {
+      "preferred": "5-Cloro-AB-PINACA",
+      "synonyms": [
+        "5Cl-AB-PINACA",
+        "AB-PINACA 5-chloropentyl analog"
+      ]
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-3-methyl-1-oxobutan-2-yl]-1-(5-chloropentyl)indazole-3-carboxamide",
+  "formula": "C18H25ClN4O2",
+  "molar_mass_g_mol": 364.9,
+  "smiles": "CC(C)[C@@H](C(=O)N)NC(=O)C1=NN(C2=CC=CC=C21)CCCCCCl",
+  "inchi": "InChI=1S/C18H25ClN4O2/c1-12(2)15(17(20)24)21-18(25)16-13-8-4-5-9-14(13)23(22-16)11-7-3-6-10-19/h4-5,8-9,12,15H,3,6-7,10-11H2,1-2H3,(H2,20,24)(H,21,25)/t15-/m0/s1",
+  "inchikey": "VUPMALPMUYUYES-HNNXBMFYSA-N",
+  "external_ids": {
+    "cas": "1801552-02-2",
+    "pubchem_cid": 91936938
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

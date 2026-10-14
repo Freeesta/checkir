@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mdmb-5br-inaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MDMB-5Br-INACA",
+      "synonyms": [
+        "MDMB-5'Br-INACA",
+        "5Br-MDMB-INACA"
+      ]
+    },
+    "it": {
+      "preferred": "MDMB-5Br-INACA",
+      "synonyms": [
+        "MDMB-5'Br-INACA",
+        "5Br-MDMB-INACA"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-2-[(5-bromo-1H-indazole-3-carbonyl)amino]-3,3-dimethylbutanoate",
+  "formula": "C15H18BrN3O3",
+  "molar_mass_g_mol": 368.2,
+  "smiles": "CC(C)(C)[C@@H](C(=O)OC)NC(=O)C1=NNC2=C1C=C(C=C2)Br",
+  "inchi": "InChI=1S/C15H18BrN3O3/c1-15(2,3)12(14(21)22-4)17-13(20)11-9-7-8(16)5-6-10(9)18-19-11/h5-7,12H,1-4H3,(H,17,20)(H,18,19)/t12-/m1/s1",
+  "inchikey": "QGEVEXPJOKFMAN-GFCCVEGCSA-N",
+  "external_ids": {
+    "pubchem_cid": 165362085
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "cumyl-pica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "CUMYL-PICA",
+      "synonyms": [
+        "SGT-56"
+      ]
+    },
+    "it": {
+      "preferred": "CUMYL-PICA",
+      "synonyms": [
+        "SGT-56"
+      ]
+    }
+  },
+  "iupac": "1-pentyl-N-(2-phenylpropan-2-yl)indole-3-carboxamide",
+  "formula": "C23H28N2O",
+  "molar_mass_g_mol": 348.5,
+  "smiles": "CCCCCN1C=C(C2=CC=CC=C21)C(=O)NC(C)(C)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C23H28N2O/c1-4-5-11-16-25-17-20(19-14-9-10-15-21(19)25)22(26)24-23(2,3)18-12-7-6-8-13-18/h6-10,12-15,17H,4-5,11,16H2,1-3H3,(H,24,26)",
+  "inchikey": "RCXFMWJQOYCIQU-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1400742-32-6",
+    "pubchem_cid": 86273678
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

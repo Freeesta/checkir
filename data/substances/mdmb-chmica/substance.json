@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mdmb-chmica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MDMB-CHMICA",
+      "synonyms": [
+        "MMB-CHMINACA"
+      ]
+    },
+    "it": {
+      "preferred": "MDMB-CHMICA",
+      "synonyms": [
+        "MMB-CHMINACA"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-2-[[1-(cyclohexylmethyl)indole-3-carbonyl]amino]-3,3-dimethylbutanoate",
+  "formula": "C23H32N2O3",
+  "molar_mass_g_mol": 384.5,
+  "smiles": "CC(C)(C)[C@@H](C(=O)OC)NC(=O)C1=CN(C2=CC=CC=C21)CC3CCCCC3",
+  "inchi": "InChI=1S/C23H32N2O3/c1-23(2,3)20(22(27)28-4)24-21(26)18-15-25(14-16-10-6-5-7-11-16)19-13-9-8-12-17(18)19/h8-9,12-13,15-16,20H,5-7,10-11,14H2,1-4H3,(H,24,26)/t20-/m1/s1",
+  "inchikey": "SRJKCVHWIDFUBO-HXUWFJFHSA-N",
+  "external_ids": {
+    "cas": "1971007-95-0",
+    "pubchem_cid": 125181404
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
