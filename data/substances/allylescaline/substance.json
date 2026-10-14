@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "allylescaline",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Allylescaline",
+      "synonyms": [
+        "4-allyloxy-3,5-dimethoxyphenethylamine"
+      ]
+    },
+    "it": {
+      "preferred": "Allilescalina",
+      "synonyms": [
+        "4-alliloxi-3,5-dimetossifenetilammina"
+      ]
+    }
+  },
+  "iupac": "2-(3,5-dimethoxy-4-prop-2-enoxyphenyl)ethanamine",
+  "formula": "C13H19NO3",
+  "molar_mass_g_mol": 237.3,
+  "smiles": "COC1=CC(=CC(=C1OCC=C)OC)CCN",
+  "inchi": "InChI=1S/C13H19NO3/c1-4-7-17-13-11(15-2)8-10(5-6-14)9-12(13)16-3/h4,8-9H,1,5-7,14H2,2-3H3",
+  "inchikey": "JNUAYHHGCXYBHX-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 44719469
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
