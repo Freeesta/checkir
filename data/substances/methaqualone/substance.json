@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "methaqualone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Methaqualone",
+      "synonyms": [
+        "Quaalude"
+      ]
+    },
+    "it": {
+      "preferred": "Metaqualone",
+      "synonyms": [
+        "Quaalude"
+      ]
+    }
+  },
+  "iupac": "2-methyl-3-(2-methylphenyl)quinazolin-4-one",
+  "formula": "C16H14N2O",
+  "molar_mass_g_mol": 250.29,
+  "smiles": "CC1=CC=CC=C1N2C(=NC3=CC=CC=C3C2=O)C",
+  "inchi": "InChI=1S/C16H14N2O/c1-11-7-3-6-10-15(11)18-12(2)17-14-9-5-4-8-13(14)16(18)19/h3-10H,1-2H3",
+  "inchikey": "JEYCTXHKTXCGPB-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 6292
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
