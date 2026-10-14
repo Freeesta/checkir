@@ -16760,6 +16760,184 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "harris2003",
+      "type": "paper",
+      "title": "The bioavailability of intranasal and smoked methamphetamine (Clin Pharmacol Ther 74:475-86)",
+      "authors": [
+        "D. S. Harris",
+        "H. Boxenbaum",
+        "E. T. Everhart",
+        "G. Sequeira",
+        "J. E. Mendelson",
+        "R. T. Jones"
+      ],
+      "year": 2003,
+      "doi": "10.1016/j.clpt.2003.08.002",
+      "url": "https://doi.org/10.1016/j.clpt.2003.08.002",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mendelson2006",
+      "type": "paper",
+      "title": "Human pharmacology of the methamphetamine stereoisomers (Clin Pharmacol Ther 80:403-20)",
+      "authors": [
+        "J. Mendelson",
+        "N. Uemura",
+        "D. Harris",
+        "R. P. Nath",
+        "E. Fernandez",
+        "P. Jacob",
+        "E. T. Everhart",
+        "R. T. Jones"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.clpt.2006.06.013",
+      "url": "https://doi.org/10.1016/j.clpt.2006.06.013",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "schepers2003",
+      "type": "paper",
+      "title": "Methamphetamine and amphetamine pharmacokinetics in oral fluid and plasma after controlled oral methamphetamine administration to human volunteers (Clin Chem 49:121-32)",
+      "authors": [
+        "R. J. F. Schepers",
+        "J. M. Oyler",
+        "R. E. Joseph",
+        "E. J. Cone",
+        "E. T. Moolchan",
+        "M. A. Huestis"
+      ],
+      "year": 2003,
+      "doi": "10.1373/49.1.121",
+      "url": "https://doi.org/10.1373/49.1.121",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "huestis2007",
+      "type": "paper",
+      "title": "Methamphetamine disposition in oral fluid, plasma, and urine (Ann N Y Acad Sci 1098:104-21)",
+      "authors": [
+        "M. A. Huestis",
+        "E. J. Cone"
+      ],
+      "year": 2007,
+      "doi": "10.1196/annals.1384.038",
+      "url": "https://doi.org/10.1196/annals.1384.038",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "caldwell1972",
+      "type": "paper",
+      "title": "Metabolism of (14C)methamphetamine in man, the guinea pig and the rat (Biochem J 129:11-22)",
+      "authors": [
+        "J. Caldwell",
+        "L. G. Dring",
+        "R. T. Williams"
+      ],
+      "year": 1972,
+      "doi": "10.1042/bj1290011",
+      "url": "https://doi.org/10.1042/bj1290011",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "isoardi2019",
+      "type": "paper",
+      "title": "Methamphetamine presentations to an emergency department: Management and complications (Emerg Med Australas 31:593-599)",
+      "authors": [
+        "K. Z. Isoardi",
+        "S. F. Ayles",
+        "K. Harris",
+        "C. J. Finch",
+        "C. B. Page"
+      ],
+      "year": 2018,
+      "doi": "10.1111/1742-6723.13219",
+      "url": "https://doi.org/10.1111/1742-6723.13219",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "liu2023-taar1",
+      "type": "paper",
+      "title": "Recognition of methamphetamine and other amines by trace amine receptor TAAR1 (Nature 624:663-671)",
+      "authors": [
+        "H. Liu",
+        "Y. Zheng",
+        "Y. Wang",
+        "Y. Wang",
+        "X. He",
+        "P. Xu",
+        "S. Huang",
+        "Q. Yuan",
+        "X. Zhang",
+        "L. Wang",
+        "K. Jiang",
+        "H. Chen",
+        "Z. Li",
+        "W. Liu",
+        "S. Wang",
+        "H. E. Xu",
+        "F. Xu"
+      ],
+      "year": 2023,
+      "doi": "10.1038/s41586-023-06775-1",
+      "url": "https://doi.org/10.1038/s41586-023-06775-1",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lin1997-cyp2d6",
+      "type": "paper",
+      "title": "Oxidation of methamphetamine and methylenedioxymethamphetamine by CYP2D6 (Drug Metab Dispos 25:1059-64)",
+      "authors": [
+        "L. Y. Lin",
+        "E. W. Di Stefano",
+        "D. A. Schmitz",
+        "L. Hsu",
+        "S. W. Ellis",
+        "M. S. Lennard",
+        "G. T. Tucker",
+        "A. K. Cho"
+      ],
+      "year": 1997,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9311621/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "cook1993",
+      "type": "paper",
+      "title": "Pharmacokinetics of methamphetamine self-administered to human subjects by smoking S-(+)-methamphetamine hydrochloride (Drug Metab Dispos 21:717-23)",
+      "authors": [
+        "C. E. Cook",
+        "A. R. Jeffcoat",
+        "J. M. Hill",
+        "D. E. Pugh",
+        "P. K. Patetta",
+        "B. M. Sadler",
+        "W. R. White",
+        "M. Perez-Reyes"
+      ],
+      "year": 1993,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8104133/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
