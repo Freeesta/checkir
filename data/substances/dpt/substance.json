@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "dpt",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "DPT",
+      "synonyms": [
+        "N,N-dipropyltryptamine",
+        "dipropyltryptamine"
+      ]
+    },
+    "it": {
+      "preferred": "DPT",
+      "synonyms": [
+        "N,N-dipropiltriptamina",
+        "dipropiltriptamina"
+      ]
+    }
+  },
+  "iupac": "N-[2-(1H-indol-3-yl)ethyl]-N-propylpropan-1-amine",
+  "formula": "C16H24N2",
+  "molar_mass_g_mol": 244.37,
+  "smiles": "CCCN(CCC)CCC1=CNC2=CC=CC=C21",
+  "inchi": "InChI=1S/C16H24N2/c1-3-10-18(11-4-2)12-9-14-13-17-16-8-6-5-7-15(14)16/h5-8,13,17H,3-4,9-12H2,1-2H3",
+  "inchikey": "BOOQTIHIKDDPRW-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "61-52-9",
+    "pubchem_cid": 6091
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
