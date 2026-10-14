@@ -64,7 +64,7 @@ export async function areaScenario(browser, base, check, axe) {
   await addLibrary(page);
   await page.evaluate(() => (window.print = () => (window.__printed = (window.__printed ?? 0) + 1)));
 
-  // The path from file to printed sheet, counting every click and key: open (1), sign (2), sheet (3), print (4); the result needs none.
+  // The path from file to printed sheet, counting every click and key: open (1), sheet (2), print (3); the result needs none.
   let actions = 0;
   await page.evaluate(() => {
     window.__tops = [];
@@ -89,13 +89,11 @@ export async function areaScenario(browser, base, check, axe) {
   check("area: choosing another row moves the overlay with it", (await page.locator("#chart polyline.curve-reference").count()) === 1 && (await page.getAttribute('[data-fk="cand-1"]', "aria-current")) === "true", label ?? "");
   await page.click('[data-fk="cand-0"]');
 
-  await page.keyboard.press("f");
-  actions++;
   await page.keyboard.press("s");
   actions++;
   await page.click('[data-action="sheet.print"]');
   actions++;
-  check("area: from file to printed sheet in 4 actions or fewer, no dialog", actions <= 4 && (await page.evaluate(() => window.__printed)) === 1 && (await page.locator("dialog[open]").count()) === 0, String(actions));
+  check("area: from file to printed sheet in 3 actions or fewer, no dialog", actions <= 3 && (await page.evaluate(() => window.__printed)) === 1 && (await page.locator("dialog[open]").count()) === 0, String(actions));
 
   await tableAndColours(page, check);
 

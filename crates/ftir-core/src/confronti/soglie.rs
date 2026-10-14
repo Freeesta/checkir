@@ -14,12 +14,11 @@ pub struct Region {
     pub to_cm1: f64,
 }
 
-/// A named range selection. Only a calibrated preset may reach the level "probable".
+/// A named range selection.
 #[derive(Debug, Clone, PartialEq)]
 pub struct Preset {
     pub id: String,
     pub ranges: Vec<(f64, f64)>,
-    pub calibrated: bool,
     pub probable_r1: Option<f64>,
     pub probable_margin: Option<f64>,
 }
@@ -94,7 +93,6 @@ fn preset(v: &Value) -> EngineResult<Preset> {
     Ok(Preset {
         id: text(v, "id")?,
         ranges,
-        calibrated: matches!(v.get("calibrated"), Some(Value::Bool(true))),
         probable_r1: v.get("probable_r1").and_then(Value::as_f64),
         probable_margin: v.get("probable_margin").and_then(Value::as_f64),
     })
@@ -239,7 +237,7 @@ mod test {
             }
         );
         assert_eq!(t.quality.co2_band, (2330.0, 2370.0));
-        assert!(t.preset("full").is_some_and(|p| p.calibrated));
+        assert!(t.preset("full").is_some());
     }
 
     #[test]

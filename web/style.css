@@ -130,6 +130,7 @@ button, select { font: inherit; color: var(--text); }
 .chips { display: flex; gap: 0.4rem; min-width: 0; }
 .chip { min-height: 2.25rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .chip[data-warn], .chip[data-quality] { border-color: var(--color-alert); }
+.sheets-link { color: var(--text); text-decoration: none; }
 .hdr-tools { display: flex; align-items: center; gap: 0.4rem; margin-left: auto; }
 .menu-button { display: none; margin-left: auto; }
 .lang-group { display: inline-flex; border: 1px solid var(--border); border-radius: 0.4rem; overflow: hidden; }
@@ -238,6 +239,8 @@ th { position: sticky; top: 0; background: var(--surface); }
   .chips [data-chip="result"] { flex: 0 0 auto; }
   .chips [data-chip="result"] .chip-value { max-width: none; overflow: visible; }
   .menu-button { display: inline-flex; }
+  .sheets-link { min-width: 2.25rem; padding-inline: 0.4rem; justify-content: center; }
+  .sheets-link-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .hdr-tools { display: none; position: absolute; top: 100%; right: 0.5rem; flex-direction: column; align-items: stretch; margin: 0; padding: 0.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 0.4rem; }
   .app-header[data-menu] .hdr-tools { display: flex; }
   .shell { display: block; }
