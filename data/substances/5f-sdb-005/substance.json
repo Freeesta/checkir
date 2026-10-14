@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-sdb-005",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-SDB-005",
+      "synonyms": [
+        "5-fluoro-SDB-005",
+        "SDB-005-5F",
+        "5-fluoro phenyl-PICA"
+      ]
+    },
+    "it": {
+      "preferred": "5F-SDB-005",
+      "synonyms": [
+        "5-fluoro-SDB-005",
+        "SDB-005-5F",
+        "5-fluoro fenil-PICA"
+      ]
+    }
+  },
+  "iupac": "1-(5-fluoropentyl)-N-phenylindole-3-carboxamide",
+  "formula": "C20H21FN2O",
+  "molar_mass_g_mol": 324.4,
+  "smiles": "C1=CC=C(C=C1)NC(=O)C2=CN(C3=CC=CC=C32)CCCCCF",
+  "inchi": "InChI=1S/C20H21FN2O/c21-13-7-2-8-14-23-15-18(17-11-5-6-12-19(17)23)20(24)22-16-9-3-1-4-10-16/h1,3-6,9-12,15H,2,7-8,13-14H2,(H,22,24)",
+  "inchikey": "FZYJALPWLNXEIP-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1776086-01-1",
+    "pubchem_cid": 91936840
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-mn-24",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-MN-24",
+      "synonyms": [
+        "5F-NNEI",
+        "5-fluoro-MN-24",
+        "5-fluoro-NNEI",
+        "CBM-2201"
+      ]
+    },
+    "it": {
+      "preferred": "5F-MN-24",
+      "synonyms": [
+        "5F-NNEI",
+        "5-fluoro-MN-24",
+        "5-fluoro-NNEI"
+      ]
+    }
+  },
+  "iupac": "1-(5-fluoropentyl)-N-naphthalen-1-ylindole-3-carboxamide",
+  "formula": "C24H23FN2O",
+  "molar_mass_g_mol": 374.4,
+  "smiles": "C1=CC=C2C(=C1)C=CC=C2NC(=O)C3=CN(C4=CC=CC=C43)CCCCCF",
+  "inchi": "InChI=1S/C24H23FN2O/c25-15-6-1-7-16-27-17-21(20-12-4-5-14-23(20)27)24(28)26-22-13-8-10-18-9-2-3-11-19(18)22/h2-5,8-14,17H,1,6-7,15-16H2,(H,26,28)",
+  "inchikey": "DJKVOBZLMBHFKX-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1445580-60-8",
+    "pubchem_cid": 118796566
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

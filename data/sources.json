@@ -7613,6 +7613,128 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-13"
+    },
+    {
+      "id": "truver2019",
+      "type": "paper",
+      "title": "5F-MDMB-PICA metabolite identification and cannabinoid receptor activity (Drug Test Anal 12:127-135)",
+      "authors": [
+        "M. T. Truver",
+        "S. Watanabe",
+        "A. Åstrand",
+        "S. Vikingsson",
+        "H. Green",
+        "M. J. Swortwood",
+        "R. Kronstrand"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2688",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31461219/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206023819/https://pubmed.ncbi.nlm.nih.gov/31461219/"
+    },
+    {
+      "id": "diao2017-mn18",
+      "type": "paper",
+      "title": "Human Hepatocyte Metabolism of Novel Synthetic Cannabinoids MN-18 and Its 5-Fluoro Analog 5F-MN-18 (Clin Chem 63:1753-1763)",
+      "authors": [
+        "X. Diao",
+        "J. Carlier",
+        "M. Zhu",
+        "M. A. Huestis"
+      ],
+      "year": 2017,
+      "doi": "10.1373/clinchem.2017.277152",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28821542/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250420152106/https://pubmed.ncbi.nlm.nih.gov/28821542/"
+    },
+    {
+      "id": "diao2016-nm2201",
+      "type": "paper",
+      "title": "In vitro and in vivo human metabolism of a new synthetic cannabinoid NM-2201 (CBL-2201) (Forensic Toxicol 35:20-32)",
+      "authors": [
+        "X. Diao",
+        "J. Carlier",
+        "M. Zhu",
+        "S. Pang",
+        "R. Kronstrand",
+        "K. B. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s11419-016-0326-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28286577/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206113842/https://pubmed.ncbi.nlm.nih.gov/28286577/"
+    },
+    {
+      "id": "apirakkan2020",
+      "type": "paper",
+      "title": "In Vitro Phase I Metabolic Profiling of the Synthetic Cannabinoids AM-694, 5F-NNEI, FUB-APINACA, MFUBINAC, and AMB-FUBINACA (Chem Res Toxicol 33:1653-1664)",
+      "authors": [
+        "O. Apirakkan",
+        "I. Gavrilović",
+        "D. A. Cowan",
+        "V. Abbate"
+      ],
+      "year": 2020,
+      "doi": "10.1021/acs.chemrestox.9b00466",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32301604/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204214203/https://pubmed.ncbi.nlm.nih.gov/32301604/"
+    },
+    {
+      "id": "hill2017-scra-tox",
+      "type": "paper",
+      "title": "Human Toxicity Caused by Indole and Indazole Carboxylate Synthetic Cannabinoid Receptor Agonists: From Horizon Scanning to Notification (Clin Chem 64:346-354)",
+      "authors": [
+        "S. L. Hill",
+        "M. Dunn",
+        "C. Cano",
+        "S. J. Harnor",
+        "I. R. Hardcastle",
+        "J. Grundlingh",
+        "P. I. Dargan",
+        "D. M. Wood",
+        "S. Tucker",
+        "T. Bartram",
+        "S. H. L. Thomas"
+      ],
+      "year": 2017,
+      "doi": "10.1373/clinchem.2017.275867",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29038156/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250202070232/https://pubmed.ncbi.nlm.nih.gov/29038156/"
+    },
+    {
+      "id": "atasoy2021",
+      "type": "paper",
+      "title": "Determination of synthetic cannabinoids in randomly urine samples collected from probationers in Turkey (Forensic Sci Int 322:110752)",
+      "authors": [
+        "A. Atasoy",
+        "N. Daglioglu",
+        "İ. E. Gören",
+        "A. Girisbay",
+        "R. Aslan",
+        "S. A. Akgur"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.forsciint.2021.110752",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33735632/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
     }
   ]
 }

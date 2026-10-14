@@ -215,7 +215,26 @@
     "methoxyacetyl-fentanyl": "methoxyacetylfentanyl",
     "o-chlorofentanyl": "ortho-chlorofentanyl",
     "o-fluoroacrylfentanyl": "ortho-fluoroacrylfentanyl",
-    "ortho-fluoro-acrylfentanyl": "ortho-fluoroacrylfentanyl"
+    "ortho-fluoro-acrylfentanyl": "ortho-fluoroacrylfentanyl",
+    "5f-adb": "5f-mdmb-pinaca",
+    "5-fluoro-adb": "5f-mdmb-pinaca",
+    "5-fluoro-mdmb-pinaca": "5f-mdmb-pinaca",
+    "5f-mdmb-2201": "5f-mdmb-pica",
+    "5-fluoro-mdmb-pica": "5f-mdmb-pica",
+    "5-fluoro-mn-18": "5f-mn-18",
+    "5f-nnei": "5f-mn-24",
+    "5-fluoro-mn-24": "5f-mn-24",
+    "5-fluoro-nnei": "5f-mn-24",
+    "cbm-2201": "5f-mn-24",
+    "5-fluoro-mpp-pica": "5f-mpp-pica",
+    "5f-mphp-pica": "5f-mpp-pica",
+    "mphp-2201": "5f-mpp-pica",
+    "5-fluoro-npb-22": "5f-npb-22",
+    "5-fluoro-sdb-005": "5f-sdb-005",
+    "5-fluoro-sdb-005-indole": "nm-2201",
+    "5f-sdb-005-indole": "nm-2201",
+    "cbl-2201": "nm-2201",
+    "nm2201": "nm-2201"
   },
   "schema": "aliases/1"
 }

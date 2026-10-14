@@ -1,0 +1,70 @@
+{
+  "schema": "datasheet/1",
+  "substance": "nm-2201",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "5-fluoro PB-22 3-carboxyindole (M13)",
+        "reaction": "hydrolysis_ester",
+        "source": "diao2016-nm2201"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "hydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "diao2016-nm2201"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "oxidatively defluorinated metabolites",
+        "reaction": "other",
+        "source": "diao2016-nm2201"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "glucuronides",
+        "reaction": "glucuronidation",
+        "source": "diao2016-nm2201"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "nm-2201-5-fluoro-pb-22-3-carboxyindole",
+        "active": null,
+        "source": "diao2016-nm2201",
+        "marker": true
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
