@@ -5,6 +5,7 @@
   "section_state": {
     "molecule": "draft",
     "category": "draft",
+    "history": "draft",
     "origin": "draft",
     "metabolism": "draft",
     "cuts": "draft",
@@ -29,5 +30,51 @@
   "authors": [
     "checkir project (AI-assisted draft)"
   ],
-  "ai_assisted": true
+  "ai_assisted": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "norfluorofentanyl",
+        "reaction": "other",
+        "source": "gundersen2020"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "gundersen2020"
+      },
+      {
+        "from": "parent",
+        "to": "N-oxide",
+        "reaction": "other",
+        "source": "gundersen2020"
+      },
+      {
+        "from": "parent",
+        "to": "dihydrodiol metabolites",
+        "reaction": "other",
+        "source": "gundersen2020"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxymethoxy metabolite",
+        "reaction": "other",
+        "source": "gundersen2020"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "norfluorofentanyl",
+        "active": null,
+        "source": "gundersen2020"
+      },
+      {
+        "name_key": "hydroxymethoxy-fluorofentanyl",
+        "active": null,
+        "source": "gundersen2020"
+      }
+    ]
+  }
 }

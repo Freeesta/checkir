@@ -6,13 +6,17 @@ meta-Fluorofentanyl, N-(3-fluorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]propa
 
 Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
 
+## history
+
+Meta-fluorofentanyl was placed in Schedule I of the US Controlled Substances Act by a DEA final rule effective 7 December 2023. [f:dea-fr2023-26694]
+
 ## origin
 
 A synthetic substance, a fentanyl analogue. [f:armenian2018]
 
 ## metabolism
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+In human hepatocytes each fluorofentanyl isomer (ortho, meta, para) gave 14 metabolites; the main one was the N-dealkylation product norfluorofentanyl, with hydroxylated, N-oxide, dihydrodiol and hydroxymethoxy metabolites. [f:gundersen2020]
 
 ## cuts
 
@@ -40,7 +44,7 @@ Benzodiazepines and other sedatives mixed with opioids are a risk factor for ove
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:unodc-ewa] [f:checkir-classification] [f:armenian2018] [f:varshneya2023] [f:lovrecic2019] [f:kerensky2017]
+Sources used for the claims in this sheet: [f:pubchem] [f:unodc-ewa] [f:checkir-classification] [f:armenian2018] [f:varshneya2023] [f:lovrecic2019] [f:kerensky2017] [f:dea-fr2023-26694] [f:gundersen2020]
 
 ## license
 
