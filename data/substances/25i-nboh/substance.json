@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "25i-nboh",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "25I-NBOH",
+      "synonyms": [
+        "2C-I-NBOH",
+        "2-[[2-(4-iodo-2,5-dimethoxyphenyl)ethylamino]methyl]phenol"
+      ]
+    },
+    "it": {
+      "preferred": "25I-NBOH",
+      "synonyms": [
+        "2C-I-NBOH",
+        "2-[[2-(4-iodo-2,5-dimethoxyphenyl)ethylamino]methyl]phenol"
+      ]
+    }
+  },
+  "iupac": "2-[[2-(4-iodo-2,5-dimethoxyphenyl)ethylamino]methyl]phenol",
+  "formula": "C17H20INO3",
+  "molar_mass_g_mol": 413.25,
+  "smiles": "COC1=CC(=C(C=C1CCNCC2=CC=CC=C2O)OC)I",
+  "inchi": "InChI=1S/C17H20INO3/c1-21-16-10-14(18)17(22-2)9-12(16)7-8-19-11-13-5-3-4-6-15(13)20/h3-6,9-10,19-20H,7-8,11H2,1-2H3",
+  "inchikey": "FEUZHYRXGQTBRO-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "919797-20-9",
+    "pubchem_cid": 10001761
+  },
+  "classes": {
+    "chemical": [
+      "nbome"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
