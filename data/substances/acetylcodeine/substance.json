@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "acetylcodeine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Acetylcodeine",
+      "synonyms": [
+        "6-acetylcodeine"
+      ]
+    },
+    "it": {
+      "preferred": "Acetilcodeina",
+      "synonyms": [
+        "6-acetilcodeina"
+      ]
+    }
+  },
+  "iupac": "[(4R,4aR,7S,7aR,12bS)-9-methoxy-3-methyl-2,4,4a,7,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinolin-7-yl] acetate",
+  "formula": "C20H23NO4",
+  "molar_mass_g_mol": 341.4,
+  "smiles": "CC(=O)O[C@H]1C=C[C@H]2[C@H]3CC4=C5[C@]2([C@H]1OC5=C(C=C4)OC)CCN3C",
+  "inchi": "InChI=1S/C20H23NO4/c1-11(22)24-16-7-5-13-14-10-12-4-6-15(23-3)18-17(12)20(13,19(16)25-18)8-9-21(14)2/h4-7,13-14,16,19H,8-10H2,1-3H3/t13-,14+,16-,19-,20-/m0/s1",
+  "inchikey": "MFXFQKMUCYHPFQ-BKRJIHRRSA-N",
+  "external_ids": {
+    "pubchem_cid": 5486550
+  },
+  "classes": {
+    "chemical": [
+      "morphinans"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
