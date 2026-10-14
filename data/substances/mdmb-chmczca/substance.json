@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mdmb-chmczca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MDMB-CHMCZCA",
+      "synonyms": [
+        "EGMB-CHMINACA"
+      ]
+    },
+    "it": {
+      "preferred": "MDMB-CHMCZCA",
+      "synonyms": [
+        "EGMB-CHMINACA"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-2-[[9-(cyclohexylmethyl)carbazole-3-carbonyl]amino]-3,3-dimethylbutanoate",
+  "formula": "C27H34N2O3",
+  "molar_mass_g_mol": 434.6,
+  "smiles": "CC(C)(C)[C@@H](C(=O)OC)NC(=O)C1=CC2=C(C=C1)N(C3=CC=CC=C32)CC4CCCCC4",
+  "inchi": "InChI=1S/C27H34N2O3/c1-27(2,3)24(26(31)32-4)28-25(30)19-14-15-23-21(16-19)20-12-8-9-13-22(20)29(23)17-18-10-6-5-7-11-18/h8-9,12-16,18,24H,5-7,10-11,17H2,1-4H3,(H,28,30)/t24-/m1/s1",
+  "inchikey": "FAWVRKNYDPKTDZ-XMMPIXPASA-N",
+  "external_ids": {
+    "cas": "2219324-32-8",
+    "pubchem_cid": 121231159
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
