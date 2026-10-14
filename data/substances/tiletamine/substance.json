@@ -1,0 +1,47 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "tiletamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Tiletamine",
+      "synonyms": []
+    },
+    "it": {
+      "preferred": "Tiletamina",
+      "synonyms": []
+    }
+  },
+  "iupac": "2-(ethylamino)-2-thiophen-2-ylcyclohexan-1-one",
+  "formula": "C12H17NOS",
+  "molar_mass_g_mol": 223.34,
+  "smiles": "CCNC1(CCCCC1=O)C2=CC=CS2",
+  "inchi": "InChI=1S/C12H17NOS/c1-2-13-12(11-7-5-9-15-11)8-4-3-6-10(12)14/h5,7,9,13H,2-4,6,8H2,1H3",
+  "inchikey": "QAXBVGVYDCAVLV-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 26533
+  },
+  "classes": {
+    "chemical": [
+      "arylcyclohexylamines"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

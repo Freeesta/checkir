@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mmb-fubica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MMB-FUBICA",
+      "synonyms": [
+        "AMB-FUBICA"
+      ]
+    },
+    "it": {
+      "preferred": "MMB-FUBICA",
+      "synonyms": [
+        "AMB-FUBICA"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-2-[[1-[(4-fluorophenyl)methyl]indole-3-carbonyl]amino]-3-methylbutanoate",
+  "formula": "C22H23FN2O3",
+  "molar_mass_g_mol": 382.4,
+  "smiles": "CC(C)[C@@H](C(=O)OC)NC(=O)C1=CN(C2=CC=CC=C21)CC3=CC=C(C=C3)F",
+  "inchi": "InChI=1S/C22H23FN2O3/c1-14(2)20(22(27)28-3)24-21(26)18-13-25(19-7-5-4-6-17(18)19)12-15-8-10-16(23)11-9-15/h4-11,13-14,20H,12H2,1-3H3,(H,24,26)/t20-/m0/s1",
+  "inchikey": "NYQOGZPXNJSYDW-FQEVSTJZSA-N",
+  "external_ids": {
+    "cas": "1971007-90-5",
+    "pubchem_cid": 129522103
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

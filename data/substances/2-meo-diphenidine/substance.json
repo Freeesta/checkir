@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-meo-diphenidine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-MeO-diphenidine",
+      "synonyms": [
+        "Methoxphenidine",
+        "MXP",
+        "2-MXP"
+      ]
+    },
+    "it": {
+      "preferred": "2-MeO-difenidina",
+      "synonyms": [
+        "Metossifenidina",
+        "MXP",
+        "2-MXP"
+      ]
+    }
+  },
+  "iupac": "1-[1-(2-methoxyphenyl)-2-phenylethyl]piperidine",
+  "formula": "C20H25NO",
+  "molar_mass_g_mol": 295.4,
+  "smiles": "COC1=CC=CC=C1C(CC2=CC=CC=C2)N3CCCCC3",
+  "inchi": "InChI=1S/C20H25NO/c1-22-20-13-7-6-12-18(20)19(21-14-8-3-9-15-21)16-17-10-4-2-5-11-17/h2,4-7,10-13,19H,3,8-9,14-16H2,1H3",
+  "inchikey": "QXXCUXIRBHSITD-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 67833251
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
