@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "dobu",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "DOBU",
+      "synonyms": [
+        "4-butyl-2,5-dimethoxyamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "DOBU",
+      "synonyms": [
+        "4-butil-2,5-dimetossianfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(4-butyl-2,5-dimethoxyphenyl)propan-2-amine",
+  "formula": "C15H25NO2",
+  "molar_mass_g_mol": 251.4,
+  "smiles": "CCCCC1=CC(=C(C=C1OC)CC(C)N)OC",
+  "inchi": "InChI=1S/C15H25NO2/c1-5-6-7-12-9-15(18-4)13(8-11(2)16)10-14(12)17-3/h9-11H,5-8,16H2,1-4H3",
+  "inchikey": "NGVDYAULSQKEGW-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 10060720
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
