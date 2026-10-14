@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-ho-det",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-HO-DET",
+      "synonyms": [
+        "ethocin",
+        "4-hydroxy-N,N-diethyltryptamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-HO-DET",
+      "synonyms": [
+        "ethocin",
+        "4-hydroxy-N,N-diethyltryptamine"
+      ]
+    }
+  },
+  "iupac": "3-[2-(diethylamino)ethyl]-1H-indol-4-ol",
+  "formula": "C14H20N2O",
+  "molar_mass_g_mol": 232.3,
+  "smiles": "CCN(CC)CCC1=CNC2=C1C(=CC=C2)O",
+  "inchi": "InChI=1S/C14H20N2O/c1-3-16(4-2)9-8-11-10-15-12-6-5-7-13(17)14(11)12/h5-7,10,15,17H,3-4,8-9H2,1-2H3",
+  "inchikey": "OHHYMKDBKJPILO-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "22204-89-3",
+    "pubchem_cid": 9991554
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "datasheet/1",
+  "substance": "4-ho-dipt",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "tryptamines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "4-OH-DiPT glucuronide",
+        "reaction": "glucuronidation",
+        "source": "malaca2022"
+      },
+      {
+        "from": "parent",
+        "to": "4-OH-DiPT N-oxide",
+        "reaction": "other",
+        "source": "malaca2022"
+      },
+      {
+        "from": "parent",
+        "to": "4-OH-iPT",
+        "reaction": "other",
+        "source": "malaca2022"
+      },
+      {
+        "from": "4-oh-ipt",
+        "to": "4-OH-iPT sulfate",
+        "reaction": "sulfation",
+        "source": "malaca2022"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "4-oh-ipt",
+        "active": null,
+        "marker": true,
+        "source": "malaca2022"
+      },
+      {
+        "name_key": "4-oh-dipt-n-oxide",
+        "active": null,
+        "marker": true,
+        "source": "malaca2022"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

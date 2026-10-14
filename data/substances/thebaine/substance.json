@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "thebaine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Thebaine",
+      "synonyms": [
+        "paramorphine"
+      ]
+    },
+    "it": {
+      "preferred": "Thebaine",
+      "synonyms": [
+        "paramorphine"
+      ]
+    }
+  },
+  "iupac": "(4R,7aR,12bS)-7,9-dimethoxy-3-methyl-2,4,7a,13-tetrahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinoline",
+  "formula": "C19H21NO3",
+  "molar_mass_g_mol": 311.4,
+  "smiles": "CN1CC[C@]23[C@@H]4C(=CC=C2[C@H]1CC5=C3C(=C(C=C5)OC)O4)OC",
+  "inchi": "InChI=1S/C19H21NO3/c1-20-9-8-19-12-5-7-15(22-3)18(19)23-17-14(21-2)6-4-11(16(17)19)10-13(12)20/h4-7,13,18H,8-10H2,1-3H3/t13-,18+,19+/m1/s1",
+  "inchikey": "FQXXSQDCDRQNQE-VMDGZTHMSA-N",
+  "external_ids": {
+    "cas": "115-37-7",
+    "pubchem_cid": 5324289
+  },
+  "classes": {
+    "chemical": [
+      "morphinans"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
