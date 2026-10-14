@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "app-chminaca-px3",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "APP-CHMINACA",
+      "synonyms": [
+        "PX-3"
+      ]
+    },
+    "it": {
+      "preferred": "APP-CHMINACA",
+      "synonyms": [
+        "PX-3"
+      ]
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-1-oxo-3-phenylpropan-2-yl]-1-(cyclohexylmethyl)indazole-3-carboxamide",
+  "formula": "C24H28N4O2",
+  "molar_mass_g_mol": 404.5,
+  "smiles": "C1CCC(CC1)CN2C3=CC=CC=C3C(=N2)C(=O)N[C@@H](CC4=CC=CC=C4)C(=O)N",
+  "inchi": "InChI=1S/C24H28N4O2/c25-23(29)20(15-17-9-3-1-4-10-17)26-24(30)22-19-13-7-8-14-21(19)28(27-22)16-18-11-5-2-6-12-18/h1,3-4,7-10,13-14,18,20H,2,5-6,11-12,15-16H2,(H2,25,29)(H,26,30)/t20-/m0/s1",
+  "inchikey": "DMHWDSGURMXMGE-FQEVSTJZSA-N",
+  "external_ids": {
+    "cas": "1185887-14-2",
+    "pubchem_cid": 44206137
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
