@@ -273,7 +273,13 @@
     "5-fluoro-app-pica": "5f-app-pica-px1",
     "5f-aeb": "5f-emb-pinaca",
     "5-fluoro-emb-pinaca": "5f-emb-pinaca",
-    "5-fluoro-aeb": "5f-emb-pinaca"
+    "5-fluoro-aeb": "5f-emb-pinaca",
+    "adb-5-br-inaca": "adb-5br-inaca",
+    "admb-butinaca": "adb-butinaca",
+    "adb-chminaca": "adb-chmica",
+    "mab-chminaca": "adb-chmica",
+    "fub-acadb": "adb-fubiata",
+    "adb-fubiaca": "adb-fubiata"
   },
   "schema": "aliases/1"
 }
