@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "thca-a",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "THCA-A",
+      "synonyms": [
+        "Δ9-Tetrahydrocannabinolic acid A",
+        "Tetrahydrocannabinolic acid"
+      ]
+    },
+    "it": {
+      "preferred": "THCA-A",
+      "synonyms": [
+        "Acido Δ9-tetraidrocannabinolico A",
+        "Acido tetraidrocannabinolico",
+        "THC-A"
+      ]
+    }
+  },
+  "iupac": "(6aR,10aR)-1-hydroxy-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydrobenzo[c]chromene-2-carboxylic acid",
+  "formula": "C22H30O4",
+  "molar_mass_g_mol": 358.5,
+  "smiles": "CCCCCC1=CC2=C([C@@H]3C=C(CC[C@H]3C(O2)(C)C)C)C(=C1C(=O)O)O",
+  "inchi": "InChI=1S/C22H30O4/c1-5-6-7-8-14-12-17-19(20(23)18(14)21(24)25)15-11-13(2)9-10-16(15)22(3,4)26-17/h11-12,15-16,23H,5-10H2,1-4H3,(H,24,25)/t15-,16-/m1/s1",
+  "inchikey": "UCONUSSAWGCZMV-HZPDHXFCSA-N",
+  "external_ids": {
+    "cas": "23978-85-0",
+    "pubchem_cid": 98523
+  },
+  "classes": {
+    "chemical": [
+      "plant_based"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

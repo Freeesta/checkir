@@ -9938,6 +9938,186 @@
       "consulted": "2026-10-14"
     },
     {
+      "id": "diao2016-thj",
+      "type": "paper",
+      "title": "High-resolution mass spectrometry for characterizing the metabolism of synthetic cannabinoid THJ-018 and its 5-fluoro analog THJ-2201 after incubation in human hepatocytes (Clin Chem 62:157-169)",
+      "authors": [
+        "X. Diao",
+        "A. Wohlfarth",
+        "S. Pang",
+        "K. B. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1373/clinchem.2015.243535",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26430074/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "wohlfarth2014-rcs8",
+      "type": "paper",
+      "title": "Metabolism of RCS-8, a synthetic cannabinoid with cyclohexyl structure, in human hepatocytes by high-resolution MS (Bioanalysis 6:1187-1200)",
+      "authors": [
+        "A. Wohlfarth",
+        "S. Pang",
+        "M. Zhu",
+        "et al."
+      ],
+      "year": 2014,
+      "doi": "10.4155/bio.14.1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24946920/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204192827/https://pubmed.ncbi.nlm.nih.gov/24946920/"
+    },
+    {
+      "id": "banister2018-sdb006",
+      "type": "paper",
+      "title": "The chemistry and pharmacology of synthetic cannabinoid SDB-006 and its regioisomeric fluorinated and methoxylated analogs (Drug Test Anal)",
+      "authors": [
+        "S. D. Banister",
+        "A. Olson",
+        "M. Winchester",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2362",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29350472/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260112062152/https://pubmed.ncbi.nlm.nih.gov/29350472/"
+    },
+    {
+      "id": "dambra1992",
+      "type": "paper",
+      "title": "Conformationally restrained analogues of pravadoline: nanomolar potent, enantioselective, (aminoalkyl)indole agonists of the cannabinoid receptor (J Med Chem 35:124-135)",
+      "authors": [
+        "T. E. D'Ambra",
+        "K. G. Estep",
+        "M. R. Bell",
+        "et al."
+      ],
+      "year": 1992,
+      "doi": "10.1021/jm00079a016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1732519/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260920225309/https://pubmed.ncbi.nlm.nih.gov/1732519/"
+    },
+    {
+      "id": "compton1992",
+      "type": "paper",
+      "title": "Aminoalkylindole analogs: cannabimimetic activity of a class of compounds structurally distinct from delta 9-tetrahydrocannabinol (J Pharmacol Exp Ther 263:1118-1126)",
+      "authors": [
+        "D. R. Compton",
+        "L. H. Gold",
+        "S. J. Ward",
+        "R. L. Balster",
+        "B. R. Martin"
+      ],
+      "year": 1992,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1335057/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260107144851/https://pubmed.ncbi.nlm.nih.gov/1335057/"
+    },
+    {
+      "id": "hofert2024-thca",
+      "type": "paper",
+      "title": "Does the quantification of Δ9-tetrahydrocannabinolic acid A in serum/plasma provide any additional information about consumption pattern from drivers under the influence of cannabis? (Cannabis Cannabinoid Res 10:e165-e175)",
+      "authors": [
+        "L. Höfert",
+        "S. Baumann",
+        "J. Dreßler",
+        "S. Becker"
+      ],
+      "year": 2024,
+      "doi": "10.1089/can.2023.0172",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38512708/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "wang2016-decarboxylation",
+      "type": "paper",
+      "title": "Decarboxylation study of acidic cannabinoids: a novel approach using ultra-high-performance supercritical fluid chromatography/photodiode array-mass spectrometry (Cannabis Cannabinoid Res 1:262-271)",
+      "authors": [
+        "M. Wang",
+        "Y.-H. Wang",
+        "B. Avula",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1089/can.2016.0020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28861498/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261004010947/https://pubmed.ncbi.nlm.nih.gov/28861498/"
+    },
+    {
+      "id": "mcpartland2017-thca",
+      "type": "paper",
+      "title": "Affinity and efficacy studies of tetrahydrocannabinolic acid A at cannabinoid receptor types one and two (Cannabis Cannabinoid Res 2:87-95)",
+      "authors": [
+        "J. M. McPartland",
+        "C. MacDonald",
+        "M. Young",
+        "P. S. Grant",
+        "D. P. Furkert",
+        "M. Glass"
+      ],
+      "year": 2017,
+      "doi": "10.1089/can.2016.0032",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28861508/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260915184538/https://pubmed.ncbi.nlm.nih.gov/28861508/"
+    },
+    {
+      "id": "haghdoost2024-thcv",
+      "type": "paper",
+      "title": "Tetrahydrocannabivarin is not tetrahydrocannabinol (Cannabis Cannabinoid Res 10:1-5)",
+      "authors": [
+        "M. Haghdoost",
+        "E. N. Peters",
+        "M. Roberts",
+        "M. O. Bonn-Miller"
+      ],
+      "year": 2024,
+      "doi": "10.1089/can.2024.0051",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38995871/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260926155855/https://pubmed.ncbi.nlm.nih.gov/38995871/"
+    },
+    {
+      "id": "sempio2026-thcv",
+      "type": "paper",
+      "title": "Metabolite patterns in human urine after oral administration of highly purified Δ8-THCV (Forensic Toxicol 44:437-444)",
+      "authors": [
+        "C. Sempio",
+        "J. Campos-Palomino",
+        "J. Klawitter",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1007/s11419-026-00772-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42250012/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "sia2021",
       "type": "paper",
       "title": "Urinary Metabolite Biomarkers for the Detection of Synthetic Cannabinoid ADB-BUTINACA Abuse (Clin Chem 67:1534-1544)",
@@ -10234,6 +10414,23 @@
       "consulted": "2026-10-14",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20251228171627/https://pubmed.ncbi.nlm.nih.gov/26105953/"
+    },
+    {
+      "id": "abiedalla2016",
+      "type": "paper",
+      "title": "GC-MS, MS/MS and GC-IR Analysis of a Series of Methylenedioxyphenyl-Aminoketones: Precursors, Ring Regioisomers and Side-Chain Homologs of 3,4-Methylenedioxypyrovalerone (J Chromatogr Sci 55(2):99-108)",
+      "authors": [
+        "Younis F. Hamad Abiedalla",
+        "Karim Abdel-Hay",
+        "Jack DeRuiter",
+        "C. Randall Clark"
+      ],
+      "year": 2017,
+      "doi": "10.1093/chromsci/bmw159",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27733481/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     },
     {
       "id": "rouxinol2019",
