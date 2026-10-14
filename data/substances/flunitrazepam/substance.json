@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "flunitrazepam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Flunitrazepam",
+      "synonyms": [
+        "Rohypnol",
+        "Roipnol"
+      ]
+    },
+    "it": {
+      "preferred": "Flunitrazepam",
+      "synonyms": [
+        "Rohypnol",
+        "Roipnol"
+      ]
+    }
+  },
+  "iupac": "5-(2-fluorophenyl)-1-methyl-7-nitro-3H-1,4-benzodiazepin-2-one",
+  "formula": "C16H12FN3O3",
+  "molar_mass_g_mol": 313.28,
+  "smiles": "CN1C(=O)CN=C(C2=C1C=CC(=C2)[N+](=O)[O-])C3=CC=CC=C3F",
+  "inchi": "InChI=1S/C16H12FN3O3/c1-19-14-7-6-10(20(22)23)8-12(14)16(18-9-15(19)21)11-4-2-3-5-13(11)17/h2-8H,9H2,1H3",
+  "inchikey": "PPTYJKAXVCCBDU-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 3380
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
