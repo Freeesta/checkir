@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "urb-754",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "URB754",
+      "synonyms": [
+        "URB 754"
+      ]
+    },
+    "it": {
+      "preferred": "URB754",
+      "synonyms": [
+        "URB 754"
+      ]
+    }
+  },
+  "iupac": "6-methyl-2-(4-methylanilino)-3,1-benzoxazin-4-one",
+  "formula": "C16H14N2O2",
+  "molar_mass_g_mol": 266.3,
+  "smiles": "CC1=CC=C(C=C1)NC2=NC3=C(C=C(C=C3)C)C(=O)O2",
+  "inchi": "InChI=1S/C16H14N2O2/c1-10-3-6-12(7-4-10)17-16-18-14-8-5-11(2)9-13(14)15(19)20-16/h3-9H,1-2H3,(H,17,18)",
+  "inchikey": "GFWNGVKCDGYFKG-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "86672-58-4",
+    "pubchem_cid": 848487
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

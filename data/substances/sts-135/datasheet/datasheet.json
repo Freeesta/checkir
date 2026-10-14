@@ -1,0 +1,76 @@
+{
+  "schema": "datasheet/1",
+  "substance": "sts-135",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "mono-, di- and trihydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "sobolevsky2015"
+      },
+      {
+        "from": "parent",
+        "to": "N-desalkyl (N-despentyl) metabolites",
+        "reaction": "other",
+        "source": "sobolevsky2015"
+      },
+      {
+        "from": "n-desalkyl-metabolites",
+        "to": "hydroxylated N-desalkyl metabolites",
+        "reaction": "hydroxylation",
+        "source": "sobolevsky2015"
+      },
+      {
+        "from": "parent",
+        "to": "oxidative defluorination products",
+        "reaction": "other",
+        "source": "sobolevsky2015"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "monohydroxy-sts-135",
+        "active": null,
+        "marker": true,
+        "source": "sobolevsky2015"
+      },
+      {
+        "name_key": "n-despentyl-hydroxyadamantyl-metabolite",
+        "active": null,
+        "marker": true,
+        "source": "sobolevsky2015"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

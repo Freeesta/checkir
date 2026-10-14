@@ -15290,6 +15290,183 @@
       "license": "© marketing authorisation holder; cited as the source of facts only",
       "consulted": "2026-10-14",
       "tier": "agency"
+    },
+    {
+      "id": "sertraline-label",
+      "type": "institution",
+      "title": "Zoloft (sertraline hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "trazodone-label",
+      "type": "institution",
+      "title": "Trazodone hydrochloride tablets (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5b9f0b60-0c25-4303-88f1-44bcb347bc49",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "sobolevsky2015",
+      "type": "paper",
+      "title": "Study on the phase I metabolism of novel synthetic cannabinoids, APICA and its fluorinated analogue (Drug Test Anal 7:131-142)",
+      "authors": [
+        "T. Sobolevsky",
+        "I. Prasolov",
+        "G. Rodchenkov"
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1756",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25428705/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kathuria2003",
+      "type": "paper",
+      "title": "Modulation of anxiety through blockade of anandamide hydrolysis (Nat Med 9:76-81)",
+      "authors": [
+        "S. Kathuria",
+        "S. Gaetani",
+        "D. Fegley",
+        "F. Valiño",
+        "A. Duranti",
+        "A. Tontini",
+        "M. Mor",
+        "G. Tarzia",
+        "G. La Rana",
+        "A. Calignano",
+        "A. Giustino",
+        "M. Tattoli",
+        "M. Palmery",
+        "V. Cuomo",
+        "D. Piomelli"
+      ],
+      "year": 2003,
+      "doi": "10.1038/nm803",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12461523/",
+      "archive_url": "https://web.archive.org/web/20261001095413/https://pubmed.ncbi.nlm.nih.gov/12461523/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "king2007",
+      "type": "paper",
+      "title": "URB602 inhibits monoacylglycerol lipase and selectively blocks 2-arachidonoylglycerol degradation in intact brain slices (Chem Biol 14:1357-1365)",
+      "authors": [
+        "A. R. King",
+        "A. Duranti",
+        "A. Tontini",
+        "S. Rivara",
+        "A. Rosengarth",
+        "J. R. Clapper",
+        "G. Astarita",
+        "J. A. Geaga",
+        "H. Luecke",
+        "M. Mor",
+        "G. Tarzia",
+        "D. Piomelli"
+      ],
+      "year": 2007,
+      "doi": "10.1016/j.chembiol.2007.10.017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18096504/",
+      "archive_url": "https://web.archive.org/web/20250202072910/https://pubmed.ncbi.nlm.nih.gov/18096504/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "vandevoorde2007",
+      "type": "paper",
+      "title": "Lack of selectivity of URB602 for 2-oleoylglycerol compared to anandamide hydrolysis in vitro (Br J Pharmacol 150:186-191)",
+      "authors": [
+        "S. Vandevoorde",
+        "K.-O. Jonsson",
+        "G. Labar",
+        "E. Persson",
+        "D. M. Lambert",
+        "C. J. Fowler"
+      ],
+      "year": 2007,
+      "doi": "10.1038/sj.bjp.0706971",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17143303/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "johnston2012",
+      "type": "paper",
+      "title": "A novel MDMA analogue, UWA-101, that lacks psychoactivity and cytotoxicity, enhances L-DOPA benefit in parkinsonian primates (FASEB J 26:2154-2163)",
+      "authors": [
+        "T. H. Johnston",
+        "Z. Millar",
+        "P. Huot",
+        "K. Wagg",
+        "S. Thiele",
+        "D. Salomonczyk",
+        "C. J. Yong-Kee",
+        "M. N. Gandy",
+        "M. McIldowie",
+        "K. D. Lewis",
+        "J. Gomez-Ramirez",
+        "J. Lee",
+        "S. H. Fox",
+        "M. Martin-Iverson",
+        "J. E. Nash",
+        "M. J. Piggott",
+        "J. M. Brotchie"
+      ],
+      "year": 2012,
+      "doi": "10.1096/fj.11-195016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22345403/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "daniels2026",
+      "type": "paper",
+      "title": "Kavalactone profiling of Piper methysticum root and rhizome extracts and the modulation of CYP450 activity in vitro (Chem Biol Interact 437:112219)",
+      "authors": [
+        "T. Daniels",
+        "K. Puchalski",
+        "S. Trapp",
+        "A. Jimoh",
+        "B. Baravati",
+        "Y. Shokoohinia",
+        "S. Smith",
+        "J. Langland"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.cbi.2026.112219",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431523/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "berry2019",
+      "type": "paper",
+      "title": "Cases of kava impairment in Iowa drivers (J Forensic Sci 64:1943-1949)",
+      "authors": [
+        "J. Berry",
+        "A. Gilbert",
+        "J. Grodnitzky"
+      ],
+      "year": 2019,
+      "doi": "10.1111/1556-4029.14130",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31305953/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
