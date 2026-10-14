@@ -8360,6 +8360,257 @@
       "tier": "primary"
     },
     {
+      "id": "li2022",
+      "type": "paper",
+      "title": "Study on the metabolic process of synthetic cannabinoids 4F-MDMB-BINACA and 4F-MDMB-BICA in human liver microsome and zebrafish model via UHPLC-QE Orbitrap MS (Anal Bioanal Chem 414:3905-3916)",
+      "authors": [
+        "H. Li",
+        "Z. Qian",
+        "Y. Zhao",
+        "H. Zheng"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00216-022-04034-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35389093/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "tokarczyk2022",
+      "type": "paper",
+      "title": "Fatal intoxication with new synthetic cannabinoids 5F-MDMB-PICA and 4F-MDMB-BINACA: parent compounds and metabolite identification in blood, urine and cerebrospinal fluid (Forensic Sci Med Pathol 18:393-402)",
+      "authors": [
+        "B. Tokarczyk",
+        "A. Jurczyk",
+        "J. Krupińska",
+        "P. Adamowicz"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s12024-022-00492-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35699867/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251206192127/https://pubmed.ncbi.nlm.nih.gov/35699867/"
+    },
+    {
+      "id": "lie2020",
+      "type": "paper",
+      "title": "Diagnosing intake and rationalizing toxicities associated with 5F-MDMB-PINACA and 4F-MDMB-BINACA abuse (Arch Toxicol 95:489-508)",
+      "authors": [
+        "W. Lie",
+        "E. J. Y. Cheong",
+        "E. M. L. Goh",
+        "H. Y. Moy",
+        "A. Cannaert",
+        "C. P. Stove",
+        "E. C. Y. Chan"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s00204-020-02948-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33236189/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "xu2025",
+      "type": "paper",
+      "title": "Differential cannabinoid-like effects, receptor affinity and physiologically based pharmacokinetics of the synthetic cannabinoids 4F-MDMB-BINACA, 4F-MDMB-BICA and 5F-MDMB-PICA in mice (Toxicol Appl Pharmacol 505:117549)",
+      "authors": [
+        "Y. Xu",
+        "S. Zhang",
+        "X. Shi",
+        "L. Kuai",
+        "Y. Chen",
+        "K. Li",
+        "X. Li",
+        "Y. Qiao",
+        "D. Wang",
+        "C. Jiang",
+        "P. Xu"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.taap.2025.117549",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40945865/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250918080755/https://pubmed.ncbi.nlm.nih.gov/40945865/"
+    },
+    {
+      "id": "vaccaro2022",
+      "type": "paper",
+      "title": "NPS detection in prison: a systematic literature review of use, drug form, and analytical approaches (Drug Test Anal 14:1350-1367)",
+      "authors": [
+        "G. Vaccaro",
+        "A. Massariol",
+        "A. Guirguis",
+        "S. B. Kirton",
+        "J. L. Stair"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3263",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35355411/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261004041201/https://pubmed.ncbi.nlm.nih.gov/35355411/"
+    },
+    {
+      "id": "staeheli2018",
+      "type": "paper",
+      "title": "In vitro metabolism of the synthetic cannabinoids CUMYL-PINACA, 5F-CUMYL-PINACA, CUMYL-4CN-BINACA, 5F-CUMYL-P7AICA and CUMYL-4CN-B7AICA (Drug Test Anal 10:148-157)",
+      "authors": [
+        "S. N. Staeheli",
+        "M. Poetzsch",
+        "V. P. Veloso",
+        "M. Bovens",
+        "C. Bissig",
+        "A. E. Steuer",
+        "T. Kraemer"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2298",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28885775/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20230218231107/https://pubmed.ncbi.nlm.nih.gov/28885775/"
+    },
+    {
+      "id": "ozturk2018",
+      "type": "paper",
+      "title": "Detection of metabolites of the new synthetic cannabinoid CUMYL-4CN-BINACA in authentic urine samples and human liver microsomes using high-resolution mass spectrometry (Drug Test Anal 10:449-459)",
+      "authors": [
+        "Y. E. Öztürk",
+        "O. Yeter",
+        "S. Öztürk",
+        "G. Karakus",
+        "I. Ates",
+        "Y. Buyuk",
+        "T. Yurdun"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2248",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28691766/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204044420/https://pubmed.ncbi.nlm.nih.gov/28691766/"
+    },
+    {
+      "id": "uchiyama2014",
+      "type": "paper",
+      "title": "Characterization of four new designer drugs, 5-chloro-NNEI, NNEI indazole analog, α-PHPP and α-POP, with 11 newly distributed designer drugs in illegal products (Forensic Sci Int 243:1-13)",
+      "authors": [
+        "N. Uchiyama",
+        "S. Matsuda",
+        "M. Kawamura",
+        "Y. Shimokawa",
+        "R. Kikura-Hanajiri",
+        "K. Aritake",
+        "Y. Urade",
+        "Y. Goda"
+      ],
+      "year": 2014,
+      "doi": "10.1016/j.forsciint.2014.03.013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24769262/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260521212535/https://pubmed.ncbi.nlm.nih.gov/24769262/"
+    },
+    {
+      "id": "huffman2005",
+      "type": "paper",
+      "title": "Structure-activity relationships for 1-alkyl-3-(1-naphthoyl)indoles at the cannabinoid CB1 and CB2 receptors: steric and electronic effects of naphthoyl substituents (Bioorg Med Chem 13:89-112)",
+      "authors": [
+        "J. W. Huffman",
+        "G. Zengin",
+        "M. J. Wu",
+        "J. Lu",
+        "G. Hynd",
+        "K. Bushell",
+        "A. L. S. Thompson",
+        "S. Bushell",
+        "C. Tartal",
+        "D. P. Hurst",
+        "P. H. Reggio",
+        "D. E. Selley",
+        "M. P. Cassidy",
+        "J. L. Wiley",
+        "B. R. Martin"
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.bmc.2004.09.050",
+      "url": "https://doi.org/10.1016/j.bmc.2004.09.050",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "wiley2017",
+      "type": "paper",
+      "title": "Combination chemistry: structure-activity relationships of novel psychoactive cannabinoids (Curr Top Behav Neurosci 32:231-248)",
+      "authors": [
+        "J. L. Wiley",
+        "J. A. Marusich",
+        "B. F. Thomas"
+      ],
+      "year": 2017,
+      "doi": "10.1007/7854_2016_17",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27753007/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "blazewicz2019",
+      "type": "paper",
+      "title": "Identification and structural characterization of synthetic cathinones: N-propylcathinone, 2,4-dimethylmethcathinone, 2,4-dimethylethcathinone, 2,4-dimethyl-α-pyrrolidinopropiophenone, 4-bromo-α-pyrrolidinopropiophenone, 1-(2,3-dihydro-1H-inden-5-yl)-2-(pyrrolidin-1-yl)hexan-1-one and 2,4-dimethylisocathinone (Forensic Toxicol 37:288-307)",
+      "authors": [
+        "A. Błażewicz"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s11419-018-00463-w",
+      "url": "https://doi.org/10.1007/s11419-018-00463-w",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "dea2017",
+      "type": "institution",
+      "title": "Drug Enforcement Administration: Schedules of Controlled Substances: Temporary Placement of Six Synthetic Cannabinoids (5F-ADB, 5F-AMB, 5F-APINACA, ADB-FUBINACA, MDMB-CHMICA and MDMB-FUBINACA) into Schedule I (Fed Regist 82(67):17119-24)",
+      "year": 2017,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28425681/",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "unodc-lss-2f-adb",
+      "type": "institution",
+      "title": "UNODC Laboratory and Scientific Section, NPS substance page: 2-fluoro-ADB (2F-ADB, 2F-MDMB-PINACA; substance group synthetic cannabinoids)",
+      "url": "https://www.unodc.org/LSS/Substance/Details/ab2d7479-069f-4ac1-9242-731231ef8da7",
+      "license": "cited as the source of names and group only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "nfl-si-5-bpdi",
+      "type": "institution",
+      "title": "Slovenian National Forensic Laboratory: Analytical report 5-BPDi (sample 1183-15, NMR identification)",
+      "year": 2015,
+      "url": "https://www.policija.si/apps/nfl_response_web/0_Analytical_Reports_final/5-BPDi-ID-1183-15-report_final.pdf",
+      "archive_url": "https://web.archive.org/web/20251124152352/https://www.policija.si/apps/nfl_response_web/0_Analytical_Reports_final/5-BPDi-ID-1183-15-report_final.pdf",
+      "license": "public document of a national forensic laboratory, no licence declared; cited as the source of identity only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
       "id": "cooman2021",
       "type": "paper",
       "title": "The metabolism of valerylfentanyl using human liver microsomes and zebrafish larvae (Drug Test Anal 14:1116-1129)",
