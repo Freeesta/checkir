@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "cathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Cathinone ((S)-cathinone)",
+      "synonyms": [
+        "2-amino-1-phenylpropan-1-one",
+        "α-aminopropiophenone"
+      ]
+    },
+    "it": {
+      "preferred": "Catinone ((S)-catinone)",
+      "synonyms": [
+        "2-ammino-1-fenilpropan-1-one",
+        "α-amminopropiofenone"
+      ]
+    }
+  },
+  "iupac": "(2S)-2-amino-1-phenylpropan-1-one",
+  "formula": "C9H11NO",
+  "molar_mass_g_mol": 149.19,
+  "smiles": "C[C@@H](C(=O)C1=CC=CC=C1)N",
+  "inchi": "InChI=1S/C9H11NO/c1-7(10)9(11)8-5-3-2-4-6-8/h2-7H,10H2,1H3/t7-/m0/s1",
+  "inchikey": "PUAQLLVFLMYYJJ-ZETCQYMHSA-N",
+  "external_ids": {
+    "cas": "71031-15-7",
+    "pubchem_cid": 62258
+  },
+  "classes": {
+    "chemical": [
+      "plant_based"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

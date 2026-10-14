@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "buphedrone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Buphedrone (MABP)",
+      "synonyms": [
+        "MABP",
+        "α-methylaminobutyrophenone",
+        "2-(methylamino)-1-phenylbutan-1-one"
+      ]
+    },
+    "it": {
+      "preferred": "Bufedrone (MABP)",
+      "synonyms": [
+        "MABP",
+        "α-metilamminobutirrofenone"
+      ]
+    }
+  },
+  "iupac": "2-(methylamino)-1-phenylbutan-1-one",
+  "formula": "C11H15NO",
+  "molar_mass_g_mol": 177.24,
+  "smiles": "CCC(C(=O)C1=CC=CC=C1)NC",
+  "inchi": "InChI=1S/C11H15NO/c1-3-10(12-2)11(13)9-7-5-4-6-8-9/h4-8,10,12H,3H2,1-2H3",
+  "inchikey": "DDPMGIMJSRUULN-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "408332-79-6",
+    "pubchem_cid": 53249194
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
