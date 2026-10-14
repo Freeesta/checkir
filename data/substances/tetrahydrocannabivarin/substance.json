@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "tetrahydrocannabivarin",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Tetrahydrocannabivarin",
+      "synonyms": [
+        "THCV",
+        "Δ9-THCV"
+      ]
+    },
+    "it": {
+      "preferred": "Tetraidrocannabivarina",
+      "synonyms": [
+        "THCV",
+        "Δ9-THCV"
+      ]
+    }
+  },
+  "iupac": "(6aR,10aR)-6,6,9-trimethyl-3-propyl-6a,7,8,10a-tetrahydrobenzo[c]chromen-1-ol",
+  "formula": "C19H26O2",
+  "molar_mass_g_mol": 286.4,
+  "smiles": "CCCC1=CC(=C2[C@@H]3C=C(CC[C@H]3C(OC2=C1)(C)C)C)O",
+  "inchi": "InChI=1S/C19H26O2/c1-5-6-13-10-16(20)18-14-9-12(2)7-8-15(14)19(3,4)21-17(18)11-13/h9-11,14-15,20H,5-8H2,1-4H3/t14-,15-/m1/s1",
+  "inchikey": "ZROLHBHDLIHEMS-HUUCEWRRSA-N",
+  "external_ids": {
+    "cas": "31262-37-0",
+    "pubchem_cid": 93147
+  },
+  "classes": {
+    "chemical": [
+      "plant_based"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

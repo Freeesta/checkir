@@ -1,0 +1,48 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "fub-npb-22",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "FUB-NPB-22",
+      "synonyms": []
+    },
+    "it": {
+      "preferred": "FUB-NPB-22",
+      "synonyms": []
+    }
+  },
+  "iupac": "quinolin-8-yl 1-[(4-fluorophenyl)methyl]indazole-3-carboxylate",
+  "formula": "C24H16FN3O2",
+  "molar_mass_g_mol": 397.4,
+  "smiles": "C1=CC=C2C(=C1)C(=NN2CC3=CC=C(C=C3)F)C(=O)OC4=CC=CC5=C4N=CC=C5",
+  "inchi": "InChI=1S/C24H16FN3O2/c25-18-12-10-16(11-13-18)15-28-20-8-2-1-7-19(20)23(27-28)24(29)30-21-9-3-5-17-6-4-14-26-22(17)21/h1-14H,15H2",
+  "inchikey": "NYHGKZZRRCVGAU-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2244864-90-0",
+    "pubchem_cid": 125181354
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

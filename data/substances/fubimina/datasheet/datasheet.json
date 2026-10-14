@@ -1,0 +1,76 @@
+{
+  "schema": "datasheet/1",
+  "substance": "fubimina",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "oxidatively defluorinated metabolites (5'-hydroxy, then pentanoic acid)",
+        "reaction": "other",
+        "source": "diao2016-fubimina"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated and dihydrodiol metabolites",
+        "reaction": "hydroxylation",
+        "source": "diao2016-fubimina"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "glucuronides",
+        "reaction": "glucuronidation",
+        "source": "diao2016-fubimina"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "5-hydroxy-bim-018",
+        "active": null,
+        "marker": true,
+        "source": "diao2016-fubimina"
+      },
+      {
+        "name_key": "bim-018-pentanoic-acid",
+        "active": null,
+        "marker": true,
+        "source": "diao2016-fubimina"
+      },
+      {
+        "name_key": "bim-018-pentanoic-acid-dihydrodiol",
+        "active": null,
+        "marker": true,
+        "source": "diao2016-fubimina"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

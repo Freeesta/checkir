@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "jwh-019",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "JWH-019",
+      "synonyms": [
+        "1-hexyl-3-(1-naphthoyl)indole"
+      ]
+    },
+    "it": {
+      "preferred": "JWH-019",
+      "synonyms": [
+        "1-hexyl-3-(1-naphthoyl)indole"
+      ]
+    }
+  },
+  "iupac": "(1-hexylindol-3-yl)-naphthalen-1-ylmethanone",
+  "formula": "C25H25NO",
+  "molar_mass_g_mol": 355.5,
+  "smiles": "CCCCCCN1C=C(C2=CC=CC=C21)C(=O)C3=CC=CC4=CC=CC=C43",
+  "inchi": "InChI=1S/C25H25NO/c1-2-3-4-9-17-26-18-23(21-14-7-8-16-24(21)26)25(27)22-15-10-12-19-11-5-6-13-20(19)22/h5-8,10-16,18H,2-4,9,17H2,1H3",
+  "inchikey": "PALJPGHWDUHUPO-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "209414-08-4",
+    "pubchem_cid": 52224389
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
