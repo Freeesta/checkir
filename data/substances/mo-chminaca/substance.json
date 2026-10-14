@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mo-chminaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MO-CHMINACA",
+      "synonyms": [
+        "MO-CHMINAKA"
+      ]
+    },
+    "it": {
+      "preferred": "MO-CHMINACA",
+      "synonyms": [
+        "MO-CHMINAKA"
+      ]
+    }
+  },
+  "iupac": "(1-methoxy-3,3-dimethyl-1-oxobutan-2-yl) 1-(cyclohexylmethyl)indazole-3-carboxylate",
+  "formula": "C22H30N2O4",
+  "molar_mass_g_mol": 386.5,
+  "smiles": "CC(C)(C)C(C(=O)OC)OC(=O)C1=NN(C2=CC=CC=C21)CC3CCCCC3",
+  "inchi": "InChI=1S/C22H30N2O4/c1-22(2,3)19(21(26)27-4)28-20(25)18-16-12-8-9-13-17(16)24(23-18)14-15-10-6-5-7-11-15/h8-9,12-13,15,19H,5-7,10-11,14H2,1-4H3",
+  "inchikey": "SUEOBRAXHJBVGY-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2365471-04-9",
+    "pubchem_cid": 132584892
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
