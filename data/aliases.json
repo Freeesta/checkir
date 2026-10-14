@@ -828,7 +828,15 @@
     "levometorfano": "levomethorphan",
     "racemorfano": "racemorphan",
     "namenda": "memantine",
-    "memantina": "memantine"
+    "memantina": "memantine",
+    "2c-b-nbome": "25b-nbome",
+    "cimbi-36": "25b-nbome",
+    "2c-b-nboh": "25b-nboh",
+    "nboh-2c-b": "25b-nboh",
+    "2c-c-nbf": "25c-nbf",
+    "nbf-2c-c": "25c-nbf",
+    "2c-d-nbome": "25d-nbome",
+    "cimbi-138": "25d-nbome"
   },
   "schema": "aliases/1"
 }
