@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-fluoro-emb-pica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-Fluoro-EMB-PICA",
+      "synonyms": [
+        "5F-EMB-PICA",
+        "EMB-2201"
+      ]
+    },
+    "it": {
+      "preferred": "5-Fluoro-EMB-PICA",
+      "synonyms": [
+        "5F-EMB-PICA",
+        "EMB-2201"
+      ]
+    }
+  },
+  "iupac": "ethyl (2S)-2-[[1-(5-fluoropentyl)indole-3-carbonyl]amino]-3-methylbutanoate",
+  "formula": "C21H29FN2O3",
+  "molar_mass_g_mol": 376.5,
+  "smiles": "CCOC(=O)[C@H](C(C)C)NC(=O)C1=CN(C2=CC=CC=C21)CCCCCF",
+  "inchi": "InChI=1S/C21H29FN2O3/c1-4-27-21(26)19(15(2)3)23-20(25)17-14-24(13-9-5-8-12-22)18-11-7-6-10-16(17)18/h6-7,10-11,14-15,19H,4-5,8-9,12-13H2,1-3H3,(H,23,25)/t19-/m0/s1",
+  "inchikey": "WPRKGJGOLPGBMG-IBGZPJMESA-N",
+  "external_ids": {
+    "cas": "2648861-83-8",
+    "pubchem_cid": 155907803
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

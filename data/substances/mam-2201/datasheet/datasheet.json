@@ -1,0 +1,82 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mam-2201",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxy-MAM-2201 and N-(5-hydroxypentyl)-MAM-2201 metabolites",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP1A2",
+          "CYP2B6",
+          "CYP2C9",
+          "CYP2C19",
+          "CYP2D6",
+          "CYP3A4",
+          "other"
+        ],
+        "source": "kong2017"
+      },
+      {
+        "from": "parent",
+        "to": "N-dealkylated metabolites",
+        "reaction": "other",
+        "source": "kong2017"
+      },
+      {
+        "from": "parent",
+        "to": "N-pentanoic acid metabolite",
+        "reaction": "other",
+        "source": "kong2017"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "glucuronides",
+        "reaction": "glucuronidation",
+        "source": "kim2018-mam2201"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "mam-2201-monohydroxy",
+        "active": null,
+        "source": "kong2017"
+      },
+      {
+        "name_key": "mam-2201-n-5-hydroxypentyl",
+        "active": null,
+        "source": "kong2017"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

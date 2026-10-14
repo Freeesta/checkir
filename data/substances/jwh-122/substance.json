@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "jwh-122",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "JWH-122",
+      "synonyms": [
+        "JWH122",
+        "1-pentyl-3-(4-methyl-1-naphthoyl)indole"
+      ]
+    },
+    "it": {
+      "preferred": "JWH-122",
+      "synonyms": [
+        "JWH122",
+        "1-pentil-3-(4-metil-1-naftoil)indolo"
+      ]
+    }
+  },
+  "iupac": "(4-methylnaphthalen-1-yl)-(1-pentylindol-3-yl)methanone",
+  "formula": "C25H25NO",
+  "molar_mass_g_mol": 355.5,
+  "smiles": "CCCCCN1C=C(C2=CC=CC=C21)C(=O)C3=CC=C(C4=CC=CC=C43)C",
+  "inchi": "InChI=1S/C25H25NO/c1-3-4-9-16-26-17-23(21-12-7-8-13-24(21)26)25(27)22-15-14-18(2)19-10-5-6-11-20(19)22/h5-8,10-15,17H,3-4,9,16H2,1-2H3",
+  "inchikey": "HUKJQMKQFWYIHS-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "619294-47-2",
+    "pubchem_cid": 44466638
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

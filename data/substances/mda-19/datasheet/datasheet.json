@@ -1,0 +1,92 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mda-19",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "N-alkyl and phenyl monohydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP3A4",
+          "CYP3A5",
+          "CYP2C9"
+        ],
+        "source": "lee2022-oxizid"
+      },
+      {
+        "from": "parent",
+        "to": "ketone and carboxylate metabolites",
+        "reaction": "other",
+        "source": "lee2022-oxizid"
+      },
+      {
+        "from": "parent",
+        "to": "amide hydrolysis metabolites",
+        "reaction": "other",
+        "source": "lee2022-oxizid"
+      },
+      {
+        "from": "parent",
+        "to": "N-dealkylated metabolites",
+        "reaction": "other",
+        "source": "lee2022-oxizid"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "mda-19-n-alkyl-monohydroxy",
+        "active": null,
+        "source": "lee2022-oxizid",
+        "marker": true
+      },
+      {
+        "name_key": "mda-19-phenyl-monohydroxy",
+        "active": null,
+        "source": "lee2022-oxizid",
+        "marker": true
+      }
+    ]
+  },
+  "cuts": [
+    {
+      "cut": "caffeine",
+      "frequency": "reported",
+      "source": "dearaujo2023"
+    },
+    {
+      "cut": "cocaine",
+      "frequency": "reported",
+      "source": "dearaujo2023"
+    }
+  ],
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
