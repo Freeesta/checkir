@@ -1,0 +1,82 @@
+{
+  "schema": "datasheet/1",
+  "substance": "nitromethaqualone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "amino-nitromethaqualone",
+        "reaction": "other",
+        "source": "vanboven1982"
+      },
+      {
+        "from": "amino-nitromethaqualone",
+        "to": "acetylamino-nitromethaqualone",
+        "reaction": "other",
+        "source": "vanboven1982"
+      },
+      {
+        "from": "parent",
+        "to": "2-methoxy-4-nitroaniline",
+        "reaction": "other",
+        "source": "vanboven1982"
+      },
+      {
+        "from": "parent",
+        "to": "2-hydroxymethyl-nitromethaqualone",
+        "reaction": "hydroxylation",
+        "source": "vanboven1982"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "amino-nitromethaqualone",
+        "active": null,
+        "source": "vanboven1982"
+      },
+      {
+        "name_key": "acetylamino-nitromethaqualone",
+        "active": null,
+        "source": "vanboven1982"
+      },
+      {
+        "name_key": "2-methoxy-4-nitroaniline",
+        "active": null,
+        "source": "vanboven1982"
+      },
+      {
+        "name_key": "2-hydroxymethyl-nitromethaqualone",
+        "active": null,
+        "source": "vanboven1982"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

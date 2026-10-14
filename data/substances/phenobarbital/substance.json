@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "phenobarbital",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Phenobarbital",
+      "synonyms": [
+        "Phenobarbitone",
+        "Luminal"
+      ]
+    },
+    "it": {
+      "preferred": "Fenobarbital",
+      "synonyms": [
+        "Fenobarbitone",
+        "Luminal"
+      ]
+    }
+  },
+  "iupac": "5-ethyl-5-phenyl-1,3-diazinane-2,4,6-trione",
+  "formula": "C12H12N2O3",
+  "molar_mass_g_mol": 232.2,
+  "smiles": "CCC1(C(=O)NC(=O)NC1=O)C2=CC=CC=C2",
+  "inchi": "InChI=1S/C12H12N2O3/c1-2-12(8-6-4-3-5-7-8)9(15)13-11(17)14-10(12)16/h3-7H,2H2,1H3,(H2,13,14,15,16,17)",
+  "inchikey": "DDBREPKUVSBGFI-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 4763
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

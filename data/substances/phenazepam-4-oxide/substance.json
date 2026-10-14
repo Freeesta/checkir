@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "phenazepam-4-oxide",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Phenazepam 4-oxide"
+    },
+    "it": {
+      "preferred": "Fenazepam 4-ossido"
+    }
+  },
+  "iupac": "7-bromo-5-(2-chlorophenyl)-4-hydroxy-3H-1,4-benzodiazepin-2-one",
+  "formula": "C15H10BrClN2O2",
+  "molar_mass_g_mol": 365.61,
+  "smiles": "C1C(=O)N=C2C=CC(=CC2=C(N1O)C3=CC=CC=C3Cl)Br",
+  "inchi": "InChI=1S/C15H10BrClN2O2/c16-9-5-6-13-11(7-9)15(19(21)8-14(20)18-13)10-3-1-2-4-12(10)17/h1-7,21H,8H2",
+  "inchikey": "YNKDPCTZJPAZJC-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1177751-52-8",
+    "pubchem_cid": 630182
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
