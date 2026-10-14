@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ergonovine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Ergonovine",
+      "synonyms": [
+        "ergometrine",
+        "ergobasine"
+      ]
+    },
+    "it": {
+      "preferred": "Ergonovina",
+      "synonyms": [
+        "ergometrina",
+        "ergobasina"
+      ]
+    }
+  },
+  "iupac": "(6aR,9R)-N-[(2S)-1-hydroxypropan-2-yl]-7-methyl-6,6a,8,9-tetrahydro-4H-indolo[4,3-fg]quinoline-9-carboxamide",
+  "formula": "C19H23N3O2",
+  "molar_mass_g_mol": 325.4,
+  "smiles": "CC(CO)NC(=O)C1CN(C2CC3=CNC4=CC=CC(=C34)C2=C1)C",
+  "inchi": "InChI=1S/C19H23N3O2/c1-11(10-23)21-19(24)13-6-15-14-4-3-5-16-18(14)12(8-20-16)7-17(15)22(2)9-13/h3-6,8,11,13,17,20,23H,7,9-10H2,1-2H3,(H,21,24)/t11-,13+,17+/m0/s1",
+  "inchikey": "WVVSZNPYNCNODU-XTQGRXLLSA-N",
+  "external_ids": {
+    "cas": "60-79-7",
+    "pubchem_cid": 443884
+  },
+  "classes": {
+    "chemical": [
+      "lysergamides"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
