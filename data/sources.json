@@ -10612,6 +10612,308 @@
       "consulted": "2026-10-14",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20250526044158/https://pubmed.ncbi.nlm.nih.gov/30377956/"
+    },
+    {
+      "id": "krotulski2019-app-binaca",
+      "type": "paper",
+      "title": "Detection and characterization of the new synthetic cannabinoid APP-BINACA in forensic casework (Drug Test Anal 12:136-144)",
+      "authors": [
+        "A. J. Krotulski",
+        "A. L. A. Mohr",
+        "F. X. Diamond",
+        "B. K. Logan"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2698",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31788963/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206055058/https://pubmed.ncbi.nlm.nih.gov/31788963/"
+    },
+    {
+      "id": "norman2023-ch-piata",
+      "type": "paper",
+      "title": "In vitro cannabinoid receptor activity, metabolism, and detection in seized samples of CH-PIATA, a new indole-3-acetamide synthetic cannabinoid (Drug Test Anal 16:380-391)",
+      "authors": [
+        "C. Norman",
+        "M. H. Deventer",
+        "O. Dremann",
+        "R. Reid",
+        "K. Van Uytfanghe",
+        "C. Guillou",
+        "I. M. J. Vinckier",
+        "N. Nic Daeid",
+        "A. Krotulski",
+        "C. P. Stove"
+      ],
+      "year": 2023,
+      "doi": "10.1002/dta.3555",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37491777/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250203195135/https://pubmed.ncbi.nlm.nih.gov/37491777/"
+    },
+    {
+      "id": "zschiesche2024",
+      "type": "paper",
+      "title": "Insights into the metabolism of CH-PIATA, a novel synthetic cannabinoid featuring an acetamide linker (J Anal Toxicol 48:359-371)",
+      "authors": [
+        "A. Zschiesche",
+        "M. Scheu",
+        "D. Thieme",
+        "A. M. Keiler",
+        "B. Pulver",
+        "L. M. Huppertz",
+        "V. Auwaerter"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38441323/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260823081336/https://pubmed.ncbi.nlm.nih.gov/38441323/"
+    },
+    {
+      "id": "watanabe2023-ch-piata",
+      "type": "paper",
+      "title": "In vitro metabolic profiling of new synthetic cannabinoids, ADB-FUBIATA, AFUBIATA, CH-FUBIATA, and CH-PIATA (Arch Toxicol 97:3085-3094)",
+      "authors": [
+        "S. Watanabe",
+        "H. Yamane",
+        "T. Iwai",
+        "R. Matsushita",
+        "Y. Seto"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s00204-023-03605-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37755504/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261012043440/https://pubmed.ncbi.nlm.nih.gov/37755504/"
+    },
+    {
+      "id": "richeval2023",
+      "type": "paper",
+      "title": "A current overview of the pharmacological composition of La Chimique consumed in Mayotte: preliminary results of the CHASSE-MAREE protocol (Drug Test Anal 16:558-569)",
+      "authors": [
+        "C. Richeval",
+        "A. Gish",
+        "V. Cottereau",
+        "A. Peyre",
+        "E. Pleignet",
+        "S. Cherki",
+        "D. Allorge",
+        "J.-M. Gaulier",
+        "D. A. Devault"
+      ],
+      "year": 2023,
+      "doi": "10.1002/dta.3585",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37798946/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260926234503/https://pubmed.ncbi.nlm.nih.gov/37798946/"
+    },
+    {
+      "id": "hubner2025",
+      "type": "paper",
+      "title": "NMR spectroscopic reference data of synthetic cannabinoids sold on the internet (Magn Reson Chem 63:241-255)",
+      "authors": [
+        "E.-M. Hubner",
+        "M. G. Schmid",
+        "V. Manojlovic",
+        "D. Gattringer",
+        "E.-M. Pferschy-Wenzig",
+        "O. Kunert"
+      ],
+      "year": 2025,
+      "doi": "10.1002/mrc.5498",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39743737/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "beers2021-cbd",
+      "type": "paper",
+      "title": "Cytochrome P450-catalyzed metabolism of cannabidiol to the active metabolite 7-hydroxy-cannabidiol (Drug Metab Dispos 49:882-891)",
+      "authors": [
+        "J. L. Beers",
+        "D. Fu",
+        "K. D. Jackson"
+      ],
+      "year": 2021,
+      "doi": "10.1124/dmd.120.000350",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34330718/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250908062807/https://pubmed.ncbi.nlm.nih.gov/34330718/"
+    },
+    {
+      "id": "bansal2022",
+      "type": "paper",
+      "title": "Comprehensive predictions of cytochrome P450-mediated in vivo cannabinoid-drug interactions based on reversible and time-dependent inhibition (Drug Metab Dispos 50:351-360)",
+      "authors": [
+        "S. Bansal",
+        "M. F. Paine",
+        "J. D. Unadkat"
+      ],
+      "year": 2022,
+      "doi": "10.1124/dmd.121.000734",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35115300/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kim2025-vaping",
+      "type": "paper",
+      "title": "Thermal transformation of CBD, CBDA, and delta9-THC during e-cigarette vaping: identification of conversion products by GC-MS (J Chromatogr A 1749:465909)",
+      "authors": [
+        "E. J. Kim",
+        "E. Kwon",
+        "S. J. Oh",
+        "M. R. Choi",
+        "S.-R. Lee",
+        "B. H. Jung",
+        "W. Lee",
+        "J. Hong"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.chroma.2025.465909",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40158472/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "turner2017",
+      "type": "paper",
+      "title": "Molecular pharmacology of phytocannabinoids (Prog Chem Org Nat Prod 103:61-101)",
+      "authors": [
+        "S. E. Turner",
+        "C. M. Williams",
+        "L. Iversen",
+        "B. J. Whalley"
+      ],
+      "year": 2017,
+      "doi": "10.1007/978-3-319-45541-9_3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28120231/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260716012223/https://pubmed.ncbi.nlm.nih.gov/28120231/"
+    },
+    {
+      "id": "stone2020",
+      "type": "paper",
+      "title": "A systematic review of minor phytocannabinoids with promising neuroprotective potential (Br J Pharmacol 177:4330-4352)",
+      "authors": [
+        "N. L. Stone",
+        "A. J. Murphy",
+        "T. J. England",
+        "S. E. O'Sullivan"
+      ],
+      "year": 2020,
+      "doi": "10.1111/bph.15185",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32608035/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260214005855/https://pubmed.ncbi.nlm.nih.gov/32608035/"
+    },
+    {
+      "id": "calapai2022",
+      "type": "paper",
+      "title": "Pharmacological aspects and biological effects of cannabigerol and its synthetic derivatives (Evid Based Complement Alternat Med 2022:3336516)",
+      "authors": [
+        "F. Calapai",
+        "L. Cardia",
+        "E. Esposito",
+        "I. Ammendolia",
+        "C. Mondello",
+        "R. Lo Giudice",
+        "S. Gangemi",
+        "G. Calapai",
+        "C. Mannucci"
+      ],
+      "year": 2022,
+      "doi": "10.1155/2022/3336516",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36397993/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261002113211/https://pubmed.ncbi.nlm.nih.gov/36397993/"
+    },
+    {
+      "id": "blebea2024",
+      "type": "paper",
+      "title": "Phytocannabinoids: exploring pharmacological profiles and their impact on therapeutical use (Int J Mol Sci 25:4204)",
+      "authors": [
+        "N. M. Blebea",
+        "A. I. Pricopie",
+        "R.-A. Vlad",
+        "G. Hancu"
+      ],
+      "year": 2024,
+      "doi": "10.3390/ijms25084204",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38673788/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250203060505/https://pubmed.ncbi.nlm.nih.gov/38673788/"
+    },
+    {
+      "id": "hurley2022-cbdv",
+      "type": "paper",
+      "title": "Efficacy and safety of cannabidivarin treatment of epilepsy in girls with Rett syndrome: a phase 1 clinical trial (Epilepsia 63:1736-1747)",
+      "authors": [
+        "E. N. Hurley",
+        "C. J. Ellaway",
+        "A. M. Johnson",
+        "L. Truong",
+        "R. Gordon",
+        "P. Galettis",
+        "J. H. Martin",
+        "J. A. Lawson"
+      ],
+      "year": 2022,
+      "doi": "10.1111/epi.17247",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35364618/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260425201942/https://pubmed.ncbi.nlm.nih.gov/35364618/"
+    },
+    {
+      "id": "tsumura2012",
+      "type": "paper",
+      "title": "A survey of the potency of Japanese illicit cannabis in fiscal year 2010 (Forensic Sci Int 221:77-83)",
+      "authors": [
+        "Y. Tsumura",
+        "R. Aoki",
+        "Y. Tokieda",
+        "M. Akutsu",
+        "Y. Kawase",
+        "T. Kataoka",
+        "T. Takagi",
+        "T. Mizuno",
+        "M. Fukada",
+        "H. Fujii",
+        "K. Kurahashi"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.forsciint.2012.04.005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22554871/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204042625/https://pubmed.ncbi.nlm.nih.gov/22554871/"
     }
   ]
 }

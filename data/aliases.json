@@ -482,7 +482,24 @@
     "3-methylphenmetrazine": "3-mpm",
     "3mpm": "3-mpm",
     "3-metilfenmetrazina": "3-mpm",
-    "pal-773": "3-mpm"
+    "pal-773": "3-mpm",
+    "app-butinaca": "app-binaca",
+    "app-chminaca": "app-chminaca-px3",
+    "px-3": "app-chminaca-px3",
+    "px3": "app-chminaca-px3",
+    "ch-piaca": "ch-piata",
+    "chx-piata": "ch-piata",
+    "chx-piaca": "ch-piata",
+    "cannabidiol": "cbd",
+    "cannabidiolo": "cbd",
+    "cbn": "cannabinol",
+    "cannabinolo": "cannabinol",
+    "cbg": "cannabigerol",
+    "cannabigerolo": "cannabigerol",
+    "cbga": "cannabigerolic-acid",
+    "acido-cannabigerolico": "cannabigerolic-acid",
+    "cbdv": "cannabidivarin",
+    "cannabidivarina": "cannabidivarin"
   },
   "schema": "aliases/1"
 }
