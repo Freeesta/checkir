@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-pb-22",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-PB-22",
+      "synonyms": [
+        "5-fluoro-PB-22",
+        "5F-PB22",
+        "5F-QUPIC"
+      ]
+    },
+    "it": {
+      "preferred": "5F-PB-22",
+      "synonyms": [
+        "5-fluoro-PB-22",
+        "5F-PB22",
+        "5F-QUPIC"
+      ]
+    }
+  },
+  "iupac": "quinolin-8-yl 1-(5-fluoropentyl)indole-3-carboxylate",
+  "formula": "C23H21FN2O2",
+  "molar_mass_g_mol": 376.4,
+  "smiles": "C1=CC=C2C(=C1)C(=CN2CCCCCF)C(=O)OC3=CC=CC4=C3N=CC=C4",
+  "inchi": "InChI=1S/C23H21FN2O2/c24-13-4-1-5-15-26-16-19(18-10-2-3-11-20(18)26)23(27)28-21-12-6-8-17-9-7-14-25-22(17)21/h2-3,6-12,14,16H,1,4-5,13,15H2",
+  "inchikey": "MBOCMBFDYVSGLJ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1400742-41-7",
+    "pubchem_cid": 72710774
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
