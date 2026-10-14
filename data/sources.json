@@ -15596,6 +15596,152 @@
       "archive_url": "https://web.archive.org/web/20260112184122/https://pubmed.ncbi.nlm.nih.gov/30779257/"
     },
     {
+      "id": "katselou2016",
+      "type": "paper",
+      "title": "Fenethylline (Captagon) Abuse - Local Problems from an Old Drug Become Universal (Basic Clin Pharmacol Toxicol 119)",
+      "authors": [
+        "Katselou",
+        "Papoutsis",
+        "Nikolaou",
+        "Qammaz",
+        "Spiliopoulou"
+      ],
+      "year": 2016,
+      "doi": "10.1111/bcpt.12584",
+      "url": "https://doi.org/10.1111/bcpt.12584",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "wenthur2017",
+      "type": "paper",
+      "title": "Vaccine-driven pharmacodynamic dissection and mitigation of fenethylline psychoactivity (Nature 548)",
+      "authors": [
+        "Wenthur",
+        "Zhou",
+        "Janda"
+      ],
+      "year": 2017,
+      "doi": "10.1038/nature23464",
+      "url": "https://doi.org/10.1038/nature23464",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "alabdalla2005",
+      "type": "paper",
+      "title": "Chemical characterization of counterfeit captagon tablets seized in Jordan (Forensic Sci Int 152)",
+      "authors": [
+        "Alabdalla"
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.forsciint.2004.08.004",
+      "url": "https://doi.org/10.1016/j.forsciint.2004.08.004",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "pennick2010",
+      "type": "paper",
+      "title": "Absorption of lisdexamfetamine dimesylate and its enzymatic conversion to d-amphetamine (Neuropsychiatr Dis Treat 6)",
+      "authors": [
+        "Pennick"
+      ],
+      "year": 2010,
+      "doi": "10.2147/ndt.s9749",
+      "url": "https://doi.org/10.2147/ndt.s9749",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "xu2022",
+      "type": "paper",
+      "title": "N-isopropylbenzylamine, a methamphetamine mimics, produces toxicity via increasing nitric oxide in vitro (Toxicology 480)",
+      "authors": [
+        "Xu",
+        "Li",
+        "Qiu",
+        "Xiao",
+        "Qiu"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.tox.2022.153337",
+      "url": "https://doi.org/10.1016/j.tox.2022.153337",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lai2024",
+      "type": "paper",
+      "title": "N-Isopropylbenzylamine-induced conditioned place preference, sensitization behaviour and self-administration in rodents (Addict Biol 29)",
+      "authors": [
+        "Lai",
+        "Fu",
+        "Li",
+        "Zhuang",
+        "Wang"
+      ],
+      "year": 2024,
+      "doi": "10.1111/adb.13370",
+      "url": "https://doi.org/10.1111/adb.13370",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kintz1997",
+      "type": "paper",
+      "title": "Excretion of MBDB and BDB in urine, saliva, and sweat following single oral administration (J Anal Toxicol 21)",
+      "authors": [
+        "Kintz"
+      ],
+      "year": 1997,
+      "doi": "10.1093/jat/21.7.570",
+      "url": "https://doi.org/10.1093/jat/21.7.570",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nagai2002",
+      "type": "paper",
+      "title": "Enantiomer analysis of a new street drug, 3,4-methylenedioxy-N-methyl-butanamine, in rat urine (J Anal Toxicol 26)",
+      "authors": [
+        "Nagai",
+        "Matsushima",
+        "Suzuki",
+        "Saotome",
+        "Kurosu"
+      ],
+      "year": 2002,
+      "doi": "10.1093/jat/26.2.104",
+      "url": "https://doi.org/10.1093/jat/26.2.104",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "bach1999",
+      "type": "paper",
+      "title": "Involvement of CYP2D6 in the in vitro metabolism of amphetamine, two N-alkylamphetamines and their 4-methoxylated derivatives (Xenobiotica 29)",
+      "authors": [
+        "Bach",
+        "Coutts",
+        "Baker"
+      ],
+      "year": 1999,
+      "doi": "10.1080/004982599238344",
+      "url": "https://doi.org/10.1080/004982599238344",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "fluoxetine-label",
       "type": "institution",
       "title": "Fluoxetine capsules (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
