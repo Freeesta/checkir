@@ -16220,6 +16220,152 @@
       "tier": "primary",
       "license": "cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "rook2006",
+      "type": "paper",
+      "title": "Pharmacokinetics and pharmacodynamics of high doses of pharmaceutically prepared heroin, by intravenous or by inhalation route in opioid-dependent patients (Basic Clin Pharmacol Toxicol 98(1):86-96)",
+      "authors": [
+        "E. J. Rook",
+        "J. M. van Ree",
+        "W. van den Brink",
+        "M. J. X. Hillebrand",
+        "A. D. R. Huitema",
+        "V. M. Hendriks",
+        "J. H. Beijnen"
+      ],
+      "year": 2006,
+      "doi": "10.1111/j.1742-7843.2006.pto_233.x",
+      "url": "https://doi.org/10.1111/j.1742-7843.2006.pto_233.x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "rentsch2001",
+      "type": "paper",
+      "title": "Arterial and venous pharmacokinetics of intravenous heroin in subjects who are addicted to narcotics (Clin Pharmacol Ther 70(3):237-246)",
+      "authors": [
+        "K. M. Rentsch",
+        "G. A. Kullak-Ublick",
+        "C. Reichel",
+        "P. J. Meier",
+        "K. Fattinger"
+      ],
+      "year": 2001,
+      "doi": "10.1067/mcp.2001.117981",
+      "url": "https://doi.org/10.1067/mcp.2001.117981",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "cone1991",
+      "type": "paper",
+      "title": "Forensic drug testing for opiates: I. Detection of 6-acetylmorphine in urine as an indicator of recent heroin exposure (J Anal Toxicol 15(1):1-7)",
+      "authors": [
+        "E. J. Cone",
+        "P. Welch",
+        "J. M. Mitchell",
+        "B. D. Paul"
+      ],
+      "year": 1991,
+      "doi": "10.1093/jat/15.1.1",
+      "url": "https://doi.org/10.1093/jat/15.1.1",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "darke1996",
+      "type": "paper",
+      "title": "Fatal heroin overdose: a review (Addiction 91(12):1765-1772)",
+      "authors": [
+        "S. Darke",
+        "D. Zador"
+      ],
+      "year": 1996,
+      "doi": "10.1046/j.1360-0443.1996.911217652.x",
+      "url": "https://doi.org/10.1046/j.1360-0443.1996.911217652.x",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "tress1980",
+      "type": "paper",
+      "title": "Cardiovascular, respiratory and temperature responses to intravenous heroin (diamorphine) in dependent and non-dependent humans (Br J Clin Pharmacol 10(5):477-485)",
+      "authors": [
+        "K. H. Tress",
+        "A. A. El-Sobky"
+      ],
+      "year": 1980,
+      "doi": "10.1111/j.1365-2125.1980.tb01792.x",
+      "url": "https://doi.org/10.1111/j.1365-2125.1980.tb01792.x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "selley2001",
+      "type": "paper",
+      "title": "mu Opioid receptor-mediated G-protein activation by heroin metabolites: evidence for greater efficacy of 6-monoacetylmorphine compared with morphine (Biochem Pharmacol 62(4):447-455)",
+      "authors": [
+        "D. E. Selley",
+        "C. C. Cao",
+        "T. Sexton",
+        "J. A. Schwegel",
+        "T. J. Martin",
+        "S. R. Childers"
+      ],
+      "year": 2001,
+      "doi": "10.1016/s0006-2952(01)00689-x",
+      "url": "https://doi.org/10.1016/s0006-2952(01)00689-x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "guessoum2025",
+      "type": "paper",
+      "title": "Pharmacokinetics and Pharmacodynamics of Intranasal Diacetylmorphine in Heroin-Assisted Treatment for Severe Opioid Use Disorder (CNS Drugs 39(8):807-817)",
+      "authors": [
+        "A. Guessoum",
+        "S. B. Vogt",
+        "M. Meyer",
+        "J. N. Westenberg",
+        "B. Klemperer",
+        "K. M. Dürsteler",
+        "M. E. Liechti",
+        "J. Thomann",
+        "D. Luethi",
+        "U. Duthaler",
+        "M. Vogel"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s40263-025-01189-1",
+      "url": "https://doi.org/10.1007/s40263-025-01189-1",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "halbsguth2008",
+      "type": "paper",
+      "title": "Oral diacetylmorphine (heroin) yields greater morphine bioavailability than oral morphine: bioavailability related to dosage and prior opioid exposure (Br J Clin Pharmacol 66(6):781-791)",
+      "authors": [
+        "U. Halbsguth",
+        "K. M. Rentsch",
+        "D. Eich-Höchli",
+        "I. Diterich",
+        "K. Fattinger"
+      ],
+      "year": 2008,
+      "doi": "10.1111/j.1365-2125.2008.03286.x",
+      "url": "https://doi.org/10.1111/j.1365-2125.2008.03286.x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
     }
   ]
 }

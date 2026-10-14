@@ -41,7 +41,27 @@
       "matrix": "blood",
       "route": "intravenous, inhaled",
       "source": "milella2023"
-    }
+    },
+    "metabolites": [
+      {
+        "name_key": "6-monoacetylmorphine",
+        "active": true,
+        "marker": true,
+        "source": "cone1991"
+      },
+      {
+        "name_key": "morphine",
+        "active": true,
+        "marker": true,
+        "source": "cone1991"
+      },
+      {
+        "name_key": "morphine-6-glucuronide",
+        "active": true,
+        "marker": false,
+        "source": "milella2023"
+      }
+    ]
   },
   "cuts": [
     {
@@ -67,6 +87,18 @@
       "severity": "dangerous",
       "mechanism": "cns_depression",
       "source": "kerensky2017"
+    },
+    {
+      "with": "ethanol",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "darke1996"
+    },
+    {
+      "with": "cocaine",
+      "severity": "risky",
+      "mechanism": "other",
+      "source": "roque-bravo2022"
     }
   ],
   "counselling": [
@@ -78,7 +110,7 @@
     {
       "key": "heroin.benzodiazepines",
       "topic": "combination",
-      "source": "kerensky2017"
+      "source": "darke1996"
     },
     {
       "key": "heroin.naloxone",
