@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-fluoro-abica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-Fluoro-ABICA",
+      "synonyms": [
+        "5F-ABICA",
+        "5-fluoro ABICA"
+      ]
+    },
+    "it": {
+      "preferred": "5-Fluoro-ABICA",
+      "synonyms": [
+        "5F-ABICA",
+        "5-fluoro ABICA"
+      ]
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-3-methyl-1-oxobutan-2-yl]-1-(5-fluoropentyl)indole-3-carboxamide",
+  "formula": "C19H26FN3O2",
+  "molar_mass_g_mol": 347.4,
+  "smiles": "CC(C)[C@@H](C(=O)N)NC(=O)C1=CN(C2=CC=CC=C21)CCCCCF",
+  "inchi": "InChI=1S/C19H26FN3O2/c1-13(2)17(18(21)24)22-19(25)15-12-23(11-7-3-6-10-20)16-9-5-4-8-14(15)16/h4-5,8-9,12-13,17H,3,6-7,10-11H2,1-2H3,(H2,21,24)(H,22,25)/t17-/m0/s1",
+  "inchikey": "GQYZBLMAONPUNX-KRWDZBQOSA-N",
+  "external_ids": {
+    "cas": "1801338-26-0",
+    "pubchem_cid": 118796498
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

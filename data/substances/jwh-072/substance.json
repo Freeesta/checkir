@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "jwh-072",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "JWH-072",
+      "synonyms": [
+        "JWH072",
+        "1-propyl-3-(1-naphthoyl)indole"
+      ]
+    },
+    "it": {
+      "preferred": "JWH-072",
+      "synonyms": [
+        "JWH072",
+        "1-propil-3-(1-naftoil)indolo"
+      ]
+    }
+  },
+  "iupac": "naphthalen-1-yl-(1-propylindol-3-yl)methanone",
+  "formula": "C22H19NO",
+  "molar_mass_g_mol": 313.4,
+  "smiles": "CCCN1C=C(C2=CC=CC=C21)C(=O)C3=CC=CC4=CC=CC=C43",
+  "inchi": "InChI=1S/C22H19NO/c1-2-14-23-15-20(18-11-5-6-13-21(18)23)22(24)19-12-7-9-16-8-3-4-10-17(16)19/h3-13,15H,2,14H2,1H3",
+  "inchikey": "IVLWWVXVWRIXSS-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "209414-06-2",
+    "pubchem_cid": 45271208
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

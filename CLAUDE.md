@@ -44,7 +44,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 | `crates/ftir-core`, `crates/ftir-wasm` | `docs/agenti/motore.md` (lettori, anonimizzazione, sintetici), `motore_segnale.md` (passi, sottrazione, qualità della misura, interferogrammi), `motore_confronto.md` (confronto, allerte), `motore_picchi.md` (picchi, indice, assegnazione), `motore_didattica.md` (teoria, miscele) |
 | `crates/ftir-lib`, `tools/libreria/` | `docs/agenti/libreria.md` |
 | `web/` | `docs/agenti/pagina.md` (guscio, stile, pagine), `pagina_grafico.md` (grafico, picchi, regioni), `pagina_confronto.md` (risultati, scheda, sottrazione), `pagina_schede.md` (schede delle sostanze, pagina schede), `pagina_miscele.md` (proposta di miscela), `pagina_file.md` (file, residui, cartella) |
-| `data/`, `docs/schemi/` | `docs/agenti/dati.md` (struttura, contratti, schede), `dati_bande.md` (bande IR), `dati_revisione.md` (revisori, firme, contributi) |
+| `data/`, `docs/schemi/` | `docs/agenti/dati.md` (struttura, contratti), `dati_schede.md` (schede per pacchetto, tagli), `dati_schede_c.md` (schede essenziali dell'ondata C), `dati_bande.md` (bande IR), `dati_revisione.md` (revisori, firme, contributi) |
 | `tests_e2e/`, `tools/`, `.github/` | `docs/agenti/test.md` |
 | Trasferimento del repository (proprietario, organizzazione) | `docs/trasferimento.md` (il nome sta in `web/appname.js`) |
 | CSP, esportazioni, anonimizzazione, avvertenze, informativa | `docs/agenti/riservatezza.md` |

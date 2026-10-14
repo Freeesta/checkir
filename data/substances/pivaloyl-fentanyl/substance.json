@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "pivaloyl-fentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Pivaloylfentanyl",
+      "synonyms": [
+        "pivaloyl fentanyl",
+        "N-(1-phenethylpiperidin-4-yl)-N-phenylpivalamide"
+      ]
+    },
+    "it": {
+      "preferred": "Pivaloilfentanil",
+      "synonyms": [
+        "pivaloil fentanil"
+      ]
+    }
+  },
+  "iupac": "2,2-dimethyl-N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]propanamide",
+  "formula": "C24H32N2O",
+  "molar_mass_g_mol": 364.5,
+  "smiles": "CC(C)(C)C(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C24H32N2O/c1-24(2,3)23(27)26(21-12-8-5-9-13-21)22-15-18-25(19-16-22)17-14-20-10-6-4-7-11-20/h4-13,22H,14-19H2,1-3H3",
+  "inchikey": "ZSFLALBHNJDBFJ-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 137700053
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

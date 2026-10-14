@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "mdmb-4en-pinaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "MDMB-4en-PINACA",
+      "synonyms": [
+        "MDMB-PENINACA"
+      ]
+    },
+    "it": {
+      "preferred": "MDMB-4en-PINACA",
+      "synonyms": [
+        "MDMB-PENINACA"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-3,3-dimethyl-2-[(1-pent-4-enylindazole-3-carbonyl)amino]butanoate",
+  "formula": "C20H27N3O3",
+  "molar_mass_g_mol": 357.4,
+  "smiles": "CC(C)(C)[C@@H](C(=O)OC)NC(=O)C1=NN(C2=CC=CC=C21)CCCC=C",
+  "inchi": "InChI=1S/C20H27N3O3/c1-6-7-10-13-23-15-12-9-8-11-14(15)16(22-23)18(24)21-17(19(25)26-5)20(2,3)4/h6,8-9,11-12,17H,1,7,10,13H2,2-5H3,(H,21,24)/t17-/m1/s1",
+  "inchikey": "LWOCBHBFWNGPGM-QGZVFWFLSA-N",
+  "external_ids": {
+    "cas": "2504100-70-1",
+    "pubchem_cid": 155804661
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
