@@ -1,0 +1,45 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "o-desmethyl-cis-tramadol",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "O-Desmethyl-cis-tramadol"
+    },
+    "it": {
+      "preferred": "O-Desmetil-cis-tramadolo"
+    }
+  },
+  "iupac": "3-[2-[(dimethylamino)methyl]-1-hydroxycyclohexyl]phenol",
+  "formula": "C15H23NO2",
+  "molar_mass_g_mol": 249.35,
+  "smiles": "CN(C)CC1CCCCC1(C2=CC(=CC=C2)O)O",
+  "inchi": "InChI=1S/C15H23NO2/c1-16(2)11-13-6-3-4-9-15(13,18)12-7-5-8-14(17)10-12/h5,7-8,10,13,17-18H,3-4,6,9,11H2,1-2H3",
+  "inchikey": "UWJUQVWARXYRCG-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 130829
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

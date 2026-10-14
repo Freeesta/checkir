@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-ho-mipt",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-HO-MiPT",
+      "synonyms": [
+        "miprocin",
+        "4-hydroxy-N-methyl-N-isopropyltryptamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-HO-MiPT",
+      "synonyms": [
+        "miprocina"
+      ]
+    }
+  },
+  "iupac": "3-[2-[methyl(propan-2-yl)amino]ethyl]-1H-indol-4-ol",
+  "formula": "C14H20N2O",
+  "molar_mass_g_mol": 232.32,
+  "smiles": "CC(C)N(C)CCC1=CNC2=C1C(=CC=C2)O",
+  "inchi": "InChI=1S/C14H20N2O/c1-10(2)16(3)8-7-11-9-15-12-5-4-6-13(17)14(11)12/h4-6,9-10,15,17H,7-8H2,1-3H3",
+  "inchikey": "RXKGHZCQFXXWFQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "77872-43-6",
+    "pubchem_cid": 10082683
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

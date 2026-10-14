@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "oxymorphone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Oxymorphone",
+      "synonyms": [
+        "Opana"
+      ]
+    },
+    "it": {
+      "preferred": "Ossimorfone",
+      "synonyms": [
+        "Opana"
+      ]
+    }
+  },
+  "iupac": "(4R,4aS,7aR,12bS)-4a,9-dihydroxy-3-methyl-2,4,5,6,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinolin-7-one",
+  "formula": "C17H19NO4",
+  "molar_mass_g_mol": 301.34,
+  "smiles": "CN1CC[C@]23[C@@H]4C(=O)CC[C@]2([C@H]1CC5=C3C(=C(C=C5)O)O4)O",
+  "inchi": "InChI=1S/C17H19NO4/c1-18-7-6-16-13-9-2-3-10(19)14(13)22-15(16)11(20)4-5-17(16,21)12(18)8-9/h2-3,12,15,19,21H,4-8H2,1H3/t12-,15+,16+,17-/m1/s1",
+  "inchikey": "UQCNKQCJZOAFTQ-ISWURRPUSA-N",
+  "external_ids": {
+    "pubchem_cid": 5284604
+  },
+  "classes": {
+    "chemical": [
+      "morphinans"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

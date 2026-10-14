@@ -1,0 +1,96 @@
+{
+  "schema": "datasheet/1",
+  "substance": "tapentadol",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "tapentadol O-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "nucynta-label"
+      },
+      {
+        "from": "parent",
+        "to": "tapentadol sulfate",
+        "reaction": "sulfation",
+        "source": "nucynta-label"
+      },
+      {
+        "from": "parent",
+        "to": "N-desmethyl tapentadol",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP2C9",
+          "CYP2C19"
+        ],
+        "source": "nucynta-label"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy tapentadol",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP2D6"
+        ],
+        "source": "nucynta-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "tapentadol-o-glucuronide",
+        "active": false,
+        "source": "nucynta-label"
+      },
+      {
+        "name_key": "tapentadol-sulfate",
+        "active": false,
+        "source": "nucynta-label"
+      },
+      {
+        "name_key": "n-desmethyl-tapentadol",
+        "active": false,
+        "source": "nucynta-label"
+      },
+      {
+        "name_key": "hydroxy-tapentadol",
+        "active": false,
+        "source": "nucynta-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 4,
+      "max": 4,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "nucynta-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
