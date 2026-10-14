@@ -1,0 +1,93 @@
+{
+  "schema": "datasheet/1",
+  "substance": "citalopram",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "demethylcitalopram",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP3A4",
+          "CYP2C19"
+        ],
+        "source": "citalopram-label"
+      },
+      {
+        "from": "demethylcitalopram",
+        "to": "didemethylcitalopram",
+        "reaction": "n_demethylation",
+        "source": "citalopram-label"
+      },
+      {
+        "from": "parent",
+        "to": "citalopram-n-oxide",
+        "reaction": "other",
+        "source": "citalopram-label"
+      },
+      {
+        "from": "parent",
+        "to": "deaminated-propionic-acid-derivative",
+        "reaction": "deamination",
+        "source": "citalopram-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "demethylcitalopram",
+        "active": null,
+        "source": "citalopram-label"
+      },
+      {
+        "name_key": "didemethylcitalopram",
+        "active": null,
+        "source": "citalopram-label"
+      },
+      {
+        "name_key": "citalopram-n-oxide",
+        "active": null,
+        "source": "citalopram-label"
+      },
+      {
+        "name_key": "deaminated-propionic-acid-derivative",
+        "active": null,
+        "source": "citalopram-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 35,
+      "max": 35,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "citalopram-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "datasheet/1",
+  "substance": "amitriptyline",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "nortriptyline",
+        "reaction": "n_demethylation",
+        "source": "amitriptyline-label"
+      },
+      {
+        "from": "parent",
+        "to": "bridge-hydroxylated-metabolites",
+        "reaction": "hydroxylation",
+        "source": "amitriptyline-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "nortriptyline",
+        "active": true,
+        "source": "hicks2017"
+      },
+      {
+        "name_key": "bridge-hydroxylated-metabolites",
+        "active": null,
+        "source": "amitriptyline-label"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
