@@ -1,0 +1,78 @@
+{
+  "schema": "datasheet/1",
+  "substance": "modafinil",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "modafinil-acid",
+        "reaction": "other",
+        "source": "dailymed-provigil"
+      },
+      {
+        "from": "parent",
+        "to": "modafinil-sulfone",
+        "reaction": "other",
+        "source": "dailymed-provigil"
+      },
+      {
+        "from": "parent",
+        "to": "4-hydroxy-modafinil",
+        "reaction": "hydroxylation",
+        "source": "dailymed-provigil"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "modafinil-acid",
+        "active": false,
+        "source": "dailymed-provigil"
+      },
+      {
+        "name_key": "modafinil-sulfone",
+        "active": false,
+        "source": "dailymed-provigil"
+      },
+      {
+        "name_key": "4-hydroxy-modafinil",
+        "active": false,
+        "source": "dailymed-provigil"
+      }
+    ],
+    "half_life_h": {
+      "min": 15,
+      "max": 15,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "dailymed-provigil"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
