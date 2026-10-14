@@ -13169,6 +13169,297 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "dybek2019",
+      "type": "paper",
+      "title": "Syntheses and analytical characterizations of the research chemical 1-[1-(2-fluorophenyl)-2-phenylethyl]pyrrolidine (fluorolintane) and five of its isomers (Drug Test Anal 11:1144-1161)",
+      "authors": [
+        "Dybek M",
+        "Wallach J",
+        "Kavanagh PV",
+        "Colestock T",
+        "Filemban N",
+        "Dowling G",
+        "Westphal F",
+        "Elliott SP",
+        "Adejare A",
+        "Brandt SD"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2608",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31033229/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "wallach2019",
+      "type": "paper",
+      "title": "Pharmacological characterizations of the 'legal high' fluorolintane and isomers (Eur J Pharmacol 857:172427)",
+      "authors": [
+        "Wallach J",
+        "Colestock T",
+        "Agramunt J",
+        "Claydon MDB",
+        "Dybek M",
+        "Filemban N",
+        "Chatha M",
+        "Halberstadt AL",
+        "Brandt SD",
+        "Lodge D",
+        "Bortolotto ZA",
+        "Adejare A"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.ejphar.2019.172427",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31152702/",
+      "archive_url": "https://web.archive.org/web/20260223072047/https://pubmed.ncbi.nlm.nih.gov/31152702/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "sayson2019",
+      "type": "paper",
+      "title": "The novel methoxetamine analogs N-ethylnorketamine hydrochloride (NENK), 2-MeO-N-ethylketamine hydrochloride (2-MeO-NEK), and 4-MeO-N-ethylketamine hydrochloride (4-MeO-NEK) elicit rapid antidepressant effects via activation of AMPA and 5-HT2 receptors (Psychopharmacology (Berl) 236:2201-2210)",
+      "authors": [
+        "Sayson LV",
+        "Botanas CJ",
+        "Custodio RJP",
+        "Abiero A",
+        "Kim M",
+        "Lee HJ",
+        "Kim HJ",
+        "Yoo SY",
+        "Lee KW",
+        "Ryu HW",
+        "Acharya S",
+        "Kim KM",
+        "Lee YS",
+        "Cheong JH"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00213-019-05219-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30891619/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "li2022-nenk",
+      "type": "paper",
+      "title": "N-Ethylnorketamine has anesthetic and analgesic effects with abuse liability (Behav Brain Res 435:114052)",
+      "authors": [
+        "Li F",
+        "Qiao Y",
+        "Chen Y",
+        "Li N",
+        "Yang M",
+        "Li X",
+        "Qiu Y",
+        "Cui W",
+        "Shen H",
+        "Xu P",
+        "Di B"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.bbr.2022.114052",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35952778/",
+      "archive_url": "https://web.archive.org/web/20260512075639/https://pubmed.ncbi.nlm.nih.gov/35952778/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "luca2018",
+      "type": "paper",
+      "title": "Lauflumide (NLS-4) Is a New Potent Wake-Promoting Compound (Front Neurosci 12:519)",
+      "authors": [
+        "Luca G",
+        "Bandarabadi M",
+        "Konofal E",
+        "Lecendreux M",
+        "Ferrié L",
+        "Figadère B",
+        "Tafti M"
+      ],
+      "year": 2018,
+      "doi": "10.3389/fnins.2018.00519",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30158846/",
+      "archive_url": "https://web.archive.org/web/20250202034903/https://pubmed.ncbi.nlm.nih.gov/30158846/",
+      "tier": "primary",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "krug2026",
+      "type": "paper",
+      "title": "Investigations Into the Metabolism and Elimination of Flmodafinil and Fladrafinil for Sports Drug Testing Purposes (Drug Test Anal 18:1076-1087)",
+      "authors": [
+        "Krug O",
+        "Guddat S",
+        "Görgens C",
+        "Walpurgis K",
+        "Toma F",
+        "Thomas A",
+        "Thevis M"
+      ],
+      "year": 2026,
+      "doi": "10.1002/dta.70100",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42210629/",
+      "tier": "primary",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "salerno2025",
+      "type": "paper",
+      "title": "Investigation of adulterated seized heroin samples and direct stereochemical analysis of methorphan by chiral HPLC-MS/MS (Anal Bioanal Chem 417:5187-5198)",
+      "authors": [
+        "Salerno TMG",
+        "Zamengo L",
+        "Coppolino C",
+        "Cucinotta L",
+        "Donato P",
+        "Trovato E",
+        "Vento F",
+        "Zancanaro F",
+        "Frison G",
+        "Mondello L"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s00216-025-06063-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40826236/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "lofaro2023",
+      "type": "paper",
+      "title": "Development of an enantioselective high-performance liquid chromatography-tandem mass spectrometry method for the quantitative determination of methorphan and its O-demethylated metabolite in human blood and its application to post-mortem samples (J Pharm Biomed Anal 230:115384)",
+      "authors": [
+        "Lo Faro AF",
+        "Berardinelli D",
+        "Sprega G",
+        "Tini A",
+        "Carlier J",
+        "Farkas T",
+        "Busardò FP",
+        "Chankvetadze B"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.jpba.2023.115384",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37044005/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "prommer2007",
+      "type": "paper",
+      "title": "Levorphanol: the forgotten opioid (Support Care Cancer 15:259-264)",
+      "authors": [
+        "Prommer E"
+      ],
+      "year": 2007,
+      "doi": "10.1007/s00520-006-0146-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17039381/",
+      "archive_url": "https://web.archive.org/web/20260115045743/https://pubmed.ncbi.nlm.nih.gov/17039381/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "memantine-misuse2020",
+      "type": "paper",
+      "title": "Memantine misuse and social networks: A content analysis of Internet self-reports (Pharmacoepidemiol Drug Saf 29:1189-1193)",
+      "authors": [
+        "Natter J",
+        "Michel B"
+      ],
+      "year": 2020,
+      "doi": "10.1002/pds.5070",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32602152/",
+      "archive_url": "https://web.archive.org/web/20260205095058/https://pubmed.ncbi.nlm.nih.gov/32602152/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "wang2025-rketamine",
+      "type": "paper",
+      "title": "Pharmacokinetics, Safety, and Tolerability of (R)-Ketamine Hydrochloride Injection, a Novel Rapid-Acting Antidepressant, in Healthy Chinese Subjects (Pharmaceuticals (Basel) 18:1079)",
+      "authors": [
+        "Wang R",
+        "Yang Y",
+        "Zhou T",
+        "Zou B",
+        "Ding L"
+      ],
+      "year": 2025,
+      "doi": "10.3390/ph18071079",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40732364/",
+      "tier": "primary",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "wang2025-rketamine-preclinical",
+      "type": "paper",
+      "title": "Preclinical pharmacokinetic characterization of (R)-ketamine injection, a novel antidepressant glutamatergic agent (Front Pharmacol 16:1699304)",
+      "authors": [
+        "Wang R",
+        "Jin Y",
+        "Zou B",
+        "Ding L"
+      ],
+      "year": 2025,
+      "doi": "10.3389/fphar.2025.1699304",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41357861/",
+      "tier": "primary",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kawczak2024",
+      "type": "paper",
+      "title": "Ketamine, Esketamine, and Arketamine: Their Mechanisms of Action and Applications in the Treatment of Depression and Alleviation of Depressive Symptoms (Biomedicines 12:2283)",
+      "authors": [
+        "Kawczak P",
+        "Feszak I",
+        "Bączek T"
+      ],
+      "year": 2024,
+      "doi": "10.3390/biomedicines12102283",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39457596/",
+      "archive_url": "https://web.archive.org/web/20261005033540/https://pubmed.ncbi.nlm.nih.gov/39457596/",
+      "tier": "review",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "spravato-label",
+      "type": "institution",
+      "title": "Spravato (esketamine) nasal spray, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d81a6a79-a74a-44b7-822c-0dfa3036eaed",
+      "archive_url": "https://web.archive.org/web/20260803143939/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d81a6a79-a74a-44b7-822c-0dfa3036eaed",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "namenda-xr-label",
+      "type": "institution",
+      "title": "Namenda XR (memantine hydrochloride) extended-release capsules, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2018,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1fa2b7bc-94e5-4566-a7c5-419f8fd393a7",
+      "archive_url": "https://web.archive.org/web/20260803134448/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1fa2b7bc-94e5-4566-a7c5-419f8fd393a7",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
     }
   ]
 }

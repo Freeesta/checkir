@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "racemorphan",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Racemorphan",
+      "synonyms": [
+        "dl-3-hydroxy-N-methylmorphinan"
+      ]
+    },
+    "it": {
+      "preferred": "Racemorfano",
+      "synonyms": [
+        "dl-3-idrossi-N-metilmorfinano"
+      ]
+    }
+  },
+  "iupac": "17-methyl-17-azatetracyclo[7.5.3.01,10.02,7]heptadeca-2(7),3,5-trien-4-ol",
+  "formula": "C17H23NO",
+  "molar_mass_g_mol": 257.37,
+  "smiles": "CN1CCC23CCCCC2C1CC4=C3C=C(C=C4)O",
+  "inchi": "InChI=1S/C17H23NO/c1-18-9-8-17-7-3-2-4-14(17)16(18)10-12-5-6-13(19)11-15(12)17/h5-6,11,14,16,19H,2-4,7-10H2,1H3",
+  "inchikey": "JAQUASYNZVUNQP-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "297-90-5",
+    "pubchem_cid": 3918
+  },
+  "classes": {
+    "chemical": [
+      "morphinans"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

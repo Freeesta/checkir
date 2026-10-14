@@ -1,0 +1,64 @@
+{
+  "schema": "datasheet/1",
+  "substance": "s-ketamine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "arylcyclohexylamines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "noresketamine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP2B6",
+          "CYP3A4",
+          "CYP2C9",
+          "CYP2C19"
+        ],
+        "source": "spravato-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "noresketamine",
+        "active": null,
+        "source": "spravato-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 7,
+      "max": 12,
+      "matrix": "plasma",
+      "route": "intranasal",
+      "source": "spravato-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
