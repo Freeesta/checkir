@@ -15292,6 +15292,186 @@
       "tier": "agency"
     },
     {
+      "id": "welter2013",
+      "type": "paper",
+      "title": "2-methiopropamine, a thiophene analogue of methamphetamine: studies on its metabolism and detectability in the rat and human using GC-MS and LC-(HR)-MS techniques (Anal Bioanal Chem 405(10):3125-3135)",
+      "authors": [
+        "J. Welter",
+        "M. R. Meyer",
+        "E. U. Wolf",
+        "W. Weinmann",
+        "P. Kavanagh",
+        "H. H. Maurer"
+      ],
+      "year": 2013,
+      "doi": "10.1007/s00216-013-6741-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23361230/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "camuto2021",
+      "type": "paper",
+      "title": "Urinary excretion profile of methiopropamine in mice following intraperitoneal administration: a liquid chromatography-tandem mass spectrometry investigation (Drug Test Anal 13(1):91-100)",
+      "authors": [
+        "C. Camuto",
+        "S. Pellegrini",
+        "F. De-Giorgio",
+        "X. de la Torre",
+        "M. Marti",
+        "M. Mazzarino",
+        "F. Botrè"
+      ],
+      "year": 2021,
+      "doi": "10.1002/dta.2900",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32678963/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "muhammed2024",
+      "type": "paper",
+      "title": "Comprehensive metabolic investigation of dopamine reuptake inhibitor HDMP-28 in equine liver microsomes and Cunninghamella elegans for doping control (Drug Test Anal 16(10):1182-1194)",
+      "authors": [
+        "M. Muhammed Ajeebsanu",
+        "M. B. Subhahar",
+        "A. K. Karakka Kal",
+        "M. Philip",
+        "Z. Perwad",
+        "T. K. Karatt",
+        "F. M. Graiban",
+        "M. Joseph",
+        "S. V. Jose"
+      ],
+      "year": 2024,
+      "doi": "10.1002/dta.3642",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38225724/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "lucchetti2017",
+      "type": "paper",
+      "title": "Brain disposition of 4,4'-DMAR and its potential metabolites after acute and chronic treatment in rats: correlation with central behavioral effects (J Pharmacol Exp Ther 361(3):492-500)",
+      "authors": [
+        "J. Lucchetti",
+        "C. M. Marzo",
+        "A. Passoni",
+        "A. Di Clemente",
+        "F. Moro",
+        "R. Bagnati",
+        "M. Gobbi",
+        "L. Cervo"
+      ],
+      "year": 2017,
+      "doi": "10.1124/jpet.117.240788",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28404688/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "rickli2019",
+      "type": "paper",
+      "title": "Pharmacological characterization of the aminorex analogs 4-MAR, 4,4'-DMAR, and 3,4-DMAR (Neurotoxicology 72:95-100)",
+      "authors": [
+        "A. Rickli",
+        "K. Kolaczynska",
+        "M. C. Hoener",
+        "M. E. Liechti"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuro.2019.02.011",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30776375/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "ladona2000",
+      "type": "paper",
+      "title": "Cocaine metabolism in human fetal and adult liver microsomes is related to cytochrome P450 3A expression (Life Sci 68(4):431-443)",
+      "authors": [
+        "M. G. Ladona",
+        "M. L. Gonzalez",
+        "A. Rane",
+        "R. M. Peter",
+        "R. de la Torre"
+      ],
+      "year": 2000,
+      "doi": "10.1016/s0024-3205(00)00952-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11205892/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "liu2016-cocaine",
+      "type": "paper",
+      "title": "Applicability of ultra-high performance liquid chromatography-quadrupole-time of flight mass spectrometry for cocaine profiling (Drug Test Anal 9(8):1152-1161)",
+      "authors": [
+        "C. Liu",
+        "Z. Hua",
+        "X. Meng"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.2132",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27860448/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "laposchan2021",
+      "type": "paper",
+      "title": "Impurities, adulterants and cutting agents in cocaine as potential candidates for retrospective mining of GC-MS data (Sci Justice 62(1):60-75)",
+      "authors": [
+        "S. Laposchan",
+        "R. F. Kranenburg",
+        "A. C. van Asten"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.scijus.2021.11.004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35033329/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "sousa2020",
+      "type": "paper",
+      "title": "Pharmacokinetic and pharmacodynamic of the cognitive enhancer modafinil: relevant clinical and forensic aspects (Subst Abus 41(2):155-173)",
+      "authors": [
+        "A. Sousa",
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2020,
+      "doi": "10.1080/08897077.2019.1700584",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31951804/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dailymed-ritalin",
+      "type": "institution",
+      "title": "Ritalin (methylphenidate hydrochloride) tablets, Sandoz Inc, prescribing information (DailyMed, label of 5 February 2025), section 12.3",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d6fb2750-cdab-4749-ba0d-7534840a5892",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "dailymed-provigil",
+      "type": "institution",
+      "title": "Provigil (modafinil) tablets, Cephalon LLC, prescribing information (DailyMed, label of 31 December 2022), section 12.3",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e16c26ad-7bc2-d155-3a5d-da83ad6492c8",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
       "id": "staack2004",
       "type": "paper",
       "title": "Cytochrome P450 dependent metabolism of the new designer drug 1-(3-trifluoromethylphenyl)piperazine (TFMPP) (Biochem Pharmacol 67:235-244)",

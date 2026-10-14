@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "norephedrine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Norephedrine (phenylpropanolamine)",
+      "synonyms": [
+        "phenylpropanolamine",
+        "PPA",
+        "(1R,2S)-2-amino-1-phenylpropan-1-ol"
+      ]
+    },
+    "it": {
+      "preferred": "Norefedrina (fenilpropanolamina)",
+      "synonyms": [
+        "fenilpropanolamina",
+        "PPA",
+        "(1R,2S)-2-ammino-1-fenilpropan-1-olo"
+      ]
+    }
+  },
+  "iupac": "(1R,2S)-2-amino-1-phenylpropan-1-ol",
+  "formula": "C9H13NO",
+  "molar_mass_g_mol": 151.2,
+  "smiles": "C[C@@H]([C@@H](C1=CC=CC=C1)O)N",
+  "inchi": "InChI=1S/C9H13NO/c1-7(10)9(11)8-5-3-2-4-6-8/h2-7,9,11H,10H2,1H3/t7-,9-/m0/s1",
+  "inchikey": "DLNKOYKMWOXYQA-CBAPKCEASA-N",
+  "external_ids": {
+    "cas": "14838-15-4",
+    "pubchem_cid": 10297
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
