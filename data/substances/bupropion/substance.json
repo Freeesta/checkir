@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "bupropion",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Bupropion",
+      "synonyms": [
+        "amfebutamone"
+      ]
+    },
+    "it": {
+      "preferred": "Bupropione",
+      "synonyms": [
+        "amfebutamone"
+      ]
+    }
+  },
+  "iupac": "2-(tert-butylamino)-1-(3-chlorophenyl)propan-1-one",
+  "formula": "C13H18ClNO",
+  "molar_mass_g_mol": 239.74,
+  "smiles": "CC(C(=O)C1=CC(=CC=C1)Cl)NC(C)(C)C",
+  "inchi": "InChI=1S/C13H18ClNO/c1-9(15-13(2,3)4)12(16)10-6-5-7-11(14)8-10/h5-9,15H,1-4H3",
+  "inchikey": "SNPPWIUOZRMYNY-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "34911-55-2",
+    "pubchem_cid": 444
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

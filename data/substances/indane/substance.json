@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "indane",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Indane",
+      "synonyms": [
+        "2,3-dihydro-1H-indene",
+        "hydrindene",
+        "indan"
+      ]
+    },
+    "it": {
+      "preferred": "Indano",
+      "synonyms": [
+        "2,3-diidro-1H-indene",
+        "idrindene"
+      ]
+    }
+  },
+  "iupac": "2,3-dihydro-1H-indene",
+  "formula": "C9H10",
+  "molar_mass_g_mol": 118.18,
+  "smiles": "C1CC2=CC=CC=C2C1",
+  "inchi": "InChI=1S/C9H10/c1-2-5-9-7-3-6-8(9)4-1/h1-2,4-5H,3,6-7H2",
+  "inchikey": "PQNFLJBBNBOBRQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "496-11-7",
+    "pubchem_cid": 10326
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "datasheet/1",
+  "substance": "25ip-nbome",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "nbome",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "o-desmethyl-25ip-nbome",
+        "reaction": "o_demethylation",
+        "source": "xiang2024"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-25ip-nbome",
+        "reaction": "hydroxylation",
+        "source": "xiang2024"
+      },
+      {
+        "from": "parent",
+        "to": "glucuronide-25ip-nbome",
+        "reaction": "glucuronidation",
+        "source": "xiang2024"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "o-desmethyl-25ip-nbome",
+        "active": null,
+        "source": "xiang2024"
+      },
+      {
+        "name_key": "hydroxy-25ip-nbome",
+        "active": null,
+        "source": "xiang2024"
+      },
+      {
+        "name_key": "glucuronide-25ip-nbome",
+        "active": null,
+        "source": "xiang2024"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
