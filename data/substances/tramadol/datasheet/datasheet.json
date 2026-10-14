@@ -1,0 +1,131 @@
+{
+  "schema": "datasheet/1",
+  "substance": "tramadol",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "o-desmethyltramadol",
+        "reaction": "o_demethylation",
+        "enzymes": [
+          "CYP2D6"
+        ],
+        "source": "grond2004"
+      },
+      {
+        "from": "parent",
+        "to": "n-desmethyltramadol",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP2B6",
+          "CYP3A4"
+        ],
+        "source": "grond2004"
+      },
+      {
+        "from": "parent",
+        "to": "tramadol-conjugates",
+        "reaction": "glucuronidation",
+        "source": "grond2004"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "o-desmethyltramadol",
+        "active": true,
+        "source": "tramadol-label"
+      },
+      {
+        "name_key": "n-desmethyltramadol",
+        "active": null,
+        "source": "grond2004"
+      }
+    ],
+    "half_life_h": {
+      "min": 6,
+      "max": 7,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "tramadol-label"
+    }
+  },
+  "interactions": [
+    {
+      "with": "cyp2d6_inhibitors",
+      "severity": "risky",
+      "mechanism": "cyp_inhibition",
+      "source": "tramadol-label"
+    },
+    {
+      "with": "serotonergic_drugs",
+      "severity": "dangerous",
+      "mechanism": "serotonergic",
+      "source": "tramadol-label"
+    },
+    {
+      "with": "benzodiazepines",
+      "severity": "dangerous",
+      "mechanism": "cns_depression",
+      "source": "tramadol-label"
+    },
+    {
+      "with": "maoi",
+      "severity": "dangerous",
+      "mechanism": "maoi",
+      "source": "tramadol-label"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "tramadol.cyp2d6",
+      "topic": "dosing",
+      "source": "grond2004"
+    },
+    {
+      "key": "tramadol.seizures",
+      "topic": "overdose_signs",
+      "source": "tramadol-label"
+    },
+    {
+      "key": "tramadol.serotonergic",
+      "topic": "combination",
+      "source": "tramadol-label"
+    },
+    {
+      "key": "tramadol.combination",
+      "topic": "combination",
+      "source": "tramadol-label"
+    },
+    {
+      "key": "tramadol.dependence",
+      "topic": "dependence",
+      "source": "tramadol-label"
+    }
+  ],
+  "doses": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "para-methoxyfuranylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "para-Methoxyfuranylfentanyl",
+      "synonyms": [
+        "p-methoxyfuranylfentanyl",
+        "4-methoxyfuranylfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "para-Metossifuranilfentanil",
+      "synonyms": [
+        "p-metossifuranilfentanil",
+        "4-metossifuranilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(4-methoxyphenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]furan-2-carboxamide",
+  "formula": "C25H28N2O3",
+  "molar_mass_g_mol": 404.5,
+  "smiles": "COC1=CC=C(C=C1)N(C2CCN(CC2)CCC3=CC=CC=C3)C(=O)C4=CC=CO4",
+  "inchi": "InChI=1S/C25H28N2O3/c1-29-23-11-9-21(10-12-23)27(25(28)24-8-5-19-30-24)22-14-17-26(18-15-22)16-13-20-6-3-2-4-7-20/h2-12,19,22H,13-18H2,1H3",
+  "inchikey": "JCCKUDBCTLAHGQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2748591-40-2",
+    "pubchem_cid": 137700077
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

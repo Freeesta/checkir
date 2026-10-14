@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "1p-lsd",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "1P-LSD",
+      "synonyms": [
+        "1-propionyl-LSD",
+        "1-propanoyl-lysergic acid diethylamide",
+        "1P-LAD"
+      ]
+    },
+    "it": {
+      "preferred": "1P-LSD",
+      "synonyms": [
+        "1-propionil-LSD",
+        "1P-LAD"
+      ]
+    }
+  },
+  "iupac": "(6aR,9R)-N,N-diethyl-7-methyl-4-propanoyl-6,6a,8,9-tetrahydroindolo[4,3-fg]quinoline-9-carboxamide",
+  "formula": "C23H29N3O2",
+  "molar_mass_g_mol": 379.5,
+  "smiles": "CCC(=O)N1C=C2C[C@@H]3C(=C[C@H](CN3C)C(=O)N(CC)CC)C4=C2C1=CC=C4",
+  "inchi": "InChI=1S/C23H29N3O2/c1-5-21(27)26-14-15-12-20-18(17-9-8-10-19(26)22(15)17)11-16(13-24(20)4)23(28)25(6-2)7-3/h8-11,14,16,20H,5-7,12-13H2,1-4H3/t16-,20-/m1/s1",
+  "inchikey": "JSMQOVGXBIDBIE-OXQOHEQNSA-N",
+  "external_ids": {
+    "cas": "2349358-81-0",
+    "pubchem_cid": 119025985
+  },
+  "classes": {
+    "chemical": [
+      "lysergamides"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

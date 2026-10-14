@@ -1,0 +1,92 @@
+{
+  "schema": "datasheet/1",
+  "substance": "4-aco-dmt",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "counselling": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true,
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "psilocin",
+        "reaction": "hydrolysis_ester",
+        "source": "jones2023"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-4-aco-dmt",
+        "reaction": "hydroxylation",
+        "source": "zhai2022"
+      },
+      {
+        "from": "parent",
+        "to": "nor-4-aco-dmt",
+        "reaction": "n_demethylation",
+        "source": "zhai2022"
+      },
+      {
+        "from": "parent",
+        "to": "4-aco-dmt glucuronide",
+        "reaction": "glucuronidation",
+        "source": "zhai2022"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "psilocin",
+        "active": true,
+        "source": "jones2023"
+      },
+      {
+        "name_key": "beta-hydroxy-4-aco-dmt",
+        "active": null,
+        "source": "zhai2022",
+        "marker": true
+      }
+    ]
+  },
+  "counselling": [
+    {
+      "key": "4acodmt.identity",
+      "topic": "testing",
+      "source": "correia2025"
+    },
+    {
+      "key": "4acodmt.set_setting",
+      "topic": "set_setting",
+      "source": "klein2021"
+    },
+    {
+      "key": "4acodmt.dosing",
+      "topic": "dosing",
+      "source": "jones2023"
+    }
+  ],
+  "family": "tryptamines"
+}

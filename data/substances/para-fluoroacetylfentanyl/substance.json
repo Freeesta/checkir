@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "para-fluoroacetylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "para-Fluoroacetylfentanyl",
+      "synonyms": [
+        "p-fluoroacetylfentanyl",
+        "4-fluoroacetylfentanyl",
+        "acetyl 4-fluorofentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "para-Fluoroacetilfentanil",
+      "synonyms": [
+        "p-fluoroacetilfentanil",
+        "4-fluoroacetilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(4-fluorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]acetamide",
+  "formula": "C21H25FN2O",
+  "molar_mass_g_mol": 340.4,
+  "smiles": "CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=C(C=C3)F",
+  "inchi": "InChI=1S/C21H25FN2O/c1-17(25)24(20-9-7-19(22)8-10-20)21-12-15-23(16-13-21)14-11-18-5-3-2-4-6-18/h2-10,21H,11-16H2,1H3",
+  "inchikey": "OXKSBDHHJOPFAH-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "244195-30-0",
+    "pubchem_cid": 527014
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}
