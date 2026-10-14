@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-ethylmethcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-Ethylmethcathinone",
+      "synonyms": [
+        "4-EMC"
+      ]
+    },
+    "it": {
+      "preferred": "4-Ethylmethcathinone",
+      "synonyms": [
+        "4-EMC"
+      ]
+    }
+  },
+  "iupac": "1-(4-ethylphenyl)-2-(methylamino)propan-1-one",
+  "formula": "C12H17NO",
+  "molar_mass_g_mol": 191.3,
+  "smiles": "CCC1=CC=C(C=C1)C(=O)C(C)NC",
+  "inchi": "InChI=1S/C12H17NO/c1-4-10-5-7-11(8-6-10)12(14)9(2)13-3/h5-9,13H,4H2,1-3H3",
+  "inchikey": "FUYPDKFWOHBUFT-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1225622-14-9",
+    "pubchem_cid": 71316576
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
