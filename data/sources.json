@@ -9804,6 +9804,140 @@
       "tier": "primary"
     },
     {
+      "id": "vikingsson2016",
+      "type": "paper",
+      "title": "Identification of AB-FUBINACA metabolites in authentic urine samples suitable as urinary markers of drug intake using liquid chromatography quadrupole tandem time of flight mass spectrometry (Drug Test Anal 8:950-956)",
+      "authors": [
+        "S. Vikingsson",
+        "H. Gréen",
+        "L. Brinkhagen",
+        "S. Mukhtar",
+        "M. Josefsson"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1896",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26560240/",
+      "archive_url": "https://web.archive.org/web/20250204174127/https://pubmed.ncbi.nlm.nih.gov/26560240/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "takayama2014",
+      "type": "paper",
+      "title": "UPLC/ESI-MS/MS-based determination of metabolism of several new illicit drugs, ADB-FUBINACA, AB-FUBINACA, AB-PINACA, QUPIC, 5F-QUPIC and α-PVT, by human liver microsome (Biomed Chromatogr 28:831-838)",
+      "authors": [
+        "T. Takayama",
+        "M. Suzuki",
+        "K. Todoroki",
+        "K. Inoue",
+        "J. Z. Min",
+        "R. Kikura-Hanajiri",
+        "Y. Goda",
+        "T. Toyo'oka"
+      ],
+      "year": 2014,
+      "doi": "10.1002/bmc.3155",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24861751/",
+      "archive_url": "https://web.archive.org/web/20250204010410/https://pubmed.ncbi.nlm.nih.gov/24861751/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "minakata2021-ab-pinaca",
+      "type": "paper",
+      "title": "In Vivo Metabolites of AB-PINACA in Solid Tissues Obtained from Its Abuser: Comparison with In Vitro Experiment (J Anal Toxicol 44:1027-1035)",
+      "authors": [
+        "K. Minakata",
+        "K. Hasegawa",
+        "I. Yamagishi",
+        "H. Nozawa",
+        "M. Suzuki",
+        "T. Kitamoto",
+        "O. Suzuki",
+        "K. Watanabe"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa031",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32232365/",
+      "archive_url": "https://web.archive.org/web/20260812041156/https://pubmed.ncbi.nlm.nih.gov/32232365/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "monti2021-thpinaca",
+      "type": "paper",
+      "title": "Phase I In Vitro Metabolic Profiling of the Synthetic Cannabinoid Receptor Agonists CUMYL-THPINACA and ADAMANTYL-THPINACA (Metabolites 11:470)",
+      "authors": [
+        "M. C. Monti",
+        "E. Scheurer",
+        "K. Mercer-Chalmers-Bender"
+      ],
+      "year": 2021,
+      "doi": "10.3390/metabo11080470",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8398790/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "decampos2024",
+      "type": "paper",
+      "title": "Identification of ADB-5'Br-BINACA in plant material and analytical characterization using GC-MS, LC-QTOF-MS, NMR and ATR-FTIR (J Pharm Biomed Anal 247:116254)",
+      "authors": [
+        "E. G. de Campos",
+        "D. G. Farrar",
+        "A. J. Krotulski"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.116254",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38810333/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "murakami2018",
+      "type": "paper",
+      "title": "Differentiation of AB-FUBINACA and its five positional isomers using liquid chromatography-electrospray ionization-linear ion trap mass spectrometry and triple quadrupole mass spectrometry (Forensic Toxicol 36:351-358)",
+      "authors": [
+        "T. Murakami",
+        "Y. Iwamuro",
+        "R. Ishimaru",
+        "S. Chinaka",
+        "N. Takayama",
+        "H. Hasegawa"
+      ],
+      "year": 2018,
+      "doi": "10.1007/s11419-018-0410-4",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6002426/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dea-fr2016-ab-fubinaca",
+      "type": "institution",
+      "title": "Schedules of Controlled Substances: Placement of PB-22, 5F-PB-22, AB-FUBINACA and ADB-PINACA into Schedule I (US DEA final rule, Federal Register 81:61130-61133, 6 September 2016)",
+      "year": 2016,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27632803/",
+      "archive_url": "https://web.archive.org/web/20250420152100/https://pubmed.ncbi.nlm.nih.gov/27632803/",
+      "tier": "agency",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dea-fr2017-ab-pinaca",
+      "type": "institution",
+      "title": "Schedules of Controlled Substances: Placement of AB-CHMINACA, ABPINACA and THJ-2201 Into Schedule I (US DEA final rule, Federal Register 82:47971-47974, 16 October 2017)",
+      "year": 2017,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29035496/",
+      "archive_url": "https://web.archive.org/web/20250204020423/https://pubmed.ncbi.nlm.nih.gov/29035496/",
+      "tier": "agency",
+      "consulted": "2026-10-14"
+    },
+    {
       "id": "krotulski2019-app-binaca",
       "type": "paper",
       "title": "Detection and characterization of the new synthetic cannabinoid APP-BINACA in forensic casework (Drug Test Anal 12:136-144)",
