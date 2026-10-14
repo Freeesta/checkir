@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-fluoropentyl-3-pyridinoylindole",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-fluoropentyl-3-pyridinoylindole",
+      "synonyms": [
+        "[1-(5-fluoropentyl)indol-3-yl]-pyridin-3-ylmethanone"
+      ]
+    },
+    "it": {
+      "preferred": "5-fluoropentyl-3-pyridinoylindole",
+      "synonyms": [
+        "[1-(5-fluoropentyl)indol-3-yl]-pyridin-3-ylmethanone"
+      ]
+    }
+  },
+  "iupac": "[1-(5-fluoropentyl)indol-3-yl]-pyridin-3-ylmethanone",
+  "formula": "C19H19FN2O",
+  "molar_mass_g_mol": 310.4,
+  "smiles": "C1=CC=C2C(=C1)C(=CN2CCCCCF)C(=O)C3=CN=CC=C3",
+  "inchi": "InChI=1S/C19H19FN2O/c20-10-4-1-5-12-22-14-17(16-8-2-3-9-18(16)22)19(23)15-7-6-11-21-13-15/h2-3,6-9,11,13-14H,1,4-5,10,12H2",
+  "inchikey": "CNMQLCYLJPWHEW-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 124518670
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
