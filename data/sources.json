@@ -8874,6 +8874,133 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "chimalakonda2012",
+      "type": "paper",
+      "title": "Cytochrome P450-mediated oxidative metabolism of abused synthetic cannabinoids found in K2/Spice: identification of novel cannabinoid receptor ligands (Drug Metab Dispos 40:2174-2184)",
+      "authors": [
+        "K. C. Chimalakonda",
+        "K. A. Seely",
+        "S. M. Bratton",
+        "L. K. Brents",
+        "C. L. Moran",
+        "G. W. Endres",
+        "L. P. James",
+        "P. F. Hollenberg",
+        "P. L. Prather",
+        "A. Radominska-Pandya",
+        "J. H. Moran"
+      ],
+      "year": 2012,
+      "doi": "10.1124/dmd.112.047530",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22904561/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250418174105/https://pubmed.ncbi.nlm.nih.gov/22904561/"
+    },
+    {
+      "id": "wintermeyer2010-jwh018",
+      "type": "paper",
+      "title": "In vitro phase I metabolism of the synthetic cannabimimetic JWH-018 (Anal Bioanal Chem 398:2141-2153)",
+      "authors": [
+        "A. Wintermeyer",
+        "I. Möller",
+        "M. Thevis",
+        "M. Jübner",
+        "J. Beike",
+        "M. A. Rothschild",
+        "K. Bender"
+      ],
+      "year": 2010,
+      "doi": "10.1007/s00216-010-4171-0",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20838779/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250202001924/https://pubmed.ncbi.nlm.nih.gov/20838779/"
+    },
+    {
+      "id": "holm2016-jwh018",
+      "type": "paper",
+      "title": "JWH-018 ω-OH, a shared hydroxy metabolite of the two synthetic cannabinoids JWH-018 and AM-2201, undergoes oxidation by alcohol dehydrogenase and aldehyde dehydrogenase enzymes in vitro forming the carboxylic acid metabolite (Toxicol Lett 259:35-43)",
+      "authors": [
+        "N. B. Holm",
+        "C. Noble",
+        "K. Linnet"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.toxlet.2016.07.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27421777/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204134348/https://pubmed.ncbi.nlm.nih.gov/27421777/"
+    },
+    {
+      "id": "hutter2018",
+      "type": "paper",
+      "title": "Metabolism of Nine Synthetic Cannabinoid Receptor Agonists Encountered in Clinical Casework: Major in vivo Phase I Metabolites of AM-694, AM-2201, JWH-007, JWH-019, JWH-203, JWH-307, MAM-2201, UR-144 and XLR-11 in Human Urine Using LC-MS/MS (Curr Pharm Biotechnol 19:144-162)",
+      "authors": [
+        "M. Hutter",
+        "S. Broecker",
+        "S. Kneisel",
+        "F. Franz",
+        "S. D. Brandt",
+        "V. Auwärter"
+      ],
+      "year": 2018,
+      "doi": "10.2174/1389201019666180509163114",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29745330/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204050336/https://pubmed.ncbi.nlm.nih.gov/29745330/"
+    },
+    {
+      "id": "diao2016-fubimina",
+      "type": "paper",
+      "title": "Strategies to distinguish new synthetic cannabinoid FUBIMINA (BIM-2201) intake from its isomer THJ-2201: metabolism of FUBIMINA in human hepatocytes (Forensic Toxicol 34:256-267)",
+      "authors": [
+        "X. Diao",
+        "K. B. Scheidweiler",
+        "A. Wohlfarth",
+        "M. Zhu",
+        "S. Pang",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s11419-016-0312-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27547265/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260108113527/https://pubmed.ncbi.nlm.nih.gov/27547265/"
+    },
+    {
+      "id": "wiley2015",
+      "type": "paper",
+      "title": "AB-CHMINACA, AB-PINACA, and FUBIMINA: Affinity and Potency of Novel Synthetic Cannabinoids in Producing Δ9-Tetrahydrocannabinol-Like Effects in Mice (J Pharmacol Exp Ther 354:328-339)",
+      "authors": [
+        "J. L. Wiley",
+        "J. A. Marusich",
+        "T. W. Lefever",
+        "K. R. Antonazzo",
+        "M. T. Wallgren",
+        "R. A. Cortes",
+        "P. R. Patel",
+        "M. Grabenauer",
+        "K. N. Moore",
+        "B. F. Thomas"
+      ],
+      "year": 2015,
+      "doi": "10.1124/jpet.115.225326",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26105953/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251228171627/https://pubmed.ncbi.nlm.nih.gov/26105953/"
     }
   ]
 }
