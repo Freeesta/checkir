@@ -12591,6 +12591,211 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "maas2017",
+      "type": "paper",
+      "title": "Confirmation of recent heroin abuse: Accepting the challenge (Drug Test Anal 10:54-71)",
+      "authors": [
+        "A. Maas",
+        "B. Madea",
+        "C. Hess"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2244",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28681463/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "oneal2001",
+      "type": "paper",
+      "title": "Acetylcodeine, an impurity of illicitly manufactured heroin, elicits convulsions, antinociception, and locomotor stimulation in mice (Drug Alcohol Depend 65:37-43)",
+      "authors": [
+        "C. L. O'Neal",
+        "A. Poklis",
+        "A. H. Lichtman"
+      ],
+      "year": 2001,
+      "doi": "10.1016/s0376-8716(01)00145-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11714588/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gillis1995",
+      "type": "paper",
+      "title": "Transnasal butorphanol. A review of its pharmacodynamic and pharmacokinetic properties, and therapeutic potential in acute pain management (Drugs 50:157-175)",
+      "authors": [
+        "J. C. Gillis",
+        "P. Benfield",
+        "K. L. Goa"
+      ],
+      "year": 1995,
+      "doi": "10.2165/00003495-199550010-00010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7588085/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "vachharajani1997",
+      "type": "paper",
+      "title": "The pharmacokinetics of butorphanol and its metabolites at steady state following nasal administration in humans (Biopharm Drug Dispos 18:191-202)",
+      "authors": [
+        "N. N. Vachharajani",
+        "W. C. Shyu",
+        "D. S. Greene",
+        "R. H. Barbhaiya"
+      ],
+      "year": 1997,
+      "doi": "10.1002/(sici)1099-081x(199704)18:3<191::aid-bdd9>3.0.co;2-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9113342/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "somogyi2004",
+      "type": "paper",
+      "title": "CYP3A4 mediates dextropropoxyphene N-demethylation to nordextropropoxyphene: human in vitro and in vivo studies and lack of CYP2D6 involvement (Xenobiotica 34:875-887)",
+      "authors": [
+        "A. A. Somogyi",
+        "A. Menelaou",
+        "S. V. Fullston"
+      ],
+      "year": 2004,
+      "doi": "10.1080/00498250400008371",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15764408/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "hutchinson2004",
+      "type": "paper",
+      "title": "CYP2D6 and CYP3A4 involvement in the primary oxidative metabolism of hydrocodone by human liver microsomes (Br J Clin Pharmacol 57:287-297)",
+      "authors": [
+        "M. R. Hutchinson",
+        "A. Menelaou",
+        "D. J. R. Foster",
+        "J. K. Coller",
+        "A. A. Somogyi"
+      ],
+      "year": 2004,
+      "doi": "10.1046/j.1365-2125.2003.02002.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14998425/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kapil2015",
+      "type": "paper",
+      "title": "Effects of paroxetine, a CYP2D6 inhibitor, on the pharmacokinetic properties of hydrocodone after coadministration with a single-entity, once-daily, extended-release hydrocodone tablet (Clin Ther 37:2286-2296)",
+      "authors": [
+        "R. P. Kapil",
+        "K. Friedman",
+        "A. Cipriano",
+        "G. Michels",
+        "M. Shet",
+        "S. A. Mondal",
+        "S. C. Harris"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.clinthera.2015.08.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26350273/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "barakat2014",
+      "type": "paper",
+      "title": "Urinary hydrocodone and metabolite distributions in pain patients (J Anal Toxicol 38:404-409)",
+      "authors": [
+        "N. H. Barakat",
+        "R. S. Atayee",
+        "B. M. Best",
+        "J. D. Ma"
+      ],
+      "year": 2014,
+      "doi": "10.1093/jat/bku051",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24836897/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "coates2025",
+      "type": "paper",
+      "title": "UGT2B7-mediated drug-drug interaction between cannabinoids and hydromorphone (Drug Metab Dispos 53:100135)",
+      "authors": [
+        "S. Coates",
+        "K. Bardhi",
+        "M. Zhao",
+        "P. Lazarus"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.dmd.2025.100135",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40925219/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lohela2021",
+      "type": "paper",
+      "title": "Rifampin reduces the plasma concentrations of oral and intravenous hydromorphone in healthy volunteers (Anesth Analg 133:423-434)",
+      "authors": [
+        "T. J. Lohela",
+        "S. Poikola",
+        "M. Neuvonen",
+        "M. Niemi",
+        "J. T. Backman",
+        "K. T. Olkkola",
+        "T. O. Lilius"
+      ],
+      "year": 2021,
+      "doi": "10.1213/ANE.0000000000005229",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33177323/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "boonstra2001",
+      "type": "paper",
+      "title": "Engineering novel biocatalytic routes for production of semisynthetic opiate drugs (Biomol Eng 18:41-47)",
+      "authors": [
+        "B. Boonstra",
+        "D. A. Rathbone",
+        "N. C. Bruce"
+      ],
+      "year": 2001,
+      "doi": "10.1016/s1389-0344(01)00084-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11535415/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "petek2010",
+      "type": "paper",
+      "title": "Qualitative GC-MS assessment of TCP and TAMORF elimination in rats (Arh Hig Rada Toksikol 61:61-67)",
+      "authors": [
+        "M. J. Petek",
+        "A. Lucić Vrdoljak",
+        "G. Mrsić"
+      ],
+      "year": 2010,
+      "doi": "10.2478/10004-1254-61-2010-1985",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20338869/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }

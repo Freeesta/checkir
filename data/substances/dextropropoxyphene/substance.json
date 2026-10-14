@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "dextropropoxyphene",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Dextropropoxyphene",
+      "synonyms": [
+        "Propoxyphene"
+      ]
+    },
+    "it": {
+      "preferred": "Destropropossifene",
+      "synonyms": [
+        "Propossifene"
+      ]
+    }
+  },
+  "iupac": "[(2S,3R)-4-(dimethylamino)-3-methyl-1,2-diphenylbutan-2-yl] propanoate",
+  "formula": "C22H29NO2",
+  "molar_mass_g_mol": 339.5,
+  "smiles": "CCC(=O)O[C@](CC1=CC=CC=C1)(C2=CC=CC=C2)[C@H](C)CN(C)C",
+  "inchi": "InChI=1S/C22H29NO2/c1-5-21(24)25-22(18(2)17-23(3)4,20-14-10-7-11-15-20)16-19-12-8-6-9-13-19/h6-15,18H,5,16-17H2,1-4H3/t18-,22+/m1/s1",
+  "inchikey": "XLMALTXPSGQGBX-GCJKJVERSA-N",
+  "external_ids": {
+    "pubchem_cid": 10100
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

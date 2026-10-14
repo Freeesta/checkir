@@ -738,7 +738,24 @@
     "ro-5-3448": "diclazepam",
     "chlorodiazepam": "diclazepam",
     "prosom": "estazolam",
-    "eurodin": "estazolam"
+    "eurodin": "estazolam",
+    "6-acetylcodeine": "acetylcodeine",
+    "acetilcodeina": "acetylcodeine",
+    "6-acetilcodeina": "acetylcodeine",
+    "butorfanolo": "butorphanol",
+    "propoxyphene": "dextropropoxyphene",
+    "destropropossifene": "dextropropoxyphene",
+    "propossifene": "dextropropoxyphene",
+    "difenossilato": "diphenoxylate",
+    "hydrocodone": "hydrocodone-bitartrate-hemipentahydrate",
+    "idrocodone": "hydrocodone-bitartrate-hemipentahydrate",
+    "hydrocodone-bitartrate": "hydrocodone-bitartrate-hemipentahydrate",
+    "idrocodone-bitartrato": "hydrocodone-bitartrate-hemipentahydrate",
+    "idromorfone": "hydromorphone",
+    "dihydromorphinone": "hydromorphone",
+    "tcp": "tenocyclidine",
+    "tenociclidina": "tenocyclidine",
+    "tiletamina": "tiletamine"
   },
   "schema": "aliases/1"
 }
