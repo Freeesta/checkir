@@ -365,7 +365,15 @@
     "jwh081": "jwh-081",
     "jwh122": "jwh-122",
     "jwh147": "jwh-147",
-    "jwh166": "jwh-166"
+    "jwh166": "jwh-166",
+    "jwh203": "jwh-203",
+    "jwh210": "jwh-210",
+    "jwh249": "jwh-249",
+    "jwh250": "jwh-250",
+    "jwh251": "jwh-251",
+    "jwh307": "jwh-307",
+    "jwh308": "jwh-308",
+    "jwh368": "jwh-368"
   },
   "schema": "aliases/1"
 }
