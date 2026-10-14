@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "3-fma",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "3-FMA",
+      "synonyms": [
+        "3-fluoromethamphetamine",
+        "1-(3-fluorophenyl)-N-methylpropan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "3-FMA",
+      "synonyms": [
+        "3-fluorometanfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(3-fluorophenyl)-N-methylpropan-2-amine",
+  "formula": "C10H14FN",
+  "molar_mass_g_mol": 167.2,
+  "smiles": "CC(CC1=CC(=CC=C1)F)NC",
+  "inchi": "InChI=1S/C10H14FN/c1-8(12-2)6-9-4-3-5-10(11)7-9/h3-5,7-8,12H,6H2,1-2H3",
+  "inchikey": "RRVAUTPWWWFYQT-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 58216164
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

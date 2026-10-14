@@ -1,0 +1,75 @@
+{
+  "schema": "datasheet/1",
+  "substance": "25d-nbome",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "nbome",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "O-demethylated metabolites",
+        "reaction": "o_demethylation",
+        "source": "grafinger2018"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "grafinger2018"
+      },
+      {
+        "from": "parent",
+        "to": "oxidative deamination metabolites",
+        "reaction": "deamination",
+        "source": "grafinger2018"
+      },
+      {
+        "from": "parent",
+        "to": "2C-D",
+        "reaction": "other",
+        "source": "grafinger2018"
+      },
+      {
+        "from": "parent",
+        "to": "N-oxide",
+        "reaction": "other",
+        "source": "grafinger2018"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "2c-d",
+        "active": null,
+        "source": "grafinger2018"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
