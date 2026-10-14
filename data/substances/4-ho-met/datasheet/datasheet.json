@@ -1,0 +1,83 @@
+{
+  "schema": "datasheet/1",
+  "substance": "4-ho-met",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "tryptamines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "N-demethyl-4-HO-MET",
+        "reaction": "n_demethylation",
+        "source": "wagmann2022"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-4-HO-MET",
+        "reaction": "hydroxylation",
+        "source": "wagmann2022"
+      },
+      {
+        "from": "parent",
+        "to": "oxo-4-HO-MET",
+        "reaction": "other",
+        "source": "wagmann2022"
+      },
+      {
+        "from": "parent",
+        "to": "4-HO-MET N-oxide",
+        "reaction": "other",
+        "source": "wagmann2022"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "n-demethyl-4-ho-met",
+        "active": null,
+        "source": "wagmann2022"
+      },
+      {
+        "name_key": "hydroxy-4-ho-met",
+        "active": null,
+        "source": "wagmann2022"
+      },
+      {
+        "name_key": "oxo-4-ho-met",
+        "active": null,
+        "source": "wagmann2022"
+      },
+      {
+        "name_key": "4-ho-met-n-oxide",
+        "active": null,
+        "source": "wagmann2022"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

@@ -764,7 +764,25 @@
     "fenazepam-4-ossido": "phenazepam-4-oxide",
     "n-desmethyldiazepam": "nordiazepam",
     "nordazepam": "nordiazepam",
-    "phenazepam-n-oxide": "phenazepam-4-oxide"
+    "phenazepam-n-oxide": "phenazepam-4-oxide",
+    "metacetin": "4-aco-met",
+    "mipracetin": "4-aco-mipt",
+    "4-acetoxy-det": "4-aco-det",
+    "4-acetoxy-dipt": "4-aco-dipt",
+    "4-acetoxy-met": "4-aco-met",
+    "4-acetoxy-mipt": "4-aco-mipt",
+    "ethocin": "4-ho-det",
+    "iprocin": "4-ho-dipt",
+    "metocin": "4-ho-met",
+    "methylcybin": "4-ho-met",
+    "4-hydroxy-det": "4-ho-det",
+    "4-hydroxy-dipt": "4-ho-dipt",
+    "4-hydroxy-met": "4-ho-met",
+    "paramorphine": "thebaine",
+    "tebaina": "thebaine",
+    "4-oh-det": "4-ho-det",
+    "4-oh-dipt": "4-ho-dipt",
+    "4-oh-met": "4-ho-met"
   },
   "schema": "aliases/1"
 }
