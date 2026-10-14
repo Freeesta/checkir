@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "hdep-28",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "HDEP-28",
+      "synonyms": [
+        "ethylnaphthidate",
+        "ethyl 2-(naphthalen-2-yl)-2-(piperidin-2-yl)acetate"
+      ]
+    },
+    "it": {
+      "preferred": "HDEP-28",
+      "synonyms": [
+        "etilnaftidato"
+      ]
+    }
+  },
+  "iupac": "ethyl 2-naphthalen-2-yl-2-piperidin-2-ylacetate",
+  "formula": "C19H23NO2",
+  "molar_mass_g_mol": 297.4,
+  "smiles": "CCOC(=O)C(C1CCCCN1)C2=CC3=CC=CC=C3C=C2",
+  "inchi": "InChI=1S/C19H23NO2/c1-2-22-19(21)18(17-9-5-6-12-20-17)16-11-10-14-7-3-4-8-15(14)13-16/h3-4,7-8,10-11,13,17-18,20H,2,5-6,9,12H2,1H3",
+  "inchikey": "OTQVTBPHZRARTL-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2170529-69-6",
+    "pubchem_cid": 91844468
+  },
+  "classes": {
+    "chemical": [
+      "phenidates"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
