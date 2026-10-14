@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5-methoxy-n-n-dipropyltryptamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5-MeO-DPT",
+      "synonyms": [
+        "5-methoxy-N,N-dipropyltryptamine",
+        "5-MeO-DPT"
+      ]
+    },
+    "it": {
+      "preferred": "5-MeO-DPT",
+      "synonyms": [
+        "5-metossi-N,N-dipropiltriptamina"
+      ]
+    }
+  },
+  "iupac": "N-[2-(5-methoxy-1H-indol-3-yl)ethyl]-N-propylpropan-1-amine",
+  "formula": "C17H26N2O",
+  "molar_mass_g_mol": 274.4,
+  "smiles": "CCCN(CCC)CCC1=CNC2=C1C=C(C=C2)OC",
+  "inchi": "InChI=1S/C17H26N2O/c1-4-9-19(10-5-2)11-8-14-13-18-17-7-6-15(20-3)12-16(14)17/h6-7,12-13,18H,4-5,8-11H2,1-3H3",
+  "inchikey": "PNHPVNBKLQWBKH-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "69496-75-9",
+    "pubchem_cid": 14011047
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

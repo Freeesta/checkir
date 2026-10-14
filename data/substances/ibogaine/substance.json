@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ibogaine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Ibogaine",
+      "synonyms": [
+        "12-methoxyibogamine",
+        "endabuse"
+      ]
+    },
+    "it": {
+      "preferred": "Ibogaina",
+      "synonyms": [
+        "12-metossiibogamina"
+      ]
+    }
+  },
+  "iupac": "(1R,15R,17S,18S)-17-ethyl-7-methoxy-3,13-diazapentacyclo[13.3.1.02,10.04,9.013,18]nonadeca-2(10),4(9),5,7-tetraene",
+  "formula": "C20H26N2O",
+  "molar_mass_g_mol": 310.4,
+  "smiles": "CCC1CC2CC3C1N(C2)CCC4=C3NC5=C4C=C(C=C5)OC",
+  "inchi": "InChI=1S/C20H26N2O/c1-3-13-8-12-9-17-19-15(6-7-22(11-12)20(13)17)16-10-14(23-2)4-5-18(16)21-19/h4-5,10,12-13,17,20-21H,3,6-9,11H2,1-2H3/t12-,13+,17+,20+/m1/s1",
+  "inchikey": "HSIBGVUMFOSJPD-CFDPKNGZSA-N",
+  "external_ids": {
+    "cas": "83-74-9",
+    "pubchem_cid": 197060
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
