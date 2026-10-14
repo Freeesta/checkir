@@ -8874,6 +8874,373 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "carlier2017-adb-pinaca",
+      "type": "paper",
+      "title": "Distinguishing Intake of New Synthetic Cannabinoids ADB-PINACA and 5F-ADB-PINACA with Human Hepatocyte Metabolites and High-Resolution Mass Spectrometry (Clin Chem 63(5):1008-1021)",
+      "authors": [
+        "J. Carlier",
+        "X. Diao",
+        "K. B. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2017,
+      "doi": "10.1373/clinchem.2016.267575",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28302730/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "li2026-5f-adb-pinaca",
+      "type": "paper",
+      "title": "Study on Phase I Metabolic Processes and Metabolite Biomarker Identification of Synthetic Cannabinoids 5F-ADB-PINACA and 5F-ADBICA in Human Liver Microsomes and Zebrafish Model (Molecules 31(2))",
+      "authors": [
+        "H. Li",
+        "H. Zheng",
+        "S. Zhong",
+        "Y. Zhao",
+        "J. Lin",
+        "H. Su",
+        "Z. Qian",
+        "Y. Wang"
+      ],
+      "year": 2026,
+      "doi": "10.3390/molecules31020250",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41599300/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260222142849/https://pubmed.ncbi.nlm.nih.gov/41599300/"
+    },
+    {
+      "id": "gao2024-5f-edmb-pica",
+      "type": "paper",
+      "title": "Identification of phase-I and phase-II metabolites and the metabolic pathway of the novel synthetic cannabinoid 5F-EDMB-PICA in vitro (Arch Toxicol 98(9):2879-2888)",
+      "authors": [
+        "Y. Gao",
+        "K. Shi",
+        "P. Wang",
+        "X. Liu",
+        "C. Liu",
+        "L. Luo",
+        "Y. Lin",
+        "L. Yang",
+        "R. Yang",
+        "L. Liao"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00204-024-03790-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38955863/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "giorgetti2022-edmb",
+      "type": "paper",
+      "title": "Human phase-I metabolism and prevalence of two synthetic cannabinoids bearing an ethyl ester moiety: 5F-EDMB-PICA and EDMB-PINACA (Drug Test Anal 15(3):299-313)",
+      "authors": [
+        "A. Giorgetti",
+        "P. Brunetti",
+        "B. Haschimi",
+        "F. P. Busardò",
+        "S. Pelotti",
+        "V. Auwärter"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3405",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36366743/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240916230231/https://pubmed.ncbi.nlm.nih.gov/36366743/"
+    },
+    {
+      "id": "wang2023-transesterification",
+      "type": "paper",
+      "title": "Transesterification of Indazole-3-carboxamide Synthetic Cannabinoids: Identification of Metabolite Biomarkers for Diagnosing Co-abuse of 5F-MDMB-PINACA and Alcohol (J Anal Toxicol 46(9):1016-1024)",
+      "authors": [
+        "Z. Wang",
+        "C. Y. Fong",
+        "E. M. L. Goh",
+        "H. Y. Moy",
+        "E. C. Y. Chan"
+      ],
+      "year": 2023,
+      "doi": "10.1093/jat/bkab121",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34918103/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206054951/https://pubmed.ncbi.nlm.nih.gov/34918103/"
+    },
+    {
+      "id": "wilson2022-indazole",
+      "type": "paper",
+      "title": "Cannabimimetic effects of abused indazole-carboxamide synthetic cannabinoid receptor agonists AB-PINACA, 5F-AB-PINACA and 5F-ADB-PINACA in mice: Tolerance, dependence and withdrawal (Drug Alcohol Depend 236:109468)",
+      "authors": [
+        "C. D. Wilson",
+        "T. Hiranita",
+        "W. E. Fantegrossi"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.drugalcdep.2022.109468",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35643039/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250425184523/https://pubmed.ncbi.nlm.nih.gov/35643039/"
+    },
+    {
+      "id": "marusich2022",
+      "type": "paper",
+      "title": "In vitro and in vivo pharmacology of nine novel synthetic cannabinoid receptor agonists (Pharmacol Biochem Behav 220:173467)",
+      "authors": [
+        "J. A. Marusich",
+        "T. F. Gamage",
+        "Y. Zhang",
+        "L. R. Akinfiresoye",
+        "J. L. Wiley"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.pbb.2022.173467",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36154844/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261004041203/https://pubmed.ncbi.nlm.nih.gov/36154844/"
+    },
+    {
+      "id": "krotulski2020",
+      "type": "paper",
+      "title": "Emerging Synthetic Cannabinoids: Development and Validation of a Novel Liquid Chromatography Quadrupole Time-of-Flight Mass Spectrometry Assay for Real-Time Detection (J Anal Toxicol 44(3):207-217)",
+      "authors": [
+        "A. J. Krotulski",
+        "A. L. A. Mohr",
+        "B. K. Logan"
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkz084",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31909808/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251009155011/https://pubmed.ncbi.nlm.nih.gov/31909808/"
+    },
+    {
+      "id": "liu2017-edmb-pinaca",
+      "type": "paper",
+      "title": "Identification and analytical characterization of six synthetic cannabinoids NNL-3, 5F-NPB-22-7N, 5F-AKB-48-7N, 5F-EDMB-PINACA, EMB-FUBINACA, and EG-018 (Drug Test Anal 9(8):1251-1261)",
+      "authors": [
+        "C. Liu",
+        "W. Jia",
+        "Z. Hua",
+        "Z. Qian"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2160",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28063270/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "baeckberg2023",
+      "type": "paper",
+      "title": "Using in vitro receptor activity studies of synthetic cannabinoids to support the risk assessment of new psychoactive substances - A Swedish strategy to protect public health from harm (Forensic Sci Int 348:111691)",
+      "authors": [
+        "M. Bäckberg",
+        "S. Vikingsson",
+        "J. Strandberg",
+        "S. Wall",
+        "A. Åstrand",
+        "H. Karlsson",
+        "M. Persson",
+        "R. Kronstrand",
+        "H. Green"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.forsciint.2023.111691",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37116244/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20231122081156/https://pubmed.ncbi.nlm.nih.gov/37116244/"
+    },
+    {
+      "id": "al-eitan2024",
+      "type": "paper",
+      "title": "The synthetic cannabinoid 5-fluoro ABICA upregulates angiogenic markers and stimulates tube formation in human brain microvascular endothelial cells (J Taibah Univ Med Sci 19(2):359-371)",
+      "authors": [
+        "L. Al-Eitan",
+        "R. Abusirdaneh"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jtumed.2024.01.002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38357583/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260419160333/https://pubmed.ncbi.nlm.nih.gov/38357583/"
+    },
+    {
+      "id": "shetty2026",
+      "type": "paper",
+      "title": "Behavioral pharmacology of novel synthetic indazole, indole, and benzimidazole cannabinoids in rodents (J Cannabis Res 8(1):22)",
+      "authors": [
+        "R. A. Shetty",
+        "R. D. Hill",
+        "J. A. McDonald",
+        "N. Sumien",
+        "M. J. Forster",
+        "M. B. Gatch"
+      ],
+      "year": 2026,
+      "doi": "10.1186/s42238-026-00390-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41526973/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260215171328/https://pubmed.ncbi.nlm.nih.gov/41526973/"
+    },
+    {
+      "id": "norman2021",
+      "type": "paper",
+      "title": "Large-scale evaluation of ion mobility spectrometry for the rapid detection of synthetic cannabinoid receptor agonists in infused papers in prisons (Drug Test Anal 13(3):644-663)",
+      "authors": [
+        "C. Norman",
+        "B. McKirdy",
+        "G. Walker",
+        "P. Dugard",
+        "N. NicDaéid",
+        "C. McKenzie"
+      ],
+      "year": 2021,
+      "doi": "10.1002/dta.2945",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33058556/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250202094145/https://pubmed.ncbi.nlm.nih.gov/33058556/"
+    },
+    {
+      "id": "tang2024",
+      "type": "paper",
+      "title": "Determination of four amide synthetic cannabinoid isomers by ultra-high performance liquid chromatography-high resolution mass spectrometry (Se Pu 42(1):84-91)",
+      "authors": [
+        "R. Tang",
+        "J. Wang",
+        "T. Xiao",
+        "S. Qin",
+        "Z. Jie",
+        "A. Zhang"
+      ],
+      "year": 2024,
+      "doi": "10.3724/SP.J.1123.2023.07007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38197209/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204113656/https://pubmed.ncbi.nlm.nih.gov/38197209/"
+    },
+    {
+      "id": "al-matrouk2019",
+      "type": "paper",
+      "title": "Identification of synthetic cannabinoids that were seized, consumed, or associated with deaths in Kuwait in 2018 using GC-MS and LC-MS-MS analysis (Forensic Sci Int 303:109960)",
+      "authors": [
+        "A. Al-Matrouk",
+        "M. Alqallaf",
+        "A. AlShemmeri",
+        "H. BoJbarah"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.forsciint.2019.109960",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31550599/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "musile2023",
+      "type": "paper",
+      "title": "Development and Validation of a Rapid Method for Identification of New Synthetic Cannabinoids in Hair Based on High-Performance Liquid Chromatography-Ion Trap Mass Spectrometry Using a Simplified User Interface (J Anal Toxicol 47(1):72-80)",
+      "authors": [
+        "G. Musile",
+        "C. Palacio",
+        "M. Murari",
+        "S. Appolonova",
+        "F. Tagliaro"
+      ],
+      "year": 2023,
+      "doi": "10.1093/jat/bkac027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35536611/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "li2024-5f-edmb-pica",
+      "type": "paper",
+      "title": "Assessment of pharmacological effects and abuse potential of 5F-EDMB-PICA, CUMYL-PEGACLONE, and NM-2201 in mice (Psychopharmacology (Berl) 242(3):533-544)",
+      "authors": [
+        "K. Li",
+        "D. Xu",
+        "Y. Qiao",
+        "L. Kuai",
+        "X. Luo",
+        "B. Di",
+        "P. Xu"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00213-024-06703-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39402377/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260807182931/https://pubmed.ncbi.nlm.nih.gov/39402377/"
+    },
+    {
+      "id": "li2025-5f-edmb-pica",
+      "type": "paper",
+      "title": "Characterization of the Behavioral and Molecular Effects of Acute Exposure to the Fourth-Generation Synthetic Cannabinoid, 5F-EDMB-PICA, in Male Mice of Different Age Groups (Int J Mol Sci 26(21))",
+      "authors": [
+        "K. Li",
+        "P. Xu",
+        "Y. Wang",
+        "X. Shi",
+        "Y. Chen",
+        "S. Zhang",
+        "J. Ran",
+        "Y. Qiao",
+        "Y. Xu",
+        "Y. Pang",
+        "B. Di"
+      ],
+      "year": 2025,
+      "doi": "10.3390/ijms262110424",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41226463/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251209023825/https://pubmed.ncbi.nlm.nih.gov/41226463/"
+    },
+    {
+      "id": "andersen2021",
+      "type": "paper",
+      "title": "Molecular signaling of synthetic cannabinoids: Comparison of CB1 receptor and TRPV1 channel activation (Eur J Pharmacol 907:174301)",
+      "authors": [
+        "H. K. Andersen",
+        "K. B. Walsh"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.ejphar.2021.174301",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34224700/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240302125124/https://pubmed.ncbi.nlm.nih.gov/34224700/"
     }
   ]
 }
