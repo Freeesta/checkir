@@ -40,7 +40,6 @@ pub struct BackgroundEnergy {
 #[derive(Debug, Clone, PartialEq)]
 pub struct Thresholds {
     pub version: u32,
-    pub status: String,
     pub co2: Co2,
     pub vapour: Vapour,
     pub negative: Negative,
@@ -141,12 +140,8 @@ impl Thresholds {
         if version.fract() != 0.0 || version < 1.0 {
             return Err(bad("version"));
         }
-        let status = at(&v, &["calibration", "status"])?
-            .as_str()
-            .ok_or_else(|| bad("calibration/status"))?;
         Ok(Self {
             version: version as u32,
-            status: status.to_string(),
             co2: co2(&v)?,
             vapour: vapour(&v)?,
             negative: negative(&v)?,
@@ -166,9 +161,8 @@ mod test {
     use super::*;
 
     #[test]
-    fn embedded_file_is_valid_and_draft() {
+    fn embedded_file_is_valid() {
         let t = Thresholds::embedded().unwrap();
-        assert_eq!(t.status, "draft");
         assert_eq!(t.co2.band_cm1, (2300.0, 2380.0));
     }
 

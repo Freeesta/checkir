@@ -1,7 +1,7 @@
 // @ts-check
 import { matchScore } from "./candidati.js";
 import { chainLine, levelWord, shownLevel } from "./alerts.js";
-import { chosenCandidates } from "./decision.js";
+import { choiceOf, chosenCandidates } from "./decision.js";
 import { candidatesCsv, download, peaksCsv, spectrumCsv } from "./export.js";
 import { spectrumOf } from "./files.js";
 import { el } from "./dom.js";
@@ -10,12 +10,11 @@ import { mixtureComponents } from "./mixture.js";
 import { libraryLabel } from "./librerie.js";
 import { analyse } from "./peaks.js";
 import { candidateName, LISTED } from "./results.js";
-import { activeFile, decisionOf, getState, resultOf } from "./state.js";
+import { activeFile, getState, resultOf } from "./state.js";
 
 /**
  * The chemist's report (key `e` writes the CSV files, the menu and the button print this): one A4 page with what the chemist needs to stand behind the
- * result — the spectrum, the chain and libraries with versions, the region, the candidates, the unexplained peaks, the decision and the signature
- * line. Built from the page's memory into the hidden `#report-host`, printed, then emptied; nothing is stored or sent.
+ * result — the spectrum, the chain and libraries with versions, the region, the candidates, the unexplained peaks, the chemist's choice. Built from the page's memory into the hidden `#report-host`, printed, then emptied; nothing is stored or sent.
  */
 
 /** @param {string} label @param {string} value @returns {HTMLElement[]} */
@@ -33,10 +32,9 @@ export function buildReport(s) {
   if (result) facts.push(...row(t("report.chain"), chainLine(result.data)), ...row(t("report.level"), level === null ? "" : levelWord(level)));
   /** @type {HTMLElement[]} */
   const parts = [el("h2", {}, [t("report.title")]), el("dl", { class: "report-facts" }, facts)];
-  if (result) parts.push(candidatesBlock(result.data), ...mixtureBlock(result.data), ...decisionBlock(s));
+  if (result) parts.push(candidatesBlock(result.data), ...mixtureBlock(result.data), ...choiceBlock(s));
   const peaks = unexplained(s);
   if (peaks.length) parts.push(el("h3", {}, [t("report.unexplained")]), el("p", {}, [peaks.map((p) => `~${formatNumber(Math.round(p.position))}`).join(" · ")]));
-  parts.push(el("p", { class: "report-sign" }, [t("report.signature")]), el("div", { class: "report-line" }));
   return el("section", { class: "report" }, parts);
 }
 
@@ -57,8 +55,8 @@ function mixtureBlock(data) {
 }
 
 /** @param {import("./state.js").AppState} s @returns {HTMLElement[]} */
-function decisionBlock(s) {
-  const d = decisionOf(s);
+function choiceBlock(s) {
+  const d = choiceOf(s);
   const data = resultOf(s)?.data;
   if (!d || !data) return [];
   const names = chosenCandidates(d, data).map((/** @type {any} */ c) => candidateName(c));

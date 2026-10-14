@@ -41,7 +41,7 @@ async function reportScenario(page, check) {
   check("menu: the rows of the registry show their key on the right", ["e", "n", "b", "p", "x"].every((k) => keys.includes(k)), keys.join(","));
   await page.click('[data-item="export.report"]');
   const printed = await page.evaluate(() => window.__printed);
-  check("report: prints alone, with the code, the candidates, the signature line and no original file name", printed?.mode === "report" && /C1/.test(printed.text) && /beta/.test(printed.text) && /Firma/.test(printed.text) && !/campione/.test(printed.text), JSON.stringify(printed)?.slice(0, 300));
+  check("report: prints alone, with the code, the candidates and no original file name", printed?.mode === "report" && /C1/.test(printed.text) && /beta/.test(printed.text) && !/campione/.test(printed.text), JSON.stringify(printed)?.slice(0, 300));
   await page.evaluate(() => {
     window.print = () => {};
   });

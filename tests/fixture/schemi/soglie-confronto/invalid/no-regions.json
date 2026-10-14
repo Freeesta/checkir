@@ -27,7 +27,6 @@
     "r_min": 0.99
   },
   "quality": {
-    "status": "draft",
     "saturation_a": 1.5,
     "weak_signal_a": 0.02,
     "snr_min": 100,
@@ -55,8 +54,7 @@
           650,
           3800
         ]
-      ],
-      "calibrated": true
+      ]
     }
   ],
   "region_agreement": {

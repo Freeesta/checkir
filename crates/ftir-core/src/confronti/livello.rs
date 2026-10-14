@@ -23,9 +23,9 @@ fn said(method: &str) -> Option<&str> {
 }
 
 /// Level from the first candidate's r, the margin over the first different substance and the coverage. A coverage
-/// under the threshold, a hand-chosen range, a range without calibration or a different sampling method
+/// under the threshold, a hand-chosen range or a different sampling method
 /// (`sampling_differs`) cap "probable" at "to check"; the caps that applied are returned (`coverage`,
-/// `custom_range`, `range_not_calibrated`, `sampling_not_calibrated`).
+/// `custom_range`, `sampling_not_calibrated`).
 pub fn propose(
     r1: f64,
     margin: Option<f64>,
@@ -55,8 +55,6 @@ pub fn propose(
     }
     if o.custom {
         caps.push("custom_range");
-    } else if !o.calibrated {
-        caps.push("range_not_calibrated");
     }
     if sampling_differs {
         caps.push("sampling_not_calibrated");
@@ -260,12 +258,11 @@ pub fn build_alerts(a: &AlertInput) -> Vec<Alert> {
 mod test {
     use super::*;
 
-    fn opts(custom: bool, calibrated: bool) -> Options {
+    fn opts(custom: bool) -> Options {
         Options {
             ranges: vec![],
             range_preset: Some("full".into()),
             custom,
-            calibrated,
             probable_r1: None,
             probable_margin: None,
             libraries: None,
@@ -279,7 +276,7 @@ mod test {
     #[test]
     fn levels_follow_the_agreed_rules() {
         let t = Thresholds::embedded().unwrap();
-        let o = opts(false, true);
+        let o = opts(false);
         let lvl = |r, m, c| propose(r, m, c, false, &o, &t).0;
         assert_eq!(
             propose(0.96, Some(0.06), 1.0, false, &o, &t),
@@ -294,20 +291,16 @@ mod test {
     }
 
     #[test]
-    fn coverage_custom_ranges_and_uncalibrated_presets_cap_at_to_check() {
+    fn coverage_and_custom_ranges_cap_at_to_check() {
         let t = Thresholds::embedded().unwrap();
-        let (l, caps) = propose(0.99, Some(0.5), 0.79, false, &opts(false, true), &t);
+        let (l, caps) = propose(0.99, Some(0.5), 0.79, false, &opts(false), &t);
         assert_eq!((l, caps), (Level::ToCheck, vec!["coverage"]));
         assert_eq!(
-            propose(0.99, Some(0.5), 1.0, false, &opts(true, false), &t).1,
+            propose(0.99, Some(0.5), 1.0, false, &opts(true), &t).1,
             vec!["custom_range"]
         );
         assert_eq!(
-            propose(0.99, Some(0.5), 1.0, false, &opts(false, false), &t).1,
-            vec!["range_not_calibrated"]
-        );
-        assert_eq!(
-            propose(0.5, Some(0.5), 0.1, false, &opts(true, false), &t),
+            propose(0.5, Some(0.5), 0.1, false, &opts(true), &t),
             (Level::NotIdentified, vec![])
         );
     }

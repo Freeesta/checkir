@@ -1,16 +1,16 @@
 // @ts-check
 import { alertViews, familyParts } from "./alerts.js";
-import { chosenCandidates, shownChoice } from "./decision.js";
+import { choiceOf, chosenCandidates, isChanged } from "./decision.js";
 import { mixtureCandidates, mixtureTaken } from "./mixture.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, inLang, t } from "./i18n.js";
 import { candidateName, levelBadge } from "./results.js";
 import { talkCounselling } from "./schede_inline.js";
-import { decisionOf, resultOf } from "./state.js";
+import { resultOf } from "./state.js";
 
 /**
- * The counselling sheet: four blocks in a fixed order (head, found, alerts, foot with the signature line), built from the state in memory after the chemist's decision (before it, a draft
- * with a watermark). It is never stored. Its language is chosen apart from the interface's. Short sentences, no score, no
+ * The counselling sheet: three blocks in a fixed order (head, found, alerts), built from the state in memory: the proposal, or the chemist's choice
+ * when it differs. It is never stored. Its language is chosen apart from the interface's. Short sentences, no score, no
  * percentage, and never a word that reassures; no fixed warning text, only data of the sample and of this result.
  */
 
@@ -66,19 +66,19 @@ function nameOf(c) {
   return c.form ? `${candidateName(c)} (${c.form})` : candidateName(c);
 }
 
-/** «Possible mixture: A, B» when the program proposes one that the choice does not already hold. @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {HTMLElement[]} */
+/** «Possible mixture: A, B» when the program proposes one that the choice does not already hold. @param {import("./state.js").Choice} choice @param {any} data @returns {HTMLElement[]} */
 function mixtureLine(choice, data) {
   const parts = mixtureCandidates(data);
   if (!parts.length || (choice.level === 4 && mixtureTaken(data, choice.keys))) return [];
   return [el("p", { class: "sheet-mixture" }, [t("sheet.found.mixture", { names: parts.map(nameOf).join(", ") })])];
 }
 
-/** The sentence or names of block 2, by level. @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {Array<Node | string>} */
+/** The sentence or names of block 2, by level. @param {import("./state.js").Choice} choice @param {any} data @returns {Array<Node | string>} */
 function foundLines(choice, data) {
   return [...levelLines(choice, data), ...mixtureLine(choice, data)];
 }
 
-/** @param {import("./state.js").DecisionDraft} choice @param {any} data @returns {Array<Node | string>} */
+/** @param {import("./state.js").Choice} choice @param {any} data @returns {Array<Node | string>} */
 function levelLines(choice, data) {
   const picked = chosenCandidates(choice, data);
   const names = picked.map((c) => el("strong", { class: "sheet-name" }, [nameOf(c)]));
@@ -92,9 +92,9 @@ function levelLines(choice, data) {
   return [el("p", {}, [sentence]), el("p", {}, names)];
 }
 
-/** Block 2: what was found, with the level as a shape and a word, and who decided. A name never stands without its level. @param {import("./state.js").DecisionDraft} choice @param {any} data @param {boolean} decided @returns {HTMLElement} */
-function foundBlock(choice, data, decided) {
-  const who = el("span", { class: "sheet-who" }, [decided ? icon("pen") : "", decided ? t("sheet.found.decided") : t("sheet.found.proposed")]);
+/** Block 2: what was found, with the level as a shape and a word, and who chose. A name never stands without its level. @param {import("./state.js").Choice} choice @param {any} data @param {boolean} changed @returns {HTMLElement} */
+function foundBlock(choice, data, changed) {
+  const who = el("span", { class: "sheet-who" }, [changed ? icon("pen") : "", changed ? t("sheet.found.decided") : t("sheet.found.proposed")]);
   const box = el("div", { class: "found" }, [el("p", { class: "level-row" }, [levelBadge(choice.level, false), who]), ...foundLines(choice, data)]);
   return block(t("sheet.found.title"), "found", [box]);
 }
@@ -113,13 +113,6 @@ function alertsBlock(data, chemist) {
   return block(t("sheet.alerts.title"), "alerts", [views.length ? list : el("p", {}, [t("sheet.alerts.none")])]);
 }
 
-/** Block 4: foot with the chemist's signature line. @returns {HTMLElement} */
-function footBlock() {
-  return el("footer", { class: "sheet-foot", "data-block": "foot" }, [
-    el("p", { class: "signature" }, [el("span", { class: "sign-label" }, [t("sheet.foot.sign")]), el("span", { class: "sign-line" })]),
-  ]);
-}
-
 /**
  * Build the sheet of the spectrum shown, in the sheet language. Without a result it is an empty article.
  * @param {import("./state.js").AppState} s
@@ -128,16 +121,14 @@ function footBlock() {
  */
 export function buildSheet(s, opts = {}) {
   const r = resultOf(s);
-  const choice = shownChoice(s);
+  const choice = choiceOf(s);
   const lang = s.sheetLang ?? currentLang();
   const sheet = el("article", { class: "sheet", lang });
   if (!r || !choice) return sheet;
-  const decided = decisionOf(s) !== null;
-  sheet.setAttribute("data-draft", decided ? "0" : "1");
   inLang(lang, () => {
     sheet.setAttribute("aria-label", t("sheet.title"));
     const talk = s.talk ? talkCounselling({ cands: chosenCandidates(choice, r.data), level: choice.level, lang: s.sheetLang ?? currentLang() }) : null;
-    sheet.append(headBlock(r.code, r.data), foundBlock(choice, r.data, decided), alertsBlock(r.data, Boolean(opts.chemist)), ...(talk ? [talk] : []), footBlock());
+    sheet.append(headBlock(r.code, r.data), foundBlock(choice, r.data, isChanged(s)), alertsBlock(r.data, Boolean(opts.chemist)), ...(talk ? [talk] : []));
   });
   return sheet;
 }

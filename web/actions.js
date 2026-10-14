@@ -1,7 +1,6 @@
 // @ts-check
-import { draftOf, isSignable } from "./decision.js";
 import { lastResidual } from "./files.js";
-import { activeLibraries, decisionOf, resultOf } from "./state.js";
+import { activeLibraries, resultOf } from "./state.js";
 import { canSubtract } from "./subtract.js";
 /**
  * Registry of everything the user can do. Header, panel, work-area bar, phone menu and (later) shortcut help are generated from it.
@@ -10,7 +9,7 @@ import { canSubtract } from "./subtract.js";
  *   getState: () => import("./state.js").AppState,
  *   openFile: () => void, loadDemo: () => void, selectFile: (code: string) => void, closeFile: (code: string) => void, setLang: (code: string) => void, toggleLang: () => void, cycleTheme: () => void,
  *   togglePanel: () => void, goto: (panelId: string) => void, closeSection: () => void, openDialog: (id: string) => void, folder: FolderCtx,
- *   setDraft: (patch: Partial<import("./state.js").DecisionDraft>) => void, signDecision: () => void, acceptMixture: () => void, revokeDecision: () => void, setSheetLang: (lang: string) => Promise<void>, toggleTalk: () => void, printSheet: () => void,
+ *   setChoice: (patch: Partial<import("./state.js").Choice>) => void, acceptMixture: () => void, setSheetLang: (lang: string) => Promise<void>, toggleTalk: () => void, printSheet: () => void,
  *   runMatch: () => void, selectCandidate: (key: string) => void, setLabel: (key: string, label: import("./state.js").ChemistLabel | null) => void, toggleOverlay: () => void,
  *   togglePeaks: () => void, focusPeak: (id: string | null) => void, stepPeak: (dir: 1 | -1) => boolean, clearPeak: () => boolean,
  *   setTextLevel: (level: import("./state.js").TextLevel) => void, stepLevel: (dir: 1 | -1) => void, toggleModeAnim: () => void, showRule: (range: import("./state.js").RuleRange | null) => void,
@@ -56,8 +55,6 @@ export const ACTIONS = [
   { id: "subtract.search", labelKey: "action.subtract_search.label", tipKey: "action.subtract_search.tip", icon: "compare", section: "results", run: async (c) => { if (await c.subtractSearch()) { c.goto("results"); window.scrollTo({ top: 0 }); } }, enabled: (s) => s.subtraction !== null },
   { id: "subtract.close", labelKey: "action.subtract_close.label", tipKey: "action.subtract_close.tip", icon: "close", section: "results", run: (c) => c.subtractClose(), enabled: (s) => s.subtraction !== null },
   { id: "sheet.open", labelKey: "action.sheet_open.label", tipKey: "action.sheet_open.tip", icon: "sheet", key: "s", section: "sheet", step: 4, run: (c) => c.goto("sheet"), enabled: (s) => resultOf(s) !== null },
-  { id: "decision.sign", labelKey: "action.decision_sign.label", tipKey: "action.decision_sign.tip", icon: "pen", key: "f", section: "sheet", run: (c) => c.signDecision(), enabled: (s) => { const d = draftOf(s); return d !== null && decisionOf(s) === null && isSignable(d); } },
-  { id: "decision.revoke", labelKey: "action.decision_revoke.label", tipKey: "action.decision_revoke.tip", icon: "back", section: "sheet", run: (c) => c.revokeDecision(), enabled: (s) => decisionOf(s) !== null },
   { id: "sheet.print", labelKey: "action.sheet_print.label", tipKey: "action.sheet_print.tip", icon: "sheet", section: "sheet", run: (c) => c.printSheet(), enabled: (s) => resultOf(s) !== null },
   { id: "library.recall", labelKey: "action.library_recall.label", tipKey: "action.library_recall.tip", icon: "library", key: "n", section: "libraries", menu: true, run: (c) => c.recallOpen(), enabled: (s) => s.files.length > 0 && activeLibraries(s).length > 0 },
   { id: "view.back", labelKey: "action.view_back.label", tipKey: "action.view_back.tip", icon: "back", key: "b", menu: true, run: (c) => c.viewBack(), enabled: (s) => s.files.length > 0 },
