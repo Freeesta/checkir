@@ -1,0 +1,88 @@
+{
+  "schema": "datasheet/1",
+  "substance": "5f-pb-22",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "5-fluoropentylindole-3-carboxylic acid metabolites",
+        "reaction": "hydrolysis_ester",
+        "source": "wohlfarth2014"
+      },
+      {
+        "from": "parent",
+        "to": "oxidised metabolites",
+        "reaction": "other",
+        "source": "wohlfarth2014"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "glucuronides",
+        "reaction": "glucuronidation",
+        "source": "wohlfarth2014"
+      },
+      {
+        "from": "parent",
+        "to": "oxidatively defluorinated metabolites (PB-22 metabolites)",
+        "reaction": "other",
+        "source": "wohlfarth2014"
+      },
+      {
+        "from": "parent",
+        "to": "epoxide-derived metabolites and cysteine conjugate",
+        "reaction": "other",
+        "source": "wohlfarth2014"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "5f-pb-22-5-fluoropentylindole-3-carboxylic-acid",
+        "active": null,
+        "source": "wohlfarth2014",
+        "marker": true
+      },
+      {
+        "name_key": "5f-pb-22-pentanoic-acid",
+        "active": null,
+        "source": "wohlfarth2014",
+        "marker": true
+      },
+      {
+        "name_key": "5f-pb-22-hydroxy-quinoline",
+        "active": null,
+        "source": "wohlfarth2014",
+        "marker": true
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
