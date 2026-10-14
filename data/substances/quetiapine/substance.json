@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "quetiapine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Quetiapine",
+      "synonyms": [
+        "Seroquel"
+      ]
+    },
+    "it": {
+      "preferred": "Quetiapina",
+      "synonyms": [
+        "Seroquel"
+      ]
+    }
+  },
+  "iupac": "2-[2-(4-benzo[b][1,4]benzothiazepin-6-ylpiperazin-1-yl)ethoxy]ethanol",
+  "formula": "C21H25N3O2S",
+  "molar_mass_g_mol": 383.5,
+  "smiles": "C1CN(CCN1CCOCCO)C2=NC3=CC=CC=C3SC4=CC=CC=C42",
+  "inchi": "InChI=1S/C21H25N3O2S/c25-14-16-26-15-13-23-9-11-24(12-10-23)21-17-5-1-3-7-19(17)27-20-8-4-2-6-18(20)22-21/h1-8,25H,9-16H2",
+  "inchikey": "URKOMYMAXPYINW-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "111974-69-7",
+    "pubchem_cid": 5002
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

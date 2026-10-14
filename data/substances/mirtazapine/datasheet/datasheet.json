@@ -1,0 +1,94 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mirtazapine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "N-desmethylmirtazapine",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "other"
+        ],
+        "source": "mirtazapine-label"
+      },
+      {
+        "from": "parent",
+        "to": "8-hydroxymirtazapine",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP2D6",
+          "CYP1A2"
+        ],
+        "source": "mirtazapine-label"
+      },
+      {
+        "from": "parent",
+        "to": "mirtazapine-N-oxide",
+        "reaction": "other",
+        "enzymes": [
+          "other"
+        ],
+        "source": "mirtazapine-label"
+      },
+      {
+        "from": "parent",
+        "to": "glucuronide-conjugates",
+        "reaction": "glucuronidation",
+        "source": "mirtazapine-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "n-desmethylmirtazapine",
+        "active": null,
+        "source": "mirtazapine-label"
+      },
+      {
+        "name_key": "8-hydroxymirtazapine",
+        "active": null,
+        "source": "mirtazapine-label"
+      },
+      {
+        "name_key": "mirtazapine-n-oxide",
+        "active": null,
+        "source": "mirtazapine-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 20,
+      "max": 40,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "mirtazapine-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

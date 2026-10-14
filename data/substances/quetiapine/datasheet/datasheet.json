@@ -1,0 +1,88 @@
+{
+  "schema": "datasheet/1",
+  "substance": "quetiapine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "quetiapine-sulfoxide",
+        "reaction": "other",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "quetiapine-label"
+      },
+      {
+        "from": "parent",
+        "to": "parent-acid-metabolite",
+        "reaction": "other",
+        "source": "quetiapine-label"
+      },
+      {
+        "from": "parent",
+        "to": "N-desalkylquetiapine",
+        "reaction": "other",
+        "source": "quetiapine-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "quetiapine-sulfoxide",
+        "active": false,
+        "source": "quetiapine-label"
+      },
+      {
+        "name_key": "parent-acid-metabolite",
+        "active": false,
+        "source": "quetiapine-label"
+      },
+      {
+        "name_key": "n-desalkylquetiapine",
+        "active": true,
+        "source": "quetiapine-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 6,
+      "max": 6,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "quetiapine-label"
+    }
+  },
+  "cuts": [
+    {
+      "cut": "heroin",
+      "frequency": "reported",
+      "source": "friedman2026-quetiapine"
+    }
+  ],
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

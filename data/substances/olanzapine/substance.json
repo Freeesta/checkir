@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "olanzapine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Olanzapine",
+      "synonyms": [
+        "Zyprexa"
+      ]
+    },
+    "it": {
+      "preferred": "Olanzapina",
+      "synonyms": [
+        "Zyprexa"
+      ]
+    }
+  },
+  "iupac": "2-methyl-4-(4-methylpiperazin-1-yl)-10H-thieno[2,3-b][1,5]benzodiazepine",
+  "formula": "C17H20N4S",
+  "molar_mass_g_mol": 312.4,
+  "smiles": "CC1=CC2=C(S1)NC3=CC=CC=C3N=C2N4CCN(CC4)C",
+  "inchi": "InChI=1S/C17H20N4S/c1-12-11-13-16(21-9-7-20(2)8-10-21)18-14-5-3-4-6-15(14)19-17(13)22-12/h3-6,11,19H,7-10H2,1-2H3",
+  "inchikey": "KVWDHTXUZHCGIO-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "132539-06-1",
+    "pubchem_cid": 135398745
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

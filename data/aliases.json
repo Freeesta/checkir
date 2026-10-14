@@ -1154,7 +1154,22 @@
     "tropacocaina": "tropacocaine",
     "tropacaine": "tropacocaine",
     "benzoylpseudotropine": "tropacocaine",
-    "benzoilpseudotropina": "tropacocaine"
+    "benzoilpseudotropina": "tropacocaine",
+    "prozac": "fluoxetine",
+    "fluoxetina": "fluoxetine",
+    "dmxb-a": "gts-21",
+    "dimethoxybenzylidene-anabaseine": "gts-21",
+    "tofranil": "imipramine",
+    "imipramina": "imipramine",
+    "3-4-methylenedioxy-n-isopropylcathinone": "iprone",
+    "3-4-metilendiossi-n-isopropilcatinone": "iprone",
+    "remeron": "mirtazapine",
+    "mirtazapina": "mirtazapine",
+    "zyprexa": "olanzapine",
+    "olanzapina": "olanzapine",
+    "prometazina": "promethazine",
+    "seroquel": "quetiapine",
+    "quetiapina": "quetiapine"
   },
   "schema": "aliases/1"
 }

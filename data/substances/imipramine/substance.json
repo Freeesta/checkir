@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "imipramine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Imipramine"
+    },
+    "it": {
+      "preferred": "Imipramina"
+    }
+  },
+  "iupac": "3-(5,6-dihydrobenzo[b][1]benzazepin-11-yl)-N,N-dimethylpropan-1-amine",
+  "formula": "C19H24N2",
+  "molar_mass_g_mol": 280.4,
+  "smiles": "CN(C)CCCN1C2=CC=CC=C2CCC3=CC=CC=C31",
+  "inchi": "InChI=1S/C19H24N2/c1-20(2)14-7-15-21-18-10-5-3-8-16(18)12-13-17-9-4-6-11-19(17)21/h3-6,8-11H,7,12-15H2,1-2H3",
+  "inchikey": "BCGWQEUPMDMJNV-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "50-49-7",
+    "pubchem_cid": 3696
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

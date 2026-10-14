@@ -15178,6 +15178,134 @@
       "license": "cited as the source of facts only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "fluoxetine-label",
+      "type": "institution",
+      "title": "Fluoxetine capsules (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b8666383-462d-4a21-8f49-1d572da386d1",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "imipramine-label",
+      "type": "institution",
+      "title": "Imipramine hydrochloride tablets, film coated (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=db007ac0-020e-4962-8903-7497ab96a74e",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "mirtazapine-label",
+      "type": "institution",
+      "title": "Mirtazapine tablets, film coated (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f54718d1-3ef7-4472-9e97-90e5fd30db4d",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "olanzapine-label",
+      "type": "institution",
+      "title": "Zyprexa (olanzapine) tablets, Zyprexa Zydis orally disintegrating tablets and Zyprexa IntraMuscular, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b418946a-1ab4-4d89-a012-d94fc361a3c4",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "promethazine-label",
+      "type": "institution",
+      "title": "Promethazine hydrochloride tablets (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6728bb41-5d50-4abb-bb73-993dcc16ee66",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "quetiapine-label",
+      "type": "institution",
+      "title": "Quetiapine tablets, film coated (Major Pharmaceuticals), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f9447739-9e21-4232-950f-174c0496ab66",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kitagawa2003-gts21",
+      "type": "paper",
+      "title": "Safety, pharmacokinetics, and effects on cognitive function of multiple doses of GTS-21 in healthy, male volunteers (Neuropsychopharmacology 28:542-551)",
+      "authors": [
+        "H. Kitagawa",
+        "T. Takenouchi",
+        "R. Azuma",
+        "K. A. Wesnes",
+        "W. G. Kramer",
+        "D. E. Clody",
+        "A. L. Burnett"
+      ],
+      "year": 2003,
+      "doi": "10.1038/sj.npp.1300028",
+      "url": "https://doi.org/10.1038/sj.npp.1300028",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kim2007-gts21",
+      "type": "paper",
+      "title": "Synthesis and positron emission tomography studies of C-11-labeled isotopomers and metabolites of GTS-21, a partial alpha7 nicotinic cholinergic agonist drug (Nucl Med Biol 34:541-551)",
+      "authors": [
+        "S. W. Kim",
+        "Y. S. Ding",
+        "D. Alexoff",
+        "V. Patel",
+        "J. Logan",
+        "K. S. Lin",
+        "C. Shea",
+        "L. Muench",
+        "Y. Xu",
+        "P. Carter",
+        "P. King",
+        "J. R. Constanzo",
+        "J. A. Ciaccio",
+        "J. S. Fowler"
+      ],
+      "year": 2007,
+      "doi": "10.1016/j.nucmedbio.2007.04.005",
+      "url": "https://doi.org/10.1016/j.nucmedbio.2007.04.005",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "friedman2026-quetiapine",
+      "type": "paper",
+      "title": "Quetiapine: a novel additive to the illicit heroin supply in Los Angeles (J Addict Med 20:386-388)",
+      "authors": [
+        "J. R. Friedman",
+        "C. A. Molina",
+        "R. Romero",
+        "E. M. Pyfrom",
+        "M. G. Appley",
+        "C. Marienfeld",
+        "E. Sisco",
+        "C. L. Shover"
+      ],
+      "year": 2026,
+      "doi": "10.1097/ADM.0000000000001552",
+      "url": "https://doi.org/10.1097/ADM.0000000000001552",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
     }
   ]
 }
