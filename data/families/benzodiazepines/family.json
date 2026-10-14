@@ -1,18 +1,7 @@
 {
-  "schema": "family-sheet/1",
+  "schema": "family-sheet/2",
   "id": "benzodiazepines",
   "version": 1,
-  "section_state": {
-    "effects": "draft",
-    "risks": "draft",
-    "interactions": "draft",
-    "counselling": "draft",
-    "sources": "draft",
-    "license": "draft"
-  },
-  "reviewers": [],
-  "reviewed": "2026-10-14",
-  "review_by": "2028-09-30",
   "interactions": [
     {
       "with": "opioid",

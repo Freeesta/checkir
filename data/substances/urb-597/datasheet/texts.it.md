@@ -16,27 +16,27 @@ Una sostanza di sintesi: un N-cicloesilcarbammato O-arilico su un nucleo bifenil
 
 ## metabolism
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## sources
 

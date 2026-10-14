@@ -18,7 +18,7 @@ In those urine samples 70 of 80 pooled samples were reported positive by a canna
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -26,15 +26,15 @@ THCV has been reported to reduce blood sugar and act as an appetite suppressant 
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## sources
 

@@ -1,0 +1,627 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:checkir:schema:datasheet:2",
+  "title": "Substance sheet data (texts live in testi.<lang>.md)",
+  "title_it": "Dati della scheda sostanza (i testi stanno in testi.<lingua>.md)",
+  "description": "Substance sheet data (texts live in testi.<lang>.md)",
+  "description_it": "Dati della scheda sostanza (i testi stanno in testi.<lingua>.md)",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "datasheet/2",
+      "description": "Schema name and version.",
+      "description_it": "Nome e versione dello schema."
+    },
+    "substance": {
+      "description": "Id of the substance.",
+      "description_it": "Id della sostanza.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "version": {
+      "description": "Sheet version.",
+      "description_it": "Versione della scheda.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "doses": {
+      "description": "Dose rows; every row is shown in the sheet.",
+      "description_it": "Righe di dosi; ogni riga è mostrata nella scheda.",
+      "type": "array",
+      "items": {
+        "description": "Dose row; there is never a 'safe' or 'maximum safe' column.",
+        "description_it": "Riga di dosi; non esiste mai una colonna «sicura» o «massima sicura».",
+        "type": "object",
+        "properties": {
+          "route": {
+            "description": "Route of administration.",
+            "description_it": "Via di assunzione.",
+            "type": "string",
+            "minLength": 1
+          },
+          "unit": {
+            "description": "Unit.",
+            "description_it": "Unità.",
+            "type": "string",
+            "enum": [
+              "mg",
+              "ug",
+              "g"
+            ]
+          },
+          "threshold": {
+            "description": "Threshold dose.",
+            "description_it": "Dose soglia.",
+            "type": "number",
+            "minimum": 0
+          },
+          "light": {
+            "description": "Light dose.",
+            "description_it": "Dose leggera.",
+            "type": "number",
+            "minimum": 0
+          },
+          "common": {
+            "description": "Common dose.",
+            "description_it": "Dose comune.",
+            "type": "number",
+            "minimum": 0
+          },
+          "strong": {
+            "description": "Strong dose.",
+            "description_it": "Dose forte.",
+            "type": "number",
+            "minimum": 0
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "evidence_type": {
+            "description": "Type of evidence.",
+            "description_it": "Tipo di evidenza.",
+            "type": "string",
+            "enum": [
+              "clinical",
+              "observational",
+              "user_reported"
+            ]
+          }
+        },
+        "required": [
+          "route",
+          "unit",
+          "source",
+          "evidence_type"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "timings": {
+      "description": "Time courses.",
+      "description_it": "Andamenti nel tempo.",
+      "type": "array",
+      "items": {
+        "description": "Time course for a route.",
+        "description_it": "Andamento nel tempo per una via.",
+        "type": "object",
+        "properties": {
+          "route": {
+            "description": "Route.",
+            "description_it": "Via.",
+            "type": "string",
+            "minLength": 1
+          },
+          "onset_min": {
+            "description": "Onset in minutes.",
+            "description_it": "Inizio in minuti.",
+            "type": "number",
+            "minimum": 0
+          },
+          "peak_min": {
+            "description": "Peak in minutes.",
+            "description_it": "Picco in minuti.",
+            "type": "number",
+            "minimum": 0
+          },
+          "duration_h": {
+            "description": "Duration in hours.",
+            "description_it": "Durata in ore.",
+            "type": "number",
+            "minimum": 0
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "route",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "interactions": {
+      "description": "Interactions.",
+      "description_it": "Interazioni.",
+      "type": "array",
+      "items": {
+        "description": "Dangerous combination.",
+        "description_it": "Combinazione pericolosa.",
+        "type": "object",
+        "properties": {
+          "with": {
+            "description": "Substance or class id (classes.json or a substance).",
+            "description_it": "Id di sostanza o di classe (classes.json o sostanza).",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+          },
+          "severity": {
+            "description": "Severity.",
+            "description_it": "Gravità.",
+            "type": "string",
+            "enum": [
+              "dangerous",
+              "risky",
+              "caution"
+            ]
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "mechanism": {
+            "description": "Mechanism of the interaction.",
+            "description_it": "Meccanismo dell'interazione.",
+            "type": "string",
+            "enum": [
+              "serotonergic",
+              "cyp_inhibition",
+              "cns_depression",
+              "sympathomimetic",
+              "qt",
+              "maoi",
+              "other"
+            ]
+          },
+          "text_key": {
+            "description": "Optional text key.",
+            "description_it": "Chiave di testo facoltativa.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "with",
+          "severity",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "authors": {
+      "description": "Public names of the authors.",
+      "description_it": "Nomi pubblici degli autori.",
+      "type": "array",
+      "items": {
+        "description": "Name.",
+        "description_it": "Nome.",
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "ai_assisted": {
+      "description": "True if a draft was AI-assisted; every claim must be checked by a person.",
+      "description_it": "True se la bozza è stata assistita da IA; ogni affermazione va controllata da una persona.",
+      "type": "boolean"
+    },
+    "family": {
+      "description": "Id of the family sheet (families/<id>) whose sections fill the ones this sheet lacks.",
+      "description_it": "Id della scheda di famiglia (families/<id>) le cui sezioni completano quelle che mancano a questa scheda.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-z0-9]+([-_][a-z0-9]+)*$"
+    },
+    "structure_svg": {
+      "description": "True if data/substances/<id>/structure.svg exists; it is generated from substance.smiles by tools/dati/genera_strutture.py.",
+      "description_it": "True se esiste data/substances/<id>/structure.svg; lo genera tools/dati/genera_strutture.py da substance.smiles.",
+      "type": "boolean"
+    },
+    "identity_extra": {
+      "description": "Extra identity data (formula, mass, SMILES and InChIKey stay in substance.json).",
+      "description_it": "Dati di identità aggiuntivi (formula, massa, SMILES e InChIKey restano in substance.json).",
+      "type": "object",
+      "properties": {
+        "salt_forms": {
+          "description": "Ids of the forms (forms/) that are salts or bases of this substance.",
+          "description_it": "Id delle forme (forms/) che sono sali o basi di questa sostanza.",
+          "type": "array",
+          "items": {
+            "description": "Form id.",
+            "description_it": "Id forma.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "uniqueItems": true
+        },
+        "street_forms_key": {
+          "description": "Text key of the street forms.",
+          "description_it": "Chiave di testo delle forme di strada.",
+          "type": "string",
+          "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "origin": {
+      "description": "Origin of the substance, described by class only.",
+      "description_it": "Origine della sostanza, descritta solo per classe.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Natural, semisynthetic or synthetic.",
+          "description_it": "Naturale, semisintetica o sintetica.",
+          "type": "string",
+          "enum": [
+            "natural",
+            "semisynthetic",
+            "synthetic"
+          ]
+        },
+        "precursor_classes": {
+          "description": "Classes of precursors (never reagents, amounts or conditions).",
+          "description_it": "Classi di precursori (mai reagenti, quantità o condizioni).",
+          "type": "array",
+          "items": {
+            "description": "Class key.",
+            "description_it": "Chiave di classe.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+          }
+        },
+        "typical_impurities": {
+          "description": "Impurities and by-products that matter for the spectrum.",
+          "description_it": "Impurezze e sottoprodotti che contano per lo spettro.",
+          "type": "array",
+          "items": {
+            "description": "An impurity.",
+            "description_it": "Un'impurezza.",
+            "type": "object",
+            "properties": {
+              "substance": {
+                "description": "Substance id or name.",
+                "description_it": "Id o nome della sostanza.",
+                "type": "string",
+                "minLength": 1
+              },
+              "ir_relevant": {
+                "description": "True if it shows in the IR spectrum.",
+                "description_it": "True se si vede nello spettro IR.",
+                "type": "boolean"
+              },
+              "source": {
+                "description": "Source id.",
+                "description_it": "Id fonte.",
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              }
+            },
+            "required": [
+              "substance",
+              "ir_relevant",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "metabolism": {
+      "description": "Metabolism.",
+      "description_it": "Metabolismo.",
+      "type": "object",
+      "properties": {
+        "pathways": {
+          "description": "Main pathways.",
+          "description_it": "Vie principali.",
+          "type": "array",
+          "items": {
+            "description": "A metabolic pathway.",
+            "description_it": "Una via metabolica.",
+            "type": "object",
+            "properties": {
+              "from": {
+                "description": "'parent', a substance id or a combination such as 'parent+ethanol'.",
+                "description_it": "'parent', un id di sostanza o una combinazione come 'parent+ethanol'.",
+                "type": "string",
+                "pattern": "^[a-z0-9]+([-+_][a-z0-9]+)*$"
+              },
+              "to": {
+                "description": "Name of the metabolite.",
+                "description_it": "Nome del metabolita.",
+                "type": "string",
+                "minLength": 1
+              },
+              "reaction": {
+                "description": "Kind of reaction.",
+                "description_it": "Tipo di reazione.",
+                "type": "string",
+                "enum": [
+                  "n_demethylation",
+                  "o_demethylation",
+                  "hydrolysis_ester",
+                  "hydroxylation",
+                  "glucuronidation",
+                  "sulfation",
+                  "deamination",
+                  "reduction_keto",
+                  "other"
+                ]
+              },
+              "enzymes": {
+                "description": "Enzymes involved (closed list).",
+                "description_it": "Enzimi coinvolti (elenco chiuso).",
+                "type": "array",
+                "items": {
+                  "description": "Enzyme.",
+                  "description_it": "Enzima.",
+                  "type": "string",
+                  "enum": [
+                    "CYP1A2",
+                    "CYP2B6",
+                    "CYP2C9",
+                    "CYP2C19",
+                    "CYP2D6",
+                    "CYP3A4",
+                    "CYP3A5",
+                    "UGT1A*",
+                    "UGT2B7",
+                    "UGT2B15",
+                    "SULT",
+                    "MAO-A",
+                    "MAO-B",
+                    "CES1",
+                    "CES2",
+                    "BChE",
+                    "ADH",
+                    "ALDH",
+                    "FMO3",
+                    "other"
+                  ]
+                }
+              },
+              "source": {
+                "description": "Source id.",
+                "description_it": "Id fonte.",
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "reaction",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "metabolites": {
+          "description": "Metabolites.",
+          "description_it": "Metaboliti.",
+          "type": "array",
+          "items": {
+            "description": "A metabolite.",
+            "description_it": "Un metabolita.",
+            "type": "object",
+            "properties": {
+              "name_key": {
+                "description": "Text key of the name.",
+                "description_it": "Chiave di testo del nome.",
+                "type": "string",
+                "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+              },
+              "pubchem_cid": {
+                "description": "PubChem CID.",
+                "description_it": "CID di PubChem.",
+                "type": "integer",
+                "minimum": 1
+              },
+              "active": {
+                "description": "True if active, null if unknown.",
+                "description_it": "True se attivo, null se ignoto.",
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "marker": {
+                "description": "True if it is a marker of use.",
+                "description_it": "True se è un marcatore di assunzione.",
+                "type": "boolean"
+              },
+              "source": {
+                "description": "Source id.",
+                "description_it": "Id fonte.",
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              }
+            },
+            "required": [
+              "name_key",
+              "active",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "half_life_h": {
+          "description": "Elimination half-life as a range.",
+          "description_it": "Emivita di eliminazione come intervallo.",
+          "type": "object",
+          "properties": {
+            "min": {
+              "description": "Lower end in hours.",
+              "description_it": "Estremo inferiore in ore.",
+              "type": "number",
+              "minimum": 0
+            },
+            "max": {
+              "description": "Upper end in hours.",
+              "description_it": "Estremo superiore in ore.",
+              "type": "number",
+              "minimum": 0
+            },
+            "matrix": {
+              "description": "Matrix (e.g. plasma).",
+              "description_it": "Matrice (es. plasma).",
+              "type": "string",
+              "minLength": 1
+            },
+            "route": {
+              "description": "Route of administration.",
+              "description_it": "Via di assunzione.",
+              "type": "string",
+              "minLength": 1
+            },
+            "source": {
+              "description": "Source id.",
+              "description_it": "Id fonte.",
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "required": [
+            "min",
+            "max",
+            "matrix",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "notes_key": {
+          "description": "Optional text key.",
+          "description_it": "Chiave di testo facoltativa.",
+          "type": "string",
+          "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "cuts": {
+      "description": "Cutting agents met with this substance; 'checkIR detects it' is computed, never written.",
+      "description_it": "Tagli incontrati con questa sostanza; «checkIR lo rileva» si calcola, non si scrive.",
+      "type": "array",
+      "items": {
+        "description": "A cut.",
+        "description_it": "Un taglio.",
+        "type": "object",
+        "properties": {
+          "cut": {
+            "description": "Id in tagli.json or id of a substance.",
+            "description_it": "Id in tagli.json o id di una sostanza.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "frequency": {
+            "description": "How often it is met.",
+            "description_it": "Quanto spesso si incontra.",
+            "type": "string",
+            "enum": [
+              "common",
+              "occasional",
+              "reported"
+            ]
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "cut",
+          "frequency",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "counselling": {
+      "description": "Talking points for the interview, text in the 'counselling' section (one paragraph per point, same order).",
+      "description_it": "Punti del colloquio, testo nella sezione 'counselling' (un capoverso per punto, stesso ordine).",
+      "type": "array",
+      "items": {
+        "description": "A talking point.",
+        "description_it": "Un punto del colloquio.",
+        "type": "object",
+        "properties": {
+          "key": {
+            "description": "Key of the point.",
+            "description_it": "Chiave del punto.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+          },
+          "topic": {
+            "description": "Topic of the point (filter and map to the interview topics).",
+            "description_it": "Tema del punto (per filtrare e per confrontare con i temi del colloquio).",
+            "type": "string",
+            "enum": [
+              "set_setting",
+              "dosing",
+              "redosing",
+              "route",
+              "combination",
+              "overdose_signs",
+              "tolerance",
+              "dependence",
+              "mental_health",
+              "sleep_food_water",
+              "sexual_health",
+              "legal_status",
+              "testing"
+            ]
+          },
+          "source": {
+            "description": "Source id.",
+            "description_it": "Id fonte.",
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          }
+        },
+        "required": [
+          "key",
+          "topic",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "substance",
+    "version",
+    "doses",
+    "authors",
+    "ai_assisted"
+  ],
+  "additionalProperties": false
+}

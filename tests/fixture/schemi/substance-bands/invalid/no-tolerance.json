@@ -1,5 +1,5 @@
 {
-  "schema": "substance-bands/1",
+  "schema": "substance-bands/2",
   "version": "2026-10.1",
   "substance": "synthetic-a",
   "form": "hydrochloride",
@@ -13,7 +13,7 @@
       "sources": [
         "coates2000"
       ],
-      "status": "draft"
+      "status": "literature"
     }
   ]
 }

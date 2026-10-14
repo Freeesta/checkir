@@ -16,7 +16,7 @@ In a clinical trial with healthy volunteers who took methylone, 3,4-methylenedio
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -24,7 +24,7 @@ Synthetic cathinones have stimulant and, in part, hallucinogenic properties. [f:
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

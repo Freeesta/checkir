@@ -30,7 +30,7 @@ It is a potent dissociative hallucinogen and can cause acute agitation and cardi
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -42,7 +42,7 @@ Persistent psychotic symptoms and cognitive impairment after use have been descr
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

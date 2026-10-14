@@ -28,11 +28,11 @@ Perché venga aggiunto non è noto; è stato ipotizzato che serva a potenziare g
 
 ## effects
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -42,7 +42,7 @@ Le rassegne sull'uso medico riportano leucopenia e agranulocitosi, e vasculite (
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

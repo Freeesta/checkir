@@ -22,7 +22,7 @@ Nei microsomi epatici umani e in campioni autentici il metabolismo della brorfin
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -32,7 +32,7 @@ In vitro la brorfina è stata tra le più attive di cinque benzimidazoloni affin
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

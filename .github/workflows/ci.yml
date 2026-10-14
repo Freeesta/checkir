@@ -42,7 +42,7 @@ jobs:
           match() { echo "$changed" | grep -qE "$1|$common" && echo true || echo false; }
           echo "rust=$(match '^(crates/|Cargo\.|rust-toolchain\.toml|deny\.toml|tools/clippy_base\.json|tools/libreria/)')" >> "$GITHUB_OUTPUT"
           echo "web=$(match '^(web/|tests_e2e/|tsconfig\.json|package(-lock)?\.json|tools/costruisci_sito\.sh|crates/)')" >> "$GITHUB_OUTPUT"
-          echo "data=$(match '^(data/|docs/schemi/|tests/fixture/schemi/|tools/dati/|tools/signatures/|\.github/ISSUE_TEMPLATE/|\.github/labels\.yml|\.github/CODEOWNERS|\.github/pull_request_template\.md)')" >> "$GITHUB_OUTPUT"
+          echo "data=$(match '^(data/|docs/schemi/|tests/fixture/schemi/|tools/dati/|\.github/ISSUE_TEMPLATE/|\.github/labels\.yml|\.github/CODEOWNERS|\.github/pull_request_template\.md)')" >> "$GITHUB_OUTPUT"
 
   rust:
     needs: changes
@@ -226,7 +226,7 @@ jobs:
       - name: Pinned validator dependency
         run: pip install -r tools/dati/requirements.txt
       - name: Schemas valid and documented in it + en; fixtures; data checker (references, quality, privacy, wording), band data checker and generator in sync, and their tests
-        run: python3 tools/dati/valida_schemi.py --schemi && python3 tools/dati/valida_schemi.py --fixture && python3 -m unittest discover -s tools/dati -p 'test_*.py' && python3 -m unittest discover -s tools/signatures -p 'test_*.py' && python3 tools/dati/controlla_dati.py && python3 tools/dati/controlla_bande.py && python3 tools/dati/genera_bande.py --verifica && python3 tools/dati/genera_strutture.py --verifica
+        run: python3 tools/dati/valida_schemi.py --schemi && python3 tools/dati/valida_schemi.py --fixture && python3 -m unittest discover -s tools/dati -p 'test_*.py' && python3 tools/dati/controlla_dati.py && python3 tools/dati/controlla_bande.py && python3 tools/dati/genera_bande.py --verifica && python3 tools/dati/genera_strutture.py --verifica
       - name: "Privacy of the schemas (T3: no personal field, closed objects, measurement dates as YYYY-MM)"
         run: python3 tools/controlla_schemi.py
 

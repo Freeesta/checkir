@@ -20,15 +20,15 @@ Animal data only; no controlled human study of 3-FA effects was found. In mice, 
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

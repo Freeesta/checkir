@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "mdma-hydrochloride.demo.003",
   "form": "mdma-hydrochloride",
   "role": "reference",
@@ -39,11 +39,6 @@
   "license": "CC-BY-4.0",
   "sha256": "30f098ace3e800c80031e77a562a356655312b77fc75ea696fa2fcfb784d0900",
   "original_format": "Shimadzu LabSolutions IR (.ispd), cleaned with anonimizza/1",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-13"
-  },
   "quality": {
     "checks": [
       {

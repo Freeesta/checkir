@@ -1,0 +1,16 @@
+{
+  "schema": "alerts/2",
+  "id": "example-positional-isomers",
+  "status": "draft",
+  "target": {
+    "substances": [
+      "example-amine"
+    ]
+  },
+  "reason": "ir_ambiguity",
+  "severity": "caution",
+  "sources": [
+    "wikidata"
+  ],
+  "issued": "2026-10-12"
+}

@@ -8,7 +8,7 @@ Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppament
 
 ## history
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## origin
 
@@ -22,7 +22,7 @@ L'emivita terminale è lunga e variabile (valori medi da 3 a 44 ore); la maggior
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -30,7 +30,7 @@ La buprenorfina è un agonista parziale del recettore μ degli oppioidi con alta
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

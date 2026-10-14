@@ -34,7 +34,7 @@ Gli effetti clinici di α-PVP e MDPV sono individuali e dipendono dalla dose e d
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -46,7 +46,7 @@ L'α-PVP non si rileva con le procedure di analisi di routine classiche, quindi 
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

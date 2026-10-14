@@ -24,7 +24,7 @@ const MIN_DELTA_CM1 = 0.5;
 
 /** @param {string} status @returns {string} */
 function statusWord(status) {
-  return status === "verified_spectra" ? t("card.status.verified") : status === "reviewed" ? t("card.status.reviewed") : t("card.status.draft");
+  return status === "verified_spectra" ? t("card.status.verified") : t("card.status.literature");
 }
 
 /** @param {import("./state.js").TextLevel} level @returns {string} */

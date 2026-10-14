@@ -16,7 +16,7 @@ L'acido ADB-PINACA N-pentanoico è un metabolita urinario incluso in un pannello
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

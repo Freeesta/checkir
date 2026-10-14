@@ -34,7 +34,7 @@ In the mouse, potency measured with the head-twitch response rises when the 4-me
 
 ## doses
 
-Not yet written. This section will be written from verifiable sources and signed by health personnel before it is shown. [f:checkir-section-pending]
+Not yet written. [f:checkir-section-pending]
 
 ## risks
 

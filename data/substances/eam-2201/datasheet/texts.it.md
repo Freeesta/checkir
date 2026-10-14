@@ -18,7 +18,7 @@ Hanno partecipato più isoenzimi CYP (tra cui CYP1A2, 2B6, 2C8, 2C9, 2C19, 2D6, 
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

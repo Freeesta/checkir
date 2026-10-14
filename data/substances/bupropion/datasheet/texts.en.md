@@ -20,23 +20,23 @@ The mean elimination half-life of bupropion is 21 h (SD 9); that of hydroxybupro
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## sources
 

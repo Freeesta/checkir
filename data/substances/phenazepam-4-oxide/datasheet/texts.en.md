@@ -8,7 +8,7 @@ Chemical class: benzodiazepines. Expected effect: central nervous system depress
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -16,11 +16,11 @@ A synthetic substance, the 4-position N-oxide of phenazepam. [f:pubchem]
 
 ## metabolism
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -30,7 +30,7 @@ They are central nervous system depressants and sedatives that can cause psychom
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

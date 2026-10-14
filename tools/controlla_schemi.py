@@ -35,9 +35,9 @@ MONTH = "^[0-9]{4}-(0[1-9]|1[0-2])$"
 # (schema file, pointer of the property) -> why it is not personal data
 EXCEPTIONS = {
     ("ftir-library-1.json", "/name"): "id of the library (a lowercase slug), not a person",
-    ("ftir-spectrum-1.json", "/library/name"): "id of the library (a lowercase slug), not a person",
+    ("ftir-spectrum-2.json", "/library/name"): "id of the library (a lowercase slug), not a person",
     ("ftir-form-1.json", "/notes"): "reviewed text about the chemical form, per language; no person",
-    ("substance-bands-1.json", "/note"): "reviewer note on where the band numbers come from; checked for personal data by the data checker",
+    ("substance-bands-2.json", "/note"): "note on where the band numbers come from; checked for personal data by the data checker",
 }
 
 

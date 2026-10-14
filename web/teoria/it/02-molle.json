@@ -1,5 +1,5 @@
 {
- "schema": "theory/1",
+ "schema": "theory/2",
  "id": "springs",
  "n": 2,
  "title": "Le molecole sono molle",
@@ -111,7 +111,5 @@
   "reduced-mass",
   "harmonic-oscillator",
   "anharmonicity"
- ],
- "status": "draft",
- "reviewers": []
+ ]
 }

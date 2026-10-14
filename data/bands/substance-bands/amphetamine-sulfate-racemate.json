@@ -1,13 +1,13 @@
 {
- "schema": "substance-bands/1",
+ "schema": "substance-bands/2",
  "version": "2026-10.1",
  "substance": "amphetamine",
  "form": "sulfate-racemate",
- "note": "Positions from the monograph and from one library entry that looks like the d-form (NH3+ bend ~1539). The racemate is reported higher (~1553 on a library entry that cannot be cited): the tolerance of the NH3+ band covers both and the distinction is left to the reviewer. The sulfate band is the most intense and the one that separates it from the hydrochloride.",
+ "note": "Positions from the monograph and from one library entry that looks like the d-form (NH3+ bend ~1539). The racemate is reported higher (~1553 on a library entry that cannot be cited): the tolerance of the NH3+ band covers both and the distinction is left to the person reading the spectrum. The sulfate band is the most intense and the one that separates it from the hydrochloride.",
  "bands": [
-  {"position_cm1": 1539, "tolerance_cm1": 15, "intensity": "weak", "shape": "medium", "group": "ammonium_primary", "mode": "bend_in_plane", "rule_id": "nh3plus.bend", "sources": ["swgdrug-amphetamine", "smith-amine-salts"], "status": "draft", "verified_on": ["vs-a097a01e67aa"]},
-  {"position_cm1": 1049, "tolerance_cm1": 20, "intensity": "strong", "shape": "very_broad", "group": "sulfate", "mode": "stretch_asym", "rule_id": "sulfate.stretch", "text_key": "substance_bands.amphetamine.sulfate_racemate.1049", "sources": ["swgdrug-amphetamine", "smith-inorg2"], "status": "draft", "verified_on": ["vs-a097a01e67aa"]},
-  {"position_cm1": 737, "tolerance_cm1": 6, "intensity": "medium", "shape": "sharp", "group": "benzene_mono", "mode": "oop", "rule_id": "oop.mono", "sources": ["swgdrug-amphetamine", "smith-benzene"], "status": "draft", "verified_on": ["vs-a097a01e67aa"]},
-  {"position_cm1": 698, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "benzene_mono", "mode": "bend_in_plane", "rule_id": "ring.mono_bend", "sources": ["swgdrug-amphetamine", "smith-benzene"], "status": "draft", "verified_on": ["vs-a097a01e67aa"]}
+  {"position_cm1": 1539, "tolerance_cm1": 15, "intensity": "weak", "shape": "medium", "group": "ammonium_primary", "mode": "bend_in_plane", "rule_id": "nh3plus.bend", "sources": ["swgdrug-amphetamine", "smith-amine-salts"], "status": "literature", "verified_on": ["vs-a097a01e67aa"]},
+  {"position_cm1": 1049, "tolerance_cm1": 20, "intensity": "strong", "shape": "very_broad", "group": "sulfate", "mode": "stretch_asym", "rule_id": "sulfate.stretch", "text_key": "substance_bands.amphetamine.sulfate_racemate.1049", "sources": ["swgdrug-amphetamine", "smith-inorg2"], "status": "literature", "verified_on": ["vs-a097a01e67aa"]},
+  {"position_cm1": 737, "tolerance_cm1": 6, "intensity": "medium", "shape": "sharp", "group": "benzene_mono", "mode": "oop", "rule_id": "oop.mono", "sources": ["swgdrug-amphetamine", "smith-benzene"], "status": "literature", "verified_on": ["vs-a097a01e67aa"]},
+  {"position_cm1": 698, "tolerance_cm1": 6, "intensity": "strong", "shape": "sharp", "group": "benzene_mono", "mode": "bend_in_plane", "rule_id": "ring.mono_bend", "sources": ["swgdrug-amphetamine", "smith-benzene"], "status": "literature", "verified_on": ["vs-a097a01e67aa"]}
  ]
 }

@@ -1,5 +1,5 @@
 {
- "schema": "theory/1",
+ "schema": "theory/2",
  "id": "instrument",
  "n": 6,
  "title": "Lo strumento",
@@ -81,7 +81,5 @@
   "opd",
   "interferogram",
   "spectral-resolution"
- ],
- "status": "draft",
- "reviewers": []
+ ]
 }

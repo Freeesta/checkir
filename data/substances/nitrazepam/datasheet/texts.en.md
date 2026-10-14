@@ -8,7 +8,7 @@ Chemical class: benzodiazepines. Expected effect: central nervous system depress
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -24,7 +24,7 @@ In 16 healthy volunteers given 5 mg by mouth the half-life was 22.1 hours in the
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -34,7 +34,7 @@ They are central nervous system depressants and sedatives that can cause psychom
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

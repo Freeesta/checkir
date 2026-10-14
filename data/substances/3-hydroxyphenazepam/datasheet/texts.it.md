@@ -8,7 +8,7 @@ Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso c
 
 ## history
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## origin
 
@@ -22,7 +22,7 @@ Le vie metaboliche proprie del 3-idrossifenazepam non sono ancora redatte. [f:ch
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -32,7 +32,7 @@ Sono depressori del sistema nervoso centrale e sedativi che possono causare comp
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

@@ -28,7 +28,7 @@ In vitro N-ethylpentylone strongly inhibits the dopamine (IC50 37 nM), noradrena
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -40,7 +40,7 @@ In one fatality the body temperature was 105.5 °F and the blood pH 6.7, with rh
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

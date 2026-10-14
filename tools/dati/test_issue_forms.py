@@ -1,7 +1,7 @@
 """Tests of the issue forms and labels: run with `python3 -m unittest discover -s tools/dati -p 'test_*.py'`.
 
-Every form must tell the writer that everything is public, have unique field ids (the ids are a contract: the program
-pre-fills forms from the URL), and carry the declaration boxes that fit it.
+The only form is the bug report: it must tell the writer that everything is public, have unique field ids
+and carry the personal-data declaration.
 """
 import unittest
 from pathlib import Path
@@ -10,9 +10,7 @@ import yaml
 
 GITHUB = Path(__file__).resolve().parent.parent.parent / ".github"
 FORMS = sorted(p for p in (GITHUB / "ISSUE_TEMPLATE").glob("*.yml") if p.name != "config.yml")
-# forms that carry text or data into the project also need the DCO and the licence boxes
-CONTRIBUTING = {"sheet.yml", "new-sheet.yml", "translation.yml", "spectrum.yml"}
-EXPECTED = {"sheet.yml", "new-sheet.yml", "translation.yml", "spectrum.yml", "alert.yml", "bug.yml"}
+EXPECTED = {"bug.yml"}
 
 
 def declarations(form: dict) -> str:
@@ -39,14 +37,6 @@ class IssueForms(unittest.TestCase):
                 self.assertLessEqual(set(form["labels"]), label_names, "a label of the form is not in labels.yml")
                 text = declarations(form)
                 self.assertIn("personal data", text)
-                if path.name in CONTRIBUTING:
-                    self.assertIn("developer certificate of origin", text)
-                    self.assertRegex(text, r"cc by(-sa)? 4\.0")
-
-    def test_field_ids_of_the_sheet_form_are_stable(self):
-        form = yaml.safe_load((GITHUB / "ISSUE_TEMPLATE" / "sheet.yml").read_text(encoding="utf-8"))
-        ids = [e["id"] for e in form["body"] if "id" in e]
-        self.assertEqual(ids, ["substance", "section", "language", "version", "text", "sources", "public_name", "declarations"])
 
     def test_blank_issues_off(self):
         config = yaml.safe_load((GITHUB / "ISSUE_TEMPLATE" / "config.yml").read_text(encoding="utf-8"))
@@ -60,7 +50,7 @@ class Labels(unittest.TestCase):
         labels = yaml.safe_load((GITHUB / "labels.yml").read_text(encoding="utf-8"))
         names = [entry["name"] for entry in labels]
         self.assertEqual(len(names), len(set(names)))
-        for needed in ("bug", "spectrum", "sheet", "translation", "alert", "urgent", "needs-review", "conduct"):
+        for needed in ("bug", "urgent", "triage", "conduct"):
             self.assertIn(needed, names)
         for entry in labels:
             self.assertRegex(entry["color"], r"^[0-9a-f]{6}$")

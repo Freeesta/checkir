@@ -41,7 +41,7 @@ pub struct Explanation {
     pub ref_peak_id: String,
     pub ref_peak_cm1: f64,
     pub delta_cm1: f64,
-    /// From the assignment of the band in `substance-bands/1`, when the file has one.
+    /// From the assignment of the band in `substance-bands/2`, when the file has one.
     pub band: Option<BandInfo>,
 }
 

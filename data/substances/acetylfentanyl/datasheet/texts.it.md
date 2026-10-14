@@ -24,7 +24,7 @@ Nelle urine di 5 casi le concentrazioni medie erano 1874 μg/L per l'acetilfenta
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

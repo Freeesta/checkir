@@ -45,7 +45,7 @@ def rule(row: tuple) -> dict:
         r["conditions"] = cond
     if friends:
         r["false_friends"] = friends
-    r.update(sources=sources.split(), status="draft")
+    r.update(sources=sources.split(), status="literature")
     if rid in V.VERIFIED:
         cls, strength, spectra = V.VERIFIED[rid]
         r.update(status="verified_spectra", diagnostic_for=[{"class": cls, "strength": strength}], verified_on=sorted(spectra))
@@ -103,7 +103,7 @@ def band(rules: dict, d: dict, b: tuple) -> dict:
         out["rule_id"] = rid
     if (d["substance"], d["form"], pos) in bande_sostanze_testi.TEXTS:
         out["text_key"] = text_key(d["substance"], d["form"], pos)
-    out.update(sources=list(sources), status="verified_spectra" if verified else "draft")
+    out.update(sources=list(sources), status="verified_spectra" if verified else "literature")
     if spectra:
         out["verified_on"] = sorted(spectra)
     return out
@@ -113,7 +113,7 @@ def substance_files() -> dict[str, str]:
     rules = {r[0]: rule(r) for r in T.RULES}
     files = {}
     for d in bande_sostanze.SUBSTANCES:
-        doc = {"schema": "substance-bands/1", "version": VERSION, "substance": d["substance"], "form": d["form"], "note": d["note"],
+        doc = {"schema": "substance-bands/2", "version": VERSION, "substance": d["substance"], "form": d["form"], "note": d["note"],
                "bands": [band(rules, d, b) for b in d["bands"]]}
         body = ",\n".join("  " + json.dumps(b, ensure_ascii=False, separators=(", ", ": ")) for b in doc.pop("bands"))
         head = json.dumps(doc, ensure_ascii=False, indent=1)[:-2]
@@ -128,7 +128,7 @@ def line_per_item(schema: str, key: str, items: list[dict]) -> str:
 
 def build() -> dict[str, str]:
     files = {
-        "rules.json": line_per_item("bands/1", "rules", [rule(r) for r in T.RULES]),
+        "rules.json": line_per_item("bands/2", "rules", [rule(r) for r in T.RULES]),
         "groups.json": line_per_item("groups/1", "groups", groups()),
         "modes.json": json.dumps({"schema": "modes/1", "version": VERSION, "modes": modes()}, ensure_ascii=False, indent=1) + "\n",
         "regions.json": line_per_item("regions/1", "regions", regions()),

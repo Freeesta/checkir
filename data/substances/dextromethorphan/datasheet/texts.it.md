@@ -18,7 +18,7 @@ L'uso improprio di destrometorfano da parte di bambini e adolescenti è document
 
 ## origin
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## metabolism
 

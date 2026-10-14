@@ -16,11 +16,11 @@ Phenacetin is on the list of the frequent cuts of cocaine. [f:unodc-cocaine2012]
 
 ## effects
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -32,7 +32,7 @@ In humans, N-acetyl-p-aminophenol (paracetamol) is the major urinary metabolite 
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

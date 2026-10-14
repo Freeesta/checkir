@@ -34,7 +34,7 @@ Le fonti lette non danno dati controllati sugli effetti dell'etilone nell'uomo. 
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

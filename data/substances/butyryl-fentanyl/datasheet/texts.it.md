@@ -22,7 +22,7 @@ Nei microsomi epatici umani e in un caso autentico sono state proposte sei vie, 
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

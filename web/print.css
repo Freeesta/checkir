@@ -32,8 +32,8 @@ body[data-printing="report"] .report-host { display: block; page: report; }
 .report-line { height: 22pt; border-bottom: 0.5pt solid #000; }
 .sheet-counselling { display: none; }
 @page { size: A4; margin: 15mm; }
-body[data-page="sheets"] .app-header, body[data-page="sheets"] .footer, body[data-page="sheets"] .sheet-filters, body[data-page="sheets"] .back, body[data-page="sheets"] .propose-wrap, body[data-page="sheets"] .copy-btn, body[data-page="sheets"] .skip { display: none; }
+body[data-page="sheets"] .app-header, body[data-page="sheets"] .footer, body[data-page="sheets"] .sheet-filters, body[data-page="sheets"] .back, body[data-page="sheets"] .copy-btn, body[data-page="sheets"] .skip { display: none; }
 body[data-page="sheets"] { background: #fff; color: #000; font-size: 10pt; }
 body[data-page="sheets"] .sheet-section { break-inside: avoid; }
 body[data-page="sheets"] .structure-svg { background: #fff; color: #000; }
-body[data-page="sheets"] .state-tag, body[data-page="sheets"] .topic-tag { border-color: #000; color: #000; }
+body[data-page="sheets"] .topic-tag { border-color: #000; color: #000; }

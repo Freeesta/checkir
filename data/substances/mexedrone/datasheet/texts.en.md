@@ -20,7 +20,7 @@ In vitro (human liver microsomes and recombinant CYP isoforms) the main phase I 
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -28,7 +28,7 @@ Synthetic cathinones have stimulant and, in part, hallucinogenic properties. [f:
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

@@ -10,7 +10,7 @@ Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulan
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -18,11 +18,11 @@ A synthetic substance, an α-pyrrolidinophenone cathinone with a tetrahydronapht
 
 ## metabolism
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -30,7 +30,7 @@ Synthetic cathinones have stimulant and, in part, hallucinogenic properties; no 
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

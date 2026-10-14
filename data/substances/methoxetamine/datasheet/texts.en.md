@@ -26,7 +26,7 @@ It is a ketamine analogue with a much longer duration of action. [f:zawilska2014
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -38,7 +38,7 @@ A fatal case with methoxetamine is described. [f:adamowicz2014]
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

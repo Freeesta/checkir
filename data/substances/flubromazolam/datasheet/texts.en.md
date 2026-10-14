@@ -26,7 +26,7 @@ The estimated terminal half-life in that person is 10-20 hours; the serum peak w
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

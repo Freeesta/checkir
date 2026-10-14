@@ -28,7 +28,6 @@ import qualita  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 OUT = ROOT / "data" / "demo"
-DAY = "2026-10-13"
 NOTE = "FTIR identification by the service, not confirmed with another technique."
 ORIGIN = "checkir demo, servizio di drug checking (Torino)"
 # demo id -> (form id of the identity proposed by FTIR, extra files: sample + background interferograms for the teaching pages)
@@ -75,7 +74,7 @@ def meta_json(demo_id: str, form: str, text: str, doc: dict, main: dict) -> dict
     j = jcamp.parse(text)
     xs = main["x"]
     meta = {
-        "schema": "ftir-spectrum/1", "id": f"{form}.demo.{demo_id[-3:].replace('-', '0')}", "form": form, "role": "reference",
+        "schema": "ftir-spectrum/2", "id": f"{form}.demo.{demo_id[-3:].replace('-', '0')}", "form": form, "role": "reference",
         "technique": {"method": "ATR", "crystal": "diamond", "reflections": 1},
         "instrument": {"manufacturer": "Shimadzu", "model": doc["model"]}, "resolution_cm1": doc["resolution_cm1"],
         "range_cm1": [round(xs[0], 3), round(xs[-1], 3)], "step_cm1": round((xs[-1] - xs[0]) / (len(xs) - 1), 3),
@@ -85,7 +84,6 @@ def meta_json(demo_id: str, form: str, text: str, doc: dict, main: dict) -> dict
         "contributors": [{"public_name": "Drug checking service", "body": "Drug checking service (Torino)"}],
         "license": "CC-BY-4.0", "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
         "original_format": "Shimadzu LabSolutions IR (.ispd), cleaned with anonimizza/1",
-        "review": {"state": "proposed", "reviewers": [], "date": DAY},
     }
     checks = qualita.checks(j, meta)
     meta["quality"] = {"checks": [{"criterion": c, "result": r, **({} if v is None else {"value": v})} for c, r, v in checks]}

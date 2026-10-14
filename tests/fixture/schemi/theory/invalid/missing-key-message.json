@@ -1,5 +1,5 @@
 {
-  "schema": "theory/1",
+  "schema": "theory/2",
   "id": "example",
   "n": 1,
   "title": "Example",
@@ -31,7 +31,5 @@
   "sources": [
     "wiki-ftir"
   ],
-  "glossary_terms": [],
-  "status": "draft",
-  "reviewers": []
+  "glossary_terms": []
 }

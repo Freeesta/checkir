@@ -16,7 +16,7 @@ Nei microsomi epatici umani (solo fase I) 5F-NNEI ha seguito come vie principali
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

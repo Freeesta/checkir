@@ -29,4 +29,4 @@ Apri il sito: <https://freeesta.github.io/checkir/>. Carica un file di spettro (
 - Il codice è sviluppato con l'aiuto di assistenti IA; l'IA non è autrice, chi pubblica risponde di tutto.
 
 ## Contribuire
-Non serve saper programmare: vedi [CONTRIBUTING.it.md](CONTRIBUTING.it.md) per i quattro percorsi (chimici, operatori sanitari, traduttori, sviluppatori). Leggi anche il [Codice di condotta](CODE_OF_CONDUCT.it.md). Problemi di sicurezza: [SECURITY.md](SECURITY.md).
+Segnala un errore con il modulo degli errori o correggi il codice: vedi [CONTRIBUTING.it.md](CONTRIBUTING.it.md). Leggi anche il [Codice di condotta](CODE_OF_CONDUCT.it.md). Problemi di sicurezza: [SECURITY.md](SECURITY.md).

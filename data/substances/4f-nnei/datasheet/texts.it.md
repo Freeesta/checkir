@@ -16,7 +16,7 @@ Non è stato trovato nessuno studio su 4F-NNEI. Per l'isomero 5-fluoropentilico 
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

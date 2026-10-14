@@ -18,7 +18,7 @@ Nei preparati di fegato umano si sono formati i metaboliti idrossi-arile, idross
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -26,7 +26,7 @@ La difenidina è una sostanza dissociativa; in 17 pazienti positivi a difenidina
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -36,7 +36,7 @@ Nell'87 % dei casi erano presenti anche altre sostanze, quindi il quadro non è 
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## sources
 

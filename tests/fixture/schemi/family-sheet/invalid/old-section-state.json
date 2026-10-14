@@ -1,0 +1,27 @@
+{
+  "schema": "family-sheet/2",
+  "id": "synthetic_cathinones",
+  "version": 1,
+  "interactions": [
+    {
+      "with": "maoi",
+      "severity": "dangerous",
+      "mechanism": "maoi",
+      "source": "x"
+    }
+  ],
+  "counselling": [
+    {
+      "key": "cathinones.redosing",
+      "topic": "redosing",
+      "source": "x"
+    }
+  ],
+  "authors": [
+    "Example Author"
+  ],
+  "ai_assisted": true,
+  "section_state": {
+    "effects": "draft"
+  }
+}

@@ -32,16 +32,16 @@ fn peaks_of(bands: &[B], seed: u64) -> PeakSet {
     PeakSet::from(&detect(&s, &t).expect("detect"))
 }
 
-/// A rule of `bands/1`; `extra` is raw JSON for conditions, scope and classes.
+/// A rule of `bands/2`; `extra` is raw JSON for conditions, scope and classes.
 fn rule(id: &str, min: i32, max: i32, extra: &str) -> String {
     format!(
-        r#"{{"id":"{id}","version":1,"range_cm1":{{"min":{min},"max":{max}}},"group":"g_{id}","mode":"stretch","intensity":"strong","shape":"sharp","sources":["s"],"status":"draft"{extra}}}"#
+        r#"{{"id":"{id}","version":1,"range_cm1":{{"min":{min},"max":{max}}},"group":"g_{id}","mode":"stretch","intensity":"strong","shape":"sharp","sources":["s"],"status":"literature"{extra}}}"#
     )
 }
 
 fn rules(list: &[String]) -> RuleSet {
     let text = format!(
-        r#"{{"schema":"bands/1","version":"test.1","rules":[{}]}}"#,
+        r#"{{"schema":"bands/2","version":"test.1","rules":[{}]}}"#,
         list.join(",")
     );
     RuleSet::parse(&text).expect("rules")
@@ -214,7 +214,7 @@ fn band(at: f64, group: &str, origin: Origin) -> SubstanceBand {
         group_instance: Some("methyl ester".into()),
         mode_character: Some("mostly C=O".into()),
         origin,
-        status: "draft".into(),
+        status: "literature".into(),
     }
 }
 
@@ -291,7 +291,7 @@ fn suspects_are_cuts_with_a_diagnostic_band_at_an_unexplained_peak_and_never_mor
 #[test]
 fn the_rules_for_a_position_are_listed_narrowest_first() {
     let text = format!(
-        r#"{{"schema":"bands/1","version":"t","rules":[{},{}]}}"#,
+        r#"{{"schema":"bands/2","version":"t","rules":[{},{}]}}"#,
         rule("wide", 1650, 1750, ""),
         rule("narrow", 1695, 1705, "")
     );

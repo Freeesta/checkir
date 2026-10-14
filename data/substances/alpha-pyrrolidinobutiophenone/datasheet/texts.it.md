@@ -22,7 +22,7 @@ In vitro CYP2C19 e CYP2D6 sono gli enzimi principali nei primi passaggi. [f:mani
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -30,7 +30,7 @@ I catinoni sintetici hanno proprietà stimolanti e, in parte, allucinogene; nell
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

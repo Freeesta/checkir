@@ -8,7 +8,7 @@ Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannab
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -22,7 +22,7 @@ Oxidative deamination was the biotransformation common to PX-1, PX-2 and PX-3, w
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

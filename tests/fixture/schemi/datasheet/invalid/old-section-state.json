@@ -1,0 +1,13 @@
+{
+  "schema": "datasheet/2",
+  "substance": "example-amine",
+  "version": 1,
+  "doses": [],
+  "authors": [
+    "Example Author"
+  ],
+  "ai_assisted": false,
+  "section_state": {
+    "molecule": "draft"
+  }
+}

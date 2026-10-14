@@ -50,7 +50,7 @@ After use an emergence reaction with psychosis, bizarre behaviour or depression 
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

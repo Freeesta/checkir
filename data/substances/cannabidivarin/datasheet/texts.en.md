@@ -8,7 +8,7 @@ Chemical class: plant-based substances (UNODC grouping). Expected effect: cannab
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -16,11 +16,11 @@ Non-hallucinogenic phytocannabinoid of Cannabis sativa, among the seven most inv
 
 ## metabolism
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -36,7 +36,7 @@ In the study 91% of adverse events were mild or moderate and none required withd
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## sources
 

@@ -1,7 +1,7 @@
 """Rules re-checked locally on reference spectra (2026-10-13): class they are diagnostic for and opaque spectrum ids.
 
 The ids are salted hashes of library entries kept in a private place: never a file name or a sample code.
-A rule listed here moves from draft to verified_spectra; reviewers sign it later (status reviewed).
+A rule listed here moves from literature to verified_spectra.
 """
 
 CATHINONES = ("vs-31eb58599154", "vs-d49d56071832", "vs-35555f68cdd4", "vs-8c229d4bd6ff")

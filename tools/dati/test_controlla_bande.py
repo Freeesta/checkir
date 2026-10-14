@@ -52,7 +52,7 @@ class ShippedData(Base):
         rules = json.loads((DATA / "bands/rules.json").read_text(encoding="utf-8"))["rules"]
         self.assertEqual(len(rules), 79)
         self.assertTrue(all(r["sources"] for r in rules))
-        verified = {r["id"] for r in rules if r["status"] != "draft"}
+        verified = {r["id"] for r in rules if r["status"] != "literature"}
         self.assertEqual(verified, {"co.aryl_ketone", "o_ch2_o.c_o", "o_ch2_o.ring", "co.ketone.sat", "co.amide"})
         self.assertTrue(all(r["diagnostic_for"] and len(r["verified_on"]) >= 2 for r in rules if r["id"] in verified))
         texts = json.loads((DATA / "bands/texts.it.json").read_text(encoding="utf-8"))["texts"]

@@ -32,7 +32,7 @@ La PMMA è descritta come un'amfetamina sintetica sostituita con effetto allucin
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

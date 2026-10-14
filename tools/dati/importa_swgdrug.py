@@ -25,7 +25,6 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 DATA = ROOT / "data"
 LIBRARY = {"name": "swgdrug-ir", "version": "2024-05-15"}
 CITATION = "IR spectral data provided courtesy of SWGDRUG (swgdrug.org), SWGDRUG IR Library v2024-05-15"
-DAY = "2026-10-13"
 # SWGDRUG entry number -> form id (the form files live in data/substances/<substance>/forms/).
 ENTRIES = {
     "350": "benzocaine-base", "352": "phenacetin-neutral", "354": "paracetamol-neutral", "357": "caffeine-base",
@@ -63,7 +62,7 @@ def write_jdx(sid: str, xs: list[float], ys: list[float]) -> bytes:
 
 def metadata(sid: str, form: str, number: str, lot: str, month: str, xs: list[float], raw: bytes) -> dict:
     meta = {
-        "schema": "ftir-spectrum/1", "id": sid, "form": form, "role": "reference",
+        "schema": "ftir-spectrum/2", "id": sid, "form": form, "role": "reference",
         "technique": {"method": "ATR", "crystal": "diamond", "reflections": 1},
         "instrument": {"manufacturer": "Thermo Nicolet", "model": "iS10"},
         "resolution_cm1": 4, "scans": 32, "apodization": "Norton-Beer strong",
@@ -77,7 +76,6 @@ def metadata(sid: str, form: str, number: str, lot: str, month: str, xs: list[fl
         "license": "LicenseRef-permission-swgdrug",
         "license_terms": {"non_commercial": True, "citation": CITATION, "permission": "written, 2026-10-13, for the listed cutting agents"},
         "sha256": hashlib.sha256(raw).hexdigest(), "original_format": "JCAMP-DX 5.01 (OMNIC), (X++(Y..Y))",
-        "review": {"state": "proposed", "reviewers": [], "date": DAY},
     }
     j = jcamp.parse(raw.decode("utf-8"))
     meta["quality"] = {"checks": [{"criterion": c, "result": r, **({} if v is None else {"value": v})} for c, r, v in qualita.checks(j, meta)]}

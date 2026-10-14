@@ -18,7 +18,7 @@ With cDNA-expressed human CYPs, O-deethylation of PCEEA was catalysed by CYP2B6,
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -26,7 +26,7 @@ Phencyclidine, ketamine and their analogues act as non-competitive antagonists o
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

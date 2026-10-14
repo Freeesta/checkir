@@ -2,10 +2,10 @@
 
     python3 tools/dati/controlla_bande.py [DATA_DIR]      # default: data/ ; one line per problem, exit 1 if any
 
-Files: rules.json (bands/1), groups.json, modes.json, regions.json, texts.<lang>.json (band-texts/1), substance-bands/*.json (substance-bands/1).
-Checks: schema (each message names the rule, group, mode or region, not just an index); every cited id exists (group, mode, rule, class, source,
-reviewer); at least one source per rule; window at least 10 cm-1 wide unless the group family is artifact; ATR widening of strong bands applied;
-diagnostic_for only from status verified_spectra (checked on at least two opaque spectrum ids); reviewed needs a listed reviewer; every text key
+Files: rules.json (bands/2), groups.json, modes.json, regions.json, texts.<lang>.json (band-texts/1), substance-bands/*.json (substance-bands/2).
+Checks: schema (each message names the rule, group, mode or region, not just an index); every cited id exists (group, mode, rule, class, source);
+at least one source per rule; window at least 10 cm-1 wide unless the group family is artifact; ATR widening of strong bands applied;
+diagnostic_for only from status verified_spectra (checked on at least two opaque spectrum ids); every text key
 exists in every language and no key is orphan; forbidden reassuring words (also "fentanyl-free", "negative result", "purity", "ok to use", "green
 light" and their Italian equivalents); no personal data and no forbidden private names (NOMI_VIETATI) in any string.
 """
@@ -125,14 +125,10 @@ def check_rule(r: dict, ctx: dict) -> list[str]:
     for c in r.get("diagnostic_for", []):
         if c["class"] not in ctx["classes"]:
             out.append(f"{who}: diagnostic_for names an unknown class '{c['class']}'")
-        if r["status"] == "draft":
-            out.append(f"{who}: diagnostic_for needs status verified_spectra or reviewed, found draft")
-    if r["status"] != "draft" and len(r.get("verified_on", [])) < 2:
+        if r["status"] == "literature":
+            out.append(f"{who}: diagnostic_for needs status verified_spectra, found literature")
+    if r["status"] != "literature" and len(r.get("verified_on", [])) < 2:
         out.append(f"{who}: status {r['status']} needs at least two spectra in verified_on")
-    if r["status"] == "reviewed":
-        names = {x["public_name"] for x in r.get("reviewers", [])}
-        if not names or not names <= ctx["reviewers"]:
-            out.append(f"{who}: status reviewed needs signatures of reviewers listed in reviewers.json")
     return out
 
 
@@ -167,7 +163,7 @@ def check_substance_bands(files: dict, ctx: dict) -> tuple[list[str], set[str]]:
             if win and not win["min"] - b["tolerance_cm1"] <= b["position_cm1"] <= win["max"] + b["tolerance_cm1"]:
                 out.append(f"{who}: lies outside the window {win['min']}-{win['max']} of its rule '{b['rule_id']}'")
             out += [f"{who}: unknown source '{s}'" for s in b["sources"] if s not in ctx["sources"]]
-            if b["status"] != "draft" and len(b.get("verified_on", [])) < 2:
+            if b["status"] != "literature" and len(b.get("verified_on", [])) < 2:
                 out.append(f"{who}: status {b['status']} needs at least two spectra in verified_on")
             if "text_key" in b:
                 keys.add(b["text_key"])
@@ -227,9 +223,7 @@ def check_wording(files: dict, forbidden: list[re.Pattern[str]]) -> list[str]:
 def reference_ids(root: Path) -> dict:
     sources = {s["id"] for s in load(root / "sources.json")["sources"]}
     classes = {c["id"] for c in load(root / "classes.json")["classes"]}
-    people = root / "reviewers.json"
-    reviewers = {r["public_name"] for r in load(people).get("reviewers", [])} if people.is_file() else set()
-    return {"sources": sources, "classes": classes, "reviewers": reviewers}
+    return {"sources": sources, "classes": classes}
 
 
 def check_bands(root: Path) -> list[str]:

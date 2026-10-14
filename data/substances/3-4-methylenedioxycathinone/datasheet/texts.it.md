@@ -16,7 +16,7 @@ In uno studio clinico su volontari sani che avevano assunto metilone, la 3,4-met
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -24,7 +24,7 @@ I catinoni sintetici hanno proprietà stimolanti e, in parte, allucinogene. [f:m
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta a partire da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

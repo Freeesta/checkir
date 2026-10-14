@@ -28,7 +28,7 @@ Nel ratto l'emivita del flualprazolam è circa il doppio di quella dell'alprazol
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -36,7 +36,7 @@ Il flualprazolam è stato associato a sedazione, perdita di coscienza, perdita d
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

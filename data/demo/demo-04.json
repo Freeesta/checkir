@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "ketamine-hydrochloride.demo.004",
   "form": "ketamine-hydrochloride",
   "role": "reference",
@@ -39,11 +39,6 @@
   "license": "CC-BY-4.0",
   "sha256": "ab1378e2683cac588c30b2511300310519bfb0221633ff9f4dfdf30e38f1dadd",
   "original_format": "Shimadzu LabSolutions IR (.ispd), cleaned with anonimizza/1",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-13"
-  },
   "quality": {
     "checks": [
       {

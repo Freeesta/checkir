@@ -1,7 +1,7 @@
 {
-  "schema": "alerts/1",
+  "schema": "alerts/2",
   "id": "family-nitazenes",
-  "status": "draft",
+  "status": "active",
   "target": {
     "classes": [
       "nitazenes"
@@ -12,7 +12,5 @@
   "sources": [
     "unodc-ewa"
   ],
-  "issued": "2026-10-13",
-  "review_by": "2027-10-13",
-  "reviewers": []
+  "issued": "2026-10-13"
 }

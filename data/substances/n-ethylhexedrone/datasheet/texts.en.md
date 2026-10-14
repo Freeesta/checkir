@@ -38,7 +38,7 @@ A 21-year-old man died with hyperthermia above 41 °C, tachycardia above 160 bea
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

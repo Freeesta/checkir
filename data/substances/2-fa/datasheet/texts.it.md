@@ -20,7 +20,7 @@ Solo dati su animali; non è stato trovato alcuno studio umano controllato sugli
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -28,7 +28,7 @@ In tre casi forensi danesi (soprattutto guida sotto l'effetto di sostanze) la 2-
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

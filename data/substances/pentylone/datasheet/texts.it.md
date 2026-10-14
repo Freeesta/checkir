@@ -20,7 +20,7 @@ Il pentilone è anche il principale metabolita N-desmetilato della N,N-dimetilpe
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -28,7 +28,7 @@ I catinoni sintetici hanno proprietà stimolanti e in parte allucinogene; nelle 
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

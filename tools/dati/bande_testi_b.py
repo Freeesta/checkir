@@ -183,8 +183,8 @@ TESTI_B = {
  "oop.124": (
   "Questi picchi intensi vengono dalla flessione fuori piano dei C-H di un anello con tre sostituenti. Da soli non bastano.",
   "These intense peaks come from the out-of-plane bending of the C-H bonds of a ring with three substituents. They are not enough alone.",
-  "C-H fuori piano del benzene 1,2,4-trisostituito, forte, ~790-900 cm⁻¹; una sola fonte (LibreTexts, che riproduce Sigma-Aldrich), regola in bozza finché non verificata su spettri. Solo con un candidato. Falsi amici: para-disostituito, carbonato.",
-  "Out-of-plane C-H of 1,2,4-trisubstituted benzene, strong, ~790-900 cm⁻¹; a single source (LibreTexts, reproducing Sigma-Aldrich), draft until verified on spectra. Candidate only. False friends: para-disubstituted, carbonate."),
+  "C-H fuori piano del benzene 1,2,4-trisostituito, forte, ~790-900 cm⁻¹; una sola fonte (LibreTexts, che riproduce Sigma-Aldrich), regola dalla sola letteratura finché non verificata su spettri. Solo con un candidato. Falsi amici: para-disostituito, carbonato.",
+  "Out-of-plane C-H of 1,2,4-trisubstituted benzene, strong, ~790-900 cm⁻¹; a single source (LibreTexts, reproducing Sigma-Aldrich), literature only until verified on spectra. Candidate only. False friends: para-disubstituted, carbonate."),
  "oop.para": (
   "Questo picco intenso viene dalla flessione fuori piano dei C-H di un anello con due sostituenti opposti. Da solo non basta.",
   "This intense peak comes from the out-of-plane bending of the C-H bonds of a ring with two opposite substituents. It is not enough alone.",

@@ -16,7 +16,7 @@ JWH-250 è uno dei sette cannabinoidi sintetici di cui sono stati identificati i
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

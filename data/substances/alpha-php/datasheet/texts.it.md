@@ -30,7 +30,7 @@ Nell'uomo i suoi effetti stimolanti sono paragonabili a quelli di α-PVP e MDPV;
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 
@@ -42,7 +42,7 @@ Per l'isomero α-PiHP le concentrazioni nel sangue post mortem (0.3-840 ng/mL) s
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

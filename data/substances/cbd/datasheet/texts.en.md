@@ -8,7 +8,7 @@ Chemical class: plant-based substances (UNODC grouping). Expected effect: cannab
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -30,7 +30,7 @@ It is a popular consumer product and the active ingredient of Epidiolex, an oral
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

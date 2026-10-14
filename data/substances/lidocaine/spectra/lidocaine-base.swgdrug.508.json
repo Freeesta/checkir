@@ -1,5 +1,5 @@
 {
-  "schema": "ftir-spectrum/1",
+  "schema": "ftir-spectrum/2",
   "id": "lidocaine-base.swgdrug.508",
   "form": "lidocaine-base",
   "role": "reference",
@@ -50,11 +50,6 @@
   },
   "sha256": "21e668a7e1cd9fc21359f7557f9e0b7c5eae4e781525e4d35fe2c9c9c9eff5b0",
   "original_format": "JCAMP-DX 5.01 (OMNIC), (X++(Y..Y))",
-  "review": {
-    "state": "proposed",
-    "reviewers": [],
-    "date": "2026-10-13"
-  },
   "quality": {
     "checks": [
       {

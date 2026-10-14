@@ -8,7 +8,7 @@ Chemical class: morphinans, among the plant-based substances of the UNODC groupi
 
 ## history
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## origin
 
@@ -22,7 +22,7 @@ The terminal half-life is long and variable (mean values from 3 to 44 hours); mo
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 
@@ -30,7 +30,7 @@ Buprenorphine is a partial agonist at the μ-opioid receptor with high affinity 
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 

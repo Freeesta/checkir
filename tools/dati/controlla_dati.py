@@ -5,7 +5,7 @@
 Checks: schema of every JSON; id = folder name; unique ids and InChIKeys (compounds); references (form -> substance, spectrum -> form,
 class, source, relation and alert targets); .jdx/.json coherence and SHA-256; quality metrics equal to the recomputed ones and no
 failing criterion; no unconfirmed samples; no personal fields (regular expressions + the secret list NOMI_VIETATI) in JCAMP and JSON;
-datasheet texts: fixed section keys, a source on every claim in the health sections, forbidden reassuring words, review deadline.
+datasheet texts: fixed section keys, a source on every claim in the health sections, forbidden reassuring words.
 """
 from __future__ import annotations
 
@@ -73,17 +73,6 @@ def check_texts(label: str, path: Path, ctx: dict) -> list[str]:
 
 def wording(label: str, text: str) -> list[str]:
     return [f"{label}: forbidden reassuring word '{m.group(0)}' (the program never says a sample is safe, pure or clean)" for m in FORBIDDEN.finditer(ALLOWED_PHRASES.sub(" ", text))]
-
-
-def check_sheet(label: str, sheet: dict) -> list[str]:
-    out = []
-    y, m, d = (int(x) for x in sheet["reviewed"].split("-"))
-    ry, rm, rd = (int(x) for x in sheet["review_by"].split("-"))
-    if (ry - y) * 12 + (rm - m) + (1 if rd > d else 0) > 24:
-        out.append(f"{label}: review_by is more than 24 months after reviewed")
-    if "approved" in sheet["section_state"].values() and not sheet["reviewers"]:
-        out.append(f"{label}: a section is approved but there are no reviewers")
-    return out
 
 
 def check_spectrum(label: str, jdx: Path, meta_path: Path, meta: dict, forbidden: list[re.Pattern[str]]) -> tuple[list[str], list[float] | None]:
@@ -216,7 +205,6 @@ def check_datasheet(folder: Path, ctx: dict, forbidden: list[re.Pattern[str]], s
     if out:
         return out
     sheet = load(folder / "datasheet.json")
-    out += check_sheet(str(folder / "datasheet.json"), sheet)
     out += personal(str(folder / "datasheet.json"), [("", t) for t in strings(sheet)], forbidden)
     out += [f"{folder / 'datasheet.json'}: forbidden reassuring word '{m.group(0)}'" for t in strings(sheet) for m in FORBIDDEN.finditer(ALLOWED_PHRASES.sub(" ", t))]
     if not (folder / "texts.en.md").is_file():

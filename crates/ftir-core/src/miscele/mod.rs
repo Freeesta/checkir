@@ -3,7 +3,7 @@
 //! The program proposes, the chemist decides. A component's `contribution` is its share of the explained spectrum
 //! (area of absorbance), never a weight percentage and never a probability; "what is needed" is the growth of the
 //! residual if the component is taken out. Nothing is named to fill the residual: when a lot is left, `high_residual`.
-//! Method (data in `soglie_miscele/1`, cuts in `tagli/1`): see `seleziona.rs`; space and references: `spazio.rs`.
+//! Method (data in `soglie_miscele/1`, cuts in `tagli/2`): see `seleziona.rs`; space and references: `spazio.rs`.
 use crate::error::{EngineError, EngineResult};
 use crate::peaks;
 use crate::spectrum::Spectrum;

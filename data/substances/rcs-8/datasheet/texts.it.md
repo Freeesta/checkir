@@ -16,7 +16,7 @@ Negli epatociti umani sono stati identificati più di 20 metaboliti di RCS-8, pr
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

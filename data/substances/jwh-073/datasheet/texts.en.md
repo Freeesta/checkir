@@ -18,7 +18,7 @@ A validated LC-MS/MS method identifies JWH-073 and its urinary metabolites after
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

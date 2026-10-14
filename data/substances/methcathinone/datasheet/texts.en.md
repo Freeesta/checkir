@@ -32,7 +32,7 @@ In mice low doses of methcathinone (10 and 25 mg/kg) stimulated locomotor activi
 
 ## doses
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## risks
 
@@ -44,7 +44,7 @@ In mice the lethal dose 50 was 201.7 mg/kg for methcathinone alone and 110.2 mg 
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

@@ -1,4 +1,4 @@
-"""Tests of the sheet checks (13 sections, signing roles, tiers, synthesis words, counselling, cuts, families, structures)."""
+"""Tests of the sheet checks (13 sections, tiers, synthesis words, counselling, cuts, families, structures)."""
 import json
 import unittest
 from pathlib import Path
@@ -19,7 +19,6 @@ def full_texts(lang, **override):
 
 class WithFullSheet(Base):
     def full(self, **override):
-        self.edit_json(SHEET, lambda o: o.update(section_state={k: "draft" for k in cs.SECTIONS}))
         for lang in ("en", "it"):
             (self.root / SUB / "datasheet" / f"texts.{lang}.md").write_text(full_texts(lang, **override.get(lang, {})), encoding="utf-8")
 
@@ -58,18 +57,6 @@ class Full(WithFullSheet):
         self.full(**ok)
         self.assertEqual(self.problems(), "")
 
-    def test_chemist_cannot_approve_health_section(self):
-        self.full()
-        self.edit_json(SHEET, lambda o: (o["section_state"].update(counselling="approved"),
-                                         o.update(reviewers=[{"public_name": "A", "role": "chemist", "sections": ["counselling"], "date": "2026-10-12"}])))
-        self.assertIn("cannot sign 'counselling'", self.problems())
-
-    def test_approved_needs_signature_of_the_right_role(self):
-        self.full()
-        self.edit_json(SHEET, lambda o: (o["section_state"].update(cuts="approved"),
-                                         o.update(reviewers=[{"public_name": "A", "role": "chemist", "sections": ["molecule"], "date": "2026-10-12"}])))
-        self.assertIn("'cuts' is approved without a signature by a chemist", self.problems())
-
 
 
 class Structured(WithFullSheet):
@@ -83,13 +70,8 @@ class Structured(WithFullSheet):
         self.edit_json(SHEET, lambda o: o.update(counselling=[{"key": "a.b", "topic": "dosing", "source": "synthetic-generator"}] * 2))
         self.assertIn("1 counselling paragraphs for 2 points", self.problems())
 
-    def test_show_doses_false_for_potent_classes(self):
-        self.edit_json(f"{SUB}/substance.json", lambda o: o["classes"].update(chemical=["fentanyls"]))
-        self.edit_json(SHEET, lambda o: o.update(show_doses=True, doses=[{"route": "oral", "unit": "ug", "source": "synthetic-generator", "evidence_type": "clinical"}]))
-        self.assertIn("show_doses must be false", self.problems())
-
     def test_user_reported_doses_must_say_so(self):
-        self.edit_json(SHEET, lambda o: o.update(show_doses=True, doses=[{"route": "oral", "unit": "mg", "source": "synthetic-generator", "evidence_type": "user_reported"}]))
+        self.edit_json(SHEET, lambda o: o.update(doses=[{"route": "oral", "unit": "mg", "source": "synthetic-generator", "evidence_type": "user_reported"}]))
         self.assertIn("user-reported", self.problems())
 
     def test_languages_must_have_the_same_citations(self):
@@ -101,18 +83,12 @@ class Structured(WithFullSheet):
         self.edit_json(SHEET, lambda o: o.update(structure_svg=True))
         self.assertIn("structure.svg is missing", self.problems())
 
-    def test_section_state_must_match_texts(self):
-        self.full()
-        self.edit_json(SHEET, lambda o: o["section_state"].pop("history"))
-        self.assertIn("without a section_state", self.problems())
-
 
 class Families(Base):
     def family(self, tweak=None):
         d = self.root / "families" / "benzodiazepines"
         d.mkdir(parents=True, exist_ok=True)
-        doc = {"schema": "family-sheet/1", "id": "benzodiazepines", "version": 1, "section_state": {k: "draft" for k in cs.FAMILY_SECTIONS}, "reviewers": [],
-               "reviewed": "2026-10-12", "review_by": "2028-09-30", "authors": ["Example"], "ai_assisted": True}
+        doc = {"schema": "family-sheet/2", "id": "benzodiazepines", "version": 1, "authors": ["Example"], "ai_assisted": True}
         if tweak:
             tweak(doc)
         (d / "family.json").write_text(json.dumps(doc), encoding="utf-8")

@@ -38,7 +38,7 @@ Case reports of fatalities with toxicologically confirmed MDEA exist; for seroto
 
 ## interactions
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## counselling
 

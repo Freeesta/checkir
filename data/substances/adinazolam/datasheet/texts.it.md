@@ -10,7 +10,7 @@ Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso c
 
 ## history
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## origin
 
@@ -24,7 +24,7 @@ Dopo infusione endovenosa in nove volontari sani l'emivita di eliminazione è st
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -36,7 +36,7 @@ Nei volontari sani l'adinazolam per via endovenosa ha prodotto sedazione valutat
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

@@ -22,7 +22,7 @@ L'idrolisi dell'estere dà lo stesso metabolita del FUB-PB-22, l'acido fluoroben
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

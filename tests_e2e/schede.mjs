@@ -2,9 +2,7 @@
 // with no banner and nothing hidden for caution (the state is plain data), cites sources, makes no request to another origin, and works by keyboard at 320 px.
 import { readFile } from "node:fs/promises";
 import { parseParagraphs, sectionStatus } from "../web/schede.js";
-import { GITHUB_URL } from "../web/appname.js";
-import { buildIssueUrl, checkProposal, MAX_URL } from "../web/proponi.js";
-import { CANARIES, CANARY_STRINGS } from "./canarino.mjs";
+import { CANARIES } from "./canarino.mjs";
 
 export const REASSURING = /sicur|\bpur[oai]\b|pulit|via libera|\bok\b|negativ|\bsafe\b|\bpure\b|\bclean\b|all clear/i;
 const SPECTRUM = new URL("../data/substances/synthetic-a/spectra/synthetic-a-base.checkir.001.jdx", import.meta.url);
@@ -17,25 +15,13 @@ function canarySpectrum(jdx) {
 
 /** The rules of what may be shown, on hand-made sheets, no browser. */
 export async function sheetsPureScenario(check) {
-  const sheet = (text) => ({ id: "x", names: {}, version: 1, section_state: { effects: "draft" }, reviewers: [], reviewed: "", review_by: "", ai_assisted: true, texts: { en: { effects: text } } });
+  const sheet = (text) => ({ id: "x", names: {}, version: 1, ai_assisted: true, texts: { en: { effects: text } } });
   check("sheets: a placeholder is an empty section", sectionStatus(sheet("Not written yet. [f:abc-section-pending]"), "effects", "en") === "empty");
   check("sheets: a missing section is empty", sectionStatus(sheet(""), "doses", "en") === "empty");
-  check("sheets: a draft section with text is shown as it is", sectionStatus(sheet("A fact. [f:a]"), "effects", "en") === "shown");
+  check("sheets: a section with text is shown as it is", sectionStatus(sheet("A fact. [f:a]"), "effects", "en") === "shown");
   const order = [];
   const p = parseParagraphs("One. [f:a] Two. [f:b] [f:a]\n\nThree.", order);
   check("sheets: citations are numbered in order of first appearance", order.join() === "a,b" && p.length === 2 && p[0].filter((x) => x.ref).map((x) => x.n).join() === "1,2,1");
-  const known = new Set(["a"]);
-  const base = { section: "effects", lang: "it", text: "Un fatto. [f:a]", current: "Altro. [f:a]", sources: "", known };
-  const codes = (o) => checkProposal({ ...base, ...o }).map((x) => x.key).join();
-  check("propose: a sourced change passes", codes({}) === "");
-  check("propose: forbidden words block, in both languages", codes({ text: "È sicuro. [f:a]" }) === "propose.err.banned" && codes({ lang: "en", text: "It is pure. [f:a]" }) === "propose.err.banned");
-  check("propose: a health point without a known source blocks, a new source unblocks", codes({ text: "Un fatto." }) === "propose.err.no_source" && codes({ text: "Un fatto.", sources: "10.1000/xyz123" }) === "");
-  check("propose: other sections need no source", codes({ section: "molecule", text: "Un fatto." }) === "");
-  check("propose: email, phone, link, bad source, empty, unchanged", codes({ text: "Scrivi a x@y.it [f:a]" }) === "propose.err.contact" && codes({ text: "Chiama +39 011 1234567 [f:a]" }) === "propose.err.contact" && codes({ text: "Vedi https://x.it [f:a]" }) === "propose.err.contact" && codes({ sources: "boh" }) === "propose.err.sources_invalid" && codes({ text: " " }) === "propose.err.empty" && codes({ text: "Altro. [f:a]" }) === "propose.err.unchanged");
-  const short = buildIssueUrl({ id: "synthetic-a", section: "effects", lang: "it", version: 2, text: "Un fatto. [f:a]", sources: "", name: "" });
-  const long = buildIssueUrl({ id: "synthetic-a", section: "effects", lang: "it", version: 2, text: "x ".repeat(5000), sources: "", name: "" });
-  check("propose: the link has the form fields and the text", short.url.startsWith(GITHUB_URL + "issues/new?template=sheet.yml&substance=synthetic-a&section=effects&language=it&version=2&text=") && !short.pasted);
-  check("propose: a very long text goes through the clipboard, not the address", long.pasted && long.url.length <= MAX_URL && !long.url.includes("text="));
 }
 
 /** The sheet in the page: open, read, close. */
@@ -61,14 +47,13 @@ export async function sheetsScenario(browser, base, check, axe) {
   await page.waitForSelector("dialog .substance-sheet");
   const text = (await page.textContent("dialog .substance-sheet")) ?? "";
   check("sheets: the sheet is the one of the candidate", /^synthetic-/.test((await page.getAttribute("dialog .substance-sheet", "data-substance")) ?? ""));
-  check("sheets: no banner, no note and no tick", (await page.locator("dialog [role=note]").count()) === 0 && !/Bozza non firmata/.test(text) && (await page.locator("dialog .substance-sheet svg use[href$='#check']").count()) === 0);
-  check("sheets: the thirteen sections with a state each", (await page.locator("dialog .sheet-section").count()) === 13 && (await page.locator("dialog .sheet-section .state-tag").count()) === 13);
-  check("sheets: version and signed sections are written", /Versione \d+ · sezioni firmate: 0 su 13/.test(text), text.slice(0, 200));
+  check("sheets: no banner, no note and no tick", (await page.locator("dialog [role=note]").count()) === 0 && !/firmat|bozza|revision/i.test(text) && (await page.locator("dialog .substance-sheet svg use[href$='#check']").count()) === 0);
+  check("sheets: the thirteen sections, with no state tag", (await page.locator("dialog .sheet-section").count()) === 13 && (await page.locator("dialog .sheet-section .state-tag").count()) === 0);
+  check("sheets: version and written sections are stated", /Versione \d+ · sezioni scritte: \d+ su 13/.test(text), text.slice(0, 200));
   check("sheets: every section that has text shows it, the five new ones say they are not written yet", (await page.locator('dialog [data-section="doses"] p:not([data-empty])').count()) >= 1 && (await page.locator("dialog [data-empty]").count()) === 5 && !/preparazione/.test(text));
   check("sheets: no raw [f:...] marker and nothing that reassures", !/\[f:/.test(text) && !REASSURING.test(text), text.slice(0, 200));
   const v = await axe(page);
   check("sheets: axe has no violations with the sheet open", v.length === 0, v.join(", "));
-  await proposeFlow(page, check, axe);
   await page.keyboard.press("Escape");
   await page.waitForSelector("dialog", { state: "detached" });
   check("sheets: Esc closes and the focus returns to the button", await page.evaluate(() => document.activeElement?.getAttribute("data-fk") === "open-sheet"));
@@ -79,26 +64,4 @@ export async function sheetsScenario(browser, base, check, axe) {
   check("sheets: 320 px has no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth && (document.querySelector("dialog")?.scrollWidth ?? 0) <= (document.querySelector("dialog")?.clientWidth ?? 0) + 1));
   check("sheets: no page errors", errors.length === 0, errors.join(" | "));
   await ctx.close();
-}
-
-/** The editor of a section, with the canary sample loaded: blocked by a forbidden word, open by a sourced text, no canary in the link. */
-async function proposeFlow(page, check, axe) {
-  await page.locator('[data-section="doses"] [data-fk="propose"]').click();
-  const link = page.locator('[data-propose="doses"] [data-fk="propose-open"]');
-  const text = page.locator('[data-propose="doses"] textarea').first();
-  const problems = async () => (await page.textContent('[data-propose="problems"]')) ?? "";
-  check("propose: the editor starts from the current text and its link is shut while nothing changed", (await text.inputValue()).length > 0 && (await link.getAttribute("aria-disabled")) === "true" && !(await link.getAttribute("href")));
-  await text.fill("Questa dose è sicura.");
-  check("propose: a forbidden word shuts the link with a translated message", (await link.getAttribute("aria-disabled")) === "true" && /non è ammessa/.test(await problems()));
-  await text.fill("Una frase senza fonte.");
-  check("propose: a health point without a source shuts the link", /senza fonte/.test(await problems()) && !(await link.getAttribute("href")));
-  await page.locator('[data-propose="doses"] textarea').nth(1).fill("10.1000/xyz123");
-  await text.fill("Una frase con fonte nuova.");
-  const href = (await link.getAttribute("href")) ?? "";
-  check("propose: with a source the link opens the issue form of the project in a new tab", href.startsWith(GITHUB_URL + "issues/new?template=sheet.yml&") && (await link.getAttribute("target")) === "_blank" && /noopener/.test((await link.getAttribute("rel")) ?? ""), href);
-  const decoded = decodeURIComponent(href);
-  check("propose: PRIVACY T2 canary: nothing of the sample is in the link", CANARY_STRINGS.every((c) => !decoded.toLowerCase().includes(c.toLowerCase())) && !/campione|\.jdx/i.test(decoded), decoded);
-  check("propose: the history link of the sheet points to the project", ((await page.getAttribute('[data-fk="sheet-history"]', "href")) ?? "").startsWith(GITHUB_URL + "commits/main/data/substances/synthetic-"));
-  const v = await axe(page);
-  check("propose: axe has no violations with the editor open", v.length === 0, v.join(", "));
 }

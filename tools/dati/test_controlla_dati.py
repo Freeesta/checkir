@@ -93,10 +93,6 @@ class Integrity(Base):
         self.edit_json(f"{SUB}/substance.json", lambda o: o["classes"].update(effect=["stimulant_x"]))
         self.assertIn("class 'stimulant_x'", self.problems())
 
-    def test_review_deadline_over_24_months(self):
-        self.edit_json(f"{SUB}/datasheet/datasheet.json", lambda o: o.update(review_by="2029-12-01"))
-        self.assertIn("more than 24 months", self.problems())
-
     def test_stored_quality_must_match_the_file(self):
         self.edit_json(META, lambda o: o["quality"]["checks"][5].update(result="fail"))
         self.assertIn("quality 'noise' is stored as fail", self.problems())

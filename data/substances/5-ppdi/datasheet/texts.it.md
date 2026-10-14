@@ -22,7 +22,7 @@ Nelle urine di un consumatore sono stati rilevati 5-PPDI e i suoi metaboliti: id
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 
@@ -30,7 +30,7 @@ I catinoni sintetici hanno proprietà stimolanti e, in parte, allucinogene; nell
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

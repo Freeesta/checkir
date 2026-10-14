@@ -1,4 +1,4 @@
-//! Flagged families: `data/alerts/*.json` (`alerts/1`, embedded at build time like the thresholds) say which classes
+//! Flagged families: `data/alerts/*.json` (`alerts/2`, embedded at build time like the thresholds) say which classes
 //! of the library deserve an alert when a shown candidate belongs to them. The alert never raises the level: it only
 //! tells the person that the candidate sits in a family that FTIR can hardly tell apart or that is active at low doses.
 use super::indice::Index;

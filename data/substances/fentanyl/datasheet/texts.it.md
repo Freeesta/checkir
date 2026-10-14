@@ -8,7 +8,7 @@ Classe chimica: analoghi del fentanil (raggruppamento UNODC). Effetto atteso: op
 
 ## history
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## origin
 
@@ -22,7 +22,7 @@ In 12 volontari trattati con fentanil transmucosale orale, la rifampicina (induz
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

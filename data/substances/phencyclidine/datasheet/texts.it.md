@@ -50,7 +50,7 @@ Dopo l'uso una reazione di risveglio con psicosi, comportamento bizzarro o depre
 
 ## interactions
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## counselling
 

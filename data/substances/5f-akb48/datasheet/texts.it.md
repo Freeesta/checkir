@@ -22,7 +22,7 @@ In microsomi epatici umani sono stati trovati 37 metaboliti di 5F-AKB-48 (41 di 
 
 ## cuts
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da un professionista sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## effects
 

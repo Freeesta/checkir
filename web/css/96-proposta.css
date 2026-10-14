@@ -1,7 +1,0 @@
-
-.propose-toggle, .propose-open { font: inherit; border: 1px solid var(--border); border-radius: 0.3rem; padding: 0.3rem 0.7rem; background: transparent; color: var(--text); cursor: pointer; text-decoration: none; display: inline-block; }
-.propose-open[aria-disabled="true"] { color: var(--text-muted); cursor: not-allowed; }
-.propose { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
-.propose-field { display: grid; gap: 0.2rem; }
-.propose-field textarea, .propose-field input { font: inherit; width: 100%; box-sizing: border-box; }
-.propose-problems { margin: 0; padding-left: 1.2rem; }

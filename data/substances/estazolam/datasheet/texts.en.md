@@ -20,7 +20,7 @@ The metabolite 1-oxo-estazolam, active in mice, was undetectable in human plasma
 
 ## cuts
 
-Not yet drafted. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not yet drafted. [f:checkir-section-pending]
 
 ## effects
 
@@ -30,7 +30,7 @@ They are central nervous system depressants and sedatives that can cause psychom
 
 ## doses
 
-Not yet drafted. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not yet drafted. [f:checkir-section-pending]
 
 ## risks
 

@@ -22,7 +22,7 @@ In human liver microsomes 37 metabolites of 5F-AKB-48 (41 of AKB-48) were found,
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

@@ -4,7 +4,7 @@ import { SECTIONS, sectionStatus } from "../../web/schede.js";
 import { parseTexts } from "../../tools/genera_schede.mjs";
 import { REASSURING } from "../schede.mjs";
 
-// Sheets drafted in full (13 sections, all still draft): every section that has text is shown, a placeholder stays empty.
+// Sheets written in full (13 sections): every section that has text is shown, a placeholder stays empty.
 const PILOT_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "heroin", "methamphetamine", "3-mmc", "4-mmc", "2c-b", "methoxetamine", "lsd", "psilocybin", "dmt", "5-meo-dmt", "mescaline"];
 const REAL_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "methamphetamine", "heroin", "3-mmc", "4-mmc", "2c-b", "methoxetamine", "lsd", "psilocybin", "dmt", "5-meo-dmt", "mescaline"];
 
@@ -16,7 +16,7 @@ export default async ({ check }) => {
     const dir = new URL(`substances/${id}/datasheet/`, data);
     const ds = JSON.parse(await readFile(new URL("datasheet.json", dir), "utf8"));
     const texts = { en: parseTexts(await readFile(new URL("texts.en.md", dir), "utf8")), it: parseTexts(await readFile(new URL("texts.it.md", dir), "utf8")) };
-    const sheet = { id, names: {}, version: ds.version, section_state: ds.section_state, reviewers: ds.reviewers, reviewed: ds.reviewed, review_by: ds.review_by, ai_assisted: ds.ai_assisted, texts };
+    const sheet = { id, names: {}, version: ds.version, ai_assisted: ds.ai_assisted, texts };
     for (const lang of ["it", "en"]) {
       const shown = SECTIONS.filter((k) => sectionStatus(sheet, k, lang) === "shown");
       if (PILOT_SHEETS.includes(id)) {

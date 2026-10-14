@@ -18,7 +18,7 @@ Several CYP isoenzymes took part (among them CYP1A2, 2B6, 2C8, 2C9, 2C19, 2D6, 2
 
 ## cuts
 
-Not drafted yet. This section will be written from verifiable sources and signed by a health professional before it is shown. [f:checkir-section-pending]
+Not drafted yet. [f:checkir-section-pending]
 
 ## effects
 

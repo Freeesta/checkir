@@ -30,7 +30,7 @@ Per la 2C-H le fonti verificate danno solo dati recettoriali: tra i composti 2C 
 
 ## doses
 
-Non ancora redatta. Questa sezione sarà scritta da fonti verificabili e firmata da personale sanitario prima di essere mostrata. [f:checkir-section-pending]
+Non ancora redatta. [f:checkir-section-pending]
 
 ## risks
 

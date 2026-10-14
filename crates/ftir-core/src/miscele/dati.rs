@@ -1,4 +1,4 @@
-//! `soglie_miscele/1` and `tagli/1`: every limit of the mixture search and the list of common cuts as versioned data
+//! `soglie_miscele/1` and `tagli/2`: every limit of the mixture search and the list of common cuts as versioned data
 //! (`data/soglie/soglie_miscele-1.json`, `data/tagli.json`), never as constants in the code.
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::{self, Value};
@@ -6,7 +6,7 @@ use crate::passi::json::{self, Value};
 pub const THRESHOLDS_JSON: &str = include_str!("../../../../data/soglie/soglie_miscele-1.json");
 pub const CUTS_JSON: &str = include_str!("../../../../data/tagli.json");
 const THRESHOLDS_SCHEMA: &str = "soglie_miscele/1";
-const CUTS_SCHEMA: &str = "tagli/1";
+const CUTS_SCHEMA: &str = "tagli/2";
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct Thresholds {
@@ -205,6 +205,6 @@ mod test {
         let missing = THRESHOLDS_JSON.replace("\"max_components\"", "\"max_x\"");
         let e = Thresholds::parse(&missing).expect_err("missing field");
         assert_eq!(e.error_key, "miscele.dati_non_validi");
-        assert!(Cuts::parse(&CUTS_JSON.replace("tagli/1", "x/1")).is_err());
+        assert!(Cuts::parse(&CUTS_JSON.replace("tagli/2", "x/2")).is_err());
     }
 }
