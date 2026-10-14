@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "alpha-benzyl-n-methylphenethylamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "alpha-Benzyl-N-methylphenethylamine",
+      "synonyms": [
+        "BNMPA",
+        "ABNMP",
+        "N-methyl-1,3-diphenylpropan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "alfa-benzil-N-metilfenetilammina",
+      "synonyms": [
+        "BNMPA",
+        "N-metil-1,3-difenilpropan-2-ammina"
+      ]
+    }
+  },
+  "iupac": "N-methyl-1,3-diphenylpropan-2-amine",
+  "formula": "C16H19N",
+  "molar_mass_g_mol": 225.3,
+  "smiles": "CNC(CC1=CC=CC=C1)CC2=CC=CC=C2",
+  "inchi": "InChI=1S/C16H19N/c1-17-16(12-14-8-4-2-5-9-14)13-15-10-6-3-7-11-15/h2-11,16-17H,12-13H2,1H3",
+  "inchikey": "HHBBJSPPGKHKHX-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "53660-20-1",
+    "pubchem_cid": 93287
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
