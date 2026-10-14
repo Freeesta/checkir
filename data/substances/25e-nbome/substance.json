@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "25e-nbome",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "25E-NBOMe",
+      "synonyms": [
+        "2C-E-NBOMe"
+      ]
+    },
+    "it": {
+      "preferred": "25E-NBOMe",
+      "synonyms": [
+        "2C-E-NBOMe"
+      ]
+    }
+  },
+  "iupac": "2-(4-ethyl-2,5-dimethoxyphenyl)-N-[(2-methoxyphenyl)methyl]ethanamine",
+  "formula": "C20H27NO3",
+  "molar_mass_g_mol": 329.4,
+  "smiles": "CCC1=CC(=C(C=C1OC)CCNCC2=CC=CC=C2OC)OC",
+  "inchi": "InChI=1S/C20H27NO3/c1-5-15-12-20(24-4)16(13-19(15)23-3)10-11-21-14-17-8-6-7-9-18(17)22-2/h6-9,12-13,21H,5,10-11,14H2,1-4H3",
+  "inchikey": "PXDVGFGXPVCNAB-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 118796522
+  },
+  "classes": {
+    "chemical": [
+      "nbome"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
