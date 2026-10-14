@@ -23,15 +23,6 @@
       "description_it": "Da dove vengono i numeri.",
       "type": "object",
       "properties": {
-        "status": {
-          "description": "draft until a calibration on the instrument is done.",
-          "description_it": "draft finche non c'e una taratura sullo strumento.",
-          "type": "string",
-          "enum": [
-            "draft",
-            "calibrated"
-          ]
-        },
         "bench": {
           "description": "Bench the numbers come from.",
           "description_it": "Banco da cui vengono i numeri.",
@@ -50,7 +41,6 @@
         }
       },
       "required": [
-        "status",
         "bench",
         "method",
         "date"

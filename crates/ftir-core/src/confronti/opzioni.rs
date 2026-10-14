@@ -25,8 +25,6 @@ pub struct Options {
     pub range_preset: Option<String>,
     /// The ranges were chosen by hand: thresholds not calibrated, level capped at "to check".
     pub custom: bool,
-    /// The preset (or the whole grid) is calibrated for the level "probable".
-    pub calibrated: bool,
     pub probable_r1: Option<f64>,
     pub probable_margin: Option<f64>,
     /// Ids of the libraries to search; `None` = all loaded.
@@ -105,7 +103,6 @@ pub fn parse_options(text: &str, t: &Thresholds) -> EngineResult<Options> {
         ranges: Vec::new(),
         range_preset: None,
         custom: false,
-        calibrated: true,
         probable_r1: None,
         probable_margin: None,
         libraries: v
@@ -137,7 +134,6 @@ pub fn parse_options(text: &str, t: &Thresholds) -> EngineResult<Options> {
         (Some(r), None) => {
             o.ranges = range_list(r)?;
             o.custom = true;
-            o.calibrated = false;
         }
         (None, id) => {
             let id = id.unwrap_or("full");
@@ -147,7 +143,6 @@ pub fn parse_options(text: &str, t: &Thresholds) -> EngineResult<Options> {
             })?;
             o.ranges = p.ranges.clone();
             o.range_preset = Some(p.id.clone());
-            o.calibrated = p.calibrated;
             (o.probable_r1, o.probable_margin) = (p.probable_r1, p.probable_margin);
         }
     }
@@ -215,12 +210,9 @@ mod test {
     fn defaults_presets_and_conflicts() {
         let t = Thresholds::embedded().unwrap();
         let o = parse_options("", &t).unwrap();
-        assert_eq!(
-            (o.range_preset.as_deref(), o.custom, o.calibrated),
-            (Some("full"), false, true)
-        );
+        assert_eq!((o.range_preset.as_deref(), o.custom), (Some("full"), false));
         let c = parse_options(r#"{"ranges":[[1000,1800]]}"#, &t).unwrap();
-        assert!(c.custom && !c.calibrated && c.range_preset.is_none());
+        assert!(c.custom && c.range_preset.is_none());
         assert!(parse_options(r#"{"ranges":[[1,2]],"range_preset":"full"}"#, &t).is_err());
         assert_eq!(
             parse_options(r#"{"range_preset":"x"}"#, &t)

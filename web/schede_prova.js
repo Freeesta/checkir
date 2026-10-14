@@ -23,14 +23,14 @@ function result(level, candidates, alerts = []) {
   return { level_proposed: level, candidates, alerts: [...alerts], libraries: [{ id: "prova", version: "0", searched: true }], chain: { derivative: "confronto_v1" }, margin: 0.1, range_preset: "full", level_caps: [] };
 }
 
-/** The six cases: the comparison result, and the decision (null = still a draft). @type {Array<{ data: any, decision: null | { level: number, keys: string[] } }>} */
+/** The six cases: the comparison result, and the chemist's choice (null = the proposal as it is). @type {Array<{ data: any, choice: null | { level: number, keys: string[] } }>} */
 const CASES = [
-  { data: result("probable", [ALFA, BETA, GAMMA]), decision: { level: 2, keys: ["prova/s1"] } },
-  { data: result("to_check", [ALFA, BETA, GAMMA], [{ id: "ambiguity", data: { first: { display_name: "Alfa-prova", form: "HCl", r: 0.94 }, second: { display_name: "Beta-prova", form: "base", r: 0.91 } } }]), decision: { level: 3, keys: ["prova/s1", "prova/s2"] } },
-  { data: result("to_check", [ALFA, BETA, GAMMA]), decision: { level: 4, keys: ["prova/s1", "prova/s3"] } },
-  { data: result("not_identified", [ALFA, BETA, GAMMA]), decision: { level: 5, keys: [] } },
-  { data: result("probable", [ALFA, BETA, GAMMA], [{ id: "family_flagged", data: { class: "benzodiazepines", source: "unodc-ewa", display_name: "Alfa-prova", form: "HCl", rank: 1 } }, { id: "quality_noise", data: { ratio: 12, limit: 20 } }]), decision: { level: 2, keys: ["prova/s1"] } },
-  { data: result("probable", [ALFA, BETA, GAMMA]), decision: null },
+  { data: result("probable", [ALFA, BETA, GAMMA]), choice: { level: 2, keys: ["prova/s1"] } },
+  { data: result("to_check", [ALFA, BETA, GAMMA], [{ id: "ambiguity", data: { first: { display_name: "Alfa-prova", form: "HCl", r: 0.94 }, second: { display_name: "Beta-prova", form: "base", r: 0.91 } } }]), choice: { level: 3, keys: ["prova/s1", "prova/s2"] } },
+  { data: result("to_check", [ALFA, BETA, GAMMA]), choice: { level: 4, keys: ["prova/s1", "prova/s3"] } },
+  { data: result("not_identified", [ALFA, BETA, GAMMA]), choice: { level: 5, keys: [] } },
+  { data: result("probable", [ALFA, BETA, GAMMA], [{ id: "family_flagged", data: { class: "benzodiazepines", source: "unodc-ewa", display_name: "Alfa-prova", form: "HCl", rank: 1 } }, { id: "quality_noise", data: { ratio: 12, limit: 20 } }]), choice: { level: 2, keys: ["prova/s1"] } },
+  { data: result("probable", [ALFA, BETA, GAMMA]), choice: null },
 ];
 
 /** Replace whatever is loaded with case `n` (1–6) as spectrum C1. The automatic comparison goes off, or it would replace the hand-made result. @param {number} n */
@@ -43,7 +43,7 @@ export function loadSample(n) {
   const code = addSpectrum({ wavenumber_cm1, y: wavenumber_cm1.map((x) => 0.1 + 0.5 / (1 + ((x - 1700) / 40) ** 2)) }, {});
   const sig = "prova";
   const s = getState();
-  update({ results: { ...s.results, [code]: { code, data: c.data, sig } }, decisions: c.decision ? { [code]: { ...c.decision, sig } } : {} });
+  update({ results: { ...s.results, [code]: { code, data: c.data, sig } }, choice: c.choice ? { [code]: c.choice } : {} });
 }
 
 /** Add the bar with the six buttons at the foot of the page. */

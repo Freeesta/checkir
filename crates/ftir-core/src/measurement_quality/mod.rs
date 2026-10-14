@@ -2,7 +2,7 @@
 //! seen in the absorbance spectrum of any format: residual CO₂, water vapour lines, negative bands. They are warnings,
 //! never blocks: the result says what was checked, what was measured, the limit, and a catalogue key for the text.
 //! The outcome is neutral («no anomalous signal found» / «attention»); it is never a pass mark. The limits are data
-//! (`quality_thresholds/1`, status `draft`). The comparison has its own `quality_*` alerts, relative to the noise
+//! (`quality_thresholds/1`). The comparison has its own `quality_*` alerts, relative to the noise
 //! (`confronti/controlli.rs`); these are absolute limits in absorbance and do not change the comparison.
 use crate::error::{EngineError, EngineResult};
 use crate::passi::json::Value;
@@ -55,7 +55,6 @@ impl Check {
 #[derive(Debug, Clone, PartialEq)]
 pub struct Report {
     pub thresholds_version: u32,
-    pub thresholds_status: String,
     pub checks: Vec<Check>,
 }
 
@@ -96,13 +95,10 @@ impl Report {
             ("schema".to_string(), s(SCHEMA)),
             (
                 "thresholds".to_string(),
-                Value::Obj(vec![
-                    (
-                        "version".to_string(),
-                        num(f64::from(self.thresholds_version)),
-                    ),
-                    ("status".to_string(), s(&self.thresholds_status)),
-                ]),
+                Value::Obj(vec![(
+                    "version".to_string(),
+                    num(f64::from(self.thresholds_version)),
+                )]),
             ),
             ("blocks".to_string(), Value::Bool(false)),
             ("summary_key".to_string(), s(summary)),
@@ -122,7 +118,6 @@ pub fn check(s: &Spectrum, t: &Thresholds) -> EngineResult<Report> {
     }
     Ok(Report {
         thresholds_version: t.version,
-        thresholds_status: t.status.clone(),
         checks: controls::run(s, t),
     })
 }
