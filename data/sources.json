@@ -12105,6 +12105,227 @@
       "tier": "review"
     },
     {
+      "id": "kong2023",
+      "type": "paper",
+      "title": "Metabolic profiling of clonazolam in human liver microsomes and zebrafish models using liquid chromatography quadrupole Orbitrap mass spectrometry (J Chromatogr B Analyt Technol Biomed Life Sci 1216:123583)",
+      "authors": [
+        "Kong R",
+        "Zhao J",
+        "Zhai W",
+        "Chen Z",
+        "et al."
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.jchromb.2022.123583",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36621072/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mortele2018",
+      "type": "paper",
+      "title": "In vitro Phase I and Phase II metabolism of the new designer benzodiazepine cloniprazepam using liquid chromatography coupled to quadrupole time-of-flight mass spectrometry (J Pharm Biomed Anal 153:158-167)",
+      "authors": [
+        "Mortelé O",
+        "Vervliet P",
+        "Gys C",
+        "Degreef M",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jpba.2018.02.032",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29494888/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "moosmann2016",
+      "type": "paper",
+      "title": "Characterization and in vitro phase I microsomal metabolism of designer benzodiazepines - an update comprising adinazolam, cloniprazepam, fonazepam, 3-hydroxyphenazepam, metizolam and nitrazolam (J Mass Spectrom 51(11):1080-1089)",
+      "authors": [
+        "Moosmann B",
+        "Bisel P",
+        "Franz F",
+        "Huppertz LM",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1002/jms.3840",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27535017/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "moosmann2014",
+      "type": "paper",
+      "title": "Characterization of the designer benzodiazepine diclazepam and preliminary data on its metabolism and pharmacokinetics (Drug Test Anal 6(7-8):757-63)",
+      "authors": [
+        "Moosmann B",
+        "Bisel P",
+        "Auwärter V"
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1628",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24604775/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "moosmann2018",
+      "type": "paper",
+      "title": "Designer Benzodiazepines: Another Class of New Psychoactive Substances (Handb Exp Pharmacol 252:383-410)",
+      "authors": [
+        "Moosmann B",
+        "Auwärter V"
+      ],
+      "year": 2018,
+      "doi": "10.1007/164_2018_154",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30367253/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260608000326/https://pubmed.ncbi.nlm.nih.gov/30367253/"
+    },
+    {
+      "id": "katselou2017",
+      "type": "paper",
+      "title": "Metabolites replace the parent drug in the drug arena. The cases of fonazepam and nifoxipam (Forensic Toxicol 35(1):1-10)",
+      "authors": [
+        "Katselou M",
+        "Papoutsis I",
+        "Nikolaou P",
+        "Spiliopoulou C",
+        "et al."
+      ],
+      "year": 2017,
+      "doi": "10.1007/s11419-016-0338-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28127407/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "miura2005",
+      "type": "paper",
+      "title": "Identification of human cytochrome P450 enzymes involved in the formation of 4-hydroxyestazolam from estazolam (Xenobiotica 35(5):455-65)",
+      "authors": [
+        "Miura M",
+        "Otani K",
+        "Ohkubo T"
+      ],
+      "year": 2005,
+      "doi": "10.1080/00498250500111612",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16012077/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "allen1979",
+      "type": "paper",
+      "title": "Single- and multiple-dose kinetics of estazolam, a triazolo benzodiazepine (Psychopharmacology (Berl) 66(3):267-74)",
+      "authors": [
+        "Allen MD",
+        "Greenblatt DJ",
+        "Arnold JD"
+      ],
+      "year": 1979,
+      "doi": "10.1007/BF00428318",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43552/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mancinelli1985",
+      "type": "paper",
+      "title": "Kinetic and pharmacological studies on estazolam in mice and man (Xenobiotica 15(3):257-65)",
+      "authors": [
+        "Mancinelli A",
+        "Guiso G",
+        "Garattini S",
+        "Urso R",
+        "et al."
+      ],
+      "year": 1985,
+      "doi": "10.3109/00498258509045357",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2862746/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "cheze2004",
+      "type": "paper",
+      "title": "Determination of bromazepam, clonazepam and metabolites after a single intake in urine and hair by LC-MS/MS. Application to forensic cases of drug facilitated crimes (Forensic Sci Int 145(2-3):123-30)",
+      "authors": [
+        "Chèze M",
+        "Villain M",
+        "Pépin G"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.forsciint.2004.04.066",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15451083/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "oda2003",
+      "type": "paper",
+      "title": "The effect of itraconazole on the pharmacokinetics and pharmacodynamics of bromazepam in healthy volunteers (Eur J Clin Pharmacol 59(8-9):615-9)",
+      "authors": [
+        "Oda M",
+        "Kotegawa T",
+        "Tsutsumi K",
+        "Ohtani Y",
+        "et al."
+      ],
+      "year": 2003,
+      "doi": "10.1007/s00228-003-0681-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14517708/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "manchester2022",
+      "type": "paper",
+      "title": "The blood-to-plasma ratio and predicted GABA(A)-binding affinity of designer benzodiazepines (Forensic Toxicol 40(2):349-356)",
+      "authors": [
+        "Manchester KR",
+        "Waters L",
+        "Haider S",
+        "Maskell PD"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s11419-022-00616-y",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36454409/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gonzalezlopez1986",
+      "type": "paper",
+      "title": "Pharmacokinetics of tiadipone: a new anxiolytic (Int J Clin Pharmacol Ther Toxicol 24(9):482-4)",
+      "authors": [
+        "Gonzalez López F",
+        "Mariño EL",
+        "Dominguez-Gil A"
+      ],
+      "year": 1986,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2877954/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260909014731/https://pubmed.ncbi.nlm.nih.gov/2877954/"
+    },
+    {
       "id": "roldan2014",
       "type": "paper",
       "title": "Phenytoin toxicity from cocaine adulteration (West J Emerg Med 15:127-130)",
