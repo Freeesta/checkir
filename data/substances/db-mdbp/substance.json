@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "db-mdbp",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "DB-MDBP",
+      "synonyms": [
+        "DF-MDBP",
+        "1-[(2,2-difluoro-1,3-benzodioxol-5-yl)methyl]piperazine"
+      ]
+    },
+    "it": {
+      "preferred": "DB-MDBP",
+      "synonyms": [
+        "DF-MDBP"
+      ]
+    }
+  },
+  "iupac": "1-[(2,2-difluoro-1,3-benzodioxol-5-yl)methyl]piperazine",
+  "formula": "C12H14F2N2O2",
+  "molar_mass_g_mol": 256.3,
+  "smiles": "C1CN(CCN1)CC2=CC3=C(C=C2)OC(O3)(F)F",
+  "inchi": "InChI=1S/C12H14F2N2O2/c13-12(14)17-10-2-1-9(7-11(10)18-12)8-16-5-3-15-4-6-16/h1-2,7,15H,3-6,8H2",
+  "inchikey": "MPZINTHEMFDGTH-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1093211-85-8",
+    "pubchem_cid": 66553702
+  },
+  "classes": {
+    "chemical": [
+      "piperazines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

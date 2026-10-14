@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "acetylamphetamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "N-Acetylamphetamine",
+      "synonyms": [
+        "acetylamphetamine",
+        "N-(1-phenylpropan-2-yl)acetamide"
+      ]
+    },
+    "it": {
+      "preferred": "N-acetilanfetamina",
+      "synonyms": [
+        "acetilanfetamina"
+      ]
+    }
+  },
+  "iupac": "N-(1-phenylpropan-2-yl)acetamide",
+  "formula": "C11H15NO",
+  "molar_mass_g_mol": 177.2,
+  "smiles": "CC(CC1=CC=CC=C1)NC(=O)C",
+  "inchi": "InChI=1S/C11H15NO/c1-9(12-10(2)13)8-11-6-4-3-5-7-11/h3-7,9H,8H2,1-2H3,(H,12,13)",
+  "inchikey": "YPKBVWZHVTZSPU-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "14383-60-9",
+    "pubchem_cid": 26660
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

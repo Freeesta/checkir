@@ -14382,6 +14382,165 @@
       "tier": "primary"
     },
     {
+      "id": "staack2002",
+      "type": "paper",
+      "title": "Studies on the metabolism and toxicological detection of the new designer drug N-benzylpiperazine in urine using gas chromatography-mass spectrometry (J Chromatogr B 773(1):35-46)",
+      "authors": [
+        "R. F. Staack",
+        "G. Fritschi",
+        "H. H. Maurer"
+      ],
+      "year": 2002,
+      "doi": "10.1016/s1570-0232(01)00619-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12015268/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "antia2009",
+      "type": "paper",
+      "title": "Pharmacokinetics of 'party pill' drug N-benzylpiperazine (BZP) in healthy human participants (Forensic Sci Int 186(1-3):63-67)",
+      "authors": [
+        "U. Antia",
+        "H. S. Lee",
+        "R. R. Kydd",
+        "M. D. Tingle",
+        "B. R. Russell"
+      ],
+      "year": 2009,
+      "doi": "10.1016/j.forsciint.2009.01.015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19261399/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "baden1999",
+      "type": "paper",
+      "title": "Metabolic production of amphetamine following multidose administration of clobenzorex (J Anal Toxicol 23(6):511-517)",
+      "authors": [
+        "K. L. Baden",
+        "S. Valtier",
+        "J. T. Cody"
+      ],
+      "year": 1999,
+      "doi": "10.1093/jat/23.6.511",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10517559/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "valtier2000",
+      "type": "paper",
+      "title": "Differentiation of clobenzorex use from amphetamine abuse using the metabolite 4-hydroxyclobenzorex (J Anal Toxicol 24(7):606-613)",
+      "authors": [
+        "S. Valtier",
+        "J. T. Cody"
+      ],
+      "year": 2000,
+      "doi": "10.1093/jat/24.7.606",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11043667/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "moore1995a",
+      "type": "paper",
+      "title": "alpha-Benzyl-N-methylphenethylamine (BNMPA), an impurity of illicit methamphetamine synthesis: I. Physical characterization and GC-MS analysis of BNMPA and anticipated metabolites in urine (J Anal Toxicol 19(7):542-548)",
+      "authors": [
+        "K. A. Moore",
+        "W. H. Soine",
+        "A. Poklis"
+      ],
+      "year": 1995,
+      "doi": "10.1093/jat/19.7.542",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8577175/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "moore1995b",
+      "type": "paper",
+      "title": "alpha-Benzyl-N-methylphenethylamine (BNMPA), an impurity of illicit methamphetamine synthesis: II. Metabolism and urinary excretion (human) (J Anal Toxicol 19(7):549-553)",
+      "authors": [
+        "K. A. Moore",
+        "A. Poklis"
+      ],
+      "year": 1995,
+      "doi": "10.1093/jat/19.7.549",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8577176/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "moore1996",
+      "type": "paper",
+      "title": "alpha-benzyl-N-methylphenethylamine (BNMPA), an impurity of illicit methamphetamine synthesis: III. Detection of BNMPA and metabolites in urine of methamphetamine users (J Anal Toxicol 20(2):89-92)",
+      "authors": [
+        "K. A. Moore",
+        "A. Ismaiel",
+        "A. Poklis"
+      ],
+      "year": 1996,
+      "doi": "10.1093/jat/20.2.89",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8868398/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kuwayama2006",
+      "type": "paper",
+      "title": "Identification of impurities and the statistical classification of methamphetamine using headspace solid phase microextraction and gas chromatography-mass spectrometry (Forensic Sci Int 160(1):44-52)",
+      "authors": [
+        "K. Kuwayama",
+        "K. Tsujikawa",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. Iwata",
+        "H. Inoue",
+        "S. Saitoh",
+        "T. Kishi"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.forsciint.2005.08.013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16188412/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "uchiyama2015",
+      "type": "paper",
+      "title": "A phenethylamine derivative 25I-NB34MD and a piperazine derivative 1-(3,4-difluoromethylenedioxybenzyl)piperazine (DF-MDBP), newly detected in illicit products (Forensic Toxicol 34:166-173)",
+      "authors": [
+        "N. Uchiyama",
+        "R. Kikura-Hanajiri",
+        "T. Hakamatsuka"
+      ],
+      "year": 2015,
+      "doi": "10.1007/s11419-015-0304-7",
+      "url": "https://doi.org/10.1007/s11419-015-0304-7",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "zenzedi-label",
+      "type": "institution",
+      "title": "ZENZEDI (dextroamphetamine sulfate) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d6394df5-f2c9-47eb-b57e-f3e9cfd94f84",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "tier": "agency",
+      "consulted": "2026-10-14"
+    },
+    {
       "id": "seo2018",
       "type": "paper",
       "title": "Metabolic profile determination of 25N-NBOMe in human liver microsomes by liquid chromatography-quadrupole time-of-flight mass spectrometry (Int J Legal Med 133:833-841)",
