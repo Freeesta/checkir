@@ -1,0 +1,48 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "n-ethylheptedrone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "N-Ethylheptedrone",
+      "synonyms": []
+    },
+    "it": {
+      "preferred": "N-Etileptedrone",
+      "synonyms": []
+    }
+  },
+  "iupac": "2-(ethylamino)-1-phenylheptan-1-one",
+  "formula": "C15H23NO",
+  "molar_mass_g_mol": 233.35,
+  "smiles": "CCCCCC(C(=O)C1=CC=CC=C1)NCC",
+  "inchi": "InChI=1S/C15H23NO/c1-3-5-7-12-14(16-4-2)15(17)13-10-8-6-9-11-13/h6,8-11,14,16H,3-5,7,12H2,1-2H3",
+  "inchikey": "KCDBNUUMBCYCQC-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2514784-72-4",
+    "pubchem_cid": 163195977
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
