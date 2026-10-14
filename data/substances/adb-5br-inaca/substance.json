@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "adb-5br-inaca",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "ADB-5'Br-INACA",
+      "synonyms": [
+        "ADB-5Br-INACA"
+      ]
+    },
+    "it": {
+      "preferred": "ADB-5'Br-INACA",
+      "synonyms": [
+        "ADB-5Br-INACA"
+      ]
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-3,3-dimethyl-1-oxobutan-2-yl]-5-bromo-1H-indazole-3-carboxamide",
+  "formula": "C14H17BrN4O2",
+  "molar_mass_g_mol": 353.2,
+  "smiles": "CC(C)(C)[C@@H](C(=O)N)NC(=O)C1=NNC2=C1C=C(C=C2)Br",
+  "inchi": "InChI=1S/C14H17BrN4O2/c1-14(2,3)11(12(16)20)17-13(21)10-8-6-7(15)4-5-9(8)18-19-10/h4-6,11H,1-3H3,(H2,16,20)(H,17,21)(H,18,19)/t11-/m1/s1",
+  "inchikey": "AJGASUCDTSLMNP-LLVKDONJSA-N",
+  "external_ids": {
+    "pubchem_cid": 167713294
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
