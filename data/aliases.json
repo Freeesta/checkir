@@ -1078,7 +1078,23 @@
     "4f-eph": "4-fluoroethylphenidate",
     "4-fep": "4-fluoroethylphenidate",
     "4-fluoroetilfenidato": "4-fluoroethylphenidate",
-    "4-methyl-n-ethylnorephedrine": "4-methyl-n-ethyl-norephedrine"
+    "4-methyl-n-ethylnorephedrine": "4-methyl-n-ethyl-norephedrine",
+    "phenylephrine": "r-phenylephrine",
+    "fenilefrina": "r-phenylephrine",
+    "metasynephrine": "r-phenylephrine",
+    "dichloropane": "rti-111",
+    "n-methyldichloropane": "rti-111",
+    "d2pm": "s-alpha-alpha-diphenyl-2-pyrrolidinemethanol",
+    "diphenylprolinol": "s-alpha-alpha-diphenyl-2-pyrrolidinemethanol",
+    "difenilprolinolo": "s-alpha-alpha-diphenyl-2-pyrrolidinemethanol",
+    "diphenyl-2-pyrrolidinemethanol": "s-alpha-alpha-diphenyl-2-pyrrolidinemethanol",
+    "1-piperidinocyclohexanecarbonitrile": "pcc",
+    "piperidinocyclohexanecarbonitrile": "pcc",
+    "1-piperidinocicloesancarbonitrile": "pcc",
+    "fenmetrazina": "phenmetrazine",
+    "fentermina": "phentermine",
+    "prolintano": "prolintane",
+    "propilfenidato": "propylphenidate"
   },
   "schema": "aliases/1"
 }
