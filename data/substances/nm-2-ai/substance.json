@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "nm-2-ai",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "NM-2-AI",
+      "synonyms": [
+        "N-methyl-2-aminoindane",
+        "N-methylindan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "NM-2-AI",
+      "synonyms": [
+        "N-metil-2-aminoindano"
+      ]
+    }
+  },
+  "iupac": "N-methyl-2,3-dihydro-1H-inden-2-amine",
+  "formula": "C10H13N",
+  "molar_mass_g_mol": 147.2,
+  "smiles": "CNC1CC2=CC=CC=C2C1",
+  "inchi": "InChI=1S/C10H13N/c1-11-10-6-8-4-2-3-5-9(8)7-10/h2-5,10-11H,6-7H2,1H3",
+  "inchikey": "SXWZQUCTTOBHJT-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 15023225
+  },
+  "classes": {
+    "chemical": [
+      "aminoindanes"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
