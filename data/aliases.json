@@ -507,7 +507,24 @@
     "4-me-alpha-pbp": "4-mpbp",
     "4-metil-alfa-pbp": "4-mpbp",
     "5-methoxy-methylone": "5-methoxymethylone",
-    "5-metossimetilone": "5-methoxymethylone"
+    "5-metossimetilone": "5-methoxymethylone",
+    "app-butinaca": "app-binaca",
+    "app-chminaca": "app-chminaca-px3",
+    "px-3": "app-chminaca-px3",
+    "px3": "app-chminaca-px3",
+    "ch-piaca": "ch-piata",
+    "chx-piata": "ch-piata",
+    "chx-piaca": "ch-piata",
+    "cannabidiol": "cbd",
+    "cannabidiolo": "cbd",
+    "cbn": "cannabinol",
+    "cannabinolo": "cannabinol",
+    "cbg": "cannabigerol",
+    "cannabigerolo": "cannabigerol",
+    "cbga": "cannabigerolic-acid",
+    "acido-cannabigerolico": "cannabigerolic-acid",
+    "cbdv": "cannabidivarin",
+    "cannabidivarina": "cannabidivarin"
   },
   "schema": "aliases/1"
 }
