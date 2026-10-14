@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-fluoroethcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-Fluoroethcathinone",
+      "synonyms": [
+        "2-FEC"
+      ]
+    },
+    "it": {
+      "preferred": "2-Fluoroethcathinone",
+      "synonyms": [
+        "2-FEC"
+      ]
+    }
+  },
+  "iupac": "2-(ethylamino)-1-(2-fluorophenyl)propan-1-one",
+  "formula": "C11H14FNO",
+  "molar_mass_g_mol": 195.23,
+  "smiles": "CCNC(C)C(=O)C1=CC=CC=C1F",
+  "inchi": "InChI=1S/C11H14FNO/c1-3-13-8(2)11(14)9-6-4-5-7-10(9)12/h4-8,13H,3H2,1-2H3",
+  "inchikey": "HTIPESHOKKKFAV-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1439439-85-6",
+    "pubchem_cid": 101877579
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
