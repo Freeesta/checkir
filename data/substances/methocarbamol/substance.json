@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "methocarbamol",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Methocarbamol",
+      "synonyms": [
+        "Robaxin"
+      ]
+    },
+    "it": {
+      "preferred": "Metocarbamolo",
+      "synonyms": [
+        "Robaxin"
+      ]
+    }
+  },
+  "iupac": "[2-hydroxy-3-(2-methoxyphenoxy)propyl] carbamate",
+  "formula": "C11H15NO5",
+  "molar_mass_g_mol": 241.24,
+  "smiles": "COC1=CC=CC=C1OCC(COC(=O)N)O",
+  "inchi": "InChI=1S/C11H15NO5/c1-15-9-4-2-3-5-10(9)16-6-8(13)7-17-11(12)14/h2-5,8,13H,6-7H2,1H3,(H2,12,14)",
+  "inchikey": "GNXFOGHNGIVQEH-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 4107
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

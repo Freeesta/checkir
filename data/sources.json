@@ -12398,6 +12398,199 @@
       "tier": "agency",
       "license": "© marketing authorisation holder; cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "neurontin-label",
+      "type": "institution",
+      "title": "NEURONTIN (gabapentin) capsules, tablets and oral solution, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=97935fd9-1d4a-43b6-a5d9-de994591187b",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "methocarbamol-label",
+      "type": "institution",
+      "title": "Methocarbamol tablets USP, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=42c0a177-7d62-4bcf-9fce-7dd484cda4d5",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "meprobamate-label",
+      "type": "institution",
+      "title": "Meprobamate tablets USP, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=17d814e2-b277-4dce-8615-e7fd7cab773f",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "prost2001",
+      "type": "paper",
+      "title": "Enantiomeric analysis of the five major monohydroxylated metabolites of methaqualone in human urine by chiral capillary electrophoresis (Electrophoresis 22:3270-3280)",
+      "authors": [
+        "F. Prost",
+        "W. Thormann"
+      ],
+      "year": 2001,
+      "doi": "10.1002/1522-2683(200109)22:15<3270::AID-ELPS3270>3.0.CO;2-K",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11589290/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "prost2003",
+      "type": "paper",
+      "title": "Assessment of the stereoselective metabolism of methaqualone in man by capillary electrophoresis (Electrophoresis 24:2598-2607)",
+      "authors": [
+        "F. Prost",
+        "W. Thormann"
+      ],
+      "year": 2003,
+      "doi": "10.1002/elps.200305512",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12900872/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "brenner1996",
+      "type": "paper",
+      "title": "Comparison of methaqualone excretion patterns using Abuscreen ONLINE and EMIT II immunoassays and GC/MS (Forensic Sci Int 79:31-41)",
+      "authors": [
+        "C. Brenner",
+        "R. Hui",
+        "J. Passarelli",
+        "R. Wu",
+        "R. Brenneisen",
+        "K. Bracher",
+        "M. A. ElSohly",
+        "V. D. Ghodoussi",
+        "S. J. Salamone"
+      ],
+      "year": 1996,
+      "doi": "10.1016/0379-0738(96)01888-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8635771/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "tusiewicz2024",
+      "type": "paper",
+      "title": "From historical drugs to present perils: UHPLC-QqQ-MS/MS determination of methaqualone and its designer analogs (NPS) with comprehensive fragmentation pathways study (QTOF) (Toxicol Mech Methods 35:318-328)",
+      "authors": [
+        "K. Tusiewicz",
+        "O. Wachełko",
+        "P. Szpot",
+        "M. Zawadzki"
+      ],
+      "year": 2024,
+      "doi": "10.1080/15376516.2024.2426582",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39508427/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "yang2022-quinazolinones",
+      "type": "paper",
+      "title": "The next addiction-causing drug class 4-quinazolinone derivatives: analyses of methaqualone analogs including recently discovered 2-methoxyqualone by different modes of mass spectrometry (Forensic Toxicol 41:59-70)",
+      "authors": [
+        "H. Yang",
+        "Y. Wang",
+        "J. Liu",
+        "S. Qiu",
+        "J. Gu",
+        "H. Bai",
+        "J. Li",
+        "A. Wurita",
+        "K. Hasegawa"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s11419-022-00631-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36652055/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "woods2021",
+      "type": "paper",
+      "title": "Two fatalities involving mebroqualone (J Anal Toxicol 45:308-311)",
+      "authors": [
+        "K. M. Woods"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa077",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32789477/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "sharma2020",
+      "type": "paper",
+      "title": "Chemistry, analysis, pharmacokinetics and pharmacodynamics aspects of lorcaserin, a selective serotonin 5-HT2C receptor agonist: an update (Mini Rev Med Chem 20:768-778)",
+      "authors": [
+        "S. Sharma",
+        "K. S. Aware",
+        "K. Hatware",
+        "K. Patil"
+      ],
+      "year": 2020,
+      "doi": "10.2174/1389557519666190408154443",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30961494/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "bessho1996",
+      "type": "paper",
+      "title": "Effect of the novel high affinity choline uptake enhancer MKC-231 on deficits of water maze learning in rats (Arzneimittelforschung 46:369-373)",
+      "authors": [
+        "T. Bessho",
+        "K. Takashina",
+        "R. Tabata",
+        "C. Ohshima",
+        "H. Chaki",
+        "H. Yamabe",
+        "M. Egawa",
+        "A. Tobe",
+        "K. Saito"
+      ],
+      "year": 1996,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8740080/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "calvo2022",
+      "type": "paper",
+      "title": "Single and multiple dose PK-PD characterization for carisoprodol. Part I: pharmacokinetics, metabolites, and 2C19 phenotype influence (J Clin Med 11:858)",
+      "authors": [
+        "A. Calvo",
+        "S. Alonso",
+        "E. Prieto",
+        "A. Ascaso-Del-Rio",
+        "J. Ortuño",
+        "N. Fernandez",
+        "A. Portolés"
+      ],
+      "year": 2022,
+      "doi": "10.3390/jcm11030858",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35160309/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }

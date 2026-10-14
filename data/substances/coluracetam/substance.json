@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "coluracetam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Coluracetam",
+      "synonyms": [
+        "MKC-231"
+      ]
+    },
+    "it": {
+      "preferred": "Coluracetam",
+      "synonyms": [
+        "MKC-231"
+      ]
+    }
+  },
+  "iupac": "N-(2,3-dimethyl-5,6,7,8-tetrahydrofuro[2,3-b]quinolin-4-yl)-2-(2-oxopyrrolidin-1-yl)acetamide",
+  "formula": "C19H23N3O3",
+  "molar_mass_g_mol": 341.4,
+  "smiles": "CC1=C(OC2=NC3=C(CCCC3)C(=C12)NC(=O)CN4CCCC4=O)C",
+  "inchi": "InChI=1S/C19H23N3O3/c1-11-12(2)25-19-17(11)18(13-6-3-4-7-14(13)20-19)21-15(23)10-22-9-5-8-16(22)24/h3-10H2,1-2H3,(H,20,21,23)",
+  "inchikey": "PSPGQHXMUKWNDI-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 214346
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
