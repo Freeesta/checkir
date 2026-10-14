@@ -15145,6 +15145,39 @@
       "tier": "primary",
       "license": "cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "dinisoliveira2017",
+      "type": "paper",
+      "title": "Metabolomics of Methylphenidate and Ethylphenidate: Implications in Pharmacological and Toxicological Effects (Eur J Drug Metab Pharmacokinet 42(1):11-16)",
+      "authors": [
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s13318-016-0362-1",
+      "url": "https://doi.org/10.1007/s13318-016-0362-1",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "knych2018",
+      "type": "paper",
+      "title": "L- and D-threo ethylphenidate concentrations, pharmacokinetics, and pharmacodynamics in horses (Drug Test Anal 10(10):1508-1517)",
+      "authors": [
+        "H. K. Knych",
+        "D. S. McKemie",
+        "K. Seminoff",
+        "P. Hartmann",
+        "L. Hovda",
+        "D. Benson"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2408",
+      "url": "https://doi.org/10.1002/dta.2408",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
