@@ -1,0 +1,58 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-me-tmp",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Threo-4-methylmethylphenidate",
+      "synonyms": [
+        "4-Me-TMP",
+        "4-MeTMP",
+        "4-Mmph",
+        "4-methylmethylphenidate"
+      ]
+    },
+    "it": {
+      "preferred": "Treo-4-metilmetilfenidato",
+      "synonyms": [
+        "4-Me-TMP",
+        "4-MeTMP",
+        "4-Mmph",
+        "4-metilmetilfenidato"
+      ]
+    }
+  },
+  "iupac": "methyl (2R)-2-(4-methylphenyl)-2-[(2S)-piperidin-2-yl]acetate",
+  "formula": "C15H21NO2",
+  "molar_mass_g_mol": 247.33,
+  "smiles": "CC1=CC=C(C=C1)[C@H]([C@@H]2CCCCN2)C(=O)OC",
+  "inchi": "InChI=1S/C15H21NO2/c1-11-6-8-12(9-7-11)14(15(17)18-2)13-5-3-4-10-16-13/h6-9,13-14,16H,3-5,10H2,1-2H3/t13-,14+/m0/s1",
+  "inchikey": "WJZNCJIOIACDBR-UONOGXRCSA-N",
+  "external_ids": {
+    "cas": "467468-40-2",
+    "pubchem_cid": 23815457
+  },
+  "classes": {
+    "chemical": [
+      "phenidates"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

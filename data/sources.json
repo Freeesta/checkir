@@ -10612,6 +10612,58 @@
       "consulted": "2026-10-14",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20250526044158/https://pubmed.ncbi.nlm.nih.gov/30377956/"
+    },
+    {
+      "id": "lopes2020",
+      "type": "paper",
+      "title": "Metabolic Profile of Four Selected Cathinones in Microsome Incubations: Identification of Phase I and II Metabolites by Liquid Chromatography High Resolution Mass Spectrometry (Front Chem 8:609251)",
+      "authors": [
+        "Lopes BT",
+        "Caldeira MJ",
+        "Gaspar H",
+        "Antunes AMM"
+      ],
+      "year": 2020,
+      "doi": "10.3389/fchem.2020.609251",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33511100/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260518075947/https://pubmed.ncbi.nlm.nih.gov/33511100/"
+    },
+    {
+      "id": "westphal2012",
+      "type": "paper",
+      "title": "Mass, NMR and IR spectroscopic characterization of pentedrone and pentylone and identification of their isocathinone by-products (Forensic Sci Int 217:157-167)",
+      "authors": [
+        "Westphal F",
+        "Junge T",
+        "Girreser U",
+        "Greibl W",
+        "Doering C"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.forsciint.2011.10.045",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22115724/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250419210110/https://pubmed.ncbi.nlm.nih.gov/22115724/"
+    },
+    {
+      "id": "niznik2026",
+      "type": "paper",
+      "title": "The ADME profile of threo-4-methylmethylphenidate (4-Mmph, 4-MeTMP, CAS: 467468-40-2) as new psychoactive substance (NPS): Prediction of absorption, distribution, metabolism and excretion parameters using integrated in silico approach for clinical and forensic purposes (Chem Biol Interact, 111861)",
+      "authors": [
+        "Niżnik Ł",
+        "Jurowski K"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.cbi.2025.111861",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41349929/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
