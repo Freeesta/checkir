@@ -14133,6 +14133,62 @@
       "license": "CC BY 4.0; cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "park2016",
+      "type": "paper",
+      "title": "Tentative identification of in vitro metabolites of 5-APDB, a synthetic benzofuran, by LC-Q/TOF-MS (J Chromatogr B 1033-1034:296-300)",
+      "authors": [
+        "J. S. Park",
+        "S. U. Rehman",
+        "I. S. Kim",
+        "M. S. Choi",
+        "J. S. Lee",
+        "S. In",
+        "H. H. Yoo"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.jchromb.2016.08.043",
+      "url": "https://doi.org/10.1016/j.jchromb.2016.08.043",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "qian2016-pyrrolidinyl",
+      "type": "paper",
+      "title": "Identification of five pyrrolidinyl substituted cathinones and the collision-induced dissociation of electrospray-generated pyrrolidinyl substituted cathinones (Drug Test Anal 9:778-787)",
+      "authors": [
+        "Z. Qian",
+        "W. Jia",
+        "T. Li",
+        "Z. Hua",
+        "C. Liu"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.2035",
+      "url": "https://doi.org/10.1002/dta.2035",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "liu2016",
+      "type": "paper",
+      "title": "Identification of five substituted phenethylamine derivatives 5-MAPDB, 5-AEDB, MDMA methylene homolog, 6-Br-MDMA, and 5-APB-NBOMe (Drug Test Anal 9:199-207)",
+      "authors": [
+        "C. Liu",
+        "W. Jia",
+        "Z. Qian",
+        "T. Li",
+        "Z. Hua"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1955",
+      "url": "https://doi.org/10.1002/dta.1955",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
