@@ -1,0 +1,58 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-akb48",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-AKB48",
+      "synonyms": [
+        "5F-AKB-48",
+        "5F-APINACA",
+        "5-fluoro-AKB48",
+        "AKB-48F"
+      ]
+    },
+    "it": {
+      "preferred": "5F-AKB48",
+      "synonyms": [
+        "5F-AKB-48",
+        "5F-APINACA",
+        "5-fluoro-AKB48",
+        "AKB-48F"
+      ]
+    }
+  },
+  "iupac": "N-(1-adamantyl)-1-(5-fluoropentyl)indazole-3-carboxamide",
+  "formula": "C23H30FN3O",
+  "molar_mass_g_mol": 383.5,
+  "smiles": "C1C2CC3CC1CC(C2)(C3)NC(=O)C4=NN(C5=CC=CC=C54)CCCCCF",
+  "inchi": "InChI=1S/C23H30FN3O/c24-8-4-1-5-9-27-20-7-3-2-6-19(20)21(26-27)22(28)25-23-13-16-10-17(14-23)12-18(11-16)15-23/h2-3,6-7,16-18H,1,4-5,8-15H2,(H,25,28)",
+  "inchikey": "UCMFSGVIEPXYIV-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1400742-13-3",
+    "pubchem_cid": 71711119
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
