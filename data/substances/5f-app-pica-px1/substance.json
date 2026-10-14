@@ -1,0 +1,58 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-app-pica-px1",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-APP-PICA",
+      "synonyms": [
+        "PX-1",
+        "PX1",
+        "SRF-30",
+        "5-fluoro-APP-PICA"
+      ]
+    },
+    "it": {
+      "preferred": "5F-APP-PICA",
+      "synonyms": [
+        "PX-1",
+        "PX1",
+        "SRF-30",
+        "5-fluoro-APP-PICA"
+      ]
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-1-oxo-3-phenylpropan-2-yl]-1-(5-fluoropentyl)indole-3-carboxamide",
+  "formula": "C23H26FN3O2",
+  "molar_mass_g_mol": 395.5,
+  "smiles": "C1=CC=C(C=C1)C[C@@H](C(=O)N)NC(=O)C2=CN(C3=CC=CC=C32)CCCCCF",
+  "inchi": "InChI=1S/C23H26FN3O2/c24-13-7-2-8-14-27-16-19(18-11-5-6-12-21(18)27)23(29)26-20(22(25)28)15-17-9-3-1-4-10-17/h1,3-6,9-12,16,20H,2,7-8,13-15H2,(H2,25,28)(H,26,29)/t20-/m0/s1",
+  "inchikey": "DDVANTXQCRMRFF-FQEVSTJZSA-N",
+  "external_ids": {
+    "cas": "2221100-71-4",
+    "pubchem_cid": 125181260
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

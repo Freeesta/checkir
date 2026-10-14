@@ -7262,6 +7262,929 @@
       "consulted": "2026-10-13"
     },
     {
+      "id": "ono2022",
+      "type": "paper",
+      "title": "Hepatic and renal toxicities and metabolism of fentanyl analogues in rats (Naunyn Schmiedebergs Arch Pharmacol 396(1):149-159)",
+      "authors": [
+        "Y. Ono",
+        "M. Sakamoto",
+        "K. Makino",
+        "K. Tayama",
+        "Y. Tada",
+        "Y. Nakagawa",
+        "J. Nakajima",
+        "J. Suzuki",
+        "T. Suzuki",
+        "H. Takahashi",
+        "A. Inomata",
+        "T. Moriyasu"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00210-022-02301-8",
+      "url": "https://doi.org/10.1007/s00210-022-02301-8",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20231020043008/https://pubmed.ncbi.nlm.nih.gov/36269341/"
+    },
+    {
+      "id": "ono2025",
+      "type": "paper",
+      "title": "Assessment of μ-Opioid Receptor Signaling Responses for Fentanyl Analogs Using Luciferase Complementation Assay (Biol Pharm Bull 48(11):1769-1774)",
+      "authors": [
+        "Y. Ono",
+        "K. Tayama",
+        "K. Makino",
+        "M. Sakamoto",
+        "J. Suzuki",
+        "H. Takahashi",
+        "A. Inomata"
+      ],
+      "year": 2025,
+      "doi": "10.1248/bpb.b25-00318",
+      "url": "https://doi.org/10.1248/bpb.b25-00318",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251222062755/https://pubmed.ncbi.nlm.nih.gov/41260693/"
+    },
+    {
+      "id": "roosendaal2023",
+      "type": "paper",
+      "title": "A fatal mono-intoxication with 4-fluoroisobutyrylfentanyl: Case report with postmortem concentrations (J Anal Toxicol 47(6):541-546)",
+      "authors": [
+        "J. Roosendaal",
+        "R. Oosting",
+        "D.-P. Kloos",
+        "H. H. de Boer",
+        "J. D. J. van den Berg",
+        "S. Oldenhof",
+        "I. J. Bosman"
+      ],
+      "year": 2023,
+      "doi": "10.1093/jat/bkad034",
+      "url": "https://doi.org/10.1093/jat/bkad034",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250203032103/https://pubmed.ncbi.nlm.nih.gov/37315188/"
+    },
+    {
+      "id": "lai2026",
+      "type": "paper",
+      "title": "Reinforcing and discriminative stimulus effects of 4-fluorobutyrfentanyl, 4-fluoroisobutyrfentanyl, and isobutyrfentanyl in male rats (Eur J Pharmacol 1030:179055)",
+      "authors": [
+        "M. Lai",
+        "L. Wen",
+        "H. Li",
+        "D. Fu",
+        "Z. Xu",
+        "Q. Jin",
+        "B. Shi",
+        "W. Zhou",
+        "L. Liu",
+        "P. Xu"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.ejphar.2026.179055",
+      "url": "https://doi.org/10.1016/j.ejphar.2026.179055",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "rautio2023",
+      "type": "paper",
+      "title": "In vitro metabolite identification of acetylbenzylfentanyl, benzoylbenzylfentanyl, 3-fluoro-methoxyacetylfentanyl, and 3-phenylpropanoylfentanyl using LC-QTOF-HRMS together with synthesized references (Drug Test Anal 15(7):711-729)",
+      "authors": [
+        "T. Rautio",
+        "D. Vangerven",
+        "J. Dahlén",
+        "S. Watanabe",
+        "R. Kronstrand",
+        "S. Vikingsson",
+        "P. Konradsson",
+        "X. Wu",
+        "H. Gréen"
+      ],
+      "year": 2023,
+      "doi": "10.1002/dta.3454",
+      "url": "https://doi.org/10.1002/dta.3454",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251116030321/https://pubmed.ncbi.nlm.nih.gov/36756728/"
+    },
+    {
+      "id": "canfield2026",
+      "type": "paper",
+      "title": "The abuse-related effects of illicitly manufactured fentanyls (IMFs): A mini review (Pharmacol Biochem Behav 265:174201)",
+      "authors": [
+        "J. R. Canfield",
+        "J. E. Sprague"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.pbb.2026.174201",
+      "url": "https://doi.org/10.1016/j.pbb.2026.174201",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "obeng2025",
+      "type": "paper",
+      "title": "In vitro and in vivo pharmacological characterization of fentanyl analogs (Neuropharmacology 279:110603)",
+      "authors": [
+        "S. Obeng",
+        "K. R. Urquhart",
+        "S. Fukuda",
+        "V. L. C. Pallares",
+        "L. R. McMahon",
+        "W. E. Fantegrossi",
+        "T. Hiranita"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.neuropharm.2025.110603",
+      "url": "https://doi.org/10.1016/j.neuropharm.2025.110603",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "polke2024",
+      "type": "paper",
+      "title": "Development and validation of a liquid chromatography-tandem mass spectrometry (LC-MS/MS) method including 25 novel synthetic opioids in hair and subsequent analysis of a Swiss opioid consumer cohort (Drug Test Anal 16(11):1384-1391)",
+      "authors": [
+        "M. Polke",
+        "M. Concheiro",
+        "G. Cooper",
+        "C. Bogdal",
+        "M. R. Baumgartner",
+        "T. Krämer",
+        "T. M. Binz"
+      ],
+      "year": 2024,
+      "doi": "10.1002/dta.3663",
+      "url": "https://doi.org/10.1002/dta.3663",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251009153700/https://pubmed.ncbi.nlm.nih.gov/38382125/"
+    },
+    {
+      "id": "hewes2024",
+      "type": "paper",
+      "title": "Determination of fentanyl contamination on United States paper currency by LC-QQQ-MS (J Anal Toxicol 48(3):141-149)",
+      "authors": [
+        "M. P. Hewes",
+        "D. M. Papsun",
+        "B. K. Logan",
+        "A. J. Krotulski"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae010",
+      "url": "https://doi.org/10.1093/jat/bkae010",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "cieri2024",
+      "type": "paper",
+      "title": "Evaluating cross-reactivity of new psychoactive substances (NPS) in human whole blood by enzyme-linked immunosorbent assay (ELISA) (J Anal Toxicol 48(3):191-196)",
+      "authors": [
+        "G. Cieri",
+        "A. L. A. Mohr",
+        "R. Mastrovito",
+        "B. K. Logan"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae017",
+      "url": "https://doi.org/10.1093/jat/bkae017",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240804120257/https://pubmed.ncbi.nlm.nih.gov/38456706/"
+    },
+    {
+      "id": "mastrovito2022",
+      "type": "paper",
+      "title": "Determination of Cross-Reactivity of Novel Psychoactive Substances with Drug Screen Immunoassays Kits in Whole Blood (J Anal Toxicol 46(7):726-731)",
+      "authors": [
+        "R. Mastrovito",
+        "C. Trail",
+        "M. Lino",
+        "A. Cervantes",
+        "A. Chan-Hosokawa",
+        "F. Strathmann",
+        "B. Logan"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkab110",
+      "url": "https://doi.org/10.1093/jat/bkab110",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240604065203/https://pubmed.ncbi.nlm.nih.gov/34791285/"
+    },
+    {
+      "id": "coopman2016",
+      "type": "paper",
+      "title": "Ocfentanil overdose fatality in the recreational drug scene (Forensic Sci Int 266:469-473)",
+      "authors": [
+        "V. Coopman",
+        "J. Cordonnier",
+        "M. De Leeuw",
+        "V. Cirimele"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.forsciint.2016.07.005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27471990/",
+      "archive_url": "https://web.archive.org/web/20250916114849/https://pubmed.ncbi.nlm.nih.gov/27471990/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "fogarty2018",
+      "type": "paper",
+      "title": "Analysis of Fentanyl and 18 Novel Fentanyl Analogs and Metabolites by LC-MS-MS, and report of Fatalities Associated with Methoxyacetylfentanyl and Cyclopropylfentanyl (J Anal Toxicol 42:592-604)",
+      "authors": [
+        "M. F. Fogarty",
+        "D. M. Papsun",
+        "B. K. Logan"
+      ],
+      "year": 2018,
+      "doi": "10.1093/jat/bky035",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29750250/",
+      "archive_url": "https://web.archive.org/web/20260725102208/https://pubmed.ncbi.nlm.nih.gov/29750250/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "walentiny2019",
+      "type": "paper",
+      "title": "Oxycodone-like discriminative stimulus effects of fentanyl-related emerging drugs of abuse in mice (Neuropharmacology 150:210-216)",
+      "authors": [
+        "D. M. Walentiny",
+        "L. T. Moisa",
+        "P. M. Beardsley"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2019.02.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30735691/",
+      "archive_url": "https://web.archive.org/web/20250202035911/https://pubmed.ncbi.nlm.nih.gov/30735691/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "kronstrand2021",
+      "type": "paper",
+      "title": "Circumstances, Postmortem Findings, Blood Concentrations and Metabolism in a Series of Methoxyacetylfentanyl-Related Deaths (J Anal Toxicol 45:760-771)",
+      "authors": [
+        "R. Kronstrand",
+        "A. Åstrand",
+        "S. Watanabe",
+        "H. Gréen",
+        "S. Vikingsson"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkab053",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34009362/",
+      "archive_url": "https://web.archive.org/web/20250202024558/https://pubmed.ncbi.nlm.nih.gov/34009362/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "bilel2023",
+      "type": "paper",
+      "title": "Toxicity and behavioural effects of ocfentanil and 2-furanylfentanyl in zebrafish larvae and mice (Neurotoxicology 95:83-93)",
+      "authors": [
+        "S. Bilel",
+        "M. Murari",
+        "S. Pesavento",
+        "R. Arfè",
+        "M. Tirri",
+        "L. Torroni",
+        "M. Marti",
+        "F. Tagliaro",
+        "R. Gottardo"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.neuro.2023.01.003",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36634872/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "varshneya2023-locomotor",
+      "type": "paper",
+      "title": "Structurally diverse fentanyl analogs yield differential locomotor activities in mice (Pharmacol Biochem Behav 222:173496)",
+      "authors": [
+        "N. B. Varshneya",
+        "D. M. Walentiny",
+        "D. L. Stevens",
+        "T. D. Walker",
+        "L. R. Akinfiresoye",
+        "P. M. Beardsley"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.pbb.2022.173496",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36435268/",
+      "archive_url": "https://web.archive.org/web/20260210215912/https://pubmed.ncbi.nlm.nih.gov/36435268/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "rodriguezcruz2023",
+      "type": "paper",
+      "title": "Evaluating the sensitivity, stability, and cross-reactivity of commercial fentanyl immunoassay test strips (J Forensic Sci 68:1555-1569)",
+      "authors": [
+        "S. E. Rodriguez-Cruz"
+      ],
+      "year": 2023,
+      "doi": "10.1111/1556-4029.15332",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37420315/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "truver2019",
+      "type": "paper",
+      "title": "5F-MDMB-PICA metabolite identification and cannabinoid receptor activity (Drug Test Anal 12:127-135)",
+      "authors": [
+        "M. T. Truver",
+        "S. Watanabe",
+        "A. Åstrand",
+        "S. Vikingsson",
+        "H. Green",
+        "M. J. Swortwood",
+        "R. Kronstrand"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2688",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31461219/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206023819/https://pubmed.ncbi.nlm.nih.gov/31461219/"
+    },
+    {
+      "id": "diao2017-mn18",
+      "type": "paper",
+      "title": "Human Hepatocyte Metabolism of Novel Synthetic Cannabinoids MN-18 and Its 5-Fluoro Analog 5F-MN-18 (Clin Chem 63:1753-1763)",
+      "authors": [
+        "X. Diao",
+        "J. Carlier",
+        "M. Zhu",
+        "M. A. Huestis"
+      ],
+      "year": 2017,
+      "doi": "10.1373/clinchem.2017.277152",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28821542/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250420152106/https://pubmed.ncbi.nlm.nih.gov/28821542/"
+    },
+    {
+      "id": "diao2016-nm2201",
+      "type": "paper",
+      "title": "In vitro and in vivo human metabolism of a new synthetic cannabinoid NM-2201 (CBL-2201) (Forensic Toxicol 35:20-32)",
+      "authors": [
+        "X. Diao",
+        "J. Carlier",
+        "M. Zhu",
+        "S. Pang",
+        "R. Kronstrand",
+        "K. B. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s11419-016-0326-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28286577/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206113842/https://pubmed.ncbi.nlm.nih.gov/28286577/"
+    },
+    {
+      "id": "apirakkan2020",
+      "type": "paper",
+      "title": "In Vitro Phase I Metabolic Profiling of the Synthetic Cannabinoids AM-694, 5F-NNEI, FUB-APINACA, MFUBINAC, and AMB-FUBINACA (Chem Res Toxicol 33:1653-1664)",
+      "authors": [
+        "O. Apirakkan",
+        "I. Gavrilović",
+        "D. A. Cowan",
+        "V. Abbate"
+      ],
+      "year": 2020,
+      "doi": "10.1021/acs.chemrestox.9b00466",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32301604/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204214203/https://pubmed.ncbi.nlm.nih.gov/32301604/"
+    },
+    {
+      "id": "hill2017-scra-tox",
+      "type": "paper",
+      "title": "Human Toxicity Caused by Indole and Indazole Carboxylate Synthetic Cannabinoid Receptor Agonists: From Horizon Scanning to Notification (Clin Chem 64:346-354)",
+      "authors": [
+        "S. L. Hill",
+        "M. Dunn",
+        "C. Cano",
+        "S. J. Harnor",
+        "I. R. Hardcastle",
+        "J. Grundlingh",
+        "P. I. Dargan",
+        "D. M. Wood",
+        "S. Tucker",
+        "T. Bartram",
+        "S. H. L. Thomas"
+      ],
+      "year": 2017,
+      "doi": "10.1373/clinchem.2017.275867",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29038156/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250202070232/https://pubmed.ncbi.nlm.nih.gov/29038156/"
+    },
+    {
+      "id": "atasoy2021",
+      "type": "paper",
+      "title": "Determination of synthetic cannabinoids in randomly urine samples collected from probationers in Turkey (Forensic Sci Int 322:110752)",
+      "authors": [
+        "A. Atasoy",
+        "N. Daglioglu",
+        "İ. E. Gören",
+        "A. Girisbay",
+        "R. Aslan",
+        "S. A. Akgur"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.forsciint.2021.110752",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33735632/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "dea-fr2023-26694",
+      "type": "institution",
+      "title": "Schedules of Controlled Substances: Placement of Nine Specific Fentanyl-Related Substances in Schedule I (US DEA final rule, Federal Register 2023-26694, effective 7 December 2023)",
+      "year": 2023,
+      "url": "https://www.federalregister.gov/documents/2023/12/07/2023-26694/schedules-of-controlled-substances-placement-of-nine-specific-fentanyl-related-substances-in",
+      "archive_url": "https://web.archive.org/web/20250526090435/https://www.federalregister.gov/documents/2023/12/07/2023-26694/schedules-of-controlled-substances-placement-of-nine-specific-fentanyl-related-substances-in",
+      "license": "public domain (US government); cited as the source of facts only",
+      "tier": "agency",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "gundersen2020",
+      "type": "paper",
+      "title": "Metabolite Profiling of Ortho-, Meta- and Para-Fluorofentanyl by Hepatocytes and High-Resolution Mass Spectrometry (J Anal Toxicol 44:140-148)",
+      "authors": [
+        "P. O. M. Gundersen",
+        "A. Åstrand",
+        "H. Gréen",
+        "M. Josefsson",
+        "O. Spigset",
+        "S. Vikingsson"
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkz081",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7238673/",
+      "archive_url": "https://web.archive.org/web/20250406112020/https://pmc.ncbi.nlm.nih.gov/articles/PMC7238673/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "truver2022",
+      "type": "paper",
+      "title": "Toxicological Analysis of Fluorofentanyl Isomers in Postmortem Blood (J Anal Toxicol 46:835-843)",
+      "authors": [
+        "M. T. Truver",
+        "C. W. Chronister",
+        "A. M. Kinsey",
+        "J. L. Hoyer",
+        "B. A. Goldberger"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkac014",
+      "url": "https://doi.org/10.1093/jat/bkac014",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "liu2018",
+      "type": "paper",
+      "title": "The identification and analytical characterization of 2,2'-difluorofentanyl (Drug Test Anal 10:774-780)",
+      "authors": [
+        "C. Liu",
+        "T. Li",
+        "Y. Han",
+        "Z. Hua",
+        "W. Jia",
+        "Z. Qian"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2264",
+      "url": "https://doi.org/10.1002/dta.2264",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "wilde2019",
+      "type": "paper",
+      "title": "Metabolic Pathways and Potencies of New Fentanyl Analogs (Front Pharmacol 10:238)",
+      "authors": [
+        "M. Wilde",
+        "S. Pichini",
+        "R. Pacifici",
+        "A. Tagliabracci",
+        "F. P. Busardò",
+        "V. Auwärter",
+        "R. Solimini"
+      ],
+      "year": 2019,
+      "doi": "10.3389/fphar.2019.00238",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6461066/",
+      "archive_url": "https://web.archive.org/web/20260605231138/https://pmc.ncbi.nlm.nih.gov/articles/PMC6461066/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "fogarty2022",
+      "type": "paper",
+      "title": "Toxicological and pharmacological characterization of novel cinnamylpiperazine synthetic opioids in humans and in vitro including 2-methyl AP-237 and AP-238 (Arch Toxicol 96:1701-1710)",
+      "authors": [
+        "M. F. Fogarty",
+        "M. M. Vandeputte",
+        "A. J. Krotulski",
+        "D. Papsun",
+        "S. E. Walton",
+        "C. P. Stove",
+        "B. K. Logan"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00204-022-03257-7",
+      "url": "https://doi.org/10.1007/s00204-022-03257-7",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "truver2023",
+      "type": "paper",
+      "title": "Fatal intoxication involving 2-methyl AP-237 (J Forensic Sci 68:1419-1424)",
+      "authors": [
+        "M. T. Truver",
+        "M. M. Crosby",
+        "A. T. Gillette",
+        "S. C. Brogan",
+        "J. L. Hoyer",
+        "C. W. Chronister",
+        "W. A. Broussard",
+        "R. S. Vega",
+        "B. A. Goldberger"
+      ],
+      "year": 2023,
+      "doi": "10.1111/1556-4029.15295",
+      "url": "https://doi.org/10.1111/1556-4029.15295",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "resnik2021",
+      "type": "paper",
+      "title": "DARK Classics in Chemical Neuroscience: Bucinnazine (ACS Chem Neurosci 12:3527-3534)",
+      "authors": [
+        "K. Resnik",
+        "P. Brandão",
+        "E. A. Alves"
+      ],
+      "year": 2021,
+      "doi": "10.1021/acschemneuro.1c00522",
+      "url": "https://doi.org/10.1021/acschemneuro.1c00522",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "vandeputte2024b",
+      "type": "paper",
+      "title": "Characterization of novel nitazene recreational drugs: insights into their risk potential from in vitro µ-opioid receptor assays and in vivo behavioral studies in mice (Pharmacol Res 210:107503)",
+      "authors": [
+        "M. M. Vandeputte",
+        "G. C. Glatfelter",
+        "D. Walther",
+        "N. K. Layle",
+        "D. M. St Germaine",
+        "I. Ujváry",
+        "D. M. Iula",
+        "M. H. Baumann",
+        "C. P. Stove"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.phrs.2024.107503",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11655282/",
+      "archive_url": "https://web.archive.org/web/20251202052836/https://pmc.ncbi.nlm.nih.gov/articles/PMC11655282/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "wohlfarth2013",
+      "type": "paper",
+      "title": "First metabolic profile of XLR-11, a novel synthetic cannabinoid, obtained by using human hepatocytes and high-resolution mass spectrometry (Clin Chem 59:1638-1648)",
+      "authors": [
+        "A. Wohlfarth",
+        "S. Pang",
+        "M. Zhu",
+        "A. S. Gandhi",
+        "K. B. Scheidweiler",
+        "H. Liu",
+        "M. A. Huestis"
+      ],
+      "year": 2013,
+      "doi": "10.1373/clinchem.2013.209965",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24014837/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20241106050125/https://pubmed.ncbi.nlm.nih.gov/24014837/"
+    },
+    {
+      "id": "kanamori2015",
+      "type": "paper",
+      "title": "Detection of main metabolites of XLR-11 and its thermal degradation product in human hepatoma HepaRG cells and human urine (Drug Test Anal)",
+      "authors": [
+        "T. Kanamori",
+        "K. Kanda",
+        "et al."
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1765",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25600155/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "holm2014",
+      "type": "paper",
+      "title": "Metabolites of 5F-AKB-48, a synthetic cannabinoid receptor agonist, identified in human urine and liver microsomal preparations using liquid chromatography high-resolution mass spectrometry (Drug Test Anal 7:199-206)",
+      "authors": [
+        "N. B. Holm",
+        "A. J. Pedersen",
+        "P. W. Dalsgaard",
+        "K. Linnet"
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1663",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24802286/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204104229/https://pubmed.ncbi.nlm.nih.gov/24802286/"
+    },
+    {
+      "id": "vikingsson2015",
+      "type": "paper",
+      "title": "Identification of AKB-48 and 5F-AKB-48 metabolites in authentic human urine samples using human liver microsomes and time of flight mass spectrometry (J Anal Toxicol 39:426-435)",
+      "authors": [
+        "S. Vikingsson",
+        "M. Josefsson",
+        "H. Gréen"
+      ],
+      "year": 2015,
+      "doi": "10.1093/jat/bkv045",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25957385/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "li2026",
+      "type": "paper",
+      "title": "Study on phase I metabolic processes and metabolite biomarker identification of synthetic cannabinoids 5F-ADB-PINACA and 5F-ADBICA in human liver microsomes and zebrafish (Molecules 31:250)",
+      "authors": [
+        "H. Li",
+        "H. Zheng",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.3390/molecules31020250",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41599300/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "dahm2021",
+      "type": "paper",
+      "title": "Phase I-metabolism studies of the synthetic cannabinoids PX-1 and PX-2 using three different in vitro models (Forensic Toxicol)",
+      "authors": [
+        "P. Dahm",
+        "A. Thomas",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1007/s11419-021-00606-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36454402/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "presley2020",
+      "type": "paper",
+      "title": "Phase I metabolism of synthetic cannabinoid receptor agonist PX-1 (5F-APP-PICA) via incubation with human liver microsomes and UHPLC-HRMS (Biomed Chromatogr)",
+      "authors": [
+        "B. C. Presley",
+        "B. K. Logan",
+        "et al."
+      ],
+      "year": 2020,
+      "doi": "10.1002/bmc.4786",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31863591/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "fabregat2019-px1",
+      "type": "paper",
+      "title": "Comprehensive investigation on synthetic cannabinoids: metabolic behavior and potency testing, using 5F-APP-PICA and AMB-FUBINACA as model compounds (Drug Test Anal)",
+      "authors": [
+        "D. Fabregat-Safont",
+        "M. Mardal",
+        "et al."
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2659",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31192526/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204005606/https://pubmed.ncbi.nlm.nih.gov/31192526/"
+    },
+    {
+      "id": "cooman2019",
+      "type": "paper",
+      "title": "In vitro metabolism of the synthetic cannabinoids PX-1, PX-2, and PX-3 by high-resolution mass spectrometry and their clearance rates in human liver microsomes (Rapid Commun Mass Spectrom)",
+      "authors": [
+        "T. Cooman",
+        "S. Bell",
+        "et al."
+      ],
+      "year": 2019,
+      "doi": "10.1002/rcm.8543",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31364227/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gampfer2021",
+      "type": "paper",
+      "title": "Cytotoxicity, metabolism, and isozyme mapping of the synthetic cannabinoids JWH-200, A-796260, and 5F-EMB-PINACA studied by means of in vitro systems (Arch Toxicol)",
+      "authors": [
+        "T. M. Gampfer",
+        "L. Wagmann",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1007/s00204-021-03148-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34453555/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "wang2023",
+      "type": "paper",
+      "title": "Transesterification of indazole-3-carboxamide synthetic cannabinoids: identification of metabolite biomarkers for diagnosing co-abuse of 5F-MDMB-PINACA and alcohol (J Anal Toxicol 46:1016-1024)",
+      "authors": [
+        "Z. Wang",
+        "C. Y. Fong",
+        "E. M. L. Goh",
+        "H. Y. Moy",
+        "E. C. Y. Chan"
+      ],
+      "year": 2023,
+      "doi": "10.1093/jat/bkab121",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34918103/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "brandon2021",
+      "type": "paper",
+      "title": "A systematic study of the in vitro pharmacokinetics and estimated human in vivo clearance of indole and indazole-3-carboxamide synthetic cannabinoid receptor agonists detected on the illicit drug market (Molecules 26:1396)",
+      "authors": [
+        "A. M. Brandon",
+        "L. H. Antonides",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.3390/molecules26051396",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33807614/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "banister2015",
+      "type": "paper",
+      "title": "Pharmacology of indole and indazole synthetic cannabinoid designer drugs AB-FUBINACA, ADB-FUBINACA, AB-PINACA, ADB-PINACA, 5F-AB-PINACA, 5F-ADB-PINACA, ADBICA, and 5F-ADBICA (ACS Chem Neurosci 6:1546-1559)",
+      "authors": [
+        "S. D. Banister",
+        "M. Moir",
+        "J. Stuart",
+        "R. C. Kevin",
+        "K. E. Wood",
+        "M. Longworth",
+        "S. M. Wilkinson",
+        "C. Beinat",
+        "A. S. Buchanan",
+        "M. Glass",
+        "M. Connor",
+        "I. S. McGregor",
+        "M. Kassiou"
+      ],
+      "year": 2015,
+      "doi": "10.1021/acschemneuro.5b00112",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26134475/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261005002846/https://pubmed.ncbi.nlm.nih.gov/26134475/"
+    },
+    {
+      "id": "fabregat2019-5ppdi",
+      "type": "paper",
+      "title": "Metabolic profiling of four synthetic stimulants, including the novel indanyl-cathinone 5-PPDi, after human hepatocyte incubation (J Pharm Anal)",
+      "authors": [
+        "D. Fabregat-Safont",
+        "M. Mardal",
+        "et al."
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.jpha.2019.12.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32373386/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ishii2020",
+      "type": "paper",
+      "title": "Studies on the phase I metabolites of the new designer drug 1-(2,3-dihydro-1H-inden-5-yl)-2-(pyrrolidine-1-yl)butan-1-one (5-PPDI) in human urine (Forensic Sci Int)",
+      "authors": [
+        "A. Ishii",
+        "K. Kusakabe",
+        "et al."
+      ],
+      "year": 2020,
+      "doi": "10.1016/j.forsciint.2020.110214",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32199237/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "uchiyama2012",
+      "type": "paper",
+      "title": "URB-754: a new class of designer drug and 12 synthetic cannabinoids detected in illegal products (Forensic Sci Int)",
+      "authors": [
+        "N. Uchiyama",
+        "M. Kawamura",
+        "et al."
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.forsciint.2012.08.047",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23063179/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260426075639/https://pubmed.ncbi.nlm.nih.gov/23063179/"
+    },
+    {
       "id": "li2022",
       "type": "paper",
       "title": "Study on the metabolic process of synthetic cannabinoids 4F-MDMB-BINACA and 4F-MDMB-BICA in human liver microsome and zebrafish model via UHPLC-QE Orbitrap MS (Anal Bioanal Chem 414:3905-3916)",
@@ -7401,23 +8324,6 @@
       "consulted": "2026-10-13",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20250204044420/https://pubmed.ncbi.nlm.nih.gov/28691766/"
-    },
-    {
-      "id": "apirakkan2020",
-      "type": "paper",
-      "title": "In vitro phase I metabolic profiling of the synthetic cannabinoids AM-694, 5F-NNEI, FUB-APINACA, MFUBINAC, and AMB-FUBINACA (Chem Res Toxicol 33:1653-1664)",
-      "authors": [
-        "O. Apirakkan",
-        "I. Gavrilović",
-        "D. A. Cowan",
-        "V. Abbate"
-      ],
-      "year": 2020,
-      "doi": "10.1021/acs.chemrestox.9b00466",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/32301604/",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-13",
-      "tier": "primary"
     },
     {
       "id": "uchiyama2014",

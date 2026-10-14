@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "beta-hydroxythiofentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "beta-Hydroxythiofentanyl",
+      "synonyms": [
+        "β-hydroxythiofentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "beta-Idrossitiofentanil",
+      "synonyms": [
+        "β-idrossitiofentanil"
+      ]
+    }
+  },
+  "iupac": "N-[1-(2-hydroxy-2-thiophen-2-ylethyl)piperidin-4-yl]-N-phenylpropanamide",
+  "formula": "C20H26N2O2S",
+  "molar_mass_g_mol": 358.5,
+  "smiles": "CCC(=O)N(C1CCN(CC1)CC(C2=CC=CS2)O)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C20H26N2O2S/c1-2-20(24)22(16-7-4-3-5-8-16)17-10-12-21(13-11-17)15-18(23)19-9-6-14-25-19/h3-9,14,17-18,23H,2,10-13,15H2,1H3",
+  "inchikey": "GLAAETOTOUGGSB-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1474-34-6",
+    "pubchem_cid": 117072582
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

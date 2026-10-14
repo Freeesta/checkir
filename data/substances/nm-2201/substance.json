@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "nm-2201",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "NM-2201",
+      "synonyms": [
+        "CBL-2201",
+        "NM2201",
+        "5-fluoro-SDB-005 indole"
+      ]
+    },
+    "it": {
+      "preferred": "NM-2201",
+      "synonyms": [
+        "CBL-2201",
+        "NM2201",
+        "5-fluoro-SDB-005 indole"
+      ]
+    }
+  },
+  "iupac": "naphthalen-1-yl 1-(5-fluoropentyl)indole-3-carboxylate",
+  "formula": "C24H22FNO2",
+  "molar_mass_g_mol": 375.4,
+  "smiles": "C1=CC=C2C(=C1)C=CC=C2OC(=O)C3=CN(C4=CC=CC=C43)CCCCCF",
+  "inchi": "InChI=1S/C24H22FNO2/c25-15-6-1-7-16-26-17-21(20-12-4-5-13-22(20)26)24(27)28-23-14-8-10-18-9-2-3-11-19(18)23/h2-5,8-14,17H,1,6-7,15-16H2",
+  "inchikey": "PRGFSQYZCKCBQO-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2042201-16-9",
+    "pubchem_cid": 91864534
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

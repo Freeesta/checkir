@@ -1,0 +1,70 @@
+{
+  "schema": "datasheet/1",
+  "substance": "5f-mn-18",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "5'-OH-MN-18",
+        "reaction": "other",
+        "source": "diao2017-mn18"
+      },
+      {
+        "from": "parent",
+        "to": "MN-18 pentanoic acid",
+        "reaction": "other",
+        "source": "diao2017-mn18"
+      },
+      {
+        "from": "parent",
+        "to": "1-(5-fluoropentyl)-1H-indazole-3-carboxylic acid",
+        "reaction": "other",
+        "source": "diao2017-mn18"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "5f-mn-18-5-hydroxy-mn-18",
+        "active": null,
+        "source": "diao2017-mn18",
+        "marker": true
+      },
+      {
+        "name_key": "5f-mn-18-pentanoic-acid",
+        "active": null,
+        "source": "diao2017-mn18",
+        "marker": true
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
