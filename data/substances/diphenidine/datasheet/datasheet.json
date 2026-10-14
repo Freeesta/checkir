@@ -1,0 +1,102 @@
+{
+  "schema": "datasheet/1",
+  "substance": "diphenidine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxy-aryl-diphenidine",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP1A2",
+          "CYP2B6",
+          "CYP2C9",
+          "CYP2D6",
+          "CYP3A4"
+        ],
+        "source": "wink2016"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-piperidine-diphenidine",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP1A2",
+          "CYP2B6",
+          "CYP2C9",
+          "CYP2D6",
+          "CYP3A4"
+        ],
+        "source": "wink2016"
+      },
+      {
+        "from": "parent",
+        "to": "bis-hydroxy-piperidine-diphenidine",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP1A2",
+          "CYP2B6",
+          "CYP2C9",
+          "CYP3A4"
+        ],
+        "source": "wink2016"
+      },
+      {
+        "from": "parent",
+        "to": "n-n-bis-dealkyl-diphenidine",
+        "reaction": "other",
+        "source": "wink2016"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "hydroxy-aryl-diphenidine",
+        "active": null,
+        "source": "wink2016"
+      },
+      {
+        "name_key": "hydroxy-piperidine-diphenidine",
+        "active": null,
+        "source": "wink2016"
+      },
+      {
+        "name_key": "bis-hydroxy-piperidine-diphenidine",
+        "active": null,
+        "source": "wink2016"
+      },
+      {
+        "name_key": "n-n-bis-dealkyl-diphenidine",
+        "active": null,
+        "source": "wink2016"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
