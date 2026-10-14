@@ -14894,6 +14894,257 @@
       "license": "© marketing authorisation holder; cited as the source of facts only",
       "consulted": "2026-10-14",
       "tier": "agency"
+    },
+    {
+      "id": "amitriptyline-label",
+      "type": "institution",
+      "title": "Amitriptyline hydrochloride tablets USP (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=56379133-cd11-4dff-b511-7cdfc9a360ca",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "citalopram-label",
+      "type": "institution",
+      "title": "Citalopram tablets (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=625a78b2-4751-4ca5-91b6-7c85fd9f8c2e",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "theophylline-label",
+      "type": "institution",
+      "title": "Theophylline (anhydrous) extended-release tablets (Proficient Rx LP), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=882657ae-e15b-4c86-a571-b55460bd4726",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "hicks2017",
+      "type": "paper",
+      "title": "Clinical Pharmacogenetics Implementation Consortium guideline (CPIC) for CYP2D6 and CYP2C19 genotypes and dosing of tricyclic antidepressants: 2016 update (Clin Pharmacol Ther 102:37-44)",
+      "authors": [
+        "J. K. Hicks",
+        "K. Sangkuhl",
+        "J. J. Swen",
+        "V. L. Ellingrod",
+        "D. J. Müller",
+        "K. Shimoda",
+        "J. R. Bishop",
+        "E. D. Kharasch",
+        "T. C. Skaar",
+        "A. Gaedigk",
+        "H. M. Dunnenberger",
+        "T. E. Klein",
+        "K. E. Caudle",
+        "J. C. Stingl"
+      ],
+      "year": 2017,
+      "doi": "10.1002/cpt.597",
+      "url": "https://doi.org/10.1002/cpt.597",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "gates1999",
+      "type": "paper",
+      "title": "Cytochrome P450 isoform selectivity in human hepatic theobromine metabolism (Br J Clin Pharmacol 47:299-305)",
+      "authors": [
+        "S. Gates",
+        "J. O. Miners"
+      ],
+      "year": 1999,
+      "doi": "10.1046/j.1365-2125.1999.00890.x",
+      "url": "https://doi.org/10.1046/j.1365-2125.1999.00890.x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "bae2008",
+      "type": "paper",
+      "title": "Cytochrome P450 2B6 catalyzes the formation of pharmacologically active sibutramine metabolites in human liver microsomes (Drug Metab Dispos 36:1679-1688)",
+      "authors": [
+        "S. K. Bae",
+        "S. Cao",
+        "K.-A. Seo",
+        "H. Kim",
+        "M.-J. Kim",
+        "J.-H. Shon",
+        "K.-H. Liu",
+        "H.-H. Zhou",
+        "J.-G. Shin"
+      ],
+      "year": 2008,
+      "doi": "10.1124/dmd.108.020727",
+      "url": "https://doi.org/10.1124/dmd.108.020727",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kim2009",
+      "type": "paper",
+      "title": "Association of CYP2B6, CYP3A5, and CYP2C19 genetic polymorphisms with sibutramine pharmacokinetics in healthy Korean subjects (Clin Pharmacol Ther 86:511-518)",
+      "authors": [
+        "K. A. Kim",
+        "W. K. Song",
+        "J. Y. Park"
+      ],
+      "year": 2009,
+      "doi": "10.1038/clpt.2009.145",
+      "url": "https://doi.org/10.1038/clpt.2009.145",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "tucker2018",
+      "type": "paper",
+      "title": "Unapproved Pharmaceutical Ingredients Included in Dietary Supplements Associated With US Food and Drug Administration Warnings (JAMA Netw Open 1:e183337)",
+      "authors": [
+        "J. Tucker",
+        "T. Fischer",
+        "L. Upjohn",
+        "D. Mazzera",
+        "M. Kumar"
+      ],
+      "year": 2018,
+      "doi": "10.1001/jamanetworkopen.2018.3337",
+      "url": "https://doi.org/10.1001/jamanetworkopen.2018.3337",
+      "tier": "primary",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "carles2025",
+      "type": "paper",
+      "title": "Presence of sibutramine and sildenafil in weight loss dietary supplements: a case series with analytical and clinical investigation (Clin Toxicol 63:193-195)",
+      "authors": [
+        "M. Carles",
+        "T. Pietri",
+        "J. Micallef",
+        "C. Corteggiani-Giraud",
+        "M. Richez",
+        "C. Solas-Chesneau",
+        "B. Lacarelle",
+        "N. Fabresse"
+      ],
+      "year": 2025,
+      "doi": "10.1080/15563650.2025.2452297",
+      "url": "https://doi.org/10.1080/15563650.2025.2452297",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "pascali2018",
+      "type": "paper",
+      "title": "Application of HRAM screening and LC-MS/MS confirmation of active pharmaceutical ingredient in \"natural\" herbal supplements (Forensic Sci Int 286:e28-e31)",
+      "authors": [
+        "J. P. Pascali",
+        "P. Fais",
+        "F. Vaiano",
+        "E. Bertol"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.forsciint.2018.03.014",
+      "url": "https://doi.org/10.1016/j.forsciint.2018.03.014",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "laposchan2022",
+      "type": "paper",
+      "title": "Impurities, adulterants and cutting agents in cocaine as potential candidates for retrospective mining of GC-MS data (Sci Justice 62:60-75)",
+      "authors": [
+        "S. Laposchan",
+        "R. F. Kranenburg",
+        "A. C. van Asten"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.scijus.2021.11.004",
+      "url": "https://doi.org/10.1016/j.scijus.2021.11.004",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "goya2022",
+      "type": "paper",
+      "title": "From Cocoa to Chocolate: Effect of Processing on Flavanols and Methylxanthines and Their Mechanisms of Action (Int J Mol Sci 23:14365)",
+      "authors": [
+        "L. Goya",
+        "J. E. Kongor",
+        "S. de Pascual-Teresa"
+      ],
+      "year": 2022,
+      "doi": "10.3390/ijms232214365",
+      "url": "https://doi.org/10.3390/ijms232214365",
+      "tier": "review",
+      "license": "CC BY 4.0; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "cova2019",
+      "type": "paper",
+      "title": "Exploring cocoa properties: is theobromine a cognitive modulator? (Psychopharmacology 236:561-572)",
+      "authors": [
+        "I. Cova",
+        "V. Leta",
+        "C. Mariani",
+        "L. Pantoni",
+        "S. Pomati"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00213-019-5172-0",
+      "url": "https://doi.org/10.1007/s00213-019-5172-0",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "hansen1995",
+      "type": "paper",
+      "title": "Fungal transformations of antihistamines: metabolism of brompheniramine, chlorpheniramine, and pheniramine to N-oxide and N-demethylated metabolites by the fungus Cunninghamella elegans (Xenobiotica 25:1081-1092)",
+      "authors": [
+        "E. B. Hansen",
+        "B. P. Cho",
+        "W. A. Korfmacher",
+        "C. E. Cerniglia"
+      ],
+      "year": 1995,
+      "doi": "10.3109/00498259509061908",
+      "url": "https://doi.org/10.3109/00498259509061908",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "ahmadi2012",
+      "type": "paper",
+      "title": "Synthesis and anti-inflammatory effects of new piperazine and ethanolamine derivatives of H1-antihistaminic drugs (Mini Rev Med Chem 12:1282-1292)",
+      "authors": [
+        "A. Ahmadi",
+        "M. Khalili",
+        "A. Nafarie",
+        "A. Yazdani",
+        "B. Nahri-Niknafs"
+      ],
+      "year": 2012,
+      "doi": "10.2174/138955712802762013",
+      "url": "https://doi.org/10.2174/138955712802762013",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
     }
   ]
 }
