@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "eszopiclone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Eszopiclone",
+      "synonyms": [
+        "Lunesta"
+      ]
+    },
+    "it": {
+      "preferred": "Eszopiclone",
+      "synonyms": [
+        "Lunesta"
+      ]
+    }
+  },
+  "iupac": "[(7S)-6-(5-chloro-2-pyridinyl)-5-oxo-7H-pyrrolo[3,4-b]pyrazin-7-yl] 4-methylpiperazine-1-carboxylate",
+  "formula": "C17H17ClN6O3",
+  "molar_mass_g_mol": 388.8,
+  "smiles": "CN1CCN(CC1)C(=O)OC2C3=NC=CN=C3C(=O)N2C4=NC=C(C=C4)Cl",
+  "inchi": "InChI=1S/C17H17ClN6O3/c1-22-6-8-23(9-7-22)17(26)27-16-14-13(19-4-5-20-14)15(25)24(16)12-3-2-11(18)10-21-12/h2-5,10,16H,6-9H2,1H3/t16-/m0/s1",
+  "inchikey": "GBBSUAFBMRNDJC-INIZCTEOSA-N",
+  "external_ids": {
+    "pubchem_cid": 969472
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

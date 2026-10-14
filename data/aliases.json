@@ -639,7 +639,17 @@
     "naftirone": "beta-naphyrone",
     "dibutylone": "bk-dmbdb",
     "dibutilone": "bk-dmbdb",
-    "bk-dimbdb": "bk-dmbdb"
+    "bk-dimbdb": "bk-dmbdb",
+    "rohypnol": "flunitrazepam",
+    "roipnol": "flunitrazepam",
+    "ativan": "lorazepam",
+    "tavor": "lorazepam",
+    "noctamid": "lormetazepam",
+    "minias": "lormetazepam",
+    "anxon": "ketazolam",
+    "lunesta": "eszopiclone",
+    "n-methylclonazepam": "methylclonazepam",
+    "metilclonazepam": "methylclonazepam"
   },
   "schema": "aliases/1"
 }

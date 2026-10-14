@@ -1,0 +1,62 @@
+{
+  "schema": "datasheet/1",
+  "substance": "lormetazepam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "benzodiazepines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "lormetazepam 3-O-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "hildebrand1990"
+      },
+      {
+        "from": "parent",
+        "to": "lorazepam",
+        "reaction": "n_demethylation",
+        "source": "hildebrand1990"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "lormetazepam-glucuronide",
+        "active": null,
+        "source": "hildebrand1990"
+      },
+      {
+        "name_key": "lorazepam",
+        "pubchem_cid": 3958,
+        "active": null,
+        "source": "hildebrand1990"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
