@@ -1,0 +1,57 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "dextroamphetamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Dextroamphetamine",
+      "synonyms": [
+        "dexamfetamine",
+        "d-amphetamine",
+        "(S)-amphetamine",
+        "(2S)-1-phenylpropan-2-amine"
+      ]
+    },
+    "it": {
+      "preferred": "Destroanfetamina",
+      "synonyms": [
+        "dexanfetamina",
+        "d-anfetamina",
+        "(S)-anfetamina"
+      ]
+    }
+  },
+  "iupac": "(2S)-1-phenylpropan-2-amine",
+  "formula": "C9H13N",
+  "molar_mass_g_mol": 135.2,
+  "smiles": "C[C@@H](CC1=CC=CC=C1)N",
+  "inchi": "InChI=1S/C9H13N/c1-8(10)7-9-5-3-2-4-6-9/h2-6,8H,7,10H2,1H3/t8-/m0/s1",
+  "inchikey": "KWTSXDURSIMDCE-QMMMGPOBSA-N",
+  "external_ids": {
+    "cas": "51-64-9",
+    "pubchem_cid": 5826
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

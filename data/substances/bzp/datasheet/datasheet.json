@@ -1,0 +1,74 @@
+{
+  "schema": "datasheet/1",
+  "substance": "bzp",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic",
+    "typical_impurities": [
+      {
+        "substance": "DBZP",
+        "ir_relevant": false,
+        "source": "stojanovska2014"
+      }
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "4-oh-bzp",
+        "reaction": "hydroxylation",
+        "source": "antia2009"
+      },
+      {
+        "from": "parent",
+        "to": "3-oh-bzp",
+        "reaction": "hydroxylation",
+        "source": "antia2009"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "4-oh-bzp",
+        "active": null,
+        "source": "antia2009"
+      },
+      {
+        "name_key": "3-oh-bzp",
+        "active": null,
+        "source": "antia2009"
+      }
+    ],
+    "half_life_h": {
+      "min": 5.5,
+      "max": 5.5,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "antia2009"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
