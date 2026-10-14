@@ -1,0 +1,73 @@
+{
+  "schema": "datasheet/1",
+  "substance": "cloniprazepam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "benzodiazepines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "clonazepam",
+        "reaction": "other",
+        "source": "mortele2018"
+      },
+      {
+        "from": "parent",
+        "to": "7-amino-cloniprazepam",
+        "reaction": "other",
+        "source": "mortele2018"
+      },
+      {
+        "from": "parent",
+        "to": "hydroxy-cloniprazepam",
+        "reaction": "hydroxylation",
+        "source": "mortele2018"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "clonazepam",
+        "pubchem_cid": 2802,
+        "active": null,
+        "source": "mortele2018"
+      },
+      {
+        "name_key": "7-amino-cloniprazepam",
+        "active": null,
+        "source": "mortele2018"
+      },
+      {
+        "name_key": "hydroxy-cloniprazepam",
+        "active": null,
+        "source": "mortele2018"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

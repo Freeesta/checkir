@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "bromazepam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Bromazepam",
+      "synonyms": [
+        "Lexotan",
+        "Lexomil"
+      ]
+    },
+    "it": {
+      "preferred": "Bromazepam",
+      "synonyms": [
+        "Lexotan",
+        "Lexomil"
+      ]
+    }
+  },
+  "iupac": "7-bromo-5-pyridin-2-yl-1,3-dihydro-1,4-benzodiazepin-2-one",
+  "formula": "C14H10BrN3O",
+  "molar_mass_g_mol": 316.15,
+  "smiles": "C1C(=O)NC2=C(C=C(C=C2)Br)C(=N1)C3=CC=CC=N3",
+  "inchi": "InChI=1S/C14H10BrN3O/c15-9-4-5-11-10(7-9)14(17-8-13(19)18-11)12-3-1-2-6-16-12/h1-7H,8H2,(H,18,19)",
+  "inchikey": "VMIYHDSEFNYJSL-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1812-30-2",
+    "pubchem_cid": 2441
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
