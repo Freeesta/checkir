@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "trazodone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Trazodone",
+      "synonyms": [
+        "Desyrel"
+      ]
+    },
+    "it": {
+      "preferred": "Trazodone",
+      "synonyms": [
+        "Trittico",
+        "Trazodone"
+      ]
+    }
+  },
+  "iupac": "2-[3-[4-(3-chlorophenyl)piperazin-1-yl]propyl]-[1,2,4]triazolo[4,3-a]pyridin-3-one",
+  "formula": "C19H22ClN5O",
+  "molar_mass_g_mol": 371.9,
+  "smiles": "C1CN(CCN1CCCN2C(=O)N3C=CC=CC3=N2)C4=CC(=CC=C4)Cl",
+  "inchi": "InChI=1S/C19H22ClN5O/c20-16-5-3-6-17(15-16)23-13-11-22(12-14-23)8-4-10-25-19(26)24-9-2-1-7-18(24)21-25/h1-3,5-7,9,15H,4,8,10-14H2",
+  "inchikey": "PHLBKPHSAVXXEF-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "19794-93-5",
+    "pubchem_cid": 5533
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
