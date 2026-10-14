@@ -9295,6 +9295,144 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "huffman2005-pai",
+      "type": "paper",
+      "title": "1-Pentyl-3-phenylacetylindoles, a new class of cannabimimetic indoles (Bioorg Med Chem Lett 15:4110-4113)",
+      "authors": [
+        "J. W. Huffman",
+        "P. V. Szklennik",
+        "A. Almond",
+        "K. Bushell",
+        "D. E. Selley",
+        "H. He",
+        "M. P. Cassidy",
+        "J. L. Wiley",
+        "B. R. Martin"
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.bmcl.2005.06.008",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16005223/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "huffman2006-pyrroles",
+      "type": "paper",
+      "title": "1-Alkyl-2-aryl-4-(1-naphthoyl)pyrroles: new high affinity ligands for the cannabinoid CB1 and CB2 receptors (Bioorg Med Chem Lett 16:5432-5435)",
+      "authors": [
+        "J. W. Huffman",
+        "L. W. Padgett",
+        "M. L. Isherwood",
+        "J. L. Wiley",
+        "B. R. Martin"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.bmcl.2006.07.051",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16889960/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kavanagh2013",
+      "type": "paper",
+      "title": "Detection and tentative identification of urinary phase I metabolites of phenylacetylindole cannabimimetics JWH-203 and JWH-251, by GC-MS and LC-MS/MS (J Chromatogr B 934:102-108)",
+      "authors": [
+        "P. Kavanagh",
+        "A. Grigoryev",
+        "A. Melnik",
+        "S. Savchuk",
+        "A. Simonov",
+        "V. Rozhanets"
+      ],
+      "year": 2013,
+      "doi": "10.1016/j.jchromb.2013.07.005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23917406/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "strano-rossi2014",
+      "type": "paper",
+      "title": "Metabolism of JWH-015, JWH-098, JWH-251, and JWH-307 in silico and in vitro: a pilot study for the detection of unknown synthetic cannabinoids metabolites (Anal Bioanal Chem 406:3621-3636)",
+      "authors": [
+        "S. Strano-Rossi",
+        "L. Anzillotti",
+        "S. Dragoni",
+        "R. M. Pellegrino",
+        "L. Goracci",
+        "V. L. Pascali",
+        "G. Cruciani"
+      ],
+      "year": 2014,
+      "doi": "10.1007/s00216-014-7793-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24804821/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "hutter2018",
+      "type": "paper",
+      "title": "Metabolism of nine synthetic cannabinoid receptor agonists encountered in clinical casework: major in vivo phase I metabolites of AM-694, AM-2201, JWH-007, JWH-019, JWH-203, JWH-307, MAM-2201, UR-144 and XLR-11 in human urine using LC-MS/MS (Curr Pharm Biotechnol 19:144-162)",
+      "authors": [
+        "M. Hutter",
+        "S. Broecker",
+        "S. Kneisel",
+        "F. Franz",
+        "S. D. Brandt",
+        "V. Auwärter"
+      ],
+      "year": 2018,
+      "doi": "10.2174/1389201019666180509163114",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29745330/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "hutter2012",
+      "type": "paper",
+      "title": "Identification of the major urinary metabolites in man of seven synthetic cannabinoids of the aminoalkylindole type present as adulterants in 'herbal mixtures' using LC-MS/MS techniques (J Mass Spectrom 47:54-65)",
+      "authors": [
+        "M. Hutter",
+        "S. Broecker",
+        "S. Kneisel",
+        "V. Auwärter"
+      ],
+      "year": 2012,
+      "doi": "10.1002/jms.2026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22282090/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "schaefer2017",
+      "type": "paper",
+      "title": "Metabolic patterns of JWH-210, RCS-4, and THC in pig urine elucidated using LC-HR-MS/MS: do they reflect patterns in humans? (Drug Test Anal 9:613-625)",
+      "authors": [
+        "N. Schaefer",
+        "A. G. Helfer",
+        "M. Kettner",
+        "M. W. Laschke",
+        "J. Schlote",
+        "A. H. Ewald",
+        "M. R. Meyer",
+        "M. D. Menger",
+        "H. H. Maurer",
+        "P. H. Schmidt"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.1995",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27328899/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
