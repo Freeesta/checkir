@@ -1,0 +1,108 @@
+{
+  "schema": "datasheet/1",
+  "substance": "adb-butinaca",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic",
+    "precursor_classes": [
+      "tail-less-indazole-carboxamides"
+    ]
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "monohydroxylated metabolites",
+        "reaction": "hydroxylation",
+        "source": "sia2021"
+      },
+      {
+        "from": "parent",
+        "to": "N-debutylated metabolite",
+        "reaction": "other",
+        "source": "sia2021"
+      },
+      {
+        "from": "parent",
+        "to": "dihydrodiol metabolite",
+        "reaction": "other",
+        "source": "sia2021"
+      },
+      {
+        "from": "parent",
+        "to": "oxidatively deaminated metabolite",
+        "reaction": "deamination",
+        "source": "sia2021"
+      },
+      {
+        "from": "parent",
+        "to": "overall CYP-mediated elimination",
+        "reaction": "other",
+        "enzymes": [
+          "CYP2C19",
+          "CYP3A4",
+          "CYP3A5"
+        ],
+        "source": "sia2021"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "adb-butinaca-hydroxylated-m6",
+        "active": null,
+        "marker": true,
+        "source": "sia2021"
+      },
+      {
+        "name_key": "adb-butinaca-hydroxylated-m11",
+        "active": null,
+        "marker": true,
+        "source": "sia2021"
+      },
+      {
+        "name_key": "adb-butinaca-hydroxylated-m14",
+        "active": null,
+        "marker": true,
+        "source": "sia2021"
+      },
+      {
+        "name_key": "adb-butinaca-oxidative-deamination-m15",
+        "active": null,
+        "marker": true,
+        "source": "sia2021"
+      },
+      {
+        "name_key": "adb-butinaca-dihydrodiol",
+        "active": null,
+        "marker": true,
+        "source": "zschiesche2026"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
