@@ -18,13 +18,13 @@ Il fentanil è un oppioide di sintesi. I suoi analoghi e altri nuovi oppioidi si
 
 ## metabolism
 
-Il fentanyl è molto lipofilo: volume di distribuzione allo steady state 287 ± 79 L, emivita terminale 425 ± 102 minuti e clearance 0,67 ± 0,15 L/min dopo somministrazione endovenosa (12 volontari); nel plasma umano è legato alle proteine per l'84,4% (in vitro). [f:streisand1991] [f:meuldermans1982]
+Il fentanyl è molto lipofilo: volume di distribuzione allo steady state 287 ± 79 L, emivita terminale 425 ± 102 minuti e clearance 0.67 ± 0.15 L/min dopo somministrazione endovenosa (12 volontari); nel plasma umano è legato alle proteine per l'84.4% (in vitro). [f:streisand1991] [f:meuldermans1982]
 
 Nei microsomi epatici umani l'unico metabolita principale è il norfentanyl, formato per N-dealchilazione soprattutto da CYP3A4 (ketoconazolo ed eritromicina lo inibivano del 90% o più, in vitro). [f:feierman1996]
 
 L'etichetta riporta circa il 75% di una dose endovenosa nelle urine, soprattutto come metaboliti, e circa il 9% nelle feci; l'emivita terminale è 219 minuti. [f:fentanyl-injection-label]
 
-Biodisponibilità in 12 volontari: 0,52 per via orale transmucosale, 0,32 per la dose deglutita; la dose deglutita raggiungeva il picco più tardi (101 contro 22 minuti). [f:streisand1991]
+Biodisponibilità in 12 volontari: 0.52 per via orale transmucosale, 0.32 per la dose deglutita; la dose deglutita raggiungeva il picco più tardi (101 contro 22 minuti). [f:streisand1991]
 
 In 12 volontari il ritonavir (inibitore di CYP3A4) ha ridotto del 67% la clearance del fentanyl. [f:olkkola1999] La rifampicina ha abbassato e la troleandomicina ha alzato l'esposizione al fentanyl orale transmucosale. [f:kharasch2004]
 
@@ -46,7 +46,7 @@ Fra gli effetti segnalati per i nuovi oppioidi sintetici ci sono anche sedazione
 
 Il fentanyl è circa 50–100 volte più potente della morfina, quindi nessuna dose è sicura da suggerire. [f:lovrecic2019]
 
-Punti di riferimento medici, non dosi di strada: 100 µg della forma iniettabile equivalgono in analgesia a circa 10 mg di morfina; una compressa buccale era 46 volte più potente della morfina endovenosa (IC 95% 17,6-575,3) in 33 volontari valutabili. [f:fentanyl-injection-label] [f:saunders2011]
+Punti di riferimento medici, non dosi di strada: 100 µg della forma iniettabile equivalgono in analgesia a circa 10 mg di morfina; una compressa buccale era 46 volte più potente della morfina endovenosa (IC 95% 17.6-575.3) in 33 volontari valutabili. [f:fentanyl-injection-label] [f:saunders2011]
 
 ## risks
 
