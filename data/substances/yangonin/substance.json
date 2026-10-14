@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "yangonin",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Yangonin",
+      "synonyms": [
+        "Yangonine"
+      ]
+    },
+    "it": {
+      "preferred": "Yangonin",
+      "synonyms": [
+        "Yangonina"
+      ]
+    }
+  },
+  "iupac": "4-methoxy-6-[(E)-2-(4-methoxyphenyl)ethenyl]pyran-2-one",
+  "formula": "C15H14O4",
+  "molar_mass_g_mol": 258.3,
+  "smiles": "COC1=CC=C(C=C1)/C=C/C2=CC(=CC(=O)O2)OC",
+  "inchi": "InChI=1S/C15H14O4/c1-17-12-6-3-11(4-7-12)5-8-13-9-14(18-2)10-15(16)19-13/h3-10H,1-2H3/b8-5+",
+  "inchikey": "XLHIYUYCSMZCCC-VMPITWQZSA-N",
+  "external_ids": {
+    "cas": "500-62-9",
+    "pubchem_cid": 5281575
+  },
+  "classes": {
+    "chemical": [
+      "plant_based"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

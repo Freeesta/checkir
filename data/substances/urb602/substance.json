@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "urb602",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "URB602",
+      "synonyms": [
+        "URB 602"
+      ]
+    },
+    "it": {
+      "preferred": "URB602",
+      "synonyms": [
+        "URB 602"
+      ]
+    }
+  },
+  "iupac": "cyclohexyl N-(3-phenylphenyl)carbamate",
+  "formula": "C19H21NO2",
+  "molar_mass_g_mol": 295.4,
+  "smiles": "C1CCC(CC1)OC(=O)NC2=CC=CC(=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C19H21NO2/c21-19(22-18-12-5-2-6-13-18)20-17-11-7-10-16(14-17)15-8-3-1-4-9-15/h1,3-4,7-11,14,18H,2,5-6,12-13H2,(H,20,21)",
+  "inchikey": "HHVUFQYJOSFTEH-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "565460-15-3",
+    "pubchem_cid": 10979337
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

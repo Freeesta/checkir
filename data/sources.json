@@ -52,6 +52,137 @@
       "license": "© John Wiley & Sons; cited as the source of numbers only, text not copied"
     },
     {
+      "id": "staack2004",
+      "type": "paper",
+      "title": "Cytochrome P450 dependent metabolism of the new designer drug 1-(3-trifluoromethylphenyl)piperazine (TFMPP) (Biochem Pharmacol 67:235-244)",
+      "authors": [
+        "R. F. Staack",
+        "L. D. Paul",
+        "D. Springer",
+        "T. Kraemer",
+        "H. H. Maurer"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.bcp.2003.08.029",
+      "url": "https://doi.org/10.1016/j.bcp.2003.08.029",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "arbo2012",
+      "type": "paper",
+      "title": "Piperazine compounds as drugs of abuse (Drug Alcohol Depend 122:174-185)",
+      "authors": [
+        "M. D. Arbo",
+        "M. L. Bastos",
+        "H. F. Carmo"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.drugalcdep.2011.10.007",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2011.10.007",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "teja2020",
+      "type": "paper",
+      "title": "Abuse, Toxicology and the Resurgence of Propylhexedrine: A Case Report and Review of Literature (Cureus 12:e10868)",
+      "authors": [
+        "N. Teja",
+        "C. P. Dodge",
+        "C. N. Stanciu"
+      ],
+      "year": 2020,
+      "doi": "10.7759/cureus.10868",
+      "url": "https://doi.org/10.7759/cureus.10868",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250408212825/https://pmc.ncbi.nlm.nih.gov/articles/PMC7652022/"
+    },
+    {
+      "id": "tsujikawa2011",
+      "type": "paper",
+      "title": "Urinary excretion profiles of N-hydroxy-3,4-methylenedioxymethamphetamine in rats (Xenobiotica 41:578-584)",
+      "authors": [
+        "K. Tsujikawa",
+        "T. Mikuma",
+        "K. Kuwayama",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Inoue"
+      ],
+      "year": 2011,
+      "doi": "10.3109/00498254.2011.565821",
+      "url": "https://doi.org/10.3109/00498254.2011.565821",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "makino1989",
+      "type": "paper",
+      "title": "Identification and quantification of p-hydroxyethylamphetamine as a novel metabolite of ethylamphetamine in rat by gas chromatography-mass spectrometry (Forensic Sci Int 41:83-91)",
+      "authors": [
+        "Y. Makino",
+        "T. Higuchi",
+        "S. Ohta",
+        "M. Hirobe"
+      ],
+      "year": 1989,
+      "doi": "10.1016/0379-0738(89)90239-9",
+      "url": "https://doi.org/10.1016/0379-0738(89)90239-9",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "delbeke1986",
+      "type": "paper",
+      "title": "The influence of diuretics on the excretion and metabolism of doping agents. III. Etilamfetamine (Arzneimittelforschung 36:1413-1416)",
+      "authors": [
+        "F. T. Delbeke",
+        "M. Debackere"
+      ],
+      "year": 1986,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3790195/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kunalan2009",
+      "type": "paper",
+      "title": "Characterization of Route Specific Impurities Found in Methamphetamine Synthesized by the Leuckart and Reductive Amination Methods (Anal Chem 81:7342-7348)",
+      "authors": [
+        "V. Kunalan",
+        "N. Nic Daeid",
+        "W. J. Kerr",
+        "H. A. S. Buchanan",
+        "A. R. McPherson"
+      ],
+      "year": 2009,
+      "doi": "10.1021/ac9005588",
+      "url": "https://doi.org/10.1021/ac9005588",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "who-pmebf2018",
+      "type": "institution",
+      "title": "WHO Expert Committee on Drug Dependence, Critical Review Report: p-Methoxy-butyrylfentanyl (S. D. Brandt)",
+      "year": 2018,
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/9579",
+      "archive_url": "https://web.archive.org/web/20250325211657/https://researchonline.ljmu.ac.uk/id/eprint/9579/",
+      "tier": "agency",
+      "license": "© WHO; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
       "id": "wikipedia-ir-table",
       "type": "web",
       "title": "Wikipedia: Infrared spectroscopy correlation table",
@@ -15737,6 +15868,227 @@
       "year": 1999,
       "doi": "10.1080/004982599238344",
       "url": "https://doi.org/10.1080/004982599238344",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "sertraline-label",
+      "type": "institution",
+      "title": "Zoloft (sertraline hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "trazodone-label",
+      "type": "institution",
+      "title": "Trazodone hydrochloride tablets (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5b9f0b60-0c25-4303-88f1-44bcb347bc49",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "sobolevsky2015",
+      "type": "paper",
+      "title": "Study on the phase I metabolism of novel synthetic cannabinoids, APICA and its fluorinated analogue (Drug Test Anal 7:131-142)",
+      "authors": [
+        "T. Sobolevsky",
+        "I. Prasolov",
+        "G. Rodchenkov"
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1756",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25428705/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kathuria2003",
+      "type": "paper",
+      "title": "Modulation of anxiety through blockade of anandamide hydrolysis (Nat Med 9:76-81)",
+      "authors": [
+        "S. Kathuria",
+        "S. Gaetani",
+        "D. Fegley",
+        "F. Valiño",
+        "A. Duranti",
+        "A. Tontini",
+        "M. Mor",
+        "G. Tarzia",
+        "G. La Rana",
+        "A. Calignano",
+        "A. Giustino",
+        "M. Tattoli",
+        "M. Palmery",
+        "V. Cuomo",
+        "D. Piomelli"
+      ],
+      "year": 2003,
+      "doi": "10.1038/nm803",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12461523/",
+      "archive_url": "https://web.archive.org/web/20261001095413/https://pubmed.ncbi.nlm.nih.gov/12461523/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "king2007",
+      "type": "paper",
+      "title": "URB602 inhibits monoacylglycerol lipase and selectively blocks 2-arachidonoylglycerol degradation in intact brain slices (Chem Biol 14:1357-1365)",
+      "authors": [
+        "A. R. King",
+        "A. Duranti",
+        "A. Tontini",
+        "S. Rivara",
+        "A. Rosengarth",
+        "J. R. Clapper",
+        "G. Astarita",
+        "J. A. Geaga",
+        "H. Luecke",
+        "M. Mor",
+        "G. Tarzia",
+        "D. Piomelli"
+      ],
+      "year": 2007,
+      "doi": "10.1016/j.chembiol.2007.10.017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18096504/",
+      "archive_url": "https://web.archive.org/web/20250202072910/https://pubmed.ncbi.nlm.nih.gov/18096504/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "vandevoorde2007",
+      "type": "paper",
+      "title": "Lack of selectivity of URB602 for 2-oleoylglycerol compared to anandamide hydrolysis in vitro (Br J Pharmacol 150:186-191)",
+      "authors": [
+        "S. Vandevoorde",
+        "K.-O. Jonsson",
+        "G. Labar",
+        "E. Persson",
+        "D. M. Lambert",
+        "C. J. Fowler"
+      ],
+      "year": 2007,
+      "doi": "10.1038/sj.bjp.0706971",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17143303/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "johnston2012",
+      "type": "paper",
+      "title": "A novel MDMA analogue, UWA-101, that lacks psychoactivity and cytotoxicity, enhances L-DOPA benefit in parkinsonian primates (FASEB J 26:2154-2163)",
+      "authors": [
+        "T. H. Johnston",
+        "Z. Millar",
+        "P. Huot",
+        "K. Wagg",
+        "S. Thiele",
+        "D. Salomonczyk",
+        "C. J. Yong-Kee",
+        "M. N. Gandy",
+        "M. McIldowie",
+        "K. D. Lewis",
+        "J. Gomez-Ramirez",
+        "J. Lee",
+        "S. H. Fox",
+        "M. Martin-Iverson",
+        "J. E. Nash",
+        "M. J. Piggott",
+        "J. M. Brotchie"
+      ],
+      "year": 2012,
+      "doi": "10.1096/fj.11-195016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22345403/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "daniels2026",
+      "type": "paper",
+      "title": "Kavalactone profiling of Piper methysticum root and rhizome extracts and the modulation of CYP450 activity in vitro (Chem Biol Interact 437:112219)",
+      "authors": [
+        "T. Daniels",
+        "K. Puchalski",
+        "S. Trapp",
+        "A. Jimoh",
+        "B. Baravati",
+        "Y. Shokoohinia",
+        "S. Smith",
+        "J. Langland"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.cbi.2026.112219",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431523/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "berry2019",
+      "type": "paper",
+      "title": "Cases of kava impairment in Iowa drivers (J Forensic Sci 64:1943-1949)",
+      "authors": [
+        "J. Berry",
+        "A. Gilbert",
+        "J. Grodnitzky"
+      ],
+      "year": 2019,
+      "doi": "10.1111/1556-4029.14130",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31305953/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "cohen2015",
+      "type": "paper",
+      "title": "Pharmaceutical quantities of yohimbine found in dietary supplements in the USA (Drug Test Anal 8:357-369)",
+      "authors": [
+        "Cohen PA",
+        "Wang YH",
+        "Maller G",
+        "DeSouza R",
+        "Khan IA"
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1849",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26391406/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lecorre2004",
+      "type": "paper",
+      "title": "Human sympathetic activation by alpha2-adrenergic blockade with yohimbine: bimodal, epistatic influence of cytochrome P450-mediated drug metabolism (Clin Pharmacol Ther 76:139-153)",
+      "authors": [
+        "Le Corre P",
+        "Parmer RJ",
+        "Kailasam MT",
+        "Kennedy BP",
+        "Skaar TP",
+        "Ho H",
+        "Leverge R",
+        "Smith DW",
+        "Ziegler MG",
+        "Insel PA",
+        "Schork NJ",
+        "Flockhart DA",
+        "O'Connor DT"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.clpt.2004.04.010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15289791/",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
