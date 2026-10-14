@@ -1,0 +1,78 @@
+{
+  "schema": "datasheet/1",
+  "substance": "olanzapine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "olanzapine-10-N-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "olanzapine-label"
+      },
+      {
+        "from": "parent",
+        "to": "4'-N-desmethylolanzapine",
+        "reaction": "n_demethylation",
+        "source": "olanzapine-label"
+      },
+      {
+        "from": "parent",
+        "to": "oxidative-metabolites",
+        "reaction": "other",
+        "enzymes": [
+          "CYP1A2",
+          "CYP2D6",
+          "other"
+        ],
+        "source": "olanzapine-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "olanzapine-10-n-glucuronide",
+        "active": false,
+        "source": "olanzapine-label"
+      },
+      {
+        "name_key": "4-n-desmethylolanzapine",
+        "active": false,
+        "source": "olanzapine-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 21,
+      "max": 54,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "olanzapine-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

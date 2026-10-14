@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "fluoxetine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Fluoxetine"
+    },
+    "it": {
+      "preferred": "Fluoxetina"
+    }
+  },
+  "iupac": "N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine",
+  "formula": "C17H18F3NO",
+  "molar_mass_g_mol": 309.33,
+  "smiles": "CNCCC(C1=CC=CC=C1)OC2=CC=C(C=C2)C(F)(F)F",
+  "inchi": "InChI=1S/C17H18F3NO/c1-21-12-11-16(13-5-3-2-4-6-13)22-15-9-7-14(8-10-15)17(18,19)20/h2-10,16,21H,11-12H2,1H3",
+  "inchikey": "RTHCYVBBDHJXIQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "54910-89-3",
+    "pubchem_cid": 3386
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

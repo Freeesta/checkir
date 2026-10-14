@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "promethazine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Promethazine"
+    },
+    "it": {
+      "preferred": "Prometazina"
+    }
+  },
+  "iupac": "N,N-dimethyl-1-phenothiazin-10-ylpropan-2-amine",
+  "formula": "C17H20N2S",
+  "molar_mass_g_mol": 284.4,
+  "smiles": "CC(CN1C2=CC=CC=C2SC3=CC=CC=C31)N(C)C",
+  "inchi": "InChI=1S/C17H20N2S/c1-13(18(2)3)12-19-14-8-4-6-10-16(14)20-17-11-7-5-9-15(17)19/h4-11,13H,12H2,1-3H3",
+  "inchikey": "PWWVAXIEGOYWEE-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "60-87-7",
+    "pubchem_cid": 4927
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

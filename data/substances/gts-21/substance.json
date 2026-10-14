@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "gts-21",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "GTS-21",
+      "synonyms": [
+        "Dimethoxybenzylidene anabaseine"
+      ]
+    },
+    "it": {
+      "preferred": "GTS-21",
+      "synonyms": [
+        "Dimetossibenziliden-anabaseina"
+      ]
+    }
+  },
+  "iupac": "3-[(5E)-5-[(2,4-dimethoxyphenyl)methylidene]-3,4-dihydro-2H-pyridin-6-yl]pyridine",
+  "formula": "C19H20N2O2",
+  "molar_mass_g_mol": 308.4,
+  "smiles": "COC1=CC(=C(C=C1)/C=C/2\\CCCN=C2C3=CN=CC=C3)OC",
+  "inchi": "InChI=1S/C19H20N2O2/c1-22-17-8-7-14(18(12-17)23-2)11-15-5-4-10-21-19(15)16-6-3-9-20-13-16/h3,6-9,11-13H,4-5,10H2,1-2H3/b15-11+",
+  "inchikey": "RPYWXZCFYPVCNQ-RVDMUPIBSA-N",
+  "external_ids": {
+    "cas": "148372-04-7",
+    "pubchem_cid": 5310985
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
