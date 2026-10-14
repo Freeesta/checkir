@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "1-4-dibenzylpiperazine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "DBZP",
+      "synonyms": [
+        "1,4-dibenzylpiperazine"
+      ]
+    },
+    "it": {
+      "preferred": "DBZP",
+      "synonyms": [
+        "1,4-dibenzilpiperazina"
+      ]
+    }
+  },
+  "iupac": "1,4-dibenzylpiperazine",
+  "formula": "C18H22N2",
+  "molar_mass_g_mol": 266.4,
+  "smiles": "C1CN(CCN1CC2=CC=CC=C2)CC3=CC=CC=C3",
+  "inchi": "InChI=1S/C18H22N2/c1-3-7-17(8-4-1)15-19-11-13-20(14-12-19)16-18-9-5-2-6-10-18/h1-10H,11-16H2",
+  "inchikey": "YPUGLZQRXQQCSX-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 200601
+  },
+  "classes": {
+    "chemical": [
+      "piperazines"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "synthesis_or_degradation_residue"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

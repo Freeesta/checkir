@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "doam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "DOAM",
+      "synonyms": [
+        "4-pentyl-2,5-dimethoxyamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "DOAM",
+      "synonyms": [
+        "4-pentil-2,5-dimetossianfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(2,5-dimethoxy-4-pentylphenyl)propan-2-amine",
+  "formula": "C16H27NO2",
+  "molar_mass_g_mol": 265.4,
+  "smiles": "CCCCCC1=CC(=C(C=C1OC)CC(C)N)OC",
+  "inchi": "InChI=1S/C16H27NO2/c1-5-6-7-8-13-10-16(19-4)14(9-12(2)17)11-15(13)18-3/h10-12H,5-9,17H2,1-4H3",
+  "inchikey": "VLJORLCVOAUUKM-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 12262512
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

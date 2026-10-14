@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "tma-2",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "TMA-2",
+      "synonyms": [
+        "2,4,5-trimethoxyamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "TMA-2",
+      "synonyms": [
+        "2,4,5-trimetossianfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(2,4,5-trimethoxyphenyl)propan-2-amine",
+  "formula": "C12H19NO3",
+  "molar_mass_g_mol": 225.3,
+  "smiles": "CC(CC1=CC(=C(C=C1OC)OC)OC)N",
+  "inchi": "InChI=1S/C12H19NO3/c1-8(13)5-9-6-11(15-3)12(16-4)7-10(9)14-2/h6-8H,5,13H2,1-4H3",
+  "inchikey": "TVSIMAWGATVNGK-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 31014
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

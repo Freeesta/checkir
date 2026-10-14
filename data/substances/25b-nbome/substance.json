@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "25b-nbome",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "25B-NBOMe",
+      "synonyms": [
+        "2C-B-NBOMe",
+        "Cimbi-36"
+      ]
+    },
+    "it": {
+      "preferred": "25B-NBOMe",
+      "synonyms": [
+        "2C-B-NBOMe",
+        "Cimbi-36"
+      ]
+    }
+  },
+  "iupac": "2-(4-bromo-2,5-dimethoxyphenyl)-N-[(2-methoxyphenyl)methyl]ethanamine",
+  "formula": "C18H22BrNO3",
+  "molar_mass_g_mol": 380.3,
+  "smiles": "COC1=CC=CC=C1CNCCC2=CC(=C(C=C2OC)Br)OC",
+  "inchi": "InChI=1S/C18H22BrNO3/c1-21-16-7-5-4-6-14(16)12-20-9-8-13-10-18(23-3)15(19)11-17(13)22-2/h4-7,10-11,20H,8-9,12H2,1-3H3",
+  "inchikey": "SUXGNJVVBGJEFB-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1026511-90-9",
+    "pubchem_cid": 9977044
+  },
+  "classes": {
+    "chemical": [
+      "nbome"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

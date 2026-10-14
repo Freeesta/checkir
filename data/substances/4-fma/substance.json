@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-fma",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-FMA",
+      "synonyms": [
+        "4-Fluoromethamphetamine",
+        "para-Fluoromethamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-FMA",
+      "synonyms": [
+        "4-Fluorometamfetamina",
+        "para-fluorometamfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(4-fluorophenyl)-N-methylpropan-2-amine",
+  "formula": "C10H14FN",
+  "molar_mass_g_mol": 167.2,
+  "smiles": "CC(CC1=CC=C(C=C1)F)NC",
+  "inchi": "InChI=1S/C10H14FN/c1-8(12-2)7-9-3-5-10(11)6-4-9/h3-6,8,12H,7H2,1-2H3",
+  "inchikey": "YCWZPIHKUYZTFM-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 11745017
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "stimulant",
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -14039,6 +14039,293 @@
       "tier": "primary"
     },
     {
+      "id": "stojanovska2014",
+      "type": "paper",
+      "title": "Analysis of amphetamine-type substances and piperazine analogues using desorption electrospray ionisation mass spectrometry (Rapid Commun Mass Spectrom 28(7):731-740)",
+      "authors": [
+        "Natasha Stojanovska",
+        "Tamsin Kelly",
+        "Mark Tahtouh",
+        "Alison Beavis",
+        "Shanlin Fu"
+      ],
+      "year": 2014,
+      "doi": "10.1002/rcm.6832",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24573804/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "wink2016",
+      "type": "paper",
+      "title": "Diphenidine, a new psychoactive substance: metabolic fate elucidated with rat urine and human liver preparations and detectability in urine using GC-MS, LC-MS, and LC-HR-MS (Drug Test Anal 8(10):1005-1014)",
+      "authors": [
+        "C. S. D. Wink",
+        "G. M. Michely",
+        "N. Jacobsen-Bauer",
+        "J. Zapp",
+        "H. H. Maurer"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1946",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26811026/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260115140435/https://pubmed.ncbi.nlm.nih.gov/26811026/"
+    },
+    {
+      "id": "helander2015",
+      "type": "paper",
+      "title": "Intoxications by the dissociative new psychoactive substances diphenidine and methoxphenidine (Clin Toxicol 53(5):446-453)",
+      "authors": [
+        "A. Helander",
+        "O. Beck",
+        "M. Bäckberg"
+      ],
+      "year": 2015,
+      "doi": "10.3109/15563650.2015.1033630",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25881797/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261011064011/https://pubmed.ncbi.nlm.nih.gov/25881797"
+    },
+    {
+      "id": "kang2017",
+      "type": "paper",
+      "title": "Ephenidine: A new psychoactive agent with ketamine-like NMDA receptor antagonist properties (Neuropharmacology 112:144-149)",
+      "authors": [
+        "H. Kang",
+        "P. Park",
+        "Z. A. Bortolotto",
+        "S. D. Brandt",
+        "T. Colestock",
+        "J. Wallach",
+        "G. L. Collingridge",
+        "D. Lodge"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.neuropharm.2016.08.004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27520396/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260421072923/https://pubmed.ncbi.nlm.nih.gov/27520396/"
+    },
+    {
+      "id": "paskanova2026",
+      "type": "paper",
+      "title": "Determination of Enantiomers of Deschloroketamine and Its Metabolites in Wistar Rat Brains (J Sep Sci 49(9):e70503)",
+      "authors": [
+        "Paškanová",
+        "Hrubá",
+        "Frühauf",
+        "Jurásek",
+        "Kuchař",
+        "Řezanka",
+        "Kohout"
+      ],
+      "year": 2026,
+      "doi": "10.1002/jssc.70503",
+      "url": "https://doi.org/10.1002/jssc.70503",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "grafinger2018",
+      "type": "paper",
+      "title": "In vitro phase I metabolism of three phenethylamines 25D-NBOMe, 25E-NBOMe and 25N-NBOMe using microsomal and microbial models (Drug Test Anal 10(10):1607-1626)",
+      "authors": [
+        "K. E. Grafinger",
+        "K. Stahl",
+        "A. Wilke",
+        "S. König",
+        "W. Weinmann"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2446",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29971945/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "pelletier2024",
+      "type": "paper",
+      "title": "Severe 25E-NBOH intoxication associated with MDPHP intake: a case report, metabolism study, and literature review (Int J Legal Med 138(3):815-822)",
+      "authors": [
+        "R. Pelletier",
+        "T. Gicquel",
+        "J. Carvelli",
+        "P. Balaz",
+        "A. L. Pelissier-Alicot",
+        "I. Morel",
+        "C. Bottinelli",
+        "C. Solas",
+        "B. Le Daré",
+        "N. Fabresse"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00414-023-03151-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38117418/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "munir2025",
+      "type": "paper",
+      "title": "Locomotor and discriminative stimulus effects of NBOH hallucinogens in rodents (Behav Pharmacol 36(2-3):107-114)",
+      "authors": [
+        "D. D. Munir",
+        "R. A. Shetty",
+        "M. B. Gatch",
+        "N. Sumien",
+        "R. D. Hill",
+        "J. A. Priddy",
+        "M. J. Forster"
+      ],
+      "year": 2025,
+      "doi": "10.1097/FBP.0000000000000802",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39642035/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260331151231/https://pubmed.ncbi.nlm.nih.gov/39642035/"
+    },
+    {
+      "id": "hur2020",
+      "type": "paper",
+      "title": "25C-NBF, a new psychoactive substance, has addictive and neurotoxic potential in rodents (Arch Toxicol 94(7):2505-2516)",
+      "authors": [
+        "K. H. Hur",
+        "S. E. Kim",
+        "B. R. Lee",
+        "Y. H. Ko",
+        "J. Y. Seo",
+        "S. K. Kim",
+        "S. X. Ma",
+        "Y. J. Kim",
+        "Y. Jeong",
+        "D. T. Pham",
+        "Q. D. Trinh",
+        "E. J. Shin",
+        "H. C. Kim",
+        "Y. S. Lee",
+        "S. Y. Lee",
+        "C. G. Jang"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s00204-020-02740-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32296860/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nadal2026",
+      "type": "paper",
+      "title": "The psychedelic phenethylamine 25C-NBF, a selective 5-HT2A agonist, shows psychoplastogenic properties and rapid antidepressant effects in male rodents (Mol Psychiatry 31(4):1909-1922)",
+      "authors": [
+        "N. Nadal-Gratacós",
+        "P. Puigseslloses",
+        "L. Guzmán",
+        "N. Weiss",
+        "E. Pottie",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1038/s41380-025-03341-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41238841/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251116174203/https://pubmed.ncbi.nlm.nih.gov/41238841/"
+    },
+    {
+      "id": "lai2015",
+      "type": "paper",
+      "title": "Liquid chromatography-quadrupole time-of-flight mass spectrometry for screening in vitro drug metabolites in humans: investigation on seven phenethylamine-based designer drugs (J Pharm Biomed Anal 114:355-375)",
+      "authors": [
+        "Foon Yin Lai",
+        "Claudio Erratico",
+        "Juliet Kinyua",
+        "Jochen F. Mueller",
+        "Adrian Covaci",
+        "Alexander L. N. van Nuijs"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.jpba.2015.06.016",
+      "url": "https://doi.org/10.1016/j.jpba.2015.06.016",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "blanckaert2013",
+      "type": "paper",
+      "title": "4-Methyl-amphetamine: a health threat for recreational amphetamine users (J Psychopharmacol 27:817-822)",
+      "authors": [
+        "P. Blanckaert",
+        "J. G. C. van Amsterdam",
+        "T. M. Brunt",
+        "J. D. J. van den Berg",
+        "F. Van Durme",
+        "K. Maudens",
+        "J. C. H. van Bussel"
+      ],
+      "year": 2013,
+      "doi": "10.1177/0269881113487950",
+      "url": "https://doi.org/10.1177/0269881113487950",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "blanckaert2018",
+      "type": "paper",
+      "title": "Identification and characterization of 4-chloromethamphetamine (4-CMA) in seized ecstasy: a risk to public health (Forensic Sci Int 288:173-180)",
+      "authors": [
+        "Peter Blanckaert",
+        "Stijn Vanquekelberghe",
+        "Vera Coopman",
+        "Martijn D. P. Risseeuw",
+        "Serge Van Calenbergh",
+        "Jan Cordonnier"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.forsciint.2018.04.023",
+      "url": "https://doi.org/10.1016/j.forsciint.2018.04.023",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "calle2019",
+      "type": "paper",
+      "title": "Lessons to be learned from toxicological analyses in intoxicated patients and seized materials at an electronic music dance festival (Forensic Sci Int 299:174-179)",
+      "authors": [
+        "Paul Calle",
+        "Kristof Maudens",
+        "Sabine Lemoyne",
+        "Simon Geerts",
+        "Diederik Van Sassenbroeck",
+        "Peter Jensen",
+        "Jorne Van Overloop",
+        "Eric Deconinck",
+        "Peter Blanckaert"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.forsciint.2019.03.047",
+      "url": "https://doi.org/10.1016/j.forsciint.2019.03.047",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "seo2018",
       "type": "paper",
       "title": "Metabolic profile determination of 25N-NBOMe in human liver microsomes by liquid chromatography-quadrupole time-of-flight mass spectrometry (Int J Legal Med 133:833-841)",
@@ -14056,24 +14343,6 @@
       "consulted": "2026-10-14",
       "tier": "primary",
       "archive_url": "https://web.archive.org/web/20250204105932/https://pubmed.ncbi.nlm.nih.gov/30090972/"
-    },
-    {
-      "id": "grafinger2018",
-      "type": "paper",
-      "title": "In vitro phase I metabolism of three phenethylamines 25D-NBOMe, 25E-NBOMe and 25N-NBOMe using microsomal and microbial models (Drug Test Anal 10:1607-1626)",
-      "authors": [
-        "K. E. Grafinger",
-        "K. Stahl",
-        "A. Wilke",
-        "S. König",
-        "W. Weinmann"
-      ],
-      "year": 2018,
-      "doi": "10.1002/dta.2446",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/29971945/",
-      "license": "cited as the source of numbers only",
-      "consulted": "2026-10-14",
-      "tier": "primary"
     },
     {
       "id": "eshleman2018",
