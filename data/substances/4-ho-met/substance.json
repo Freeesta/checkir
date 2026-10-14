@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-ho-met",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-HO-MET",
+      "synonyms": [
+        "metocin",
+        "methylcybin",
+        "4-hydroxy-N-methyl-N-ethyltryptamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-HO-MET",
+      "synonyms": [
+        "metocin",
+        "methylcybin",
+        "4-hydroxy-N-methyl-N-ethyltryptamine"
+      ]
+    }
+  },
+  "iupac": "3-[2-[ethyl(methyl)amino]ethyl]-1H-indol-4-ol",
+  "formula": "C13H18N2O",
+  "molar_mass_g_mol": 218.3,
+  "smiles": "CCN(C)CCC1=CNC2=C1C(=CC=C2)O",
+  "inchi": "InChI=1S/C13H18N2O/c1-3-15(2)8-7-10-9-14-11-5-4-6-12(16)13(10)11/h4-6,9,14,16H,3,7-8H2,1-2H3",
+  "inchikey": "ORWQBKPSGDRPPA-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "77872-41-4",
+    "pubchem_cid": 21786582
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
