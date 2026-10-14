@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "25h-nboh",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "25H-NBOH",
+      "synonyms": [
+        "2C-H-NBOH"
+      ]
+    },
+    "it": {
+      "preferred": "25H-NBOH",
+      "synonyms": [
+        "2C-H-NBOH"
+      ]
+    }
+  },
+  "iupac": "2-[[2-(2,5-dimethoxyphenyl)ethylamino]methyl]phenol",
+  "formula": "C17H21NO3",
+  "molar_mass_g_mol": 287.35,
+  "smiles": "COC1=CC(=C(C=C1)OC)CCNCC2=CC=CC=C2O",
+  "inchi": "InChI=1S/C17H21NO3/c1-20-15-7-8-17(21-2)13(11-15)9-10-18-12-14-5-3-4-6-16(14)19/h3-8,11,18-19H,9-10,12H2,1-2H3",
+  "inchikey": "GWSDQXKNRDQTTQ-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 71424713
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
