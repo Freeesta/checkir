@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "lormetazepam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Lormetazepam",
+      "synonyms": [
+        "Noctamid",
+        "Minias"
+      ]
+    },
+    "it": {
+      "preferred": "Lormetazepam",
+      "synonyms": [
+        "Noctamid",
+        "Minias"
+      ]
+    }
+  },
+  "iupac": "7-chloro-5-(2-chlorophenyl)-3-hydroxy-1-methyl-3H-1,4-benzodiazepin-2-one",
+  "formula": "C16H12Cl2N2O2",
+  "molar_mass_g_mol": 335.2,
+  "smiles": "CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3Cl",
+  "inchi": "InChI=1S/C16H12Cl2N2O2/c1-20-13-7-6-9(17)8-11(13)14(19-15(21)16(20)22)10-4-2-3-5-12(10)18/h2-8,15,21H,1H3",
+  "inchikey": "FJIKWRGCXUCUIG-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 13314
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

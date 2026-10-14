@@ -1,0 +1,85 @@
+{
+  "schema": "datasheet/1",
+  "substance": "alpha-pyrrolidinobutiophenone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cathinones",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxy metabolites",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP2C19",
+          "CYP2D6"
+        ],
+        "source": "kavanagh2020"
+      },
+      {
+        "from": "parent",
+        "to": "carbonyl-reduced (alcohol) metabolites",
+        "reaction": "reduction_keto",
+        "source": "kavanagh2020"
+      },
+      {
+        "from": "parent",
+        "to": "lactam metabolites with ring opening",
+        "reaction": "other",
+        "source": "kavanagh2020"
+      },
+      {
+        "from": "parent",
+        "to": "glucuronides of the hydroxy metabolites",
+        "reaction": "glucuronidation",
+        "source": "kavanagh2020"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "hydroxy-metabolites",
+        "active": null,
+        "source": "kavanagh2020"
+      },
+      {
+        "name_key": "carbonyl-reduced-metabolites",
+        "active": null,
+        "marker": true,
+        "source": "kavanagh2020"
+      },
+      {
+        "name_key": "lactam-ring-opened-metabolites",
+        "active": null,
+        "marker": true,
+        "source": "kavanagh2020"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

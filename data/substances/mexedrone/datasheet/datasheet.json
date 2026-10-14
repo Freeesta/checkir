@@ -1,0 +1,75 @@
+{
+  "schema": "datasheet/1",
+  "substance": "mexedrone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cathinones",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxy-mexedrone",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP2C19",
+          "CYP2D6",
+          "CYP1A2"
+        ],
+        "source": "camuto2022"
+      },
+      {
+        "from": "parent",
+        "to": "n-demethyl-mexedrone",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP2C19"
+        ],
+        "source": "camuto2022"
+      },
+      {
+        "from": "parent",
+        "to": "o-demethyl-mexedrone",
+        "reaction": "o_demethylation",
+        "enzymes": [
+          "CYP2C19"
+        ],
+        "source": "camuto2022"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "hydroxy-mexedrone",
+        "active": null,
+        "source": "camuto2022",
+        "marker": true
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

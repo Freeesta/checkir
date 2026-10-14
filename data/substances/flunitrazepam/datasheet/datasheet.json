@@ -1,0 +1,90 @@
+{
+  "schema": "datasheet/1",
+  "substance": "flunitrazepam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "benzodiazepines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "N-desmethylflunitrazepam",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP3A4",
+          "CYP2C19"
+        ],
+        "source": "hesse2001"
+      },
+      {
+        "from": "parent",
+        "to": "3-hydroxyflunitrazepam",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "CYP3A4"
+        ],
+        "source": "hesse2001"
+      },
+      {
+        "from": "parent",
+        "to": "7-aminoflunitrazepam",
+        "reaction": "other",
+        "source": "dinis-oliveira2017a"
+      },
+      {
+        "from": "7-aminoflunitrazepam",
+        "to": "7-acetamidoflunitrazepam",
+        "reaction": "other",
+        "source": "dinis-oliveira2017a"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "n-desmethylflunitrazepam",
+        "active": null,
+        "source": "dinis-oliveira2017a"
+      },
+      {
+        "name_key": "3-hydroxyflunitrazepam",
+        "active": null,
+        "source": "dinis-oliveira2017a"
+      },
+      {
+        "name_key": "7-aminoflunitrazepam",
+        "active": null,
+        "source": "dinis-oliveira2017a"
+      },
+      {
+        "name_key": "7-acetamidoflunitrazepam",
+        "active": null,
+        "source": "dinis-oliveira2017a"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

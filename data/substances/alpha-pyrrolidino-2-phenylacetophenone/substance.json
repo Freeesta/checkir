@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "alpha-pyrrolidino-2-phenylacetophenone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "α-D2PV",
+      "synonyms": [
+        "α-pyrrolidino-2-phenylacetophenone",
+        "1,2-diphenyl-2-pyrrolidin-1-ylethanone"
+      ]
+    },
+    "it": {
+      "preferred": "α-D2PV",
+      "synonyms": [
+        "α-pirrolidino-2-fenilacetofenone",
+        "1,2-difenil-2-pirrolidin-1-iletanone"
+      ]
+    }
+  },
+  "iupac": "1,2-diphenyl-2-pyrrolidin-1-ylethanone",
+  "formula": "C18H19NO",
+  "molar_mass_g_mol": 265.3,
+  "smiles": "C1CCN(C1)C(C2=CC=CC=C2)C(=O)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C18H19NO/c20-18(16-11-5-2-6-12-16)17(19-13-7-8-14-19)15-9-3-1-4-10-15/h1-6,9-12,17H,7-8,13-14H2",
+  "inchikey": "GQCCTZGWWWUYLS-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "22311-88-2",
+    "pubchem_cid": 33957
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

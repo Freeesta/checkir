@@ -1,0 +1,75 @@
+{
+  "schema": "datasheet/1",
+  "substance": "eszopiclone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "(S)-zopiclone-N-oxide",
+        "reaction": "other",
+        "enzymes": [
+          "CYP3A4",
+          "other"
+        ],
+        "source": "lunesta-label"
+      },
+      {
+        "from": "parent",
+        "to": "(S)-N-desmethyl zopiclone",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP3A4",
+          "other"
+        ],
+        "source": "lunesta-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "zopiclone-n-oxide",
+        "active": false,
+        "source": "lunesta-label"
+      },
+      {
+        "name_key": "n-desmethyl-zopiclone",
+        "active": null,
+        "source": "lunesta-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 6,
+      "max": 6,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "lunesta-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
