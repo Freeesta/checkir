@@ -970,7 +970,15 @@
     "4-butyl-2-5-dimethoxyamphetamine": "dobu",
     "4-butil-2-5-dimetossianfetamina": "dobu",
     "4-propyl-2-5-dimethoxyamphetamine": "dopr",
-    "4-propil-2-5-dimetossianfetamina": "dopr"
+    "4-propil-2-5-dimetossianfetamina": "dopr",
+    "2c-b-nbome": "25b-nbome",
+    "cimbi-36": "25b-nbome",
+    "2c-b-nboh": "25b-nboh",
+    "nboh-2c-b": "25b-nboh",
+    "2c-c-nbf": "25c-nbf",
+    "nbf-2c-c": "25c-nbf",
+    "2c-d-nbome": "25d-nbome",
+    "cimbi-138": "25d-nbome"
   },
   "schema": "aliases/1"
 }
