@@ -12726,6 +12726,159 @@
       "tier": "primary",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "First reported fatalities associated with the 'research chemical' 2-methoxydiphenidine (J Anal Toxicol 39:287-293)",
+      "authors": [
+        "S. P. Elliott",
+        "S. D. Brandt",
+        "J. Wallach",
+        "H. Morris",
+        "P. V. Kavanagh"
+      ],
+      "year": 2015,
+      "doi": "10.1093/jat/bkv006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25698777/",
+      "tier": "primary",
+      "id": "elliott2015",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Acute toxicity associated with the recreational use of the novel dissociative psychoactive substance methoxphenidine (Clin Toxicol 52:1288-1291)",
+      "authors": [
+        "K. E. Hofer",
+        "C. Degrandi",
+        "D. M. Müller",
+        "U. Zürrer-Härdi",
+        "S. Wahl",
+        "C. Rauber-Lüthy",
+        "A. Ceschi"
+      ],
+      "year": 2014,
+      "doi": "10.3109/15563650.2014.974264",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25350467/",
+      "tier": "primary",
+      "id": "hofer2014",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Biotransformation and excretion of nitromethaqualone in rats and humans (J Pharm Sci 71:1152-1157)",
+      "authors": [
+        "M. Van Boven",
+        "P. Daenens"
+      ],
+      "year": 1982,
+      "doi": "10.1002/jps.2600711019",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7143214/",
+      "tier": "primary",
+      "id": "vanboven1982",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Phenibut: A drug with one too many \"buts\" (Basic Clin Pharmacol Toxicol 135:409-416)",
+      "authors": [
+        "B. J. Gurley",
+        "I. Koturbash"
+      ],
+      "year": 2024,
+      "doi": "10.1111/bcpt.14075",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39197876/",
+      "tier": "review",
+      "id": "gurley2024",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Phenibut (beta-phenyl-GABA): a tranquilizer and nootropic drug (CNS Drug Rev 7:471-481)",
+      "authors": [
+        "I. Lapin"
+      ],
+      "year": 2001,
+      "doi": "10.1111/j.1527-3458.2001.tb00211.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11830761/",
+      "tier": "review",
+      "id": "lapin2001",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Neuroprotective and anti-inflammatory activity of DAT inhibitor R-phenylpiracetam in experimental models of inflammation in male mice (Inflammopharmacology 28:1283-1292)",
+      "authors": [
+        "L. Zvejniece",
+        "B. Zvejniece",
+        "M. Videja",
+        "G. Stelfa",
+        "E. Vavers",
+        "S. Grinberga",
+        "B. Svalbe",
+        "M. Dambrova"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s10787-020-00705-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32279140/",
+      "tier": "primary",
+      "id": "zvejniece2020",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Unifi nootropics from the lab to the web: a story of academic (and industrial) shortcomings (J Enzyme Inhib Med Chem 31:187-194)",
+      "authors": [
+        "F. Gualtieri"
+      ],
+      "year": 2015,
+      "doi": "10.3109/14756366.2015.1021252",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25831025/",
+      "tier": "review",
+      "id": "gualtieri2015",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Sigma-1 receptor agonist PRE-084 confers protection against TAR DNA-binding protein-43 toxicity through NRF2 signalling (Redox Biol 58:102542)",
+      "authors": [
+        "C. Lasbleiz",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.redox.2022.102542",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36442393/",
+      "tier": "primary",
+      "id": "lasbleiz2022",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260828202930/https://pubmed.ncbi.nlm.nih.gov/36442393/"
+    },
+    {
+      "type": "institution",
+      "title": "Pentobarbital sodium injection, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d375b92a-baa1-4d63-9ad1-1467dcfde7d5",
+      "tier": "agency",
+      "id": "pentobarbital-label",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "institution",
+      "title": "Phenobarbital tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=74428144-fb24-40a5-a670-3b876e2d116c",
+      "tier": "agency",
+      "id": "phenobarbital-label",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
     }
   ]
 }
