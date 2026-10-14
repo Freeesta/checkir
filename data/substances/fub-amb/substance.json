@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "fub-amb",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "FUB-AMB",
+      "synonyms": [
+        "AMB-FUBINACA",
+        "MMB-FUBINACA"
+      ]
+    },
+    "it": {
+      "preferred": "FUB-AMB",
+      "synonyms": [
+        "AMB-FUBINACA",
+        "MMB-FUBINACA"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-2-[[1-[(4-fluorophenyl)methyl]indazole-3-carbonyl]amino]-3-methylbutanoate",
+  "formula": "C21H22FN3O3",
+  "molar_mass_g_mol": 383.4,
+  "smiles": "CC(C)[C@@H](C(=O)OC)NC(=O)C1=NN(C2=CC=CC=C21)CC3=CC=C(C=C3)F",
+  "inchi": "InChI=1S/C21H22FN3O3/c1-13(2)18(21(27)28-3)23-20(26)19-16-6-4-5-7-17(16)25(24-19)12-14-8-10-15(22)11-9-14/h4-11,13,18H,12H2,1-3H3,(H,23,26)/t18-/m0/s1",
+  "inchikey": "FRFFLYJQPCIIQB-SFHVURJKSA-N",
+  "external_ids": {
+    "cas": "1971007-92-7",
+    "pubchem_cid": 119026173
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
