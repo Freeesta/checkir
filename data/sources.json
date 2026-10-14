@@ -11098,6 +11098,188 @@
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"
+    },
+    {
+      "id": "manier2018",
+      "type": "paper",
+      "title": "Different in vitro and in vivo tools for elucidating the human metabolism of alpha-cathinone-derived drugs of abuse (Drug Test Anal 10:1-17)",
+      "authors": [
+        "Manier SK",
+        "Richter LHJ",
+        "Schäper J",
+        "Maurer HH",
+        "Meyer MR"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2355",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29314710/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260616123809/https://pubmed.ncbi.nlm.nih.gov/29314710"
+    },
+    {
+      "id": "kavanagh2020",
+      "type": "paper",
+      "title": "Tentative identification of the phase I and II metabolites of two synthetic cathinones, MDPHP and α-PBP, in human urine (Drug Test Anal 12(10):1442-1451)",
+      "authors": [
+        "Kavanagh P",
+        "Gofenberg M",
+        "Shevyrin V",
+        "Dvorskaya O",
+        "Dowling G",
+        "Grigoryev A"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2891",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32621389/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250526171751/https://pubmed.ncbi.nlm.nih.gov/32621389/"
+    },
+    {
+      "id": "franzen2018",
+      "type": "paper",
+      "title": "Acute Intoxications Involving α-Pyrrolidinobutiophenone (α-PBP): Results from the Swedish STRIDA Project (J Med Toxicol 14(4):265-271)",
+      "authors": [
+        "Franzén L",
+        "Bäckberg M",
+        "Beck O",
+        "Helander A"
+      ],
+      "year": 2018,
+      "doi": "10.1007/s13181-018-0668-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29923027/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250624165531/https://pubmed.ncbi.nlm.nih.gov/29923027/"
+    },
+    {
+      "id": "paul2021",
+      "type": "paper",
+      "title": "Alpha-Pyrrolidinopentiothiophenone (α-PVT): A forensic case study including plasma concentrations (Forensic Sci Int 321:110721)",
+      "authors": [
+        "Paul LD",
+        "Welter-Luedeke J",
+        "Penzel S",
+        "Zangl A",
+        "Graw M"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.forsciint.2021.110721",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33640778/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "wood2024",
+      "type": "paper",
+      "title": "Crystal structure and analytical profile of 1,2-diphenyl-2-pyrrolidin-1-ylethanone hydrochloride or 'α-D2PV': a synthetic cathinone seized by law enforcement, along with its diluent sugar, myo-inositol (Acta Crystallogr C Struct Chem 80(4):91-97)",
+      "authors": [
+        "Wood MR",
+        "Bernal I",
+        "Lalancette RA"
+      ],
+      "year": 2024,
+      "doi": "10.1107/S2053229624000561",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38441142/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206142823/https://pubmed.ncbi.nlm.nih.gov/38441142/"
+    },
+    {
+      "id": "nadalgratacos2025",
+      "type": "paper",
+      "title": "Unveiling the potential abuse liability of α-D2PV: A novel α-carbon phenyl-substituted synthetic cathinone (Neuropharmacology 272:110425)",
+      "authors": [
+        "Nadal-Gratacós N",
+        "Mata S",
+        "Puigseslloses P",
+        "De Macedo M",
+        "Lardeux V",
+        "Pain S",
+        "Wang FH",
+        "Källsten L",
+        "Pubill D",
+        "Berzosa X",
+        "Kehr J",
+        "Solinas M"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.neuropharm.2025.110425",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40118207/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "danda2022",
+      "type": "paper",
+      "title": "Effects of synthetic cathinone naphyrone in the conditioned place preference test - Evidence of its addictive potential (Behav Brain Res 421:113713)",
+      "authors": [
+        "Danda H",
+        "Pinterová-Leca N",
+        "Šíchová K",
+        "Štefková-Mazochová K",
+        "Syrová K",
+        "Olejníková L",
+        "Končická M",
+        "Mazoch V",
+        "Lhotková E",
+        "Kuchař M",
+        "Páleníček T"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.bbr.2021.113713",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34906607/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250203041551/https://pubmed.ncbi.nlm.nih.gov/34906607/"
+    },
+    {
+      "id": "shevyrin2020",
+      "type": "paper",
+      "title": "Identification and analytical characterization of the synthetic cathinone N-butylhexedrone (Drug Test Anal 12(1):159-163)",
+      "authors": [
+        "Shevyrin V",
+        "Eltsov O",
+        "Shafran Y"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2712",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31667946/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "maier2021",
+      "type": "paper",
+      "title": "α-PPP and its derivatives are selective partial releasers at the human norepinephrine transporter: A pharmacological characterization of interactions between pyrrolidinopropiophenones and high and low affinity monoamine transporters (Neuropharmacology 190:108570)",
+      "authors": [
+        "Maier J",
+        "Rauter L",
+        "Rudin D",
+        "Niello M",
+        "Holy M",
+        "Schmid D",
+        "Wilson J",
+        "Blough BE",
+        "Gannon BM",
+        "Murnane KS",
+        "Sitte HH"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.neuropharm.2021.108570",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33864800/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
