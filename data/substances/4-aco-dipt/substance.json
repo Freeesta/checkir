@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-aco-dipt",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-AcO-DiPT",
+      "synonyms": [
+        "4-acetoxy-N,N-diisopropyltryptamine",
+        "4-acetoxy-DiPT"
+      ]
+    },
+    "it": {
+      "preferred": "4-AcO-DiPT",
+      "synonyms": [
+        "4-acetoxy-N,N-diisopropyltryptamine",
+        "4-acetoxy-DiPT"
+      ]
+    }
+  },
+  "iupac": "[3-[2-[di(propan-2-yl)amino]ethyl]-1H-indol-4-yl] acetate",
+  "formula": "C18H26N2O2",
+  "molar_mass_g_mol": 302.4,
+  "smiles": "CC(C)N(CCC1=CNC2=C1C(=CC=C2)OC(=O)C)C(C)C",
+  "inchi": "InChI=1S/C18H26N2O2/c1-12(2)20(13(3)4)10-9-15-11-19-16-7-6-8-17(18(15)16)22-14(5)21/h6-8,11-13,19H,9-10H2,1-5H3",
+  "inchikey": "ZPAOVGZYDSXCPK-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "936015-60-0",
+    "pubchem_cid": 24801868
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
