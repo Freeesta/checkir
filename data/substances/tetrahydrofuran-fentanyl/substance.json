@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "tetrahydrofuran-fentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Tetrahydrofuranylfentanyl",
+      "synonyms": [
+        "tetrahydrofuran fentanyl",
+        "THF-F",
+        "THFF",
+        "tetrahydrofuranfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Tetraidrofuranilfentanil",
+      "synonyms": [
+        "tetraidrofuran fentanil",
+        "THF-F"
+      ]
+    }
+  },
+  "iupac": "N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]oxolane-2-carboxamide",
+  "formula": "C24H30N2O2",
+  "molar_mass_g_mol": 378.5,
+  "smiles": "C1CC(OC1)C(=O)N(C2CCN(CC2)CCC3=CC=CC=C3)C4=CC=CC=C4",
+  "inchi": "InChI=1S/C24H30N2O2/c27-24(23-12-7-19-28-23)26(21-10-5-2-6-11-21)22-14-17-25(18-15-22)16-13-20-8-3-1-4-9-20/h1-6,8-11,22-23H,7,12-19H2",
+  "inchikey": "OHJNHKUFSKAANI-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2142571-01-3",
+    "pubchem_cid": 137332293
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

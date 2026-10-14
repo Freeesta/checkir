@@ -8611,6 +8611,167 @@
       "tier": "agency"
     },
     {
+      "id": "cooman2021",
+      "type": "paper",
+      "title": "The metabolism of valerylfentanyl using human liver microsomes and zebrafish larvae (Drug Test Anal 14:1116-1129)",
+      "authors": [
+        "T. Cooman",
+        "B. Hoover",
+        "B. Sauvé",
+        "S. A. Bergeron",
+        "N. Quinete",
+        "P. Gardinali",
+        "L. E. Arroyo"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3233",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35128825/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250206004705/https://pubmed.ncbi.nlm.nih.gov/35128825/"
+    },
+    {
+      "id": "xie2023",
+      "type": "paper",
+      "title": "Binding preference at the μ-opioid receptor underlies distinct pharmacology of cyclopropyl versus valeryl analogs of fentanyl (Neuropharmacology 227:109442)",
+      "authors": [
+        "B. Xie",
+        "V. P. Le Rouzic",
+        "A. Goldberg",
+        "M. M. Tsai",
+        "L. Chen",
+        "T. Zhang",
+        "A. Sinha",
+        "Y. X. Pan",
+        "M. H. Baumann",
+        "L. Shi"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.neuropharm.2023.109442",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36731721/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "sauer2008-pceea",
+      "type": "paper",
+      "title": "New designer drugs N-(1-phenylcyclohexyl)-2-ethoxyethanamine (PCEEA) and N-(1-phenylcyclohexyl)-2-methoxyethanamine (PCMEA): studies on their metabolism and toxicological detection in rat urine using gas chromatographic/mass spectrometric techniques (J Mass Spectrom 43:305-316)",
+      "authors": [
+        "C. Sauer",
+        "F. T. Peters",
+        "R. F. Staack",
+        "G. Fritschi",
+        "H. H. Maurer"
+      ],
+      "year": 2008,
+      "doi": "10.1002/jms.1312",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17968862/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250219183647/https://pubmed.ncbi.nlm.nih.gov/17968862/"
+    },
+    {
+      "id": "sauer2009-pceea",
+      "type": "paper",
+      "title": "Investigations on the cytochrome P450 (CYP) isoenzymes involved in the metabolism of the designer drugs N-(1-phenylcyclohexyl)-2-ethoxyethanamine and N-(1-phenylcyclohexyl)-2-methoxyethanamine (Biochem Pharmacol 77:444-450)",
+      "authors": [
+        "C. Sauer",
+        "F. T. Peters",
+        "A. E. Schwaninger",
+        "M. R. Meyer",
+        "H. H. Maurer"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.bcp.2008.10.024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19022226/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250206070923/https://pubmed.ncbi.nlm.nih.gov/19022226/"
+    },
+    {
+      "id": "krotulski2018-thff",
+      "type": "paper",
+      "title": "Fatality following ingestion of tetrahydrofuranylfentanyl, U-49900 and methoxy-phencyclidine (J Anal Toxicol 42:e27-e32)",
+      "authors": [
+        "A. J. Krotulski",
+        "D. M. Papsun",
+        "M. Friscia",
+        "J. L. Swartz",
+        "B. D. Holsey",
+        "B. K. Logan"
+      ],
+      "year": 2018,
+      "doi": "10.1093/jat/bkx092",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29186585/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "gampfer2020",
+      "type": "paper",
+      "title": "Toxicokinetic studies and analytical toxicology of the new synthetic opioids cyclopentanoyl-fentanyl and tetrahydrofuranoyl-fentanyl (J Anal Toxicol 44:449-460)",
+      "authors": [
+        "T. M. Gampfer",
+        "L. Wagmann",
+        "M. J. Richter",
+        "S. Fischmann",
+        "F. Westphal",
+        "M. R. Meyer"
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkaa010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32020187/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20240428132609/https://pubmed.ncbi.nlm.nih.gov/32020187/"
+    },
+    {
+      "id": "thaxton2015",
+      "type": "paper",
+      "title": "GC-MS studies on the six naphthoyl-substituted 1-n-pentyl-indoles: JWH-018 and five regioisomeric equivalents (Forensic Sci Int 252:107-113)",
+      "authors": [
+        "A. Thaxton",
+        "T. S. Belal",
+        "F. Smith",
+        "J. DeRuiter",
+        "K. M. Abdel-Hay",
+        "C. R. Clark"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.forsciint.2015.04.023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25965306/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250201235506/https://pubmed.ncbi.nlm.nih.gov/25965306/"
+    },
+    {
+      "id": "song2025",
+      "type": "paper",
+      "title": "Qualitative confirmation of 30 phencyclidine analogs in human blood and urine using GC-HRMS and a self-built library search (J Chromatogr B 1252:124464)",
+      "authors": [
+        "Z. Song",
+        "Z. Guo",
+        "Y. Tang",
+        "M. Zhang",
+        "P. Xiang",
+        "W. Liu",
+        "H. Yan"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.jchromb.2025.124464",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39809033/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
       "id": "carlier2017-adb-pinaca",
       "type": "paper",
       "title": "Distinguishing Intake of New Synthetic Cannabinoids ADB-PINACA and 5F-ADB-PINACA with Human Hepatocyte Metabolites and High-Resolution Mass Spectrometry (Clin Chem 63(5):1008-1021)",
