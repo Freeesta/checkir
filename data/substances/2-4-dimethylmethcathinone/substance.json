@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-4-dimethylmethcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2,4-Dimethylmethcathinone",
+      "synonyms": [
+        "2,4-DMMC",
+        "2-Methylmephedrone"
+      ]
+    },
+    "it": {
+      "preferred": "2,4-Dimethylmethcathinone",
+      "synonyms": [
+        "2,4-DMMC",
+        "2-Methylmephedrone"
+      ]
+    }
+  },
+  "iupac": "1-(2,4-dimethylphenyl)-2-(methylamino)propan-1-one",
+  "formula": "C12H17NO",
+  "molar_mass_g_mol": 191.27,
+  "smiles": "CC1=CC(=C(C=C1)C(=O)C(C)NC)C",
+  "inchi": "InChI=1S/C12H17NO/c1-8-5-6-11(9(2)7-8)12(14)10(3)13-4/h5-7,10,13H,1-4H3",
+  "inchikey": "GMWLLQUZDNDCMN-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1225623-63-1",
+    "pubchem_cid": 82100563
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

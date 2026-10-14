@@ -395,7 +395,18 @@
     "adb-chminaca": "adb-chmica",
     "mab-chminaca": "adb-chmica",
     "fub-acadb": "adb-fubiata",
-    "adb-fubiaca": "adb-fubiata"
+    "adb-fubiaca": "adb-fubiata",
+    "2-3-mdmc": "2-3-methylenedioxymethcathinone",
+    "2-3-methylenedioxy-methcathinone": "2-3-methylenedioxymethcathinone",
+    "2-3-mdpv": "2-3-methylenedioxypyrovalerone",
+    "2-3-methylenedioxy-pyrovalerone": "2-3-methylenedioxypyrovalerone",
+    "2-3-pentylone-isomer": "2-3-pentylone",
+    "2-4-dmmc": "2-4-dimethylmethcathinone",
+    "2-methylmephedrone": "2-4-dimethylmethcathinone",
+    "2-5-dmmc": "2-5-dimethylmethcathinone",
+    "2-eec": "2-ethylethcathinone",
+    "2-emc": "2-ethylmethcathinone",
+    "2-fec": "2-fluoroethcathinone"
   },
   "schema": "aliases/1"
 }
