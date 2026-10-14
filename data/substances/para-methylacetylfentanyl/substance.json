@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "para-methylacetylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "para-Methylacetylfentanyl",
+      "synonyms": [
+        "p-methylacetylfentanyl",
+        "4-methylacetylfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "para-Metilacetilfentanil",
+      "synonyms": [
+        "p-metilacetilfentanil",
+        "4-metilacetilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(4-methylphenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]acetamide",
+  "formula": "C22H28N2O",
+  "molar_mass_g_mol": 336.5,
+  "smiles": "CC1=CC=C(C=C1)N(C2CCN(CC2)CCC3=CC=CC=C3)C(=O)C",
+  "inchi": "InChI=1S/C22H28N2O/c1-18-8-10-21(11-9-18)24(19(2)25)22-13-16-23(17-14-22)15-12-20-6-4-3-5-7-20/h3-11,22H,12-17H2,1-2H3",
+  "inchikey": "JNQPTABAZAHVEN-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "90736-12-2",
+    "pubchem_cid": 618634
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "acrylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Acrylfentanyl",
+      "synonyms": [
+        "acryloylfentanyl",
+        "acryl fentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Acrilfentanil",
+      "synonyms": [
+        "acriloilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]prop-2-enamide",
+  "formula": "C22H26N2O",
+  "molar_mass_g_mol": 334.5,
+  "smiles": "C=CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3",
+  "inchi": "InChI=1S/C22H26N2O/c1-2-22(25)24(20-11-7-4-8-12-20)21-14-17-23(18-15-21)16-13-19-9-5-3-6-10-19/h2-12,21H,1,13-18H2",
+  "inchikey": "RFQNLMWUIJJEQF-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "82003-75-6",
+    "pubchem_cid": 10314851
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

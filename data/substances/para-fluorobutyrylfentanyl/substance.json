@@ -1,0 +1,58 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "para-fluorobutyrylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "para-Fluorobutyrylfentanyl",
+      "synonyms": [
+        "p-fluorobutyrylfentanyl",
+        "4-fluorobutyrylfentanyl",
+        "4-fluorobutyrfentanyl",
+        "4-FBF",
+        "p-FBF"
+      ]
+    },
+    "it": {
+      "preferred": "para-Fluorobutirrilfentanil",
+      "synonyms": [
+        "p-fluorobutirrilfentanil",
+        "4-fluorobutirrilfentanil",
+        "4-fluorobutirfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(4-fluorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]butanamide",
+  "formula": "C23H29FN2O",
+  "molar_mass_g_mol": 368.5,
+  "smiles": "CCCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=C(C=C3)F",
+  "inchi": "InChI=1S/C23H29FN2O/c1-2-6-23(27)26(21-11-9-20(24)10-12-21)22-14-17-25(18-15-22)16-13-19-7-4-3-5-8-19/h3-5,7-12,22H,2,6,13-18H2,1H3",
+  "inchikey": "QZFMCYUBPSLOBP-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "244195-31-1",
+    "pubchem_cid": 86280430
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

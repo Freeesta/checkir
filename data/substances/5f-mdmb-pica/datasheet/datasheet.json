@@ -1,0 +1,63 @@
+{
+  "schema": "datasheet/1",
+  "substance": "5f-mdmb-pica",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "ester hydrolysis metabolites",
+        "reaction": "hydrolysis_ester",
+        "source": "truver2019"
+      },
+      {
+        "from": "parent",
+        "to": "ester hydrolysis with oxidative defluorination (pentanoic acid) metabolites",
+        "reaction": "other",
+        "source": "truver2019"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "glucuronides",
+        "reaction": "glucuronidation",
+        "source": "truver2019"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "5f-mdmb-pica-ester-hydrolysis-defluorination-pentanoic-acid",
+        "active": null,
+        "source": "truver2019",
+        "marker": true
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

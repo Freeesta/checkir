@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ortho-fluoroacrylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "ortho-Fluoroacrylfentanyl",
+      "synonyms": [
+        "o-fluoroacrylfentanyl",
+        "2-fluoroacrylfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "ortho-Fluoroacrilfentanil",
+      "synonyms": [
+        "o-fluoroacrilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-(2-fluorophenyl)-N-[1-(2-phenylethyl)piperidin-4-yl]prop-2-enamide",
+  "formula": "C22H25FN2O",
+  "molar_mass_g_mol": 352.4,
+  "smiles": "C=CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3F",
+  "inchi": "InChI=1S/C22H25FN2O/c1-2-22(26)25(21-11-7-6-10-20(21)23)19-13-16-24(17-14-19)15-12-18-8-4-3-5-9-18/h2-11,19H,1,12-17H2",
+  "inchikey": "ROBNYLIAYXEIFM-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 137699952
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

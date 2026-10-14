@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "benzoylfentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Benzoylfentanyl",
+      "synonyms": [
+        "phenylfentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "Benzoilfentanil",
+      "synonyms": [
+        "fenilfentanil"
+      ]
+    }
+  },
+  "iupac": "N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]benzamide",
+  "formula": "C26H28N2O",
+  "molar_mass_g_mol": 384.5,
+  "smiles": "C1CN(CCC1N(C2=CC=CC=C2)C(=O)C3=CC=CC=C3)CCC4=CC=CC=C4",
+  "inchi": "InChI=1S/C26H28N2O/c29-26(23-12-6-2-7-13-23)28(24-14-8-3-9-15-24)25-17-20-27(21-18-25)19-16-22-10-4-1-5-11-22/h1-15,25H,16-21H2",
+  "inchikey": "BJPDWVPQDSVQKD-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2309383-15-9",
+    "pubchem_cid": 139025450
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

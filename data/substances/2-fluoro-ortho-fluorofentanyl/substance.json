@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-fluoro-ortho-fluorofentanyl",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-Fluoro-ortho-fluorofentanyl",
+      "synonyms": [
+        "2,2'-Difluorofentanyl",
+        "2'-Fluoro ortho-fluorofentanyl"
+      ]
+    },
+    "it": {
+      "preferred": "2-Fluoro-ortho-fluorofentanyl",
+      "synonyms": [
+        "2,2'-Difluorofentanyl",
+        "2'-Fluoro ortho-fluorofentanyl"
+      ]
+    }
+  },
+  "iupac": "N-(2-fluorophenyl)-N-[1-[2-(2-fluorophenyl)ethyl]piperidin-4-yl]propanamide",
+  "formula": "C22H26F2N2O",
+  "molar_mass_g_mol": 372.5,
+  "smiles": "CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2F)C3=CC=CC=C3F",
+  "inchi": "InChI=1S/C22H26F2N2O/c1-2-22(27)26(21-10-6-5-9-20(21)24)18-12-15-25(16-13-18)14-11-17-7-3-4-8-19(17)23/h3-10,18H,2,11-16H2,1H3",
+  "inchikey": "AUXYZYMWQUXVDV-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2748343-87-3",
+    "pubchem_cid": 137700285
+  },
+  "classes": {
+    "chemical": [
+      "fentanyls"
+    ],
+    "effect": [
+      "opioid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-13"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

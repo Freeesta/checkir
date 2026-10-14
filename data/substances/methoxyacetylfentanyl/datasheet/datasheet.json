@@ -1,0 +1,68 @@
+{
+  "schema": "datasheet/1",
+  "substance": "methoxyacetylfentanyl",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-13",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "fentanyls",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "O-desmethyl-methoxyacetylfentanyl",
+        "reaction": "o_demethylation",
+        "source": "kronstrand2021"
+      },
+      {
+        "from": "parent",
+        "to": "nor-methoxyacetylfentanyl",
+        "reaction": "other",
+        "source": "kronstrand2021"
+      },
+      {
+        "from": "parent",
+        "to": "phenethyl-hydroxy-methoxyacetylfentanyl",
+        "reaction": "hydroxylation",
+        "source": "kronstrand2021"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "o-desmethyl-methoxyacetylfentanyl",
+        "active": null,
+        "source": "kronstrand2021"
+      },
+      {
+        "name_key": "nor-methoxyacetylfentanyl",
+        "active": null,
+        "source": "kronstrand2021"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

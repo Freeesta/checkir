@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "5f-amb",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "5F-AMB",
+      "synonyms": [
+        "5F-MMB-PINACA",
+        "5F-AMB-PINACA",
+        "5-fluoro-AMB"
+      ]
+    },
+    "it": {
+      "preferred": "5F-AMB",
+      "synonyms": [
+        "5F-MMB-PINACA",
+        "5F-AMB-PINACA",
+        "5-fluoro-AMB"
+      ]
+    }
+  },
+  "iupac": "methyl (2S)-2-[[1-(5-fluoropentyl)indazole-3-carbonyl]amino]-3-methylbutanoate",
+  "formula": "C19H26FN3O3",
+  "molar_mass_g_mol": 363.4,
+  "smiles": "CC(C)[C@@H](C(=O)OC)NC(=O)C1=NN(C2=CC=CC=C21)CCCCCF",
+  "inchi": "InChI=1S/C19H26FN3O3/c1-13(2)16(19(25)26-3)21-18(24)17-14-9-5-6-10-15(14)23(22-17)12-8-4-7-11-20/h5-6,9-10,13,16H,4,7-8,11-12H2,1-3H3,(H,21,24)/t16-/m0/s1",
+  "inchikey": "SAFXSUZMRLTBMM-INIZCTEOSA-N",
+  "external_ids": {
+    "cas": "1801552-03-3",
+    "pubchem_cid": 119025812
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
