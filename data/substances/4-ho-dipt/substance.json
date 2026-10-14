@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-ho-dipt",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-HO-DiPT",
+      "synonyms": [
+        "iprocin",
+        "4-hydroxy-N,N-diisopropyltryptamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-HO-DiPT",
+      "synonyms": [
+        "iprocin",
+        "4-hydroxy-N,N-diisopropyltryptamine"
+      ]
+    }
+  },
+  "iupac": "3-[2-[di(propan-2-yl)amino]ethyl]-1H-indol-4-ol",
+  "formula": "C16H24N2O",
+  "molar_mass_g_mol": 260.4,
+  "smiles": "CC(C)N(CCC1=CNC2=C1C(=CC=C2)O)C(C)C",
+  "inchi": "InChI=1S/C16H24N2O/c1-11(2)18(12(3)4)9-8-13-10-17-14-6-5-7-15(19)16(13)14/h5-7,10-12,17,19H,8-9H2,1-4H3",
+  "inchikey": "KBRYKXCBGISXQV-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "132328-45-1",
+    "pubchem_cid": 21854225
+  },
+  "classes": {
+    "chemical": [
+      "tryptamines"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

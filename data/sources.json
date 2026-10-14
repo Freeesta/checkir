@@ -13517,6 +13517,79 @@
       "consulted": "2026-10-14"
     },
     {
+      "id": "brandt2017",
+      "type": "paper",
+      "title": "Return of the lysergamides. Part IV: Analytical and pharmacological characterization of lysergic acid morpholide (LSM-775) (Drug Test Anal 10:310-322)",
+      "authors": [
+        "Brandt SD",
+        "Kavanagh PV",
+        "Twamley B",
+        "Westphal F",
+        "Elliott SP",
+        "Wallach J",
+        "Stratford A",
+        "Klein LM",
+        "McCorvy JD",
+        "Nichols DE",
+        "Halberstadt AL"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2222",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28585392/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "basiliere2020",
+      "type": "paper",
+      "title": "CYP450-mediated metabolism of mitragynine and investigation of metabolites in human urine (J Anal Toxicol 44:301-313)",
+      "authors": [
+        "Basiliere S",
+        "Kerrigan S"
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkz108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32008041/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ya2019",
+      "type": "paper",
+      "title": "Pharmacokinetics of mitragynine, a major analgesic alkaloid in kratom (Mitragyna speciosa): a systematic review (Asian J Psychiatr 43:73-82)",
+      "authors": [
+        "Ya K",
+        "Tangamornsuksan W",
+        "Scholfield CN",
+        "Methaneethorn J",
+        "Lohitnavy M"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.ajp.2019.05.016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31100603/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "horniakova2024",
+      "type": "paper",
+      "title": "Development of a CZE-MS/MS method with dynamic pH junction sample pretreatment for analysis of kratom psychoactive alkaloids in urine (Anal Chim Acta 1323:343076)",
+      "authors": [
+        "Horniakova A",
+        "Mikus P",
+        "Piestansky J"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.aca.2024.343076",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39182975/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "knuijver2024",
       "type": "paper",
       "title": "The pharmacokinetics and pharmacodynamics of ibogaine in opioid use disorder patients (J Psychopharmacol)",
@@ -13821,6 +13894,149 @@
       "tier": "agency",
       "license": "© marketing authorisation holder; cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "malaca2022",
+      "type": "paper",
+      "title": "Human Hepatocyte 4-Acetoxy-N,N-Diisopropyltryptamine Metabolite Profiling by Reversed-Phase Liquid Chromatography Coupled with High-Resolution Tandem Mass Spectrometry (Metabolites 12:705)",
+      "authors": [
+        "Malaca S",
+        "Huestis MA",
+        "Lattanzio L",
+        "Marsella LT",
+        "Tagliabracci A",
+        "Carlier J",
+        "Busardò FP"
+      ],
+      "year": 2022,
+      "doi": "10.3390/metabo12080705",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36005577/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261012074831/https://pubmed.ncbi.nlm.nih.gov/36005577/"
+    },
+    {
+      "id": "wagmann2022",
+      "type": "paper",
+      "title": "Can the Intake of a Synthetic Tryptamine be Detected Only by Blood Plasma Analysis? A Clinical Toxicology Case Involving 4-HO-MET",
+      "authors": [
+        "Wagmann L",
+        "Manier SK",
+        "Meyer MR"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkab062",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34100553/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "millgate2004",
+      "type": "paper",
+      "title": "Analgesia: morphine-pathway block in top1 poppies (Nature 431:413-414)",
+      "authors": [
+        "Millgate AG",
+        "Pogson BJ",
+        "Wilson IW",
+        "Kutchan TM",
+        "Zenk MH",
+        "Gerlach WL",
+        "Fist AJ",
+        "Larkin PJ"
+      ],
+      "year": 2004,
+      "doi": "10.1038/431413a",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15386001/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250201235316/https://pubmed.ncbi.nlm.nih.gov/15386001/"
+    },
+    {
+      "id": "eisenreich2019",
+      "type": "paper",
+      "title": "What do we know about health risks related to thebaine in food?",
+      "authors": [
+        "Eisenreich A",
+        "Sachse B",
+        "Gürtler R",
+        "Dusemund B",
+        "Lindtner O",
+        "Schäfer B"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.foodchem.2019.125564",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31670127/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260511164622/https://pubmed.ncbi.nlm.nih.gov/31670127/"
+    },
+    {
+      "id": "penafiel2023",
+      "type": "paper",
+      "title": "Toxicokinetics of thebaine in those consuming non-food grade poppy seeds as a tea",
+      "authors": [
+        "Penafiel R",
+        "Yoo D",
+        "Turner C",
+        "Brown JA",
+        "McDonald C",
+        "Tran J",
+        "Shaw V",
+        "Roberts DM"
+      ],
+      "year": 2023,
+      "doi": "10.1080/15563650.2023.2271163",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37917043/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "isoardi2023",
+      "type": "paper",
+      "title": "A cluster of acute thebaine poisonings from non-food grade poppy seeds in the Australian food supply (Clin Toxicol)",
+      "authors": [
+        "Isoardi KZ",
+        "Roberts DM",
+        "Holford AG",
+        "Brown JA",
+        "Griffiths A",
+        "Soderstrom J",
+        "McDonald C",
+        "Gerostamoulos D",
+        "Sakrajda P",
+        "Turner C",
+        "Yates H",
+        "Gunja N",
+        "Greene S"
+      ],
+      "year": 2023,
+      "doi": "10.1080/15563650.2023.2265053",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37855308/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251209074356/https://pubmed.ncbi.nlm.nih.gov/37855308/"
+    },
+    {
+      "id": "bollini2022",
+      "type": "paper",
+      "title": "Urine thebaine determination by liquid chromatography tandem mass spectrometry after poppy seed consumption (Drug Test Anal)",
+      "authors": [
+        "Bollini SM",
+        "Banks JF",
+        "Hobbs GA"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3274",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35478494/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     },
     {
       "id": "seo2018",
