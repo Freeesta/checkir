@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "isopropylbenzylamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Isopropylbenzylamine",
+      "synonyms": [
+        "N-isopropylbenzylamine",
+        "N-benzylpropan-2-amine",
+        "INBA"
+      ]
+    },
+    "it": {
+      "preferred": "Isopropilbenzilammina",
+      "synonyms": [
+        "N-isopropilbenzilammina",
+        "INBA"
+      ]
+    }
+  },
+  "iupac": "N-benzylpropan-2-amine",
+  "formula": "C10H15N",
+  "molar_mass_g_mol": 149.23,
+  "smiles": "CC(C)NCC1=CC=CC=C1",
+  "inchi": "InChI=1S/C10H15N/c1-9(2)11-8-10-6-4-3-5-7-10/h3-7,9,11H,8H2,1-2H3",
+  "inchikey": "LYBKPDDZTNUNNM-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 66024
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
