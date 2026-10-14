@@ -16220,6 +16220,348 @@
       "tier": "primary",
       "license": "cited as the source of facts only",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "yanagihara2003",
+      "type": "paper",
+      "title": "Plasma concentration profiles of ketamine and norketamine after administration of various ketamine preparations to healthy Japanese volunteers (Biopharm Drug Dispos 24:37-43)",
+      "authors": [
+        "Y. Yanagihara",
+        "M. Ohtani",
+        "S. Kariya",
+        "K. Uchino",
+        "T. Hiraishi",
+        "N. Ashizawa",
+        "T. Aoyama",
+        "Y. Yamamura",
+        "Y. Yamada",
+        "T. Iga"
+      ],
+      "year": 2003,
+      "doi": "10.1002/bdd.336",
+      "url": "https://doi.org/10.1002/bdd.336",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "perez-ruixo2021",
+      "type": "paper",
+      "title": "Population Pharmacokinetics of Esketamine Nasal Spray and its Metabolite Noresketamine in Healthy Subjects and Patients with Treatment-Resistant Depression (Clin Pharmacokinet 60:501-516)",
+      "authors": [
+        "C. Perez-Ruixo",
+        "S. Rossenu",
+        "P. Zannikos",
+        "P. Nandy",
+        "J. Singh",
+        "W. C. Drevets",
+        "J. J. Perez-Ruixo"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s40262-020-00953-4",
+      "url": "https://doi.org/10.1007/s40262-020-00953-4",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kamp2020",
+      "type": "paper",
+      "title": "Pharmacokinetics of ketamine and its major metabolites norketamine, hydroxynorketamine, and dehydronorketamine: a model-based analysis (Br J Anaesth 125:750-761)",
+      "authors": [
+        "J. Kamp",
+        "K. Jonkman",
+        "M. van Velzen",
+        "L. Aarts",
+        "M. Niesters",
+        "A. Dahan",
+        "E. Olofsen"
+      ],
+      "year": 2020,
+      "doi": "10.1016/j.bja.2020.06.067",
+      "url": "https://doi.org/10.1016/j.bja.2020.06.067",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "li2013-cyp2b6",
+      "type": "paper",
+      "title": "The CYP2B6*6 allele significantly alters the N-demethylation of ketamine enantiomers in vitro (Drug Metab Dispos 41:1264-72)",
+      "authors": [
+        "Y. Li",
+        "J. K. Coller",
+        "M. R. Hutchinson",
+        "K. Klein",
+        "U. M. Zanger",
+        "N. J. Stanley",
+        "A. D. Abell",
+        "A. A. Somogyi"
+      ],
+      "year": 2013,
+      "doi": "10.1124/dmd.113.051631",
+      "url": "https://doi.org/10.1124/dmd.113.051631",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "desta2012",
+      "type": "paper",
+      "title": "Stereoselective and regiospecific hydroxylation of ketamine and norketamine (Xenobiotica 42:1076-87)",
+      "authors": [
+        "Z. Desta",
+        "R. Moaddel",
+        "E. T. Ogburn",
+        "C. Xu",
+        "A. Ramamoorthy",
+        "S. L. Venkata",
+        "M. Sanghvi",
+        "M. E. Goldberg",
+        "M. C. Torjman",
+        "I. W. Wainer"
+      ],
+      "year": 2012,
+      "doi": "10.3109/00498254.2012.685777",
+      "url": "https://doi.org/10.3109/00498254.2012.685777",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "peltoniemi2012-grapefruit",
+      "type": "paper",
+      "title": "S-ketamine concentrations are greatly increased by grapefruit juice (Eur J Clin Pharmacol 68:979-86)",
+      "authors": [
+        "M. A. Peltoniemi",
+        "T. I. Saari",
+        "N. M. Hagelberg",
+        "K. Laine",
+        "P. J. Neuvonen",
+        "K. T. Olkkola"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00228-012-1214-9",
+      "url": "https://doi.org/10.1007/s00228-012-1214-9",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "peltoniemi2012-rifampicin",
+      "type": "paper",
+      "title": "Rifampicin has a profound effect on the pharmacokinetics of oral S-ketamine and less on intravenous S-ketamine (Basic Clin Pharmacol Toxicol 111:325-32)",
+      "authors": [
+        "M. A. Peltoniemi",
+        "T. I. Saari",
+        "N. M. Hagelberg",
+        "K. Laine",
+        "K. J. Kurkinen",
+        "P. J. Neuvonen",
+        "K. T. Olkkola"
+      ],
+      "year": 2012,
+      "doi": "10.1111/j.1742-7843.2012.00908.x",
+      "url": "https://doi.org/10.1111/j.1742-7843.2012.00908.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "dejong2020",
+      "type": "paper",
+      "title": "Prolonged Ketamine and Norketamine Excretion Profiles in Urine After Chronic Use: A Case Series (J Clin Psychopharmacol 40:300-304)",
+      "authors": [
+        "L. A. A. de Jong",
+        "R. Qurishi",
+        "M. P. J. Stams",
+        "M. Böttcher",
+        "C. A. J. de Jong"
+      ],
+      "year": 2020,
+      "doi": "10.1097/JCP.0000000000001191",
+      "url": "https://doi.org/10.1097/JCP.0000000000001191",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "bonaventura2021",
+      "type": "paper",
+      "title": "Pharmacological and behavioral divergence of ketamine enantiomers: implications for abuse liability (Mol Psychiatry 26:6704-6722)",
+      "authors": [
+        "J. Bonaventura",
+        "S. Lam",
+        "M. Carlton",
+        "M. A. Boehm",
+        "J. L. Gomez",
+        "O. Solís",
+        "M. Sánchez-Soto",
+        "P. J. Morris",
+        "I. Fredriksson",
+        "C. J. Thomas",
+        "D. R. Sibley",
+        "Y. Shaham",
+        "C. A. Zarate",
+        "M. Michaelides"
+      ],
+      "year": 2021,
+      "doi": "10.1038/s41380-021-01093-2",
+      "url": "https://doi.org/10.1038/s41380-021-01093-2",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "zanos2018",
+      "type": "paper",
+      "title": "Ketamine and Ketamine Metabolite Pharmacology: Insights into Therapeutic Mechanisms (Pharmacol Rev 70:621-660)",
+      "authors": [
+        "P. Zanos",
+        "R. Moaddel",
+        "P. J. Morris",
+        "L. M. Riggs",
+        "J. N. Highland",
+        "P. Georgiou",
+        "E. F. R. Pereira",
+        "E. X. Albuquerque",
+        "C. J. Thomas",
+        "C. A. Zarate",
+        "T. D. Gould"
+      ],
+      "year": 2018,
+      "doi": "10.1124/pr.117.015198",
+      "url": "https://doi.org/10.1124/pr.117.015198",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "jansen2001",
+      "type": "paper",
+      "title": "The nonmedical use of ketamine, part two: A review of problem use and dependence (J Psychoactive Drugs 33:151-8)",
+      "authors": [
+        "K. L. Jansen",
+        "R. Darracot-Cankovic"
+      ],
+      "year": 2001,
+      "doi": "10.1080/02791072.2001.10400480",
+      "url": "https://doi.org/10.1080/02791072.2001.10400480",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "muetzelfeldt2008",
+      "type": "paper",
+      "title": "Journey through the K-hole: phenomenological aspects of ketamine use (Drug Alcohol Depend 95:219-29)",
+      "authors": [
+        "L. Muetzelfeldt",
+        "S. K. Kamboj",
+        "H. Rees",
+        "J. Taylor",
+        "C. J. Morgan",
+        "H. V. Curran"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.drugalcdep.2008.01.024",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2008.01.024",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "darke2020",
+      "type": "paper",
+      "title": "Characteristics and circumstances of death related to the self-administration of ketamine (Addiction 116:339-345)",
+      "authors": [
+        "S. Darke",
+        "J. Duflou",
+        "M. Farrell",
+        "A. Peacock",
+        "J. Lappin"
+      ],
+      "year": 2020,
+      "doi": "10.1111/add.15154",
+      "url": "https://doi.org/10.1111/add.15154",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "hasan2021",
+      "type": "paper",
+      "title": "Chiral Pharmacokinetics and Metabolite Profile of Prolonged-release Ketamine Tablets in Healthy Human Subjects (Anesthesiology 135:326-339)",
+      "authors": [
+        "M. Hasan",
+        "C. Modess",
+        "T. Roustom",
+        "A. Dokter",
+        "M. Grube",
+        "A. Link",
+        "H. Rey",
+        "S. Adler",
+        "K. Meissner",
+        "W. Siegmund"
+      ],
+      "year": 2021,
+      "doi": "10.1097/ALN.0000000000003829",
+      "url": "https://doi.org/10.1097/ALN.0000000000003829",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lin2022-norketamine",
+      "type": "paper",
+      "title": "Norketamine, the Main Metabolite of Ketamine, Induces Mitochondria-Dependent and ER Stress-Triggered Apoptotic Death in Urothelial Cells via a Ca2+-Regulated ERK1/2-Activating Pathway (Int J Mol Sci 23)",
+      "authors": [
+        "J. W. Lin",
+        "Y. C. Lin",
+        "J. M. Liu",
+        "S. H. Liu",
+        "K. M. Fang",
+        "R. J. Hsu",
+        "C. F. Huang",
+        "K. Y. Chang",
+        "K. I. Lee",
+        "K. C. Chang",
+        "C. C. Su",
+        "Y. W. Chen"
+      ],
+      "year": 2022,
+      "doi": "10.3390/ijms23094666",
+      "url": "https://doi.org/10.3390/ijms23094666",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "narendran2005",
+      "type": "paper",
+      "title": "Altered prefrontal dopaminergic function in chronic recreational ketamine users (Am J Psychiatry 162:2352-9)",
+      "authors": [
+        "R. Narendran",
+        "W. G. Frankle",
+        "R. Keefe",
+        "R. Gil",
+        "D. Martinez",
+        "M. Slifstein",
+        "L. S. Kegeles",
+        "P. S. Talbot",
+        "Y. Huang",
+        "D. R. Hwang",
+        "L. Khenissi",
+        "T. B. Cooper",
+        "M. Laruelle",
+        "A. Abi-Dargham"
+      ],
+      "year": 2005,
+      "doi": "10.1176/appi.ajp.162.12.2352",
+      "url": "https://doi.org/10.1176/appi.ajp.162.12.2352",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
     }
   ]
 }
