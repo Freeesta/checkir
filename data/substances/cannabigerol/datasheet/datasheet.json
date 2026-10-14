@@ -1,0 +1,67 @@
+{
+  "schema": "datasheet/1",
+  "substance": "cannabigerol",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "natural"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxylated CBG",
+        "reaction": "hydroxylation",
+        "enzymes": [
+          "other"
+        ],
+        "source": "calapai2022"
+      },
+      {
+        "from": "parent",
+        "to": "dioxygenated CBG",
+        "reaction": "other",
+        "enzymes": [
+          "other"
+        ],
+        "source": "calapai2022"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "hydroxylated-cbg",
+        "active": null,
+        "source": "calapai2022"
+      },
+      {
+        "name_key": "dioxygenated-cbg",
+        "active": null,
+        "source": "calapai2022"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
