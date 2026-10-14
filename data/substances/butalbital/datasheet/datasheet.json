@@ -1,0 +1,73 @@
+{
+  "schema": "datasheet/1",
+  "substance": "butalbital",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "5-isobutyl-5-(2,3-dihydroxypropyl)barbituric acid",
+        "reaction": "other",
+        "source": "butalbital-label"
+      },
+      {
+        "from": "parent",
+        "to": "5-allyl-5-(3-hydroxy-2-methyl-1-propyl)barbituric acid",
+        "reaction": "hydroxylation",
+        "source": "butalbital-label"
+      },
+      {
+        "from": "parent",
+        "to": "ring-hydrolysed products (urea released)",
+        "reaction": "other",
+        "source": "butalbital-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "isobutyl-dihydroxypropyl-barbituric-acid",
+        "active": null,
+        "source": "butalbital-label"
+      },
+      {
+        "name_key": "allyl-hydroxymethylpropyl-barbituric-acid",
+        "active": null,
+        "source": "butalbital-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 35,
+      "max": 35,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "butalbital-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
