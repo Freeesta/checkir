@@ -1,0 +1,79 @@
+{
+  "schema": "datasheet/1",
+  "substance": "memantine",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "memantine N-glucuronide",
+        "reaction": "glucuronidation",
+        "source": "namenda-xr-label"
+      },
+      {
+        "from": "parent",
+        "to": "6-hydroxy memantine",
+        "reaction": "hydroxylation",
+        "source": "namenda-xr-label"
+      },
+      {
+        "from": "parent",
+        "to": "1-nitroso-deaminated memantine",
+        "reaction": "other",
+        "source": "namenda-xr-label"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "memantine-n-glucuronide",
+        "active": false,
+        "source": "namenda-xr-label"
+      },
+      {
+        "name_key": "6-hydroxy-memantine",
+        "active": false,
+        "source": "namenda-xr-label"
+      },
+      {
+        "name_key": "1-nitroso-deaminated-memantine",
+        "active": false,
+        "source": "namenda-xr-label"
+      }
+    ],
+    "half_life_h": {
+      "min": 60,
+      "max": 80,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "namenda-xr-label"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
