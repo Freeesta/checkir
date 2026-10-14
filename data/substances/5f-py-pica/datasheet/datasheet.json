@@ -1,0 +1,82 @@
+{
+  "schema": "datasheet/1",
+  "substance": "5f-py-pica",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "synthetic_cannabinoids",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "ω-carboxylic acid (M4)",
+        "reaction": "other",
+        "source": "mardal2018"
+      },
+      {
+        "from": "parent",
+        "to": "defluorinated ω-hydroxy metabolite (M3)",
+        "reaction": "hydroxylation",
+        "source": "mardal2018"
+      },
+      {
+        "from": "parent",
+        "to": "pyrrolidine carboxylic acid (M6)",
+        "reaction": "other",
+        "source": "mardal2018"
+      },
+      {
+        "from": "phase-i-metabolites",
+        "to": "hydroxy-indole glucuronide (M22)",
+        "reaction": "glucuronidation",
+        "source": "mardal2018"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "5f-py-pica-omega-carboxylic-acid-m4",
+        "active": null,
+        "source": "mardal2018",
+        "marker": true
+      },
+      {
+        "name_key": "5f-py-pica-pyrrolidine-carboxylic-acid-m6",
+        "active": null,
+        "source": "mardal2018",
+        "marker": true
+      },
+      {
+        "name_key": "5f-py-pica-hydroxy-indole-glucuronide-m22",
+        "active": null,
+        "source": "mardal2018",
+        "marker": true
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

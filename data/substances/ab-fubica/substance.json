@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ab-fubica",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "AB-FUBICA"
+    },
+    "it": {
+      "preferred": "AB-FUBICA"
+    }
+  },
+  "iupac": "N-[(2S)-1-amino-3-methyl-1-oxobutan-2-yl]-1-[(4-fluorophenyl)methyl]indole-3-carboxamide",
+  "formula": "C21H22FN3O2",
+  "molar_mass_g_mol": 367.4,
+  "smiles": "CC(C)[C@@H](C(=O)N)NC(=O)C1=CN(C2=CC=CC=C21)CC3=CC=C(C=C3)F",
+  "inchi": "InChI=1S/C21H22FN3O2/c1-13(2)19(20(23)26)24-21(27)17-12-25(18-6-4-3-5-16(17)18)11-14-7-9-15(22)10-8-14/h3-10,12-13,19H,11H2,1-2H3,(H2,23,26)(H,24,27)/t19-/m0/s1",
+  "inchikey": "KTVPQJSKKGZIEA-IBGZPJMESA-N",
+  "external_ids": {
+    "cas": "1801338-22-6",
+    "pubchem_cid": 129532610
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
