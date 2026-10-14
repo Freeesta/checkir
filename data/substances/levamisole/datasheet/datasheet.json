@@ -1,7 +1,7 @@
 {
   "schema": "datasheet/2",
   "substance": "levamisole",
-  "version": 3,
+  "version": 4,
   "doses": [],
   "interactions": [],
   "authors": [
@@ -28,7 +28,7 @@
       {
         "name_key": "aminorex",
         "active": true,
-        "source": "hess2013"
+        "source": "hofmaier2014"
       },
       {
         "name_key": "hydroxylevamisole",

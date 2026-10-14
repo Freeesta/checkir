@@ -14,9 +14,11 @@ Il levamisolo era un farmaco approvato dalla FDA statunitense come immunomodulat
 
 ## metabolism
 
-Dopo una dose orale in volontari, solo lo 0.5 % è stato trovato immodificato nelle urine. Tra i metaboliti ci sono l'aminorex, una sostanza simile alle anfetamine, e il levamisolo idrossilato, libero o coniugato con solfato o glucuronide. [f:hess2013]
+Dopo dosi orali in volontari sani (umano) solo una piccola parte viene escreta immodificata nelle urine: 0.5 % dopo 100 mg [f:hess2013], 3.2 ± 2.9 % dopo 150 mg [f:kouassi1986]. Il metabolita principale documentato è il p-idrossilevamisolo, escreto soprattutto come glucuronide (12.4 ± 5.5 % della dose dopo idrolisi) [f:kouassi1986].
 
-In uno studio farmacocinetico l'emivita plasmatica è stata di 2.0 ore e il levamisolo era rilevabile fino a 36 ore; l'aminorex è rimasto sotto il limite di quantificazione. [f:hess2014]
+L'emivita plasmatica è stata di 2.0 h dopo 100 mg (picco di 214 ng/mL a circa 2 h; rilevabile fino a 36 h) [f:hess2014] e di 5.6 ± 2.5 h dopo 150 mg [f:kouassi1986]; i due studi differiscono e la causa non è indicata.
+
+L'aminorex, una sostanza simile alle anfetamine, è stato segnalato nelle urine dopo 100 mg (fino a 45 ng/mL) [f:hess2013], ma nel plasma non ha mai superato il limite di quantificazione [f:hess2014] e non è mai stato rilevato in uno studio controllato, secondo cui il composto indicato come aminorex nei lavori forensi precedenti era probabilmente il 4-fenil-2-imidazolidinone, un isomero [f:hundertmark2023].
 
 ## cuts
 
@@ -28,21 +30,23 @@ Perché venga aggiunto non è noto; è stato ipotizzato che serva a potenziare g
 
 ## effects
 
-Non ancora redatta. [f:checkir-section-pending]
+Nell'uomo non è stato trovato alcuno studio sugli effetti del solo levamisolo alle dosi presenti nella cocaina e la relazione dose-risposta in questo contesto non è nota. In vitro e nel ratto: il levamisolo non ha mostrato attività misurabile sui recettori e sui trasportatori delle monoamine (uno studio precedente trovava una potenza 100-300 volte inferiore alla cocaina sui trasportatori di noradrenalina e dopamina) e non ha modificato gli effetti della cocaina sulla dopamina nel ratto [f:zolkowska2026] [f:hofmaier2014].
+
+Il metabolita aminorex è un potente substrato dei trasportatori di dopamina, noradrenalina e serotonina in vitro, quindi potrebbe contribuire solo con esposizioni ripetute e alte; nell'uomo non è dimostrato [f:zolkowska2026] [f:hofmaier2014].
 
 ## doses
 
-Non ancora redatta. [f:checkir-section-pending]
+Nessuna tabella di dosi: non sono stati trovati dati sulla quantità di levamisolo assunta con la cocaina né una relazione dose-risposta come adulterante. Nei volontari degli studi farmacocinetici le dosi orali erano 100 mg [f:hess2014] e 150 mg [f:kouassi1986]. In campioni di plasma positivi alla cocaina il levamisolo è stato quantificato a 2.2-224 ng/mL nel 42.5 % dei casi [f:hess2014]. Una valutazione del rischio ha stimato l'esposizione per grammo di cocaina e sottolineato l'esposizione cronica nei consumatori forti [f:brunt2017].
 
 ## risks
 
-Il levamisolo nella cocaina di strada è stato collegato ad agranulocitosi (forte calo di un tipo di globuli bianchi) nei consumatori di cocaina; l'agranulocitosi è associata anche all'uso terapeutico e questo potrebbe avere portato al ritiro del farmaco dal mercato statunitense. [f:chang2010]
+Il levamisolo nella cocaina di strada è stato associato a neutropenia e agranulocitosi (forte calo di un tipo di globuli bianchi), vasculopatia con lesioni cutanee purpuriche e necrosi, e leucoencefalopatia; le femmine sembrano più suscettibili [f:brunt2017]. L'agranulocitosi è associata anche all'uso terapeutico, che può aver portato al ritiro dal mercato statunitense [f:chang2010].
 
-Le rassegne sull'uso medico riportano leucopenia e agranulocitosi, e vasculite (infiammazione dei vasi sanguigni, spesso con interessamento dei lobi delle orecchie), che possono ripresentarsi alla riesposizione. Le complicanze nei consumatori di cocaina sono state pubblicate per la prima volta nel 2009. [f:larocque2012]
+In 32 casi pubblicati (età media 44 anni, 75 % donne) le lesioni interessavano gambe, volto e orecchie; il 63 % aveva leucopenia o neutropenia e il 94 % autoanticorpi ANCA; 10 pazienti su 22 hanno avuto recidive dopo l'uso di cocaina (follow-up mediano 21 giorni) [f:arora2013]. Le rassegne sull'uso medico riportano vasculite, che può ripresentarsi alla riesposizione [f:larocque2012].
 
 ## interactions
 
-Non ancora redatta. [f:checkir-section-pending]
+Nessuna interazione individuata: nel ratto il levamisolo non ha modificato gli effetti acuti della cocaina su dopamina e attività motoria [f:zolkowska2026], e in vitro non ha accentuato il blocco dei trasportatori da parte della cocaina [f:hofmaier2014]. Interazioni con altri farmaci, compresi altri agenti mielotossici, non sono state trovate nelle fonti consultate; l'assenza di dati non è assenza di rischio. Gli effetti avversi qui sotto riguardano persone che usano cocaina adulterata, soprattutto dopo esposizioni ripetute [f:brunt2017].
 
 ## counselling
 
@@ -52,7 +56,7 @@ Segnala che i sintomi sono ricomparsi nel 27.1 % dei consumatori di cocaina dopo
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:chang2010] [f:chebi] [f:checkir-classification] [f:eiden2015] [f:hess2013] [f:hess2014] [f:larocque2012] [f:pubchem] [f:unodc-cocaine2012] [f:wikidata]
+[f:arora2013] [f:brunt2017] [f:chang2010] [f:chebi] [f:checkir-classification] [f:eiden2015] [f:hess2013] [f:hess2014] [f:hofmaier2014] [f:hundertmark2023] [f:kouassi1986] [f:larocque2012] [f:pubchem] [f:unodc-cocaine2012] [f:wikidata] [f:zolkowska2026]
 
 ## license
 
