@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-oxo-pce",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2-oxo-PCE",
+      "synonyms": [
+        "O-PCE",
+        "N-ethyldeschloroketamine",
+        "deschloro-N-ethyl-ketamine",
+        "eticyclidone"
+      ]
+    },
+    "it": {
+      "preferred": "2-oxo-PCE",
+      "synonyms": [
+        "O-PCE",
+        "N-etildescloroketamina"
+      ]
+    }
+  },
+  "iupac": "2-(ethylamino)-2-phenylcyclohexan-1-one",
+  "formula": "C14H19NO",
+  "molar_mass_g_mol": 217.31,
+  "smiles": "CCNC1(CCCCC1=O)C2=CC=CC=C2",
+  "inchi": "InChI=1S/C14H19NO/c1-2-15-14(11-7-6-10-13(14)16)12-8-4-3-5-9-12/h3-5,8-9,15H,2,6-7,10-11H2,1H3",
+  "inchikey": "IDLSBAANXISGEI-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "6740-82-5",
+    "pubchem_cid": 132989542
+  },
+  "classes": {
+    "chemical": [
+      "arylcyclohexylamines"
+    ],
+    "effect": [
+      "dissociative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
