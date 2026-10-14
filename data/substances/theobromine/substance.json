@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "theobromine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Theobromine",
+      "synonyms": [
+        "3,7-dimethylxanthine"
+      ]
+    },
+    "it": {
+      "preferred": "Teobromina",
+      "synonyms": [
+        "3,7-dimetilxantina"
+      ]
+    }
+  },
+  "iupac": "3,7-dimethylpurine-2,6-dione",
+  "formula": "C7H8N4O2",
+  "molar_mass_g_mol": 180.16,
+  "smiles": "CN1C=NC2=C1C(=O)NC(=O)N2C",
+  "inchi": "InChI=1S/C7H8N4O2/c1-10-3-8-5-4(10)6(12)9-7(13)11(5)2/h3H,1-2H3,(H,9,12,13)",
+  "inchikey": "YAPQBXQYLJRXSA-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "83-67-0",
+    "pubchem_cid": 5429
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
