@@ -14541,6 +14541,220 @@
       "consulted": "2026-10-14"
     },
     {
+      "id": "seo2018",
+      "type": "paper",
+      "title": "Metabolic profile determination of 25N-NBOMe in human liver microsomes by liquid chromatography-quadrupole time-of-flight mass spectrometry (Int J Legal Med 133:833-841)",
+      "authors": [
+        "H. Seo",
+        "I. S. Kim",
+        "Y. H. Kim",
+        "H. H. Yoo",
+        "J. Hong"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00414-018-1904-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30090972/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204105932/https://pubmed.ncbi.nlm.nih.gov/30090972/"
+    },
+    {
+      "id": "eshleman2018",
+      "type": "paper",
+      "title": "Neurochemical pharmacology of psychoactive substituted N-benzylphenethylamines: High potency agonists at 5-HT2A receptors (Biochem Pharmacol 158:27-34)",
+      "authors": [
+        "A. J. Eshleman",
+        "K. M. Wolfrum",
+        "J. F. Reed",
+        "S. O. Kim",
+        "R. A. Johnson",
+        "A. Janowsky"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.bcp.2018.09.024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30261175/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "xiang2024",
+      "type": "paper",
+      "title": "Metabolic characterization of 25X-NBOH and 25X-NBOMe phenethylamines based on UHPLC-Q-Exactive Orbitrap MS in human liver microsomes (J Pharm Biomed Anal 242:116020)",
+      "authors": [
+        "J. Xiang",
+        "D. Wen",
+        "W. Zhai",
+        "J. Zhao",
+        "P. Xiang",
+        "C. Ma",
+        "Y. Shi"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.116020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38359493/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "halberstadt2019",
+      "type": "paper",
+      "title": "Comparison of the behavioral responses induced by phenylalkylamine hallucinogens and their tetrahydrobenzodifuran (\"FLY\") and benzodifuran (\"DragonFLY\") analogs (Neuropharmacology 144:368-376)",
+      "authors": [
+        "A. L. Halberstadt",
+        "M. Chatha",
+        "A. Stratford",
+        "M. Grill",
+        "S. D. Brandt"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2018.10.037",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30385253/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "stoller2017",
+      "type": "paper",
+      "title": "Mistaking 2C-P for 2C-B: What a Difference a Letter Makes (J Anal Toxicol 41:77-79)",
+      "authors": [
+        "A. Stoller",
+        "P. C. Dolder",
+        "M. Bodmer",
+        "F. Hammann",
+        "K. M. Rentsch",
+        "A. K. Exadaktylos",
+        "M. E. Liechti",
+        "E. Liakoni"
+      ],
+      "year": 2017,
+      "doi": "10.1093/jat/bkw108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28130544/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260928103958/https://pubmed.ncbi.nlm.nih.gov/28130544/"
+    },
+    {
+      "id": "hong2011",
+      "type": "paper",
+      "title": "Comparison of contents of five ephedrine alkaloids in three official origins of Ephedra Herb in China by high-performance liquid chromatography (J Nat Med 65)",
+      "authors": [
+        "H Hong",
+        "H-B Chen",
+        "D-H Yang",
+        "M-Y Shang",
+        "X Wang",
+        "S-Q Cai",
+        "M Mikage"
+      ],
+      "year": 2011,
+      "doi": "10.1007/s11418-011-0528-8",
+      "url": "https://doi.org/10.1007/s11418-011-0528-8",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "barroso2011",
+      "type": "paper",
+      "title": "Determination of urinary concentrations of pseudoephedrine and cathine after therapeutic administration of pseudoephedrine-containing medications to healthy subjects (Drug Test Anal 3)",
+      "authors": [
+        "O Barroso",
+        "D Goudreault",
+        "M-l Carbó Banús",
+        "C Ayotte",
+        "I Mazzoni",
+        "T Boghosian",
+        "O Rabin"
+      ],
+      "year": 2011,
+      "doi": "10.1002/dta.291",
+      "url": "https://doi.org/10.1002/dta.291",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "helfer2014",
+      "type": "paper",
+      "title": "Elucidation of the metabolites of the novel psychoactive substance 4-methyl-N-ethyl-cathinone (4-MEC) in human urine and pooled liver microsomes by GC-MS and LC-HR-MS/MS techniques (Drug Test Anal 7)",
+      "authors": [
+        "A G Helfer",
+        "A Turcant",
+        "D Boels",
+        "S Ferec",
+        "B Lelièvre",
+        "J Welter",
+        "M R Meyer",
+        "H H Maurer"
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1682",
+      "url": "https://doi.org/10.1002/dta.1682",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "carlier2019",
+      "type": "paper",
+      "title": "Use of cognitive enhancers: methylphenidate and analogs (Eur Rev Med Pharmacol Sci 23)",
+      "authors": [
+        "J Carlier",
+        "R Giorgetti",
+        "M R Varì",
+        "F Pirani",
+        "G Ricci",
+        "F P Busardò"
+      ],
+      "year": 2019,
+      "doi": "10.26355/eurrev_201901_16741",
+      "url": "https://doi.org/10.26355/eurrev_201901_16741",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "sakamoto2023",
+      "type": "paper",
+      "title": "Analytical characterization and differentiation between threo- and erythro-4-fluoroethylphenidate (Forensic Toxicol 41)",
+      "authors": [
+        "M Sakamoto",
+        "T Suzuki",
+        "D Teraoka",
+        "K Tanaka",
+        "Y Saeki",
+        "K Kishimoto",
+        "M Nagashima",
+        "J Nakajima",
+        "J Suzuki",
+        "A Inomata",
+        "T Moriyasu",
+        "H Fukaya"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s11419-023-00664-y",
+      "url": "https://doi.org/10.1007/s11419-023-00664-y",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "jin2008",
+      "type": "paper",
+      "title": "Analysis of indandione anticoagulant rodenticides in animal liver by eluent generator reagent free ion chromatography coupled with electrospray mass spectrometry (J Chromatogr A 1213)",
+      "authors": [
+        "M Jin",
+        "X Chen",
+        "M Ye",
+        "Y Zhu"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.chroma.2008.08.100",
+      "url": "https://doi.org/10.1016/j.chroma.2008.08.100",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
       "id": "mclaughlin2017",
       "type": "paper",
       "title": "Analytical characterization and pharmacological evaluation of the new psychoactive substance 4-fluoromethylphenidate (4F-MPH) and differentiation between the (±)-threo and (±)-erythro diastereomers (Drug Test Anal 9:347-357)",

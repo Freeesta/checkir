@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-fluoroethylphenidate",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-Fluoroethylphenidate",
+      "synonyms": [
+        "4F-EPH",
+        "4-FEP",
+        "ethyl 2-(4-fluorophenyl)-2-(piperidin-2-yl)acetate"
+      ]
+    },
+    "it": {
+      "preferred": "4-Fluoroetilfenidato",
+      "synonyms": [
+        "4F-EPH",
+        "4-FEP"
+      ]
+    }
+  },
+  "iupac": "ethyl 2-(4-fluorophenyl)-2-piperidin-2-ylacetate",
+  "formula": "C15H20FNO2",
+  "molar_mass_g_mol": 265.32,
+  "smiles": "CCOC(=O)C(C1CCCCN1)C2=CC=C(C=C2)F",
+  "inchi": "InChI=1S/C15H20FNO2/c1-2-19-15(18)14(13-5-3-4-10-17-13)11-6-8-12(16)9-7-11/h6-9,13-14,17H,2-5,10H2,1H3",
+  "inchikey": "RKXQYWFDJDYSEN-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2160555-59-7",
+    "pubchem_cid": 123133727
+  },
+  "classes": {
+    "chemical": [
+      "phenidates"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
