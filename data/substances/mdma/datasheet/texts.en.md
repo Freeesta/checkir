@@ -14,15 +14,21 @@ Analogues that one band cannot tell apart: the three methylenedioxy bands point 
 
 Chemical class: phenethylamines, methylenedioxy subgroup. Expected effect: entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
 
+## history
+
+MDMA was first mentioned in Merck's files in 1912 as «Methylsafrylamin», an intermediate in a patent for another synthesis, not an appetite suppressant as often said; Merck ran basic pharmacological tests only from 1927 and never tested it in humans. [f:bernschneider-reif2006]
+
 ## origin
 
 Synthetic compound. Precursors: 3,4-methylenedioxyphenyl-2-propanone, safrole (also via isosafrole) and piperonal. N-formyl-MDMA is a by-product of the Leuckart route. [f:unodc-ats2006]
 
 ## metabolism
 
-MDMA is metabolised to MDA, HHMA and HMMA; the contribution of CYP2D6 does not exceed 30%. It is a mechanism-based inhibitor of CYP2D6: activity returns to 90% after about 10 days, with a recovery half-life of 36.6 ± 22.9 hours in women and 27.6 in men. [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011]
+After 75 and 125 mg orally, Cmax was 130.9 and 236.4 ng/mL, Tmax 1.8 and 2.4 h and half-life 7.7 and 8.6 h; 8-9% of the dose appeared in plasma as MDA. [f:mas1999] Per enantiomer the half-life is 4.8 h for (S)-MDMA and 14.8 h for (R)-MDMA. [f:pizarro2004]
 
-The half-life is 4.8 hours for (S)-MDMA and 14.8 hours for (R)-MDMA. [f:pizarro2004]
+Two routes: O-demethylenation to HHMA, then methylation by COMT to HMMA, with conjugation; and N-dealkylation to MDA. CYP2D6 contributes up to 30%. [f:delatorre2004] [f:pizarro2004] MDMA inactivates CYP2D6: after two doses everyone is phenotypically a poor metaboliser, activity returns to 90% after about 10 days. [f:delatorre2004] [f:segura2005] [f:yubero-lahoz2011]
+
+Kinetics are non-linear: a small rise in dose gives a disproportionate rise in plasma levels. [f:delatorre2000] A second dose 24 h later raised AUC by 77% and Cmax by 29%. [f:farre2004]
 
 ## cuts
 
@@ -30,37 +36,47 @@ Tablets contain adulterants, cutting agents, colours, excipients and binders; in
 
 ## effects
 
-In a review of controlled studies in healthy volunteers, MDMA showed robust effects on most subjective and physiological measures; the subjective effects matched an entactogenic profile. Pupil size, plasma cortisol and plasma prolactin increased. [f:dumont2006]
+MDMA releases and blocks the reuptake of serotonin, dopamine and noradrenaline through their membrane and vesicular transporters. [f:delatorre2004] Typical effects: euphoria, well-being, empathy, closeness to others, sociability, mild perceptual changes, moderate derealisation, no hallucinations; plus higher blood pressure and heart rate and mydriasis. [f:delatorre2004]
 
-Cardiovascular effects were dose-dependent: below 1.0 mg/kg no change relative to placebo was observed, above this dose all studies reported significant increases. [f:dumont2006]
+At 75 and 125 mg systolic pressure rose by about 40 mmHg and heart rate by about 30 beats/min; cortisol rose, prolactin only at the high dose. [f:mas1999] At 125 mg only MDMA, not methylphenidate or modafinil, reduced anxiety, impaired fear recognition and raised oxytocin. [f:dolder2018]
+
+Cardiovascular effects were dose-dependent: no change below 1.0 mg/kg, significant increases above. [f:dumont2006] Onset and duration of the subjective effects: no verified source; plasma Tmax is 1.8-2.4 h. [f:mas1999]
 
 ## doses
 
 Tablets contain 40-140 mg of MDMA; the European mean is about 60-70 mg, against about 100 mg in the mid-1990s. [f:unodc-ats2006]
 
+Controlled studies used single oral doses of 50 to 150 mg (75 and 125 mg in most). [f:delatorre2000] Because kinetics are non-linear, a rise in dose raises plasma levels more than proportionally. [f:delatorre2000]
+
 ## risks
 
-After a single dose of MDMA acute hyponatraemia appeared in 31% of participants (96 people in 4 randomised trials); fluid restriction attenuated it. [f:atila2024]
+Acute toxicity is not due to overdose alone: dose-dependent hyperthermia, potentially fatal, and a serotonin syndrome (muscle rigidity, hyperreflexia, hyperthermia) mark the toxic episodes. [f:green2003] [f:delatorre2004] The toxic and fatal range overlaps the recreational one; deaths describe hyperthermia, rhabdomyolysis, coagulopathy, hepatic necrosis, arrhythmias and stroke. [f:kalant2001]
 
-Deaths from ecstasy describe hyperthermia, rhabdomyolysis, coagulopathy, hepatic necrosis, arrhythmias and stroke; the toxic and fatal range overlaps the recreational one. Serotonergic neurotoxicity is described. [f:kalant2001]
+After a single dose acute hyponatraemia appeared in 31% of participants (96 people in 4 trials); fluid restriction attenuated it. [f:atila2024] The rise of 40 mmHg and 30 beats/min at rest could matter in crowded places and with physical activity. [f:mas1999]
+
+Serotonergic neurotoxicity is shown in animals; in human users the evidence is equivocal. [f:green2003]
 
 ## interactions
 
 MDMA with moclobemide (a reversible MAO-A inhibitor) has caused fatal serotonin toxicity. Ritonavir, a CYP inhibitor, has caused severe MDMA toxicity; paroxetine raises the AUC of MDMA by 27%. [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:segura2005]
 
+Redosing: because MDMA inhibits its own metabolism, a second dose raises plasma levels more than expected from simple accumulation. [f:farre2004]
+
 ## counselling
 
-Ask about current medication: fatal cases of serotonin toxicity are described with moclobemide (a MAO-A inhibitor). [f:vuori2003] [f:pilgrim2012] [f:ubc-counselling-guidelines]
+Ask about current medication: fatal serotonin toxicity is described with moclobemide. [f:vuori2003] [f:ubc-counselling-guidelines]
 
-Ask about antiviral medication: a case of severe MDMA toxicity is described with ritonavir. [f:papaseit2012] [f:ubc-counselling-guidelines]
+Ask about antiviral medication: severe MDMA toxicity is described with ritonavir. [f:papaseit2012] [f:ubc-counselling-guidelines]
 
-Talk about fluids: sodium can fall after MDMA and in trials fluid restriction attenuated hyponatraemia. [f:atila2024] [f:ubc-counselling-guidelines]
+Redosing: levels rise more than expected, so a further dose adds more than it seems; agree beforehand whether to redose at all. [f:farre2004] [f:ubc-counselling-guidelines]
 
-Explain that the toxic range overlaps the recreational one and that deaths describe hyperthermia and rhabdomyolysis: no amount offers a guarantee. [f:kalant2001] [f:ubc-counselling-guidelines]
+Talk about fluids: sodium can fall after MDMA; in trials fluid restriction attenuated it. [f:atila2024] [f:ubc-counselling-guidelines]
+
+The toxic range overlaps the recreational one: no amount offers a guarantee. [f:kalant2001] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011] [f:atila2024] [f:kalant2001] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines] [f:dumont2006]
+Sources used for the claims in this sheet: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:bernschneider-reif2006] [f:mas1999] [f:pizarro2004] [f:delatorre2004] [f:segura2005] [f:yubero-lahoz2011] [f:delatorre2000] [f:farre2004] [f:dolder2018] [f:dumont2006] [f:green2003] [f:kalant2001] [f:atila2024] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines]
 
 ## license
 
