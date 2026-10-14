@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-3-methylenedioxypyrovalerone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2,3-MDPV",
+      "synonyms": [
+        "2,3-Methylenedioxypyrovalerone"
+      ]
+    },
+    "it": {
+      "preferred": "2,3-MDPV",
+      "synonyms": [
+        "2,3-Methylenedioxypyrovalerone"
+      ]
+    }
+  },
+  "iupac": "1-(1,3-benzodioxol-4-yl)-2-pyrrolidin-1-ylpentan-1-one",
+  "formula": "C16H21NO3",
+  "molar_mass_g_mol": 275.34,
+  "smiles": "CCCC(C(=O)C1=C2C(=CC=C1)OCO2)N3CCCC3",
+  "inchi": "InChI=1S/C16H21NO3/c1-2-6-13(17-9-3-4-10-17)15(18)12-7-5-8-14-16(12)20-11-19-14/h5,7-8,13H,2-4,6,9-11H2,1H3",
+  "inchikey": "LBRDQHPPVAYKTK-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1427205-89-7",
+    "pubchem_cid": 119058032
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

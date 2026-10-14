@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "2-5-dimethylmethcathinone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "2,5-Dimethylmethcathinone",
+      "synonyms": [
+        "2,5-DMMC"
+      ]
+    },
+    "it": {
+      "preferred": "2,5-Dimethylmethcathinone",
+      "synonyms": [
+        "2,5-DMMC"
+      ]
+    }
+  },
+  "iupac": "1-(2,5-dimethylphenyl)-2-(methylamino)propan-1-one",
+  "formula": "C12H17NO",
+  "molar_mass_g_mol": 191.27,
+  "smiles": "CC1=CC(=C(C=C1)C)C(=O)C(C)NC",
+  "inchi": "InChI=1S/C12H17NO/c1-8-5-6-9(2)11(7-8)12(14)10(3)13-4/h5-7,10,13H,1-4H3",
+  "inchikey": "DXMZEFZHFMLFKR-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "1368703-59-6",
+    "pubchem_cid": 82281429
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
