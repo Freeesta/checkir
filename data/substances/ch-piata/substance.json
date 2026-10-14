@@ -1,0 +1,56 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "ch-piata",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "CH-PIATA",
+      "synonyms": [
+        "CH-PIACA",
+        "CHX-PIATA",
+        "CHX-PIACA"
+      ]
+    },
+    "it": {
+      "preferred": "CH-PIATA",
+      "synonyms": [
+        "CH-PIACA",
+        "CHX-PIATA",
+        "CHX-PIACA"
+      ]
+    }
+  },
+  "iupac": "N-cyclohexyl-2-(1-pentylindol-3-yl)acetamide",
+  "formula": "C21H30N2O",
+  "molar_mass_g_mol": 326.5,
+  "smiles": "CCCCCN1C=C(C2=CC=CC=C21)CC(=O)NC3CCCCC3",
+  "inchi": "InChI=1S/C21H30N2O/c1-2-3-9-14-23-16-17(19-12-7-8-13-20(19)23)15-21(24)22-18-10-5-4-6-11-18/h7-8,12-13,16,18H,2-6,9-11,14-15H2,1H3,(H,22,24)",
+  "inchikey": "SYYOOLIGHZEOKJ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "3085600-43-4",
+    "pubchem_cid": 165361915
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cannabinoids"
+    ],
+    "effect": [
+      "cannabinoid"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
