@@ -16318,6 +16318,1022 @@
       "consulted": "2026-10-14",
       "license": "cited as the source of numbers only",
       "url": "https://doi.org/10.1016/0893-133X(95)00145-4"
+    },
+    {
+      "id": "jeffcoat1989",
+      "type": "paper",
+      "title": "Cocaine disposition in humans after intravenous injection, nasal insufflation (snorting), or smoking (Drug Metab Dispos 17(2):153-159)",
+      "authors": [
+        "A. R. Jeffcoat",
+        "M. Perez-Reyes",
+        "J. M. Hill",
+        "B. M. Sadler",
+        "C. E. Cook"
+      ],
+      "year": 1989,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2565204/",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "cone1998",
+      "type": "paper",
+      "title": "Cocaine metabolism and urinary excretion after different routes of administration (Ther Drug Monit 20(5):556-560)",
+      "authors": [
+        "E. J. Cone",
+        "A. Tsadik",
+        "J. Oyler",
+        "W. D. Darwin"
+      ],
+      "year": 1998,
+      "doi": "10.1097/00007691-199810000-00019",
+      "url": "https://doi.org/10.1097/00007691-199810000-00019",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "preston2002",
+      "type": "paper",
+      "title": "Urinary elimination of cocaine metabolites in chronic cocaine users during cessation (J Anal Toxicol 26(7):393-400)",
+      "authors": [
+        "K. L. Preston",
+        "D. H. Epstein",
+        "E. J. Cone",
+        "A. T. Wtsadik",
+        "M. A. Huestis",
+        "E. T. Moolchan"
+      ],
+      "year": 2002,
+      "doi": "10.1093/jat/26.7.393",
+      "url": "https://doi.org/10.1093/jat/26.7.393",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "volkow1997",
+      "type": "paper",
+      "title": "Relationship between subjective effects of cocaine and dopamine transporter occupancy (Nature 386(6627):827-830)",
+      "authors": [
+        "N. D. Volkow",
+        "G. J. Wang",
+        "M. W. Fischman",
+        "R. W. Foltin",
+        "J. S. Fowler",
+        "N. N. Abumrad",
+        "S. Vitkun",
+        "J. Logan",
+        "S. J. Gatley",
+        "N. Pappas",
+        "R. Hitzemann",
+        "C. E. Shea"
+      ],
+      "year": 1997,
+      "doi": "10.1038/386827a0",
+      "url": "https://doi.org/10.1038/386827a0",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "ambre1988",
+      "type": "paper",
+      "title": "Acute tolerance to cocaine in humans (Clin Pharmacol Ther 44(1):1-8)",
+      "authors": [
+        "J. J. Ambre",
+        "S. M. Belknap",
+        "J. Nelson",
+        "T. I. Ruo",
+        "S. G. Shin",
+        "A. J. Atkinson"
+      ],
+      "year": 1988,
+      "doi": "10.1038/clpt.1988.104",
+      "url": "https://doi.org/10.1038/clpt.1988.104",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "foltin2004",
+      "type": "paper",
+      "title": "Intranasal cocaine in humans: acute tolerance, cardiovascular and subjective effects (Pharmacol Biochem Behav 78(1):93-101)",
+      "authors": [
+        "R. W. Foltin",
+        "M. Haney"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.pbb.2004.02.018",
+      "url": "https://doi.org/10.1016/j.pbb.2004.02.018",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "harris2003",
+      "type": "paper",
+      "title": "The pharmacology of cocaethylene in humans following cocaine and ethanol administration (Drug Alcohol Depend 72(2):169-182)",
+      "authors": [
+        "D. S. Harris",
+        "E. T. Everhart",
+        "J. Mendelson",
+        "R. T. Jones"
+      ],
+      "year": 2003,
+      "doi": "10.1016/s0376-8716(03)00200-x",
+      "url": "https://doi.org/10.1016/s0376-8716(03)00200-x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "mccance-katz1993",
+      "type": "paper",
+      "title": "Concurrent cocaine-ethanol ingestion in humans: pharmacology, physiology, behavior, and the role of cocaethylene (Psychopharmacology 111(1):39-46)",
+      "authors": [
+        "E. F. McCance-Katz",
+        "L. H. Price",
+        "C. J. McDougle",
+        "T. R. Kosten",
+        "J. E. Black",
+        "P. I. Jatlow"
+      ],
+      "year": 1993,
+      "doi": "10.1007/BF02257405",
+      "url": "https://doi.org/10.1007/BF02257405",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "afonso2007",
+      "type": "paper",
+      "title": "Crack whips the heart: a review of the cardiovascular toxicity of cocaine (Am J Cardiol 100(6):1040-1043)",
+      "authors": [
+        "L. Afonso",
+        "T. Mohammad",
+        "D. Thatai"
+      ],
+      "year": 2007,
+      "doi": "10.1016/j.amjcard.2007.04.049",
+      "url": "https://doi.org/10.1016/j.amjcard.2007.04.049",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "markowitz2017",
+      "type": "paper",
+      "title": "The Clinical Pharmacokinetics of Amphetamines Utilized in the Treatment of Attention-Deficit/Hyperactivity Disorder (J Child Adolesc Psychopharmacol 27:678-689)",
+      "authors": [
+        "J. S. Markowitz",
+        "K. S. Patrick"
+      ],
+      "year": 2017,
+      "doi": "10.1089/cap.2017.0071",
+      "url": "https://doi.org/10.1089/cap.2017.0071",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "wan1978",
+      "type": "paper",
+      "title": "Kinetics, salivary excretion of amphetamine isomers, and effect of urinary pH (Clin Pharmacol Ther 23:585-90)",
+      "authors": [
+        "S. H. Wan",
+        "S. B. Matin",
+        "D. L. Azarnoff"
+      ],
+      "year": 1978,
+      "doi": "10.1002/cpt1978235585",
+      "url": "https://doi.org/10.1002/cpt1978235585",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "poklis1998",
+      "type": "paper",
+      "title": "Urinary excretion of d-amphetamine following oral doses in humans: implications for urine drug testing (J Anal Toxicol 22:481-6)",
+      "authors": [
+        "A. Poklis",
+        "J. Still",
+        "P. W. Slattum",
+        "L. F. Edinboro",
+        "J. J. Saady",
+        "A. Costantino"
+      ],
+      "year": 1998,
+      "doi": "10.1093/jat/22.6.481",
+      "url": "https://doi.org/10.1093/jat/22.6.481",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "cody2004",
+      "type": "paper",
+      "title": "Amphetamine excretion profile following multidose administration of mixed salt amphetamine preparation (J Anal Toxicol 28:563-74)",
+      "authors": [
+        "J. T. Cody",
+        "S. Valtier",
+        "S. L. Nelson"
+      ],
+      "year": 2004,
+      "doi": "10.1093/jat/28.7.563",
+      "url": "https://doi.org/10.1093/jat/28.7.563",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "helland2025",
+      "type": "paper",
+      "title": "Drug detection in oral fluid and urine after single therapeutic doses of dexamphetamine, lisdexamphetamine, and methylphenidate in healthy volunteers (J Anal Toxicol 49:65-72)",
+      "authors": [
+        "A. Helland",
+        "S. Muller",
+        "O. Spigset",
+        "H. M. Krabseth",
+        "M. Hansen",
+        "R. B. Skråstad"
+      ],
+      "year": 2025,
+      "doi": "10.1093/jat/bkae097",
+      "url": "https://doi.org/10.1093/jat/bkae097",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "miranda2007",
+      "type": "paper",
+      "title": "Determination of amphetamine, methamphetamine, and hydroxyamphetamine derivatives in urine by gas chromatography-mass spectrometry and its relation to CYP2D6 phenotype of drug users (J Anal Toxicol 31:31-6)",
+      "authors": [
+        "E. Miranda-G",
+        "M. Sordo",
+        "A. M. Salazar",
+        "C. Contreras",
+        "L. Bautista",
+        "A. E. R. García",
+        "P. Ostrosky-Wegman"
+      ],
+      "year": 2007,
+      "doi": "10.1093/jat/31.1.31",
+      "url": "https://doi.org/10.1093/jat/31.1.31",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "rothman2001",
+      "type": "paper",
+      "title": "Amphetamine-type central nervous system stimulants release norepinephrine more potently than they release dopamine and serotonin (Synapse 39:32-41)",
+      "authors": [
+        "R. B. Rothman",
+        "M. H. Baumann",
+        "C. M. Dersch",
+        "D. V. Romero",
+        "K. C. Rice",
+        "F. I. Carroll",
+        "J. S. Partilla"
+      ],
+      "year": 2001,
+      "doi": "10.1002/1098-2396(20010101)39:1<32::AID-SYN5>3.0.CO;2-3",
+      "url": "https://doi.org/10.1002/1098-2396(20010101)39:1<32::AID-SYN5>3.0.CO;2-3",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "sulzer2005",
+      "type": "paper",
+      "title": "Mechanisms of neurotransmitter release by amphetamines: a review (Prog Neurobiol 75:406-33)",
+      "authors": [
+        "D. Sulzer",
+        "M. S. Sonders",
+        "N. W. Poulsen",
+        "A. Galli"
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.pneurobio.2005.04.003",
+      "url": "https://doi.org/10.1016/j.pneurobio.2005.04.003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "spiller2013",
+      "type": "paper",
+      "title": "Overdose of drugs for attention-deficit hyperactivity disorder: clinical presentation, mechanisms of toxicity, and management (CNS Drugs 27:531-43)",
+      "authors": [
+        "H. A. Spiller",
+        "H. L. Hays",
+        "A. Aleguas"
+      ],
+      "year": 2013,
+      "doi": "10.1007/s40263-013-0084-8",
+      "url": "https://doi.org/10.1007/s40263-013-0084-8",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "carvalho2012",
+      "type": "paper",
+      "title": "Toxicity of amphetamines: an update (Arch Toxicol 86:1167-231)",
+      "authors": [
+        "M. Carvalho",
+        "H. Carmo",
+        "V. M. Costa",
+        "J. P. Capela",
+        "H. Pontes",
+        "F. Remião",
+        "F. Carvalho",
+        "M. d. L. Bastos"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00204-012-0815-5",
+      "url": "https://doi.org/10.1007/s00204-012-0815-5",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "kirkpatrick2012",
+      "type": "paper",
+      "title": "Comparison of intranasal methamphetamine and d-amphetamine self-administration by humans (Addiction 107:783-91)",
+      "authors": [
+        "M. G. Kirkpatrick",
+        "E. W. Gunderson",
+        "C. E. Johanson",
+        "F. R. Levin",
+        "R. W. Foltin",
+        "C. L. Hart"
+      ],
+      "year": 2012,
+      "doi": "10.1111/j.1360-0443.2011.03706.x",
+      "url": "https://doi.org/10.1111/j.1360-0443.2011.03706.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "yanagihara2003",
+      "type": "paper",
+      "title": "Plasma concentration profiles of ketamine and norketamine after administration of various ketamine preparations to healthy Japanese volunteers (Biopharm Drug Dispos 24:37-43)",
+      "authors": [
+        "Y. Yanagihara",
+        "M. Ohtani",
+        "S. Kariya",
+        "K. Uchino",
+        "T. Hiraishi",
+        "N. Ashizawa",
+        "T. Aoyama",
+        "Y. Yamamura",
+        "Y. Yamada",
+        "T. Iga"
+      ],
+      "year": 2003,
+      "doi": "10.1002/bdd.336",
+      "url": "https://doi.org/10.1002/bdd.336",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "perez-ruixo2021",
+      "type": "paper",
+      "title": "Population Pharmacokinetics of Esketamine Nasal Spray and its Metabolite Noresketamine in Healthy Subjects and Patients with Treatment-Resistant Depression (Clin Pharmacokinet 60:501-516)",
+      "authors": [
+        "C. Perez-Ruixo",
+        "S. Rossenu",
+        "P. Zannikos",
+        "P. Nandy",
+        "J. Singh",
+        "W. C. Drevets",
+        "J. J. Perez-Ruixo"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s40262-020-00953-4",
+      "url": "https://doi.org/10.1007/s40262-020-00953-4",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kamp2020",
+      "type": "paper",
+      "title": "Pharmacokinetics of ketamine and its major metabolites norketamine, hydroxynorketamine, and dehydronorketamine: a model-based analysis (Br J Anaesth 125:750-761)",
+      "authors": [
+        "J. Kamp",
+        "K. Jonkman",
+        "M. van Velzen",
+        "L. Aarts",
+        "M. Niesters",
+        "A. Dahan",
+        "E. Olofsen"
+      ],
+      "year": 2020,
+      "doi": "10.1016/j.bja.2020.06.067",
+      "url": "https://doi.org/10.1016/j.bja.2020.06.067",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "li2013-cyp2b6",
+      "type": "paper",
+      "title": "The CYP2B6*6 allele significantly alters the N-demethylation of ketamine enantiomers in vitro (Drug Metab Dispos 41:1264-72)",
+      "authors": [
+        "Y. Li",
+        "J. K. Coller",
+        "M. R. Hutchinson",
+        "K. Klein",
+        "U. M. Zanger",
+        "N. J. Stanley",
+        "A. D. Abell",
+        "A. A. Somogyi"
+      ],
+      "year": 2013,
+      "doi": "10.1124/dmd.113.051631",
+      "url": "https://doi.org/10.1124/dmd.113.051631",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "desta2012",
+      "type": "paper",
+      "title": "Stereoselective and regiospecific hydroxylation of ketamine and norketamine (Xenobiotica 42:1076-87)",
+      "authors": [
+        "Z. Desta",
+        "R. Moaddel",
+        "E. T. Ogburn",
+        "C. Xu",
+        "A. Ramamoorthy",
+        "S. L. Venkata",
+        "M. Sanghvi",
+        "M. E. Goldberg",
+        "M. C. Torjman",
+        "I. W. Wainer"
+      ],
+      "year": 2012,
+      "doi": "10.3109/00498254.2012.685777",
+      "url": "https://doi.org/10.3109/00498254.2012.685777",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "peltoniemi2012-grapefruit",
+      "type": "paper",
+      "title": "S-ketamine concentrations are greatly increased by grapefruit juice (Eur J Clin Pharmacol 68:979-86)",
+      "authors": [
+        "M. A. Peltoniemi",
+        "T. I. Saari",
+        "N. M. Hagelberg",
+        "K. Laine",
+        "P. J. Neuvonen",
+        "K. T. Olkkola"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00228-012-1214-9",
+      "url": "https://doi.org/10.1007/s00228-012-1214-9",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "peltoniemi2012-rifampicin",
+      "type": "paper",
+      "title": "Rifampicin has a profound effect on the pharmacokinetics of oral S-ketamine and less on intravenous S-ketamine (Basic Clin Pharmacol Toxicol 111:325-32)",
+      "authors": [
+        "M. A. Peltoniemi",
+        "T. I. Saari",
+        "N. M. Hagelberg",
+        "K. Laine",
+        "K. J. Kurkinen",
+        "P. J. Neuvonen",
+        "K. T. Olkkola"
+      ],
+      "year": 2012,
+      "doi": "10.1111/j.1742-7843.2012.00908.x",
+      "url": "https://doi.org/10.1111/j.1742-7843.2012.00908.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "dejong2020",
+      "type": "paper",
+      "title": "Prolonged Ketamine and Norketamine Excretion Profiles in Urine After Chronic Use: A Case Series (J Clin Psychopharmacol 40:300-304)",
+      "authors": [
+        "L. A. A. de Jong",
+        "R. Qurishi",
+        "M. P. J. Stams",
+        "M. Böttcher",
+        "C. A. J. de Jong"
+      ],
+      "year": 2020,
+      "doi": "10.1097/JCP.0000000000001191",
+      "url": "https://doi.org/10.1097/JCP.0000000000001191",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "bonaventura2021",
+      "type": "paper",
+      "title": "Pharmacological and behavioral divergence of ketamine enantiomers: implications for abuse liability (Mol Psychiatry 26:6704-6722)",
+      "authors": [
+        "J. Bonaventura",
+        "S. Lam",
+        "M. Carlton",
+        "M. A. Boehm",
+        "J. L. Gomez",
+        "O. Solís",
+        "M. Sánchez-Soto",
+        "P. J. Morris",
+        "I. Fredriksson",
+        "C. J. Thomas",
+        "D. R. Sibley",
+        "Y. Shaham",
+        "C. A. Zarate",
+        "M. Michaelides"
+      ],
+      "year": 2021,
+      "doi": "10.1038/s41380-021-01093-2",
+      "url": "https://doi.org/10.1038/s41380-021-01093-2",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "zanos2018",
+      "type": "paper",
+      "title": "Ketamine and Ketamine Metabolite Pharmacology: Insights into Therapeutic Mechanisms (Pharmacol Rev 70:621-660)",
+      "authors": [
+        "P. Zanos",
+        "R. Moaddel",
+        "P. J. Morris",
+        "L. M. Riggs",
+        "J. N. Highland",
+        "P. Georgiou",
+        "E. F. R. Pereira",
+        "E. X. Albuquerque",
+        "C. J. Thomas",
+        "C. A. Zarate",
+        "T. D. Gould"
+      ],
+      "year": 2018,
+      "doi": "10.1124/pr.117.015198",
+      "url": "https://doi.org/10.1124/pr.117.015198",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "jansen2001",
+      "type": "paper",
+      "title": "The nonmedical use of ketamine, part two: A review of problem use and dependence (J Psychoactive Drugs 33:151-8)",
+      "authors": [
+        "K. L. Jansen",
+        "R. Darracot-Cankovic"
+      ],
+      "year": 2001,
+      "doi": "10.1080/02791072.2001.10400480",
+      "url": "https://doi.org/10.1080/02791072.2001.10400480",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "muetzelfeldt2008",
+      "type": "paper",
+      "title": "Journey through the K-hole: phenomenological aspects of ketamine use (Drug Alcohol Depend 95:219-29)",
+      "authors": [
+        "L. Muetzelfeldt",
+        "S. K. Kamboj",
+        "H. Rees",
+        "J. Taylor",
+        "C. J. Morgan",
+        "H. V. Curran"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.drugalcdep.2008.01.024",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2008.01.024",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "darke2020",
+      "type": "paper",
+      "title": "Characteristics and circumstances of death related to the self-administration of ketamine (Addiction 116:339-345)",
+      "authors": [
+        "S. Darke",
+        "J. Duflou",
+        "M. Farrell",
+        "A. Peacock",
+        "J. Lappin"
+      ],
+      "year": 2020,
+      "doi": "10.1111/add.15154",
+      "url": "https://doi.org/10.1111/add.15154",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "hasan2021",
+      "type": "paper",
+      "title": "Chiral Pharmacokinetics and Metabolite Profile of Prolonged-release Ketamine Tablets in Healthy Human Subjects (Anesthesiology 135:326-339)",
+      "authors": [
+        "M. Hasan",
+        "C. Modess",
+        "T. Roustom",
+        "A. Dokter",
+        "M. Grube",
+        "A. Link",
+        "H. Rey",
+        "S. Adler",
+        "K. Meissner",
+        "W. Siegmund"
+      ],
+      "year": 2021,
+      "doi": "10.1097/ALN.0000000000003829",
+      "url": "https://doi.org/10.1097/ALN.0000000000003829",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lin2022-norketamine",
+      "type": "paper",
+      "title": "Norketamine, the Main Metabolite of Ketamine, Induces Mitochondria-Dependent and ER Stress-Triggered Apoptotic Death in Urothelial Cells via a Ca2+-Regulated ERK1/2-Activating Pathway (Int J Mol Sci 23)",
+      "authors": [
+        "J. W. Lin",
+        "Y. C. Lin",
+        "J. M. Liu",
+        "S. H. Liu",
+        "K. M. Fang",
+        "R. J. Hsu",
+        "C. F. Huang",
+        "K. Y. Chang",
+        "K. I. Lee",
+        "K. C. Chang",
+        "C. C. Su",
+        "Y. W. Chen"
+      ],
+      "year": 2022,
+      "doi": "10.3390/ijms23094666",
+      "url": "https://doi.org/10.3390/ijms23094666",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "narendran2005",
+      "type": "paper",
+      "title": "Altered prefrontal dopaminergic function in chronic recreational ketamine users (Am J Psychiatry 162:2352-9)",
+      "authors": [
+        "R. Narendran",
+        "W. G. Frankle",
+        "R. Keefe",
+        "R. Gil",
+        "D. Martinez",
+        "M. Slifstein",
+        "L. S. Kegeles",
+        "P. S. Talbot",
+        "Y. Huang",
+        "D. R. Hwang",
+        "L. Khenissi",
+        "T. B. Cooper",
+        "M. Laruelle",
+        "A. Abi-Dargham"
+      ],
+      "year": 2005,
+      "doi": "10.1176/appi.ajp.162.12.2352",
+      "url": "https://doi.org/10.1176/appi.ajp.162.12.2352",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "harris2003-meth",
+      "type": "paper",
+      "title": "The bioavailability of intranasal and smoked methamphetamine (Clin Pharmacol Ther 74:475-86)",
+      "authors": [
+        "D. S. Harris",
+        "H. Boxenbaum",
+        "E. T. Everhart",
+        "G. Sequeira",
+        "J. E. Mendelson",
+        "R. T. Jones"
+      ],
+      "year": 2003,
+      "doi": "10.1016/j.clpt.2003.08.002",
+      "url": "https://doi.org/10.1016/j.clpt.2003.08.002",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mendelson2006",
+      "type": "paper",
+      "title": "Human pharmacology of the methamphetamine stereoisomers (Clin Pharmacol Ther 80:403-20)",
+      "authors": [
+        "J. Mendelson",
+        "N. Uemura",
+        "D. Harris",
+        "R. P. Nath",
+        "E. Fernandez",
+        "P. Jacob",
+        "E. T. Everhart",
+        "R. T. Jones"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.clpt.2006.06.013",
+      "url": "https://doi.org/10.1016/j.clpt.2006.06.013",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "schepers2003",
+      "type": "paper",
+      "title": "Methamphetamine and amphetamine pharmacokinetics in oral fluid and plasma after controlled oral methamphetamine administration to human volunteers (Clin Chem 49:121-32)",
+      "authors": [
+        "R. J. F. Schepers",
+        "J. M. Oyler",
+        "R. E. Joseph",
+        "E. J. Cone",
+        "E. T. Moolchan",
+        "M. A. Huestis"
+      ],
+      "year": 2003,
+      "doi": "10.1373/49.1.121",
+      "url": "https://doi.org/10.1373/49.1.121",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "huestis2007",
+      "type": "paper",
+      "title": "Methamphetamine disposition in oral fluid, plasma, and urine (Ann N Y Acad Sci 1098:104-21)",
+      "authors": [
+        "M. A. Huestis",
+        "E. J. Cone"
+      ],
+      "year": 2007,
+      "doi": "10.1196/annals.1384.038",
+      "url": "https://doi.org/10.1196/annals.1384.038",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "caldwell1972",
+      "type": "paper",
+      "title": "Metabolism of (14C)methamphetamine in man, the guinea pig and the rat (Biochem J 129:11-22)",
+      "authors": [
+        "J. Caldwell",
+        "L. G. Dring",
+        "R. T. Williams"
+      ],
+      "year": 1972,
+      "doi": "10.1042/bj1290011",
+      "url": "https://doi.org/10.1042/bj1290011",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "isoardi2019",
+      "type": "paper",
+      "title": "Methamphetamine presentations to an emergency department: Management and complications (Emerg Med Australas 31:593-599)",
+      "authors": [
+        "K. Z. Isoardi",
+        "S. F. Ayles",
+        "K. Harris",
+        "C. J. Finch",
+        "C. B. Page"
+      ],
+      "year": 2018,
+      "doi": "10.1111/1742-6723.13219",
+      "url": "https://doi.org/10.1111/1742-6723.13219",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "liu2023-taar1",
+      "type": "paper",
+      "title": "Recognition of methamphetamine and other amines by trace amine receptor TAAR1 (Nature 624:663-671)",
+      "authors": [
+        "H. Liu",
+        "Y. Zheng",
+        "Y. Wang",
+        "Y. Wang",
+        "X. He",
+        "P. Xu",
+        "S. Huang",
+        "Q. Yuan",
+        "X. Zhang",
+        "L. Wang",
+        "K. Jiang",
+        "H. Chen",
+        "Z. Li",
+        "W. Liu",
+        "S. Wang",
+        "H. E. Xu",
+        "F. Xu"
+      ],
+      "year": 2023,
+      "doi": "10.1038/s41586-023-06775-1",
+      "url": "https://doi.org/10.1038/s41586-023-06775-1",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lin1997-cyp2d6",
+      "type": "paper",
+      "title": "Oxidation of methamphetamine and methylenedioxymethamphetamine by CYP2D6 (Drug Metab Dispos 25:1059-64)",
+      "authors": [
+        "L. Y. Lin",
+        "E. W. Di Stefano",
+        "D. A. Schmitz",
+        "L. Hsu",
+        "S. W. Ellis",
+        "M. S. Lennard",
+        "G. T. Tucker",
+        "A. K. Cho"
+      ],
+      "year": 1997,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9311621/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "cook1993",
+      "type": "paper",
+      "title": "Pharmacokinetics of methamphetamine self-administered to human subjects by smoking S-(+)-methamphetamine hydrochloride (Drug Metab Dispos 21:717-23)",
+      "authors": [
+        "C. E. Cook",
+        "A. R. Jeffcoat",
+        "J. M. Hill",
+        "D. E. Pugh",
+        "P. K. Patetta",
+        "B. M. Sadler",
+        "W. R. White",
+        "M. Perez-Reyes"
+      ],
+      "year": 1993,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8104133/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "bernschneider-reif2006",
+      "type": "paper",
+      "title": "The origin of MDMA (\"ecstasy\")--separating the facts from the myth (Pharmazie 61(11):966-972)",
+      "authors": [
+        "S. Bernschneider-Reif",
+        "F. Oxler",
+        "R. W. Freudenmann"
+      ],
+      "year": 2006,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17152992/",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "mas1999",
+      "type": "paper",
+      "title": "Cardiovascular and neuroendocrine effects and pharmacokinetics of 3,4-methylenedioxymethamphetamine in humans (J Pharmacol Exp Ther 290(1):136-145)",
+      "authors": [
+        "M. Mas",
+        "M. Farré",
+        "R. de la Torre",
+        "P. N. Roset",
+        "J. Ortuño",
+        "J. Segura",
+        "J. Camí"
+      ],
+      "year": 1999,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10381769/",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "delatorre2000",
+      "type": "paper",
+      "title": "Non-linear pharmacokinetics of MDMA ('ecstasy') in humans (Br J Clin Pharmacol 49(2):104-109)",
+      "authors": [
+        "R. de la Torre",
+        "M. Farré",
+        "J. Ortuño",
+        "M. Mas",
+        "R. Brenneisen",
+        "P. N. Roset",
+        "J. Segura",
+        "J. Camí"
+      ],
+      "year": 2000,
+      "doi": "10.1046/j.1365-2125.2000.00121.x",
+      "url": "https://doi.org/10.1046/j.1365-2125.2000.00121.x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "delatorre2004",
+      "type": "paper",
+      "title": "Human pharmacology of MDMA: pharmacokinetics, metabolism, and disposition (Ther Drug Monit 26(2):137-144)",
+      "authors": [
+        "R. de la Torre",
+        "M. Farré",
+        "P. N. Roset",
+        "N. Pizarro",
+        "S. Abanades",
+        "M. Segura",
+        "J. Segura",
+        "J. Camí"
+      ],
+      "year": 2004,
+      "doi": "10.1097/00007691-200404000-00009",
+      "url": "https://doi.org/10.1097/00007691-200404000-00009",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "farre2004",
+      "type": "paper",
+      "title": "Repeated doses administration of MDMA in humans: pharmacological effects and pharmacokinetics (Psychopharmacology 173(3-4):364-375)",
+      "authors": [
+        "M. Farré",
+        "R. de la Torre",
+        "B. O. Mathúna",
+        "P. N. Roset",
+        "A. M. Peiró",
+        "M. Torrens",
+        "J. Ortuño",
+        "M. Pujadas",
+        "J. Camí"
+      ],
+      "year": 2004,
+      "doi": "10.1007/s00213-004-1789-7",
+      "url": "https://doi.org/10.1007/s00213-004-1789-7",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dolder2018",
+      "type": "paper",
+      "title": "Direct comparison of the acute subjective, emotional, autonomic, and endocrine effects of MDMA, methylphenidate, and modafinil in healthy subjects (Psychopharmacology 235(2):467-479)",
+      "authors": [
+        "P. C. Dolder",
+        "F. Müller",
+        "Y. Schmid",
+        "S. J. Borgwardt",
+        "M. E. Liechti"
+      ],
+      "year": 2018,
+      "doi": "10.1007/s00213-017-4650-5",
+      "url": "https://doi.org/10.1007/s00213-017-4650-5",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "green2003",
+      "type": "paper",
+      "title": "The pharmacology and clinical pharmacology of 3,4-methylenedioxymethamphetamine (MDMA, \"ecstasy\") (Pharmacol Rev 55(3):463-508)",
+      "authors": [
+        "A. R. Green",
+        "A. O. Mechan",
+        "J. M. Elliott",
+        "E. O'Shea",
+        "M. I. Colado"
+      ],
+      "year": 2003,
+      "doi": "10.1124/pr.55.3.3",
+      "url": "https://doi.org/10.1124/pr.55.3.3",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
     }
   ]
 }

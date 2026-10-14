@@ -9,6 +9,12 @@
       "severity": "caution",
       "mechanism": "sympathomimetic",
       "source": "schep2010"
+    },
+    {
+      "with": "cyp2d6_substrates",
+      "severity": "caution",
+      "mechanism": "cyp_inhibition",
+      "source": "lin1997-cyp2d6"
     }
   ],
   "authors": [
@@ -33,32 +39,39 @@
         "from": "parent",
         "to": "4-hydroxymethamphetamine",
         "reaction": "hydroxylation",
-        "source": "schep2010"
+        "enzymes": [
+          "CYP2D6"
+        ],
+        "source": "lin1997-cyp2d6"
       },
       {
         "from": "parent",
         "to": "amphetamine",
         "reaction": "n_demethylation",
-        "source": "schep2010"
+        "enzymes": [
+          "CYP2D6"
+        ],
+        "source": "lin1997-cyp2d6"
       }
     ],
     "metabolites": [
       {
         "name_key": "4-hydroxymethamphetamine",
         "active": null,
-        "source": "euda-meth"
+        "source": "caldwell1972"
       },
       {
         "name_key": "amphetamine",
         "active": true,
-        "source": "euda-meth"
+        "source": "schepers2003"
       }
     ],
     "half_life_h": {
-      "min": 5,
-      "max": 30,
-      "matrix": "unspecified",
-      "source": "schep2010"
+      "min": 10.7,
+      "max": 11.4,
+      "matrix": "plasma",
+      "route": "oral, intranasal, smoked",
+      "source": "harris2003-meth"
     }
   },
   "cuts": [

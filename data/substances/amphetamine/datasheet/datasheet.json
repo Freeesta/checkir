@@ -13,18 +13,18 @@
     "pathways": [
       {
         "from": "parent",
-        "to": "norephedrine",
-        "reaction": "hydroxylation",
-        "source": "losacker2021"
-      },
-      {
-        "from": "parent",
         "to": "4-hydroxyamphetamine",
         "reaction": "hydroxylation",
-        "source": "losacker2021",
+        "source": "miranda2007",
         "enzymes": [
           "CYP2D6"
         ]
+      },
+      {
+        "from": "parent",
+        "to": "norephedrine",
+        "reaction": "hydroxylation",
+        "source": "losacker2021"
       }
     ],
     "half_life_h": {
@@ -33,7 +33,20 @@
       "matrix": "plasma",
       "route": "oral",
       "source": "dolder2017"
-    }
+    },
+    "metabolites": [
+      {
+        "name_key": "4-hydroxyamphetamine",
+        "active": null,
+        "marker": true,
+        "source": "miranda2007"
+      },
+      {
+        "name_key": "norephedrine",
+        "active": null,
+        "source": "losacker2021"
+      }
+    ]
   },
   "cuts": [
     {
@@ -84,6 +97,16 @@
       "key": "amphetamine.route",
       "topic": "route",
       "source": "heal2013"
+    },
+    {
+      "key": "amphetamine.combination",
+      "topic": "combination",
+      "source": "evekeo-label"
+    },
+    {
+      "key": "amphetamine.comedown",
+      "topic": "mental_health",
+      "source": "evekeo-label"
     },
     {
       "key": "amphetamine.mixtures",

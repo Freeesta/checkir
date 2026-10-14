@@ -2,7 +2,6 @@
   "schema": "soglie_miscele/1",
   "version": 2,
   "calibration": {
-    "status": "draft",
     "bench": "banco-1",
     "method": "forward_selection_absorbance",
     "date": "2026-10"

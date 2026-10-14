@@ -12,22 +12,39 @@
         "from": "parent",
         "to": "norketamine",
         "reaction": "n_demethylation",
-        "source": "peltoniemi2016",
+        "source": "li2013-cyp2b6",
         "enzymes": [
+          "CYP2B6",
+          "CYP3A4"
+        ]
+      },
+      {
+        "from": "parent",
+        "to": "hydroxyketamine",
+        "reaction": "hydroxylation",
+        "source": "desta2012",
+        "enzymes": [
+          "other",
           "CYP3A4",
-          "CYP2B6"
+          "CYP3A5"
+        ]
+      },
+      {
+        "from": "norketamine",
+        "to": "hydroxynorketamine",
+        "reaction": "hydroxylation",
+        "source": "desta2012",
+        "enzymes": [
+          "other",
+          "CYP2B6",
+          "CYP3A4",
+          "CYP3A5"
         ]
       },
       {
         "from": "norketamine",
         "to": "dehydronorketamine",
         "reaction": "other",
-        "source": "dinis-oliveira2017"
-      },
-      {
-        "from": "norketamine",
-        "to": "hydroxynorketamine",
-        "reaction": "hydroxylation",
         "source": "dinis-oliveira2017"
       },
       {
@@ -43,7 +60,26 @@
       "matrix": "plasma",
       "route": "intravenous",
       "source": "dinis-oliveira2017"
-    }
+    },
+    "metabolites": [
+      {
+        "name_key": "norketamine",
+        "active": true,
+        "marker": true,
+        "source": "hasan2021"
+      },
+      {
+        "name_key": "hydroxynorketamine",
+        "active": null,
+        "source": "hasan2021"
+      },
+      {
+        "name_key": "dehydronorketamine",
+        "active": false,
+        "marker": true,
+        "source": "hasan2021"
+      }
+    ]
   },
   "cuts": [
     {
@@ -79,36 +115,53 @@
       "with": "opioid",
       "severity": "dangerous",
       "mechanism": "cns_depression",
-      "source": "kalsi2011"
+      "source": "darke2020"
     },
     {
       "with": "benzodiazepines",
       "severity": "dangerous",
       "mechanism": "cns_depression",
-      "source": "kalsi2011"
+      "source": "darke2020"
     },
     {
       "with": "stimulant",
       "severity": "risky",
       "mechanism": "sympathomimetic",
       "source": "kalsi2011"
+    },
+    {
+      "with": "grapefruit_juice",
+      "severity": "caution",
+      "mechanism": "cyp_inhibition",
+      "source": "peltoniemi2012-grapefruit"
+    },
+    {
+      "with": "rifampicin",
+      "severity": "caution",
+      "mechanism": "other",
+      "source": "peltoniemi2012-rifampicin"
     }
   ],
   "counselling": [
     {
       "key": "ketamine.depressants",
       "topic": "combination",
-      "source": "kalsi2011"
+      "source": "darke2020"
+    },
+    {
+      "key": "ketamine.setting",
+      "topic": "set_setting",
+      "source": "peltoniemi2016"
     },
     {
       "key": "ketamine.tolerance",
       "topic": "tolerance",
-      "source": "kalsi2011"
+      "source": "jansen2001"
     },
     {
       "key": "ketamine.bladder",
       "topic": "dependence",
-      "source": "kalsi2011"
+      "source": "zheng2025"
     },
     {
       "key": "ketamine.mixtures",

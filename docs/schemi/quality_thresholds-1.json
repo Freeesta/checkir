@@ -23,15 +23,6 @@
       "description_it": "Da dove vengono i numeri.",
       "type": "object",
       "properties": {
-        "status": {
-          "description": "draft until the service confirms the limits.",
-          "description_it": "draft finche il servizio non conferma i limiti.",
-          "type": "string",
-          "enum": [
-            "draft",
-            "calibrated"
-          ]
-        },
         "bench": {
           "description": "Bench the numbers come from.",
           "description_it": "Banco da cui vengono i numeri.",
@@ -50,7 +41,6 @@
         }
       },
       "required": [
-        "status",
         "bench",
         "chain",
         "date"
