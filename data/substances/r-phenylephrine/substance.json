@@ -1,0 +1,55 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "r-phenylephrine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "(R)-Phenylephrine",
+      "synonyms": [
+        "phenylephrine",
+        "3-[(1R)-1-hydroxy-2-(methylamino)ethyl]phenol",
+        "metasynephrine"
+      ]
+    },
+    "it": {
+      "preferred": "(R)-Fenilefrina",
+      "synonyms": [
+        "fenilefrina"
+      ]
+    }
+  },
+  "iupac": "3-[(1R)-1-hydroxy-2-(methylamino)ethyl]phenol",
+  "formula": "C9H13NO2",
+  "molar_mass_g_mol": 167.2,
+  "smiles": "CNC[C@@H](C1=CC(=CC=C1)O)O",
+  "inchi": "InChI=1S/C9H13NO2/c1-10-6-9(12)7-3-2-4-8(11)5-7/h2-5,9-12H,6H2,1H3/t9-/m0/s1",
+  "inchikey": "SONNWYBIRXJNDC-VIFPVBQESA-N",
+  "external_ids": {
+    "cas": "59-42-7",
+    "pubchem_cid": 6041
+  },
+  "classes": {
+    "chemical": [
+      "phenethylamines"
+    ],
+    "effect": [
+      "no_psychoactive_effect_expected"
+    ],
+    "typical_role": [
+      "active_principle",
+      "pharmacological_adulterant"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
