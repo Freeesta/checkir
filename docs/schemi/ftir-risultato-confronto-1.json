@@ -462,7 +462,6 @@
         "enum": [
           "coverage",
           "custom_range",
-          "range_not_calibrated",
           "sampling_not_calibrated"
         ],
         "description": "Cap.",

@@ -22,25 +22,31 @@ L'EUDA descrive l'LSD come un allucinogeno semisintetico. La maggior parte è pr
 
 ## metabolism
 
-In vitro CYP2D6, CYP2E1 e CYP3A4 contribuiscono alla formazione di nor-LSD, e CYP1A2, CYP2C9, CYP2E1 e CYP3A4 a quella di 2-oxo-3-idrossi-LSD. Il nor-LSD è probabilmente attivo; il 2-oxo-3-idrossi-LSD è inattivo. [f:luethi2019-lsd]
+In vitro, CYP2D6, CYP2E1 e CYP3A4 contribuiscono alla formazione di nor-LSD, e CYP1A2, CYP2C9, CYP2E1 e CYP3A4 a quella di 2-oxo-3-idrossi-LSD. La nor-LSD è probabilmente attiva; la 2-oxo-3-idrossi-LSD è inattiva. [f:luethi2019-lsd]
 
-Chi non ha CYP2D6 funzionante aveva emivite dell'LSD più lunghe e un'esposizione plasmatica (AUC) di LSD e di 2-oxo-3-idrossi-LSD più alta di circa il 75% rispetto ai portatori di CYP2D6 funzionante (81 soggetti sani di 4 studi). [f:vizeli2021]
+Dopo 200 µg per bocca in 16 soggetti sani il picco era 4.5 ± 1.4 ng/mL a una mediana di 1.5 ore (intervallo 0.5-4); l'emivita era 3.6 ± 0.9 ore fino a 12 ore, poi più lenta (terminale 8.9 ± 5.9 ore), senza differenze di sesso. [f:dolder2015]
 
-Dopo 85 e 170 µg per bocca le emivite di eliminazione erano 3.7 e 4.0 ore. Nelle 24 ore l'1% della dose si ritrovava invariato nelle urine e il 16% come 2-oxo-3-idrossi-LSD. [f:holze2023]
+Dopo 85 e 170 µg per bocca le emivite di eliminazione erano 3.7 e 4.0 ore. In 24 ore l'1% della dose si ritrovava immutato nelle urine e il 16% come 2-oxo-3-idrossi-LSD. [f:holze2023]
+
+Chi non ha CYP2D6 funzionale aveva emivite più lunghe e un'esposizione plasmatica (AUC) circa il 75% più alta rispetto ai portatori di CYP2D6 funzionale (81 soggetti sani da 4 studi riuniti). [f:vizeli2021]
 
 ## effects
 
-In 28 volontari sani gli effetti soggettivi sono durati 9.3 ± 3.2 ore dopo 85 µg e 11 ± 3.7 ore dopo 170 µg; l'effetto massimo è stato valutato 77% e 87%. [f:holze2023]
+L'LSD agisce soprattutto sui recettori serotoninergici 5-HT2A: in 16 soggetti sani il ketanserin (40 mg, antagonista 5-HT2A) ha impedito in modo efficace la risposta a 200 µg. [f:holze2020]
 
-La farmacologia dell'LSD è complessa e i suoi meccanismi d'azione non sono ancora del tutto compresi. [f:passie2008]
+In vitro su recettori umani l'LSD legava il 5-HT2A più fortemente di psilocina o DMT e, a differenza delle triptamine provate, interagiva anche con recettori adrenergici e dopaminergici; la 2-oxo-3-idrossi-LSD ha affinità e attività molto più deboli. [f:rickli2016] [f:luethi2019-lsd]
 
-In vitro LSD e nor-LSD sono attivi su diversi recettori della serotonina; il 2-oxo-3-idrossi-LSD ha affinità e attività molto più deboli. [f:luethi2019-lsd]
+Gli effetti dipendono dalla dose a partire da 25 µg; l'effetto positivo raggiunge un massimo a 100 µg, mentre 200 µg davano più dissoluzione dell'io e ansia significativa. La durata saliva da 6.7 ore (25 µg) a 11 ore (200 µg); pressione e frequenza cardiaca aumentavano in modo moderato. [f:holze2020]
+
+Gli effetti seguivano da vicino le concentrazioni plasmatiche e non mostravano tolleranza acuta nella singola sessione. [f:dolder2015]
 
 ## doses
 
-Dosi nello studio: 85 e 170 µg per bocca. Le concentrazioni massime erano 1.8 e 3.4 ng/mL, raggiunte in media dopo 1.7 ore; l'esposizione era proporzionale alla dose. [f:holze2023]
+Soglia degli effetti psicotropi: 10 µg di LSD base per bocca. In 23 partecipanti sani 5 µg non avevano effetti significativi; con 10 µg gli effetti iniziavano dopo circa 1.1 ore, avevano il picco a 2.5 ore e finivano a 5.1 ore; 20 µg aumentavano anche i «bad drug effects». [f:holze2020-micro]
 
-Le linee UBC indicano 50-150 µg come intervallo usuale e 150-400 µg per esperienze molto intense, con inizio dopo 20-60 minuti ed effetti di 8-12 ore; le dosi dello studio rientrano nei due intervalli. [f:ubc-counselling-guidelines] [f:holze2023]
+Dosi di studio da 25 a 200 µg per bocca agivano in modo dose-dipendente; 85 e 170 µg davano picchi di 1.8 e 3.4 ng/mL, proporzionali alla dose. [f:holze2020] [f:holze2023]
+
+Le linee UBC indicano 50-150 µg come intervallo usuale e 150-400 µg per esperienze molto intense, con inizio dopo 20-60 minuti ed effetti per 8-12 ore; le dosi di studio di 85 e 170 µg cadono in questi due intervalli. [f:ubc-counselling-guidelines] [f:holze2023]
 
 ## risks
 
@@ -54,9 +60,11 @@ Composti NBOMe sono stati venduti come LSD su carta assorbente; due morti di ado
 
 ## interactions
 
-Tra 62 segnalazioni online di litio assunto con psichedelici classici come LSD o psilocibina, il 47% riguardava crisi convulsive; nessuna delle 34 segnalazioni con lamotrigina. Sono resoconti personali, non dati controllati. [f:nayak2021]
+Tra 62 resoconti online di litio assunto con psichedelici classici come LSD o psilocibina, il 47% riguardava crisi convulsive; nessuno dei 34 resoconti con lamotrigina. Sono autosegnalazioni, non dati controllati. [f:nayak2021]
 
-In vitro la rifampicina ha aumentato nettamente la formazione di nor-LSD e di 2-oxo-3-idrossi-LSD; gli autori affermano che servono studi di interazione nell'uomo. [f:luethi2019-lsd]
+In un'indagine con interviste, 28 di 32 persone che avevano preso LSD durante antidepressivi inibitori della ricaptazione della serotonina (fluoxetina, paroxetina, sertralina, trazodone) da oltre 3 settimane riferivano una risposta ridotta o quasi assente; sono autosegnalazioni. [f:bonson1996]
+
+In vitro la rifampicina aumentava nettamente la formazione di nor-LSD e di 2-oxo-3-idrossi-LSD; gli autori affermano che servono studi di interazione nell'uomo. [f:luethi2019-lsd]
 
 ## counselling
 
@@ -66,13 +74,13 @@ Di' che gli effetti sono lunghi, in media 9-11 ore negli studi, e che le linee U
 
 Chiedi di umore, salute e ambiente: il rischio più probabile è un disagio travolgente, che le linee UBC legano a set e setting; per chi ha malattie mentali o problemi cardiaci e circolatori consigliano di rinunciare. [f:johnson2008] [f:ubc-counselling-guidelines]
 
-Chiedi dei farmaci, soprattutto il litio: crisi convulsive sono state riportate nel 47% di 62 segnalazioni online di litio con psichedelici classici. [f:nayak2021]
+Chiedi dei farmaci, soprattutto il litio (crisi convulsive nel 47% di 62 segnalazioni online di litio con psichedelici classici) e gli antidepressivi inibitori della ricaptazione della serotonina, che in un'indagine indebolivano o annullavano la risposta all'LSD. [f:nayak2021] [f:bonson1996]
 
 Parla dei giorni dopo: l'HPPD è raro, e le linee UBC suggeriscono almeno un giorno di quiete per elaborare l'esperienza. [f:halpern2018] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:coates2000] [f:nist-webbook] [f:smith-amides] [f:euda-lsd] [f:unodc-ewa] [f:checkir-classification] [f:passie2008] [f:luethi2019-lsd] [f:vizeli2021] [f:holze2023] [f:ubc-counselling-guidelines] [f:johnson2008] [f:halpern2018] [f:shanks2015] [f:nayak2021]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:coates2000] [f:nist-webbook] [f:smith-amides] [f:euda-lsd] [f:unodc-ewa] [f:checkir-classification] [f:passie2008] [f:luethi2019-lsd] [f:vizeli2021] [f:holze2023] [f:ubc-counselling-guidelines] [f:johnson2008] [f:halpern2018] [f:shanks2015] [f:nayak2021] [f:holze2020] [f:holze2020-micro] [f:dolder2015] [f:rickli2016] [f:bonson1996]
 
 ## license
 

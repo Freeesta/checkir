@@ -70,15 +70,15 @@ function rejectedBlock(mixture, nameOf) {
 /**
  * The lines above the table: «Mixture: A + B», each part with its contribution and peaks explained, the peaks nobody explains, the alerts
  * of the mixture search and the button that takes the mixture.
- * @param {any} data @param {boolean} taken the draft already holds exactly these components @param {boolean} locked a signed decision cannot change
+ * @param {any} data @param {boolean} taken the choice already holds exactly these components
  * @param {(c: Component) => string} nameOf the name in the active language @param {() => void} accept
  * @returns {HTMLElement | null} null when there is no proposal; the reason when the engine rejected one
  */
-export function mixtureBlock(data, taken, locked, nameOf, accept) {
+export function mixtureBlock(data, taken, nameOf, accept) {
   const parts = mixtureComponents(data);
   if (!parts.length) return rejectedBlock(data?.mixture, nameOf);
   const button = el("button", { type: "button", class: "btn", "data-fk": "mixture-accept", "aria-pressed": String(taken) }, [icon("compare"), t("mixture.accept")]);
-  button.disabled = locked || taken;
+  button.disabled = taken;
   button.addEventListener("click", accept);
   const alerts = alertViews(data.mixture);
   return el("section", { class: "mixture", "aria-label": t("mixture.label"), "data-mixture": "1" }, [

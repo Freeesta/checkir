@@ -148,7 +148,7 @@ export function inlineSheet(p) {
 }
 
 /**
- * The counselling points of the sheet(s) the choice names, for the talk-mode sheet (big letters, no source numbers or signing states: those stay in the chemist's view).
+ * The counselling points of the sheet(s) the choice names, for the talk-mode sheet (big letters, no source numbers: those stay in the chemist's view).
  * Filled when the sheets are read; empty (and hidden) when the choice has no sheet or the sheet has no counselling text yet.
  * @param {{ cands: any[], level: number, lang: string }} p @returns {HTMLElement | null}
  */

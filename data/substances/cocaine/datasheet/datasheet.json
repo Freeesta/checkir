@@ -63,7 +63,33 @@
       "max": 1.5,
       "matrix": "plasma",
       "source": "roque-bravo2022"
-    }
+    },
+    "metabolites": [
+      {
+        "name_key": "benzoylecgonine",
+        "active": false,
+        "marker": true,
+        "source": "cone1998"
+      },
+      {
+        "name_key": "ecgonine-methyl-ester",
+        "active": false,
+        "marker": true,
+        "source": "cone1998"
+      },
+      {
+        "name_key": "norcocaine",
+        "active": true,
+        "marker": false,
+        "source": "roque-bravo2022"
+      },
+      {
+        "name_key": "cocaethylene",
+        "active": true,
+        "marker": true,
+        "source": "harris2003"
+      }
+    ]
   },
   "cuts": [
     {
@@ -141,12 +167,17 @@
     {
       "key": "cocaine.ethanol",
       "topic": "combination",
-      "source": "roque-bravo2022"
+      "source": "cami1998"
     },
     {
       "key": "cocaine.opioids",
       "topic": "combination",
       "source": "roque-bravo2022"
+    },
+    {
+      "key": "cocaine.redosing",
+      "topic": "redosing",
+      "source": "foltin2004"
     },
     {
       "key": "cocaine.comedown",

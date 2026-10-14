@@ -14,15 +14,21 @@ Analoghi non distinguibili da una sola banda: le tre bande del metilendiossi ind
 
 Classe chimica: fenetilammine, sottogruppo metilendiossi. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
 
+## history
+
+L'MDMA compare per la prima volta nei documenti Merck nel 1912 come «Methylsafrylamin», intermedio di un brevetto per un'altra sintesi e non un anoressizzante come spesso si dice; Merck eseguì test farmacologici di base solo dal 1927 e non la provò mai nell'uomo. [f:bernschneider-reif2006]
+
 ## origin
 
 Composto di sintesi. Precursori: 3,4-metilendiossifenil-2-propanone, safrolo (anche tramite isosafrolo) e piperonale. La N-formil-MDMA è un sottoprodotto della via Leuckart. [f:unodc-ats2006]
 
 ## metabolism
 
-L'MDMA è metabolizzata a MDA, HHMA e HMMA; il contributo del CYP2D6 non supera il 30%. È un inibitore meccanismo-dipendente del CYP2D6: l'attività torna al 90% dopo circa 10 giorni, con emivita di recupero di 36.6 ± 22.9 ore nelle donne e 27.6 negli uomini. [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011]
+Dopo 75 e 125 mg per os la Cmax era 130,9 e 236,4 ng/mL, il Tmax 1,8 e 2,4 h e l'emivita 7,7 e 8,6 h; l'8-9% della dose compariva nel plasma come MDA. [f:mas1999] Per enantiomero l'emivita è 4,8 h per (S)-MDMA e 14,8 h per (R)-MDMA. [f:pizarro2004]
 
-L'emivita è di 4.8 ore per (S)-MDMA e 14.8 ore per (R)-MDMA. [f:pizarro2004]
+Due vie: O-demetilenazione a HHMA, poi metilazione da COMT a HMMA, con coniugazione; e N-dealchilazione a MDA. Il CYP2D6 contribuisce fino al 30%. [f:delatorre2004] [f:pizarro2004] L'MDMA inattiva il CYP2D6: dopo due dosi tutti sono fenotipicamente poor metabolizer, l'attività torna al 90% dopo circa 10 giorni. [f:delatorre2004] [f:segura2005] [f:yubero-lahoz2011]
+
+La cinetica non è lineare: un piccolo aumento di dose dà un aumento sproporzionato dei livelli plasmatici. [f:delatorre2000] Una seconda dose dopo 24 h ha aumentato l'AUC del 77% e la Cmax del 29%. [f:farre2004]
 
 ## cuts
 
@@ -30,37 +36,47 @@ Le compresse contengono adulteranti, tagli, coloranti, eccipienti e leganti; in 
 
 ## effects
 
-In una rassegna di studi controllati su volontari sani, MDMA ha mostrato effetti robusti sulla maggior parte delle misure soggettive e fisiologiche; gli effetti soggettivi corrispondevano a un profilo entactogeno. Sono aumentati il diametro pupillare, il cortisolo e la prolattina plasmatici. [f:dumont2006]
+L'MDMA rilascia e blocca la ricaptazione di serotonina, dopamina e noradrenalina tramite i loro trasportatori di membrana e vescicolari. [f:delatorre2004] Effetti tipici: euforia, benessere, empatia, vicinanza agli altri, socialità, lievi alterazioni percettive, derealizzazione moderata, nessuna allucinazione; inoltre pressione e frequenza cardiaca più alte e midriasi. [f:delatorre2004]
 
-Gli effetti cardiovascolari dipendevano dalla dose: sotto 1.0 mg/kg non si osservava alcuna variazione rispetto al placebo, sopra questa dose tutti gli studi riportavano aumenti significativi. [f:dumont2006]
+A 75 e 125 mg la pressione sistolica è salita di circa 40 mmHg e la frequenza di circa 30 battiti/min; il cortisolo è aumentato, la prolattina solo alla dose alta. [f:mas1999] A 125 mg solo l'MDMA, non metilfenidato o modafinil, ha ridotto l'ansia, alterato il riconoscimento della paura e aumentato l'ossitocina. [f:dolder2018]
+
+Gli effetti cardiovascolari erano dose-dipendenti: nessuna variazione sotto 1,0 mg/kg, aumenti significativi sopra. [f:dumont2006] Inizio e durata degli effetti soggettivi: nessuna fonte verificata; il Tmax plasmatico è 1,8-2,4 h. [f:mas1999]
 
 ## doses
 
-Le compresse contengono 40-140 mg di MDMA; la media europea è circa 60-70 mg, contro circa 100 mg a metà degli anni Novanta. [f:unodc-ats2006]
+Le compresse contengono 40-140 mg di MDMA; la media europea è circa 60-70 mg, contro circa 100 mg a metà anni Novanta. [f:unodc-ats2006]
+
+Gli studi controllati hanno usato dosi orali singole da 50 a 150 mg (75 e 125 mg nella maggior parte). [f:delatorre2000] Poiché la cinetica non è lineare, un aumento di dose alza i livelli plasmatici più che proporzionalmente. [f:delatorre2000]
 
 ## risks
 
-Dopo una singola dose di MDMA l'iponatriemia acuta è comparsa nel 31% dei partecipanti (96 persone in 4 studi randomizzati); la restrizione dei liquidi l'ha attenuata. [f:atila2024]
+La tossicità acuta non dipende solo dall'overdose: ipertermia dose-dipendente, potenzialmente fatale, e sindrome serotoninergica (rigidità muscolare, iperreflessia, ipertermia) caratterizzano gli episodi tossici. [f:green2003] [f:delatorre2004] L'intervallo tossico e letale si sovrappone a quello ricreativo; i decessi descrivono ipertermia, rabdomiolisi, coagulopatia, necrosi epatica, aritmie e ictus. [f:kalant2001]
 
-Nei decessi da ecstasy sono descritti ipertermia, rabdomiolisi, coagulopatia, necrosi epatica, aritmie e ictus; l'intervallo tossico e letale si sovrappone a quello ricreativo. È descritta neurotossicità serotoninergica. [f:kalant2001]
+Dopo una singola dose è comparsa iponatriemia acuta nel 31% dei partecipanti (96 persone in 4 studi); la restrizione di liquidi l'ha attenuata. [f:atila2024] L'aumento di 40 mmHg e 30 battiti/min a riposo potrebbe contare in luoghi affollati e con attività fisica. [f:mas1999]
+
+La neurotossicità serotoninergica è dimostrata negli animali; nell'umano le prove sono equivoche. [f:green2003]
 
 ## interactions
 
-MDMA con moclobemide (inibitore reversibile della MAO-A) ha causato sindrome serotoninergica fatale. Il ritonavir, inibitore del CYP, ha causato una tossicità grave di MDMA; la paroxetina aumenta l'AUC dell'MDMA del 27%. [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:segura2005]
+L'MDMA con moclobemide (inibitore reversibile della MAO-A) ha causato tossicità serotoninergica fatale. Il ritonavir, inibitore del CYP, ha causato tossicità grave da MDMA; la paroxetina aumenta del 27% l'AUC dell'MDMA. [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:segura2005]
+
+Riassunzione: poiché l'MDMA inibisce il proprio metabolismo, una seconda dose alza i livelli plasmatici più di quanto previsto da un semplice accumulo. [f:farre2004]
 
 ## counselling
 
-Chiedere dei farmaci in corso: con moclobemide (inibitore della MAO-A) sono descritti casi fatali di tossicità serotoninergica. [f:vuori2003] [f:pilgrim2012] [f:ubc-counselling-guidelines]
+Chiedere dei farmaci in corso: sono descritti casi fatali di tossicità serotoninergica con moclobemide. [f:vuori2003] [f:ubc-counselling-guidelines]
 
-Chiedere di farmaci antivirali: con il ritonavir è descritto un caso di tossicità grave di MDMA. [f:papaseit2012] [f:ubc-counselling-guidelines]
+Chiedere di antivirali: è descritta tossicità grave da MDMA con ritonavir. [f:papaseit2012] [f:ubc-counselling-guidelines]
 
-Parlare di liquidi: dopo l'MDMA il sodio può scendere e nei studi la restrizione dei liquidi ha attenuato l'iponatriemia. [f:atila2024] [f:ubc-counselling-guidelines]
+Riassunzione: i livelli salgono più del previsto, quindi una dose in più pesa più di quanto sembri; concordare prima se riassumere. [f:farre2004] [f:ubc-counselling-guidelines]
 
-Spiegare che l'intervallo tossico si sovrappone a quello ricreativo e che nei decessi sono descritte ipertermia e rabdomiolisi: nessuna quantità offre garanzie. [f:kalant2001] [f:ubc-counselling-guidelines]
+Parlare di liquidi: il sodio può calare dopo l'MDMA; negli studi la restrizione di liquidi l'ha attenuato. [f:atila2024] [f:ubc-counselling-guidelines]
+
+L'intervallo tossico si sovrappone a quello ricreativo: nessuna quantità dà garanzie. [f:kalant2001] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:pizarro2004] [f:segura2005] [f:yubero-lahoz2011] [f:atila2024] [f:kalant2001] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines] [f:dumont2006]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:unodc-ats2006] [f:swgdrug-mdma] [f:smith-ethers] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:bernschneider-reif2006] [f:mas1999] [f:pizarro2004] [f:delatorre2004] [f:segura2005] [f:yubero-lahoz2011] [f:delatorre2000] [f:farre2004] [f:dolder2018] [f:dumont2006] [f:green2003] [f:kalant2001] [f:atila2024] [f:vuori2003] [f:pilgrim2012] [f:papaseit2012] [f:ubc-counselling-guidelines]
 
 ## license
 

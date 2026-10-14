@@ -22,16 +22,10 @@
           "description_it": "Versione.",
           "type": "integer",
           "minimum": 1
-        },
-        "status": {
-          "description": "draft or calibrated.",
-          "description_it": "draft o calibrated.",
-          "type": "string"
         }
       },
       "required": [
-        "version",
-        "status"
+        "version"
       ],
       "additionalProperties": false
     },

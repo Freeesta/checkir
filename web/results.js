@@ -12,8 +12,8 @@ import { mixtureBlock, mixtureChip, mixtureComponents, mixtureTaken } from "./mi
 import { inlineSheet, sheetOfCandidate } from "./schede_inline.js";
 import { cutContext } from "./schede_tagli.js";
 import { openSheet } from "./schede_ui.js";
-import { chosenCandidates, draftOf, shownChoice } from "./decision.js";
-import { activeFile, activeLibraries, candidateKey, decisionOf, getState, resultOf } from "./state.js";
+import { choiceOf, chosenCandidates, isChanged } from "./decision.js";
+import { activeFile, activeLibraries, candidateKey, getState, resultOf } from "./state.js";
 import { renderRanges, rangeTable, usedRangeLine } from "./ranges_ui.js";
 import { attachTip, toggletip } from "./tooltip.js";
 
@@ -58,7 +58,7 @@ export function levelBadge(n, withBar = true) {
   return el("span", { class: "level", "data-level": String(n) }, [icon(levelIcon(n)), el("strong", {}, [levelWord(n)]), ...(withBar ? [bar] : [])]);
 }
 
-/** "proposed by the program", or the pen and "decided by the chemist" (with the proposal when it differs). @param {import("./state.js").Decision | null} dec @param {number} proposed @returns {HTMLElement} */
+/** "proposed by the program", or the pen and "decided by the chemist" (with the proposal when the level differs). @param {import("./state.js").Choice | null} dec the chemist's choice when it differs from the proposal @param {number} proposed @returns {HTMLElement} */
 function decisionMark(dec, proposed) {
   if (!dec) return el("span", { class: "proposed" }, [t("results.proposed")]);
   const was = dec.level === proposed ? "" : ` · ${t("results.proposed_was", { level: levelWord(proposed) })}`;
@@ -123,7 +123,7 @@ function marginMark(margin) {
 
 /** What the sheets need to know about the sample: the chosen candidates, and with the mixture components what was found (for the cuts). @param {import("./state.js").AppState} s @param {any} data @returns {{ level: number, cands: any[], found: any[], cuts: import("./schede_tagli.js").CutContext }} */
 function sheetContext(s, data) {
-  const choice = shownChoice(s);
+  const choice = choiceOf(s);
   const cands = choice ? chosenCandidates(choice, data) : [];
   const found = choice?.level === 4 ? [...mixtureComponents(data), ...cands] : cands;
   return { level: choice?.level ?? 5, cands, found, cuts: cutContext(activeLibraries(s).map((l) => l.id), found) };
@@ -265,8 +265,8 @@ function statusNodes(s, file, hasResult) {
 
 /** The mixture proposal above the table (nothing when there is none). @param {any} data @param {import("./state.js").AppState} s @param {import("./actions.js").Ctx} ctx @returns {HTMLElement[]} */
 function mixtureLines(data, s, ctx) {
-  const draft = draftOf(s);
-  const block = mixtureBlock(data, !!draft && draft.level === 4 && mixtureTaken(data, draft.keys), decisionOf(s) !== null, componentName, () => ctx.acceptMixture());
+  const choice = choiceOf(s);
+  const block = mixtureBlock(data, !!choice && choice.level === 4 && mixtureTaken(data, choice.keys), componentName, () => ctx.acceptMixture());
   return block ? [block] : [];
 }
 
@@ -291,7 +291,7 @@ export function renderResults(body, s, ctx) {
   body.append(...statusNodes(s, file, !!result));
   if (!result) return;
   const data = result.data;
-  const dec = decisionOf(s);
+  const dec = isChanged(s) ? choiceOf(s) : null;
   const proposed = levelNumber(data);
   const n = dec?.level ?? proposed;
   const chosen = selectedCandidate(s, data);
@@ -329,7 +329,7 @@ export function renderResultsPanel(body, s, ctx) {
   renderRanges(body, s, ctx);
   body.append(...statusNodes(s, file, !!result));
   if (!result) return;
-  const dec = decisionOf(s);
+  const dec = isChanged(s) ? choiceOf(s) : null;
   body.append(
     el("p", { class: "level-line" }, [levelBadge(dec?.level ?? levelNumber(result.data)), decisionMark(dec, levelNumber(result.data))]),
     el("p", { class: "note" }, [t("results.count", { n: formatNumber((result.data.candidates ?? []).length) })]),

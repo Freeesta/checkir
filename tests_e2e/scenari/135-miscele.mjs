@@ -51,8 +51,8 @@ async function proposalScenario(browser, base, check, axe) {
   const sheet = await inPage(page, `const s = await import("./state.js"); const m = await import("./sheet.js"); return m.buildSheet(s.getState()).textContent;`);
   check("mixture: the sheet lists the possible mixture before it is accepted", /Possibile miscela: .*(alfa|beta)/.test(sheet), sheet);
   await page.click('[data-fk="mixture-accept"]');
-  const draft = await inPage(page, `const s = await import("./state.js"); return s.getState().draft.C1;`);
-  check("mixture: accepting sets level 4 with both components", draft?.level === 4 && draft.keys.length === 2 && new Set(draft.keys).size === 2, JSON.stringify(draft));
+  const choice = await inPage(page, `const s = await import("./state.js"); return s.getState().choice.C1;`);
+  check("mixture: accepting sets level 4 with both components", choice?.level === 4 && choice.keys.length === 2 && new Set(choice.keys).size === 2, JSON.stringify(choice));
   check("mixture: the button is pressed and the proposal stays", (await page.getAttribute('[data-fk="mixture-accept"]', "aria-pressed")) === "true");
   const taken = await inPage(page, `const s = await import("./state.js"); const m = await import("./sheet.js"); return m.buildSheet(s.getState()).textContent;`);
   check("mixture: the sheet names the components at level 4", /Componenti principali: .*(alfa|beta)/i.test(taken) && /alfa/i.test(taken) && /beta/i.test(taken), taken);
