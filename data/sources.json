@@ -4040,6 +4040,152 @@
       "tier": "review"
     },
     {
+      "id": "bassi2024",
+      "type": "paper",
+      "title": "The synthetic cathinones MDPHP and MDPV: Comparison of the acute effects in mice, in silico ADMET profiles and clinical reports (Neurotoxicology 103:230-255)",
+      "authors": [
+        "M. Bassi",
+        "S. Bilel",
+        "et al."
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.neuro.2024.06.014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38955288/",
+      "archive_url": "https://web.archive.org/web/20260928211224/https://pubmed.ncbi.nlm.nih.gov/38955288/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "brueckner2025",
+      "type": "paper",
+      "title": "Toxicological detection of the new psychoactive substances MDPHP and MDPHpP in human urine samples by elucidation of their urinary metabolites using gas chromatography-mass spectrometry (J Anal Toxicol 49:299-314)",
+      "authors": [
+        "I. Brueckner",
+        "J. Welter-Luedeke",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1093/jat/bkaf026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40130363/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "camuto2022",
+      "type": "paper",
+      "title": "In vitro metabolic profile of mexedrone, a mephedrone analog, studied by high- and low-resolution mass spectrometry (Drug Test Anal 14:269-276)",
+      "authors": [
+        "C. Camuto",
+        "A. Guglielmelli",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3179",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34652887/",
+      "archive_url": "https://web.archive.org/web/20250204022043/https://pubmed.ncbi.nlm.nih.gov/34652887/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "casati2025",
+      "type": "paper",
+      "title": "Polydrug fatal intoxication involving MDPHP: Detection and in silico investigation of multiple 3,4-methylenedioxy-derived designer drugs and their metabolites (J Anal Toxicol 49:384-393)",
+      "authors": [
+        "S. Casati",
+        "A. Ravelli",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1093/jat/bkaf048",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40440133/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "ferrari2026",
+      "type": "paper",
+      "title": "GC-MS By-product signatures enable reliable differentiation of isomeric synthetic cathinones (Forensic Sci Int 387:113012)",
+      "authors": [
+        "E. Ferrari Júnior",
+        "L. P. E. Ferreira",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.forsciint.2026.113012",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42172948/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "gatch2025b",
+      "type": "paper",
+      "title": "Locomotor stimulant and drug discrimination effects of five synthetic cathinones in rodents (Pharmacol Biochem Behav 257:174100)",
+      "authors": [
+        "M. B. Gatch",
+        "R. D. Hill",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.pbb.2025.174100",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40975318/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "liliedahl2023",
+      "type": "paper",
+      "title": "The differentiation of N-butyl pentylone isomers using GC-EI-MS and NMR (Forensic Sci Int 351:111815)",
+      "authors": [
+        "R. E. Liliedahl",
+        "E. Hutzell",
+        "et al."
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.forsciint.2023.111815",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37713773/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "pain2026",
+      "type": "paper",
+      "title": "Neurochemical and behavioral evidence of high abuse liability of 3F-NEB, a novel synthetic cathinone (Eur J Pharmacol 1015:178570)",
+      "authors": [
+        "S. Pain",
+        "N. Nadal-Gratacós",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.ejphar.2026.178570",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41554370/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "yang2021",
+      "type": "paper",
+      "title": "Detection of amfepramone and its metabolite cathinone in human hair: Application to authentic cases of amfepramone use (Drug Test Anal 14:101-109)",
+      "authors": [
+        "H. Yang",
+        "X. Wang",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3149",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34405558/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
       "id": "gresnigt2026",
       "type": "paper",
       "title": "Acute cardiovascular complications of sympathomimetic recreational drug use (Clin Toxicol 64:850-864)",
@@ -11277,6 +11423,159 @@
       "year": 2021,
       "doi": "10.1016/j.neuropharm.2021.108570",
       "url": "https://pubmed.ncbi.nlm.nih.gov/33864800/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "leung2024",
+      "type": "paper",
+      "title": "N,N-dimethylpentylone poisoning: Clinical manifestations, analytical detection, and metabolic characterization (Forensic Sci Int 361:112116)",
+      "authors": [
+        "Leung HS",
+        "Tang MHY",
+        "Tong HF",
+        "Chong YK"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.forsciint.2024.112116",
+      "url": "https://doi.org/10.1016/j.forsciint.2024.112116",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "fogarty2025",
+      "type": "paper",
+      "title": "Toxicological evaluation, postmortem case descriptions, and pharmacological activity of N,N-dimethylpentylone and related analogs (J Anal Toxicol 49:143-151)",
+      "authors": [
+        "Fogarty MF",
+        "Walton SE",
+        "Truver MT",
+        "Glatfelter GC",
+        "Krotulski AJ",
+        "Papsun DM",
+        "Lamb M",
+        "Chronister CW",
+        "Goldberger BA",
+        "Walther D",
+        "Barba K",
+        "Baumann MH",
+        "Logan BK"
+      ],
+      "year": 2025,
+      "doi": "10.1093/jat/bkaf002",
+      "url": "https://doi.org/10.1093/jat/bkaf002",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "venkatakrishnan1998",
+      "type": "paper",
+      "title": "Kinetic characterization and identification of the enzymes responsible for the hepatic biotransformation of adinazolam and N-desmethyladinazolam in man (J Pharm Pharmacol 50:265-74)",
+      "authors": [
+        "Venkatakrishnan K",
+        "von Moltke LL",
+        "Duan SX",
+        "Fleishaker JC",
+        "Shader RI",
+        "Greenblatt DJ"
+      ],
+      "year": 1998,
+      "doi": "10.1111/j.2042-7158.1998.tb06859.x",
+      "url": "https://doi.org/10.1111/j.2042-7158.1998.tb06859.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "venkatakrishnan2005",
+      "type": "paper",
+      "title": "Kinetics and dynamics of intravenous adinazolam, N-desmethyl adinazolam, and alprazolam in healthy volunteers (J Clin Pharmacol 45:529-37)",
+      "authors": [
+        "Venkatakrishnan K",
+        "Culm KE",
+        "Ehrenberg BL",
+        "Harmatz JS",
+        "Corbett KE",
+        "Fleishaker JC",
+        "Greenblatt DJ"
+      ],
+      "year": 2005,
+      "doi": "10.1177/0091270004269105",
+      "url": "https://doi.org/10.1177/0091270004269105",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "borisova2021",
+      "type": "paper",
+      "title": "GABAA receptor agonist cinazepam and its active metabolite 3-hydroxyphenazepam act differently at the presynaptic site (Eur Neuropsychopharmacol 45:39-51)",
+      "authors": [
+        "Borisova T",
+        "Pozdnyakova N",
+        "Dudarenko M",
+        "Krisanova N",
+        "Andronati S"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.euroneuro.2021.03.013",
+      "url": "https://doi.org/10.1016/j.euroneuro.2021.03.013",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "luo2025",
+      "type": "paper",
+      "title": "Characterizing the in vitro metabolic features of seven α-pyrrolidinophenone-derived synthetic cathinone-type new psychoactive substances (Arch Toxicol 99:4145-4158)",
+      "authors": [
+        "Luo X",
+        "Zhang F",
+        "Huang K",
+        "Liu X",
+        "Yang N",
+        "Luo Q"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s00204-025-04097-x",
+      "url": "https://doi.org/10.1007/s00204-025-04097-x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "meltzer2006",
+      "type": "paper",
+      "title": "1-(4-Methylphenyl)-2-pyrrolidin-1-yl-pentan-1-one (Pyrovalerone) analogues: a promising class of monoamine uptake inhibitors (J Med Chem 49:1420-32)",
+      "authors": [
+        "Meltzer PC",
+        "Butler D",
+        "Deschamps JR",
+        "Madras BK"
+      ],
+      "year": 2006,
+      "doi": "10.1021/jm050797a",
+      "url": "https://doi.org/10.1021/jm050797a",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "zherdev1985",
+      "type": "paper",
+      "title": "[Pharmacokinetics of fenazepam and its metabolite 3-oxyfenazepam in animals of different species and in man] (Farmakol Toksikol 48:31-5)",
+      "authors": [
+        "Zherdev VP",
+        "Martynova LA",
+        "Caccia S",
+        "Garattini S",
+        "Ekonomov AL"
+      ],
+      "year": 1985,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2858403/",
       "license": "cited as the source of numbers only",
       "consulted": "2026-10-14",
       "tier": "primary"

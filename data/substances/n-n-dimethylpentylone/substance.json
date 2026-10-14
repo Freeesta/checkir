@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "n-n-dimethylpentylone",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "N,N-Dimethylpentylone",
+      "synonyms": [
+        "Dipentylone",
+        "bk-DMBDP"
+      ]
+    },
+    "it": {
+      "preferred": "N,N-Dimetilpentilone",
+      "synonyms": [
+        "Dipentylone",
+        "bk-DMBDP"
+      ]
+    }
+  },
+  "iupac": "1-(1,3-benzodioxol-5-yl)-2-(dimethylamino)pentan-1-one",
+  "formula": "C14H19NO3",
+  "molar_mass_g_mol": 249.3,
+  "smiles": "CCCC(C(=O)C1=CC2=C(C=C1)OCO2)N(C)C",
+  "inchi": "InChI=1S/C14H19NO3/c1-4-5-11(15(2)3)14(16)10-6-7-12-13(8-10)18-9-17-12/h6-8,11H,4-5,9H2,1-3H3",
+  "inchikey": "PQTJKFUXRBKONZ-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "803614-36-0",
+    "pubchem_cid": 119057570
+  },
+  "classes": {
+    "chemical": [
+      "synthetic_cathinones"
+    ],
+    "effect": [
+      "stimulant"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
