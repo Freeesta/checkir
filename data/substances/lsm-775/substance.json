@@ -1,0 +1,51 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "lsm-775",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "LSM-775",
+      "synonyms": [
+        "lysergic acid morpholide"
+      ]
+    },
+    "it": {
+      "preferred": "LSM-775",
+      "synonyms": [
+        "morfolide dell'acido lisergico"
+      ]
+    }
+  },
+  "iupac": "[(6aR,9R)-7-methyl-6,6a,8,9-tetrahydro-4H-indolo[4,3-fg]quinolin-9-yl]-morpholin-4-ylmethanone",
+  "formula": "C20H23N3O2",
+  "molar_mass_g_mol": 337.4,
+  "smiles": "CN1C[C@@H](C=C2[C@H]1CC3=CNC4=CC=CC2=C34)C(=O)N5CCOCC5",
+  "inchi": "InChI=1S/C20H23N3O2/c1-22-12-14(20(24)23-5-7-25-8-6-23)9-16-15-3-2-4-17-19(15)13(11-21-17)10-18(16)22/h2-4,9,11,14,18,21H,5-8,10,12H2,1H3/t14-,18-/m1/s1",
+  "inchikey": "OTQWCDNEJVKXKG-RDTXWAMCSA-N",
+  "external_ids": {
+    "pubchem_cid": 199507
+  },
+  "classes": {
+    "chemical": [
+      "lysergamides"
+    ],
+    "effect": [
+      "psychedelic"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
