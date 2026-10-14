@@ -1,0 +1,60 @@
+{
+  "schema": "datasheet/1",
+  "substance": "5-apdb",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "hydroxylated-5-apdb",
+        "reaction": "hydroxylation",
+        "source": "park2016"
+      },
+      {
+        "from": "hydroxylated-5-apdb",
+        "to": "dehydrated-5-apdb",
+        "reaction": "other",
+        "source": "park2016"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "hydroxylated-5-apdb",
+        "active": null,
+        "source": "park2016"
+      },
+      {
+        "name_key": "dehydrated-5-apdb",
+        "active": null,
+        "source": "park2016"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "4-chloromethamphetamine",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "4-Chloromethamphetamine",
+      "synonyms": [
+        "4-CMA",
+        "para-Chloromethamphetamine"
+      ]
+    },
+    "it": {
+      "preferred": "4-Chloromethamphetamine",
+      "synonyms": [
+        "4-Clorometamfetamina",
+        "para-clorometamfetamina"
+      ]
+    }
+  },
+  "iupac": "1-(4-chlorophenyl)-N-methylpropan-2-amine",
+  "formula": "C10H14ClN",
+  "molar_mass_g_mol": 183.7,
+  "smiles": "CC(CC1=CC=C(C=C1)Cl)NC",
+  "inchi": "InChI=1S/C10H14ClN/c1-8(12-2)7-9-3-5-10(11)6-4-9/h3-6,8,12H,7H2,1-2H3",
+  "inchikey": "XXLWNLKEOWWHDC-UHFFFAOYSA-N",
+  "external_ids": {
+    "pubchem_cid": 3128
+  },
+  "classes": {
+    "chemical": [
+      "amphetamines"
+    ],
+    "effect": [
+      "entactogen"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
