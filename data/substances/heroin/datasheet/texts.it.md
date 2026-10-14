@@ -16,7 +16,7 @@ Classe chimica: morfinani (derivato semisintetico della morfina), tra le sostanz
 
 ## history
 
-La diacetilmorfina fu sintetizzata nel 1874. [f:milella2023]
+La diacetilmorfina fu sintetizzata per la prima volta nel 1874 e poi commercializzata come antitosse e rimedio per le malattie respiratorie; ha un potente effetto analgesico. [f:milella2023]
 
 ## origin
 
@@ -24,7 +24,11 @@ Oppioide semisintetico derivato dalla morfina, alcaloide dell'oppio. Nei campion
 
 ## metabolism
 
-L'eroina è deacetilata rapidamente a 6-monoacetilmorfina e poi a morfina da colinesterasi plasmatiche e carbossilesterasi epatiche; la morfina è glucuronidata, e la morfina-6-glucuronide è attiva. L'emivita dell'eroina è di 3-4 minuti. [f:milella2023]
+L'eroina è un profarmaco: l'emivita arteriosa è 2,4 ± 0,8 min dopo uso endovenoso. È idrolizzata a 6-monoacetilmorfina e poi a morfina (anche nei tessuti periferici), che viene glucuronidata; la morfina-6-glucuronide è attiva. L'ingresso arterioso di morfina dura fino a 90 minuti. [f:rentsch2001] [f:milella2023] La morfina ha un'emivita di circa 3-4 ore. [f:milella2023]
+
+Biodisponibilità: per inalazione («chasing the dragon») 52% (IC 95% 44-61%), con picchi 2-6 volte inferiori all'endovena [f:rook2006]; fumata in tabacco miscelato circa 14%, intranasale non nota [f:milella2023]. Per via orale l'eroina diventa morfina prima di entrare in circolo, e la biodisponibilità della morfina era 22,9% in persone naive agli oppioidi e 45,6% in persone dipendenti. [f:halbsguth2008]
+
+Nelle urine la 6-monoacetilmorfina (emivita 0,6 h, rilevabile 2-8 h) è il marcatore specifico dell'eroina; la morfina resta rilevabile circa 24 h. [f:cone1991]
 
 ## cuts
 
@@ -32,35 +36,45 @@ Caffeina e paracetamolo sono gli adulteranti più riportati; nei sequestri itali
 
 ## effects
 
-La depressione respiratoria, con la conseguente ipossia cerebrale, è l'effetto avverso più grave degli agonisti MOP. Chi sniffa non raggiunge la stessa euforia di chi inietta o fuma. [f:milella2023]
+L'eroina agisce sul recettore μ-oppioide tramite 6-monoacetilmorfina e morfina; la 6-monoacetilmorfina è più efficace della morfina nell'attivare la proteina G (talamo di ratto, recettore umano clonato). [f:selley2001] È lipofila e attraversa facilmente la barriera ematoencefalica, mentre la morfina entra lentamente nel cervello. [f:milella2023]
+
+L'uso endovenoso dà un «flash» di circa un minuto, poi alcune ore di calma e benessere; l'inalazione dà un flash paragonabile (picco entro 5 min), mentre sniffare non raggiunge la stessa euforia. [f:milella2023] L'eroina intranasale agisce entro 2 min e ha il picco a 30-35 min. [f:guessoum2025]
+
+L'eroina endovenosa riduce frequenza respiratoria, frequenza cardiaca e temperatura nei volontari. [f:tress1980] In pazienti a dosi alte ha allungato il tempo di reazione di 28 ± 5,3 ms e ridotto il craving. [f:rook2006]
 
 ## doses
 
-Non ancora redatta. [f:checkir-section-pending]
+Nelle fonti controllate non c'è una dose di strada (profili EUDA e OMS non raggiungibili). Le dosi endovenose prescritte nel trattamento con eroina sono 120-450 mg; aumenti del 50% della dose abituale non hanno causato effetti gravi in pazienti tolleranti. [f:milella2023] [f:rook2006]
+
+In volontari non dipendenti 2,5 e 5 mg per via endovenosa hanno già ridotto la frequenza respiratoria. [f:tress1980] Le dosi intranasali nel trattamento erano in media 346 mg (190-700 mg). [f:guessoum2025]
 
 ## risks
 
-Dopo un'astinenza (carcere, trattamenti) la tolleranza si perde: è un periodo ad alto rischio di overdose. L'uso di benzodiazepine è un fattore di rischio. L'eroina è a volte mescolata con fentanil e derivati. [f:kerensky2017]
+La depressione respiratoria, con l'ipossia cerebrale che ne segue, è l'effetto avverso più grave degli agonisti μ. La tolleranza si perde dopo l'astinenza (carcere, terapia): periodo ad alto rischio di overdose. L'eroina è talvolta tagliata con fentanil e derivati. [f:milella2023] [f:kerensky2017]
 
-La tolleranza si sviluppa per analgesia, euforia, sedazione, nausea e depressione respiratoria, non per la stipsi. [f:milella2023]
+I decessi attribuiti a overdose di eroina coinvolgono la sola eroina solo in una minoranza di casi: si trovano comunemente alcol e benzodiazepine, e i livelli di morfina non sono più alti che nei sopravvissuti. [f:darke1996]
+
+Si sviluppa tolleranza ad analgesia, euforia, sedazione, nausea e depressione respiratoria, ma non alla stipsi. [f:milella2023]
 
 ## interactions
 
-Le benzodiazepine sommano la depressione del sistema nervoso centrale e sono un fattore di rischio di overdose. [f:kerensky2017]
+Le benzodiazepine si sommano alla depressione del sistema nervoso centrale e sono un fattore di rischio di overdose. [f:kerensky2017] [f:darke1996]
+
+Alcol e altri depressori si trovano di frequente nei decessi da eroina. [f:darke1996] Con la cocaina: in Europa gli oppioidi sono la sostanza più trovata nei decessi legati alla cocaina, e la cocaina non annulla l'ipossia cerebrale di una dose alta di eroina. [f:roque-bravo2022]
 
 ## counselling
 
-Chiedere da quanto tempo non usa: dopo pause (carcere, trattamenti) la tolleranza si perde e una quantità abituale può non essere più tollerata. [f:kerensky2017] [f:ubc-counselling-guidelines]
+Chiedere da quanto tempo non usa: dopo pause (carcere, terapia) la tolleranza si perde e la quantità abituale può essere troppa. [f:kerensky2017] [f:ubc-counselling-guidelines]
 
-Chiedere di benzodiazepine e altri sedativi: sono un fattore di rischio di overdose insieme all'eroina. [f:kerensky2017] [f:ubc-counselling-guidelines]
+Chiedere di benzodiazepine, alcol e altri sedativi: si trovano di frequente nei decessi da eroina. [f:darke1996] [f:ubc-counselling-guidelines]
 
-Parlare di naloxone: inverte la depressione respiratoria; ricordare che l'eroina è a volte mescolata con fentanil e derivati. [f:kerensky2017] [f:ubc-counselling-guidelines]
+Parlare del naloxone: inverte la depressione respiratoria; l'eroina è talvolta tagliata con fentanil e derivati. [f:kerensky2017] [f:ubc-counselling-guidelines]
 
-Chiedere la via di assunzione: la biodisponibilità è 38-53% se inalata («chasing the dragon») e circa 14% se fumata in una sigaretta, quindi cambiare via cambia l'effetto. [f:milella2023] [f:ubc-counselling-guidelines]
+Chiedere la via: la biodisponibilità è 38-53% per inalazione e circa 14% fumata in tabacco, quindi cambiare via cambia l'effetto. [f:milella2023] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-heroin] [f:smith-esters] [f:smith-amine-salts] [f:tittarelli2020] [f:unodc-ewa] [f:checkir-classification] [f:milella2023] [f:kerensky2017] [f:ubc-counselling-guidelines]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:chebi] [f:swgdrug-heroin] [f:smith-esters] [f:smith-amine-salts] [f:tittarelli2020] [f:unodc-ewa] [f:checkir-classification] [f:milella2023] [f:rentsch2001] [f:rook2006] [f:halbsguth2008] [f:cone1991] [f:selley2001] [f:guessoum2025] [f:tress1980] [f:kerensky2017] [f:darke1996] [f:roque-bravo2022] [f:ubc-counselling-guidelines]
 
 ## license
 
