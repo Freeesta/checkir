@@ -1,0 +1,71 @@
+{
+  "schema": "datasheet/1",
+  "substance": "zopiclone",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "history": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "n-desmethylzopiclone",
+        "reaction": "n_demethylation",
+        "enzymes": [
+          "CYP3A4",
+          "CYP2C9",
+          "other"
+        ],
+        "source": "becquemont1999"
+      },
+      {
+        "from": "parent",
+        "to": "zopiclone-n-oxide",
+        "reaction": "other",
+        "enzymes": [
+          "CYP3A4",
+          "CYP2C9",
+          "other"
+        ],
+        "source": "becquemont1999"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "n-desmethyl-zopiclone",
+        "active": null,
+        "source": "becquemont1999"
+      },
+      {
+        "name_key": "zopiclone-n-oxide",
+        "active": null,
+        "source": "becquemont1999"
+      }
+    ]
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}

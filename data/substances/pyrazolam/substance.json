@@ -1,0 +1,46 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "pyrazolam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Pyrazolam"
+    },
+    "it": {
+      "preferred": "Pirazolam"
+    }
+  },
+  "iupac": "8-bromo-1-methyl-6-pyridin-2-yl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepine",
+  "formula": "C16H12BrN5",
+  "molar_mass_g_mol": 354.2,
+  "smiles": "CC1=NN=C2N1C3=C(C=C(C=C3)Br)C(=NC2)C4=CC=CC=N4",
+  "inchi": "InChI=1S/C16H12BrN5/c1-10-20-21-15-9-19-16(13-4-2-3-7-18-13)12-8-11(17)5-6-14(12)22(10)15/h2-8H,9H2,1H3",
+  "inchikey": "BGRWSFIQQPVEML-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "39243-02-2",
+    "pubchem_cid": 12562545
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

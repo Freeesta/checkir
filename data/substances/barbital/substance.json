@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "barbital",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Barbital",
+      "synonyms": [
+        "Barbitone",
+        "Diethylbarbituric acid"
+      ]
+    },
+    "it": {
+      "preferred": "Barbital",
+      "synonyms": [
+        "Barbitone",
+        "Diethylbarbituric acid"
+      ]
+    }
+  },
+  "iupac": "5,5-diethyl-1,3-diazinane-2,4,6-trione",
+  "formula": "C8H12N2O3",
+  "molar_mass_g_mol": 184.19,
+  "smiles": "CCC1(C(=O)NC(=O)NC1=O)CC",
+  "inchi": "InChI=1S/C8H12N2O3/c1-3-8(4-2)5(11)9-7(13)10-6(8)12/h3-4H2,1-2H3,(H2,9,10,11,12,13)",
+  "inchikey": "FTOAOBMCPZCFFF-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "57-44-3",
+    "pubchem_cid": 2294
+  },
+  "classes": {
+    "chemical": [
+      "others"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

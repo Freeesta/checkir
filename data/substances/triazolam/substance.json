@@ -1,0 +1,52 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "triazolam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Triazolam",
+      "synonyms": [
+        "Halcion"
+      ]
+    },
+    "it": {
+      "preferred": "Triazolam",
+      "synonyms": [
+        "Halcion"
+      ]
+    }
+  },
+  "iupac": "8-chloro-6-(2-chlorophenyl)-1-methyl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepine",
+  "formula": "C17H12Cl2N4",
+  "molar_mass_g_mol": 343.2,
+  "smiles": "CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4Cl",
+  "inchi": "InChI=1S/C17H12Cl2N4/c1-10-21-22-16-9-20-17(12-4-2-3-5-14(12)19)13-8-11(18)6-7-15(13)23(10)16/h2-8H,9H2,1H3",
+  "inchikey": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "28911-01-5",
+    "pubchem_cid": 5556
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

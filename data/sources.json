@@ -11983,6 +11983,423 @@
       "tier": "agency"
     },
     {
+      "id": "restoril-label",
+      "type": "institution",
+      "title": "RESTORIL (temazepam) capsules, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bc56f7fd-1aaf-48ff-8aa7-d467e59e1015",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260802150116/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bc56f7fd-1aaf-48ff-8aa7-d467e59e1015",
+      "tier": "agency"
+    },
+    {
+      "id": "triazolam-label",
+      "type": "institution",
+      "title": "Triazolam tablets (Mylan Pharmaceuticals Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260804030030/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf",
+      "tier": "agency"
+    },
+    {
+      "id": "ambien-label",
+      "type": "institution",
+      "title": "AMBIEN (zolpidem tartrate) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260828133129/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452",
+      "tier": "agency"
+    },
+    {
+      "id": "telazol-label",
+      "type": "institution",
+      "title": "TELAZOL (tiletamine hydrochloride and zolazepam hydrochloride) for injection, veterinary prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2023,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3ef51363-2236-40aa-bf32-601c9f1c722a",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260731133604/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3ef51363-2236-40aa-bf32-601c9f1c722a",
+      "tier": "agency"
+    },
+    {
+      "id": "vonmoltke1999",
+      "type": "paper",
+      "title": "Zolpidem metabolism in vitro: responsible cytochromes, chemical inhibitors, and in vivo correlations (Br J Clin Pharmacol 48:89-97)",
+      "authors": [
+        "L. L. von Moltke",
+        "D. J. Greenblatt",
+        "B. W. Granda",
+        "S. X. Duan",
+        "J. M. Grassi",
+        "K. Venkatakrishnan",
+        "J. S. Harmatz",
+        "R. I. Shader"
+      ],
+      "year": 1999,
+      "doi": "10.1046/j.1365-2125.1999.00953.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10383565/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250418190101/https://pubmed.ncbi.nlm.nih.gov/10383565/"
+    },
+    {
+      "id": "becquemont1999",
+      "type": "paper",
+      "title": "Cytochrome P-450 3A4 and 2C8 are involved in zopiclone metabolism (Drug Metab Dispos 27:1068-1073)",
+      "authors": [
+        "L. Becquemont",
+        "S. Mouajjah",
+        "O. Escaffre",
+        "P. Beaune",
+        "C. Funck-Brentano",
+        "P. Jaillon"
+      ],
+      "year": 1999,
+      "doi": "10.1016/S0090-9556(24)15027-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10460808/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260113101310/https://pubmed.ncbi.nlm.nih.gov/10460808/"
+    },
+    {
+      "id": "liakoni2019",
+      "type": "paper",
+      "title": "Butanediol conversion to gamma-hydroxybutyrate markedly reduced by the alcohol dehydrogenase blocker fomepizole (Clin Pharmacol Ther 105:1196-1203)",
+      "authors": [
+        "E. Liakoni",
+        "H. Gugelmann",
+        "D. A. Dempsey",
+        "T. J. Wiegand",
+        "C. Havel",
+        "P. Jacob",
+        "N. L. Benowitz"
+      ],
+      "year": 2019,
+      "doi": "10.1002/cpt.1306",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30450642/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "skryabin2023",
+      "type": "paper",
+      "title": "Consequences of 1,4-butanediol misuse: a review (Psychopharmacol Bull 53:48-53)",
+      "authors": [
+        "V. Skryabin",
+        "Y. Shevtsova",
+        "E. A. Novoselova"
+      ],
+      "year": 2023,
+      "doi": "10.64719/pb.4475",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38076667/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "kong2023",
+      "type": "paper",
+      "title": "Metabolic profiling of clonazolam in human liver microsomes and zebrafish models using liquid chromatography quadrupole Orbitrap mass spectrometry (J Chromatogr B Analyt Technol Biomed Life Sci 1216:123583)",
+      "authors": [
+        "Kong R",
+        "Zhao J",
+        "Zhai W",
+        "Chen Z",
+        "et al."
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.jchromb.2022.123583",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36621072/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mortele2018",
+      "type": "paper",
+      "title": "In vitro Phase I and Phase II metabolism of the new designer benzodiazepine cloniprazepam using liquid chromatography coupled to quadrupole time-of-flight mass spectrometry (J Pharm Biomed Anal 153:158-167)",
+      "authors": [
+        "Mortelé O",
+        "Vervliet P",
+        "Gys C",
+        "Degreef M",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jpba.2018.02.032",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29494888/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "moosmann2016",
+      "type": "paper",
+      "title": "Characterization and in vitro phase I microsomal metabolism of designer benzodiazepines - an update comprising adinazolam, cloniprazepam, fonazepam, 3-hydroxyphenazepam, metizolam and nitrazolam (J Mass Spectrom 51(11):1080-1089)",
+      "authors": [
+        "Moosmann B",
+        "Bisel P",
+        "Franz F",
+        "Huppertz LM",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1002/jms.3840",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27535017/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "moosmann2014",
+      "type": "paper",
+      "title": "Characterization of the designer benzodiazepine diclazepam and preliminary data on its metabolism and pharmacokinetics (Drug Test Anal 6(7-8):757-63)",
+      "authors": [
+        "Moosmann B",
+        "Bisel P",
+        "Auwärter V"
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1628",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24604775/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "moosmann2018",
+      "type": "paper",
+      "title": "Designer Benzodiazepines: Another Class of New Psychoactive Substances (Handb Exp Pharmacol 252:383-410)",
+      "authors": [
+        "Moosmann B",
+        "Auwärter V"
+      ],
+      "year": 2018,
+      "doi": "10.1007/164_2018_154",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30367253/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260608000326/https://pubmed.ncbi.nlm.nih.gov/30367253/"
+    },
+    {
+      "id": "katselou2017",
+      "type": "paper",
+      "title": "Metabolites replace the parent drug in the drug arena. The cases of fonazepam and nifoxipam (Forensic Toxicol 35(1):1-10)",
+      "authors": [
+        "Katselou M",
+        "Papoutsis I",
+        "Nikolaou P",
+        "Spiliopoulou C",
+        "et al."
+      ],
+      "year": 2017,
+      "doi": "10.1007/s11419-016-0338-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28127407/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "miura2005",
+      "type": "paper",
+      "title": "Identification of human cytochrome P450 enzymes involved in the formation of 4-hydroxyestazolam from estazolam (Xenobiotica 35(5):455-65)",
+      "authors": [
+        "Miura M",
+        "Otani K",
+        "Ohkubo T"
+      ],
+      "year": 2005,
+      "doi": "10.1080/00498250500111612",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16012077/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "allen1979",
+      "type": "paper",
+      "title": "Single- and multiple-dose kinetics of estazolam, a triazolo benzodiazepine (Psychopharmacology (Berl) 66(3):267-74)",
+      "authors": [
+        "Allen MD",
+        "Greenblatt DJ",
+        "Arnold JD"
+      ],
+      "year": 1979,
+      "doi": "10.1007/BF00428318",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43552/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mancinelli1985",
+      "type": "paper",
+      "title": "Kinetic and pharmacological studies on estazolam in mice and man (Xenobiotica 15(3):257-65)",
+      "authors": [
+        "Mancinelli A",
+        "Guiso G",
+        "Garattini S",
+        "Urso R",
+        "et al."
+      ],
+      "year": 1985,
+      "doi": "10.3109/00498258509045357",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2862746/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "cheze2004",
+      "type": "paper",
+      "title": "Determination of bromazepam, clonazepam and metabolites after a single intake in urine and hair by LC-MS/MS. Application to forensic cases of drug facilitated crimes (Forensic Sci Int 145(2-3):123-30)",
+      "authors": [
+        "Chèze M",
+        "Villain M",
+        "Pépin G"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.forsciint.2004.04.066",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15451083/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "oda2003",
+      "type": "paper",
+      "title": "The effect of itraconazole on the pharmacokinetics and pharmacodynamics of bromazepam in healthy volunteers (Eur J Clin Pharmacol 59(8-9):615-9)",
+      "authors": [
+        "Oda M",
+        "Kotegawa T",
+        "Tsutsumi K",
+        "Ohtani Y",
+        "et al."
+      ],
+      "year": 2003,
+      "doi": "10.1007/s00228-003-0681-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14517708/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "manchester2022",
+      "type": "paper",
+      "title": "The blood-to-plasma ratio and predicted GABA(A)-binding affinity of designer benzodiazepines (Forensic Toxicol 40(2):349-356)",
+      "authors": [
+        "Manchester KR",
+        "Waters L",
+        "Haider S",
+        "Maskell PD"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s11419-022-00616-y",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36454409/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gonzalezlopez1986",
+      "type": "paper",
+      "title": "Pharmacokinetics of tiadipone: a new anxiolytic (Int J Clin Pharmacol Ther Toxicol 24(9):482-4)",
+      "authors": [
+        "Gonzalez López F",
+        "Mariño EL",
+        "Dominguez-Gil A"
+      ],
+      "year": 1986,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2877954/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260909014731/https://pubmed.ncbi.nlm.nih.gov/2877954/"
+    },
+    {
+      "id": "roldan2014",
+      "type": "paper",
+      "title": "Phenytoin toxicity from cocaine adulteration (West J Emerg Med 15:127-130)",
+      "authors": [
+        "C. J. Roldan"
+      ],
+      "year": 2014,
+      "doi": "10.5811/westjem.2013.12.20010",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3966464/",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "ema-azaperone-mrl",
+      "type": "institution",
+      "title": "Azaperone, Summary Report (1), Committee for Veterinary Medicinal Products (EMEA)",
+      "year": 1997,
+      "url": "https://www.ema.europa.eu/en/documents/mrl-report/azaperone-summary-report-1-committee-veterinary-medicinal-products_en.pdf",
+      "tier": "agency",
+      "license": "© European Medicines Agency; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dilantin-label",
+      "type": "institution",
+      "title": "DILANTIN (extended phenytoin sodium capsules), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=86dd27d1-9cee-48ae-b55d-e2d2f7dbc593",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "tegretol-label",
+      "type": "institution",
+      "title": "TEGRETOL (carbamazepine) tablets, suspension and XR tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8d409411-aa9f-4f3a-a52c-fbcb0c3ec053",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "carisoprodol-label",
+      "type": "institution",
+      "title": "Carisoprodol tablets (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b83f7fd1-11e3-4e94-ae53-4637e892b372",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "chlorzoxazone-label",
+      "type": "institution",
+      "title": "Chlorzoxazone tablets USP (Par Health USA, LLC), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7c5a835d-3754-4c25-a0e2-335b8eceb2d2",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "butalbital-label",
+      "type": "institution",
+      "title": "Butalbital, acetaminophen and caffeine tablets USP (Actavis Pharma, Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a6cbc17f-5c60-489c-8029-84b0add556d8",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
       "id": "neurontin-label",
       "type": "institution",
       "title": "NEURONTIN (gabapentin) capsules, tablets and oral solution, US prescribing information (DailyMed, U.S. National Library of Medicine)",

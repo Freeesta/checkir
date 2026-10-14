@@ -1,0 +1,54 @@
+{
+  "schema": "ftir-substance/1",
+  "id": "diclazepam",
+  "type": "compound",
+  "names": {
+    "en": {
+      "preferred": "Diclazepam",
+      "synonyms": [
+        "2-Chlorodiazepam",
+        "Ro 5-3448"
+      ]
+    },
+    "it": {
+      "preferred": "Diclazepam",
+      "synonyms": [
+        "2-Clorodiazepam",
+        "Ro 5-3448"
+      ]
+    }
+  },
+  "iupac": "7-chloro-5-(2-chlorophenyl)-1-methyl-3H-1,4-benzodiazepin-2-one",
+  "formula": "C16H12Cl2N2O",
+  "molar_mass_g_mol": 319.2,
+  "smiles": "CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3Cl",
+  "inchi": "InChI=1S/C16H12Cl2N2O/c1-20-14-7-6-10(17)8-12(14)16(19-9-15(20)21)11-4-2-3-5-13(11)18/h2-8H,9H2,1H3",
+  "inchikey": "VPAYQWRBBOGGPY-UHFFFAOYSA-N",
+  "external_ids": {
+    "cas": "2894-68-0",
+    "pubchem_cid": 76168
+  },
+  "classes": {
+    "chemical": [
+      "benzodiazepines"
+    ],
+    "effect": [
+      "depressant_sedative"
+    ],
+    "typical_role": [
+      "active_principle"
+    ]
+  },
+  "sources": [
+    {
+      "field": "identity",
+      "source": "pubchem",
+      "consulted": "2026-10-14"
+    },
+    {
+      "field": "classes",
+      "source": "checkir-classification",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "datasheet/1",
+  "substance": "bromazepam",
+  "version": 1,
+  "section_state": {
+    "molecule": "draft",
+    "category": "draft",
+    "origin": "draft",
+    "metabolism": "draft",
+    "cuts": "draft",
+    "effects": "draft",
+    "doses": "draft",
+    "risks": "draft",
+    "interactions": "draft",
+    "sources": "draft",
+    "license": "draft"
+  },
+  "reviewers": [],
+  "reviewed": "2026-10-14",
+  "review_by": "2028-09-30",
+  "structure_svg": true,
+  "family": "benzodiazepines",
+  "origin": {
+    "type": "synthetic"
+  },
+  "metabolism": {
+    "pathways": [
+      {
+        "from": "parent",
+        "to": "3-hydroxybromazepam",
+        "reaction": "hydroxylation",
+        "source": "cheze2004"
+      }
+    ],
+    "metabolites": [
+      {
+        "name_key": "3-hydroxybromazepam",
+        "pubchem_cid": 166774,
+        "active": null,
+        "source": "cheze2004"
+      }
+    ],
+    "half_life_h": {
+      "min": 32.1,
+      "max": 32.1,
+      "matrix": "plasma",
+      "route": "oral",
+      "source": "oda2003"
+    }
+  },
+  "doses": [],
+  "interactions": [],
+  "show_doses": false,
+  "authors": [
+    "checkir project (AI-assisted draft)"
+  ],
+  "ai_assisted": true
+}
