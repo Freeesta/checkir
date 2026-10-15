@@ -171,7 +171,7 @@ jobs:
       - uses: ./.github/actions/node-deps
         with:
           browser: "true"
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: site
           path: site
@@ -190,7 +190,7 @@ jobs:
       - uses: ./.github/actions/node-deps
         with:
           browser: "true"
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: site
           path: site
