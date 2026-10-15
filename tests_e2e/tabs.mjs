@@ -115,7 +115,7 @@ async function keysScenario(page, check) {
   await page.keyboard.press("Shift+F10");
   await page.waitForSelector('[role=menu] [data-item="tab.close_others"]');
   const items = await page.locator('[role=menu] [role=menuitem]').allTextContents();
-  check("tabs e2e: Shift+F10 opens the menu with the four rows", items.length === 4 && /Sposta a sinistra/.test(items[0]) && /Chiudi le altre/.test(items[3]), items.join("|"));
+  check("tabs e2e: Shift+F10 opens the menu with its six rows", items.length === 6 && /Sposta a sinistra/.test(items[0]) && /Affianca a destra/.test(items[2]) && /Chiudi le altre/.test(items[5]), items.join("|"));
   await page.keyboard.press("Escape");
   check("tabs e2e: Esc closes the menu and the focus stays on the tab", (await page.locator("[role=menu]").count()) === 0 && (await focusId(page)) === "tab-C2");
   await page.keyboard.press("j");

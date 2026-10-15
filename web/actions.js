@@ -8,6 +8,7 @@ import { canSubtract } from "./subtract.js";
  * @typedef {{
  *   getState: () => import("./state.js").AppState,
  *   focusTab: (id: string) => void, closeTab: (id: string) => void, moveTab: (id: string, to: number) => void, closeOtherTabs: (id: string) => void,
+ *   splitTab: (id: string, side: import("./panes.js").Side, target?: string) => void, unsplitTab: (id: string) => void, endSplit: () => void, setSplitOrientation: (o: "row" | "column") => void, setSplitLinked: (on: boolean) => void,
  *   openFile: () => void, loadDemo: () => void, selectFile: (code: string) => void, closeFile: (code: string) => void, setLang: (code: string) => void, toggleLang: () => void, cycleTheme: () => void,
  *   togglePanel: () => void, goto: (panelId: string) => void, closeSection: () => void, openDialog: (id: string) => void, folder: FolderCtx,
  *   setChoice: (patch: Partial<import("./state.js").Choice>) => void, acceptMixture: () => void, setSheetLang: (lang: string) => Promise<void>, toggleTalk: () => void, printSheet: () => void,

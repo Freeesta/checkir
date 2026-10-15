@@ -1,0 +1,64 @@
+/* Side-by-side view: the grid of #panes, the bar above it, the light panes, the tab being dragged and the drop zones. Colours come from variables only. */
+.split-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0 0 0.5rem; }
+.split-bar[hidden] { display: none; }
+.split-group { display: inline-flex; gap: 0.25rem; }
+.split-note { flex: 1 1 100%; margin: 0; font-size: 0.9rem; }
+.split-note:empty { display: none; }
+.split-btn[aria-pressed="true"] { border-color: var(--accent); font-weight: 600; }
+.panes[data-split] { display: grid; align-items: stretch; gap: 1px; background: var(--border-ui); border: 1px solid var(--border-ui); }
+.split-pane { min-width: 0; background: var(--bg); padding: 0.5rem; border-top: 3px solid transparent; }
+.split-pane[hidden] { display: none; }
+.split-pane[data-focus] { border-top-color: var(--accent); background: var(--panel); }
+.split-pane > .pane, .split-pane > #pane-main { min-width: 0; }
+.pane-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem; margin: 0 0 0.5rem; }
+.pane-title { display: inline-flex; align-items: center; gap: 0.375rem; flex: 1 1 8rem; min-width: 0; min-height: 2.5rem; padding: 0 0.5rem; border: 1px solid var(--border-soft); border-radius: 0.4rem; background: var(--bg); color: var(--text); font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
+.pane-title .icon { width: 1rem; height: 1rem; flex: 0 0 auto; }
+.pane-title .pane-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 400; }
+.pane-title:focus-visible, .pane-chart:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pane-body { min-width: 0; }
+.pane-chart { border: 1px solid var(--border-soft); border-radius: 0.4rem; background: var(--panel); }
+.pane-chart svg { display: block; width: 100%; height: auto; user-select: none; touch-action: pan-y; }
+.pane-toolbar { margin: 0 0 0.375rem; }
+.pane-range { margin: 0.25rem 0; font-size: 0.9rem; }
+.pane-data { margin: 0.25rem 0; }
+.pane-level { margin: 0.5rem 0 0.25rem; }
+.pane-cands { margin: 0; padding: 0; list-style: none; }
+.pane-cand { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.25rem 0; border-bottom: 1px solid var(--border-soft); }
+.pane-cand-name { min-width: 0; overflow-wrap: anywhere; }
+.pane-cand-r { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
+.doc-tab .tab-split { font-size: 0.9rem; line-height: 1; }
+.doc-tablist, .doc-tab { user-select: none; -webkit-touch-callout: none; }
+.doc-tabs-scroll { touch-action: pan-x; position: relative; }
+.doc-tab { touch-action: pan-x; }
+body[data-tab-drag] { user-select: none; cursor: grabbing; }
+body[data-tab-drag] * { cursor: grabbing; }
+.tab-ghost { position: fixed; z-index: 60; pointer-events: none; padding: 0.25rem 0.625rem; border: 2px solid var(--accent); border-radius: 0.4rem; background: var(--panel); color: var(--text); font-weight: 600; box-shadow: 0 2px 8px rgb(0 0 0 / 0.3); }
+.tab-insert { position: fixed; z-index: 60; width: 3px; pointer-events: none; background: var(--accent); border-radius: 2px; }
+.drop-zones { position: fixed; z-index: 55; pointer-events: none; }
+.drop-zone { position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center; padding: 0.25rem; border: 2px dashed var(--accent); background: repeating-linear-gradient(135deg, transparent 0 6px, color-mix(in srgb, var(--accent) 14%, transparent) 6px 8px); text-align: center; }
+.drop-zone[data-side="center"] { background: repeating-linear-gradient(0deg, transparent 0 6px, color-mix(in srgb, var(--accent) 14%, transparent) 6px 8px); }
+.drop-zone[data-active] { border-style: solid; border-width: 4px; background: color-mix(in srgb, var(--accent) 26%, var(--panel)); }
+.drop-label { padding: 0.125rem 0.375rem; border-radius: 0.25rem; background: var(--panel); color: var(--text); font-size: 0.9rem; font-weight: 600; }
+.drop-zone:not([data-active]) .drop-label { font-weight: 400; }
+@media (max-width: 45em) {
+  .panes[data-split] { display: block; }
+  .split-pane { padding: 0.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tab-ghost, .tab-insert, .drop-zone { transition: none; animation: none; }
+}
+@media (forced-colors: active) {
+  .panes[data-split] { border-color: CanvasText; background: CanvasText; }
+  .split-pane { background: Canvas; }
+  .split-pane[data-focus] { border-top-color: Highlight; }
+  .tab-ghost { border-color: Highlight; background: Canvas; color: CanvasText; }
+  .tab-insert { background: Highlight; }
+  .drop-zone { border-color: Highlight; background: none; }
+  .drop-zone[data-active] { border-color: Highlight; background: Canvas; }
+  .drop-label { background: Canvas; color: CanvasText; border: 1px solid CanvasText; }
+  .pane-title:focus-visible, .pane-chart:focus-visible { outline-color: Highlight; }
+}
+body[data-talk] #split-bar { display: none; }
+@media print { .split-bar, .drop-zones, .tab-ghost { display: none; } }
+@media print { .split-pane[data-light="true"] { display: none; } }
+body[data-talk] .split-pane[data-light="true"] { display: none; }
