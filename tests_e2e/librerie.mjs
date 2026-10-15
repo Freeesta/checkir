@@ -204,6 +204,7 @@ export async function offlineScenario(browser, base, check) {
   await page.waitForSelector("body[data-ready='1']");
   await openLibraries(page);
   await page.locator('[data-library="swgdrug-ir"]').waitFor();
+  await page.locator('[data-library="checkir-demo"]').waitFor(); // a library that is off is still listed offline
   check("offline: a library that is on is available without network after the first visit", await page.getByRole("checkbox", { name: /swgdrug-ir/ }).isChecked() && ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 11"));
   await ctx.close();
 }

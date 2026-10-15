@@ -6,16 +6,18 @@ const CACHE = ID + "-v" + VERSION;
 const LIBRARIES = "librerie/";
 const FILES = []; // precache list: written into site/sw.js by the build (tools/versione_sw.mjs); never edit it
 
-/** The libraries that are on by default, named by the general manifest: their files (asked with `?v=`, the way the page asks) are cached on install so they work offline. A library that is off is fetched when it is switched on. A failure here never blocks the install. */
+/** The libraries that are on by default, named by the general manifest: their files and the manifest of every other one (asked with `?v=`, the way the page asks) are cached on install so they work offline. A library that is off is fetched when it is switched on. A failure here never blocks the install. */
 async function cacheLibraries(cache) {
   try {
     const res = await fetch(LIBRARIES + "libraries.json", { cache: "reload" });
     if (!res.ok) return;
     await cache.put(LIBRARIES + "libraries.json", res.clone());
     for (const lib of (await res.json()).libraries ?? []) {
-      if (!/^[a-z0-9-]+$/.test(String(lib.path)) || lib.enabled === false) continue;
+      if (!/^[a-z0-9-]+$/.test(String(lib.path))) continue;
       const base = `${LIBRARIES}${lib.path}/`;
-      for (const f of ["manifest.json", "index.json", "data.bin"]) await cache.add(`${base}${f}?v=${lib.v}`);
+      await cache.add(`${base}manifest.json?v=${lib.v}`); // always: the panel lists every library, on or off
+      if (lib.enabled === false) continue;
+      for (const f of ["index.json", "data.bin"]) await cache.add(`${base}${f}?v=${lib.v}`);
       await cache.add(`${base}native.bin?v=${lib.v}`).catch(() => {});
     }
   } catch {

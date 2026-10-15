@@ -164,11 +164,15 @@ export async function loadAllLibraries(engine) {
       const id = String(item.id);
       const lib = { path: String(item.path), v: String(item.v ?? ""), enabled: item.enabled !== false };
       listed.set(id, lib);
-      const manifest = new TextDecoder().decode(await fetchBytes(packageUrl(lib, "manifest.json")));
-      if (!enabledFor(item)) registerListed(id, manifest);
-      else {
-        const bad = registerPackage(engine, await fetchPackage(id, lib, manifest), true, false);
-        if (bad) addNotice(bad);
+      try {
+        const manifest = new TextDecoder().decode(await fetchBytes(packageUrl(lib, "manifest.json")));
+        if (!enabledFor(item)) registerListed(id, manifest);
+        else {
+          const bad = registerPackage(engine, await fetchPackage(id, lib, manifest), true, false);
+          if (bad) addNotice(bad);
+        }
+      } catch {
+        addNotice({ key: "library.load_failed", params: {} }); // one library that cannot be read never hides the others
       }
     }
   } catch {
