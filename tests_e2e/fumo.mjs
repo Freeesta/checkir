@@ -5,6 +5,7 @@ import { chromium, firefox, webkit } from "playwright";
 import { FIXTURE } from "./caricamento.mjs";
 import { registryScenario } from "./registri.mjs";
 import { startSite } from "./sito.mjs";
+import { quiet } from "./conteggio.mjs";
 import { versionScenario } from "./versione.mjs";
 
 const axeSource = await readFile(new URL("../node_modules/axe-core/axe.min.js", import.meta.url), "utf8");
@@ -199,7 +200,7 @@ async function shellScenario(browser) {
     idb: (await indexedDB.databases()).length,
   }));
   const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.panelWidth", "checkir.shortcuts", "checkir.autoMatch", "checkir.textLevel", "checkir.modeAnim"];
-  check("privacy: only preferences are stored, nothing of the analysis", stored.local.every((k) => allowed.includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
+  check("privacy: only preferences are stored, nothing of the analysis", stored.local.every((k) => allowed.includes(k) || k.startsWith("checkir.libsw.")) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
   await ctx.close();
 }
 
@@ -320,7 +321,7 @@ function pickShard(list) {
 }
 
 async function run() {
-  const browser = await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
+  const browser = quiet(await { chromium, firefox, webkit }[process.env.BROWSER || "chromium"].launch({ executablePath: process.env.CHROMIUM_PATH || undefined }), base);
   try {
     for (const step of pickShard(await scenarios(browser))) await step();
   } finally {

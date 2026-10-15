@@ -1,7 +1,10 @@
 {
   "schema": "ftir-libraries-config/1",
   "libraries": [
-    { "id": "checkir-demo", "enabled": false },
+    {
+      "id": "checkir-demo",
+      "enabled": false
+    },
     {
       "id": "swgdrug-ir",
       "enabled": true,
@@ -13,6 +16,56 @@
       "terms": {
         "it": "Solo uso non commerciale. SWGDRUG spectra are provided for reference purposes without warranty or liability regarding compound identifications or operational outcomes (gli spettri SWGDRUG sono forniti come riferimento, senza garanzia né responsabilità per le identificazioni dei composti o gli esiti operativi). SWGDRUG does not endorse {app} or any software implementations derived from the library (SWGDRUG non approva {app} né i software derivati dalla libreria).",
         "en": "Non-commercial use only. SWGDRUG spectra are provided for reference purposes without warranty or liability regarding compound identifications or operational outcomes. SWGDRUG does not endorse {app} or any software implementations derived from the library."
+      }
+    },
+    {
+      "id": "bccsu",
+      "enabled": true,
+      "package": "librerie/bccsu",
+      "license": "CC-BY-NC-SA-4.0",
+      "attribution": {
+        "it": "British Columbia Centre on Substance Use (BCCSU), libreria di spettri FTIR per il drug checking; licenza CC BY-NC-SA 4.0 (attribuzione, solo uso non commerciale, stessa licenza).",
+        "en": "British Columbia Centre on Substance Use (BCCSU), FTIR drug checking spectral library; CC BY-NC-SA 4.0 (attribution, non-commercial use only, share alike)."
+      }
+    },
+    {
+      "id": "the-loop",
+      "enabled": true,
+      "package": "librerie/the-loop",
+      "license": "LicenseRef-permission-the-loop",
+      "attribution": {
+        "it": "The Loop, General Library (05/2023), usata con il permesso dell'ente.",
+        "en": "The Loop, General Library (05/2023), used with the permission of the owner."
+      }
+    },
+    {
+      "id": "irs-pharmaceuticals",
+      "enabled": true,
+      "package": "librerie/irs-pharmaceuticals",
+      "license": "LicenseRef-proprietary-shimadzu",
+      "attribution": {
+        "it": "Shimadzu, libreria IRs Pharmaceuticals.",
+        "en": "Shimadzu, IRs Pharmaceuticals library."
+      }
+    },
+    {
+      "id": "foodadditives-atr",
+      "enabled": true,
+      "package": "librerie/foodadditives-atr",
+      "license": "LicenseRef-proprietary-shimadzu",
+      "attribution": {
+        "it": "Shimadzu, libreria Food Additives ATR.",
+        "en": "Shimadzu, Food Additives ATR library."
+      }
+    },
+    {
+      "id": "foodadditives-trans",
+      "enabled": true,
+      "package": "librerie/foodadditives-trans",
+      "license": "LicenseRef-proprietary-shimadzu",
+      "attribution": {
+        "it": "Shimadzu, libreria Food Additives TRANS.",
+        "en": "Shimadzu, Food Additives TRANS library."
       }
     }
   ]

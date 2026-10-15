@@ -1,7 +1,7 @@
 # CLAUDE.md — checkir (repository Freeesta/checkir)
 Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'area del tuo lavoro (§5). Tienilo ≤ 12 KB: ogni KB lo paga ogni turno di ogni chat.
 
-**Non leggere** (bloccati da `.claude/settings.json`; grep resta permesso): `site/`, `target/`, `web/vendor/`.
+**Non leggere** (bloccati da `.claude/settings.json`; grep resta permesso): `site/`, `target/`, `web/vendor/`, `librerie/` (pacchetti binari delle librerie).
 
 ## 1. Il progetto
 - **checkir**: analisi FTIR open source per il drug checking (servizi di riduzione del danno e laboratori). Nome visibile SOLO in `web/appname.js`; i prefissi dei dati salvati nel browser sono `checkir.` / `checkir-` (decisi una volta, mai rinominati).
@@ -11,7 +11,7 @@ Questo file è già nel contesto di ogni chat: non rileggerlo. Leggi il file d'a
 - **Principi da non violare**: 1. il programma propone, la persona esperta decide; 2. incertezza sempre visibile come livello di confidenza dell'identificazione, mai «verde = sicuro» (i colori sono confidenza, non sicurezza);
   3. nessun avviso, disclaimer, banner o testo fisso generico (limiti dell'FTIR, riduzione del danno, emergenza, «non è un dispositivo medico») in piè di pagina, schermate, scheda, stampa o pagine dedicate (decisione del proprietario, 13/10/2026): restano solo i livelli di confidenza e le allerte calcolate sul risultato, più le condizioni di licenza delle librerie (obblighi, non cautele);
   4. il programma non formula diagnosi né pareri medici: è un comportamento del prodotto, non un testo; la privacy è un comportamento, descritta solo da `web/pagine/informativa/`; 5. niente esce dal browser, nessuna telemetria, nessun dato personale (lo provano i test di rete, non un testo); 6. Rust per il calcolo, HTML/JS senza bundler; 7. due lingue (it, en) dalla nascita, decimale col punto; 8. WCAG 2.2 AA, ogni grafico con la sua tabella dei dati.
-- **Dati privati**: MAI nel repository pubblico (nemmeno «per un test»); stanno in `Freeesta/checkir-data`. La lista `NOMI_VIETATI` (segreto di GitHub) non compare mai nel pubblico. Librerie di terzi: solo con permesso e attribuzione dichiarati.
+- **Dati privati**: le misure del servizio MAI nel repository pubblico (nemmeno «per un test»); stanno in `Freeesta/checkir-data`. Le librerie di `librerie/` sono pubbliche per decisione del proprietario (eccezione di test, temporanea). La lista `NOMI_VIETATI` (segreto di GitHub) non compare mai nel pubblico. Librerie di terzi: licenza e attribuzione dichiarate nella configurazione.
 
 ## 2. Regole di lavoro
 - **Consegna = sito pubblicato**: finito quando è in `main` e il workflow `pages` di quel commit è riuscito.

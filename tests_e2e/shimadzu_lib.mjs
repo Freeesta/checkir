@@ -35,6 +35,7 @@ export async function shimadzuScenario(browser, base, check, axe) {
   await page.waitForSelector("body[data-ready='1']");
   const section = page.locator('details[data-panel="libraries"]');
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();
+  await page.waitForLoadState("networkidle"); // the manifests of the libraries that are off are still arriving
   const before = requests.length;
   await page.fill("#lib-name", "Shim");
   await page.setInputFiles('input[data-library="files"]', files);
