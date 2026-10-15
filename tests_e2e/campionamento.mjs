@@ -31,6 +31,14 @@ export async function samplingScenario(browser, base, check) {
   await importAs(page, "Diamante", [file("alfa.jdx", ALFA), file("beta.jdx", BETA), file("gamma.jdx", GAMMA), file("alfa_bis.jdx", ALFA_BIS)]);
   await page.locator('[data-library="diamante"]').waitFor();
   await page.waitForFunction(() => /4/.test(document.querySelector('[data-library="diamante"]')?.textContent ?? ""));
+  // The library is listed before its files are stored; with big public libraries loading the write can come later.
+  await page.waitForFunction(async () => {
+    try {
+      const dir = await (await (await navigator.storage.getDirectory()).getDirectoryHandle("checkir-libraries")).getDirectoryHandle("diamante");
+      await dir.getFileHandle("native.bin");
+      return true;
+    } catch { return false; }
+  }, null, { timeout: 30000 });
   // The panel asks nothing, so the library has no method; a ready-made package that declares one is loaded in its place.
   const pack = await page.evaluate(async () => {
     const dir = await (await (await navigator.storage.getDirectory()).getDirectoryHandle("checkir-libraries")).getDirectoryHandle("diamante");
