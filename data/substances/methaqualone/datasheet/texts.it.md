@@ -4,7 +4,7 @@ Metaqualone, 2-methyl-3-(2-methylphenyl)quinazolin-4-one. Formula C16H14N2O, 250
 
 ## category
 
-Classe chimica: altre sostanze. È un ipnotico-sedativo della classe dei 4-chinazolinoni, introdotto negli anni Sessanta come alternativa ai barbiturici e ritirato dal mercato. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:tusiewicz2024] [f:checkir-classification]
+Classe chimica: altre sostanze. È un ipnotico-sedativo della classe dei 4-chinazolinoni, introdotto negli anni Sessanta come alternativa ai barbiturici e ritirato dal mercato. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. [f:tusiewicz2024] [f:checkir-classification]
 
 ## origin
 

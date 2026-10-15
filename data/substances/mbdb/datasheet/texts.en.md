@@ -6,7 +6,7 @@ Compared with MDMA it has an ethyl group in place of the methyl on the alpha car
 
 ## category
 
-Chemical class: methylenedioxy. Expected effect: entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: methylenedioxy. Expected effect: entactogen. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

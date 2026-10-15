@@ -8,7 +8,7 @@ Street forms: sheets of absorbent paper, less often microdots, gelatine squares 
 
 ## category
 
-Chemical class: lysergamides (family sheet: tryptamines). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: lysergamides (family sheet: tryptamines). Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

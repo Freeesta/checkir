@@ -6,7 +6,7 @@ Structure: the same cyclohexanone as ketamine, but with ethylamino in place of m
 
 ## category
 
-Chemical class: arylcyclohexylamines. Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: arylcyclohexylamines. Expected effect: dissociative. Typical role in samples: active principle. [f:checkir-classification]
 
 ## history
 

@@ -6,7 +6,7 @@ N-Idrossi-MDA (N-OH-MDA), N-[1-(1,3-benzodioxol-5-il)propan-2-il]idrossilammina.
 
 ## category
 
-Classe chimica: composti metilendiossi. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: composti metilendiossi. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -8,7 +8,7 @@ Forme: la mescalina estratta è una polvere, soprattutto come solfato o cloridra
 
 ## category
 
-Classe chimica: fenetilammine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilammine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -6,7 +6,7 @@ It is the mirror image of dextromethorphan (its own sheet) with the same formula
 
 ## category
 
-Chemical class: morphinans. Expected effect: opioid, through its metabolite levorphanol. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:lofaro2023] [f:prommer2007] [f:checkir-classification]
+Chemical class: morphinans. Expected effect: opioid, through its metabolite levorphanol. Typical role in samples: active principle. [f:lofaro2023] [f:prommer2007] [f:checkir-classification]
 
 ## history
 

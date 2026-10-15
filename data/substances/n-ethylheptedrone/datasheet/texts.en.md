@@ -4,7 +4,7 @@ N-Ethylheptedrone, 2-(ethylamino)-1-phenylheptan-1-one. Base: C15H23NO, 233.35 g
 
 ## category
 
-Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

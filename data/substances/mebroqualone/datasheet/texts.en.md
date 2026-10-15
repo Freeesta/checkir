@@ -4,7 +4,7 @@ Mebroqualone, 3-(2-bromophenyl)-2-methylquinazolin-4-one. Formula C15H11BrN2O, 3
 
 ## category
 
-Chemical class: other substances. It is an analogue of methaqualone sold as a designer drug. Expected effect: depressant / sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:woods2021] [f:checkir-classification]
+Chemical class: other substances. It is an analogue of methaqualone sold as a designer drug. Expected effect: depressant / sedative. Typical role in samples: active principle. [f:woods2021] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Methylclonazepam, 5-(2-chlorophenyl)-1-methyl-7-nitro-3H-1,4-benzodiazepin-2-one
 
 ## category
 
-Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

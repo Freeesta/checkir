@@ -6,7 +6,7 @@ Lauflumide (flmodafinil, CRL-40,940), 2-[bis(4-fluorofenil)metilsolfinil]acetamm
 
 ## category
 
-Classe chimica: altre; non è collegata alcuna scheda di famiglia. La classe d'effetto (stimolante) è una proposta di checkir, perché il composto è descritto come promotore della veglia e venduto come alternativa al modafinil; è in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:luca2018] [f:krug2026] [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre; non è collegata alcuna scheda di famiglia. La classe d'effetto (stimolante) è una classificazione di checkir, perché il composto è descritto come promotore della veglia e venduto come alternativa al modafinil. Ruolo tipico nei campioni: principio attivo. [f:luca2018] [f:krug2026] [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

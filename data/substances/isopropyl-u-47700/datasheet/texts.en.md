@@ -4,7 +4,7 @@ Isopropyl-U-47700, 3,4-dichloro-N-[(1R,2R)-2-(dimethylamino)cyclohexyl]-N-propan
 
 ## category
 
-Chemical class: other substances (checkir proposal; the UNODC grouping does not name this structure). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: other substances (checkir classification; the UNODC grouping does not name this structure). Expected effect: opioid. Typical role in samples: active principle. [f:checkir-classification]
 
 ## history
 

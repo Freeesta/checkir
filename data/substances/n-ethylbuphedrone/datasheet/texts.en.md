@@ -4,7 +4,7 @@ N-Ethylbuphedrone (NEB), 2-(ethylamino)-1-phenylbutan-1-one. Base: C12H17NO, 191
 
 ## category
 
-Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

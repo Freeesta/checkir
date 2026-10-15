@@ -4,7 +4,7 @@ Morfina, (4R,4aR,7S,7aR,12bS)-3-metil-2,4,4a,7,7a,13-esaidro-1H-4,12-metanobenzo
 
 ## category
 
-Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

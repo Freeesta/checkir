@@ -4,7 +4,7 @@ Indane (2,3-dihydro-1H-indene). Hydrocarbon: C9H10, 118.18 g/mol, CAS 496-11-7. 
 
 ## category
 
-Chemical class: altre sostanze. Expected effect: nessun effetto psicoattivo atteso. Typical role in samples: residuo di sintesi o degradazione. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: altre sostanze. Expected effect: nessun effetto psicoattivo atteso. Typical role in samples: residuo di sintesi o degradazione. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ It is the analogue of methylphenidate (own sheet) with a naphthyl in place of th
 
 ## category
 
-Chemical class: Phenidates. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: Phenidates. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

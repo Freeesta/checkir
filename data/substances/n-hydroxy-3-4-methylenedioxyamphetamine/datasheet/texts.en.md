@@ -6,7 +6,7 @@ It is MDA with a hydroxyl group on the nitrogen; MDA has its own sheet. [f:pubch
 
 ## category
 
-Chemical class: methylenedioxy compounds. Expected effect: entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: methylenedioxy compounds. Expected effect: entactogen. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

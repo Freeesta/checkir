@@ -6,7 +6,7 @@ An adamantane with a primary amine and no carbonyl or aromatic ring; the labelle
 
 ## category
 
-Chemical class: other substances (aminoadamantane); the arylcyclohexylamine family sheet does not cover it, so no family sheet is attached. Expected effect: dissociative, as an NMDA receptor antagonist. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:memantine-misuse2020] [f:checkir-classification]
+Chemical class: other substances (aminoadamantane); the arylcyclohexylamine family sheet does not cover it, so no family sheet is attached. Expected effect: dissociative, as an NMDA receptor antagonist. Typical role in samples: active principle. [f:memantine-misuse2020] [f:checkir-classification]
 
 ## history
 

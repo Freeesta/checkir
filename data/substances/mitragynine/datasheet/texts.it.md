@@ -6,7 +6,7 @@ Mitragynina (alcaloide del kratom), methyl (E)-2-[(2S,3S,12bS)-3-ethyl-8-methoxy
 
 ## category
 
-Classe chimica: sostanze di origine vegetale. Effetto atteso: stimolante e oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification] A basse dosi gli alcaloidi del kratom agiscono da psicostimolanti e a dosi più alte mediano un effetto di tipo oppioide. [f:horniakova2024]
+Classe chimica: sostanze di origine vegetale. Effetto atteso: stimolante e oppioide. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification] A basse dosi gli alcaloidi del kratom agiscono da psicostimolanti e a dosi più alte mediano un effetto di tipo oppioide. [f:horniakova2024]
 
 ## origin
 

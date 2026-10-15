@@ -6,7 +6,7 @@ Un adamantano con un'ammina primaria, senza carbonile né anello aromatico; il m
 
 ## category
 
-Classe chimica: altre (amminoadamantano); la scheda di famiglia delle arilcicloesilamine non la copre, quindi non è collegata alcuna scheda di famiglia. Effetto atteso: dissociativo, come antagonista del recettore NMDA. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:memantine-misuse2020] [f:checkir-classification]
+Classe chimica: altre (amminoadamantano); la scheda di famiglia delle arilcicloesilamine non la copre, quindi non è collegata alcuna scheda di famiglia. Effetto atteso: dissociativo, come antagonista del recettore NMDA. Ruolo tipico nei campioni: principio attivo. [f:memantine-misuse2020] [f:checkir-classification]
 
 ## history
 

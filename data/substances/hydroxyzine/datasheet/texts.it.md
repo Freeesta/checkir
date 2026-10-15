@@ -4,7 +4,7 @@ Idrossizina (2-[2-[4-[(4-clorofenil)-fenilmetil]piperazin-1-il]etossi]etanolo), 
 
 ## category
 
-Classe chimica: antistaminico H1 di prima generazione, usato come farmaco sedativo e ansiolitico (tra le altre sostanze). Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: antistaminico H1 di prima generazione, usato come farmaco sedativo e ansiolitico (tra le altre sostanze). Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: adulterante farmacologico. [f:checkir-classification]
 
 ## metabolism
 

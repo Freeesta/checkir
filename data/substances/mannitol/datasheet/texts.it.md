@@ -4,7 +4,7 @@ D-Mannitolo ((2R,3R,4R,5R)-hexane-1,2,3,4,5,6-hexol), formula C6H14O6, massa mol
 
 ## category
 
-Classe chimica: alcol zuccherino (polialcol, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: alcol zuccherino (polialcol, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. [f:checkir-classification]
 
 ## origin
 

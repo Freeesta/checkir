@@ -4,7 +4,7 @@ N-Isobutylpentylone, 1-(1,3-benzodioxol-5-yl)-2-(2-methylpropylamino)pentan-1-on
 
 ## category
 
-Chemical class: synthetic cathinones (methylenedioxy). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones (methylenedioxy). Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

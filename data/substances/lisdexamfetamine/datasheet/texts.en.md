@@ -6,7 +6,7 @@ It is a prodrug: dextroamphetamine bound to the amino acid lysine, active only a
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:pennick2010] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. [f:pennick2010] [f:checkir-classification]
 
 ## origin
 

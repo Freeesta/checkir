@@ -6,7 +6,7 @@ Lisdexanfetamina, (2S)-2,6-diamino-N-[(2S)-1-phenylpropan-2-yl]hexanamide. Formu
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:pennick2010] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:pennick2010] [f:checkir-classification]
 
 ## origin
 

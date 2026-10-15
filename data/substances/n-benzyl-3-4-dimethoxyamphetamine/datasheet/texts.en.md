@@ -6,7 +6,7 @@ N-benzyl-3,4-dimethoxyamphetamine, N-benzyl-1-(3,4-dimethoxyphenyl)propan-2-amin
 
 ## category
 
-Chemical class: amphetamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

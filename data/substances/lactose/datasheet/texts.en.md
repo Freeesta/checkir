@@ -4,7 +4,7 @@ Lactose ((2R,3R,4S,5R,6S)-2-(hydroxymethyl)-6-[(2R,3S,4R,5R)-4,5,6-trihydroxy-2-
 
 ## category
 
-Chemical class: sugar (disaccharide, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent or excipient. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: sugar (disaccharide, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent or excipient. [f:checkir-classification]
 
 ## origin
 

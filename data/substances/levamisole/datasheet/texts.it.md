@@ -4,7 +4,7 @@ Levamisolo ((6S)-6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole), formul
 
 ## category
 
-Classe chimica: antielmintico (tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico, segnalato soprattutto nella cocaina. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: antielmintico (tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico, segnalato soprattutto nella cocaina. [f:checkir-classification]
 
 ## history
 
