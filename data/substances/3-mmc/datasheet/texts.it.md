@@ -20,9 +20,11 @@ Sostanza di sintesi, catinone ad anello sostituito, racemica. I suoi precursori 
 
 ## metabolism
 
-Non ci sono studi clinici di farmacocinetica né sul metabolismo nell'uomo; nel maiale l'emivita è 0.8 h e la biodisponibilità orale 7 %. [f:who-ecdd45-3mmc]
+Non ci sono studi farmacocinetici controllati sull'uomo (assorbimento, emivita, clearance). I soli dati cinetici vengono da 3 maiali: biodisponibilità orale circa 7 %, picco a 5-10 minuti, emivita plasmatica 0.8 h; gli autori sconsigliano di estrapolare alle persone (campione piccolo, dose bassa). [f:shimshoni2015]
 
-Nei casi clinici sono stati rilevati nor-3-MMC, diidro-3-MMC, nor-diidro-3-MMC, idrossitolil-3-MMC, 3-carbossi-3-MMC e 3-carbossi-diidro-3-MMC: le vie nel nostro elenco sono dedotte da questi metaboliti, e il metabolismo potrebbe somigliare a quello della 4-MMC. [f:who-ecdd45-3mmc]
+In microsomi e citosol epatici umani si sono formati tre prodotti: un derivato idrossilato, uno cheto-ridotto e uno N-desmetilato (nor-3-MMC). Tutti e tre sono stati trovati in 31 campioni umani positivi (plasma, urina, saliva, capelli): nel 16 %, 52 % e 42 % dei campioni, con il 61 % positivo ad almeno uno. Gli enzimi e l'attività dei metaboliti non sono stati determinati. [f:vanwichelen2024]
+
+Nei casi clinici sono stati rilevati nor-3-MMC, diidro-3-MMC, nor-diidro-3-MMC, idrossitolil-3-MMC, 3-carbossi-3-MMC e 3-carbossi-diidro-3-MMC; il metabolismo potrebbe somigliare a quello della 4-MMC. [f:who-ecdd45-3mmc]
 
 ## cuts
 
@@ -30,9 +32,11 @@ Tra gli adulteranti comuni dei catinoni il manuale UNODC elenca paracetamolo, ca
 
 ## effects
 
-Le vie descritte sono nasale, orale ed endovenosa; l'iniezione è riferita nel chemsex («slamsex»). Gli effetti sembrano più brevi e meno intensi di quelli del mefedrone, ma il dato è incerto. [f:who-ecdd45-3mmc]
+In vitro, in cellule HEK293 con trasportatori umani, la 3-MMC inibiva il trasportatore della noradrenalina e agiva da rilasciatore di monoammine di tipo substrato, come le anfetamine classiche. A differenza di altri analoghi del mefedrone non inibiva il trasportatore della serotonina più di quello della dopamina: il profilo è da stimolante e non da MDMA. [f:luethi2018-analogs]
 
-In vitro il rapporto di rilascio DAT:SERT è circa 10: la selettività è catecolaminergica. [f:who-ecdd45-3mmc]
+In 14 volontari sani (crossover, controllato con placebo) 25, 50 e 100 mg alzavano la soglia del dolore da pressione e riducevano il dolore percepito, soprattutto a 50 e 100 mg e fino a 5 ore; l'umore saliva a 1 ora ma non a 5. L'abstract non indica la via e non riporta altri effetti. [f:ramaekers2025-3mmc]
+
+Le vie descritte dagli utenti sono nasale, orale ed endovenosa; l'iniezione è riferita nel chemsex («slamsex»). Gli effetti sembrano più brevi e meno intensi di quelli del mefedrone, ma il dato è incerto. [f:who-ecdd45-3mmc]
 
 ## doses
 
@@ -44,13 +48,15 @@ Durata riferita dagli utenti: per via orale 4-6 h in tutto (inizio 10-30 min, pi
 
 In Svezia, in 50 pazienti (agosto 2012 - marzo 2014), si sono visti tachicardia (48 %), agitazione (44 %), ipertensione (38 %), pupille dilatate (24 %), convulsioni (8 %) e ipertermia oltre 39 °C (6 %). [f:who-ecdd45-3mmc]
 
+Le concentrazioni nel sangue in 95 casi forensi in Polonia andavano da tracce (<1 ng/mL) a 1.6 µg/mL (mediana 18.5 ng/mL), per lo più con altre sostanze. Una revisione non trova correlazione fra concentrazione e gravità, e la maggior parte delle intossicazioni e dei decessi riguardava più sostanze. [f:adamowicz2016] [f:kelecevic2024]
+
 L'EMCDDA conta 27 decessi con esposizione confermata, in 8 dei quali la 3-MMC è attribuita o contribuente; in letteratura si contano 34 decessi. Alcuni sono in contesto di chemsex. [f:who-ecdd45-3mmc]
 
-Non ci sono studi sulla dipendenza. [f:who-ecdd45-3mmc]
+Dipendenza: nessuno studio; una revisione indica un possibile potenziale di dipendenza psicologica. [f:who-ecdd45-3mmc] [f:kelecevic2024]
 
 ## interactions
 
-Nei decessi la co-esposizione era frequente (alcol, GHB, benzodiazepine); le fonti non dimostrano un rapporto causale. [f:who-ecdd45-3mmc]
+Nei decessi la co-esposizione era frequente (alcol, GHB, benzodiazepine); le fonti non dimostrano un rapporto causale. Non è stato trovato nessuno studio controllato di interazione. [f:who-ecdd45-3mmc] [f:kelecevic2024]
 
 ## counselling
 
@@ -66,7 +72,7 @@ Ricorda che 2-MMC, 3-MMC e 4-MMC hanno la stessa formula: la banda dell'anello s
 
 ## sources
 
-Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:swgdrug-3mmc] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:who-ecdd45-3mmc] [f:ubc-counselling-guidelines]
+Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:wikidata] [f:swgdrug-3mmc] [f:smith-benzene] [f:smith-amine-salts] [f:unodc-cathinones2015] [f:unodc-ewa] [f:checkir-classification] [f:who-ecdd45-3mmc] [f:ubc-counselling-guidelines] [f:shimshoni2015] [f:vanwichelen2024] [f:luethi2018-analogs] [f:ramaekers2025-3mmc] [f:adamowicz2016] [f:kelecevic2024]
 
 ## license
 

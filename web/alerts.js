@@ -3,7 +3,7 @@ import { matchScore } from "./candidati.js";
 import { formatNumber, t } from "./i18n.js";
 import { samplingName } from "./campionamento.js";
 import { libraryLabel, rowName } from "./librerie.js";
-import { decisionOf, resultOf } from "./state.js";
+import { resultOf } from "./state.js";
 
 /**
  * Levels and alerts of a comparison result (`ftir-risultato-confronto/1`), as the page shows them. The program only proposes a level
@@ -37,10 +37,10 @@ export function levelWord(n) {
   return tier ? t("level.tier", { tier, word }) : word;
 }
 
-/** The level on show for the spectrum shown: the chemist's decision if there is one, else the program's proposal; null without a result. @param {import("./state.js").AppState} s @returns {number | null} */
+/** The level on show for the spectrum shown: the chemist's choice if there is one, else the program's proposal; null without a result. @param {import("./state.js").AppState} s @returns {number | null} */
 export function shownLevel(s) {
   const r = resultOf(s);
-  return r ? (decisionOf(s)?.level ?? levelNumber(r.data)) : null;
+  return r ? (s.choice[r.code]?.level ?? levelNumber(r.data)) : null;
 }
 
 /** @param {any} r a row reference of an alert: name, form and r @returns {string} */
@@ -134,7 +134,7 @@ function firstLibrarySampling(data) {
 /** Why the level cannot go higher, one line per cap. @param {any} data @returns {string[]} */
 export function capLines(data) {
   /** @type {Record<string, () => string>} */
-  const lines = { coverage: () => t("results.cap.coverage"), custom_range: () => t("results.cap.custom_range"), range_not_calibrated: () => t("results.cap.range_not_calibrated"), sampling_not_calibrated: () => t("results.cap.sampling_not_calibrated", { sample: samplingName(data.query?.sampling), library: samplingName(firstLibrarySampling(data)) }) };
+  const lines = { coverage: () => t("results.cap.coverage"), custom_range: () => t("results.cap.custom_range"), sampling_not_calibrated: () => t("results.cap.sampling_not_calibrated", { sample: samplingName(data.query?.sampling), library: samplingName(firstLibrarySampling(data)) }) };
   return (data.level_caps ?? []).map((/** @type {string} */ c) => lines[c]?.() ?? c);
 }
 

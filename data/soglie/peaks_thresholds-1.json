@@ -2,7 +2,6 @@
   "schema": "peaks_thresholds/1",
   "version": 2,
   "calibration": {
-    "status": "draft",
     "bench": "banco-1",
     "chain": "peak_detect_v1",
     "date": "2026-10"

@@ -28,13 +28,11 @@ Ephedrine and pseudoephedrine, the precursors, may remain in the product. [f:uno
 
 ## metabolism
 
-The main routes are aromatic hydroxylation to 4-hydroxymethamphetamine and N-demethylation to amphetamine. [f:schep2010] [f:euda-meth]
+Bioavailability in volunteers: oral about 67%, intranasal 79%, smoked 67% of the delivered dose (37.4% of the dose in the pipe), with peaks at 2.5-2.7 h by the intranasal and smoked routes. [f:harris2003-meth] [f:cook1993] Elimination half-life is 10.7-11.4 h whatever the route, distribution volume 4.2 L/kg. [f:harris2003-meth]
 
-Metabolism and intoxication correlate with CYP2D6 activity. [f:chaichana2022]
+CYP2D6 carries out both the 4-hydroxylation and the N-demethylation to amphetamine (human liver microsomes, recombinant enzyme), so interactions with other CYP2D6 substrates are likely. [f:lin1997-cyp2d6] In two men, 22% of an oral dose was excreted unchanged on day 1 and 15% as 4-hydroxymethamphetamine. [f:caldwell1972] Amphetamine plasma exposure is about 21% of that of methamphetamine. [f:schepers2003]
 
-Terminal half-life about 5-30 h; the mean elimination half-life is about 10 h with large variability; in plasma about 9 h. [f:schep2010] [f:cruickshank2009] [f:euda-meth]
-
-Urine can test positive for methamphetamine because of medicines such as selegiline. [f:euda-meth]
+Urine holds higher concentrations and a longer detection window than oral fluid. [f:huestis2007] Urine can test positive for methamphetamine because of medicines such as selegiline. [f:euda-meth]
 
 ## cuts
 
@@ -42,23 +40,23 @@ Caffeine is frequent in samples of amphetamine-type stimulants and, in some regi
 
 ## effects
 
-Taken orally the effects start within about 30 minutes and last many hours; smoked, the drug reaches the brain much faster and is more addictive. [f:euda-meth]
+It releases catecholamines by redistribution from vesicles to the cytosol and reverse transport through the membrane carriers [f:sulzer2005]; human TAAR1 recognises it (cryo-EM structure). [f:liu2023-taar1] Release of noradrenaline is its most potent action in vitro, and the oral dose giving amphetamine-type effects follows it. [f:rothman2001]
 
-Doses of 5-30 mg increase arousal, mood and attention. [f:cruickshank2009]
+Taken orally the effects start within about 30 minutes and last many hours; smoked, the drug reaches the brain much faster and is more addictive. [f:euda-meth] Doses of 5-30 mg increase arousal, mood and attention. [f:cruickshank2009]
 
-Hypertension, tachycardia and insomnia are common. [f:euda-meth]
+Intravenous d-methamphetamine (0.25-0.5 mg/kg, 12 users) raised heart rate, blood pressure and breathing for about 6 h; l-methamphetamine at 0.5 mg/kg was as liked but faded in about 3 h. [f:mendelson2006] Intranasal, it acted like d-amphetamine, with more effect on heart rate and "high". [f:kirkpatrick2012]
 
 ## doses
 
 Therapeutic oral dose of the (S) enantiomer: up to 25 mg. Illicit ingested doses range from several tens to several hundreds of mg. [f:euda-meth]
 
-From 50 mg upwards, psychotic symptoms can appear. [f:cruickshank2009]
+From 50 mg upwards, psychotic symptoms can appear. [f:cruickshank2009] The service guidelines give 5-40 mg depending on content and route. [f:ubc-counselling-guidelines] [f:cruickshank2009]
 
 In fatal poisonings the blood concentration is usually above 0.5 mg/L. [f:euda-meth]
 
 ## risks
 
-Intoxication gives a sympathomimetic picture: tachycardia, hypertension, chest pain, arrhythmias, headache, cerebral haemorrhage, hyperthermia and aggression. [f:schep2010]
+Intoxication gives a sympathomimetic picture: tachycardia, hypertension, chest pain, arrhythmias, headache, cerebral haemorrhage, hyperthermia and aggression. [f:schep2010] Of 378 emergency presentations, 78% had acute behavioural disturbance, 56% tachycardia and 42% hypertension; rhabdomyolysis, kidney injury, seizures and intracranial bleeds were seen. [f:isoardi2019]
 
 Injection carries the risk of HIV and hepatitis. [f:euda-meth]
 
@@ -70,9 +68,11 @@ Withdrawal: low mood, anxiety and sleep disturbance, acute for 7-10 days with re
 
 With other sympathomimetic stimulants (cocaine, amphetamine, MDMA) and with alcohol, which the UBC guidelines list as mixes to avoid, an added effect on heart rate and blood pressure is expected: this is an inference from the sympathomimetic picture, not a clinical finding. [f:schep2010] [f:ubc-counselling-guidelines]
 
+Other CYP2D6 substrates may interact pharmacokinetically, since CYP2D6 carries the main metabolic steps. [f:lin1997-cyp2d6]
+
 ## counselling
 
-Ask the route: smoked and injected reach the brain faster and are more addictive; with injection ask whether equipment is shared (HIV, hepatitis). [f:euda-meth] [f:ubc-counselling-guidelines]
+Ask the route: smoked and intranasal are well absorbed (67-79%) and reach the brain faster; with injection ask whether equipment is shared (HIV, hepatitis). [f:harris2003-meth] [f:euda-meth] [f:ubc-counselling-guidelines]
 
 Effects last many hours and with high doses or redosing can exceed 24 hours: suggest not redosing and allowing time for the comedown. [f:euda-meth] [f:ubc-counselling-guidelines]
 
@@ -82,11 +82,11 @@ Ask about anxiety, paranoia and mood after use: withdrawal lasts days and can le
 
 Signs to recognise: chest pain, irregular heartbeat, severe headache, high temperature, agitation; with chest pain or tachycardia the UBC guidelines say to call an ambulance. [f:schep2010] [f:ubc-counselling-guidelines]
 
-Ask about alcohol and other stimulants (cocaine, amphetamine, MDMA): these are the combinations the service flags; the sympathomimetic picture includes tachycardia, hypertension and hyperthermia. [f:schep2010] [f:ubc-counselling-guidelines]
+Ask about alcohol and other stimulants (cocaine, amphetamine, MDMA): the combinations the service flags. [f:schep2010] [f:ubc-counselling-guidelines]
 
 ## sources
 
-Sources used for the claims in this sheet: [f:pubchem] [f:swgdrug-methamphetamine] [f:wikidata] [f:unodc-ats2006] [f:smith-amine-salts] [f:smith-benzene] [f:unodc-ewa] [f:checkir-classification] [f:euda-meth] [f:schep2010] [f:chaichana2022] [f:cruickshank2009] [f:ubc-counselling-guidelines]
+Sources used for the claims in this sheet: [f:caldwell1972] [f:checkir-classification] [f:cook1993] [f:cruickshank2009] [f:euda-meth] [f:harris2003-meth] [f:huestis2007] [f:isoardi2019] [f:kirkpatrick2012] [f:lin1997-cyp2d6] [f:liu2023-taar1] [f:mendelson2006] [f:pubchem] [f:rothman2001] [f:schep2010] [f:schepers2003] [f:smith-amine-salts] [f:smith-benzene] [f:sulzer2005] [f:swgdrug-methamphetamine] [f:ubc-counselling-guidelines] [f:unodc-ats2006] [f:unodc-ewa] [f:wikidata]
 
 ## license
 

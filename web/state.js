@@ -20,21 +20,20 @@ import { STORAGE_PREFIX } from "./appname.js";
  * @typedef {{ code: string, data: any, sig: string }} MatchResult
  * The chemist's own mark on a candidate (memory only, never stored).
  * @typedef {"accept" | "unsure" | "reject"} ChemistLabel
- * The chemist's decision on one spectrum: level 1–5 and the chosen candidates (keys), valid for the libraries searched (`sig`). Memory only; the sheet is never stored.
- * @typedef {{ level: number, keys: string[] }} DecisionDraft
- * @typedef {{ level: number, keys: string[], sig: string }} Decision
+ * The chemist's choice on one spectrum: level 1–5 and the chosen candidates (keys). Memory only; the sheet is never stored.
+ * @typedef {{ level: number, keys: string[] }} Choice
  * The region of the comparison (a preset or ranges chosen by hand), an error to show next to its fields, and the candidate × region table per spectrum (`sig` = libraries and choice it was made for). Memory only.
  * @typedef {{ preset: string | null, ranges: Array<[number, number]> }} RangeChoice
  * @typedef {{ sig: string, columns: Array<{ id: string, ranges: Array<[number, number]> }>, cells: Record<string, Record<string, number | null>>, busy: boolean }} RangeTable
  * The three levels of the explanation texts, and a rule window shown on the chart from the peak card (memory only).
  * @typedef {"counsellor" | "chemist" | "teaching"} TextLevel
  * @typedef {{ ruleId: string, from: number, to: number }} RuleRange
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, textLevel: TextLevel, modeAnim: boolean, ruleRange: RuleRange | null, decisions: Record<string, Decision>, draft: Record<string, DecisionDraft>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, recall: RecallState, rangesOpen: boolean, rangeChoice: RangeChoice, rangeError: Notice | null, rangeTable: Record<string, RangeTable>, folder: FolderState }} AppState
+ * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, textLevel: TextLevel, modeAnim: boolean, ruleRange: RuleRange | null, choice: Record<string, Choice>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, recall: RecallState, rangesOpen: boolean, rangeChoice: RangeChoice, rangeError: Notice | null, rangeTable: Record<string, RangeTable>, folder: FolderState }} AppState
  */
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, textLevel: readLevel(), modeAnim: readPref("modeAnim") !== "off", ruleRange: null, decisions: {}, draft: {}, sheetLang: null, talk: false, subtraction: null, recall: { refs: [], mode: "overlay", scale: "max", offset: 0.1, current: 0 }, rangesOpen: false, rangeChoice: { preset: "full", ranges: [] }, rangeError: null, rangeTable: {}, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
+  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, textLevel: readLevel(), modeAnim: readPref("modeAnim") !== "off", ruleRange: null, choice: {}, sheetLang: null, talk: false, subtraction: null, recall: { refs: [], mode: "overlay", scale: "max", offset: 0.1, current: 0 }, rangesOpen: false, rangeChoice: { preset: "full", ranges: [] }, rangeError: null, rangeTable: {}, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();
@@ -50,13 +49,6 @@ export function activeFile(s) {
 export function resultOf(s) {
   const code = activeFile(s)?.code;
   return (code && s.results[code]) || null;
-}
-
-/** The decision on the spectrum shown, if it still matches the comparison it was made on. @param {AppState} s @returns {Decision | null} */
-export function decisionOf(s) {
-  const code = activeFile(s)?.code;
-  const d = code ? s.decisions[code] : undefined;
-  return d && resultOf(s)?.sig === d.sig ? d : null;
 }
 
 /** Key of a candidate in `labels` and `selected`. @param {{ library: string, spectrum_id: string }} c @returns {string} */
