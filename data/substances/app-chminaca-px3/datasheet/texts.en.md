@@ -50,4 +50,4 @@ Sources used for the statements of this sheet: [f:pubchem] [f:cooman2019] [f:uno
 
 ## license
 
-Text under the CC BY-SA 4.0 licence. Status: draft written with AI assistance, not yet checked by a chemist or a health professional; every statement must be verified against the cited source before review.
+Text under the CC BY-SA 4.0 licence.

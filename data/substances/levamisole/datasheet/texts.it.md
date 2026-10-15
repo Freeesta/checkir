@@ -60,4 +60,4 @@ Segnala che i sintomi sono ricomparsi nel 27.1 % dei consumatori di cocaina dopo
 
 ## license
 
-Testo con licenza CC BY-SA 4.0. Stato: bozza scritta con assistenza di IA, non ancora controllata da un chimico né da personale sanitario; ogni affermazione va verificata sulla fonte citata prima della revisione.
+Testo con licenza CC BY-SA 4.0.

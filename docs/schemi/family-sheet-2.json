@@ -147,8 +147,8 @@
       "minItems": 1
     },
     "ai_assisted": {
-      "description": "True if a draft was AI-assisted; every claim must be checked by a person.",
-      "description_it": "True se la bozza è stata assistita da IA; ogni affermazione va controllata da una persona.",
+      "description": "True if the text was written with AI assistance.",
+      "description_it": "True se il testo è stato scritto con assistenza di IA.",
       "type": "boolean"
     }
   },

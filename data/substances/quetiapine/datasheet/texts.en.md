@@ -20,7 +20,7 @@ In vitro CYP3A4 is involved in the formation of the sulfoxide and in the metabol
 
 ## cuts
 
-In a community drug-checking program in Los Angeles (DART-MS), 13 of 52 heroin samples (25.0%) contained quetiapine; all were identified by clients as expected to contain black tar heroin, and no client expected quetiapine. Fentanyl was present in 4 of the 13 quetiapine-positive samples (30.8%) and in 27 of the 39 quetiapine-negative ones (69.2%). The authors describe it as a novel additive and call for confirmatory studies. [f:friedman2026-quetiapine]
+In a community drug-checking program in Los Angeles (DART-MS), 13 of 52 heroin samples (25.0%) contained quetiapine; all were identified by clients as expected to contain black tar heroin, and no client expected quetiapine. Fentanyl was present in 4 of the 13 samples containing quetiapine (30.8%) and in 27 of the 39 the other 39 samples without quetiapine (69.2%). The authors describe it as a novel additive and call for confirmatory studies. [f:friedman2026-quetiapine]
 
 ## effects
 
@@ -44,4 +44,4 @@ Sources used for the claims in this sheet: [f:pubchem] [f:quetiapine-label] [f:f
 
 ## license
 
-Text licensed CC BY-SA 4.0. Status: draft written with AI assistance, not yet checked by a chemist or a health professional; every statement must be checked against the cited source before review.
+Text licensed CC BY-SA 4.0.

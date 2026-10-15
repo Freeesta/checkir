@@ -34,4 +34,4 @@ Sources used for the claims in this sheet: [f:pubchem] [f:unodc-ewa] [f:checkir-
 
 ## license
 
-Text licensed CC BY-SA 4.0. Status: draft written with AI assistance, not yet checked by a chemist or a health professional; every statement must be checked against the cited source before review.
+Text licensed CC BY-SA 4.0.

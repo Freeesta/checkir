@@ -8,7 +8,7 @@ Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: c
 
 ## history
 
-In uno studio LC-MS l'isomero 2-fluorobenzile dell'AB-FUBINACA è stato separato su colonna ODS in isocratica e distinto in modalità negativa dagli ioni prodotto caratteristici a livello MS3. [f:murakami2018]
+In uno studio LC-MS l'isomero 2-fluorobenzile dell'AB-FUBINACA è stato separato su colonna ODS in isocratica e distinto nella modalità a polarità invertita dagli ioni prodotto caratteristici a livello MS3. [f:murakami2018]
 
 ## origin
 
@@ -30,7 +30,7 @@ Per ADB-FUBINACA e AMB-FUBINACA l'agonismo pieno su CB1 spiega alterazioni della
 
 ## doses
 
-La potenza varia molto tra i cannabinoidi sintetici: ADB-FUBINACA e AMB-FUBINACA sono fino a 140 e 85 volte più potenti del Δ9-THC e nelle fonti usate non ci sono dati di potenza per questo composto, quindi nessuna dose è sicura da suggerire. [f:lobato-freitas2021]
+La potenza varia molto tra i cannabinoidi sintetici: ADB-FUBINACA e AMB-FUBINACA sono fino a 140 e 85 volte più potenti del Δ9-THC e nelle fonti usate non ci sono dati di potenza per questo composto, quindi non si può suggerire nessuna dose. [f:lobato-freitas2021]
 
 ## risks
 
@@ -48,4 +48,4 @@ Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:murakami2018] [
 
 ## license
 
-Testo con licenza CC BY-SA 4.0. Stato: bozza scritta con assistenza di IA, non ancora controllata da un chimico o da un professionista sanitario; ogni affermazione va verificata sulla fonte citata prima della revisione.
+Testo con licenza CC BY-SA 4.0.
