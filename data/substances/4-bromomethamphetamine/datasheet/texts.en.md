@@ -6,7 +6,7 @@ It is the N-methyl analogue of 4-bromoamphetamine (separate sheet), with a bromi
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

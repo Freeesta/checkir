@@ -6,7 +6,7 @@
 
 ## category
 
-Classe chimica: NBOMe (N-benzilfenetilammine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:suzuki2015] [f:checkir-classification]
+Classe chimica: NBOMe (N-benzilfenetilammine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:suzuki2015] [f:checkir-classification]
 
 ## history
 

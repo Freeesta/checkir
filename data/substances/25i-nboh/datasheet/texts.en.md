@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: NBOMe (by the N-benzyl group). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: NBOMe (by the N-benzyl group). Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 The benzyl group carries a hydroxy in place of the methoxy of the NBOMes (an NBOH); in vitro the high-potency 5-HT2A agonism is similar to that of LSD, consistent with hallucinogenic activity. [f:eshleman2018]
 

@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: fenidati (raggruppamento UNODC), un analogo del metilfenidato e non un catinone, quindi non ha la scheda di famiglia dei catinoni. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:davidson2018] [f:checkir-classification]
+Classe chimica: fenidati (raggruppamento UNODC), un analogo del metilfenidato e non un catinone, quindi non ha la scheda di famiglia dei catinoni. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:davidson2018] [f:checkir-classification]
 
 ## history
 

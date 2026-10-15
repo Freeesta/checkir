@@ -6,7 +6,7 @@ Ha due centri chirali, quindi più stereoisomeri. [f:pubchem]
 
 ## category
 
-Classe chimica: Altre sostanze. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: Altre sostanze. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

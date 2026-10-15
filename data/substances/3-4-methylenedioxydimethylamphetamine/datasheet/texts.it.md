@@ -6,7 +6,7 @@ MDDMA, 1-(1,3-benzodioxol-5-yl)-N,N-dimethylpropan-2-amine. Formula C12H17NO2, 2
 
 ## category
 
-Classe chimica: fenetilamine metilenediossi. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilamine metilenediossi. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

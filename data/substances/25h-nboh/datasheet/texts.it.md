@@ -6,7 +6,7 @@ Una N-benzilfenetilammina: il derivato N-(2-idrossibenzil) della 2C-H (2,5-dimet
 
 ## category
 
-Classe chimica: fenetilammine (N-benzilfenetilammine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: fenetilammine (N-benzilfenetilammine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 

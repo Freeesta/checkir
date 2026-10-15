@@ -6,7 +6,7 @@ The benzofuran analogue of 5-MeO-DMT: the indole nitrogen is replaced by an oxyg
 
 ## category
 
-Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

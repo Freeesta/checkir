@@ -6,7 +6,7 @@ Pseudoefedrina, (1S,2S)-2-(metilammino)-1-fenilpropan-1-olo. Formula C10H15NO, 1
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo o adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo o adulterante farmacologico. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ It is phenmetrazine (3-methyl-2-phenylmorpholine) with a fluorine on the meta (3
 
 ## category
 
-Chemical class: phenmetrazines. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenmetrazines. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: altre sostanze. È un isocatinone: in PubChem il gruppo amminico è sul carbonio benzilico e il chetone sul carbonio successivo, all'inverso di un catinone, quindi non è un catinone in senso stretto e non ha una scheda di famiglia. In letteratura gli isocatinoni sono descritti come sottoprodotti della preparazione dei catinoni. Effetto atteso: stimolante per parentela strutturale con i catinoni, anche se non è stata trovata una fonte farmacologica. Ruolo tipico nei campioni: sottoprodotto di sintesi, per analogia con gli isocatinoni descritti. Questa classificazione è una proposta di checkir in attesa di revisione. [f:pubchem] [f:westphal2012] [f:checkir-classification]
+Classe chimica: altre sostanze. È un isocatinone: in PubChem il gruppo amminico è sul carbonio benzilico e il chetone sul carbonio successivo, all'inverso di un catinone, quindi non è un catinone in senso stretto e non ha una scheda di famiglia. In letteratura gli isocatinoni sono descritti come sottoprodotti della preparazione dei catinoni. Effetto atteso: stimolante per parentela strutturale con i catinoni, anche se non è stata trovata una fonte farmacologica. Ruolo tipico nei campioni: sottoprodotto di sintesi, per analogia con gli isocatinoni descritti. [f:pubchem] [f:westphal2012] [f:checkir-classification]
 
 ## origin
 

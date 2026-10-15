@@ -8,7 +8,7 @@ L'anello 2,5-dimetossi dà le stesse bande degli eteri arilici in ogni composto 
 
 ## category
 
-Classe chimica: fenetilammine, serie 2C. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilammine, serie 2C. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

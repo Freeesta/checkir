@@ -6,7 +6,7 @@ It is the tertiary amine N,N-dimethyl analogue of MDA; the secondary amine MDMA 
 
 ## category
 
-Chemical class: methylenedioxy phenethylamines. Expected effect: entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: methylenedioxy phenethylamines. Expected effect: entactogen. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

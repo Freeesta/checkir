@@ -4,7 +4,7 @@ Valone, 2-(3-metilbutanoil)indene-1,3-dione (2-isovaleril-1,3-indandione). Formu
 
 ## category
 
-Classe chimica: altre sostanze. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

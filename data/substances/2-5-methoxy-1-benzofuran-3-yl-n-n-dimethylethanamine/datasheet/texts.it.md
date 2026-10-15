@@ -6,7 +6,7 @@ L'analogo benzofuranico della 5-MeO-DMT: l'azoto indolico è sostituito da un os
 
 ## category
 
-Classe chimica: triptamine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: triptamine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

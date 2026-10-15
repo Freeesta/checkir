@@ -8,7 +8,7 @@ Identificazione degli isomeri: nell'attività di laboratorio in LC-MS/MS 3-FA e 
 
 ## category
 
-Classe chimica: anfetamine (fluoroanfetamine). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine (fluoroanfetamine). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

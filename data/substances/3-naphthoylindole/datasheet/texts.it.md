@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: altre sostanze. Ha il nucleo naftoilindolico dei cannabinoidi 1-alchil-3-(1-naftoil)indolici ma nessuna catena alchilica sull'azoto indolico, e nessuna fonte trovata lo dà come attivo, quindi non è associata una scheda di famiglia dei cannabinoidi. Effetto atteso: cannabinoide per relazione strutturale, non verificato. Ruolo tipico nei campioni: residuo di sintesi o degradazione (proposta). Questa classificazione è una proposta di checkir in attesa di revisione. [f:huffman2005] [f:checkir-classification]
+Classe chimica: altre sostanze. Ha il nucleo naftoilindolico dei cannabinoidi 1-alchil-3-(1-naftoil)indolici ma nessuna catena alchilica sull'azoto indolico, e nessuna fonte trovata lo dà come attivo, quindi non è associata una scheda di famiglia dei cannabinoidi. Effetto atteso: cannabinoide per relazione strutturale, non verificato. Ruolo tipico nei campioni: residuo di sintesi o degradazione (proposta). [f:huffman2005] [f:checkir-classification]
 
 ## origin
 

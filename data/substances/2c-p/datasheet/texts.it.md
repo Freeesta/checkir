@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: serie 2C. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: serie 2C. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 Una delle sostanze della serie 2C, note per le proprietà allucinogene; differiscono per affinità recettoriale, potenza e durata d'azione. [f:stoller2017]
 

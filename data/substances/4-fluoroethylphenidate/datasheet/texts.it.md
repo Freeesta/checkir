@@ -6,7 +6,7 @@ La molecola ha due centri stereogenici, quindi esistono una forma treo e una eri
 
 ## category
 
-Classe chimica: fenidati. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenidati. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 
