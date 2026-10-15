@@ -4,7 +4,7 @@ JWH-073, (1-butylindol-3-yl)-naphthalen-1-ylmethanone. Base: C23H21NO, 327.4 g/m
 
 ## category
 
-Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

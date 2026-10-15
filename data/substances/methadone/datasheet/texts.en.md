@@ -6,7 +6,7 @@ In most countries it is given as a racemic mixture of (R)- and (S)-methadone; (R
 
 ## category
 
-Chemical class: other substances (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

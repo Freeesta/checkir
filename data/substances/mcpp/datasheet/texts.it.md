@@ -6,7 +6,7 @@ Qui non c'è uno spettro di riferimento verificato: dalla struttura ci si attend
 
 ## category
 
-Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

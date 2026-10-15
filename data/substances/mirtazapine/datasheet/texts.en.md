@@ -6,7 +6,7 @@ It has a tetracyclic chemical structure and belongs to the piperazino-azepine gr
 
 ## category
 
-Chemical class: tetracyclic antidepressant, piperazino-azepine (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:mirtazapine-label] [f:checkir-classification]
+Chemical class: tetracyclic antidepressant, piperazino-azepine (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. [f:mirtazapine-label] [f:checkir-classification]
 
 ## origin
 

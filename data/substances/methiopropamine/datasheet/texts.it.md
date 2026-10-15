@@ -6,7 +6,7 @@ MPA (metiopropamina), N-metil-1-(tiofen-2-il)propan-2-ammina. Base: C8H13NS, 155
 
 ## category
 
-Classe chimica: Anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: Anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

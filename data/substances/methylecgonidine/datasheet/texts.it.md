@@ -4,7 +4,7 @@ Metilecgonidina, methyl (1R,5S)-8-methyl-8-azabicyclo[3.2.1]oct-2-ene-2-carboxyl
 
 ## category
 
-Classe chimica: esteri tropanici, tra le sostanze di origine vegetale del raggruppamento UNODC, perché deriva dalla cocaina; non è un oppioide. Ruolo tipico nei campioni: residuo di degradazione. L'asse dell'effetto segue il composto di partenza, la cocaina: la farmacologia della metilecgonidina stessa è descritta solo in parte (agonista parziale dei recettori muscarinici M1 e M3). Questa classificazione è una proposta di checkir in attesa di revisione. [f:romero-norena2024] [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: esteri tropanici, tra le sostanze di origine vegetale del raggruppamento UNODC, perché deriva dalla cocaina; non è un oppioide. Ruolo tipico nei campioni: residuo di degradazione. L'asse dell'effetto segue il composto di partenza, la cocaina: la farmacologia della metilecgonidina stessa è descritta solo in parte (agonista parziale dei recettori muscarinici M1 e M3). [f:romero-norena2024] [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ L-Ephedrine levulinate, (1R,2S)-2-(methylamino)-1-phenylpropyl 4-oxopentanoate. 
 
 ## category
 
-Chemical class: amfetamine. Expected effect: stimolante. Typical role in samples: principio attivo. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amfetamine. Expected effect: stimolante. Typical role in samples: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

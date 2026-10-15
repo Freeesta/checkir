@@ -4,7 +4,7 @@ meta-Fluorobutirrilfentanil, N-(3-fluorofenil)-N-[1-(2-feniletil)piperidin-4-il]
 
 ## category
 
-Classe chimica: analoghi del fentanil (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: analoghi del fentanil (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Lidocaine (2-(diethylamino)-N-(2,6-dimethylphenyl)acetamide), formula C14H22N2O,
 
 ## category
 
-Chemical class: local anaesthetic (amide type, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: local anaesthetic (amide type, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. [f:checkir-classification]
 
 ## metabolism
 

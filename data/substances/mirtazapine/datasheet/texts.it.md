@@ -6,7 +6,7 @@ Ha una struttura chimica tetraciclica e appartiene al gruppo delle piperazino-az
 
 ## category
 
-Classe chimica: antidepressivo tetraciclico, piperazino-azepina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:mirtazapine-label] [f:checkir-classification]
+Classe chimica: antidepressivo tetraciclico, piperazino-azepina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. [f:mirtazapine-label] [f:checkir-classification]
 
 ## origin
 

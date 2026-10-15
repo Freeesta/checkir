@@ -4,7 +4,7 @@ JWH-210, (4-ethylnaphthalen-1-yl)-(1-pentylindol-3-yl)methanone. Base: C26H27NO,
 
 ## category
 
-Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

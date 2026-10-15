@@ -4,7 +4,7 @@ Omatropina, 2-idrossi-2-fenilacetato di (8-metil-8-azabiciclo[3.2.1]ottan-3-ile)
 
 ## category
 
-Classe chimica: tropane esters. Effetto atteso: deliriant. Ruolo tipico nei campioni: active principle. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: tropane esters. Effetto atteso: deliriant. Ruolo tipico nei campioni: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Lormetazepam, 7-chloro-5-(2-chlorophenyl)-3-hydroxy-1-methyl-3H-1,4-benzodiazepi
 
 ## category
 
-Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

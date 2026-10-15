@@ -4,7 +4,7 @@ L-Efedrina levulinato, 4-oxopentanoato di (1R,2S)-2-(metilammino)-1-fenilpropile
 
 ## category
 
-Classe chimica: amphetamines. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: amphetamines. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

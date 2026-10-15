@@ -4,7 +4,7 @@ JWH-251, 2-(2-methylphenyl)-1-(1-pentylindol-3-yl)ethanone. Base: C22H25NO, 319.
 
 ## category
 
-Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

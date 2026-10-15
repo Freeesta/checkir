@@ -4,7 +4,7 @@ Hydroxyzine (2-[2-[4-[(4-chlorophenyl)-phenylmethyl]piperazin-1-yl]ethoxy]ethano
 
 ## category
 
-Chemical class: first-generation H1 antihistamine, used as a sedative and anxiolytic medicine (grouped here under other substances). Expected effect: depressant or sedative. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: first-generation H1 antihistamine, used as a sedative and anxiolytic medicine (grouped here under other substances). Expected effect: depressant or sedative. Typical role in samples: pharmacological adulterant. [f:checkir-classification]
 
 ## metabolism
 

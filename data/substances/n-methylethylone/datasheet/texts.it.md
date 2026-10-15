@@ -4,7 +4,7 @@ N-Metiletilone, 1-(1,3-benzodioxol-5-il)-2-[etil(metil)ammino]propan-1-one (3,4-
 
 ## category
 
-Classe chimica: catinoni sintetici (metilendiossi). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici (metilendiossi). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

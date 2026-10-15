@@ -4,7 +4,7 @@ Midazolam, 8-cloro-6-(2-fluorofenil)-1-metil-4H-imidazo[1,5-a][1,4]benzodiazepin
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

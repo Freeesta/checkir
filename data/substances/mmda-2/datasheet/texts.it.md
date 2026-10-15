@@ -6,7 +6,7 @@ Un'anfetamina con un anello metilendiossi sulle posizioni 4 e 5 e un metossile s
 
 ## category
 
-Classe chimica: anfetamine, composti metilendiossi. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine, composti metilendiossi. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

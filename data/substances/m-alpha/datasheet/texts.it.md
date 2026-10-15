@@ -4,7 +4,7 @@ M-ALPHA, 1-(1,3-benzodiossol-5-il)-N-metilpropan-1-ammina. Base: C11H15NO2, 193.
 
 ## category
 
-Classe chimica: methylenedioxy. Effetto atteso: entactogen. Ruolo tipico nei campioni: active principle. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: methylenedioxy. Effetto atteso: entactogen. Ruolo tipico nei campioni: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

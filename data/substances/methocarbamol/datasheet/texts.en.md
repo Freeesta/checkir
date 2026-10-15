@@ -4,7 +4,7 @@ Methocarbamol, [2-hydroxy-3-(2-methoxyphenoxy)propyl] carbamate. Formula C11H15N
 
 ## category
 
-Chemical class: other substances. It is a carbamate derivative of guaifenesin, a central nervous system depressant with sedative and skeletal muscle relaxant properties. Expected effect: depressant / sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:methocarbamol-label] [f:checkir-classification]
+Chemical class: other substances. It is a carbamate derivative of guaifenesin, a central nervous system depressant with sedative and skeletal muscle relaxant properties. Expected effect: depressant / sedative. Typical role in samples: active principle. [f:methocarbamol-label] [f:checkir-classification]
 
 ## origin
 

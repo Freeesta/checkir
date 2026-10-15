@@ -6,7 +6,7 @@ It is an isomer of methamphetamine: same formula, different carbon chain; metham
 
 ## category
 
-Chemical class: other substances. Expected effect: stimulant. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:lai2024] [f:checkir-classification]
+Chemical class: other substances. Expected effect: stimulant. Typical role in samples: pharmacological adulterant. [f:lai2024] [f:checkir-classification]
 
 It is used to adulterate methamphetamine and sold as fake «ice»; it is a cut of methamphetamine. [f:xu2022]
 

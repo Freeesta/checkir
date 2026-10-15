@@ -4,7 +4,7 @@ MDMB-CHMINACA, methyl (2S)-2-[[1-(cyclohexylmethyl)indazole-3-carbonyl]amino]-3,
 
 ## category
 
-Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

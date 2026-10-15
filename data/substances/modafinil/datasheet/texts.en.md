@@ -6,7 +6,7 @@ It is a 1:1 racemic compound (the sulfoxide is chiral); the enantiomers do not i
 
 ## category
 
-Chemical class: Other substances. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: Other substances. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

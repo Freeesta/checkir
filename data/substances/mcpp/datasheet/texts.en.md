@@ -6,7 +6,7 @@ There is no verified reference spectrum here: by structure a meta-disubstituted 
 
 ## category
 
-Chemical class: piperazines. Expected effect: stimulant. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: piperazines. Expected effect: stimulant. Typical role in samples: pharmacological adulterant. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

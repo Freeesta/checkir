@@ -8,7 +8,7 @@ Forme di strada: fogli di carta assorbente, più di rado microdot, quadratini di
 
 ## category
 
-Classe chimica: lisergammidi (scheda di famiglia: triptamine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: lisergammidi (scheda di famiglia: triptamine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

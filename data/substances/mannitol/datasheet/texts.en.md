@@ -4,7 +4,7 @@ D-Mannitol ((2R,3R,4R,5R)-hexane-1,2,3,4,5,6-hexol), formula C6H14O6, molar mass
 
 ## category
 
-Chemical class: sugar alcohol (polyol, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent or excipient. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: sugar alcohol (polyol, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent or excipient. [f:checkir-classification]
 
 ## origin
 

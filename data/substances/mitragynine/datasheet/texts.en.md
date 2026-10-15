@@ -6,7 +6,7 @@ It is the main pharmacologically active alkaloid of kratom; the molecule is a si
 
 ## category
 
-Chemical class: plant-based substances. Expected effect: stimulant and opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification] At low doses kratom alkaloids act as psychostimulants and at higher doses they mediate an opioid-like effect. [f:horniakova2024]
+Chemical class: plant-based substances. Expected effect: stimulant and opioid. Typical role in samples: active principle. [f:checkir-classification] At low doses kratom alkaloids act as psychostimulants and at higher doses they mediate an opioid-like effect. [f:horniakova2024]
 
 ## origin
 

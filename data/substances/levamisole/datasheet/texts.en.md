@@ -4,7 +4,7 @@ Levamisole ((6S)-6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole), formul
 
 ## category
 
-Chemical class: anthelmintic (grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant, reported mainly in cocaine. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: anthelmintic (grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant, reported mainly in cocaine. [f:checkir-classification]
 
 ## history
 

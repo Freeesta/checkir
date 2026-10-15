@@ -4,7 +4,7 @@ myo-Inositolo ((1R,2R,3S,4S,5R,6S)-cyclohexane-1,2,3,4,5,6-hexol), formula C6H12
 
 ## category
 
-Classe chimica: alcol zuccherino ciclico (ciclitolo; questa voce è il myo-inositolo, tra gli alcoli zuccherini e le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: alcol zuccherino ciclico (ciclitolo; questa voce è il myo-inositolo, tra gli alcoli zuccherini e le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. [f:checkir-classification]
 
 ## effects
 

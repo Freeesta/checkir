@@ -4,7 +4,7 @@ Iprone, 1-(1,3-benzodioxol-5-yl)-2-(propan-2-ylamino)propan-1-one. Base: C13H17N
 
 ## category
 
-Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

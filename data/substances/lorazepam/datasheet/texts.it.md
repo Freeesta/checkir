@@ -4,7 +4,7 @@ Lorazepam, 7-chloro-5-(2-chlorophenyl)-3-hydroxy-1,3-dihydro-1,4-benzodiazepin-2
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

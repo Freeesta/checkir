@@ -6,7 +6,7 @@ The abbreviation NEP is also used for N-ethylpentylone (ephylone), a different s
 
 ## category
 
-Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ Lidocaina (2-(diethylamino)-N-(2,6-dimethylphenyl)acetamide), formula C14H22N2O,
 
 ## category
 
-Classe chimica: anestetico locale (di tipo ammidico, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: anestetico locale (di tipo ammidico, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. [f:checkir-classification]
 
 ## metabolism
 

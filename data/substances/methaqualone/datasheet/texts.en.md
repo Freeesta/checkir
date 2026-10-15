@@ -4,7 +4,7 @@ Methaqualone, 2-methyl-3-(2-methylphenyl)quinazolin-4-one. Formula C16H14N2O, 25
 
 ## category
 
-Chemical class: other substances. It is a sedative-hypnotic of the 4-quinazolinone class, introduced in the 1960s as an alternative to barbiturates and withdrawn from the market. Expected effect: depressant / sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:tusiewicz2024] [f:checkir-classification]
+Chemical class: other substances. It is a sedative-hypnotic of the 4-quinazolinone class, introduced in the 1960s as an alternative to barbiturates and withdrawn from the market. Expected effect: depressant / sedative. Typical role in samples: active principle. [f:tusiewicz2024] [f:checkir-classification]
 
 ## origin
 
