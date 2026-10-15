@@ -19,17 +19,19 @@
 //! the written files, which the page puts in the URLs so the service worker can keep them for good). With `--config` every library of the file is
 //! built. The manifest says how the spectra were measured (`sampling`) when every spectrum agrees: from its record
 //! (`technique`) or, where the record does not say, from `--sampling` (the default of a private library). Packages are
-//! never committed: CI builds them.
+//! built from `data/` by CI; an entry with `"package": "librerie/<id>"` is a package already made, copied as it is
+//! (checked with `Package::open`) with the licence, attribution and terms of the config.
 use ftir_core::campionamento;
 use ftir_core::passi::json::parse;
 use ftir_core::passi::Value;
 use ftir_core::readers::sha256::sha256_hex;
 use ftir_lib::build::{build_one, Built, Source};
+use ftir_lib::data::Limits;
 use ftir_lib::files::{from_files, slug};
 use ftir_lib::identity;
 use ftir_lib::index::Row;
 use ftir_lib::manifest::Grid;
-use ftir_lib::package::{write_package, Files, Identity};
+use ftir_lib::package::{write_package, Files, Identity, Package};
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
@@ -44,6 +46,8 @@ struct LibConf {
     license: String,
     attribution: (Option<String>, String),
     terms: Option<(Option<String>, String)>,
+    /// A package already built (folder with the four files): copied as it is, with the licence texts of the config.
+    package: Option<PathBuf>,
 }
 
 impl LibConf {
@@ -54,6 +58,7 @@ impl LibConf {
             license: "CC-BY-4.0".into(),
             attribution: (Some(ATTRIBUTION_IT.into()), ATTRIBUTION_EN.into()),
             terms: None,
+            package: None,
         }
     }
 }
@@ -318,6 +323,45 @@ fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize, Vec<Stri
     Ok((version, n, unknown))
 }
 
+/// Copies a ready package (`conf.package`) into `<out>/<id>/`: checks it (`Package::open`: schema, counts, SHA-256,
+/// limits), puts the licence, attribution and terms of the config in its manifest, drops `private`; returns its version
+/// and number of spectra. The spectra, the index and `native.bin` are copied byte for byte.
+fn copy_package(out: &Path, conf: &LibConf) -> Result<(String, usize), String> {
+    let dir = conf.package.as_deref().ok_or("no package folder")?;
+    let read =
+        |f: &str| fs::read(dir.join(f)).map_err(|e| format!("{}: {e}", dir.join(f).display()));
+    let text = |f: &str| {
+        String::from_utf8(read(f)?).map_err(|_| format!("{}: not UTF-8", dir.join(f).display()))
+    };
+    let (manifest_json, index_json) = (text("manifest.json")?, text("index.json")?);
+    let (data_bin, native) = (read("data.bin")?, read("native.bin")?);
+    let open = Package::open(&manifest_json, &index_json, &data_bin, &Limits::STANDARD);
+    let mut manifest = open
+        .map_err(|e| format!("{}: {}", dir.display(), e.json()))?
+        .manifest;
+    if manifest.name != conf.id {
+        return Err(format!(
+            "{}: the package is named {}",
+            dir.display(),
+            manifest.name
+        ));
+    }
+    manifest.license = conf.license.clone();
+    manifest.attribution_it = conf.attribution.0.clone();
+    manifest.attribution_en = conf.attribution.1.clone();
+    manifest.terms_it = conf.terms.as_ref().and_then(|t| t.0.clone());
+    manifest.terms_en = conf.terms.as_ref().map(|t| t.1.clone());
+    manifest.private = false;
+    let (version, n) = (manifest.version.clone(), manifest.n_spectra);
+    let files = Files {
+        manifest_json: manifest.to_json(),
+        index_json,
+        data_bin,
+    };
+    write_files(out, &conf.id, files, native)?;
+    Ok((version, n))
+}
+
 /// Version of a written package: the first 12 hex digits of the SHA-256 of `manifest.json`, `index.json`, `data.bin` and
 /// `native.bin` (when present), read back from `dir` in that order.
 fn package_version(dir: &Path) -> Result<String, String> {
@@ -345,7 +389,14 @@ fn conf_of(x: &Value, path: &Path) -> Result<LibConf, String> {
     let id = x.get("id").and_then(Value::as_str);
     let id = id.ok_or(format!("{}: a library has no id", path.display()))?;
     let enabled = !matches!(x.get("enabled"), Some(Value::Bool(false)));
+    let package = x.get("package").and_then(Value::as_str).map(PathBuf::from);
     let Some(license) = x.get("license").and_then(Value::as_str) else {
+        if package.is_some() {
+            return Err(format!(
+                "{}: {id} is a package and needs a licence",
+                path.display()
+            ));
+        }
         return Ok(LibConf::community(id, enabled));
     };
     let attribution = texts(x, "attribution").ok_or(format!(
@@ -358,6 +409,7 @@ fn conf_of(x: &Value, path: &Path) -> Result<LibConf, String> {
         license: license.to_string(),
         attribution,
         terms: texts(x, "terms"),
+        package,
     })
 }
 
@@ -382,7 +434,12 @@ fn run() -> Result<String, String> {
     let mut report = Vec::new();
     for conf in wanted(&args)? {
         let (name, enabled) = (conf.id.clone(), conf.enabled);
-        let (version, n, unknown) = build_library(&args, &conf)?;
+        let (version, n, unknown) = if conf.package.is_some() {
+            let (version, n) = copy_package(&args.out, &conf)?;
+            (version, n, Vec::new())
+        } else {
+            build_library(&args, &conf)?
+        };
         let v = package_version(&args.out.join(&name))?;
         entries.push(Value::Obj(vec![
             ("id".into(), Value::Str(name.clone())),
@@ -428,8 +485,93 @@ fn main() -> ExitCode {
 
 #[cfg(test)]
 mod tests {
-    use super::package_version;
+    use super::{conf_of, copy_package, package_version, LibConf};
+    use ftir_core::passi::json::parse;
+    use ftir_lib::index::Row;
+    use ftir_lib::manifest::{Grid, Manifest};
+    use ftir_lib::package::{write_package, Identity};
     use std::fs;
+    use std::path::Path;
+
+    fn synthetic(dir: &Path, name: &str) {
+        let row = Row {
+            id: "s1".into(),
+            form: "base".into(),
+            substance: None,
+            name_it: None,
+            name_en: "Synthetic".into(),
+            classes: vec![],
+            inchikey: None,
+            quality: "pass".into(),
+            provenance_type: "measured".into(),
+        };
+        let id = Identity {
+            name: name.into(),
+            version: "1".into(),
+            date: "2026-10-13".into(),
+            license: "LicenseRef-private".into(),
+            attribution_it: None,
+            attribution_en: "private".into(),
+            terms_it: None,
+            terms_en: None,
+            private: true,
+            sampling: None,
+        };
+        let values = vec![0.5f32; Grid::STANDARD.points().unwrap()];
+        let f = write_package(&id, &Grid::STANDARD, vec![(row, values)]).unwrap();
+        fs::create_dir_all(dir).unwrap();
+        fs::write(dir.join("manifest.json"), f.manifest_json).unwrap();
+        fs::write(dir.join("index.json"), f.index_json).unwrap();
+        fs::write(dir.join("data.bin"), f.data_bin).unwrap();
+        fs::write(dir.join("native.bin"), [7u8, 8, 9]).unwrap();
+    }
+
+    fn conf(id: &str, package: &Path) -> LibConf {
+        LibConf {
+            id: id.into(),
+            enabled: true,
+            license: "CC-BY-NC-SA-4.0".into(),
+            attribution: (Some("it".into()), "en".into()),
+            terms: Some((None, "terms".into())),
+            package: Some(package.to_path_buf()),
+        }
+    }
+
+    #[test]
+    fn a_package_keeps_its_bytes_and_takes_the_public_texts() {
+        let base = std::env::temp_dir().join(format!("checkir-p-{}", std::process::id()));
+        let (src, out) = (base.join("src"), base.join("out"));
+        synthetic(&src, "syn");
+        let (version, n) = copy_package(&out, &conf("syn", &src)).unwrap();
+        assert_eq!((version.as_str(), n), ("1", 1));
+        for f in ["index.json", "data.bin", "native.bin"] {
+            assert_eq!(
+                fs::read(src.join(f)).unwrap(),
+                fs::read(out.join("syn").join(f)).unwrap()
+            );
+        }
+        let m =
+            Manifest::parse(&fs::read_to_string(out.join("syn/manifest.json")).unwrap()).unwrap();
+        assert!(!m.private);
+        assert_eq!(m.license, "CC-BY-NC-SA-4.0");
+        assert_eq!(m.terms_en.as_deref(), Some("terms"));
+        assert!(copy_package(&out, &conf("other", &src)).is_err());
+        fs::write(src.join("data.bin"), [0u8; 4]).unwrap();
+        assert!(copy_package(&out, &conf("syn", &src)).is_err());
+        fs::remove_dir_all(base).unwrap();
+    }
+
+    #[test]
+    fn a_package_entry_needs_licence_and_attribution() {
+        let path = Path::new("librerie.json");
+        let no_licence = parse(r#"{"id":"a","package":"librerie/a"}"#).unwrap();
+        assert!(conf_of(&no_licence, path).is_err());
+        let no_attribution = parse(r#"{"id":"a","package":"librerie/a","license":"X"}"#).unwrap();
+        assert!(conf_of(&no_attribution, path).is_err());
+        let ok = r#"{"id":"a","package":"librerie/a","license":"X","attribution":{"en":"e"}}"#;
+        let conf = conf_of(&parse(ok).unwrap(), path).unwrap();
+        assert_eq!(conf.package.as_deref(), Some(Path::new("librerie/a")));
+    }
 
     fn package(tag: &str, index: &str) -> std::path::PathBuf {
         let dir = std::env::temp_dir().join(format!("checkir-v-{}-{tag}", std::process::id()));
