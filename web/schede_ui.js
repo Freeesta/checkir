@@ -120,6 +120,6 @@ export async function openSheet(id, fallbackName, cuts = NO_EXTRAS.cuts) {
     if (live) live.textContent = t(notice.key, notice.params);
     return;
   }
-  document.dispatchEvent(new CustomEvent("checkir:sheet-opened", { detail: `sheet-${id}` }));
+  document.dispatchEvent(new CustomEvent("sheet-opened", { detail: `sheet-${id}` }));
   update({ ...openSheetPatch(s, { id, name: fallbackName, cuts }), tabNotice: null });
 }

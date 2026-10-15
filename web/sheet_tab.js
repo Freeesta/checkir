@@ -75,7 +75,7 @@ export function syncSheetPane(s) {
 
 if (typeof document !== "undefined") {
   // The opener of a sheet asks for the focus on the title through this event (schede_ui.js cannot import this module without a cycle).
-  document.addEventListener("checkir:sheet-opened", (e) => {
+  document.addEventListener("sheet-opened", (e) => {
     shown.focusTitle = String(/** @type {CustomEvent} */ (e).detail);
     shown.key = null;
   });
