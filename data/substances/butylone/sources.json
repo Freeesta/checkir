@@ -1,0 +1,137 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-butylone",
+      "type": "database",
+      "title": "SWGDRUG monograph: Butylone (IR: HCl, ATR)",
+      "url": "https://www.swgdrug.org/Monographs/butylone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241204095226/https://swgdrug.org/Monographs/butylone.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "zaitsu2009",
+      "type": "paper",
+      "title": "Determination of the metabolites of the new designer drugs bk-MBDB and bk-MDEA in human urine (Forensic science international 188:131-139)",
+      "authors": [
+        "Zaitsu K",
+        "Katagi M",
+        "Kamata HT",
+        "Kamata T",
+        "Shima N",
+        "Miki A",
+        "Tsuchihashi H",
+        "Mori Y"
+      ],
+      "year": 2009,
+      "doi": "10.1016/j.forsciint.2009.04.001",
+      "url": "https://doi.org/10.1016/j.forsciint.2009.04.001",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "simmler2013",
+      "type": "paper",
+      "title": "Pharmacological characterization of designer cathinones in vitro (British journal of pharmacology 168:458-470)",
+      "authors": [
+        "Simmler LD",
+        "Buser TA",
+        "Donzelli M",
+        "Schramm Y",
+        "Dieu LH",
+        "Huwyler J",
+        "Chaboz S",
+        "Hoener MC",
+        "Liechti ME"
+      ],
+      "year": 2013,
+      "doi": "10.1111/j.1476-5381.2012.02145.x",
+      "url": "https://doi.org/10.1111/j.1476-5381.2012.02145.x",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "saha2019",
+      "type": "paper",
+      "title": "The synthetic cathinones, butylone and pentylone, are stimulants that act as dopamine transporter blockers but 5-HT transporter substrates (Psychopharmacology 236:953-962)",
+      "authors": [
+        "Saha K",
+        "Li Y",
+        "Holy M",
+        "Lehner KR",
+        "Bukhari MO",
+        "Partilla JS",
+        "Sandtner W",
+        "Sitte HH",
+        "Baumann MH"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00213-018-5075-5",
+      "url": "https://doi.org/10.1007/s00213-018-5075-5",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "lopezarnau2012",
+      "type": "paper",
+      "title": "Comparative neuropharmacology of three psychostimulant cathinone derivatives: butylone, mephedrone and methylone (British journal of pharmacology 167:407-420)",
+      "authors": [
+        "López-Arnau R",
+        "Martínez-Clemente J",
+        "Pubill D",
+        "Escubedo E",
+        "Camarasa J"
+      ],
+      "year": 2012,
+      "doi": "10.1111/j.1476-5381.2012.01998.x",
+      "url": "https://doi.org/10.1111/j.1476-5381.2012.01998.x",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "warrick2012",
+      "type": "paper",
+      "title": "Lethal serotonin syndrome after methylone and butylone ingestion (Journal of medical toxicology : official journal of the American College of Medical Toxicology 8:65-68)",
+      "authors": [
+        "Warrick BJ",
+        "Wilson J",
+        "Hedge M",
+        "Freeman S",
+        "Leonard K",
+        "Aaron C"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s13181-011-0199-6",
+      "url": "https://doi.org/10.1007/s13181-011-0199-6",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "roquebravo2021",
+      "type": "paper",
+      "title": "From street to lab: in vitro hepatotoxicity of buphedrone, butylone and 3,4-DMMC (Archives of toxicology 95:1443-1462)",
+      "authors": [
+        "Roque Bravo R",
+        "Carmo H",
+        "Valente MJ",
+        "Silva JP",
+        "Carvalho F",
+        "Bastos ML",
+        "Dias da Silva D"
+      ],
+      "year": 2021,
+      "doi": "10.1007/s00204-021-02990-9",
+      "url": "https://doi.org/10.1007/s00204-021-02990-9",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

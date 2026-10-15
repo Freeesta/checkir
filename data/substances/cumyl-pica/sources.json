@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kevin2017",
+      "type": "paper",
+      "title": "In vitro and in vivo pharmacokinetics and metabolism of synthetic cannabinoids CUMYL-PICA and 5F-CUMYL-PICA (Forensic Toxicol 35:333-347)",
+      "authors": [
+        "R. C. Kevin",
+        "T. W. Lefever",
+        "R. W. Snyder",
+        "P. R. Patel",
+        "T. R. Fennell",
+        "J. L. Wiley",
+        "I. S. McGregor",
+        "B. F. Thomas"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s11419-017-0361-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28824730/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

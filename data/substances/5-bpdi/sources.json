@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "nfl-si-5-bpdi",
+      "type": "institution",
+      "title": "Slovenian National Forensic Laboratory: Analytical report 5-BPDi (sample 1183-15, NMR identification)",
+      "year": 2015,
+      "url": "https://www.policija.si/apps/nfl_response_web/0_Analytical_Reports_final/5-BPDi-ID-1183-15-report_final.pdf",
+      "archive_url": "https://web.archive.org/web/20251124152352/https://www.policija.si/apps/nfl_response_web/0_Analytical_Reports_final/5-BPDi-ID-1183-15-report_final.pdf",
+      "license": "public document of a national forensic laboratory, no licence declared; cited as the source of identity only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    }
+  ]
+}

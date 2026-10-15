@@ -1,0 +1,53 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "katselou2016",
+      "type": "paper",
+      "title": "Fenethylline (Captagon) Abuse - Local Problems from an Old Drug Become Universal (Basic Clin Pharmacol Toxicol 119)",
+      "authors": [
+        "Katselou",
+        "Papoutsis",
+        "Nikolaou",
+        "Qammaz",
+        "Spiliopoulou"
+      ],
+      "year": 2016,
+      "doi": "10.1111/bcpt.12584",
+      "url": "https://doi.org/10.1111/bcpt.12584",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "wenthur2017",
+      "type": "paper",
+      "title": "Vaccine-driven pharmacodynamic dissection and mitigation of fenethylline psychoactivity (Nature 548)",
+      "authors": [
+        "Wenthur",
+        "Zhou",
+        "Janda"
+      ],
+      "year": 2017,
+      "doi": "10.1038/nature23464",
+      "url": "https://doi.org/10.1038/nature23464",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "alabdalla2005",
+      "type": "paper",
+      "title": "Chemical characterization of counterfeit captagon tablets seized in Jordan (Forensic Sci Int 152)",
+      "authors": [
+        "Alabdalla"
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.forsciint.2004.08.004",
+      "url": "https://doi.org/10.1016/j.forsciint.2004.08.004",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

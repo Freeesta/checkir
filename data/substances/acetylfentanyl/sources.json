@@ -1,0 +1,98 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "mmwr2013-acetylfentanyl",
+      "type": "paper",
+      "title": "Acetyl fentanyl overdose fatalities - Rhode Island, March-May 2013 (MMWR Morb Mortal Wkly Rep 62:703-704)",
+      "authors": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "year": 2013,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4604997/",
+      "tier": "agency",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "lozier2015",
+      "type": "paper",
+      "title": "Acetyl fentanyl, a novel fentanyl analog, causes 14 overdose deaths in Rhode Island, March-May 2013 (J Med Toxicol 11:208-217)",
+      "authors": [
+        "M. J. Lozier",
+        "M. Boyd",
+        "C. Stanley",
+        "L. Ogilvie",
+        "E. King",
+        "C. Martin",
+        "L. Lewis"
+      ],
+      "year": 2015,
+      "doi": "10.1007/s13181-015-0477-9",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4469714/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "mmwr2014-fentanyl-ri",
+      "type": "paper",
+      "title": "Notes from the field: increase in fentanyl-related overdose deaths - Rhode Island, November 2013-March 2014 (MMWR Morb Mortal Wkly Rep 63:531)",
+      "authors": [
+        "M. C. Mercado-Crespo",
+        "S. A. Sumner",
+        "M. B. Spelke",
+        "D. E. Sugerman",
+        "C. Stanley"
+      ],
+      "year": 2014,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5779372/",
+      "tier": "agency",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "poklis2015",
+      "type": "paper",
+      "title": "Postmortem tissue distribution of acetyl fentanyl, fentanyl and their respective nor-metabolites analyzed by ultrahigh performance liquid chromatography with tandem mass spectrometry (Forensic Sci Int 257:435-441)",
+      "authors": [
+        "J. Poklis",
+        "A. Poklis",
+        "C. Wolf",
+        "M. Mainland",
+        "L. Hair",
+        "K. Devers",
+        "L. Chrostowski",
+        "E. Arbefeville",
+        "M. Merves",
+        "J. Pearson"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.forsciint.2015.10.021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4879818/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "busardo2019",
+      "type": "paper",
+      "title": "Ultra-high-performance liquid chromatography-tandem mass spectrometry assay for quantifying fentanyl and 22 analogs and metabolites in whole blood, urine, and hair (Front Chem 7:184)",
+      "authors": [
+        "F. P. Busardò",
+        "J. Carlier",
+        "R. Giorgetti",
+        "A. Tagliabracci",
+        "R. Pacifici",
+        "M. Gottardi",
+        "S. Pichini"
+      ],
+      "year": 2019,
+      "doi": "10.3389/fchem.2019.00184",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6454115/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

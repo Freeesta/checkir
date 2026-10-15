@@ -1,0 +1,32 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "theophylline-label",
+      "type": "institution",
+      "title": "Theophylline (anhydrous) extended-release tablets (Proficient Rx LP), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=882657ae-e15b-4c86-a571-b55460bd4726",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "pascali2018",
+      "type": "paper",
+      "title": "Application of HRAM screening and LC-MS/MS confirmation of active pharmaceutical ingredient in \"natural\" herbal supplements (Forensic Sci Int 286:e28-e31)",
+      "authors": [
+        "J. P. Pascali",
+        "P. Fais",
+        "F. Vaiano",
+        "E. Bertol"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.forsciint.2018.03.014",
+      "url": "https://doi.org/10.1016/j.forsciint.2018.03.014",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "misselwitz2019",
+      "type": "paper",
+      "title": "Update on lactose malabsorption and intolerance: pathogenesis, diagnosis and clinical management",
+      "authors": [
+        "Misselwitz, Benjamin",
+        "Butter, Matthias",
+        "Verbeke, Kristin",
+        "Fox, Mark R"
+      ],
+      "year": 2019,
+      "doi": "10.1136/gutjnl-2019-318404",
+      "url": "https://doi.org/10.1136/gutjnl-2019-318404",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250711214651/https://gut.bmj.com/content/68/11/2080"
+    }
+  ]
+}

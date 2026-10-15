@@ -1,0 +1,48 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "deluca2022",
+      "type": "paper",
+      "title": "Pharmacological characterization of novel synthetic opioids: isotonitazene, metonitazene, and piperidylthiambutene as potent μ-opioid receptor agonists (Neuropharmacology 221:109263)",
+      "authors": [
+        "M. A. De Luca",
+        "G. Tocco",
+        "R. Mostallino",
+        "A. Laus",
+        "F. Caria",
+        "A. Musa",
+        "N. Pintori",
+        "M. Ucha",
+        "C. Poza",
+        "E. Ambrosio",
+        "G. Di Chiara",
+        "M. P. Castelli"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.neuropharm.2022.109263",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36154843/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20251106032420/https://pubmed.ncbi.nlm.nih.gov/36154843/"
+    },
+    {
+      "id": "vandeputte2020",
+      "type": "paper",
+      "title": "In vitro functional characterization of a panel of non-fentanyl opioid new psychoactive substances (Arch Toxicol 94:3819-3830)",
+      "authors": [
+        "M. M. Vandeputte",
+        "A. Cannaert",
+        "C. P. Stove"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s00204-020-02855-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32734307/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260927084616/https://pubmed.ncbi.nlm.nih.gov/32734307/"
+    }
+  ]
+}

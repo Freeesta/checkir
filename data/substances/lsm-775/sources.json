@@ -1,0 +1,29 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "brandt2017",
+      "type": "paper",
+      "title": "Return of the lysergamides. Part IV: Analytical and pharmacological characterization of lysergic acid morpholide (LSM-775) (Drug Test Anal 10:310-322)",
+      "authors": [
+        "Brandt SD",
+        "Kavanagh PV",
+        "Twamley B",
+        "Westphal F",
+        "Elliott SP",
+        "Wallach J",
+        "Stratford A",
+        "Klein LM",
+        "McCorvy JD",
+        "Nichols DE",
+        "Halberstadt AL"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2222",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28585392/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

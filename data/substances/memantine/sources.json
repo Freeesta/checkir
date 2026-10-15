@@ -1,0 +1,32 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "memantine-misuse2020",
+      "type": "paper",
+      "title": "Memantine misuse and social networks: A content analysis of Internet self-reports (Pharmacoepidemiol Drug Saf 29:1189-1193)",
+      "authors": [
+        "Natter J",
+        "Michel B"
+      ],
+      "year": 2020,
+      "doi": "10.1002/pds.5070",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32602152/",
+      "archive_url": "https://web.archive.org/web/20260205095058/https://pubmed.ncbi.nlm.nih.gov/32602152/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "namenda-xr-label",
+      "type": "institution",
+      "title": "Namenda XR (memantine hydrochloride) extended-release capsules, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2018,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1fa2b7bc-94e5-4566-a7c5-419f8fd393a7",
+      "archive_url": "https://web.archive.org/web/20260803134448/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1fa2b7bc-94e5-4566-a7c5-419f8fd393a7",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

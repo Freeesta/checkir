@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "bach1999",
+      "type": "paper",
+      "title": "Involvement of CYP2D6 in the in vitro metabolism of amphetamine, two N-alkylamphetamines and their 4-methoxylated derivatives (Xenobiotica 29)",
+      "authors": [
+        "Bach",
+        "Coutts",
+        "Baker"
+      ],
+      "year": 1999,
+      "doi": "10.1080/004982599238344",
+      "url": "https://doi.org/10.1080/004982599238344",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

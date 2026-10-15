@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "atasoy2021",
+      "type": "paper",
+      "title": "Determination of synthetic cannabinoids in randomly urine samples collected from probationers in Turkey (Forensic Sci Int 322:110752)",
+      "authors": [
+        "A. Atasoy",
+        "N. Daglioglu",
+        "İ. E. Gören",
+        "A. Girisbay",
+        "R. Aslan",
+        "S. A. Akgur"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.forsciint.2021.110752",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33735632/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

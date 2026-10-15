@@ -1,0 +1,27 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "stoller2017",
+      "type": "paper",
+      "title": "Mistaking 2C-P for 2C-B: What a Difference a Letter Makes (J Anal Toxicol 41:77-79)",
+      "authors": [
+        "A. Stoller",
+        "P. C. Dolder",
+        "M. Bodmer",
+        "F. Hammann",
+        "K. M. Rentsch",
+        "A. K. Exadaktylos",
+        "M. E. Liechti",
+        "E. Liakoni"
+      ],
+      "year": 2017,
+      "doi": "10.1093/jat/bkw108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28130544/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260928103958/https://pubmed.ncbi.nlm.nih.gov/28130544/"
+    }
+  ]
+}

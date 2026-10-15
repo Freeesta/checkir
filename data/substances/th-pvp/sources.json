@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "luo2025",
+      "type": "paper",
+      "title": "Characterizing the in vitro metabolic features of seven α-pyrrolidinophenone-derived synthetic cathinone-type new psychoactive substances (Arch Toxicol 99:4145-4158)",
+      "authors": [
+        "Luo X",
+        "Zhang F",
+        "Huang K",
+        "Liu X",
+        "Yang N",
+        "Luo Q"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s00204-025-04097-x",
+      "url": "https://doi.org/10.1007/s00204-025-04097-x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

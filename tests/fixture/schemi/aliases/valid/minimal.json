@@ -1,6 +1,6 @@
 {
-  "schema": "aliases/1",
-  "aliases": {
-    "old-id": "new-id"
-  }
+  "schema": "aliases/2",
+  "aliases": [
+    "old-id"
+  ]
 }

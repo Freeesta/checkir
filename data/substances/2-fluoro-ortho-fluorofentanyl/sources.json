@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "liu2018",
+      "type": "paper",
+      "title": "The identification and analytical characterization of 2,2'-difluorofentanyl (Drug Test Anal 10:774-780)",
+      "authors": [
+        "C. Liu",
+        "T. Li",
+        "Y. Han",
+        "Z. Hua",
+        "W. Jia",
+        "Z. Qian"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2264",
+      "url": "https://doi.org/10.1002/dta.2264",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

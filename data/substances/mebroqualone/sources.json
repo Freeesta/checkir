@@ -1,0 +1,19 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "woods2021",
+      "type": "paper",
+      "title": "Two fatalities involving mebroqualone (J Anal Toxicol 45:308-311)",
+      "authors": [
+        "K. M. Woods"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa077",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32789477/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

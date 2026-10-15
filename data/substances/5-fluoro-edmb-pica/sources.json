@@ -1,0 +1,94 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gao2024-5f-edmb-pica",
+      "type": "paper",
+      "title": "Identification of phase-I and phase-II metabolites and the metabolic pathway of the novel synthetic cannabinoid 5F-EDMB-PICA in vitro (Arch Toxicol 98(9):2879-2888)",
+      "authors": [
+        "Y. Gao",
+        "K. Shi",
+        "P. Wang",
+        "X. Liu",
+        "C. Liu",
+        "L. Luo",
+        "Y. Lin",
+        "L. Yang",
+        "R. Yang",
+        "L. Liao"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00204-024-03790-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38955863/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "giorgetti2022-edmb",
+      "type": "paper",
+      "title": "Human phase-I metabolism and prevalence of two synthetic cannabinoids bearing an ethyl ester moiety: 5F-EDMB-PICA and EDMB-PINACA (Drug Test Anal 15(3):299-313)",
+      "authors": [
+        "A. Giorgetti",
+        "P. Brunetti",
+        "B. Haschimi",
+        "F. P. Busardò",
+        "S. Pelotti",
+        "V. Auwärter"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3405",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36366743/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240916230231/https://pubmed.ncbi.nlm.nih.gov/36366743/"
+    },
+    {
+      "id": "li2024-5f-edmb-pica",
+      "type": "paper",
+      "title": "Assessment of pharmacological effects and abuse potential of 5F-EDMB-PICA, CUMYL-PEGACLONE, and NM-2201 in mice (Psychopharmacology (Berl) 242(3):533-544)",
+      "authors": [
+        "K. Li",
+        "D. Xu",
+        "Y. Qiao",
+        "L. Kuai",
+        "X. Luo",
+        "B. Di",
+        "P. Xu"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00213-024-06703-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39402377/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260807182931/https://pubmed.ncbi.nlm.nih.gov/39402377/"
+    },
+    {
+      "id": "li2025-5f-edmb-pica",
+      "type": "paper",
+      "title": "Characterization of the Behavioral and Molecular Effects of Acute Exposure to the Fourth-Generation Synthetic Cannabinoid, 5F-EDMB-PICA, in Male Mice of Different Age Groups (Int J Mol Sci 26(21))",
+      "authors": [
+        "K. Li",
+        "P. Xu",
+        "Y. Wang",
+        "X. Shi",
+        "Y. Chen",
+        "S. Zhang",
+        "J. Ran",
+        "Y. Qiao",
+        "Y. Xu",
+        "Y. Pang",
+        "B. Di"
+      ],
+      "year": 2025,
+      "doi": "10.3390/ijms262110424",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41226463/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251209023825/https://pubmed.ncbi.nlm.nih.gov/41226463/"
+    }
+  ]
+}

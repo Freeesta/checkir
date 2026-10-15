@@ -1,0 +1,58 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wang2023-transesterification",
+      "type": "paper",
+      "title": "Transesterification of Indazole-3-carboxamide Synthetic Cannabinoids: Identification of Metabolite Biomarkers for Diagnosing Co-abuse of 5F-MDMB-PINACA and Alcohol (J Anal Toxicol 46(9):1016-1024)",
+      "authors": [
+        "Z. Wang",
+        "C. Y. Fong",
+        "E. M. L. Goh",
+        "H. Y. Moy",
+        "E. C. Y. Chan"
+      ],
+      "year": 2023,
+      "doi": "10.1093/jat/bkab121",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34918103/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206054951/https://pubmed.ncbi.nlm.nih.gov/34918103/"
+    },
+    {
+      "id": "krotulski2020",
+      "type": "paper",
+      "title": "Emerging Synthetic Cannabinoids: Development and Validation of a Novel Liquid Chromatography Quadrupole Time-of-Flight Mass Spectrometry Assay for Real-Time Detection (J Anal Toxicol 44(3):207-217)",
+      "authors": [
+        "A. J. Krotulski",
+        "A. L. A. Mohr",
+        "B. K. Logan"
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkz084",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31909808/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251009155011/https://pubmed.ncbi.nlm.nih.gov/31909808/"
+    },
+    {
+      "id": "liu2017-edmb-pinaca",
+      "type": "paper",
+      "title": "Identification and analytical characterization of six synthetic cannabinoids NNL-3, 5F-NPB-22-7N, 5F-AKB-48-7N, 5F-EDMB-PINACA, EMB-FUBINACA, and EG-018 (Drug Test Anal 9(8):1251-1261)",
+      "authors": [
+        "C. Liu",
+        "W. Jia",
+        "Z. Hua",
+        "Z. Qian"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2160",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28063270/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

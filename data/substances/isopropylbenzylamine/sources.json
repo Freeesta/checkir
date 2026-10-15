@@ -1,0 +1,41 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "xu2022",
+      "type": "paper",
+      "title": "N-isopropylbenzylamine, a methamphetamine mimics, produces toxicity via increasing nitric oxide in vitro (Toxicology 480)",
+      "authors": [
+        "Xu",
+        "Li",
+        "Qiu",
+        "Xiao",
+        "Qiu"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.tox.2022.153337",
+      "url": "https://doi.org/10.1016/j.tox.2022.153337",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lai2024",
+      "type": "paper",
+      "title": "N-Isopropylbenzylamine-induced conditioned place preference, sensitization behaviour and self-administration in rodents (Addict Biol 29)",
+      "authors": [
+        "Lai",
+        "Fu",
+        "Li",
+        "Zhuang",
+        "Wang"
+      ],
+      "year": 2024,
+      "doi": "10.1111/adb.13370",
+      "url": "https://doi.org/10.1111/adb.13370",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

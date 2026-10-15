@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "degroot1998",
+      "type": "paper",
+      "title": "Ergot alkaloids. Current status and review of clinical pharmacology and therapeutic use compared with other oxytocics in obstetrics and gynaecology (Drugs)",
+      "authors": [
+        "A. N. de Groot",
+        "P. W. van Dongen",
+        "T. B. Vree",
+        "Y. A. Hekster",
+        "J. van Roosmalen"
+      ],
+      "year": 1998,
+      "doi": "10.2165/00003495-199856040-00002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9806101/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

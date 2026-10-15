@@ -1,0 +1,43 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wong2023",
+      "type": "paper",
+      "title": "Analgesic effect of buprenorphine for chronic noncancer pain: a systematic review and meta-analysis of randomized controlled trials (Anesth Analg 137:59-71)",
+      "authors": [
+        "S. S. C. Wong",
+        "T. H. Chan",
+        "F. Wang",
+        "T. C. W. Chan",
+        "H. C. Ho",
+        "C. W. Cheung"
+      ],
+      "year": 2023,
+      "doi": "10.1213/ANE.0000000000006467",
+      "url": "https://doi.org/10.1213/ANE.0000000000006467",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "wightman2020",
+      "type": "paper",
+      "title": "Opioid overdose deaths with buprenorphine detected in postmortem toxicology: a retrospective analysis (J Med Toxicol 17:10-15)",
+      "authors": [
+        "R. S. Wightman",
+        "J. Perrone",
+        "R. Scagos",
+        "M. Krieger",
+        "L. S. Nelson",
+        "B. D. L. Marshall"
+      ],
+      "year": 2021,
+      "doi": "10.1007/s13181-020-00795-3",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7785599/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

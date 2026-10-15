@@ -1,0 +1,42 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kanamori2019",
+      "type": "paper",
+      "title": "Metabolism of Butyrylfentanyl in Fresh Human Hepatocytes: Chemical Synthesis of Authentic Metabolite Standards for Definitive Identification (Biol Pharm Bull 42:623-630)",
+      "authors": [
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Segawa",
+        "T. Yamamuro",
+        "K. Kuwayama",
+        "K. Tsujikawa",
+        "H. Inoue"
+      ],
+      "year": 2019,
+      "doi": "10.1248/bpb.b18-00765",
+      "url": "https://doi.org/10.1248/bpb.b18-00765",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "steuer2017",
+      "type": "paper",
+      "title": "Studies on the metabolism of the fentanyl-derived designer drug butyrfentanyl in human in vitro liver preparations and authentic human samples using liquid chromatography-high resolution mass spectrometry (Drug Test Anal 9:1085-1092)",
+      "authors": [
+        "A. E. Steuer",
+        "E. Williner",
+        "S. N. Staeheli",
+        "T. Kraemer"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2111",
+      "url": "https://doi.org/10.1002/dta.2111",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

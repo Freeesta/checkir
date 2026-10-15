@@ -1,0 +1,46 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "stalberga2026",
+      "type": "paper",
+      "title": "Comprehensive in vitro profiling of traditional and emerging stimulants at monoamine transporters and the 5-HT2A receptor (Br J Pharmacol 183(19):5871-5894)",
+      "authors": [
+        "Stalberga D",
+        "Kronstrand R",
+        "Schranz B",
+        "van Zijl N",
+        "Karlman S",
+        "Aref S",
+        "Rautio T",
+        "Vikingsson S",
+        "Persson M",
+        "Green H"
+      ],
+      "year": 2026,
+      "doi": "10.1111/bph.70587",
+      "url": "https://doi.org/10.1111/bph.70587",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nadarajan2025",
+      "type": "paper",
+      "title": "Wastewater analysis as a global toxicovigilance tool for the monitoring of new psychoactive substances (Water Res 289:124847)",
+      "authors": [
+        "Nadarajan D",
+        "Laimou-Geraniou M",
+        "Chappell A",
+        "Bade R",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.watres.2025.124847",
+      "url": "https://doi.org/10.1016/j.watres.2025.124847",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "dearaujo2023",
+      "type": "paper",
+      "title": "The mystery behind the apprehensions of the selective cannabinoid receptor type-2 agonist BZO-HEXOXIZID (MDA-19) as a drug of abuse (Forensic Toxicol 41:142-150)",
+      "authors": [
+        "K. R. G. de Araujo",
+        "A. L. Fabris",
+        "L. F. Neves Júnior",
+        "J. de Carvalho Ponce",
+        "A. L. Soares",
+        "J. L. Costa",
+        "M. Yonamine"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s11419-022-00646-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36652069/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lee2022-oxizid",
+      "type": "paper",
+      "title": "Identification of Optimal Urinary Biomarkers of Synthetic Cannabinoids BZO-HEXOXIZID, BZO-POXIZID, 5F-BZO-POXIZID, and BZO-CHMOXIZID for Illicit Abuse Monitoring (Clin Chem 68:1436-1448)",
+      "authors": [
+        "K. Z. H. Lee",
+        "Z. Wang",
+        "C. Y. Fong",
+        "E. M. L. Goh",
+        "H. Y. Moy",
+        "E. C. Y. Chan"
+      ],
+      "year": 2022,
+      "doi": "10.1093/clinchem/hvac138",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36175111/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

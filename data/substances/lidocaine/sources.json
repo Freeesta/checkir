@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "olkkola2005",
+      "type": "paper",
+      "title": "The Effect of Erythromycin and Fluvoxamine on the Pharmacokinetics of Intravenous Lidocaine",
+      "authors": [
+        "Olkkola, Klaus T.",
+        "Isohanni, Mika H.",
+        "Hamunen, Katri",
+        "Neuvonen, Pertti J."
+      ],
+      "year": 2005,
+      "doi": "10.1213/01.ane.0000148123.79437.f9",
+      "url": "https://doi.org/10.1213/01.ane.0000148123.79437.f9",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20251004220105/https://pubmed.ncbi.nlm.nih.gov/15845683/"
+    }
+  ]
+}

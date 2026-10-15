@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "Sigma-1 receptor agonist PRE-084 confers protection against TAR DNA-binding protein-43 toxicity through NRF2 signalling (Redox Biol 58:102542)",
+      "authors": [
+        "C. Lasbleiz",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.redox.2022.102542",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36442393/",
+      "tier": "primary",
+      "id": "lasbleiz2022",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260828202930/https://pubmed.ncbi.nlm.nih.gov/36442393/"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "Unifi nootropics from the lab to the web: a story of academic (and industrial) shortcomings (J Enzyme Inhib Med Chem 31:187-194)",
+      "authors": [
+        "F. Gualtieri"
+      ],
+      "year": 2015,
+      "doi": "10.3109/14756366.2015.1021252",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25831025/",
+      "tier": "review",
+      "id": "gualtieri2015",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

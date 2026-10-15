@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "franz2017-mdmb-chmica",
+      "type": "paper",
+      "title": "Phase I metabolism of the highly potent synthetic cannabinoid MDMB-CHMICA and detection in human urine samples (Drug Test Anal 9:744-753)",
+      "authors": [
+        "F. Franz",
+        "V. Angerer",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2049",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27504870/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "diao2017-mn18",
+      "type": "paper",
+      "title": "Human Hepatocyte Metabolism of Novel Synthetic Cannabinoids MN-18 and Its 5-Fluoro Analog 5F-MN-18 (Clin Chem 63:1753-1763)",
+      "authors": [
+        "X. Diao",
+        "J. Carlier",
+        "M. Zhu",
+        "M. A. Huestis"
+      ],
+      "year": 2017,
+      "doi": "10.1373/clinchem.2017.277152",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28821542/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250420152106/https://pubmed.ncbi.nlm.nih.gov/28821542/"
+    }
+  ]
+}

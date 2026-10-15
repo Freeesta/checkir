@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gampfer2021",
+      "type": "paper",
+      "title": "Cytotoxicity, metabolism, and isozyme mapping of the synthetic cannabinoids JWH-200, A-796260, and 5F-EMB-PINACA studied by means of in vitro systems (Arch Toxicol)",
+      "authors": [
+        "T. M. Gampfer",
+        "L. Wagmann",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1007/s00204-021-03148-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34453555/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

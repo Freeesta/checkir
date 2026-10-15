@@ -1,0 +1,45 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "norman2021",
+      "type": "paper",
+      "title": "Large-scale evaluation of ion mobility spectrometry for the rapid detection of synthetic cannabinoid receptor agonists in infused papers in prisons (Drug Test Anal 13(3):644-663)",
+      "authors": [
+        "C. Norman",
+        "B. McKirdy",
+        "G. Walker",
+        "P. Dugard",
+        "N. NicDaéid",
+        "C. McKenzie"
+      ],
+      "year": 2021,
+      "doi": "10.1002/dta.2945",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33058556/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250202094145/https://pubmed.ncbi.nlm.nih.gov/33058556/"
+    },
+    {
+      "id": "tang2024",
+      "type": "paper",
+      "title": "Determination of four amide synthetic cannabinoid isomers by ultra-high performance liquid chromatography-high resolution mass spectrometry (Se Pu 42(1):84-91)",
+      "authors": [
+        "R. Tang",
+        "J. Wang",
+        "T. Xiao",
+        "S. Qin",
+        "Z. Jie",
+        "A. Zhang"
+      ],
+      "year": 2024,
+      "doi": "10.3724/SP.J.1123.2023.07007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38197209/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204113656/https://pubmed.ncbi.nlm.nih.gov/38197209/"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "presley2019",
+      "type": "paper",
+      "title": "In vitro Phase I metabolism of indazole carboxamide synthetic cannabinoid MDMB-CHMINACA via human liver microsome incubation and high-resolution mass spectrometry (Drug Test Anal 11:1264-1276)",
+      "authors": [
+        "B. C. Presley",
+        "B. K. Logan",
+        "S. A. Jansen-Varnum"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2615",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31108568/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "xu2021",
+      "type": "paper",
+      "title": "Rapid Identification of MDMB-CHMINACA Metabolites Using Zebrafish and Human Liver Microsomes as the Biotransformation System by LC-QE-HF-MS (J Anal Toxicol 44:1012-1026)",
+      "authors": [
+        "D. Q. Xu",
+        "Y. Dai",
+        "W. F. Zhang",
+        "J. F. Wang",
+        "Y. Y. Wang",
+        "Y. Zhang",
+        "Q. L. Zhao",
+        "X. Li"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa001",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32020177/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

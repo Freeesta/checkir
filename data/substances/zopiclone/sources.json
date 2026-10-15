@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "becquemont1999",
+      "type": "paper",
+      "title": "Cytochrome P-450 3A4 and 2C8 are involved in zopiclone metabolism (Drug Metab Dispos 27:1068-1073)",
+      "authors": [
+        "L. Becquemont",
+        "S. Mouajjah",
+        "O. Escaffre",
+        "P. Beaune",
+        "C. Funck-Brentano",
+        "P. Jaillon"
+      ],
+      "year": 1999,
+      "doi": "10.1016/S0090-9556(24)15027-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10460808/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260113101310/https://pubmed.ncbi.nlm.nih.gov/10460808/"
+    }
+  ]
+}

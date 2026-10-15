@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "epain2024",
+      "type": "paper",
+      "title": "Alpha-methyltryptamine and 5-(2-methylaminopropyl)-benzofuran (5-MAPB) fatal co-intoxication: case report and review of literature (Int J Legal Med 138:1813-1820)",
+      "authors": [
+        "M. Epain",
+        "N. Cartiser",
+        "F. Bevalot",
+        "C. Bottinelli",
+        "C. Chatenay",
+        "L. Fanton"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s00414-024-03236-w",
+      "url": "https://doi.org/10.1007/s00414-024-03236-w",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

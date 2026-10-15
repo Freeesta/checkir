@@ -1,0 +1,43 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "erratico2015",
+      "type": "paper",
+      "title": "In vitro and in vivo human metabolism of the synthetic cannabinoid AB-CHMINACA (Drug Test Anal 7:866-876)",
+      "authors": [
+        "C. Erratico",
+        "N. Negreira",
+        "H. Norouzizadeh",
+        "A. Covaci",
+        "H. Neels",
+        "K. Maudens",
+        "A. L. N. van Nuijs"
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1796",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25865117/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "eccarius2026",
+      "type": "paper",
+      "title": "In vitro metabolic profile characterization for synthetic cannabinoids MDMB-BINACA, MDMB-PICA, and AB-CHMINACA (J Anal Toxicol 50:bkag034)",
+      "authors": [
+        "L. K. Eccarius",
+        "B. N. Stang",
+        "S. E. Walton",
+        "A. J. Krotulski",
+        "B. K. Logan"
+      ],
+      "year": 2026,
+      "doi": "10.1093/jat/bkag034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42226022/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

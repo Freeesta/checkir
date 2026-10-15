@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "zenzedi-label",
+      "type": "institution",
+      "title": "ZENZEDI (dextroamphetamine sulfate) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d6394df5-f2c9-47eb-b57e-f3e9cfd94f84",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "tier": "agency",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "sobolevsky2015",
+      "type": "paper",
+      "title": "Study on the phase I metabolism of novel synthetic cannabinoids, APICA and its fluorinated analogue (Drug Test Anal 7:131-142)",
+      "authors": [
+        "T. Sobolevsky",
+        "I. Prasolov",
+        "G. Rodchenkov"
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1756",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25428705/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

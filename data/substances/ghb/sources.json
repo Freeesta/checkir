@@ -1,0 +1,73 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "liechti2016",
+      "type": "paper",
+      "title": "Pharmacokinetics and pharmacodynamics of γ-hydroxybutyrate in healthy subjects (British journal of clinical pharmacology 81)",
+      "authors": [
+        "Matthias E Liechti",
+        "Boris B Quednow",
+        "Evangelia Liakoni",
+        "Dario Dornbierer",
+        "Robin von Rotz",
+        "Maria Salomé Gachet",
+        "Jürg Gertsch",
+        "Erich Seifritz",
+        "Oliver G Bosch"
+      ],
+      "year": 2016,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1111/bcp.12863",
+      "url": "https://doi.org/10.1111/bcp.12863"
+    },
+    {
+      "id": "palatini1993",
+      "type": "paper",
+      "title": "Dose-dependent absorption and elimination of gamma-hydroxybutyric acid in healthy volunteers (European journal of clinical pharmacology 45)",
+      "authors": [
+        "P Palatini",
+        "L Tedeschi",
+        "G Frison",
+        "R Padrini",
+        "R Zordan",
+        "R Orlando",
+        "L Gallimberti",
+        "G L Gessa",
+        "S D Ferrara"
+      ],
+      "year": 1993,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/BF00265954",
+      "url": "https://doi.org/10.1007/BF00265954"
+    },
+    {
+      "id": "swgdrug-ghb",
+      "type": "database",
+      "title": "SWGDRUG monograph: Gamma-hydroxybutyrate / butyric acid (IR: sodium salt and free acid)",
+      "url": "https://www.swgdrug.org/Monographs/GAMMA-HYDROXYBUTYRATE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260917194548/https://www.swgdrug.org/Monographs/GAMMA-HYDROXYBUTYRATE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "wong2004",
+      "type": "paper",
+      "title": "Gamma-hydroxybutyric acid: neurobiology and toxicology of a recreational drug (Toxicological reviews 23)",
+      "authors": [
+        "C Guin Ting Wong",
+        "Katherine F Y Chan",
+        "K Michael Gibson",
+        "O Carter Snead"
+      ],
+      "year": 2004,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.2165/00139709-200423010-00002",
+      "url": "https://doi.org/10.2165/00139709-200423010-00002"
+    }
+  ]
+}

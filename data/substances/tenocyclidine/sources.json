@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "petek2010",
+      "type": "paper",
+      "title": "Qualitative GC-MS assessment of TCP and TAMORF elimination in rats (Arh Hig Rada Toksikol 61:61-67)",
+      "authors": [
+        "M. J. Petek",
+        "A. Lucić Vrdoljak",
+        "G. Mrsić"
+      ],
+      "year": 2010,
+      "doi": "10.2478/10004-1254-61-2010-1985",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20338869/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

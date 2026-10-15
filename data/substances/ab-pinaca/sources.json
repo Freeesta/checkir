@@ -1,0 +1,37 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "minakata2021-ab-pinaca",
+      "type": "paper",
+      "title": "In Vivo Metabolites of AB-PINACA in Solid Tissues Obtained from Its Abuser: Comparison with In Vitro Experiment (J Anal Toxicol 44:1027-1035)",
+      "authors": [
+        "K. Minakata",
+        "K. Hasegawa",
+        "I. Yamagishi",
+        "H. Nozawa",
+        "M. Suzuki",
+        "T. Kitamoto",
+        "O. Suzuki",
+        "K. Watanabe"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa031",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32232365/",
+      "archive_url": "https://web.archive.org/web/20260812041156/https://pubmed.ncbi.nlm.nih.gov/32232365/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dea-fr2017-ab-pinaca",
+      "type": "institution",
+      "title": "Schedules of Controlled Substances: Placement of AB-CHMINACA, ABPINACA and THJ-2201 Into Schedule I (US DEA final rule, Federal Register 82:47971-47974, 16 October 2017)",
+      "year": 2017,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29035496/",
+      "archive_url": "https://web.archive.org/web/20250204020423/https://pubmed.ncbi.nlm.nih.gov/29035496/",
+      "tier": "agency",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

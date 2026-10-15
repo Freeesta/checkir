@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "phentermine-label",
+      "type": "institution",
+      "title": "Phentermine hydrochloride tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=129e781c-5366-4986-8e67-6b35fa4c3f39",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

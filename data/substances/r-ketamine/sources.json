@@ -1,0 +1,40 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wang2025-rketamine",
+      "type": "paper",
+      "title": "Pharmacokinetics, Safety, and Tolerability of (R)-Ketamine Hydrochloride Injection, a Novel Rapid-Acting Antidepressant, in Healthy Chinese Subjects (Pharmaceuticals (Basel) 18:1079)",
+      "authors": [
+        "Wang R",
+        "Yang Y",
+        "Zhou T",
+        "Zou B",
+        "Ding L"
+      ],
+      "year": 2025,
+      "doi": "10.3390/ph18071079",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40732364/",
+      "tier": "primary",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "wang2025-rketamine-preclinical",
+      "type": "paper",
+      "title": "Preclinical pharmacokinetic characterization of (R)-ketamine injection, a novel antidepressant glutamatergic agent (Front Pharmacol 16:1699304)",
+      "authors": [
+        "Wang R",
+        "Jin Y",
+        "Zou B",
+        "Ding L"
+      ],
+      "year": 2025,
+      "doi": "10.3389/fphar.2025.1699304",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41357861/",
+      "tier": "primary",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "norman2023-ch-piata",
+      "type": "paper",
+      "title": "In vitro cannabinoid receptor activity, metabolism, and detection in seized samples of CH-PIATA, a new indole-3-acetamide synthetic cannabinoid (Drug Test Anal 16:380-391)",
+      "authors": [
+        "C. Norman",
+        "M. H. Deventer",
+        "O. Dremann",
+        "R. Reid",
+        "K. Van Uytfanghe",
+        "C. Guillou",
+        "I. M. J. Vinckier",
+        "N. Nic Daeid",
+        "A. Krotulski",
+        "C. P. Stove"
+      ],
+      "year": 2023,
+      "doi": "10.1002/dta.3555",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37491777/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250203195135/https://pubmed.ncbi.nlm.nih.gov/37491777/"
+    },
+    {
+      "id": "zschiesche2024",
+      "type": "paper",
+      "title": "Insights into the metabolism of CH-PIATA, a novel synthetic cannabinoid featuring an acetamide linker (J Anal Toxicol 48:359-371)",
+      "authors": [
+        "A. Zschiesche",
+        "M. Scheu",
+        "D. Thieme",
+        "A. M. Keiler",
+        "B. Pulver",
+        "L. M. Huppertz",
+        "V. Auwaerter"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38441323/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260823081336/https://pubmed.ncbi.nlm.nih.gov/38441323/"
+    },
+    {
+      "id": "watanabe2023-ch-piata",
+      "type": "paper",
+      "title": "In vitro metabolic profiling of new synthetic cannabinoids, ADB-FUBIATA, AFUBIATA, CH-FUBIATA, and CH-PIATA (Arch Toxicol 97:3085-3094)",
+      "authors": [
+        "S. Watanabe",
+        "H. Yamane",
+        "T. Iwai",
+        "R. Matsushita",
+        "Y. Seto"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s00204-023-03605-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37755504/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261012043440/https://pubmed.ncbi.nlm.nih.gov/37755504/"
+    },
+    {
+      "id": "richeval2023",
+      "type": "paper",
+      "title": "A current overview of the pharmacological composition of La Chimique consumed in Mayotte: preliminary results of the CHASSE-MAREE protocol (Drug Test Anal 16:558-569)",
+      "authors": [
+        "C. Richeval",
+        "A. Gish",
+        "V. Cottereau",
+        "A. Peyre",
+        "E. Pleignet",
+        "S. Cherki",
+        "D. Allorge",
+        "J.-M. Gaulier",
+        "D. A. Devault"
+      ],
+      "year": 2023,
+      "doi": "10.1002/dta.3585",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37798946/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260926234503/https://pubmed.ncbi.nlm.nih.gov/37798946/"
+    }
+  ]
+}

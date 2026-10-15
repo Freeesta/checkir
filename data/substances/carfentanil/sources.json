@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "feasel2016",
+      "type": "paper",
+      "title": "Metabolism of Carfentanil, an Ultra-Potent Opioid, in Human Liver Microsomes and Human Hepatocytes by High-Resolution Mass Spectrometry (AAPS J 18:1489-1499)",
+      "authors": [
+        "M. G. Feasel",
+        "A. Wohlfarth",
+        "J. M. Nilles",
+        "S. Pang",
+        "R. L. Kristovich",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1208/s12248-016-9963-5",
+      "url": "https://doi.org/10.1208/s12248-016-9963-5",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

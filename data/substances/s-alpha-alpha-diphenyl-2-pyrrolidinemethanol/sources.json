@@ -1,0 +1,20 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "meyer2013",
+      "type": "paper",
+      "title": "Studies on the metabolism and detectability of the emerging drug of abuse diphenyl-2-pyrrolidinemethanol (D2PM) in rat urine using GC-MS and LC-HR-MS/MS (J Mass Spectrom 48)",
+      "authors": [
+        "M R Meyer",
+        "S Schmitt",
+        "H H Maurer"
+      ],
+      "year": 2013,
+      "doi": "10.1002/jms.3142",
+      "url": "https://doi.org/10.1002/jms.3142",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "truver2022",
+      "type": "paper",
+      "title": "Toxicological Analysis of Fluorofentanyl Isomers in Postmortem Blood (J Anal Toxicol 46:835-843)",
+      "authors": [
+        "M. T. Truver",
+        "C. W. Chronister",
+        "A. M. Kinsey",
+        "J. L. Hoyer",
+        "B. A. Goldberger"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkac014",
+      "url": "https://doi.org/10.1093/jat/bkac014",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

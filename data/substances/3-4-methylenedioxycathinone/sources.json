@@ -1,0 +1,28 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "sprega2023",
+      "type": "paper",
+      "title": "Usefulness of Oral Fluid for Measurement of Methylone and Its Metabolites: Correlation with Plasma Drug Concentrations and the Effect of Oral Fluid pH (Metabolites 13(4):468)",
+      "authors": [
+        "Sprega G",
+        "Di Giorgi A",
+        "Poyatos L",
+        "Papaseit E",
+        "Pérez-Mañá C",
+        "Tini A",
+        "Pichini S",
+        "Busardò FP",
+        "Lo Faro AF",
+        "Farré M"
+      ],
+      "year": 2023,
+      "doi": "10.3390/metabo13040468",
+      "url": "https://doi.org/10.3390/metabo13040468",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

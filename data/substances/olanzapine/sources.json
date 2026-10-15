@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "olanzapine-label",
+      "type": "institution",
+      "title": "Zyprexa (olanzapine) tablets, Zyprexa Zydis orally disintegrating tablets and Zyprexa IntraMuscular, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b418946a-1ab4-4d89-a012-d94fc361a3c4",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

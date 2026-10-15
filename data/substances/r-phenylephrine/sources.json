@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "phenylephrine-label",
+      "type": "institution",
+      "title": "Phenylephrine hydrochloride injection, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=71b8fb8a-e13a-246f-f7b4-aa912b9ccd54",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

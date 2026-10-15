@@ -1,0 +1,37 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "fabregat2019-5ppdi",
+      "type": "paper",
+      "title": "Metabolic profiling of four synthetic stimulants, including the novel indanyl-cathinone 5-PPDi, after human hepatocyte incubation (J Pharm Anal)",
+      "authors": [
+        "D. Fabregat-Safont",
+        "M. Mardal",
+        "et al."
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.jpha.2019.12.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32373386/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ishii2020",
+      "type": "paper",
+      "title": "Studies on the phase I metabolites of the new designer drug 1-(2,3-dihydro-1H-inden-5-yl)-2-(pyrrolidine-1-yl)butan-1-one (5-PPDI) in human urine (Forensic Sci Int)",
+      "authors": [
+        "A. Ishii",
+        "K. Kusakabe",
+        "et al."
+      ],
+      "year": 2020,
+      "doi": "10.1016/j.forsciint.2020.110214",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32199237/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

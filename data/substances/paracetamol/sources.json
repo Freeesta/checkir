@@ -1,0 +1,91 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "yoon2016",
+      "type": "paper",
+      "title": "Acetaminophen-Induced Hepatotoxicity: a Comprehensive Update",
+      "authors": [
+        "Yoon, Eric",
+        "Babar, Ali",
+        "Choudhary, Moaz",
+        "Kutner, Matthew",
+        "Pyrsopoulos, Nikolaos"
+      ],
+      "year": 2016,
+      "doi": "10.14218/jcth.2015.00052",
+      "url": "https://doi.org/10.14218/jcth.2015.00052",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20261002105648/https://pubmed.ncbi.nlm.nih.gov/27350943/"
+    },
+    {
+      "id": "mazaleuskaya2015",
+      "type": "paper",
+      "title": "PharmGKB summary: pathways of acetaminophen metabolism at the therapeutic versus toxic doses",
+      "authors": [
+        "Mazaleuskaya, L. L.",
+        "Sangkuhl, K.",
+        "Thorn, C. F.",
+        "FitzGerald, G. A.",
+        "Altman, R. B.",
+        "Klein, T. E."
+      ],
+      "year": 2015,
+      "doi": "10.1097/FPC.0000000000000150",
+      "url": "https://doi.org/10.1097/FPC.0000000000000150",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20251126043803/https://pubmed.ncbi.nlm.nih.gov/26049587/",
+      "tier": "review"
+    },
+    {
+      "id": "schneider2011",
+      "type": "paper",
+      "title": "Analysis of illicit cocaine and heroin samples seized in Luxembourg from 2005-2010 (Forensic Sci Int 212:242-246)",
+      "authors": [
+        "Schneider, S.",
+        "Meys, F."
+      ],
+      "year": 2011,
+      "doi": "10.1016/j.forsciint.2011.06.027",
+      "url": "https://doi.org/10.1016/j.forsciint.2011.06.027",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "hesse2025",
+      "type": "paper",
+      "title": "Purity and adulterants in street heroin in Denmark from 2006 to 2024 (Forensic Sci Int 380:112795)",
+      "authors": [
+        "Hesse, M.",
+        "Andersen, C.U.",
+        "Reitzel, L.A.",
+        "Eriksen, T.S.",
+        "Lindholst, C."
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.forsciint.2025.112795",
+      "url": "https://doi.org/10.1016/j.forsciint.2025.112795",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "risser2007",
+      "type": "paper",
+      "title": "Is there a relationship between street heroin purity and drug-related emergencies and/or drug-related deaths? An analysis from Vienna, Austria (J Forensic Sci 52:1171-1176)",
+      "authors": [
+        "Risser, D.",
+        "Uhl, A.",
+        "Oberndorfer, F.",
+        "Hönigschnabl, S.",
+        "Stichenwirth, M.",
+        "Hirz, R.",
+        "Sebald, D."
+      ],
+      "year": 2007,
+      "doi": "10.1111/j.1556-4029.2007.00507.x",
+      "url": "https://doi.org/10.1111/j.1556-4029.2007.00507.x",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

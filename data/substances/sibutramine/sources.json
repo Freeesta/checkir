@@ -1,0 +1,82 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "bae2008",
+      "type": "paper",
+      "title": "Cytochrome P450 2B6 catalyzes the formation of pharmacologically active sibutramine metabolites in human liver microsomes (Drug Metab Dispos 36:1679-1688)",
+      "authors": [
+        "S. K. Bae",
+        "S. Cao",
+        "K.-A. Seo",
+        "H. Kim",
+        "M.-J. Kim",
+        "J.-H. Shon",
+        "K.-H. Liu",
+        "H.-H. Zhou",
+        "J.-G. Shin"
+      ],
+      "year": 2008,
+      "doi": "10.1124/dmd.108.020727",
+      "url": "https://doi.org/10.1124/dmd.108.020727",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kim2009",
+      "type": "paper",
+      "title": "Association of CYP2B6, CYP3A5, and CYP2C19 genetic polymorphisms with sibutramine pharmacokinetics in healthy Korean subjects (Clin Pharmacol Ther 86:511-518)",
+      "authors": [
+        "K. A. Kim",
+        "W. K. Song",
+        "J. Y. Park"
+      ],
+      "year": 2009,
+      "doi": "10.1038/clpt.2009.145",
+      "url": "https://doi.org/10.1038/clpt.2009.145",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "tucker2018",
+      "type": "paper",
+      "title": "Unapproved Pharmaceutical Ingredients Included in Dietary Supplements Associated With US Food and Drug Administration Warnings (JAMA Netw Open 1:e183337)",
+      "authors": [
+        "J. Tucker",
+        "T. Fischer",
+        "L. Upjohn",
+        "D. Mazzera",
+        "M. Kumar"
+      ],
+      "year": 2018,
+      "doi": "10.1001/jamanetworkopen.2018.3337",
+      "url": "https://doi.org/10.1001/jamanetworkopen.2018.3337",
+      "tier": "primary",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "carles2025",
+      "type": "paper",
+      "title": "Presence of sibutramine and sildenafil in weight loss dietary supplements: a case series with analytical and clinical investigation (Clin Toxicol 63:193-195)",
+      "authors": [
+        "M. Carles",
+        "T. Pietri",
+        "J. Micallef",
+        "C. Corteggiani-Giraud",
+        "M. Richez",
+        "C. Solas-Chesneau",
+        "B. Lacarelle",
+        "N. Fabresse"
+      ],
+      "year": 2025,
+      "doi": "10.1080/15563650.2025.2452297",
+      "url": "https://doi.org/10.1080/15563650.2025.2452297",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

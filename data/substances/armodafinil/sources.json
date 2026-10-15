@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "nuvigil-label",
+      "type": "institution",
+      "title": "NUVIGIL (armodafinil) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a69631d0-1263-769e-b232-4ab9160e0fa3",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20260803160041/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a69631d0-1263-769e-b232-4ab9160e0fa3"
+    }
+  ]
+}

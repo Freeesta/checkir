@@ -1,0 +1,34 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-2ct7",
+      "type": "database",
+      "title": "SWGDRUG monograph: 2C-T-7 (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/2C-T-7.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20241213082647/https://swgdrug.org/Monographs/2C-T-7.pdf"
+    },
+    {
+      "id": "curtis2003",
+      "type": "paper",
+      "title": "Postmortem identification and quantitation of 2,5-dimethoxy-4-n-propylthiophenethylamine using GC-MSD and GC-NPD (J Anal Toxicol 27(7):493-498)",
+      "authors": [
+        "B. Curtis",
+        "P. Kemp",
+        "L. Harty",
+        "C. Choi",
+        "D. Christensen"
+      ],
+      "year": 2003,
+      "doi": "10.1093/jat/27.7.493",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14607005/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260418121317/https://pubmed.ncbi.nlm.nih.gov/14607005/"
+    }
+  ]
+}

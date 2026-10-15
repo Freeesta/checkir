@@ -1,0 +1,39 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gish2025-fubiata",
+      "type": "paper",
+      "title": "Elucidation of human metabolism of ADB-FUBIATA for population exposure assessment (Environ Sci Pollut Res 32:30871-30880)",
+      "authors": [
+        "A. Gish",
+        "A. Peyré",
+        "C. Richeval",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1007/s11356-025-36571-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40576895/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "de-simone2026",
+      "type": "paper",
+      "title": "Human Stem Cell-Derived Neurospheroids and a Multi-Assay Strategy Provide Brain Cytotoxicity New Insights from ADB-FUBIATA Exposure (Neurotox Res 44(4))",
+      "authors": [
+        "U. De Simone",
+        "C. A. Locatelli",
+        "F. Caloni",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1007/s12640-026-00808-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42461479/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

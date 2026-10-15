@@ -1,0 +1,99 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-methcathinone",
+      "type": "database",
+      "title": "SWGDRUG monograph: Methcathinone (IR: KBr pellet, hydrochloride and base)",
+      "url": "https://www.swgdrug.org/Monographs/Methcathinone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207124110/https://swgdrug.org/Monographs/METHCATHINONE.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "asser2019",
+      "type": "paper",
+      "title": "Acute effects of methcathinone and manganese in mice: a dose response study (Heliyon 5(9):e02475)",
+      "authors": [
+        "Andres Asser",
+        "Sulev Kõks",
+        "Ursel Soomets",
+        "Anton Terasmaa",
+        "Martin Sauk",
+        "Mall Eltermaa",
+        "Piret Piip",
+        "Kumari Ubhayasekera",
+        "Jonas Bergquist",
+        "Pille Taba"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.heliyon.2019.e02475",
+      "url": "https://doi.org/10.1016/j.heliyon.2019.e02475",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "sanotsky2020",
+      "type": "paper",
+      "title": "Neuropathological Findings in Ephedrone Encephalopathy (Mov Disord 35(10):1858-1863)",
+      "authors": [
+        "Yanosh Sanotsky",
+        "Marianna Selikhova",
+        "Ludmyla Fedoryshyn",
+        "Petro Kuzyk",
+        "Yuriy Matviyenko",
+        "Orest Semeryak",
+        "Dorota Dziewulska",
+        "Janice L. Holton",
+        "Andrew J. Lees"
+      ],
+      "year": 2020,
+      "doi": "10.1002/mds.28125",
+      "url": "https://doi.org/10.1002/mds.28125",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "selikhova2016",
+      "type": "paper",
+      "title": "Analysis of a distinct speech disorder seen in chronic manganese toxicity following Ephedrone abuse (Clin Neurol Neurosurg 147:71-77)",
+      "authors": [
+        "M. Selikhova",
+        "E. Tripoliti",
+        "L. Fedoryshyn",
+        "Y. Matvienko",
+        "H. Stanetska",
+        "M. Boychuk",
+        "I. Komnatska",
+        "A. J. Lees",
+        "Y. Sanotsky"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.clineuro.2016.05.027",
+      "url": "https://doi.org/10.1016/j.clineuro.2016.05.027",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "ennok2019",
+      "type": "paper",
+      "title": "Cognitive profile of patients with manganese-methcathinone encephalopathy (Neurotoxicology 76:138-143)",
+      "authors": [
+        "Margus Ennok",
+        "Katrin Sikk",
+        "Sulev Haldre",
+        "Pille Taba"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuro.2019.10.007",
+      "url": "https://doi.org/10.1016/j.neuro.2019.10.007",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

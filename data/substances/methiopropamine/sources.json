@@ -1,0 +1,44 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "welter2013",
+      "type": "paper",
+      "title": "2-methiopropamine, a thiophene analogue of methamphetamine: studies on its metabolism and detectability in the rat and human using GC-MS and LC-(HR)-MS techniques (Anal Bioanal Chem 405(10):3125-3135)",
+      "authors": [
+        "J. Welter",
+        "M. R. Meyer",
+        "E. U. Wolf",
+        "W. Weinmann",
+        "P. Kavanagh",
+        "H. H. Maurer"
+      ],
+      "year": 2013,
+      "doi": "10.1007/s00216-013-6741-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23361230/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "camuto2021",
+      "type": "paper",
+      "title": "Urinary excretion profile of methiopropamine in mice following intraperitoneal administration: a liquid chromatography-tandem mass spectrometry investigation (Drug Test Anal 13(1):91-100)",
+      "authors": [
+        "C. Camuto",
+        "S. Pellegrini",
+        "F. De-Giorgio",
+        "X. de la Torre",
+        "M. Marti",
+        "M. Mazzarino",
+        "F. Botrè"
+      ],
+      "year": 2021,
+      "doi": "10.1002/dta.2900",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32678963/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

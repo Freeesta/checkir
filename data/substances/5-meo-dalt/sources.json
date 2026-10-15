@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "meng2025",
+      "type": "paper",
+      "title": "Metabolic profiling of 5-Methoxy-N,N-diallyltryptamine in human liver microsomes and zebrafish using LC-Orbitrap MS (J Chromatogr B 1256:124557)",
+      "authors": [
+        "L. Meng",
+        "Y. Wang",
+        "C. Zhong",
+        "S. Zhao"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.jchromb.2025.124557",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40081218/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

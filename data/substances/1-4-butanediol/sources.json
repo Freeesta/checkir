@@ -1,0 +1,41 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "liakoni2019",
+      "type": "paper",
+      "title": "Butanediol conversion to gamma-hydroxybutyrate markedly reduced by the alcohol dehydrogenase blocker fomepizole (Clin Pharmacol Ther 105:1196-1203)",
+      "authors": [
+        "E. Liakoni",
+        "H. Gugelmann",
+        "D. A. Dempsey",
+        "T. J. Wiegand",
+        "C. Havel",
+        "P. Jacob",
+        "N. L. Benowitz"
+      ],
+      "year": 2019,
+      "doi": "10.1002/cpt.1306",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30450642/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "skryabin2023",
+      "type": "paper",
+      "title": "Consequences of 1,4-butanediol misuse: a review (Psychopharmacol Bull 53:48-53)",
+      "authors": [
+        "V. Skryabin",
+        "Y. Shevtsova",
+        "E. A. Novoselova"
+      ],
+      "year": 2023,
+      "doi": "10.64719/pb.4475",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38076667/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kang2017",
+      "type": "paper",
+      "title": "Ephenidine: A new psychoactive agent with ketamine-like NMDA receptor antagonist properties (Neuropharmacology 112:144-149)",
+      "authors": [
+        "H. Kang",
+        "P. Park",
+        "Z. A. Bortolotto",
+        "S. D. Brandt",
+        "T. Colestock",
+        "J. Wallach",
+        "G. L. Collingridge",
+        "D. Lodge"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.neuropharm.2016.08.004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27520396/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260421072923/https://pubmed.ncbi.nlm.nih.gov/27520396/"
+    }
+  ]
+}

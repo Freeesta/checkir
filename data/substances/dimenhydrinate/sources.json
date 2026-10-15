@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "ehling2019",
+      "type": "paper",
+      "title": "Diphenhydramine pharmacokinetics after oral and intravenous administration of diphenhydramine and oral administration of dimenhydrinate to healthy dogs, and pharmacodynamic effect on histamine-induced wheal formation: a pilot study",
+      "authors": [
+        "Ehling, S",
+        "Bäumer, W",
+        "Papich, MG"
+      ],
+      "year": 2019,
+      "doi": "10.1111/vde.12727",
+      "url": "https://doi.org/10.1111/vde.12727",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260112184122/https://pubmed.ncbi.nlm.nih.gov/30779257/"
+    }
+  ]
+}

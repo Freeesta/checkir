@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "butalbital-label",
+      "type": "institution",
+      "title": "Butalbital, acetaminophen and caffeine tablets USP (Actavis Pharma, Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a6cbc17f-5c60-489c-8029-84b0add556d8",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

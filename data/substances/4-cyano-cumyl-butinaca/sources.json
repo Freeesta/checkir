@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "ozturk2018",
+      "type": "paper",
+      "title": "Detection of metabolites of the new synthetic cannabinoid CUMYL-4CN-BINACA in authentic urine samples and human liver microsomes using high-resolution mass spectrometry (Drug Test Anal 10:449-459)",
+      "authors": [
+        "Y. E. Öztürk",
+        "O. Yeter",
+        "S. Öztürk",
+        "G. Karakus",
+        "I. Ates",
+        "Y. Buyuk",
+        "T. Yurdun"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2248",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28691766/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204044420/https://pubmed.ncbi.nlm.nih.gov/28691766/"
+    }
+  ]
+}

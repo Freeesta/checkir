@@ -1,0 +1,42 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "daniels2026",
+      "type": "paper",
+      "title": "Kavalactone profiling of Piper methysticum root and rhizome extracts and the modulation of CYP450 activity in vitro (Chem Biol Interact 437:112219)",
+      "authors": [
+        "T. Daniels",
+        "K. Puchalski",
+        "S. Trapp",
+        "A. Jimoh",
+        "B. Baravati",
+        "Y. Shokoohinia",
+        "S. Smith",
+        "J. Langland"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.cbi.2026.112219",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431523/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "berry2019",
+      "type": "paper",
+      "title": "Cases of kava impairment in Iowa drivers (J Forensic Sci 64:1943-1949)",
+      "authors": [
+        "J. Berry",
+        "A. Gilbert",
+        "J. Grodnitzky"
+      ],
+      "year": 2019,
+      "doi": "10.1111/1556-4029.14130",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31305953/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

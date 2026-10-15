@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "banister2018-sdb006",
+      "type": "paper",
+      "title": "The chemistry and pharmacology of synthetic cannabinoid SDB-006 and its regioisomeric fluorinated and methoxylated analogs (Drug Test Anal)",
+      "authors": [
+        "S. D. Banister",
+        "A. Olson",
+        "M. Winchester",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2362",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29350472/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260112062152/https://pubmed.ncbi.nlm.nih.gov/29350472/"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kane2007",
+      "type": "paper",
+      "title": "Benzocaine-Induced Methemoglobinemia Based on the Mayo Clinic Experience From 28 478 Transesophageal Echocardiograms",
+      "authors": [
+        "Kane, Garvan C.",
+        "Hoehn, Suzette M.",
+        "Behrenbeck, Thomas R.",
+        "Mulvagh, Sharon L."
+      ],
+      "year": 2007,
+      "doi": "10.1001/archinte.167.18.1977",
+      "url": "https://doi.org/10.1001/archinte.167.18.1977",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241214003216/https://pubmed.ncbi.nlm.nih.gov/17923598/"
+    },
+    {
+      "id": "spiller2014",
+      "type": "paper",
+      "title": "Identification of N-Hydroxy-para-aminobenzoic acid in a cyanotic child after benzocaine exposure (Clin Toxicol 52:976-979)",
+      "authors": [
+        "Spiller, H.A.",
+        "Russell, J.L.",
+        "Casavant, M.J.",
+        "Ho, R.Y.",
+        "Gerona, R.R."
+      ],
+      "year": 2014,
+      "doi": "10.3109/15563650.2014.958615",
+      "url": "https://doi.org/10.3109/15563650.2014.958615",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

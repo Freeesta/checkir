@@ -1,0 +1,63 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wood2010",
+      "type": "paper",
+      "title": "Case series of individuals with analytically confirmed acute mephedrone toxicity (Clinical Toxicology 48)",
+      "authors": [
+        "David M. Wood",
+        "Susannah Davies",
+        "Shaun L. Greene",
+        "Jenny Button",
+        "David W. Holt",
+        "John Ramsey",
+        "Paul I. Dargan"
+      ],
+      "year": 2010,
+      "doi": "10.3109/15563650.2010.531021",
+      "url": "https://doi.org/10.3109/15563650.2010.531021",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "pozo2015",
+      "type": "paper",
+      "title": "Mass Spectrometric Evaluation of Mephedrone In Vivo Human Metabolism: Identification of Phase I and Phase II Metabolites, Including a Novel Succinyl Conjugate (Drug Metabolism and Disposition 43)",
+      "authors": [
+        "Óscar J. Pozo",
+        "María Ibáñez",
+        "Juan V. Sancho",
+        "Julio Lahoz-Beneytez",
+        "Magí Farré",
+        "Esther Papaseit",
+        "Rafael de la Torre",
+        "Félix Hernández"
+      ],
+      "year": 2015,
+      "doi": "10.1124/dmd.114.061416",
+      "url": "https://doi.org/10.1124/dmd.114.061416",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "olesti2017",
+      "type": "paper",
+      "title": "Pharmacokinetics of Mephedrone and Its Metabolites in Human by LC-MS/MS (The AAPS Journal 19)",
+      "authors": [
+        "Eulàlia Olesti",
+        "Magí Farré",
+        "Esther Papaseit",
+        "Aristotelis Krotonoulas",
+        "Mitona Pujadas",
+        "Rafael de la Torre",
+        "Óscar J. Pozo"
+      ],
+      "year": 2017,
+      "doi": "10.1208/s12248-017-0132-2",
+      "url": "https://doi.org/10.1208/s12248-017-0132-2",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

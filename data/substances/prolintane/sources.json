@@ -1,0 +1,50 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "espartero1997",
+      "type": "paper",
+      "title": "Direct determination of prolintane and its metabolite oxoprolintane in human urine by capillary zone electrophoresis and beta-cyclodextrin-modified micellar electrokinetic chromatography (J Chromatogr A 778)",
+      "authors": [
+        "A G Espartero",
+        "J A Pérez",
+        "A Zapardiel",
+        "E Bermejo",
+        "L Hernández"
+      ],
+      "year": 1997,
+      "doi": "10.1016/s0021-9673(97)00478-0",
+      "url": "https://doi.org/10.1016/s0021-9673(97)00478-0",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "rucker1992",
+      "type": "paper",
+      "title": "Study on the metabolism of racemic prolintane and its optically pure enantiomers (Xenobiotica 22)",
+      "authors": [
+        "G Rücker",
+        "M Neugebauer",
+        "D Zhong"
+      ],
+      "year": 1992,
+      "doi": "10.3109/00498259209046613",
+      "url": "https://doi.org/10.3109/00498259209046613",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "delbeke1996",
+      "type": "paper",
+      "title": "Doping in cyclism: results of unannounced controls in Flanders (1987-1994) (Int J Sports Med 17)",
+      "authors": [
+        "F T Delbeke"
+      ],
+      "year": 1996,
+      "doi": "10.1055/s-2007-972874",
+      "url": "https://doi.org/10.1055/s-2007-972874",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

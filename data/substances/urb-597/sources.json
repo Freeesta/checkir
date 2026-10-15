@@ -1,0 +1,34 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kathuria2003",
+      "type": "paper",
+      "title": "Modulation of anxiety through blockade of anandamide hydrolysis (Nat Med 9:76-81)",
+      "authors": [
+        "S. Kathuria",
+        "S. Gaetani",
+        "D. Fegley",
+        "F. Valiño",
+        "A. Duranti",
+        "A. Tontini",
+        "M. Mor",
+        "G. Tarzia",
+        "G. La Rana",
+        "A. Calignano",
+        "A. Giustino",
+        "M. Tattoli",
+        "M. Palmery",
+        "V. Cuomo",
+        "D. Piomelli"
+      ],
+      "year": 2003,
+      "doi": "10.1038/nm803",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12461523/",
+      "archive_url": "https://web.archive.org/web/20261001095413/https://pubmed.ncbi.nlm.nih.gov/12461523/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

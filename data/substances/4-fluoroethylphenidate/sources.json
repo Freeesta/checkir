@@ -1,0 +1,29 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "sakamoto2023",
+      "type": "paper",
+      "title": "Analytical characterization and differentiation between threo- and erythro-4-fluoroethylphenidate (Forensic Toxicol 41)",
+      "authors": [
+        "M Sakamoto",
+        "T Suzuki",
+        "D Teraoka",
+        "K Tanaka",
+        "Y Saeki",
+        "K Kishimoto",
+        "M Nagashima",
+        "J Nakajima",
+        "J Suzuki",
+        "A Inomata",
+        "T Moriyasu",
+        "H Fukaya"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s11419-023-00664-y",
+      "url": "https://doi.org/10.1007/s11419-023-00664-y",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

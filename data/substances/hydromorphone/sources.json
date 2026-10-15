@@ -1,0 +1,42 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "coates2025",
+      "type": "paper",
+      "title": "UGT2B7-mediated drug-drug interaction between cannabinoids and hydromorphone (Drug Metab Dispos 53:100135)",
+      "authors": [
+        "S. Coates",
+        "K. Bardhi",
+        "M. Zhao",
+        "P. Lazarus"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.dmd.2025.100135",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40925219/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lohela2021",
+      "type": "paper",
+      "title": "Rifampin reduces the plasma concentrations of oral and intravenous hydromorphone in healthy volunteers (Anesth Analg 133:423-434)",
+      "authors": [
+        "T. J. Lohela",
+        "S. Poikola",
+        "M. Neuvonen",
+        "M. Niemi",
+        "J. T. Backman",
+        "K. T. Olkkola",
+        "T. O. Lilius"
+      ],
+      "year": 2021,
+      "doi": "10.1213/ANE.0000000000005229",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33177323/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

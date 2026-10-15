@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "li2026",
+      "type": "paper",
+      "title": "Study on phase I metabolic processes and metabolite biomarker identification of synthetic cannabinoids 5F-ADB-PINACA and 5F-ADBICA in human liver microsomes and zebrafish (Molecules 31:250)",
+      "authors": [
+        "H. Li",
+        "H. Zheng",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.3390/molecules31020250",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41599300/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

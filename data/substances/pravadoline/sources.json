@@ -1,0 +1,41 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "dambra1992",
+      "type": "paper",
+      "title": "Conformationally restrained analogues of pravadoline: nanomolar potent, enantioselective, (aminoalkyl)indole agonists of the cannabinoid receptor (J Med Chem 35:124-135)",
+      "authors": [
+        "T. E. D'Ambra",
+        "K. G. Estep",
+        "M. R. Bell",
+        "et al."
+      ],
+      "year": 1992,
+      "doi": "10.1021/jm00079a016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1732519/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260920225309/https://pubmed.ncbi.nlm.nih.gov/1732519/"
+    },
+    {
+      "id": "compton1992",
+      "type": "paper",
+      "title": "Aminoalkylindole analogs: cannabimimetic activity of a class of compounds structurally distinct from delta 9-tetrahydrocannabinol (J Pharmacol Exp Ther 263:1118-1126)",
+      "authors": [
+        "D. R. Compton",
+        "L. H. Gold",
+        "S. J. Ward",
+        "R. L. Balster",
+        "B. R. Martin"
+      ],
+      "year": 1992,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1335057/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260107144851/https://pubmed.ncbi.nlm.nih.gov/1335057/"
+    }
+  ]
+}

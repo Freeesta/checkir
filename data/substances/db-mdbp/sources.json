@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "uchiyama2015",
+      "type": "paper",
+      "title": "A phenethylamine derivative 25I-NB34MD and a piperazine derivative 1-(3,4-difluoromethylenedioxybenzyl)piperazine (DF-MDBP), newly detected in illicit products (Forensic Toxicol 34:166-173)",
+      "authors": [
+        "N. Uchiyama",
+        "R. Kikura-Hanajiri",
+        "T. Hakamatsuka"
+      ],
+      "year": 2015,
+      "doi": "10.1007/s11419-015-0304-7",
+      "url": "https://doi.org/10.1007/s11419-015-0304-7",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

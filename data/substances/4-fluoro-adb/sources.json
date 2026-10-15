@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "dea2017",
+      "type": "institution",
+      "title": "Drug Enforcement Administration: Schedules of Controlled Substances: Temporary Placement of Six Synthetic Cannabinoids (5F-ADB, 5F-AMB, 5F-APINACA, ADB-FUBINACA, MDMB-CHMICA and MDMB-FUBINACA) into Schedule I (Fed Regist 82(67):17119-24)",
+      "year": 2017,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28425681/",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    }
+  ]
+}

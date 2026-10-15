@@ -1,0 +1,31 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "lin2007",
+      "type": "paper",
+      "title": "Recent paramethoxymethamphetamine (PMMA) deaths in Taiwan (J Anal Toxicol 31:109-13)",
+      "authors": [
+        "D. L. Lin",
+        "H. C. Liu",
+        "H. L. Yin"
+      ],
+      "year": 2007,
+      "doi": "10.1093/jat/31.2.109",
+      "url": "https://doi.org/10.1093/jat/31.2.109",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "swgdrug-pmma",
+      "type": "database",
+      "title": "SWGDRUG monograph: p-Methoxymethamphetamine (PMMA) (IR: HCl and base, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/p-METHOXYMETHAMPHETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213081332/https://swgdrug.org/Monographs/p-METHOXYMETHAMPHETAMINE.pdf",
+      "tier": "agency"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "mortele2018",
+      "type": "paper",
+      "title": "In vitro Phase I and Phase II metabolism of the new designer benzodiazepine cloniprazepam using liquid chromatography coupled to quadrupole time-of-flight mass spectrometry (J Pharm Biomed Anal 153:158-167)",
+      "authors": [
+        "Mortelé O",
+        "Vervliet P",
+        "Gys C",
+        "Degreef M",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jpba.2018.02.032",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29494888/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

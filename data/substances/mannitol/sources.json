@@ -1,0 +1,50 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "lenhart2017",
+      "type": "paper",
+      "title": "A Systematic Review of the Effects of Polyols on Gastrointestinal Health and Irritable Bowel Syndrome",
+      "authors": [
+        "Lenhart, Adrienne",
+        "Chey, William D"
+      ],
+      "year": 2017,
+      "doi": "10.3945/an.117.015560",
+      "url": "https://doi.org/10.3945/an.117.015560",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20240909215346/https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5508768/"
+    },
+    {
+      "id": "laker1982",
+      "type": "paper",
+      "title": "Evaluation of mannitol for use as a probe marker of gastrointestinal permeability in man (Eur J Clin Invest 12:485-491)",
+      "authors": [
+        "Laker, M.F.",
+        "Bull, H.J.",
+        "Menzies, I.S."
+      ],
+      "year": 1982,
+      "doi": "10.1111/j.1365-2362.1982.tb02230.x",
+      "url": "https://doi.org/10.1111/j.1365-2362.1982.tb02230.x",
+      "tier": "primary",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "rajkumar2026",
+      "type": "paper",
+      "title": "Single-Step Production of Mannitol From Yacon Fructo-Oligosaccharides Using Fructophilic Lactic Acid Bacteria",
+      "authors": [
+        "Rajkumar, A S.",
+        "Leech, J.",
+        "McAuliffe, O."
+      ],
+      "year": 2026,
+      "doi": "10.1002/mbo3.70387",
+      "url": "https://doi.org/10.1002/mbo3.70387",
+      "license": "CC BY 4.0",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

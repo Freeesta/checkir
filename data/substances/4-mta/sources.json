@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "lai2015",
+      "type": "paper",
+      "title": "Liquid chromatography-quadrupole time-of-flight mass spectrometry for screening in vitro drug metabolites in humans: investigation on seven phenethylamine-based designer drugs (J Pharm Biomed Anal 114:355-375)",
+      "authors": [
+        "Foon Yin Lai",
+        "Claudio Erratico",
+        "Juliet Kinyua",
+        "Jochen F. Mueller",
+        "Adrian Covaci",
+        "Alexander L. N. van Nuijs"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.jpba.2015.06.016",
+      "url": "https://doi.org/10.1016/j.jpba.2015.06.016",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

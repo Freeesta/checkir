@@ -1,0 +1,27 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hurley2022-cbdv",
+      "type": "paper",
+      "title": "Efficacy and safety of cannabidivarin treatment of epilepsy in girls with Rett syndrome: a phase 1 clinical trial (Epilepsia 63:1736-1747)",
+      "authors": [
+        "E. N. Hurley",
+        "C. J. Ellaway",
+        "A. M. Johnson",
+        "L. Truong",
+        "R. Gordon",
+        "P. Galettis",
+        "J. H. Martin",
+        "J. A. Lawson"
+      ],
+      "year": 2022,
+      "doi": "10.1111/epi.17247",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35364618/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260425201942/https://pubmed.ncbi.nlm.nih.gov/35364618/"
+    }
+  ]
+}

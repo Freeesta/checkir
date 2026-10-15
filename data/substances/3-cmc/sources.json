@@ -1,0 +1,29 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "bassi2025",
+      "type": "paper",
+      "title": "3-CMC: Acute Effects in Male and Female Mice, Human Intoxication Case Series (Italy, 2014-2025), and Prediction of ADMET Properties (Int J Mol Sci 26(23))",
+      "authors": [
+        "Marta Bassi",
+        "Elisa Roda",
+        "Giorgia Corli",
+        "Sabrine Bilel",
+        "Fabrizio De Luca",
+        "Tatiana Bernardi",
+        "Adolfo Gregori",
+        "Fabiana Di Rosa",
+        "Davide Lonati",
+        "Carlo Alessandro Locatelli",
+        "Matteo Marti"
+      ],
+      "year": 2025,
+      "doi": "10.3390/ijms262311600",
+      "url": "https://doi.org/10.3390/ijms262311600",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

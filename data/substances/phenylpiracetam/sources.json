@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "Neuroprotective and anti-inflammatory activity of DAT inhibitor R-phenylpiracetam in experimental models of inflammation in male mice (Inflammopharmacology 28:1283-1292)",
+      "authors": [
+        "L. Zvejniece",
+        "B. Zvejniece",
+        "M. Videja",
+        "G. Stelfa",
+        "E. Vavers",
+        "S. Grinberga",
+        "B. Svalbe",
+        "M. Dambrova"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s10787-020-00705-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32279140/",
+      "tier": "primary",
+      "id": "zvejniece2020",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

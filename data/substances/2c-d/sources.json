@@ -1,0 +1,20 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "theobald2006d",
+      "type": "paper",
+      "title": "Studies on the metabolism and toxicological detection of the designer drug 2,5-dimethoxy-4-methyl-beta-phenethylamine (2C-D) in rat urine using gas chromatographic/mass spectrometric techniques (J Mass Spectrom 41(11):1509-1519)",
+      "authors": [
+        "Denis S. Theobald",
+        "Hans H. Maurer"
+      ],
+      "year": 2006,
+      "doi": "10.1002/jms.1128",
+      "url": "https://doi.org/10.1002/jms.1128",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "theobald2006i",
+      "type": "paper",
+      "title": "New designer drug 4-iodo-2,5-dimethoxy-beta-phenethylamine (2C-I): studies on its metabolism and toxicological detection in rat urine using gas chromatographic/mass spectrometric and capillary electrophoretic/mass spectrometric techniques (J Mass Spectrom 41(7):872-886)",
+      "authors": [
+        "Denis S. Theobald",
+        "Markus Pütz",
+        "Eberhard Schneider",
+        "Hans H. Maurer"
+      ],
+      "year": 2006,
+      "doi": "10.1002/jms.1045",
+      "url": "https://doi.org/10.1002/jms.1045",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "drees2009",
+      "type": "paper",
+      "title": "Morbidity involving the hallucinogenic designer amines MDA and 2C-I (J Forensic Sci 54(6):1485-1487)",
+      "authors": [
+        "J. C. Drees",
+        "J. A. Stone",
+        "A. H. Wu"
+      ],
+      "year": 2009,
+      "doi": "10.1111/j.1556-4029.2009.01199.x",
+      "url": "https://doi.org/10.1111/j.1556-4029.2009.01199.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

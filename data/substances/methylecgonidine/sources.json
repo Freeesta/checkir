@@ -1,0 +1,39 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "jacob1990",
+      "type": "paper",
+      "title": "A pyrolysis product, anhydroecgonine methyl ester (methylecgonidine), is in the urine of cocaine smokers (J Anal Toxicol 14:353-357)",
+      "authors": [
+        "P. Jacob 3rd",
+        "E. R. Lewis",
+        "B. A. Elias-Baker",
+        "R. T. Jones"
+      ],
+      "year": 1990,
+      "doi": "10.1093/jat/14.6.353",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2087095/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "romero-norena2024",
+      "type": "paper",
+      "title": "Toxicology of anhydroecgonine methyl ester: a systematic review of a cocaine pyrolysis product (Toxicol Rep 13:101690)",
+      "authors": [
+        "A. Romero-Noreña",
+        "H. J. Contreras-Martinez",
+        "M. Mendivil-Perez"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.toxrep.2024.101690",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39104366/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250204001811/https://pubmed.ncbi.nlm.nih.gov/39104366/"
+    }
+  ]
+}

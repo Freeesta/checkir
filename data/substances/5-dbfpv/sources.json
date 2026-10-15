@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "qian2016-pyrrolidinyl",
+      "type": "paper",
+      "title": "Identification of five pyrrolidinyl substituted cathinones and the collision-induced dissociation of electrospray-generated pyrrolidinyl substituted cathinones (Drug Test Anal 9:778-787)",
+      "authors": [
+        "Z. Qian",
+        "W. Jia",
+        "T. Li",
+        "Z. Hua",
+        "C. Liu"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.2035",
+      "url": "https://doi.org/10.1002/dta.2035",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

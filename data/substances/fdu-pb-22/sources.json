@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "diao2016-fdupb22",
+      "type": "paper",
+      "title": "In vitro and in vivo human metabolism of synthetic cannabinoids FDU-PB-22 and FUB-PB-22 (AAPS J 18:455-464)",
+      "authors": [
+        "X. Diao",
+        "K. B. Scheidweiler",
+        "A. Wohlfarth",
+        "S. Pang",
+        "R. Kronstrand",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1208/s12248-016-9867-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26810398/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

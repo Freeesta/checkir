@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "katselou2017",
+      "type": "paper",
+      "title": "Metabolites replace the parent drug in the drug arena. The cases of fonazepam and nifoxipam (Forensic Toxicol 35(1):1-10)",
+      "authors": [
+        "Katselou M",
+        "Papoutsis I",
+        "Nikolaou P",
+        "Spiliopoulou C",
+        "et al."
+      ],
+      "year": 2017,
+      "doi": "10.1007/s11419-016-0338-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28127407/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    }
+  ]
+}

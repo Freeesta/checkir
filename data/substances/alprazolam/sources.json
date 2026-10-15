@@ -1,0 +1,60 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-alprazolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Alprazolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Alprazolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213092300/https://swgdrug.org/Monographs/Alprazolam.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "greenblatt1993",
+      "type": "paper",
+      "title": "Clinical pharmacokinetics of alprazolam. Therapeutic implications (Clin Pharmacokinet 24(6):453-471)",
+      "authors": [
+        "D. J. Greenblatt",
+        "C. E. Wright"
+      ],
+      "year": 1993,
+      "doi": "10.2165/00003088-199324060-00003",
+      "url": "https://doi.org/10.2165/00003088-199324060-00003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "greenblatt1993b",
+      "type": "paper",
+      "title": "Alprazolam pharmacokinetics, metabolism, and plasma levels: clinical implications (J Clin Psychiatry 54 Suppl:4-11)",
+      "authors": [
+        "D. J. Greenblatt",
+        "L. L. von Moltke",
+        "J. S. Harmatz",
+        "D. A. Ciraulo",
+        "R. I. Shader"
+      ],
+      "year": 1993,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8262889/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "huybrechts1991",
+      "type": "paper",
+      "title": "The pharmacology of alprazolam: a review (Clin Ther 13(1):100-117)",
+      "authors": [
+        "I. Huybrechts"
+      ],
+      "year": 1991,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2029716/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    }
+  ]
+}

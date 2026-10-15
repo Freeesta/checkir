@@ -1,0 +1,28 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "salerno2025",
+      "type": "paper",
+      "title": "Investigation of adulterated seized heroin samples and direct stereochemical analysis of methorphan by chiral HPLC-MS/MS (Anal Bioanal Chem 417:5187-5198)",
+      "authors": [
+        "Salerno TMG",
+        "Zamengo L",
+        "Coppolino C",
+        "Cucinotta L",
+        "Donato P",
+        "Trovato E",
+        "Vento F",
+        "Zancanaro F",
+        "Frison G",
+        "Mondello L"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s00216-025-06063-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40826236/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "franz2017",
+      "type": "paper",
+      "title": "In vitro metabolism of the synthetic cannabinoid 3,5-AB-CHMFUPPYCA and its 5,3-regioisomer and investigation of their thermal stability (Drug Test Anal 9:311-316)",
+      "authors": [
+        "F. Franz",
+        "V. Angerer",
+        "S. D. Brandt",
+        "G. McLaughlin",
+        "P. V. Kavanagh",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.1950",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26888282/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

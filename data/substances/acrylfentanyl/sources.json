@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "cieri2024",
+      "type": "paper",
+      "title": "Evaluating cross-reactivity of new psychoactive substances (NPS) in human whole blood by enzyme-linked immunosorbent assay (ELISA) (J Anal Toxicol 48(3):191-196)",
+      "authors": [
+        "G. Cieri",
+        "A. L. A. Mohr",
+        "R. Mastrovito",
+        "B. K. Logan"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae017",
+      "url": "https://doi.org/10.1093/jat/bkae017",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240804120257/https://pubmed.ncbi.nlm.nih.gov/38456706/"
+    }
+  ]
+}

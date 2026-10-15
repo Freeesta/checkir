@@ -1,0 +1,31 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-etizolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Etizolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Etizolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "fracasso1991",
+      "type": "paper",
+      "title": "Single and multiple dose pharmacokinetics of etizolam in healthy subjects (Eur J Clin Pharmacol 40(2):181-185)",
+      "authors": [
+        "C. Fracasso",
+        "S. Confalonieri",
+        "S. Garattini",
+        "S. Caccia"
+      ],
+      "year": 1991,
+      "doi": "10.1007/BF00280074",
+      "url": "https://doi.org/10.1007/BF00280074",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

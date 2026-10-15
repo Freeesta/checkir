@@ -1,0 +1,76 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "owusu-antwi2025",
+      "type": "paper",
+      "title": "Management of xylazine toxicity, overdose, dependence, and withdrawal: A systematic review",
+      "authors": [
+        "Owusu-Antwi, P.",
+        "Atodaria, P.",
+        "Appiah-Kubi, E.",
+        "Shah, Z.",
+        "Garcia, E M."
+      ],
+      "year": 2025,
+      "doi": "10.1111/ajad.70051",
+      "url": "https://doi.org/10.1111/ajad.70051",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "choon2023",
+      "type": "paper",
+      "title": "A case series of accidental xylazine intoxication in humans; Is there a role of naloxone as an antidote?",
+      "authors": [
+        "Choon, L K.",
+        "Khiruddin, A I.",
+        "Annuar, W M W M.",
+        "Shamsuddin, S R."
+      ],
+      "year": 2023,
+      "doi": "10.4103/tjem.tjem_198_22",
+      "url": "https://doi.org/10.4103/tjem.tjem_198_22",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250206004155/https://pubmed.ncbi.nlm.nih.gov/37169031/",
+      "tier": "primary"
+    },
+    {
+      "id": "vaile2026",
+      "type": "paper",
+      "title": "Xylazine-Associated Wounds: A Scoping Review of Clinical Presentation and Management",
+      "authors": [
+        "Vaile, J R.",
+        "Connolly, W C.",
+        "Zavitsanos, A P.",
+        "Isch, E L.",
+        "Zavodnick, J H.",
+        "Tannouri, S.",
+        "McMahon, H A."
+      ],
+      "year": 2026,
+      "doi": "10.1097/ASW.0000000000000436",
+      "url": "https://doi.org/10.1097/ASW.0000000000000436",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "lin2025",
+      "type": "paper",
+      "title": "Xylazine Pharmacokinetics in Patients Testing Positive for Fentanyl and Xylazine",
+      "authors": [
+        "Lin, Y.",
+        "Farnsworth, C W.",
+        "Azimi, V.",
+        "Liss, D B.",
+        "Mullins, M E.",
+        "Crews, B O."
+      ],
+      "year": 2025,
+      "doi": "10.1093/clinchem/hvae163",
+      "url": "https://doi.org/10.1093/clinchem/hvae163",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

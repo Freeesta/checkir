@@ -1,0 +1,41 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "fogarty2018",
+      "type": "paper",
+      "title": "Analysis of Fentanyl and 18 Novel Fentanyl Analogs and Metabolites by LC-MS-MS, and report of Fatalities Associated with Methoxyacetylfentanyl and Cyclopropylfentanyl (J Anal Toxicol 42:592-604)",
+      "authors": [
+        "M. F. Fogarty",
+        "D. M. Papsun",
+        "B. K. Logan"
+      ],
+      "year": 2018,
+      "doi": "10.1093/jat/bky035",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29750250/",
+      "archive_url": "https://web.archive.org/web/20260725102208/https://pubmed.ncbi.nlm.nih.gov/29750250/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "kronstrand2021",
+      "type": "paper",
+      "title": "Circumstances, Postmortem Findings, Blood Concentrations and Metabolism in a Series of Methoxyacetylfentanyl-Related Deaths (J Anal Toxicol 45:760-771)",
+      "authors": [
+        "R. Kronstrand",
+        "A. Åstrand",
+        "S. Watanabe",
+        "H. Gréen",
+        "S. Vikingsson"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkab053",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34009362/",
+      "archive_url": "https://web.archive.org/web/20250202024558/https://pubmed.ncbi.nlm.nih.gov/34009362/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

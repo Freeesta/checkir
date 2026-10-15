@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "abiedalla2016",
+      "type": "paper",
+      "title": "GC-MS, MS/MS and GC-IR Analysis of a Series of Methylenedioxyphenyl-Aminoketones: Precursors, Ring Regioisomers and Side-Chain Homologs of 3,4-Methylenedioxypyrovalerone (J Chromatogr Sci 55(2):99-108)",
+      "authors": [
+        "Younis F. Hamad Abiedalla",
+        "Karim Abdel-Hay",
+        "Jack DeRuiter",
+        "C. Randall Clark"
+      ],
+      "year": 2017,
+      "doi": "10.1093/chromsci/bmw159",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27733481/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

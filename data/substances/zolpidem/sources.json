@@ -1,0 +1,38 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "ambien-label",
+      "type": "institution",
+      "title": "AMBIEN (zolpidem tartrate) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260828133129/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452",
+      "tier": "agency"
+    },
+    {
+      "id": "vonmoltke1999",
+      "type": "paper",
+      "title": "Zolpidem metabolism in vitro: responsible cytochromes, chemical inhibitors, and in vivo correlations (Br J Clin Pharmacol 48:89-97)",
+      "authors": [
+        "L. L. von Moltke",
+        "D. J. Greenblatt",
+        "B. W. Granda",
+        "S. X. Duan",
+        "J. M. Grassi",
+        "K. Venkatakrishnan",
+        "J. S. Harmatz",
+        "R. I. Shader"
+      ],
+      "year": 1999,
+      "doi": "10.1046/j.1365-2125.1999.00953.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10383565/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250418190101/https://pubmed.ncbi.nlm.nih.gov/10383565/"
+    }
+  ]
+}

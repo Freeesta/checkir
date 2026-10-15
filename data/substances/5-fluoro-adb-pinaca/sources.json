@@ -1,0 +1,62 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "carlier2017-adb-pinaca",
+      "type": "paper",
+      "title": "Distinguishing Intake of New Synthetic Cannabinoids ADB-PINACA and 5F-ADB-PINACA with Human Hepatocyte Metabolites and High-Resolution Mass Spectrometry (Clin Chem 63(5):1008-1021)",
+      "authors": [
+        "J. Carlier",
+        "X. Diao",
+        "K. B. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2017,
+      "doi": "10.1373/clinchem.2016.267575",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28302730/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "li2026-5f-adb-pinaca",
+      "type": "paper",
+      "title": "Study on Phase I Metabolic Processes and Metabolite Biomarker Identification of Synthetic Cannabinoids 5F-ADB-PINACA and 5F-ADBICA in Human Liver Microsomes and Zebrafish Model (Molecules 31(2))",
+      "authors": [
+        "H. Li",
+        "H. Zheng",
+        "S. Zhong",
+        "Y. Zhao",
+        "J. Lin",
+        "H. Su",
+        "Z. Qian",
+        "Y. Wang"
+      ],
+      "year": 2026,
+      "doi": "10.3390/molecules31020250",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41599300/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260222142849/https://pubmed.ncbi.nlm.nih.gov/41599300/"
+    },
+    {
+      "id": "musile2023",
+      "type": "paper",
+      "title": "Development and Validation of a Rapid Method for Identification of New Synthetic Cannabinoids in Hair Based on High-Performance Liquid Chromatography-Ion Trap Mass Spectrometry Using a Simplified User Interface (J Anal Toxicol 47(1):72-80)",
+      "authors": [
+        "G. Musile",
+        "C. Palacio",
+        "M. Murari",
+        "S. Appolonova",
+        "F. Tagliaro"
+      ],
+      "year": 2023,
+      "doi": "10.1093/jat/bkac027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35536611/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

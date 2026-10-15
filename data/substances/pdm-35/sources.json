@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "mclaughlin2018",
+      "type": "paper",
+      "title": "Synthesis, analytical characterization, and monoamine transporter activity of the new psychoactive substance 4-methylphenmetrazine (4-MPM), with differentiation from its ortho- and meta- positional isomers (Drug Test Anal 10:1404-1416)",
+      "authors": [
+        "G. McLaughlin",
+        "M. H. Baumann",
+        "et al.",
+        "S. D. Brandt"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2396",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29673128/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

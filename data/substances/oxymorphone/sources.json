@@ -1,0 +1,31 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "prommer2006",
+      "type": "paper",
+      "title": "Oxymorphone: a review (Support Care Cancer 14:109-115)",
+      "authors": [
+        "E. Prommer"
+      ],
+      "year": 2006,
+      "doi": "10.1007/s00520-005-0917-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16317569/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250202095451/https://pubmed.ncbi.nlm.nih.gov/16317569/"
+    },
+    {
+      "id": "oxymorphone-label",
+      "type": "institution",
+      "title": "Oxymorphone hydrochloride tablets (Hikma Pharmaceuticals USA Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3eb971cf-ab82-49f3-a46c-4d76a8ce599e",
+      "archive_url": "https://web.archive.org/web/20260802152427/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3eb971cf-ab82-49f3-a46c-4d76a8ce599e",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

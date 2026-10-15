@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "Detection and identification of the designer benzodiazepine flubromazepam and preliminary data on its metabolism and pharmacokinetics (J Mass Spectrom 48:1150-1159)",
+      "authors": [
+        "B. Moosmann",
+        "L. M. Huppertz",
+        "M. Hutter",
+        "A. Buchwald",
+        "S. Ferlaino",
+        "V. Auwärter"
+      ],
+      "year": 2013,
+      "doi": "10.1002/jms.3279",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24259203/",
+      "tier": "primary",
+      "id": "moosmann2013",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260909095202/https://pubmed.ncbi.nlm.nih.gov/24259203/"
+    }
+  ]
+}

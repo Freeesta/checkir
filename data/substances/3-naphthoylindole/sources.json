@@ -1,0 +1,49 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "huffman2005",
+      "type": "paper",
+      "title": "Structure-activity relationships for 1-alkyl-3-(1-naphthoyl)indoles at the cannabinoid CB1 and CB2 receptors: steric and electronic effects of naphthoyl substituents (Bioorg Med Chem 13:89-112)",
+      "authors": [
+        "J. W. Huffman",
+        "G. Zengin",
+        "M. J. Wu",
+        "J. Lu",
+        "G. Hynd",
+        "K. Bushell",
+        "A. L. S. Thompson",
+        "S. Bushell",
+        "C. Tartal",
+        "D. P. Hurst",
+        "P. H. Reggio",
+        "D. E. Selley",
+        "M. P. Cassidy",
+        "J. L. Wiley",
+        "B. R. Martin"
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.bmc.2004.09.050",
+      "url": "https://doi.org/10.1016/j.bmc.2004.09.050",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "wiley2017",
+      "type": "paper",
+      "title": "Combination chemistry: structure-activity relationships of novel psychoactive cannabinoids (Curr Top Behav Neurosci 32:231-248)",
+      "authors": [
+        "J. L. Wiley",
+        "J. A. Marusich",
+        "B. F. Thomas"
+      ],
+      "year": 2017,
+      "doi": "10.1007/7854_2016_17",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27753007/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    }
+  ]
+}

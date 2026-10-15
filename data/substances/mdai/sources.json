@@ -1,0 +1,137 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gallagher2012",
+      "type": "paper",
+      "title": "5,6-Methylenedioxy-2-aminoindane: from laboratory curiosity to 'legal high' (Hum Psychopharmacol 27:106-12)",
+      "authors": [
+        "C. T. Gallagher",
+        "S. Assi",
+        "J. L. Stair",
+        "S. Fergus",
+        "O. Corazza",
+        "J. M. Corkery",
+        "F. Schifano"
+      ],
+      "year": 2012,
+      "doi": "10.1002/hup.1255",
+      "url": "https://doi.org/10.1002/hup.1255",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "pinterova2017",
+      "type": "paper",
+      "title": "Synthetic Aminoindanes: A Summary of Existing Knowledge (Front Psychiatry 8:236)",
+      "authors": [
+        "N. Pinterova",
+        "R. R. Horsley",
+        "T. Palenicek"
+      ],
+      "year": 2017,
+      "doi": "10.3389/fpsyt.2017.00236",
+      "url": "https://doi.org/10.3389/fpsyt.2017.00236",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "simmler2014",
+      "type": "paper",
+      "title": "Pharmacological profiles of aminoindanes, piperazines, and pipradrol derivatives (Biochem Pharmacol 88:237-44)",
+      "authors": [
+        "L. D. Simmler",
+        "A. Rickli",
+        "Y. Schramm",
+        "M. C. Hoener",
+        "M. E. Liechti"
+      ],
+      "year": 2014,
+      "doi": "10.1016/j.bcp.2014.01.024",
+      "url": "https://doi.org/10.1016/j.bcp.2014.01.024",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "zidkova2017",
+      "type": "paper",
+      "title": "Study on the metabolism of 5,6-methylenedioxy-2-aminoindane (MDAI) in rats: identification of urinary metabolites (Xenobiotica 47:505-514)",
+      "authors": [
+        "M. Židková",
+        "I. Linhart",
+        "M. Balíková",
+        "M. Himl",
+        "L. Váňa",
+        "M. Vetýška",
+        "T. Páleníček",
+        "E. Lhotková",
+        "M. Dušek"
+      ],
+      "year": 2017,
+      "doi": "10.1080/00498254.2016.1199919",
+      "url": "https://doi.org/10.1080/00498254.2016.1199919",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "angerer2024",
+      "type": "paper",
+      "title": "Acute psychotropic, autonomic, and endocrine effects of 5,6-methylenedioxy-2-aminoindane (MDAI) compared with 3,4-methylenedioxymethamphetamine (MDMA) in human volunteers: A self-administration study (Drug Test Anal 16:1002-1011)",
+      "authors": [
+        "V. Angerer",
+        "Y. Schmid",
+        "F. Franz",
+        "H. Gnann",
+        "J. M. Speer",
+        "A. Gnann",
+        "S. Helmecke",
+        "A. Buchwald",
+        "S. D. Brandt",
+        "T. Passie",
+        "M. E. Liechti",
+        "V. Auwärter"
+      ],
+      "year": 2024,
+      "doi": "10.1002/dta.3622",
+      "url": "https://doi.org/10.1002/dta.3622",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "staeheli2017",
+      "type": "paper",
+      "title": "Postmortem distribution and redistribution of MDAI and 2-MAPB in blood and alternative matrices (Forensic Sci Int 279:83-87)",
+      "authors": [
+        "S. N. Staeheli",
+        "M. I. Boxler",
+        "A. Oestreich",
+        "M. Marti",
+        "D. Gascho",
+        "S. A. Bolliger",
+        "T. Kraemer",
+        "A. E. Steuer"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.forsciint.2017.08.007",
+      "url": "https://doi.org/10.1016/j.forsciint.2017.08.007",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "swgdrug-mdai",
+      "type": "database",
+      "title": "SWGDRUG monograph: 5,6-MDAI (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/5,6-MDAI.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241212101632/https://swgdrug.org/Monographs/5,6-MDAI.pdf",
+      "tier": "agency"
+    }
+  ]
+}

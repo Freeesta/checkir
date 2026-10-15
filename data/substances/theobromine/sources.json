@@ -1,0 +1,54 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gates1999",
+      "type": "paper",
+      "title": "Cytochrome P450 isoform selectivity in human hepatic theobromine metabolism (Br J Clin Pharmacol 47:299-305)",
+      "authors": [
+        "S. Gates",
+        "J. O. Miners"
+      ],
+      "year": 1999,
+      "doi": "10.1046/j.1365-2125.1999.00890.x",
+      "url": "https://doi.org/10.1046/j.1365-2125.1999.00890.x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "goya2022",
+      "type": "paper",
+      "title": "From Cocoa to Chocolate: Effect of Processing on Flavanols and Methylxanthines and Their Mechanisms of Action (Int J Mol Sci 23:14365)",
+      "authors": [
+        "L. Goya",
+        "J. E. Kongor",
+        "S. de Pascual-Teresa"
+      ],
+      "year": 2022,
+      "doi": "10.3390/ijms232214365",
+      "url": "https://doi.org/10.3390/ijms232214365",
+      "tier": "review",
+      "license": "CC BY 4.0; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "cova2019",
+      "type": "paper",
+      "title": "Exploring cocoa properties: is theobromine a cognitive modulator? (Psychopharmacology 236:561-572)",
+      "authors": [
+        "I. Cova",
+        "V. Leta",
+        "C. Mariani",
+        "L. Pantoni",
+        "S. Pomati"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00213-019-5172-0",
+      "url": "https://doi.org/10.1007/s00213-019-5172-0",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

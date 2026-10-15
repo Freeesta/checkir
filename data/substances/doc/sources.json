@@ -1,0 +1,74 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-doc",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Chloro-2,5-dimethoxyamphetamine (DOC) (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4-Chloro-2,5-dimethoxyamphetamine.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20241212101514/https://swgdrug.org/Monographs/4-Chloro-2,5-dimethoxyamphetamine.pdf"
+    },
+    {
+      "id": "barnett2014",
+      "type": "paper",
+      "title": "A fatal intoxication of 2,5-dimethoxy-4-chloroamphetamine: a case report (J Anal Toxicol 38(8):589-591)",
+      "authors": [
+        "R. Y. Barnett",
+        "D. D. Baker",
+        "N. E. Kelly",
+        "C. E. McGuire",
+        "T. C. Fassette",
+        "J. M. Gorniak"
+      ],
+      "year": 2014,
+      "doi": "10.1093/jat/bku087",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25217551/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "lelievre2022",
+      "type": "paper",
+      "title": "Difficulties interpreting concentrations in fatal cases: example of 2,5-dimethoxy-4-chloroamphetamine (Forensic Toxicol 40(2):383-392)",
+      "authors": [
+        "B. Lelievre",
+        "V. Dupont",
+        "C. Buchaillet",
+        "N. Jousset",
+        "M. Deguigne",
+        "V. Cirimele"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s11419-022-00628-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36454420/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250202095237/https://pubmed.ncbi.nlm.nih.gov/36454420/"
+    },
+    {
+      "id": "cha2018",
+      "type": "paper",
+      "title": "Rewarding and reinforcing effects of 4-chloro-2,5-dimethoxyamphetamine and AH-7921 in rodents (Neurosci Lett 676:66-70)",
+      "authors": [
+        "H. J. Cha",
+        "S. Y. Jeon",
+        "H. J. Jang",
+        "J. Shin",
+        "Y.-H. Kim",
+        "S. K. Suh"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.neulet.2018.04.009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29626650/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250318000434/https://pubmed.ncbi.nlm.nih.gov/29626650/"
+    }
+  ]
+}

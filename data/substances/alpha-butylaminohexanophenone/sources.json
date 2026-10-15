@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "shevyrin2020",
+      "type": "paper",
+      "title": "Identification and analytical characterization of the synthetic cathinone N-butylhexedrone (Drug Test Anal 12(1):159-163)",
+      "authors": [
+        "Shevyrin V",
+        "Eltsov O",
+        "Shafran Y"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2712",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31667946/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

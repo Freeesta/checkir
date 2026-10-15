@@ -1,0 +1,313 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "segura2005",
+      "type": "paper",
+      "title": "Contribution of cytochrome P450 2D6 to 3,4-methylenedioxymethamphetamine disposition in humans: use of paroxetine as a metabolic inhibitor probe (Clin Pharmacokinet 44(6):649-660)",
+      "authors": [
+        "M. Segura",
+        "M. Farré",
+        "S. Pichini",
+        "A. M. Peiró",
+        "P. N. Roset",
+        "A. Ramírez",
+        "J. Ortuño",
+        "R. Pacifici",
+        "P. Zuccaro",
+        "J. Segura",
+        "R. de la Torre"
+      ],
+      "year": 2005,
+      "doi": "10.2165/00003088-200544060-00006",
+      "url": "https://doi.org/10.2165/00003088-200544060-00006",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "pizarro2004",
+      "type": "paper",
+      "title": "Stereochemical analysis of 3,4-methylenedioxymethamphetamine and its main metabolites in human samples including the catechol-type metabolite (3,4-dihydroxymethamphetamine) (Drug Metab Dispos 32(9):1001-1007)",
+      "authors": [
+        "N. Pizarro",
+        "M. Farré",
+        "M. Pujadas",
+        "A. M. Peiró",
+        "P. N. Roset",
+        "J. Joglar",
+        "R. de la Torre"
+      ],
+      "year": 2004,
+      "doi": "10.1016/s0090-9556(24)02984-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15319342/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260608181936/https://pubmed.ncbi.nlm.nih.gov/15319342/"
+    },
+    {
+      "id": "yubero-lahoz2011",
+      "type": "paper",
+      "title": "Sex differences in 3,4-methylenedioxymethamphetamine (MDMA; ecstasy)-induced cytochrome P450 2D6 inhibition in humans (Clin Pharmacokinet 50(5):319-329)",
+      "authors": [
+        "S. Yubero-Lahoz",
+        "R. Pardo",
+        "M. Farré",
+        "B. O'Mahony",
+        "M. Torrens",
+        "C. Mustata",
+        "C. Pérez-Mañá",
+        "M. L. Carbó",
+        "R. de la Torre"
+      ],
+      "year": 2011,
+      "doi": "10.2165/11584550-000000000-00000",
+      "url": "https://doi.org/10.2165/11584550-000000000-00000",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "atila2024",
+      "type": "paper",
+      "title": "Oxytocin and the Role of Fluid Restriction in MDMA-Induced Hyponatremia: A Secondary Analysis of 4 Randomized Clinical Trials (JAMA Netw Open 7(12):e2445278)",
+      "authors": [
+        "C. Atila",
+        "I. Straumann",
+        "P. Vizeli",
+        "J. Beck",
+        "S. Monnerat",
+        "F. Holze",
+        "M. E. Liechti",
+        "M. Christ-Crain"
+      ],
+      "year": 2024,
+      "doi": "10.1001/jamanetworkopen.2024.45278",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11568463/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260930152027/https://pmc.ncbi.nlm.nih.gov/articles/PMC11568463/"
+    },
+    {
+      "id": "kalant2001",
+      "type": "paper",
+      "title": "The pharmacology and toxicology of \"ecstasy\" (MDMA) and related drugs (CMAJ 165(7):917-928; abstract consulted)",
+      "authors": [
+        "H. Kalant"
+      ],
+      "year": 2001,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11599334/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260925100505/https://pubmed.ncbi.nlm.nih.gov/11599334/"
+    },
+    {
+      "id": "vuori2003",
+      "type": "paper",
+      "title": "Death following ingestion of MDMA (ecstasy) and moclobemide (Addiction 98(3):365-368)",
+      "authors": [
+        "E. Vuori",
+        "J. A. Henry",
+        "I. Ojanperä",
+        "R. Nieminen",
+        "T. Savolainen",
+        "P. Wahlsten",
+        "M. Jäntti"
+      ],
+      "year": 2003,
+      "doi": "10.1046/j.1360-0443.2003.00292.x",
+      "url": "https://doi.org/10.1046/j.1360-0443.2003.00292.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "pilgrim2012",
+      "type": "paper",
+      "title": "Serotonin toxicity involving MDMA (ecstasy) and moclobemide (Forensic Sci Int 215(1-3):184-188)",
+      "authors": [
+        "J. L. Pilgrim",
+        "D. Gerostamoulos",
+        "N. Woodford",
+        "O. H. Drummer"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.forsciint.2011.04.008",
+      "url": "https://doi.org/10.1016/j.forsciint.2011.04.008",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "papaseit2012",
+      "type": "paper",
+      "title": "Surviving life-threatening MDMA (3,4-methylenedioxymethamphetamine, ecstasy) toxicity caused by ritonavir (RTV) (Intensive Care Med 38(7):1239-1240)",
+      "authors": [
+        "E. Papaseit",
+        "A. Vázquez",
+        "C. Pérez-Mañá",
+        "M. Pujadas",
+        "R. de la Torre",
+        "M. Farré",
+        "J. Nolla"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00134-012-2537-9",
+      "url": "https://doi.org/10.1007/s00134-012-2537-9",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "dumont2006",
+      "type": "paper",
+      "title": "A review of acute effects of 3,4-methylenedioxymethamphetamine in healthy volunteers (J Psychopharmacol 20:176-187)",
+      "authors": [
+        "Dumont, G.J.H.",
+        "Verkes, R.J."
+      ],
+      "year": 2006,
+      "doi": "10.1177/0269881106063271",
+      "url": "https://doi.org/10.1177/0269881106063271",
+      "tier": "review",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "bernschneider-reif2006",
+      "type": "paper",
+      "title": "The origin of MDMA (\"ecstasy\")--separating the facts from the myth (Pharmazie 61(11):966-972)",
+      "authors": [
+        "S. Bernschneider-Reif",
+        "F. Oxler",
+        "R. W. Freudenmann"
+      ],
+      "year": 2006,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17152992/",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "mas1999",
+      "type": "paper",
+      "title": "Cardiovascular and neuroendocrine effects and pharmacokinetics of 3,4-methylenedioxymethamphetamine in humans (J Pharmacol Exp Ther 290(1):136-145)",
+      "authors": [
+        "M. Mas",
+        "M. Farré",
+        "R. de la Torre",
+        "P. N. Roset",
+        "J. Ortuño",
+        "J. Segura",
+        "J. Camí"
+      ],
+      "year": 1999,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10381769/",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "delatorre2000",
+      "type": "paper",
+      "title": "Non-linear pharmacokinetics of MDMA ('ecstasy') in humans (Br J Clin Pharmacol 49(2):104-109)",
+      "authors": [
+        "R. de la Torre",
+        "M. Farré",
+        "J. Ortuño",
+        "M. Mas",
+        "R. Brenneisen",
+        "P. N. Roset",
+        "J. Segura",
+        "J. Camí"
+      ],
+      "year": 2000,
+      "doi": "10.1046/j.1365-2125.2000.00121.x",
+      "url": "https://doi.org/10.1046/j.1365-2125.2000.00121.x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "delatorre2004",
+      "type": "paper",
+      "title": "Human pharmacology of MDMA: pharmacokinetics, metabolism, and disposition (Ther Drug Monit 26(2):137-144)",
+      "authors": [
+        "R. de la Torre",
+        "M. Farré",
+        "P. N. Roset",
+        "N. Pizarro",
+        "S. Abanades",
+        "M. Segura",
+        "J. Segura",
+        "J. Camí"
+      ],
+      "year": 2004,
+      "doi": "10.1097/00007691-200404000-00009",
+      "url": "https://doi.org/10.1097/00007691-200404000-00009",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "farre2004",
+      "type": "paper",
+      "title": "Repeated doses administration of MDMA in humans: pharmacological effects and pharmacokinetics (Psychopharmacology 173(3-4):364-375)",
+      "authors": [
+        "M. Farré",
+        "R. de la Torre",
+        "B. O. Mathúna",
+        "P. N. Roset",
+        "A. M. Peiró",
+        "M. Torrens",
+        "J. Ortuño",
+        "M. Pujadas",
+        "J. Camí"
+      ],
+      "year": 2004,
+      "doi": "10.1007/s00213-004-1789-7",
+      "url": "https://doi.org/10.1007/s00213-004-1789-7",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dolder2018",
+      "type": "paper",
+      "title": "Direct comparison of the acute subjective, emotional, autonomic, and endocrine effects of MDMA, methylphenidate, and modafinil in healthy subjects (Psychopharmacology 235(2):467-479)",
+      "authors": [
+        "P. C. Dolder",
+        "F. Müller",
+        "Y. Schmid",
+        "S. J. Borgwardt",
+        "M. E. Liechti"
+      ],
+      "year": 2018,
+      "doi": "10.1007/s00213-017-4650-5",
+      "url": "https://doi.org/10.1007/s00213-017-4650-5",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "green2003",
+      "type": "paper",
+      "title": "The pharmacology and clinical pharmacology of 3,4-methylenedioxymethamphetamine (MDMA, \"ecstasy\") (Pharmacol Rev 55(3):463-508)",
+      "authors": [
+        "A. R. Green",
+        "A. O. Mechan",
+        "J. M. Elliott",
+        "E. O'Shea",
+        "M. I. Colado"
+      ],
+      "year": 2003,
+      "doi": "10.1124/pr.55.3.3",
+      "url": "https://doi.org/10.1124/pr.55.3.3",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

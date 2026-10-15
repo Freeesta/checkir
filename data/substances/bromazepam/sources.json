@@ -1,0 +1,39 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "cheze2004",
+      "type": "paper",
+      "title": "Determination of bromazepam, clonazepam and metabolites after a single intake in urine and hair by LC-MS/MS. Application to forensic cases of drug facilitated crimes (Forensic Sci Int 145(2-3):123-30)",
+      "authors": [
+        "Chèze M",
+        "Villain M",
+        "Pépin G"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.forsciint.2004.04.066",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15451083/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "oda2003",
+      "type": "paper",
+      "title": "The effect of itraconazole on the pharmacokinetics and pharmacodynamics of bromazepam in healthy volunteers (Eur J Clin Pharmacol 59(8-9):615-9)",
+      "authors": [
+        "Oda M",
+        "Kotegawa T",
+        "Tsutsumi K",
+        "Ohtani Y",
+        "et al."
+      ],
+      "year": 2003,
+      "doi": "10.1007/s00228-003-0681-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14517708/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

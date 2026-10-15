@@ -1,0 +1,30 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "tsumura2012",
+      "type": "paper",
+      "title": "A survey of the potency of Japanese illicit cannabis in fiscal year 2010 (Forensic Sci Int 221:77-83)",
+      "authors": [
+        "Y. Tsumura",
+        "R. Aoki",
+        "Y. Tokieda",
+        "M. Akutsu",
+        "Y. Kawase",
+        "T. Kataoka",
+        "T. Takagi",
+        "T. Mizuno",
+        "M. Fukada",
+        "H. Fujii",
+        "K. Kurahashi"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.forsciint.2012.04.005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22554871/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204042625/https://pubmed.ncbi.nlm.nih.gov/22554871/"
+    }
+  ]
+}

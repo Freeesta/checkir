@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "rice2018",
+      "type": "paper",
+      "title": "Stereochemistry of ephedrine and its environmental significance: Exposure and effects directed approach (J Hazard Mater 348:39-46)",
+      "authors": [
+        "J. Rice",
+        "K. Proctor",
+        "L. Lopardo",
+        "S. Evans",
+        "B. Kasprzyk-Hordern"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jhazmat.2018.01.020",
+      "url": "https://doi.org/10.1016/j.jhazmat.2018.01.020",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

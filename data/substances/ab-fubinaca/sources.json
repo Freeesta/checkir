@@ -1,0 +1,34 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "vikingsson2016",
+      "type": "paper",
+      "title": "Identification of AB-FUBINACA metabolites in authentic urine samples suitable as urinary markers of drug intake using liquid chromatography quadrupole tandem time of flight mass spectrometry (Drug Test Anal 8:950-956)",
+      "authors": [
+        "S. Vikingsson",
+        "H. Gréen",
+        "L. Brinkhagen",
+        "S. Mukhtar",
+        "M. Josefsson"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1896",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26560240/",
+      "archive_url": "https://web.archive.org/web/20250204174127/https://pubmed.ncbi.nlm.nih.gov/26560240/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dea-fr2016-ab-fubinaca",
+      "type": "institution",
+      "title": "Schedules of Controlled Substances: Placement of PB-22, 5F-PB-22, AB-FUBINACA and ADB-PINACA into Schedule I (US DEA final rule, Federal Register 81:61130-61133, 6 September 2016)",
+      "year": 2016,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27632803/",
+      "archive_url": "https://web.archive.org/web/20250420152100/https://pubmed.ncbi.nlm.nih.gov/27632803/",
+      "tier": "agency",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

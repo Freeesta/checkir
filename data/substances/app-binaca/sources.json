@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "krotulski2019-app-binaca",
+      "type": "paper",
+      "title": "Detection and characterization of the new synthetic cannabinoid APP-BINACA in forensic casework (Drug Test Anal 12:136-144)",
+      "authors": [
+        "A. J. Krotulski",
+        "A. L. A. Mohr",
+        "F. X. Diamond",
+        "B. K. Logan"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2698",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31788963/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206055058/https://pubmed.ncbi.nlm.nih.gov/31788963/"
+    }
+  ]
+}

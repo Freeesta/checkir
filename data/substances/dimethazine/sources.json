@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "geldof2016",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolism studies of dimethazine",
+      "authors": [
+        "Geldof, L",
+        "Tudela, E",
+        "Lootens, L",
+        "van Lysebeth, J",
+        "Meuleman, P",
+        "Leroux-Roels, G",
+        "van Eenoo, P",
+        "Deventer, K"
+      ],
+      "year": 2016,
+      "doi": "10.1002/bmc.3668",
+      "url": "https://doi.org/10.1002/bmc.3668",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

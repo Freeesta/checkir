@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "laposchan2022",
+      "type": "paper",
+      "title": "Impurities, adulterants and cutting agents in cocaine as potential candidates for retrospective mining of GC-MS data (Sci Justice 62:60-75)",
+      "authors": [
+        "S. Laposchan",
+        "R. F. Kranenburg",
+        "A. C. van Asten"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.scijus.2021.11.004",
+      "url": "https://doi.org/10.1016/j.scijus.2021.11.004",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

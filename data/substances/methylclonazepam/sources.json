@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "Initial study of methylclonazepam in generalized anxiety disorder. Evidence for greater power in the cross-over design (Psychopharmacology 87:130-135)",
+      "authors": [
+        "M. Ansseau",
+        "A. Doumont",
+        "D. Thiry",
+        "R. von Frenckell",
+        "J. Collard"
+      ],
+      "year": 1985,
+      "doi": "10.1007/BF00431795",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3931136/",
+      "tier": "primary",
+      "id": "ansseau1985",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

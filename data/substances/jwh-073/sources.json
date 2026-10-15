@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "rajasekaran2013-cb2",
+      "type": "paper",
+      "title": "Human metabolites of synthetic cannabinoids JWH-018 and JWH-073 bind with high affinity and act as potent agonists at cannabinoid type-2 receptors (Toxicol Appl Pharmacol 269:100-108)",
+      "authors": [
+        "M. Rajasekaran",
+        "L. K. Brents",
+        "L. N. Franks",
+        "J. H. Moran",
+        "P. L. Prather"
+      ],
+      "year": 2013,
+      "doi": "10.1016/j.taap.2013.03.012",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23537664/",
+      "archive_url": "https://web.archive.org/web/20260814151959/https://pubmed.ncbi.nlm.nih.gov/23537664/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

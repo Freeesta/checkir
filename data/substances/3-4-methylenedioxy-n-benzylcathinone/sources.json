@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "florou2024",
+      "type": "paper",
+      "title": "Nuclear Magnetic Resonance Spectroscopic Characterization and Determination of the New Psychoactive Substance Benzylone: Application in a Biological Fluid (Magn Reson Chem 63(3):195-204)",
+      "authors": [
+        "Florou D",
+        "Boumba VA",
+        "Tsiafoulis GC"
+      ],
+      "year": 2024,
+      "doi": "10.1002/mrc.5500",
+      "url": "https://doi.org/10.1002/mrc.5500",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

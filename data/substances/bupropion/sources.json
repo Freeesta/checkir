@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "bupropion-label",
+      "type": "institution",
+      "title": "Bupropion hydrochloride extended-release tablets (XL) (NuCare Pharmaceuticals Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5d44daa9-d0e9-eec0-e063-6394a90a81e4",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

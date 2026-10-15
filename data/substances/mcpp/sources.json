@@ -1,0 +1,104 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "bossong2005",
+      "type": "paper",
+      "title": "Methylone and mCPP, two new drugs of abuse? (Addiction biology 10)",
+      "authors": [
+        "M G Bossong",
+        "J P Van Dijk",
+        "R J M Niesink"
+      ],
+      "year": 2005,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1080/13556210500350794",
+      "url": "https://doi.org/10.1080/13556210500350794"
+    },
+    {
+      "id": "feuchtl2004",
+      "type": "paper",
+      "title": "Pharmacokinetics of m-chlorophenylpiperazine after intravenous and oral administration in healthy male volunteers: implication for the pharmacodynamic profile (Pharmacopsychiatry 37)",
+      "authors": [
+        "A Feuchtl",
+        "M Bagli",
+        "R Stephan",
+        "C Frahnert",
+        "H Kölsch",
+        "K U Kühn",
+        "M L Rao"
+      ],
+      "year": 2004,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1055/s-2004-827175",
+      "url": "https://doi.org/10.1055/s-2004-827175"
+    },
+    {
+      "id": "rotzinger1998",
+      "type": "paper",
+      "title": "Trazodone is metabolized to m-chlorophenylpiperazine by CYP3A4 from human sources (Drug metabolism and disposition: the biological fate of chemicals 26)",
+      "authors": [
+        "S Rotzinger",
+        "J Fang",
+        "G B Baker"
+      ],
+      "year": 1998,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9616194/"
+    },
+    {
+      "id": "staack2007",
+      "type": "paper",
+      "title": "Proof of a 1-(3-chlorophenyl)piperazine (mCPP) intake: use as adulterant of cocaine resulting in drug-drug interactions? (Journal of chromatography. B, Analytical technologies in the biomedical and life sciences 855)",
+      "authors": [
+        "Roland F Staack",
+        "Liane D Paul",
+        "Dagmar Schmid",
+        "Gabriele Roider",
+        "Burkhard Rolf"
+      ],
+      "year": 2007,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.jchromb.2007.05.017",
+      "url": "https://doi.org/10.1016/j.jchromb.2007.05.017"
+    },
+    {
+      "id": "vogels2009",
+      "type": "paper",
+      "title": "Content of ecstasy in the Netherlands: 1993-2008 (Addiction (Abingdon, England) 104)",
+      "authors": [
+        "Neeltje Vogels",
+        "Tibor M Brunt",
+        "Sander Rigter",
+        "Peter van Dijk",
+        "Hylke Vervaeke",
+        "Raymond J M Niesink"
+      ],
+      "year": 2009,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1111/j.1360-0443.2009.02707.x",
+      "url": "https://doi.org/10.1111/j.1360-0443.2009.02707.x"
+    },
+    {
+      "id": "wen2008",
+      "type": "paper",
+      "title": "Detection of novel reactive metabolites of trazodone: evidence for CYP2D6-mediated bioactivation of m-chlorophenylpiperazine (Drug metabolism and disposition: the biological fate of chemicals 36)",
+      "authors": [
+        "Bo Wen",
+        "Li Ma",
+        "A David Rodrigues",
+        "Mingshe Zhu"
+      ],
+      "year": 2008,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1124/dmd.107.019471",
+      "url": "https://doi.org/10.1124/dmd.107.019471"
+    }
+  ]
+}

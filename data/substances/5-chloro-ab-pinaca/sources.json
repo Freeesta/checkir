@@ -1,0 +1,28 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "baeckberg2023",
+      "type": "paper",
+      "title": "Using in vitro receptor activity studies of synthetic cannabinoids to support the risk assessment of new psychoactive substances - A Swedish strategy to protect public health from harm (Forensic Sci Int 348:111691)",
+      "authors": [
+        "M. Bäckberg",
+        "S. Vikingsson",
+        "J. Strandberg",
+        "S. Wall",
+        "A. Åstrand",
+        "H. Karlsson",
+        "M. Persson",
+        "R. Kronstrand",
+        "H. Green"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.forsciint.2023.111691",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37116244/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20231122081156/https://pubmed.ncbi.nlm.nih.gov/37116244/"
+    }
+  ]
+}

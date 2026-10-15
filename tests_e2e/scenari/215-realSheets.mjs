@@ -2,6 +2,7 @@
 import { readFile } from "node:fs/promises";
 import { SECTIONS, sectionStatus } from "../../web/schede.js";
 import { parseTexts } from "../../tools/genera_schede.mjs";
+import { loadSources } from "../../tools/unisci_dati.mjs";
 import { REASSURING } from "../schede.mjs";
 
 // Sheets written in full (13 sections): every section that has text is shown, a placeholder stays empty.
@@ -11,7 +12,7 @@ const REAL_SHEETS = ["cocaine", "mdma", "ketamine", "amphetamine", "methamphetam
 /** The sheets of the main substances, read from data/ as the build reads them: identity and IR text shown, the rest a placeholder except in the pilot sheets, every citation known. */
 export default async ({ check }) => {
   const data = new URL("../../data/", import.meta.url);
-  const known = new Set(JSON.parse(await readFile(new URL("sources.json", data), "utf8")).sources.map((s) => s.id));
+  const known = new Set((await loadSources(data)).map((s) => s.id));
   for (const id of REAL_SHEETS) {
     const dir = new URL(`substances/${id}/datasheet/`, data);
     const ds = JSON.parse(await readFile(new URL("datasheet.json", dir), "utf8"));

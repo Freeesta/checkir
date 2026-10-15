@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "atomoxetine-label",
+      "type": "institution",
+      "title": "Atomoxetine capsules (Glenmark Pharmaceuticals Inc., USA), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20260803160003/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "eap2002",
+      "type": "paper",
+      "title": "Interindividual variability of the clinical pharmacokinetics of methadone: implications for the treatment of opioid dependence (Clin Pharmacokinet 41:1153-1193)",
+      "authors": [
+        "C. B. Eap",
+        "T. Buclin",
+        "P. Baumann"
+      ],
+      "year": 2002,
+      "doi": "10.2165/00003088-200241140-00003",
+      "url": "https://doi.org/10.2165/00003088-200241140-00003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    }
+  ]
+}

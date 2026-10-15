@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kim2026-fub144",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolism of the synthetic cannabinoid FUB-144: comprehensive phase I and II profiling using UHPLC-HRMS (Arch Toxicol 100:2411-2419)",
+      "authors": [
+        "D. E. Kim",
+        "J. Park",
+        "Y. T. Park",
+        "S. Farzand",
+        "H. Lee",
+        "J. Kim",
+        "B. H. Jung",
+        "H. Lee"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00204-026-04321-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41807793/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hermanns-clausen2026",
+      "type": "paper",
+      "title": "Acute toxicity of ADB-CHMINACA - a case series of patients with pronounced central nervous symptoms including the posterior reversible encephalopathic syndrome (Br J Clin Pharmacol)",
+      "authors": [
+        "M. Hermanns-Clausen",
+        "M. Sommer",
+        "A. Zschiesche",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1002/bcp.70538",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41916726/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260514033516/https://pubmed.ncbi.nlm.nih.gov/41916726/"
+    },
+    {
+      "id": "filipiuc2026",
+      "type": "paper",
+      "title": "Acute Toxicity of Three Synthetic Cannabinoids: First In Vivo Preclinical Study (Molecules 31:2365)",
+      "authors": [
+        "S.-I. Filipiuc",
+        "C. Solcan",
+        "B.-I. Tamba",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.3390/molecules31132365",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13362526/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

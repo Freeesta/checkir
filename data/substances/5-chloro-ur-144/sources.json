@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "andersen2021",
+      "type": "paper",
+      "title": "Molecular signaling of synthetic cannabinoids: Comparison of CB1 receptor and TRPV1 channel activation (Eur J Pharmacol 907:174301)",
+      "authors": [
+        "H. K. Andersen",
+        "K. B. Walsh"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.ejphar.2021.174301",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34224700/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240302125124/https://pubmed.ncbi.nlm.nih.gov/34224700/"
+    }
+  ]
+}

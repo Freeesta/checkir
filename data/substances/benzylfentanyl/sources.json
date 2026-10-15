@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hewes2024",
+      "type": "paper",
+      "title": "Determination of fentanyl contamination on United States paper currency by LC-QQQ-MS (J Anal Toxicol 48(3):141-149)",
+      "authors": [
+        "M. P. Hewes",
+        "D. M. Papsun",
+        "B. K. Logan",
+        "A. J. Krotulski"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae010",
+      "url": "https://doi.org/10.1093/jat/bkae010",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

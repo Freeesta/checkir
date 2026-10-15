@@ -1,0 +1,44 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "krotulski2018-thff",
+      "type": "paper",
+      "title": "Fatality following ingestion of tetrahydrofuranylfentanyl, U-49900 and methoxy-phencyclidine (J Anal Toxicol 42:e27-e32)",
+      "authors": [
+        "A. J. Krotulski",
+        "D. M. Papsun",
+        "M. Friscia",
+        "J. L. Swartz",
+        "B. D. Holsey",
+        "B. K. Logan"
+      ],
+      "year": 2018,
+      "doi": "10.1093/jat/bkx092",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29186585/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "gampfer2020",
+      "type": "paper",
+      "title": "Toxicokinetic studies and analytical toxicology of the new synthetic opioids cyclopentanoyl-fentanyl and tetrahydrofuranoyl-fentanyl (J Anal Toxicol 44:449-460)",
+      "authors": [
+        "T. M. Gampfer",
+        "L. Wagmann",
+        "M. J. Richter",
+        "S. Fischmann",
+        "F. Westphal",
+        "M. R. Meyer"
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkaa010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32020187/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20240428132609/https://pubmed.ncbi.nlm.nih.gov/32020187/"
+    }
+  ]
+}

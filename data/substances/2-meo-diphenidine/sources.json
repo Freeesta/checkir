@@ -1,0 +1,43 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "First reported fatalities associated with the 'research chemical' 2-methoxydiphenidine (J Anal Toxicol 39:287-293)",
+      "authors": [
+        "S. P. Elliott",
+        "S. D. Brandt",
+        "J. Wallach",
+        "H. Morris",
+        "P. V. Kavanagh"
+      ],
+      "year": 2015,
+      "doi": "10.1093/jat/bkv006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25698777/",
+      "tier": "primary",
+      "id": "elliott2015",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Acute toxicity associated with the recreational use of the novel dissociative psychoactive substance methoxphenidine (Clin Toxicol 52:1288-1291)",
+      "authors": [
+        "K. E. Hofer",
+        "C. Degrandi",
+        "D. M. Müller",
+        "U. Zürrer-Härdi",
+        "S. Wahl",
+        "C. Rauber-Lüthy",
+        "A. Ceschi"
+      ],
+      "year": 2014,
+      "doi": "10.3109/15563650.2014.974264",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25350467/",
+      "tier": "primary",
+      "id": "hofer2014",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

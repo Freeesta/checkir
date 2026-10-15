@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wohlfarth2014-rcs8",
+      "type": "paper",
+      "title": "Metabolism of RCS-8, a synthetic cannabinoid with cyclohexyl structure, in human hepatocytes by high-resolution MS (Bioanalysis 6:1187-1200)",
+      "authors": [
+        "A. Wohlfarth",
+        "S. Pang",
+        "M. Zhu",
+        "et al."
+      ],
+      "year": 2014,
+      "doi": "10.4155/bio.14.1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24946920/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204192827/https://pubmed.ncbi.nlm.nih.gov/24946920/"
+    }
+  ]
+}

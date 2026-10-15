@@ -1,0 +1,76 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "grond2004",
+      "type": "paper",
+      "title": "Clinical pharmacology of tramadol (Clin Pharmacokinet 43:879-923)",
+      "authors": [
+        "S. Grond",
+        "A. Sablotzki"
+      ],
+      "year": 2004,
+      "doi": "10.2165/00003088-200443130-00004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15509185/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261005084943/https://pubmed.ncbi.nlm.nih.gov/15509185/"
+    },
+    {
+      "id": "crews2021",
+      "type": "paper",
+      "title": "Clinical Pharmacogenetics Implementation Consortium guideline for CYP2D6, OPRM1, and COMT genotypes and select opioid therapy (Clin Pharmacol Ther 110:888-896)",
+      "authors": [
+        "K. R. Crews",
+        "A. A. Monte",
+        "R. Huddart",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1002/cpt.2149",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33387367/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260414222147/https://pubmed.ncbi.nlm.nih.gov/33387367/"
+    },
+    {
+      "id": "ali2023",
+      "type": "paper",
+      "title": "Clinical and laboratory factors related to seizure and serotonin toxicity in tramadol intoxication: an Egyptian study (Clin Drug Investig 43:963-971)",
+      "authors": [
+        "A. A. Ali",
+        "M. M. Abdeshafy",
+        "K. Abdelkawy",
+        "R. M. Elsabaa",
+        "F. Elbarbry"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s40261-023-01326-y",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38006536/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260624154855/https://pubmed.ncbi.nlm.nih.gov/38006536/"
+    },
+    {
+      "id": "nielsen2025",
+      "type": "paper",
+      "title": "Prevalence and characteristics of tramadol-induced seizures in young adult emergency admissions (Dan Med J 72:A02250108)",
+      "authors": [
+        "A. V. A. Nielsen",
+        "C. K. Lassen",
+        "D. Cakar",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.61409/a02250108",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40747723/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250827190039/https://pubmed.ncbi.nlm.nih.gov/40747723/"
+    }
+  ]
+}

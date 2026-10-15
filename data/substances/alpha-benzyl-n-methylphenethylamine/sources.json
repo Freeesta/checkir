@@ -1,0 +1,52 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "moore1995a",
+      "type": "paper",
+      "title": "alpha-Benzyl-N-methylphenethylamine (BNMPA), an impurity of illicit methamphetamine synthesis: I. Physical characterization and GC-MS analysis of BNMPA and anticipated metabolites in urine (J Anal Toxicol 19(7):542-548)",
+      "authors": [
+        "K. A. Moore",
+        "W. H. Soine",
+        "A. Poklis"
+      ],
+      "year": 1995,
+      "doi": "10.1093/jat/19.7.542",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8577175/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "moore1995b",
+      "type": "paper",
+      "title": "alpha-Benzyl-N-methylphenethylamine (BNMPA), an impurity of illicit methamphetamine synthesis: II. Metabolism and urinary excretion (human) (J Anal Toxicol 19(7):549-553)",
+      "authors": [
+        "K. A. Moore",
+        "A. Poklis"
+      ],
+      "year": 1995,
+      "doi": "10.1093/jat/19.7.549",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8577176/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "moore1996",
+      "type": "paper",
+      "title": "alpha-benzyl-N-methylphenethylamine (BNMPA), an impurity of illicit methamphetamine synthesis: III. Detection of BNMPA and metabolites in urine of methamphetamine users (J Anal Toxicol 20(2):89-92)",
+      "authors": [
+        "K. A. Moore",
+        "A. Ismaiel",
+        "A. Poklis"
+      ],
+      "year": 1996,
+      "doi": "10.1093/jat/20.2.89",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8868398/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

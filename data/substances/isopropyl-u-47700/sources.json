@@ -1,0 +1,57 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "otte2022",
+      "type": "paper",
+      "title": "Investigation of the μ- and κ-opioid receptor activation by eight new synthetic opioids using the [35S]-GTPγS assay: U-47700, isopropyl U-47700, U-49900, U-47931E, N-methyl U-47931E, U-51754, U-48520, and U-48800 (Drug Test Anal 14:1187-1199)",
+      "authors": [
+        "L. Otte",
+        "M. Wilde",
+        "V. Auwärter",
+        "K. E. Grafinger"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3238",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35142070/",
+      "archive_url": "https://web.archive.org/web/20240720165327/https://pubmed.ncbi.nlm.nih.gov/35142070/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "fogarty2022-u48800",
+      "type": "paper",
+      "title": "Analysis of the illicit opioid U-48800 and related compounds by LC-MS-MS and case series of fatalities involving U-48800 (J Anal Toxicol 46:17-24)",
+      "authors": [
+        "M. F. Fogarty",
+        "A. L. A. Mohr",
+        "D. M. Papsun",
+        "B. K. Logan"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkaa180",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33237987/",
+      "archive_url": "https://web.archive.org/web/20260504110444/https://pubmed.ncbi.nlm.nih.gov/33237987/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "krotulski2019-mining",
+      "type": "paper",
+      "title": "Sample mining and data mining: combined real-time and retrospective approaches for the identification of emerging novel psychoactive substances (J Forensic Sci 65:550-562)",
+      "authors": [
+        "A. J. Krotulski",
+        "S. Jansen Varnum",
+        "B. K. Logan"
+      ],
+      "year": 2019,
+      "doi": "10.1111/1556-4029.14184",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31498433/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "oliynyk2012",
+      "type": "paper",
+      "title": "The pharmacology of actoprotectors: practical application for improvement of mental and physical performance (Biomol Ther 20:446-456)",
+      "authors": [
+        "S. Oliynyk",
+        "S. Oh"
+      ],
+      "year": 2012,
+      "doi": "10.4062/biomolther.2012.20.5.446",
+      "url": "https://doi.org/10.4062/biomolther.2012.20.5.446",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    }
+  ]
+}

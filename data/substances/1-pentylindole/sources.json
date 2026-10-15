@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "thaxton2015",
+      "type": "paper",
+      "title": "GC-MS studies on the six naphthoyl-substituted 1-n-pentyl-indoles: JWH-018 and five regioisomeric equivalents (Forensic Sci Int 252:107-113)",
+      "authors": [
+        "A. Thaxton",
+        "T. S. Belal",
+        "F. Smith",
+        "J. DeRuiter",
+        "K. M. Abdel-Hay",
+        "C. R. Clark"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.forsciint.2015.04.023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25965306/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250201235506/https://pubmed.ncbi.nlm.nih.gov/25965306/"
+    }
+  ]
+}

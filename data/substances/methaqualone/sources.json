@@ -1,0 +1,57 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "prost2001",
+      "type": "paper",
+      "title": "Enantiomeric analysis of the five major monohydroxylated metabolites of methaqualone in human urine by chiral capillary electrophoresis (Electrophoresis 22:3270-3280)",
+      "authors": [
+        "F. Prost",
+        "W. Thormann"
+      ],
+      "year": 2001,
+      "doi": "10.1002/1522-2683(200109)22:15<3270::AID-ELPS3270>3.0.CO;2-K",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11589290/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "prost2003",
+      "type": "paper",
+      "title": "Assessment of the stereoselective metabolism of methaqualone in man by capillary electrophoresis (Electrophoresis 24:2598-2607)",
+      "authors": [
+        "F. Prost",
+        "W. Thormann"
+      ],
+      "year": 2003,
+      "doi": "10.1002/elps.200305512",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12900872/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "brenner1996",
+      "type": "paper",
+      "title": "Comparison of methaqualone excretion patterns using Abuscreen ONLINE and EMIT II immunoassays and GC/MS (Forensic Sci Int 79:31-41)",
+      "authors": [
+        "C. Brenner",
+        "R. Hui",
+        "J. Passarelli",
+        "R. Wu",
+        "R. Brenneisen",
+        "K. Bracher",
+        "M. A. ElSohly",
+        "V. D. Ghodoussi",
+        "S. J. Salamone"
+      ],
+      "year": 1996,
+      "doi": "10.1016/0379-0738(96)01888-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8635771/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

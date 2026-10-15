@@ -1,0 +1,72 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-25i-nbome",
+      "type": "database",
+      "title": "SWGDRUG monograph: 25I-NBOMe (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/25I-NBOMe.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20260101173922/https://www.swgdrug.org/Monographs/25I-NBOMe.pdf"
+    },
+    {
+      "id": "hill2013-25i",
+      "type": "paper",
+      "title": "Severe clinical toxicity associated with analytically confirmed recreational use of 25I-NBOMe: case series (Clin Toxicol 51(6):487-492)",
+      "authors": [
+        "S. L. Hill",
+        "T. Doris",
+        "S. Gurung",
+        "S. Katebe",
+        "A. Lomas",
+        "M. Dunn",
+        "P. Blain",
+        "S. H. L. Thomas"
+      ],
+      "year": 2013,
+      "doi": "10.3109/15563650.2013.802795",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23731373/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260426180655/https://pubmed.ncbi.nlm.nih.gov/23731373/"
+    },
+    {
+      "id": "hieger2015",
+      "type": "paper",
+      "title": "Severe poisoning after self-reported use of 2-(4-iodo-2,5-dimethoxyphenyl)-N-[(2-methoxyphenyl)methyl]ethanamine, a novel substituted amphetamine: a case series (Am J Emerg Med 33(12):1843.e1-3)",
+      "authors": [
+        "M. A. Hieger",
+        "S. R. Rose",
+        "K. L. Cumpston",
+        "P. E. Stromberg",
+        "S. Miller",
+        "B. K. Wills"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.ajem.2015.04.065",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25983267/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206073254/https://pubmed.ncbi.nlm.nih.gov/25983267/"
+    },
+    {
+      "id": "kueppers2015",
+      "type": "paper",
+      "title": "25I-NBOMe related death in Australia: a case report (Forensic Sci Int 249:e15-e18)",
+      "authors": [
+        "V. B. Kueppers",
+        "C. T. Cooke"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.forsciint.2015.02.010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25747271/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

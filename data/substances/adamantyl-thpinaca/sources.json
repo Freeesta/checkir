@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "monti2021-thpinaca",
+      "type": "paper",
+      "title": "Phase I In Vitro Metabolic Profiling of the Synthetic Cannabinoid Receptor Agonists CUMYL-THPINACA and ADAMANTYL-THPINACA (Metabolites 11:470)",
+      "authors": [
+        "M. C. Monti",
+        "E. Scheurer",
+        "K. Mercer-Chalmers-Bender"
+      ],
+      "year": 2021,
+      "doi": "10.3390/metabo11080470",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8398790/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

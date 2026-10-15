@@ -1,0 +1,38 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "bassi2024",
+      "type": "paper",
+      "title": "The synthetic cathinones MDPHP and MDPV: Comparison of the acute effects in mice, in silico ADMET profiles and clinical reports (Neurotoxicology 103:230-255)",
+      "authors": [
+        "M. Bassi",
+        "S. Bilel",
+        "et al."
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.neuro.2024.06.014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38955288/",
+      "archive_url": "https://web.archive.org/web/20260928211224/https://pubmed.ncbi.nlm.nih.gov/38955288/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "brueckner2025",
+      "type": "paper",
+      "title": "Toxicological detection of the new psychoactive substances MDPHP and MDPHpP in human urine samples by elucidation of their urinary metabolites using gas chromatography-mass spectrometry (J Anal Toxicol 49:299-314)",
+      "authors": [
+        "I. Brueckner",
+        "J. Welter-Luedeke",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1093/jat/bkaf026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40130363/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "triazolam-label",
+      "type": "institution",
+      "title": "Triazolam tablets (Mylan Pharmaceuticals Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260804030030/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf",
+      "tier": "agency"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "vogt2023",
+      "type": "paper",
+      "title": "Acute effects of intravenous DMT in a randomized placebo-controlled study in healthy participants (Transl Psychiatry 13:172)",
+      "authors": [
+        "S. B. Vogt",
+        "L. Ley",
+        "L. Erne",
+        "I. Straumann",
+        "A. M. Becker",
+        "A. Klaiber",
+        "F. Holze",
+        "A. Vandersmissen",
+        "L. Mueller",
+        "U. Duthaler",
+        "D. Rudin",
+        "D. Luethi",
+        "N. Varghese",
+        "A. Eckert",
+        "M. E. Liechti"
+      ],
+      "year": 2023,
+      "doi": "10.1038/s41398-023-02477-4",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10206108/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

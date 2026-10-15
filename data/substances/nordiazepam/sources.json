@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "greenblatt1988",
+      "type": "paper",
+      "title": "Desmethyldiazepam pharmacokinetics: studies following intravenous and oral desmethyldiazepam, oral clorazepate, and intravenous diazepam (J Clin Pharmacol 28:853-859)",
+      "authors": [
+        "D. J. Greenblatt",
+        "M. K. Divoll",
+        "M. H. Soong",
+        "H. G. Boxenbaum",
+        "J. S. Harmatz"
+      ],
+      "year": 1988,
+      "doi": "10.1002/j.1552-4604.1988.tb03228.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2906643/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

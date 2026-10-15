@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "silenor-label",
+      "type": "institution",
+      "title": "SILENOR (doxepin) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1bec1223-5239-4eb6-a9e8-62444106d2c0",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803132828/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1bec1223-5239-4eb6-a9e8-62444106d2c0"
+    }
+  ]
+}

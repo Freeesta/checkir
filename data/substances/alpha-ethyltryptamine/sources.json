@@ -1,0 +1,28 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "silverman2025",
+      "type": "paper",
+      "title": "Dual modulation of 5-HT2A receptors and SERT by alpha-ethyltryptamine and its optical isomers (ACS Chem Neurosci)",
+      "authors": [
+        "J. M. Silverman",
+        "M. Fiorillo",
+        "J. Younkin",
+        "C. B. Jones",
+        "J. L. Maltman",
+        "I. Herszenhorn",
+        "A. Artigas",
+        "J. T. Wolstenholme",
+        "M. Dukat",
+        "J. Gonzalez-Maeso"
+      ],
+      "year": 2025,
+      "doi": "10.1021/acschemneuro.5c00468",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41359995/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "miura2005",
+      "type": "paper",
+      "title": "Identification of human cytochrome P450 enzymes involved in the formation of 4-hydroxyestazolam from estazolam (Xenobiotica 35(5):455-65)",
+      "authors": [
+        "Miura M",
+        "Otani K",
+        "Ohkubo T"
+      ],
+      "year": 2005,
+      "doi": "10.1080/00498250500111612",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16012077/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "allen1979",
+      "type": "paper",
+      "title": "Single- and multiple-dose kinetics of estazolam, a triazolo benzodiazepine (Psychopharmacology (Berl) 66(3):267-74)",
+      "authors": [
+        "Allen MD",
+        "Greenblatt DJ",
+        "Arnold JD"
+      ],
+      "year": 1979,
+      "doi": "10.1007/BF00428318",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43552/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "mancinelli1985",
+      "type": "paper",
+      "title": "Kinetic and pharmacological studies on estazolam in mice and man (Xenobiotica 15(3):257-65)",
+      "authors": [
+        "Mancinelli A",
+        "Guiso G",
+        "Garattini S",
+        "Urso R",
+        "et al."
+      ],
+      "year": 1985,
+      "doi": "10.3109/00498258509045357",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2862746/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

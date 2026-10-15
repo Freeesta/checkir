@@ -1,0 +1,96 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "ono2022",
+      "type": "paper",
+      "title": "Hepatic and renal toxicities and metabolism of fentanyl analogues in rats (Naunyn Schmiedebergs Arch Pharmacol 396(1):149-159)",
+      "authors": [
+        "Y. Ono",
+        "M. Sakamoto",
+        "K. Makino",
+        "K. Tayama",
+        "Y. Tada",
+        "Y. Nakagawa",
+        "J. Nakajima",
+        "J. Suzuki",
+        "T. Suzuki",
+        "H. Takahashi",
+        "A. Inomata",
+        "T. Moriyasu"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00210-022-02301-8",
+      "url": "https://doi.org/10.1007/s00210-022-02301-8",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20231020043008/https://pubmed.ncbi.nlm.nih.gov/36269341/"
+    },
+    {
+      "id": "ono2025",
+      "type": "paper",
+      "title": "Assessment of μ-Opioid Receptor Signaling Responses for Fentanyl Analogs Using Luciferase Complementation Assay (Biol Pharm Bull 48(11):1769-1774)",
+      "authors": [
+        "Y. Ono",
+        "K. Tayama",
+        "K. Makino",
+        "M. Sakamoto",
+        "J. Suzuki",
+        "H. Takahashi",
+        "A. Inomata"
+      ],
+      "year": 2025,
+      "doi": "10.1248/bpb.b25-00318",
+      "url": "https://doi.org/10.1248/bpb.b25-00318",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251222062755/https://pubmed.ncbi.nlm.nih.gov/41260693/"
+    },
+    {
+      "id": "roosendaal2023",
+      "type": "paper",
+      "title": "A fatal mono-intoxication with 4-fluoroisobutyrylfentanyl: Case report with postmortem concentrations (J Anal Toxicol 47(6):541-546)",
+      "authors": [
+        "J. Roosendaal",
+        "R. Oosting",
+        "D.-P. Kloos",
+        "H. H. de Boer",
+        "J. D. J. van den Berg",
+        "S. Oldenhof",
+        "I. J. Bosman"
+      ],
+      "year": 2023,
+      "doi": "10.1093/jat/bkad034",
+      "url": "https://doi.org/10.1093/jat/bkad034",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250203032103/https://pubmed.ncbi.nlm.nih.gov/37315188/"
+    },
+    {
+      "id": "lai2026",
+      "type": "paper",
+      "title": "Reinforcing and discriminative stimulus effects of 4-fluorobutyrfentanyl, 4-fluoroisobutyrfentanyl, and isobutyrfentanyl in male rats (Eur J Pharmacol 1030:179055)",
+      "authors": [
+        "M. Lai",
+        "L. Wen",
+        "H. Li",
+        "D. Fu",
+        "Z. Xu",
+        "Q. Jin",
+        "B. Shi",
+        "W. Zhou",
+        "L. Liu",
+        "P. Xu"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.ejphar.2026.179055",
+      "url": "https://doi.org/10.1016/j.ejphar.2026.179055",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

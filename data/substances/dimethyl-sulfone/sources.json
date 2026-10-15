@@ -1,0 +1,29 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "butawan2017",
+      "type": "paper",
+      "title": "Methylsulfonylmethane: Applications and Safety of a Novel Dietary Supplement",
+      "authors": [
+        "Butawan, M.",
+        "Benjamin, R L.",
+        "Bloomer, R J."
+      ],
+      "year": 2017,
+      "doi": "10.3390/nu9030290",
+      "url": "https://doi.org/10.3390/nu9030290",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "uw-adai-methamphetamine2025",
+      "type": "web",
+      "title": "Alcohol and Drug Abuse Institute, University of Washington, Variability of the methamphetamine supply in Washington (drug checking data, updated 6 June 2025)",
+      "year": 2025,
+      "url": "https://adai.uw.edu/WAdata/DrugChecking/methamphetamine_content.html",
+      "consulted": "2026-10-13",
+      "tier": "database"
+    }
+  ]
+}

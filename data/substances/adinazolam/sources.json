@@ -1,0 +1,44 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "venkatakrishnan1998",
+      "type": "paper",
+      "title": "Kinetic characterization and identification of the enzymes responsible for the hepatic biotransformation of adinazolam and N-desmethyladinazolam in man (J Pharm Pharmacol 50:265-74)",
+      "authors": [
+        "Venkatakrishnan K",
+        "von Moltke LL",
+        "Duan SX",
+        "Fleishaker JC",
+        "Shader RI",
+        "Greenblatt DJ"
+      ],
+      "year": 1998,
+      "doi": "10.1111/j.2042-7158.1998.tb06859.x",
+      "url": "https://doi.org/10.1111/j.2042-7158.1998.tb06859.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "venkatakrishnan2005",
+      "type": "paper",
+      "title": "Kinetics and dynamics of intravenous adinazolam, N-desmethyl adinazolam, and alprazolam in healthy volunteers (J Clin Pharmacol 45:529-37)",
+      "authors": [
+        "Venkatakrishnan K",
+        "Culm KE",
+        "Ehrenberg BL",
+        "Harmatz JS",
+        "Corbett KE",
+        "Fleishaker JC",
+        "Greenblatt DJ"
+      ],
+      "year": 2005,
+      "doi": "10.1177/0091270004269105",
+      "url": "https://doi.org/10.1177/0091270004269105",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-ethylone",
+      "type": "database",
+      "title": "SWGDRUG monograph: Ethylone (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Ethylone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207125206/https://swgdrug.org/Monographs/Ethylone.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "lee2015",
+      "type": "paper",
+      "title": "Ethylone-Related Deaths: Toxicological Findings (J Anal Toxicol 39(7):567-571)",
+      "authors": [
+        "Dayong Lee",
+        "Chris W. Chronister",
+        "Jennifer Hoyer",
+        "Bruce A. Goldberger"
+      ],
+      "year": 2015,
+      "doi": "10.1093/jat/bkv053",
+      "url": "https://doi.org/10.1093/jat/bkv053",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "uralets2014",
+      "type": "paper",
+      "title": "Testing for designer stimulants: metabolic profiles of 16 synthetic cathinones excreted free in human urine (J Anal Toxicol 38(5):233-241)",
+      "authors": [
+        "Victor Uralets",
+        "Sumandeep Rana",
+        "Stewart Morgan",
+        "Wayne Ross"
+      ],
+      "year": 2014,
+      "doi": "10.1093/jat/bku021",
+      "url": "https://doi.org/10.1093/jat/bku021",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "strickland2019",
+      "type": "paper",
+      "title": "Development and Validation of a Novel All-Inclusive LC-MS-MS Designer Drug Method (J Anal Toxicol 43(3):161-169)",
+      "authors": [
+        "Erin C. Strickland",
+        "Oneka T. Cummings",
+        "Allyson L. Mellinger",
+        "Gregory L. McIntire"
+      ],
+      "year": 2019,
+      "doi": "10.1093/jat/bky087",
+      "url": "https://doi.org/10.1093/jat/bky087",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

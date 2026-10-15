@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "manchester2022",
+      "type": "paper",
+      "title": "The blood-to-plasma ratio and predicted GABA(A)-binding affinity of designer benzodiazepines (Forensic Toxicol 40(2):349-356)",
+      "authors": [
+        "Manchester KR",
+        "Waters L",
+        "Haider S",
+        "Maskell PD"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s11419-022-00616-y",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36454409/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

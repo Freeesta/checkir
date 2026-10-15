@@ -1,0 +1,36 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "makino1989",
+      "type": "paper",
+      "title": "Identification and quantification of p-hydroxyethylamphetamine as a novel metabolite of ethylamphetamine in rat by gas chromatography-mass spectrometry (Forensic Sci Int 41:83-91)",
+      "authors": [
+        "Y. Makino",
+        "T. Higuchi",
+        "S. Ohta",
+        "M. Hirobe"
+      ],
+      "year": 1989,
+      "doi": "10.1016/0379-0738(89)90239-9",
+      "url": "https://doi.org/10.1016/0379-0738(89)90239-9",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "delbeke1986",
+      "type": "paper",
+      "title": "The influence of diuretics on the excretion and metabolism of doping agents. III. Etilamfetamine (Arzneimittelforschung 36:1413-1416)",
+      "authors": [
+        "F. T. Delbeke",
+        "M. Debackere"
+      ],
+      "year": 1986,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3790195/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

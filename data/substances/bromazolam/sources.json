@@ -1,0 +1,49 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-bromazolam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Bromazolam (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/Bromazolam.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213095838/https://swgdrug.org/Monographs/Bromazolam.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "rodda2024",
+      "type": "paper",
+      "title": "The surge of bromazolam-related fatalities replacing other novel designer benzodiazepines-related fatalities in San Francisco (Addiction 119(8):1487-1490)",
+      "authors": [
+        "Luke N. Rodda"
+      ],
+      "year": 2024,
+      "doi": "10.1111/add.16520",
+      "url": "https://doi.org/10.1111/add.16520",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ballotari2024",
+      "type": "paper",
+      "title": "A postmortem case report involving fentanyl, desalkylgidazepam, and bromazolam (J Anal Toxicol 48(8):636-640)",
+      "authors": [
+        "Marco Ballotari",
+        "Michael T. Truver",
+        "Leena R. Dhoble",
+        "Amy M. Kinsey",
+        "Jennifer L. Hoyer",
+        "Chris W. Chronister",
+        "Bruce A. Goldberger"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae059",
+      "url": "https://doi.org/10.1093/jat/bkae059",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

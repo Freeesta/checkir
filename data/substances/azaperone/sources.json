@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "ema-azaperone-mrl",
+      "type": "institution",
+      "title": "Azaperone, Summary Report (1), Committee for Veterinary Medicinal Products (EMEA)",
+      "year": 1997,
+      "url": "https://www.ema.europa.eu/en/documents/mrl-report/azaperone-summary-report-1-committee-veterinary-medicinal-products_en.pdf",
+      "tier": "agency",
+      "license": "© European Medicines Agency; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

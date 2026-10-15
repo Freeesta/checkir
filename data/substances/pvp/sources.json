@@ -1,0 +1,69 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "nobrega2018",
+      "type": "paper",
+      "title": "The synthetic cathinone α-pyrrolidinovalerophenone (α-PVP): pharmacokinetic and pharmacodynamic clinical and forensic aspects (Drug Metab Rev 50:125-139)",
+      "authors": [
+        "Nóbrega L",
+        "Dinis-Oliveira RJ"
+      ],
+      "year": 2018,
+      "doi": "10.1080/03602532.2018.1448867",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29540067/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261004045338/https://pubmed.ncbi.nlm.nih.gov/29540067/"
+    },
+    {
+      "id": "kolesnikova2019",
+      "type": "paper",
+      "title": "DARK Classics in Chemical Neuroscience: α-Pyrrolidinovalerophenone (\"Flakka\") (ACS Chem Neurosci 10:168-174)",
+      "authors": [
+        "Kolesnikova TO",
+        "Khatsko SL",
+        "Demin KA",
+        "Shevyrin VA",
+        "Kalueff AV"
+      ],
+      "year": 2019,
+      "doi": "10.1021/acschemneuro.8b00525",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30384587/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "sauer2009",
+      "type": "paper",
+      "title": "New designer drug alpha-pyrrolidinovalerophenone (PVP): studies on its metabolism and toxicological detection in rat urine using gas chromatographic/mass spectrometric techniques (J Mass Spectrom 44:952-64)",
+      "authors": [
+        "Sauer C",
+        "Peters FT",
+        "Haas C",
+        "Meyer MR",
+        "Fritschi G",
+        "Maurer HH"
+      ],
+      "year": 2009,
+      "doi": "10.1002/jms.1571",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19241365/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251117060350/https://pubmed.ncbi.nlm.nih.gov/19241365/"
+    },
+    {
+      "id": "swgdrug-apvp",
+      "type": "database",
+      "title": "SWGDRUG monograph: alpha-PVP (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/a-PVP.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260724181156/https://www.swgdrug.org/Monographs/a-PVP.pdf",
+      "tier": "agency"
+    }
+  ]
+}

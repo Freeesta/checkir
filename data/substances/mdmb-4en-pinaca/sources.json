@@ -1,0 +1,170 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "watanabe2019",
+      "type": "paper",
+      "title": "Biotransformation of the New Synthetic Cannabinoid with an Alkene, MDMB-4en-PINACA, by Human Hepatocytes, Human Liver Microsomes, and Human Urine and Blood (AAPS J 22:13)",
+      "authors": [
+        "S. Watanabe",
+        "S. Vikingsson",
+        "A. Åstrand",
+        "H. Gréen",
+        "R. Kronstrand"
+      ],
+      "year": 2019,
+      "doi": "10.1208/s12248-019-0381-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31848852/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "erolozturk2021",
+      "type": "paper",
+      "title": "In Vitro Phase I Metabolism of the Recently Emerged Synthetic MDMB-4en-PINACA and Its Detection in Human Urine Samples (J Anal Toxicol 44:976-984)",
+      "authors": [
+        "Y. Erol Ozturk",
+        "O. Yeter"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32091101/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gu2022",
+      "type": "paper",
+      "title": "Metabolic profiles and screening tactics for MDMB-4en-PINACA in human urine and serum samples (J Pharm Biomed Anal 220:114985)",
+      "authors": [
+        "K. Gu",
+        "S. Qin",
+        "Y. Zhang",
+        "W. Zhang",
+        "G. Xin",
+        "B. Shi",
+        "J. Wang",
+        "Y. Wang",
+        "J. Lu"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.jpba.2022.114985",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35985137/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "norman2020",
+      "type": "paper",
+      "title": "Detection and quantitation of synthetic cannabinoid receptor agonists in infused papers from prisons in a constantly evolving illicit market (Drug Test Anal 12:538-554)",
+      "authors": [
+        "C. Norman",
+        "G. Walker",
+        "B. McKirdy",
+        "C. McDonald",
+        "D. Fletcher",
+        "L. H. Antonides",
+        "O. B. Sutcliffe",
+        "N. Nic Daéid",
+        "C. McKenzie"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2767",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31944624/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kronstrand2022",
+      "type": "paper",
+      "title": "The metabolism of the synthetic cannabinoids ADB-BUTINACA and ADB-4en-PINACA and their detection in forensic toxicology casework and infused papers seized in prisons (Drug Test Anal 14:634-652)",
+      "authors": [
+        "R. Kronstrand",
+        "C. Norman",
+        "S. Vikingsson",
+        "A. Biemans",
+        "B. Valencia Crespo",
+        "D. Edwards",
+        "D. Fletcher",
+        "N. Gilbert",
+        "M. Persson",
+        "R. Reid",
+        "O. Semenova",
+        "F. Al Teneiji",
+        "X. Wu",
+        "J. Dahlén",
+        "N. NicDaéid",
+        "F. Tarbah",
+        "O. B. Sutcliffe",
+        "C. McKenzie",
+        "H. Gréen"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3203",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34811926/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "giorgetti2022",
+      "type": "paper",
+      "title": "Detection of AP-237 and synthetic cannabinoids on an infused letter sent to a German prisoner (Drug Test Anal 14:1779-1784)",
+      "authors": [
+        "A. Giorgetti",
+        "P. Brunetti",
+        "S. Pelotti",
+        "V. Auwärter"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3351",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35918775/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "gardner2026",
+      "type": "paper",
+      "title": "Identification and quantification of Δ-9-tetrahydrocannabinol and the synthetic cannabinoid MDMB-4en-PINACA in edible products seized by United Kingdom police in 2024 (Addiction)",
+      "authors": [
+        "M. Gardner",
+        "K. Proctor",
+        "M. Old",
+        "G. Cozier",
+        "O. Sutcliffe",
+        "J. Scott",
+        "S. M. Husbands",
+        "T. P. Freeman",
+        "P. Sunderland",
+        "C. R. Pudney"
+      ],
+      "year": 2026,
+      "doi": "10.1111/add.70611",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42866963/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "osman2026",
+      "type": "paper",
+      "title": "Severe MDMB-4en-PINACA toxicity following use of an electronic vaping device (Clin Toxicol (Phila))",
+      "authors": [
+        "A. Osman",
+        "L. Starbrook",
+        "M. Pucci"
+      ],
+      "year": 2026,
+      "doi": "10.1080/15563650.2026.2743727",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42861996/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

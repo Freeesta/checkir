@@ -1,0 +1,38 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "huppertz2018",
+      "type": "paper",
+      "title": "Flubromazolam - basic pharmacokinetic evaluation of a highly potent designer benzodiazepine (Drug Test Anal 10:206-211)",
+      "authors": [
+        "L. M. Huppertz",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2203",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28378533/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204003332/https://pubmed.ncbi.nlm.nih.gov/28378533/"
+    },
+    {
+      "id": "bohnenberger2019",
+      "type": "paper",
+      "title": "Flubromazolam overdose: a review of a new designer benzodiazepine and the role of flumazenil (Ment Health Clin 9:133-137)",
+      "authors": [
+        "K. Bohnenberger",
+        "M. T. Liu"
+      ],
+      "year": 2019,
+      "doi": "10.9740/mhc.2019.05.133",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31123661/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250203224939/https://pubmed.ncbi.nlm.nih.gov/31123661/"
+    }
+  ]
+}

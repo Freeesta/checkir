@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-bk-mddma",
+      "type": "database",
+      "title": "SWGDRUG monograph: bk-MDDMA (dimethylone) (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/bk-MDDMA.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

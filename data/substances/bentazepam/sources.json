@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gonzalezlopez1986",
+      "type": "paper",
+      "title": "Pharmacokinetics of tiadipone: a new anxiolytic (Int J Clin Pharmacol Ther Toxicol 24(9):482-4)",
+      "authors": [
+        "Gonzalez López F",
+        "Mariño EL",
+        "Dominguez-Gil A"
+      ],
+      "year": 1986,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2877954/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260909014731/https://pubmed.ncbi.nlm.nih.gov/2877954/"
+    }
+  ]
+}

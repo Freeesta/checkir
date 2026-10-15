@@ -1,0 +1,179 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "dolder2017",
+      "type": "paper",
+      "title": "Pharmacokinetics and Pharmacodynamics of Lisdexamfetamine Compared with D-Amphetamine in Healthy Subjects (Front Pharmacol 8:617)",
+      "authors": [
+        "P. C. Dolder",
+        "P. Strajhar",
+        "P. Vizeli",
+        "F. Hammann",
+        "A. Odermatt",
+        "M. E. Liechti"
+      ],
+      "year": 2017,
+      "doi": "10.3389/fphar.2017.00617",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5594082/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260927214026/https://pmc.ncbi.nlm.nih.gov/articles/PMC5594082/"
+    },
+    {
+      "id": "heal2013",
+      "type": "paper",
+      "title": "Amphetamine, past and present - a pharmacological and clinical perspective (J Psychopharmacol 27(6):479-496)",
+      "authors": [
+        "D. J. Heal",
+        "S. L. Smith",
+        "J. Gosden",
+        "D. J. Nutt"
+      ],
+      "year": 2013,
+      "doi": "10.1177/0269881113482532",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3666194",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20261011231842/https://pmc.ncbi.nlm.nih.gov/articles/PMC3666194"
+    },
+    {
+      "id": "evekeo-label",
+      "type": "institution",
+      "title": "EVEKEO (amphetamine sulfate) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f469fb38-0380-4621-9db3-a4f429126156",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "markowitz2017",
+      "type": "paper",
+      "title": "The Clinical Pharmacokinetics of Amphetamines Utilized in the Treatment of Attention-Deficit/Hyperactivity Disorder (J Child Adolesc Psychopharmacol 27:678-689)",
+      "authors": [
+        "J. S. Markowitz",
+        "K. S. Patrick"
+      ],
+      "year": 2017,
+      "doi": "10.1089/cap.2017.0071",
+      "url": "https://doi.org/10.1089/cap.2017.0071",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "wan1978",
+      "type": "paper",
+      "title": "Kinetics, salivary excretion of amphetamine isomers, and effect of urinary pH (Clin Pharmacol Ther 23:585-90)",
+      "authors": [
+        "S. H. Wan",
+        "S. B. Matin",
+        "D. L. Azarnoff"
+      ],
+      "year": 1978,
+      "doi": "10.1002/cpt1978235585",
+      "url": "https://doi.org/10.1002/cpt1978235585",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "poklis1998",
+      "type": "paper",
+      "title": "Urinary excretion of d-amphetamine following oral doses in humans: implications for urine drug testing (J Anal Toxicol 22:481-6)",
+      "authors": [
+        "A. Poklis",
+        "J. Still",
+        "P. W. Slattum",
+        "L. F. Edinboro",
+        "J. J. Saady",
+        "A. Costantino"
+      ],
+      "year": 1998,
+      "doi": "10.1093/jat/22.6.481",
+      "url": "https://doi.org/10.1093/jat/22.6.481",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "helland2025",
+      "type": "paper",
+      "title": "Drug detection in oral fluid and urine after single therapeutic doses of dexamphetamine, lisdexamphetamine, and methylphenidate in healthy volunteers (J Anal Toxicol 49:65-72)",
+      "authors": [
+        "A. Helland",
+        "S. Muller",
+        "O. Spigset",
+        "H. M. Krabseth",
+        "M. Hansen",
+        "R. B. Skråstad"
+      ],
+      "year": 2025,
+      "doi": "10.1093/jat/bkae097",
+      "url": "https://doi.org/10.1093/jat/bkae097",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "miranda2007",
+      "type": "paper",
+      "title": "Determination of amphetamine, methamphetamine, and hydroxyamphetamine derivatives in urine by gas chromatography-mass spectrometry and its relation to CYP2D6 phenotype of drug users (J Anal Toxicol 31:31-6)",
+      "authors": [
+        "E. Miranda-G",
+        "M. Sordo",
+        "A. M. Salazar",
+        "C. Contreras",
+        "L. Bautista",
+        "A. E. R. García",
+        "P. Ostrosky-Wegman"
+      ],
+      "year": 2007,
+      "doi": "10.1093/jat/31.1.31",
+      "url": "https://doi.org/10.1093/jat/31.1.31",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "spiller2013",
+      "type": "paper",
+      "title": "Overdose of drugs for attention-deficit hyperactivity disorder: clinical presentation, mechanisms of toxicity, and management (CNS Drugs 27:531-43)",
+      "authors": [
+        "H. A. Spiller",
+        "H. L. Hays",
+        "A. Aleguas"
+      ],
+      "year": 2013,
+      "doi": "10.1007/s40263-013-0084-8",
+      "url": "https://doi.org/10.1007/s40263-013-0084-8",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "carvalho2012",
+      "type": "paper",
+      "title": "Toxicity of amphetamines: an update (Arch Toxicol 86:1167-231)",
+      "authors": [
+        "M. Carvalho",
+        "H. Carmo",
+        "V. M. Costa",
+        "J. P. Capela",
+        "H. Pontes",
+        "F. Remião",
+        "F. Carvalho",
+        "M. d. L. Bastos"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00204-012-0815-5",
+      "url": "https://doi.org/10.1007/s00204-012-0815-5",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    }
+  ]
+}

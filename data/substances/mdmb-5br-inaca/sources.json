@@ -1,0 +1,27 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "deventer2024",
+      "type": "paper",
+      "title": "In vitro cannabinoid activity profiling of generic ban-evading brominated synthetic cannabinoid receptor agonists and their analogs (Drug Test Anal 16:616-628)",
+      "authors": [
+        "M. H. Deventer",
+        "M. Persson",
+        "C. Norman",
+        "H. Liu",
+        "M. J. Connolly",
+        "N. N. Daéid",
+        "C. McKenzie",
+        "H. Gréen",
+        "C. P. Stove"
+      ],
+      "year": 2024,
+      "doi": "10.1002/dta.3592",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37903509/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

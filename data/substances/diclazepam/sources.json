@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "moosmann2014",
+      "type": "paper",
+      "title": "Characterization of the designer benzodiazepine diclazepam and preliminary data on its metabolism and pharmacokinetics (Drug Test Anal 6(7-8):757-63)",
+      "authors": [
+        "Moosmann B",
+        "Bisel P",
+        "Auwärter V"
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1628",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24604775/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

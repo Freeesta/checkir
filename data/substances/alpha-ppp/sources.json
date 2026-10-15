@@ -1,0 +1,29 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "maier2021",
+      "type": "paper",
+      "title": "α-PPP and its derivatives are selective partial releasers at the human norepinephrine transporter: A pharmacological characterization of interactions between pyrrolidinopropiophenones and high and low affinity monoamine transporters (Neuropharmacology 190:108570)",
+      "authors": [
+        "Maier J",
+        "Rauter L",
+        "Rudin D",
+        "Niello M",
+        "Holy M",
+        "Schmid D",
+        "Wilson J",
+        "Blough BE",
+        "Gannon BM",
+        "Murnane KS",
+        "Sitte HH"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.neuropharm.2021.108570",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33864800/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

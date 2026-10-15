@@ -1,0 +1,36 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "quetiapine-label",
+      "type": "institution",
+      "title": "Quetiapine tablets, film coated (Major Pharmaceuticals), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f9447739-9e21-4232-950f-174c0496ab66",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "friedman2026-quetiapine",
+      "type": "paper",
+      "title": "Quetiapine: a novel additive to the illicit heroin supply in Los Angeles (J Addict Med 20:386-388)",
+      "authors": [
+        "J. R. Friedman",
+        "C. A. Molina",
+        "R. Romero",
+        "E. M. Pyfrom",
+        "M. G. Appley",
+        "C. Marienfeld",
+        "E. Sisco",
+        "C. L. Shover"
+      ],
+      "year": 2026,
+      "doi": "10.1097/ADM.0000000000001552",
+      "url": "https://doi.org/10.1097/ADM.0000000000001552",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

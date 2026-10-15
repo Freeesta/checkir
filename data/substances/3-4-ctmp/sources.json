@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "davidson2018",
+      "type": "paper",
+      "title": "Neurochemical Assessment of Methylphenidate and Its \"Legal High\" Analogs 3,4-CTMP and Ethylphenidate in Rat Nucleus Accumbens and Bed Nucleus of the Stria Terminalis (Front Psychiatry 9:149)",
+      "authors": [
+        "Davidson C",
+        "Raby CAR",
+        "Barrese V",
+        "Ramsey J"
+      ],
+      "year": 2018,
+      "doi": "10.3389/fpsyt.2018.00149",
+      "url": "https://doi.org/10.3389/fpsyt.2018.00149",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

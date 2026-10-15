@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "decampos2024",
+      "type": "paper",
+      "title": "Identification of ADB-5'Br-BINACA in plant material and analytical characterization using GC-MS, LC-QTOF-MS, NMR and ATR-FTIR (J Pharm Biomed Anal 247:116254)",
+      "authors": [
+        "E. G. de Campos",
+        "D. G. Farrar",
+        "A. J. Krotulski"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.116254",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38810333/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

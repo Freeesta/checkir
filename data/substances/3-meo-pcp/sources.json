@@ -1,0 +1,56 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "copeland2022",
+      "type": "paper",
+      "title": "The First Fatal Intoxication with 3-MeO-PCP in the UK and a Review of the Literature (J Anal Toxicol)",
+      "authors": [
+        "C. S. Copeland",
+        "S. Hudson",
+        "R. Treble"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkac015",
+      "url": "https://doi.org/10.1093/jat/bkac015",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "arbouche2021",
+      "type": "paper",
+      "title": "Determination of 3-MeO-PCP in human blood and urine in a fatal intoxication case, with a specific focus on metabolites identification (Forensic Sci Res)",
+      "authors": [
+        "N. Arbouche",
+        "P. Kintz",
+        "C. Zagdoun",
+        "C. Gheddar",
+        "J.-S. Raul",
+        "A. Ameline"
+      ],
+      "year": 2021,
+      "doi": "10.1080/20961790.2021.1928821",
+      "url": "https://doi.org/10.1080/20961790.2021.1928821",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "pepe2024",
+      "type": "paper",
+      "title": "3-Methoxy-Phencyclidine Induced Psychotic Disorder: A Literature Review and an 18F-FDG PET/CT Case Report (Pharmaceuticals 17(4):452)",
+      "authors": [
+        "M. Pepe",
+        "M. Di Nicola",
+        "F. Cocciolillo"
+      ],
+      "year": 2024,
+      "doi": "10.3390/ph17040452",
+      "url": "https://doi.org/10.3390/ph17040452",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    }
+  ]
+}

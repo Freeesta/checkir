@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wagmann2020",
+      "type": "paper",
+      "title": "Toxicokinetics and analytical toxicology of flualprazolam: metabolic fate, isozyme mapping, human plasma concentration and main urinary excretion products (J Anal Toxicol 44:549-558)",
+      "authors": [
+        "L. Wagmann",
+        "S. K. Manier",
+        "T. P. Bambauer",
+        "et al."
+      ],
+      "year": 2020,
+      "doi": "10.1093/jat/bkaa019",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32104896/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204191314/https://pubmed.ncbi.nlm.nih.gov/32104896/"
+    }
+  ]
+}
