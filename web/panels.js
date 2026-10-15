@@ -19,7 +19,7 @@ import { activeFile, activeLibraries, readPref, resultOf, writePref } from "./st
  * `summary` is the numeric line shown when the section is closed; `render` fills the open section; `sig` (optional) is what the section shows: it is drawn again only when that changes, so a result arriving does not rebuild a section the person is using.
  * @typedef {{
  *   id: string, n: number, titleKey: string, tipKey: string, icon: string,
- *   sig?: (s: import("./state.js").AppState) => string, summary: (s: import("./state.js").AppState) => string, label?: (s: import("./state.js").AppState) => string,
+ *   busy?: (s: import("./state.js").AppState) => boolean, sig?: (s: import("./state.js").AppState) => string, summary: (s: import("./state.js").AppState) => string, label?: (s: import("./state.js").AppState) => string,
  *   render: (body: HTMLElement, s: import("./state.js").AppState, ctx: import("./actions.js").Ctx) => void,
  * }} PanelDef
  */
@@ -86,12 +86,23 @@ export const PANELS = [
     id: "libraries", n: 2, titleKey: "panel.libraries.title", tipKey: "panel.libraries.tip", icon: "library",
     summary: (s) => `${formatNumber(activeLibraries(s).length)} · ${formatNumber(activeLibraries(s).reduce((a, l) => a + l.spectra, 0))}`,
     sig: (s) => JSON.stringify([s.libraries, s.libraryJob, s.libraryNotices]),
+    busy: (s) => s.librariesLoading,
     render: renderLibraries,
   },
   { id: "results", n: 3, titleKey: "panel.results.title", tipKey: "panel.results.tip", icon: "results", summary: resultsSummary, render: renderResultsPanel },
   { id: "peaks", n: 4, titleKey: "panel.peaks.title", tipKey: "panel.peaks.tip", icon: "peaks", summary: peaksSummary, label: peaksLabel, render: renderPeaks },
   { id: "sheet", n: 5, titleKey: "panel.sheet.title", tipKey: "panel.sheet.tip", icon: "sheet", summary: sheetSummary, render: renderSheetPanel },
 ];
+
+/** Spinner next to the title while the section loads: a hidden spoken text in the status region, `aria-busy` on the section. @param {HTMLElement} section @param {boolean} on */
+function showBusy(section, on) {
+  const ind = section.querySelector(".load-ind");
+  if (!ind) return;
+  section.setAttribute("aria-busy", String(on));
+  if (!on) return ind.replaceChildren();
+  if (ind.firstChild) return;
+  ind.append(el("span", { class: "spinner", "aria-hidden": "true" }), el("span", { class: "visually-hidden" }, [t("panel.libraries.loading")]));
+}
 
 /** @param {string} id @returns {HTMLDetailsElement | null} */
 function sectionOf(id) {
@@ -179,7 +190,7 @@ export function buildPanels(hosts, ctx) {
   };
   for (const p of PANELS) {
     const section = el("details", { class: "panel-section", "data-panel": p.id, name: "panel" });
-    const summary = el("summary", {}, [icon(p.icon), el("span", { class: "title" }), el("span", { class: "sum" })]);
+    const summary = el("summary", {}, [icon(p.icon), el("span", { class: "title" }), ...(p.busy ? [el("span", { class: "load-ind", role: "status" })] : []), el("span", { class: "sum" })]);
     summary.addEventListener("click", (e) => {
       if (!isRail()) return;
       e.preventDefault();
@@ -211,6 +222,7 @@ export function buildPanels(hosts, ctx) {
       section.querySelector(".sum")?.replaceChildren(p.summary(s));
       const spoken = `${title} ${(p.label ?? p.summary)(s)}`;
       section.querySelector("summary")?.setAttribute("aria-label", spoken);
+      if (p.busy) showBusy(section, p.busy(s));
       drawBody(section, p, s, ctx);
       hosts.tabbar.querySelector(`[data-goto="${p.id}"]`)?.setAttribute("aria-label", spoken);
     }
