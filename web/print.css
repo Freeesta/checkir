@@ -34,3 +34,11 @@ body[data-page="sheets"] .sheet-section { break-inside: avoid; }
 body[data-page="sheets"] .structure-svg { background: #fff; color: #000; }
 body[data-page="sheets"] .topic-tag { border-color: #000; color: #000; }
 #doc-tabs { display: none; }
+/* A substance in focus prints as the sheets page does: the sheet alone, A4, black and white. */
+body[data-sheet-tab] > .shell { display: block; }
+body[data-sheet-tab] .panel, body[data-sheet-tab] #pane-main, body[data-sheet-tab] .panel-resize { display: none; }
+body[data-sheet-tab] #sheet-pane { display: block; font-size: 10pt; background: #fff; color: #000; }
+body[data-sheet-tab] #sheet-pane .sheet-section { break-inside: avoid; }
+body[data-sheet-tab] #sheet-pane .structure-svg { background: #fff; color: #000; }
+body[data-sheet-tab] #sheet-pane .topic-tag { border-color: #000; color: #000; }
+body[data-sheet-tab] #sheet-pane > h2 { border-top: 0; font-size: 14pt; }
