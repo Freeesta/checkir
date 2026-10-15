@@ -1,5 +1,6 @@
 // Comparison e2e: the automatic comparison, levels, alerts, rows, overlay and what is (not) stored, on synthetic spectra with a known answer.
 import { alertViews, levelNumber } from "../web/alerts.js";
+import { importAs } from "./importa_aiuto.mjs";
 
 /** Lorentzian bands [centre, height, half-width] on 400-4000 cm-1, step 2, as a JCAMP XYPOINTS file. */
 export function jcamp(title, bands) {
@@ -127,8 +128,7 @@ export async function matchScenario(browser, base, check, axe) {
   });
   await openPanel(page, "libraries");
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
-  await page.fill("#lib-name", "Sintetica");
-  await page.setInputFiles('input[data-library="files"]', [
+  await importAs(page, "Sintetica", [
     { name: "alfa.jdx", mimeType: "application/octet-stream", buffer: jcamp("alfa", ALFA) },
     { name: "beta.jdx", mimeType: "application/octet-stream", buffer: jcamp("beta", BETA) },
     { name: "gamma.jdx", mimeType: "application/octet-stream", buffer: jcamp("gamma", GAMMA) },

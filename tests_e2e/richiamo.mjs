@@ -1,5 +1,6 @@
 // Recalled compounds e2e: search by name, up to three references, overlaid / offset / difference, the four scales, the numbers beside each one, "keep as residual".
 import { BETA, GAMMA, ALFA, ALFA_BIS, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 export async function openPanel(page, name) {
   const section = page.locator(`details[data-panel="${name}"]`);
@@ -12,9 +13,8 @@ export async function prepare(browser, base) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openPanel(page, "libraries");
-  await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });
-  await page.setInputFiles('input[data-library="files"]', [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
+  await importAs(page, "Sintetica", [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
   await page.waitForFunction(() => /4/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));
   await page.setInputFiles("input[type=file]", [{ name: "campione.jdx", mimeType: "chemical/x-jcamp-dx", buffer: jcamp("campione", BETA) }]);
   await openPanel(page, "results");

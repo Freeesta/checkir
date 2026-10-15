@@ -98,7 +98,7 @@ h3 { margin: 0.75rem 0 0.25rem; font-size: 1rem; }
 p { margin: 0.25rem 0; }
 .footer { max-width: 70rem; margin: 0 auto; padding: 0.75rem 1rem; color: var(--text-muted); font-size: 0.9rem; }
 .empty { color: var(--text-muted); font-size: 0.9rem; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.sr-only, .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 0.5rem; top: 0.5rem; background: var(--surface); padding: 0.5rem; z-index: 40; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
@@ -176,11 +176,9 @@ body[data-panel="rail"] .panel-head { justify-content: center; }
 .sampling-choice { max-width: 100%; min-height: 1.75rem; font-size: 0.9em; }
 .file-select[aria-current] { border-left-color: var(--color-brand); font-weight: 600; background: var(--surface); }
 .libs, .notes { list-style: none; margin: 0.5rem 0 0; padding: 0; font-size: 0.9rem; }
-.lib-item { padding: 0.35rem 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.1rem; }
-.lib-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
-.lib-toggle { display: inline-flex; align-items: center; gap: 0.4rem; flex: 1; min-height: 1.75rem; }
-.badge { padding: 0 0.4rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 0.8rem; color: var(--text-muted); }
-.lib-name { width: 100%; box-sizing: border-box; min-height: 1.9rem; margin-bottom: 0.4rem; font: inherit; color: inherit; background: var(--surface); border: 1px solid var(--border); border-radius: 0.3rem; padding: 0.1rem 0.4rem; }
+.lib-item { padding: 0.1rem 0; border-top: 1px solid var(--border); }
+.lib-head { display: flex; align-items: center; gap: 0.2rem; }
+.lib-toggle { display: inline-flex; align-items: center; gap: 0.4rem; flex: 1; min-width: 0; min-height: 1.75rem; overflow-wrap: anywhere; }
 .lib-progress { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.5rem 0; font-size: 0.9rem; }
 .lib-progress progress { flex: 1; min-width: 6rem; accent-color: var(--color-brand); }
 .note { color: var(--text-muted); font-size: 0.85rem; }
@@ -214,7 +212,7 @@ th, td { padding: 0.25rem 0.75rem; text-align: right; border-bottom: 1px solid v
 th { position: sticky; top: 0; background: var(--surface); }
 
 /* Tooltip, toggletip, dialogs */
-.tooltip { position: absolute; z-index: 50; max-width: 18rem; padding: 0.3rem 0.6rem; background: var(--text); color: var(--bg); border-radius: 0.3rem; font-size: 0.875rem; }
+.tooltip { position: absolute; z-index: 50; max-width: 18rem; padding: 0.3rem 0.6rem; background: var(--text); color: var(--bg); border-radius: 0.3rem; font-size: 0.875rem; white-space: pre-line; }
 .toggletip { position: relative; display: inline-flex; }
 .toggletip .icon-button { min-width: 2rem; min-height: 2rem; border: 0; background: transparent; }
 .toggletip-note { position: absolute; top: 100%; left: 0; z-index: 30; width: max-content; max-width: min(22rem, 80vw); padding: 0.5rem 0.75rem; background: var(--surface); border: 1px solid var(--border); border-radius: 0.4rem; font-size: 0.9rem; }

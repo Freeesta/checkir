@@ -1,5 +1,6 @@
 // Layout pass e2e: chart width, regions strip, coverage bar, sheet head, phone header, test bar, panel that follows the step. Waits on state, never on time.
 import { BETA, GAMMA, ALFA, ALFA_BIS, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 const BETA_PLUS = [...BETA, [2650, 0.5, 12]];
 
@@ -9,9 +10,8 @@ async function loadResult(page) {
   await page.waitForSelector("body[data-ready='1']");
   if (page.viewportSize().width <= 720) await page.click("#tabbar [data-goto='libraries']");
   else if (!(await page.locator('details[data-panel="libraries"]').evaluate((d) => d.open))) await page.locator('details[data-panel="libraries"] summary').click();
-  await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });
-  await page.setInputFiles('input[data-library="files"]', [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
+  await importAs(page, "Sintetica", [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
   await page.waitForFunction(() => /4/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));
   await page.setInputFiles("input[type=file]", [file("campione", BETA_PLUS)]);
   await page.waitForSelector(".result[data-level]", { timeout: 20000 });

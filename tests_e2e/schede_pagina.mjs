@@ -3,6 +3,7 @@
 import { collect } from "../tools/genera_schede.mjs";
 import { REASSURING } from "./schede.mjs";
 import { ALFA, BETA, GAMMA, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 const FIXTURE = new URL("../tests/fixture/schede/data/", import.meta.url);
 
@@ -105,8 +106,7 @@ async function analyse(page, base, spectra, sample) {
   });
   const panel = page.locator('details[data-panel="libraries"]');
   if (!(await panel.evaluate((d) => d.open))) await panel.locator("summary").click();
-  await page.fill("#lib-name", "Privata");
-  await page.setInputFiles('input[data-library="files"]', spectra.map(([title, bands]) => ({ name: `${title}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(title, bands) })));
+  await importAs(page, "Privata", spectra.map(([title, bands]) => ({ name: `${title}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(title, bands) })));
   await page.waitForFunction((n) => new RegExp(String(n)).test(document.querySelector('[data-library="privata"]')?.textContent ?? ""), spectra.length);
   await page.setInputFiles("input[type=file]:not([data-library])", [{ name: "campione.jdx", mimeType: "chemical/x-jcamp-dx", buffer: jcamp("campione", sample) }]);
   await page.waitForSelector(".result[data-level]", { state: "attached", timeout: 20000 });

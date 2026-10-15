@@ -1,6 +1,7 @@
 // Peak index e2e: the worker builds the index of a private synthetic library, answers "which spectra have a band here?", keeps the index in the
 // OPFS cache and finds it again after a reload. Known answers from the synthetic bands; no page for the search yet, so the page modules are called.
 import { ALFA, ALFA_BIS, BETA, GAMMA, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 async function openPanel(page, name) {
   const section = page.locator(`details[data-panel="${name}"]`);
@@ -91,9 +92,8 @@ export async function inverseScenario(browser, base, check, axe) {
   const { ctx, page, errors } = await libraryPage(browser, base);
   await openPanel(page, "libraries");
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
-  await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });
-  await page.setInputFiles('input[data-library="files"]', [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
+  await importAs(page, "Sintetica", [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
   await page.waitForFunction(() => /4/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));
   const first = await ask(page, QUERIES);
   const [one, both, notAbove, partial, empty] = first.out;

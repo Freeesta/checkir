@@ -1,6 +1,7 @@
 // Choice and counselling sheet e2e: the proposal and the chemist's choice, the three blocks, the words that must not appear, the A5 print (one page),
 // talk mode, the language of the sheet, and the comparison flow on a synthetic library.
 import { ALFA, BETA, GAMMA, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 const BLOCKS = ["head", "found", "alerts"];
 /** Fixed warning texts the owner removed (13/10/2026): none of them may come back on the sheet. */
@@ -98,8 +99,7 @@ async function flowScenario(browser, base, check) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.fill("#lib-name", "Sintetica");
-  await page.setInputFiles('input[data-library="files"]', [{ name: "alfa.jdx", buffer: jcamp("alfa", ALFA) }, { name: "beta.jdx", buffer: jcamp("beta", BETA) }, { name: "gamma.jdx", buffer: jcamp("gamma", GAMMA) }]);
+  await importAs(page, "Sintetica", [{ name: "alfa.jdx", buffer: jcamp("alfa", ALFA) }, { name: "beta.jdx", buffer: jcamp("beta", BETA) }, { name: "gamma.jdx", buffer: jcamp("gamma", GAMMA) }]);
   await page.waitForFunction(() => /3/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));
   await page.setInputFiles("input[type=file]", [{ name: "campione_beta.jdx", mimeType: "chemical/x-jcamp-dx", buffer: jcamp("campione_beta", BETA) }]);
   await page.waitForSelector(".result[data-level]", { state: "attached", timeout: 20000 });

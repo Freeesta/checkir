@@ -11,7 +11,7 @@
  * @typedef {{ entry: LibraryEntry, rows: import("./nomi.js").IndexRow[], values: Float32Array, native: Native | null }} Loaded
  */
 import { buildNameIndex, searchNames } from "./nomi.js";
-import { buildPrivateLibrary, groupPackages, noticeOf, slug, uniqueId } from "./importa.js";
+import { buildPrivateLibrary, groupPackages, isPackageFile, noticeOf, slug, uniqueId } from "./importa.js";
 import { canStore, loadLibraries, removeStored, saveLibrary } from "./opfs.js";
 import { removeIndex } from "./peak_index_cache.js";
 import { currentLang, t } from "./i18n.js";
@@ -345,7 +345,9 @@ export async function importPackages(engine, files, say) {
   publish();
   /** @type {Notice} */
   const head = ok ? { key: "library.package.done", params: { n: String(ok) } } : { key: "library.package.none", params: {} };
-  const all = [head, ...(noStorage ? [{ key: "library.import.no_storage", params: {} }] : []), ...notices];
+  const strange = files.filter((f) => !isPackageFile(f)).length;
+  const unknown = strange ? [{ key: strange === 1 ? "library.import.unrecognized_one" : "library.import.unrecognized_many", params: { count: String(strange) } }] : [];
+  const all = [head, ...(noStorage ? [{ key: "library.import.no_storage", params: {} }] : []), ...notices, ...unknown];
   update({ libraryNotices: all });
   say(head);
 }

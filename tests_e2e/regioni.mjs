@@ -1,6 +1,7 @@
 // Region e2e: choosing the part of the spectrum the comparison uses (fields, cursors, brush, presets), the candidate × region table, the chip, the alert and what is (not) stored.
 import { readFile } from "node:fs/promises";
 import { ALFA, BETA, GAMMA, ALFA_BIS, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 /** Pure helpers: merging, the mask, the minimum width, the options, and the presets against the thresholds file. */
 export async function rangesPureScenario(check) {
@@ -47,9 +48,8 @@ async function setup(browser, base, locale = "it-IT", viewport = { width: 1366, 
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openPanel(page, "libraries");
-  await page.fill("#lib-name", "Sintetica");
   const files = [["alfa", ALFA], ["beta", BETA], ["gamma", GAMMA], ["alfa_bis", ALFA_BIS]];
-  await page.setInputFiles('input[data-library="files"]', files.map(([n, b]) => ({ name: `${n}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(n, b) })));
+  await importAs(page, "Sintetica", files.map(([n, b]) => ({ name: `${n}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(n, b) })));
   await page.locator('[data-library="sintetica"]').waitFor();
   await page.waitForFunction(() => /4/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));
   await page.setInputFiles("input[type=file]:not([data-library])", [{ name: "beta.jdx", mimeType: "chemical/x-jcamp-dx", buffer: jcamp("beta", BETA) }]);

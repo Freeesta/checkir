@@ -4,6 +4,7 @@ import { execFileSync } from "node:child_process";
 import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { importAs } from "./importa_aiuto.mjs";
 
 async function synthetic() {
   const dir = await mkdtemp(join(tmpdir(), "checkir-shimadzu-"));
@@ -36,13 +37,12 @@ export async function shimadzuScenario(browser, base, check, axe) {
   const section = page.locator('details[data-panel="libraries"]');
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();
   const before = requests.length;
-  await page.fill("#lib-name", "Shim");
-  await page.setInputFiles('input[data-library="files"]', files);
+  await importAs(page, "Shim", files);
   const lib = page.locator('[data-library="shim"]');
   await lib.waitFor();
   const notes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
   check("shimadzu: the library is imported with its 3 entries and the scale warning is translated", /3 spettri/.test(notes) && /normalizzato a 0–255 \(3 voci\)/.test(notes) && !/reader\./.test(notes), notes);
-  check("shimadzu: the library is private with 3 spectra", /Privata/.test((await lib.textContent()) ?? "") && /Spettri: 3/.test((await lib.textContent()) ?? ""));
+  check("shimadzu: the library is private with 3 spectra", /importata da te/.test((await lib.textContent()) ?? "") && /Spettri: 3/.test((await lib.textContent()) ?? ""));
   const stored = await page.evaluate(async () => {
     const dirHandle = await (await (await navigator.storage.getDirectory()).getDirectoryHandle("checkir-libraries")).getDirectoryHandle("shim");
     const get = async (n) => (await dirHandle.getFileHandle(n)).getFile();
