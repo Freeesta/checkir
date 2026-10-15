@@ -6,7 +6,7 @@ It is the acetate ester of codeine at the 6-hydroxyl group. [f:pubchem]
 
 ## category
 
-Chemical class: morphinans, among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: synthesis or degradation residue (an impurity of illicitly manufactured heroin). This classification is a checkir proposal awaiting review. [f:oneal2001] [f:unodc-ewa] [f:checkir-classification]
+Chemical class: morphinans, among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: synthesis or degradation residue (an impurity of illicitly manufactured heroin). [f:oneal2001] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

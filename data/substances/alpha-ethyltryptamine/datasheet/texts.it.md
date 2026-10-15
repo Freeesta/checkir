@@ -6,7 +6,7 @@ Ha un centro stereogenico sul carbonio alfa; la voce PubChem non indica la stere
 
 ## category
 
-Classe chimica: triptamine. Effetto atteso: entactogeno e psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification] È classificata tra le triptamine; la stessa pubblicazione la descrive come affine sia agli psichedelici serotoninergici sia agli entactogeni. [f:silverman2025]
+Classe chimica: triptamine. Effetto atteso: entactogeno e psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification] È classificata tra le triptamine; la stessa pubblicazione la descrive come affine sia agli psichedelici serotoninergici sia agli entactogeni. [f:silverman2025]
 
 ## origin
 

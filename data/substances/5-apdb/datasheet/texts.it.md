@@ -6,7 +6,7 @@ L'anello furanico è saturo (2,3-diidro), a differenza della 5-APB. [f:pubchem]
 
 ## category
 
-Classe chimica: fenetilammine. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilammine. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

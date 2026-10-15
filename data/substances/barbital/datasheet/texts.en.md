@@ -4,7 +4,7 @@ Barbital, 5,5-diethyl-1,3-diazinane-2,4,6-trione. Formula C8H12N2O3, 184.19 g/mo
 
 ## category
 
-Chemical class: other substances. It is a barbiturate (5,5-diethyl derivative of barbituric acid). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:pubchem] [f:checkir-classification]
+Chemical class: other substances. It is a barbiturate (5,5-diethyl derivative of barbituric acid). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:pubchem] [f:checkir-classification]
 
 ## origin
 

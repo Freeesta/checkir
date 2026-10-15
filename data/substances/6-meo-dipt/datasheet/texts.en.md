@@ -6,7 +6,7 @@ It is the 6-methoxy positional isomer of 5-MeO-DIPT: same formula, methoxy group
 
 ## category
 
-Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

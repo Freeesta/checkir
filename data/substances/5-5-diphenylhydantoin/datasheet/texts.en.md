@@ -4,7 +4,7 @@ Phenytoin (5-5-diphenylhydantoin), 5,5-diphenylimidazolidine-2,4-dione. Formula 
 
 ## category
 
-Chemical class: other substances. It is an antiepileptic (hydantoin derivative) used as a medicine. Expected effect: none psychoactive. Typical role in samples: pharmacological adulterant (reported in cocaine). This classification is a checkir proposal awaiting review. [f:dilantin-label] [f:roldan2014] [f:checkir-classification]
+Chemical class: other substances. It is an antiepileptic (hydantoin derivative) used as a medicine. Expected effect: none psychoactive. Typical role in samples: pharmacological adulterant (reported in cocaine). [f:dilantin-label] [f:roldan2014] [f:checkir-classification]
 
 ## origin
 

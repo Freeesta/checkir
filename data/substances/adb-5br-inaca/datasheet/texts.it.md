@@ -4,7 +4,7 @@ ADB-5'Br-INACA, (2S)-N-(1-ammino-3,3-dimetil-1-ossobutan-2-il)-5-bromo-1H-indazo
 
 ## category
 
-Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: residuo di sintesi o degradazione. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

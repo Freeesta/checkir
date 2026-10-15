@@ -6,7 +6,7 @@ L'isomero di posizione è la 6-APB; il derivato N-metilico è la 5-MAPB. [f:bran
 
 ## category
 
-Classe chimica: fenetilammine. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilammine. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

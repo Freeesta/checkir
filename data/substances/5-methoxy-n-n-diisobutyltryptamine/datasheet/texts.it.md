@@ -6,7 +6,7 @@ I gruppi isobutilici sono 2-metilpropile, quindi non è il 5-MeO-DBT (n-butile).
 
 ## category
 
-Classe chimica: triptamine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: triptamine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

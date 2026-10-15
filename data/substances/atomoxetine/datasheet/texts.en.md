@@ -4,7 +4,7 @@ Atomoxetine, (3R)-N-methyl-3-(2-methylphenoxy)-3-phenylpropan-1-amine. Formula C
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The label describes a selective norepinephrine reuptake inhibitor for ADHD, not a stimulant; the effect axis has no such class, so "stimulant" is a checkir proposal awaiting review. Typical role in samples: active principle. [f:atomoxetine-label] [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The label describes a selective norepinephrine reuptake inhibitor for ADHD, not a stimulant; the effect axis has no such class, so "stimulant" is a checkir classification. Typical role in samples: active principle. [f:atomoxetine-label] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

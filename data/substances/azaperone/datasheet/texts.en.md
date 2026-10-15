@@ -4,7 +4,7 @@ Azaperone, 1-(4-fluorophenyl)-4-(4-pyridin-2-ylpiperazin-1-yl)butan-1-one. Formu
 
 ## category
 
-Chemical class: other substances. It is a butyrophenone neuroleptic used as a veterinary sedative in pigs. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:ema-azaperone-mrl] [f:checkir-classification]
+Chemical class: other substances. It is a butyrophenone neuroleptic used as a veterinary sedative in pigs. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:ema-azaperone-mrl] [f:checkir-classification]
 
 ## origin
 

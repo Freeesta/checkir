@@ -6,7 +6,7 @@ La catena amminopropilica è in posizione 7 del benzofurano, la posizione del be
 
 ## category
 
-Classe chimica: fenetilamine. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilamine. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

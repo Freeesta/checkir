@@ -4,7 +4,7 @@ Acrylfentanyl, N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]prop-2-enamide. Base:
 
 ## category
 
-Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

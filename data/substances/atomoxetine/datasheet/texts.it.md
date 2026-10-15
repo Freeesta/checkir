@@ -4,7 +4,7 @@ Atomoxetina, (3R)-N-metil-3-(2-metilfenossi)-3-fenilpropan-1-ammina. Formula C17
 
 ## category
 
-Classe chimica: altre sostanze; nessuna scheda di famiglia collegata. L'etichetta la descrive come inibitore selettivo della ricaptazione della noradrenalina per l'ADHD, non come stimolante; l'asse degli effetti non ha una classe simile, quindi «stimolante» è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:atomoxetine-label] [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze; nessuna scheda di famiglia collegata. L'etichetta la descrive come inibitore selettivo della ricaptazione della noradrenalina per l'ADHD, non come stimolante; l'asse degli effetti non ha una classe simile, quindi «stimolante» è una classificazione di checkir. Ruolo tipico nei campioni: principio attivo. [f:atomoxetine-label] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

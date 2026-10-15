@@ -6,7 +6,7 @@ The isobutyl groups are 2-methylpropyl, so it is not 5-MeO-DBT (n-butyl). PubChe
 
 ## category
 
-Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

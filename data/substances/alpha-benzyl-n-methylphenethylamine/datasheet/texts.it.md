@@ -6,7 +6,7 @@ Una fenetilammina con un benzile sul carbonio che porta l'azoto e un metile sull
 
 ## category
 
-Classe chimica: fenetilamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 
