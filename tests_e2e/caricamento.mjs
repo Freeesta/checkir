@@ -89,7 +89,7 @@ async function browserScenario(browser, base, check, axe) {
   check("error: a truncated JCAMP file shows a translated message, never a raw key", trunc.length > 0 && !/^\s*(reader|err)\./.test(trunc) && !trunc.includes("reader."), trunc);
 
   const stored = await page.evaluate(async () => ({ local: Object.keys(localStorage), session: sessionStorage.length, idb: (await indexedDB.databases()).length }));
-  check("canary: only preferences are stored with files loaded", stored.local.every((k) => ["checkir.lang", "checkir.theme", "checkir.panel"].includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
+  check("canary: only preferences are stored with files loaded", stored.local.every((k) => ["checkir.lang", "checkir.theme", "checkir.panel"].includes(k) || k.startsWith("checkir.libsw.")) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
 
   await page.evaluate(() => { document.querySelector('details[data-panel="files"]').open = true; });
   await page.click('[data-fk="close-C1"]');

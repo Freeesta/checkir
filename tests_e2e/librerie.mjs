@@ -2,6 +2,7 @@
 // a private library is imported from files with progress and zero network requests, kept in OPFS across a reload and removed
 // on request; the name index finds compounds by prefix without accents.
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { chipCount } from "./conteggio.mjs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { FIXTURE } from "./caricamento.mjs";
@@ -148,7 +149,7 @@ export async function librariesScenario(browser, base, check, axe) {
   const text = (await pub.textContent()) ?? "";
   check("libraries: the public library carries version, spectra, licence and attribution in its description", /Versione/.test(text) && /Spettri: 1/.test(text) && /CC-BY-4\.0/.test(text) && /Attribuzione: Libreria comunitaria/.test(text), text);
   await listChecks(page, check);
-  check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 11"));
+  check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes(await chipCount(base)));
   const swg = (await page.locator('[data-library="swgdrug-ir"]').textContent()) ?? "";
   check("libraries: a library under a written permission describes its citation, licence terms, disclaimer and no endorsement", /SWGDRUG IR Library v2024-05-15/.test(swg) && /LicenseRef-permission-swgdrug/.test(swg) && /Condizioni della licenza: Solo uso non commerciale/.test(swg) && /without warranty or liability/.test(swg) && /SWGDRUG does not endorse \S+ or any software/.test(swg) && !swg.includes("{app}"), swg);
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
@@ -208,7 +209,7 @@ export async function librariesScenario(browser, base, check, axe) {
 
 /** A public library that is off costs only its manifest: switching it on downloads it once (URL with `?v=`), the switch is remembered for it as for every library, and off again forgets the preference. */
 export async function lazyScenario(browser, base, check) {
-  const ctx = await browser.newContext({ locale: "it-IT" });
+  const ctx = await browser.newContext({ allLibraries: true, locale: "it-IT" });
   const page = await ctx.newPage();
   const requests = [];
   page.on("request", (r) => ["fetch", "xhr"].includes(r.resourceType()) && requests.push(r.url()));
@@ -219,13 +220,14 @@ export async function lazyScenario(browser, base, check) {
   const asked = (file) => requests.filter((u) => u.includes(`librerie/checkir-demo/${file}`));
   check("lazy: a library that is off shows its name but its spectra are not requested", asked("data.bin").length === 0 && asked("manifest.json").length >= 1 && /Spettri: 1/.test((await page.locator('[data-library="checkir-demo"]').textContent()) ?? ""), requests.join(", "));
   await page.getByRole("checkbox", { name: /checkir-demo/ }).check();
-  await page.waitForFunction(() => document.querySelector('[data-chip="library"]')?.textContent?.includes("2 · 12"));
+  const expected = await chipCount(base, { withDemo: true, all: true });
+  await page.waitForFunction((x) => document.querySelector('[data-chip="library"]')?.textContent?.includes(x), expected);
   check("lazy: switching it on downloads data.bin once, with ?v=, and the library joins the count", asked("data.bin").length === 1 && /data\.bin\?v=[0-9a-f]{12}$/.test(asked("data.bin")[0]), asked("data.bin").join());
   check("lazy: the switch is remembered as libsw.<id> = 1", (await page.evaluate(() => localStorage.getItem("checkir.libsw.checkir-demo"))) === "1");
   await page.reload();
   await page.waitForSelector("body[data-ready='1']");
   await openLibraries(page);
-  await page.waitForFunction(() => document.querySelector('[data-chip="library"]')?.textContent?.includes("2 · 12"));
+  await page.waitForFunction((x) => document.querySelector('[data-chip="library"]')?.textContent?.includes(x), expected);
   check("lazy: after a reload the library is still on", await page.getByRole("checkbox", { name: /checkir-demo/ }).isChecked());
   await page.getByRole("checkbox", { name: /checkir-demo/ }).uncheck();
   check("lazy: off again is the default, so the preference is forgotten", (await page.evaluate(() => localStorage.getItem("checkir.libsw.checkir-demo"))) === null);
@@ -234,7 +236,7 @@ export async function lazyScenario(browser, base, check) {
 
 /** After the first visit the libraries that are on are available with no network at all. */
 export async function offlineScenario(browser, base, check) {
-  const ctx = await browser.newContext({ locale: "it-IT" });
+  const ctx = await browser.newContext({ allLibraries: true, locale: "it-IT" });
   const page = await ctx.newPage();
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
@@ -249,6 +251,6 @@ export async function offlineScenario(browser, base, check) {
   await openLibraries(page);
   await page.locator('[data-library="swgdrug-ir"]').waitFor();
   await page.locator('[data-library="checkir-demo"]').waitFor(); // a library that is off is still listed offline
-  check("offline: a library that is on is available without network after the first visit", await page.getByRole("checkbox", { name: /swgdrug-ir/ }).isChecked() && ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 11"));
+  check("offline: a library that is on is available without network after the first visit", await page.getByRole("checkbox", { name: /swgdrug-ir/ }).isChecked() && ((await page.textContent('[data-chip="library"]')) ?? "").includes(await chipCount(base, { all: true })));
   await ctx.close();
 }

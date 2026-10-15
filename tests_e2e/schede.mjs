@@ -1,6 +1,7 @@
 // Substance sheet e2e: the sheet opens from the candidate's detail, shows version and state per section, shows what exists
 // with no banner and nothing hidden for caution (the state is plain data), cites sources, makes no request to another origin, and works by keyboard at 320 px.
 import { readFile } from "node:fs/promises";
+import { chipCount } from "./conteggio.mjs";
 import { parseParagraphs, sectionStatus } from "../web/schede.js";
 import { CANARIES } from "./canarino.mjs";
 
@@ -37,7 +38,7 @@ export async function sheetsScenario(browser, base, check, axe) {
   await page.locator('details[data-panel="libraries"] summary').click();
   await page.waitForFunction(() => /1/.test(document.querySelector('[data-library="checkir-demo"]')?.textContent ?? ""), null, { timeout: 20000 });
   await page.getByRole("checkbox", { name: /checkir-demo/ }).check();
-  await page.waitForFunction(() => document.querySelector('[data-chip="library"]')?.textContent?.includes("2 · 12"), null, { timeout: 20000 });
+  await page.waitForFunction((x) => document.querySelector('[data-chip="library"]')?.textContent?.includes(x), await chipCount(base, { withDemo: true }), { timeout: 20000 });
   await page.setInputFiles("input[type=file]", [{ name: CANARIES.fileName, mimeType: "chemical/x-jcamp-dx", buffer: Buffer.from(canarySpectrum(await readFile(SPECTRUM, "utf8"))) }]);
   const section = page.locator('details[data-panel="results"]');
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();

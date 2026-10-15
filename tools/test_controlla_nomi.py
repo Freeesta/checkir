@@ -33,5 +33,17 @@ class PatternTests(unittest.TestCase):
         self.assertTrue(p[0].search(r"open C:\Users\someone\Desktop\x.ispd"))
 
 
+class SizeTests(unittest.TestCase):
+    def test_library_packages_may_be_big_and_binary_files_are_not_read(self):
+        big = cn.ROOT / "tools" / "_big_probe.tmp"
+        big.write_bytes(b"x" * (cn.MAX_BYTES + 1))
+        try:
+            self.assertEqual(len(cn.big_files(["tools/_big_probe.tmp"])), 1)
+            self.assertEqual(cn.big_files(["librerie/x/data.bin"]), [])
+            self.assertEqual(cn.hits(["librerie/x/data.bin"], cn.compile_patterns("zzz")), [])
+        finally:
+            big.unlink()
+
+
 if __name__ == "__main__":
     unittest.main()

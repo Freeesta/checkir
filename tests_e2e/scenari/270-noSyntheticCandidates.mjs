@@ -1,6 +1,7 @@
 // Scenario run by fumo.mjs: with the default libraries no synthetic example is a candidate, and a folder with the same
 // spectra as the public ones adds no repeated candidate, no twin/ambiguity alert between copies and no raw id.
 import { readFile } from "node:fs/promises";
+import { chipCount } from "../conteggio.mjs";
 import { importAs } from "../importa_aiuto.mjs";
 
 const SYNTHETIC = new URL("../../data/substances/synthetic-a/spectra/synthetic-a-base.checkir.001.jdx", import.meta.url);
@@ -23,7 +24,7 @@ export default async ({ browser, base, check }) => {
   await page.locator('[data-library="swgdrug-ir"]').waitFor();
   const demo = page.getByRole("checkbox", { name: /checkir-demo/ });
   check("no synthetic: the demo library is listed but off by default", (await demo.count()) === 1 && !(await demo.isChecked()));
-  check("no synthetic: the header counts only the real library", ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 11"));
+  check("no synthetic: the header counts only the real library", ((await page.textContent('[data-chip="library"]')) ?? "").includes(await chipCount(base)));
 
   await page.setInputFiles("input[type=file]", { name: "campione.jdx", mimeType: "chemical/x-jcamp-dx", buffer: await readFile(SYNTHETIC) });
   await openResults(page);

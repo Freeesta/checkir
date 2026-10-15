@@ -18,7 +18,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MAX_BYTES = 1_000_000
-BINARY_SKIP = (".png", ".jpg", ".jpeg", ".gif", ".ico", ".woff", ".woff2", ".wasm")
+BINARY_SKIP = (".png", ".jpg", ".jpeg", ".gif", ".ico", ".woff", ".woff2", ".wasm", ".bin")
+# ready-made library packages (public by the owner's decision) are binary data larger than MAX_BYTES
+BIG_OK = ("librerie/",)
 
 
 def git(*args: str) -> str:
@@ -43,7 +45,7 @@ def compile_patterns(text: str) -> list[re.Pattern[str]]:
 
 
 def big_files(files: list[str]) -> list[str]:
-    return [f"file over {MAX_BYTES} bytes: {f}" for f in files if (ROOT / f).is_file() and (ROOT / f).stat().st_size > MAX_BYTES]
+    return [f"file over {MAX_BYTES} bytes: {f}" for f in files if not f.startswith(BIG_OK) and (ROOT / f).is_file() and (ROOT / f).stat().st_size > MAX_BYTES]
 
 
 def hits(files: list[str], forbidden: list[re.Pattern[str]]) -> list[str]:
