@@ -4,7 +4,7 @@ O-Desmethyl-cis-tramadol, 3-[2-[(dimethylamino)methyl]-1-hydroxycyclohexyl]pheno
 
 ## category
 
-Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 It is the O-demethylated form of tramadol; O-desmethyltramadol (M1) is the main active metabolite of tramadol (see the tramadol sheet) and binds to μ-opioid receptors with higher affinity than the parent compound. [f:barbosa2016] [f:tramadol-label]
 

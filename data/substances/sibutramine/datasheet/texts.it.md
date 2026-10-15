@@ -4,7 +4,7 @@ Sibutramina, 1-[1-(4-chlorophenyl)cyclobutyl]-N,N,3-trimethylbutan-1-amine. Form
 
 ## category
 
-Classe chimica: anoressizzante (ciclobutilalchilammina) ritirato dal commercio (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:carles2025] [f:checkir-classification]
+Classe chimica: anoressizzante (ciclobutilalchilammina) ritirato dal commercio (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico. [f:carles2025] [f:checkir-classification]
 
 Tra gli avvisi della FDA sugli integratori adulterati dal 2007 al 2016, la sibutramina era l'ingrediente nascosto in 269 prodotti dimagranti su 317 (84.9%). [f:tucker2018] In una serie di casi di Marsiglia tutti i 12 integratori dimagranti analizzati la contenevano, da 7.5 a 15.4 mg per unità. [f:carles2025]
 

@@ -4,7 +4,7 @@ Yangonina, 4-metossi-6-[(E)-2-(4-metossifenil)etenil]piran-2-one. Formula C15H14
 
 ## category
 
-Classe chimica: sostanze di origine vegetale; un kavalattone (stirilpirone) della kava. Effetto atteso: depressore / sedativo, proposto a partire dagli effetti riportati per la kava (sedazione, euforia, compromissione della coordinazione motoria), non misurato per la sola yangonina. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:berry2019] [f:checkir-classification]
+Classe chimica: sostanze di origine vegetale; un kavalattone (stirilpirone) della kava. Effetto atteso: depressore / sedativo, proposto a partire dagli effetti riportati per la kava (sedazione, euforia, compromissione della coordinazione motoria), non misurato per la sola yangonina. Ruolo tipico nei campioni: principio attivo. [f:berry2019] [f:checkir-classification]
 
 ## origin
 

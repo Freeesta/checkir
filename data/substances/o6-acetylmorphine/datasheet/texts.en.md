@@ -4,7 +4,7 @@ O6-Acetylmorphine, [(4R,4aR,7S,7aR,12bS)-9-hydroxy-3-methyl-2,4,4a,7,7a,13-hexah
 
 ## category
 
-Chemical class: morphinans, among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: morphinans, among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: synthesis or degradation residue. [f:unodc-ewa] [f:checkir-classification]
 
 It is the first metabolite of heroin (see the heroin and morphine sheets), and seized heroin samples also contain it, together with acetylcodeine and morphine. [f:milella2023] [f:tittarelli2020]
 

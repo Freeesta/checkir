@@ -4,7 +4,7 @@ Phenylpiracetam, 2-(2-oxo-4-phenylpyrrolidin-1-yl)acetamide. Formula C12H14N2O2,
 
 ## category
 
-Chemical class: other substances. It is a piracetam-type (racetam) nootropic, and no family sheet covers racetams, so none is attached. Expected effect: stimulant, since its R-enantiomer binds the dopamine transporter (DAT). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:zvejniece2020] [f:checkir-classification]
+Chemical class: other substances. It is a piracetam-type (racetam) nootropic, and no family sheet covers racetams, so none is attached. Expected effect: stimulant, since its R-enantiomer binds the dopamine transporter (DAT). Typical role in samples: active principle. [f:zvejniece2020] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ UWA-101, 2-(1,3-benzodioxol-5-yl)-1-cyclopropyl-N-methylethanamine (α-cycloprop
 
 ## category
 
-Chemical class: methylenedioxy phenethylamines. Expected effect: none psychoactive, since in the study that described it UWA-101 did not show psychoactive properties and did not substitute for MDMA in drug discrimination assays. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:johnston2012] [f:checkir-classification]
+Chemical class: methylenedioxy phenethylamines. Expected effect: none psychoactive, since in the study that described it UWA-101 did not show psychoactive properties and did not substitute for MDMA in drug discrimination assays. Typical role in samples: active principle. [f:johnston2012] [f:checkir-classification]
 
 ## history
 

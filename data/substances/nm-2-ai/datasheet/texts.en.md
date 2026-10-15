@@ -6,7 +6,7 @@ NM-2-AI (N-methyl-2-aminoindane), N-methyl-2,3-dihydro-1H-inden-2-amine. Formula
 
 ## category
 
-Chemical class: aminoindanes. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: aminoindanes. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

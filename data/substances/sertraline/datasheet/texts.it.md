@@ -4,7 +4,7 @@ Sertralina, (1S,4S)-4-(3,4-diclorofenil)-N-metil-1,2,3,4-tetraidronaftalen-1-amm
 
 ## category
 
-Classe chimica: antidepressivo inibitore selettivo della ricaptazione della serotonina (SSRI) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:sertraline-label] [f:checkir-classification]
+Classe chimica: antidepressivo inibitore selettivo della ricaptazione della serotonina (SSRI) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. [f:sertraline-label] [f:checkir-classification]
 
 ## origin
 

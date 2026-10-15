@@ -6,7 +6,7 @@ La voce PubChem del D2PM (CID 204386) non ha stereochimica definita; questa sche
 
 ## category
 
-Classe chimica: altre sostanze. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

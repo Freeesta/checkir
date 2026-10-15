@@ -4,7 +4,7 @@ sec-Butonitazene, 2-[2-[(4-butan-2-yloxyphenyl)methyl]-5-nitrobenzimidazol-1-yl]
 
 ## category
 
-Chemical class: nitazenes (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: nitazenes (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

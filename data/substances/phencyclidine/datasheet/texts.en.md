@@ -8,7 +8,7 @@ The structure has no carbonyl and a tertiary amine; a salt (the hydrochloride) i
 
 ## category
 
-Chemical class: arylcyclohexylamines (phencyclidine type). Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: arylcyclohexylamines (phencyclidine type). Expected effect: dissociative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

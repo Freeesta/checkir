@@ -4,7 +4,7 @@ N,N-Dietilcatinone (dietilpropione, anfepramone), 2-(dietilammino)-1-fenilpropan
 
 ## category
 
-Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

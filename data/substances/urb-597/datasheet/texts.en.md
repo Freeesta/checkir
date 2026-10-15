@@ -4,7 +4,7 @@ URB597, [3-(3-carbamoylphenyl)phenyl] N-cyclohexylcarbamate (cyclohexylcarbamic 
 
 ## category
 
-Chemical class: a carbamate research compound, inhibitor of fatty acid amide hydrolase (FAAH) (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:kathuria2003] [f:checkir-classification]
+Chemical class: a carbamate research compound, inhibitor of fatty acid amide hydrolase (FAAH) (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. [f:kathuria2003] [f:checkir-classification]
 
 ## history
 

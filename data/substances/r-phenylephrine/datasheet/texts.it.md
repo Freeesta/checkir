@@ -6,7 +6,7 @@
 
 ## category
 
-Classe chimica: fenetilamine. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: principio attivo o adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilamine. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: principio attivo o adulterante farmacologico. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

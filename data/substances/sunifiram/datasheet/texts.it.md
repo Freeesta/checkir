@@ -4,7 +4,7 @@ Sunifiram (DM235), 1-(4-benzoylpiperazin-1-yl)propan-1-one. Formula C14H18N2O2, 
 
 ## category
 
-Classe chimica: altre sostanze. È un potenziatore cognitivo (nootropo) a base di piperazina, di tipo piracetam, e nessuna scheda di famiglia lo copre. checkir non ha una classe per i potenziatori cognitivi, quindi la classe di effetto è un segnaposto, non un'affermazione. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:gualtieri2015] [f:checkir-classification]
+Classe chimica: altre sostanze. È un potenziatore cognitivo (nootropo) a base di piperazina, di tipo piracetam, e nessuna scheda di famiglia lo copre. checkir non ha una classe per i potenziatori cognitivi, quindi la classe di effetto è un segnaposto, non un'affermazione. Ruolo tipico nei campioni: principio attivo. [f:gualtieri2015] [f:checkir-classification]
 
 ## origin
 

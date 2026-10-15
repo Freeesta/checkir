@@ -4,7 +4,7 @@ Pethidine, ethyl 1-methyl-4-phenylpiperidine-4-carboxylate. Formula C15H21NO2, 2
 
 ## category
 
-Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 The medicine (meperidine) is a Schedule II controlled substance in the United States. [f:demerol-label]
 

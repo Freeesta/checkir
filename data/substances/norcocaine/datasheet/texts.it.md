@@ -6,7 +6,7 @@ Norcocaina, metil (1R,2R,3S,5S)-3-(benzoilossi)-8-azabiciclo[3.2.1]ottano-2-carb
 
 ## category
 
-Classe chimica: Esteri del tropano (cocaina). Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: Esteri del tropano (cocaina). Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

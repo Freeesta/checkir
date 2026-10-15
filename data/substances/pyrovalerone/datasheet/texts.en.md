@@ -4,7 +4,7 @@ Pyrovalerone, 1-(4-methylphenyl)-2-pyrrolidin-1-ylpentan-1-one. Base: C16H23NO, 
 
 ## category
 
-Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

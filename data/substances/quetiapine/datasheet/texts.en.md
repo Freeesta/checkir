@@ -6,7 +6,7 @@ It is the free base; the marketed drug is the fumarate salt (2:1), and doses are
 
 ## category
 
-Chemical class: atypical antipsychotic, dibenzothiazepine derivative (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:quetiapine-label] [f:friedman2026-quetiapine] [f:checkir-classification]
+Chemical class: atypical antipsychotic, dibenzothiazepine derivative (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: pharmacological adulterant. [f:quetiapine-label] [f:friedman2026-quetiapine] [f:checkir-classification]
 
 ## origin
 

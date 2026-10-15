@@ -7,7 +7,7 @@ Una 1,4-benzodiazepin-2-one con un ossidrile in posizione 3 e un metile su N-1. 
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. L'etichetta statunitense la definisce un ipnotico benzodiazepinico. [f:restoril-label] [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. L'etichetta statunitense la definisce un ipnotico benzodiazepinico. [f:restoril-label] [f:checkir-classification]
 
 
 ## history

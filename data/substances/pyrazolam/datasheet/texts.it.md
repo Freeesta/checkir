@@ -7,7 +7,7 @@ Una triazolobenzodiazepina con un bromo in posizione 8 e un gruppo 2-piridile in
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. Appartiene alle triazolobenzodiazepine. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Appartiene alle triazolobenzodiazepine. [f:unodc-ewa] [f:checkir-classification]
 
 
 ## history

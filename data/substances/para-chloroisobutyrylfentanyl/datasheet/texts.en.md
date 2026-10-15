@@ -4,7 +4,7 @@ para-Chloroisobutyrylfentanyl, N-(4-chlorophenyl)-2-methyl-N-[1-(2-phenylethyl)p
 
 ## category
 
-Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

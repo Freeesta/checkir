@@ -4,7 +4,7 @@ PRE-084, 2-morpholin-4-ylethyl 1-phenylcyclohexane-1-carboxylate. Formula C19H27
 
 ## category
 
-Classe chimica: altre sostanze. È un estere dell'acido 1-fenilcicloesancarbossilico, senza ammina sull'anello cicloesanico, quindi non è una arilcicloesilammina e non ha scheda di famiglia. È un agonista selettivo del recettore sigma-1 usato come strumento di ricerca; checkir non ha una classe per esso, quindi la classe di effetto è un segnaposto, non un'affermazione. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:lasbleiz2022] [f:checkir-classification]
+Classe chimica: altre sostanze. È un estere dell'acido 1-fenilcicloesancarbossilico, senza ammina sull'anello cicloesanico, quindi non è una arilcicloesilammina e non ha scheda di famiglia. È un agonista selettivo del recettore sigma-1 usato come strumento di ricerca; checkir non ha una classe per esso, quindi la classe di effetto è un segnaposto, non un'affermazione. Ruolo tipico nei campioni: principio attivo. [f:lasbleiz2022] [f:checkir-classification]
 
 ## origin
 

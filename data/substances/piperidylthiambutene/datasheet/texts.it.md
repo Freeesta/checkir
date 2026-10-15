@@ -4,7 +4,7 @@ Piperidiltiambutene, 1-(4,4-dithiophen-2-ylbut-3-en-2-yl)piperidine. Formula C17
 
 ## category
 
-Classe chimica: altre sostanze nel raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze nel raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 In vitro è un agonista del recettore oppioide μ, con affinità e potenza inferiori al DAMGO, e in un pannello di nuove sostanze psicoattive oppioidi non fentanilici ha mostrato uno dei valori di efficacia più alti, superiore al riferimento idromorfone. [f:deluca2022] [f:vandeputte2020]
 

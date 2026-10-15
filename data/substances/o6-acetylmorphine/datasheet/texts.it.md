@@ -4,7 +4,7 @@ O6-Acetilmorfina, [(4R,4aR,7S,7aR,12bS)-9-hydroxy-3-methyl-2,4,4a,7,7a,13-hexahy
 
 ## category
 
-Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: residuo di sintesi o di degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: residuo di sintesi o di degradazione. [f:unodc-ewa] [f:checkir-classification]
 
 È il primo metabolita dell'eroina (vedi le schede dell'eroina e della morfina) e i campioni sequestrati di eroina lo contengono, insieme ad acetilcodeina e morfina. [f:milella2023] [f:tittarelli2020]
 

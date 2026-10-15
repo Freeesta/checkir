@@ -4,7 +4,7 @@ PRE-084, 2-morpholin-4-ylethyl 1-phenylcyclohexane-1-carboxylate. Formula C19H27
 
 ## category
 
-Chemical class: other substances. It is an ester of 1-phenylcyclohexanecarboxylic acid, with no amine on the cyclohexane ring, so it is not an arylcyclohexylamine and no family sheet is attached. It is a selective sigma-1 receptor agonist used as a research tool; checkir has no class for it, so the effect class is a placeholder, not a statement. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:lasbleiz2022] [f:checkir-classification]
+Chemical class: other substances. It is an ester of 1-phenylcyclohexanecarboxylic acid, with no amine on the cyclohexane ring, so it is not an arylcyclohexylamine and no family sheet is attached. It is a selective sigma-1 receptor agonist used as a research tool; checkir has no class for it, so the effect class is a placeholder, not a statement. Typical role in samples: active principle. [f:lasbleiz2022] [f:checkir-classification]
 
 ## origin
 

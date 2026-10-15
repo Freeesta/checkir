@@ -4,7 +4,7 @@ Tapentadol, 3-[(2R,3R)-1-(dimethylamino)-2-methylpentan-3-yl]phenol. Formula C14
 
 ## category
 
-Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 The medicine is a Schedule II controlled substance in the United States. [f:nucynta-label]
 

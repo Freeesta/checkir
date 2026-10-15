@@ -4,7 +4,7 @@ Yohimbine, methyl (1S,15R,18S,19R,20S)-18-hydroxy-1,3,11,12,14,15,16,17,18,19,20
 
 ## category
 
-Chemical class: other substances (an indole alkaloid). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: other substances (an indole alkaloid). Expected effect: stimulant. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Sertraline, (1S,4S)-4-(3,4-dichlorophenyl)-N-methyl-1,2,3,4-tetrahydronaphthalen
 
 ## category
 
-Chemical class: selective serotonin reuptake inhibitor (SSRI) antidepressant (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:sertraline-label] [f:checkir-classification]
+Chemical class: selective serotonin reuptake inhibitor (SSRI) antidepressant (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. [f:sertraline-label] [f:checkir-classification]
 
 ## origin
 

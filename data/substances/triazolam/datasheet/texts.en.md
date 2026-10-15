@@ -7,7 +7,7 @@ A triazolobenzodiazepine like alprazolam, with a chlorine on the 6-phenyl ring (
 
 ## category
 
-Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. It belongs to the triazolobenzodiazepines. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. It belongs to the triazolobenzodiazepines. [f:unodc-ewa] [f:checkir-classification]
 
 
 ## history

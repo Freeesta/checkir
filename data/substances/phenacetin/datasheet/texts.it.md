@@ -4,7 +4,7 @@ Fenacetina (N-(4-ethoxyphenyl)acetamide), formula C10H13NO2, massa molare 179.22
 
 ## category
 
-Classe chimica: analgesico (medicinale ritirato, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: analgesico (medicinale ritirato, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. [f:checkir-classification]
 
 ## metabolism
 

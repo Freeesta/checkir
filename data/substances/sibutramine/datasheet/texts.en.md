@@ -4,7 +4,7 @@ Sibutramine, 1-[1-(4-chlorophenyl)cyclobutyl]-N,N,3-trimethylbutan-1-amine. Form
 
 ## category
 
-Chemical class: cyclobutylalkylamine appetite suppressant, withdrawn from the market (grouped here under other substances); no family sheet is attached. Expected effect: stimulant. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:carles2025] [f:checkir-classification]
+Chemical class: cyclobutylalkylamine appetite suppressant, withdrawn from the market (grouped here under other substances); no family sheet is attached. Expected effect: stimulant. Typical role in samples: pharmacological adulterant. [f:carles2025] [f:checkir-classification]
 
 Among FDA warnings on adulterated dietary supplements from 2007 to 2016, sibutramine was the hidden ingredient in 269 of 317 weight-loss products (84.9%). [f:tucker2018] In a Marseille case series all 12 weight-loss supplements analysed contained it, 7.5 to 15.4 mg per unit. [f:carles2025]
 

@@ -4,7 +4,7 @@ URB602, cyclohexyl N-(3-phenylphenyl)carbamate (biphenyl-3-ylcarbamic acid cyclo
 
 ## category
 
-Chemical class: an N-aryl carbamate research compound, inhibitor of monoacylglycerol lipase (MAGL) (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:king2007] [f:checkir-classification]
+Chemical class: an N-aryl carbamate research compound, inhibitor of monoacylglycerol lipase (MAGL) (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. [f:king2007] [f:checkir-classification]
 
 ## history
 

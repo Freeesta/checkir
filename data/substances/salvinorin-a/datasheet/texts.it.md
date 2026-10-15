@@ -6,7 +6,7 @@ Struttura: un terpene con un anello furanico, un lattone, un estere metilico, un
 
 ## category
 
-Classe chimica: sostanza di origine vegetale. Effetto atteso: psichedelico, ma per agonismo del recettore κ degli oppioidi e non del 5-HT2A. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification] [f:maqueda2016]
+Classe chimica: sostanza di origine vegetale. Effetto atteso: psichedelico, ma per agonismo del recettore κ degli oppioidi e non del 5-HT2A. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification] [f:maqueda2016]
 
 ## history
 

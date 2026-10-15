@@ -7,7 +7,7 @@ Pivoxazepam, (7-chloro-2-oxo-5-phenyl-1,3-dihydro-1,4-benzodiazepin-3-il) 2,2-di
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 
 ## history

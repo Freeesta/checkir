@@ -4,7 +4,7 @@ PDM-35, 3,5-dimethyl-2-phenylmorpholine. Base: C12H17NO, 191.27 g/mol, CAS 12183
 
 ## category
 
-Classe chimica: fenmetrazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: fenmetrazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 

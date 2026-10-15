@@ -4,7 +4,7 @@ N-pyrrolidino etonitazene, 2-[(4-ethoxyphenyl)methyl]-5-nitro-1-(2-pyrrolidin-1-
 
 ## category
 
-Chemical class: nitazenes (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: nitazenes (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

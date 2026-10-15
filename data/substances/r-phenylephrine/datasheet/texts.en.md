@@ -6,7 +6,7 @@ It is the (R) enantiomer, with the hydroxyl on the meta position of the phenyl r
 
 ## category
 
-Chemical class: phenethylamines. Expected effect: no psychoactive effect expected. Typical role in samples: active principle or pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines. Expected effect: no psychoactive effect expected. Typical role in samples: active principle or pharmacological adulterant. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

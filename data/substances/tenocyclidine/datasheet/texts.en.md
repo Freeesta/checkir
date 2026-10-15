@@ -6,7 +6,7 @@ It is a phencyclidine analogue in which a thiophene ring replaces the phenyl rin
 
 ## category
 
-Chemical class: arylcyclohexylamines (phencyclidine/ketamine type). Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: arylcyclohexylamines (phencyclidine/ketamine type). Expected effect: dissociative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

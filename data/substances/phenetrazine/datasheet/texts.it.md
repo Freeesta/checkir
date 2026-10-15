@@ -6,7 +6,7 @@ Ha due centri chirali; qui la struttura piatta, senza stereochimica. [f:pubchem]
 
 ## category
 
-Classe chimica: Fenmetrazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: Fenmetrazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

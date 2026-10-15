@@ -6,7 +6,7 @@ Il medicinale è un racemo di due enantiomeri, che contribuiscono all'effetto co
 
 ## category
 
-Classe chimica: altre sostanze del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 È un analgesico ad azione centrale, strutturalmente correlato a codeina e morfina. [f:grond2004]
 

@@ -7,7 +7,7 @@ An imidazopyridine, not a benzodiazepine: it has no benzodiazepine ring. [f:pubc
 
 ## category
 
-Chemical class: others (imidazopyridine, a so-called Z-drug). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: others (imidazopyridine, a so-called Z-drug). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:checkir-classification]
 
 
 ## history

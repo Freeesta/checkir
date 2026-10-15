@@ -6,7 +6,7 @@ TH-PVP (3',4'-tetrametilen-α-pirrolidinovalerofenone), 2-pyrrolidin-1-yl-1-(5,6
 
 ## category
 
-Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

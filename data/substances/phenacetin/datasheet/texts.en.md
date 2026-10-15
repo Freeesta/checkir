@@ -4,7 +4,7 @@ Phenacetin (N-(4-ethoxyphenyl)acetamide), formula C10H13NO2, molar mass 179.22 g
 
 ## category
 
-Chemical class: analgesic (withdrawn medicine, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: analgesic (withdrawn medicine, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. [f:checkir-classification]
 
 ## metabolism
 

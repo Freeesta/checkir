@@ -4,7 +4,7 @@ Ossimorfone, (4R,4aS,7aR,12bS)-4a,9-dihydroxy-3-methyl-2,4,5,6,7a,13-hexahydro-1
 
 ## category
 
-Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 Il medicinale è una sostanza controllata di Tabella II negli Stati Uniti. [f:oxymorphone-label]
 

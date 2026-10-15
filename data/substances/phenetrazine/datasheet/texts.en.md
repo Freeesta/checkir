@@ -6,7 +6,7 @@ It has two chiral centres; the flat structure without stereochemistry is used he
 
 ## category
 
-Chemical class: Phenmetrazines. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: Phenmetrazines. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

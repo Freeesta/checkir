@@ -6,7 +6,7 @@ Structure: a terpene with a furan ring, a lactone, a methyl ester, an acetate an
 
 ## category
 
-Chemical class: plant-based substance. Expected effect: psychedelic, but through kappa opioid receptor agonism, not 5-HT2A. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification] [f:maqueda2016]
+Chemical class: plant-based substance. Expected effect: psychedelic, but through kappa opioid receptor agonism, not 5-HT2A. Typical role in samples: active principle. [f:checkir-classification] [f:maqueda2016]
 
 ## history
 

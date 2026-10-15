@@ -6,7 +6,7 @@ Ha il gruppo N,N-dietilamminico al posto del metilamminico del pentilone: non co
 
 ## category
 
-Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

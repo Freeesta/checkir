@@ -4,7 +4,7 @@ Teobromina, 3,7-dimethylpurine-2,6-dione. Formula C7H8N4O2, 180.16 g/mol, CAS 83
 
 ## category
 
-Classe chimica: alcaloide metilxantinico, come la caffeina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:cova2019] [f:checkir-classification]
+Classe chimica: alcaloide metilxantinico, come la caffeina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:cova2019] [f:checkir-classification]
 
 Negli studi sull'animale un'esposizione acuta alla teobromina ha un effetto minore e ritardato rispetto alla caffeina. [f:cova2019]
 

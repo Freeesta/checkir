@@ -4,7 +4,7 @@ Petidina, ethyl 1-methyl-4-phenylpiperidine-4-carboxylate. Formula C15H21NO2, 24
 
 ## category
 
-Classe chimica: altre sostanze nel raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze nel raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 Il medicinale (meperidina) è una sostanza controllata di Tabella II negli Stati Uniti. [f:demerol-label]
 

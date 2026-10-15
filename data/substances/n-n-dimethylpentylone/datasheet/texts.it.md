@@ -6,7 +6,7 @@ N,N-Dimetilpentilone (dipentilone, bk-DMBDP), 1-(1,3-benzodioxol-5-yl)-2-(dimeth
 
 ## category
 
-Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

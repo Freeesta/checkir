@@ -6,7 +6,7 @@ It is the benzoyl ester of pseudotropine (benzoylpseudotropine); the PubChem ent
 
 ## category
 
-Chemical class: tropane ester, among the plant-based substances of the UNODC grouping, because it is an alkaloid of the coca leaf; it is not an opioid. Typical role in samples: residue of the plant. The effect axis follows cocaine: the pharmacology of the compound itself is not described in the sources consulted. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:laposchan2022] [f:checkir-classification]
+Chemical class: tropane ester, among the plant-based substances of the UNODC grouping, because it is an alkaloid of the coca leaf; it is not an opioid. Typical role in samples: residue of the plant. The effect axis follows cocaine: the pharmacology of the compound itself is not described in the sources consulted. [f:unodc-ewa] [f:laposchan2022] [f:checkir-classification]
 
 ## origin
 

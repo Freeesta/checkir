@@ -6,7 +6,7 @@ Quetiapina, 2-[2-(4-benzo[b][1,4]benzothiazepin-6-ylpiperazin-1-yl)ethoxy]ethano
 
 ## category
 
-Classe chimica: antipsicotico atipico, derivato della dibenzotiazepina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:quetiapine-label] [f:friedman2026-quetiapine] [f:checkir-classification]
+Classe chimica: antipsicotico atipico, derivato della dibenzotiazepina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: adulterante farmacologico. [f:quetiapine-label] [f:friedman2026-quetiapine] [f:checkir-classification]
 
 ## origin
 

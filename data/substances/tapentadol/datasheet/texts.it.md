@@ -4,7 +4,7 @@ Tapentadolo, 3-[(2R,3R)-1-(dimethylamino)-2-methylpentan-3-yl]phenol. Formula C1
 
 ## category
 
-Classe chimica: altre sostanze nel raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze nel raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 Il medicinale è una sostanza controllata di Tabella II negli Stati Uniti. [f:nucynta-label]
 

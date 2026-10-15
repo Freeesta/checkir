@@ -4,7 +4,7 @@ Teofillina, 1,3-dimethyl-7H-purine-2,6-dione. Formula C7H8N4O2, 180.16 g/mol, CA
 
 ## category
 
-Classe chimica: metilxantina, commercializzata come broncodilatatore (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:theophylline-label] [f:checkir-classification]
+Classe chimica: metilxantina, commercializzata come broncodilatatore (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico. [f:theophylline-label] [f:checkir-classification]
 
 La teofillina, con sibutramina e caffeina, è stata confermata in prodotti erboristici venduti per dimagrire. [f:pascali2018]
 

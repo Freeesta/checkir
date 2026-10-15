@@ -6,7 +6,7 @@ Appartiene alla classe delle tienobenzodiazepine. [f:olanzapine-label]
 
 ## category
 
-Classe chimica: antipsicotico atipico, tienobenzodiazepina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:olanzapine-label] [f:checkir-classification]
+Classe chimica: antipsicotico atipico, tienobenzodiazepina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. [f:olanzapine-label] [f:checkir-classification]
 
 ## origin
 

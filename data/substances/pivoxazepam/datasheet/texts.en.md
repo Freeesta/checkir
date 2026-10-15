@@ -7,7 +7,7 @@ It is the pivalate ester of 7-chloro-1,3-dihydro-3-hydroxy-5-phenyl-2H-1,4-benzo
 
 ## category
 
-Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:checkir-classification]
 
 
 ## history

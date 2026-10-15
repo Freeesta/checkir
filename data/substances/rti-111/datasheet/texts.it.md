@@ -6,7 +6,7 @@ RTI-111, (1R,2S,3S,5S)-3-(3,4-diclorofenil)-8-metil-8-azabiciclo[3.2.1]ottano-2-
 
 ## category
 
-Classe chimica: esteri del tropano. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: esteri del tropano. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

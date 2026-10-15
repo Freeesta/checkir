@@ -4,7 +4,7 @@ Xylazine (N-(2,6-dimethylphenyl)-5,6-dihydro-4H-1,3-thiazin-2-amine), formula C1
 
 ## category
 
-Chemical class: alpha-2 adrenergic agonist, a veterinary sedative (grouped here under other substances). Expected effect: depressant or sedative. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: alpha-2 adrenergic agonist, a veterinary sedative (grouped here under other substances). Expected effect: depressant or sedative. Typical role in samples: pharmacological adulterant. [f:checkir-classification]
 
 ## history
 

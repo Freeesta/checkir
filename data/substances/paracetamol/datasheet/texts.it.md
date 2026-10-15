@@ -4,7 +4,7 @@ Paracetamolo (N-(4-hydroxyphenyl)acetamide), formula C8H9NO2, massa molare 151.1
 
 ## category
 
-Classe chimica: analgesico (non oppioide, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: analgesico (non oppioide, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. [f:checkir-classification]
 
 ## metabolism
 

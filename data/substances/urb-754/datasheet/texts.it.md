@@ -4,7 +4,7 @@ URB754, 6-metil-2-(4-metilanilino)-3,1-benzossazin-4-one. Formula C16H14N2O2, 26
 
 ## category
 
-Classe chimica: composto di ricerca benzossazinonico segnalato come inibitore della monoacilglicerolo lipasi (MAGL) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:vandevoorde2007] [f:checkir-classification]
+Classe chimica: composto di ricerca benzossazinonico segnalato come inibitore della monoacilglicerolo lipasi (MAGL) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. [f:vandevoorde2007] [f:checkir-classification]
 
 ## history
 

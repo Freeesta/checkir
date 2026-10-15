@@ -6,7 +6,7 @@ It is a phenyltropane, an analogue of cocaine: the 2-carbomethoxy group of the t
 
 ## category
 
-Chemical class: tropane esters. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tropane esters. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ O-Desmetil-cis-tramadolo, 3-[2-[(dimethylamino)methyl]-1-hydroxycyclohexyl]pheno
 
 ## category
 
-Classe chimica: altre sostanze nel raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze nel raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 È la forma O-demetilata del tramadolo; l'O-desmetiltramadolo (M1) è il principale metabolita attivo del tramadolo (vedi la scheda del tramadolo) e lega i recettori oppioidi μ con affinità maggiore del composto di partenza. [f:barbosa2016] [f:tramadol-label]
 

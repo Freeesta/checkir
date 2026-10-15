@@ -6,7 +6,7 @@ N,N-Dimetilanfetamina, N,N-dimetil-1-fenilpropan-2-ammina. Formula C11H17N, 163.
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. Nei campioni si incontra come impurezza della metanfetamina più che come principio attivo. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Nei campioni si incontra come impurezza della metanfetamina più che come principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

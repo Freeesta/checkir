@@ -4,7 +4,7 @@ Piperidylthiambutene, 1-(4,4-dithiophen-2-ylbut-3-en-2-yl)piperidine. Formula C1
 
 ## category
 
-Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 In vitro it is a μ-opioid receptor agonist, with lower affinity and potency than DAMGO, and among a panel of non-fentanyl opioid new psychoactive substances it had one of the highest efficacy values, above the reference hydromorphone. [f:deluca2022] [f:vandeputte2020]
 

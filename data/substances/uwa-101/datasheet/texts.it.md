@@ -4,7 +4,7 @@ UWA-101, 2-(1,3-benzodiossol-5-il)-1-ciclopropil-N-metiletanammina (analogo α-c
 
 ## category
 
-Classe chimica: fenetilamine metilenediossi. Effetto atteso: nessuno psicoattivo, perché nello studio che lo ha descritto UWA-101 non ha mostrato proprietà psicoattive e non ha sostituito l'MDMA nei test di discriminazione. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:johnston2012] [f:checkir-classification]
+Classe chimica: fenetilamine metilenediossi. Effetto atteso: nessuno psicoattivo, perché nello studio che lo ha descritto UWA-101 non ha mostrato proprietà psicoattive e non ha sostituito l'MDMA nei test di discriminazione. Ruolo tipico nei campioni: principio attivo. [f:johnston2012] [f:checkir-classification]
 
 ## history
 

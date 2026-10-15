@@ -4,7 +4,7 @@ Trazodone, 2-[3-[4-(3-chlorophenyl)piperazin-1-yl]propyl]-[1,2,4]triazolo[4,3-a]
 
 ## category
 
-Chemical class: antidepressant, a triazolopyridine derivative with SSRI and 5-HT2 receptor antagonist activity (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:trazodone-label] [f:checkir-classification]
+Chemical class: antidepressant, a triazolopyridine derivative with SSRI and 5-HT2 receptor antagonist activity (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. [f:trazodone-label] [f:checkir-classification]
 
 ## origin
 

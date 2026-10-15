@@ -4,7 +4,7 @@ Phenibut (β-phenyl-GABA), 4-amino-3-phenylbutanoic acid. Formula C10H13NO2, 179
 
 ## category
 
-Chemical class: other substances. It is a derivative of γ-aminobutyric acid (GABA), and no family sheet covers GABA derivatives, so none is attached. Expected effect: central nervous system depressant (anxiolytic), acting mainly at GABA-B receptors. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:lapin2001] [f:checkir-classification]
+Chemical class: other substances. It is a derivative of γ-aminobutyric acid (GABA), and no family sheet covers GABA derivatives, so none is attached. Expected effect: central nervous system depressant (anxiolytic), acting mainly at GABA-B receptors. Typical role in samples: active principle. [f:lapin2001] [f:checkir-classification]
 
 ## origin
 
