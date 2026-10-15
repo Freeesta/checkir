@@ -34,8 +34,7 @@
 .help-tabs [aria-selected="true"] { background: transparent; color: var(--text); border-color: transparent; box-shadow: inset 0 -3px 0 var(--accent); text-decoration: none; }
 
 /* Fields, lists, tables */
-.lib-name, kbd, .badge { background: var(--panel); border-color: var(--border-ui); }
-.lib-name { border-radius: var(--radius); }
+kbd { background: var(--panel); border-color: var(--border-ui); }
 .file-select[aria-current], .cand-select[aria-current] { background: var(--bg); border-left-color: var(--accent); }
 th { background: var(--panel); }
 tr + tr td, .files li + li { border-top-color: var(--border-soft); }
@@ -51,6 +50,6 @@ tr + tr td, .files li + li { border-top-color: var(--border-soft); }
 .ranges, .decision, .sheet, .recall, .chart-menu, .peak-card { border-color: var(--border-soft); border-radius: var(--radius); background: var(--panel); }
 
 @media (prefers-contrast: more) {
-  .btn, .icon-button, .chip, .toolbar button, .lang-group, .lib-name, kbd, .badge { border-color: var(--text); }
+  .btn, .icon-button, .chip, .toolbar button, .lang-group, kbd { border-color: var(--text); }
   .hdr-tools, .dialog, .scroll, #chart, .folder, .cand, .detail, .recall-item, .ranges, .decision, .sheet, .recall, .chart-menu, .peak-card { border-color: var(--text); }
 }

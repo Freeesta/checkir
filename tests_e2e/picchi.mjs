@@ -1,5 +1,6 @@
 // Peaks and regions e2e: which peaks the chosen candidate explains, the IR regions with their agreement, the chart marks and the tables, on synthetic spectra with known bands.
 import { BETA, GAMMA, ALFA, ALFA_BIS, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 /** The sample is beta plus one band (2650 cm-1) that no library spectrum has. */
 const BETA_PLUS = [...BETA, [2650, 0.5, 12]];
@@ -17,9 +18,8 @@ export async function prepare(browser, base) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openPanel(page, "libraries");
-  await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });
-  await page.setInputFiles('input[data-library="files"]', [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
+  await importAs(page, "Sintetica", [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA), file("alfa_bis", ALFA_BIS)]);
   await page.waitForFunction(() => /4/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));
   await page.setInputFiles("input[type=file]", [{ name: "campione.jdx", mimeType: "chemical/x-jcamp-dx", buffer: jcamp("campione", BETA_PLUS) }]);
   await openPanel(page, "results");

@@ -1,5 +1,6 @@
 // Sampling e2e: a library that declares how it was measured, the choice in the file row, the cap with its reason, the file that names its own method.
 import { ALFA, ALFA_BIS, BETA, GAMMA, jcamp } from "./confronto.mjs";
+import { importAs, removeLibrary } from "./importa_aiuto.mjs";
 
 async function openPanel(page, name) {
   const section = page.locator(`details[data-panel="${name}"]`);
@@ -26,12 +27,27 @@ export async function samplingScenario(browser, base, check) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openPanel(page, "libraries");
-  await page.fill("#lib-name", "Diamante");
-  await page.selectOption("#lib-sampling", "atr_diamond");
   const file = (name, bands) => ({ name, mimeType: "application/octet-stream", buffer: jcamp(name.replace(".jdx", ""), bands) });
-  await page.setInputFiles('input[data-library="files"]', [file("alfa.jdx", ALFA), file("beta.jdx", BETA), file("gamma.jdx", GAMMA), file("alfa_bis.jdx", ALFA_BIS)]);
+  await importAs(page, "Diamante", [file("alfa.jdx", ALFA), file("beta.jdx", BETA), file("gamma.jdx", GAMMA), file("alfa_bis.jdx", ALFA_BIS)]);
   await page.locator('[data-library="diamante"]').waitFor();
   await page.waitForFunction(() => /4/.test(document.querySelector('[data-library="diamante"]')?.textContent ?? ""));
+  // The panel asks nothing, so the library has no method; a ready-made package that declares one is loaded in its place.
+  const pack = await page.evaluate(async () => {
+    const dir = await (await (await navigator.storage.getDirectory()).getDirectoryHandle("checkir-libraries")).getDirectoryHandle("diamante");
+    const out = [];
+    for (const name of ["manifest.json", "index.json", "data.bin", "native.bin"]) {
+      const bytes = new Uint8Array(await (await (await dir.getFileHandle(name)).getFile()).arrayBuffer());
+      out.push({ name, b64: btoa(Array.from(bytes, (b) => String.fromCharCode(b)).join("")) });
+    }
+    return out;
+  });
+  await removeLibrary(page, "diamante");
+  await page.waitForSelector('[data-library="diamante"]', { state: "detached" });
+  await page.setInputFiles('input[data-library="files"]', pack.map((f) => {
+    const buffer = Buffer.from(f.b64, "base64");
+    return { name: f.name, mimeType: "application/octet-stream", buffer: f.name === "manifest.json" ? Buffer.from(JSON.stringify({ ...JSON.parse(buffer.toString()), sampling: "atr_diamond" })) : buffer };
+  }));
+  await page.locator('[data-library="diamante"]').waitFor();
 
   await page.setInputFiles("input[type=file]", [file("campione.jdx", BETA)]);
   check("sampling: without a stated method the level is not capped", await levelIs(page, "2"));

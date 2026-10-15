@@ -1,5 +1,6 @@
 // Scenario: the same substance as absorbance, %T and fraction T (JCAMP ##YUNITS=TRANSMITTANCE) gives the same first candidate and r ±0.01; axis and CSV follow the unit.
 import { ALFA, BETA, GAMMA, jcamp } from "../confronto.mjs";
+import { importAs } from "../importa_aiuto.mjs";
 
 /** Same Lorentzian bands as `jcamp`, written in the unit asked: `absorbance`, `percent` (%T) or `fraction` (T from 0 to 1). */
 function file(title, bands, unit) {
@@ -24,8 +25,7 @@ export default async ({ browser, base, check }) => {
   const panel = page.locator('details[data-panel="libraries"]');
   if (!(await panel.evaluate((d) => d.open))) await panel.locator("summary").click();
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
-  await page.fill("#lib-name", "Sintetica");
-  await page.setInputFiles('input[data-library="files"]', [
+  await importAs(page, "Sintetica", [
     { name: "alfa.jdx", mimeType: "application/octet-stream", buffer: jcamp("alfa", ALFA) },
     { name: "beta.jdx", mimeType: "application/octet-stream", buffer: jcamp("beta", BETA) },
     { name: "gamma.jdx", mimeType: "application/octet-stream", buffer: jcamp("gamma", GAMMA) },

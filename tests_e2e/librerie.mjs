@@ -1,10 +1,11 @@
 // Library scenarios: the public package is listed with licence and attribution and has a switch, it is still there offline,
 // a private library is imported from files with progress and zero network requests, kept in OPFS across a reload and removed
 // on request; the name index finds compounds by prefix without accents.
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { FIXTURE } from "./caricamento.mjs";
+import { importAs, removeLibrary } from "./importa_aiuto.mjs";
 
 /** Pure checks (no browser): the name index and the helpers of the importer. */
 export async function librariesPureScenario(check) {
@@ -46,18 +47,19 @@ async function openLibraries(page) {
 async function folderScenario(page, jdx, check) {
   const ispd = await readFile(new URL("../crates/ftir-core/tests/fixtures/ispd/measurement.ispd", import.meta.url));
   const csv = ["wavenumber,absorbance", ...Array.from({ length: 400 }, (_, i) => `${800 + i * 6},${(0.5 + 0.4 * Math.sin(i / 9)).toFixed(4)}`)].join("\n");
-  const dir = await mkdtemp(join(tmpdir(), "checkir-folder-"));
+  const root = await mkdtemp(join(tmpdir(), "checkir-folder-"));
+  const dir = join(root, "Cartella");
+  await mkdir(dir);
   await writeFile(join(dir, "a.jdx"), jdx);
   await writeFile(join(dir, "b.csv"), csv);
   await writeFile(join(dir, "c.ispd"), ispd);
   await writeFile(join(dir, "d.bin"), Buffer.from([0, 1, 2, 3, 250, 251, 252, 253]));
-  await page.fill("#lib-name", "Cartella");
   await page.setInputFiles('input[data-library="folder"]', dir);
   await page.locator('[data-library="cartella"]').waitFor();
   const folderNotes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
   check("import: a folder of JCAMP, CSV and .ispd gives 3 spectra and counts 1 unrecognized file", /3 spettri, 0 scartati/.test(folderNotes) && /1 file non riconosciuto/.test(folderNotes), folderNotes);
-  await rm(dir, { recursive: true, force: true });
-  await page.getByRole("button", { name: /Rimuovi la libreria cartella/ }).click();
+  await rm(root, { recursive: true, force: true });
+  await removeLibrary(page, "cartella");
   await page.waitForSelector('[data-library="cartella"]', { state: "detached" });
 }
 
@@ -72,9 +74,9 @@ async function packageScenario(page, check) {
     }
     return out;
   });
-  await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
+  await removeLibrary(page, "mia-libreria");
   await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
-  await page.setInputFiles('input[data-library="package"]', files.map((f) => ({ name: f.name, mimeType: "application/octet-stream", buffer: Buffer.from(f.b64, "base64") })));
+  await page.setInputFiles('input[data-library="files"]', files.map((f) => ({ name: f.name, mimeType: "application/octet-stream", buffer: Buffer.from(f.b64, "base64") })));
   await page.locator('[data-library="mia-libreria"]').waitFor();
   const notes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
   check("package: one ready-made private package is loaded and announced", /Pacchetti privati caricati: 1/.test(notes), notes);
@@ -86,9 +88,47 @@ async function packageScenario(page, check) {
   check("package: it is kept across a reload and stays switched off", !(await page.getByRole("checkbox", { name: /mia-libreria/ }).isChecked()));
   check("package: the switch of a private library is remembered as libsw.<id> = 0", (await page.evaluate(() => localStorage.getItem("checkir.libsw.mia-libreria"))) === "0" && (await page.evaluate(() => localStorage.getItem("checkir.liboff.mia-libreria"))) === null);
   await page.getByRole("checkbox", { name: /mia-libreria/ }).check();
-  await page.setInputFiles('input[data-library="package"]', [{ name: "manifest.json", mimeType: "application/json", buffer: Buffer.from("{}") }]);
+  await page.setInputFiles('input[data-library="files"]', [{ name: "manifest.json", mimeType: "application/json", buffer: Buffer.from('{"schema":"ftir-library/1"}') }]);
   await page.waitForFunction(() => /mancano file/.test(document.querySelector('details[data-panel="libraries"] .notes')?.textContent ?? ""));
   check("package: an incomplete set is refused with a message", true);
+  await page.setInputFiles('input[data-library="files"]', [{ name: "manifest.json", mimeType: "application/json", buffer: Buffer.from('{"schema":"altro/1"}') }]);
+  await page.waitForFunction(() => /non c'è nessuno spettro/.test(document.querySelector('details[data-panel="libraries"] .notes')?.textContent ?? ""));
+  check("package: a manifest.json of another schema is not a package, so the files are read as spectra", true);
+  await page.mouse.move(0, 0);
+  await page.locator("#tooltip").waitFor({ state: "hidden" });
+  // A folder holding a package and a foreign file: the package is loaded and the foreign file is counted.
+  await removeLibrary(page, "mia-libreria");
+  await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
+  const root = await mkdtemp(join(tmpdir(), "checkir-pack-"));
+  const pack = join(root, "pacchetti", "mia-libreria");
+  await mkdir(pack, { recursive: true });
+  for (const f of files) await writeFile(join(pack, f.name), Buffer.from(f.b64, "base64"));
+  await writeFile(join(pack, "note.txt"), "x");
+  await page.setInputFiles('input[data-library="folder"]', join(root, "pacchetti"));
+  await page.locator('[data-library="mia-libreria"]').waitFor();
+  const folderNotes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
+  check("package: a folder of packages is recognized from its content; the foreign file is counted", /Pacchetti privati caricati: 1/.test(folderNotes) && /1 file non riconosciuto/.test(folderNotes), folderNotes);
+  await rm(root, { recursive: true, force: true });
+}
+
+/** The list shows only names; the information is in the tooltip (mouse and keyboard focus) and in the description of the switch. */
+async function listChecks(page, check) {
+  const visible = (sel) => page.locator(sel).evaluate((li) => { const c = li.cloneNode(true); c.querySelectorAll(".visually-hidden").forEach((n) => n.remove()); return c.textContent.trim(); });
+  check("libraries: the list shows only the name", (await visible('[data-library="checkir-demo"]')) === "checkir-demo", await visible('[data-library="checkir-demo"]'));
+  check("libraries: exactly two import buttons (library, folder) and two choosers", (await page.locator('details[data-panel="libraries"] button.btn').count()) === 2 && (await page.locator('input[data-library="files"], input[data-library="folder"]').count()) === 2 && (await page.locator("input[data-library=package], input[data-library=packages], #lib-name, #lib-sampling").count()) === 0);
+  const tip = page.locator("#tooltip");
+  await page.hover('[data-library="checkir-demo"] strong');
+  await tip.waitFor({ state: "visible" });
+  check("libraries: hovering the name shows version, spectra and licence", /Versione/.test((await tip.textContent()) ?? "") && /Spettri: 1/.test((await tip.textContent()) ?? "") && /Licenza: CC-BY-4\.0/.test((await tip.textContent()) ?? ""));
+  await page.mouse.move(0, 0);
+  await tip.waitFor({ state: "hidden" });
+  await page.focus('[data-fk="lib-on-checkir-demo"]');
+  await tip.waitFor({ state: "visible" });
+  check("libraries: keyboard focus on the switch shows the same description", /Versione/.test((await tip.textContent()) ?? "") && /Licenza/.test((await tip.textContent()) ?? ""));
+  await page.locator('[data-fk="lib-on-checkir-demo"]').blur();
+  await tip.waitFor({ state: "hidden" });
+  await page.waitForFunction(() => document.querySelector('[data-fk="lib-on-checkir-demo"]')?.getAttribute("aria-describedby") === "lib-info-checkir-demo");
+  check("libraries: the switch keeps its permanent description (aria-describedby)", (await page.locator("#lib-info-checkir-demo").textContent())?.includes("Versione") === true);
 }
 
 /** @param {import("playwright").Browser} browser */
@@ -106,10 +146,11 @@ export async function librariesScenario(browser, base, check, axe) {
   const pub = page.locator('[data-library="checkir-demo"]');
   await pub.waitFor();
   const text = (await pub.textContent()) ?? "";
-  check("libraries: the public library shows version, spectra, licence and attribution", /Versione/.test(text) && /Spettri: 1/.test(text) && /CC-BY-4\.0/.test(text) && /Attribuzione: Libreria comunitaria/.test(text) && /Pubblica/.test(text), text);
+  check("libraries: the public library carries version, spectra, licence and attribution in its description", /Versione/.test(text) && /Spettri: 1/.test(text) && /CC-BY-4\.0/.test(text) && /Attribuzione: Libreria comunitaria/.test(text), text);
+  await listChecks(page, check);
   check("libraries: the header counts the active libraries", ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 11"));
   const swg = (await page.locator('[data-library="swgdrug-ir"]').textContent()) ?? "";
-  check("libraries: a library under a written permission shows its citation, licence terms, disclaimer and no endorsement", /SWGDRUG IR Library v2024-05-15/.test(swg) && /LicenseRef-permission-swgdrug/.test(swg) && /Condizioni della licenza: Solo uso non commerciale/.test(swg) && /without warranty or liability/.test(swg) && /SWGDRUG does not endorse \S+ or any software/.test(swg) && !swg.includes("{app}"), swg);
+  check("libraries: a library under a written permission describes its citation, licence terms, disclaimer and no endorsement", /SWGDRUG IR Library v2024-05-15/.test(swg) && /LicenseRef-permission-swgdrug/.test(swg) && /Condizioni della licenza: Solo uso non commerciale/.test(swg) && /without warranty or liability/.test(swg) && /SWGDRUG does not endorse \S+ or any software/.test(swg) && !swg.includes("{app}"), swg);
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
   check("libraries: switching a library off empties the header chip", ((await page.textContent('[data-chip="library"]')) ?? "").includes("—"));
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).check();
@@ -117,8 +158,7 @@ export async function librariesScenario(browser, base, check, axe) {
   check("libraries: axe has no violations with the panel open", violations.length === 0, violations.join(", "));
 
   const before = requests.length;
-  await page.fill("#lib-name", "Mia Libreria");
-  await page.setInputFiles('input[data-library="files"]', [
+  await importAs(page, "Mia Libreria", [
     { name: "uno.jdx", mimeType: "application/octet-stream", buffer: jdx },
     { name: "due.JDX", mimeType: "application/octet-stream", buffer: jdx },
     { name: "rotto.jdx", mimeType: "application/octet-stream", buffer: Buffer.from("non e' uno spettro") },
@@ -129,7 +169,8 @@ export async function librariesScenario(browser, base, check, axe) {
   await page.locator('details[data-panel="libraries"] .notes').waitFor();
   const notes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
   check("import: the summary counts imported files and the unrecognized ones (broken JCAMP, text note); the repeated file counts as discarded", /1 spettri, 1 scartati/.test(notes) && /2 file non riconosciuti/.test(notes), notes);
-  check("import: the private library is marked private with personal-use licence", /Privata/.test((await mine.textContent()) ?? "") && /uso personale/.test((await mine.textContent()) ?? ""));
+  check("import: the private library says it was imported by you, with personal-use licence", /importata da te/.test((await mine.textContent()) ?? "") && /uso personale/.test((await mine.textContent()) ?? ""));
+  check("import: nothing is asked: no name field, no sampling choice, no confirm", (await page.locator("#lib-name, #lib-sampling").count()) === 0);
   check("import: no network request during the import", requests.length === before, requests.slice(before).join(", "));
   const stored = await page.evaluate(async () => {
     const root = await (await navigator.storage.getDirectory()).getDirectoryHandle("checkir-libraries");
@@ -141,6 +182,9 @@ export async function librariesScenario(browser, base, check, axe) {
   await folderScenario(page, jdx, check);
   const withPrivate = await axe(page);
   check("import: axe has no violations with a private library", withPrivate.length === 0, withPrivate.join(", "));
+  await page.setViewportSize({ width: 320, height: 700 });
+  check("libraries: no horizontal scroll at 320 px with the list open", await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
+  await page.setViewportSize({ width: 1366, height: 768 });
   await packageScenario(page, check);
 
   await page.reload();
@@ -149,7 +193,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await page.locator('[data-library="mia-libreria"]').waitFor();
   check("import: the private library is still there after a reload", true);
   check("import: only preferences are kept in localStorage", await page.evaluate(() => Object.keys(localStorage).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch|libsw\.[a-z0-9-]+)$/.test(k))));
-  await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
+  await removeLibrary(page, "mia-libreria");
   await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
   const left = await page.evaluate(async () => {
     const root = await (await navigator.storage.getDirectory()).getDirectoryHandle("checkir-libraries", { create: true });

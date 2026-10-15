@@ -1,6 +1,7 @@
 // Guided subtraction e2e: a synthetic mixture A + 0.6·B, the factor proposed by the engine, the slider, the over-subtraction warning, the residual as a new
 // spectrum under its sample, the search on it, undo, and that the original never changes.
 import { ALFA, BETA, GAMMA, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 /** The mixture: A at full height plus B at 0.6. */
 export const MIX = [...ALFA, ...BETA.map(([c, h, w]) => [c, h * 0.6, w])];
@@ -21,9 +22,8 @@ export async function importLibrary(page) {
     if (await box.isChecked()) await box.click();
   }
   await openPanel(page, "libraries");
-  await page.fill("#lib-name", "Sintetica");
   const file = (name, bands) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) });
-  await page.setInputFiles('input[data-library="files"]', [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA)]);
+  await importAs(page, "Sintetica", [file("alfa", ALFA), file("beta", BETA), file("gamma", GAMMA)]);
   await page.waitForFunction(() => /3/.test(document.querySelector('[data-library="sintetica"]')?.textContent ?? ""));
 }
 

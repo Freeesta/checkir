@@ -1,6 +1,7 @@
 // Work-area e2e: spectrum, level and candidates in one view without scrolling, the overlay by itself, the folded data table,
 // the path from file to printed sheet in few actions, no green on results, and the sample in one colour.
 import { ALFA, BETA, GAMMA, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 const hueOf = (rgb) => {
   const [r, g, b] = (rgb.match(/[\d.]+/g) ?? []).slice(0, 3).map((x) => Number(x) / 255);
@@ -19,8 +20,7 @@ const isGreen = (rgb) => {
 async function addLibrary(page) {
   await page.locator('details[data-panel="libraries"] summary').click();
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
-  await page.fill("#lib-name", "Sintetica");
-  await page.setInputFiles('input[data-library="files"]', [
+  await importAs(page, "Sintetica", [
     { name: "alfa.jdx", mimeType: "application/octet-stream", buffer: jcamp("alfa", ALFA) },
     { name: "beta.jdx", mimeType: "application/octet-stream", buffer: jcamp("beta", BETA) },
     { name: "gamma.jdx", mimeType: "application/octet-stream", buffer: jcamp("gamma", GAMMA) },
