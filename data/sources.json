@@ -17672,6 +17672,129 @@
       "url": "https://api.fda.gov/drug/label.json?search=set_id:%220c10e465-4117-48ba-a454-23ccb7a3fcc7%22",
       "tier": "agency",
       "consulted": "2026-10-14"
+    },
+    {
+      "id": "ramaekers2025-3mmc",
+      "title": "Low to moderate doses of 3-methylmethcathinone (3-MMC) produce analgesic effects in healthy volunteers: a proof of principle study with a designer drug (Psychopharmacology 242(10):2293-2301)",
+      "authors": [
+        "J. G. Ramaekers",
+        "J. T. Reckweg",
+        "N. L. Mason",
+        "K. P. C. Kuypers",
+        "S. W. Toennes",
+        "E. L. Theunissen"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s00213-025-06798-8",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1007/s00213-025-06798-8"
+    },
+    {
+      "id": "vanwichelen2024",
+      "title": "In vitro biotransformation of 3-methylmethcathinone (3-MMC) through incubation with human liver microsomes and cytosol and application to in vivo samples (J Pharm Biomed Anal 248:116335)",
+      "authors": [
+        "N. Van Wichelen",
+        "A. Estévez-Danta",
+        "L. Belova",
+        "F. den Ouden",
+        "N. Verougstraete",
+        "M. Roggeman",
+        "T. Boogaerts",
+        "M. Quireyns",
+        "R. Robeyns",
+        "N. De Brabanter",
+        "J. B. Quintana",
+        "R. Rodil",
+        "A. L. N. van Nuijs",
+        "A. Covaci",
+        "C. Gys"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.116335",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/j.jpba.2024.116335"
+    },
+    {
+      "id": "adamowicz2016",
+      "title": "3-Methylmethcathinone - interpretation of blood concentrations based on analysis of 95 cases (J Anal Toxicol 40(4):272-276)",
+      "authors": [
+        "P. Adamowicz",
+        "J. Gieroń",
+        "D. Gil",
+        "W. Lechowicz",
+        "A. Skulska",
+        "B. Tokarczyk"
+      ],
+      "year": 2016,
+      "doi": "10.1093/jat/bkw018",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1093/jat/bkw018"
+    },
+    {
+      "id": "luethi2018-analogs",
+      "title": "Pharmacological profile of mephedrone analogs and related new psychoactive substances (Neuropharmacology 134 Pt A:4-12)",
+      "authors": [
+        "D. Luethi",
+        "K. E. Kolaczynska",
+        "L. Docci",
+        "S. Krähenbühl",
+        "M. C. Hoener",
+        "M. E. Liechti"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.neuropharm.2017.07.026",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/j.neuropharm.2017.07.026"
+    },
+    {
+      "id": "shimshoni2015",
+      "title": "3-Methyl-methcathinone: pharmacokinetic profile evaluation in pigs in relation to pharmacodynamics (J Psychopharmacol 29(6):734-743)",
+      "authors": [
+        "J. A. Shimshoni",
+        "M. Britzi",
+        "E. Sobol",
+        "U. Willenz",
+        "D. Nutt",
+        "N. Edery"
+      ],
+      "year": 2015,
+      "doi": "10.1177/0269881115576687",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1177/0269881115576687"
+    },
+    {
+      "id": "kelecevic2024",
+      "title": "Metaphedrone (3-methylmethcathinone): pharmacological, clinical, and toxicological profile (Medicina 60(3):466)",
+      "authors": [
+        "I. Kelečević",
+        "A.-M. Vejnović",
+        "J. Javorac",
+        "N. Gvozdenović",
+        "N. Janjić",
+        "V. Mijatović Jovin"
+      ],
+      "year": 2024,
+      "doi": "10.3390/medicina60030466",
+      "tier": "review",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.3390/medicina60030466"
     }
   ]
 }
