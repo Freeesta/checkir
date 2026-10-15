@@ -78,7 +78,6 @@ export const ACTIONS = [
   gotoAction(5, "sheet", "sheet"),
   { id: "info.open", labelKey: "action.info_open.label", tipKey: "action.info_open.tip", icon: "info", key: "i", run: (c) => c.openDialog("info"), enabled: always },
   { id: "help.open", labelKey: "action.help_open.label", tipKey: "action.help_open.tip", icon: "keyboard", key: "?", run: (c) => c.openDialog("help"), enabled: always },
-  { id: "privacy.open", labelKey: "action.privacy_open.label", tipKey: "action.privacy_open.tip", icon: "lock", run: (c) => c.openDialog("info"), enabled: always },
   { id: "lang.toggle", labelKey: "lang.label", tipKey: "action.lang_toggle.tip", icon: "language", key: "l", run: (c) => c.toggleLang(), enabled: always },
   { id: "theme.cycle", labelKey: "action.theme_cycle.label", tipKey: "action.theme_cycle.tip", icon: "theme-auto", key: "t", run: (c) => c.cycleTheme(), enabled: always },
 ];

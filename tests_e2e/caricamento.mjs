@@ -78,6 +78,7 @@ async function browserScenario(browser, base, check, axe) {
   check("error: a file in no known format gives a translated error (it)", errIt.includes("non riconosciuto"), errIt);
   const bad = await axe(page);
   check("load: axe is clean with files and an error shown", bad.length === 0, bad.join(", "));
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en");
   const errEn = (await page.textContent("#panel .error")) ?? "";

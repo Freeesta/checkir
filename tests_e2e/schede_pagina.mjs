@@ -73,6 +73,7 @@ async function aroundScenario(page, check, axe) {
   await page.click(".family-list a");
   await page.waitForSelector(".family-sheet");
   check("sheets page: a family sheet has its six sections", (await page.locator(".family-sheet .sheet-section").count()) === 6 && (await page.locator('.family-sheet [data-part="interactions"]').count()) === 1);
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("sheets page: English titles", /Substance sheets|Example family/.test((await page.textContent("main")) ?? "") && /Effects/.test((await page.textContent(".family-sheet")) ?? ""));

@@ -8,37 +8,35 @@ const X_HEAD = 292;
 const Y_MID = 40;
 const AMPLITUDE = 20;
 const WAVELENGTH = 40;
-const PERIOD_MS = 900;
+const TRAIL = 220;
+const TRAVEL_MS = 1500;
 const STEP = 2;
 
-/** Wave height at x and time t (ms): a sine travelling right, one wavelength per period.
- * @param {number} x
- * @param {number} t */
-function waveY(x, t) {
-  return Y_MID - AMPLITUDE * Math.sin((2 * Math.PI * (x - (WAVELENGTH * t) / PERIOD_MS)) / WAVELENGTH);
-}
-
-/** Draw the wave as a polyline that ends exactly in the head, and put the head (and its halo) on that last point.
- * @param {number} t */
-function drawSplash(t) {
+/** Draw the photon at progress p (0 = left edge, 1 = right end): the head on the middle line and its red wave trailing behind it, so the whole figure advances to the right.
+ * @param {number} p */
+function drawSplash(p) {
   const wave = document.querySelector(".splash-wave");
   if (!wave) return;
+  const head = X_START + p * (X_HEAD - X_START);
+  const waveY = (/** @type {number} */ x) => Y_MID + AMPLITUDE * Math.sin((2 * Math.PI * (head - x)) / WAVELENGTH);
   let d = "";
-  for (let x = X_START; x < X_HEAD; x += STEP) d += `${d ? "L" : "M"}${x} ${waveY(x, t).toFixed(2)}`;
-  const y = waveY(X_HEAD, t).toFixed(2);
-  wave.setAttribute("d", `${d}L${X_HEAD} ${y}`);
-  for (const el of document.querySelectorAll(".splash-head, .splash-halo")) el.setAttribute("cy", y);
+  for (let x = Math.max(X_START, head - TRAIL); x < head; x += STEP) d += `${d ? "L" : "M"}${x.toFixed(1)} ${waveY(x).toFixed(2)}`;
+  wave.setAttribute("d", `${d ? `${d}L` : "M"}${head.toFixed(1)} ${Y_MID}`);
+  for (const el of document.querySelectorAll(".splash-head, .splash-halo")) {
+    el.setAttribute("cx", head.toFixed(1));
+    el.setAttribute("cy", String(Y_MID));
+  }
 }
 
-/** Animate wave and head from the same phase; static with reduced motion; stops when the splash is gone. */
+/** Animate the photon from left to right, looping; still (fully drawn) with reduced motion; stops when the splash is gone. */
 function startSplash() {
-  drawSplash(0);
+  drawSplash(1);
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const t0 = performance.now();
   const frame = (/** @type {number} */ now) => {
     const splash = document.getElementById("splash");
     if (!splash || splash.hasAttribute("data-gone")) return;
-    drawSplash(now - t0);
+    drawSplash(((now - t0) % TRAVEL_MS) / TRAVEL_MS);
     requestAnimationFrame(frame);
   };
   requestAnimationFrame(frame);

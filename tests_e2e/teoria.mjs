@@ -136,9 +136,10 @@ async function accessibility(browser, base, check, axe) {
   const { ctx, page } = await open(browser, base, { locale: "en-GB" });
   await go(page, base, "4");
   check("theory [en]: chapter and interactive in English", /^4\./.test((await page.locator("#view-title").textContent()) ?? "") && /IR-inactive/.test((await result(page)) ?? ""));
-  await page.getByRole("button", { name: "IT" }).click();
+  await page.click("#lang-button");
+  await page.click('[data-lang="it"]');
   await page.waitForFunction(() => /Perché/.test(document.querySelector("#view-title")?.textContent ?? ""));
-  check("theory: the language buttons switch the chapter", /Perché/.test((await page.locator("#view-title").textContent()) ?? ""));
+  check("theory: the language menu switches the chapter", /Perché/.test((await page.locator("#view-title").textContent()) ?? ""));
   await ctx.close();
 }
 

@@ -4,7 +4,8 @@ import { actionButton } from "./controls.js";
 import { levelIcon } from "./results.js";
 import { alertViews, isPartialRange, levelWord, shownLevel } from "./alerts.js";
 import { el, icon, setIcon } from "./dom.js";
-import { LANGS, currentLang, formatNumber, t } from "./i18n.js";
+import { formatNumber, t } from "./i18n.js";
+import { buildLangMenu } from "./lang_menu.js";
 import { fileRange } from "./files.js";
 import { attachTip } from "./tooltip.js";
 import { activeFile, activeLibraries, emptyState, resultOf } from "./state.js";
@@ -97,16 +98,8 @@ export function buildHeader(host, ctx, appName) {
   }
   const menu = el("button", { type: "button", class: "icon-button menu-button", "aria-expanded": "false", "aria-controls": "hdr-tools" }, [icon("more")]);
   const tools = el("div", { class: "hdr-tools", id: "hdr-tools" });
-  const langGroup = el("div", { class: "lang-group", role: "group" });
-  /** @type {Map<string, HTMLButtonElement>} */
-  const langButtons = new Map();
-  for (const code of LANGS) {
-    const b = el("button", { type: "button", class: "lang-button", lang: code, "data-lang": code }, [code.toUpperCase()]);
-    b.addEventListener("click", () => ctx.setLang(code));
-    langButtons.set(code, b);
-    langGroup.append(b);
-  }
-  tools.append(actionButton("privacy.open", ctx), actionButton("info.open", ctx), actionButton("help.open", ctx), langGroup, actionButton("theme.cycle", ctx));
+  const langMenu = buildLangMenu((code) => ctx.setLang(code));
+  tools.append(actionButton("info.open", ctx), actionButton("help.open", ctx), langMenu.root, actionButton("theme.cycle", ctx));
   const closeMenu = () => {
     menu.setAttribute("aria-expanded", "false");
     host.removeAttribute("data-menu");
@@ -151,11 +144,7 @@ export function buildHeader(host, ctx, appName) {
       sheets.querySelector(".sheets-link-text")?.replaceChildren(t("header.sheets"));
       sheets.setAttribute("aria-label", t("header.sheets"));
       menu.setAttribute("aria-label", t("header.menu.label"));
-      langGroup.setAttribute("aria-label", t("lang.label"));
-      for (const [code, b] of langButtons) {
-        b.setAttribute("aria-pressed", String(code === currentLang()));
-        b.setAttribute("aria-label", code === "it" ? t("lang.it") : t("lang.en"));
-      }
+      langMenu.refresh();
     },
   };
 }

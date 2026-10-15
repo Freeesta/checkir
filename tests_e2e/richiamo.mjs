@@ -68,6 +68,7 @@ export async function recallScenario(browser, base, check, axe) {
   await page.locator("#recall").evaluate((e) => e.scrollIntoView({ block: "center" }));
   const violations = await axe(page);
   check("recall: axe has no violations", violations.length === 0, violations.join(", "));
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => /Recalled compounds/.test(document.getElementById("recall")?.textContent ?? ""));
   check("recall: English labels", true);

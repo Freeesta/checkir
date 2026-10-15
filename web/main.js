@@ -5,7 +5,7 @@ import { createViewLink } from "./view_link.js";
 import { refreshActionButtons } from "./controls.js";
 import { buildDialogs } from "./dialogs.js";
 import { buildHeader } from "./header.js";
-import { applyCatalog, currentLang, LANGS, loadLang, pickLang, t } from "./i18n.js";
+import { applyCatalog, currentLang, LANGS, LANG_NAMES, loadLang, pickLang, t } from "./i18n.js";
 import { loadEngine } from "./engine.js";
 import { createFolder } from "./cartella.js";
 import { decisionActions } from "./decision.js";
@@ -85,7 +85,7 @@ function languageActions(redraw, say) {
     await loadBandData(code);
     redraw();
     document.body.dataset.langReady = code;
-    say(t("status.lang_changed", { lang: t(code === "it" ? "lang.it" : "lang.en") }));
+    say(t("status.lang_changed", { lang: LANG_NAMES[code] ?? code }));
   };
   return {
     setLang,

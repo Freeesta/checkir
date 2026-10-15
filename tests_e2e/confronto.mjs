@@ -102,9 +102,11 @@ async function levelsScenario(page, check) {
   check("match: unknown sample -> Non identificato, titled 'I più simili'", /più simili/i.test((await page.textContent(".cands-title")) ?? ""));
 
   // English.
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("match: English shows the level word", /Not identified/.test((await page.textContent(".result .level")) ?? ""));
+  await page.click("#lang-button");
   await page.click('[data-lang="it"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "it");
 

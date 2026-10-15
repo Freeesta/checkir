@@ -141,6 +141,7 @@ async function stateScenario(page, check, axe) {
   const v2 = await axe(page);
   check("ranges: axe is clean in dark", v2.length === 0, v2.join(", "));
   await page.evaluate(() => (document.documentElement.dataset.theme = "light"));
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en");
   await page.waitForSelector(".ranges-table thead", { timeout: 20000 });
