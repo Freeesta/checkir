@@ -162,23 +162,25 @@ function menuChart(c) {
   };
 }
 
-/** Call `redraw` when the width of the host changes (the chart is drawn as wide as its area). @param {HTMLElement} host @param {() => unknown} redraw */
+/** Call `redraw` when the width of the host changes (the chart is drawn as wide as its area). @param {HTMLElement} host @param {() => unknown} redraw @returns {() => void} stops watching */
 function onWidthChange(host, redraw) {
-  if (typeof ResizeObserver !== "function") return;
+  if (typeof ResizeObserver !== "function") return () => {};
   let width = host.clientWidth;
-  new ResizeObserver(() => {
+  const observer = new ResizeObserver(() => {
     if (host.clientWidth === width) return;
     width = host.clientWidth;
     redraw();
-  }).observe(host);
+  });
+  observer.observe(host);
+  return () => observer.disconnect();
 }
 
 /**
  * Wire the chart: keyboard (+ - arrows 0 and the cursor keys), pointer (cursors, zoom bands on the plot and the axes, wheel, double click), the menu and the buttons.
  * The spectrum is swapped with `set`; with none, a short line says so. With `link`, the x axis follows the other charts joined to the same link.
  * @param {{ chart: HTMLElement, toolbar: HTMLElement, tab: HTMLElement, range: HTMLElement }} el
- * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, onBrush?: (from: number, to: number) => void, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean, pick: (id: string) => void }, ctx?: import("./actions.js").Ctx, codeOf?: () => string | null }} [opts]
- * @returns {{ back: () => unknown, redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void, cursorRange: () => [number, number] | null, cursorValues: () => Array<{ x: number, y: number }> }} `redraw` after a language change
+ * @param {{ announce?: (text: string) => void, link?: ReturnType<typeof import("./view_link.js").createViewLink>, onBrush?: (from: number, to: number) => void, peaks?: { step: (dir: 1 | -1) => boolean, clear: () => boolean, level: (dir: 1 | -1) => boolean, pick: (id: string) => void }, ctx?: import("./actions.js").Ctx, localMenu?: boolean, codeOf?: () => string | null }} [opts]
+ * @returns {{ back: () => unknown, redraw: () => void, set: (s: Spectrum | null) => void, setLayers: (l: Layers) => void, cursorRange: () => [number, number] | null, cursorValues: () => Array<{ x: number, y: number }>, destroy: () => void }} `redraw` after a language change; `destroy` leaves the link and stops watching the width
  */
 export function wire(el, opts = {}) {
   const say = opts.announce ?? (() => {});
@@ -199,7 +201,7 @@ export function wire(el, opts = {}) {
     geom = s ? draw(el.chart, s, v, layers, { yLock: y.range(), cursors }) : null;
     showTable(el, s, v, layers);
   };
-  const publish = opts.link ? opts.link.join((r) => ((v = fitView(r, full)), update())) : () => {};
+  const publish = opts.link ? opts.link.join((r) => ((v = fitView(r, full)), update())) : Object.assign(() => {}, { leave: () => {} });
   /** @param {View} next @param {boolean} [defer] one redraw per frame while the wheel turns */
   const setView = (next, defer = false) => {
     if (!s) return;
@@ -235,14 +237,14 @@ export function wire(el, opts = {}) {
   };
   attachInput(el.chart, input);
   const back = () => past.views.length && ((v = /** @type {View} */ (past.views.pop())), update());
-  if (opts.ctx) attachMenu(el.chart, menuChart({ has: () => s !== null, view: () => v, full: () => full, setView, y, cursors, toggleLockY, lockButton, wnAt: (e) => clientWavenumber(el.chart, input, e) }), opts.ctx);
+  if (opts.ctx) attachMenu(el.chart, menuChart({ has: () => s !== null, view: () => v, full: () => full, setView, y, cursors, toggleLockY, lockButton, wnAt: (e) => clientWavenumber(el.chart, input, e) }), opts.ctx, !opts.localMenu);
   const redraw = () => (refresh(), update());
   redraw();
-  onWidthChange(el.chart, () => frame || (frame = requestAnimationFrame(update)));
+  const unwatch = onWidthChange(el.chart, () => frame || (frame = requestAnimationFrame(update)));
   return {
-    back,
+    destroy: () => (unwatch(), cancelAnimationFrame(frame), publish.leave()),
+    back, redraw,
     cursorRange: () => cursors.pair(), cursorValues: () => cursors.values(),
-    redraw,
     setLayers: (next) => ((layers = next), (v = withPeakInView(next, v, full)), update()),
     set: (next) => {
       if (next !== s) {

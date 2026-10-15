@@ -30,8 +30,9 @@ export const MENU_ITEMS = [
  * @param {HTMLElement} host
  * @param {MenuChart} chart
  * @param {import("./actions.js").Ctx} ctx
+ * @param {boolean} [withActions] the actions of the page too (false for the chart of a pane that is not focused: they would act on the focused tab)
  */
-export function attachMenu(host, chart, ctx) {
+export function attachMenu(host, chart, ctx, withActions = true) {
   /** @param {number} x @param {number} y @param {number | null} at wavenumber under the pointer, if any */
   const show = (x, y, at) => {
     const state = ctx.getState();
@@ -42,7 +43,7 @@ export function attachMenu(host, chart, ctx) {
       returnFocus: host,
       rows: [
         ...MENU_ITEMS.map((i) => ({ id: i.id, label: t(i.labelKey), checked: i.checked?.(chart, ctx, at), disabled: i.enabled ? !i.enabled(chart, ctx, at) : false, run: () => i.run(chart, ctx, at) })),
-        ...ACTIONS.filter((a) => a.menu).map((a) => ({ id: a.id, label: t(a.labelKey), key: activeKey(a), checked: a.id === "peaks.toggle" ? state.showPeaks : undefined, disabled: !a.enabled(state), run: () => a.run(ctx) })),
+        ...(withActions ? ACTIONS : []).filter((a) => a.menu).map((a) => ({ id: a.id, label: t(a.labelKey), key: activeKey(a), checked: a.id === "peaks.toggle" ? state.showPeaks : undefined, disabled: !a.enabled(state), run: () => a.run(ctx) })),
       ],
     });
   };

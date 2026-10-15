@@ -2,6 +2,7 @@
 import { anchorOf, isMenuKey, openMenu } from "./context_menu.js";
 import { el, icon, keepFocus } from "./dom.js";
 import { currentLang, t } from "./i18n.js";
+import { attachTabDrag } from "./tab_drag.js";
 import { kindOf } from "./tab_kinds.js";
 
 /**
@@ -18,12 +19,18 @@ function labelOf(tab, s) {
   return { code, name, text: t(kindOf(tab).nameKey, { code, name }).trim() };
 }
 
-/** The rows of the context menu of a tab; the side-by-side view adds its own later. @param {Tab} tab @param {AppState} s @param {Ctx} ctx @returns {import("./context_menu.js").MenuRow[]} */
+/** Whether a tab is one of the panes of the side-by-side view. @param {AppState} s @param {string} id @returns {boolean} */
+const inSplit = (s, id) => s.split.panes.length >= 2 && s.split.panes.includes(id);
+
+/** The rows of the context menu of a tab. @param {Tab} tab @param {AppState} s @param {Ctx} ctx @returns {import("./context_menu.js").MenuRow[]} */
 export function menuRows(tab, s, ctx) {
   const at = s.tabs.findIndex((x) => x.id === tab.id);
   return [
     { id: "tab.move_left", label: t("tabs.move_left"), disabled: at <= 0, run: () => ctx.moveTab(tab.id, at - 1) },
     { id: "tab.move_right", label: t("tabs.move_right"), disabled: at < 0 || at >= s.tabs.length - 1, run: () => ctx.moveTab(tab.id, at + 1) },
+    { id: "tab.split_right", label: t("tabs.split.right"), disabled: s.tabs.length < 2, run: () => ctx.splitTab(tab.id, "right") },
+    { id: "tab.split_below", label: t("tabs.split.below"), key: "Ctrl+Shift+↓", disabled: s.tabs.length < 2, run: () => ctx.splitTab(tab.id, "bottom") },
+    ...(inSplit(s, tab.id) ? [{ id: "tab.unsplit", label: t("tabs.split.remove"), disabled: false, run: () => ctx.unsplitTab(tab.id) }] : []),
     { id: "tab.close", label: t("tabs.close"), key: "Del", disabled: false, run: () => ctx.closeTab(tab.id) },
     { id: "tab.close_others", label: t("tabs.close_others"), disabled: s.tabs.length < 2, run: () => ctx.closeOtherTabs(tab.id) },
   ];
@@ -58,9 +65,10 @@ function reveal(scroll, list, b) {
 function tabButton(tab, s, roving) {
   const { code, name, text } = labelOf(tab, s);
   const on = tab.id === s.focusTab;
-  const b = /** @type {HTMLButtonElement} */ (el("button", { type: "button", role: "tab", id: `tab-${tab.id}`, class: "doc-tab", "data-tab": tab.id, "data-fk": `tab-${tab.id}`, "data-kind": tab.kind, "aria-selected": String(on), "aria-controls": kindOf(tab).panel, "aria-label": text, "aria-keyshortcuts": "Delete", tabindex: tab.id === roving ? "0" : "-1" }));
+  const split = inSplit(s, tab.id);
+  const b = /** @type {HTMLButtonElement} */ (el("button", { type: "button", role: "tab", id: `tab-${tab.id}`, class: "doc-tab", "data-tab": tab.id, "data-fk": `tab-${tab.id}`, "data-kind": tab.kind, "aria-selected": String(on), "aria-controls": split ? `panebox-${tab.id}` : kindOf(tab).panel, "aria-label": split ? `${text}, ${t("tabs.split.icon")}` : text, "aria-keyshortcuts": "Delete", tabindex: tab.id === roving ? "0" : "-1" }));
   if (name) b.title = name;
-  b.append(icon(kindOf(tab).icon), el("span", { class: "tab-code" }, [code]), el("span", { class: "tab-name" }, [name]), el("span", { class: "tab-close", "aria-hidden": "true" }, ["×"]));
+  b.append(icon(kindOf(tab).icon), el("span", { class: "tab-code" }, [code]), el("span", { class: "tab-name" }, [name]), ...(split ? [el("span", { class: "tab-split", "aria-hidden": "true" }, ["▥"])] : []), el("span", { class: "tab-close", "aria-hidden": "true" }, ["×"]));
   return b;
 }
 
@@ -100,7 +108,7 @@ function wireMouse(list, ctx, bar) {
   });
 }
 
-/** Keyboard: arrows, Home, End, Delete, Ctrl+Shift+arrows, the menu key. Enter and Space act as a click. @param {HTMLElement} list @param {Ctx} ctx @param {Bar} bar */
+/** Keyboard: arrows, Home, End, Delete, Ctrl+Shift+arrows (← → move, ↓ puts beside below), the menu key. Enter and Space act as a click. @param {HTMLElement} list @param {Ctx} ctx @param {Bar} bar */
 function wireKeys(list, ctx, bar) {
   list.addEventListener("keydown", (e) => {
     const b = /** @type {HTMLElement} */ (e.target).closest("button");
@@ -109,7 +117,10 @@ function wireKeys(list, ctx, bar) {
     const at = tabs.findIndex((x) => x.id === id);
     if (!id || at < 0) return;
     const step = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-    if (step && e.ctrlKey && e.shiftKey) {
+    if (e.key === "ArrowDown" && e.ctrlKey && e.shiftKey) {
+      bar.pending = id;
+      ctx.splitTab(id, "bottom");
+    } else if (step && e.ctrlKey && e.shiftKey) {
       bar.pending = id;
       ctx.moveTab(id, at + step);
     } else if (step && !e.ctrlKey && !e.altKey) rove(list, bar, tabs[(at + step + tabs.length) % tabs.length].id);
@@ -158,6 +169,10 @@ export function buildTabs(host, ctx) {
   host.append(el("div", { class: "doc-tabs-bar" }, [scroll, all]), notice);
   /** @type {Bar} */
   const bar = { state: null, roving: null, pending: null, shownFocus: null, sig: "" };
+  attachTabDrag(list, ctx, (id, x, y) => {
+    const tab = bar.state?.tabs.find((t) => t.id === id);
+    if (tab) showMenu(list, ctx, bar, tab, x, y);
+  });
   wireMouse(list, ctx, bar);
   wireKeys(list, ctx, bar);
   wireAll(all, ctx, bar);
@@ -177,7 +192,7 @@ export function buildTabs(host, ctx) {
     refresh(s) {
       bar.state = s;
       host.hidden = s.tabs.length === 0;
-      const next = JSON.stringify([currentLang(), s.focusTab, s.tabs.map((x) => [x.id, x.kind, labelOf(x, s).name])]);
+      const next = JSON.stringify([currentLang(), s.focusTab, s.split.panes, s.tabs.map((x) => [x.id, x.kind, labelOf(x, s).name])]);
       if (next !== bar.sig) {
         bar.sig = next;
         redraw(s);
@@ -186,7 +201,7 @@ export function buildTabs(host, ctx) {
         rove(list, bar, buttonOf(list, bar.pending) ? bar.pending : s.focusTab);
         bar.pending = null;
       }
-      labelPane(document.getElementById("pane-main"), s.focusTab);
+      labelPane(document.getElementById("pane-main"), s.split.panes.length >= 2 ? null : s.focusTab);
       const text = s.tabNotice ? t(s.tabNotice.key, s.tabNotice.params) : "";
       if (notice.textContent !== text) notice.textContent = text;
     },

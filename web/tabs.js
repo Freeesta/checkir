@@ -76,6 +76,7 @@ export function focusPatch(s, id, code) {
   if (leaving && leaving.id === id) return code && codesOf(s, next).includes(code) ? { active: code } : {};
   const tabs = s.tabs.map((t) => (leaving && t.id === leaving.id ? { ...t, view: viewOf(s) } : t));
   const patch = /** @type {Partial<AppState>} */ ({ tabs, focusTab: id, talk: false });
+  if (leaving && s.split.panes.length && !s.split.panes.includes(id)) patch.split = { ...s.split, panes: s.split.panes.map((p) => (p === leaving.id ? id : p)) };
   if (leaving) {
     const gone = new Set(codesOf(s, leaving));
     patch.rangeTable = Object.fromEntries(Object.entries(s.rangeTable).filter(([c]) => !gone.has(c)));
@@ -92,15 +93,16 @@ export function openFilePatch(s, code) {
   return focusPatch({ ...s, tabs: [...s.tabs, tab] }, code, code);
 }
 
-/** Close a tab: the focus goes to the neighbour on the right, else on the left; below two panes the side-by-side view ends. @param {AppState} s @param {string} id @returns {Partial<AppState>} */
+/** Close a tab: the focus goes to the next pane of the side-by-side view if the tab was in it, else to the neighbour on the right, else on the left; below two panes the view ends. @param {AppState} s @param {string} id @returns {Partial<AppState>} */
 export function closePatch(s, id) {
   const at = s.tabs.findIndex((t) => t.id === id);
   if (at < 0) return {};
   const tabs = s.tabs.filter((t) => t.id !== id);
+  const was = s.split.panes.indexOf(id);
   const panes = s.split.panes.filter((p) => p !== id);
   const split = { ...s.split, panes: panes.length < 2 ? [] : panes };
   if (s.focusTab !== id) return { tabs, split };
-  const near = tabs[at] ?? tabs[at - 1];
+  const near = tabs.find((t) => t.id === (was >= 0 ? (panes[was] ?? panes[was - 1]) : undefined)) ?? tabs[at] ?? tabs[at - 1];
   if (!near) return { tabs, split, focusTab: null, ...emptyView(null) };
   return { ...focusPatch({ ...s, tabs, focusTab: null }, near.id), split };
 }

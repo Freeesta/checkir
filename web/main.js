@@ -41,7 +41,8 @@ import { buildRecallView, openRecallDialog } from "./recall_ui.js";
 import { subtractActions } from "./subtract.js";
 import { buildCandidates, buildNextStep } from "./workarea.js";
 import { buildTabs } from "./tabs_ui.js";
-import { tabActions } from "./tabs_wire.js";
+import { splitActions, tabActions } from "./tabs_wire.js";
+import { buildPanes } from "./panes_ui.js";
 
 /** @param {string} id @returns {HTMLElement} */
 function $(id) {
@@ -134,6 +135,13 @@ function chartPeakKeys(ctx) {
   return { step: (/** @type {-1 | 1} */ dir) => ctx.stepPeak(dir), clear: () => ctx.clearPeak(), level: (/** @type {-1 | 1} */ dir) => (getState().peakFocus ? (ctx.stepLevel(dir), true) : false), pick: (/** @type {string} */ id) => ctx.focusPeak(id) };
 }
 
+/** The chart of the focused tab and the side-by-side panes, which share its x axis link. @param {import("./actions.js").Ctx} ctx @param {(text: string) => void} announce */
+function chartAndPanes(ctx, announce) {
+  const link = createViewLink();
+  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link, onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
+  return { chart, panes: buildPanes($("panes"), $("pane-main"), ctx, link) };
+}
+
 async function start() {
   initTheme();
   await loadLang(pickLang());
@@ -148,7 +156,7 @@ async function start() {
     getState,
     openFile: () => input.choose(),
     loadDemo: demoLoader(engine, announce),
-    ...tabActions(announce),
+    ...tabActions(announce), ...splitActions(announce),
     closeFile: (code) => {
       closeFile(code);
       announce(t("status.file_closed"));
@@ -173,7 +181,7 @@ async function start() {
   const talk = wireTalk($("sheet-host"));
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
-  const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
+  const { chart, panes } = chartAndPanes(ctx, announce);
   viewBack = chart.back; attachRowMenus(ctx);
   let shown = /** @type {string | null | undefined} */ (undefined);
   const layers = buildLayers(chart, $("peaks-summary"));
@@ -188,7 +196,7 @@ async function start() {
     layers.sync(s, shown ?? null);
     card.refresh(s);
     document.body.toggleAttribute("data-subtract", s.subtraction !== null);
-    for (const part of [tabs, subtraction, recalled, header, panels]) part.refresh(s);
+    for (const part of [panes, tabs, subtraction, recalled, header, panels]) part.refresh(s);
     next.refresh(s);
     candidates.refresh(s);
     talk.refresh(s);
