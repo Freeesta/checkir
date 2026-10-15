@@ -16,7 +16,6 @@
   "same_as_previous": { "r_min": 0.99 },
   "region_agreement": { "agree_min": 0.9, "partial_min": 0.7, "signal_share_min": 0.01 },
   "quality": {
-    "status": "draft",
     "saturation_a": 1.5,
     "weak_signal_a": 0.02,
     "snr_min": 100,
@@ -40,6 +39,6 @@
     { "id": "1000-650", "from_cm1": 650, "to_cm1": 1000 }
   ],
   "range_presets": [
-    { "id": "full", "ranges": [[650, 3800]], "calibrated": true }
+    { "id": "full", "ranges": [[650, 3800]] }
   ]
 }

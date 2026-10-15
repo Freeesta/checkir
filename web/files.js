@@ -138,17 +138,16 @@ export function closeFile(code) {
   const files = s.files.filter((f) => !gone.has(f.code));
   if (!files.length) seq = 0;
   const results = Object.fromEntries(Object.entries(s.results).filter(([c]) => !gone.has(c)));
-  const decisions = Object.fromEntries(Object.entries(s.decisions).filter(([c]) => !gone.has(c)));
-  const draft = Object.fromEntries(Object.entries(s.draft).filter(([c]) => !gone.has(c)));
+  const choice = Object.fromEntries(Object.entries(s.choice).filter(([c]) => !gone.has(c)));
   const open = s.subtraction && gone.has(s.subtraction.sample) ? null : s.subtraction;
-  update({ files, results, decisions, draft, subtraction: open, active: gone.has(/** @type {string} */ (s.active)) ? (files[0]?.code ?? null) : s.active, fileError: null });
+  update({ files, results, choice, subtraction: open, active: gone.has(/** @type {string} */ (s.active)) ? (files[0]?.code ?? null) : s.active, fileError: null });
 }
 
 /** Forget everything loaded. */
 export function closeAll() {
   store.clear();
   seq = 0;
-  update({ files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: true, decisions: {}, draft: {}, talk: false, subtraction: null });
+  update({ files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: true, choice: {}, talk: false, subtraction: null });
 }
 
 /**

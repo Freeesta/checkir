@@ -59,6 +59,7 @@ async function phoneScenario(browser) {
   await page.setInputFiles("input[type=file]", FIXTURE.pathname);
   await page.waitForSelector("#chart polyline.curve");
   check("zoom 400 % (320 px): no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
+  check("320 px: the sheets link stays in the header, inside the viewport", await page.evaluate(() => { const r = document.querySelector("#app-header .sheets-link")?.getBoundingClientRect(); return Boolean(r) && r.width > 0 && r.right <= document.documentElement.clientWidth; }));
   await page.keyboard.press("Tab");
   check("Tab: first element is the skip link", await page.evaluate(() => document.activeElement?.className === "skip"));
   await page.focus("#chart");
@@ -169,11 +170,11 @@ async function shellScenario(browser) {
   await page.waitForSelector("body[data-ready='1']");
   await page.keyboard.press("Tab");
   const stops = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 11; i++) {
     await page.keyboard.press("Tab");
     stops.push(await page.evaluate(() => ({ inHeader: Boolean(document.activeElement?.closest("#app-header")), left: document.activeElement?.getBoundingClientRect().left ?? -1 })));
   }
-  check("Tab: the 10 header controls come in visual order", stops.every((x, i) => x.inHeader && (i === 0 || x.left > stops[i - 1].left)), JSON.stringify(stops));
+  check("Tab: the 11 header controls come in visual order", stops.every((x, i) => x.inHeader && (i === 0 || x.left > stops[i - 1].left)), JSON.stringify(stops));
   await page.focus('[data-action="info.open"]');
   check("tooltip: shows on keyboard focus", await page.isVisible("#tooltip"));
   await page.keyboard.press("Escape");

@@ -42,7 +42,24 @@
       "matrix": "plasma",
       "route": "oral",
       "source": "pizarro2004"
-    }
+    },
+    "metabolites": [
+      {
+        "name_key": "mda",
+        "active": null,
+        "source": "mas1999"
+      },
+      {
+        "name_key": "hhma",
+        "active": null,
+        "source": "delatorre2004"
+      },
+      {
+        "name_key": "hmma",
+        "active": null,
+        "source": "delatorre2004"
+      }
+    ]
   },
   "cuts": [
     {
@@ -87,6 +104,11 @@
       "key": "mdma.ritonavir",
       "topic": "combination",
       "source": "papaseit2012"
+    },
+    {
+      "key": "mdma.redosing",
+      "topic": "redosing",
+      "source": "farre2004"
     },
     {
       "key": "mdma.fluids",

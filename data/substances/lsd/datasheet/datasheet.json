@@ -1,14 +1,28 @@
 {
   "schema": "datasheet/2",
   "substance": "lsd",
-  "version": 1,
-  "doses": [],
+  "version": 2,
+  "doses": [
+    {
+      "route": "oral",
+      "unit": "ug",
+      "threshold": 10,
+      "source": "holze2020-micro",
+      "evidence_type": "clinical"
+    }
+  ],
   "interactions": [
     {
       "with": "lithium",
       "severity": "dangerous",
       "mechanism": "other",
       "source": "nayak2021"
+    },
+    {
+      "with": "ssri",
+      "severity": "caution",
+      "mechanism": "serotonergic",
+      "source": "bonson1996"
     }
   ],
   "authors": [

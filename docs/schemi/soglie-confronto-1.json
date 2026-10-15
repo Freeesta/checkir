@@ -212,15 +212,6 @@
       "description_it": "Limiti delle allerte sulla qualita della misura.",
       "type": "object",
       "properties": {
-        "status": {
-          "description": "Provisional until the service confirms the values.",
-          "description_it": "Provvisorie finche il servizio non conferma i valori.",
-          "type": "string",
-          "enum": [
-            "draft",
-            "confirmed"
-          ]
-        },
         "saturation_a": {
           "description": "Highest absorbance before the alert quality_saturation.",
           "description_it": "Assorbanza massima oltre cui scatta quality_saturation.",
@@ -307,7 +298,6 @@
         }
       },
       "required": [
-        "status",
         "saturation_a",
         "weak_signal_a",
         "snr_min",
@@ -387,8 +377,8 @@
       "minItems": 1
     },
     "range_presets": {
-      "description": "Named range selections; only a calibrated one may reach the level probable.",
-      "description_it": "Selezioni di regioni con nome; solo una tarata puo arrivare al livello probabile.",
+      "description": "Named range selections.",
+      "description_it": "Selezioni di regioni con nome.",
       "type": "array",
       "items": {
         "description": "A preset.",
@@ -419,11 +409,6 @@
             },
             "minItems": 1
           },
-          "calibrated": {
-            "description": "Thresholds calibrated for this selection.",
-            "description_it": "Soglie tarate per questa selezione.",
-            "type": "boolean"
-          },
           "probable_r1": {
             "description": "Own lowest r for probable, if different.",
             "description_it": "r minimo proprio per probabile, se diverso.",
@@ -441,8 +426,7 @@
         },
         "required": [
           "id",
-          "ranges",
-          "calibrated"
+          "ranges"
         ],
         "additionalProperties": false
       },
