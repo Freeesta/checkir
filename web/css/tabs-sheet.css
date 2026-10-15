@@ -1,0 +1,9 @@
+/* Substance tabs: the orange rule of the tab (--tab-sheet, with the sheet icon) and the pane that holds the sheet. */
+.doc-tab[data-kind="sheet"] .tab-name { display: none; }
+.doc-tab[data-kind="sheet"] .tab-code { max-width: 12em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.doc-tab[data-kind="sheet"] .icon { color: var(--tab-sheet); }
+.pane-sheet[hidden] { display: none; }
+.pane-sheet { padding: 0 0 1rem; min-width: 0; }
+.pane-sheet > h2 { margin: 0 0 0.5rem; border-top: 3px solid var(--tab-sheet); padding-top: 0.5rem; font-size: 1.25rem; }
+.pane-sheet > h2:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pane-sheet .substance-sheet { overflow-wrap: anywhere; }

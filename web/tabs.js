@@ -92,6 +92,14 @@ export function openFilePatch(s, code) {
   return focusPatch({ ...s, tabs: [...s.tabs, tab] }, code, code);
 }
 
+/** A substance tab at the end, with the focus; the one already open for that substance only gets the focus. @param {AppState} s @param {{ id: string, name: string, cuts: any }} sheet @returns {Partial<AppState>} */
+export function openSheetPatch(s, sheet) {
+  const id = `sheet-${sheet.id}`;
+  if (s.tabs.some((t) => t.id === id)) return focusPatch(s, id);
+  const tab = /** @type {Tab} */ ({ id, kind: "sheet", code: null, sheet, view: null });
+  return focusPatch({ ...s, tabs: [...s.tabs, tab] }, id);
+}
+
 /** Close a tab: the focus goes to the neighbour on the right, else on the left; below two panes the side-by-side view ends. @param {AppState} s @param {string} id @returns {Partial<AppState>} */
 export function closePatch(s, id) {
   const at = s.tabs.findIndex((t) => t.id === id);
