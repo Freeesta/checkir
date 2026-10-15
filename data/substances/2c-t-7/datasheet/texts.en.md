@@ -8,7 +8,7 @@ The 2,5-dimethoxy phenethylamines of the 2C series share the aryl ether bands: a
 
 ## category
 
-Chemical class: phenethylamines, 2C series (4-thio derivatives). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:halberstadt2022] [f:checkir-classification]
+Chemical class: phenethylamines, 2C series (4-thio derivatives). Expected effect: psychedelic. Typical role in samples: active principle. [f:halberstadt2022] [f:checkir-classification]
 
 ## history
 

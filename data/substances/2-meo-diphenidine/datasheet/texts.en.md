@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: other substances. It is a 1,2-diarylethylamine (an analogue of diphenidine), not an arylcyclohexylamine, and the arylcyclohexylamines family sheet covers phencyclidine- and ketamine-type compounds, so no family sheet is attached. Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:hofer2014] [f:checkir-classification]
+Chemical class: other substances. It is a 1,2-diarylethylamine (an analogue of diphenidine), not an arylcyclohexylamine, and the arylcyclohexylamines family sheet covers phencyclidine- and ketamine-type compounds, so no family sheet is attached. Expected effect: dissociative. Typical role in samples: active principle. [f:hofer2014] [f:checkir-classification]
 
 ## origin
 

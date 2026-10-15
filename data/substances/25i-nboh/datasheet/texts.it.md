@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: NBOMe (per il gruppo N-benzilico). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: NBOMe (per il gruppo N-benzilico). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 Il gruppo benzilico ha un ossidrile al posto del metossile degli NBOMe (un NBOH); in vitro l'agonismo 5-HT2A ad alta potenza è simile a quello del LSD, coerente con un'attività allucinogena. [f:eshleman2018]
 

@@ -6,7 +6,7 @@ It is the 4-methyl member of the series: 2C-D carrying a 2-methoxybenzyl group o
 
 ## category
 
-Chemical class: NBOMe (N-benzyl phenethylamines). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:suzuki2015] [f:checkir-classification]
+Chemical class: NBOMe (N-benzyl phenethylamines). Expected effect: psychedelic. Typical role in samples: active principle. [f:suzuki2015] [f:checkir-classification]
 
 ## history
 

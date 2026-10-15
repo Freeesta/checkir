@@ -6,7 +6,7 @@ An N-benzyl phenethylamine: the N-(2-methoxybenzyl) derivative of 2C-H (2,5-dime
 
 ## category
 
-Chemical class: NBOMe (N-benzyl phenethylamines). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: NBOMe (N-benzyl phenethylamines). Expected effect: psychedelic. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

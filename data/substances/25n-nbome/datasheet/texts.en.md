@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: NBOMe. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: NBOMe. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 In vitro 25N-NBOMe is a 5-HT2A agonist with subnanomolar to low nanomolar potency, similar to LSD. [f:eshleman2018]
 

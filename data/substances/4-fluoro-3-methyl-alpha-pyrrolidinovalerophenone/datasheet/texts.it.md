@@ -6,7 +6,7 @@ Ha la stessa formula di 4-fluoro-α-PHP (C16H22FNO), con scheletro carbonioso e 
 
 ## category
 
-Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

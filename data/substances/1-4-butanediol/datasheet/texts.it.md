@@ -7,7 +7,7 @@ Un diolo C4 lineare con un ossidrile primario a ciascuna estremità e senza grup
 
 ## category
 
-Classe chimica: altre. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 È un precursore metabolico del GHB, come il gamma-butirrolattone (GBL), e i tre sono descritti come depressori centrali usati per gli effetti euforici e rilassanti. [f:skryabin2023]
 

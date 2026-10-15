@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: altre. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. Non è una sostanza psicoattiva; non è stata trovata alcuna fonte che spieghi perché compaia nel drug checking, quindi il ruolo è solo una proposta provvisoria. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Non è una sostanza psicoattiva; non è stata trovata alcuna fonte che spieghi perché compaia nel drug checking, quindi il ruolo è solo una proposta provvisoria. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

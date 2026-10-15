@@ -6,7 +6,7 @@ It is the ortho positional isomer of 4-methoxyamphetamine (PMA, own sheet). [f:p
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

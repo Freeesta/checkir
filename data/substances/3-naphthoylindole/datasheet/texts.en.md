@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: other substances. It has the naphthoylindole core of the 1-alkyl-3-(1-naphthoyl)indole cannabinoids but no alkyl chain on the indole nitrogen, and no source found gives it as active, so no cannabinoid family sheet is attached. Expected effect: cannabinoid by structural relation, not verified. Typical role in samples: synthesis or degradation residue (proposal). This classification is a checkir proposal awaiting review. [f:huffman2005] [f:checkir-classification]
+Chemical class: other substances. It has the naphthoylindole core of the 1-alkyl-3-(1-naphthoyl)indole cannabinoids but no alkyl chain on the indole nitrogen, and no source found gives it as active, so no cannabinoid family sheet is attached. Expected effect: cannabinoid by structural relation, not verified. Typical role in samples: synthesis or degradation residue (proposal). [f:huffman2005] [f:checkir-classification]
 
 ## origin
 

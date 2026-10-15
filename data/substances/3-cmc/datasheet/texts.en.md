@@ -8,7 +8,7 @@ Isomers: 2-CMC and 4-CMC have the same formula and the C=O in the same region; o
 
 ## category
 
-Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

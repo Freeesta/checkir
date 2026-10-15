@@ -6,7 +6,7 @@ Una N-benzilfenetilammina: il derivato N-(2-metossibenzil) della 2C-G (2,5-dimet
 
 ## category
 
-Classe chimica: NBOMe (N-benzilfenetilammine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: NBOMe (N-benzilfenetilammine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 

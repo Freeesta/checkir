@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: piperazines (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: piperazines (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 It is an opioid with a piperazine core and a cinnamyl group, structurally distinct from the fentanyls, so it has no family sheet. [f:fogarty2022]
 

@@ -4,7 +4,7 @@ Deschloroketamine, 2-(methylamino)-2-phenylcyclohexan-1-one. Formula C13H17NO, 2
 
 ## category
 
-Chemical class: arylcyclohexylamines. Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: arylcyclohexylamines. Expected effect: dissociative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

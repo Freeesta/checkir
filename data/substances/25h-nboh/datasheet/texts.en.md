@@ -6,7 +6,7 @@ An N-benzyl phenethylamine: the N-(2-hydroxybenzyl) derivative of 2C-H (2,5-dime
 
 ## category
 
-Chemical class: phenethylamines (N-benzyl phenethylamines). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: phenethylamines (N-benzyl phenethylamines). Expected effect: psychedelic. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

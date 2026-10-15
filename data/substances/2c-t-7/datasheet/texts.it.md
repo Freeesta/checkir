@@ -8,7 +8,7 @@ Le fenetilammine 2,5-dimetossi della serie 2C hanno le stesse bande degli eteri 
 
 ## category
 
-Classe chimica: fenetilammine, serie 2C (derivati 4-tio). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:halberstadt2022] [f:checkir-classification]
+Classe chimica: fenetilammine, serie 2C (derivati 4-tio). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:halberstadt2022] [f:checkir-classification]
 
 ## history
 

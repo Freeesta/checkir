@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: piperazine (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: piperazine (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 È un oppioide con nucleo piperazinico e gruppo cinnamile, strutturalmente distinto dai fentanil, quindi non ha una scheda di famiglia. [f:fogarty2022]
 

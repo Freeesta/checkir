@@ -6,7 +6,7 @@ A branched aliphatic primary amine with no aromatic ring: a six-carbon chain wit
 
 ## category
 
-Chemical class: other (aliphatic amine). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other (aliphatic amine). Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

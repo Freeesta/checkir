@@ -6,7 +6,7 @@ L'ammina è in posizione 2 dell'anello indanico; l'anello non porta altri sostit
 
 ## category
 
-Classe chimica: aminoindani. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: aminoindani. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

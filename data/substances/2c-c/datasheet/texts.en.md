@@ -8,7 +8,7 @@ The 2,5-dimethoxy ring gives the same aryl ether bands in every 2C compound, so 
 
 ## category
 
-Chemical class: phenethylamines, 2C series. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines, 2C series. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

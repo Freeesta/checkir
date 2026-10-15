@@ -7,7 +7,7 @@ An unbranched C4 diol with a primary hydroxyl group at each end and no carbonyl 
 
 ## category
 
-Chemical class: others. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: others. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:checkir-classification]
 
 It is a metabolic precursor of GHB, as is gamma-butyrolactone (GBL), and the three are described as central depressants used for euphoric and relaxant effects. [f:skryabin2023]
 

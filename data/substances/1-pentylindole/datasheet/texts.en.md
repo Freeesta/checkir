@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: other substances. It is not assigned to the synthetic cannabinoids: no source consulted reports psychoactive activity of the bare compound, so no family sheet is attached and no effect is described. The effect and role classes are a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances. It is not assigned to the synthetic cannabinoids: no source consulted reports psychoactive activity of the bare compound, so no family sheet is attached and no effect is described. The effect and role classes are a checkir classification. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

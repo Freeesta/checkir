@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: other substances. It is an isocathinone: in PubChem the amino group sits on the benzylic carbon and the ketone on the next one, the reverse of a cathinone, so it is not a cathinone in the strict sense and no family sheet is attached. Isocathinones are described in the literature as by-products of cathinone preparation. Expected effect: stimulant by structural relation to the cathinones, although no pharmacological source was found. Typical role in samples: synthesis by-product, by analogy with the isocathinones described. This classification is a checkir proposal awaiting review. [f:pubchem] [f:westphal2012] [f:checkir-classification]
+Chemical class: other substances. It is an isocathinone: in PubChem the amino group sits on the benzylic carbon and the ketone on the next one, the reverse of a cathinone, so it is not a cathinone in the strict sense and no family sheet is attached. Isocathinones are described in the literature as by-products of cathinone preparation. Expected effect: stimulant by structural relation to the cathinones, although no pharmacological source was found. Typical role in samples: synthesis by-product, by analogy with the isocathinones described. [f:pubchem] [f:westphal2012] [f:checkir-classification]
 
 ## origin
 

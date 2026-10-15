@@ -8,7 +8,7 @@ Isomeri: 2-MMC e 4-MMC hanno la stessa formula e un C=O nella stessa zona (1684-
 
 ## category
 
-Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

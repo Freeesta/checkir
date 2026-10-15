@@ -6,7 +6,7 @@ Ha un gruppo 2-fluorobenzile sull'azoto della 2C-C, al posto del 2-metossibenzil
 
 ## category
 
-Classe chimica: fenetilamine (N-benzilfenetilammine); fuori dalla famiglia NBOMe, che comprende solo i derivati del 2-metossibenzile. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: fenetilamine (N-benzilfenetilammine); fuori dalla famiglia NBOMe, che comprende solo i derivati del 2-metossibenzile. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## history
 

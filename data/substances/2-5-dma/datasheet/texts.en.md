@@ -6,7 +6,7 @@ It is the alpha-methyl (amphetamine) analogue of 2C-H: 2,5-dimethoxy substitutio
 
 ## category
 
-Chemical class: amphetamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

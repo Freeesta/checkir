@@ -8,7 +8,7 @@ Analoghi: la monografia SWGDRUG annota che, con i parametri usati, lo spettro IR
 
 ## category
 
-Classe chimica: fenetilammine, serie 2C. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilammine, serie 2C. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

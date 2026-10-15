@@ -6,7 +6,7 @@ An N-benzyl phenethylamine: the N-(2-fluorobenzyl) derivative of 2C-I (4-iodo-2,
 
 ## category
 
-Chemical class: phenethylamines (N-benzyl phenethylamines). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: phenethylamines (N-benzyl phenethylamines). Expected effect: psychedelic. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

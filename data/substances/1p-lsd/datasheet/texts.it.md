@@ -10,7 +10,7 @@ Il gruppo propionile è sull'azoto dell'indolo, quindi la banda N-H dell'indolo 
 
 ## category
 
-Classe chimica: lisergammidi (scheda di famiglia: triptamine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: lisergammidi (scheda di famiglia: triptamine). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 
