@@ -4,7 +4,7 @@ Amitriptilina, N,N-dimethyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,11,13
 
 ## category
 
-Classe chimica: antidepressivo triciclico, derivato del dibenzocicloeptadiene (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:amitriptyline-label] [f:checkir-classification]
+Classe chimica: antidepressivo triciclico, derivato del dibenzocicloeptadiene (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. [f:amitriptyline-label] [f:checkir-classification]
 
 ## origin
 

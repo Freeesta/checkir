@@ -4,7 +4,7 @@ JWH-166, (6-methoxynaphthalen-1-yl)-(1-pentylindol-3-yl)methanone. Base: C25H25N
 
 ## category
 
-Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

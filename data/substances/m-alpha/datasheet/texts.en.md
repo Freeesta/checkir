@@ -4,7 +4,7 @@ M-ALPHA, 1-(1,3-benzodioxol-5-yl)-N-methylpropan-1-amine. Base: C11H15NO2, 193.2
 
 ## category
 
-Chemical class: metilendiossi. Expected effect: entactogeno. Typical role in samples: principio attivo. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: metilendiossi. Expected effect: entactogeno. Typical role in samples: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

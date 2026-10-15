@@ -6,7 +6,7 @@ Un'amfetamina con un atomo di bromo in posizione 4 dell'anello fenilico; l'analo
 
 ## category
 
-Classe chimica: amfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: amfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

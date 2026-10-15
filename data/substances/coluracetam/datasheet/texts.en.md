@@ -4,7 +4,7 @@ Coluracetam, N-(2,3-dimethyl-5,6,7,8-tetrahydrofuro[2,3-b]quinolin-4-yl)-2-(2-ox
 
 ## category
 
-Chemical class: other substances. It is a tetrahydrofuroquinoline studied under the code MKC-231 as a high-affinity choline uptake enhancer. Expected effect: no psychoactive effect expected. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:bessho1996] [f:checkir-classification]
+Chemical class: other substances. It is a tetrahydrofuroquinoline studied under the code MKC-231 as a high-affinity choline uptake enhancer. Expected effect: no psychoactive effect expected. Typical role in samples: active principle. [f:bessho1996] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: 2C series. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: 2C series. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 One of the 2C drugs, known for hallucinogenic properties; they differ in receptor affinity, potency and duration of action. [f:stoller2017]
 

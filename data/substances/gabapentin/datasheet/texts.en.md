@@ -4,7 +4,7 @@ Gabapentin, 2-[1-(aminomethyl)cyclohexyl]acetic acid. Formula C9H17NO2, 171.24 g
 
 ## category
 
-Chemical class: other substances. It is a gabapentinoid, structurally related to γ-aminobutyric acid (GABA), that binds with high affinity to the α2δ subunit of voltage-activated calcium channels. Expected effect: depressant / sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:neurontin-label] [f:checkir-classification]
+Chemical class: other substances. It is a gabapentinoid, structurally related to γ-aminobutyric acid (GABA), that binds with high affinity to the α2δ subunit of voltage-activated calcium channels. Expected effect: depressant / sedative. Typical role in samples: active principle. [f:neurontin-label] [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ It is the bis(4-fluoro) analogue of modafinil. CRL-40,941 (fladrafinil, its own 
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir proposal, since the compound is described as a wake-promoting compound and sold as an alternative to modafinil; it is awaiting review. Typical role in samples: active principle. [f:luca2018] [f:krug2026] [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir classification, since the compound is described as a wake-promoting compound and sold as an alternative to modafinil. Typical role in samples: active principle. [f:luca2018] [f:krug2026] [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

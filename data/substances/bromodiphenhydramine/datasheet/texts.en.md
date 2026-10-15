@@ -4,7 +4,7 @@ Bromodiphenhydramine, 2-[(4-bromophenyl)-phenylmethoxy]-N,N-dimethylethanamine. 
 
 ## category
 
-Chemical class: H1-receptor antagonist of the ethanolamine type, a 4-bromo analogue of diphenhydramine (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:ahmadi2012] [f:checkir-classification]
+Chemical class: H1-receptor antagonist of the ethanolamine type, a 4-bromo analogue of diphenhydramine (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. [f:ahmadi2012] [f:checkir-classification]
 
 ## origin
 

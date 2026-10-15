@@ -1,4 +1,4 @@
-/* Loading screen: a photon (bright head) with its red wave; splash.js draws the wave and moves the head on its last point, from one phase. */
+/* Loading screen: a photon (bright head) with its red wave; splash.js draws the wave with a phase that advances so the crests travel to the right; the head sits at the right end. */
 #splash { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: var(--bg); opacity: 1; transition: opacity 0.12s linear; }
 #splash[data-gone] { opacity: 0; pointer-events: none; }
 .splash-art { width: min(20rem, 70vw); height: auto; }

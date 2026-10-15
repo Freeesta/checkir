@@ -4,7 +4,7 @@ Metizolam (desmetiletizolam), tienotriazolodiazepina: 4-(2-clorofenil)-2-etil-ti
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

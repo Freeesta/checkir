@@ -4,7 +4,7 @@ Lattosio ((2R,3R,4S,5R,6S)-2-(hydroxymethyl)-6-[(2R,3S,4R,5R)-4,5,6-trihydroxy-2
 
 ## category
 
-Classe chimica: zucchero (disaccaride, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: zucchero (disaccaride, tra le sostanze non psicoattive). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente o eccipiente. [f:checkir-classification]
 
 ## origin
 

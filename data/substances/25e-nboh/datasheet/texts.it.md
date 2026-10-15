@@ -6,7 +6,7 @@ Al posto del 2-metossibenzile degli NBOMe ha un 2-idrossibenzile (un fenolo) sul
 
 ## category
 
-Classe chimica: fenetilamine (N-benzilfenetilammine); fuori dalla famiglia NBOMe, che comprende solo i derivati del 2-metossibenzile. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: fenetilamine (N-benzilfenetilammine); fuori dalla famiglia NBOMe, che comprende solo i derivati del 2-metossibenzile. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## history
 

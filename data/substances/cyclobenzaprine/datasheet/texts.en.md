@@ -4,7 +4,7 @@ Cyclobenzaprine, N,N-dimethyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,9,1
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The label describes a skeletal muscle relaxant closely related to the tricyclic antidepressants; in animals it showed sedation and anticholinergic effects like them. The effect axis has no muscle-relaxant class: "depressant/sedative" is a checkir proposal awaiting review. Typical role in samples: active principle. [f:cyclobenzaprine-label] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The label describes a skeletal muscle relaxant closely related to the tricyclic antidepressants; in animals it showed sedation and anticholinergic effects like them. The effect axis has no muscle-relaxant class: "depressant/sedative" is a checkir classification. Typical role in samples: active principle. [f:cyclobenzaprine-label] [f:checkir-classification]
 
 ## origin
 

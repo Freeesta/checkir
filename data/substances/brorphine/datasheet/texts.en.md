@@ -4,7 +4,7 @@ Brorphine, 3-[1-[1-(4-bromophenyl)ethyl]piperidin-4-yl]-1H-benzimidazol-2-one. B
 
 ## category
 
-Chemical class: orphine analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: orphine analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

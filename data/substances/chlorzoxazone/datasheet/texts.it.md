@@ -4,7 +4,7 @@ Clorzoxazone, 5-chloro-3H-1,3-benzoxazol-2-one. Formula C7H4ClNO2, 169.56 g/mol,
 
 ## category
 
-Classe chimica: altre sostanze. È un miorilassante scheletrico ad azione centrale (benzossazolone). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:chlorzoxazone-label] [f:checkir-classification]
+Classe chimica: altre sostanze. È un miorilassante scheletrico ad azione centrale (benzossazolone). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:chlorzoxazone-label] [f:checkir-classification]
 
 ## origin
 

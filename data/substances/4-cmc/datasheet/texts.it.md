@@ -8,7 +8,7 @@ Isomeri: 2-CMC e 3-CMC hanno la stessa formula e il C=O nella stessa zona; le ba
 
 ## category
 
-Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

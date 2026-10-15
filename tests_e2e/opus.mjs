@@ -2,6 +2,7 @@
 // with its table and the comparison starts by itself against a synthetic library built from the same bands.
 import { readFile } from "node:fs/promises";
 import { jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 const DIR = new URL("../crates/ftir-core/tests/fixtures/opus/", import.meta.url);
 /** Bands of `Params::demo()` in the engine: [centre, height, half-width]. */
@@ -21,8 +22,7 @@ export async function opusScenario(browser, base, check, axe) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await openPanel(page, "libraries");
-  await page.fill("#lib-name", "Opus");
-  await page.setInputFiles('input[data-library="files"]', [
+  await importAs(page, "Opus", [
     { name: "demo.jdx", mimeType: "application/octet-stream", buffer: jcamp("demo", DEMO) },
     { name: "altro.jdx", mimeType: "application/octet-stream", buffer: jcamp("altro", OTHER) },
   ]);

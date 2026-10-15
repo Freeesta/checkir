@@ -4,7 +4,7 @@ Barbital, 5,5-diethyl-1,3-diazinane-2,4,6-trione. Formula C8H12N2O3, 184.19 g/mo
 
 ## category
 
-Classe chimica: altre sostanze. È un barbiturico (derivato 5,5-dietilico dell'acido barbiturico). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:pubchem] [f:checkir-classification]
+Classe chimica: altre sostanze. È un barbiturico (derivato 5,5-dietilico dell'acido barbiturico). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:pubchem] [f:checkir-classification]
 
 ## origin
 

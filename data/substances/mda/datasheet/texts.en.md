@@ -8,7 +8,7 @@ Diagnostic bands: the methylenedioxy group gives the characteristic C-O-C bands 
 
 ## category
 
-Chemical class: phenethylamines, methylenedioxy subgroup. Expected effect: entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines, methylenedioxy subgroup. Expected effect: entactogen. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ An amphetamine with a methylenedioxy ring on positions 4 and 5 and a methoxy gro
 
 ## category
 
-Chemical class: amphetamines, methylenedioxy compounds. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines, methylenedioxy compounds. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

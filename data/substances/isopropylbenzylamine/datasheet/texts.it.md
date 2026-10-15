@@ -6,7 +6,7 @@ Isopropilbenzilammina (INBA), N-benzylpropan-2-amine. Formula C10H15N, 149.2 g/m
 
 ## category
 
-Classe chimica: altre sostanze. Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:lai2024] [f:checkir-classification]
+Classe chimica: altre sostanze. Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico. [f:lai2024] [f:checkir-classification]
 
 Si usa per adulterare la metanfetamina e viene venduta come falsa «ice»; è un taglio della metanfetamina. [f:xu2022]
 

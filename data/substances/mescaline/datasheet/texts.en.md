@@ -8,7 +8,7 @@ Forms: extracted mescaline is a powder, mostly as sulfate or hydrochloride and m
 
 ## category
 
-Chemical class: phenethylamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ myo-Inositol ((1R,2R,3S,4S,5R,6S)-cyclohexane-1,2,3,4,5,6-hexol), formula C6H12O
 
 ## category
 
-Chemical class: cyclic sugar alcohol (cyclitol; this record is myo-inositol, grouped under sugar alcohols and non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent or excipient. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: cyclic sugar alcohol (cyclitol; this record is myo-inositol, grouped under sugar alcohols and non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent or excipient. [f:checkir-classification]
 
 ## effects
 

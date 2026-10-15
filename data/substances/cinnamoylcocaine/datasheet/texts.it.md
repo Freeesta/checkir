@@ -6,7 +6,7 @@ trans-Cinnamoilcocaina, methyl (1R,2R,3S,5S)-8-methyl-3-[(E)-3-phenylprop-2-enoy
 
 ## category
 
-Classe chimica: esteri tropanici, tra le sostanze di origine vegetale del raggruppamento UNODC, perché è un alcaloide della foglia di coca; non è un oppioide. Ruolo tipico nei campioni: residuo della pianta. L'asse degli effetti segue la cocaina: la farmacologia del composto stesso non è descritta nelle fonti consultate. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: esteri tropanici, tra le sostanze di origine vegetale del raggruppamento UNODC, perché è un alcaloide della foglia di coca; non è un oppioide. Ruolo tipico nei campioni: residuo della pianta. L'asse degli effetti segue la cocaina: la farmacologia del composto stesso non è descritta nelle fonti consultate. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

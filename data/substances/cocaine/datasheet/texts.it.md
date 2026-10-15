@@ -12,7 +12,7 @@ Analoghi e impurezze: la cis- e la trans-cinnamoilcocaina accompagnano la cocain
 
 ## category
 
-Classe chimica: estere del tropano, tra le sostanze di origine vegetale del gruppo UNODC. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: estere del tropano, tra le sostanze di origine vegetale del gruppo UNODC. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ Isophenmetrazine, 5-methyl-2-phenylmorpholine. Base: C11H15NO, 177.24 g/mol, CAS
 
 ## category
 
-Chemical class: fenmetrazine. Expected effect: stimolante. Typical role in samples: principio attivo. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: fenmetrazine. Expected effect: stimolante. Typical role in samples: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

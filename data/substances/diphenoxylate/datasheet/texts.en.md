@@ -4,7 +4,7 @@ Diphenoxylate, ethyl 1-(3-cyano-3,3-diphenylpropyl)-4-phenylpiperidine-4-carboxy
 
 ## category
 
-Chemical class: other substances. No family sheet covers non-fentanyl synthetic opioids, so none is attached. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: other substances. No family sheet covers non-fentanyl synthetic opioids, so none is attached. Expected effect: opioid. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

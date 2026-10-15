@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: synthetic cannabinoids (UNODC substance group, effect group synthetic cannabinoid receptor agonists). Expected effect: cannabinoid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-lss-2f-adb] [f:checkir-classification]
+Chemical class: synthetic cannabinoids (UNODC substance group, effect group synthetic cannabinoid receptor agonists). Expected effect: cannabinoid. Typical role in samples: active principle. [f:unodc-lss-2f-adb] [f:checkir-classification]
 
 ## origin
 

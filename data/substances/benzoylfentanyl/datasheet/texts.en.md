@@ -6,7 +6,7 @@ PubChem lists phenylfentanyl as a synonym; the studies cited below use that name
 
 ## category
 
-Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

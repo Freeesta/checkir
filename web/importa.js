@@ -176,3 +176,26 @@ export function groupPackages(files) {
   }
   return [...groups.values()];
 }
+
+const PACKAGE_FILES = new Set(["manifest.json", "index.json", "data.bin", "native.bin"]);
+
+/** Whether a file of a package is one the package format knows. @param {File} file @returns {boolean} */
+export const isPackageFile = (file) => PACKAGE_FILES.has(file.name);
+
+/**
+ * What the chosen files are, from their content: ready-made library packages (a `manifest.json` of schema `ftir-library/1`), a Shimadzu library (`.L01`), or spectra.
+ * @param {File[]} files
+ * @returns {Promise<{ kind: "packages" | "shimadzu" | "spectra", files: File[] }>}
+ */
+export async function classify(files) {
+  for (const file of files) {
+    if (file.name !== "manifest.json") continue;
+    try {
+      if (JSON.parse(await file.text())?.schema === "ftir-library/1") return { kind: "packages", files };
+    } catch {
+      // not JSON: an ordinary file
+    }
+  }
+  if (files.some((f) => extOf(f.name) === ".l01")) return { kind: "shimadzu", files };
+  return { kind: "spectra", files };
+}

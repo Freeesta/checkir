@@ -6,7 +6,7 @@ Modafinil, 2-(difenilmetilsolfinil)acetammide. Base: C15H15NO2S, 273.36 g/mol, C
 
 ## category
 
-Classe chimica: Altre sostanze. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: Altre sostanze. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

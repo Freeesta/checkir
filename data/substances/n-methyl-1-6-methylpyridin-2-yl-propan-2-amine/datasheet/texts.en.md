@@ -6,7 +6,7 @@ It is a methamphetamine-like skeleton in which the phenyl ring is replaced by a 
 
 ## category
 
-Chemical class: others. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: others. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

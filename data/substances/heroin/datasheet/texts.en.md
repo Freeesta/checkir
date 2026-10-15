@@ -12,7 +12,7 @@ Analogues and impurities: seized samples also contain 6-monoacetylmorphine, acet
 
 ## category
 
-Chemical class: morphinans (a semi-synthetic derivative of morphine), among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: morphinans (a semi-synthetic derivative of morphine), among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

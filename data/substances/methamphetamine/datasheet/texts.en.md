@@ -12,7 +12,7 @@ Isomers and analogues: amphetamine has the same monosubstituted ring; ephedrine 
 
 ## category
 
-Chemical class: phenethylamines, amphetamines subgroup. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines, amphetamines subgroup. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

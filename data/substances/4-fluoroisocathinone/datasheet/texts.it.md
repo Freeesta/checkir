@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: altre sostanze; non è un catinone (vedi origine). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze; non è un catinone (vedi origine). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

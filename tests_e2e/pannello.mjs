@@ -4,6 +4,7 @@ import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { ALFA, BETA, GAMMA, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 /** A folder "Miscela" with three different spectra and a copy of the first under another name. */
 function folder() {
@@ -33,10 +34,10 @@ export async function pannelloScenario(browser, base, check) {
   await page.waitForFunction(() => !document.querySelector(".lib-progress") && /miscela-2» importata/.test(document.querySelector('details[data-panel="libraries"] .notes')?.textContent ?? ""));
 
   // Section 2 is open by hand and stays so, with the same nodes, when the result arrives.
-  await page.evaluate(() => (document.querySelector("#lib-name").__keep = 1));
+  await page.evaluate(() => (document.querySelector('[data-fk="lib-import-files"]').__keep = 1));
   await page.setInputFiles("input[type=file]:not([data-library])", [{ name: "campione_beta.jdx", mimeType: "application/octet-stream", buffer: jcamp("beta", BETA) }]);
   await page.waitForSelector(".result[data-level]", { timeout: 20000 });
-  const open = await page.evaluate(() => ({ libs: document.querySelector('details[data-panel="libraries"]').open, results: document.querySelector('details[data-panel="results"]').open, keep: document.querySelector("#lib-name")?.__keep === 1 }));
+  const open = await page.evaluate(() => ({ libs: document.querySelector('details[data-panel="libraries"]').open, results: document.querySelector('details[data-panel="results"]').open, keep: document.querySelector('[data-fk="lib-import-files"]')?.__keep === 1 }));
   check("pannello: section 2 opened by hand stays open and is not rebuilt when a result arrives", open.libs && !open.results && open.keep, JSON.stringify(open));
 
   const rows = await page.locator("#main-content .cand").evaluateAll((l) => l.map((x) => ({ name: x.querySelector(".cand-name").childNodes[0].textContent.trim(), r: x.querySelector(".cand-r").textContent.trim(), margin: x.querySelector(".cand-delta").textContent.trim(), lib: x.querySelector(".cand-lib").textContent.trim() })));

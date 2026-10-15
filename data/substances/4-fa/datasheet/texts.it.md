@@ -8,7 +8,7 @@ Isomeri: un anello para-sostituito mostra un solo wagging C-H tra 860 e 790 cm-1
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante ed entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante ed entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

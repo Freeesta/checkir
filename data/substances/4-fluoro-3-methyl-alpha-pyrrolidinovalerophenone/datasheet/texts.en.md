@@ -6,7 +6,7 @@ It has the same formula as 4-fluoro-α-PHP (C16H22FNO), with a different carbon 
 
 ## category
 
-Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

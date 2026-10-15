@@ -6,7 +6,7 @@ Una piperazina con un benzile su un azoto; l'anello benzenico porta un gruppo di
 
 ## category
 
-Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

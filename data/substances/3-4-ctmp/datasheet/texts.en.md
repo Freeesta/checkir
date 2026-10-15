@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: phenidates (UNODC grouping), a methylphenidate analogue and not a cathinone, so no cathinone family sheet is attached. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:davidson2018] [f:checkir-classification]
+Chemical class: phenidates (UNODC grouping), a methylphenidate analogue and not a cathinone, so no cathinone family sheet is attached. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:davidson2018] [f:checkir-classification]
 
 ## history
 

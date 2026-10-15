@@ -4,7 +4,7 @@ Benzocaine (ethyl 4-aminobenzoate), formula C9H11NO2, molar mass 165.19 g/mol, C
 
 ## category
 
-Chemical class: local anaesthetic (ester type, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: local anaesthetic (ester type, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. [f:checkir-classification]
 
 ## metabolism
 

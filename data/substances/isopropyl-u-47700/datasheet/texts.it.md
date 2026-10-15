@@ -4,7 +4,7 @@ Isopropil-U-47700, 3,4-dicloro-N-[(1R,2R)-2-(dimetilamino)cicloesil]-N-propan-2-
 
 ## category
 
-Classe chimica: altre sostanze (proposta di checkir; il raggruppamento UNODC non nomina questa struttura). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre sostanze (classificazione di checkir; il raggruppamento UNODC non nomina questa struttura). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## history
 

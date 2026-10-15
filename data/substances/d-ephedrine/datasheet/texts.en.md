@@ -8,7 +8,7 @@ The SWGDRUG monograph named d-Ephedrine describes the (1S,2R) enantiomer; the IR
 
 ## category
 
-Chemical class: amphetamines, as for the ephedrine sheet. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines, as for the ephedrine sheet. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

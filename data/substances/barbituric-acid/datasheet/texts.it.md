@@ -4,7 +4,7 @@ Acido barbiturico, 1,3-diazinane-2,4,6-trione. Formula C4H4N2O3, 128.09 g/mol, C
 
 ## category
 
-Classe chimica: altre sostanze. È l'anello di base dei barbiturici, non un farmaco sedativo-ipnotico in sé. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: riferimento strumentale. Questa classificazione è una proposta di checkir in attesa di revisione. [f:pubchem] [f:checkir-classification]
+Classe chimica: altre sostanze. È l'anello di base dei barbiturici, non un farmaco sedativo-ipnotico in sé. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: riferimento strumentale. [f:pubchem] [f:checkir-classification]
 
 ## origin
 

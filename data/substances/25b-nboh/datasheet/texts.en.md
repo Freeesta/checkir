@@ -6,7 +6,7 @@ In place of the 2-methoxybenzyl group of the NBOMes it has a 2-hydroxybenzyl gro
 
 ## category
 
-Chemical class: phenethylamines (N-benzyl phenethylamines); outside the NBOMe family, which covers only the 2-methoxybenzyl derivatives. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: phenethylamines (N-benzyl phenethylamines); outside the NBOMe family, which covers only the 2-methoxybenzyl derivatives. Expected effect: psychedelic. Typical role in samples: active principle. [f:checkir-classification]
 
 ## history
 

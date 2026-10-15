@@ -4,7 +4,7 @@ Diphenhydramine, 2-benzhydryloxy-N,N-dimethylethanamine. Formula C17H21NO, 255.3
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. It is a widely used over-the-counter antihistamine with a sedative effect. The effect axis has no antihistamine class: "depressant/sedative" is a checkir proposal awaiting review. Typical role in samples: pharmacological adulterant, as a cutting agent in heroin. [f:akutsu2006] [f:lockwood2021] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. It is a widely used over-the-counter antihistamine with a sedative effect. The effect axis has no antihistamine class: "depressant/sedative" is a checkir classification. Typical role in samples: pharmacological adulterant, as a cutting agent in heroin. [f:akutsu2006] [f:lockwood2021] [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ N-acetilanfetamina (acetilanfetamina), N-(1-fenilpropan-2-il)acetammide. Formula
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

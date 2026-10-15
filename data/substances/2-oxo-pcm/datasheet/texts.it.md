@@ -4,7 +4,7 @@ Deschloroketamina, 2-(methylamino)-2-phenylcyclohexan-1-one. Formula C13H17NO, 2
 
 ## category
 
-Classe chimica: arilcicloesilammine. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: arilcicloesilammine. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

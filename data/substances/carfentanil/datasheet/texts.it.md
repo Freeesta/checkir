@@ -4,7 +4,7 @@ Carfentanil, methyl 1-(2-phenylethyl)-4-(N-propanoylanilino)piperidine-4-carboxy
 
 ## category
 
-Classe chimica: analoghi del fentanil (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: analoghi del fentanil (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

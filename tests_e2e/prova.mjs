@@ -1,6 +1,7 @@
 // Library test e2e: the button in the information dialog, progress, the report, the CSV and what leaves the page (nothing),
 // on a synthetic library with a known answer (alfa and alfa_bis are the same material under two names).
 import { ALFA, ALFA_BIS, BETA, GAMMA, jcamp } from "./confronto.mjs";
+import { importAs } from "./importa_aiuto.mjs";
 
 /** @param {import("playwright").Browser} browser */
 export async function libraryTestScenario(browser, base, check, axe) {
@@ -16,8 +17,7 @@ export async function libraryTestScenario(browser, base, check, axe) {
   await page.waitForSelector("body[data-ready='1']");
   await page.locator('details[data-panel="libraries"]').evaluate((d) => (d.open = true));
   await page.getByRole("checkbox", { name: /swgdrug-ir/ }).uncheck();
-  await page.fill("#lib-name", "Sintetica");
-  await page.setInputFiles('input[data-library="files"]', [
+  await importAs(page, "Sintetica", [
     { name: "alfa.jdx", mimeType: "application/octet-stream", buffer: jcamp("alfa", ALFA) },
     { name: "beta.jdx", mimeType: "application/octet-stream", buffer: jcamp("beta", BETA) },
     { name: "gamma.jdx", mimeType: "application/octet-stream", buffer: jcamp("gamma", GAMMA) },

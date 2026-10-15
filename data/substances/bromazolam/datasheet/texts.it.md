@@ -8,7 +8,7 @@ Alcune bande etichettate nello spettro ATR (diamante) della monografia SWGDRUG: 
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. Appartiene alle benzodiazepine di design (triazolobenzodiazepine non farmaceutiche). [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Appartiene alle benzodiazepine di design (triazolobenzodiazepine non farmaceutiche). [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

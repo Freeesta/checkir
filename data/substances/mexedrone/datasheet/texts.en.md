@@ -4,7 +4,7 @@ Mexedrone, 3-methoxy-2-(methylamino)-1-(4-methylphenyl)propan-1-one. Base: C12H1
 
 ## category
 
-Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

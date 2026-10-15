@@ -4,7 +4,7 @@ Isofenmetrazina, 5-metil-2-fenilmorfolina. Base: C11H15NO, 177.24 g/mol, CAS 801
 
 ## category
 
-Classe chimica: phenmetrazines. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: phenmetrazines. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ Acetilcodeina (6-acetilcodeina), [(4R,4aR,7S,7aR,12bS)-9-methoxy-3-methyl-2,4,4a
 
 ## category
 
-Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: residuo di sintesi o degradazione (un'impurezza dell'eroina prodotta illegalmente). Questa classificazione è una proposta di checkir in attesa di revisione. [f:oneal2001] [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: residuo di sintesi o degradazione (un'impurezza dell'eroina prodotta illegalmente). [f:oneal2001] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

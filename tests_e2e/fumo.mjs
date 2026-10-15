@@ -269,22 +269,20 @@ async function splashScenario(browser) {
     const tag = `splash (${motion})`;
     check(`${tag}: status role, translated hidden label, no visible text`, info.role === "status" && word.test(info.label ?? "") && info.labelWidth <= 1 && info.textOutside === "", JSON.stringify(info));
     check(`${tag}: ${motion === "reduce" ? "static" : "animated"}`, motion === "reduce" ? info.animations === 0 : (info.animations ?? 0) > 0, String(info.animations));
-    const headOnWave = () => page.evaluate(() => {
-      const d = document.querySelector(".splash-wave")?.getAttribute("d") ?? "";
-      const last = d.split("L").pop()?.split(" ").map(Number) ?? [NaN, NaN];
-      const head = document.querySelector(".splash-head");
-      const hx = Number(head?.getAttribute("cx")), hy = Number(head?.getAttribute("cy"));
-      return { dist: Math.hypot(last[0] - hx, last[1] - hy), hx };
+    // crest = local minimum of y (SVG y points down); a crest present in one frame must reappear a little to the right in the next
+    const crests = () => page.evaluate(() => {
+      const pts = (document.querySelector(".splash-wave")?.getAttribute("d") ?? "").split(/[ML]/).filter(Boolean).map((q) => q.split(" ").map(Number));
+      return pts.filter((q, i) => i > 0 && i < pts.length - 1 && q[1] < pts[i - 1][1] && q[1] <= pts[i + 1][1]).map((q) => q[0]);
     });
-    const samples = [await headOnWave()];
+    const frames = [await crests()];
     for (let i = 0; i < 3; i++) {
-      await page.waitForTimeout(80);
-      samples.push(await headOnWave());
+      await page.waitForTimeout(60);
+      frames.push(await crests());
     }
-    const steps = samples.slice(1).map((x, i) => x.hx - samples[i].hx);
-    check(`${tag}: head sits on the wave end`, samples.every((x) => x.dist < 1), JSON.stringify(samples));
-    // a jump back of more than 100 units is the loop restarting; anything else must go to the right
-    check(`${tag}: ${motion === "reduce" ? "head still" : "head advances to the right"}`, motion === "reduce" ? steps.every((d) => d === 0) : steps.some((d) => d > 0) && steps.every((d) => d >= 0 || d < -100), JSON.stringify(steps));
+    // smallest signed shift (mod the 40-unit wavelength, folded into -20..20) of the crest positions between consecutive frames
+    const shift = (a, b) => { const w = 40; const m = (b[0] - a[0] + 3 * w / 2) % w - w / 2; return m; };
+    const shifts = frames.slice(1).map((f, i) => shift(frames[i], f));
+    check(`${tag}: ${motion === "reduce" ? "wave still" : "wave crests travel to the right"}`, motion === "reduce" ? shifts.every((d) => d === 0) : shifts.every((d) => d > 0 && d < 10), JSON.stringify({ frames, shifts }));
     await page.waitForSelector("body[data-ready='1']");
     await page.waitForSelector("#splash", { state: "detached", timeout: 2000 });
     check(`${tag}: removed when ready`, (await page.locator("#splash").count()) === 0);

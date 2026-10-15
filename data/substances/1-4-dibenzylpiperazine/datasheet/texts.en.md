@@ -6,7 +6,7 @@ A piperazine ring with a benzyl group on each of the two nitrogens. [f:pubchem]
 
 ## category
 
-Chemical class: piperazines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: piperazines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

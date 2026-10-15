@@ -6,7 +6,7 @@ Un anello piperazinico con un benzile su un azoto e un N-H libero sull'altro; DB
 
 ## category
 
-Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

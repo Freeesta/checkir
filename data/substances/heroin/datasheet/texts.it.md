@@ -12,7 +12,7 @@ Analoghi e impurezze: nei campioni sequestrati si trovano anche 6-monoacetilmorf
 
 ## category
 
-Classe chimica: morfinani (derivato semisintetico della morfina), tra le sostanze di origine vegetale del gruppo UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: morfinani (derivato semisintetico della morfina), tra le sostanze di origine vegetale del gruppo UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

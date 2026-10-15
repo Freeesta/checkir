@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: serie 2C (per analogia con 2C-B). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: serie 2C (per analogia con 2C-B). Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 Nel test della risposta di scuotimento della testa nel topo (comportamento mediato dal 5-HT2A), 2C-B-FLY è attiva con potenza simile a quella di 2C-B. [f:halberstadt2019]
 

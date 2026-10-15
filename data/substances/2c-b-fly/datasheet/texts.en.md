@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: 2C series (by analogy with 2C-B). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: 2C series (by analogy with 2C-B). Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 In the mouse head-twitch response (a 5-HT2A-mediated behaviour) 2C-B-FLY is active with a potency similar to 2C-B. [f:halberstadt2019]
 

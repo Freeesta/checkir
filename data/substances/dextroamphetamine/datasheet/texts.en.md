@@ -6,7 +6,7 @@ It is the S (dextro) enantiomer of amphetamine, which is a racemate of two optic
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

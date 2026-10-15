@@ -8,7 +8,7 @@ Isomers: a para-substituted ring shows one C-H wag between 860 and 790 cm-1 and 
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant and entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant and entactogen. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

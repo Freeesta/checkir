@@ -6,7 +6,7 @@ It is a member of the dibenzazepine group, supplied as the hydrochloride. [f:imi
 
 ## category
 
-Chemical class: tricyclic antidepressant, dibenzazepine derivative (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:imipramine-label] [f:checkir-classification]
+Chemical class: tricyclic antidepressant, dibenzazepine derivative (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. [f:imipramine-label] [f:checkir-classification]
 
 ## origin
 

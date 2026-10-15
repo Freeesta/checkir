@@ -4,7 +4,7 @@ Fenitoina (5-5-diphenylhydantoin), 5,5-diphenylimidazolidine-2,4-dione. Formula 
 
 ## category
 
-Classe chimica: altre sostanze. È un antiepilettico (derivato dell'idantoina) usato come medicinale. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: adulterante farmacologico (segnalato nella cocaina). Questa classificazione è una proposta di checkir in attesa di revisione. [f:dilantin-label] [f:roldan2014] [f:checkir-classification]
+Classe chimica: altre sostanze. È un antiepilettico (derivato dell'idantoina) usato come medicinale. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: adulterante farmacologico (segnalato nella cocaina). [f:dilantin-label] [f:roldan2014] [f:checkir-classification]
 
 ## origin
 

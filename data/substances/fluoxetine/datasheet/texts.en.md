@@ -6,7 +6,7 @@ It is a racemic compound, (±)-fluoxetine, marketed as the hydrochloride. [f:flu
 
 ## category
 
-Chemical class: selective serotonin reuptake inhibitor (SSRI) antidepressant (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:fluoxetine-label] [f:checkir-classification]
+Chemical class: selective serotonin reuptake inhibitor (SSRI) antidepressant (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. [f:fluoxetine-label] [f:checkir-classification]
 
 ## origin
 

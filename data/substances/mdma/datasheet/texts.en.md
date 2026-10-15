@@ -12,7 +12,7 @@ Analogues that one band cannot tell apart: the three methylenedioxy bands point 
 
 ## category
 
-Chemical class: phenethylamines, methylenedioxy subgroup. Expected effect: entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines, methylenedioxy subgroup. Expected effect: entactogen. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

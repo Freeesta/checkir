@@ -6,7 +6,7 @@ It is amphetamine (own sheet) with an acetyl group on the nitrogen, so the amine
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

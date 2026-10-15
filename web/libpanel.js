@@ -1,35 +1,37 @@
 // @ts-check
-import { SAMPLING_IDS, samplingName } from "./campionamento.js";
 import { APP_NAME } from "./appname.js";
 import { proposedLibraryName } from "./candidati.js";
+import { classify } from "./importa.js";
 import { el, icon } from "./dom.js";
 import { currentLang, formatNumber, t } from "./i18n.js";
 import { attachTip } from "./tooltip.js";
 
-/** Name typed for the next imported library; kept here so a redraw of the panel does not lose it. */
-let typedName = "";
-let typedSampling = "unknown";
 /** The library being renamed and what is typed so far; kept here so a redraw of the panel does not close the field. */
 let renaming = { id: "", text: "" };
 /** @type {import("./actions.js").Ctx | null} */
 let current = null;
-/** @type {{ files: HTMLInputElement, folder: HTMLInputElement, packages: HTMLInputElement, package: HTMLInputElement } | null} */
+/** @type {{ files: HTMLInputElement, folder: HTMLInputElement } | null} */
 let pickers = null;
 
-/** @param {"files" | "folder" | "packages" | "package"} kind spectra to import (files, folder) or ready-made packages (a folder of them, or the files of one) @returns {HTMLInputElement} */
+/** Import what was chosen, as its content says: packages, a Shimadzu library or spectra; no question is asked. @param {File[]} chosen */
+async function importChosen(chosen) {
+  const { kind, files } = await classify(chosen);
+  if (kind === "packages") current?.importPackages(files);
+  else current?.importLibrary(files, proposedLibraryName(files) || t("library.import.name_default"), "unknown");
+}
+
+/** @param {"files" | "folder"} kind the files of a library or of a package (several choices), or a folder @returns {HTMLInputElement} */
 function makePicker(kind) {
-  const folder = kind === "folder" || kind === "packages";
   const input = document.createElement("input");
   input.type = "file";
   input.multiple = true;
   input.hidden = true;
   input.dataset.library = kind;
-  if (folder) input.setAttribute("webkitdirectory", "");
+  if (kind === "folder") input.setAttribute("webkitdirectory", "");
   input.addEventListener("change", () => {
     const chosen = [...(input.files ?? [])];
     input.value = "";
-    if (chosen.length && kind.startsWith("package")) current?.importPackages(chosen);
-    else if (chosen.length) current?.importLibrary(chosen, typedName.trim() || proposedLibraryName(chosen) || t("library.import.name_default"), typedSampling);
+    if (chosen.length) void importChosen(chosen);
   });
   document.body.append(input);
   return input;
@@ -37,7 +39,7 @@ function makePicker(kind) {
 
 /** The hidden file choosers, created on first use. */
 function choosers() {
-  pickers ??= { files: makePicker("files"), folder: makePicker("folder"), packages: makePicker("packages"), package: makePicker("package") };
+  pickers ??= { files: makePicker("files"), folder: makePicker("folder") };
   return pickers;
 }
 
@@ -88,12 +90,31 @@ function startRename(head, l, ctx, restoring = false) {
   });
 }
 
+/** What the list does not show: version, spectra, source, licence and its conditions ({app} = product name). @param {import("./state.js").LibraryEntry} l @returns {string} */
+function libraryInfo(l) {
+  const license = l.private ? t("library.item.license_private") : l.license;
+  const attribution = l.private ? t("library.item.attribution_private") : ((currentLang() === "it" && l.attribution.it) || l.attribution.en);
+  const termsText = l.terms && ((currentLang() === "it" && l.terms.it) || l.terms.en);
+  const terms = termsText ? t("library.item.terms", { text: termsText.replaceAll("{app}", APP_NAME) }) : "";
+  return [`${t("library.item.version", { version: l.version })} · ${t("library.item.spectra", { n: formatNumber(l.spectra) })} · ${t("library.item.license", { license })}`, t("library.item.attribution", { text: attribution }), terms].filter(Boolean).join("\n");
+}
+
 /** @param {import("./state.js").LibraryEntry} l @param {import("./actions.js").Ctx} ctx */
 function libraryItem(l, ctx) {
-  const check = el("input", { type: "checkbox", "data-fk": `lib-on-${l.id}`, "aria-label": t("library.item.enable", { name: l.label }) });
+  const infoId = `lib-info-${l.id}`;
+  const info = libraryInfo(l);
+  const check = el("input", { type: "checkbox", "data-fk": `lib-on-${l.id}`, "aria-label": t("library.item.enable", { name: l.label }), "aria-describedby": infoId });
   check.checked = l.enabled;
   check.addEventListener("change", () => ctx.toggleLibrary(l.id, check.checked));
-  const head = el("div", { class: "lib-head" }, [el("label", { class: "lib-toggle" }, [check, el("strong", {}, [l.label])]), el("span", { class: "badge" }, [t(l.private ? "library.item.private" : "library.item.public")])]);
+  const name = el("strong", {}, [l.label]);
+  const toggle = el("label", { class: "lib-toggle" }, [check, name]);
+  // The tip takes the description of the box while it shows: put the permanent one back after it hides.
+  const restore = () => setTimeout(() => check.setAttribute("aria-describedby", infoId), 250);
+  check.addEventListener("blur", restore);
+  check.addEventListener("mouseleave", restore);
+  attachTip(name, () => info);
+  attachTip(check, () => info);
+  const head = el("div", { class: "lib-head" }, [toggle, el("span", { class: "visually-hidden", id: infoId, "data-library-terms": l.id }, [info])]);
   if (l.private) {
     const remove = el("button", { type: "button", class: "icon-button", "data-fk": `lib-rm-${l.id}`, "aria-label": t("library.item.remove", { name: l.label }) }, [icon("close")]);
     remove.addEventListener("click", () => ctx.removeLibrary(l.id));
@@ -101,20 +122,10 @@ function libraryItem(l, ctx) {
     const rename = el("button", { type: "button", class: "icon-button", "data-fk": `lib-rename-${l.id}`, "aria-label": t("library.item.rename", { name: l.label }) }, [icon("pen")]);
     rename.addEventListener("click", () => startRename(head, l, ctx));
     attachTip(rename, () => t("library.item.rename", { name: l.label }));
-    head.querySelector("strong")?.addEventListener("dblclick", () => startRename(head, l, ctx));
+    name.addEventListener("dblclick", () => startRename(head, l, ctx));
     head.append(rename, remove);
   }
-  const license = l.private ? t("library.item.license_private") : l.license;
-  const attribution = l.private ? t("library.item.attribution_private") : ((currentLang() === "it" && l.attribution.it) || l.attribution.en);
-  // Conditions of a third-party permission (licence page of the library, never in the results); {app} = product name.
-  const termsText = l.terms && ((currentLang() === "it" && l.terms.it) || l.terms.en);
-  const terms = termsText ? termsText.replaceAll("{app}", APP_NAME) : "";
-  const item = el("li", { class: "lib-item", "data-library": l.id }, [
-    head,
-    el("span", { class: "note" }, [`${t("library.item.version", { version: l.version })} · ${t("library.item.spectra", { n: formatNumber(l.spectra) })} · ${t("library.item.license", { license })}`]),
-    el("span", { class: "note" }, [t("library.item.attribution", { text: attribution })]),
-    ...(terms ? [el("span", { class: "note", "data-library-terms": l.id }, [t("library.item.terms", { text: terms })])] : []),
-  ]);
+  const item = el("li", { class: "lib-item", "data-library": l.id }, [head]);
   if (renaming.id === l.id) startRename(head, l, ctx, true);
   return item;
 }
@@ -124,29 +135,14 @@ export function renderLibraries(body, s, ctx) {
   current = ctx;
   const busy = Boolean(s.libraryJob);
   const pick = choosers();
-  const files = el("button", { type: "button", class: "btn", "data-fk": "lib-import-files" }, [icon("file"), t("library.import.files")]);
-  const folder = el("button", { type: "button", class: "btn", "data-fk": "lib-import-folder" }, [icon("library"), t("library.import.folder")]);
-  const packages = el("button", { type: "button", class: "btn", "data-fk": "lib-import-packages" }, [icon("library"), t("library.import.packages")]);
-  const onePackage = el("button", { type: "button", class: "btn", "data-fk": "lib-import-package" }, [icon("file"), t("library.import.package")]);
-  files.disabled = folder.disabled = packages.disabled = onePackage.disabled = busy;
+  const files = el("button", { type: "button", class: "btn", "data-fk": "lib-import-files", "aria-label": t("library.import.pick_files_tip") }, [icon("file"), t("library.import.pick_files")]);
+  const folder = el("button", { type: "button", class: "btn", "data-fk": "lib-import-folder", "aria-label": t("library.import.pick_folder_tip") }, [icon("library"), t("library.import.pick_folder")]);
+  files.disabled = folder.disabled = busy;
   files.addEventListener("click", () => pick.files.click());
   folder.addEventListener("click", () => pick.folder.click());
-  packages.addEventListener("click", () => pick.packages.click());
-  onePackage.addEventListener("click", () => pick.package.click());
-  const name = el("input", { type: "text", id: "lib-name", class: "lib-name", maxlength: "60", autocomplete: "off", placeholder: t("library.import.name_placeholder") });
-  name.value = typedName;
-  name.addEventListener("input", () => (typedName = name.value));
-  const how = el("select", { id: "lib-sampling", class: "chip sampling-choice", "aria-label": t("library.import.sampling_label") }, SAMPLING_IDS.map((id) => el("option", { value: id }, [`${t("sampling.prefix")} ${samplingName(id)}`])));
-  how.value = typedSampling;
-  how.addEventListener("change", () => (typedSampling = how.value));
-  body.append(
-    el("div", { class: "row" }, [files, folder]),
-    el("div", { class: "row" }, [packages, onePackage]),
-    el("label", { for: "lib-name", class: "note" }, [t("library.import.name_label")]),
-    name,
-    how,
-    el("p", { class: "note" }, [icon("lock"), t("library.import.private_note")]),
-  );
+  attachTip(files, () => t("library.import.pick_files_tip"));
+  attachTip(folder, () => t("library.import.pick_folder_tip"));
+  body.append(el("div", { class: "row" }, [files, folder]));
   if (s.libraryJob) body.append(progressBlock(s.libraryJob, ctx));
   if (s.libraryNotices.length) body.append(el("div", { role: "status" }, [el("ul", { class: "notes" }, s.libraryNotices.map((n) => el("li", {}, [noticeText(n)])))]));
   if (!s.libraries.length) return body.append(el("p", { class: "empty" }, [t("panel.libraries.empty")]));

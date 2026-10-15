@@ -6,7 +6,7 @@ Clobenzorex, (2S)-N-[(2-clorofenil)metil]-1-fenilpropan-2-ammina. Formula C16H18
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

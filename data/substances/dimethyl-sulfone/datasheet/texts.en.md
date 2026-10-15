@@ -4,7 +4,7 @@ Dimethyl sulfone, also called methylsulfonylmethane or MSM (methylsulfonylmethan
 
 ## category
 
-Chemical class: organosulfur compound (grouped here under other substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: organosulfur compound (grouped here under other substances). Expected effect: no psychoactive effect expected. Typical role in samples: diluent. [f:checkir-classification]
 
 ## metabolism
 

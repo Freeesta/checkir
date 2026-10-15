@@ -4,7 +4,7 @@ Eszopiclone, [(7S)-6-(5-chloro-2-pyridinyl)-5-oxo-7H-pyrrolo[3,4-b]pyrazin-7-yl]
 
 ## category
 
-Chemical class: other substances. It is a cyclopyrrolone ('Z-drug'), not a benzodiazepine, and the benzodiazepine family sheet does not cover non-benzodiazepine GABA-A agonists, so no family sheet is attached. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:najib2006] [f:checkir-classification]
+Chemical class: other substances. It is a cyclopyrrolone ('Z-drug'), not a benzodiazepine, and the benzodiazepine family sheet does not cover non-benzodiazepine GABA-A agonists, so no family sheet is attached. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:najib2006] [f:checkir-classification]
 
 ## origin
 

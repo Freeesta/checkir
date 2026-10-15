@@ -4,7 +4,7 @@ Desoxypipradrol (2-DPMP), 2-benzhydrylpiperidine. Base: C18H21N, 251.4 g/mol, CA
 
 ## category
 
-Chemical class: altre sostanze. Expected effect: stimolante. Typical role in samples: principio attivo. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: altre sostanze. Expected effect: stimolante. Typical role in samples: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

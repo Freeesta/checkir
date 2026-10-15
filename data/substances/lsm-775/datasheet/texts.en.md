@@ -6,7 +6,7 @@ A powdered sample was characterised by X-ray crystallography, NMR, mass spectrom
 
 ## category
 
-Chemical class: lysergamides (family sheet: tryptamines). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: lysergamides (family sheet: tryptamines). Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

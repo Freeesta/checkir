@@ -6,7 +6,7 @@ Hydrochloride: C14H21NO·HCl, 255.78 g/mol, melting point 177.74 °C, white powd
 
 ## category
 
-Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

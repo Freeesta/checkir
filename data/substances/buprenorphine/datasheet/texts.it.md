@@ -4,7 +4,7 @@ Buprenorfina, (1S,2S,6R,14R,15R,16R)-5-(ciclopropilmetil)-16-[(2S)-2-idrossi-3,3
 
 ## category
 
-Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: morfinani, tra le sostanze di origine vegetale del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

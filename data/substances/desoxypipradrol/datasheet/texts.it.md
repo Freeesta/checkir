@@ -4,7 +4,7 @@ Desossipipradrolo (2-DPMP), 2-benzidrilpiperidina. Base: C18H21N, 251.4 g/mol, C
 
 ## category
 
-Classe chimica: other substances. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: other substances. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

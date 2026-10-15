@@ -4,7 +4,7 @@ Catinone ((S)-catinone), (2S)-2-ammino-1-fenilpropan-1-one. Base: C9H11NO, 149.1
 
 ## category
 
-Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

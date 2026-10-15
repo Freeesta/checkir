@@ -4,7 +4,7 @@ CRL-40,941 (fluorafinil, fladrafinil), 2-[bis(4-fluorofenil)metilsolfinil]-N-idr
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata alcuna scheda di famiglia. La classe di effetto (stimolante) è una proposta di checkir, perché il composto è venduto online come alternativa al modafinil; è in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification] [f:dowling2017]
+Classe chimica: altre sostanze; non è collegata alcuna scheda di famiglia. La classe di effetto (stimolante) è una classificazione di checkir, perché il composto è venduto online come alternativa al modafinil. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification] [f:dowling2017]
 
 ## origin
 

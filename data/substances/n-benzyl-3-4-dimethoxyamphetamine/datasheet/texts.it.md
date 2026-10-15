@@ -6,7 +6,7 @@ N-benzil-3,4-dimetossianfetamina, N-benzil-1-(3,4-dimetossifenil)propan-2-ammina
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

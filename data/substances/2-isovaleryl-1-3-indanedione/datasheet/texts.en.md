@@ -4,7 +4,7 @@ Valone, 2-(3-methylbutanoyl)indene-1,3-dione (2-isovaleryl-1,3-indandione). Form
 
 ## category
 
-Chemical class: others. Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: others. Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

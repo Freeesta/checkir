@@ -2,6 +2,7 @@
 // spectra as the public ones adds no repeated candidate, no twin/ambiguity alert between copies and no raw id.
 import { readFile } from "node:fs/promises";
 import { chipCount } from "../conteggio.mjs";
+import { importAs } from "../importa_aiuto.mjs";
 
 const SYNTHETIC = new URL("../../data/substances/synthetic-a/spectra/synthetic-a-base.checkir.001.jdx", import.meta.url);
 const CAFFEINE = new URL("../../data/substances/caffeine/spectra/caffeine-base.swgdrug.357.jdx", import.meta.url);
@@ -33,8 +34,7 @@ export default async ({ browser, base, check }) => {
   // The same caffeine as the public library, imported as a private one under another name.
   const caffeine = await readFile(CAFFEINE);
   await page.locator('details[data-panel="libraries"] summary').click();
-  await page.fill("#lib-name", "Copia");
-  await page.setInputFiles('input[data-library="files"]', [{ name: "caffeine-base_lab.jdx", mimeType: "application/octet-stream", buffer: caffeine }]);
+  await importAs(page, "Copia", [{ name: "caffeine-base_lab.jdx", mimeType: "application/octet-stream", buffer: caffeine }]);
   await page.waitForFunction(() => document.querySelector('[data-library="copia"]'), null, { timeout: 30000 });
   await page.setInputFiles("input[type=file]", { name: "caffeina.jdx", mimeType: "chemical/x-jcamp-dx", buffer: caffeine });
   await page.waitForFunction(() => /caffe/i.test([...document.querySelectorAll(".cands > li")].map((e) => e.textContent).join(" ")), null, { timeout: 30000 });

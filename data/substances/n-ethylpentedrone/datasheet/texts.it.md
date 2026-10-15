@@ -6,7 +6,7 @@ La sigla NEP è usata anche per la N-etilpentilone (efilone), una sostanza diver
 
 ## category
 
-Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

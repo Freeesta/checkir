@@ -8,7 +8,7 @@ Isomer identification: in LC-MS/MS casework 3-FA and 4-FA are told apart from 2-
 
 ## category
 
-Chemical class: amphetamines (fluoroamphetamines). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines (fluoroamphetamines). Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

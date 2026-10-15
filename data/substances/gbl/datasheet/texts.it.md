@@ -8,7 +8,7 @@ Bande (ATR, diamante): il C=O del lattone a 1762 cm-1 (1770 cm-1 tal quale tra d
 
 ## category
 
-Classe chimica: altre sostanze. Effetto atteso: depressore/sedativo (come profarmaco del GHB). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze. Effetto atteso: depressore/sedativo (come profarmaco del GHB). Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

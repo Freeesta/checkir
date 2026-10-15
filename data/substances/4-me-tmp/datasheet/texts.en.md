@@ -4,7 +4,7 @@ Threo-4-methylmethylphenidate (4-Me-TMP), methyl (2R)-2-(4-methylphenyl)-2-[(2S)
 
 ## category
 
-Chemical class: phenidates (methylphenidate and derivatives); not a cathinone. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenidates (methylphenidate and derivatives); not a cathinone. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

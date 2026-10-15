@@ -4,7 +4,7 @@ Eszopiclone, [(7S)-6-(5-chloro-2-pyridinyl)-5-oxo-7H-pyrrolo[3,4-b]pyrazin-7-yl]
 
 ## category
 
-Classe chimica: altre sostanze. È un ciclopirrolone («farmaco Z»), non una benzodiazepina, e la scheda di famiglia delle benzodiazepine non copre gli agonisti GABA-A non benzodiazepinici, quindi non ha scheda di famiglia. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:najib2006] [f:checkir-classification]
+Classe chimica: altre sostanze. È un ciclopirrolone («farmaco Z»), non una benzodiazepina, e la scheda di famiglia delle benzodiazepine non copre gli agonisti GABA-A non benzodiazepinici, quindi non ha scheda di famiglia. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:najib2006] [f:checkir-classification]
 
 ## origin
 

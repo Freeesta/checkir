@@ -4,7 +4,7 @@ Azaperone, 1-(4-fluorophenyl)-4-(4-pyridin-2-ylpiperazin-1-yl)butan-1-one. Formu
 
 ## category
 
-Classe chimica: altre sostanze. È un neurolettico butirrofenonico usato come sedativo veterinario nei suini. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:ema-azaperone-mrl] [f:checkir-classification]
+Classe chimica: altre sostanze. È un neurolettico butirrofenonico usato come sedativo veterinario nei suini. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:ema-azaperone-mrl] [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ Un'amfetamina con un gruppo metiltio in posizione 4 dell'anello; è l'analogo so
 
 ## category
 
-Classe chimica: amfetamine. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: amfetamine. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

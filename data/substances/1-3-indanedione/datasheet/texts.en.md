@@ -4,7 +4,7 @@
 
 ## category
 
-Chemical class: others. Expected effect: no psychoactive effect expected. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. It is not a psychoactive substance; no source was found that explains why it is met in drug checking, so the role is only a placeholder proposal. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: others. Expected effect: no psychoactive effect expected. Typical role in samples: synthesis or degradation residue. It is not a psychoactive substance; no source was found that explains why it is met in drug checking, so the role is only a placeholder proposal. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

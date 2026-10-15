@@ -1,6 +1,7 @@
 // One vocabulary for the result: the engine's tier (T4) beside the word with no "level N" next to it, no ambiguity or different-form alert
 // for an unknown sample, the chip says when a mixture is proposed (60/40 and lactose/levamisole 80/20), and "share of the signal" instead of "contribution".
 import { jcamp } from "../confronto.mjs";
+import { importAs } from "../importa_aiuto.mjs";
 
 const ACTIVE = [[1700, 1.0, 10], [1450, 0.6, 12], [1250, 0.8, 10], [1050, 0.7, 12], [2950, 0.5, 25]];
 const CAFFEINE = [[1700, 0.9, 10], [1655, 1.0, 10], [1550, 0.5, 10], [1240, 0.6, 12], [745, 0.6, 10]];
@@ -39,9 +40,8 @@ async function importLibrary(page) {
     if (await box.isChecked()) await box.click();
   }
   await openPanel(page, "libraries");
-  await page.fill("#lib-name", "Cancello");
   const files = Object.entries(LIBRARY).map(([name, bands]) => ({ name: `${name}.jdx`, mimeType: "application/octet-stream", buffer: jcamp(name, bands) }));
-  await page.setInputFiles('input[data-library="files"]', files);
+  await importAs(page, "Cancello", files);
   await page.waitForFunction(() => /5/.test(document.querySelector('[data-library="cancello"]')?.textContent ?? ""));
 }
 

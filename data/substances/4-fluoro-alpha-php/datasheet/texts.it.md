@@ -6,7 +6,7 @@ Ha la stessa formula di 4-fluoro-3-methyl-α-PVP (C16H22FNO), con scheletro carb
 
 ## category
 
-Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici (raggruppamento UNODC). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

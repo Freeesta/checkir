@@ -8,7 +8,7 @@ Bands of d-ephedrine hydrochloride (ATR): O-H at 3321 cm-1, N-H2+ envelope from 
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle or pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle or pharmacological adulterant. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -6,7 +6,7 @@ It is a racemic bicyclic phthalane compound, (±)-citalopram. [f:citalopram-labe
 
 ## category
 
-Chemical class: selective serotonin reuptake inhibitor (SSRI) antidepressant (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:citalopram-label] [f:checkir-classification]
+Chemical class: selective serotonin reuptake inhibitor (SSRI) antidepressant (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. [f:citalopram-label] [f:checkir-classification]
 
 ## origin
 

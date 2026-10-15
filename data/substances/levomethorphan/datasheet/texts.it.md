@@ -6,7 +6,7 @@ Levometorfano, l'enantiomero levogiro del metorfano (3-metossi-17-metilmorfinano
 
 ## category
 
-Classe chimica: morfinani. Effetto atteso: oppioide, tramite il metabolita levorfanolo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:lofaro2023] [f:prommer2007] [f:checkir-classification]
+Classe chimica: morfinani. Effetto atteso: oppioide, tramite il metabolita levorfanolo. Ruolo tipico nei campioni: principio attivo. [f:lofaro2023] [f:prommer2007] [f:checkir-classification]
 
 ## history
 

@@ -6,7 +6,7 @@ L'ammina è in posizione 2 dell'anello indanico e uno iodio in posizione 5; l'an
 
 ## category
 
-Classe chimica: aminoindani. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: aminoindani. Effetto atteso: entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

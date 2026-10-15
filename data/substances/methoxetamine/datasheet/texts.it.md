@@ -6,7 +6,7 @@ Struttura: lo stesso cicloesanone della ketamina, ma con etilammino al posto del
 
 ## category
 
-Classe chimica: arilcicloesilammina. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: arilcicloesilammina. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## history
 

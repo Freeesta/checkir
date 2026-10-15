@@ -6,7 +6,7 @@ It is a theophylline derivative of amphetamine: the amphetamine part has its own
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:katselou2016] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle. [f:katselou2016] [f:checkir-classification]
 
 The trade name «Captagon» became the street name of tablets seized in Arab countries. [f:katselou2016]
 

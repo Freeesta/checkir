@@ -6,7 +6,7 @@ It has a 2-fluorobenzyl group on the nitrogen of 2C-C, in place of the 2-methoxy
 
 ## category
 
-Chemical class: phenethylamines (N-benzyl phenethylamines); outside the NBOMe family, which covers only the 2-methoxybenzyl derivatives. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: phenethylamines (N-benzyl phenethylamines); outside the NBOMe family, which covers only the 2-methoxybenzyl derivatives. Expected effect: psychedelic. Typical role in samples: active principle. [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ Isotonitazene, N,N-dietil-2-[5-nitro-2-[(4-propan-2-ilossifenil)metil]benzimidaz
 
 ## category
 
-Classe chimica: nitazeni (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: nitazeni (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -6,7 +6,7 @@ It is the (1S,2S) diastereoisomer of ephedrine (sheet `ephedrine`, 1R,2S). [f:pu
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle or pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: active principle or pharmacological adulterant. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

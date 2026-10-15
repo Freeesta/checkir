@@ -4,7 +4,7 @@ Lorcaserin, (5R)-7-chloro-5-methyl-2,3,4,5-tetrahydro-1H-3-benzazepine. Formula 
 
 ## category
 
-Chemical class: other substances. It is a benzazepine, a selective serotonin 5-HT2C receptor agonist that increases satiety. Expected effect: no psychoactive effect expected. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:sharma2020] [f:checkir-classification]
+Chemical class: other substances. It is a benzazepine, a selective serotonin 5-HT2C receptor agonist that increases satiety. Expected effect: no psychoactive effect expected. Typical role in samples: active principle. [f:sharma2020] [f:checkir-classification]
 
 ## origin
 

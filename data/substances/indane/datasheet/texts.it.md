@@ -4,7 +4,7 @@ Indano (2,3-diidro-1H-indene). Idrocarburo: C9H10, 118.18 g/mol, CAS 496-11-7. I
 
 ## category
 
-Classe chimica: other substances. Effetto atteso: no psychoactive effect expected. Ruolo tipico nei campioni: synthesis or degradation residue. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: other substances. Effetto atteso: no psychoactive effect expected. Ruolo tipico nei campioni: synthesis or degradation residue. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

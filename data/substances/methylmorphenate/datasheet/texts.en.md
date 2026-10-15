@@ -4,7 +4,7 @@ Methylmorphenate, methyl 2-morpholin-3-yl-2-phenylacetate. Formula C13H17NO3, 23
 
 ## category
 
-Chemical class: phenidates. It is the morpholine analogue of methylphenidate (a morpholine ring in place of the piperidine ring), a methylphenidate-based designer drug, not an opioid. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:luethi2018] [f:pubchem] [f:checkir-classification]
+Chemical class: phenidates. It is the morpholine analogue of methylphenidate (a morpholine ring in place of the piperidine ring), a methylphenidate-based designer drug, not an opioid. Expected effect: stimulant. Typical role in samples: active principle. [f:luethi2018] [f:pubchem] [f:checkir-classification]
 
 In vitro it inhibited the norepinephrine and dopamine transporters more potently than the serotonin transporter, like methylphenidate and cocaine. [f:luethi2018]
 

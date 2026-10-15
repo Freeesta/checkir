@@ -4,7 +4,7 @@ Desipramina, 3-(5,6-dihydrobenzo[b][1]benzazepin-11-yl)-N-methylpropan-1-amine. 
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive un antidepressivo triciclico indicato per la depressione. L'asse degli effetti non ha una classe antidepressiva: «nessun effetto psicoattivo atteso» è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:norpramin-label] [f:checkir-classification]
+Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive un antidepressivo triciclico indicato per la depressione. L'asse degli effetti non ha una classe antidepressiva: «nessun effetto psicoattivo atteso» è una classificazione di checkir. Ruolo tipico nei campioni: principio attivo. [f:norpramin-label] [f:checkir-classification]
 
 ## origin
 

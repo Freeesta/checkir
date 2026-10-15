@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: altre sostanze. Non è assegnata ai cannabinoidi sintetici: nessuna fonte consultata riporta un'attività psicoattiva del composto isolato, quindi non è collegata a nessuna scheda di famiglia e non si descrive nessun effetto. Le classi di effetto e di ruolo sono una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze. Non è assegnata ai cannabinoidi sintetici: nessuna fonte consultata riporta un'attività psicoattiva del composto isolato, quindi non è collegata a nessuna scheda di famiglia e non si descrive nessun effetto. Le classi di effetto e di ruolo sono una classificazione di checkir. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

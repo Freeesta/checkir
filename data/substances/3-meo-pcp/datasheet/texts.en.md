@@ -6,7 +6,7 @@ It is a phencyclidine derivative with a methoxy group on the aromatic ring. Unli
 
 ## category
 
-Chemical class: arylcyclohexylamines (phencyclidine type). Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: arylcyclohexylamines (phencyclidine type). Expected effect: dissociative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

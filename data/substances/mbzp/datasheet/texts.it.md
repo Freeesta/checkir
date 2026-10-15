@@ -6,7 +6,7 @@ MBZP, 1-benzyl-4-methylpiperazine. Formula C12H18N2, 190.3 g/mol. Identità cont
 
 ## category
 
-Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

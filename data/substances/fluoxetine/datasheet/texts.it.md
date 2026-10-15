@@ -6,7 +6,7 @@ Fluoxetina, N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine. Form
 
 ## category
 
-Classe chimica: antidepressivo inibitore selettivo della ricaptazione della serotonina (SSRI) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:fluoxetine-label] [f:checkir-classification]
+Classe chimica: antidepressivo inibitore selettivo della ricaptazione della serotonina (SSRI) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. [f:fluoxetine-label] [f:checkir-classification]
 
 ## origin
 

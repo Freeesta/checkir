@@ -4,7 +4,7 @@ HDEP-28 (etilnaftidato), 2-(naftalen-2-il)-2-(piperidin-2-il)acetato di etile. B
 
 ## category
 
-Classe chimica: phenidates. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: phenidates. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

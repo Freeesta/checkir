@@ -4,7 +4,7 @@ Brorphine, 3-[1-[1-(4-bromofenil)etil]piperidin-4-il]-1H-benzimidazol-2-one. Bas
 
 ## category
 
-Classe chimica: analoghi orfina (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: analoghi orfina (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

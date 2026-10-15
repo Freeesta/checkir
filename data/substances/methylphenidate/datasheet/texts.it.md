@@ -6,7 +6,7 @@ Ha due centri chirali; l'etichetta del medicinale riporta i dati degli enantiome
 
 ## category
 
-Classe chimica: Fenidati. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: Fenidati. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

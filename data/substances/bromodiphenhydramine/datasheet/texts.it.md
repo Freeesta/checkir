@@ -4,7 +4,7 @@ Bromodifenidramina, 2-[(4-bromophenyl)-phenylmethoxy]-N,N-dimethylethanamine. Fo
 
 ## category
 
-Classe chimica: antagonista del recettore H1 di tipo etanolamminico, analogo 4-bromo della difenidramina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:ahmadi2012] [f:checkir-classification]
+Classe chimica: antagonista del recettore H1 di tipo etanolamminico, analogo 4-bromo della difenidramina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. [f:ahmadi2012] [f:checkir-classification]
 
 ## origin
 

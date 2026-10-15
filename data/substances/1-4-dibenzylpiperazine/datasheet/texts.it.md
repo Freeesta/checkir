@@ -6,7 +6,7 @@ Un anello piperazinico con un gruppo benzile su ciascuno dei due azoti. [f:pubch
 
 ## category
 
-Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: residuo di sintesi o degradazione. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

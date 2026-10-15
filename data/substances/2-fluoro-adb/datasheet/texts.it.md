@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: cannabinoidi sintetici (gruppo di sostanze UNODC, gruppo di effetto agonisti sintetici dei recettori dei cannabinoidi). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-lss-2f-adb] [f:checkir-classification]
+Classe chimica: cannabinoidi sintetici (gruppo di sostanze UNODC, gruppo di effetto agonisti sintetici dei recettori dei cannabinoidi). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-lss-2f-adb] [f:checkir-classification]
 
 ## origin
 

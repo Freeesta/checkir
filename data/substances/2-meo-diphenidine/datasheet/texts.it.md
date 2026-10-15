@@ -4,7 +4,7 @@
 
 ## category
 
-Classe chimica: altre sostanze. È una 1,2-diariletilammina (analogo della difenidina), non una arilcicloesilammina, e la scheda di famiglia delle arilcicloesilammine copre i composti tipo fenciclidina e ketamina, quindi non ha scheda di famiglia. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:hofer2014] [f:checkir-classification]
+Classe chimica: altre sostanze. È una 1,2-diariletilammina (analogo della difenidina), non una arilcicloesilammina, e la scheda di famiglia delle arilcicloesilammine copre i composti tipo fenciclidina e ketamina, quindi non ha scheda di famiglia. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:hofer2014] [f:checkir-classification]
 
 ## origin
 

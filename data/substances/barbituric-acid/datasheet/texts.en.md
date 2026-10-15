@@ -4,7 +4,7 @@ Barbituric acid, 1,3-diazinane-2,4,6-trione. Formula C4H4N2O3, 128.09 g/mol, CAS
 
 ## category
 
-Chemical class: other substances. It is the parent ring of the barbiturates, itself not a sedative-hypnotic drug. Expected effect: none psychoactive. Typical role in samples: instrumental reference. This classification is a checkir proposal awaiting review. [f:pubchem] [f:checkir-classification]
+Chemical class: other substances. It is the parent ring of the barbiturates, itself not a sedative-hypnotic drug. Expected effect: none psychoactive. Typical role in samples: instrumental reference. [f:pubchem] [f:checkir-classification]
 
 ## origin
 

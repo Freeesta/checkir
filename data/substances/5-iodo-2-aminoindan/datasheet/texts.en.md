@@ -6,7 +6,7 @@ The amine sits on the 2 position of the indane ring and an iodine on the 5 posit
 
 ## category
 
-Chemical class: aminoindanes. Expected effect: entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: aminoindanes. Expected effect: entactogen. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

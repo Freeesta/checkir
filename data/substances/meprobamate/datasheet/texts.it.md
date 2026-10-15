@@ -4,7 +4,7 @@ Meprobamato, [2-(carbamoyloxymethyl)-2-methylpentyl] carbamate. Formula C9H18N2O
 
 ## category
 
-Classe chimica: altre sostanze. È un ansiolitico carbammato, indicato nei disturbi d'ansia. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:meprobamate-label] [f:checkir-classification]
+Classe chimica: altre sostanze. È un ansiolitico carbammato, indicato nei disturbi d'ansia. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. [f:meprobamate-label] [f:checkir-classification]
 
 ## origin
 

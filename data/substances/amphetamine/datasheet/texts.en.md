@@ -12,7 +12,7 @@ Isomers and analogues: methamphetamine has the same monosubstituted ring, so the
 
 ## category
 
-Chemical class: phenethylamines, amphetamines subgroup. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines, amphetamines subgroup. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

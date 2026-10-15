@@ -4,7 +4,7 @@ Caffeine (1,3,7-trimethylpurine-2,6-dione), formula C8H10N4O2, molar mass 194.19
 
 ## category
 
-Chemical class: xanthine alkaloid (grouped here under other substances). Expected effect: stimulant. Typical role in samples: pharmacological adulterant, also found as a declared ingredient. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: xanthine alkaloid (grouped here under other substances). Expected effect: stimulant. Typical role in samples: pharmacological adulterant, also found as a declared ingredient. [f:checkir-classification]
 
 ## origin
 

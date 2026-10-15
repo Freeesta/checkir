@@ -6,7 +6,7 @@ Fenetillina, 1,3-dimethyl-7-[2-(1-phenylpropan-2-ylamino)ethyl]purine-2,6-dione.
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:katselou2016] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:katselou2016] [f:checkir-classification]
 
 Il nome commerciale «Captagon» è diventato il nome di strada delle compresse sequestrate nei paesi arabi. [f:katselou2016]
 

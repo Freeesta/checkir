@@ -6,7 +6,7 @@ Appartiene al gruppo delle dibenzazepine ed è fornita come cloridrato. [f:imipr
 
 ## category
 
-Classe chimica: antidepressivo triciclico, derivato della dibenzazepina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:imipramine-label] [f:checkir-classification]
+Classe chimica: antidepressivo triciclico, derivato della dibenzazepina (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. [f:imipramine-label] [f:checkir-classification]
 
 ## origin
 

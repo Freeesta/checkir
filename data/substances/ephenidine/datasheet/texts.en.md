@@ -4,7 +4,7 @@ Ephenidine, N-ethyl-1,2-diphenylethanamine. Formula C16H19N, 225.33 g/mol, CAS 6
 
 ## category
 
-Chemical class: others (diarylethylamines, a dissociative class distinct from arylcyclohexylamines). Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: others (diarylethylamines, a dissociative class distinct from arylcyclohexylamines). Expected effect: dissociative. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

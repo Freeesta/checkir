@@ -6,7 +6,7 @@ It has two chiral centres; the drug label reports data for the d and l enantiome
 
 ## category
 
-Chemical class: Phenidates. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: Phenidates. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

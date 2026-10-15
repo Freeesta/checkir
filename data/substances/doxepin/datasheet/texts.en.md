@@ -4,7 +4,7 @@ Doxepin, 3-(6H-benzo[c][1]benzoxepin-11-ylidene)-N,N-dimethylpropan-1-amine. For
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The label describes doxepin tablets indicated for insomnia characterized by difficulty with sleep maintenance. The effect axis has no hypnotic class: "depressant/sedative" is a checkir proposal awaiting review. Typical role in samples: active principle. [f:silenor-label] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The label describes doxepin tablets indicated for insomnia characterized by difficulty with sleep maintenance. The effect axis has no hypnotic class: "depressant/sedative" is a checkir classification. Typical role in samples: active principle. [f:silenor-label] [f:checkir-classification]
 
 ## origin
 

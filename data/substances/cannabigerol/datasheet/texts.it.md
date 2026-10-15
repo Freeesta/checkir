@@ -4,7 +4,7 @@ Cannabigerolo (CBG), 2-[(2E)-3,7-dimetilotta-2,6-dienil]-5-pentilbenzene-1,3-dio
 
 ## category
 
-Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

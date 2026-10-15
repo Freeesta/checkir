@@ -4,7 +4,7 @@ Diltiazem ([(2S,3S)-5-[2-(dimethylamino)ethyl]-2-(4-methoxyphenyl)-4-oxo-2,3-dih
 
 ## category
 
-Chemical class: calcium channel blocker, a heart and blood-pressure medicine (grouped here under other substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: calcium channel blocker, a heart and blood-pressure medicine (grouped here under other substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. [f:checkir-classification]
 
 ## metabolism
 

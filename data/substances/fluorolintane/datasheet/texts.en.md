@@ -8,7 +8,7 @@ No band value is given here because no verified reference spectrum is cited. [f:
 
 ## category
 
-Chemical class: other substances (1,2-diarylethylamine). The arylcyclohexylamine family sheet does not cover diarylethylamines, so no family sheet is attached. Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:wallach2019] [f:checkir-classification]
+Chemical class: other substances (1,2-diarylethylamine). The arylcyclohexylamine family sheet does not cover diarylethylamines, so no family sheet is attached. Expected effect: dissociative. Typical role in samples: active principle. [f:wallach2019] [f:checkir-classification]
 
 ## history
 

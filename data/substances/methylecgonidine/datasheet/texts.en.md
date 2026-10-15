@@ -4,7 +4,7 @@ Methylecgonidine, methyl (1R,5S)-8-methyl-8-azabicyclo[3.2.1]oct-2-ene-2-carboxy
 
 ## category
 
-Chemical class: tropane esters, among the plant-based substances of the UNODC grouping, because it derives from cocaine; it is not an opioid. Typical role in samples: degradation residue. The effect axis follows the parent compound cocaine: the pharmacology of methylecgonidine itself is only partly described (partial agonist at muscarinic M1 and M3 receptors). This classification is a checkir proposal awaiting review. [f:romero-norena2024] [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tropane esters, among the plant-based substances of the UNODC grouping, because it derives from cocaine; it is not an opioid. Typical role in samples: degradation residue. The effect axis follows the parent compound cocaine: the pharmacology of methylecgonidine itself is only partly described (partial agonist at muscarinic M1 and M3 receptors). [f:romero-norena2024] [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -6,7 +6,7 @@ Armodafinil, 2-[(R)-benzidrilsolfinil]acetammide. Formula C15H15NO2S, 273.4 g/mo
 
 ## category
 
-Classe chimica: altre sostanze; nessuna scheda di famiglia collegata. La classe di effetto (stimolante) è una proposta di checkir, perché l'etichetta descrive un medicinale che promuove la veglia con meccanismo sconosciuto; è in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:nuvigil-label] [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze; nessuna scheda di famiglia collegata. La classe di effetto (stimolante) è una classificazione di checkir, perché l'etichetta descrive un medicinale che promuove la veglia con meccanismo sconosciuto. Ruolo tipico nei campioni: principio attivo. [f:nuvigil-label] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 
