@@ -28,12 +28,25 @@ import { STORAGE_PREFIX } from "./appname.js";
  * The three levels of the explanation texts, and a rule window shown on the chart from the peak card (memory only).
  * @typedef {"counsellor" | "chemist" | "teaching"} TextLevel
  * @typedef {{ ruleId: string, from: number, to: number }} RuleRange
- * @typedef {{ files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, textLevel: TextLevel, modeAnim: boolean, ruleRange: RuleRange | null, choice: Record<string, Choice>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, recall: RecallState, rangesOpen: boolean, rangeChoice: RangeChoice, rangeError: Notice | null, rangeTable: Record<string, RangeTable>, folder: FolderState }} AppState
+ * One open tab: a file (its root code and the derived spectra that belong to it) or, later, a substance sheet. `view` holds the `VIEW_FIELDS` of the tab while it is not the focused one.
+ * @typedef {{ id: string, kind: "file" | "sheet", code: string | null, sheet: { id: string, name: string, cuts: any } | null, view: Partial<AppState> | null }} Tab
+ * Side-by-side view: the tab ids shown together, how they are laid out and whether their views move together.
+ * @typedef {{ panes: string[], orientation: "row" | "column", linked: boolean }} Split
+ * @typedef {{ tabs: Tab[], focusTab: string | null, split: Split, tabNotice: Notice | null, files: FileEntry[], active: string | null, fileError: Notice | null, libraries: LibraryEntry[], libraryJob: LibraryJob | null, libraryNotices: Notice[], results: Record<string, MatchResult>, matching: string | null, matchError: Notice | null, labels: Record<string, ChemistLabel>, selected: string | null, overlay: boolean, showPeaks: boolean, peakFocus: string | null, textLevel: TextLevel, modeAnim: boolean, ruleRange: RuleRange | null, choice: Record<string, Choice>, sheetLang: string | null, talk: boolean, subtraction: Subtraction | null, recall: RecallState, rangesOpen: boolean, rangeChoice: RangeChoice, rangeError: Notice | null, rangeTable: Record<string, RangeTable>, folder: FolderState }} AppState
  */
+
+/** The fields of the state that belong to the focused tab: tabs.js saves them in the tab that loses the focus and restores those of the one that gains it. */
+export const VIEW_FIELDS = /** @type {const} */ (["active", "selected", "labels", "overlay", "showPeaks", "peakFocus", "ruleRange", "subtraction", "recall", "rangesOpen", "rangeChoice", "rangeError", "sheetLang"]);
+
+/** The view of a tab just opened on `code`: the values of an empty state. @param {string | null} code @returns {Partial<AppState>} */
+export function emptyView(code) {
+  const e = emptyState();
+  return { ...Object.fromEntries(VIEW_FIELDS.map((k) => [k, e[k]])), active: code };
+}
 
 /** @returns {AppState} */
 export function emptyState() {
-  return { files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, textLevel: readLevel(), modeAnim: readPref("modeAnim") !== "off", ruleRange: null, choice: {}, sheetLang: null, talk: false, subtraction: null, recall: { refs: [], mode: "overlay", scale: "max", offset: 0.1, current: 0 }, rangesOpen: false, rangeChoice: { preset: "full", ranges: [] }, rangeError: null, rangeTable: {}, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
+  return { tabs: [], focusTab: null, split: { panes: [], orientation: "row", linked: true }, tabNotice: null, files: [], active: null, fileError: null, libraries: [], libraryJob: null, libraryNotices: [], results: {}, matching: null, matchError: null, labels: {}, selected: null, overlay: true, showPeaks: false, peakFocus: null, textLevel: readLevel(), modeAnim: readPref("modeAnim") !== "off", ruleRange: null, choice: {}, sheetLang: null, talk: false, subtraction: null, recall: { refs: [], mode: "overlay", scale: "max", offset: 0.1, current: 0 }, rangesOpen: false, rangeChoice: { preset: "full", ranges: [] }, rangeError: null, rangeTable: {}, folder: { supported: false, watching: false, folderName: null, saved: null, remember: false, auto: false, offers: [], notice: null } };
 }
 
 let state = emptyState();

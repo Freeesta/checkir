@@ -56,23 +56,26 @@
   <div class="shell">
     <aside class="panel" id="panel"></aside>
     <main id="main-content">
-      <div class="workbar" id="workbar">
-        <div class="toolbar" id="chart-toolbar"></div>
-      </div>
-      <section id="chart-section" aria-labelledby="chart-title">
-        <div class="title-row"><h2 id="chart-title" data-i18n="chart.title"></h2><span id="chart-help"></span></div>
-        <p id="peaks-summary" class="peaks-summary" hidden></p>
-        <div id="chart" tabindex="0" role="group" data-i18n-aria="chart.title"></div>
-        <p id="range" aria-live="polite"></p>
-      </section>
-      <section id="recall" class="recall" hidden aria-labelledby="recall-title"></section>
-      <section id="peak-card" class="peak-card" aria-labelledby="peak-card-title" hidden></section>
-      <section id="subtract" hidden aria-labelledby="subtract-title"></section>
-      <section id="candidates" class="candidates" aria-live="off"></section>
-      <details id="table-section" class="table-section">
-        <summary id="table-title"></summary>
-        <div id="table" class="scroll" tabindex="0" role="region" data-i18n-aria="table.region"></div>
-      </details>
+      <div class="doc-tabs" id="doc-tabs" hidden></div>
+      <div class="panes" id="panes"><div class="pane" id="pane-main" role="tabpanel">
+        <div class="workbar" id="workbar">
+          <div class="toolbar" id="chart-toolbar"></div>
+        </div>
+        <section id="chart-section" aria-labelledby="chart-title">
+          <div class="title-row"><h2 id="chart-title" data-i18n="chart.title"></h2><span id="chart-help"></span></div>
+          <p id="peaks-summary" class="peaks-summary" hidden></p>
+          <div id="chart" tabindex="0" role="group" data-i18n-aria="chart.title"></div>
+          <p id="range" aria-live="polite"></p>
+        </section>
+        <section id="recall" class="recall" hidden aria-labelledby="recall-title"></section>
+        <section id="peak-card" class="peak-card" aria-labelledby="peak-card-title" hidden></section>
+        <section id="subtract" hidden aria-labelledby="subtract-title"></section>
+        <section id="candidates" class="candidates" aria-live="off"></section>
+        <details id="table-section" class="table-section">
+          <summary id="table-title"></summary>
+          <div id="table" class="scroll" tabindex="0" role="region" data-i18n-aria="table.region"></div>
+        </details>
+      </div></div>
     </main>
   </div>
   <nav class="tabbar" id="tabbar"></nav>

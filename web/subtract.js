@@ -5,6 +5,7 @@ import { engineUnit } from "./spectrum.js";
 import { libraryCurve, runMatch } from "./match.js";
 import { candidateName, selectedCandidate } from "./results.js";
 import { activeFile, getState, resultOf, subscribe, update } from "./state.js";
+import { syncActive } from "./tabs.js";
 
 /**
  * Guided subtraction. The engine does the arithmetic (`fattore_proposto` proposes k, `sottrai` makes the residual); this module only
@@ -169,6 +170,7 @@ async function search() {
     }
   });
   const code = addResidual(sub.sample, { wavenumber_cm1: xs, y: ys, y_unit: "Absorbance" }, { name: sub.name, library: sub.library, k: sub.k });
+  if (!code) return false;
   update({ subtraction: null });
   say(t("status.subtract_done", { code }));
   runMatch(code);
@@ -180,7 +182,7 @@ function undo() {
   const last = lastResidual(getState());
   if (!last) return;
   closeFile(last.code);
-  if (last.parent) update({ active: last.parent });
+  if (last.parent) update(syncActive(getState(), last.parent));
   say(t("status.undone", { code: last.code }));
 }
 

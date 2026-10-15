@@ -130,6 +130,7 @@ function keep() {
   if (!code || !d) return null;
   const row = s.recall.refs[Math.min(s.recall.current, s.recall.refs.length - 1)];
   const made = addResidual(code, d.spectrum, { name: d.name, library: row.library, k: Math.round(d.k * 100) / 100 });
+  if (!made) return null;
   say(t("recall.kept", { code: made }));
   return made;
 }

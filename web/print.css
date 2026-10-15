@@ -33,3 +33,4 @@ body[data-page="sheets"] { background: #fff; color: #000; font-size: 10pt; }
 body[data-page="sheets"] .sheet-section { break-inside: avoid; }
 body[data-page="sheets"] .structure-svg { background: #fff; color: #000; }
 body[data-page="sheets"] .topic-tag { border-color: #000; color: #000; }
+#doc-tabs { display: none; }

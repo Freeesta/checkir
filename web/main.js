@@ -40,6 +40,8 @@ import { attachRowMenus } from "./row_menus.js";
 import { buildRecallView, openRecallDialog } from "./recall_ui.js";
 import { subtractActions } from "./subtract.js";
 import { buildCandidates, buildNextStep } from "./workarea.js";
+import { buildTabs } from "./tabs_ui.js";
+import { tabActions } from "./tabs_wire.js";
 
 /** @param {string} id @returns {HTMLElement} */
 function $(id) {
@@ -114,6 +116,7 @@ function showName() {
 /** Last step of the start-up: libraries, offline support, loading screen away, page marked ready. @param {import("./engine.js").Engine | null} engine */
 function finishStart(engine) {
   if (engine) loadAllLibraries(engine);
+  if (engine) setProgramVersion(engine.version());
   loadSheetIndex(() => update({}));
   startExtras();
   hideSplash();
@@ -145,7 +148,7 @@ async function start() {
     getState,
     openFile: () => input.choose(),
     loadDemo: demoLoader(engine, announce),
-    selectFile: (code) => update({ active: code }),
+    ...tabActions(announce),
     closeFile: (code) => {
       closeFile(code);
       announce(t("status.file_closed"));
@@ -160,6 +163,7 @@ async function start() {
     folder: createFolder({ engine, announce }),
     ...libraryActions(engine, announce),
   };
+  const tabs = buildTabs($("doc-tabs"), ctx);
   const header = buildHeader(/** @type {HTMLElement} */ ($("app-header")), ctx, APP_NAME);
   const panels = buildPanels({ panel: $("panel"), tabbar: $("tabbar") }, ctx);
   const next = buildNextStep($("workbar"), ctx);
@@ -167,7 +171,6 @@ async function start() {
   const subtraction = buildSubtractView($("subtract"), ctx);
   const recalled = buildRecallView($("recall"), ctx);
   const talk = wireTalk($("sheet-host"));
-  if (engine) setProgramVersion(engine.version());
   const openDialog = buildDialogs(() => (engine ? engine.version() : null));
   $("chart-help").append(toggletip(() => t("chart.help"), () => t("chart.help_label")));
   const chart = wire({ chart: $("chart"), toolbar: $("chart-toolbar"), tab: $("table"), range: $("range") }, { announce, ctx, codeOf: () => activeFile(getState())?.code ?? null, link: createViewLink(), onBrush: (from, to) => ctx.addRange([from, to]), peaks: chartPeakKeys(ctx) });
@@ -185,7 +188,7 @@ async function start() {
     layers.sync(s, shown ?? null);
     card.refresh(s);
     document.body.toggleAttribute("data-subtract", s.subtraction !== null);
-    for (const part of [subtraction, recalled, header, panels]) part.refresh(s);
+    for (const part of [tabs, subtraction, recalled, header, panels]) part.refresh(s);
     next.refresh(s);
     candidates.refresh(s);
     talk.refresh(s);

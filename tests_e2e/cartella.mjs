@@ -36,7 +36,7 @@ async function leaksOf(page, names) {
   return page.evaluate(async (names) => {
     const hit = [];
     for (const node of document.querySelectorAll("body *")) {
-      if (node.closest('[data-panel="files"]')) continue;
+      if (node.closest('[data-panel="files"]') || node.closest("#doc-tabs")) continue;
       const own = [...node.childNodes].filter((c) => c.nodeType === 3).map((c) => c.textContent).join("") + [...node.attributes].map((a) => a.value).join(" ");
       if (names.some((n) => own.includes(n))) hit.push(node.tagName);
     }
@@ -137,7 +137,7 @@ async function rememberScenario(page, b64, check) {
     return keys;
   });
   check("folder: remembering stores a single reference under a fixed key", JSON.stringify(kept) === '["watched"]', JSON.stringify(kept));
-  check("folder: no file name reaches the page outside section 1 or any storage", (await leaksOf(page, ["misura_nuova", "vecchio_", "rotto", "da_ignorare", "subito"])).length === 0);
+  check("folder: no file name reaches the page outside section 1 and the tab bar, or any storage", (await leaksOf(page, ["misura_nuova", "vecchio_", "rotto", "da_ignorare", "subito"])).length === 0);
   await page.reload();
   await page.waitForSelector("body[data-ready='1']");
   await page.waitForSelector("#folder-resume");
