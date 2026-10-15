@@ -6,7 +6,7 @@ The 2,5-dimethoxyamphetamine skeleton with a pentyl chain at position 4; DOI car
 
 ## category
 
-Chemical class: amphetamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

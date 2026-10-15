@@ -4,7 +4,7 @@ Deschloroetizolam, 4-ethyl-13-methyl-7-phenyl-3-thia-1,8,11,12-tetrazatricyclo[8
 
 ## category
 
-Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. It is a thienodiazepine, not a benzodiazepine in the strict sense. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. It is a thienodiazepine, not a benzodiazepine in the strict sense. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

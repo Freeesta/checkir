@@ -8,7 +8,7 @@ Butylone is a methylone derivative with a longer α-carbon chain. [f:saha2019]
 
 ## category
 
-Chemical class: synthetic cathinones. Expected effect: stimulant, entactogen. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones. Expected effect: stimulant, entactogen. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

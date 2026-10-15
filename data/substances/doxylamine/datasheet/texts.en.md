@@ -4,7 +4,7 @@ Doxylamine, N,N-dimethyl-2-(1-phenyl-1-pyridin-2-ylethoxy)ethanamine. Formula C1
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The label describes doxylamine succinate as an antihistamine, an ethanolamine derivative. The effect axis has no antihistamine class: "depressant/sedative" is a checkir proposal awaiting review. Typical role in samples: active principle. [f:diclegis-label] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The label describes doxylamine succinate as an antihistamine, an ethanolamine derivative. The effect axis has no antihistamine class: "depressant/sedative" is a checkir classification. Typical role in samples: active principle. [f:diclegis-label] [f:checkir-classification]
 
 ## origin
 

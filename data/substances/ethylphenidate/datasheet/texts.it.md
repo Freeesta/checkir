@@ -4,7 +4,7 @@ Etilfenidato, 2-fenil-2-(piperidin-2-il)acetato di etile. Base: C15H21NO2, 247.3
 
 ## category
 
-Classe chimica: phenidates. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: phenidates. Effetto atteso: stimulant. Ruolo tipico nei campioni: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

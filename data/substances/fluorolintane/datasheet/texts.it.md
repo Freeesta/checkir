@@ -8,7 +8,7 @@ Non si indica alcun valore di banda perché non è citato uno spettro di riferim
 
 ## category
 
-Classe chimica: altre (1,2-diariletilammina). La scheda di famiglia delle arilcicloesilamine non copre le diariletilammine, quindi non è collegata alcuna scheda di famiglia. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:wallach2019] [f:checkir-classification]
+Classe chimica: altre (1,2-diariletilammina). La scheda di famiglia delle arilcicloesilamine non copre le diariletilammine, quindi non è collegata alcuna scheda di famiglia. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:wallach2019] [f:checkir-classification]
 
 ## history
 

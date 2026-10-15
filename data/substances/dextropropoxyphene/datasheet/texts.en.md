@@ -4,7 +4,7 @@ Dextropropoxyphene, [(2S,3R)-4-(dimethylamino)-3-methyl-1,2-diphenylbutan-2-yl] 
 
 ## category
 
-Chemical class: other substances. No family sheet covers non-fentanyl synthetic opioids, so none is attached. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: other substances. No family sheet covers non-fentanyl synthetic opioids, so none is attached. Expected effect: opioid. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

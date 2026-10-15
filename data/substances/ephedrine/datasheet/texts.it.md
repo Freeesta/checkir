@@ -8,7 +8,7 @@ Bande del cloridrato di d-efedrina (ATR): O-H a 3321 cm-1, inviluppo N-H2+ da 29
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo o adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo o adulterante farmacologico. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

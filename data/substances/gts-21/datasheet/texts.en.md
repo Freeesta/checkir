@@ -6,7 +6,7 @@ It is the (E) isomer, a 3-benzylidene derivative of anabaseine. [f:kim2007-gts21
 
 ## category
 
-Chemical class: partial agonist of the α7 nicotinic acetylcholine receptor, studied as a cognitive enhancer (grouped here under other substances); no family sheet is attached. Checkir has no class for it, so the effect class is a placeholder, not a statement. Expected effect: none psychoactive. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:kim2007-gts21] [f:checkir-classification]
+Chemical class: partial agonist of the α7 nicotinic acetylcholine receptor, studied as a cognitive enhancer (grouped here under other substances); no family sheet is attached. Checkir has no class for it, so the effect class is a placeholder, not a statement. Expected effect: none psychoactive. Typical role in samples: active principle. [f:kim2007-gts21] [f:checkir-classification]
 
 ## origin
 

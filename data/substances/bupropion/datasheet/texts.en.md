@@ -6,7 +6,7 @@ It is a racemic mixture; the activity and pharmacokinetics of the single enantio
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir proposal, since the label describes an aminoketone antidepressant whose action is presumed to be noradrenergic and/or dopaminergic; it is awaiting review. Typical role in samples: active principle. [f:bupropion-label] [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir classification, since the label describes an aminoketone antidepressant whose action is presumed to be noradrenergic and/or dopaminergic. Typical role in samples: active principle. [f:bupropion-label] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

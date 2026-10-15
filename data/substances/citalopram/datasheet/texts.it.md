@@ -6,7 +6,7 @@ Citalopram, 1-[3-(dimethylamino)propyl]-1-(4-fluorophenyl)-3H-2-benzofuran-5-car
 
 ## category
 
-Classe chimica: antidepressivo inibitore selettivo della ricaptazione della serotonina (SSRI) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:citalopram-label] [f:checkir-classification]
+Classe chimica: antidepressivo inibitore selettivo della ricaptazione della serotonina (SSRI) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. [f:citalopram-label] [f:checkir-classification]
 
 ## origin
 

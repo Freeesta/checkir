@@ -10,7 +10,7 @@ The monograph notes that GHB salts often give a poor spectrum, with broad featur
 
 ## category
 
-Chemical class: other substances. Expected effect: depressant/sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances. Expected effect: depressant/sedative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

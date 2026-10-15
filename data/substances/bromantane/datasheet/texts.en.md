@@ -4,7 +4,7 @@ Bromantane (bromantan, ladasten), N-(4-bromophenyl)adamantan-2-amine. Formula C1
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir proposal, since bromantane is described as an actoprotector, a class of synthetic adaptogens; it is awaiting review. Typical role in samples: active principle. [f:oliynyk2012] [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir classification, since bromantane is described as an actoprotector, a class of synthetic adaptogens. Typical role in samples: active principle. [f:oliynyk2012] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

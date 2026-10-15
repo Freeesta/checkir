@@ -10,7 +10,7 @@ La monografia nota che i sali del GHB danno spesso uno spettro scadente, con ban
 
 ## category
 
-Classe chimica: altre sostanze. Effetto atteso: depressore/sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze. Effetto atteso: depressore/sedativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ CRL-40,941 (fluorafinil, fladrafinil), 2-[bis(4-fluorophenyl)methylsulfinyl]-N-h
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir proposal, since the compound is sold online as an alternative to modafinil; it is awaiting review. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification] [f:dowling2017]
+Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir classification, since the compound is sold online as an alternative to modafinil. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification] [f:dowling2017]
 
 ## origin
 

@@ -4,7 +4,7 @@ Clonazepam, 5-(2-chlorophenyl)-7-nitro-1,3-dihydro-1,4-benzodiazepin-2-one. Form
 
 ## category
 
-Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## effects
 

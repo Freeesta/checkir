@@ -4,7 +4,7 @@ Butorphanol, (1S,9R,10S)-17-(cyclobutylmethyl)-17-azatetracyclo[7.5.3.01,10.02,7
 
 ## category
 
-Chemical class: other substances. It is a synthetic opioid agonist-antagonist analgesic, so it is not placed among the morphinans (morphine and its semi-synthetic derivatives) and no family sheet is attached. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:gillis1995] [f:checkir-classification]
+Chemical class: other substances. It is a synthetic opioid agonist-antagonist analgesic, so it is not placed among the morphinans (morphine and its semi-synthetic derivatives) and no family sheet is attached. Expected effect: opioid. Typical role in samples: active principle. [f:gillis1995] [f:checkir-classification]
 
 ## origin
 

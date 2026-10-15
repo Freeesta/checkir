@@ -4,7 +4,7 @@ Carisoprodolo, [2-(carbamoyloxymethyl)-2-methylpentyl] N-propan-2-ylcarbamate. F
 
 ## category
 
-Classe chimica: altre sostanze. È un miorilassante scheletrico carbammato; il suo metabolita meprobamato è una sostanza controllata. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:carisoprodol-label] [f:checkir-classification]
+Classe chimica: altre sostanze. È un miorilassante scheletrico carbammato; il suo metabolita meprobamato è una sostanza controllata. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:carisoprodol-label] [f:checkir-classification]
 
 ## origin
 

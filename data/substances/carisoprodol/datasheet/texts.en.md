@@ -4,7 +4,7 @@ Carisoprodol, [2-(carbamoyloxymethyl)-2-methylpentyl] N-propan-2-ylcarbamate. Fo
 
 ## category
 
-Chemical class: other substances. It is a carbamate skeletal muscle relaxant; its metabolite meprobamate is a controlled substance. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:carisoprodol-label] [f:checkir-classification]
+Chemical class: other substances. It is a carbamate skeletal muscle relaxant; its metabolite meprobamate is a controlled substance. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:carisoprodol-label] [f:checkir-classification]
 
 ## origin
 

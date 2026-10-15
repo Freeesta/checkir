@@ -4,7 +4,7 @@ Fluorexetamina, 2-(ethylamino)-2-(3-fluorophenyl)cyclohexan-1-one. Formula C14H1
 
 ## category
 
-Classe chimica: arilcicloesilammine. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: arilcicloesilammine. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

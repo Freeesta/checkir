@@ -8,7 +8,7 @@ Il cloridrato di etilone esiste in due polimorfi che l'FTIR sa distinguere, quin
 
 ## category
 
-Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ Dimenhydrinate, 2-benzhydryloxy-N,N-dimethylethanamine;8-chloro-1,3-dimethyl-7H-
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. It is the salt of diphenhydramine and 8-chlorotheophylline (see the diphenhydramine sheet). The effect axis has no antihistamine class: "depressant/sedative" follows diphenhydramine and is a checkir proposal awaiting review. Typical role in samples: active principle. [f:ehling2019] [f:akutsu2006] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. It is the salt of diphenhydramine and 8-chlorotheophylline (see the diphenhydramine sheet). The effect axis has no antihistamine class: "depressant/sedative" follows diphenhydramine and is a checkir classification. Typical role in samples: active principle. [f:ehling2019] [f:akutsu2006] [f:checkir-classification]
 
 ## origin
 

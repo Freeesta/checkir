@@ -8,7 +8,7 @@ Bande etichettate nello spettro ATR (diamante) della monografia SWGDRUG: 3053, 2
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. È una tienodiazepina (derivato tienotriazolodiazepinico), non una benzodiazepina in senso stretto. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. È una tienodiazepina (derivato tienotriazolodiazepinico), non una benzodiazepina in senso stretto. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

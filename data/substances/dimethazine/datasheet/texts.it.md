@@ -4,7 +4,7 @@ Dimetazina, (2R,3E,5S,8R,9S,10S,13S,14S,17S)-3-[(E)-[(2R,5S,8R,9S,10S,13S,14S,17
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata una scheda di famiglia. È uno steroide anabolizzante di design. L'asse degli effetti non ha una classe steroidea: «nessun effetto psicoattivo atteso» è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:geldof2016] [f:checkir-classification]
+Classe chimica: altre sostanze; non è collegata una scheda di famiglia. È uno steroide anabolizzante di design. L'asse degli effetti non ha una classe steroidea: «nessun effetto psicoattivo atteso» è una classificazione di checkir. Ruolo tipico nei campioni: principio attivo. [f:geldof2016] [f:checkir-classification]
 
 ## origin
 

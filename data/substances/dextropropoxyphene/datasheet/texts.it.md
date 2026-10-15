@@ -4,7 +4,7 @@ Destropropossifene, [(2S,3R)-4-(dimethylamino)-3-methyl-1,2-diphenylbutan-2-yl] 
 
 ## category
 
-Classe chimica: altre sostanze. Nessuna scheda di famiglia copre gli oppioidi sintetici non fentanilici, quindi non ne è collegata nessuna. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre sostanze. Nessuna scheda di famiglia copre gli oppioidi sintetici non fentanilici, quindi non ne è collegata nessuna. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 

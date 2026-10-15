@@ -4,7 +4,7 @@ Diltiazem ([(2S,3S)-5-[2-(dimethylamino)ethyl]-2-(4-methoxyphenyl)-4-oxo-2,3-dih
 
 ## category
 
-Classe chimica: calcio-antagonista, un farmaco per il cuore e la pressione (tra le altre sostanze). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: calcio-antagonista, un farmaco per il cuore e la pressione (tra le altre sostanze). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: adulterante farmacologico. [f:checkir-classification]
 
 ## metabolism
 

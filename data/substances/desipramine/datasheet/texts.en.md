@@ -4,7 +4,7 @@ Desipramine, 3-(5,6-dihydrobenzo[b][1]benzazepin-11-yl)-N-methylpropan-1-amine. 
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The label describes a tricyclic antidepressant indicated for depression. The effect axis has no antidepressant class: "no psychoactive effect expected" is a checkir proposal awaiting review. Typical role in samples: active principle. [f:norpramin-label] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The label describes a tricyclic antidepressant indicated for depression. The effect axis has no antidepressant class: "no psychoactive effect expected" is a checkir classification. Typical role in samples: active principle. [f:norpramin-label] [f:checkir-classification]
 
 ## origin
 

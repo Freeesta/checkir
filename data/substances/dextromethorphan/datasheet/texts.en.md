@@ -10,7 +10,7 @@ Cough preparations often also contain chlorpheniramine, acetaminophen or pseudoe
 
 ## category
 
-Chemical class: morphinans. Effect: antitussive, dissociative at high doses. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:burns2013] [f:checkir-classification]
+Chemical class: morphinans. Effect: antitussive, dissociative at high doses. Typical role in samples: active principle. [f:burns2013] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ Cannabidivarina (CBDV), 2-[(1R,6R)-3-metil-6-prop-1-en-2-ilcicloes-2-en-1-il]-5-
 
 ## category
 
-Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

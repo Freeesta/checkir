@@ -4,7 +4,7 @@ Cannabigerol (CBG), 2-[(2E)-3,7-dimethylocta-2,6-dienyl]-5-pentylbenzene-1,3-dio
 
 ## category
 
-Chemical class: plant-based substances (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: plant-based substances (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ Coluracetam, N-(2,3-dimethyl-5,6,7,8-tetrahydrofuro[2,3-b]quinolin-4-yl)-2-(2-ox
 
 ## category
 
-Classe chimica: altre sostanze. È un tetraidrofuroquinolina studiata con il codice MKC-231 come potenziatore dell'assorbimento ad alta affinità della colina. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:bessho1996] [f:checkir-classification]
+Classe chimica: altre sostanze. È un tetraidrofuroquinolina studiata con il codice MKC-231 come potenziatore dell'assorbimento ad alta affinità della colina. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: principio attivo. [f:bessho1996] [f:checkir-classification]
 
 ## origin
 

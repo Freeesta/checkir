@@ -4,7 +4,7 @@ Flualprazolam, 8-chloro-6-(2-fluorophenyl)-1-methyl-4H-[1,2,4]triazolo[4,3-a][1,
 
 ## category
 
-Chemical class: benzodiazepines in the UNODC grouping. Expected effect: depressant / sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: benzodiazepines in the UNODC grouping. Expected effect: depressant / sedative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 It is a potent designer benzodiazepine. [f:wagmann2020]
 

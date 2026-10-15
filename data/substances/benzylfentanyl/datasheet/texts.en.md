@@ -4,7 +4,7 @@ Benzylfentanyl, N-(1-benzylpiperidin-4-yl)-N-phenylpropanamide. Base: C21H26N2O,
 
 ## category
 
-Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

@@ -4,7 +4,7 @@ Clonidina, N-(2,6-dichlorophenyl)-4,5-dihydro-1H-imidazol-2-amine. Formula C9H9C
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive la clonidina come un ipotensivo agonista alfa ad azione centrale, derivato imidazolinico. L'asse degli effetti non ha una classe antipertensiva: «depressore/sedativo» è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:catapres-tts-label] [f:checkir-classification]
+Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive la clonidina come un ipotensivo agonista alfa ad azione centrale, derivato imidazolinico. L'asse degli effetti non ha una classe antipertensiva: «depressore/sedativo» è una classificazione di checkir. Ruolo tipico nei campioni: principio attivo. [f:catapres-tts-label] [f:checkir-classification]
 
 ## origin
 

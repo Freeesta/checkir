@@ -6,7 +6,7 @@ It is the (Z) isomer of cinnamoylcocaine; cinnamoylcocaine (the (E) isomer) has 
 
 ## category
 
-Chemical class: tropane esters, among the plant-based substances of the UNODC grouping, because it is an alkaloid of the coca leaf; it is not an opioid. Typical role in samples: residue of the plant. The effect axis follows cocaine: the pharmacology of the compound itself is not described in the sources consulted. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tropane esters, among the plant-based substances of the UNODC grouping, because it is an alkaloid of the coca leaf; it is not an opioid. Typical role in samples: residue of the plant. The effect axis follows cocaine: the pharmacology of the compound itself is not described in the sources consulted. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

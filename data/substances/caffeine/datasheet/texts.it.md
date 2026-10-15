@@ -4,7 +4,7 @@ Caffeina (1,3,7-trimethylpurine-2,6-dione), formula C8H10N4O2, massa molare 194.
 
 ## category
 
-Classe chimica: alcaloide xantinico (qui tra le altre sostanze). Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico, presente anche come ingrediente dichiarato. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: alcaloide xantinico (qui tra le altre sostanze). Effetto atteso: stimolante. Ruolo tipico nei campioni: adulterante farmacologico, presente anche come ingrediente dichiarato. [f:checkir-classification]
 
 ## origin
 

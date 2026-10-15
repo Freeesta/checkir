@@ -6,7 +6,7 @@ Bupropione, 2-(terz-butilammino)-1-(3-clorofenil)propan-1-one (amfebutamone). Fo
 
 ## category
 
-Classe chimica: altre sostanze; nessuna scheda di famiglia collegata. La classe di effetto (stimolante) è una proposta di checkir, perché l'etichetta descrive un antidepressivo amminochetonico la cui azione si presume noradrenergica e/o dopaminergica; è in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:bupropion-label] [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze; nessuna scheda di famiglia collegata. La classe di effetto (stimolante) è una classificazione di checkir, perché l'etichetta descrive un antidepressivo amminochetonico la cui azione si presume noradrenergica e/o dopaminergica. Ruolo tipico nei campioni: principio attivo. [f:bupropion-label] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

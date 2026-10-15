@@ -4,7 +4,7 @@ Bromantano (bromantan, ladasten), N-(4-bromofenil)adamantan-2-ammina. Formula C1
 
 ## category
 
-Classe chimica: altre sostanze; nessuna scheda di famiglia collegata. La classe di effetto (stimolante) è una proposta di checkir, perché il bromantano è descritto come attoprotettore, una classe di adattogeni sintetici; è in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:oliynyk2012] [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze; nessuna scheda di famiglia collegata. La classe di effetto (stimolante) è una classificazione di checkir, perché il bromantano è descritto come attoprotettore, una classe di adattogeni sintetici. Ruolo tipico nei campioni: principio attivo. [f:oliynyk2012] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

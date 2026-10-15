@@ -10,7 +10,7 @@ I preparati per la tosse contengono spesso anche clorfenamina, paracetamolo o ps
 
 ## category
 
-Classe chimica: morfinani. Effetto: antitussivo, dissociativo ad alte dosi. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:burns2013] [f:checkir-classification]
+Classe chimica: morfinani. Effetto: antitussivo, dissociativo ad alte dosi. Ruolo tipico nei campioni: principio attivo. [f:burns2013] [f:checkir-classification]
 
 ## history
 

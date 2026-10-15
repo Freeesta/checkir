@@ -4,7 +4,7 @@ Ethylphenidate, ethyl 2-phenyl-2-(piperidin-2-yl)acetate. Base: C15H21NO2, 247.3
 
 ## category
 
-Chemical class: fenidati. Expected effect: stimolante. Typical role in samples: principio attivo. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: fenidati. Expected effect: stimolante. Typical role in samples: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

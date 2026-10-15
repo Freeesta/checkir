@@ -4,7 +4,7 @@ Difenidina, 1-(1,2-diphenylethyl)piperidine. Formula C19H23N, 265.4 g/mol, CAS 3
 
 ## category
 
-Classe chimica: altre (diarilletilammine, una classe dissociativa distinta dalle arilcicloesilammine). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre (diarilletilammine, una classe dissociativa distinta dalle arilcicloesilammine). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 
