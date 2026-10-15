@@ -2,12 +2,32 @@
 import { formatNumber, t } from "./i18n.js";
 import { engineUnit, parseDocument } from "./spectrum.js";
 import { getState, update } from "./state.js";
+import { canOpenFile, closePatch, openFilePatch, pointsInMemory, SHEETS_MAX, TABS_MAX } from "./tabs.js";
 
 /** @typedef {import("./spectrum.js").Spectrum} Spectrum */
 /** @typedef {import("./state.js").FileEntry} FileEntry */
 
 /** Memory budget handed to every `open_file` (the engine never exceeds it). Same numbers as `Budget::STANDARD`. */
 export const BUDGET = { maxBytes: 32 * 1024 * 1024, maxPoints: 1 << 20 };
+
+/**
+ * What can be open at once: at most 20 file tabs, 20 substance tabs and 4 194 304 points in all (roots and residuals), i.e. 16 B per point → at most 64 MiB of spectra.
+ * A contract, not a measurement: past a limit the new file is refused with a notice and nothing is closed by itself; the person decides what to close.
+ */
+export const OPEN_BUDGET = { tabs: TABS_MAX, sheets: SHEETS_MAX, points: 1 << 22 };
+
+/** Why a new spectrum of `points` points does not fit, or null. @param {number} points @param {boolean} newTab @returns {import("./state.js").Notice | null} */
+function refusal(points, newTab) {
+  const s = getState();
+  if (newTab && !canOpenFile(s)) return { key: "err.tabs.limit", params: { max: String(OPEN_BUDGET.tabs) } };
+  if (pointsInMemory(s) + points > OPEN_BUDGET.points) return { key: "err.tabs.points", params: { max: formatNumber(OPEN_BUDGET.points) } };
+  return null;
+}
+
+/** @param {import("./state.js").Notice} notice */
+function refuse(notice) {
+  update({ tabNotice: notice, fileError: notice });
+}
 
 /** Spectrum data lives here, in memory only; the state holds just the entries that describe them. @type {Map<string, Spectrum>} */
 const store = new Map();
@@ -39,14 +59,17 @@ function extent(xs) {
  * Add a spectrum to the analysis as the next local code (C1, C2…) and make it the active one.
  * @param {Spectrum} spectrum
  * @param {Partial<FileEntry>} fields
- * @returns {string} the code
+ * @returns {string} the code, or "" when the open-files budget has no room for it (the notice is in the state)
  */
 export function addSpectrum(spectrum, fields) {
+  const no = refusal(spectrum.y.length, true);
+  if (no) return refuse(no), "";
   const code = `C${++seq}`;
   store.set(code, spectrum);
   const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, scans: null, sampling: "unknown", role: "sample", parent: null, note: null, derived: null, warnings: [], ...fields };
   const s = getState();
-  update({ files: [...s.files, /** @type {FileEntry} */ (entry)], active: code, fileError: null });
+  const next = { ...s, files: [...s.files, /** @type {FileEntry} */ (entry)] };
+  update({ files: next.files, active: code, fileError: null, tabNotice: null, ...openFilePatch(next, code) });
   return code;
 }
 
@@ -67,9 +90,11 @@ function residualCode(parent) {
  * @param {string} parent code of the spectrum the reference was subtracted from
  * @param {Spectrum} spectrum
  * @param {import("./state.js").Derived} derived
- * @returns {string} the code
+ * @returns {string} the code, or "" when the points budget has no room for it
  */
 export function addResidual(parent, spectrum, derived) {
+  const no = refusal(spectrum.y.length, false);
+  if (no) return refuse(no), "";
   const code = residualCode(parent);
   store.set(code, spectrum);
   const entry = { code, name: null, demo: false, points: spectrum.y.length, ...extent(spectrum.wavenumber_cm1), resolutionCm1: null, scans: null, sampling: "unknown", role: "residual", parent, note: null, derived, warnings: [] };
@@ -115,6 +140,13 @@ export async function isReadable(file, engine) {
   }
 }
 
+let lastSkipped = 0;
+
+/** How many files the last `openFiles` left unopened because the tabs were full. @returns {number} */
+export function skippedCount() {
+  return lastSkipped;
+}
+
 /** Open the chosen files one after the other, so the codes follow the order of choice. @param {Iterable<File>} files @param {import("./engine.js").Engine | null} engine @returns {Promise<number>} how many were read */
 export async function openFiles(files, engine) {
   if (!engine) {
@@ -122,7 +154,13 @@ export async function openFiles(files, engine) {
     return 0;
   }
   const before = getState().files.length;
-  for (const f of files) await readOne(f, engine);
+  let skipped = 0;
+  for (const f of files) {
+    if (!canOpenFile(getState())) skipped++;
+    else await readOne(f, engine);
+  }
+  lastSkipped = skipped;
+  if (skipped) refuse({ key: "err.tabs.limit", params: { max: String(OPEN_BUDGET.tabs) } });
   return getState().files.length - before;
 }
 
@@ -140,14 +178,16 @@ export function closeFile(code) {
   const results = Object.fromEntries(Object.entries(s.results).filter(([c]) => !gone.has(c)));
   const choice = Object.fromEntries(Object.entries(s.choice).filter(([c]) => !gone.has(c)));
   const open = s.subtraction && gone.has(s.subtraction.sample) ? null : s.subtraction;
-  update({ files, results, choice, subtraction: open, active: gone.has(/** @type {string} */ (s.active)) ? (files[0]?.code ?? null) : s.active, fileError: null });
+  const tab = s.tabs.find((t) => t.kind === "file" && t.code === code);
+  const active = gone.has(/** @type {string} */ (s.active)) ? (s.files.find((f) => f.code === code)?.parent ?? files[0]?.code ?? null) : s.active;
+  update({ files, results, choice, subtraction: open, active, fileError: null, ...(tab ? { tabNotice: null, ...closePatch(s, tab.id) } : {}) });
 }
 
 /** Forget everything loaded. */
 export function closeAll() {
   store.clear();
   seq = 0;
-  update({ files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: true, choice: {}, talk: false, subtraction: null });
+  update({ tabs: [], focusTab: null, split: { panes: [], orientation: "row", linked: true }, tabNotice: null, files: [], active: null, fileError: null, results: {}, labels: {}, selected: null, overlay: true, choice: {}, talk: false, subtraction: null });
 }
 
 /**
@@ -163,6 +203,8 @@ export function wireFileInput({ engine, announce, onLibrary }) {
     if (all.some((f) => /\.l01$/i.test(f.name))) return onLibrary(all);
     const opened = await openFiles(all, engine);
     const s = getState();
+    const skipped = skippedCount();
+    if (skipped) return announce(t("status.tabs_skipped", { count: String(skipped) }));
     announce(s.fileError ? `${t("status.file_failed")} ${t(s.fileError.key, s.fileError.params)}` : opened ? t("status.file_loaded", { code: s.active ?? "" }) : "");
   };
   const picker = document.createElement("input");

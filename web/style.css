@@ -17,6 +17,8 @@
   --panel: #ffffff; /* cards, panels and bars on the grey page */
   --border-ui: #b4bac1; /* outline of labelled buttons (the label identifies them) */
   --accent: #1f6fb2; /* the one blue for active states */
+  --tab-file: var(--oi-blue); /* top rule of a file tab (an icon tells the kinds apart too) */
+  --tab-sheet: var(--oi-orange);
   /* Colour roles (light): what each colour means; the chart and the text use only these names. Shapes and dashes tell them apart too. */
   --color-brand: var(--accent);
   --color-sample: #000000; /* the spectrum shown: black on light */
@@ -48,6 +50,8 @@
     --panel: #1e2126;
     --border-ui: #4a4f57;
     --accent: #62aef0;
+    --tab-file: var(--oi-blue);
+    --tab-sheet: var(--oi-orange);
     --color-brand: var(--accent);
     --color-sample: #ffffff; /* white on dark */
     --color-reference: #ff6b6b;
@@ -74,6 +78,8 @@
   --panel: #1e2126;
   --border-ui: #4a4f57;
   --accent: #62aef0;
+  --tab-file: var(--oi-blue);
+  --tab-sheet: var(--oi-orange);
   --color-brand: var(--accent);
   --color-sample: #ffffff; /* white on dark */
   --color-reference: #ff6b6b;

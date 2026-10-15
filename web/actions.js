@@ -7,6 +7,7 @@ import { canSubtract } from "./subtract.js";
  * `step` orders the guided flow: the "next step" button shows the first enabled action by `step`. `key` is the single-key shortcut (same in every language, run by shortcuts.js); an action not built yet has `soon` and `enabled` always false (the shortcut list shows it grey).
  * @typedef {{
  *   getState: () => import("./state.js").AppState,
+ *   focusTab: (id: string) => void, closeTab: (id: string) => void, moveTab: (id: string, to: number) => void, closeOtherTabs: (id: string) => void,
  *   openFile: () => void, loadDemo: () => void, selectFile: (code: string) => void, closeFile: (code: string) => void, setLang: (code: string) => void, toggleLang: () => void, cycleTheme: () => void,
  *   togglePanel: () => void, goto: (panelId: string) => void, closeSection: () => void, openDialog: (id: string) => void, folder: FolderCtx,
  *   setChoice: (patch: Partial<import("./state.js").Choice>) => void, acceptMixture: () => void, setSheetLang: (lang: string) => Promise<void>, toggleTalk: () => void, printSheet: () => void,
@@ -70,6 +71,8 @@ export const ACTIONS = [
   { id: "peaks.toggle", labelKey: "action.peaks_toggle.label", tipKey: "action.peaks_toggle.tip", icon: "peaks", key: "p", section: "peaks", menu: true, run: (c) => c.togglePeaks(), enabled: (s) => s.files.length > 0 },
   { id: "sheet.talk", labelKey: "action.sheet_talk.label", tipKey: "action.sheet_talk.tip", icon: "sheet", key: "m", section: "sheet", run: (c) => c.toggleTalk(), enabled: (s) => resultOf(s) !== null },
   { id: "history.undo", labelKey: "action.history_undo.label", tipKey: "action.history_undo.tip", icon: "back", key: "u", run: (c) => c.undo(), enabled: (s) => lastResidual(s) !== undefined },
+  { id: "tab.close", labelKey: "action.tab_close.label", tipKey: "action.tab_close.tip", icon: "close", key: "w", run: (c) => { const id = c.getState().focusTab; if (id) c.closeTab(id); }, enabled: (s) => s.tabs.length > 0 },
+  { id: "tab.next", labelKey: "action.tab_next.label", tipKey: "action.tab_next.tip", icon: "file", key: "j", run: (c) => { const s = c.getState(); const at = s.tabs.findIndex((x) => x.id === s.focusTab); if (s.tabs.length) c.focusTab(s.tabs[(at + 1) % s.tabs.length].id); }, enabled: (s) => s.tabs.length > 0 },
   { id: "panel.toggle", labelKey: "action.panel_toggle.label", tipKey: "action.panel_toggle.tip", icon: "panel-open", key: "[", run: (c) => c.togglePanel(), enabled: always },
   gotoAction(1, "files", "file"),
   gotoAction(2, "libraries", "library"),

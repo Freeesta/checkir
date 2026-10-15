@@ -44,12 +44,13 @@ async function browserScenario(browser, base, check, axe) {
   const leaks = await page.evaluate((name) => {
     const hit = [];
     for (const node of document.querySelectorAll("body *")) {
-      if (node.closest('[data-panel="files"]')) continue;
+      if (node.closest('[data-panel="files"]') || node.closest("#doc-tabs")) continue;
       if ((node.childNodes.length && [...node.childNodes].some((c) => c.nodeType === 3 && c.textContent.includes(name))) || [...node.attributes].some((a) => a.value.includes(name))) hit.push(node.tagName);
     }
     return hit;
   }, SECRET_NAME);
-  check("load: the file name appears only in section 1 (and the tooltip)", leaks.length === 0, leaks.join(","));
+  check("load: the file name appears only in section 1, the tooltip and the tab bar", leaks.length === 0, leaks.join(","));
+  check("load: the file name is in the tab of C1", ((await page.getAttribute("#tab-C1", "title")) ?? "") === SECRET_NAME);
   check("load: the file name is in section 1", ((await page.textContent('[data-panel="files"]')) ?? "").includes(SECRET_NAME));
   await page.hover('[data-chip="file"]');
   check("load: the file name is in the header tooltip", ((await page.textContent("#tooltip")) ?? "").includes(SECRET_NAME));
