@@ -157,6 +157,7 @@ async function fetchPackage(id, lib, manifestText) {
 
 /** Public packages from the general manifest (spectra only for the libraries that are on), then the private ones from OPFS. @param {import("./engine.js").Engine} engine */
 export async function loadAllLibraries(engine) {
+  update({ librariesLoading: true });
   try {
     const general = JSON.parse(new TextDecoder().decode(await fetchBytes(`${BASE}libraries.json`)));
     for (const item of general.libraries ?? []) {
@@ -186,7 +187,8 @@ export async function loadAllLibraries(engine) {
   } catch {
     addNotice({ key: "library.store_failed", params: {} });
   }
-  publish(); // one state change for all the libraries: the first comparison never runs on a part of them
+  names = null;
+  update({ libraries: [...loaded.values()].map((l) => l.entry), librariesLoading: false }); // one state change for all the libraries: the first comparison never runs on a part of them
 }
 
 /** @param {string} id @returns {string} the name shown for a library: the one the user gave a private library, else its id */
@@ -218,7 +220,7 @@ export async function setEnabled(engine, id, on) {
   const site = listed.get(id);
   if (on && l.entry.loaded === false && site && engine) {
     fetching.add(id);
-    update({ libraryJob: { done: 0, total: 1, name: id } });
+    update({ libraryJob: { done: 0, total: 1, name: id }, librariesLoading: true });
     try {
       const bad = registerPackage(engine, await fetchPackage(id, site, new TextDecoder().decode(await fetchBytes(packageUrl(site, "manifest.json")))), true, false);
       if (bad) throw new Error(bad.key);
@@ -227,7 +229,7 @@ export async function setEnabled(engine, id, on) {
       on = false;
     }
     fetching.delete(id);
-    update({ libraryJob: null });
+    update({ libraryJob: null, librariesLoading: fetching.size > 0 });
   }
   const now = loaded.get(id);
   if (!now) return;

@@ -443,6 +443,7 @@
   "panel.files.tip": "Loaded spectra",
   "panel.files.title": "Files",
   "panel.libraries.empty": "No library",
+  "panel.libraries.loading": "Libraries loading…",
   "panel.libraries.tip": "Comparison libraries",
   "panel.libraries.title": "Libraries",
   "panel.nav": "Sections",

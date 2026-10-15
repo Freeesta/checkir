@@ -443,6 +443,7 @@
   "panel.files.tip": "Spettri caricati",
   "panel.files.title": "File",
   "panel.libraries.empty": "Nessuna libreria",
+  "panel.libraries.loading": "Librerie in caricamento…",
   "panel.libraries.tip": "Librerie di confronto",
   "panel.libraries.title": "Librerie",
   "panel.nav": "Sezioni",
