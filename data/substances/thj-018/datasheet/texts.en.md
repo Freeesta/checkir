@@ -4,7 +4,7 @@ THJ-018, naphthalen-1-yl-(1-pentylindazol-3-yl)methanone. Base: C23H22N2O, 342.4
 
 ## category
 
-Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

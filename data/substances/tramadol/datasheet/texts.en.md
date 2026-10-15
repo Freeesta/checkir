@@ -6,7 +6,7 @@ The medicine is a racemate of two enantiomers, which contribute to the effect th
 
 ## category
 
-Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 It is a centrally acting analgesic, structurally related to codeine and morphine. [f:grond2004]
 

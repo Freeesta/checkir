@@ -4,7 +4,7 @@ URB754, 6-methyl-2-(4-methylanilino)-3,1-benzoxazin-4-one. Formula C16H14N2O2, 2
 
 ## category
 
-Chemical class: a benzoxazinone research compound reported as a monoacylglycerol lipase (MAGL) inhibitor (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:vandevoorde2007] [f:checkir-classification]
+Chemical class: a benzoxazinone research compound reported as a monoacylglycerol lipase (MAGL) inhibitor (grouped here under other substances); no family sheet is attached. Expected effect: none psychoactive. Typical role in samples: active principle. [f:vandevoorde2007] [f:checkir-classification]
 
 ## history
 

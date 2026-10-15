@@ -7,7 +7,7 @@ Zolazepam, 4-(2-fluorofenil)-1,3,8-trimetil-6H-pirazolo[3,4-e][1,4]diazepin-7-on
 
 ## category
 
-Classe chimica: benzodiazepine, per analogia strutturale (proposta di checkir in attesa di revisione). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
+Classe chimica: benzodiazepine, per analogia strutturale (classificazione di checkir). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 
 ## history

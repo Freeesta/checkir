@@ -4,7 +4,7 @@ THCA-A (Δ9-tetrahydrocannabinolic acid A), (6aR,10aR)-1-hydroxy-6,6,9-trimethyl
 
 ## category
 
-Chemical class: plant-based substances (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: plant-based substances (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ PCC, 1-(piperidin-1-il)cicloesan-1-carbonitrile. Formula C12H20N2, 192.30 g/mol,
 
 ## category
 
-Classe chimica: altre sostanze. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: residuo di sintesi o degradazione. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre sostanze. Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: residuo di sintesi o degradazione. [f:checkir-classification]
 
 ## origin
 

@@ -6,7 +6,7 @@ It is the tetrahydronaphthyl analogue of α-PBP and the lower homologue of `th-p
 
 ## category
 
-Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cathinones (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

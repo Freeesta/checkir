@@ -8,7 +8,7 @@ Psilocin, the active form formed in the body, is a separate substance: this shee
 
 ## category
 
-Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

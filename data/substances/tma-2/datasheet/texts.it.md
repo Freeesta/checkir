@@ -6,7 +6,7 @@ Un'anfetamina con metossili sulle posizioni 2, 4 e 5 dell'anello fenilico. [f:pu
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

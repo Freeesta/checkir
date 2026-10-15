@@ -4,7 +4,7 @@ PCEEA, N-(2-etossietil)-1-fenilcicloesan-1-ammina (N-(1-fenilcicloesil)-2-etossi
 
 ## category
 
-Classe chimica: arilcicloesilammine (raggruppamento UNODC). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: arilcicloesilammine (raggruppamento UNODC). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

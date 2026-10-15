@@ -4,7 +4,7 @@ RCS-8, 1-[1-(2-cicloesiletil)indol-3-il]-2-(2-metossifenil)etanone. Base: C25H29
 
 ## category
 
-Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

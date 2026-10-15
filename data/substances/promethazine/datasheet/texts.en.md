@@ -6,7 +6,7 @@ It is a racemic compound, a phenothiazine derivative, marketed as the hydrochlor
 
 ## category
 
-Chemical class: phenothiazine derivative with antihistaminic, sedative and antiemetic action (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:promethazine-label] [f:checkir-classification]
+Chemical class: phenothiazine derivative with antihistaminic, sedative and antiemetic action (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. [f:promethazine-label] [f:checkir-classification]
 
 ## origin
 

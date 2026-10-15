@@ -4,7 +4,7 @@ Thebaine (paramorphine), (4R,7aR,12bS)-7,9-dimethoxy-3-methyl-2,4,7a,13-tetrahyd
 
 ## category
 
-Classe chimica: morfinani. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: morfinani. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 In 40 persone intossicate da un tè di semi di papavero ricchi di tebaina il quadro era di eccitazione neuromuscolare con spasmi, rigidità e convulsioni, simile all'avvelenamento da stricnina. [f:isoardi2023]
 

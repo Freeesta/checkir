@@ -6,7 +6,7 @@ NM-2-AI (N-metil-2-aminoindano), N-metil-2,3-diidro-1H-inden-2-ammina. Formula C
 
 ## category
 
-Classe chimica: aminoindani. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: aminoindani. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

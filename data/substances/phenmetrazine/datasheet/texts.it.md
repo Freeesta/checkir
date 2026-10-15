@@ -6,7 +6,7 @@ La scheda `3-fpm` descrive il suo derivato con un fluoro in posizione meta dell'
 
 ## category
 
-Classe chimica: fenmetrazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenmetrazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

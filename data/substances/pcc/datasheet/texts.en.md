@@ -6,7 +6,7 @@ It is an alpha-aminonitrile: a cyclohexane carrying a piperidine ring and a nitr
 
 ## category
 
-Chemical class: other substances. Expected effect: no psychoactive effect expected. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: other substances. Expected effect: no psychoactive effect expected. Typical role in samples: synthesis or degradation residue. [f:checkir-classification]
 
 ## origin
 

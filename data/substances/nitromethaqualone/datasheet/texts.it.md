@@ -4,7 +4,7 @@ Nitromethaqualone, 3-(2-methoxy-4-nitrophenyl)-2-methylquinazolin-4-one. Formula
 
 ## category
 
-Classe chimica: altre sostanze. È un chinazolin-4-one di tipo metaqualone; la scheda di famiglia delle benzodiazepine non lo copre, quindi non ha scheda di famiglia. Effetto atteso: depressore del sistema nervoso centrale (sedativo), per analogia strutturale con il metaqualone. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre sostanze. È un chinazolin-4-one di tipo metaqualone; la scheda di famiglia delle benzodiazepine non lo copre, quindi non ha scheda di famiglia. Effetto atteso: depressore del sistema nervoso centrale (sedativo), per analogia strutturale con il metaqualone. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 

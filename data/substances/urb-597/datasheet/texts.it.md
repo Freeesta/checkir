@@ -4,7 +4,7 @@ URB597, N-cicloesilcarbammato di [3-(3-carbamoilfenil)fenile] (estere 3'-carbamo
 
 ## category
 
-Classe chimica: composto di ricerca carbammato, inibitore dell'idrolasi delle ammidi degli acidi grassi (FAAH) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:kathuria2003] [f:checkir-classification]
+Classe chimica: composto di ricerca carbammato, inibitore dell'idrolasi delle ammidi degli acidi grassi (FAAH) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. [f:kathuria2003] [f:checkir-classification]
 
 ## history
 

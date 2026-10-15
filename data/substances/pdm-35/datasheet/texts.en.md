@@ -4,7 +4,7 @@ PDM-35, 3,5-dimethyl-2-phenylmorpholine. Base: C12H17NO, 191.27 g/mol, CAS 12183
 
 ## category
 
-Chemical class: phenmetrazines. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: phenmetrazines. Expected effect: stimulant. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

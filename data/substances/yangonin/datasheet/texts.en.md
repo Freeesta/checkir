@@ -4,7 +4,7 @@ Yangonin, 4-methoxy-6-[(E)-2-(4-methoxyphenyl)ethenyl]pyran-2-one. Formula C15H1
 
 ## category
 
-Chemical class: plant-based substances; a kavalactone (styrylpyrone) of kava. Expected effect: depressant / sedative, proposed from the effects reported for kava (sedation, euphoria, impairment of motor coordination), not measured for yangonin alone. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:berry2019] [f:checkir-classification]
+Chemical class: plant-based substances; a kavalactone (styrylpyrone) of kava. Expected effect: depressant / sedative, proposed from the effects reported for kava (sedation, euphoria, impairment of motor coordination), not measured for yangonin alone. Typical role in samples: active principle. [f:berry2019] [f:checkir-classification]
 
 ## origin
 

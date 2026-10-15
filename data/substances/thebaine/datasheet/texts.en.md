@@ -4,7 +4,7 @@ Thebaine (paramorphine), (4R,7aR,12bS)-7,9-dimethoxy-3-methyl-2,4,7a,13-tetrahyd
 
 ## category
 
-Chemical class: morphinans. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: morphinans. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 In 40 people poisoned by tea made from thebaine-rich poppy seeds, the picture was neuromuscular excitation with muscle spasm, rigidity and convulsions, like strychnine poisoning. [f:isoardi2023]
 

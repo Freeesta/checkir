@@ -4,7 +4,7 @@ Pregabalin, acido (3S)-3-(amminometil)-5-metilesanoico. C8H17NO2, 159.23 g/mol, 
 
 ## category
 
-Classe chimica: altre sostanze del raggruppamento UNODC. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze del raggruppamento UNODC. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 È un gabapentinoide: gli analoghi dell'acido γ-amminobutirrico di questo gruppo agiscono inibendo i canali del calcio voltaggio-dipendenti. [f:evoy2021]
 

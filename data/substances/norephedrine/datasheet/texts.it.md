@@ -6,7 +6,7 @@ Norefedrina ((1R,2S)-2-ammino-1-fenilpropan-1-olo), nota come fenilpropanolamina
 
 ## category
 
-Classe chimica: Anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: Anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

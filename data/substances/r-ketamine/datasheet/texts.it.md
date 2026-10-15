@@ -8,7 +8,7 @@ Come la ketamina, ha un cicloesanone: il C=O dà una banda nella regione dei che
 
 ## category
 
-Classe chimica: arilcicloesilamine. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: arilcicloesilamine. Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

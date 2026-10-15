@@ -4,7 +4,7 @@ Yohimbina, methyl (1S,15R,18S,19R,20S)-18-hydroxy-1,3,11,12,14,15,16,17,18,19,20
 
 ## category
 
-Classe chimica: altre sostanze (un alcaloide indolico). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre sostanze (un alcaloide indolico). Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 

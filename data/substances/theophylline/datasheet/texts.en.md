@@ -4,7 +4,7 @@ Theophylline, 1,3-dimethyl-7H-purine-2,6-dione. Formula C7H8N4O2, 180.16 g/mol, 
 
 ## category
 
-Chemical class: methylxanthine, marketed as a bronchodilator (grouped here under other substances); no family sheet is attached. Expected effect: stimulant. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:theophylline-label] [f:checkir-classification]
+Chemical class: methylxanthine, marketed as a bronchodilator (grouped here under other substances); no family sheet is attached. Expected effect: stimulant. Typical role in samples: pharmacological adulterant. [f:theophylline-label] [f:checkir-classification]
 
 Theophylline, with sibutramine and caffeine, was confirmed in herbal products sold for weight loss. [f:pascali2018]
 

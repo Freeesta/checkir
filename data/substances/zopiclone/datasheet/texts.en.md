@@ -7,7 +7,7 @@ A cyclopyrrolone: a carbamate of 4-methylpiperazine on a pyrrolopyrazinone ring,
 
 ## category
 
-Chemical class: others (cyclopyrrolone, a so-called Z-drug). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:becquemont1999] [f:checkir-classification]
+Chemical class: others (cyclopyrrolone, a so-called Z-drug). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:becquemont1999] [f:checkir-classification]
 
 
 ## history

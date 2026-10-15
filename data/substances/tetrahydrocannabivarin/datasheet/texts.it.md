@@ -4,7 +4,7 @@ Tetraidrocannabivarina (Δ9-THCV), (6aR,10aR)-6,6,9-trimetil-3-propil-6a,7,8,10a
 
 ## category
 
-Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

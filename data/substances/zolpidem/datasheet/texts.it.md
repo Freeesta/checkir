@@ -7,7 +7,7 @@ Un'imidazopiridina, non una benzodiazepina: non ha l'anello benzodiazepinico. [f
 
 ## category
 
-Classe chimica: altre (imidazopiridina, un cosiddetto farmaco Z). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre (imidazopiridina, un cosiddetto farmaco Z). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 
 ## history

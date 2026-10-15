@@ -4,7 +4,7 @@ Protonitazene, N,N-dietil-2-[5-nitro-2-[(4-propossifenil)metil]benzimidazol-1-il
 
 ## category
 
-Classe chimica: nitazeni (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: nitazeni (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

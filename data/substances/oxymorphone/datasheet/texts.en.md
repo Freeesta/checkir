@@ -4,7 +4,7 @@ Oxymorphone, (4R,4aS,7aR,12bS)-4a,9-dihydroxy-3-methyl-2,4,5,6,7a,13-hexahydro-1
 
 ## category
 
-Chemical class: morphinans, among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: morphinans, among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 The medicine is a Schedule II controlled substance in the United States. [f:oxymorphone-label]
 

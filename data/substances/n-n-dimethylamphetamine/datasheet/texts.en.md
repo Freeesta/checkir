@@ -6,7 +6,7 @@ It is methamphetamine with a second methyl group on the nitrogen (a tertiary ami
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. In samples it is met as an impurity of methamphetamine rather than as an active principle. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. In samples it is met as an impurity of methamphetamine rather than as an active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

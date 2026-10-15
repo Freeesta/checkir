@@ -4,7 +4,7 @@ Procaine (2-(diethylamino)ethyl 4-aminobenzoate), formula C13H20N2O2, molar mass
 
 ## category
 
-Chemical class: local anaesthetic (ester type, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: local anaesthetic (ester type, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. [f:checkir-classification]
 
 ## metabolism
 

@@ -4,7 +4,7 @@ U-47700, 3,4-dicloro-N-[(1R,2R)-2-(dimetilammino)cicloesil]-N-metilbenzammide. B
 
 ## category
 
-Classe chimica: altre sostanze del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: altre sostanze del raggruppamento UNODC. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 È un oppioide sintetico non fentanilico, uno dei «composti U». [f:giorgetti2024]
 

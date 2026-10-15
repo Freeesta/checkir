@@ -6,7 +6,7 @@ Come la ketamina è un'arilcicloesilammina con un chetone sull'anello cicloesani
 
 ## category
 
-Classe chimica: arilcicloesilammine (tipo fenciclidina/ketamina). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: arilcicloesilammine (tipo fenciclidina/ketamina). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

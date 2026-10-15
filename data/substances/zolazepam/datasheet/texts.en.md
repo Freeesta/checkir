@@ -7,7 +7,7 @@ It is a pyrazolodiazepinone: a 5-aryl-1,4-diazepin-2-one core in which a pyrazol
 
 ## category
 
-Chemical class: benzodiazepines, by structural analogy (checkir proposal awaiting review). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:checkir-classification]
+Chemical class: benzodiazepines, by structural analogy (checkir classification). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:checkir-classification]
 
 
 ## history

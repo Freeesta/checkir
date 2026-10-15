@@ -4,7 +4,7 @@ Nitromethaqualone, 3-(2-methoxy-4-nitrophenyl)-2-methylquinazolin-4-one. Formula
 
 ## category
 
-Chemical class: other substances. It is a quinazolin-4-one of the methaqualone type; the benzodiazepine family sheet does not cover it, so no family sheet is attached. Expected effect: central nervous system depressant (sedative), by structural analogy with methaqualone. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: other substances. It is a quinazolin-4-one of the methaqualone type; the benzodiazepine family sheet does not cover it, so no family sheet is attached. Expected effect: central nervous system depressant (sedative), by structural analogy with methaqualone. Typical role in samples: active principle. [f:checkir-classification]
 
 ## origin
 

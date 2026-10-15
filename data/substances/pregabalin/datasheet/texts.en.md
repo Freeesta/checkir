@@ -4,7 +4,7 @@ Pregabalin, (3S)-3-(aminomethyl)-5-methylhexanoic acid. C8H17NO2, 159.23 g/mol, 
 
 ## category
 
-Chemical class: other substances in the UNODC grouping. Expected effect: depressant / sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances in the UNODC grouping. Expected effect: depressant / sedative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 It is a gabapentinoid: the γ-aminobutyric acid analogues of this group act by inhibiting voltage-gated calcium channels. [f:evoy2021]
 

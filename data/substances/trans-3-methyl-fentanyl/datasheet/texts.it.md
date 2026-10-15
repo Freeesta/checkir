@@ -4,7 +4,7 @@ trans-3-Metilfentanil, N-[(3S,4S)-3-metil-1-(2-feniletil)piperidin-4-il]-N-fenil
 
 ## category
 
-Classe chimica: analoghi del fentanil (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: analoghi del fentanil (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

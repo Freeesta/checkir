@@ -4,7 +4,7 @@ URB602, N-(3-fenilfenil)carbammato di cicloesile (estere cicloesilico dell'acido
 
 ## category
 
-Classe chimica: composto di ricerca N-aril carbammato, inibitore della monoacilglicerolo lipasi (MAGL) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:king2007] [f:checkir-classification]
+Classe chimica: composto di ricerca N-aril carbammato, inibitore della monoacilglicerolo lipasi (MAGL) (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. [f:king2007] [f:checkir-classification]
 
 ## history
 

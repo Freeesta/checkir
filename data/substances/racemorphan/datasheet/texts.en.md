@@ -6,7 +6,7 @@ It is the racemate of levorphanol (levo-3-hydroxy-N-methylmorphinan, a strong op
 
 ## category
 
-Chemical class: morphinans. Expected effect: opioid, since one of its two components, levorphanol, is a strong opioid agonist. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:prommer2007] [f:checkir-classification]
+Chemical class: morphinans. Expected effect: opioid, since one of its two components, levorphanol, is a strong opioid agonist. Typical role in samples: active principle. [f:prommer2007] [f:checkir-classification]
 
 ## history
 

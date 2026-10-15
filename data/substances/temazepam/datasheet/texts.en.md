@@ -7,7 +7,7 @@ A 1,4-benzodiazepin-2-one with a hydroxyl group at position 3 and a methyl group
 
 ## category
 
-Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. The US label calls it a benzodiazepine hypnotic agent. [f:restoril-label] [f:checkir-classification]
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. The US label calls it a benzodiazepine hypnotic agent. [f:restoril-label] [f:checkir-classification]
 
 
 ## history

@@ -4,7 +4,7 @@ ortho-Fluoroisobutyrylfentanyl, N-(2-fluorophenyl)-2-methyl-N-[1-(2-phenylethyl)
 
 ## category
 
-Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: fentanyl analogues (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

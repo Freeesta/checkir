@@ -8,7 +8,7 @@ Like ketamine, it has a cyclohexanone: the C=O gives a band in the region of sat
 
 ## category
 
-Chemical class: arylcyclohexylamines. Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: arylcyclohexylamines. Expected effect: dissociative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

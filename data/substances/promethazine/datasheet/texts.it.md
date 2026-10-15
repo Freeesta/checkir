@@ -6,7 +6,7 @@ Prometazina, N,N-dimethyl-1-phenothiazin-10-ylpropan-2-amine. Formula C17H20N2S,
 
 ## category
 
-Classe chimica: derivato della fenotiazina con azione antistaminica, sedativa e antiemetica (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:promethazine-label] [f:checkir-classification]
+Classe chimica: derivato della fenotiazina con azione antistaminica, sedativa e antiemetica (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. [f:promethazine-label] [f:checkir-classification]
 
 ## origin
 

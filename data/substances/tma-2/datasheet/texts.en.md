@@ -6,7 +6,7 @@ An amphetamine with methoxy groups on positions 2, 4 and 5 of the phenyl ring. [
 
 ## category
 
-Chemical class: amphetamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

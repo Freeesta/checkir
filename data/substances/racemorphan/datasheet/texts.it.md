@@ -6,7 +6,7 @@ Racemorfano, (±)-3-idrossi-17-metilmorfinano. Formula C17H23NO, 257.37 g/mol, C
 
 ## category
 
-Classe chimica: morfinani. Effetto atteso: oppioide, perché uno dei suoi due componenti, il levorfanolo, è un forte agonista oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:prommer2007] [f:checkir-classification]
+Classe chimica: morfinani. Effetto atteso: oppioide, perché uno dei suoi due componenti, il levorfanolo, è un forte agonista oppioide. Ruolo tipico nei campioni: principio attivo. [f:prommer2007] [f:checkir-classification]
 
 ## history
 

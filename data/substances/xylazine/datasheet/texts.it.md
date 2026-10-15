@@ -4,7 +4,7 @@ Xilazina (N-(2,6-dimetilfenil)-5,6-diidro-4H-1,3-tiazin-2-ammina), formula C12H1
 
 ## category
 
-Classe chimica: agonista adrenergico alfa-2, un sedativo veterinario (tra le altre sostanze). Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: adulterante farmacologico. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: agonista adrenergico alfa-2, un sedativo veterinario (tra le altre sostanze). Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: adulterante farmacologico. [f:checkir-classification]
 
 ## history
 

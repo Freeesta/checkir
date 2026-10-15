@@ -8,7 +8,7 @@ La struttura non ha carbonili e ha un'ammina terziaria; un sale (il cloridrato) 
 
 ## category
 
-Classe chimica: arilcicloesilammine (tipo fenciclidina). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: arilcicloesilammine (tipo fenciclidina). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

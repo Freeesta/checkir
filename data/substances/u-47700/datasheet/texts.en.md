@@ -4,7 +4,7 @@ U-47700, 3,4-dichloro-N-[(1R,2R)-2-(dimethylamino)cyclohexyl]-N-methylbenzamide.
 
 ## category
 
-Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances in the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 It is a non-fentanyl synthetic opioid, one of the «U compounds». [f:giorgetti2024]
 

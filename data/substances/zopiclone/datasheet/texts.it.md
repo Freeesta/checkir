@@ -7,7 +7,7 @@ Una ciclopirrolone: un carbammato della 4-metilpiperazina su un anello pirrolopi
 
 ## category
 
-Classe chimica: altre (ciclopirrolone, un cosiddetto farmaco Z). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:becquemont1999] [f:checkir-classification]
+Classe chimica: altre (ciclopirrolone, un cosiddetto farmaco Z). Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:becquemont1999] [f:checkir-classification]
 
 
 ## history

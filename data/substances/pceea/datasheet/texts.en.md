@@ -4,7 +4,7 @@ PCEEA, N-(2-ethoxyethyl)-1-phenylcyclohexan-1-amine (N-(1-phenylcyclohexyl)-2-et
 
 ## category
 
-Chemical class: arylcyclohexylamines (UNODC grouping). Expected effect: dissociative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: arylcyclohexylamines (UNODC grouping). Expected effect: dissociative. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

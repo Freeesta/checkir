@@ -4,7 +4,7 @@ Sunifiram (DM235), 1-(4-benzoylpiperazin-1-yl)propan-1-one. Formula C14H18N2O2, 
 
 ## category
 
-Chemical class: other substances. It is a piperazine-based cognition enhancer (nootropic) of the piracetam type, and no family sheet covers it. checkir has no class for cognition enhancers, so the effect class is a placeholder, not a statement. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:gualtieri2015] [f:checkir-classification]
+Chemical class: other substances. It is a piperazine-based cognition enhancer (nootropic) of the piracetam type, and no family sheet covers it. checkir has no class for cognition enhancers, so the effect class is a placeholder, not a statement. Typical role in samples: active principle. [f:gualtieri2015] [f:checkir-classification]
 
 ## origin
 

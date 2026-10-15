@@ -6,7 +6,7 @@ It belongs to the thienobenzodiazepine class. [f:olanzapine-label]
 
 ## category
 
-Chemical class: atypical antipsychotic, thienobenzodiazepine (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:olanzapine-label] [f:checkir-classification]
+Chemical class: atypical antipsychotic, thienobenzodiazepine (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. [f:olanzapine-label] [f:checkir-classification]
 
 ## origin
 

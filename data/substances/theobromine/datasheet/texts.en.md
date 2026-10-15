@@ -4,7 +4,7 @@ Theobromine, 3,7-dimethylpurine-2,6-dione. Formula C7H8N4O2, 180.16 g/mol, CAS 8
 
 ## category
 
-Chemical class: methylxanthine alkaloid, like caffeine (grouped here under other substances); no family sheet is attached. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:cova2019] [f:checkir-classification]
+Chemical class: methylxanthine alkaloid, like caffeine (grouped here under other substances); no family sheet is attached. Expected effect: stimulant. Typical role in samples: active principle. [f:cova2019] [f:checkir-classification]
 
 In animal studies an acute exposure to theobromine has a smaller and delayed effect than caffeine. [f:cova2019]
 

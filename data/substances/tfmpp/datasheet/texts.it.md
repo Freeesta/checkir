@@ -6,7 +6,7 @@ TFMPP, 1-[3-(trifluorometil)fenil]piperazina. Formula C11H13F3N2, 230.23 g/mol. 
 
 ## category
 
-Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: piperazine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

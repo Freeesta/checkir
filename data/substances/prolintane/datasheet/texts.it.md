@@ -6,7 +6,7 @@ Prolintano, 1-(1-fenilpentan-2-il)pirrolidina. Formula C15H23N, 217.35 g/mol, CA
 
 ## category
 
-Classe chimica: fenetilamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenetilamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

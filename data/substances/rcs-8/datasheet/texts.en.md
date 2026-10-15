@@ -4,7 +4,7 @@ RCS-8, 1-[1-(2-cyclohexylethyl)indol-3-yl]-2-(2-methoxyphenyl)ethanone. Base: C2
 
 ## category
 
-Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannabinoid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

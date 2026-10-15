@@ -4,7 +4,7 @@ Paracetamol (N-(4-hydroxyphenyl)acetamide), formula C8H9NO2, molar mass 151.16 g
 
 ## category
 
-Chemical class: analgesic (non-opioid, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. This classification is a checkir proposal awaiting review. [f:checkir-classification]
+Chemical class: analgesic (non-opioid, grouped under non-psychoactive substances). Expected effect: no psychoactive effect expected. Typical role in samples: pharmacological adulterant. [f:checkir-classification]
 
 ## metabolism
 

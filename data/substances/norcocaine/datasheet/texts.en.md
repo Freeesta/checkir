@@ -6,7 +6,7 @@ It is cocaine (own sheet) without the methyl on the nitrogen, which stays a seco
 
 ## category
 
-Chemical class: Tropane esters (cocaine). Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: Tropane esters (cocaine). Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Pravadolina (WIN 48,098), (4-metossifenil)-[2-metil-1-(2-morfolin-4-iletil)indol
 
 ## category
 
-Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

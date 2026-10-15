@@ -4,7 +4,7 @@ Pentobarbital, 5-ethyl-5-pentan-2-yl-1,3-diazinane-2,4,6-trione. Formula C11H18N
 
 ## category
 
-Chemical class: other substances. It is a barbiturate, and no family sheet covers barbiturates, so none is attached. Expected effect: central nervous system depressant (sedative-hypnotic). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:pentobarbital-label] [f:checkir-classification]
+Chemical class: other substances. It is a barbiturate, and no family sheet covers barbiturates, so none is attached. Expected effect: central nervous system depressant (sedative-hypnotic). Typical role in samples: active principle. [f:pentobarbital-label] [f:checkir-classification]
 
 ## origin
 
