@@ -4,7 +4,7 @@ Ethyleneoxynitazene, 2-[2-(2,3-diidro-1-benzofuran-5-ilmetil)-5-nitrobenzimidazo
 
 ## category
 
-Classe chimica: nitazeni (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: nitazeni (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

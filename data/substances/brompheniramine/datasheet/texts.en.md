@@ -4,7 +4,7 @@ Brompheniramine, 3-(4-bromophenyl)-N,N-dimethyl-3-pyridin-2-ylpropan-1-amine. Fo
 
 ## category
 
-Chemical class: alkylamine-type H1 antihistamine (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:hansen1995] [f:checkir-classification]
+Chemical class: alkylamine-type H1 antihistamine (grouped here under other substances); no family sheet is attached. Expected effect: depressant or sedative. Typical role in samples: active principle. [f:hansen1995] [f:checkir-classification]
 
 ## origin
 

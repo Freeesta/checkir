@@ -4,7 +4,7 @@ FUB-NPB-22, 1-[(4-fluorofenil)metil]indazol-3-carbossilato di chinolin-8-ile. Ba
 
 ## category
 
-Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: cannabinoidi sintetici (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

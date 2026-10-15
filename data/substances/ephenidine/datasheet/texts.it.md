@@ -4,7 +4,7 @@ Efenidina, N-ethyl-1,2-diphenylethanamine. Formula C16H19N, 225.33 g/mol, CAS 60
 
 ## category
 
-Classe chimica: altre (diarilletilammine, una classe dissociativa distinta dalle arilcicloesilammine). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre (diarilletilammine, una classe dissociativa distinta dalle arilcicloesilammine). Effetto atteso: dissociativo. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 

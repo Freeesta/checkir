@@ -4,7 +4,7 @@ Difenidramina, 2-benzhydryloxy-N,N-dimethylethanamine. Formula C17H21NO, 255.35 
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata una scheda di famiglia. È un antistaminico da banco molto usato, con effetto sedativo. L'asse degli effetti non ha una classe antistaminica: «depressore/sedativo» è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: adulterante farmacologico, come taglio dell'eroina. [f:akutsu2006] [f:lockwood2021] [f:checkir-classification]
+Classe chimica: altre sostanze; non è collegata una scheda di famiglia. È un antistaminico da banco molto usato, con effetto sedativo. L'asse degli effetti non ha una classe antistaminica: «depressore/sedativo» è una classificazione di checkir. Ruolo tipico nei campioni: adulterante farmacologico, come taglio dell'eroina. [f:akutsu2006] [f:lockwood2021] [f:checkir-classification]
 
 ## origin
 

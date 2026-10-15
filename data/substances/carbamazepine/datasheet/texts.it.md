@@ -4,7 +4,7 @@ Carbamazepina, benzo[b][1]benzazepine-11-carboxamide. Formula C15H12N2O, 236.27 
 
 ## category
 
-Classe chimica: altre sostanze. È un antiepilettico (carbossammide dibenzazepinica) usato anche per la nevralgia del trigemino. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:tegretol-label] [f:checkir-classification]
+Classe chimica: altre sostanze. È un antiepilettico (carbossammide dibenzazepinica) usato anche per la nevralgia del trigemino. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. [f:tegretol-label] [f:checkir-classification]
 
 ## origin
 

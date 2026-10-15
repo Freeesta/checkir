@@ -4,7 +4,7 @@ Dimetilsolfone, detto anche metilsulfonilmetano o MSM (metilsulfonilmetano), for
 
 ## category
 
-Classe chimica: composto organico dello zolfo (tra le altre sostanze). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: composto organico dello zolfo (tra le altre sostanze). Effetto atteso: nessun effetto psicoattivo atteso. Ruolo tipico nei campioni: diluente. [f:checkir-classification]
 
 ## metabolism
 

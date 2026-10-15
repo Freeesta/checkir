@@ -4,7 +4,7 @@ Ethyleneoxynitazene, 2-[2-(2,3-dihydro-1-benzofuran-5-ylmethyl)-5-nitrobenzimida
 
 ## category
 
-Chemical class: nitazenes (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: nitazenes (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

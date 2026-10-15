@@ -8,7 +8,7 @@ Analogues that one band cannot tell apart: DOC belongs to the 2,5-dimethoxy-4-su
 
 ## category
 
-Chemical class: amphetamines (2,4,5-ring-substituted). Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines (2,4,5-ring-substituted). Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

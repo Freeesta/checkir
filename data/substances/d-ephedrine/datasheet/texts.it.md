@@ -8,7 +8,7 @@ La monografia SWGDRUG intitolata d-Ephedrine descrive l'enantiomero (1S,2R); le 
 
 ## category
 
-Classe chimica: amfetamine, come per la scheda ephedrine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: amfetamine, come per la scheda ephedrine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

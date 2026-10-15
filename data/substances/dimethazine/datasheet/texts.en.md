@@ -4,7 +4,7 @@ Dimethazine, (2R,3E,5S,8R,9S,10S,13S,14S,17S)-3-[(E)-[(2R,5S,8R,9S,10S,13S,14S,1
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. It is a designer anabolic steroid. The effect axis has no steroid class: "no psychoactive effect expected" is a checkir proposal awaiting review. Typical role in samples: active principle. [f:geldof2016] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. It is a designer anabolic steroid. The effect axis has no steroid class: "no psychoactive effect expected" is a checkir classification. Typical role in samples: active principle. [f:geldof2016] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Bentazepam, 5-phenyl-1,3,6,7,8,9-hexahydro-[1]benzothiolo[2,3-e][1,4]diazepin-2-
 
 ## category
 
-Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. È una tienodiazepina, non una benzodiazepina in senso stretto. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: benzodiazepine. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. È una tienodiazepina, non una benzodiazepina in senso stretto. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

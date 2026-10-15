@@ -8,7 +8,7 @@ La butilone è un derivato della metilone con la catena del carbonio α più lun
 
 ## category
 
-Classe chimica: catinoni sintetici. Effetto atteso: stimolante, entactogeno. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: catinoni sintetici. Effetto atteso: stimolante, entactogeno. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

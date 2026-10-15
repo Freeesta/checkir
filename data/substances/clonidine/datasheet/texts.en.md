@@ -4,7 +4,7 @@ Clonidine, N-(2,6-dichlorophenyl)-4,5-dihydro-1H-imidazol-2-amine. Formula C9H9C
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The label describes clonidine as a centrally acting alpha-agonist hypotensive agent, an imidazoline derivative. The effect axis has no antihypertensive class: "depressant/sedative" is a checkir proposal awaiting review. Typical role in samples: active principle. [f:catapres-tts-label] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The label describes clonidine as a centrally acting alpha-agonist hypotensive agent, an imidazoline derivative. The effect axis has no antihypertensive class: "depressant/sedative" is a checkir classification. Typical role in samples: active principle. [f:catapres-tts-label] [f:checkir-classification]
 
 ## origin
 

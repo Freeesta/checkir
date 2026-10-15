@@ -4,7 +4,7 @@ Flubromazolam, 8-bromo-6-(2-fluorofenil)-1-metil-4H-[1,2,4]triazolo[4,3-a][1,4]b
 
 ## category
 
-Classe chimica: benzodiazepine del raggruppamento UNODC. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: benzodiazepine del raggruppamento UNODC. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 È una benzodiazepina di design molto potente. [f:huppertz2018]
 

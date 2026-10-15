@@ -8,7 +8,7 @@ Analoghi non distinguibili da una sola banda: il DOI appartiene alle anfetamine 
 
 ## category
 
-Classe chimica: anfetamine (anello sostituito in 2,4,5), serie DOx. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:palamar2025] [f:checkir-classification]
+Classe chimica: anfetamine (anello sostituito in 2,4,5), serie DOx. Effetto atteso: psichedelico. Ruolo tipico nei campioni: principio attivo. [f:palamar2025] [f:checkir-classification]
 
 ## history
 

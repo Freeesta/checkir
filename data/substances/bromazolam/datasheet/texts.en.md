@@ -8,7 +8,7 @@ Some bands labelled in the ATR (diamond) spectrum of the SWGDRUG monograph: 3098
 
 ## category
 
-Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. It is a designer benzodiazepine (a non-pharmaceutical triazolobenzodiazepine). [f:unodc-ewa] [f:checkir-classification]
+Chemical class: benzodiazepines. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. It is a designer benzodiazepine (a non-pharmaceutical triazolobenzodiazepine). [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

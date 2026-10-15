@@ -4,7 +4,7 @@ Furanyl UF-17, N-[2-(dimethylamino)cyclohexyl]-N-phenylfuran-2-carboxamide. Base
 
 ## category
 
-Chemical class: other substances. It is not a fentanyl analogue: its core is a 2-(dimethylamino)cyclohexyl amide of the U-series type (U-47700), so no family sheet is attached. Expected effect: opioid by structural relation to the U-series, although the source reports no pharmacological activity. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:baumann2020] [f:checkir-classification]
+Chemical class: other substances. It is not a fentanyl analogue: its core is a 2-(dimethylamino)cyclohexyl amide of the U-series type (U-47700), so no family sheet is attached. Expected effect: opioid by structural relation to the U-series, although the source reports no pharmacological activity. Typical role in samples: active principle. [f:baumann2020] [f:checkir-classification]
 
 ## history
 

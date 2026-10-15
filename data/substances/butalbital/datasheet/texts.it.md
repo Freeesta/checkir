@@ -4,7 +4,7 @@ Butalbital, 5-(2-methylpropyl)-5-prop-2-enyl-1,3-diazinane-2,4,6-trione. Formula
 
 ## category
 
-Classe chimica: altre sostanze. È un barbiturico commercializzato in associazione con paracetamolo e caffeina per la cefalea tensiva. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:butalbital-label] [f:checkir-classification]
+Classe chimica: altre sostanze. È un barbiturico commercializzato in associazione con paracetamolo e caffeina per la cefalea tensiva. Effetto atteso: depressore del sistema nervoso centrale (sedativo). Ruolo tipico nei campioni: principio attivo. [f:butalbital-label] [f:checkir-classification]
 
 ## origin
 

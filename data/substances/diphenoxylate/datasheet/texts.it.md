@@ -4,7 +4,7 @@ Difenossilato, ethyl 1-(3-cyano-3,3-diphenylpropyl)-4-phenylpiperidine-4-carboxy
 
 ## category
 
-Classe chimica: altre sostanze. Nessuna scheda di famiglia copre gli oppioidi sintetici non fentanilici, quindi non ne è collegata nessuna. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:checkir-classification]
+Classe chimica: altre sostanze. Nessuna scheda di famiglia copre gli oppioidi sintetici non fentanilici, quindi non ne è collegata nessuna. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:checkir-classification]
 
 ## origin
 

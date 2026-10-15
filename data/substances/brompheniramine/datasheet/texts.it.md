@@ -4,7 +4,7 @@ Bromfeniramina, 3-(4-bromophenyl)-N,N-dimethyl-3-pyridin-2-ylpropan-1-amine. For
 
 ## category
 
-Classe chimica: antistaminico H1 di tipo alchilamminico (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:hansen1995] [f:checkir-classification]
+Classe chimica: antistaminico H1 di tipo alchilamminico (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Effetto atteso: depressore o sedativo. Ruolo tipico nei campioni: principio attivo. [f:hansen1995] [f:checkir-classification]
 
 ## origin
 

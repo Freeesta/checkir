@@ -4,7 +4,7 @@ Buprenorphine, (1S,2S,6R,14R,15R,16R)-5-(cyclopropylmethyl)-16-[(2S)-2-hydroxy-3
 
 ## category
 
-Chemical class: morphinans, among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: morphinans, among the plant-based substances of the UNODC grouping. Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

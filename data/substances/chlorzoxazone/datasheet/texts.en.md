@@ -4,7 +4,7 @@ Chlorzoxazone, 5-chloro-3H-1,3-benzoxazol-2-one. Formula C7H4ClNO2, 169.56 g/mol
 
 ## category
 
-Chemical class: other substances. It is a centrally acting skeletal muscle relaxant (benzoxazolone). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:chlorzoxazone-label] [f:checkir-classification]
+Chemical class: other substances. It is a centrally acting skeletal muscle relaxant (benzoxazolone). Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:chlorzoxazone-label] [f:checkir-classification]
 
 ## origin
 

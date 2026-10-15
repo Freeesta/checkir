@@ -4,7 +4,7 @@ Furanil UF-17, N-[2-(dimethylamino)cyclohexyl]-N-phenylfuran-2-carboxamide. Base
 
 ## category
 
-Classe chimica: altre sostanze. Non è un analogo del fentanil: il suo nucleo è un'ammide 2-(dimetilammino)cicloesilica del tipo della serie U (U-47700), quindi non ha una scheda di famiglia. Effetto atteso: oppioide per parentela strutturale con la serie U, anche se la fonte non riporta attività farmacologica. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:baumann2020] [f:checkir-classification]
+Classe chimica: altre sostanze. Non è un analogo del fentanil: il suo nucleo è un'ammide 2-(dimetilammino)cicloesilica del tipo della serie U (U-47700), quindi non ha una scheda di famiglia. Effetto atteso: oppioide per parentela strutturale con la serie U, anche se la fonte non riporta attività farmacologica. Ruolo tipico nei campioni: principio attivo. [f:baumann2020] [f:checkir-classification]
 
 ## history
 

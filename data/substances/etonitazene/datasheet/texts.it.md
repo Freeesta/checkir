@@ -4,7 +4,7 @@ Etonitazene, 2-[2-[(4-etossifenil)metil]-5-nitrobenzimidazol-1-il]-N,N-dietileta
 
 ## category
 
-Classe chimica: nitazeni (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: nitazeni (raggruppamento UNODC). Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

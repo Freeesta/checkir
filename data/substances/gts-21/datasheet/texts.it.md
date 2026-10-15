@@ -6,7 +6,7 @@ GTS-21, 3-[(5E)-5-[(2,4-dimethoxyphenyl)methylidene]-3,4-dihydro-2H-pyridin-6-yl
 
 ## category
 
-Classe chimica: agonista parziale del recettore nicotinico α7 dell'acetilcolina, studiato come potenziatore cognitivo (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Checkir non ha una classe per essa, quindi la classe d'effetto è un segnaposto, non un'affermazione. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:kim2007-gts21] [f:checkir-classification]
+Classe chimica: agonista parziale del recettore nicotinico α7 dell'acetilcolina, studiato come potenziatore cognitivo (qui tra le altre sostanze); nessuna scheda di famiglia collegata. Checkir non ha una classe per essa, quindi la classe d'effetto è un segnaposto, non un'affermazione. Effetto atteso: nessuno psicoattivo. Ruolo tipico nei campioni: principio attivo. [f:kim2007-gts21] [f:checkir-classification]
 
 ## origin
 

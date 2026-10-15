@@ -8,7 +8,7 @@ Bands (ATR, diamond): the lactone C=O at 1762 cm-1 (1770 cm-1 neat between KBr d
 
 ## category
 
-Chemical class: other substances. Expected effect: depressant/sedative (as a pro-drug of GHB). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances. Expected effect: depressant/sedative (as a pro-drug of GHB). Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

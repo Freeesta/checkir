@@ -6,7 +6,7 @@ Destroanfetamina, (2S)-1-fenilpropan-2-ammina. Base: C9H13N, 135.2 g/mol, CAS 51
 
 ## category
 
-Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: anfetamine. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Cathine ((+)-norpseudoephedrine), (1S,2S)-2-amino-1-phenylpropan-1-ol. Base: C9H
 
 ## category
 
-Chemical class: plant-based substances (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: plant-based substances (UNODC grouping). Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

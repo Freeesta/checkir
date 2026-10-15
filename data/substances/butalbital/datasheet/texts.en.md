@@ -4,7 +4,7 @@ Butalbital, 5-(2-methylpropyl)-5-prop-2-enyl-1,3-diazinane-2,4,6-trione. Formula
 
 ## category
 
-Chemical class: other substances. It is a barbiturate marketed in combination with acetaminophen and caffeine for tension headache. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:butalbital-label] [f:checkir-classification]
+Chemical class: other substances. It is a barbiturate marketed in combination with acetaminophen and caffeine for tension headache. Expected effect: central nervous system depressant (sedative). Typical role in samples: active principle. [f:butalbital-label] [f:checkir-classification]
 
 ## origin
 

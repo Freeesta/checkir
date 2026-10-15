@@ -4,7 +4,7 @@ Etodesnitazene, 2-[2-[(4-ethoxyphenyl)methyl]benzimidazol-1-yl]-N,N-diethylethan
 
 ## category
 
-Chemical class: nitazenes (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: nitazenes (UNODC grouping). Expected effect: opioid. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

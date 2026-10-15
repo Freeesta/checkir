@@ -4,7 +4,7 @@ Ciclobenzaprina, N,N-dimethyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,9,1
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive un miorilassante scheletrico strettamente imparentato con gli antidepressivi triciclici; negli animali ha mostrato sedazione ed effetti anticolinergici come questi. L'asse degli effetti non ha una classe miorilassante: «depressore/sedativo» è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:cyclobenzaprine-label] [f:checkir-classification]
+Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive un miorilassante scheletrico strettamente imparentato con gli antidepressivi triciclici; negli animali ha mostrato sedazione ed effetti anticolinergici come questi. L'asse degli effetti non ha una classe miorilassante: «depressore/sedativo» è una classificazione di checkir. Ruolo tipico nei campioni: principio attivo. [f:cyclobenzaprine-label] [f:checkir-classification]
 
 ## origin
 

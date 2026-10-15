@@ -8,7 +8,7 @@ Analogues not told apart by a single band: DOI belongs to the 2,5-dimethoxy-4-su
 
 ## category
 
-Chemical class: amphetamines (ring substituted at 2,4,5), DOx series. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:palamar2025] [f:checkir-classification]
+Chemical class: amphetamines (ring substituted at 2,4,5), DOx series. Expected effect: psychedelic. Typical role in samples: active principle. [f:palamar2025] [f:checkir-classification]
 
 ## history
 

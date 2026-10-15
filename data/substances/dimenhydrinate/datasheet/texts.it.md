@@ -4,7 +4,7 @@ Dimenidrinato, 2-benzhydryloxy-N,N-dimethylethanamine;8-chloro-1,3-dimethyl-7H-p
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata una scheda di famiglia. È il sale di difenidramina e 8-clorotefillina (vedi la scheda della difenidramina). L'asse degli effetti non ha una classe antistaminica: «depressore/sedativo» segue la difenidramina ed è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:ehling2019] [f:akutsu2006] [f:checkir-classification]
+Classe chimica: altre sostanze; non è collegata una scheda di famiglia. È il sale di difenidramina e 8-clorotefillina (vedi la scheda della difenidramina). L'asse degli effetti non ha una classe antistaminica: «depressore/sedativo» segue la difenidramina ed è una classificazione di checkir. Ruolo tipico nei campioni: principio attivo. [f:ehling2019] [f:akutsu2006] [f:checkir-classification]
 
 ## origin
 

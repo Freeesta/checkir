@@ -6,7 +6,7 @@ An N,N-dialkyltryptamine with two isopropyl groups on the nitrogen and no ring s
 
 ## category
 
-Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tryptamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Butorfanolo, (1S,9R,10S)-17-(cyclobutylmethyl)-17-azatetracyclo[7.5.3.01,10.02,7
 
 ## category
 
-Classe chimica: altre sostanze. È un analgesico oppioide sintetico agonista-antagonista, quindi non è tra i morfinani (morfina e derivati semisintetici) e non ha una scheda di famiglia. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:gillis1995] [f:checkir-classification]
+Classe chimica: altre sostanze. È un analgesico oppioide sintetico agonista-antagonista, quindi non è tra i morfinani (morfina e derivati semisintetici) e non ha una scheda di famiglia. Effetto atteso: oppioide. Ruolo tipico nei campioni: principio attivo. [f:gillis1995] [f:checkir-classification]
 
 ## origin
 

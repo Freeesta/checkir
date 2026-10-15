@@ -4,7 +4,7 @@ Etaqualone, 3-(2-ethylphenyl)-2-methylquinazolin-4-one. Formula C17H16N2O, 264.3
 
 ## category
 
-Classe chimica: altre sostanze. È un analogo del metaqualone della classe dei 4-chinazolinoni, incontrato come droga ricreativa e isomero strutturale del metilmetaqualone. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:yang2022-quinazolinones] [f:tusiewicz2024] [f:checkir-classification]
+Classe chimica: altre sostanze. È un analogo del metaqualone della classe dei 4-chinazolinoni, incontrato come droga ricreativa e isomero strutturale del metilmetaqualone. Effetto atteso: depressore / sedativo. Ruolo tipico nei campioni: principio attivo. [f:yang2022-quinazolinones] [f:tusiewicz2024] [f:checkir-classification]
 
 ## origin
 

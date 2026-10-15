@@ -12,7 +12,7 @@ Analogues and impurities: cis- and trans-cinnamoylcocaine come with cocaine; the
 
 ## category
 
-Chemical class: tropane ester, among the plant-based substances of the UNODC grouping. Expected effect: stimulant. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: tropane ester, among the plant-based substances of the UNODC grouping. Expected effect: stimulant. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 

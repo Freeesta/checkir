@@ -4,7 +4,7 @@ Doxepina, 3-(6H-benzo[c][1]benzoxepin-11-ylidene)-N,N-dimethylpropan-1-amine. Fo
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive compresse di doxepina indicate per l'insonnia con difficoltà di mantenimento del sonno. L'asse degli effetti non ha una classe ipnotica: «depressore/sedativo» è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:silenor-label] [f:checkir-classification]
+Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive compresse di doxepina indicate per l'insonnia con difficoltà di mantenimento del sonno. L'asse degli effetti non ha una classe ipnotica: «depressore/sedativo» è una classificazione di checkir. Ruolo tipico nei campioni: principio attivo. [f:silenor-label] [f:checkir-classification]
 
 ## origin
 

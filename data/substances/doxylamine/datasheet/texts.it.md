@@ -4,7 +4,7 @@ Doxilamina, N,N-dimethyl-2-(1-phenyl-1-pyridin-2-ylethoxy)ethanamine. Formula C1
 
 ## category
 
-Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive il succinato di doxilamina come un antistaminico, derivato dell'etanolammina. L'asse degli effetti non ha una classe antistaminica: «depressore/sedativo» è una proposta di checkir in attesa di revisione. Ruolo tipico nei campioni: principio attivo. [f:diclegis-label] [f:checkir-classification]
+Classe chimica: altre sostanze; non è collegata una scheda di famiglia. L'etichetta descrive il succinato di doxilamina come un antistaminico, derivato dell'etanolammina. L'asse degli effetti non ha una classe antistaminica: «depressore/sedativo» è una classificazione di checkir. Ruolo tipico nei campioni: principio attivo. [f:diclegis-label] [f:checkir-classification]
 
 ## origin
 

@@ -4,7 +4,7 @@ Cannabinolo (CBN), 6,6,9-trimetil-3-pentilbenzo[c]cromen-1-olo. Base: C21H26O2, 
 
 ## category
 
-Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: sostanze di origine vegetale (raggruppamento UNODC). Effetto atteso: cannabinoide. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## history
 
