@@ -108,6 +108,7 @@ function begin(list, ctx, gesture, pointerId) {
 /** Stops the click that ends a drag and the context menu of a touch gesture. @param {HTMLElement} list @param {() => boolean} touching @returns {() => void} `hold`: the next click is the end of a drag, swallow it */
 function guardEvents(list, touching) {
   let suppress = false;
+  list.addEventListener("pointerdown", () => (suppress = false), true);
   list.addEventListener("click", (e) => {
     if (!suppress) return;
     e.stopPropagation();
