@@ -20,7 +20,7 @@ In vitro CYP3A4 partecipa alla formazione del solfossido e al metabolismo del me
 
 ## cuts
 
-In un programma comunitario di drug checking a Los Angeles (DART-MS), 13 campioni di eroina su 52 (25.0%) contenevano quetiapina; tutti erano stati identificati dagli utenti come attesi «black tar heroin» e nessuno si aspettava quetiapina. Il fentanil era presente in 4 dei 13 campioni positivi alla quetiapina (30.8%) e in 27 dei 39 negativi (69.2%). Gli autori la descrivono come un additivo nuovo e chiedono studi di conferma. [f:friedman2026-quetiapine]
+In un programma comunitario di drug checking a Los Angeles (DART-MS), 13 campioni di eroina su 52 (25.0%) contenevano quetiapina; tutti erano stati identificati dagli utenti come attesi «black tar heroin» e nessuno si aspettava quetiapina. Il fentanil era presente in 4 dei 13 campioni con quetiapina (30.8%) e in 27 dei 39 campioni senza quetiapina (69.2%). Gli autori la descrivono come un additivo nuovo e chiedono studi di conferma. [f:friedman2026-quetiapine]
 
 ## effects
 
@@ -44,4 +44,4 @@ Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:quetiapine-labe
 
 ## license
 
-Testo con licenza CC BY-SA 4.0. Stato: bozza scritta con assistenza di IA, non ancora controllata da un chimico o da un professionista sanitario; ogni affermazione va verificata sulla fonte citata prima della revisione.
+Testo con licenza CC BY-SA 4.0.

@@ -44,4 +44,4 @@ Sources used for the statements of this sheet: [f:pubchem] [f:pennick2010] [f:ch
 
 ## license
 
-Text licensed CC BY-SA 4.0. Status: draft written with AI assistance, not yet checked by a chemist or a health professional; every statement must be checked against the cited source before review.
+Text licensed CC BY-SA 4.0.

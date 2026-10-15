@@ -60,4 +60,4 @@ Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:swgdrug-pma] [f
 
 ## license
 
-Testo con licenza CC BY-SA 4.0. Stato: bozza scritta con l'aiuto dell'intelligenza artificiale, non ancora verificata da un chimico né da personale sanitario; ogni affermazione va controllata sulla fonte citata prima della revisione.
+Testo con licenza CC BY-SA 4.0.

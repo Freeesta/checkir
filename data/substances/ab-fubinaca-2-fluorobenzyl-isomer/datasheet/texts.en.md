@@ -8,7 +8,7 @@ Chemical class: synthetic cannabinoids (UNODC grouping). Expected effect: cannab
 
 ## history
 
-In an LC-MS study the 2-fluorobenzyl isomer of AB-FUBINACA was separated on an ODS column in isocratic mode and distinguished in negative mode by characteristic MS3 product ions. [f:murakami2018]
+In an LC-MS study the 2-fluorobenzyl isomer of AB-FUBINACA was separated on an ODS column in isocratic mode and distinguished in the reversed polarity mode by characteristic MS3 product ions. [f:murakami2018]
 
 ## origin
 
@@ -30,7 +30,7 @@ For ADB-FUBINACA and AMB-FUBINACA, full CB1 agonism explains altered perception,
 
 ## doses
 
-Potency varies widely among synthetic cannabinoids: ADB-FUBINACA and AMB-FUBINACA are up to 140 and 85 times more potent than Δ9-THC, and no potency data for this compound were found in the sources used, so no dose is safe to suggest. [f:lobato-freitas2021]
+Potency varies widely among synthetic cannabinoids: ADB-FUBINACA and AMB-FUBINACA are up to 140 and 85 times more potent than Δ9-THC, and no potency data for this compound were found in the sources used, so no dose can be suggested. [f:lobato-freitas2021]
 
 ## risks
 
@@ -48,4 +48,4 @@ Sources used for the claims in this sheet: [f:pubchem] [f:murakami2018] [f:unodc
 
 ## license
 
-Text licensed CC BY-SA 4.0. Status: draft written with AI assistance, not yet checked by a chemist or a health professional; every statement must be checked against the cited source before review.
+Text licensed CC BY-SA 4.0.

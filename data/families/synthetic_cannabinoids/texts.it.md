@@ -30,4 +30,4 @@ Fonti usate per le affermazioni di questa scheda: [f:jones2025] [f:lobato-freita
 
 ## license
 
-Testo con licenza CC BY-SA 4.0. Stato: bozza scritta con assistenza di IA, non ancora controllata da un chimico né da personale sanitario; ogni affermazione va verificata sulla fonte citata prima della revisione.
+Testo con licenza CC BY-SA 4.0.

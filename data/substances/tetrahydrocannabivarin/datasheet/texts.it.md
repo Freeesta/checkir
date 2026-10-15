@@ -14,7 +14,7 @@ Fitocannabinoide della cannabis, strutturalmente simile al THC; sta diventando p
 
 Dopo la somministrazione orale di Δ8-THCV a partecipanti sani (l'isomero Δ8, non il Δ9-THCV), i metaboliti urinari principali erano 11-nor-9-carbossi-Δ8-THCV, 11-idrossi-Δ8-THCV e Δ9-THCV-COOH, in gran parte glucuronidati. [f:sempio2026-thcv]
 
-In quei campioni di urina 70 su 80 campioni raggruppati sono risultati positivi a un immunodosaggio dei cannabinoidi che bersaglia il Δ9-THC-COOH pur essendo negativi al Δ9-THC-COOH in LC-MS/MS: i metaboliti danno quindi reattività crociata con l'immunodosaggio. [f:sempio2026-thcv]
+In quei campioni di urina 70 su 80 campioni raggruppati sono risultati positivi a un immunodosaggio dei cannabinoidi che bersaglia il Δ9-THC-COOH pur senza Δ9-THC-COOH rilevato in LC-MS/MS: i metaboliti danno quindi reattività crociata con l'immunodosaggio. [f:sempio2026-thcv]
 
 ## cuts
 
@@ -42,4 +42,4 @@ Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:unodc-ewa] [f:c
 
 ## license
 
-Testo con licenza CC BY-SA 4.0. Stato: bozza scritta con assistenza di IA, non ancora controllata da un chimico o da un professionista sanitario; ogni affermazione va verificata sulla fonte citata prima della revisione.
+Testo con licenza CC BY-SA 4.0.

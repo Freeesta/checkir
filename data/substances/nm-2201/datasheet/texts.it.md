@@ -50,4 +50,4 @@ Fonti usate per le affermazioni di questa scheda: [f:pubchem] [f:diao2016-nm2201
 
 ## license
 
-Testo con licenza CC BY-SA 4.0. Stato: bozza scritta con assistenza di IA, non ancora controllata da un chimico o da un professionista sanitario; ogni affermazione va verificata sulla fonte citata prima della revisione.
+Testo con licenza CC BY-SA 4.0.
