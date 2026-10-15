@@ -14,7 +14,7 @@ import { STORAGE_PREFIX } from "./appname.js";
  * @typedef {{ refs: Recalled[], mode: "overlay" | "offset" | "difference", scale: "raw" | "max" | "area" | "lsq", offset: number, current: number }} RecallState
  * @typedef {{ id: string, name: string }} Offer
  * @typedef {{ supported: boolean, watching: boolean, folderName: string | null, saved: string | null, remember: boolean, auto: boolean, offers: Offer[], notice: Notice | null }} FolderState
- * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, terms?: { it: string | null, en: string } | null, private: boolean, label: string, enabled: boolean, sampling: string | null }} LibraryEntry
+ * @typedef {{ id: string, version: string, spectra: number, license: string, attribution: { it: string | null, en: string }, terms?: { it: string | null, en: string } | null, private: boolean, label: string, enabled: boolean, sampling: string | null, loaded?: boolean }} LibraryEntry
  * @typedef {{ done: number, total: number, name: string }} LibraryJob
  * One comparison: `data` is the `ftir-risultato-confronto/1` document, `code` the spectrum it was run on, `sig` the libraries searched.
  * @typedef {{ code: string, data: any, sig: string }} MatchResult

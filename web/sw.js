@@ -6,16 +6,17 @@ const CACHE = ID + "-v" + VERSION;
 const LIBRARIES = "librerie/";
 const FILES = []; // precache list: written into site/sw.js by the build (tools/versione_sw.mjs); never edit it
 
-/** Library packages named by the general manifest: cached on install so the libraries work offline. A failure here never blocks the install. */
+/** The libraries that are on by default, named by the general manifest: their files (asked with `?v=`, the way the page asks) are cached on install so they work offline. A library that is off is fetched when it is switched on. A failure here never blocks the install. */
 async function cacheLibraries(cache) {
   try {
     const res = await fetch(LIBRARIES + "libraries.json", { cache: "reload" });
     if (!res.ok) return;
     await cache.put(LIBRARIES + "libraries.json", res.clone());
     for (const lib of (await res.json()).libraries ?? []) {
-      if (!/^[a-z0-9-]+$/.test(String(lib.path))) continue;
-      for (const f of ["manifest.json", "index.json", "data.bin"]) await cache.add(`${LIBRARIES}${lib.path}/${f}`);
-      await cache.add(`${LIBRARIES}${lib.path}/native.bin`).catch(() => {});
+      if (!/^[a-z0-9-]+$/.test(String(lib.path)) || lib.enabled === false) continue;
+      const base = `${LIBRARIES}${lib.path}/`;
+      for (const f of ["manifest.json", "index.json", "data.bin"]) await cache.add(`${base}${f}?v=${lib.v}`);
+      await cache.add(`${base}native.bin?v=${lib.v}`).catch(() => {});
     }
   } catch {
     // offline libraries are a bonus: the page loads them from the network when it can
@@ -36,12 +37,17 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
-  if (new URL(e.request.url).pathname.includes("/" + LIBRARIES)) {
-    // Packages change with the build, not with VERSION: network first, the cached copy when offline.
-    e.respondWith(fetch(e.request).then((res) => {
+  const url = new URL(e.request.url);
+  if (url.pathname.includes("/" + LIBRARIES)) {
+    // A package file with `v` never changes (the version is in the URL): the cached copy first, the network once. The general manifest has no `v`: network first, the cached copy when offline.
+    const fresh = url.searchParams.has("v");
+    const fromNetwork = () => fetch(e.request).then((res) => {
       if (res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(e.request, copy)); }
       return res;
-    }).catch(() => caches.match(e.request).then((hit) => hit || Response.error())));
+    });
+    e.respondWith(fresh
+      ? caches.match(e.request).then((hit) => hit || fromNetwork())
+      : fromNetwork().catch(() => caches.match(e.request).then((hit) => hit || Response.error())));
     return;
   }
   e.respondWith(caches.match(e.request).then((hit) => hit || fetch(e.request)));

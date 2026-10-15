@@ -104,7 +104,7 @@ export async function inverseScenario(browser, base, check, axe) {
   check("inverse: with one band enough, those with two come before the one with a single band", partial.answers[0]?.total === 3 && partial.answers[0].hits.map((h) => h.found).join() === "2,2,1", JSON.stringify(partial));
   check("inverse: a query without bands is an error with a key", empty.answers[0]?.error_key === "peak_index.query_invalid", JSON.stringify(empty));
   const stored = await cacheFiles(page);
-  const publicCount = await page.evaluate(async () => (await (await fetch("librerie/libraries.json")).json()).libraries.length);
+  const publicCount = await page.evaluate(async () => (await (await fetch("librerie/libraries.json")).json()).libraries.filter((l) => l.enabled !== false).length);
   check("inverse: the index is kept in the cache, one file per library", stored.includes("sintetica.bin") && stored.length === publicCount + 1, JSON.stringify(stored));
   await page.reload();
   await page.waitForSelector("body[data-ready='1']");

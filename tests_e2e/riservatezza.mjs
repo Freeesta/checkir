@@ -155,7 +155,7 @@ async function canaryScenario(browser) {
   await page.waitForSelector("body[data-ready='1']");
   const after = (await storageDump(page, ctx)) + (await page.evaluate(() => document.documentElement.outerHTML));
   check("T2 (d): after a reload nothing of the sample is left", canariesIn(after).length === 0, canariesIn(after).join(", "));
-  check("T2 (d): only preferences in localStorage", await page.evaluate(() => Object.keys(localStorage).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch)$/.test(k))));
+  check("T2 (d): only preferences in localStorage", await page.evaluate(() => Object.keys(localStorage).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch|libsw\.[a-z0-9-]+)$/.test(k))));
   await ctx.close();
 }
 
