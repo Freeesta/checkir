@@ -1,0 +1,28 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "schaefer2017",
+      "type": "paper",
+      "title": "Metabolic patterns of JWH-210, RCS-4, and THC in pig urine elucidated using LC-HR-MS/MS: do they reflect patterns in humans? (Drug Test Anal 9:613-625)",
+      "authors": [
+        "N. Schaefer",
+        "A. G. Helfer",
+        "M. Kettner",
+        "M. W. Laschke",
+        "J. Schlote",
+        "A. H. Ewald",
+        "M. R. Meyer",
+        "M. D. Menger",
+        "H. H. Maurer",
+        "P. H. Schmidt"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.1995",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27328899/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

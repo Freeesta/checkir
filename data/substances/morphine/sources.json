@@ -1,0 +1,75 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "degregori2012",
+      "type": "paper",
+      "title": "Morphine metabolism, transport and brain disposition (Metab Brain Dis 27:1-5)",
+      "authors": [
+        "S. De Gregori",
+        "M. De Gregori",
+        "G. N. Ranzani",
+        "M. Allegri",
+        "C. Minella",
+        "M. Regazzi"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s11011-011-9274-6",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3276770/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "oosten2017",
+      "type": "paper",
+      "title": "A prospective population pharmacokinetic study on morphine metabolism in cancer patients (Clin Pharmacokinet 56:733-746)",
+      "authors": [
+        "A. W. Oosten",
+        "J. A. Abrantes",
+        "S. Jonsson",
+        "M. Matic",
+        "R. H. N. van Schaik",
+        "P. de Bruijn",
+        "C. C. D. van der Rijt",
+        "R. H. J. Mathijssen"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s40262-016-0471-7",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5488155/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "wittwer2006",
+      "type": "paper",
+      "title": "Role of morphine's metabolites in analgesia: concepts and controversies (AAPS J 8:E348-E352)",
+      "authors": [
+        "E. Wittwer",
+        "S. E. Kern"
+      ],
+      "year": 2006,
+      "doi": "10.1007/BF02854905",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3231567/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "ravenscroft2000",
+      "type": "paper",
+      "title": "Bedside perspectives on the use of opioids: transferring results of clinical research into practice (Clin Exp Pharmacol Physiol 27:529-532)",
+      "authors": [
+        "P. Ravenscroft",
+        "J. Schneider"
+      ],
+      "year": 2000,
+      "doi": "10.1046/j.1440-1681.2000.03293.x",
+      "url": "https://doi.org/10.1046/j.1440-1681.2000.03293.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    }
+  ]
+}

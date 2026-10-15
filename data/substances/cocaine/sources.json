@@ -1,0 +1,209 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "cami1998",
+      "type": "paper",
+      "title": "Cocaine metabolism in humans after use of alcohol. Clinical and research implications (Recent Dev Alcohol 14:437-455)",
+      "authors": [
+        "J. Cami",
+        "M. Farré",
+        "M. L. González",
+        "J. Segura",
+        "R. de la Torre"
+      ],
+      "year": 1998,
+      "doi": "10.1007/0-306-47148-5_22",
+      "url": "https://doi.org/10.1007/0-306-47148-5_22",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "iorio2024",
+      "type": "paper",
+      "title": "Cocaine- and Levamisole-Induced Vasculitis: Defining the Spectrum of Autoimmune Manifestations (J Clin Med 13(17):5116)",
+      "authors": [
+        "L. Iorio",
+        "F. Davanzo",
+        "D. Cazzador",
+        "M. Codirenzi",
+        "E. Fiorin",
+        "E. Zanatta",
+        "P. Nicolai",
+        "A. Doria",
+        "R. Padoan"
+      ],
+      "year": 2024,
+      "doi": "10.3390/jcm13175116",
+      "url": "https://doi.org/10.3390/jcm13175116",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "jeffcoat1989",
+      "type": "paper",
+      "title": "Cocaine disposition in humans after intravenous injection, nasal insufflation (snorting), or smoking (Drug Metab Dispos 17(2):153-159)",
+      "authors": [
+        "A. R. Jeffcoat",
+        "M. Perez-Reyes",
+        "J. M. Hill",
+        "B. M. Sadler",
+        "C. E. Cook"
+      ],
+      "year": 1989,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2565204/",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "cone1998",
+      "type": "paper",
+      "title": "Cocaine metabolism and urinary excretion after different routes of administration (Ther Drug Monit 20(5):556-560)",
+      "authors": [
+        "E. J. Cone",
+        "A. Tsadik",
+        "J. Oyler",
+        "W. D. Darwin"
+      ],
+      "year": 1998,
+      "doi": "10.1097/00007691-199810000-00019",
+      "url": "https://doi.org/10.1097/00007691-199810000-00019",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "preston2002",
+      "type": "paper",
+      "title": "Urinary elimination of cocaine metabolites in chronic cocaine users during cessation (J Anal Toxicol 26(7):393-400)",
+      "authors": [
+        "K. L. Preston",
+        "D. H. Epstein",
+        "E. J. Cone",
+        "A. T. Wtsadik",
+        "M. A. Huestis",
+        "E. T. Moolchan"
+      ],
+      "year": 2002,
+      "doi": "10.1093/jat/26.7.393",
+      "url": "https://doi.org/10.1093/jat/26.7.393",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "volkow1997",
+      "type": "paper",
+      "title": "Relationship between subjective effects of cocaine and dopamine transporter occupancy (Nature 386(6627):827-830)",
+      "authors": [
+        "N. D. Volkow",
+        "G. J. Wang",
+        "M. W. Fischman",
+        "R. W. Foltin",
+        "J. S. Fowler",
+        "N. N. Abumrad",
+        "S. Vitkun",
+        "J. Logan",
+        "S. J. Gatley",
+        "N. Pappas",
+        "R. Hitzemann",
+        "C. E. Shea"
+      ],
+      "year": 1997,
+      "doi": "10.1038/386827a0",
+      "url": "https://doi.org/10.1038/386827a0",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "ambre1988",
+      "type": "paper",
+      "title": "Acute tolerance to cocaine in humans (Clin Pharmacol Ther 44(1):1-8)",
+      "authors": [
+        "J. J. Ambre",
+        "S. M. Belknap",
+        "J. Nelson",
+        "T. I. Ruo",
+        "S. G. Shin",
+        "A. J. Atkinson"
+      ],
+      "year": 1988,
+      "doi": "10.1038/clpt.1988.104",
+      "url": "https://doi.org/10.1038/clpt.1988.104",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "foltin2004",
+      "type": "paper",
+      "title": "Intranasal cocaine in humans: acute tolerance, cardiovascular and subjective effects (Pharmacol Biochem Behav 78(1):93-101)",
+      "authors": [
+        "R. W. Foltin",
+        "M. Haney"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.pbb.2004.02.018",
+      "url": "https://doi.org/10.1016/j.pbb.2004.02.018",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "harris2003",
+      "type": "paper",
+      "title": "The pharmacology of cocaethylene in humans following cocaine and ethanol administration (Drug Alcohol Depend 72(2):169-182)",
+      "authors": [
+        "D. S. Harris",
+        "E. T. Everhart",
+        "J. Mendelson",
+        "R. T. Jones"
+      ],
+      "year": 2003,
+      "doi": "10.1016/s0376-8716(03)00200-x",
+      "url": "https://doi.org/10.1016/s0376-8716(03)00200-x",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "mccance-katz1993",
+      "type": "paper",
+      "title": "Concurrent cocaine-ethanol ingestion in humans: pharmacology, physiology, behavior, and the role of cocaethylene (Psychopharmacology 111(1):39-46)",
+      "authors": [
+        "E. F. McCance-Katz",
+        "L. H. Price",
+        "C. J. McDougle",
+        "T. R. Kosten",
+        "J. E. Black",
+        "P. I. Jatlow"
+      ],
+      "year": 1993,
+      "doi": "10.1007/BF02257405",
+      "url": "https://doi.org/10.1007/BF02257405",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "afonso2007",
+      "type": "paper",
+      "title": "Crack whips the heart: a review of the cardiovascular toxicity of cocaine (Am J Cardiol 100(6):1040-1043)",
+      "authors": [
+        "L. Afonso",
+        "T. Mohammad",
+        "D. Thatai"
+      ],
+      "year": 2007,
+      "doi": "10.1016/j.amjcard.2007.04.049",
+      "url": "https://doi.org/10.1016/j.amjcard.2007.04.049",
+      "tier": "review",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

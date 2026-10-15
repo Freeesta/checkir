@@ -4,6 +4,7 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { sheetKey, writtenCount } from "../web/schede.js";
 import { normalize } from "../web/nomi.js";
+import { loadAliases, loadSources } from "./unisci_dati.mjs";
 
 const root = new URL("../", import.meta.url);
 const SECTION = /^## ([a-z_]+)\s*$/;
@@ -71,14 +72,14 @@ export function bundleOf(id, datasheet, substance, texts, structure) {
 }
 
 
-/** Everything the site needs, as { relative path: text }. @param {URL} dataRoot the folder that holds substances/, families/, sources.json, tagli.json, classes.json, aliases.json */
+/** Everything the site needs, as { relative path: text }. @param {URL} dataRoot the folder that holds substances/, families/, sources.json, tagli.json, classes.json; sources and aliases also sit in each substance folder */
 export async function collect(dataRoot) {
   const files = new Map();
   const entries = [];
   const names = new Map();
   const keysOfSubstance = new Map();
   const put = (key, id) => names.set(key, names.has(key) && names.get(key) !== id ? null : id);
-  const aliases = (await json(new URL("aliases.json", dataRoot)).catch(() => ({ aliases: {} }))).aliases;
+  const aliases = await loadAliases(dataRoot);
   for (const id of await dirs(new URL("substances/", dataRoot))) {
     const dir = new URL(`substances/${id}/datasheet/`, dataRoot);
     let datasheet;
@@ -117,7 +118,7 @@ export async function collect(dataRoot) {
     const sub = keysOfSubstance.get(cut?.sheet ?? cid) ?? keysOfSubstance.get(cid);
     cuts[cid] = { keys: [...new Set([...keysOf(cut?.names ?? []), ...(sub?.keys ?? [])])], public: Boolean(sub?.spectra), ...(entries.some((e) => e.id === (cut?.sheet ?? cid)) ? { sheet: cut?.sheet ?? cid } : {}) };
   }
-  const all = (await json(new URL("sources.json", dataRoot))).sources;
+  const all = await loadSources(dataRoot);
   files.set("sources.json", JSON.stringify(Object.fromEntries(all.map((s) => [s.id, { title: s.title, ...(s.url ? { url: s.url } : {}), ...(s.doi ? { doi: s.doi } : {}), ...(s.year ? { year: s.year } : {}) }]))));
   files.set("names.json", JSON.stringify({ schema: "sheets-names/1", names: Object.fromEntries([...names].sort(([a], [b]) => (a < b ? -1 : 1))) }));
   files.set("classes.json", JSON.stringify(Object.fromEntries(classes.map((c) => [c.id, { axis: c.axis, names: c.names }]))));

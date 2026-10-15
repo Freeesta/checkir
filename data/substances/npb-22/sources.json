@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "takeda2024",
+      "type": "paper",
+      "title": "The biological effects and thermal degradation of NPB-22, a synthetic cannabinoid (Forensic Toxicol 42:142-151)",
+      "authors": [
+        "A. Takeda",
+        "T. Doi",
+        "et al.",
+        "T. Tagami"
+      ],
+      "year": 2024,
+      "doi": "10.1007/s11419-023-00679-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38294576/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

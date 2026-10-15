@@ -1,0 +1,49 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "cohen2015",
+      "type": "paper",
+      "title": "Pharmaceutical quantities of yohimbine found in dietary supplements in the USA (Drug Test Anal 8:357-369)",
+      "authors": [
+        "Cohen PA",
+        "Wang YH",
+        "Maller G",
+        "DeSouza R",
+        "Khan IA"
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1849",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26391406/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "lecorre2004",
+      "type": "paper",
+      "title": "Human sympathetic activation by alpha2-adrenergic blockade with yohimbine: bimodal, epistatic influence of cytochrome P450-mediated drug metabolism (Clin Pharmacol Ther 76:139-153)",
+      "authors": [
+        "Le Corre P",
+        "Parmer RJ",
+        "Kailasam MT",
+        "Kennedy BP",
+        "Skaar TP",
+        "Ho H",
+        "Leverge R",
+        "Smith DW",
+        "Ziegler MG",
+        "Insel PA",
+        "Schork NJ",
+        "Flockhart DA",
+        "O'Connor DT"
+      ],
+      "year": 2004,
+      "doi": "10.1016/j.clpt.2004.04.010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15289791/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wojcieszak2019",
+      "type": "paper",
+      "title": "Methcathinone and 3-Fluoromethcathinone Stimulate Spontaneous Horizontal Locomotor Activity in Mice and Elevate Extracellular Dopamine and Serotonin Levels in the Mouse Striatum (Neurotox Res 35:594-605)",
+      "authors": [
+        "Wojcieszak J",
+        "Andrzejczak D",
+        "Wojtas A",
+        "Gołembiowska K",
+        "Zawilska JB"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s12640-018-9973-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30377956/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250526044158/https://pubmed.ncbi.nlm.nih.gov/30377956/"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "afzal2023",
+      "type": "paper",
+      "title": "Hydroxyzine-Induced Torsade De Pointes: A Case Report and a Literature Review",
+      "authors": [
+        "Afzal, M A.",
+        "Khalid, N.",
+        "Abdullah, M.",
+        "Ul-Haiy, A.",
+        "Michael, P."
+      ],
+      "year": 2023,
+      "doi": "10.7759/cureus.41588",
+      "url": "https://doi.org/10.7759/cureus.41588",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20251127220422/https://pubmed.ncbi.nlm.nih.gov/37559846/",
+      "tier": "primary"
+    },
+    {
+      "id": "prac-hydroxyzine2015",
+      "type": "institution",
+      "title": "EMA, Pharmacovigilance Risk Assessment Committee (PRAC), Assessment report, Article 31 referral for hydroxyzine-containing medicines (EMA/154392/2015)",
+      "year": 2015,
+      "url": "https://www.ema.europa.eu/en/documents/referral/hydroxyzine-article-31-referral-prac-assessment-report_en.pdf",
+      "license": "© European Medicines Agency; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    }
+  ]
+}

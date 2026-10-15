@@ -1,0 +1,28 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "sousa2020",
+      "type": "paper",
+      "title": "Pharmacokinetic and pharmacodynamic of the cognitive enhancer modafinil: relevant clinical and forensic aspects (Subst Abus 41(2):155-173)",
+      "authors": [
+        "A. Sousa",
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2020,
+      "doi": "10.1080/08897077.2019.1700584",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31951804/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "dailymed-provigil",
+      "type": "institution",
+      "title": "Provigil (modafinil) tablets, Cephalon LLC, prescribing information (DailyMed, label of 31 December 2022), section 12.3",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e16c26ad-7bc2-d155-3a5d-da83ad6492c8",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

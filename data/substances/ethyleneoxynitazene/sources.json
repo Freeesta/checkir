@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "taoussi2025",
+      "type": "paper",
+      "title": "In vitro metabolism of a benzofuran-substituted nitazene: ethyleneoxynitazene (Metabolites 15)",
+      "authors": [
+        "O. Taoussi",
+        "D. Y. Ovat",
+        "F. Tavoletta",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.3390/metabo15100679",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41149656/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

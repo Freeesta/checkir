@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "leung2024",
+      "type": "paper",
+      "title": "N,N-dimethylpentylone poisoning: Clinical manifestations, analytical detection, and metabolic characterization (Forensic Sci Int 361:112116)",
+      "authors": [
+        "Leung HS",
+        "Tang MHY",
+        "Tong HF",
+        "Chong YK"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.forsciint.2024.112116",
+      "url": "https://doi.org/10.1016/j.forsciint.2024.112116",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

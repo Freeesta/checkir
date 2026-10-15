@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "meltzer2006",
+      "type": "paper",
+      "title": "1-(4-Methylphenyl)-2-pyrrolidin-1-yl-pentan-1-one (Pyrovalerone) analogues: a promising class of monoamine uptake inhibitors (J Med Chem 49:1420-32)",
+      "authors": [
+        "Meltzer PC",
+        "Butler D",
+        "Deschamps JR",
+        "Madras BK"
+      ],
+      "year": 2006,
+      "doi": "10.1021/jm050797a",
+      "url": "https://doi.org/10.1021/jm050797a",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

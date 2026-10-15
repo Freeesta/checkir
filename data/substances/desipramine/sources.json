@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "norpramin-label",
+      "type": "institution",
+      "title": "NORPRAMIN (desipramine hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=70b562ea-9f21-4e4a-b3ed-0590b2892f6a",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803151806/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=70b562ea-9f21-4e4a-b3ed-0590b2892f6a"
+    }
+  ]
+}

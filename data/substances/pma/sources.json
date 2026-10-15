@@ -1,0 +1,65 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "refstad2003",
+      "type": "paper",
+      "title": "Paramethoxyamphetamine (PMA) poisoning; a 'party drug' with lethal effects (Acta Anaesthesiol Scand 47:1298-9)",
+      "authors": [
+        "S. Refstad"
+      ],
+      "year": 2003,
+      "doi": "10.1046/j.1399-6576.2003.00245.x",
+      "url": "https://doi.org/10.1046/j.1399-6576.2003.00245.x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "rojek2016",
+      "type": "paper",
+      "title": "Medicolegal aspects of PMA-related deaths (Leg Med (Tokyo) 21:64-72)",
+      "authors": [
+        "S. Rojek",
+        "F. Bolechała",
+        "K. Kula",
+        "M. Maciów-Głąb",
+        "M. Kłys"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.legalmed.2016.06.002",
+      "url": "https://doi.org/10.1016/j.legalmed.2016.06.002",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "jang2016",
+      "type": "paper",
+      "title": "A fatal case of paramethoxyamphetamine poisoning and its detection in hair (Forensic Sci Int 266:e27-e31)",
+      "authors": [
+        "M. Jang",
+        "W. Yang",
+        "S. Jeong",
+        "S. Park",
+        "J. Kim"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.forsciint.2016.06.030",
+      "url": "https://doi.org/10.1016/j.forsciint.2016.06.030",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "swgdrug-pma",
+      "type": "database",
+      "title": "SWGDRUG monograph: p-Methoxyamphetamine (PMA) (IR: HCl and base, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/p-METHOXYAMPHETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213090134/https://swgdrug.org/Monographs/p-METHOXYAMPHETAMINE.pdf",
+      "tier": "agency"
+    }
+  ]
+}

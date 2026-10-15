@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gamage2018",
+      "type": "paper",
+      "title": "Molecular and behavioral pharmacological characterization of abused synthetic cannabinoids MMB- and MDMB-FUBINACA, MN-18, NNEI, CUMYL-PICA, and 5-fluoro-CUMYL-PICA (J Pharmacol Exp Ther 365:437-446)",
+      "authors": [
+        "T. F. Gamage",
+        "W. B. Farquhar",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.1124/jpet.117.246983",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29549157/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

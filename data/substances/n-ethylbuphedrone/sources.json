@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "pain2026",
+      "type": "paper",
+      "title": "Neurochemical and behavioral evidence of high abuse liability of 3F-NEB, a novel synthetic cathinone (Eur J Pharmacol 1015:178570)",
+      "authors": [
+        "S. Pain",
+        "N. Nadal-Gratacós",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.ejphar.2026.178570",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41554370/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "blanckaert2018",
+      "type": "paper",
+      "title": "Identification and characterization of 4-chloromethamphetamine (4-CMA) in seized ecstasy: a risk to public health (Forensic Sci Int 288:173-180)",
+      "authors": [
+        "Peter Blanckaert",
+        "Stijn Vanquekelberghe",
+        "Vera Coopman",
+        "Martijn D. P. Risseeuw",
+        "Serge Van Calenbergh",
+        "Jan Cordonnier"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.forsciint.2018.04.023",
+      "url": "https://doi.org/10.1016/j.forsciint.2018.04.023",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "calle2019",
+      "type": "paper",
+      "title": "Lessons to be learned from toxicological analyses in intoxicated patients and seized materials at an electronic music dance festival (Forensic Sci Int 299:174-179)",
+      "authors": [
+        "Paul Calle",
+        "Kristof Maudens",
+        "Sabine Lemoyne",
+        "Simon Geerts",
+        "Diederik Van Sassenbroeck",
+        "Peter Jensen",
+        "Jorne Van Overloop",
+        "Eric Deconinck",
+        "Peter Blanckaert"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.forsciint.2019.03.047",
+      "url": "https://doi.org/10.1016/j.forsciint.2019.03.047",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

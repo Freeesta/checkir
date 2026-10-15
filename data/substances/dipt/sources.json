@@ -1,0 +1,20 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hurst2026",
+      "type": "paper",
+      "title": "N,N-Diisopropyltryptamine and diptogenia: proposed mechanisms for a frequency-selective pitch-distorting psychedelic (Brain Commun)",
+      "authors": [
+        "A. Hurst",
+        "V. M. Bajo"
+      ],
+      "year": 2026,
+      "doi": "10.1093/braincomms/fcag093",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13069925/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

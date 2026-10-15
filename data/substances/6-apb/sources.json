@@ -1,0 +1,96 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "song2023",
+      "type": "paper",
+      "title": "New trends of new psychoactive substances (NPS)-infused chocolate: Identification and quantification of trace level of NPS in complex matrix by GC-MS and NMR (Talanta 255:124257)",
+      "authors": [
+        "C. H. Song",
+        "W. Jia",
+        "C. M. Liu",
+        "Z. D. Hua",
+        "X. Meng",
+        "Y. B. Zhao",
+        "T. Li",
+        "L. S. Cai",
+        "X. Zhao"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.talanta.2023.124257",
+      "url": "https://doi.org/10.1016/j.talanta.2023.124257",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "olesti2020",
+      "type": "paper",
+      "title": "LC-MS/MS method for the quantification of new psychoactive substances and evaluation of their urinary detection in humans for doping control analysis (Drug Test Anal 12:785-797)",
+      "authors": [
+        "E. Olesti",
+        "J. A. Pascual",
+        "M. Ventura",
+        "E. Papaseit",
+        "M. Farré",
+        "R. de la Torre",
+        "O. J. Pozo"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2768",
+      "url": "https://doi.org/10.1002/dta.2768",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "roquebravo2020",
+      "type": "paper",
+      "title": "Emerging club drugs: 5-(2-aminopropyl)benzofuran (5-APB) is more toxic than its isomer 6-(2-aminopropyl)benzofuran (6-APB) in hepatocyte cellular models (Arch Toxicol 94:609-629)",
+      "authors": [
+        "R. Roque Bravo",
+        "H. Carmo",
+        "J. P. Silva",
+        "M. J. Valente",
+        "F. Carvalho",
+        "M. d. L. Bastos",
+        "D. Dias da Silva"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s00204-019-02638-9",
+      "url": "https://doi.org/10.1007/s00204-019-02638-9",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "hofmann2022",
+      "type": "paper",
+      "title": "Simultaneous Determination of 5- and 6-APB in Blood, Other Body Fluids, Hair and Various Tissues by HPLC--MS-MS (J Anal Toxicol 46:264-269)",
+      "authors": [
+        "V. Hofmann",
+        "T. R. Sundermann",
+        "A. Landmann",
+        "S. Rechtsteiner",
+        "G. Schmitt",
+        "M. Bartel"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkab018",
+      "url": "https://doi.org/10.1093/jat/bkab018",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "swgdrug-6apb",
+      "type": "database",
+      "title": "SWGDRUG monograph: 6-(2-Aminopropyl)benzofuran (6-APB) (IR: ATR, no labelled bands)",
+      "url": "https://www.swgdrug.org/Monographs/6APB.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20241213083209/https://swgdrug.org/Monographs/6APB.pdf",
+      "tier": "agency"
+    }
+  ]
+}

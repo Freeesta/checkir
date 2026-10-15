@@ -1,0 +1,30 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-diazepam",
+      "type": "database",
+      "title": "SWGDRUG monograph: Diazepam (IR spectrum only as an image)",
+      "url": "https://www.swgdrug.org/Monographs/DIAZEPAM.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20250403031944/http://www.swgdrug.org/Monographs/DIAZEPAM.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "abernethy1981",
+      "type": "paper",
+      "title": "Effects of desmethyldiazepam on diazepam kinetics: a study of effects of a metabolite on parent drug disposition (Clin Pharmacol Ther 29(6):757-761)",
+      "authors": [
+        "D. R. Abernethy",
+        "D. J. Greenblatt"
+      ],
+      "year": 1981,
+      "doi": "10.1038/clpt.1981.107",
+      "url": "https://doi.org/10.1038/clpt.1981.107",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

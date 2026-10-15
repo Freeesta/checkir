@@ -1,0 +1,57 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "meyer2009mdea",
+      "type": "paper",
+      "title": "The role of human hepatic cytochrome P450 isozymes in the metabolism of racemic 3,4-methylenedioxyethylamphetamine and its single enantiomers (Drug Metab Dispos 37(6):1152-1156)",
+      "authors": [
+        "M. R. Meyer",
+        "F. T. Peters",
+        "H. H. Maurer"
+      ],
+      "year": 2009,
+      "doi": "10.1124/dmd.108.026203",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19299523/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204073609/https://pubmed.ncbi.nlm.nih.gov/19299523/"
+    },
+    {
+      "id": "freudenmann2004",
+      "type": "paper",
+      "title": "The Neuropsychopharmacology and Toxicology of 3,4-methylenedioxy-N-ethyl-amphetamine (MDEA) (CNS Drug Rev 10(2):89-116)",
+      "authors": [
+        "R. W. Freudenmann",
+        "M. Spitzer"
+      ],
+      "year": 2004,
+      "doi": "10.1111/j.1527-3458.2004.tb00007.x",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6741736",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260928091858/https://pmc.ncbi.nlm.nih.gov/articles/PMC6741736/"
+    },
+    {
+      "id": "hermle1993",
+      "type": "paper",
+      "title": "Psychological effects of MDE in normal subjects. Are entactogens a new class of psychoactive agents? (Neuropsychopharmacology 8(2):171-176)",
+      "authors": [
+        "L. Hermle",
+        "M. Spitzer",
+        "D. Borchardt",
+        "K. A. Kovar",
+        "E. Gouzoulis"
+      ],
+      "year": 1993,
+      "doi": "10.1038/npp.1993.19",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8471129/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261005220752/https://pubmed.ncbi.nlm.nih.gov/8471129/"
+    }
+  ]
+}

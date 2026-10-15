@@ -1,0 +1,47 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wood2024",
+      "type": "paper",
+      "title": "Crystal structure and analytical profile of 1,2-diphenyl-2-pyrrolidin-1-ylethanone hydrochloride or 'α-D2PV': a synthetic cathinone seized by law enforcement, along with its diluent sugar, myo-inositol (Acta Crystallogr C Struct Chem 80(4):91-97)",
+      "authors": [
+        "Wood MR",
+        "Bernal I",
+        "Lalancette RA"
+      ],
+      "year": 2024,
+      "doi": "10.1107/S2053229624000561",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38441142/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206142823/https://pubmed.ncbi.nlm.nih.gov/38441142/"
+    },
+    {
+      "id": "nadalgratacos2025",
+      "type": "paper",
+      "title": "Unveiling the potential abuse liability of α-D2PV: A novel α-carbon phenyl-substituted synthetic cathinone (Neuropharmacology 272:110425)",
+      "authors": [
+        "Nadal-Gratacós N",
+        "Mata S",
+        "Puigseslloses P",
+        "De Macedo M",
+        "Lardeux V",
+        "Pain S",
+        "Wang FH",
+        "Källsten L",
+        "Pubill D",
+        "Berzosa X",
+        "Kehr J",
+        "Solinas M"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.neuropharm.2025.110425",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40118207/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

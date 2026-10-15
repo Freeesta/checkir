@@ -1,0 +1,42 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wohlfarth2013",
+      "type": "paper",
+      "title": "First metabolic profile of XLR-11, a novel synthetic cannabinoid, obtained by using human hepatocytes and high-resolution mass spectrometry (Clin Chem 59:1638-1648)",
+      "authors": [
+        "A. Wohlfarth",
+        "S. Pang",
+        "M. Zhu",
+        "A. S. Gandhi",
+        "K. B. Scheidweiler",
+        "H. Liu",
+        "M. A. Huestis"
+      ],
+      "year": 2013,
+      "doi": "10.1373/clinchem.2013.209965",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24014837/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20241106050125/https://pubmed.ncbi.nlm.nih.gov/24014837/"
+    },
+    {
+      "id": "kanamori2015",
+      "type": "paper",
+      "title": "Detection of main metabolites of XLR-11 and its thermal degradation product in human hepatoma HepaRG cells and human urine (Drug Test Anal)",
+      "authors": [
+        "T. Kanamori",
+        "K. Kanda",
+        "et al."
+      ],
+      "year": 2015,
+      "doi": "10.1002/dta.1765",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25600155/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "jadhav2025",
+      "type": "paper",
+      "title": "Biotransformation and kinetics of selected benzimidazole synthetic opioids in human hepatocytes (Front Pharmacol 16:1656437)",
+      "authors": [
+        "G. R. Jadhav",
+        "P. S. Fasinu"
+      ],
+      "year": 2025,
+      "doi": "10.3389/fphar.2025.1656437",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41394146/",
+      "archive_url": "https://web.archive.org/web/20260416054536/https://pubmed.ncbi.nlm.nih.gov/41394146/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

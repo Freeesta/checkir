@@ -1,0 +1,57 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "sayson2019",
+      "type": "paper",
+      "title": "The novel methoxetamine analogs N-ethylnorketamine hydrochloride (NENK), 2-MeO-N-ethylketamine hydrochloride (2-MeO-NEK), and 4-MeO-N-ethylketamine hydrochloride (4-MeO-NEK) elicit rapid antidepressant effects via activation of AMPA and 5-HT2 receptors (Psychopharmacology (Berl) 236:2201-2210)",
+      "authors": [
+        "Sayson LV",
+        "Botanas CJ",
+        "Custodio RJP",
+        "Abiero A",
+        "Kim M",
+        "Lee HJ",
+        "Kim HJ",
+        "Yoo SY",
+        "Lee KW",
+        "Ryu HW",
+        "Acharya S",
+        "Kim KM",
+        "Lee YS",
+        "Cheong JH"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00213-019-05219-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30891619/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "li2022-nenk",
+      "type": "paper",
+      "title": "N-Ethylnorketamine has anesthetic and analgesic effects with abuse liability (Behav Brain Res 435:114052)",
+      "authors": [
+        "Li F",
+        "Qiao Y",
+        "Chen Y",
+        "Li N",
+        "Yang M",
+        "Li X",
+        "Qiu Y",
+        "Cui W",
+        "Shen H",
+        "Xu P",
+        "Di B"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.bbr.2022.114052",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35952778/",
+      "archive_url": "https://web.archive.org/web/20260512075639/https://pubmed.ncbi.nlm.nih.gov/35952778/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

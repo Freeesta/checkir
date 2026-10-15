@@ -1,0 +1,91 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kyei-baffour2020",
+      "type": "paper",
+      "title": "DARK classics in chemical neuroscience: U-47700 (ACS Chem Neurosci 11:3928-3936)",
+      "authors": [
+        "K. Kyei-Baffour",
+        "C. W. Lindsley"
+      ],
+      "year": 2020,
+      "doi": "10.1021/acschemneuro.0c00330",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32639714/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250404133630/https://pubmed.ncbi.nlm.nih.gov/32639714/"
+    },
+    {
+      "id": "rambaran2017",
+      "type": "paper",
+      "title": "U-47700: a clinical review of the literature (J Emerg Med 53:509-519)",
+      "authors": [
+        "K. A. Rambaran",
+        "S. W. Fleming",
+        "J. An",
+        "et al."
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.jemermed.2017.05.034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28911989/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20251119085553/https://pubmed.ncbi.nlm.nih.gov/28911989/"
+    },
+    {
+      "id": "vogliardi2018",
+      "type": "paper",
+      "title": "Non-fatal overdose with U-47700: identification in biological matrices (Curr Pharm Biotechnol 19:180-187)",
+      "authors": [
+        "S. Vogliardi",
+        "G. Stocchero",
+        "S. Maietti",
+        "et al."
+      ],
+      "year": 2018,
+      "doi": "10.2174/1389201019666180509164240",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29745328/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "kriikku2019",
+      "type": "paper",
+      "title": "Toxic lifespan of the synthetic opioid U-47,700 in Finland verified by re-analysis of UPLC-TOF-MS data (Forensic Sci Int 300:85-88)",
+      "authors": [
+        "P. Kriikku",
+        "A. Pelander",
+        "I. Rasanen",
+        "I. Ojanpera"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.forsciint.2019.04.030",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31082566/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260928162543/https://pubmed.ncbi.nlm.nih.gov/31082566/"
+    },
+    {
+      "id": "nordmeier2022",
+      "type": "paper",
+      "title": "Are the N-demethylated metabolites of U-47700 more active than their parent compound? In vitro mu-opioid receptor activation of N-desmethyl-U-47700 and N,N-bisdesmethyl-U-47700 (Drug Test Anal 14:713-717)",
+      "authors": [
+        "F. Nordmeier",
+        "A. Cannaert",
+        "C. P. Stove",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3182",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34669261/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

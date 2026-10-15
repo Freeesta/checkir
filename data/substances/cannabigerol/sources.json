@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "stone2020",
+      "type": "paper",
+      "title": "A systematic review of minor phytocannabinoids with promising neuroprotective potential (Br J Pharmacol 177:4330-4352)",
+      "authors": [
+        "N. L. Stone",
+        "A. J. Murphy",
+        "T. J. England",
+        "S. E. O'Sullivan"
+      ],
+      "year": 2020,
+      "doi": "10.1111/bph.15185",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32608035/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260214005855/https://pubmed.ncbi.nlm.nih.gov/32608035/"
+    }
+  ]
+}

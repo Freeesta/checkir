@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "peter2024",
+      "type": "paper",
+      "title": "Pharmacokinetics, Pharmacodynamics, and Side Effects of Midazolam: A Review and Case Example (Pharmaceuticals 17:473)",
+      "authors": [
+        "J. U. Peter",
+        "P. Dieudonné",
+        "O. Zolk"
+      ],
+      "year": 2024,
+      "doi": "10.3390/ph17040473",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11054797/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

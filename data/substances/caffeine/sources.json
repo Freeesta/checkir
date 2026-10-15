@@ -1,0 +1,56 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "nawrot2003",
+      "type": "paper",
+      "title": "Effects of caffeine on human health",
+      "authors": [
+        "Nawrot, P.",
+        "Jordan, S.",
+        "Eastwood, J.",
+        "Rotstein, J.",
+        "Hugenholtz, A.",
+        "Feeley, M."
+      ],
+      "year": 2003,
+      "doi": "10.1080/0265203021000007840",
+      "url": "https://doi.org/10.1080/0265203021000007840",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260929102905/https://pubmed.ncbi.nlm.nih.gov/12519715/"
+    },
+    {
+      "id": "culm-merdek2005",
+      "type": "paper",
+      "title": "Fluvoxamine impairs single‐dose caffeine clearance without altering caffeine pharmacodynamics",
+      "authors": [
+        "Culm‐Merdek, Kerry E.",
+        "Von Moltke, Lisa L.",
+        "Harmatz, Jerold S.",
+        "Greenblatt, David J."
+      ],
+      "year": 2005,
+      "doi": "10.1111/j.1365-2125.2005.02467.x",
+      "url": "https://doi.org/10.1111/j.1365-2125.2005.02467.x",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204054853/https://pubmed.ncbi.nlm.nih.gov/16236038/"
+    },
+    {
+      "id": "grzegorzewski2022",
+      "type": "paper",
+      "title": "Pharmacokinetics of Caffeine: A Systematic Analysis of Reported Data for Application in Metabolic Phenotyping and Liver Function Testing",
+      "authors": [
+        "Grzegorzewski, J.",
+        "Bartsch, F.",
+        "Köller, A.",
+        "König, M."
+      ],
+      "year": 2022,
+      "doi": "10.3389/fphar.2021.752826",
+      "url": "https://doi.org/10.3389/fphar.2021.752826",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260414131553/https://pmc.ncbi.nlm.nih.gov/articles/PMC8914174/",
+      "tier": "review"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "lue1988",
+      "type": "paper",
+      "title": "Pyrolytic fate of piperidinocyclohexanecarbonitrile, a contaminant of phencyclidine, during smoking (J Anal Toxicol 12)",
+      "authors": [
+        "L P Lue",
+        "J A Scimeca",
+        "B F Thomas",
+        "B R Martin"
+      ],
+      "year": 1988,
+      "doi": "10.1093/jat/12.2.57",
+      "url": "https://doi.org/10.1093/jat/12.2.57",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

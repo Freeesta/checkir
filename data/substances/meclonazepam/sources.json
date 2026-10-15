@@ -1,0 +1,42 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "Identifying metabolites of meclonazepam by high-resolution mass spectrometry using human liver microsomes, hepatocytes, a mouse model, and authentic urine samples (AAPS J 19:736-742)",
+      "authors": [
+        "S. Vikingsson",
+        "A. Wohlfarth",
+        "M. Andersson",
+        "H. Gréen",
+        "M. Roman",
+        "M. Josefsson",
+        "et al."
+      ],
+      "year": 2017,
+      "doi": "10.1208/s12248-016-0040-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28091881/",
+      "tier": "primary",
+      "id": "vikingsson2017",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Identification of main human urinary metabolites of the designer nitrobenzodiazepines clonazolam, meclonazepam, and nifoxipam by nano-liquid chromatography-high-resolution mass spectrometry for drug testing purposes (Anal Bioanal Chem 408:3571-3591)",
+      "authors": [
+        "M. R. Meyer",
+        "M. P. Bergstrand",
+        "A. Helander",
+        "O. Beck"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s00216-016-9439-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27071765/",
+      "tier": "primary",
+      "id": "meyer2016",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

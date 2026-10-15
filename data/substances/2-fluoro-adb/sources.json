@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "unodc-lss-2f-adb",
+      "type": "institution",
+      "title": "UNODC Laboratory and Scientific Section, NPS substance page: 2-fluoro-ADB (2F-ADB, 2F-MDMB-PINACA; substance group synthetic cannabinoids)",
+      "url": "https://www.unodc.org/LSS/Substance/Details/ab2d7479-069f-4ac1-9242-731231ef8da7",
+      "license": "cited as the source of names and group only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    }
+  ]
+}

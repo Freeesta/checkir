@@ -1,0 +1,73 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "jones2023",
+      "type": "paper",
+      "title": "In vivo validation of psilacetin as a prodrug yielding modestly lower peripheral psilocin exposure than psilocybin (Front Psychiatry 14:1303365)",
+      "authors": [
+        "Jones NT",
+        "Wagner L",
+        "Hahn MCP",
+        "Scarlett CO",
+        "Wenthur CJ"
+      ],
+      "year": 2023,
+      "doi": "10.3389/fpsyt.2023.1303365",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38264637/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260913145238/https://pubmed.ncbi.nlm.nih.gov/38264637/"
+    },
+    {
+      "id": "zhai2022",
+      "type": "paper",
+      "title": "Tentative identification of in vitro metabolites of O-acetylpsilocin (psilacetin, 4-AcO-DMT) by UHPLC-Q-Orbitrap MS (Drug Test Anal 14:1300-1309)",
+      "authors": [
+        "Zhai W",
+        "Li L",
+        "Zhao J",
+        "Xiang P",
+        "Liu M",
+        "Shi Y",
+        "Dang Y"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3255",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35312166/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250915234623/https://pubmed.ncbi.nlm.nih.gov/35312166/"
+    },
+    {
+      "id": "correia2025",
+      "type": "paper",
+      "title": "Quantitative analysis of recreational psychoactive mushroom gummies in Portland, Oregon (Clin Toxicol (Phila) 63:261-266)",
+      "authors": [
+        "Correia MS",
+        "Gonzaga MJ",
+        "Temple C",
+        "Gerona RR"
+      ],
+      "year": 2025,
+      "doi": "10.1080/15563650.2025.2450240",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39977248/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261005045217/https://pubmed.ncbi.nlm.nih.gov/39977248/"
+    },
+    {
+      "id": "swgdrug-4acodmt",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Acetoxy-N,N-dimethyltryptamine (IR: oxalate, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4AcODMT.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250123160756/http://www.swgdrug.org/Monographs/4AcODMT.pdf",
+      "tier": "agency"
+    }
+  ]
+}

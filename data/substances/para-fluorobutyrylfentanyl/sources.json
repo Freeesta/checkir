@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "rojkiewicz2017",
+      "type": "paper",
+      "title": "Identification and physicochemical characterization of 4-fluorobutyrfentanyl (1-((4-fluorophenyl)(1-phenethylpiperidin-4-yl)amino)butan-1-one, 4-FBF) in seized materials and post-mortem biological samples (Drug Test Anal 9(3):405-414)",
+      "authors": [
+        "M. Rojkiewicz",
+        "M. Majchrzak",
+        "R. Celiński",
+        "P. Kuś",
+        "M. Sajewicz"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2135",
+      "url": "https://doi.org/10.1002/dta.2135",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-mda",
+      "type": "database",
+      "title": "SWGDRUG monograph: 3,4-Methylenedioxyamphetamine (IR: HCl and sulfate, ATR)",
+      "url": "https://www.swgdrug.org/Monographs/3,4-METHYLENEDIOXYAMPHETAMINE.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20261012081750/https://swgdrug.org/Monographs/3,4-METHYLENEDIOXYAMPHETAMINE.pdf"
+    },
+    {
+      "id": "baggott2019",
+      "type": "paper",
+      "title": "Effects of the Psychedelic Amphetamine MDA (3,4-Methylenedioxyamphetamine) in Healthy Volunteers (J Psychoactive Drugs 51(2):108-117)",
+      "authors": [
+        "M. J. Baggott",
+        "K. J. Garrison",
+        "J. R. Coyle",
+        "G. P. Galloway",
+        "A. J. Barnes",
+        "M. A. Huestis",
+        "J. E. Mendelson"
+      ],
+      "year": 2019,
+      "doi": "10.1080/02791072.2019.1593560",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30967099/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251103192746/https://pubmed.ncbi.nlm.nih.gov/30967099/"
+    },
+    {
+      "id": "kolaczynska2022",
+      "type": "paper",
+      "title": "Pharmacological characterization of 3,4-methylenedioxyamphetamine (MDA) analogs and two amphetamine-based compounds: N,alpha-DEPEA and DPIA (Eur Neuropsychopharmacol 59:9-22)",
+      "authors": [
+        "K. E. Kolaczynska",
+        "P. Ducret",
+        "D. Trachsel",
+        "M. C. Hoener",
+        "M. E. Liechti",
+        "D. Luethi"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.euroneuro.2022.03.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35378384/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260916195443/https://pubmed.ncbi.nlm.nih.gov/35378384/"
+    },
+    {
+      "id": "brunt2012",
+      "type": "paper",
+      "title": "Linking the pharmacological content of ecstasy tablets to the subjective experiences of drug users (Psychopharmacology 220(4):751-762)",
+      "authors": [
+        "T. M. Brunt",
+        "M. W. Koeter",
+        "R. J. Niesink",
+        "W. van den Brink"
+      ],
+      "year": 2012,
+      "doi": "10.1007/s00213-011-2529-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21993879/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260819172441/https://pubmed.ncbi.nlm.nih.gov/21993879/"
+    }
+  ]
+}

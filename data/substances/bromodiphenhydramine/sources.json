@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "ahmadi2012",
+      "type": "paper",
+      "title": "Synthesis and anti-inflammatory effects of new piperazine and ethanolamine derivatives of H1-antihistaminic drugs (Mini Rev Med Chem 12:1282-1292)",
+      "authors": [
+        "A. Ahmadi",
+        "M. Khalili",
+        "A. Nafarie",
+        "A. Yazdani",
+        "B. Nahri-Niknafs"
+      ],
+      "year": 2012,
+      "doi": "10.2174/138955712802762013",
+      "url": "https://doi.org/10.2174/138955712802762013",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

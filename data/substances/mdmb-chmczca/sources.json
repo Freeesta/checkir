@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "mogler2018",
+      "type": "paper",
+      "title": "Phase I metabolism of the carbazole-derived synthetic cannabinoids EG-018, EG-2201, and MDMB-CHMCZCA and detection in human urine samples (Drug Test Anal 10:1417-1429)",
+      "authors": [
+        "L. Mogler",
+        "F. Franz",
+        "M. Wilde",
+        "L. M. Huppertz",
+        "S. Halter",
+        "V. Angerer",
+        "B. Moosmann",
+        "V. Auwärter"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2398",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29726116/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

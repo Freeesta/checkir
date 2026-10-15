@@ -1,0 +1,27 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "muhammed2024",
+      "type": "paper",
+      "title": "Comprehensive metabolic investigation of dopamine reuptake inhibitor HDMP-28 in equine liver microsomes and Cunninghamella elegans for doping control (Drug Test Anal 16(10):1182-1194)",
+      "authors": [
+        "M. Muhammed Ajeebsanu",
+        "M. B. Subhahar",
+        "A. K. Karakka Kal",
+        "M. Philip",
+        "Z. Perwad",
+        "T. K. Karatt",
+        "F. M. Graiban",
+        "M. Joseph",
+        "S. V. Jose"
+      ],
+      "year": 2024,
+      "doi": "10.1002/dta.3642",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38225724/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

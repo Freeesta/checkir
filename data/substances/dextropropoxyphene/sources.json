@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "somogyi2004",
+      "type": "paper",
+      "title": "CYP3A4 mediates dextropropoxyphene N-demethylation to nordextropropoxyphene: human in vitro and in vivo studies and lack of CYP2D6 involvement (Xenobiotica 34:875-887)",
+      "authors": [
+        "A. A. Somogyi",
+        "A. Menelaou",
+        "S. V. Fullston"
+      ],
+      "year": 2004,
+      "doi": "10.1080/00498250400008371",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15764408/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

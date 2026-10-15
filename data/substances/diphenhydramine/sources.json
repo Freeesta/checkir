@@ -1,0 +1,20 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "lockwood2021",
+      "type": "paper",
+      "title": "High concentrations of illicit stimulants and cutting agents cause false positives on fentanyl test strips",
+      "authors": [
+        "Lockwood, TE",
+        "Vervoordt, A",
+        "Lieberman, M"
+      ],
+      "year": 2021,
+      "doi": "10.1186/s12954-021-00478-4",
+      "url": "https://doi.org/10.1186/s12954-021-00478-4",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

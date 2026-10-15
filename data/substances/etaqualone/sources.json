@@ -1,0 +1,27 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "yang2022-quinazolinones",
+      "type": "paper",
+      "title": "The next addiction-causing drug class 4-quinazolinone derivatives: analyses of methaqualone analogs including recently discovered 2-methoxyqualone by different modes of mass spectrometry (Forensic Toxicol 41:59-70)",
+      "authors": [
+        "H. Yang",
+        "Y. Wang",
+        "J. Liu",
+        "S. Qiu",
+        "J. Gu",
+        "H. Bai",
+        "J. Li",
+        "A. Wurita",
+        "K. Hasegawa"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s11419-022-00631-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36652055/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

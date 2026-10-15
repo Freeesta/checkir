@@ -1,0 +1,95 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "brandt2016",
+      "type": "paper",
+      "title": "Return of the lysergamides. Part I: Analytical and behavioural characterization of 1-propionyl-d-lysergic acid diethylamide (1P-LSD) (Drug Test Anal 8:891-902)",
+      "authors": [
+        "Brandt SD",
+        "Kavanagh PV",
+        "Westphal F",
+        "Stratford A",
+        "Elliott SP",
+        "Hoang K",
+        "Wallach J",
+        "Halberstadt AL"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1884",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26456305/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260825173213/https://pubmed.ncbi.nlm.nih.gov/26456305/"
+    },
+    {
+      "id": "grumann2020",
+      "type": "paper",
+      "title": "Pharmacokinetics and subjective effects of 1P-LSD in humans after oral and intravenous administration (Drug Test Anal 12:1144-1153)",
+      "authors": [
+        "Grumann C",
+        "Henkel K",
+        "Brandt SD",
+        "Stratford A",
+        "Passie T",
+        "Auwärter V"
+      ],
+      "year": 2020,
+      "doi": "10.1002/dta.2821",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32415750/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260426052510/https://pubmed.ncbi.nlm.nih.gov/32415750/"
+    },
+    {
+      "id": "halberstadt2020",
+      "type": "paper",
+      "title": "Pharmacological and biotransformation studies of 1-acyl-substituted derivatives of d-lysergic acid diethylamide (LSD) (Neuropharmacology 172:107856)",
+      "authors": [
+        "Halberstadt AL",
+        "Chatha M",
+        "Klein AK",
+        "McCorvy JD",
+        "Meyer MR",
+        "Wagmann L",
+        "Stratford A",
+        "Brandt SD"
+      ],
+      "year": 2020,
+      "doi": "10.1016/j.neuropharm.2019.107856",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31756337/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "swgdrug-1plsd",
+      "type": "database",
+      "title": "SWGDRUG monograph: 1P-LSD (IR: base, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/1P-LSD.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207104401/https://swgdrug.org/Monographs/1P-LSD.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "jurowski2026",
+      "type": "paper",
+      "title": "The toxicity of psychedelic LSD derivatives: 1-acetyl-LSD (ALD-52), 1-propionyl-LSD (1P-LSD), 1-butyryl-LSD (1B-LSD), 1-valeryl-LSD (1V-LSD) and 1-cyclopropylmethanoyl-LSD (1cP-LSD): prediction of toxicological parameters using multi-in silico approach (Arch Toxicol 100(7):3091-3110)",
+      "authors": [
+        "K. Jurowski",
+        "A. Krośniak",
+        "D. Kobylarz",
+        "O. Fijałkowska"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00204-025-04255-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41915184/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

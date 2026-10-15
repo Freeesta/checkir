@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "fluoxetine-label",
+      "type": "institution",
+      "title": "Fluoxetine capsules (RemedyRepack Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b8666383-462d-4a21-8f49-1d572da386d1",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

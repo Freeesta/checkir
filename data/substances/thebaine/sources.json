@@ -1,0 +1,111 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "millgate2004",
+      "type": "paper",
+      "title": "Analgesia: morphine-pathway block in top1 poppies (Nature 431:413-414)",
+      "authors": [
+        "Millgate AG",
+        "Pogson BJ",
+        "Wilson IW",
+        "Kutchan TM",
+        "Zenk MH",
+        "Gerlach WL",
+        "Fist AJ",
+        "Larkin PJ"
+      ],
+      "year": 2004,
+      "doi": "10.1038/431413a",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15386001/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250201235316/https://pubmed.ncbi.nlm.nih.gov/15386001/"
+    },
+    {
+      "id": "eisenreich2019",
+      "type": "paper",
+      "title": "What do we know about health risks related to thebaine in food?",
+      "authors": [
+        "Eisenreich A",
+        "Sachse B",
+        "Gürtler R",
+        "Dusemund B",
+        "Lindtner O",
+        "Schäfer B"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.foodchem.2019.125564",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31670127/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260511164622/https://pubmed.ncbi.nlm.nih.gov/31670127/"
+    },
+    {
+      "id": "penafiel2023",
+      "type": "paper",
+      "title": "Toxicokinetics of thebaine in those consuming non-food grade poppy seeds as a tea",
+      "authors": [
+        "Penafiel R",
+        "Yoo D",
+        "Turner C",
+        "Brown JA",
+        "McDonald C",
+        "Tran J",
+        "Shaw V",
+        "Roberts DM"
+      ],
+      "year": 2023,
+      "doi": "10.1080/15563650.2023.2271163",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37917043/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "isoardi2023",
+      "type": "paper",
+      "title": "A cluster of acute thebaine poisonings from non-food grade poppy seeds in the Australian food supply (Clin Toxicol)",
+      "authors": [
+        "Isoardi KZ",
+        "Roberts DM",
+        "Holford AG",
+        "Brown JA",
+        "Griffiths A",
+        "Soderstrom J",
+        "McDonald C",
+        "Gerostamoulos D",
+        "Sakrajda P",
+        "Turner C",
+        "Yates H",
+        "Gunja N",
+        "Greene S"
+      ],
+      "year": 2023,
+      "doi": "10.1080/15563650.2023.2265053",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37855308/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251209074356/https://pubmed.ncbi.nlm.nih.gov/37855308/"
+    },
+    {
+      "id": "bollini2022",
+      "type": "paper",
+      "title": "Urine thebaine determination by liquid chromatography tandem mass spectrometry after poppy seed consumption (Drug Test Anal)",
+      "authors": [
+        "Bollini SM",
+        "Banks JF",
+        "Hobbs GA"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3274",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35478494/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

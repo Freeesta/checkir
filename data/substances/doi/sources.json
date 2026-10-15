@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-doi",
+      "type": "database",
+      "title": "SWGDRUG monograph: 2,5-Dimethoxy-4-iodoamphetamine (DOI) (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/DOI.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    }
+  ]
+}

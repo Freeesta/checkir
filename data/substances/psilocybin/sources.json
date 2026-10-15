@@ -1,0 +1,73 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hasler1997",
+      "type": "paper",
+      "title": "Determination of psilocin and 4-hydroxyindole-3-acetic acid in plasma by HPLC-ECD and pharmacokinetic profiles of oral and intravenous psilocybin in man (Pharm Acta Helv 72(3):175-184)",
+      "authors": [
+        "F. Hasler",
+        "D. Bourquin",
+        "R. Brenneisen",
+        "T. Bär",
+        "F. X. Vollenweider"
+      ],
+      "year": 1997,
+      "doi": "10.1016/s0031-6865(97)00014-9",
+      "url": "https://doi.org/10.1016/s0031-6865(97)00014-9",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "hasler2004",
+      "type": "paper",
+      "title": "Acute psychological and physiological effects of psilocybin in healthy humans: a double-blind, placebo-controlled dose-effect study (Psychopharmacology 172(2):145-156)",
+      "authors": [
+        "F. Hasler",
+        "U. Grimberg",
+        "M. A. Benz",
+        "T. Huber",
+        "F. X. Vollenweider"
+      ],
+      "year": 2004,
+      "doi": "10.1007/s00213-003-1640-6",
+      "url": "https://doi.org/10.1007/s00213-003-1640-6",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "thomann2024",
+      "type": "paper",
+      "title": "In vitro and in vivo metabolism of psilocybin's active metabolite psilocin (Front Pharmacol 15:1391689)",
+      "authors": [
+        "J. Thomann",
+        "K. E. Kolaczynska",
+        "O. V. Stoeckmann",
+        "D. Rudin",
+        "P. Vizeli",
+        "M. C. Hoener",
+        "C. R. Pryce",
+        "F. X. Vollenweider",
+        "M. E. Liechti",
+        "U. Duthaler"
+      ],
+      "year": 2024,
+      "doi": "10.3389/fphar.2024.1391689",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11089204/",
+      "archive_url": "https://web.archive.org/web/20260211054307/https://pmc.ncbi.nlm.nih.gov/articles/PMC11089204/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "euda-mushrooms",
+      "type": "institution",
+      "title": "EUDA, Hallucinogenic mushrooms drug profile",
+      "url": "https://www.euda.europa.eu/publications/drug-profiles/mushrooms_en",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    }
+  ]
+}

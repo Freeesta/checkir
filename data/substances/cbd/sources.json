@@ -1,0 +1,57 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hubner2025",
+      "type": "paper",
+      "title": "NMR spectroscopic reference data of synthetic cannabinoids sold on the internet (Magn Reson Chem 63:241-255)",
+      "authors": [
+        "E.-M. Hubner",
+        "M. G. Schmid",
+        "V. Manojlovic",
+        "D. Gattringer",
+        "E.-M. Pferschy-Wenzig",
+        "O. Kunert"
+      ],
+      "year": 2025,
+      "doi": "10.1002/mrc.5498",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39743737/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "beers2021-cbd",
+      "type": "paper",
+      "title": "Cytochrome P450-catalyzed metabolism of cannabidiol to the active metabolite 7-hydroxy-cannabidiol (Drug Metab Dispos 49:882-891)",
+      "authors": [
+        "J. L. Beers",
+        "D. Fu",
+        "K. D. Jackson"
+      ],
+      "year": 2021,
+      "doi": "10.1124/dmd.120.000350",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34330718/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250908062807/https://pubmed.ncbi.nlm.nih.gov/34330718/"
+    },
+    {
+      "id": "bansal2022",
+      "type": "paper",
+      "title": "Comprehensive predictions of cytochrome P450-mediated in vivo cannabinoid-drug interactions based on reversible and time-dependent inhibition (Drug Metab Dispos 50:351-360)",
+      "authors": [
+        "S. Bansal",
+        "M. F. Paine",
+        "J. D. Unadkat"
+      ],
+      "year": 2022,
+      "doi": "10.1124/dmd.121.000734",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35115300/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

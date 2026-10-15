@@ -1,0 +1,69 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-ephylone",
+      "type": "database",
+      "title": "SWGDRUG monograph: N-Ethylpentylone (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/N-Ethylpentylone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241207121251/https://swgdrug.org/Monographs/N-Ethylpentylone.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "krotulski2018",
+      "type": "paper",
+      "title": "N-Ethyl Pentylone (Ephylone) Intoxications: Quantitative Confirmation and Metabolite Identification in Authentic Human Biological Specimens (Journal of analytical toxicology 42:467-475)",
+      "authors": [
+        "Krotulski AJ",
+        "Papsun DM",
+        "De Martinis BS",
+        "Mohr ALA",
+        "Logan BK"
+      ],
+      "year": 2018,
+      "doi": "10.1093/jat/bky025",
+      "url": "https://doi.org/10.1093/jat/bky025",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "costa2019",
+      "type": "paper",
+      "title": "Analytical quantification, intoxication case series, and pharmacological mechanism of action for N-ethylnorpentylone (N-ethylpentylone or ephylone) (Drug testing and analysis 11:461-471)",
+      "authors": [
+        "Costa JL",
+        "Cunha KF",
+        "Lanaro R",
+        "Cunha RL",
+        "Walther D",
+        "Baumann MH"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2502",
+      "url": "https://doi.org/10.1002/dta.2502",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "thirakul2017",
+      "type": "paper",
+      "title": "Clinical Presentation, Autopsy Results and Toxicology Findings in an Acute N-Ethylpentylone Fatality (Journal of analytical toxicology 41:342-346)",
+      "authors": [
+        "Thirakul P",
+        "S Hair L",
+        "L Bergen K",
+        "M Pearson J"
+      ],
+      "year": 2017,
+      "doi": "10.1093/jat/bkx004",
+      "url": "https://doi.org/10.1093/jat/bkx004",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

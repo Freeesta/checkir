@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gatch2025b",
+      "type": "paper",
+      "title": "Locomotor stimulant and drug discrimination effects of five synthetic cathinones in rodents (Pharmacol Biochem Behav 257:174100)",
+      "authors": [
+        "M. B. Gatch",
+        "R. D. Hill",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.pbb.2025.174100",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40975318/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

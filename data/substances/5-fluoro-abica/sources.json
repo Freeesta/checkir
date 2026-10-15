@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "al-eitan2024",
+      "type": "paper",
+      "title": "The synthetic cannabinoid 5-fluoro ABICA upregulates angiogenic markers and stimulates tube formation in human brain microvascular endothelial cells (J Taibah Univ Med Sci 19(2):359-371)",
+      "authors": [
+        "L. Al-Eitan",
+        "R. Abusirdaneh"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jtumed.2024.01.002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38357583/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260419160333/https://pubmed.ncbi.nlm.nih.gov/38357583/"
+    }
+  ]
+}

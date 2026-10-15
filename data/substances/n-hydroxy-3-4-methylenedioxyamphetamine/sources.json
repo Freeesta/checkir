@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "tsujikawa2011",
+      "type": "paper",
+      "title": "Urinary excretion profiles of N-hydroxy-3,4-methylenedioxymethamphetamine in rats (Xenobiotica 41:578-584)",
+      "authors": [
+        "K. Tsujikawa",
+        "T. Mikuma",
+        "K. Kuwayama",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Inoue"
+      ],
+      "year": 2011,
+      "doi": "10.3109/00498254.2011.565821",
+      "url": "https://doi.org/10.3109/00498254.2011.565821",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

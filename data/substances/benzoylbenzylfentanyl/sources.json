@@ -1,0 +1,28 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "rautio2023",
+      "type": "paper",
+      "title": "In vitro metabolite identification of acetylbenzylfentanyl, benzoylbenzylfentanyl, 3-fluoro-methoxyacetylfentanyl, and 3-phenylpropanoylfentanyl using LC-QTOF-HRMS together with synthesized references (Drug Test Anal 15(7):711-729)",
+      "authors": [
+        "T. Rautio",
+        "D. Vangerven",
+        "J. Dahlén",
+        "S. Watanabe",
+        "R. Kronstrand",
+        "S. Vikingsson",
+        "P. Konradsson",
+        "X. Wu",
+        "H. Gréen"
+      ],
+      "year": 2023,
+      "doi": "10.1002/dta.3454",
+      "url": "https://doi.org/10.1002/dta.3454",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251116030321/https://pubmed.ncbi.nlm.nih.gov/36756728/"
+    }
+  ]
+}

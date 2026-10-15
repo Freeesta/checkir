@@ -1,0 +1,20 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "niznik2026",
+      "type": "paper",
+      "title": "The ADME profile of threo-4-methylmethylphenidate (4-Mmph, 4-MeTMP, CAS: 467468-40-2) as new psychoactive substance (NPS): Prediction of absorption, distribution, metabolism and excretion parameters using integrated in silico approach for clinical and forensic purposes (Chem Biol Interact, 111861)",
+      "authors": [
+        "Niżnik Ł",
+        "Jurowski K"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.cbi.2025.111861",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41349929/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

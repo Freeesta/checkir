@@ -1,0 +1,40 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "haghdoost2024-thcv",
+      "type": "paper",
+      "title": "Tetrahydrocannabivarin is not tetrahydrocannabinol (Cannabis Cannabinoid Res 10:1-5)",
+      "authors": [
+        "M. Haghdoost",
+        "E. N. Peters",
+        "M. Roberts",
+        "M. O. Bonn-Miller"
+      ],
+      "year": 2024,
+      "doi": "10.1089/can.2024.0051",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38995871/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260926155855/https://pubmed.ncbi.nlm.nih.gov/38995871/"
+    },
+    {
+      "id": "sempio2026-thcv",
+      "type": "paper",
+      "title": "Metabolite patterns in human urine after oral administration of highly purified Δ8-THCV (Forensic Toxicol 44:437-444)",
+      "authors": [
+        "C. Sempio",
+        "J. Campos-Palomino",
+        "J. Klawitter",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1007/s11419-026-00772-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42250012/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

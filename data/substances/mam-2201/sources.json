@@ -1,0 +1,47 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kong2017",
+      "type": "paper",
+      "title": "Metabolic characterization of (1-(5-fluoropentyl)-1H-indol-3-yl)(4-methyl-1-naphthalenyl)-methanone (MAM-2201) using human liver microsomes and cDNA-overexpressed cytochrome P450 enzymes (Anal Bioanal Chem 409:1667-1680)",
+      "authors": [
+        "T. Y. Kong",
+        "J. H. Kim",
+        "W. G. Choi",
+        "J. Y. Lee",
+        "H. S. Kim",
+        "J. Y. Kim",
+        "M. K. In",
+        "H. S. Lee"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s00216-016-0113-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27924364/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kim2018-mam2201",
+      "type": "paper",
+      "title": "Targeted and non-targeted metabolite identification of MAM-2201 in human, mouse, and rat hepatocytes (Drug Test Anal)",
+      "authors": [
+        "J. H. Kim",
+        "T. Y. Kong",
+        "J. Y. Moon",
+        "K. H. Choi",
+        "Y. Y. Cho",
+        "H. C. Kang",
+        "J. Y. Lee",
+        "H. S. Lee"
+      ],
+      "year": 2018,
+      "doi": "10.1002/dta.2389",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29608249/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

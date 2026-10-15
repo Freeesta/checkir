@@ -1,0 +1,60 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hutchinson2004",
+      "type": "paper",
+      "title": "CYP2D6 and CYP3A4 involvement in the primary oxidative metabolism of hydrocodone by human liver microsomes (Br J Clin Pharmacol 57:287-297)",
+      "authors": [
+        "M. R. Hutchinson",
+        "A. Menelaou",
+        "D. J. R. Foster",
+        "J. K. Coller",
+        "A. A. Somogyi"
+      ],
+      "year": 2004,
+      "doi": "10.1046/j.1365-2125.2003.02002.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14998425/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "kapil2015",
+      "type": "paper",
+      "title": "Effects of paroxetine, a CYP2D6 inhibitor, on the pharmacokinetic properties of hydrocodone after coadministration with a single-entity, once-daily, extended-release hydrocodone tablet (Clin Ther 37:2286-2296)",
+      "authors": [
+        "R. P. Kapil",
+        "K. Friedman",
+        "A. Cipriano",
+        "G. Michels",
+        "M. Shet",
+        "S. A. Mondal",
+        "S. C. Harris"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.clinthera.2015.08.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26350273/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "barakat2014",
+      "type": "paper",
+      "title": "Urinary hydrocodone and metabolite distributions in pain patients (J Anal Toxicol 38:404-409)",
+      "authors": [
+        "N. H. Barakat",
+        "R. S. Atayee",
+        "B. M. Best",
+        "J. D. Ma"
+      ],
+      "year": 2014,
+      "doi": "10.1093/jat/bku051",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24836897/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

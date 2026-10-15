@@ -1,0 +1,18 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "carlomagno2011",
+      "type": "paper",
+      "title": "Inositol safety: clinical evidences",
+      "authors": [
+        "Carlomagno, G",
+        "Unfer, V"
+      ],
+      "year": 2011,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21845803/",
+      "archive_url": "https://web.archive.org/web/20260625191359/https://pubmed.ncbi.nlm.nih.gov/21845803/",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

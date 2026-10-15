@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "camuto2022",
+      "type": "paper",
+      "title": "In vitro metabolic profile of mexedrone, a mephedrone analog, studied by high- and low-resolution mass spectrometry (Drug Test Anal 14:269-276)",
+      "authors": [
+        "C. Camuto",
+        "A. Guglielmelli",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3179",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34652887/",
+      "archive_url": "https://web.archive.org/web/20250204022043/https://pubmed.ncbi.nlm.nih.gov/34652887/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

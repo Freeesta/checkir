@@ -18,6 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import controlla_dati  # noqa: E402
+import unione  # noqa: E402
 import valida_schemi  # noqa: E402
 
 LANGUAGES = ("it", "en")
@@ -221,7 +222,7 @@ def check_wording(files: dict, forbidden: list[re.Pattern[str]]) -> list[str]:
 
 
 def reference_ids(root: Path) -> dict:
-    sources = {s["id"] for s in load(root / "sources.json")["sources"]}
+    sources = {s["id"] for s in unione.all_sources(root)}
     classes = {c["id"] for c in load(root / "classes.json")["classes"]}
     return {"sources": sources, "classes": classes}
 

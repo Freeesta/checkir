@@ -1,0 +1,42 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wohlfarth2014",
+      "type": "paper",
+      "title": "Metabolism of synthetic cannabinoids PB-22 and its 5-fluoro analog, 5F-PB-22, by human hepatocyte incubation and high-resolution mass spectrometry (Anal Bioanal Chem 406:1763-1780)",
+      "authors": [
+        "A. Wohlfarth",
+        "A. S. Gandhi",
+        "S. Pang",
+        "M. Zhu",
+        "K. B. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2014,
+      "doi": "10.1007/s00216-014-7668-0",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24518903/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "richter2019",
+      "type": "paper",
+      "title": "Cytotoxicity of new psychoactive substances and other drugs of abuse studied in human HepG2 cells using an adopted high content screening assay (Toxicol Lett 301:79-89)",
+      "authors": [
+        "L. H. J. Richter",
+        "A. Beck",
+        "V. Flockerzi",
+        "H. H. Maurer",
+        "M. R. Meyer"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.toxlet.2018.11.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30465810/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

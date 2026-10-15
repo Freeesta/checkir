@@ -1,0 +1,29 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "iwaki2026",
+      "type": "paper",
+      "title": "Differentiation of 2-, 3-, and 4-fluorofuranylfentanyl using high performance liquid chromatography-mass spectrometry and human liver microsomes (J Anal Toxicol 50(6))",
+      "authors": [
+        "T. Iwaki",
+        "Y. Oida",
+        "M. Morikawa",
+        "K. Itoh",
+        "K. Iwai",
+        "K. Abe",
+        "E. Kohyama",
+        "T. Ito",
+        "H. Tanaka",
+        "T. Yokoi",
+        "K. Kitaichi"
+      ],
+      "year": 2026,
+      "doi": "10.1093/jat/bkag056",
+      "url": "https://doi.org/10.1093/jat/bkag056",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

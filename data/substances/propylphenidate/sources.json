@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "luethi2017",
+      "type": "paper",
+      "title": "Pharmacological profile of methylphenidate-based designer drugs (Neuropharmacology 134)",
+      "authors": [
+        "D Luethi",
+        "P J Kaeser",
+        "S D Brandt",
+        "S Krähenbühl",
+        "M C Hoener",
+        "M E Liechti"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.neuropharm.2017.08.020",
+      "url": "https://doi.org/10.1016/j.neuropharm.2017.08.020",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

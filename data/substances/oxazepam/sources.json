@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "sonne1988",
+      "type": "paper",
+      "title": "Bioavailability and pharmacokinetics of oxazepam (Eur J Clin Pharmacol 35:385-389)",
+      "authors": [
+        "J. Sonne",
+        "S. Loft",
+        "M. Døssing",
+        "A. Vollmer-Larsen",
+        "K. L. Olesen"
+      ],
+      "year": 1988,
+      "doi": "10.1007/bf00561369",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3197746/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

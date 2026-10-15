@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "cyclobenzaprine-label",
+      "type": "institution",
+      "title": "Cyclobenzaprine hydrochloride tablets USP (SA3, LLC), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a4ae481f-9e47-470a-b4d1-5a33c0df8761",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "archive_url": "https://web.archive.org/web/20260803162439/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a4ae481f-9e47-470a-b4d1-5a33c0df8761"
+    }
+  ]
+}

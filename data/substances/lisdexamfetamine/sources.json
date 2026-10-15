@@ -1,0 +1,19 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "pennick2010",
+      "type": "paper",
+      "title": "Absorption of lisdexamfetamine dimesylate and its enzymatic conversion to d-amphetamine (Neuropsychiatr Dis Treat 6)",
+      "authors": [
+        "Pennick"
+      ],
+      "year": 2010,
+      "doi": "10.2147/ndt.s9749",
+      "url": "https://doi.org/10.2147/ndt.s9749",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

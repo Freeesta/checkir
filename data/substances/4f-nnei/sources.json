@@ -1,0 +1,27 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "uchiyama2014",
+      "type": "paper",
+      "title": "Characterization of four new designer drugs, 5-chloro-NNEI, NNEI indazole analog, α-PHPP and α-POP, with 11 newly distributed designer drugs in illegal products (Forensic Sci Int 243:1-13)",
+      "authors": [
+        "N. Uchiyama",
+        "S. Matsuda",
+        "M. Kawamura",
+        "Y. Shimokawa",
+        "R. Kikura-Hanajiri",
+        "K. Aritake",
+        "Y. Urade",
+        "Y. Goda"
+      ],
+      "year": 2014,
+      "doi": "10.1016/j.forsciint.2014.03.013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24769262/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260521212535/https://pubmed.ncbi.nlm.nih.gov/24769262/"
+    }
+  ]
+}

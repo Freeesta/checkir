@@ -1,0 +1,24 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "rouxinol2019",
+      "type": "paper",
+      "title": "Biodistribution and metabolic profile of 3,4-dimethylmethcathinone (3,4-DMMC) in Wistar rats through gas chromatography-mass spectrometry (GC-MS) analysis (Toxicol Lett 320:113-123)",
+      "authors": [
+        "Rouxinol D",
+        "Dias da Silva D",
+        "Silva JP",
+        "Carvalho F",
+        "Bastos ML",
+        "Carmo H"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.toxlet.2019.10.003",
+      "url": "https://doi.org/10.1016/j.toxlet.2019.10.003",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

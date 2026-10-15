@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-dimethylcathinone",
+      "type": "database",
+      "title": "SWGDRUG monograph: N,N-Dimethylcathinone (IR: HCl, diamond ATR 3 bounce)",
+      "url": "https://www.swgdrug.org/Monographs/N,N-Dimethylcathinone.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

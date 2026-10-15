@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "yang2021",
+      "type": "paper",
+      "title": "Detection of amfepramone and its metabolite cathinone in human hair: Application to authentic cases of amfepramone use (Drug Test Anal 14:101-109)",
+      "authors": [
+        "H. Yang",
+        "X. Wang",
+        "et al."
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3149",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34405558/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

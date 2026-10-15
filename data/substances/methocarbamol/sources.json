@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "methocarbamol-label",
+      "type": "institution",
+      "title": "Methocarbamol tablets USP, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=42c0a177-7d62-4bcf-9fce-7dd484cda4d5",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

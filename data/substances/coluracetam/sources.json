@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "bessho1996",
+      "type": "paper",
+      "title": "Effect of the novel high affinity choline uptake enhancer MKC-231 on deficits of water maze learning in rats (Arzneimittelforschung 46:369-373)",
+      "authors": [
+        "T. Bessho",
+        "K. Takashina",
+        "R. Tabata",
+        "C. Ohshima",
+        "H. Chaki",
+        "H. Yamabe",
+        "M. Egawa",
+        "A. Tobe",
+        "K. Saito"
+      ],
+      "year": 1996,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8740080/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

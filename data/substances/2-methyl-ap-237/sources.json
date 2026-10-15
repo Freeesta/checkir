@@ -1,0 +1,63 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "fogarty2022",
+      "type": "paper",
+      "title": "Toxicological and pharmacological characterization of novel cinnamylpiperazine synthetic opioids in humans and in vitro including 2-methyl AP-237 and AP-238 (Arch Toxicol 96:1701-1710)",
+      "authors": [
+        "M. F. Fogarty",
+        "M. M. Vandeputte",
+        "A. J. Krotulski",
+        "D. Papsun",
+        "S. E. Walton",
+        "C. P. Stove",
+        "B. K. Logan"
+      ],
+      "year": 2022,
+      "doi": "10.1007/s00204-022-03257-7",
+      "url": "https://doi.org/10.1007/s00204-022-03257-7",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "truver2023",
+      "type": "paper",
+      "title": "Fatal intoxication involving 2-methyl AP-237 (J Forensic Sci 68:1419-1424)",
+      "authors": [
+        "M. T. Truver",
+        "M. M. Crosby",
+        "A. T. Gillette",
+        "S. C. Brogan",
+        "J. L. Hoyer",
+        "C. W. Chronister",
+        "W. A. Broussard",
+        "R. S. Vega",
+        "B. A. Goldberger"
+      ],
+      "year": 2023,
+      "doi": "10.1111/1556-4029.15295",
+      "url": "https://doi.org/10.1111/1556-4029.15295",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "resnik2021",
+      "type": "paper",
+      "title": "DARK Classics in Chemical Neuroscience: Bucinnazine (ACS Chem Neurosci 12:3527-3534)",
+      "authors": [
+        "K. Resnik",
+        "P. Brandão",
+        "E. A. Alves"
+      ],
+      "year": 2021,
+      "doi": "10.1021/acschemneuro.1c00522",
+      "url": "https://doi.org/10.1021/acschemneuro.1c00522",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

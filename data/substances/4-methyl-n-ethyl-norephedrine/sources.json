@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "helfer2014",
+      "type": "paper",
+      "title": "Elucidation of the metabolites of the novel psychoactive substance 4-methyl-N-ethyl-cathinone (4-MEC) in human urine and pooled liver microsomes by GC-MS and LC-HR-MS/MS techniques (Drug Test Anal 7)",
+      "authors": [
+        "A G Helfer",
+        "A Turcant",
+        "D Boels",
+        "S Ferec",
+        "B Lelièvre",
+        "J Welter",
+        "M R Meyer",
+        "H H Maurer"
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1682",
+      "url": "https://doi.org/10.1002/dta.1682",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "catapres-tts-label",
+      "type": "institution",
+      "title": "Catapres-TTS (clonidine transdermal system), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d4a55825-7041-42f4-b3b2-dd7a25dbe793",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

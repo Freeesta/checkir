@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "institution",
+      "title": "Phenobarbital tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=74428144-fb24-40a5-a670-3b876e2d116c",
+      "tier": "agency",
+      "id": "phenobarbital-label",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

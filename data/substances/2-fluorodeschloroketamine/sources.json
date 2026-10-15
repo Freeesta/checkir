@@ -1,0 +1,53 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "riess2024",
+      "type": "paper",
+      "title": "2-Fluorodeschloroketamine consumption: about two deaths and a case of self-mutilation (J Anal Toxicol)",
+      "authors": [
+        "S. Riess",
+        "M. Chèze",
+        "A. Muckensturm"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae021",
+      "url": "https://doi.org/10.1093/jat/bkae021",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "zhang2026",
+      "type": "paper",
+      "title": "Metabolite Profiling and Pathway Elucidation of 2-Fluorodeschloroketamine and 2-Fluoro-N-ethylketamine in Rats Using HPLC-QTOF Mass Spectrometry (Metabolites 16(6):394)",
+      "authors": [
+        "Y. Zhang",
+        "Q. Wang",
+        "Y. Wang"
+      ],
+      "year": 2026,
+      "doi": "10.3390/metabo16060394",
+      "url": "https://doi.org/10.3390/metabo16060394",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "wang2026",
+      "type": "paper",
+      "title": "Exposure to Ketamine and 2-Fluorodeschloroketamine Impairs Mitochondrial Oxidative Phosphorylation in Human Cerebral Organoids (Curr Neuropharmacol)",
+      "authors": [
+        "J. Wang",
+        "R. Zhang",
+        "Y. Ma"
+      ],
+      "year": 2026,
+      "doi": "10.2174/011570159X445463260422181312",
+      "url": "https://doi.org/10.2174/011570159X445463260422181312",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

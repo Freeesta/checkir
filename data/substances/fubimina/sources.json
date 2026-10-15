@@ -1,0 +1,49 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "diao2016-fubimina",
+      "type": "paper",
+      "title": "Strategies to distinguish new synthetic cannabinoid FUBIMINA (BIM-2201) intake from its isomer THJ-2201: metabolism of FUBIMINA in human hepatocytes (Forensic Toxicol 34:256-267)",
+      "authors": [
+        "X. Diao",
+        "K. B. Scheidweiler",
+        "A. Wohlfarth",
+        "M. Zhu",
+        "S. Pang",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s11419-016-0312-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27547265/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260108113527/https://pubmed.ncbi.nlm.nih.gov/27547265/"
+    },
+    {
+      "id": "wiley2015",
+      "type": "paper",
+      "title": "AB-CHMINACA, AB-PINACA, and FUBIMINA: Affinity and Potency of Novel Synthetic Cannabinoids in Producing Δ9-Tetrahydrocannabinol-Like Effects in Mice (J Pharmacol Exp Ther 354:328-339)",
+      "authors": [
+        "J. L. Wiley",
+        "J. A. Marusich",
+        "T. W. Lefever",
+        "K. R. Antonazzo",
+        "M. T. Wallgren",
+        "R. A. Cortes",
+        "P. R. Patel",
+        "M. Grabenauer",
+        "K. N. Moore",
+        "B. F. Thomas"
+      ],
+      "year": 2015,
+      "doi": "10.1124/jpet.115.225326",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26105953/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251228171627/https://pubmed.ncbi.nlm.nih.gov/26105953/"
+    }
+  ]
+}

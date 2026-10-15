@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "davidsen2020-jwh122",
+      "type": "paper",
+      "title": "In vitro metabolism and hepatic intrinsic clearance of the synthetic cannabinoid receptor agonist JWH-122 and its four ω-halogenated analogues (AAPS J 21:100)",
+      "authors": [
+        "A. B. Davidsen",
+        "M. Mardal",
+        "K. Linnet"
+      ],
+      "year": 2019,
+      "doi": "10.1208/s12248-019-0338-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31093790/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

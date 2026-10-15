@@ -34,6 +34,9 @@ class Base(unittest.TestCase):
         fn(o)
         p.write_text(json.dumps(o), encoding="utf-8")
 
+    def write_json(self, rel, obj):
+        (self.root / rel).write_text(json.dumps(obj), encoding="utf-8")
+
     def problems(self):
         return "\n".join(c.check_data(self.root))
 
@@ -74,7 +77,36 @@ class Privacy(Base):
 class Integrity(Base):
     def test_duplicate_source_id(self):
         self.edit_json("sources.json", lambda o: o["sources"].append(dict(o["sources"][0])))
-        self.assertIn("sources.json: duplicate id", self.problems())
+        self.assertIn("sources: duplicate id", self.problems())
+
+    def test_source_id_repeated_in_a_substance_file(self):
+        self.edit_json("sources.json", lambda o: o["sources"].append(dict(o["sources"][0])))
+        self.write_json(f"{SUB}/sources.json", {"schema": "sources/1", "sources": [dict(c.load(self.root / "sources.json")["sources"][0])]})
+        self.assertIn("sources: duplicate id", self.problems())
+
+    def test_substance_source_is_usable_by_its_texts(self):
+        shared = c.load(self.root / "sources.json")["sources"]
+        mine = next(s for s in shared if s["id"] == "synthetic-generator")
+        self.edit_json("sources.json", lambda o: o["sources"].remove(mine))
+        self.write_json(f"{SUB}/sources.json", {"schema": "sources/1", "sources": [mine]})
+        self.assertEqual(self.problems(), "")
+
+    def test_substance_sources_file_follows_the_schema(self):
+        self.write_json(f"{SUB}/sources.json", {"schema": "sources/1", "sources": [{"id": "x"}]})
+        self.assertIn("sources.json", self.problems())
+
+    def test_alias_listed_by_two_substances(self):
+        for sub in ("synthetic-a", "synthetic-b"):
+            self.write_json(f"substances/{sub}/aliases.json", {"schema": "aliases/2", "aliases": ["old-name"]})
+        self.assertIn("'old-name' is listed by both", self.problems())
+
+    def test_alias_equal_to_a_substance_id(self):
+        self.write_json(f"{SUB}/aliases.json", {"schema": "aliases/2", "aliases": ["synthetic-b"]})
+        self.assertIn("alias 'synthetic-b' is the id of a substance", self.problems())
+
+    def test_alias_file_follows_the_schema(self):
+        self.write_json(f"{SUB}/aliases.json", {"schema": "aliases/2", "aliases": ["Old"]})
+        self.assertIn("aliases.json", self.problems())
 
     def test_duplicate_inchikey(self):
         key = json.loads((DATA / SUB / "substance.json").read_text())["inchikey"]

@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wagmann2022",
+      "type": "paper",
+      "title": "Can the Intake of a Synthetic Tryptamine be Detected Only by Blood Plasma Analysis? A Clinical Toxicology Case Involving 4-HO-MET",
+      "authors": [
+        "Wagmann L",
+        "Manier SK",
+        "Meyer MR"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkab062",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34100553/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

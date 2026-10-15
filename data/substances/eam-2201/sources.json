@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kim2016-eam2201",
+      "type": "paper",
+      "title": "In vitro metabolism of a novel synthetic cannabinoid, EAM-2201, in human liver microsomes and human recombinant cytochrome P450s (J Pharm Biomed Anal 119:50-58)",
+      "authors": [
+        "J. H. Kim",
+        "H. S. Kim",
+        "T. Y. Kong",
+        "J. Y. Lee",
+        "J. Y. Kim",
+        "M. K. In",
+        "H. S. Lee"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.jpba.2015.11.023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26641707/",
+      "archive_url": "https://web.archive.org/web/20250703031449/https://pubmed.ncbi.nlm.nih.gov/26641707/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

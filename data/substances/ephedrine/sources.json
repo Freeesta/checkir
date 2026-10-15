@@ -1,0 +1,100 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "chan2008",
+      "type": "paper",
+      "title": "Urinary elimination of ephedrines following administration of the Traditional Chinese Medicine preparation Kakkon-to (Journal of analytical toxicology 32)",
+      "authors": [
+        "Kuei Hui Chan",
+        "Ryh-Nan Pan",
+        "Mei-Chich Hsu",
+        "Ku-Fu Hsu"
+      ],
+      "year": 2008,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1093/jat/32.9.763",
+      "url": "https://doi.org/10.1093/jat/32.9.763"
+    },
+    {
+      "id": "haller2000",
+      "type": "paper",
+      "title": "Adverse cardiovascular and central nervous system events associated with dietary supplements containing ephedra alkaloids (The New England journal of medicine 343)",
+      "authors": [
+        "C A Haller",
+        "N L Benowitz"
+      ],
+      "year": 2000,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1056/NEJM200012213432502",
+      "url": "https://doi.org/10.1056/NEJM200012213432502"
+    },
+    {
+      "id": "haller2002",
+      "type": "paper",
+      "title": "Pharmacology of ephedra alkaloids and caffeine after single-dose dietary supplement use (Clinical pharmacology and therapeutics 71)",
+      "authors": [
+        "Christine A Haller",
+        "Peyton Jacob",
+        "Neal L Benowitz"
+      ],
+      "year": 2002,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1067/mcp.2002.124523",
+      "url": "https://doi.org/10.1067/mcp.2002.124523"
+    },
+    {
+      "id": "sever1975",
+      "type": "paper",
+      "title": "The metabolism of (-)-ephedrine in man (European journal of clinical pharmacology 9)",
+      "authors": [
+        "P S Sever",
+        "L G Dring",
+        "R T Williams"
+      ],
+      "year": 1975,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/BF00614017",
+      "url": "https://doi.org/10.1007/BF00614017"
+    },
+    {
+      "id": "white1997",
+      "type": "paper",
+      "title": "Pharmacokinetics and cardiovascular effects of ma-huang (Ephedra sinica) in normotensive adults (Journal of clinical pharmacology 37)",
+      "authors": [
+        "L M White",
+        "S F Gardner",
+        "B J Gurley",
+        "M A Marx",
+        "P L Wang",
+        "M Estes"
+      ],
+      "year": 1997,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1002/j.1552-4604.1997.tb04769.x",
+      "url": "https://doi.org/10.1002/j.1552-4604.1997.tb04769.x"
+    },
+    {
+      "id": "zheng2023",
+      "type": "paper",
+      "title": "Ephedrae herba: A comprehensive review of its traditional uses, phytochemistry, pharmacology, and toxicology (Journal of ethnopharmacology 307)",
+      "authors": [
+        "Qingge Zheng",
+        "Xiangyu Mu",
+        "Shaobin Pan",
+        "Ruqiao Luan",
+        "Pan Zhao"
+      ],
+      "year": 2023,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1016/j.jep.2023.116153",
+      "url": "https://doi.org/10.1016/j.jep.2023.116153"
+    }
+  ]
+}

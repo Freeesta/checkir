@@ -1,0 +1,37 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kintz1997",
+      "type": "paper",
+      "title": "Excretion of MBDB and BDB in urine, saliva, and sweat following single oral administration (J Anal Toxicol 21)",
+      "authors": [
+        "Kintz"
+      ],
+      "year": 1997,
+      "doi": "10.1093/jat/21.7.570",
+      "url": "https://doi.org/10.1093/jat/21.7.570",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nagai2002",
+      "type": "paper",
+      "title": "Enantiomer analysis of a new street drug, 3,4-methylenedioxy-N-methyl-butanamine, in rat urine (J Anal Toxicol 26)",
+      "authors": [
+        "Nagai",
+        "Matsushima",
+        "Suzuki",
+        "Saotome",
+        "Kurosu"
+      ],
+      "year": 2002,
+      "doi": "10.1093/jat/26.2.104",
+      "url": "https://doi.org/10.1093/jat/26.2.104",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

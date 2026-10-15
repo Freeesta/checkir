@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "krotulski2021",
+      "type": "paper",
+      "title": "Metonitazene in the United States: forensic toxicology assessment of a potent new synthetic opioid using liquid chromatography mass spectrometry (Drug Test Anal 13:1697-1711)",
+      "authors": [
+        "A. J. Krotulski",
+        "D. M. Papsun",
+        "S. E. Walton",
+        "B. K. Logan"
+      ],
+      "year": 2021,
+      "doi": "10.1002/dta.3115",
+      "url": "https://doi.org/10.1002/dta.3115",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

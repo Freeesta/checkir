@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "halberstadt2019",
+      "type": "paper",
+      "title": "Comparison of the behavioral responses induced by phenylalkylamine hallucinogens and their tetrahydrobenzodifuran (\"FLY\") and benzodifuran (\"DragonFLY\") analogs (Neuropharmacology 144:368-376)",
+      "authors": [
+        "A. L. Halberstadt",
+        "M. Chatha",
+        "A. Stratford",
+        "M. Grill",
+        "S. D. Brandt"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2018.10.037",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30385253/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

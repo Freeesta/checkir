@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kintz2017",
+      "type": "paper",
+      "title": "Detection of the designer benzodiazepine metizolam in urine and preliminary data on its metabolism (Drug Test Anal 9:1026-1033)",
+      "authors": [
+        "P. Kintz",
+        "C. Richeval",
+        "C. Jamey",
+        "A. Ameline"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2099",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27671107/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

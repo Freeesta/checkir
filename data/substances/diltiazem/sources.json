@@ -1,0 +1,123 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hoglund1989",
+      "type": "paper",
+      "title": "Pharmacokinetics of diltiazem and its metabolites after single and multiple dosing in healthy volunteers",
+      "authors": [
+        "Höglund, P.",
+        "Nilsson, L G."
+      ],
+      "year": 1989,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2815231/",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204221117/https://pubmed.ncbi.nlm.nih.gov/2815231/",
+      "tier": "primary"
+    },
+    {
+      "id": "molden2002",
+      "type": "paper",
+      "title": "Pharmacokinetics of diltiazem and its metabolites in relation to CYP2D6 genotype",
+      "authors": [
+        "Molden, E.",
+        "Johansen, P W.",
+        "Bøe, G H.",
+        "Bergan, S.",
+        "Christensen, H.",
+        "Rugstad, H E.",
+        "Rootwelt, H.",
+        "Reubsaet, L.",
+        "Lehne, G."
+      ],
+      "year": 2002,
+      "doi": "10.1067/mcp.2002.127396",
+      "url": "https://doi.org/10.1067/mcp.2002.127396",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260415172218/https://pubmed.ncbi.nlm.nih.gov/12235455/",
+      "tier": "primary"
+    },
+    {
+      "id": "molden2002b",
+      "type": "paper",
+      "title": "Desacetyl-diltiazem displays severalfold higher affinity to CYP2D6 compared with CYP3A4",
+      "authors": [
+        "Molden, E.",
+        "Asberg, A.",
+        "Christensen, H."
+      ],
+      "year": 2002,
+      "doi": "10.1124/dmd.30.1.1",
+      "url": "https://doi.org/10.1124/dmd.30.1.1",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260212133621/https://pubmed.ncbi.nlm.nih.gov/11744603/",
+      "tier": "primary"
+    },
+    {
+      "id": "chiappini2025",
+      "type": "paper",
+      "title": "Adverse Drug Reactions Associated with Concomitant Use of Calcium Channel Blockers and Cocaine: An Analysis of FDA Adverse Events Reporting System Data",
+      "authors": [
+        "Chiappini, S.",
+        "Mosca, A.",
+        "Papanti Pelletier, D G.",
+        "Corkery, J M.",
+        "Guirguis, A.",
+        "Arillotta, D.",
+        "Martinotti, G.",
+        "Schifano, F."
+      ],
+      "year": 2025,
+      "doi": "10.3390/jcm14103461",
+      "url": "https://doi.org/10.3390/jcm14103461",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260328112000/https://pubmed.ncbi.nlm.nih.gov/40429456/",
+      "tier": "primary"
+    },
+    {
+      "id": "graudins2016",
+      "type": "paper",
+      "title": "Calcium channel antagonist and beta-blocker overdose: antidotes and adjunct therapies",
+      "authors": [
+        "Graudins, A.",
+        "Lee, H M.",
+        "Druda, D."
+      ],
+      "year": 2016,
+      "doi": "10.1111/bcp.12763",
+      "url": "https://doi.org/10.1111/bcp.12763",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260922204520/https://pubmed.ncbi.nlm.nih.gov/26344579/",
+      "tier": "review"
+    },
+    {
+      "id": "zhang2009",
+      "type": "paper",
+      "title": "Semiphysiologically based pharmacokinetic models for the inhibition of midazolam clearance by diltiazem and its major metabolite",
+      "authors": [
+        "Zhang, X.",
+        "Quinney, SK.",
+        "Gorski, JC.",
+        "Jones, DR.",
+        "Hall, SD."
+      ],
+      "year": 2009,
+      "doi": "10.1124/dmd.109.026658",
+      "url": "https://doi.org/10.1124/dmd.109.026658",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/2026/https://pubmed.ncbi.nlm.nih.gov/19420129/",
+      "tier": "primary"
+    },
+    {
+      "id": "cardizem-label",
+      "type": "institution",
+      "title": "CARDIZEM (diltiazem hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f3e7ecef-f360-4987-a4f5-933214130ab2",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260731134200/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f3e7ecef-f360-4987-a4f5-933214130ab2",
+      "tier": "agency"
+    }
+  ]
+}

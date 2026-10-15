@@ -31,6 +31,7 @@
   "sources/invalid/no-link.json": "sources",
   "sources/invalid/bad-url.json": "/sources/0/url",
   "aliases/invalid/bad-old-id.json": "Old",
+  "aliases/invalid/duplicate-alias.json": "non-unique",
   "datasheet/invalid/old-reviewers.json": "reviewers",
   "datasheet/invalid/safe-column-in-dose.json": "safe_max",
   "datasheet/invalid/old-show-doses.json": "show_doses",

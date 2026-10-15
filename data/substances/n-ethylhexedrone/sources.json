@@ -1,0 +1,52 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-neh",
+      "type": "database",
+      "title": "SWGDRUG monograph: N-Ethylhexedrone (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/N_ethyl_hexedrone_HCl_Monograph.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "lefeuvre2024",
+      "type": "paper",
+      "title": "N-Ethylhexedrone: A very long and bad trip! A case series (Journal of analytical toxicology 48:507-513)",
+      "authors": [
+        "Lefeuvre S",
+        "Richeval C",
+        "Lelong J",
+        "Venisse N",
+        "Humbert L",
+        "Brunet B"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae040",
+      "url": "https://doi.org/10.1093/jat/bkae040",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "domagalska2021",
+      "type": "paper",
+      "title": "Fatal N-Ethylhexedrone Intoxication (Journal of analytical toxicology 45:e1-e6)",
+      "authors": [
+        "Domagalska E",
+        "Banaszkiewicz L",
+        "Woźniak MK",
+        "Kata M",
+        "Szpiech B",
+        "Kaliszan M"
+      ],
+      "year": 2021,
+      "doi": "10.1093/jat/bkaa159",
+      "url": "https://doi.org/10.1093/jat/bkaa159",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

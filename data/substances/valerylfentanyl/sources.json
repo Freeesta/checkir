@@ -1,0 +1,49 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "cooman2021",
+      "type": "paper",
+      "title": "The metabolism of valerylfentanyl using human liver microsomes and zebrafish larvae (Drug Test Anal 14:1116-1129)",
+      "authors": [
+        "T. Cooman",
+        "B. Hoover",
+        "B. Sauvé",
+        "S. A. Bergeron",
+        "N. Quinete",
+        "P. Gardinali",
+        "L. E. Arroyo"
+      ],
+      "year": 2022,
+      "doi": "10.1002/dta.3233",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35128825/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250206004705/https://pubmed.ncbi.nlm.nih.gov/35128825/"
+    },
+    {
+      "id": "xie2023",
+      "type": "paper",
+      "title": "Binding preference at the μ-opioid receptor underlies distinct pharmacology of cyclopropyl versus valeryl analogs of fentanyl (Neuropharmacology 227:109442)",
+      "authors": [
+        "B. Xie",
+        "V. P. Le Rouzic",
+        "A. Goldberg",
+        "M. M. Tsai",
+        "L. Chen",
+        "T. Zhang",
+        "A. Sinha",
+        "Y. X. Pan",
+        "M. H. Baumann",
+        "L. Shi"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.neuropharm.2023.109442",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36731721/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

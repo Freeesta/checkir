@@ -1,0 +1,62 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "coopman2016",
+      "type": "paper",
+      "title": "Ocfentanil overdose fatality in the recreational drug scene (Forensic Sci Int 266:469-473)",
+      "authors": [
+        "V. Coopman",
+        "J. Cordonnier",
+        "M. De Leeuw",
+        "V. Cirimele"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.forsciint.2016.07.005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27471990/",
+      "archive_url": "https://web.archive.org/web/20250916114849/https://pubmed.ncbi.nlm.nih.gov/27471990/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "walentiny2019",
+      "type": "paper",
+      "title": "Oxycodone-like discriminative stimulus effects of fentanyl-related emerging drugs of abuse in mice (Neuropharmacology 150:210-216)",
+      "authors": [
+        "D. M. Walentiny",
+        "L. T. Moisa",
+        "P. M. Beardsley"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.neuropharm.2019.02.007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30735691/",
+      "archive_url": "https://web.archive.org/web/20250202035911/https://pubmed.ncbi.nlm.nih.gov/30735691/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    },
+    {
+      "id": "bilel2023",
+      "type": "paper",
+      "title": "Toxicity and behavioural effects of ocfentanil and 2-furanylfentanyl in zebrafish larvae and mice (Neurotoxicology 95:83-93)",
+      "authors": [
+        "S. Bilel",
+        "M. Murari",
+        "S. Pesavento",
+        "R. Arfè",
+        "M. Tirri",
+        "L. Torroni",
+        "M. Marti",
+        "F. Tagliaro",
+        "R. Gottardo"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.neuro.2023.01.003",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36634872/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

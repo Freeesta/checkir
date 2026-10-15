@@ -1,0 +1,60 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hofert2024-thca",
+      "type": "paper",
+      "title": "Does the quantification of Δ9-tetrahydrocannabinolic acid A in serum/plasma provide any additional information about consumption pattern from drivers under the influence of cannabis? (Cannabis Cannabinoid Res 10:e165-e175)",
+      "authors": [
+        "L. Höfert",
+        "S. Baumann",
+        "J. Dreßler",
+        "S. Becker"
+      ],
+      "year": 2024,
+      "doi": "10.1089/can.2023.0172",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38512708/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "wang2016-decarboxylation",
+      "type": "paper",
+      "title": "Decarboxylation study of acidic cannabinoids: a novel approach using ultra-high-performance supercritical fluid chromatography/photodiode array-mass spectrometry (Cannabis Cannabinoid Res 1:262-271)",
+      "authors": [
+        "M. Wang",
+        "Y.-H. Wang",
+        "B. Avula",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1089/can.2016.0020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28861498/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261004010947/https://pubmed.ncbi.nlm.nih.gov/28861498/"
+    },
+    {
+      "id": "mcpartland2017-thca",
+      "type": "paper",
+      "title": "Affinity and efficacy studies of tetrahydrocannabinolic acid A at cannabinoid receptor types one and two (Cannabis Cannabinoid Res 2:87-95)",
+      "authors": [
+        "J. M. McPartland",
+        "C. MacDonald",
+        "M. Young",
+        "P. S. Grant",
+        "D. P. Furkert",
+        "M. Glass"
+      ],
+      "year": 2017,
+      "doi": "10.1089/can.2016.0032",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28861508/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260915184538/https://pubmed.ncbi.nlm.nih.gov/28861508/"
+    }
+  ]
+}

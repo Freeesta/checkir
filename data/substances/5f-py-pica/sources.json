@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "mardal2018",
+      "type": "paper",
+      "title": "Metabolism of the synthetic cannabinoid 5F-PY-PICA by human and rat hepatocytes and identification of biliary analytical targets by directional efflux in sandwich-cultured rat hepatocytes using UHPLC-HR-MS/MS (J Pharm Biomed Anal 149:296-307)",
+      "authors": [
+        "M. Mardal",
+        "P. Annaert",
+        "C. Noble",
+        "M. Oorts",
+        "K. Linnet"
+      ],
+      "year": 2018,
+      "doi": "10.1016/j.jpba.2017.11.027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29128830/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

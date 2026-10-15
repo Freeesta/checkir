@@ -1,0 +1,13 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "dailymed-ritalin",
+      "type": "institution",
+      "title": "Ritalin (methylphenidate hydrochloride) tablets, Sandoz Inc, prescribing information (DailyMed, label of 5 February 2025), section 12.3",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d6fb2750-cdab-4749-ba0d-7534840a5892",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

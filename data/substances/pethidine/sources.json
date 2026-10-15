@@ -1,0 +1,32 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "latta2002",
+      "type": "paper",
+      "title": "Meperidine: a critical review (Am J Ther 9:53-68)",
+      "authors": [
+        "K. S. Latta",
+        "B. Ginsberg",
+        "R. L. Barkin"
+      ],
+      "year": 2002,
+      "doi": "10.1097/00045391-200201000-00010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11782820/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "demerol-label",
+      "type": "institution",
+      "title": "DEMEROL (meperidine hydrochloride) injection (Hospira, Inc.), US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+      "archive_url": "https://web.archive.org/web/20260803191703/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

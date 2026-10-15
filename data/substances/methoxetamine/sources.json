@@ -1,0 +1,80 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "euda-mxe-ra",
+      "type": "institution",
+      "title": "EMCDDA, Risk assessment of methoxetamine",
+      "year": 2014,
+      "url": "https://www.euda.europa.eu/publications/risk-assessment/methoxetamine",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20230308014516/https://www.emcdda.europa.eu/publications/risk-assessment/methoxetamine",
+      "tier": "agency"
+    },
+    {
+      "id": "menzies2014",
+      "type": "paper",
+      "title": "Characterizing metabolites and potential metabolic pathways for the novel psychoactive substance methoxetamine (Drug Testing and Analysis 6)",
+      "authors": [
+        "E. L. Menzies",
+        "S. C. Hudson",
+        "P. I. Dargan",
+        "M. C. Parkin",
+        "D. M. Wood",
+        "A. T. Kicman"
+      ],
+      "year": 2013,
+      "doi": "10.1002/dta.1541",
+      "url": "https://doi.org/10.1002/dta.1541",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "zawilska2014",
+      "type": "paper",
+      "title": "Methoxetamine – a novel recreational drug with potent hallucinogenic properties (Toxicology Letters 230)",
+      "authors": [
+        "Jolanta B. Zawilska"
+      ],
+      "year": 2014,
+      "doi": "10.1016/j.toxlet.2014.08.011",
+      "url": "https://doi.org/10.1016/j.toxlet.2014.08.011",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "hill2013",
+      "type": "paper",
+      "title": "Methoxetamine toxicity reported to the National Poisons Information Service: clinical characteristics and patterns of enquiries (including the period of the introduction of the UK's first Temporary Class Drug Order) (Emergency Medicine Journal 31)",
+      "authors": [
+        "Simon L Hill",
+        "Siân C D Harbon",
+        "James Coulson",
+        "Gillian A Cooper",
+        "Gill Jackson",
+        "David J Lupton",
+        "J Allister Vale",
+        "Simon H L Thomas"
+      ],
+      "year": 2013,
+      "doi": "10.1136/emermed-2012-202251",
+      "url": "https://doi.org/10.1136/emermed-2012-202251",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "adamowicz2014",
+      "type": "paper",
+      "title": "Fatal Intoxication with Methoxetamine (Journal of Forensic Sciences 60)",
+      "authors": [
+        "Piotr Adamowicz",
+        "Dariusz Zuba"
+      ],
+      "year": 2014,
+      "doi": "10.1111/1556-4029.12594",
+      "url": "https://doi.org/10.1111/1556-4029.12594",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "jin2008",
+      "type": "paper",
+      "title": "Analysis of indandione anticoagulant rodenticides in animal liver by eluent generator reagent free ion chromatography coupled with electrospray mass spectrometry (J Chromatogr A 1213)",
+      "authors": [
+        "M Jin",
+        "X Chen",
+        "M Ye",
+        "Y Zhu"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.chroma.2008.08.100",
+      "url": "https://doi.org/10.1016/j.chroma.2008.08.100",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

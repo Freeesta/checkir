@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "diao2016-nm2201",
+      "type": "paper",
+      "title": "In vitro and in vivo human metabolism of a new synthetic cannabinoid NM-2201 (CBL-2201) (Forensic Toxicol 35:20-32)",
+      "authors": [
+        "X. Diao",
+        "J. Carlier",
+        "M. Zhu",
+        "S. Pang",
+        "R. Kronstrand",
+        "K. B. Scheidweiler",
+        "M. A. Huestis"
+      ],
+      "year": 2016,
+      "doi": "10.1007/s11419-016-0326-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28286577/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250206113842/https://pubmed.ncbi.nlm.nih.gov/28286577/"
+    }
+  ]
+}

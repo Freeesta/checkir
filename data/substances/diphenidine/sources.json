@@ -1,0 +1,41 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "wink2016",
+      "type": "paper",
+      "title": "Diphenidine, a new psychoactive substance: metabolic fate elucidated with rat urine and human liver preparations and detectability in urine using GC-MS, LC-MS, and LC-HR-MS (Drug Test Anal 8(10):1005-1014)",
+      "authors": [
+        "C. S. D. Wink",
+        "G. M. Michely",
+        "N. Jacobsen-Bauer",
+        "J. Zapp",
+        "H. H. Maurer"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.1946",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26811026/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260115140435/https://pubmed.ncbi.nlm.nih.gov/26811026/"
+    },
+    {
+      "id": "helander2015",
+      "type": "paper",
+      "title": "Intoxications by the dissociative new psychoactive substances diphenidine and methoxphenidine (Clin Toxicol 53(5):446-453)",
+      "authors": [
+        "A. Helander",
+        "O. Beck",
+        "M. Bäckberg"
+      ],
+      "year": 2015,
+      "doi": "10.3109/15563650.2015.1033630",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25881797/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261011064011/https://pubmed.ncbi.nlm.nih.gov/25881797"
+    }
+  ]
+}

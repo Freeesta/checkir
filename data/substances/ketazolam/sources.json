@@ -1,0 +1,19 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "Metabolic profile of oxazepam and related benzodiazepines: clinical and forensic aspects (Drug Metab Rev 49:451-463)",
+      "authors": [
+        "R. J. Dinis-Oliveira"
+      ],
+      "year": 2017,
+      "doi": "10.1080/03602532.2017.1377223",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28903606/",
+      "tier": "review",
+      "id": "dinis-oliveira2017b",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

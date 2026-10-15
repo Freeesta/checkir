@@ -1,0 +1,54 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "dahm2021",
+      "type": "paper",
+      "title": "Phase I-metabolism studies of the synthetic cannabinoids PX-1 and PX-2 using three different in vitro models (Forensic Toxicol)",
+      "authors": [
+        "P. Dahm",
+        "A. Thomas",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1007/s11419-021-00606-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36454402/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "presley2020",
+      "type": "paper",
+      "title": "Phase I metabolism of synthetic cannabinoid receptor agonist PX-1 (5F-APP-PICA) via incubation with human liver microsomes and UHPLC-HRMS (Biomed Chromatogr)",
+      "authors": [
+        "B. C. Presley",
+        "B. K. Logan",
+        "et al."
+      ],
+      "year": 2020,
+      "doi": "10.1002/bmc.4786",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31863591/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "fabregat2019-px1",
+      "type": "paper",
+      "title": "Comprehensive investigation on synthetic cannabinoids: metabolic behavior and potency testing, using 5F-APP-PICA and AMB-FUBINACA as model compounds (Drug Test Anal)",
+      "authors": [
+        "D. Fabregat-Safont",
+        "M. Mardal",
+        "et al."
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2659",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31192526/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20250204005606/https://pubmed.ncbi.nlm.nih.gov/31192526/"
+    }
+  ]
+}

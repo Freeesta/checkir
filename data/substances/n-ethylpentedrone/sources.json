@@ -1,0 +1,76 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "roosendaal2026",
+      "type": "paper",
+      "title": "Toxicological interpretation of N-ethylpentedrone and its metabolites in 12 fatal and non-fatal forensic cases (Journal of analytical toxicology 50:bkag010)",
+      "authors": [
+        "Roosendaal J",
+        "Bosman IJ",
+        "Van Driessche PMI",
+        "Rijken DJ",
+        "Hulshof JW",
+        "van de Velde B",
+        "Klein T",
+        "Maudens KEK"
+      ],
+      "year": 2026,
+      "doi": "10.1093/jat/bkag010",
+      "url": "https://doi.org/10.1093/jat/bkag010",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "pasquet2026",
+      "type": "paper",
+      "title": "N-Ethylpentedrone: first hair detection and human metabolic profiling across multiple biological matrices using UHPLC-HRMS, molecular networking and in silico prediction (Archives of toxicology 100:4529-4541)",
+      "authors": [
+        "Pasquet A",
+        "Pelletier R",
+        "Rouah R",
+        "Panter T",
+        "Loiseau M",
+        "Porée FH",
+        "Gicquel T",
+        "Guerard P"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00204-026-04412-0",
+      "url": "https://doi.org/10.1007/s00204-026-04412-0",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "espinosa2024",
+      "type": "paper",
+      "title": "Sex differences in the effects of N-ethylpentylone in young CD1 mice: Insights on behaviour, thermoregulation and early gene expression (British journal of pharmacology 181:4491-4513)",
+      "authors": [
+        "Espinosa-Velasco M",
+        "Castro-Zavala A",
+        "Reguilón MD",
+        "Gallego-Landin I",
+        "Bellot M",
+        "Rublinetska O",
+        "Valverde O",
+        "Rodríguez-Arias M",
+        "Nadal-Gratacós N",
+        "Berzosa X",
+        "Gómez-Canela C",
+        "Carbó ML",
+        "Camarasa J",
+        "Escubedo E",
+        "López-Arnau R",
+        "Pubill D"
+      ],
+      "year": 2024,
+      "doi": "10.1111/bph.16506",
+      "url": "https://doi.org/10.1111/bph.16506",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

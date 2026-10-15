@@ -18,6 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import jcamp  # noqa: E402
 import controlla_schede  # noqa: E402
+import unione  # noqa: E402
 import qualita  # noqa: E402
 import valida_schemi  # noqa: E402
 
@@ -108,20 +109,36 @@ def check_spectrum(label: str, jdx: Path, meta_path: Path, meta: dict, forbidden
     return out, j.ys
 
 
+def check_aliases(root: Path) -> list[str]:
+    """An alias is listed by one substance only and is never the id of a substance."""
+    ids = {d.name for d in unione.substance_dirs(root)}
+    owner: dict[str, str] = {}
+    out: list[str] = []
+    for path in unione.alias_files(root):
+        for alias in load(path)["aliases"]:
+            if alias in ids:
+                out.append(f"{path.parent.name}/aliases.json: alias '{alias}' is the id of a substance")
+            elif alias in owner:
+                out.append(f"aliases: '{alias}' is listed by both '{owner[alias]}' and '{path.parent.name}' (non-unique)")
+            owner.setdefault(alias, path.parent.name)
+    return out
+
+
 def collect(root: Path) -> tuple[list[str], dict]:
     problems: list[str] = []
     ctx: dict = {"sources": set(), "tiers": {}, "cut_ids": set(), "classes": {}, "substances": {}, "forms": set()}
-    for name in ("sources.json", "classes.json", "aliases.json"):
-        problems += valida_schemi.check_file(root / name)
+    for path in [root / "classes.json", *unione.source_files(root), *unione.alias_files(root)]:
+        problems += valida_schemi.check_file(path)
     if problems:
         return problems, ctx
-    for name, key in (("sources.json", "sources"), ("classes.json", "classes")):
-        ids = [x["id"] for x in load(root / name)[key]]
+    merged = unione.all_sources(root)
+    for name, ids in (("sources", [s["id"] for s in merged]), ("classes.json", [x["id"] for x in load(root / "classes.json")["classes"]])):
         problems += [f"{name}: duplicate id '{i}'" for i in sorted({i for i in ids if ids.count(i) > 1})]
+    problems += check_aliases(root)
     if problems:
         return problems, ctx
-    ctx["sources"] = {s["id"] for s in load(root / "sources.json")["sources"]}
-    ctx["tiers"] = {s["id"]: s.get("tier") for s in load(root / "sources.json")["sources"]}
+    ctx["sources"] = {s["id"] for s in merged}
+    ctx["tiers"] = {s["id"]: s.get("tier") for s in merged}
     ctx["classes"] = {c["id"]: c for c in load(root / "classes.json")["classes"]}
     return problems, ctx
 

@@ -1,0 +1,43 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "burns2013",
+      "type": "paper",
+      "title": "Antitussives and substance abuse (Subst Abuse Rehabil 4:75-82)",
+      "authors": [
+        "J. M. Burns",
+        "E. W. Boyer"
+      ],
+      "year": 2013,
+      "doi": "10.2147/SAR.S36761",
+      "url": "https://doi.org/10.2147/SAR.S36761",
+      "license": "CC BY-NC 3.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    },
+    {
+      "id": "schifano2021-otc",
+      "type": "paper",
+      "title": "Focus on Over-the-Counter Drugs' Misuse: A Systematic Review on Antihistamines, Cough Medicines, and Decongestants (Front Psychiatry 12:657397)",
+      "authors": [
+        "F. Schifano",
+        "S. Chiappini",
+        "A. Miuli",
+        "A. Mosca",
+        "M. C. Santovito",
+        "J. M. Corkery",
+        "A. Guirguis",
+        "M. Pettorruso",
+        "M. Di Giannantonio",
+        "G. Martinotti"
+      ],
+      "year": 2021,
+      "doi": "10.3389/fpsyt.2021.657397",
+      "url": "https://doi.org/10.3389/fpsyt.2021.657397",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    }
+  ]
+}

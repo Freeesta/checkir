@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "paskanova2026",
+      "type": "paper",
+      "title": "Determination of Enantiomers of Deschloroketamine and Its Metabolites in Wistar Rat Brains (J Sep Sci 49(9):e70503)",
+      "authors": [
+        "Paškanová",
+        "Hrubá",
+        "Frühauf",
+        "Jurásek",
+        "Kuchař",
+        "Řezanka",
+        "Kohout"
+      ],
+      "year": 2026,
+      "doi": "10.1002/jssc.70503",
+      "url": "https://doi.org/10.1002/jssc.70503",
+      "license": "CC BY 4.0; cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

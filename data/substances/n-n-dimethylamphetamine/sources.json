@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kunalan2009",
+      "type": "paper",
+      "title": "Characterization of Route Specific Impurities Found in Methamphetamine Synthesized by the Leuckart and Reductive Amination Methods (Anal Chem 81:7342-7348)",
+      "authors": [
+        "V. Kunalan",
+        "N. Nic Daeid",
+        "W. J. Kerr",
+        "H. A. S. Buchanan",
+        "A. R. McPherson"
+      ],
+      "year": 2009,
+      "doi": "10.1021/ac9005588",
+      "url": "https://doi.org/10.1021/ac9005588",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

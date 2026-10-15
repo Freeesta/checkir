@@ -1,0 +1,54 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "baumann2017",
+      "type": "paper",
+      "title": "Neuropharmacology of 3,4-Methylenedioxypyrovalerone (MDPV), Its Metabolites, and Related Analogs (Curr Top Behav Neurosci 32:93-117)",
+      "authors": [
+        "Baumann MH",
+        "Bukhari MO",
+        "Lehner KR",
+        "Anizan S",
+        "Rice KC",
+        "Concheiro M",
+        "Huestis MA"
+      ],
+      "year": 2017,
+      "doi": "10.1007/7854_2016_53",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27830575/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250620200405/https://pubmed.ncbi.nlm.nih.gov/27830575/"
+    },
+    {
+      "id": "meyer2010",
+      "type": "paper",
+      "title": "Studies on the metabolism of the α-pyrrolidinophenone designer drug methylenedioxy-pyrovalerone (MDPV) in rat and human urine and human liver microsomes using GC-MS and LC-high-resolution MS and its detectability in urine by GC-MS (J Mass Spectrom 45:1426-42)",
+      "authors": [
+        "Meyer MR",
+        "Du P",
+        "Schuster F",
+        "Maurer HH"
+      ],
+      "year": 2010,
+      "doi": "10.1002/jms.1859",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21053377/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251123060456/https://pubmed.ncbi.nlm.nih.gov/21053377/"
+    },
+    {
+      "id": "swgdrug-mdpv",
+      "type": "database",
+      "title": "SWGDRUG monograph: 3,4-MDPV (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/3,4MDPV.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241212113914/https://swgdrug.org/Monographs/3,4MDPV.pdf",
+      "tier": "agency"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "neurontin-label",
+      "type": "institution",
+      "title": "NEURONTIN (gabapentin) capsules, tablets and oral solution, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=97935fd9-1d4a-43b6-a5d9-de994591187b",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "mclaughlin2017",
+      "type": "paper",
+      "title": "Analytical characterization and pharmacological evaluation of the new psychoactive substance 4-fluoromethylphenidate (4F-MPH) and differentiation between the (±)-threo and (±)-erythro diastereomers (Drug Test Anal 9:347-357)",
+      "authors": [
+        "G. McLaughlin",
+        "N. Morris",
+        "P. V. Kavanagh",
+        "J. D. Power",
+        "G. Dowling",
+        "B. Twamley",
+        "J. O'Brien",
+        "G. Hessman",
+        "B. Murphy",
+        "D. Walther",
+        "J. S. Partilla",
+        "M. H. Baumann",
+        "S. D. Brandt"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2167",
+      "url": "https://doi.org/10.1002/dta.2167",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

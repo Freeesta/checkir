@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "paul2021",
+      "type": "paper",
+      "title": "Alpha-Pyrrolidinopentiothiophenone (α-PVT): A forensic case study including plasma concentrations (Forensic Sci Int 321:110721)",
+      "authors": [
+        "Paul LD",
+        "Welter-Luedeke J",
+        "Penzel S",
+        "Zangl A",
+        "Graw M"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.forsciint.2021.110721",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33640778/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

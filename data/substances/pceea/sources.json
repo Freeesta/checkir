@@ -1,0 +1,43 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "sauer2008-pceea",
+      "type": "paper",
+      "title": "New designer drugs N-(1-phenylcyclohexyl)-2-ethoxyethanamine (PCEEA) and N-(1-phenylcyclohexyl)-2-methoxyethanamine (PCMEA): studies on their metabolism and toxicological detection in rat urine using gas chromatographic/mass spectrometric techniques (J Mass Spectrom 43:305-316)",
+      "authors": [
+        "C. Sauer",
+        "F. T. Peters",
+        "R. F. Staack",
+        "G. Fritschi",
+        "H. H. Maurer"
+      ],
+      "year": 2008,
+      "doi": "10.1002/jms.1312",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17968862/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250219183647/https://pubmed.ncbi.nlm.nih.gov/17968862/"
+    },
+    {
+      "id": "sauer2009-pceea",
+      "type": "paper",
+      "title": "Investigations on the cytochrome P450 (CYP) isoenzymes involved in the metabolism of the designer drugs N-(1-phenylcyclohexyl)-2-ethoxyethanamine and N-(1-phenylcyclohexyl)-2-methoxyethanamine (Biochem Pharmacol 77:444-450)",
+      "authors": [
+        "C. Sauer",
+        "F. T. Peters",
+        "A. E. Schwaninger",
+        "M. R. Meyer",
+        "H. H. Maurer"
+      ],
+      "year": 2008,
+      "doi": "10.1016/j.bcp.2008.10.024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19022226/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250206070923/https://pubmed.ncbi.nlm.nih.gov/19022226/"
+    }
+  ]
+}

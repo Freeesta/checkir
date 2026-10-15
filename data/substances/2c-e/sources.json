@@ -1,0 +1,60 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "theobald2006e",
+      "type": "paper",
+      "title": "Studies on the metabolism and toxicological detection of the designer drug 4-ethyl-2,5-dimethoxy-beta-phenethylamine (2C-E) in rat urine using gas chromatographic-mass spectrometric techniques (J Chromatogr B 842(1):76-90)",
+      "authors": [
+        "Denis S. Theobald",
+        "Hans H. Maurer"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.jchromb.2006.03.001",
+      "url": "https://doi.org/10.1016/j.jchromb.2006.03.001",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "sacks2012",
+      "type": "paper",
+      "title": "Fatal toxic leukoencephalopathy secondary to overdose of a new psychoactive designer drug 2C-E (\"Europa\") (Proc (Bayl Univ Med Cent) 25(4):374-376)",
+      "authors": [
+        "J. Sacks",
+        "M. J. Ray",
+        "S. Williams",
+        "M. J. Opatowsky"
+      ],
+      "year": 2012,
+      "doi": "10.1080/08998280.2012.11928883",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3448584/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    },
+    {
+      "id": "iwersen2019",
+      "type": "paper",
+      "title": "Mass poisoning with NPS: 2C-E and Bromo-DragonFly (Int J Legal Med 133(1):123-129)",
+      "authors": [
+        "S. Iwersen-Bergmann",
+        "S. Lehmann",
+        "A. Heinemann",
+        "C. Schröder",
+        "A. Müller",
+        "H. Jungen",
+        "H. Andresen-Streichert",
+        "K. Pueschel",
+        "C. Vidal",
+        "K. Mercer-Chalmers-Bender"
+      ],
+      "year": 2019,
+      "doi": "10.1007/s00414-018-1882-9",
+      "url": "https://doi.org/10.1007/s00414-018-1882-9",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

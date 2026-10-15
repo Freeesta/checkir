@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "narimatsu2006",
+      "type": "paper",
+      "title": "Oxidative metabolism of 5-methoxy-N,N-diisopropyltryptamine (Foxy) by human liver microsomes and recombinant cytochrome P450 enzymes (Biochem Pharmacol 71(9):1377-1385)",
+      "authors": [
+        "S. Narimatsu",
+        "R. Yonemoto",
+        "K. Saito",
+        "K. Takaya",
+        "T. Kumamoto",
+        "et al.",
+        "N. Hanioka"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.bcp.2006.01.015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16510126/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

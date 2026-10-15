@@ -1,0 +1,46 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "luca2018",
+      "type": "paper",
+      "title": "Lauflumide (NLS-4) Is a New Potent Wake-Promoting Compound (Front Neurosci 12:519)",
+      "authors": [
+        "Luca G",
+        "Bandarabadi M",
+        "Konofal E",
+        "Lecendreux M",
+        "Ferrié L",
+        "Figadère B",
+        "Tafti M"
+      ],
+      "year": 2018,
+      "doi": "10.3389/fnins.2018.00519",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30158846/",
+      "archive_url": "https://web.archive.org/web/20250202034903/https://pubmed.ncbi.nlm.nih.gov/30158846/",
+      "tier": "primary",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "krug2026",
+      "type": "paper",
+      "title": "Investigations Into the Metabolism and Elimination of Flmodafinil and Fladrafinil for Sports Drug Testing Purposes (Drug Test Anal 18:1076-1087)",
+      "authors": [
+        "Krug O",
+        "Guddat S",
+        "Görgens C",
+        "Walpurgis K",
+        "Toma F",
+        "Thomas A",
+        "Thevis M"
+      ],
+      "year": 2026,
+      "doi": "10.1002/dta.70100",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42210629/",
+      "tier": "primary",
+      "license": "cc by; cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

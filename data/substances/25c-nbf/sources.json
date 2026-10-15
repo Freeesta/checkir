@@ -1,0 +1,54 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hur2020",
+      "type": "paper",
+      "title": "25C-NBF, a new psychoactive substance, has addictive and neurotoxic potential in rodents (Arch Toxicol 94(7):2505-2516)",
+      "authors": [
+        "K. H. Hur",
+        "S. E. Kim",
+        "B. R. Lee",
+        "Y. H. Ko",
+        "J. Y. Seo",
+        "S. K. Kim",
+        "S. X. Ma",
+        "Y. J. Kim",
+        "Y. Jeong",
+        "D. T. Pham",
+        "Q. D. Trinh",
+        "E. J. Shin",
+        "H. C. Kim",
+        "Y. S. Lee",
+        "S. Y. Lee",
+        "C. G. Jang"
+      ],
+      "year": 2020,
+      "doi": "10.1007/s00204-020-02740-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32296860/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "nadal2026",
+      "type": "paper",
+      "title": "The psychedelic phenethylamine 25C-NBF, a selective 5-HT2A agonist, shows psychoplastogenic properties and rapid antidepressant effects in male rodents (Mol Psychiatry 31(4):1909-1922)",
+      "authors": [
+        "N. Nadal-Gratacós",
+        "P. Puigseslloses",
+        "L. Guzmán",
+        "N. Weiss",
+        "E. Pottie",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1038/s41380-025-03341-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41238841/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251116174203/https://pubmed.ncbi.nlm.nih.gov/41238841/"
+    }
+  ]
+}

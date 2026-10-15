@@ -1,0 +1,38 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "konishi2017",
+      "type": "paper",
+      "title": "Identification of enzymes responsible for nitrazepam metabolism and toxicity in human (Biochem Pharmacol 140:150-160)",
+      "authors": [
+        "K. Konishi",
+        "T. Fukami",
+        "S. Gotoh",
+        "M. Nakajima"
+      ],
+      "year": 2017,
+      "doi": "10.1016/j.bcp.2017.06.114",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28606603/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "vangerven1998",
+      "type": "paper",
+      "title": "Pharmacodynamics and pharmacokinetics of a single oral dose of nitrazepam in healthy volunteers: an interethnic comparison (J Clin Pharmacol 38:1129-1136)",
+      "authors": [
+        "J. M. van Gerven",
+        "E. Uchida",
+        "N. Uchida"
+      ],
+      "year": 1998,
+      "doi": "10.1177/009127009803801207",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11301565/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

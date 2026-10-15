@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "watanabe2023",
+      "type": "paper",
+      "title": "In vitro metabolic profiling of new synthetic cannabinoids, ADB-FUBIATA, AFUBIATA, CH-FUBIATA, and CH-PIATA (Arch Toxicol 97:3085-3094)",
+      "authors": [
+        "S. Watanabe",
+        "H. Yamane",
+        "T. Iwai",
+        "R. Matsushita",
+        "Y. Seto"
+      ],
+      "year": 2023,
+      "doi": "10.1007/s00204-023-03605-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37755504/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

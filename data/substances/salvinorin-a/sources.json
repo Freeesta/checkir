@@ -1,0 +1,89 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "johnson2016",
+      "type": "paper",
+      "title": "Time course of pharmacokinetic and hormonal effects of inhaled high-dose salvinorin A in humans (J Psychopharmacol 30:323-329)",
+      "authors": [
+        "M. W. Johnson",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1177/0269881116629125",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26880225/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251006053331/https://pubmed.ncbi.nlm.nih.gov/26880225/"
+    },
+    {
+      "id": "maqueda2016",
+      "type": "paper",
+      "title": "Naltrexone but not ketanserin antagonizes the subjective, cardiovascular, and neuroendocrine effects of salvinorin-A in humans (Int J Neuropsychopharmacol 19:pyw016)",
+      "authors": [
+        "A. E. Maqueda",
+        "et al."
+      ],
+      "year": 2016,
+      "doi": "10.1093/ijnp/pyw016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4966277/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20261004041507/https://pmc.ncbi.nlm.nih.gov/articles/PMC4966277/"
+    },
+    {
+      "id": "mahendran2015",
+      "type": "paper",
+      "title": "Salvia divinorum: an overview of the usage, misuse, and addiction processes (Asia Pac Psychiatry 8:23-31)",
+      "authors": [
+        "R. Mahendran",
+        "et al."
+      ],
+      "year": 2015,
+      "doi": "10.1111/appy.12225",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26617400/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250202051823/https://pubmed.ncbi.nlm.nih.gov/26617400/"
+    },
+    {
+      "id": "elkhoury2015",
+      "type": "paper",
+      "title": "The association of Salvia divinorum and psychotic disorders: a review of the literature and case series (J Psychoactive Drugs 47:286-292)",
+      "authors": [
+        "J. El-Khoury",
+        "et al."
+      ],
+      "year": 2015,
+      "doi": "10.1080/02791072.2015.1073815",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26317561/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20250202195400/https://pubmed.ncbi.nlm.nih.gov/26317561/"
+    },
+    {
+      "id": "tsujikawa2009",
+      "type": "paper",
+      "title": "In vitro stability and metabolism of salvinorin A in rat plasma (Xenobiotica 39:391-398)",
+      "authors": [
+        "K. Tsujikawa",
+        "K. Kuwayama",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. T. Iwata",
+        "H. Inoue"
+      ],
+      "year": 2009,
+      "doi": "10.1080/00498250902769967",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19280383/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260224042646/https://pubmed.ncbi.nlm.nih.gov/19280383/"
+    }
+  ]
+}

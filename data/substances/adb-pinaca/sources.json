@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gaunitz2019",
+      "type": "paper",
+      "title": "Solid-phase extraction-liquid chromatography-tandem mass spectrometry method for the qualitative analysis of 61 synthetic cannabinoid metabolites in urine (Drug Test Anal 12:27-40)",
+      "authors": [
+        "F. Gaunitz",
+        "T. Kieliba",
+        "M. Thevis",
+        "K. Mercer-Chalmers-Bender"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2680",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31412168/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

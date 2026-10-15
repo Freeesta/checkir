@@ -1,0 +1,35 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "meprobamate-label",
+      "type": "institution",
+      "title": "Meprobamate tablets USP, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=17d814e2-b277-4dce-8615-e7fd7cab773f",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "agency"
+    },
+    {
+      "id": "calvo2022",
+      "type": "paper",
+      "title": "Single and multiple dose PK-PD characterization for carisoprodol. Part I: pharmacokinetics, metabolites, and 2C19 phenotype influence (J Clin Med 11:858)",
+      "authors": [
+        "A. Calvo",
+        "S. Alonso",
+        "E. Prieto",
+        "A. Ascaso-Del-Rio",
+        "J. Ortuño",
+        "N. Fernandez",
+        "A. Portolés"
+      ],
+      "year": 2022,
+      "doi": "10.3390/jcm11030858",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35160309/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "shen2010",
+      "type": "paper",
+      "title": "Effects of monoamine oxidase inhibitor and cytochrome P450 2D6 status on 5-methoxy-N,N-dimethyltryptamine metabolism and pharmacokinetics (Biochem Pharmacol 80(1):122-128)",
+      "authors": [
+        "H. W. Shen",
+        "C. Wu",
+        "X. L. Jiang",
+        "A. M. Yu"
+      ],
+      "year": 2010,
+      "doi": "10.1016/j.bcp.2010.02.020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2879007/",
+      "archive_url": "https://web.archive.org/web/20260227063333/https://pmc.ncbi.nlm.nih.gov/articles/PMC2879007/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "shen2011",
+      "type": "paper",
+      "title": "Nonlinear pharmacokinetics of 5-methoxy-N,N-dimethyltryptamine in mice (Drug Metab Dispos 39(7):1227-1234)",
+      "authors": [
+        "H. W. Shen",
+        "X. L. Jiang",
+        "A. M. Yu"
+      ],
+      "year": 2011,
+      "doi": "10.1124/dmd.111.039107",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3127237/",
+      "archive_url": "https://web.archive.org/web/20260721003228/https://pmc.ncbi.nlm.nih.gov/articles/PMC3127237/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

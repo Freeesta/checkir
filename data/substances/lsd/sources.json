@@ -1,0 +1,186 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "passie2008",
+      "type": "paper",
+      "title": "The pharmacology of lysergic acid diethylamide: a review (CNS Neurosci Ther 14(4):295-314)",
+      "authors": [
+        "T. Passie",
+        "J. H. Halpern",
+        "D. O. Stichtenoth",
+        "H. M. Emrich",
+        "A. Hintzen"
+      ],
+      "year": 2008,
+      "doi": "10.1111/j.1755-5949.2008.00059.x",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6494066/",
+      "archive_url": "https://web.archive.org/web/20261011190703/https://pmc.ncbi.nlm.nih.gov/articles/PMC6494066/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "holze2023",
+      "type": "paper",
+      "title": "Pharmacokinetics, pharmacodynamics and urinary recovery of oral lysergic acid diethylamide administration in healthy participants (Br J Clin Pharmacol 90(1):200-208)",
+      "authors": [
+        "F. Holze",
+        "L. Erne",
+        "U. Duthaler",
+        "M. E. Liechti"
+      ],
+      "year": 2023,
+      "doi": "10.1111/bcp.15887",
+      "url": "https://doi.org/10.1111/bcp.15887",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "vizeli2021",
+      "type": "paper",
+      "title": "Genetic influence of CYP2D6 on pharmacokinetics and acute subjective effects of LSD in a pooled analysis (Sci Rep 11:10851)",
+      "authors": [
+        "P. Vizeli",
+        "I. Straumann",
+        "F. Holze",
+        "Y. Schmid",
+        "P. C. Dolder",
+        "M. E. Liechti"
+      ],
+      "year": 2021,
+      "doi": "10.1038/s41598-021-90343-y",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8149637/",
+      "archive_url": "https://web.archive.org/web/20251129190609/https://pmc.ncbi.nlm.nih.gov/articles/PMC8149637/",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "luethi2019-lsd",
+      "type": "paper",
+      "title": "Cytochrome P450 enzymes contribute to the metabolism of LSD to nor-LSD and 2-oxo-3-hydroxy-LSD: Implications for clinical LSD use (Biochem Pharmacol 164:129-138)",
+      "authors": [
+        "D. Luethi",
+        "M. C. Hoener",
+        "S. Krähenbühl",
+        "M. E. Liechti",
+        "U. Duthaler"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.bcp.2019.04.013",
+      "url": "https://doi.org/10.1016/j.bcp.2019.04.013",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "euda-lsd",
+      "type": "institution",
+      "title": "EUDA, Lysergide (LSD) drug profile",
+      "url": "https://euda.europa.eu/publications/drug-profiles/lsd_en",
+      "archive_url": "https://web.archive.org/web/20260907150006/https://www.euda.europa.eu/publications/drug-profiles/lsd_en",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "holze2020",
+      "title": "Acute dose-dependent effects of lysergic acid diethylamide in a double-blind placebo-controlled study in healthy subjects (Neuropsychopharmacology 46(3):537-544)",
+      "authors": [
+        "F. Holze",
+        "P. Vizeli",
+        "L. Ley",
+        "F. Müller",
+        "P. Dolder",
+        "M. Stocker",
+        "U. Duthaler",
+        "N. Varghese",
+        "A. Eckert",
+        "S. Borgwardt",
+        "M. E. Liechti"
+      ],
+      "year": 2020,
+      "doi": "10.1038/s41386-020-00883-6",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1038/s41386-020-00883-6"
+    },
+    {
+      "id": "holze2020-micro",
+      "title": "Pharmacokinetics and pharmacodynamics of lysergic acid diethylamide microdoses in healthy participants (Clin Pharmacol Ther 109(3):658-666)",
+      "authors": [
+        "F. Holze",
+        "M. E. Liechti",
+        "N. R. P. W. Hutten",
+        "N. L. Mason",
+        "P. C. Dolder",
+        "E. L. Theunissen",
+        "U. Duthaler",
+        "A. Feilding",
+        "J. G. Ramaekers",
+        "K. P. C. Kuypers"
+      ],
+      "year": 2020,
+      "doi": "10.1002/cpt.2057",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1002/cpt.2057"
+    },
+    {
+      "id": "dolder2015",
+      "title": "Pharmacokinetics and concentration-effect relationship of oral LSD in humans (Int J Neuropsychopharmacol 19(1):pyv072)",
+      "authors": [
+        "P. C. Dolder",
+        "Y. Schmid",
+        "M. Haschke",
+        "K. M. Rentsch",
+        "M. E. Liechti"
+      ],
+      "year": 2015,
+      "doi": "10.1093/ijnp/pyv072",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1093/ijnp/pyv072"
+    },
+    {
+      "id": "rickli2016",
+      "title": "Receptor interaction profiles of novel psychoactive tryptamines compared with classic hallucinogens (Eur Neuropsychopharmacol 26(8):1327-1337)",
+      "authors": [
+        "A. Rickli",
+        "O. D. Moning",
+        "M. C. Hoener",
+        "M. E. Liechti"
+      ],
+      "year": 2016,
+      "doi": "10.1016/j.euroneuro.2016.05.001",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/j.euroneuro.2016.05.001"
+    },
+    {
+      "id": "bonson1996",
+      "title": "Chronic administration of serotonergic antidepressants attenuates the subjective effects of LSD in humans (Neuropsychopharmacology 14(6):425-436)",
+      "authors": [
+        "K. R. Bonson",
+        "J. W. Buckholtz",
+        "D. L. Murphy"
+      ],
+      "year": 1996,
+      "doi": "10.1016/0893-133X(95)00145-4",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/0893-133X(95)00145-4"
+    }
+  ]
+}

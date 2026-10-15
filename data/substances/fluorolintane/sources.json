@@ -1,0 +1,54 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "dybek2019",
+      "type": "paper",
+      "title": "Syntheses and analytical characterizations of the research chemical 1-[1-(2-fluorophenyl)-2-phenylethyl]pyrrolidine (fluorolintane) and five of its isomers (Drug Test Anal 11:1144-1161)",
+      "authors": [
+        "Dybek M",
+        "Wallach J",
+        "Kavanagh PV",
+        "Colestock T",
+        "Filemban N",
+        "Dowling G",
+        "Westphal F",
+        "Elliott SP",
+        "Adejare A",
+        "Brandt SD"
+      ],
+      "year": 2019,
+      "doi": "10.1002/dta.2608",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31033229/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "wallach2019",
+      "type": "paper",
+      "title": "Pharmacological characterizations of the 'legal high' fluorolintane and isomers (Eur J Pharmacol 857:172427)",
+      "authors": [
+        "Wallach J",
+        "Colestock T",
+        "Agramunt J",
+        "Claydon MDB",
+        "Dybek M",
+        "Filemban N",
+        "Chatha M",
+        "Halberstadt AL",
+        "Brandt SD",
+        "Lodge D",
+        "Bortolotto ZA",
+        "Adejare A"
+      ],
+      "year": 2019,
+      "doi": "10.1016/j.ejphar.2019.172427",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31152702/",
+      "archive_url": "https://web.archive.org/web/20260223072047/https://pubmed.ncbi.nlm.nih.gov/31152702/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

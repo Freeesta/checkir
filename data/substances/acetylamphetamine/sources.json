@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kuwayama2006",
+      "type": "paper",
+      "title": "Identification of impurities and the statistical classification of methamphetamine using headspace solid phase microextraction and gas chromatography-mass spectrometry (Forensic Sci Int 160(1):44-52)",
+      "authors": [
+        "K. Kuwayama",
+        "K. Tsujikawa",
+        "H. Miyaguchi",
+        "T. Kanamori",
+        "Y. Iwata",
+        "H. Inoue",
+        "S. Saitoh",
+        "T. Kishi"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.forsciint.2005.08.013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16188412/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "maas2017",
+      "type": "paper",
+      "title": "Confirmation of recent heroin abuse: Accepting the challenge (Drug Test Anal 10:54-71)",
+      "authors": [
+        "A. Maas",
+        "B. Madea",
+        "C. Hess"
+      ],
+      "year": 2017,
+      "doi": "10.1002/dta.2244",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28681463/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    },
+    {
+      "id": "oneal2001",
+      "type": "paper",
+      "title": "Acetylcodeine, an impurity of illicitly manufactured heroin, elicits convulsions, antinociception, and locomotor stimulation in mice (Drug Alcohol Depend 65:37-43)",
+      "authors": [
+        "C. L. O'Neal",
+        "A. Poklis",
+        "A. H. Lichtman"
+      ],
+      "year": 2001,
+      "doi": "10.1016/s0376-8716(01)00145-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11714588/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

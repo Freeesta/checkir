@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "huffman2006-pyrroles",
+      "type": "paper",
+      "title": "1-Alkyl-2-aryl-4-(1-naphthoyl)pyrroles: new high affinity ligands for the cannabinoid CB1 and CB2 receptors (Bioorg Med Chem Lett 16:5432-5435)",
+      "authors": [
+        "J. W. Huffman",
+        "L. W. Padgett",
+        "M. L. Isherwood",
+        "J. L. Wiley",
+        "B. R. Martin"
+      ],
+      "year": 2006,
+      "doi": "10.1016/j.bmcl.2006.07.051",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16889960/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

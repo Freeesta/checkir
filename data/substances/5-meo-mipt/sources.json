@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "zhao2024",
+      "type": "paper",
+      "title": "Biotransformation of 5-methoxy-N-isopropyl-N-methyltryptamine by zebrafish and human liver microsome with high-resolution mass spectrometry (J Pharm Biomed Anal 241:115987)",
+      "authors": [
+        "S. Zhao",
+        "Y. Wang",
+        "C. Zhong",
+        "J. Chen",
+        "L. Meng"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.jpba.2024.115987",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38280235/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

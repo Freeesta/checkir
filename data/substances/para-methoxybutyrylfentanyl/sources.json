@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "who-pmebf2018",
+      "type": "institution",
+      "title": "WHO Expert Committee on Drug Dependence, Critical Review Report: p-Methoxy-butyrylfentanyl (S. D. Brandt)",
+      "year": 2018,
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/9579",
+      "archive_url": "https://web.archive.org/web/20250325211657/https://researchonline.ljmu.ac.uk/id/eprint/9579/",
+      "tier": "agency",
+      "license": "© WHO; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

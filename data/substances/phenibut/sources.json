@@ -1,0 +1,34 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "Phenibut: A drug with one too many \"buts\" (Basic Clin Pharmacol Toxicol 135:409-416)",
+      "authors": [
+        "B. J. Gurley",
+        "I. Koturbash"
+      ],
+      "year": 2024,
+      "doi": "10.1111/bcpt.14075",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39197876/",
+      "tier": "review",
+      "id": "gurley2024",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Phenibut (beta-phenyl-GABA): a tranquilizer and nootropic drug (CNS Drug Rev 7:471-481)",
+      "authors": [
+        "I. Lapin"
+      ],
+      "year": 2001,
+      "doi": "10.1111/j.1527-3458.2001.tb00211.x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11830761/",
+      "tier": "review",
+      "id": "lapin2001",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

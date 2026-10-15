@@ -1,0 +1,51 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "type": "paper",
+      "title": "The glucuronidation of R- and S-lorazepam: human liver microsomal kinetics, UDP-glucuronosyltransferase enzyme selectivity, and inhibition by drugs (Drug Metab Dispos 41:1273-1284)",
+      "authors": [
+        "V. Uchaipichat",
+        "C. Suthisisang",
+        "J. O. Miners"
+      ],
+      "year": 2013,
+      "doi": "10.1124/dmd.113.051656",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23554428/",
+      "tier": "primary",
+      "id": "uchaipichat2013",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "paper",
+      "title": "Effect of the UGT2B15 genotype on the pharmacokinetics, pharmacodynamics, and drug interactions of intravenous lorazepam in healthy volunteers (Clin Pharmacol Ther 77:486-494)",
+      "authors": [
+        "J. Y. Chung",
+        "J. Y. Cho",
+        "K. S. Yu",
+        "J. R. Kim",
+        "H. R. Jung",
+        "K. S. Lim",
+        "et al."
+      ],
+      "year": 2005,
+      "doi": "10.1016/j.clpt.2005.02.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15961980/",
+      "tier": "primary",
+      "id": "chung2005",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "type": "institution",
+      "title": "Lorazepam tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=00960fbd-a5da-408b-9867-62982f20906f",
+      "tier": "agency",
+      "id": "lorazepam-label",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

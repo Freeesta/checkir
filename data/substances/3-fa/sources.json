@@ -1,0 +1,15 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-3fa",
+      "type": "database",
+      "title": "SWGDRUG monograph: 3-Fluoroamphetamine (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/3-FA.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency",
+      "archive_url": "https://web.archive.org/web/20241212115830/https://swgdrug.org/Monographs/3-FA.pdf"
+    }
+  ]
+}

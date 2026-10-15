@@ -1,0 +1,26 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "mastrovito2022",
+      "type": "paper",
+      "title": "Determination of Cross-Reactivity of Novel Psychoactive Substances with Drug Screen Immunoassays Kits in Whole Blood (J Anal Toxicol 46(7):726-731)",
+      "authors": [
+        "R. Mastrovito",
+        "C. Trail",
+        "M. Lino",
+        "A. Cervantes",
+        "A. Chan-Hosokawa",
+        "F. Strathmann",
+        "B. Logan"
+      ],
+      "year": 2022,
+      "doi": "10.1093/jat/bkab110",
+      "url": "https://doi.org/10.1093/jat/bkab110",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20240604065203/https://pubmed.ncbi.nlm.nih.gov/34791285/"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "papaseit2018",
+      "type": "paper",
+      "title": "Acute Pharmacological Effects of 2C-B in Humans: An Observational Study (Frontiers in Pharmacology 9)",
+      "authors": [
+        "Esther Papaseit",
+        "Magí Farré",
+        "Clara Pérez-Mañá",
+        "Marta Torrens",
+        "Mireia Ventura",
+        "Mitona Pujadas",
+        "Rafael de la Torre",
+        "Débora González"
+      ],
+      "year": 2018,
+      "doi": "10.3389/fphar.2018.00206",
+      "url": "https://doi.org/10.3389/fphar.2018.00206",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

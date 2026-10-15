@@ -1,0 +1,22 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "hansen1995",
+      "type": "paper",
+      "title": "Fungal transformations of antihistamines: metabolism of brompheniramine, chlorpheniramine, and pheniramine to N-oxide and N-demethylated metabolites by the fungus Cunninghamella elegans (Xenobiotica 25:1081-1092)",
+      "authors": [
+        "E. B. Hansen",
+        "B. P. Cho",
+        "W. A. Korfmacher",
+        "C. E. Cerniglia"
+      ],
+      "year": 1995,
+      "doi": "10.3109/00498259509061908",
+      "url": "https://doi.org/10.3109/00498259509061908",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

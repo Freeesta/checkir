@@ -1,0 +1,70 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "lyrica-label",
+      "type": "institution",
+      "title": "LYRICA (pregabalin) capsules and oral solution, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=60185c88-ecfd-46f9-adb9-b97c6b00a553",
+      "archive_url": "https://web.archive.org/web/20260802153658/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=60185c88-ecfd-46f9-adb9-b97c6b00a553",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "bockbrader2010",
+      "type": "paper",
+      "title": "Clinical pharmacokinetics of pregabalin in healthy volunteers (J Clin Pharmacol 50:941-950)",
+      "authors": [
+        "H. N. Bockbrader",
+        "L. L. Radulovic",
+        "E. L. Posvar",
+        "et al."
+      ],
+      "year": 2010,
+      "doi": "10.1177/0091270009352087",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20147618/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260707162059/https://pubmed.ncbi.nlm.nih.gov/20147618/"
+    },
+    {
+      "id": "evoy2021",
+      "type": "paper",
+      "title": "Gabapentinoid pharmacology in the context of emerging misuse liability (J Clin Pharmacol 61 Suppl 2:S89-S99)",
+      "authors": [
+        "K. E. Evoy",
+        "A. M. Peckham",
+        "J. R. Covvey",
+        "K. J. Tidgewell"
+      ],
+      "year": 2021,
+      "doi": "10.1002/jcph.1833",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34396549/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "archive_url": "https://web.archive.org/web/20260902203559/https://pubmed.ncbi.nlm.nih.gov/34396549/"
+    },
+    {
+      "id": "evoy2026",
+      "type": "paper",
+      "title": "Misuse of pregabalin and gabapentin: a second systematic review update (Drugs 86:1365-1378)",
+      "authors": [
+        "K. E. Evoy",
+        "D. Drain",
+        "J. Pedigo",
+        "J. R. Covvey",
+        "O. Ramey"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s40265-026-02342-w",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42236659/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    }
+  ]
+}

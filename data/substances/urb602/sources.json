@@ -1,0 +1,31 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "king2007",
+      "type": "paper",
+      "title": "URB602 inhibits monoacylglycerol lipase and selectively blocks 2-arachidonoylglycerol degradation in intact brain slices (Chem Biol 14:1357-1365)",
+      "authors": [
+        "A. R. King",
+        "A. Duranti",
+        "A. Tontini",
+        "S. Rivara",
+        "A. Rosengarth",
+        "J. R. Clapper",
+        "G. Astarita",
+        "J. A. Geaga",
+        "H. Luecke",
+        "M. Mor",
+        "G. Tarzia",
+        "D. Piomelli"
+      ],
+      "year": 2007,
+      "doi": "10.1016/j.chembiol.2007.10.017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18096504/",
+      "archive_url": "https://web.archive.org/web/20250202072910/https://pubmed.ncbi.nlm.nih.gov/18096504/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

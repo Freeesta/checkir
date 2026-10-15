@@ -1,0 +1,138 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-aphp",
+      "type": "database",
+      "title": "SWGDRUG monograph: alpha-PHP (α-pyrrolidinohexanophenone) (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/alpha-PHP.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    },
+    {
+      "id": "dinis2024",
+      "type": "paper",
+      "title": "α-Pyrrolidinohexanophenone (α-PHP) and α-Pyrrolidinoisohexanophenone (α-PiHP): A Review (Life 14:429)",
+      "authors": [
+        "Dinis P",
+        "Franco J",
+        "Margalho C"
+      ],
+      "year": 2024,
+      "doi": "10.3390/life14040429",
+      "url": "https://doi.org/10.3390/life14040429",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "review"
+    },
+    {
+      "id": "bassi2025aphp",
+      "type": "paper",
+      "title": "α-PHP: Acute effects and pharmacokinetic in male and female mice, and clinical data on related intoxications (Drug and alcohol dependence 269:112596)",
+      "authors": [
+        "Bassi M",
+        "Roda E",
+        "Tirri M",
+        "Corli G",
+        "Bilel S",
+        "Bernardi T",
+        "Boccuto F",
+        "Borsari M",
+        "Buscaglia E",
+        "De Luca F",
+        "Di Rosa F",
+        "Gregori A",
+        "Buccilli V",
+        "Maida P",
+        "Ambrogi D",
+        "Strano-Rossi S",
+        "Locatelli CA",
+        "Marti M"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.drugalcdep.2025.112596",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2025.112596",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "brueckner2024",
+      "type": "paper",
+      "title": "α-Pyrrolidinohexanophenone (α-PHP) vs. α-pyrrolidinoisohexanophenone (α-PiHP): A toxicological investigation about plasma concentrations and behavior in forensic routine cases (Journal of analytical toxicology 48:299-313)",
+      "authors": [
+        "Brueckner I",
+        "Welter-Luedeke J",
+        "Zangl A",
+        "Graw M",
+        "Paul LD"
+      ],
+      "year": 2024,
+      "doi": "10.1093/jat/bkae011",
+      "url": "https://doi.org/10.1093/jat/bkae011",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "yeh2024",
+      "type": "paper",
+      "title": "In vitro metabolic studies and machine learning analysis of mass spectrometry data: A dual strategy for differentiating alpha-pyrrolidinohexiophenone (α-PHP) and alpha-pyrrolidinoisohexanophenone (α-PiHP) in urine analysis (Forensic science international 361:112134)",
+      "authors": [
+        "Yeh YL",
+        "Wen CY",
+        "Hsieh CL",
+        "Chang YH",
+        "Wang SM"
+      ],
+      "year": 2024,
+      "doi": "10.1016/j.forsciint.2024.112134",
+      "url": "https://doi.org/10.1016/j.forsciint.2024.112134",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "davies2023",
+      "type": "paper",
+      "title": "Structure-Activity Relationships for a Recently Controlled Synthetic Cathinone Dopamine Transporter Reuptake Inhibitor: α-Pyrrolidinohexiophenone (α-PHP) (ACS chemical neuroscience 14:2527-2536)",
+      "authors": [
+        "Davies RA",
+        "Nguyen VT",
+        "Eltit JM",
+        "Glennon RA"
+      ],
+      "year": 2023,
+      "doi": "10.1021/acschemneuro.3c00156",
+      "url": "https://doi.org/10.1021/acschemneuro.3c00156",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    },
+    {
+      "id": "gomonit2026",
+      "type": "paper",
+      "title": "Case series involving the synthetic cathinones alpha-PHP, alpha-PiHP, MDPHP, and MDPiHP in forensic investigations (Forensic science international 384:112917)",
+      "authors": [
+        "Gomonit MM",
+        "Walton SE",
+        "Papsun DM",
+        "Lamb ME",
+        "Chronister CW",
+        "Krotulski AJ",
+        "Elliott S",
+        "Taylor K",
+        "Truver MT",
+        "Goldberger BA",
+        "Logan BK"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.forsciint.2026.112917",
+      "url": "https://doi.org/10.1016/j.forsciint.2026.112917",
+      "consulted": "2026-10-13",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

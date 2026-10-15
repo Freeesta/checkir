@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "nucynta-label",
+      "type": "institution",
+      "title": "NUCYNTA (tapentadol hydrochloride) tablets, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2025,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=80938c30-9fe3-4c7d-9d9c-5476638cfb2d",
+      "archive_url": "https://web.archive.org/web/20260804032839/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=80938c30-9fe3-4c7d-9d9c-5476638cfb2d",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

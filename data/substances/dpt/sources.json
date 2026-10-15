@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "cozzi2009",
+      "type": "paper",
+      "title": "Dimethyltryptamine and other hallucinogenic tryptamines exhibit substrate behavior at the serotonin uptake transporter and the vesicle monoamine transporter (J Neural Transm 116(12):1591-1599)",
+      "authors": [
+        "N. V. Cozzi",
+        "A. Gopalakrishnan",
+        "L. L. Anderson",
+        "J. T. Feih",
+        "A. T. Shulgin",
+        "P. F. Daley",
+        "A. E. Ruoho"
+      ],
+      "year": 2009,
+      "doi": "10.1007/s00702-009-0308-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19756361/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

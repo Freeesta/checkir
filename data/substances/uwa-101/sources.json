@@ -1,0 +1,35 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "johnston2012",
+      "type": "paper",
+      "title": "A novel MDMA analogue, UWA-101, that lacks psychoactivity and cytotoxicity, enhances L-DOPA benefit in parkinsonian primates (FASEB J 26:2154-2163)",
+      "authors": [
+        "T. H. Johnston",
+        "Z. Millar",
+        "P. Huot",
+        "K. Wagg",
+        "S. Thiele",
+        "D. Salomonczyk",
+        "C. J. Yong-Kee",
+        "M. N. Gandy",
+        "M. McIldowie",
+        "K. D. Lewis",
+        "J. Gomez-Ramirez",
+        "J. Lee",
+        "S. H. Fox",
+        "M. Martin-Iverson",
+        "J. E. Nash",
+        "M. J. Piggott",
+        "J. M. Brotchie"
+      ],
+      "year": 2012,
+      "doi": "10.1096/fj.11-195016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22345403/",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

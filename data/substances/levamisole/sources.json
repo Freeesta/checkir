@@ -1,0 +1,199 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "chang2010",
+      "type": "paper",
+      "title": "Levamisole: A Dangerous New Cocaine Adulterant",
+      "authors": [
+        "Chang, A",
+        "Osterloh, J",
+        "Thomas, J"
+      ],
+      "year": 2010,
+      "doi": "10.1038/clpt.2010.156",
+      "url": "https://doi.org/10.1038/clpt.2010.156",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260226005448/https://pubmed.ncbi.nlm.nih.gov/20668440/",
+      "tier": "primary"
+    },
+    {
+      "id": "larocque2012",
+      "type": "paper",
+      "title": "Levamisole in cocaine: Unexpected news from an old acquaintance",
+      "authors": [
+        "Larocque, Alexandre",
+        "Hoffman, Robert S."
+      ],
+      "year": 2012,
+      "doi": "10.3109/15563650.2012.665455",
+      "url": "https://doi.org/10.3109/15563650.2012.665455",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20260411000919/https://pubmed.ncbi.nlm.nih.gov/22455354/",
+      "tier": "primary"
+    },
+    {
+      "id": "hess2013",
+      "type": "paper",
+      "title": "Metabolism of levamisole and kinetics of levamisole and aminorex in urine by means of LC-QTOF-HRMS and LC-QqQ-MS",
+      "authors": [
+        "Hess, C.",
+        "Ritke, N.",
+        "Broecker, S.",
+        "Madea, B.",
+        "Musshoff, F."
+      ],
+      "year": 2013,
+      "doi": "10.1007/s00216-013-6829-x",
+      "url": "https://doi.org/10.1007/s00216-013-6829-x",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250804155220/https://pubmed.ncbi.nlm.nih.gov/23436169/",
+      "tier": "primary"
+    },
+    {
+      "id": "hess2014",
+      "type": "paper",
+      "title": "Determination of levamisole, aminorex, and pemoline in plasma by means of liquid chromatography-mass spectrometry and application to a pharmacokinetic study of levamisole",
+      "authors": [
+        "Hess, C.",
+        "Ritke, N.",
+        "Sydow, K.",
+        "Mehling, L.-M.",
+        "Ruehs, H.",
+        "Madea, B.",
+        "Musshoff, F."
+      ],
+      "year": 2014,
+      "doi": "10.1002/dta.1619",
+      "url": "https://doi.org/10.1002/dta.1619",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204064101/https://pubmed.ncbi.nlm.nih.gov/24574157/",
+      "tier": "primary"
+    },
+    {
+      "id": "eiden2015",
+      "type": "paper",
+      "title": "Prevalence of levamisole and aminorex in patients tested positive for cocaine in a French University Hospital",
+      "authors": [
+        "Eiden, C.",
+        "Peyrière, H.",
+        "Diot, C.",
+        "Mathieu, O."
+      ],
+      "year": 2015,
+      "doi": "10.3109/15563650.2015.1054499",
+      "url": "https://doi.org/10.3109/15563650.2015.1054499",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20250204074007/https://pubmed.ncbi.nlm.nih.gov/26065363/",
+      "tier": "primary"
+    },
+    {
+      "id": "kouassi1986",
+      "title": "Novel assay and pharmacokinetics of levamisole and p-hydroxylevamisole in human plasma and urine (Biopharm Drug Dispos 7(1):71-89)",
+      "authors": [
+        "E. Kouassi",
+        "G. Caillé",
+        "L. Léry",
+        "L. Larivière",
+        "M. Vézina"
+      ],
+      "year": 1986,
+      "doi": "10.1002/bdd.2510070110",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1002/bdd.2510070110"
+    },
+    {
+      "id": "hofmaier2014",
+      "title": "Aminorex, a metabolite of the cocaine adulterant levamisole, exerts amphetamine like actions at monoamine transporters (Neurochem Int 73:32-41)",
+      "authors": [
+        "T. Hofmaier",
+        "A. Luf",
+        "A. Seddik",
+        "T. Stockner",
+        "M. Holy",
+        "M. Freissmuth",
+        "G. F. Ecker",
+        "R. Schmid",
+        "H. H. Sitte",
+        "O. Kudlacek"
+      ],
+      "year": 2014,
+      "doi": "10.1016/j.neuint.2013.11.010",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1016/j.neuint.2013.11.010"
+    },
+    {
+      "id": "zolkowska2026",
+      "title": "Neuropharmacology of levamisole and its phase I metabolites: lack of evidence for levamisole-cocaine interactions (Psychopharmacology)",
+      "authors": [
+        "D. Zolkowska",
+        "K. R. Lehner",
+        "J. S. Partilla",
+        "B. E. Blough",
+        "M. H. Baumann"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00213-026-07145-1",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1007/s00213-026-07145-1"
+    },
+    {
+      "id": "brunt2017",
+      "title": "Adverse effects of levamisole in cocaine users: a review and risk assessment (Arch Toxicol 91(6):2303-2313)",
+      "authors": [
+        "T. M. Brunt",
+        "J. van den Berg",
+        "E. Pennings",
+        "B. Venhuis"
+      ],
+      "year": 2017,
+      "doi": "10.1007/s00204-017-1947-4",
+      "tier": "review",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1007/s00204-017-1947-4"
+    },
+    {
+      "id": "arora2013",
+      "title": "Cutaneous vasculopathy and neutropenia associated with levamisole-adulterated cocaine (Am J Med Sci 345(1):45-51)",
+      "authors": [
+        "N. P. Arora"
+      ],
+      "year": 2013,
+      "doi": "10.1097/MAJ.0b013e31825b2b50",
+      "tier": "review",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1097/MAJ.0b013e31825b2b50"
+    },
+    {
+      "id": "hundertmark2023",
+      "title": "Analysis of tetramisole metabolites - Is aminorex found in forensic samples of cocaine users actually 4-phenyl-2-imidazolidinone? (Drug Test Anal 15(8):865-878)",
+      "authors": [
+        "M. Hundertmark",
+        "C. Hess",
+        "J. Röhrich",
+        "C. Wunder",
+        "M. Losacker"
+      ],
+      "year": 2023,
+      "doi": "10.1002/dta.3482",
+      "tier": "primary",
+      "type": "paper",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "url": "https://doi.org/10.1002/dta.3482"
+    }
+  ]
+}

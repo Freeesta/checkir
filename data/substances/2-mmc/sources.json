@@ -1,0 +1,35 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-2mmc",
+      "type": "database",
+      "title": "SWGDRUG monograph: 2-Methylmethcathinone (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/2-MMC.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241212103357/https://swgdrug.org/Monographs/2-MMC.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "boudin2026",
+      "type": "paper",
+      "title": "Emergence of 2-MMC in the French Alps: description of 13 clinical and forensic toxicology cases (Int J Legal Med 140(4):2089-2099)",
+      "authors": [
+        "Coralie Boudin",
+        "Bruno Revol",
+        "Hélène Eysseric-Guérin",
+        "Mireille Bartoli",
+        "Françoise Stanke-Labesque",
+        "Virginie Scolan",
+        "Théo Willeman"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s00414-026-03791-4",
+      "url": "https://doi.org/10.1007/s00414-026-03791-4",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "doi2018-enantiomers",
+      "type": "paper",
+      "title": "Evaluation of carboxamide-type synthetic cannabinoids as CB1/CB2 receptor agonists: difference between the enantiomers (Forensic Toxicol 36:51-60)",
+      "authors": [
+        "T. Doi",
+        "T. Tagami",
+        "A. Takeda",
+        "A. Asada",
+        "Y. Sawabe"
+      ],
+      "year": 2018,
+      "doi": "10.1007/s11419-017-0378-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29367862/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    },
+    {
+      "id": "xi2026",
+      "type": "paper",
+      "title": "Determination of 65 synthetic cannabinoids in whole blood by QuEChERS-ultra performance liquid chromatography-mass spectrometry (Se Pu 44:393-402)",
+      "authors": [
+        "Z. Xi",
+        "Y. Ye",
+        "et al.",
+        "D.-X. Li"
+      ],
+      "year": 2026,
+      "doi": "10.3724/SP.J.1123.2025.04037",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41969257/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

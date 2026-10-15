@@ -1,0 +1,31 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "crews2014",
+      "type": "paper",
+      "title": "Clinical Pharmacogenetics Implementation Consortium guidelines for cytochrome P450 2D6 genotype and codeine therapy: 2014 update (Clin Pharmacol Ther 95:376-382)",
+      "authors": [
+        "K. R. Crews",
+        "A. Gaedigk",
+        "H. M. Dunnenberger",
+        "J. S. Leeder",
+        "T. E. Klein",
+        "K. E. Caudle",
+        "C. E. Haidar",
+        "D. D. Shen",
+        "J. T. Callaghan",
+        "S. Sadhasivam",
+        "C. A. Prows",
+        "E. D. Kharasch",
+        "T. C. Skaar"
+      ],
+      "year": 2014,
+      "doi": "10.1038/clpt.2013.254",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3975212/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "review"
+    }
+  ]
+}

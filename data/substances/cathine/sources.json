@@ -1,0 +1,19 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "alsufyani2024",
+      "type": "paper",
+      "title": "The stimulant cathine from Khat causes tachycardia indirectly in the rat (Basic Clin Pharmacol Toxicol 135:345-352)",
+      "authors": [
+        "Alsufyani HA"
+      ],
+      "year": 2024,
+      "doi": "10.1111/bcpt.14057",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39034439/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

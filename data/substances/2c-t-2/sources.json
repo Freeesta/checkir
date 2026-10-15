@@ -1,0 +1,23 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "theobald2005",
+      "type": "paper",
+      "title": "New designer drug 2,5-dimethoxy-4-ethylthio-beta-phenethylamine (2C-T-2): studies on its metabolism and toxicological detection in rat urine using gas chromatography/mass spectrometry (J Mass Spectrom 40(9):1157-1172)",
+      "authors": [
+        "D. S. Theobald",
+        "R. F. Staack",
+        "M. Puetz",
+        "H. H. Maurer"
+      ],
+      "year": 2005,
+      "doi": "10.1002/jms.890",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16041763/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20251115115324/https://pubmed.ncbi.nlm.nih.gov/16041763/"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "ferrari2026",
+      "type": "paper",
+      "title": "GC-MS By-product signatures enable reliable differentiation of isomeric synthetic cathinones (Forensic Sci Int 387:113012)",
+      "authors": [
+        "E. Ferrari Júnior",
+        "L. P. E. Ferreira",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.forsciint.2026.113012",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42172948/",
+      "consulted": "2026-10-14",
+      "license": "cited as the source of numbers only",
+      "tier": "primary"
+    }
+  ]
+}

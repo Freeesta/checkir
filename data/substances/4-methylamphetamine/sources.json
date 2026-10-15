@@ -1,0 +1,25 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "blanckaert2013",
+      "type": "paper",
+      "title": "4-Methyl-amphetamine: a health threat for recreational amphetamine users (J Psychopharmacol 27:817-822)",
+      "authors": [
+        "P. Blanckaert",
+        "J. G. C. van Amsterdam",
+        "T. M. Brunt",
+        "J. D. J. van den Berg",
+        "F. Van Durme",
+        "K. Maudens",
+        "J. C. H. van Bussel"
+      ],
+      "year": 2013,
+      "doi": "10.1177/0269881113487950",
+      "url": "https://doi.org/10.1177/0269881113487950",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "review"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "iarc-100a-phenacetin",
+      "type": "institution",
+      "title": "Phenacetin. In: IARC Monographs on the Evaluation of Carcinogenic Risks to Humans, Volume 100A, Pharmaceuticals (IARC, Lyon, 2012)",
+      "year": 2012,
+      "url": "https://publications.iarc.who.int/118",
+      "archive_url": "https://web.archive.org/web/20260520075134/https://publications.iarc.who.int/118",
+      "consulted": "2026-10-13"
+    }
+  ]
+}

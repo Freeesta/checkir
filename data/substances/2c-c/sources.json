@@ -1,0 +1,30 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kim2021",
+      "type": "paper",
+      "title": "New designer phenethylamines 2C-C and 2C-P have abuse potential and induce neurotoxicity in rodents (Arch Toxicol 95(4):1413-1429)",
+      "authors": [
+        "Young-Jung Kim",
+        "Shi-Xun Ma",
+        "Kwang-Hyun Hur",
+        "Youyoung Lee",
+        "Yong-Hyun Ko",
+        "Bo-Ram Lee",
+        "Seon-Kyung Kim",
+        "Su-Jeong Sung",
+        "Kyeong-Man Kim",
+        "Hyoung-Chun Kim",
+        "Seok-Yong Lee",
+        "Choon-Gon Jang"
+      ],
+      "year": 2021,
+      "doi": "10.1007/s00204-021-02980-x",
+      "url": "https://doi.org/10.1007/s00204-021-02980-x",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "primary"
+    }
+  ]
+}

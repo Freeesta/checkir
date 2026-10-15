@@ -1,0 +1,14 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "swgdrug-25c-nbome",
+      "type": "database",
+      "title": "SWGDRUG monograph: 25C-NBOMe (IR: diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/25C-NBOMe.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "tier": "agency"
+    }
+  ]
+}

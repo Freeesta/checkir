@@ -1,0 +1,52 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "kitagawa2003-gts21",
+      "type": "paper",
+      "title": "Safety, pharmacokinetics, and effects on cognitive function of multiple doses of GTS-21 in healthy, male volunteers (Neuropsychopharmacology 28:542-551)",
+      "authors": [
+        "H. Kitagawa",
+        "T. Takenouchi",
+        "R. Azuma",
+        "K. A. Wesnes",
+        "W. G. Kramer",
+        "D. E. Clody",
+        "A. L. Burnett"
+      ],
+      "year": 2003,
+      "doi": "10.1038/sj.npp.1300028",
+      "url": "https://doi.org/10.1038/sj.npp.1300028",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "kim2007-gts21",
+      "type": "paper",
+      "title": "Synthesis and positron emission tomography studies of C-11-labeled isotopomers and metabolites of GTS-21, a partial alpha7 nicotinic cholinergic agonist drug (Nucl Med Biol 34:541-551)",
+      "authors": [
+        "S. W. Kim",
+        "Y. S. Ding",
+        "D. Alexoff",
+        "V. Patel",
+        "J. Logan",
+        "K. S. Lin",
+        "C. Shea",
+        "L. Muench",
+        "Y. Xu",
+        "P. Carter",
+        "P. King",
+        "J. R. Constanzo",
+        "J. A. Ciaccio",
+        "J. S. Fowler"
+      ],
+      "year": 2007,
+      "doi": "10.1016/j.nucmedbio.2007.04.005",
+      "url": "https://doi.org/10.1016/j.nucmedbio.2007.04.005",
+      "tier": "primary",
+      "license": "cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

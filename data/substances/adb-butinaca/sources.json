@@ -1,0 +1,58 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "sia2021",
+      "type": "paper",
+      "title": "Urinary Metabolite Biomarkers for the Detection of Synthetic Cannabinoid ADB-BUTINACA Abuse (Clin Chem 67:1534-1544)",
+      "authors": [
+        "C. H. Sia",
+        "Z. Wang",
+        "E. M. L. Goh",
+        "et al."
+      ],
+      "year": 2021,
+      "doi": "10.1093/clinchem/hvab134",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34387654/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20241213194357/https://pubmed.ncbi.nlm.nih.gov/34387654/"
+    },
+    {
+      "id": "gish2025",
+      "type": "paper",
+      "title": "ADB-BUTINACA, a synthetic cannabinoid receptor agonist: overview of its presence in the \"Chimique\" in Mayotte (Environ Sci Pollut Res 32:29905-29916)",
+      "authors": [
+        "A. Gish",
+        "A. Peyré",
+        "C. Richeval",
+        "et al."
+      ],
+      "year": 2025,
+      "doi": "10.1007/s11356-025-37270-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41372739/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary",
+      "archive_url": "https://web.archive.org/web/20260514025453/https://pubmed.ncbi.nlm.nih.gov/41372739/"
+    },
+    {
+      "id": "zschiesche2026",
+      "type": "paper",
+      "title": "Synthetic cannabinoids in human post-mortem samples - ADB-BUTINACA and metabolites in three fatalities (Front Toxicol 8:1826767)",
+      "authors": [
+        "A. Zschiesche",
+        "S. Köpfler",
+        "C. Wunder",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.3389/ftox.2026.1826767",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13215650/",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14",
+      "tier": "primary"
+    }
+  ]
+}

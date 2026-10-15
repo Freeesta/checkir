@@ -1,0 +1,55 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "ladona2000",
+      "type": "paper",
+      "title": "Cocaine metabolism in human fetal and adult liver microsomes is related to cytochrome P450 3A expression (Life Sci 68(4):431-443)",
+      "authors": [
+        "M. G. Ladona",
+        "M. L. Gonzalez",
+        "A. Rane",
+        "R. M. Peter",
+        "R. de la Torre"
+      ],
+      "year": 2000,
+      "doi": "10.1016/s0024-3205(00)00952-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11205892/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "liu2016-cocaine",
+      "type": "paper",
+      "title": "Applicability of ultra-high performance liquid chromatography-quadrupole-time of flight mass spectrometry for cocaine profiling (Drug Test Anal 9(8):1152-1161)",
+      "authors": [
+        "C. Liu",
+        "Z. Hua",
+        "X. Meng"
+      ],
+      "year": 2016,
+      "doi": "10.1002/dta.2132",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27860448/",
+      "tier": "primary",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    },
+    {
+      "id": "laposchan2021",
+      "type": "paper",
+      "title": "Impurities, adulterants and cutting agents in cocaine as potential candidates for retrospective mining of GC-MS data (Sci Justice 62(1):60-75)",
+      "authors": [
+        "S. Laposchan",
+        "R. F. Kranenburg",
+        "A. C. van Asten"
+      ],
+      "year": 2021,
+      "doi": "10.1016/j.scijus.2021.11.004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35033329/",
+      "tier": "review",
+      "license": "cited as the source of numbers only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}

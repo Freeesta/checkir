@@ -1,0 +1,129 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "gerostamoulos2023",
+      "type": "paper",
+      "title": "Fatal Intoxications from a Combination of 4-Fluoroamphetamine and 25C-NBOMe (Journal of analytical toxicology 47)",
+      "authors": [
+        "Dimitri Gerostamoulos",
+        "Linda Glowacki",
+        "Maria Pricone",
+        "Kerryn Crump",
+        "Matthew Di Rago",
+        "Samantha Joubert",
+        "Matthew J Lynch",
+        "Noel W Woodford",
+        "Olaf H Drummer"
+      ],
+      "year": 2023,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1093/jat/bkac059",
+      "url": "https://doi.org/10.1093/jat/bkac059"
+    },
+    {
+      "id": "gresnigt2022",
+      "type": "paper",
+      "title": "4-Fluoroamphetamine (4-FA) intoxication results in exaggerated blood pressure effects compared to MDMA and amphetamine: A retrospective analysis (Journal of the American College of Emergency Physicians open 3)",
+      "authors": [
+        "Femke M J Gresnigt",
+        "Anouk Snik",
+        "Eric J F Franssen",
+        "Joost W Vanhommerig",
+        "Dylan W de Lange",
+        "Robert K Riezebos"
+      ],
+      "year": 2022,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1002/emp2.12813",
+      "url": "https://doi.org/10.1002/emp2.12813"
+    },
+    {
+      "id": "hondebrink2018",
+      "type": "paper",
+      "title": "Fatalities, Cerebral Hemorrhage, and Severe Cardiovascular Toxicity After Exposure to the New Psychoactive Substance 4-Fluoroamphetamine: A Prospective Cohort Study (Annals of emergency medicine 71)",
+      "authors": [
+        "Laura Hondebrink",
+        "Johanna J Nugteren-van Lonkhuyzen",
+        "Saskia J Rietjens",
+        "Tibor M Brunt",
+        "Bastiaan Venhuis",
+        "Vidija Soerdjbalie-Maikoe",
+        "Beitske E Smink",
+        "Antoinette J H P van Riel",
+        "Irma de Vries"
+      ],
+      "year": 2018,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.annemergmed.2017.07.482",
+      "url": "https://doi.org/10.1016/j.annemergmed.2017.07.482"
+    },
+    {
+      "id": "nugteren2015",
+      "type": "paper",
+      "title": "Pharmacokinetics, pharmacodynamics and toxicology of new psychoactive substances (NPS): 2C-B, 4-fluoroamphetamine and benzofurans (Drug and alcohol dependence 157)",
+      "authors": [
+        "Johanna J Nugteren-van Lonkhuyzen",
+        "Antoinette J H P van Riel",
+        "Tibor M Brunt",
+        "Laura Hondebrink"
+      ],
+      "year": 2015,
+      "consulted": "2026-10-13",
+      "tier": "review",
+      "doi": "10.1016/j.drugalcdep.2015.10.011",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2015.10.011"
+    },
+    {
+      "id": "swgdrug-4fa",
+      "type": "database",
+      "title": "SWGDRUG monograph: 4-Fluoroamphetamine (IR: HCl, diamond ATR)",
+      "url": "https://www.swgdrug.org/Monographs/4-FA.pdf",
+      "license": "public document of a US federal agency, no licence declared; cited as the source of numbers only",
+      "consulted": "2026-10-13",
+      "archive_url": "https://web.archive.org/web/20241212105436/https://swgdrug.org/Monographs/4-FA.pdf",
+      "tier": "agency"
+    },
+    {
+      "id": "toennes2020",
+      "type": "paper",
+      "title": "Excretion of 4-fluoroamphetamine and three metabolites in urine after controlled oral ingestion (Journal of pharmaceutical and biomedical analysis 179)",
+      "authors": [
+        "Stefan W Toennes",
+        "David Schneider",
+        "Werner Pogoda",
+        "Alexander Paulke",
+        "Cora Wunder",
+        "Eef L Theunissen",
+        "Elizabeth B de Sousa Fernandes Perna",
+        "Johannes G Ramaekers"
+      ],
+      "year": 2020,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1016/j.jpba.2019.113008",
+      "url": "https://doi.org/10.1016/j.jpba.2019.113008"
+    },
+    {
+      "id": "wijers2018",
+      "type": "paper",
+      "title": "Haemorrhagic stroke related to the use of 4-fluoroamphetamine (Journal of neurology 265)",
+      "authors": [
+        "C H W Wijers",
+        "M C Visser",
+        "R T H van Litsenburg",
+        "R J M Niesink",
+        "R B Willemse",
+        "Esther A Croes"
+      ],
+      "year": 2018,
+      "consulted": "2026-10-13",
+      "tier": "primary",
+      "doi": "10.1007/s00415-018-8888-6",
+      "url": "https://doi.org/10.1007/s00415-018-8888-6"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "sources/1",
+  "sources": [
+    {
+      "id": "spravato-label",
+      "type": "institution",
+      "title": "Spravato (esketamine) nasal spray, US prescribing information (DailyMed, U.S. National Library of Medicine)",
+      "year": 2026,
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d81a6a79-a74a-44b7-822c-0dfa3036eaed",
+      "archive_url": "https://web.archive.org/web/20260803143939/https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d81a6a79-a74a-44b7-822c-0dfa3036eaed",
+      "tier": "agency",
+      "license": "© marketing authorisation holder; cited as the source of facts only",
+      "consulted": "2026-10-14"
+    }
+  ]
+}
