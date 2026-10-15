@@ -37,6 +37,7 @@ export async function sheetsScenario(browser, base, check, axe) {
   await page.locator('details[data-panel="libraries"] summary').click();
   await page.waitForFunction(() => /1/.test(document.querySelector('[data-library="checkir-demo"]')?.textContent ?? ""), null, { timeout: 20000 });
   await page.getByRole("checkbox", { name: /checkir-demo/ }).check();
+  await page.waitForFunction(() => document.querySelector('[data-chip="library"]')?.textContent?.includes("2 · 12"), null, { timeout: 20000 });
   await page.setInputFiles("input[type=file]", [{ name: CANARIES.fileName, mimeType: "chemical/x-jcamp-dx", buffer: Buffer.from(canarySpectrum(await readFile(SPECTRUM, "utf8"))) }]);
   const section = page.locator('details[data-panel="results"]');
   if (!(await section.evaluate((d) => d.open))) await section.locator("summary").click();

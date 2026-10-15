@@ -1,8 +1,9 @@
 // @ts-check
 /**
- * The libraries of the page: the public packages named by the general manifest (`librerie/libraries.json`, cached by
- * the service worker so they work offline) and the private ones kept in OPFS. The spectra stay here, in memory; the state
- * holds only what the panel shows.
+ * The libraries of the page: the public packages named by the general manifest (`librerie/libraries.json`; the files are
+ * asked with `?v=<version>` so the service worker keeps them for good) and the private ones kept in OPFS. A public library
+ * is downloaded only while it is on (a switched-off one costs its small manifest, for the panel). The spectra stay here,
+ * in memory; the state holds only what the panel shows.
  * @typedef {import("./state.js").Notice} Notice
  * @typedef {import("./state.js").LibraryEntry} LibraryEntry
  * @typedef {{ id: string, manifest: string, index: string, data: Uint8Array, native?: Uint8Array }} PackageFiles
@@ -21,11 +22,15 @@ const LIMITS = { maxBytes: 256 * 1024 * 1024, maxSpectra: 50_000 };
 const BASE = "librerie/";
 /** Preference holding the name the user gave to a private library (the id never changes). */
 const LABEL = "libname.";
-/** Preference remembering that a private library is switched off (a library that is on has no entry). */
-const OFF = "liboff.";
+/** Preference holding the switch of a library (`1` on, `0` off) when it differs from the default of the general manifest. */
+const SWITCH = "libsw.";
 
 /** @type {Map<string, Loaded>} */
 const loaded = new Map();
+/** Public packages named by the general manifest: where they are, their version for the URLs and their default switch. @type {Map<string, { path: string, v: string, enabled: boolean }>} */
+const listed = new Map();
+/** Libraries being downloaded now. @type {Set<string>} */
+const fetching = new Set();
 /** @type {import("./nomi.js").NameEntry[] | null} */
 let names = null;
 /** @type {AbortController | null} */
@@ -94,6 +99,25 @@ function publish() {
   update({ libraries: [...loaded.values()].map((l) => l.entry) });
 }
 
+/** The state entry of a library from its manifest. @param {string} id @param {any} manifest @param {boolean} enabled @param {boolean} isLoaded @returns {LibraryEntry} */
+function entryOf(id, manifest, enabled, isLoaded) {
+  const att = manifest.attribution ?? {};
+  const isPrivate = manifest.private === true;
+  return { id, label: isPrivate ? readPref(LABEL + id) || id : id, version: manifest.version, spectra: manifest.n_spectra, license: manifest.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, terms: manifest.terms ? { it: manifest.terms.it ?? null, en: manifest.terms.en ?? "" } : null, private: isPrivate, enabled, sampling: typeof manifest.sampling === "string" ? manifest.sampling : null, loaded: isLoaded };
+}
+
+/** A public library that is off: only its manifest is here (name, version, licence for the panel), no spectra. @param {string} id @param {string} manifest */
+function registerListed(id, manifest) {
+  const meta = JSON.parse(manifest);
+  loaded.set(id, { rows: [], values: new Float32Array(0), native: null, entry: entryOf(id, meta, false, false) });
+}
+
+/** Whether a library is on: the remembered switch, else the default of the general manifest (private libraries: on). @param {{ id: string, enabled?: boolean }} lib @returns {boolean} */
+function enabledFor(lib) {
+  const saved = readPref(SWITCH + lib.id);
+  return saved === "1" ? true : saved === "0" ? false : lib.enabled !== false;
+}
+
 /**
  * Check a package with the engine and add it. Nothing partial is kept when the engine refuses it.
  * @param {import("./engine.js").Engine} engine @param {PackageFiles} files @param {boolean} enabled @param {boolean} [announce] false while several packages load together: the caller publishes once @returns {Notice | null}
@@ -102,12 +126,11 @@ export function registerPackage(engine, files, enabled, announce = true) {
   const checked = JSON.parse(engine.library_open(files.manifest, files.index, files.data, LIMITS.maxBytes, LIMITS.maxSpectra));
   if ("error_key" in checked) return noticeOf(checked);
   const bytes = files.data.byteOffset % 4 === 0 ? files.data : files.data.slice();
-  const att = checked.attribution ?? {};
   loaded.set(files.id, {
     rows: JSON.parse(files.index).spectra,
     values: new Float32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4),
     native: parseNative(files.native, checked.n_spectra),
-    entry: { id: files.id, label: checked.private === true ? readPref(LABEL + files.id) || files.id : files.id, version: checked.version, spectra: checked.n_spectra, license: checked.license, attribution: { it: att.it ?? null, en: att.en ?? "" }, terms: checked.terms ? { it: checked.terms.it ?? null, en: checked.terms.en ?? "" } : null, private: checked.private === true, enabled, sampling: typeof checked.sampling === "string" ? checked.sampling : null },
+    entry: entryOf(files.id, checked, enabled, true),
   });
   if (announce) publish();
   return null;
@@ -120,24 +143,44 @@ async function fetchBytes(path) {
   return new Uint8Array(await res.arrayBuffer());
 }
 
-/** Public packages from the general manifest, then the private ones from OPFS. @param {import("./engine.js").Engine} engine */
+/** @param {{ path: string, v: string }} lib @param {string} file @returns {string} the URL of a package file; `v` changes with the content, so the cached copy is always the right one */
+function packageUrl(lib, file) {
+  return `${BASE}${lib.path}/${file}?v=${lib.v}`;
+}
+
+/** The files of a public package (the optional `native.bin` may be missing). @param {string} id @param {{ path: string, v: string }} lib @param {string} manifestText @returns {Promise<PackageFiles>} */
+async function fetchPackage(id, lib, manifestText) {
+  const [index, data] = await Promise.all(["index.json", "data.bin"].map((f) => fetchBytes(packageUrl(lib, f))));
+  const native = await fetchBytes(packageUrl(lib, "native.bin")).catch(() => undefined);
+  return { id, manifest: manifestText, index: new TextDecoder().decode(index), data: /** @type {Uint8Array} */ (data), ...(native ? { native } : {}) };
+}
+
+/** Public packages from the general manifest (spectra only for the libraries that are on), then the private ones from OPFS. @param {import("./engine.js").Engine} engine */
 export async function loadAllLibraries(engine) {
   try {
     const general = JSON.parse(new TextDecoder().decode(await fetchBytes(`${BASE}libraries.json`)));
-    for (const lib of general.libraries ?? []) {
-      if (!/^[a-z0-9-]+$/.test(String(lib.path))) continue;
-      const [manifest, index, data] = await Promise.all(["manifest.json", "index.json", "data.bin"].map((f) => fetchBytes(`${BASE}${lib.path}/${f}`)));
-      const native = await fetchBytes(`${BASE}${lib.path}/native.bin`).catch(() => undefined);
-      const text = new TextDecoder();
-      const bad = registerPackage(engine, { id: String(lib.id), manifest: text.decode(manifest), index: text.decode(index), data: /** @type {Uint8Array} */ (data), ...(native ? { native } : {}) }, lib.enabled !== false, false);
-      if (bad) addNotice(bad);
+    for (const item of general.libraries ?? []) {
+      if (!/^[a-z0-9-]+$/.test(String(item.path))) continue;
+      const id = String(item.id);
+      const lib = { path: String(item.path), v: String(item.v ?? ""), enabled: item.enabled !== false };
+      listed.set(id, lib);
+      try {
+        const manifest = new TextDecoder().decode(await fetchBytes(packageUrl(lib, "manifest.json")));
+        if (!enabledFor(item)) registerListed(id, manifest);
+        else {
+          const bad = registerPackage(engine, await fetchPackage(id, lib, manifest), true, false);
+          if (bad) addNotice(bad);
+        }
+      } catch {
+        addNotice({ key: "library.load_failed", params: {} }); // one library that cannot be read never hides the others
+      }
     }
   } catch {
     addNotice({ key: "library.load_failed", params: {} });
   }
   try {
     for (const stored of await loadLibraries()) {
-      const bad = registerPackage(engine, stored, readPref(OFF + stored.id) !== "1", false);
+      const bad = registerPackage(engine, stored, enabledFor({ id: stored.id }), false);
       if (bad) addNotice(bad);
     }
   } catch {
@@ -162,15 +205,34 @@ export function renameLibrary(id, name) {
   publish();
 }
 
-/** @param {string} id @param {boolean} on */
-export function setEnabled(id, on) {
+/** Remember the switch of a library only when it differs from the default (private libraries: on). @param {string} id @param {boolean} on */
+function rememberSwitch(id, on) {
+  if (on === (listed.get(id)?.enabled ?? true)) forgetPref(SWITCH + id);
+  else writePref(SWITCH + id, on ? "1" : "0");
+}
+
+/** Switch a library on or off; a public one that was never downloaded is fetched first (progress in `libraryJob`). @param {import("./engine.js").Engine | null} engine @param {string} id @param {boolean} on @returns {Promise<void>} */
+export async function setEnabled(engine, id, on) {
   const l = loaded.get(id);
-  if (!l) return;
-  l.entry = { ...l.entry, enabled: on };
-  if (l.entry.private) {
-    if (on) forgetPref(OFF + id);
-    else writePref(OFF + id, "1");
+  if (!l || fetching.has(id)) return;
+  const site = listed.get(id);
+  if (on && l.entry.loaded === false && site && engine) {
+    fetching.add(id);
+    update({ libraryJob: { done: 0, total: 1, name: id } });
+    try {
+      const bad = registerPackage(engine, await fetchPackage(id, site, new TextDecoder().decode(await fetchBytes(packageUrl(site, "manifest.json")))), true, false);
+      if (bad) throw new Error(bad.key);
+    } catch {
+      addNotice({ key: "library.load_failed", params: {} });
+      on = false;
+    }
+    fetching.delete(id);
+    update({ libraryJob: null });
   }
+  const now = loaded.get(id);
+  if (!now) return;
+  now.entry = { ...now.entry, enabled: on };
+  rememberSwitch(id, on);
   publish();
 }
 
@@ -180,7 +242,7 @@ export async function removePrivate(id) {
   await removeStored(id);
   await removeIndex(id);
   forgetPref(LABEL + id);
-  forgetPref(OFF + id);
+  forgetPref(SWITCH + id);
   loaded.delete(id);
   publish();
 }
@@ -262,7 +324,7 @@ export async function importPackages(engine, files, say) {
       taken.add(id);
       const had = loaded.has(id);
       const pkg = { id, manifest, index, data: new Uint8Array(data), ...(native ? { native: new Uint8Array(native) } : {}) };
-      const bad = registerPackage(engine, pkg, readPref(OFF + id) !== "1", false);
+      const bad = registerPackage(engine, pkg, enabledFor({ id }), false);
       if (bad) {
         notices.push({ key: "library.import.skipped", params: { file: name, reason_key: bad.key, ...bad.params } });
         continue;
@@ -296,6 +358,6 @@ export function libraryActions(engine, announce) {
     cancelImport,
     renameLibrary: (/** @type {string} */ id, /** @type {string} */ name) => renameLibrary(id, name),
     removeLibrary: (/** @type {string} */ id) => void removePrivate(id).then(() => announce(t("status.library_removed", { name: id }))),
-    toggleLibrary: setEnabled,
+    toggleLibrary: (/** @type {string} */ id, /** @type {boolean} */ on) => setEnabled(engine, id, on),
   };
 }

@@ -15,13 +15,15 @@
 //! different names is one substance in the margin; names the table does not know are listed in the report.
 //!
 //! Writes `<out>/<library>/{manifest.json,index.json,data.bin,native.bin}` (`native.bin` = the spectra as the files give them, for drawing) and the general manifest `<out>/libraries.json`
-//! (`ftir-libraries/1`: one entry per package with an `enabled` switch). With `--config` every library of the file is
+//! (`ftir-libraries/1`: one entry per package with an `enabled` switch and `v`, the first 12 hex digits of the SHA-256 of
+//! the written files, which the page puts in the URLs so the service worker can keep them for good). With `--config` every library of the file is
 //! built. The manifest says how the spectra were measured (`sampling`) when every spectrum agrees: from its record
 //! (`technique`) or, where the record does not say, from `--sampling` (the default of a private library). Packages are
 //! never committed: CI builds them.
 use ftir_core::campionamento;
 use ftir_core::passi::json::parse;
 use ftir_core::passi::Value;
+use ftir_core::readers::sha256::sha256_hex;
 use ftir_lib::build::{build_one, Built, Source};
 use ftir_lib::files::{from_files, slug};
 use ftir_lib::identity;
@@ -316,6 +318,20 @@ fn build_library(args: &Args, conf: &LibConf) -> Result<(String, usize, Vec<Stri
     Ok((version, n, unknown))
 }
 
+/// Version of a written package: the first 12 hex digits of the SHA-256 of `manifest.json`, `index.json`, `data.bin` and
+/// `native.bin` (when present), read back from `dir` in that order.
+fn package_version(dir: &Path) -> Result<String, String> {
+    let mut all = Vec::new();
+    for f in ["manifest.json", "index.json", "data.bin", "native.bin"] {
+        match fs::read(dir.join(f)) {
+            Ok(bytes) => all.extend(bytes),
+            Err(e) if f == "native.bin" && e.kind() == std::io::ErrorKind::NotFound => {}
+            Err(e) => return Err(format!("{}: {e}", dir.join(f).display())),
+        }
+    }
+    Ok(sha256_hex(&all)[..12].to_string())
+}
+
 /// `{"it": …, "en": …}` of a config entry (`en` required).
 fn texts(x: &Value, key: &str) -> Option<(Option<String>, String)> {
     let v = x.get(key)?;
@@ -367,12 +383,14 @@ fn run() -> Result<String, String> {
     for conf in wanted(&args)? {
         let (name, enabled) = (conf.id.clone(), conf.enabled);
         let (version, n, unknown) = build_library(&args, &conf)?;
+        let v = package_version(&args.out.join(&name))?;
         entries.push(Value::Obj(vec![
             ("id".into(), Value::Str(name.clone())),
             ("path".into(), Value::Str(name.clone())),
             ("version".into(), Value::Str(version)),
             ("spectra".into(), Value::Num(n as f64)),
             ("enabled".into(), Value::Bool(enabled)),
+            ("v".into(), Value::Str(v)),
         ]));
         report.push(format!("{name}: {n} spectra"));
         if args.identity.is_some() {
@@ -404,6 +422,35 @@ fn main() -> ExitCode {
         Err(e) => {
             eprintln!("error: {e}");
             ExitCode::FAILURE
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::package_version;
+    use std::fs;
+
+    fn package(tag: &str, index: &str) -> std::path::PathBuf {
+        let dir = std::env::temp_dir().join(format!("checkir-v-{}-{tag}", std::process::id()));
+        fs::create_dir_all(&dir).unwrap();
+        fs::write(dir.join("manifest.json"), "{}").unwrap();
+        fs::write(dir.join("index.json"), index).unwrap();
+        fs::write(dir.join("data.bin"), [1u8, 2, 3, 4]).unwrap();
+        dir
+    }
+
+    #[test]
+    fn same_files_same_version_one_byte_other_version() {
+        let (a, b, c) = (package("a", "[]"), package("b", "[]"), package("c", "[ ]"));
+        let v = package_version(&a).unwrap();
+        assert_eq!(v.len(), 12);
+        assert_eq!(v, package_version(&b).unwrap());
+        assert_ne!(v, package_version(&c).unwrap());
+        fs::write(a.join("native.bin"), [0u8; 4]).unwrap();
+        assert_ne!(v, package_version(&a).unwrap());
+        for d in [a, b, c] {
+            fs::remove_dir_all(d).unwrap();
         }
     }
 }

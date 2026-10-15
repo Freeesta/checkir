@@ -175,7 +175,7 @@ async function closeScenario(page, check) {
   await page.click("#lang-button");
   await page.click('[data-lang="it"]');
   const stored = await page.evaluate(async () => ({ local: JSON.stringify({ ...localStorage }), idb: (await indexedDB.databases()).length }));
-  check("subtract: nothing of it is stored", !/subtract|residu|"k"/i.test(stored.local) && Object.keys(JSON.parse(stored.local)).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch)$/.test(k)));
+  check("subtract: nothing of it is stored", !/subtract|residu|"k"/i.test(stored.local) && Object.keys(JSON.parse(stored.local)).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch|libsw\.[a-z0-9-]+)$/.test(k)));
 }
 
 async function phoneScenario(browser, base, check, axe) {

@@ -50,9 +50,14 @@ export function setAutoMatch(on) {
   if (on) onState(getState());
 }
 
-/** Libraries held by the page, whether switched on or not. @param {import("./state.js").AppState} s @returns {string} */
+/** Libraries whose spectra the page holds (a public library that was never switched on is only listed), on or not. @param {import("./state.js").AppState} s @returns {import("./state.js").LibraryEntry[]} */
+function heldLibraries(s) {
+  return s.libraries.filter((l) => l.loaded !== false);
+}
+
+/** @param {import("./state.js").AppState} s @returns {string} */
 function loadedSignature(s) {
-  return s.libraries.map((l) => `${l.id}@${l.version}`).join("|");
+  return heldLibraries(s).map((l) => `${l.id}@${l.version}`).join("|");
 }
 
 /** The libraries a comparison would search. @param {import("./state.js").AppState} s @returns {string} */
@@ -108,7 +113,7 @@ function syncLibraries(s) {
   const previous = new Set(sentSignature.split("|"));
   w.postMessage({
     type: "sync",
-    libs: s.libraries.map((l) => {
+    libs: heldLibraries(s).map((l) => {
       const fresh = !previous.has(`${l.id}@${l.version}`);
       return fresh ? { id: l.id, version: l.version, rows: libraryRows(l.id) ?? [], values: libraryValues(l.id) ?? new Float32Array(), sampling: l.sampling ?? undefined, ...GRID } : { id: l.id, version: l.version };
     }),

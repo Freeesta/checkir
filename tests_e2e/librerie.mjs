@@ -84,6 +84,7 @@ async function packageScenario(page, check) {
   await openLibraries(page);
   await page.locator('[data-library="mia-libreria"]').waitFor();
   check("package: it is kept across a reload and stays switched off", !(await page.getByRole("checkbox", { name: /mia-libreria/ }).isChecked()));
+  check("package: the switch of a private library is remembered as libsw.<id> = 0", (await page.evaluate(() => localStorage.getItem("checkir.libsw.mia-libreria"))) === "0" && (await page.evaluate(() => localStorage.getItem("checkir.liboff.mia-libreria"))) === null);
   await page.getByRole("checkbox", { name: /mia-libreria/ }).check();
   await page.setInputFiles('input[data-library="package"]', [{ name: "manifest.json", mimeType: "application/json", buffer: Buffer.from("{}") }]);
   await page.waitForFunction(() => /mancano file/.test(document.querySelector('details[data-panel="libraries"] .notes')?.textContent ?? ""));
@@ -147,7 +148,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await openLibraries(page);
   await page.locator('[data-library="mia-libreria"]').waitFor();
   check("import: the private library is still there after a reload", true);
-  check("import: only preferences are kept in localStorage", await page.evaluate(() => Object.keys(localStorage).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch)$/.test(k))));
+  check("import: only preferences are kept in localStorage", await page.evaluate(() => Object.keys(localStorage).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch|libsw\.[a-z0-9-]+)$/.test(k))));
   await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
   await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
   const left = await page.evaluate(async () => {
@@ -161,7 +162,33 @@ export async function librariesScenario(browser, base, check, axe) {
   await ctx.close();
 }
 
-/** After the first visit the demo library is available with no network at all. */
+/** A public library that is off costs only its manifest: switching it on downloads it once (URL with `?v=`), the switch is remembered for it as for every library, and off again forgets the preference. */
+export async function lazyScenario(browser, base, check) {
+  const ctx = await browser.newContext({ locale: "it-IT" });
+  const page = await ctx.newPage();
+  const requests = [];
+  page.on("request", (r) => ["fetch", "xhr"].includes(r.resourceType()) && requests.push(r.url()));
+  await page.goto(base);
+  await page.waitForSelector("body[data-ready='1']");
+  await openLibraries(page);
+  await page.locator('[data-library="checkir-demo"]').waitFor();
+  const asked = (file) => requests.filter((u) => u.includes(`librerie/checkir-demo/${file}`));
+  check("lazy: a library that is off shows its name but its spectra are not requested", asked("data.bin").length === 0 && asked("manifest.json").length >= 1 && /Spettri: 1/.test((await page.locator('[data-library="checkir-demo"]').textContent()) ?? ""), requests.join(", "));
+  await page.getByRole("checkbox", { name: /checkir-demo/ }).check();
+  await page.waitForFunction(() => document.querySelector('[data-chip="library"]')?.textContent?.includes("2 · 12"));
+  check("lazy: switching it on downloads data.bin once, with ?v=, and the library joins the count", asked("data.bin").length === 1 && /data\.bin\?v=[0-9a-f]{12}$/.test(asked("data.bin")[0]), asked("data.bin").join());
+  check("lazy: the switch is remembered as libsw.<id> = 1", (await page.evaluate(() => localStorage.getItem("checkir.libsw.checkir-demo"))) === "1");
+  await page.reload();
+  await page.waitForSelector("body[data-ready='1']");
+  await openLibraries(page);
+  await page.waitForFunction(() => document.querySelector('[data-chip="library"]')?.textContent?.includes("2 · 12"));
+  check("lazy: after a reload the library is still on", await page.getByRole("checkbox", { name: /checkir-demo/ }).isChecked());
+  await page.getByRole("checkbox", { name: /checkir-demo/ }).uncheck();
+  check("lazy: off again is the default, so the preference is forgotten", (await page.evaluate(() => localStorage.getItem("checkir.libsw.checkir-demo"))) === null);
+  await ctx.close();
+}
+
+/** After the first visit the libraries that are on are available with no network at all. */
 export async function offlineScenario(browser, base, check) {
   const ctx = await browser.newContext({ locale: "it-IT" });
   const page = await ctx.newPage();
@@ -169,14 +196,15 @@ export async function offlineScenario(browser, base, check) {
   await page.waitForSelector("body[data-ready='1']");
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.waitForFunction(async () => {
-    for (const k of await caches.keys()) if (await (await caches.open(k)).match("librerie/checkir-demo/data.bin")) return true;
+    for (const k of await caches.keys()) for (const r of await (await caches.open(k)).keys()) if (/librerie\/swgdrug-ir\/data\.bin\?v=[0-9a-f]{12}$/.test(r.url)) return true;
     return false;
   });
   await ctx.setOffline(true);
   await page.reload();
   await page.waitForSelector("body[data-ready='1']");
   await openLibraries(page);
-  await page.locator('[data-library="checkir-demo"]').waitFor();
-  check("offline: the demo library is available without network after the first visit", true);
+  await page.locator('[data-library="swgdrug-ir"]').waitFor();
+  await page.locator('[data-library="checkir-demo"]').waitFor(); // a library that is off is still listed offline
+  check("offline: a library that is on is available without network after the first visit", await page.getByRole("checkbox", { name: /swgdrug-ir/ }).isChecked() && ((await page.textContent('[data-chip="library"]')) ?? "").includes("1 · 11"));
   await ctx.close();
 }
