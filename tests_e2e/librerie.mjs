@@ -94,6 +94,8 @@ async function packageScenario(page, check) {
   await page.setInputFiles('input[data-library="files"]', [{ name: "manifest.json", mimeType: "application/json", buffer: Buffer.from('{"schema":"altro/1"}') }]);
   await page.waitForFunction(() => /non c'è nessuno spettro/.test(document.querySelector('details[data-panel="libraries"] .notes')?.textContent ?? ""));
   check("package: a manifest.json of another schema is not a package, so the files are read as spectra", true);
+  await page.mouse.move(0, 0);
+  await page.locator("#tooltip").waitFor({ state: "hidden" });
   // A folder holding a package and a foreign file: the package is loaded and the foreign file is counted.
   await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
   await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
@@ -124,6 +126,7 @@ async function listChecks(page, check) {
   await tip.waitFor({ state: "visible" });
   check("libraries: keyboard focus on the switch shows the same description", /Versione/.test((await tip.textContent()) ?? "") && /Licenza/.test((await tip.textContent()) ?? ""));
   await page.locator('[data-fk="lib-on-checkir-demo"]').blur();
+  await tip.waitFor({ state: "hidden" });
   await page.waitForFunction(() => document.querySelector('[data-fk="lib-on-checkir-demo"]')?.getAttribute("aria-describedby") === "lib-info-checkir-demo");
   check("libraries: the switch keeps its permanent description (aria-describedby)", (await page.locator("#lib-info-checkir-demo").textContent())?.includes("Versione") === true);
 }
