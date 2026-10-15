@@ -128,9 +128,11 @@ export async function inlineScenario(browser, base, check, axe) {
   const v = await axe(page);
   check("inline sheet: axe has no violations with the brief sheet", v.length === 0, v.join(", "));
   await page.click('[data-fk="inline-open-sheet"]');
-  await page.waitForSelector("dialog .substance-sheet");
-  check("inline sheet: the full sheet opens from it, with a link to the page", (await page.locator("dialog .sheet-section").count()) === 13 && (await page.locator('dialog [data-fk="sheet-page"]').count()) === 1);
-  await page.keyboard.press("Escape");
+  await page.waitForSelector("#sheet-pane .substance-sheet");
+  check("inline sheet: the full sheet opens from it, with a link to the page", (await page.locator("#sheet-pane .sheet-section").count()) === 13 && (await page.locator('#sheet-pane [data-fk="sheet-page"]').count()) === 1);
+  await page.focus('#doc-tabs [data-kind="sheet"]');
+  await page.keyboard.press("Delete");
+  await page.waitForSelector(".inline-panel");
   await levelRules(page, check);
   await page.setViewportSize({ width: 320, height: 700 });
   check("inline sheet: 320 px has no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
@@ -176,7 +178,7 @@ export async function hookScenario(browser, base, check) {
   await page.waitForSelector('.inline-panel[data-sheet="cocaine"]');
   check("hook: «Cocaine HCl» in a private library hooks the cocaine sheet", (await page.locator('[data-fk="open-sheet"]').count()) === 1);
   await page.click('[data-fk="open-sheet"]');
-  await page.waitForSelector("dialog .substance-sheet");
-  check("hook: the dialog is the cocaine sheet with thirteen sections", (await page.getAttribute("dialog .substance-sheet", "data-substance")) === "cocaine" && (await page.locator("dialog .sheet-section").count()) === 13);
+  await page.waitForSelector("#sheet-pane .substance-sheet");
+  check("hook: the sheet tab is the cocaine sheet with thirteen sections", (await page.getAttribute("#sheet-pane .substance-sheet", "data-substance")) === "cocaine" && (await page.locator("#sheet-pane .sheet-section").count()) === 13);
   await ctx.close();
 }

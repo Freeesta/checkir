@@ -1,10 +1,11 @@
 // @ts-check
-import { showDialog } from "./dialogs.js";
 import { el } from "./dom.js";
-import { currentLang, formatNumber, t } from "./i18n.js";
+import { formatNumber, t } from "./i18n.js";
 import { FAMILY_SECTIONS, loadClasses, loadFamily, loadSheet, loadSources, SECTIONS, sectionStatus, sectionText, writtenCount } from "./schede.js";
 import { counsellingPoints, cutsBlock, effectiveText, identityBlock, idName, interactionsBlock, originBlock, paragraphs, sourcesList, structureFigure } from "./schede_dati.js";
 import { metabolismBlock } from "./metabolismo_ui.js";
+import { getState, update } from "./state.js";
+import { canOpenSheet, openSheetPatch, SHEETS_MAX } from "./tabs.js";
 
 /** Names of the sections (literal keys, so the catalog check can see them). @type {Record<string, () => string>} */
 export const TITLES = {
@@ -108,12 +109,17 @@ export async function loadExtras(sheet, cuts) {
   return { family, classes, cuts };
 }
 
-/** Opens the sheet of a substance in a dialog; says so when the site has none. @param {string} id @param {string} fallbackName @param {import("./schede_tagli.js").CutContext} [cuts] */
+/** Opens the sheet of a substance as a tab next to the files' (the one already open gets the focus); past the limit it opens nothing and says so. @param {string} id @param {string} fallbackName @param {import("./schede_tagli.js").CutContext} [cuts] */
 export async function openSheet(id, fallbackName, cuts = NO_EXTRAS.cuts) {
-  const [sheet, sources] = await Promise.all([loadSheet(id), loadSources()]);
-  const lang = currentLang() === "it" ? "it" : "en";
-  if (!sheet) return showDialog(fallbackName, [el("p", { class: "empty", "data-no-sheet": "1" }, [t("sheets.none")])]);
-  const view = buildSheetView(sheet, sources, lang, await loadExtras(sheet, cuts));
-  view.append(el("p", {}, [el("a", { href: `pagine/schede/#${sheet.id}`, target: "_blank", rel: "noopener", "data-fk": "sheet-page" }, [t("sheets.all_sheets")])]));
-  showDialog(sheet.names[lang] ?? sheet.names.en ?? fallbackName, [view]);
+  const s = getState();
+  const known = s.tabs.some((x) => x.id === `sheet-${id}`);
+  if (!known && !canOpenSheet(s)) {
+    const notice = { key: "err.tabs.sheets_limit", params: { max: String(SHEETS_MAX) } };
+    update({ tabNotice: notice });
+    const live = document.getElementById("status");
+    if (live) live.textContent = t(notice.key, notice.params);
+    return;
+  }
+  document.dispatchEvent(new CustomEvent("checkir:sheet-opened", { detail: `sheet-${id}` }));
+  update({ ...openSheetPatch(s, { id, name: fallbackName, cuts }), tabNotice: null });
 }
