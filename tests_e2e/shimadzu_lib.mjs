@@ -4,7 +4,7 @@ import { execFileSync } from "node:child_process";
 import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { importAs } from "./importa_aiuto.mjs";
+import { importAs, removeLibrary } from "./importa_aiuto.mjs";
 
 async function synthetic() {
   const dir = await mkdtemp(join(tmpdir(), "checkir-shimadzu-"));
@@ -53,7 +53,7 @@ export async function shimadzuScenario(browser, base, check, axe) {
   check("shimadzu: no network request during the import", requests.length === before, requests.slice(before).join(", "));
   const violations = await axe(page);
   check("shimadzu: axe has no violations with the imported library", violations.length === 0, violations.join(", "));
-  await page.getByRole("button", { name: /Rimuovi la libreria shim/ }).click();
+  await removeLibrary(page, "shim");
   await page.waitForSelector('[data-library="shim"]', { state: "detached" });
 
   const data = files.map((f) => ({ name: f.name, b64: f.buffer.toString("base64") }));

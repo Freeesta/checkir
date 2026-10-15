@@ -11,3 +11,10 @@ export async function importAs(page, name, files) {
   for (const f of [].concat(files)) await writeFile(join(dir, f.name), f.buffer);
   await page.setInputFiles('input[data-library="folder"]', dir);
 }
+
+/** Remove a private library from the list; the pointer first leaves the list, so a tooltip of a row cannot cover the button. @param {import("playwright").Page} page @param {string} id */
+export async function removeLibrary(page, id) {
+  await page.mouse.move(0, 0);
+  await page.waitForFunction(() => document.querySelector("#tooltip")?.hidden !== false);
+  await page.getByRole("button", { name: new RegExp(`Rimuovi la libreria ${id}`) }).click();
+}

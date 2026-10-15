@@ -1,6 +1,6 @@
 // Sampling e2e: a library that declares how it was measured, the choice in the file row, the cap with its reason, the file that names its own method.
 import { ALFA, ALFA_BIS, BETA, GAMMA, jcamp } from "./confronto.mjs";
-import { importAs } from "./importa_aiuto.mjs";
+import { importAs, removeLibrary } from "./importa_aiuto.mjs";
 
 async function openPanel(page, name) {
   const section = page.locator(`details[data-panel="${name}"]`);
@@ -41,7 +41,7 @@ export async function samplingScenario(browser, base, check) {
     }
     return out;
   });
-  await page.getByRole("button", { name: /Rimuovi la libreria diamante/ }).click();
+  await removeLibrary(page, "diamante");
   await page.waitForSelector('[data-library="diamante"]', { state: "detached" });
   await page.setInputFiles('input[data-library="files"]', pack.map((f) => {
     const buffer = Buffer.from(f.b64, "base64");

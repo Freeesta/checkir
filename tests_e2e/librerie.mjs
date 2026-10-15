@@ -5,7 +5,7 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { FIXTURE } from "./caricamento.mjs";
-import { importAs } from "./importa_aiuto.mjs";
+import { importAs, removeLibrary } from "./importa_aiuto.mjs";
 
 /** Pure checks (no browser): the name index and the helpers of the importer. */
 export async function librariesPureScenario(check) {
@@ -59,7 +59,7 @@ async function folderScenario(page, jdx, check) {
   const folderNotes = (await page.textContent('details[data-panel="libraries"] .notes')) ?? "";
   check("import: a folder of JCAMP, CSV and .ispd gives 3 spectra and counts 1 unrecognized file", /3 spettri, 0 scartati/.test(folderNotes) && /1 file non riconosciuto/.test(folderNotes), folderNotes);
   await rm(root, { recursive: true, force: true });
-  await page.getByRole("button", { name: /Rimuovi la libreria cartella/ }).click();
+  await removeLibrary(page, "cartella");
   await page.waitForSelector('[data-library="cartella"]', { state: "detached" });
 }
 
@@ -74,7 +74,7 @@ async function packageScenario(page, check) {
     }
     return out;
   });
-  await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
+  await removeLibrary(page, "mia-libreria");
   await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
   await page.setInputFiles('input[data-library="files"]', files.map((f) => ({ name: f.name, mimeType: "application/octet-stream", buffer: Buffer.from(f.b64, "base64") })));
   await page.locator('[data-library="mia-libreria"]').waitFor();
@@ -97,7 +97,7 @@ async function packageScenario(page, check) {
   await page.mouse.move(0, 0);
   await page.locator("#tooltip").waitFor({ state: "hidden" });
   // A folder holding a package and a foreign file: the package is loaded and the foreign file is counted.
-  await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
+  await removeLibrary(page, "mia-libreria");
   await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
   const root = await mkdtemp(join(tmpdir(), "checkir-pack-"));
   const pack = join(root, "pacchetti", "mia-libreria");
@@ -193,7 +193,7 @@ export async function librariesScenario(browser, base, check, axe) {
   await page.locator('[data-library="mia-libreria"]').waitFor();
   check("import: the private library is still there after a reload", true);
   check("import: only preferences are kept in localStorage", await page.evaluate(() => Object.keys(localStorage).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch|libsw\.[a-z0-9-]+)$/.test(k))));
-  await page.getByRole("button", { name: /Rimuovi la libreria mia-libreria/ }).click();
+  await removeLibrary(page, "mia-libreria");
   await page.waitForSelector('[data-library="mia-libreria"]', { state: "detached" });
   const left = await page.evaluate(async () => {
     const root = await (await navigator.storage.getDirectory()).getDirectoryHandle("checkir-libraries", { create: true });
