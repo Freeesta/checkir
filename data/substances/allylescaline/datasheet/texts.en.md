@@ -6,7 +6,7 @@ The ring carries methoxy groups at positions 3 and 5 as in mescaline and an ally
 
 ## category
 
-Chemical class: phenethylamines. Expected effect: psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines. Expected effect: psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

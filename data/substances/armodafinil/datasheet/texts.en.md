@@ -6,7 +6,7 @@ It is the R-enantiomer of modafinil (a mixture of R- and S-enantiomers); the S-e
 
 ## category
 
-Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir proposal, since the label describes a wakefulness-promoting medicine whose mechanism is unknown; it is awaiting review. Typical role in samples: active principle. [f:nuvigil-label] [f:unodc-ewa] [f:checkir-classification]
+Chemical class: other substances; no family sheet is attached. The effect class (stimulant) is a checkir classification, since the label describes a wakefulness-promoting medicine whose mechanism is unknown. Typical role in samples: active principle. [f:nuvigil-label] [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

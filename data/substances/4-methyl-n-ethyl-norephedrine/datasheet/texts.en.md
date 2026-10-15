@@ -6,7 +6,7 @@ It is 4-MEC (sheet `4-mec`) with the keto group reduced to a hydroxyl group. [f:
 
 ## category
 
-Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: amphetamines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

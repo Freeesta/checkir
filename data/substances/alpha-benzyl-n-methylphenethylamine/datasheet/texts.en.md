@@ -6,7 +6,7 @@ A phenethylamine with a benzyl group on the carbon that bears the nitrogen and a
 
 ## category
 
-Chemical class: phenethylamines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification]
+Chemical class: phenethylamines. Expected effect: stimulant. Typical role in samples: synthesis or degradation residue. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

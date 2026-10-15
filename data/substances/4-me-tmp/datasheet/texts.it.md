@@ -4,7 +4,7 @@ Treo-4-metilmetilfenidato (4-Me-TMP), methyl (2R)-2-(4-methylphenyl)-2-[(2S)-pip
 
 ## category
 
-Classe chimica: fenidati (metilfenidato e derivati); non è un catinone. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. Questa classificazione è una proposta di checkir in attesa di revisione. [f:unodc-ewa] [f:checkir-classification]
+Classe chimica: fenidati (metilfenidato e derivati); non è un catinone. Effetto atteso: stimolante. Ruolo tipico nei campioni: principio attivo. [f:unodc-ewa] [f:checkir-classification]
 
 ## origin
 

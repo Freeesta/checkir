@@ -6,7 +6,7 @@ It has a stereocentre at the alpha carbon; the PubChem entry has no stereochemis
 
 ## category
 
-Chemical class: tryptamines. Expected effect: entactogen and psychedelic. Typical role in samples: active principle. This classification is a checkir proposal awaiting review. [f:unodc-ewa] [f:checkir-classification] It is classed with the tryptamines; the same paper describes it as overlapping with both serotonergic psychedelics and entactogens. [f:silverman2025]
+Chemical class: tryptamines. Expected effect: entactogen and psychedelic. Typical role in samples: active principle. [f:unodc-ewa] [f:checkir-classification] It is classed with the tryptamines; the same paper describes it as overlapping with both serotonergic psychedelics and entactogens. [f:silverman2025]
 
 ## origin
 
