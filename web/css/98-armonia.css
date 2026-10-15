@@ -25,8 +25,7 @@
 }
 .primary:hover:not(:disabled) { background: var(--accent); border-color: var(--accent); filter: brightness(0.92); }
 .lang-group { border-color: var(--border-ui); border-radius: var(--radius-pill); }
-.lang-button { border-radius: 0; background: transparent; }
-.lang-button[aria-pressed="true"], .lang-group .btn[aria-pressed="true"] { background: var(--accent); color: var(--bg); box-shadow: none; font-weight: 600; }
+.lang-group .btn[aria-pressed="true"] { background: var(--accent); color: var(--bg); box-shadow: none; font-weight: 600; }
 
 /* Tabs: grey, the current one has a blue underline */
 .tab { color: var(--text-muted); }

@@ -71,6 +71,7 @@ async function qualityScenario(browser, base, check, axe) {
     const v = await axe(page);
     check(`quality: axe has no violations with the quality mark (${scheme})`, v.length === 0, v.join(", "));
   }
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en");
   check("quality: the word follows the language", /Saturation/.test((await chip.textContent()) ?? ""));

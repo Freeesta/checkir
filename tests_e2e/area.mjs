@@ -102,6 +102,7 @@ export async function areaScenario(browser, base, check, axe) {
     const v = await axe(page);
     check(`area: axe has no violations (${scheme}, it)`, v.length === 0, v.join(", "));
   }
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en");
   const ven = await axe(page);

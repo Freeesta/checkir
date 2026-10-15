@@ -22,6 +22,7 @@ export async function binariesScenario(browser, base, check, axe) {
   await page.goto(base);
   await page.waitForSelector("body[data-ready='1']");
   await loadsAndShows(page, check, "campione.spa", await fixture("spa", "absorbance.spa"), "spa");
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
   await loadsAndShows(page, check, "campione.spc", await fixture("spc", "float32.spc"), "spc");

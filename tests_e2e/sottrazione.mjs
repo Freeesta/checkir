@@ -168,9 +168,11 @@ async function closeScenario(page, check) {
   check("subtract: closing brings the chart back and makes no residual", (await page.isHidden("#subtract")) && (await page.isVisible("#chart-section")) && (await page.locator("details[data-panel='files'] .file-select").count()) === 1);
   await page.keyboard.press("d");
   await page.waitForSelector("#subtract:not([hidden])");
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en" && /Guided subtraction/.test(document.getElementById("subtract-title")?.textContent ?? "")); // the view is redrawn after the language attribute changes
   check("subtract: English names the view", /Guided subtraction/.test((await page.textContent("#subtract-title")) ?? "") && !/not the quantity/.test((await page.textContent("#subtract")) ?? ""));
+  await page.click("#lang-button");
   await page.click('[data-lang="it"]');
   const stored = await page.evaluate(async () => ({ local: JSON.stringify({ ...localStorage }), idb: (await indexedDB.databases()).length }));
   check("subtract: nothing of it is stored", !/subtract|residu|"k"/i.test(stored.local) && Object.keys(JSON.parse(stored.local)).every((k) => /^checkir\.(lang|theme|panel|shortcuts|autoMatch)$/.test(k)));

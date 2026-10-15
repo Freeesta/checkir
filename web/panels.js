@@ -6,6 +6,7 @@ import { actionButton } from "./controls.js";
 import { el, icon, keepFocus, setIcon } from "./dom.js";
 import { fileRange } from "./files.js";
 import { renderLibraries } from "./libpanel.js";
+import { wirePanelResize } from "./panel_resize.js";
 import { peaksLabel, peaksSummary, renderPeaks } from "./peaks_panel.js";
 import { renderSheetPanel, sheetSummary } from "./sheet_panel.js";
 import { derivedText, renderResultsPanel, resultsSummary } from "./results.js";
@@ -152,6 +153,7 @@ export function buildPanels(hosts, ctx) {
     writePref("panel", rail ? "rail" : "open");
     syncToggle();
   };
+  const resize = wirePanelResize(/** @type {HTMLElement} */ (hosts.panel.parentElement), hosts.panel);
   const head = el("div", { class: "panel-head" });
   const toggleButton = actionButton("panel.toggle", ctx);
   toggleButton.setAttribute("aria-expanded", "true");
@@ -177,7 +179,7 @@ export function buildPanels(hosts, ctx) {
   };
   for (const p of PANELS) {
     const section = el("details", { class: "panel-section", "data-panel": p.id, name: "panel" });
-    const summary = el("summary", {}, [icon(p.icon), el("span", { class: "num" }, [formatNumber(p.n)]), el("span", { class: "title" }), el("span", { class: "sum" })]);
+    const summary = el("summary", {}, [icon(p.icon), el("span", { class: "title" }), el("span", { class: "sum" })]);
     summary.addEventListener("click", (e) => {
       if (!isRail()) return;
       e.preventDefault();
@@ -208,10 +210,11 @@ export function buildPanels(hosts, ctx) {
       section.querySelector(".title")?.replaceChildren(title);
       section.querySelector(".sum")?.replaceChildren(p.summary(s));
       const spoken = `${title} ${(p.label ?? p.summary)(s)}`;
-      section.querySelector("summary")?.setAttribute("aria-label", `${formatNumber(p.n)} ${spoken}`);
+      section.querySelector("summary")?.setAttribute("aria-label", spoken);
       drawBody(section, p, s, ctx);
       hosts.tabbar.querySelector(`[data-goto="${p.id}"]`)?.setAttribute("aria-label", spoken);
     }
+    resize.refresh();
     backButton.setAttribute("aria-label", t("panel.back"));
     hosts.tabbar.setAttribute("aria-label", t("panel.nav"));
     hosts.panel.setAttribute("aria-label", t("action.panel_toggle.label"));

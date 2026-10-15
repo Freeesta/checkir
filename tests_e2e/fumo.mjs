@@ -74,7 +74,8 @@ async function phoneScenario(browser) {
   check("320 px: a tab opens its section as a full page", await page.evaluate(() => document.body.dataset.section === "results" && document.documentElement.scrollWidth <= document.documentElement.clientWidth));
   await page.click(".panel-back");
   await page.click(".menu-button");
-  check("320 px: the menu shows the tools", await page.isVisible('[data-lang="en"]'));
+  check("320 px: the menu shows the tools", await page.isVisible("#lang-button"));
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.body.dataset.langReady === "en");
   await page.keyboard.press("Escape"); // the open phone menu overlays the chart toolbar, which axe would count as an obscured target
@@ -170,11 +171,11 @@ async function shellScenario(browser) {
   await page.waitForSelector("body[data-ready='1']");
   await page.keyboard.press("Tab");
   const stops = [];
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < 9; i++) {
     await page.keyboard.press("Tab");
     stops.push(await page.evaluate(() => ({ inHeader: Boolean(document.activeElement?.closest("#app-header")), left: document.activeElement?.getBoundingClientRect().left ?? -1 })));
   }
-  check("Tab: the 11 header controls come in visual order", stops.every((x, i) => x.inHeader && (i === 0 || x.left > stops[i - 1].left)), JSON.stringify(stops));
+  check("Tab: the 9 header controls come in visual order", stops.every((x, i) => x.inHeader && (i === 0 || x.left > stops[i - 1].left)), JSON.stringify(stops));
   await page.focus('[data-action="info.open"]');
   check("tooltip: shows on keyboard focus", await page.isVisible("#tooltip"));
   await page.keyboard.press("Escape");
@@ -197,7 +198,7 @@ async function shellScenario(browser) {
     session: sessionStorage.length,
     idb: (await indexedDB.databases()).length,
   }));
-  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.shortcuts", "checkir.autoMatch", "checkir.textLevel", "checkir.modeAnim"];
+  const allowed = ["checkir.lang", "checkir.theme", "checkir.panel", "checkir.panelWidth", "checkir.shortcuts", "checkir.autoMatch", "checkir.textLevel", "checkir.modeAnim"];
   check("privacy: only preferences are stored, nothing of the analysis", stored.local.every((k) => allowed.includes(k)) && stored.session === 0 && stored.idb === 0, JSON.stringify(stored));
   await ctx.close();
 }
@@ -234,6 +235,7 @@ async function pagesScenario(browser) {
       check(`[${scheme}] ${p.slug}: reached from the info dialog`, page.url().endsWith(`/pagine/${p.slug}/`), page.url());
       for (const lang of ["it", "en"]) {
         if (lang === "en") {
+          await page.click("#lang-button");
           await page.click('[data-lang="en"]');
           await page.waitForFunction(() => document.body.dataset.langReady === "en");
         }
@@ -271,13 +273,17 @@ async function splashScenario(browser) {
       const last = d.split("L").pop()?.split(" ").map(Number) ?? [NaN, NaN];
       const head = document.querySelector(".splash-head");
       const hx = Number(head?.getAttribute("cx")), hy = Number(head?.getAttribute("cy"));
-      return { dist: Math.hypot(last[0] - hx, last[1] - hy), hy };
+      return { dist: Math.hypot(last[0] - hx, last[1] - hy), hx };
     });
-    const a = await headOnWave();
-    await page.waitForTimeout(250);
-    const b = await headOnWave();
-    check(`${tag}: head sits on the wave end`, a.dist < 1 && b.dist < 1, JSON.stringify([a, b]));
-    check(`${tag}: head ${motion === "reduce" ? "still" : "moves with the wave"}`, motion === "reduce" ? a.hy === b.hy : a.hy !== b.hy, JSON.stringify([a, b]));
+    const samples = [await headOnWave()];
+    for (let i = 0; i < 3; i++) {
+      await page.waitForTimeout(80);
+      samples.push(await headOnWave());
+    }
+    const steps = samples.slice(1).map((x, i) => x.hx - samples[i].hx);
+    check(`${tag}: head sits on the wave end`, samples.every((x) => x.dist < 1), JSON.stringify(samples));
+    // a jump back of more than 100 units is the loop restarting; anything else must go to the right
+    check(`${tag}: ${motion === "reduce" ? "head still" : "head advances to the right"}`, motion === "reduce" ? steps.every((d) => d === 0) : steps.some((d) => d > 0) && steps.every((d) => d >= 0 || d < -100), JSON.stringify(steps));
     await page.waitForSelector("body[data-ready='1']");
     await page.waitForSelector("#splash", { state: "detached", timeout: 2000 });
     check(`${tag}: removed when ready`, (await page.locator("#splash").count()) === 0);

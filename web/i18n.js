@@ -3,6 +3,8 @@ import { APP_NAME, STORAGE_PREFIX } from "./appname.js";
 
 /** Languages with a catalog in `lang/`. */
 export const LANGS = ["it", "en"];
+/** Each language written in itself (never translated), for the language menu. @type {Record<string, string>} */
+export const LANG_NAMES = { it: "Italiano", en: "English" };
 const DEFAULT_LANG = "it";
 
 /** @type {Record<string, string>} */

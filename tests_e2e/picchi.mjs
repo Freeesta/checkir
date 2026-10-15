@@ -194,6 +194,7 @@ async function modeScenario(browser, base, check, axe) {
     return { animated: f?.animated, text: f?.node.textContent ?? "" };
   });
   check("mode: an out-of-plane motion is never animated and uses ⊙ and ⊗", oop.animated === false && oop.text.includes("⊙") && oop.text.includes("⊗"), JSON.stringify(oop));
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
   const en = await axe(page);
@@ -208,12 +209,14 @@ async function languageScenario(page, check, axe) {
   const dark = await axe(page);
   check("peaks: axe has no violations in the dark scheme", dark.length === 0, dark.join(", "));
   await page.emulateMedia({ colorScheme: "light" });
+  await page.click("#lang-button");
   await page.click('[data-lang="en"]');
   await page.waitForFunction(() => document.documentElement.lang === "en");
   const en = await axe(page);
   check("peaks: axe has no violations in English", en.length === 0, en.join(", "));
   check("peaks: English summary, names and table", /Main peaks: 6 · explained by .*: 5 · not explained: 1/.test((await page.textContent("#peaks-summary")) ?? "") && /Strong|Intensity/.test((await page.textContent("#table table.peak-table")) ?? "") && /Instrument zone/.test((await page.textContent("#table")) ?? ""));
   check("peaks: English words", /Agrees|Does not agree|Not assessed/.test((await page.textContent(".regions")) ?? "") && /Not explained/.test((await page.textContent("#table")) ?? ""));
+  await page.click("#lang-button");
   await page.click('[data-lang="it"]');
   await page.waitForFunction(() => document.documentElement.lang === "it");
   await page.keyboard.press("p");

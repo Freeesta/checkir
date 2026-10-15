@@ -82,7 +82,8 @@ async function doEverything(page) {
     }
   }
   for (const lang of ["en", "it"]) {
-    await page.evaluate((l) => document.querySelector(`[data-lang="${l}"]`)?.click(), lang);
+    await page.click("#lang-button");
+    await page.click(`[data-lang="${lang}"]`);
     await page.waitForFunction((l) => document.body.dataset.langReady === l, lang);
   }
   await page.focus("#chart");
@@ -92,6 +93,7 @@ async function doEverything(page) {
     await page.locator("dialog .footer-links a").nth(0).click();
     await page.waitForSelector("body[data-page][data-ready='1']");
     for (const l of ["en", "it"]) {
+      await page.click("#lang-button", { timeout: 5000 });
       await page.locator(`[data-lang="${l}"]`).click({ timeout: 5000 });
       await page.waitForFunction((x) => document.body.dataset.langReady === x, l);
     }
