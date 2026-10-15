@@ -67,6 +67,70 @@ function paintZones(zones, rect, on) {
   for (const z of /** @type {HTMLElement[]} */ ([...zones.children])) z.toggleAttribute("data-active", z.dataset.side === on);
 }
 
+const blockScroll = (/** @type {Event} */ e) => e.cancelable && e.preventDefault();
+
+/** Shows the ghost and the place the drop would have at the pointer. @param {HTMLElement} list @param {Ctx} ctx @param {Gesture} gesture */
+function over(list, ctx, gesture) {
+  const { x, y } = gesture;
+  if (gesture.ghost) Object.assign(gesture.ghost.style, { left: `${x + 12}px`, top: `${y + 12}px` });
+  const at = locate(list, x, y, gesture.id, ctx.getState());
+  gesture.drop = at.drop;
+  if (at.drop?.kind === "bar") {
+    gesture.zones?.remove();
+    gesture.zones = null;
+    gesture.line ??= document.body.appendChild(el("div", { class: "tab-insert", "aria-hidden": "true" }));
+    Object.assign(gesture.line.style, { left: `${at.slotX - 1}px`, top: `${at.rect?.top}px`, height: `${at.rect?.height}px` });
+    return;
+  }
+  gesture.line?.remove();
+  gesture.line = null;
+  if (!at.rect) return void (gesture.zones?.remove(), (gesture.zones = null));
+  gesture.zones ??= document.body.appendChild(el("div", { class: "drop-zones", "aria-hidden": "true" }));
+  paintZones(gesture.zones, at.rect, at.drop?.kind === "zone" ? at.drop.side : null);
+}
+
+/** The drag starts: capture the pointer, make the ghost. @param {HTMLElement} list @param {Ctx} ctx @param {Gesture} gesture @param {number} pointerId */
+function begin(list, ctx, gesture, pointerId) {
+  gesture.active = true;
+  try {
+    list.setPointerCapture(pointerId);
+  } catch {
+    // a synthetic pointer cannot be captured: the document listeners still get its events
+  }
+  const label = gesture.btn.querySelector(".tab-code")?.textContent ?? gesture.id;
+  gesture.ghost = el("div", { class: "tab-ghost", "aria-hidden": "true" }, [label]);
+  document.body.append(gesture.ghost);
+  document.body.dataset.tabDrag = "1";
+  document.addEventListener("touchmove", blockScroll, { passive: false });
+  over(list, ctx, gesture);
+}
+
+/** Stops the click that ends a drag and the context menu of a touch gesture. @param {HTMLElement} list @param {() => boolean} touching @returns {() => void} `hold`: the next click is the end of a drag, swallow it */
+function guardEvents(list, touching) {
+  let suppress = false;
+  list.addEventListener("click", (e) => {
+    if (!suppress) return;
+    e.stopPropagation();
+    e.preventDefault();
+    suppress = false;
+  }, true);
+  list.addEventListener("contextmenu", (e) => {
+    if (touching()) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    }
+  }, true);
+  return () => {
+    suppress = true;
+    setTimeout(() => (suppress = false), 80);
+  };
+}
+
+/** @param {HTMLElement} btn @param {string} id @param {PointerEvent} e @returns {Gesture} */
+function newGesture(btn, id, e) {
+  return { id, btn, type: e.pointerType, x0: e.clientX, y0: e.clientY, x: e.clientX, y: e.clientY, active: false, moved: false, timer: 0, ghost: null, line: null, zones: null, drop: null };
+}
+
 /**
  * @param {HTMLElement} list the tab list
  * @param {Ctx} ctx
@@ -75,8 +139,8 @@ function paintZones(zones, rect, on) {
 export function attachTabDrag(list, ctx, menu) {
   /** @type {Gesture | null} */
   let g = null;
-  let suppress = false;
-  const blockScroll = (/** @type {Event} */ e) => e.cancelable && e.preventDefault();
+  let pointerId = 0;
+  const hold = guardEvents(list, () => g !== null && g.type !== "mouse");
 
   /** @param {Gesture} gesture */
   const clean = (gesture) => {
@@ -93,44 +157,6 @@ export function attachTabDrag(list, ctx, menu) {
     g = null;
   };
 
-  /** @param {Gesture} gesture */
-  const begin = (gesture) => {
-    gesture.active = true;
-    try {
-      list.setPointerCapture(pointerId);
-    } catch {
-      // a synthetic pointer cannot be captured: the document listeners still get its events
-    }
-    const label = gesture.btn.querySelector(".tab-code")?.textContent ?? gesture.id;
-    gesture.ghost = el("div", { class: "tab-ghost", "aria-hidden": "true" }, [label]);
-    document.body.append(gesture.ghost);
-    document.body.dataset.tabDrag = "1";
-    document.addEventListener("touchmove", blockScroll, { passive: false });
-    over(gesture);
-  };
-
-  let pointerId = 0;
-
-  /** @param {Gesture} gesture */
-  const over = (gesture) => {
-    const { x, y } = gesture;
-    if (gesture.ghost) Object.assign(gesture.ghost.style, { left: `${x + 12}px`, top: `${y + 12}px` });
-    const at = locate(list, x, y, gesture.id, ctx.getState());
-    gesture.drop = at.drop;
-    if (at.drop?.kind === "bar") {
-      gesture.zones?.remove();
-      gesture.zones = null;
-      gesture.line ??= document.body.appendChild(el("div", { class: "tab-insert", "aria-hidden": "true" }));
-      Object.assign(gesture.line.style, { left: `${at.slotX - 1}px`, top: `${at.rect?.top}px`, height: `${at.rect?.height}px` });
-      return;
-    }
-    gesture.line?.remove();
-    gesture.line = null;
-    if (!at.rect) return void (gesture.zones?.remove(), (gesture.zones = null));
-    gesture.zones ??= document.body.appendChild(el("div", { class: "drop-zones", "aria-hidden": "true" }));
-    paintZones(gesture.zones, at.rect, at.drop?.kind === "zone" ? at.drop.side : null);
-  };
-
   /** @param {PointerEvent} e */
   function move(e) {
     if (!g || e.pointerId !== pointerId) return;
@@ -138,13 +164,13 @@ export function attachTabDrag(list, ctx, menu) {
     g.y = e.clientY;
     const far = Math.hypot(g.x - g.x0, g.y - g.y0);
     if (!g.active) {
-      if (g.type === "mouse" && far >= MOUSE_PX) begin(g);
+      if (g.type === "mouse" && far >= MOUSE_PX) begin(list, ctx, g, pointerId);
       else if (g.type !== "mouse" && far > TOUCH_SLOP_PX) return clean(g);
       if (!g?.active) return;
     }
     g.moved = g.moved || far >= MOUSE_PX;
     e.preventDefault();
-    over(g);
+    over(list, ctx, g);
   }
 
   /** @param {PointerEvent} e */
@@ -152,8 +178,7 @@ export function attachTabDrag(list, ctx, menu) {
     if (!g || e.pointerId !== pointerId) return;
     const gesture = g;
     if (!gesture.active) return clean(gesture);
-    suppress = true;
-    setTimeout(() => (suppress = false), 80);
+    hold();
     const { drop, id, moved, x, y } = gesture;
     clean(gesture);
     if (!moved && gesture.type !== "mouse") return menu(id, x, y);
@@ -173,9 +198,7 @@ export function attachTabDrag(list, ctx, menu) {
     if (e.key !== "Escape") return;
     e.preventDefault();
     e.stopPropagation();
-    cancel();
-    suppress = true;
-    setTimeout(() => (suppress = false), 80);
+    cancel(), hold();
   }
 
   list.addEventListener("pointerdown", (e) => {
@@ -183,26 +206,12 @@ export function attachTabDrag(list, ctx, menu) {
     const btn = target.closest("button");
     if (g || !btn || target.closest(".tab-close") || (e.pointerType === "mouse" && e.button !== 0) || !btn.dataset.tab) return;
     pointerId = e.pointerId;
-    g = { id: btn.dataset.tab, btn, type: e.pointerType, x0: e.clientX, y0: e.clientY, x: e.clientX, y: e.clientY, active: false, moved: false, timer: 0, ghost: null, line: null, zones: null, drop: null };
-    if (e.pointerType !== "mouse") {
-      const started = g;
-      started.timer = window.setTimeout(() => g === started && begin(started), LONG_PRESS_MS);
-    }
+    g = newGesture(btn, btn.dataset.tab, e);
+    const started = g;
+    if (e.pointerType !== "mouse") started.timer = window.setTimeout(() => g === started && begin(list, ctx, started, pointerId), LONG_PRESS_MS);
     document.addEventListener("pointermove", move, true);
     document.addEventListener("pointerup", up, true);
     document.addEventListener("pointercancel", cancel, true);
     document.addEventListener("keydown", key, true);
   });
-  list.addEventListener("click", (e) => {
-    if (!suppress) return;
-    e.stopPropagation();
-    e.preventDefault();
-    suppress = false;
-  }, true);
-  list.addEventListener("contextmenu", (e) => {
-    if (g && g.type !== "mouse") {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-    }
-  }, true);
 }

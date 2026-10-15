@@ -56,6 +56,50 @@ function buildBar(ctx) {
   };
 }
 
+/** A light pane for a tab that is not focused. @param {Entry} e @param {import("./state.js").Tab} tab @param {AppState} s @param {Ctx} ctx @param {ReturnType<typeof gatedLink>} link */
+function fillLight(e, tab, s, ctx, link) {
+  const kind = /** @type {any} */ (kindOf(tab));
+  if (typeof kind.render === "function") {
+    const sig = `${currentLang()}|${tab.code}|${tab.sheet?.id ?? ""}`;
+    if (e.sig !== sig || e.box.childElementCount === 0) {
+      e.sig = sig;
+      kind.render(e.box, tab);
+    }
+    return;
+  }
+  if (!e.view) {
+    const body = el("div", { class: "pane-light" });
+    e.box.replaceChildren(body);
+    e.view = buildPaneView(body, tab, ctx, link);
+  } else e.view.refresh(s);
+}
+
+/** @param {Entry} e @param {boolean} focused */
+function mark(e, focused) {
+  e.box.toggleAttribute("data-focus", focused);
+  e.box.dataset.light = focused ? "false" : "true";
+}
+
+/** Put the boxes in the order of the panes without touching them when they already are (moving a box would take the focus away from what is inside). @param {HTMLElement} host @param {HTMLElement} bar @param {HTMLElement[]} order */
+function arrange(host, bar, order) {
+  if (bar.nextElementSibling !== host) host.before(bar);
+  if (order.length === host.children.length && order.every((n, i) => host.children[i] === n)) return;
+  host.append(...order);
+}
+
+/** Calls `run` when the width of the host changes. @param {HTMLElement} host @param {() => void} run */
+function watchWidth(host, run) {
+  let width = 0;
+  if (typeof ResizeObserver === "function") {
+    new ResizeObserver(() => {
+      if (host.clientWidth === width) return;
+      width = host.clientWidth;
+      run();
+    }).observe(host);
+  }
+  window.addEventListener("resize", run);
+}
+
 /**
  * @param {HTMLElement} host `#panes`
  * @param {HTMLElement} main `#pane-main`, the work area of the focused tab
@@ -100,37 +144,6 @@ export function buildPanes(host, main, ctx, viewLink) {
     return e;
   };
 
-  /** A light pane for a tab that is not focused. @param {Entry} e @param {import("./state.js").Tab} tab @param {AppState} s */
-  const fillLight = (e, tab, s) => {
-    const kind = /** @type {any} */ (kindOf(tab));
-    if (typeof kind.render === "function") {
-      const sig = `${currentLang()}|${tab.code}|${tab.sheet?.id ?? ""}`;
-      if (e.sig !== sig || e.box.childElementCount === 0) {
-        e.sig = sig;
-        kind.render(e.box, tab);
-      }
-      return;
-    }
-    if (!e.view) {
-      const body = el("div", { class: "pane-light" });
-      e.box.replaceChildren(body);
-      e.view = buildPaneView(body, tab, ctx, link);
-    } else e.view.refresh(s);
-  };
-
-  /** @param {Entry} e @param {boolean} focused */
-  const mark = (e, focused) => {
-    e.box.toggleAttribute("data-focus", focused);
-    e.box.dataset.light = focused ? "false" : "true";
-  };
-
-  /** Put the boxes in the order of the panes without touching them when they already are (moving a box would take the focus away from what is inside). @param {HTMLElement[]} order */
-  const arrange = (order) => {
-    if (bar.node.nextElementSibling !== host) host.before(bar.node);
-    if (order.length === host.children.length && order.every((n, i) => host.children[i] === n)) return;
-    host.append(...order);
-  };
-
   const refresh = (/** @type {AppState} */ s) => {
     const ids = s.split.panes.filter((id) => s.tabs.some((x) => x.id === id));
     if (ids.length < 2 || !s.focusTab || !ids.includes(s.focusTab)) return leave();
@@ -153,14 +166,14 @@ export function buildPanes(host, main, ctx, viewLink) {
       mark(e, id === s.focusTab);
       e.box.hidden = !shown.includes(id);
       e.box.style.removeProperty("grid-column");
-      if (id !== s.focusTab && shown.includes(id)) fillLight(e, tab, s);
+      if (id !== s.focusTab && shown.includes(id)) fillLight(e, tab, s, ctx, link);
       else if (id !== s.focusTab && e.view) {
         e.view.destroy();
         e.view = null;
         e.box.replaceChildren();
       }
     }
-    arrange(ids.map((id) => entryOf(id).box));
+    arrange(host, bar.node, ids.map((id) => entryOf(id).box));
     host.dataset.split = String(ids.length);
     host.style.gridTemplateColumns = `repeat(${layout.cols}, minmax(0, 1fr))`;
     host.style.setProperty("--pane-rows", String(layout.rows));
@@ -170,14 +183,6 @@ export function buildPanes(host, main, ctx, viewLink) {
     bar.node.hidden = false;
   };
 
-  let width = 0;
-  if (typeof ResizeObserver === "function") {
-    new ResizeObserver(() => {
-      if (host.clientWidth === width) return;
-      width = host.clientWidth;
-      refresh(ctx.getState());
-    }).observe(host);
-  }
-  window.addEventListener("resize", () => refresh(ctx.getState()));
+  watchWidth(host, () => refresh(ctx.getState()));
   return { refresh };
 }
