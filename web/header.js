@@ -82,7 +82,7 @@ function resultChip(chip, s) {
  * @returns {{ refresh: (s: import("./state.js").AppState) => void }}
  */
 export function buildHeader(host, ctx, appName) {
-  const brand = el("a", { class: "brand", href: "#" }, [el("span", { class: "logo", "aria-hidden": "true" }), el("h1", { id: "app-name" }, [appName])]);
+  const brand = el("a", { class: "brand", href: "#" }, [el("span", { class: "logo", "aria-hidden": "true" }), el("h1", { id: "app-name" }, [appName]), el("span", { class: "greeting" }, [t("header.greeting")])]);
   brand.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0 });
@@ -144,6 +144,7 @@ export function buildHeader(host, ctx, appName) {
       sheets.querySelector(".sheets-link-text")?.replaceChildren(t("header.sheets"));
       sheets.setAttribute("aria-label", t("header.sheets"));
       menu.setAttribute("aria-label", t("header.menu.label"));
+      brand.querySelector(".greeting")?.replaceChildren(t("header.greeting"));
       langMenu.refresh();
     },
   };
