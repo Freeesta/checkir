@@ -252,6 +252,7 @@
   "header.file.points": "{points} points",
   "header.file.quality": "spectrum quality",
   "header.file.tip": "Loaded spectrum",
+  "header.greeting": "Hello everyone",
   "header.library.label": "Libraries",
   "header.library.tip": "Comparison libraries",
   "header.menu.label": "More",

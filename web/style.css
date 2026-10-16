@@ -132,6 +132,7 @@ button, select { font: inherit; color: var(--text); }
   background: var(--bg); border-bottom: 1px solid var(--border-soft);
 }
 .brand { display: flex; align-items: center; gap: 0.5rem; color: var(--text); text-decoration: none; margin-right: 0.5rem; }
+.greeting { color: var(--text-muted, var(--text)); font-size: 0.9rem; white-space: nowrap; }
 .logo { width: 2rem; height: 2rem; flex: none; background: var(--color-brand); -webkit-mask: url(img/logo.svg) center / contain no-repeat; mask: url(img/logo.svg) center / contain no-repeat; }
 .chips { display: flex; gap: 0.4rem; min-width: 0; }
 .chip { min-height: 2.25rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -281,6 +282,7 @@ th { position: sticky; top: 0; background: var(--surface); }
 }
 /* below 24em the logo stands for the name (the heading stays for screen readers) so the result chip has the room */
 @media (max-width: 24em) {
+  .brand .greeting { display: none; }
   .brand #app-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .app-header { gap: 0.25rem; }
   .chips { gap: 0.25rem; }
